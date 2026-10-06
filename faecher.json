@@ -1,0 +1,21 @@
+{
+  "_hinweis": "Zuordnung Kalender-Titel (SUMMARY in der .ics) -> Ordner im Repo und Moodle-Kurs-ID.",
+  "faecher": {
+    "Grundlagen Programmierung": {"ordner": "programmierung", "name": "Grundlagen der Programmierung", "moodle": 18617},
+    "Lernen, Präsentation, Kommunikation": {"ordner": "lernen-praesentieren-kommunizieren", "name": "Effektives Lernen, Präsentieren und Kommunizieren", "moodle": 18612},
+    "Grundlagen IT I": {"ordner": "grundlagen-it", "name": "Grundlagen der IT", "moodle": 18618},
+    "Vertrags- & Schuldrecht": {"ordner": "recht", "name": "Vertrags- und Schuldrecht", "moodle": 18614},
+    "Einführung BWL": {"ordner": "bwl", "name": "Einführung in die BWL", "moodle": 18616},
+    "Marketing": {"ordner": "marketing", "name": "Marketing", "moodle": 18615},
+    "Mathematik I": {"ordner": "mathematik", "name": "Mathematik I", "moodle": 18613},
+    "Einführung WI": {"ordner": "wirtschaftsinformatik", "name": "Einführung in die Wirtschaftsinformatik", "moodle": 18619}
+  },
+  "klausuren": {
+    "Klausur Grundlagen IT I": "grundlagen-it",
+    "Klausur Einführung WI": "wirtschaftsinformatik",
+    "Klausur Grundlagen Programmierung": "programmierung",
+    "Klausur Vertrags- und Schuldrecht": "recht",
+    "Klausur Grundlagen der BWL": ["bwl", "marketing"],
+    "Klausur Mathematik I": "mathematik"
+  }
+}
