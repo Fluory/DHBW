@@ -7,8 +7,8 @@ Dokumente. Die Zuordnung der Themen zu Terminen ist deshalb **geschätzt**:
 
 | Termin | geschätztes Thema | Quelle |
 |---|---|---|
-| 1 (06.10.) | Effektives Lernen + Einstieg Kommunikation | Handout Effektives Lernen, Skript Teil 1 Kap. 1.1 |
-| 2 (08.10.) | Kommunikationsmodelle | Skript Teil 1 Kap. 1.2 |
+| 1 (06.10.) | Feedback, eduScrum, Kommunikationsmodelle, Lernverzerrungen, drei Lernübungen | **Fotoprotokoll 6.10.** (bestätigt) |
+| 2 (08.10.) | Fortsetzung: Schulz von Thun, Eisbergmodell, Verzerrungen beim Gruppenlernen (laut Fotoprotokoll „folgt“), dann Kommunikationsmodelle | Fotoprotokoll 6.10., Skript Teil 1 Kap. 1.2 |
 | 3 (12.10.) | Berufliche Kommunikation, Präsentation, Feedback | Skript Teil 1 Kap. 2–3 |
 | 4 (02.11.) | Moderation, Konflikte, Verhandeln, Mitarbeitergespräch | Skript Teil 2 |
 
@@ -16,7 +16,7 @@ Dokumente. Die Zuordnung der Themen zu Terminen ist deshalb **geschätzt**:
 
 | Nr | Datum | Thema | Grundlage | Notiz |
 |---|---|---|---|---|
-| 1 | 06.10.2026 | Effektives Lernen + Einstieg Kommunikation | vermutet (Handout, Skript Teil 1) | [01](vorlesungen/01_2026-10-06.md) |
+| 1 | 06.10.2026 | Feedback, eduScrum, Kommunikationsmodelle, Lernmethoden | Folien „Fotoprotokoll 6.10.2026“ | [01](vorlesungen/01_2026-10-06.md) |
 
 ## Materialien in Moodle
 
@@ -25,6 +25,7 @@ Dokumente. Die Zuordnung der Themen zu Terminen ist deshalb **geschätzt**:
 | Skript Teil 1 Kommunikations- und Präsentationskompetenzen (58 S.) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=189728) | 06.10.2026 | Termine 1–3 |
 | Skript Teil 2 Effektiv Lernen, Präsentieren und Kommunizieren (68 S.) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=189729) | 06.10.2026 | Termin 4 |
 | Handout Effektives Lernen (29 S.) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190190) | 06.10.2026 | Termin 1 |
+| Fotoprotokoll 6.10.2026 (44 Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190247) | 06.10.2026 | Termin 1 |
 
 ## Eigene Notizen
 
