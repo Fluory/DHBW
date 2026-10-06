@@ -74,7 +74,7 @@ die 10 wichtigsten Begriffe, typische Aufgabenarten, häufige Fehler.
 
 ## 4. Briefing schreiben
 `briefings/JJJJ-MM-TT.md` nach der Vorlage unten. Kurz, auf dem Handy lesbar, Deutsch, Du-Form.
-Ganz oben eine Zeile pro Fach. Keine Floskeln, keine Wiederholung derselben Inhalte zwischen
+Ganz oben eine Zeile pro Fach. Das Briefing wird am Handy gelesen (Claude-App und GitHub-App): keine HTML-Tags wie `<details>`, keine Tabellen mit mehr als 3 Spalten, Begriffe als Liste statt Tabelle. Keine Floskeln, keine Wiederholung derselben Inhalte zwischen
 Briefing und Notiz – das Briefing verlinkt die Notiz.
 
 ## 5. Abschluss
@@ -109,7 +109,7 @@ am Ende auch als Antwort der Session ausgeben.
 - nur wenn nötig: mitbringen, installieren, vorher lesen
 
 ### 3 Fragen zum Warmwerden
-1. … (zum Rückblick, mit Lösung in <details>; beim ersten Termin: Vorab-Fragen zum heutigen Thema)
+1. … (zum Rückblick; beim ersten Termin: Vorab-Fragen zum heutigen Thema – Lösungen NICHT hier, sondern unten im Abschnitt „Lösungen“)
 2. …
 3. …
 
@@ -123,6 +123,9 @@ am Ende auch als Antwort der Session ausgeben.
 
 ## Nachgetragen
 - (nur wenn eine alte Notiz mit neuem Material überarbeitet wurde)
+
+## Lösungen
+**<Fach>:** 1. … 2. … 3. …
 ```
 
 ## Vorlage: Vorlesungsnotiz
@@ -138,7 +141,7 @@ Fließtext + Stichpunkte, so dass man den Termin ohne Folien versteht. Geglieder
 Teilen der Vorlesung. Beispiele und Code übernehmen, wo sie das Verständnis tragen.
 
 ## Wichtige Begriffe
-| Begriff | Bedeutung |
+- **Begriff** – Bedeutung
 
 ## Aufgaben / Übungen
 ## Offene Fragen
