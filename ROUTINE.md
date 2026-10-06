@@ -73,9 +73,25 @@ Kein neues Thema. Briefing = kompakte Wiederholung aller Vorlesungsnotizen des F
 die 10 wichtigsten Begriffe, typische Aufgabenarten, häufige Fehler.
 
 ## 4. Briefing schreiben
-`briefings/JJJJ-MM-TT.md` nach der Vorlage unten. Kurz, auf dem Handy lesbar, Deutsch, Du-Form.
-Ganz oben eine Zeile pro Fach. Das Briefing wird am Handy gelesen (Claude-App und GitHub-App): keine HTML-Tags wie `<details>`, keine Tabellen mit mehr als 3 Spalten, Begriffe als Liste statt Tabelle. Keine Floskeln, keine Wiederholung derselben Inhalte zwischen
-Briefing und Notiz – das Briefing verlinkt die Notiz.
+`briefings/JJJJ-MM-TT.md` nach der Vorlage unten. Deutsch, Du-Form, auf dem Handy lesbar
+(Claude-App und GitHub-App): keine HTML-Tags wie `<details>`, keine Tabellen mit mehr als
+3 Spalten, Begriffe als Liste statt Tabelle, Leerzeile vor und nach jeder Liste. Ganz oben eine Zeile pro Fach.
+
+**Ausführlich statt knapp.** Das Briefing soll ohne Folien verständlich sein. Für jedes Thema –
+heute UND beim Rückblick auf den letzten Termin – nicht nur sagen, *was* gemacht wird, sondern:
+- **Was ist das?** In eigenen Worten erklärt, 2–5 Sätze, mit einem konkreten Beispiel
+  (bei Programmierung mit kurzem Code, bei Recht/BWL mit Praxisfall, bei Mathe mit Rechenbeispiel).
+- **Das Wichtigste:** 2–4 Kernaussagen, die man behalten muss.
+- **Achtung:** typische Fehler, Verwechslungen, Klausurfallen, Dinge, die die Lehrkraft betont.
+
+Pro Termin die 3–6 wichtigsten Themen so behandeln, Nebensächliches in einem Satz.
+Wenn Material fehlt: aus Skript/Agenda erklären und das kennzeichnen, nichts erfinden.
+
+**Links zu den Unterlagen:** Für heute und für den letzten Termin jeweils die passenden
+Moodle-Links (aus `## Materialien in Moodle` im Fach-README, Format
+`https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=…`) mit Namen verlinken.
+Gibt es kein eigenes Material für den Termin, den Kurs-Link
+`https://moodle.heilbronn.dhbw.de/course/view.php?id=<moodle-id>` und das passende Skript verlinken.
 
 ## 5. Abschluss
 ```bash
@@ -95,15 +111,37 @@ am Ende auch als Antwort der Session ausgeben.
 
 ## <Fach>
 
-### Letztes Mal (<TT.MM.>, Termin <n-1>)
-- 4–7 Stichpunkte: die Kernaussagen, nicht die Gliederung
-- **Hausaufgabe/Übung:** … (falls vorhanden)
+**Unterlagen:** heute → [<Material>](<moodle-link>) · letztes Mal → [<Material>](<moodle-link>) · [Kurs](<kurs-link>)
+
+### Rückblick: Termin <n-1> (<TT.MM.>) – <Thema>
+*Ein Satz: Worum ging es insgesamt?*
+
+#### <Thema 1>
+**Was ist das?** Erklärung in eigenen Worten mit Beispiel.
+
+**Das Wichtigste:**
+- …
+
+**Achtung:** …
+
+#### <Thema 2>
+… (gleiches Schema, 3–6 Themen)
+
+**Hausaufgabe/Übung:** … (falls vorhanden)
 
 ### Heute voraussichtlich: <Thema>
 *Grundlage: <Quelle>. Sicherheit: <hoch/mittel/niedrig>.*
-- Worum es geht (3–5 Stichpunkte)
-- **Neue Begriffe:** …
-- **Darauf achten:** wo es knifflig wird / was später prüfungsrelevant ist
+
+#### <Thema 1>
+**Was ist das?** Erklärung in eigenen Worten mit Beispiel.
+
+**Das Wichtigste:**
+- …
+
+**Achtung:** …
+
+#### <Thema 2>
+… (gleiches Schema, 3–6 Themen)
 
 ### Vorbereitung
 - nur wenn nötig: mitbringen, installieren, vorher lesen
