@@ -28,6 +28,11 @@ Dokumente. Die Zuordnung der Themen zu Terminen ist deshalb **geschätzt**:
 | Handout Effektives Lernen (29 S.) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190190) | 06.10.2026 | Termin 1 |
 | Fotoprotokoll 6.10.2026 (44 Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190247) | 06.10.2026 | Termin 1 |
 | Aufgabe Kulturdimensionen (5 Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190326) | 08.10.2026 | Termin 2 |
+| Hofstede 6 Kulturdimensionen (Weblink) | [Link](https://moodle.heilbronn.dhbw.de/mod/url/view.php?id=190366) | 09.10.2026 | Termin 2 (Quellen Kulturdimensionen) |
+| High Context Low Context (Weblink) | [Link](https://moodle.heilbronn.dhbw.de/mod/url/view.php?id=190368) | 09.10.2026 | Termin 2 (Quellen Kulturdimensionen) |
+| Country Comparison (Weblink) | [Link](https://moodle.heilbronn.dhbw.de/mod/url/view.php?id=190369) | 09.10.2026 | Termin 2 (Quellen Kulturdimensionen) |
+| GLOBE Studies (Weblink) | [Link](https://moodle.heilbronn.dhbw.de/mod/url/view.php?id=190370) | 09.10.2026 | Termin 2 (Quellen Kulturdimensionen) |
+| High Low Context Cultures (Weblink) | [Link](https://moodle.heilbronn.dhbw.de/mod/url/view.php?id=190371) | 09.10.2026 | Termin 2 (Quellen Kulturdimensionen) |
 
 ## Eigene Notizen
 

@@ -11,13 +11,14 @@ Terminal, `uv`, Python 3.14, `ruff`, `ty` – bewusst ohne IDE und ohne KI-Assis
 | Nr | Datum | Thema | Grundlage | Notiz |
 |---|---|---|---|---|
 | 1 | 05.10.2026 | Kennenlernen, Organisatorisches & Einführung | Folien „Vorlesung 1 – Einführung“ | [01](vorlesungen/01_2026-10-05.md) |
+| 2 | 09.10.2026 | Variablen, Datentypen und Operatoren | Folien „Vorlesung 2“ | [02](vorlesungen/02_2026-10-09.md) |
 
 ## Materialien in Moodle
 
 | Material | Link | gesehen am | genutzt für |
 |---|---|---|---|
 | Vorlesung 1 – Einführung (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=189987) | 06.10.2026 | Termin 1 |
-| Vorlesung 2 – Variablen, Datentypen und Operatoren (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=189988) | 06.10.2026 | vermutlich Termin 2 (09.10.) |
+| Vorlesung 2 – Variablen, Datentypen und Operatoren (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=189988) | 06.10.2026 | Termin 2 |
 | Vorlesung 3 – Kontrollstrukturen (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=189989) | 06.10.2026 | vermutlich Termin 3 (13.10.) |
 
 ## Eigene Notizen

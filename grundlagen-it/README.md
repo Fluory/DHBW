@@ -11,6 +11,7 @@ Zahlensysteme (09. + 14.10.) → Rechnerarchitektur (16.10.) → relationale Dat
 | Nr | Datum | Thema | Grundlage | Notiz |
 |---|---|---|---|---|
 | 1 | 07.10.2026 | Organisation und Themeneinführung: Information, Digitalisierung, IT-Infrastrukturen, Treiber | Folien „VL01“ | [01](vorlesungen/01_2026-10-07.md) |
+| 2 | 09.10.2026 | Grundlegende Konzepte (1): Informationsdarstellung, Zahlensysteme, Zweierkomplement, Boolesche Algebra, Logikgatter | Folien „GIT VL02 v2“ (Aufteilung auf 09./14.10. geschätzt) | [02](vorlesungen/02_2026-10-09.md) |
 
 ## Materialien in Moodle
 
@@ -18,6 +19,8 @@ Zahlensysteme (09. + 14.10.) → Rechnerarchitektur (16.10.) → relationale Dat
 |---|---|---|---|
 | Selbsteinschätzung | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190143) | 06.10.2026 | Termin 1 (Hausaufgabe) |
 | VL01 | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190144) | 06.10.2026 | Termin 1 |
+| GIT VL01 Rückschau (15 Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190459) | 09.10.2026 | Termin 2 (Wiederholung) |
+| GIT VL02 v2 – Grundlegende Konzepte (157 Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190460) | 09.10.2026 | Termine 2 und 3 |
 
 ## Eigene Notizen
 
