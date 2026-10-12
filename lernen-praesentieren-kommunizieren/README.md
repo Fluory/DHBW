@@ -18,6 +18,7 @@ Dokumente. Die Zuordnung der Themen zu Terminen ist deshalb **geschätzt**:
 |---|---|---|---|---|
 | 1 | 06.10.2026 | Feedback, eduScrum, Kommunikationsmodelle, Lernmethoden | Folien „Fotoprotokoll 6.10.2026“ | [01](vorlesungen/01_2026-10-06.md) |
 | 2 | 08.10.2026 | Kulturdimensionen, Schulz von Thun, Eisbergmodell | Folien „Aufgabe Kulturdimensionen“, Skript Teil 1 | [02](vorlesungen/02_2026-10-08.md) |
+| 3 | 12.10.2026 | Berufliche Kommunikation: virtuelle Meetings, Präsentieren, Pitch, Projektmeetings, Feedback | vermutet (Skript Teil 1 Kap. 2–3) | [03](vorlesungen/03_2026-10-12.md) |
 
 ## Materialien in Moodle
 
