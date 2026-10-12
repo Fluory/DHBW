@@ -1,33 +1,32 @@
 # Moderation vorbereiten: „Wie organisieren wir unsere Lerngruppe?“
 
 Vorbereitung für die Moderationsübung am 12.10.2026 (Skript Teil 2, Kap. 1). Wir moderieren **eine Phase:
-„Themen bearbeiten“**, max. 10 Minuten, und wechseln uns dabei ab.
+„Überblick schaffen / Themen sammeln“** (Themenorientierung), max. 10 Minuten, und wechseln uns dabei ab.
 
 ## Die Meetingsituation
 
-Eine Gruppe von 5–6 Studierenden hat beschlossen, gemeinsam für die Prüfungen am Semesterende zu lernen. Im
-ersten Treffen wurden die Themen schon gesammelt (Termine, Ort, Ablauf, Fächer). Jetzt geht es an die
-Kernfrage:
+Eine Gruppe von 5–6 Studierenden will gemeinsam für die Prüfungen am Semesterende lernen. Der Einstieg ist
+gemacht (alle sind angekommen, Ziel des Treffens ist bekannt). Jetzt verschaffen wir uns einen **Überblick**:
 
-> **Wie organisieren wir unsere Lerngruppe so, dass sie uns wirklich etwas bringt?**
+> **Was macht eine Lerngruppe gut – und woran scheitert sie?**
 
-Die Situation ist bewusst allgemein: Es geht nicht um ein bestimmtes Fach, sondern um die Zusammenarbeit.
+Wir sammeln dazu Erfahrungen und ordnen sie zu Themen. **Lösungen entwickeln wir noch nicht** – das ist die
+spätere Phase „Themen bearbeiten“. Wir dürfen nur kurz anreißen, was hinter einem Punkt steckt.
 
 ## Entscheidet zusammen (Fragen von der Folie)
 
 **Wer ist die Zielgruppe?**
 Die Mitglieder der Lerngruppe: Studierende mit unterschiedlichem Vorwissen, unterschiedlichen Stundenplänen und
-unterschiedlichen Lerntypen (die einen wollen viel reden, die anderen lieber still Aufgaben rechnen).
+Lerntypen (die einen reden gern, die anderen rechnen lieber still).
 
 **Wer sind die Stakeholder?**
 - die Gruppenmitglieder selbst
-- Kommilitonen, die vielleicht später dazukommen wollen
-- indirekt: Dozierende (deren Übungsaufgaben genutzt werden) und Arbeitgeber im dualen Studium (Zeit neben
-  der Praxisphase)
+- Kommilitonen, die später dazukommen wollen
+- indirekt: Dozierende (deren Übungsaufgaben genutzt werden) und Arbeitgeber im dualen Studium (Zeit neben der Praxisphase)
 
 **Was ist der Zielgruppe wichtig?**
 - dass sich der Aufwand lohnt und man wirklich etwas versteht
-- feste Absprachen, auf die man sich verlassen kann
+- verlässliche Absprachen
 - dass niemand nur mitläuft oder alles allein macht
 - dass die Treffen nicht ausufern
 
@@ -36,133 +35,130 @@ unterschiedlichen Lerntypen (die einen wollen viel reden, die anderen lieber sti
 - Arbeitgeber: dass das Lernen neben Praxis und Vorlesung planbar bleibt
 
 **Was ist das Ziel unserer Phase?**
-Am Ende stehen **drei verbindliche Regeln** für die Lerngruppe, mit denen alle leben können.
+Alle Erfahrungen – negative wie positive – liegen sichtbar auf dem Tisch und sind zu **4–5 Themen** geordnet,
+die die Gruppe danach bearbeiten kann. Alle haben das Gefühl, dass ihre Sicht vorkommt.
 
 **Welchen Schritt moderieren wir?**
-„Themen bearbeiten“: Problem klären, Lösungsideen entwickeln, Entscheidung vorbereiten.
-(Davor wäre „Themen auswählen“, danach „Maßnahmen planen“ – das machen wir nicht.)
+„Überblick schaffen / Themen sammeln“ (Phase 2 nach dem Einstieg).
+Laut Skript geht es hier um: Themen sammeln, ordnen, verdichten · unterschiedliche Sichtweisen fördern ·
+Problembewusstsein und Lösungsorientierung erzeugen · Interesse wecken.
 
-**Mit welchen Fragen und Methoden?** (laut Skript, Tabelle 2)
-- **Zuruffrage mit Simultan-Visualisierung** – Ziel und Erwartungen klären
-- **Kopfstandmethode** (Kreativitätsmethode) – Lösungen entwickeln
-- **Mehrpunkt-Frage** – auf die wichtigsten Lösungen verdichten
+**Mit welchen Fragen und Methoden?** (laut Skript, Tabelle 2: Zuruffrage, Sammelraster, Kartenfrage, Themenspeicher)
+- **Kartenfrage** mit zwei Kartenfarben – jede Person schreibt erst still für sich (so kommen auch Stille zu Wort)
+- **Sammelraster** – Karten in zwei Spalten anpinnen, gleiche Punkte zusammenlegen (clustern)
+- **Themenspeicher** – die Cluster bekommen Überschriften und werden als Themenliste festgehalten
 
 **Wer moderiert welchen Teil?**
 
 | Teil | Zeit | Wer |
 |---|---|---|
-| 1. Ziel und Erwartungen klären | 0:00–2:00 | Person A |
-| 2. Kopfstandmethode | 2:00–6:00 | Person B |
-| 3. Auf drei Regeln verdichten, Übergang | 6:00–10:00 | Person C |
-| Flipchart mitschreiben, Zeit im Blick | durchgehend | Person D (falls 4er-Team) |
-
-Bei 3 Personen schreibt jeweils die Person mit, die gerade moderiert hat.
+| 1. Einführung und stille Kartenfrage | 0:00–3:00 | Person A |
+| 2. Karten vorstellen und anpinnen | 3:00–6:30 | Person B |
+| 3. Clustern, Themenspeicher, Übergang | 6:30–10:00 | Person C |
+| Karten einsammeln, Pinnwand, Zeit im Blick | durchgehend | Person D (falls 4er-Team) |
 
 ## Moderationsplan (nach Skript, Tabelle 4)
 
 | Schritt | Funktion | Frage | Methode | Material | Zeit | Wer |
 |---|---|---|---|---|---|---|
-| 1 | Ziel transparent machen, Erwartungen sammeln | „Was soll die Lerngruppe für euch leisten?“ | Zuruffrage, mitvisualisieren | Flipchart 1 | 2' | A |
-| 2a | Probleme aufdecken | „Was müssten wir tun, damit die Lerngruppe garantiert scheitert?“ | Kopfstand – Sammeln | Flipchart 2, linke Spalte | 2' | B |
-| 2b | Lösungen entwickeln | „Was ist jeweils das Gegenteil?“ | Kopfstand – Umdrehen | Flipchart 2, rechte Spalte | 2' | B |
-| 3a | Prioritäten setzen | „Welche drei Lösungen bringen uns am meisten?“ | Mehrpunkt-Frage (3 Punkte p. P.) | Klebepunkte | 2' | C |
-| 3b | Ergebnis sichern, Übergang | „Können alle damit leben?“ | Ergebnis vorlesen, Zustimmung abfragen | Flipchart 2 | 2' | C |
+| 1 | Frage stellen, alle schreiben still | „Woran scheitern Lerngruppen?“ / „Was machen gute Lerngruppen anders?“ | Kartenfrage (rot/grün) | Karten, Stifte | 3' | A |
+| 2 | Sichtweisen sichtbar machen | „Lies deine Karten kurz vor.“ | Sammelraster, anpinnen | Pinnwand / Flipchart | 3,5' | B |
+| 3a | Ordnen, verdichten | „Welche Karten gehören zusammen? Wie nennen wir das?“ | Clustern | Pinnwand | 2,5' | C |
+| 3b | Überblick sichern, Übergang | „Fehlt noch ein Thema?“ | Themenspeicher | Flipchart | 1' | C |
 
-## Flipcharts vorbereiten
+## Material vorbereiten
 
-**Flipchart 1** – Überschrift: *„Unsere Lerngruppe soll …“* (leer, wird mitgeschrieben)
-
-**Flipchart 2** – zwei Spalten:
-
-| So scheitern wir 💥 | So klappt's ✅ |
-|---|---|
-| | |
-
-Dazu: dicke Stifte, Klebepunkte (3 pro Person), Uhr.
+- **Rote Karten:** „Daran scheitert eine Lerngruppe“
+- **Grüne Karten:** „Das machen gute Lerngruppen“
+- Pinnwand oder Flipchart mit zwei Spalten, darunter Platz für den Themenspeicher
+- dicke Stifte, Pins oder Klebeband, Uhr
+- Regel für die Karten: **ein Gedanke pro Karte, max. 5 Wörter, groß schreiben**
 
 ## Moderationsleitfaden – was wir sagen
 
-### Teil 1 – Person A (2 Min.)
+### Teil 1 – Person A (3 Min.)
 
-> „Wir haben eben gesammelt, worüber wir heute sprechen wollen. Jetzt geht es um die wichtigste Frage: **Wie
-> organisieren wir unsere Lerngruppe so, dass sie uns wirklich etwas bringt?** Unser Ziel für die nächsten
-> zehn Minuten: drei Regeln, mit denen alle leben können.
-> Zum Einstieg: **Was soll die Lerngruppe für euch leisten?** Ruft einfach rein, ich schreibe mit.“
+> „Bevor wir festlegen, wie unsere Lerngruppe laufen soll, wollen wir einen Überblick: **Was kann schiefgehen –
+> und was machen gute Lerngruppen richtig?** Dazu bekommt jede und jeder rote und grüne Karten.
+> Auf die **roten** schreibt ihr: *Woran scheitert eine Lerngruppe?*
+> Auf die **grünen**: *Was machen gute Lerngruppen anders?*
+> Ein Gedanke pro Karte, groß und kurz. Ihr habt **zwei Minuten**, jeder für sich, ohne zu reden.“
 
-Erwartbare Antworten (zum Mitschreiben auf Flipchart 1):
-- Stoff besser verstehen, Fragen klären
-- regelmäßig dranbleiben statt Last-Minute-Lernen
-- Motivation – allein schiebt man es auf
-- Übungsaufgaben und alte Klausuren gemeinsam durchgehen
+*(Zwei Minuten still schreiben lassen, nach 1:30 Min. ankündigen: „Noch 30 Sekunden.“)*
+
+> „Danke. [B] sammelt jetzt eure Karten ein.“
+
+### Teil 2 – Person B (3,5 Min.)
+
+> „Lest bitte reihum eure Karten kurz vor – ohne Diskussion, nur vorlesen. Ich pinne sie an: Rot links, Grün rechts.
+> Wenn jemand schon dasselbe hat, legen wir die Karte direkt dazu.“
+
+Erwartbare **rote Karten**:
+- kein fester Termin
+- alle kommen unvorbereitet
+- nur gequatscht
+- einer macht alles
+- Handy-Ablenkung
+- unklar, was dran ist
+- Treffen zu lang
+- Leute springen ab
+
+Erwartbare **grüne Karten**:
+- feste Termine
+- jeder bereitet etwas vor
+- gegenseitig erklären
+- alte Klausuren üben
+- klare Agenda
+- feste Dauer mit Pause
+- gute Stimmung
 - sich gegenseitig abfragen
 
-Falls es stockt: *„Denkt an eine Lerngruppe, die richtig gut war – was war da anders?“*
+Stille einbinden: *„[Name], magst du deine Karten vorlesen?“*
+Bei Diskussion: *„Spannend – das notieren wir uns, besprechen tun wir es gleich in der nächsten Phase.“*
 
-> „Danke, das hängen wir sichtbar auf – daran messen wir gleich unsere Lösungen. Ich gebe an [B] weiter.“
+> „Danke, jetzt hängt alles. [C] hilft uns, Ordnung reinzubringen.“
 
-### Teil 2 – Person B (4 Min.)
+### Teil 3 – Person C (3,5 Min.)
 
-> „Wir drehen die Frage jetzt einmal um. **Was müssten wir tun, damit unsere Lerngruppe garantiert scheitert?**
-> Je absurder, desto besser.“
+> „Ich sehe, dass einige Karten zusammengehören. **Welche Karten beschreiben dasselbe Thema?**“
 
-Erwartbare Antworten (linke Spalte):
-- kein fester Termin, jedes Mal neu abstimmen
-- alle kommen unvorbereitet
-- wir reden über alles außer den Stoff
-- eine Person erklärt alles, die anderen schreiben nur ab
-- Handys auf dem Tisch
-- Treffen ohne Ende und ohne Pause
-- niemand weiß, was beim nächsten Mal dran ist
+*(Mit der Gruppe Karten zusammenschieben – rote und grüne dürfen im selben Cluster landen.)*
 
-Stille einbinden: *„[Name], was würde bei dir eine Lerngruppe sicher kaputtmachen?“*
+> „**Wie nennen wir diese Gruppe?**“
 
-> „Super. Jetzt drehen wir jeden Punkt um: **Was ist jeweils das Gegenteil?**“
+Wahrscheinliche Themen (Clusterüberschriften):
+1. **Termine und Verbindlichkeit** (kein fester Termin ↔ feste Termine, Leute springen ab)
+2. **Vorbereitung** (unvorbereitet ↔ jeder bereitet etwas vor)
+3. **Ablauf und Struktur** (unklar, was dran ist; zu lang ↔ klare Agenda, feste Dauer)
+4. **Arbeitsweise und Beteiligung** (einer macht alles ↔ gegenseitig erklären, abfragen)
+5. **Fokus und Stimmung** (Quatschen, Handy ↔ gute Stimmung)
 
-Erwartbare Lösungen (rechte Spalte):
-- fester Termin, z. B. jede Woche gleicher Tag und gleiche Uhrzeit
-- jede Person bringt eine Aufgabe oder Frage mit
-- erst konzentriert arbeiten, danach Zeit zum Quatschen
-- wer etwas erklärt, lässt die anderen selbst rechnen – jeder kommt dran
-- Handys bleiben in der Tasche
-- feste Dauer (z. B. 90 Minuten) mit einer Pause
-- am Ende festlegen, was beim nächsten Mal drankommt
+> „Das sind unsere Themen – ich schreibe sie in den Themenspeicher.
+> **Fehlt noch ein Thema, das euch wichtig ist?**
+> Super. Damit haben wir den Überblick. Im nächsten Schritt wählen wir aus, mit welchen Themen wir anfangen.“
 
-> „Wir haben jetzt [sechs/sieben] Lösungen. Ich gebe an [C] weiter.“
+## Abgrenzung: Was wir in dieser Phase NICHT machen
 
-### Teil 3 – Person C (4 Min.)
+- **Keine Lösungen ausarbeiten** – wir sammeln und ordnen nur. Wenn jemand schon eine Lösung sagt, nehmen wir sie
+  als grüne Karte auf („gute Idee – kommt an die Wand“), diskutieren sie aber nicht.
+- **Nicht priorisieren** – das ist die nächste Phase „Themen auswählen“.
+- **Nicht bewerten** – alle Karten sind gleich viel wert.
 
-> „Wir können nicht alles auf einmal einführen. **Welche drei Lösungen bringen uns am meisten?** Jede und jeder
-> hat drei Punkte – ihr dürft auch mehrere auf eine Lösung kleben, wenn sie euch besonders wichtig ist.“
-
-*(1 Minute kleben lassen, dann auszählen.)*
-
-> „Unsere drei Regeln sind also:
-> 1. …
-> 2. …
-> 3. …
-> **Können alle damit leben?**“ *(in die Runde schauen, Nicken abwarten; bei Einwand kurz nachfragen: „Was
-> bräuchtest du, damit du damit leben kannst?“)*
->
-> „Danke! Im nächsten Schritt klären wir, wer was organisiert – zum Beispiel, wer den Raum bucht und wer beim
-> ersten Treffen die Aufgaben mitbringt.“
-
-Wahrscheinliches Ergebnis (zum Vergleich):
-1. Fester wöchentlicher Termin
-2. Jede Person bringt eine Aufgabe oder Frage mit
-3. Am Ende festlegen, was beim nächsten Mal drankommt
+Leichtes Überfließen ist erlaubt: Beim Clustern dürfen wir kurz fragen „Was steckt hinter dieser Karte?“,
+um sie richtig einzuordnen.
 
 ## Falls etwas schiefgeht
 
-- **Zu wenig Antworten:** ein Beispiel vorgeben („Zum Beispiel: Keiner weiß, wann wir uns treffen.“).
-- **Zu viele Antworten / Zeit knapp:** „Wir nehmen noch zwei Punkte, dann drehen wir um.“
-- **Diskussion über eine einzelne Lösung:** „Spannender Punkt – den nehmen wir gleich in die Punktabfrage mit.“
-- **Gleichstand bei den Punkten:** „Zwischen X und Y – kurze Handabstimmung?“
+- **Zu wenig Karten:** „Denkt an eine Gruppenarbeit, die richtig schlecht lief – woran lag es?“
+- **Zu viele Karten / Zeit knapp:** nur die neuen Punkte vorlesen lassen („Wer hat noch etwas, das noch nicht hängt?“).
+- **Diskussion bricht los:** „Wichtiger Punkt – den nehmen wir gleich mit in die Bearbeitung.“
+- **Uneinig beim Clustern:** Karte doppelt aufhängen oder im Zweifel einzeln lassen.
 
 ## Worauf wir als Moderatoren achten
 
-- **Fragen statt Behaupten** – keine eigene Meinung zu den Lösungen.
-- **Allparteilich** bleiben, alle Beiträge gleich wertschätzen.
-- **Alles sofort visualisieren**, gut lesbar.
-- **Stille mit Namen einbinden**, Vielredner freundlich bremsen („Danke – lass uns noch andere hören“).
+- **Fragen statt Behaupten** – keine eigenen Karten, keine Meinung zu den Karten.
+- **Allparteilich** – rote und grüne Karten gleich wertschätzen.
+- **Alles sichtbar** – jede Karte kommt an die Wand.
+- **Stille einbinden** – die stille Kartenfrage hilft dabei.
 - **Übergaben ansagen**, damit der Wechsel sichtbar ist.
-- **Zeit halten**: 2 – 4 – 4 Minuten.
+- **Zeit halten**: 3 – 3,5 – 3,5 Minuten.
