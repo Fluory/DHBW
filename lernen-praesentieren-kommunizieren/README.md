@@ -8,17 +8,17 @@ Dokumente. Die Zuordnung der Themen zu Terminen ist deshalb **geschätzt**:
 | Termin | geschätztes Thema | Quelle |
 |---|---|---|
 | 1 (06.10.) | Feedback, eduScrum, Kommunikationsmodelle, Lernverzerrungen, drei Lernübungen | **Fotoprotokoll 6.10.** (bestätigt) |
-| 2 (08.10.) | Kulturdimensionen (Team-Sprint mit Ländervergleich DE/USA/China) + offene Modelle vom 06.10. | **Aufgabe Kulturdimensionen** (bestätigt), Skript Teil 1 Kap. 1.2 |
-| 3 (12.10.) | Berufliche Kommunikation, Präsentation, Feedback | Skript Teil 1 Kap. 2–3 |
-| 4 (02.11.) | Moderation, Konflikte, Verhandeln, Mitarbeitergespräch | Skript Teil 2 |
+| 2 (08.10.) | Modell-Sprints, Denkpräferenzen, Kulturdimensionen, Stakeholder, Präsentation, Storytelling | **Fotoprotokoll 8.10.** (bestätigt) |
+| 3 (12.10.) | Wahrnehmung, Souveränität, Moderation, Konfliktmanagement | **Fotoprotokoll 12.10.** (bestätigt) |
+| 4 (02.11.) | Präsentieren (Portfolio-Themen), Konfliktgespräche durchführen, wissenschaftliche Arbeiten präsentieren | Fotoprotokoll 12.10., Folie 43 |
 
 ## Fortschritt
 
 | Nr | Datum | Thema | Grundlage | Notiz |
 |---|---|---|---|---|
 | 1 | 06.10.2026 | Feedback, eduScrum, Kommunikationsmodelle, Lernmethoden | Folien „Fotoprotokoll 6.10.2026“ | [01](vorlesungen/01_2026-10-06.md) |
-| 2 | 08.10.2026 | Kulturdimensionen, Schulz von Thun, Eisbergmodell | Folien „Aufgabe Kulturdimensionen“, Skript Teil 1 | [02](vorlesungen/02_2026-10-08.md) |
-| 3 | 12.10.2026 | Berufliche Kommunikation: virtuelle Meetings, Präsentieren, Pitch, Projektmeetings, Feedback | vermutet (Skript Teil 1 Kap. 2–3) | [03](vorlesungen/03_2026-10-12.md) |
+| 2 | 08.10.2026 | Modell-Sprints, Denkpräferenzen, Kulturdimensionen, Stakeholder, Präsentation, Storytelling | Folien „Fotoprotokoll 8.10.2026“ | [02](vorlesungen/02_2026-10-08.md) |
+| 3 | 12.10.2026 | Wahrnehmung, Souveränität (Feuerlöscher), Moderation, Konfliktmanagement | Folien „Fotoprotokoll 12102026“ | [03](vorlesungen/03_2026-10-12.md) |
 
 ## Materialien in Moodle
 
@@ -34,6 +34,8 @@ Dokumente. Die Zuordnung der Themen zu Terminen ist deshalb **geschätzt**:
 | Country Comparison (Weblink) | [Link](https://moodle.heilbronn.dhbw.de/mod/url/view.php?id=190369) | 09.10.2026 | Termin 2 (Quellen Kulturdimensionen) |
 | GLOBE Studies (Weblink) | [Link](https://moodle.heilbronn.dhbw.de/mod/url/view.php?id=190370) | 09.10.2026 | Termin 2 (Quellen Kulturdimensionen) |
 | High Low Context Cultures (Weblink) | [Link](https://moodle.heilbronn.dhbw.de/mod/url/view.php?id=190371) | 09.10.2026 | Termin 2 (Quellen Kulturdimensionen) |
+| Fotoprotokoll 8.10.2026 (58 Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190616) | 13.10.2026 | Termin 2 |
+| Fotoprotokoll 12.10.2026 (43 Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190617) | 13.10.2026 | Termin 3 |
 
 ## Eigene Notizen
 

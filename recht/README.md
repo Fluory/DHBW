@@ -8,7 +8,8 @@ Moodle: [Kurs 18614](https://moodle.heilbronn.dhbw.de/course/view.php?id=18614) 
 
 | Nr | Datum | Thema | Grundlage | Notiz |
 |---|---|---|---|---|
-| Skript Bürgerliches Recht Teil 1 – BGB AT + Schuldrecht AT (Silke Hennig, 51 S.) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190423) | 09.10.2026 | ab Termin 1 (13.10.) |
+| 1 | 13.10.2026 | Einführung, Personen, Willenserklärung, Vertrag | vermutet (Skript Kap. 1–4 BGB AT) | [01](vorlesungen/01_2026-10-13.md) |
+| Skript Bürgerliches Recht Teil 1 – BGB AT + Schuldrecht AT (Silke Hennig, 51 S.) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190423) | 09.10.2026 | Termin 1 (BGB AT Kap. 1–4) |
 
 ## Materialien in Moodle
 

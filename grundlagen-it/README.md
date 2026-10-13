@@ -23,6 +23,8 @@ Zahlensysteme (09. + 14.10.) → Rechnerarchitektur (16.10.) → relationale Dat
 | GIT VL02 v2 – Grundlegende Konzepte (157 Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190460) | 09.10.2026 | Termine 2 und 3 |
 | GIT VL02 v3 (161 Folien, neu: Vorzeichen-Betrag, Addierwerk) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190495) | 12.10.2026 | Termine 2 und 3 |
 | GIT VL02 Rückschau (56 Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190496) | 12.10.2026 | Termin 2 (zeigt den behandelten Stoff) |
+| GIT VL02 V4 (160 Folien, kleine Überarbeitung) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190601) | 13.10.2026 | Termine 2 und 3 |
+| GIT VL02 – Rückschau (neue Fassung, 55 Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190602) | 13.10.2026 | Termin 2 |
 
 ## Eigene Notizen
 

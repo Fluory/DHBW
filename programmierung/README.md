@@ -12,6 +12,7 @@ Terminal, `uv`, Python 3.14, `ruff`, `ty` – bewusst ohne IDE und ohne KI-Assis
 |---|---|---|---|---|
 | 1 | 05.10.2026 | Kennenlernen, Organisatorisches & Einführung | Folien „Vorlesung 1 – Einführung“ | [01](vorlesungen/01_2026-10-05.md) |
 | 2 | 09.10.2026 | Variablen, Datentypen und Operatoren | Folien „Vorlesung 2“ | [02](vorlesungen/02_2026-10-09.md) |
+| 3 | 13.10.2026 | Kontrollstrukturen und Listen | Folien „Vorlesung 3“ | [03](vorlesungen/03_2026-10-13.md) |
 
 ## Materialien in Moodle
 
@@ -19,7 +20,8 @@ Terminal, `uv`, Python 3.14, `ruff`, `ty` – bewusst ohne IDE und ohne KI-Assis
 |---|---|---|---|
 | Vorlesung 1 – Einführung (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=189987) | 06.10.2026 | Termin 1 |
 | Vorlesung 2 – Variablen, Datentypen und Operatoren (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=189988) | 06.10.2026 | Termin 2 |
-| Vorlesung 3 – Kontrollstrukturen (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=189989) | 06.10.2026 | vermutlich Termin 3 (13.10.) |
+| Vorlesung 3 – Kontrollstrukturen (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=189989) | 06.10.2026 | Termin 3 |
+| Vorlesung 2 – Lösungen als Python-Dateien (ZIP, 5 Dateien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190620) | 13.10.2026 | Termin 2 (Musterlösungen) |
 
 ## Eigene Notizen
 
