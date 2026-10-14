@@ -12,6 +12,7 @@ Zahlensysteme (09. + 14.10.) → Rechnerarchitektur (16.10.) → relationale Dat
 |---|---|---|---|---|
 | 1 | 07.10.2026 | Organisation und Themeneinführung: Information, Digitalisierung, IT-Infrastrukturen, Treiber | Folien „VL01“ | [01](vorlesungen/01_2026-10-07.md) |
 | 2 | 09.10.2026 | Grundlegende Konzepte: Zahlensysteme, Zweierkomplement, Logikgatter, Datenstrukturen, Bäume, Suchen und Sortieren | Folien „GIT VL02 Rückschau“ + „VL02 v3“ | [02](vorlesungen/02_2026-10-09.md) |
+| 3 | 14.10.2026 | Programmiersprachen, Werkzeuge (Compiler, Linker, Lader, Debugger), O-Notation, Kodierungen (ASCII, Unicode, UTF-8) | vermutet (Rest von „GIT VL02 V4“) | [03](vorlesungen/03_2026-10-14.md) |
 
 ## Materialien in Moodle
 
