@@ -21,7 +21,16 @@ python3 -I tools/heute.py            # Termine von heute (Europe/Berlin)
 
 ## 1. Moodle-Scan (bei jedem Uni-Tag, für ALLE Fächer)
 
-Die Unterlagen werden im Semester **nach und nach** hochgeladen. Deshalb bei jedem Lauf:
+Die Unterlagen werden im Semester **nach und nach** hochgeladen. Folien und Lösungen eines Termins
+kommen in der Regel **erst nach der Vorlesung** in Moodle. Daraus folgt:
+
+- Notizen für **heutige** Termine ohne eigene Folien sind normal `vermutet` – das ist kein Fehler
+  und muss im Briefing nicht als fehlend beklagt werden.
+- Der eigentliche Nachtrag passiert beim **nächsten Lauf**: Material zum letzten Termin jedes
+  Fachs gezielt suchen und die Notiz damit überarbeiten (siehe unten). Neue Lösungen zu Übungen
+  mit den Lösungsskizzen der Routine abgleichen und Abweichungen in der Notiz korrigieren.
+
+Deshalb bei jedem Lauf:
 
 ```bash
 python3 -I tools/moodle.py course <moodle-id>      # für jedes Fach aus faecher.json
