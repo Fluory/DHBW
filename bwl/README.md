@@ -1,18 +1,21 @@
 # Einführung in die BWL
 
-Moodle: [Kurs 18616](https://moodle.heilbronn.dhbw.de/course/view.php?id=18616) · Kalender-Titel: „Einführung BWL“
+Moodle: [Kurs 18616](https://moodle.heilbronn.dhbw.de/course/view.php?id=18616) · Kalender-Titel: „Einführung BWL“ · Dozentin: Michaela Geiger
+
+9 Termine, erster am 15.10.2026.
 
 ## Fortschritt
 
 | Nr | Datum | Thema | Grundlage | Notiz |
 |---|---|---|---|---|
+| 1 | 15.10.2026 | BWL als Wissenschaft, Produktionsfaktoren, Güter, ökonomisches Prinzip, Kennzahlen | vermutet (Skript Kap. 1) | [01](vorlesungen/01_2026-10-15.md) |
 
 ## Materialien in Moodle
 
 | Material | Link | gesehen am | genutzt für |
 |---|---|---|---|
-| Skript + Übungen | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190112) | 06.10.2026 | noch nicht ausgewertet |
-| Musterklausur | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190113) | 06.10.2026 | noch nicht ausgewertet |
+| Skript + Übungen | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190112) | 06.10.2026 | Termin 1 (Kap. 1, S. 5–18) |
+| Musterklausur | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190113) | 06.10.2026 | Termin 1 (Aufgabe 1b), Klausurvorbereitung |
 
 ## Eigene Notizen
 
