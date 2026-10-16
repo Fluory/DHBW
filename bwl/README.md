@@ -16,6 +16,7 @@ Moodle: [Kurs 18616](https://moodle.heilbronn.dhbw.de/course/view.php?id=18616) 
 |---|---|---|---|
 | Skript + Übungen | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190112) | 06.10.2026 | Termin 1 (Kap. 1, S. 5–18) |
 | Musterklausur | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190113) | 06.10.2026 | Termin 1 (Aufgabe 1b), Klausurvorbereitung |
+| Lösung zu den ABWL-Übungen 2026 (bis Übung 5) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190813) | 16.10.2026 | Termin 1 (Übungen 1–5) |
 
 ## Eigene Notizen
 

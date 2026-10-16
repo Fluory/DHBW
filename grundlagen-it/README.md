@@ -26,6 +26,10 @@ Zahlensysteme (09. + 14.10.) → Rechnerarchitektur (16.10.) → relationale Dat
 | GIT VL02 Rückschau (56 Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190496) | 12.10.2026 | Termin 2 (zeigt den behandelten Stoff) |
 | GIT VL02 V4 (160 Folien, kleine Überarbeitung) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190601) | 13.10.2026 | Termine 2 und 3 |
 | GIT VL02 – Rückschau (neue Fassung, 55 Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190602) | 13.10.2026 | Termin 2 |
+| GIT VL02 – final | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190829) | 16.10.2026 | Termin 3 |
+| GIT VL02 Rückschau final | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190830) | 16.10.2026 | Termin 3 (zeigt den behandelten Stoff) |
+| GIT VL03a – Rechnerarchitektur | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190833) | 16.10.2026 | Termin 4 |
+| GIT VL03b – Komponenten | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190834) | 16.10.2026 | Termin 4 |
 
 ## Eigene Notizen
 
