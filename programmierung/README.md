@@ -13,6 +13,7 @@ Terminal, `uv`, Python 3.14, `ruff`, `ty` – bewusst ohne IDE und ohne KI-Assis
 | 1 | 05.10.2026 | Kennenlernen, Organisatorisches & Einführung | Folien „Vorlesung 1 – Einführung“ | [01](vorlesungen/01_2026-10-05.md) |
 | 2 | 09.10.2026 | Variablen, Datentypen und Operatoren | Folien „Vorlesung 2“ | [02](vorlesungen/02_2026-10-09.md) |
 | 3 | 13.10.2026 | Kontrollstrukturen und Listen | Folien „Vorlesung 3“ | [03](vorlesungen/03_2026-10-13.md) |
+| 4 | 16.10.2026 | Funktionen (Parameter, Rückgabe, main, Gültigkeit, Übergabe), Standardwerte, Rekursion, Testen mit pytest | Folien „vl04_funktionen_rekursion“ | [04](vorlesungen/04_2026-10-16.md) |
 
 ## Materialien in Moodle
 
