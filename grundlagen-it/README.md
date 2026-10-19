@@ -31,6 +31,10 @@ Zahlensysteme (09. + 14.10.) → Rechnerarchitektur (16.10.) → relationale Dat
 | GIT VL02 Rückschau final | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190830) | 16.10.2026 | Termin 3 (zeigt den behandelten Stoff) |
 | GIT VL03a – Rechnerarchitektur | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190833) | 16.10.2026 | Termin 4 |
 | GIT VL03b – Komponenten | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190834) | 16.10.2026 | Termin 4 |
+| GIT VL03a – Rückschau | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190914) | 19.10.2026 | Termin 4 (zeigt den behandelten Stoff) |
+| GIT VL03b – Rückschau | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190915) | 19.10.2026 | Termin 4 (zeigt den behandelten Stoff) |
+| GIT VL03c – KI-Exkurs (AI Accelerator) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190965) | 19.10.2026 | Termin 4 |
+| GIT VL04 – Datenbanken | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190916) | 19.10.2026 | Termin 5 |
 
 ## Eigene Notizen
 
