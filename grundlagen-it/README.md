@@ -13,7 +13,8 @@ Zahlensysteme (09. + 14.10.) → Rechnerarchitektur (16.10.) → relationale Dat
 | 1 | 07.10.2026 | Organisation und Themeneinführung: Information, Digitalisierung, IT-Infrastrukturen, Treiber | Folien „VL01“ | [01](vorlesungen/01_2026-10-07.md) |
 | 2 | 09.10.2026 | Grundlegende Konzepte: Zahlensysteme, Zweierkomplement, Logikgatter, Datenstrukturen, Bäume, Suchen und Sortieren | Folien „GIT VL02 Rückschau“ + „VL02 v3“ | [02](vorlesungen/02_2026-10-09.md) |
 | 3 | 14.10.2026 | Programmiersprachen, Fehlerquellen, Modellierung, Werkzeuge (Compiler, Linker, Lader, Debugger), Rekursion; Kodierungen/O-Notation nicht belegt | Folien „GIT VL02 – final“ + „Rückschau final“ | [03](vorlesungen/03_2026-10-14.md) |
-| 4 | 16.10.2026 | Rechnerarchitektur: Generationen, Computer-Spektrum, Von-Neumann, Harvard, Komponenten (CPU, Cache, Bus, Speicher, SSD, RAID, GPU) | Folien „GIT VL03a“ + „VL03b“ | [04](vorlesungen/04_2026-10-16.md) |
+| 4 | 16.10.2026 | Rechnerarchitektur: Von-Neumann, Harvard, Komponenten (CPU, Cache, Bus, Speicherhierarchie, RAID 0/1/5/6, GPU), KI-Exkurs (GPU/NPU/TPU) | Folien „VL03a/b Rückschau“ + „VL03c KI-Exkurs“ | [04](vorlesungen/04_2026-10-16.md) |
+| 5 | 19.10.2026 | Datenbanken: Dateiansatz vs. DBMS, ER-Modell, relationales Modell, SQL, OLTP/OLAP | Folien „GIT VL04 – Datenbanken“ | [05](vorlesungen/05_2026-10-19.md) |
 
 ## Materialien in Moodle
 
