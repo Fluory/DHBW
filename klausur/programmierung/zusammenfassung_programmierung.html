@@ -1,0 +1,1875 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Zusammenfassung Programmierung</title>
+<style>
+@page { size: A4; margin: 14mm; }
+:root {
+  --ink: #1b1b1b; --muted: #555; --line: #c9c9c9; --code: #f1f1f1; --out: #e8eef6;
+  --blue: #1f5fa8; --red: #b3261e; --green: #2e7d32; --orange: #b86a00; --violet: #6a3fa0;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #fff; color: var(--ink); }
+body { font-family: "Liberation Sans", Arial, sans-serif; font-size: 10pt; line-height: 1.33;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+h1 { font-size: 19pt; margin: 0 0 3mm; padding-bottom: 1.5mm; border-bottom: 2.5px solid var(--blue); color: var(--blue); break-before: page; }
+h1.first { break-before: auto; }
+h1 .vl { display: inline-block; font-size: 10pt; background: var(--blue); color: #fff; padding: 1px 7px; border-radius: 3px; vertical-align: middle; margin-right: 6px; }
+h2 { font-size: 12.5pt; margin: 4mm 0 1.2mm; color: #123d6e; break-after: avoid; }
+h3 { font-size: 11pt; margin: 3.5mm 0 1mm; break-after: avoid; }
+p { margin: 0.8mm 0 1.6mm; }
+ul, ol { margin: 1mm 0 2mm; padding-left: 6mm; }
+li { margin: 0.3mm 0; }
+code { font-family: "DejaVu Sans Mono", "Liberation Mono", monospace; font-size: 8.9pt; background: var(--code); padding: 0 3px; border-radius: 2px; }
+pre { margin: 0; }
+pre.code { font-family: "DejaVu Sans Mono", "Liberation Mono", monospace; font-size: 7.9pt; line-height: 1.22; background: var(--code);
+  border-left: 3px solid #9a9a9a; padding: 1.4mm 2.5mm; white-space: pre-wrap; margin: 1.2mm 0 1.6mm; orphans: 4; widows: 4; }
+pre.code.java { border-left-color: var(--orange); }
+pre.code.java::before { content: "Java"; display: block; font-family: "Liberation Sans", Arial, sans-serif; font-size: 7.5pt; color: var(--orange); font-weight: bold; }
+.ex { margin: 1.2mm 0 1.8mm; }
+.ex pre.code { margin: 0; }
+pre.out { font-family: "DejaVu Sans Mono", "Liberation Mono", monospace; font-size: 7.9pt; line-height: 1.22; background: var(--out);
+  border-left: 3px solid var(--blue); padding: 0.8mm 2.5mm 1.2mm; white-space: pre-wrap; break-inside: avoid; break-before: avoid; }
+pre.out::before { content: "Ausgabe"; display: block; font-family: "Liberation Sans", Arial, sans-serif; font-size: 7.5pt; color: var(--blue); font-weight: bold; }
+table { border-collapse: collapse; width: 100%; margin: 1.2mm 0 2.4mm; font-size: 8.8pt; line-height: 1.26; }
+tr { break-inside: avoid; }
+th, td { border: 1px solid var(--line); padding: 0.7mm 1.6mm; vertical-align: top; text-align: left; }
+th { background: #e4ebf4; }
+td code, th code { font-size: 8.4pt; }
+.box { border: 1px solid var(--line); border-left: 5px solid var(--blue); border-radius: 3px; padding: 1.6mm 3mm; margin: 2mm 0 2.4mm; background: #fafbfd; }
+.slide, .info { break-inside: avoid; }
+
+.box > .t { font-weight: bold; margin-bottom: 1mm; display: block; break-after: avoid; }
+.box ul { margin: 0.5mm 0; }
+.trap { border-left-color: var(--red); background: #fdf6f5; }
+.trap > .t { color: var(--red); }
+.must { border-left-color: var(--green); background: #f5faf5; }
+.must > .t { color: var(--green); }
+.must ul { list-style: none; padding-left: 1mm; }
+.must li::before { content: "☐ "; color: var(--green); }
+.slide { border-left-color: var(--orange); background: #fff8ee; }
+.slide > .t { color: var(--orange); }
+.info { border-left-color: var(--violet); background: #f8f5fc; }
+.info > .t { color: var(--violet); }
+.erg { color: var(--violet); font-style: italic; font-size: 9pt; }
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5mm; align-items: start; }
+.cols > * { min-width: 0; }
+.cols > .box { margin: 1.5mm 0 0; }
+.cols:has(> .ex:first-child + div:not(.ex)) { grid-template-columns: 1.6fr 1fr; }
+.cols:has(> .ex:first-child + figure) { grid-template-columns: 1.1fr 1fr; }
+figure { margin: 2mm 0 3mm; break-inside: avoid; text-align: center; }
+figure svg { max-width: 100%; height: auto; }
+figcaption { font-size: 8.8pt; color: var(--muted); margin-top: 1mm; }
+.small { font-size: 9pt; color: var(--muted); }
+.kpi td:first-child { width: 33%; font-weight: bold; }
+.prio td:first-child { width: 7mm; text-align: center; font-weight: bold; color: var(--blue); }
+.title { border: 2px solid var(--blue); border-radius: 4px; padding: 3mm 4mm; margin-bottom: 3mm; }
+.title .big { font-size: 20pt; font-weight: bold; color: var(--blue); }
+.tag { display: inline-block; font-size: 8pt; border: 1px solid var(--line); border-radius: 3px; padding: 0 4px; margin-right: 3px; }
+svg text { font-family: "Liberation Sans", Arial, sans-serif; }
+svg .mono { font-family: "DejaVu Sans Mono", monospace; }
+</style>
+</head>
+<body>
+
+<!-- ================================================================ KLAUSUR AUF EINEN BLICK -->
+<div class="title">
+  <div class="big">Grundlagen der Programmierung (Python)</div>
+  <div>Klausurorientierte Zusammenfassung · DHBW Heilbronn, Wirtschaftsinformatik, 1. Semester · Dozent: Dr. Markus Rosenfelder</div>
+  <div class="small">Stand: 21.10.2026 · <b>Teil 1: deckt VL1 bis VL5 ab</b> und wird nach den nächsten Terminen erweitert (OOP II–III, Standardbibliothek, Klausurvorbereitung).</div>
+</div>
+
+<h1 class="first">Klausur auf einen Blick</h1>
+
+<div class="cols">
+<div>
+<h3>Was bekannt ist</h3>
+<table class="kpi">
+<tr><td>Termin</td><td><b>Fr 11.12.2026</b> (laut Lernplan)</td></tr>
+<tr><td>Dauer</td><td><b>120 Minuten</b></td></tr>
+<tr><td>Form</td><td>Klausur, entweder auf <b>Papier</b> oder <b>am Rechner</b> (noch offen)</td></tr>
+<tr><td>Musterklausur</td><td><b>keine</b>. Was relevant ist, zeigen die Übungen, die Mini-Aufgaben auf den Folien und die offiziellen Musterlösungen.</td></tr>
+<tr><td>Stoffstand</td><td>4 von 11 Terminen gehalten (VL1–VL4). <b>VL5 (OOP I) ist am 23.10.</b>: Kapitel 5 beruht auf den vorab veröffentlichten Folien und Musterlösungen.</td></tr>
+<tr><td>Arbeitsweise im Kurs</td><td>Code von Hand im Texteditor, ohne IDE und ohne KI. Python 3.14, Prüfwerkzeuge <code>ruff</code> und <code>ty</code></td></tr>
+</table>
+<h3>Was noch offen ist</h3>
+<ul>
+<li>Papier oder Rechner? Uhrzeit, Raum und erlaubte Hilfsmittel sind noch nicht bekannt.</li>
+<li>Stoff der VL6–VL11: Vererbung, Polymorphismus und Abstraktion (VL6/VL7 laut VL5-Folien), Standardbibliothek und Klausurvorbereitung. <b>Dieses Dokument wird ergänzt.</b></li>
+<li>Ob List Comprehensions und <code>map</code>/<code>filter</code>/<code>reduce</code> prüfungsrelevant sind, ist unklar. Bisher kommen sie nur in einer Musterlösung bzw. als Stichwort vor.</li>
+</ul>
+</div>
+<div>
+<h3>Wahrscheinliche Aufgabentypen <span class="small">(abgeleitet, nicht bestätigt)</span></h3>
+<ol>
+<li><b>„Was gibt das aus?“</b>: Mini-Aufgaben dieser Art stehen direkt auf den Folien (z. B. Modulo, Zuweisungsoperatoren, Vergleiche).</li>
+<li><b>Fehler finden und Fehlermeldungen deuten.</b> Laut Dozent ist das „die wichtigste Fähigkeit“ (VL1).</li>
+<li><b>Code nach einer Textaufgabe schreiben</b>, z. B. Staffelpreise, Gebühren, Schleifen über Listen, Funktionen, Rekursion und Klassen.</li>
+<li><b>Begriffe erklären und vergleichen</b>, z. B. Compiler oder Interpreter, imperativ oder applikativ, Klasse oder Objekt.</li>
+</ol>
+<h3>Prioritäten fürs Lernen</h3>
+<table class="prio">
+<tr><td>1</td><td><b>Operatoren und Ausdrücke</b>: <code>/ // %</code>, Rangfolge, Typumwandlung (Kap. 2)</td></tr>
+<tr><td>2</td><td><b>Fehlerarten und Tracebacks</b>: Syntax, Typ, Laufzeit, Logik (Kap. 2, Anhang)</td></tr>
+<tr><td>3</td><td><b>Verzweigungen und Schleifen</b>: <code>elif</code>, <code>match</code>, <code>range</code>, <code>break</code>/<code>continue</code> (Kap. 3)</td></tr>
+<tr><td>4</td><td><b>Listen und Namen → Objekte</b>, Verweis-Falle (Kap. 2–4)</td></tr>
+<tr><td>5</td><td><b>Funktionen</b>: <code>return</code>, Standardwerte, LEGB, Übergabe (Kap. 4)</td></tr>
+<tr><td>6</td><td><b>Rekursion</b>: Abbruchbedingung, Aufrufstapel (Kap. 4)</td></tr>
+<tr><td>7</td><td><b>Klassen</b>: <code>__init__</code>, <code>self</code>, Methoden, Property, <code>@dataclass</code> (Kap. 5)</td></tr>
+<tr><td>8</td><td>Theorie VL1: Algorithmus, Übersetzung, Werkzeuge (Kap. 1)</td></tr>
+</table>
+</div>
+</div>
+
+<div class="box info"><span class="t">So liest du dieses Dokument</span>
+<ul>
+<li>Klausurrelevant ist, was auf den Folien steht. Was darüber hinausgeht, ist mit <span class="erg">(Ergänzung)</span> markiert.</li>
+<li><b>Orange Kästen</b> zeigen Folienfehler mit der richtigen Lösung. <b>Rote Kästen</b> sammeln typische Fehler und Fallen, <b>grüne Kästen</b> sind Checklisten („Das musst du können“).</li>
+<li>Alle Codebeispiele wurden ausgeführt, die Ausgabe ist echt (lokal mit Python 3.13 statt der Kursversion 3.14; einzelne Fehlermeldungstexte können minimal abweichen, z. B. „float division by zero“ statt „division by zero“). Bei Fehlern steht nur die letzte Zeile des Tracebacks da. Aus Platzgründen steht zwischen Funktionen nur eine Leerzeile (<code>ruff format</code> setzt zwei).</li>
+<li>Für eine Papierklausur: Achte beim Schreiben auf saubere 4er-Einrückung und auf den Doppelpunkt nach <code>if</code>/<code>for</code>/<code>def</code>/<code>class</code>. <span class="erg">(Ergänzung)</span></li>
+</ul>
+</div>
+
+<!-- ================================================================ VL1 -->
+<h1><span class="vl">VL1</span>Einführung: Algorithmen, Übersetzung, Python</h1>
+
+<h2>1.1 Algorithmen</h2>
+<p>Ein <b>Algorithmus</b> ist eine Schrittfolge, die ein Problem systematisch löst. Er beschreibt den Lösungsweg unabhängig von der Programmiersprache. Jeder Schritt ist so genau beschrieben, dass eine Person oder ein Computer ihn ohne Rückfrage ausführen kann. An einen Algorithmus stellt man vier <b>Anforderungen</b>: <b>Endlichkeit</b> (er endet), <b>Ausführbarkeit</b>, <b>Korrektheit</b> und <b>Effizienz</b> (er geht sparsam mit Zeit und Speicher um).</p>
+
+<table>
+<tr><th>Eigenschaft</th><th>Bedeutung</th><th>Merkhilfe</th></tr>
+<tr><td><b>terminierend</b></td><td>endet bei jeder erlaubten Eingabe nach endlich vielen Schritten</td><td>Er hört auf.</td></tr>
+<tr><td><b>determiniert</b></td><td>Gleiche Eingaben und Startbedingungen liefern immer das gleiche <b>Ergebnis</b>.</td><td>Es geht um das Ergebnis.</td></tr>
+<tr><td><b>deterministisch</b></td><td>Der <b>nächste Schritt</b> und der Zustand sind zu jedem Zeitpunkt eindeutig festgelegt.</td><td>Es geht um den Weg.</td></tr>
+</table>
+
+<p><b>Folienbeispiel Nachbestellung:</b> (1) Nimm den nächsten Artikel aus der Lagerliste. (2) Ist der Bestand kleiner als der Meldebestand? Wenn nein, weiter mit 5. (3) Bestellmenge = Höchstbestand − Bestand. (4) Löse die Bestellung aus. (5) Sind noch Artikel in der Liste? Wenn ja, weiter mit 1, sonst fertig. Für die Schrauben (Bestand 12, Meldebestand 20, Höchstbestand 100) werden 100 − 12 = <b>88 Stück</b> bestellt, für die Muttern (8 / 25 / 120) <b>112 Stück</b>. Bei den Dichtringen (45 / 30) wird nichts bestellt. Gleiche Bestände ergeben immer dieselbe Bestellung (determiniert).</p>
+
+<h2>1.2 Datenstrukturen</h2>
+<div class="cols" style="grid-template-columns: 1fr 2.2fr">
+<p>Datenstrukturen ordnen Daten so, dass man effizient auf sie zugreifen und sie ändern kann. In Python sind <code>list</code>, <code>tuple</code>, <code>dict</code> und <code>set</code> fest eingebaut.</p>
+<table style="margin-top:0">
+<tr><th>Datenstruktur</th><th>Eigenschaft</th><th>Beispiel</th></tr>
+<tr><td>Array</td><td>Zugriff über einen Index, feste Größe</td><td>Messwerte pro Monat</td></tr>
+<tr><td>Liste</td><td>flexible Größe</td><td>Warenkorb</td></tr>
+<tr><td>Baum</td><td>Hierarchien</td><td>Dateisystem, Ablage nach Jahr → Lieferant → Monat</td></tr>
+<tr><td>Graph</td><td>Netzwerke</td><td>Routenplanung</td></tr>
+<tr><td>Stack (Stapel)</td><td><b>LIFO</b>: last in, first out</td><td>Zurück-Taste im Browser</td></tr>
+<tr><td>Queue (Warteschlange)</td><td><b>FIFO</b>: first in, first out</td><td>Druckaufträge, Rechnungen in Eingangsreihenfolge</td></tr>
+</table>
+</div>
+
+<h2>1.3 Von der Maschinensprache zu Python</h2>
+<p>Ein Prozessor versteht nur <b>Maschinensprache</b>, also binäre Befehle. <b>Assembler</b> schreibt dieselben Befehle symbolisch (<code>MOV</code>, <code>ADD</code>, <code>CMP</code>, <code>JE</code>) und hängt deshalb vom Prozessortyp ab. Ab den 1950er-Jahren kamen <b>höhere Programmiersprachen</b>, die von der Hardware abstrahieren. Früher teilte man die Sprachen in Generationen ein. Heute spricht man von <b>Paradigmen</b>, die nebeneinander bestehen: imperativ bzw. prozedural, objektorientiert, funktional, deklarativ bzw. logisch. Python ist <b>multiparadigmatisch</b>, du kannst darin also nach mehreren Paradigmen programmieren.</p>
+
+<figure>
+<svg viewBox="0 0 700 190" width="680" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker></defs>
+<g font-size="12">
+<text x="5" y="30" font-weight="bold" fill="#1f5fa8">Interpreter</text>
+<rect x="110" y="12" width="90" height="28" rx="4" fill="#f1f1f1" stroke="#888"/><text x="155" y="31" text-anchor="middle">Quellcode</text>
+<rect x="240" y="12" width="200" height="28" rx="4" fill="#e4ebf4" stroke="#1f5fa8"/><text x="340" y="31" text-anchor="middle">Interpreter: Anweisung für Anweisung</text>
+<rect x="590" y="12" width="90" height="28" rx="4" fill="#e8f3e8" stroke="#2e7d32"/><text x="635" y="31" text-anchor="middle">Ergebnis</text>
+<line x1="200" y1="26" x2="238" y2="26" stroke="#444" marker-end="url(#ar)"/><line x1="440" y1="26" x2="588" y2="26" stroke="#444" marker-end="url(#ar)"/>
+
+<text x="5" y="88" font-weight="bold" fill="#1f5fa8">Compiler</text>
+<rect x="110" y="70" width="90" height="28" rx="4" fill="#f1f1f1" stroke="#888"/><text x="155" y="89" text-anchor="middle">Quellcode</text>
+<rect x="240" y="70" width="90" height="28" rx="4" fill="#e4ebf4" stroke="#1f5fa8"/><text x="285" y="89" text-anchor="middle">Compiler</text>
+<rect x="370" y="70" width="180" height="28" rx="4" fill="#fff3df" stroke="#b86a00"/><text x="460" y="89" text-anchor="middle">Maschinencode (Zielplattform)</text>
+<rect x="590" y="70" width="90" height="28" rx="4" fill="#e8f3e8" stroke="#2e7d32"/><text x="635" y="89" text-anchor="middle">Ergebnis</text>
+<line x1="200" y1="84" x2="238" y2="84" stroke="#444" marker-end="url(#ar)"/><line x1="330" y1="84" x2="368" y2="84" stroke="#444" marker-end="url(#ar)"/><line x1="550" y1="84" x2="588" y2="84" stroke="#444" marker-end="url(#ar)"/>
+
+<text x="5" y="146" font-weight="bold" fill="#1f5fa8">Zwischencode</text>
+<rect x="110" y="128" width="90" height="28" rx="4" fill="#f1f1f1" stroke="#888"/><text x="155" y="147" text-anchor="middle">hallo.py</text>
+<rect x="240" y="128" width="90" height="28" rx="4" fill="#e4ebf4" stroke="#1f5fa8"/><text x="285" y="147" text-anchor="middle">Übersetzer</text>
+<rect x="370" y="128" width="70" height="28" rx="4" fill="#fff3df" stroke="#b86a00"/><text x="405" y="147" text-anchor="middle">Bytecode</text>
+<rect x="470" y="128" width="90" height="28" rx="4" fill="#e4ebf4" stroke="#1f5fa8"/><text x="515" y="147" text-anchor="middle">VM (+ JIT)</text>
+<rect x="590" y="128" width="90" height="28" rx="4" fill="#e8f3e8" stroke="#2e7d32"/><text x="635" y="147" text-anchor="middle">Ergebnis</text>
+<line x1="200" y1="142" x2="238" y2="142" stroke="#444" marker-end="url(#ar)"/><line x1="330" y1="142" x2="368" y2="142" stroke="#444" marker-end="url(#ar)"/><line x1="440" y1="142" x2="468" y2="142" stroke="#444" marker-end="url(#ar)"/><line x1="560" y1="142" x2="588" y2="142" stroke="#444" marker-end="url(#ar)"/>
+<path d="M240 165 h320" stroke="#1f5fa8" stroke-dasharray="4 3" fill="none"/>
+<text x="400" y="182" text-anchor="middle" fill="#1f5fa8">beides steckt in CPython: Python ist eine Zwischencode-Sprache</text>
+</g>
+</svg>
+<figcaption>Drei Wege vom Quellcode zum Ergebnis</figcaption>
+</figure>
+
+<table>
+<tr><th>Strategie</th><th>Ablauf</th><th>Vorteil</th><th>Nachteil</th><th>Beispiele</th></tr>
+<tr><td><b>Interpreter</b></td><td>liest Anweisung für Anweisung und führt sie sofort aus; es entsteht kein dauerhaftes Programm</td><td>schnelles Ausprobieren</td><td>langsamer</td><td>Shell-Skripte</td></tr>
+<tr><td><b>Compiler</b></td><td>übersetzt vorab alles in Maschinencode für die Zielhardware</td><td>hohe Geschwindigkeit</td><td>vor jedem Test kompilieren; läuft nur auf der Zielplattform</td><td>C, C++, Rust, Go</td></tr>
+<tr><td><b>Zwischencode</b></td><td>Bytecode, den eine virtuelle Maschine ausführt (oft mit JIT)</td><td>portabel</td><td>braucht eine Laufzeitumgebung</td><td>Java (JVM), C# (.NET), Python</td></tr>
+</table>
+<p>Ein <b>JIT</b> (Just-in-Time-Compiler) übersetzt häufig genutzten Code erst zur Laufzeit in Maschinencode. Dadurch verschwimmen die Grenzen zwischen Interpreter und Compiler. Python hat seit Version 3.13 einen experimentellen JIT.</p>
+
+<h2>1.4 Python: Eigenschaften, Syntax, Werkzeuge</h2>
+<p>Guido van Rossum hat Python ab 1989 entwickelt und 1991 veröffentlicht, den Namen hat es von Monty Python. Python 3 erschien 2008 und ist bewusst inkompatibel zu Python 2, im Kurs wird <b>Python 3.14</b> verwendet. Python ist plattformunabhängig, hat eine automatische Speicherverwaltung und eine große Standardbibliothek („Batteries included“). Außerdem ist es <b>dynamisch, aber stark typisiert</b>: Jeder <i>Wert</i> hat einen festen Typ, Variablen haben keinen. Python wandelt nicht heimlich um, deshalb gibt <code>"5" + 1</code> einen Fehler (Kap. 2).</p>
+
+<div class="cols">
+<div>
+<h3>Syntaxregeln</h3>
+<ul>
+<li><b>Einrückung bildet Blöcke</b> (Standard: 4 Leerzeichen), geschweifte Klammern gibt es dafür nicht.</li>
+<li>Ein <code>:</code> leitet einen Block ein. Ein Semikolon am Zeilenende braucht man nicht.</li>
+<li>Groß- und Kleinschreibung zählt: <code>Print</code> ist nicht <code>print</code>.</li>
+<li><code>#</code> leitet einen Kommentar ein. Erstes Programm: <code>print("Hello World!")</code></li>
+<li>Eine Klasse oder <code>main</code> ist nicht nötig, die Datei läuft von oben nach unten.</li>
+</ul>
+</div>
+<div>
+<h3>Was bei <code>uv run hallo.py</code> passiert</h3>
+<ol>
+<li>CPython prüft zuerst die <b>Syntax</b> der ganzen Datei. Einen Tippfehler bemerkt es also, bevor eine einzige Zeile läuft.</li>
+<li>Es übersetzt den Code in <b>Bytecode</b>. Für importierte Module wird er in <code>__pycache__/</code> gespeichert.</li>
+<li>Die <b>Python-VM</b> führt den Bytecode aus.</li>
+</ol>
+</div>
+</div>
+
+<table>
+<tr><th>Werkzeug</th><th>Aufgabe</th><th>Befehl</th></tr>
+<tr><td><b>uv</b></td><td>installiert Python, verwaltet Projekte und Pakete, startet Programme</td><td><code>uv run hallo.py</code>, <code>uv add --dev ruff ty</code></td></tr>
+<tr><td><b>CPython</b></td><td>Übersetzer und VM in einem, mit Standardbibliothek; Projektumgebung <code>.venv</code></td><td><code>uv run python</code> (Konsole, Prompt <code>&gt;&gt;&gt;</code>, Ende mit <code>exit()</code>)</td></tr>
+<tr><td><b>ruff</b></td><td>Formatierung, Stil und typische Fehler</td><td><code>uv run ruff format .</code>, <code>uv run ruff check .</code></td></tr>
+<tr><td><b>ty</b></td><td>prüft die Datentypen, <b>ohne</b> das Programm auszuführen</td><td><code>uv run ty check</code></td></tr>
+</table>
+
+<div class="cols">
+<div class="box trap"><span class="t">Typische Fehler und Fallen</span>
+<ul>
+<li>„Determiniert“ (gleiches <i>Ergebnis</i>) und „deterministisch“ (eindeutiger nächster <i>Schritt</i>) werden oft verwechselt.</li>
+<li>Python ist <i>nicht</i> „rein interpretiert“. Es übersetzt erst in Bytecode, den dann eine VM ausführt.</li>
+<li>„Dynamisch typisiert“ heißt nicht „schwach typisiert“. Python rät nicht, deshalb gibt <code>"Alter: " + 36</code> einen TypeError.</li>
+</ul>
+</div>
+<div class="box must"><span class="t">Das musst du können</span>
+<ul>
+<li>die vier Anforderungen an Algorithmen nennen und terminierend, determiniert und deterministisch unterscheiden</li>
+<li>Stack (LIFO) und Queue (FIFO) erklären und passend zuordnen</li>
+<li>Interpreter, Compiler und Zwischencode mit Vor- und Nachteilen vergleichen und Python einordnen</li>
+<li>die Syntaxregeln anwenden und sagen, wofür uv, ruff und ty zuständig sind</li>
+</ul>
+</div>
+</div>
+
+<!-- ================================================================ VL2 -->
+<h1><span class="vl">VL2</span>Variablen, Datentypen und Operatoren</h1>
+
+<h2>2.1 Kommentare und Docstrings</h2>
+<p>Ein <b>Kommentar</b> beginnt mit <code>#</code> und reicht bis zum Zeilenende. Python ignoriert ihn, er ist für Menschen gedacht. Ein guter Kommentar erklärt das <b>Warum</b>, denn das Was zeigt der Code selbst. Für mehrere Zeilen schreibt man mehrere <code>#</code>-Zeilen. <code>/* … */</code> wie in Java gibt es nicht. Ein <b>Docstring</b> <code>"""…"""</code> direkt unter <code>def</code> oder <code>class</code> beschreibt eine Funktion, Klasse oder Datei. Im Kurs gilt der <b>Google-Stil</b>: zuerst ein kurzer Satz, dann <code>Args:</code> und <code>Returns:</code>.</p>
+<div class="ex"><div class="ex"><pre class="code"># Seit 2007 gilt der Regelsatz von 19 %.   (sinnvoll: erklärt das Warum)
+netto = 100
+brutto = netto * 1.19  # Multipliziere netto mit 1.19   (überflüssig)
+
+def kreisflaeche(radius: float) -&gt; float:
+    """Berechnet die Fläche eines Kreises.
+
+    Args:
+        radius: Radius in Metern, nicht negativ.
+
+    Returns:
+        Die Fläche in Quadratmetern.
+    """
+    return 3.14159 * radius**2
+
+print(brutto, kreisflaeche(2))</pre><pre class="out">119.0 12.56636</pre></div></div>
+
+<h2>2.2 Typisierung und einfache Datentypen</h2>
+<p>Der <b>Datentyp</b> legt fest, welche Art von Daten vorliegt und welche Operationen erlaubt sind. Mit <code>type(42)</code> fragst du ihn ab, das Ergebnis ist <code>&lt;class 'int'&gt;</code>. In Python ist jeder Wert ein Objekt, „primitive“ Typen wie in Java gibt es nicht.</p>
+<p><b>Typisierung:</b> <b>statisch</b> = Prüfung beim Kompilieren (Java, C#), <b>dynamisch</b> = erst beim Ausführen (Python, JavaScript), <b>graduell</b> (im Kurs) = Python mit Typangaben, die <code>ty</code> vor dem Ausführen prüft; Python selbst ignoriert sie.</p>
+
+<table>
+<tr><th>Typ</th><th>Beispiele</th><th>Wichtig</th><th>Java</th></tr>
+<tr><td><code>int</code></td><td><code>42</code>, <code>-7</code>, <code>1_000_000</code></td><td>beliebig groß, kein Überlauf (<code>2 ** 100</code> geht)</td><td>byte/short/int/long</td></tr>
+<tr><td><code>float</code></td><td><code>3.14</code>, <code>-0.5</code></td><td>64 Bit, 15–16 Stellen genau; <code>0.1 + 0.2 == 0.3</code> ergibt <code>False</code></td><td>double</td></tr>
+<tr><td><code>bool</code></td><td><code>True</code>, <code>False</code></td><td>großgeschrieben</td><td>boolean</td></tr>
+<tr><td><code>str</code></td><td><code>"Hallo"</code>, <code>"A"</code></td><td>unveränderlich; ein Zeichen ist ein str der Länge 1, einen eigenen Typ <code>char</code> gibt es nicht</td><td>String, char</td></tr>
+<tr><td><code>None</code></td><td><code>None</code></td><td>„kein Wert“, nicht 0 und nicht <code>""</code>: <code>telefon: str | None = None</code></td><td>null</td></tr>
+</table>
+<p><b>Faustregel:</b> <code>int</code> für ganze Zahlen (Anzahl), <code>float</code> für Messwerte, <code>str</code> für alles, womit man nicht rechnet (PLZ, Telefonnummer; eine führende 0 bliebe sonst nicht erhalten). Für Geld nimmt man <code>decimal.Decimal</code>.</p>
+
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">print(type(42), type(3.0), type("3"))
+print(type(True), type(None))
+print(2 ** 100)
+print(0.1 + 0.2, 0.1 + 0.2 == 0.3)</pre><pre class="out">&lt;class 'int'&gt; &lt;class 'float'&gt; &lt;class 'str'&gt;
+&lt;class 'bool'&gt; &lt;class 'NoneType'&gt;
+1267650600228229401496703205376
+0.30000000000000004 False</pre></div></div>
+<div class="ex"><div class="ex"><pre class="code"># Zeichen ↔ Unicode-Nummer
+print(ord("A"))          # A = 65 = 0100 0001
+print(chr(66))           # 66 = B
+print(chr(ord("A") + 1)) # nächster Buchstabe
+print(ord("☺"))          # passt nicht mehr in 8 Bit</pre><pre class="out">65
+B
+B
+9786</pre></div></div>
+</div>
+
+<h2>2.3 Variablen: Namen zeigen auf Werte</h2>
+<p>Eine Variable ist ein <b>Name, der auf einen Wert zeigt</b>. Stell sie dir wie ein Namensschild vor, das an einem Objekt hängt, nicht wie eine Box. Der Typ gehört zum Wert, nicht zum Namen. Eine Variable entsteht bei der ersten Zuweisung, eine Deklaration wie in Java gibt es nicht. <code>=</code> bedeutet „zeigt ab jetzt auf“. Bei <code>zahl = zahl + 1</code> rechnet Python zuerst die rechte Seite aus und hängt dann das Schild um. Den alten Wert gibt Python automatisch frei, wenn kein Name mehr auf ihn zeigt.</p>
+
+<figure>
+<svg viewBox="0 0 690 135" width="680" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fa8"/></marker></defs>
+<g font-size="12">
+<!-- panel 1 -->
+<rect x="5" y="5" width="215" height="125" rx="5" fill="#fafafa" stroke="#ccc"/>
+<text x="15" y="24" class="mono" font-size="12" font-weight="bold">x = 10</text>
+<rect x="20" y="50" width="45" height="24" rx="3" fill="#e4ebf4" stroke="#1f5fa8"/><text x="42" y="67" text-anchor="middle" class="mono">x</text>
+<circle cx="165" cy="62" r="20" fill="#fff3df" stroke="#b86a00"/><text x="165" y="67" text-anchor="middle" class="mono">10</text>
+<line x1="65" y1="62" x2="143" y2="62" stroke="#1f5fa8" stroke-width="1.5" marker-end="url(#a2)"/>
+<text x="112" y="118" text-anchor="middle" fill="#555" font-size="11">Name → int-Objekt</text>
+<!-- panel 2 -->
+<rect x="237" y="5" width="215" height="125" rx="5" fill="#fafafa" stroke="#ccc"/>
+<text x="247" y="24" class="mono" font-size="12" font-weight="bold">y = x</text>
+<rect x="252" y="40" width="45" height="24" rx="3" fill="#e4ebf4" stroke="#1f5fa8"/><text x="274" y="57" text-anchor="middle" class="mono">x</text>
+<rect x="252" y="78" width="45" height="24" rx="3" fill="#e4ebf4" stroke="#1f5fa8"/><text x="274" y="95" text-anchor="middle" class="mono">y</text>
+<circle cx="397" cy="70" r="20" fill="#fff3df" stroke="#b86a00"/><text x="397" y="75" text-anchor="middle" class="mono">10</text>
+<line x1="297" y1="52" x2="376" y2="66" stroke="#1f5fa8" stroke-width="1.5" marker-end="url(#a2)"/>
+<line x1="297" y1="90" x2="376" y2="76" stroke="#1f5fa8" stroke-width="1.5" marker-end="url(#a2)"/>
+<text x="344" y="122" text-anchor="middle" fill="#555" font-size="11">zwei Namen, <tspan font-weight="bold">ein</tspan> Objekt (keine Kopie)</text>
+<!-- panel 3 -->
+<rect x="469" y="5" width="215" height="125" rx="5" fill="#fafafa" stroke="#ccc"/>
+<text x="479" y="24" class="mono" font-size="12" font-weight="bold">x = x + 1</text>
+<rect x="484" y="40" width="45" height="24" rx="3" fill="#e4ebf4" stroke="#1f5fa8"/><text x="506" y="57" text-anchor="middle" class="mono">x</text>
+<rect x="484" y="78" width="45" height="24" rx="3" fill="#e4ebf4" stroke="#1f5fa8"/><text x="506" y="95" text-anchor="middle" class="mono">y</text>
+<circle cx="635" cy="48" r="18" fill="#fff3df" stroke="#b86a00"/><text x="635" y="53" text-anchor="middle" class="mono">11</text>
+<circle cx="635" cy="92" r="18" fill="#fff3df" stroke="#b86a00"/><text x="635" y="97" text-anchor="middle" class="mono">10</text>
+<line x1="529" y1="52" x2="615" y2="49" stroke="#1f5fa8" stroke-width="1.5" marker-end="url(#a2)"/>
+<line x1="529" y1="90" x2="615" y2="92" stroke="#1f5fa8" stroke-width="1.5" marker-end="url(#a2)"/>
+<text x="576" y="124" text-anchor="middle" fill="#555" font-size="11">x zeigt neu, y bleibt bei 10</text>
+</g>
+</svg>
+<figcaption>Zuweisung hängt ein Namensschild an ein Objekt. Sie kopiert nichts und verändert keinen Wert.</figcaption>
+</figure>
+
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">alter: int = 25            # Typangabe: Versprechen an ty
+breite, hoehe = 1920, 1080 # Mehrfachzuweisung
+x = y = 0                  # zwei Namen, ein Wert
+a, b = 1, 2
+a, b = b, a                # Tauschen ohne Hilfsvariable
+wert = 3,5                 # Falle: Komma statt Punkt!
+print(alter, breite, hoehe, x, y, a, b)
+print(wert, type(wert))</pre><pre class="out">25 1920 1080 0 0 2 1
+(3, 5) &lt;class 'tuple'&gt;</pre></div></div>
+<div>
+<p><b>Typangaben</b> (<code>name: typ = wert</code>) ignoriert Python beim Ausführen. <code>ty</code> prüft sie aber vorher, z. B. meldet es bei <code>alter: int = "25"</code> den Fehler <code>error[invalid-assignment]</code>. Merksatz der Folie: „Die Typangabe ist ein Versprechen. ty passt auf, dass Sie es halten.“</p>
+<p><b>Tauschen</b> mit <code>a, b = b, a</code> funktioniert, weil Python zuerst die ganze rechte Seite auswertet.</p>
+</div>
+</div>
+
+<h3>NameError: typische Ursachen</h3>
+<div class="cols" style="grid-template-columns: 1.6fr 1fr">
+<table style="margin-top:0">
+<tr><th>Ursache</th><th>Beispiel</th></tr>
+<tr><td>Der Variable wurde nie ein Wert zugewiesen</td><td><code>print(summe)</code> ohne vorheriges <code>summe = …</code></td></tr>
+<tr><td>Falsche Groß- und Kleinschreibung</td><td><code>zahl = 5</code>, dann <code>print(Zahl)</code></td></tr>
+<tr><td>Nur eine Typangabe, aber kein Wert</td><td><code>anzahl: int</code>, dann <code>print(anzahl)</code></td></tr>
+<tr><td>(Gültigkeit) Der Block mit der Zuweisung wurde übersprungen</td><td><code>if a &gt; 5: b = 5</code> mit <code>a = 3</code>, dann <code>print(b)</code></td></tr>
+</table>
+<p style="margin-top:0"><b>Gültigkeitsbereich:</b> Variablen, die in einem <code>if</code>- oder Schleifenblock entstehen, gibt es danach weiterhin. Erst Funktionen haben einen eigenen Gültigkeitsbereich (Kap. 4). Wurde der Block aber übersprungen, existiert die Variable nicht.</p>
+</div>
+
+<h3>Namensregeln und Konstanten</h3>
+<table>
+<tr><th>Schreibweise</th><th>wofür</th><th>Beispiel</th></tr>
+<tr><td><code>snake_case</code></td><td>Variablen, Funktionen, Methoden, Dateien</td><td><code>netto_preis</code>, <code>berechne_summe()</code></td></tr>
+<tr><td><code>UPPER_SNAKE_CASE</code></td><td>Konstanten</td><td><code>MWST_SATZ</code></td></tr>
+<tr><td><code>PascalCase</code></td><td>Klassen</td><td><code>Konto</code>, <code>Lagerartikel</code></td></tr>
+<tr><td>camelCase / kebab-case</td><td>camelCase ist Java/JS-Stil; kebab-case ist in Python <b>ungültig</b> (<code>-</code> ist Minus)</td><td><code>nettoPreis</code> (unüblich), <code>netto-preis</code> (Fehler)</td></tr>
+</table>
+<p>Ein Name besteht aus Buchstaben, Ziffern und <code>_</code>. Er darf nicht mit einer Ziffer beginnen und kein Schlüsselwort sein. Umlaute vermeidet man (<code>groesse</code>), die Regeln prüft <code>ruff</code>. <b>Konstanten:</b> Ein <code>final</code> wie in Java gibt es nicht. Mit <code>from typing import Final</code> und <code>MWST_SATZ: Final = 0.19</code> meldet <code>ty</code> jede Neuzuweisung. Python selbst verhindert sie zur Laufzeit aber nicht.</p>
+
+<h2>2.4 Operatoren</h2>
+<table>
+<tr><th>Kategorie</th><th>Operatoren</th><th>Ergebnis</th></tr>
+<tr><td>arithmetisch</td><td><code>+ - * / // % **</code></td><td>Zahl</td></tr>
+<tr><td>Zuweisung</td><td><code>= += -= *= /= //= %=</code></td><td>Name zeigt auf neuen Wert</td></tr>
+<tr><td>Vergleich</td><td><code>== != &lt; &gt; &lt;= &gt;=</code></td><td>immer <code>bool</code></td></tr>
+<tr><td>logisch</td><td><code>and or not</code> (Java: <code>&amp;&amp; || !</code>)</td><td>Wahrheitswert</td></tr>
+<tr><td>Text</td><td><code>+</code> verketten, <code>*</code> wiederholen, <code>in</code> enthalten</td><td><code>str</code> bzw. <code>bool</code></td></tr>
+</table>
+
+<h3>Die drei Arten zu teilen: <code>/</code>, <code>//</code>, <code>%</code></h3>
+<table>
+<tr><th>Operator</th><th>Bedeutung</th><th>Beispiele</th><th>Ergebnistyp</th></tr>
+<tr><td><code>/</code></td><td>echte Division</td><td><code>7 / 2</code> → <code>3.5</code>, <code>6 / 3</code> → <code>2.0</code></td><td><b>immer float</b></td></tr>
+<tr><td><code>//</code></td><td>ganzzahlige Division, rundet <b>ab</b> (zur kleineren Zahl hin)</td><td><code>7 // 2</code> → <code>3</code>, <code>-7 // 2</code> → <code>-4</code> (Java: −3)</td><td>int (bei int-Operanden)</td></tr>
+<tr><td><code>%</code></td><td>Rest der Division (Modulo)</td><td><code>7 % 3</code> → 1, <code>8 % 3</code> → 2, <code>9 % 3</code> → 0</td><td>int</td></tr>
+<tr><td><code>**</code></td><td>Potenz, bindet am stärksten</td><td><code>2 ** 10</code> → 1024</td><td>int/float</td></tr>
+</table>
+<p>Typische Anwendungen für <code>%</code>: <code>zahl % 2 == 0</code> prüft, ob eine Zahl gerade ist, und <code>jahr % 4 == 0</code> prüft die Teilbarkeit durch 4. Die Rangfolge ist <b>Klammern → <code>**</code> → Punkt (<code>* / // %</code>) → Strich (<code>+ -</code>) → Vergleiche → <code>not</code> → <code>and</code> → <code>or</code></b>.</p>
+
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">print(7 / 2, 6 / 3, 7 // 2, -7 // 2)
+print(7 % 3, 8 % 3, 9 % 3, 13 % 2 == 0)
+print(2 + 3 * 4, (2 + 3) * 4)
+print(5 + 2 / 2, (5 + 2) / 2)   # Semantikfehler!
+alter = 30
+print(alter &gt;= 18, alter == "30")
+print(18 &lt;= alter &lt;= 65, alter % 2 == 0)</pre><pre class="out">3.5 2.0 3 -4
+1 2 0 False
+14 20
+6.0 3.5
+True False
+True True</pre></div></div>
+<div class="ex"><div class="ex"><pre class="code"># Mini-Aufgabe der Folie
+x = 4
+x *= 2   # 8
+x -= 3   # 5
+x //= 2  # 2
+print(x)
+y = 5
+++y      # zweimal Vorzeichen +, ändert nichts
+print(y)
+print("Python" == "Py" + "thon")</pre><pre class="out">2
+5
+True</pre></div></div>
+</div>
+<ul>
+<li><b>Kein <code>x++</code>:</b> Das ist ein <code>SyntaxError</code>. <code>++x</code> läuft zwar, ist aber nur zweimal das Vorzeichen + und ändert nichts (<code>ruff</code> meldet B002). Zum Hochzählen schreibt man <code>x += 1</code>.</li>
+<li><b><code>==</code> vergleicht den Inhalt</b>, auch bei Strings. Ein <code>.equals()</code> wie in Java braucht man nicht. <code>is</code> prüft, ob es <i>dasselbe Objekt</i> ist, und wird nur für <code>None</code> verwendet: <code>if x is None:</code>. Verkettet: <code>18 &lt;= alter &lt;= 65</code> heißt <code>18 &lt;= alter and alter &lt;= 65</code>.</li>
+</ul>
+
+<h2>2.5 Strings und f-Strings</h2>
+<figure>
+<svg viewBox="0 0 470 110" width="430" xmlns="http://www.w3.org/2000/svg">
+<g font-size="12">
+<text x="5" y="54" class="mono" font-size="13">text =</text>
+<g class="mono" font-size="16">
+<rect x="70" y="35" width="60" height="30" fill="#fff" stroke="#555"/><text x="100" y="56" text-anchor="middle">H</text>
+<rect x="130" y="35" width="60" height="30" fill="#d9e6f6" stroke="#555"/><text x="160" y="56" text-anchor="middle">a</text>
+<rect x="190" y="35" width="60" height="30" fill="#d9e6f6" stroke="#555"/><text x="220" y="56" text-anchor="middle">l</text>
+<rect x="250" y="35" width="60" height="30" fill="#fff" stroke="#555"/><text x="280" y="56" text-anchor="middle">l</text>
+<rect x="310" y="35" width="60" height="30" fill="#fff" stroke="#555"/><text x="340" y="56" text-anchor="middle">o</text>
+</g>
+<g fill="#1f5fa8" text-anchor="middle" class="mono"><text x="100" y="28">0</text><text x="160" y="28">1</text><text x="220" y="28">2</text><text x="280" y="28">3</text><text x="340" y="28">4</text></g>
+<g fill="#b3261e" text-anchor="middle" class="mono"><text x="100" y="82">-5</text><text x="160" y="82">-4</text><text x="220" y="82">-3</text><text x="280" y="82">-2</text><text x="340" y="82">-1</text></g>
+<text x="380" y="28" fill="#1f5fa8">Index</text><text x="380" y="82" fill="#b3261e">von hinten</text>
+<text x="190" y="104" text-anchor="middle" fill="#1f5fa8">text[1:3] → "al" (Start 1 dabei, Stopp 3 nicht)</text>
+</g>
+</svg>
+<figcaption>Index ab 0, negative Indizes zählen von hinten, beim Slicing gehört der Stopp-Index nicht dazu.</figcaption>
+</figure>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">text = "Hallo"
+print(len(text), text[0], text[-1], text[1:3])
+print("ll" in text, "python".upper())
+print("Py" + "thon", "ab" * 3)</pre><pre class="out">5 H o al
+True PYTHON
+Python ababab</pre></div></div>
+<div class="ex"><div class="ex"><pre class="code">name, alter, preis = "Ada", 20, 12.5
+print(f"{name} ist {alter} Jahre alt")
+print(f"Preis: {preis:.2f} €")
+print(f"Nächstes Jahr: {alter + 1}")</pre><pre class="out">Ada ist 20 Jahre alt
+Preis: 12.50 €
+Nächstes Jahr: 21</pre></div></div>
+</div>
+<p>In einem f-String setzt Python Werte direkt in den Text ein, in den <code>{}</code> darf auch gerechnet werden. <code>:.2f</code> formatiert auf zwei Nachkommastellen. Strings sind unveränderlich. <code>text[0] = "h"</code> gibt deshalb einen TypeError. <span class="erg">(Ergänzung)</span></p>
+
+<h2>2.6 Typumwandlung, Rundung und Geld</h2>
+<p>Zum Umwandeln ruft man den Typ wie eine Funktion auf. Automatisch wandelt Python <b>nur zwischen Zahlen</b> um, und zwar in der Richtung bool → int → float (<code>5 + 2.0</code> → <code>7.0</code>, <code>True + 1</code> → <code>2</code>). Text und Zahl mischt Python nie, das gibt einen <code>TypeError</code> („stark typisiert: Python rät nicht“).</p>
+<div class="cols" style="grid-template-columns: 1.15fr 1fr">
+<table style="margin-top:0">
+<tr><th>Ausdruck</th><th>Ergebnis</th><th>Achtung</th></tr>
+<tr><td><code>int(9.99)</code></td><td><code>9</code></td><td>schneidet ab, rundet nicht</td></tr>
+<tr><td><code>float(5)</code> / <code>str(42)</code></td><td><code>5.0</code> / <code>"42"</code></td><td></td></tr>
+<tr><td><code>int("42")</code> / <code>int("zwei")</code></td><td><code>42</code> / <code>ValueError</code></td><td><code>input()</code> gibt <code>str</code></td></tr>
+<tr><td><code>round(2.675, 2)</code> / <code>round(9.5)</code></td><td><code>2.67</code> / <code>10</code></td><td>float-Ungenauigkeit</td></tr>
+<tr><td><code>"Alter: " + 36</code></td><td><code>TypeError</code></td><td>besser: f-String</td></tr>
+</table>
+<div class="ex"><div class="ex"><pre class="code">from decimal import Decimal
+
+print(int(19.99 * 100))   # Cent weg!
+print(round(19.99 * 100)) # runden
+print(int(Decimal("19.99") * 100))
+# Decimal als TEXT übergeben
+print(5 + 2.0, True + 1)
+print(int("12") + int("3"), "12" + "3")</pre><pre class="out">1998
+1999
+1999
+7.0 2
+15 123</pre></div></div>
+</div>
+
+<h2>2.7 Syntax vs. Semantik: vier Fehler, drei Prüfer</h2>
+<p>Die <b>Syntax</b> ist die Grammatik, also die Form des Codes. Die <b>Semantik</b> ist seine Bedeutung, also was er bewirkt. Code kann syntaktisch korrekt und trotzdem semantisch falsch sein.</p>
+<table>
+<tr><th>Fehlerart</th><th>Beispiel</th><th>ruff check</th><th>ty check</th><th>uv run</th></tr>
+<tr><td><b>Syntaxfehler</b></td><td><code>print("Hallo"</code></td><td>✗ findet ihn</td><td>(nicht nötig)</td><td>startet gar nicht</td></tr>
+<tr><td><b>Typfehler</b></td><td><code>"Alter: " + alter</code> mit <code>alter = 36</code></td><td>✓ ok</td><td>✗ <code>unsupported-operator</code></td><td>TypeError</td></tr>
+<tr><td><b>Laufzeitfehler</b></td><td><code>summe / anzahl</code> mit <code>anzahl = 0</code></td><td>✓</td><td>✓</td><td>✗ ZeroDivisionError</td></tr>
+<tr><td><b>Logikfehler</b></td><td><code>5 + 2 / 2</code> statt <code>(5 + 2) / 2</code></td><td>✓</td><td>✓</td><td>✓ läuft, liefert aber 6.0 statt 3.5</td></tr>
+</table>
+<p>Einen Logikfehler findet nur, wer das Ergebnis nachprüft, zum Beispiel mit einem Test (Kap. 4).</p>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">summe = 10
+anzahl = 0
+print("Start")
+durchschnitt = summe / anzahl
+print(durchschnitt)</pre><pre class="out">Start
+Traceback … (gekürzt)
+ZeroDivisionError: division by zero</pre></div></div>
+<div>
+<p><b>Einen Traceback liest du von unten nach oben:</b></p>
+<ol>
+<li>Die <b>letzte Zeile</b> sagt, was passiert ist: Fehlerart und Meldung.</li>
+<li>Darüber steht, <b>wo</b> es passiert ist: Datei und Zeile.</li>
+<li>Die Markierung <code>^</code> zeigt auf die genaue Stelle.</li>
+</ol>
+<p class="small">„Start“ wird noch ausgegeben: Bei einem Laufzeitfehler laufen die Zeilen davor, bei einem Syntaxfehler läuft gar nichts.</p>
+</div>
+</div>
+
+<div class="cols">
+<div class="box trap"><span class="t">Typische Fehler und Fallen</span>
+<ul>
+<li><code>/</code> liefert <b>immer</b> float (<code>6 / 3</code> → <code>2.0</code>), und <code>-7 // 2</code> ergibt <b>−4</b>.</li>
+<li><code>5 + 2 / 2</code> ergibt 6.0 und nicht 3.5, denn Punkt geht vor Strich. Das ist ein Logikfehler <b>ohne</b> Fehlermeldung.</li>
+<li><code>0.1 + 0.2 == 0.3</code> ergibt <code>False</code>, und <code>int(19.99 * 100)</code> ergibt 1998. Floats nie mit <code>==</code> auf „krumme“ Werte prüfen, für Geld <code>Decimal("…")</code> nehmen.</li>
+</ul>
+</div>
+<div class="box must"><span class="t">Das musst du können</span>
+<ul>
+<li>Typ und Wert von Ausdrücken mit <code>/ // % **</code> vorhersagen, auch mit negativen Zahlen und Klammern</li>
+<li>String-Index, Slicing und f-Strings mit <code>:.2f</code> anwenden; die vier Fehlerarten erkennen</li>
+<li>Ergebnisse von <code>int()</code>, <code>str()</code>, <code>round()</code> vorhersagen; Docstring (Google-Stil) und <code>Final</code>-Konstante schreiben</li>
+</ul>
+</div>
+</div>
+
+<!-- ================================================================ VL3 -->
+<h1><span class="vl">VL3</span>Kontrollstrukturen und Listen</h1>
+
+<h2>3.1 Drei Grundformen und Blöcke</h2>
+<table>
+<tr><th>Grundform</th><th>Was passiert?</th><th>Python</th></tr>
+<tr><td><b>Sequenz</b></td><td>Die Anweisungen laufen nacheinander von oben nach unten.</td><td>jede Zeile</td></tr>
+<tr><td><b>Selektion</b></td><td>Eine Bedingung wird geprüft und ein Weg gewählt.</td><td><code>if</code>, <code>elif</code>, <code>else</code>, <code>match</code></td></tr>
+<tr><td><b>Iteration</b></td><td>Etwas wird wiederholt, solange eine Bedingung gilt.</td><td><code>while</code>, <code>for</code></td></tr>
+</table>
+<p>Ein <code>:</code> öffnet einen <b>Block</b>. Alle folgenden Zeilen, die 4 Leerzeichen weiter eingerückt sind, gehören dazu. Der Block endet, sobald eine Zeile wieder weniger eingerückt ist. Ein Block hat <b>keinen eigenen Gültigkeitsbereich</b>.</p>
+
+<h2>3.2 Bedingte Anweisungen: <code>if</code>, <code>elif</code>, <code>else</code></h2>
+<p>Um die Bedingung stehen keine Klammern, am Ende steht ein Doppelpunkt. <code>else</code> steht auf derselben Einrückungsebene wie <code>if</code>. Bei <code>if</code>–<code>else</code> läuft <b>genau einer</b> der beiden Blöcke. Mit <code>elif</code> sparst du dir verschachtelte <code>if</code>s. Python prüft die Bedingungen <b>der Reihe nach</b> und hört beim <b>ersten Treffer</b> auf, die übrigen Zweige werden dann gar nicht mehr geprüft.</p>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">temperatur = 25
+if temperatur &lt; 0:
+    print("Gefriert!")
+elif temperatur &lt; 20:
+    print("Kühl.")
+elif temperatur &lt; 30:
+    print("Angenehm.")
+else:
+    print("Heiß!")</pre><pre class="out">Angenehm.</pre></div></div>
+<figure style="margin:0">
+<svg viewBox="0 0 330 250" width="330" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker></defs>
+<g font-size="11">
+<polygon points="80,10 145,35 80,60 15,35" fill="#e4ebf4" stroke="#1f5fa8"/><text x="80" y="39" text-anchor="middle" class="mono">t &lt; 0 ?</text>
+<polygon points="80,75 145,100 80,125 15,100" fill="#e4ebf4" stroke="#1f5fa8"/><text x="80" y="104" text-anchor="middle" class="mono">t &lt; 20 ?</text>
+<polygon points="80,140 145,165 80,190 15,165" fill="#e4ebf4" stroke="#1f5fa8"/><text x="80" y="169" text-anchor="middle" class="mono">t &lt; 30 ?</text>
+<rect x="195" y="22" width="100" height="26" rx="4" fill="#e8f3e8" stroke="#2e7d32"/><text x="245" y="39" text-anchor="middle">"Gefriert!"</text>
+<rect x="195" y="87" width="100" height="26" rx="4" fill="#e8f3e8" stroke="#2e7d32"/><text x="245" y="104" text-anchor="middle">"Kühl."</text>
+<rect x="195" y="152" width="100" height="26" rx="4" fill="#e8f3e8" stroke="#2e7d32"/><text x="245" y="169" text-anchor="middle">"Angenehm."</text>
+<rect x="30" y="205" width="100" height="26" rx="4" fill="#fdf0ee" stroke="#b3261e"/><text x="80" y="222" text-anchor="middle">"Heiß!" (else)</text>
+<line x1="145" y1="35" x2="193" y2="35" stroke="#444" marker-end="url(#a3)"/><text x="168" y="30" text-anchor="middle" fill="#2e7d32">ja</text>
+<line x1="145" y1="100" x2="193" y2="100" stroke="#444" marker-end="url(#a3)"/><text x="168" y="95" text-anchor="middle" fill="#2e7d32">ja</text>
+<line x1="145" y1="165" x2="193" y2="165" stroke="#444" marker-end="url(#a3)"/><text x="168" y="160" text-anchor="middle" fill="#2e7d32">ja</text>
+<line x1="80" y1="60" x2="80" y2="73" stroke="#444" marker-end="url(#a3)"/><text x="88" y="70" fill="#b3261e">nein</text>
+<line x1="80" y1="125" x2="80" y2="138" stroke="#444" marker-end="url(#a3)"/><text x="88" y="135" fill="#b3261e">nein</text>
+<line x1="80" y1="190" x2="80" y2="203" stroke="#444" marker-end="url(#a3)"/><text x="88" y="200" fill="#b3261e">nein</text>
+<path d="M295 35 H315 V218 H132" fill="none" stroke="#888" stroke-dasharray="3 2" marker-end="url(#a3)"/>
+<line x1="295" y1="100" x2="315" y2="100" stroke="#888" stroke-dasharray="3 2"/><line x1="295" y1="165" x2="315" y2="165" stroke="#888" stroke-dasharray="3 2"/>
+<text x="235" y="245" text-anchor="middle" fill="#555">danach geht es nach dem Block weiter</text>
+</g>
+</svg>
+</figure>
+</div>
+<p><b>Reihenfolge zählt:</b> Bei Bereichsprüfungen sortierst du die Bedingungen von oben nach unten. Steht in der Notenaufgabe <code>punkte &gt;= 50</code> an erster Stelle, bekommt auch jemand mit 95 Punkten „ausreichend“, und zwar ohne Fehlermeldung (Logikfehler). Grenzen testest du mit einem Wert genau auf der Grenze und einem knapp darunter (90 und 89).</p>
+
+<h2>3.3 <code>match</code> und der bedingte Ausdruck</h2>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">note = "E"
+match note:
+    case "A" | "B" | "C":
+        print("Bestanden")
+    case "D" | "E" | "F":
+        print("Nicht bestanden")
+    case _:
+        print("Ungültige Eingabe")</pre><pre class="out">Nicht bestanden</pre></div></div>
+<div>
+<p><code>match</code> gibt es seit Python 3.10, es entspricht Javas <code>switch</code>. Es vergleicht einen Wert mit <b>festen</b> Fällen, und der erste passende Fall gewinnt. Ein <code>break</code> braucht man nicht, es gibt <b>kein Durchfallen</b> in den nächsten Fall. <code>case _:</code> passt immer und ist der Standardfall (Java: <code>default</code>). Mehrere Werte verbindest du mit <code>|</code>.</p>
+<p><code>if</code>–<code>elif</code> bleibt der Normalfall, weil nur damit Bereiche wie <code>note &lt; 3</code> geprüft werden können.</p>
+</div>
+</div>
+<p><b>Bedingter Ausdruck</b> (Kurzform von if–else, Java: <code>b ? x : y</code>): <code>status = "offen" if betrag &gt; 0 else "bezahlt"</code>. Er wählt einen von zwei Werten und sollte nicht verschachtelt werden. <code>ruff</code> schlägt ihn selbst vor, wenn ein if–else nur eine Variable setzt.</p>
+
+<h2>3.4 Wahrheitswerte beliebiger Werte</h2>
+<p>In einer Bedingung darf jeder Wert stehen. Python fragt dann: „Ist da etwas?“</p>
+<div class="cols">
+<table>
+<tr><th>gilt als <b>falsch</b></th><th>gilt als <b>wahr</b></th></tr>
+<tr><td><code>False</code>, <code>None</code></td><td><code>True</code></td></tr>
+<tr><td><code>0</code>, <code>0.0</code></td><td>jede andere Zahl, <b>auch <code>-1</code></b></td></tr>
+<tr><td><code>""</code> (leerer String)</td><td><code>"0"</code>, <code>" "</code>: jeder nicht leere String</td></tr>
+<tr><td><code>[]</code> (leere Liste)</td><td><code>[0]</code>: jede nicht leere Liste</td></tr>
+</table>
+<div class="ex"><div class="ex"><pre class="code">warenkorb: list[str] = []
+if warenkorb:
+    print(f"{len(warenkorb)} Artikel")
+else:
+    print("Der Warenkorb ist leer")
+print(bool("0"), bool(-1), bool([0]), bool(""))</pre><pre class="out">Der Warenkorb ist leer
+True True True False</pre></div></div>
+</div>
+
+<h2>3.5 Logische Operatoren, Rangfolge, Kurzschluss</h2>
+<table>
+<tr><th>a</th><th>b</th><th><code>a and b</code></th><th><code>a or b</code></th><th><code>not a</code></th><th>XOR: <code>a != b</code></th></tr>
+<tr><td>True</td><td>True</td><td>True</td><td>True</td><td>False</td><td>False</td></tr>
+<tr><td>True</td><td>False</td><td>False</td><td>True</td><td>False</td><td>True</td></tr>
+<tr><td>False</td><td>True</td><td>False</td><td>True</td><td>True</td><td>True</td></tr>
+<tr><td>False</td><td>False</td><td>False</td><td>False</td><td>True</td><td>False</td></tr>
+</table>
+<p><b>Rangfolge:</b> Klammern → Vergleiche → <code>not</code> → <code>and</code> → <code>or</code>. <code>a or b and not c</code> bedeutet also <code>a or (b and (not c))</code>. Wenn <code>and</code> und <code>or</code> in einer Bedingung vorkommen, setzt du Klammern. Die Gesetze der Logik gelten auch hier: <b>kommutativ</b> (die Reihenfolge der Operanden ist egal), <b>assoziativ</b> (die Klammerung bei gleichen Operatoren ist egal) und <b>distributiv</b> (<code>a and (b or c)</code> = <code>(a and b) or (a and c)</code>).</p>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code"># Rabatt: Studierende ODER ab 65, beide NUR mit Ausweis
+ist_student, alter, hat_ausweis = True, 22, False
+print(ist_student or alter &gt;= 65 and hat_ausweis)
+print((ist_student or alter &gt;= 65) and hat_ausweis)</pre><pre class="out">True
+False</pre></div></div>
+<div class="ex"><div class="ex"><pre class="code"># Kurzschluss: Absicherung nach vorn!
+anzahl, umsatz = 0, 0.0
+print(anzahl &gt; 0 and umsatz / anzahl &gt; 100)
+print(umsatz / anzahl &gt; 100 and anzahl &gt; 0)</pre><pre class="out">False
+Traceback … (gekürzt)
+ZeroDivisionError: float division by zero</pre></div></div>
+</div>
+<p><b>Kurzschlussauswertung:</b> Python wertet von links nach rechts aus und hört auf, sobald das Ergebnis feststeht. Ist bei <code>and</code> die linke Seite <code>False</code>, wird die rechte gar nicht mehr ausgewertet. Die Absicherung (<code>anzahl &gt; 0</code>) gehört deshalb nach vorn.</p>
+<p><b>Bedingung umkehren:</b> Entweder du schreibst <code>not (…)</code> um die ganze Bedingung, oder du kehrst jede Teilbedingung um und tauschst <code>and</code> und <code>or</code>: Das Gegenteil von <code>bestellwert &gt;= 50 or ist_premium</code> ist <code>bestellwert &lt; 50 and not ist_premium</code>, das Gegenteil von <code>hat_ticket and not ist_gesperrt</code> ist <code>not hat_ticket or ist_gesperrt</code>.</p>
+
+<h2>3.6 Übungen Teil 1: Stromkosten und Parkgebühren</h2>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">verbrauch_kwh = 180   # sonst: int(input(...))
+# Staffel: jede Stufe gilt nur für IHRE kWh
+if verbrauch_kwh &lt;= 100:
+    kosten = verbrauch_kwh * 0.25
+elif verbrauch_kwh &lt;= 300:
+    kosten = 100 * 0.25 + (verbrauch_kwh - 100) * 0.22
+else:
+    kosten = 100 * 0.25 + 200 * 0.22 + (verbrauch_kwh - 300) * 0.19
+kosten += 12.90                 # Grundpreis
+if verbrauch_kwh &lt;= 250:        # Öko-Bonus
+    kosten -= 5
+kosten = min(kosten, 100)       # Deckel 100 €
+print(f"Stromkosten: {kosten:.2f} Euro")</pre><pre class="out">Stromkosten: 50.50 Euro</pre></div></div>
+<div class="ex"><div class="ex"><pre class="code">GRUNDGEBUEHR, HOECHSTPREIS = 1.50, 50.00  # Lösung: Final
+fahrzeug, stunden = "Transporter", 6
+kosten, gueltig = 0.0, True
+match fahrzeug:
+    case "PKW":
+        kosten = stunden * 2.00
+        if stunden &gt;= 10:
+            kosten *= 0.90
+    case "Motorrad":
+        kosten = stunden * 1.00
+    case "Transporter":
+        kosten = stunden * 3.50
+        if stunden &gt;= 5:
+            kosten *= 0.80
+    case _:
+        print("Fehler: Ungültiger Fahrzeugtyp!")
+        gueltig = False
+if gueltig:  # Rabatt → Grundgebühr → Deckel
+    kosten = min(kosten + GRUNDGEBUEHR, HOECHSTPREIS)
+    print(f"Gesamtkosten: {kosten:.2f} Euro")</pre><pre class="out">Gesamtkosten: 18.30 Euro</pre></div></div>
+</div>
+<p class="small">Nach der offiziellen Musterlösung: Bei 180 kWh ergibt sich 25,00 + 17,60 + 12,90 − 5,00 = 50,50 €. Bei 6 Stunden Transporter ergibt sich 21,00 · 0,8 + 1,50 = 18,30 €. Weitere Übung aus der Musterlösung, das Schaltjahr: <code>jahr % 4 == 0 and (jahr % 100 != 0 or jahr % 400 == 0)</code>.</p>
+
+<h2>3.7 Schleifen: <code>while</code> und <code>for</code></h2>
+<div class="cols">
+<div>
+<p><b><code>while</code></b> prüft zuerst und läuft dann. Ist die Bedingung schon am Anfang falsch, läuft die Schleife <b>kein einziges Mal</b>. Im Block muss sich etwas ändern, das die Bedingung irgendwann falsch macht, sonst entsteht eine <b>Endlosschleife</b>. Abbrechen kannst du sie im Terminal mit Strg+C. Die Bedingung ist eine <i>Laufbedingung</i>: Die Schleife läuft, <i>solange</i> sie wahr ist.</p>
+<p><code>while</code> nimmt man, wenn die Zahl der Durchläufe vorher <b>unbekannt</b> ist (z. B. „Bis wann hat sich das Guthaben verdoppelt?“).</p>
+</div>
+<figure style="margin:0">
+<svg viewBox="0 0 330 210" width="320" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="a4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker></defs>
+<g font-size="11">
+<rect x="60" y="5" width="110" height="24" rx="4" fill="#f1f1f1" stroke="#888"/><text x="115" y="21" text-anchor="middle" class="mono">zahl = 1</text>
+<line x1="115" y1="29" x2="115" y2="45" stroke="#444" marker-end="url(#a4)"/>
+<polygon points="115,47 185,75 115,103 45,75" fill="#e4ebf4" stroke="#1f5fa8"/><text x="115" y="79" text-anchor="middle" class="mono">zahl &lt;= 5 ?</text>
+<line x1="115" y1="103" x2="115" y2="123" stroke="#444" marker-end="url(#a4)"/><text x="123" y="117" fill="#2e7d32">ja</text>
+<rect x="40" y="125" width="150" height="40" rx="4" fill="#e8f3e8" stroke="#2e7d32"/><text x="115" y="141" text-anchor="middle" class="mono">print(zahl)</text><text x="115" y="157" text-anchor="middle" class="mono">zahl = zahl + 1</text>
+<path d="M40 145 H15 V75 H43" fill="none" stroke="#444" marker-end="url(#a4)"/><text x="10" y="112" fill="#555" transform="rotate(-90 10 112)">zurück</text>
+<line x1="185" y1="75" x2="230" y2="75" stroke="#444" marker-end="url(#a4)"/><text x="205" y="69" fill="#b3261e">nein</text>
+<rect x="232" y="62" width="92" height="26" rx="4" fill="#fdf0ee" stroke="#b3261e"/><text x="278" y="79" text-anchor="middle">nach Schleife</text>
+<text x="165" y="195" text-anchor="middle" fill="#555">Fehlt „zahl = zahl + 1“: Endlosschleife</text>
+</g>
+</svg>
+</figure>
+</div>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">zahl = 1
+while zahl &lt;= 5:
+    print(f"Zahl: {zahl}")
+    zahl = zahl + 1
+print("zahl ist jetzt", zahl)</pre><pre class="out">Zahl: 1
+Zahl: 2
+Zahl: 3
+Zahl: 4
+Zahl: 5
+zahl ist jetzt 6</pre></div></div>
+<div class="ex"><div class="ex"><pre class="code">guthaben, jahre = 1000.0, 0
+while guthaben &lt; 2000:      # Anzahl unbekannt
+    guthaben *= 1.05
+    jahre += 1
+print(f"Nach {jahre} Jahren: {guthaben:.2f} Euro")</pre><pre class="out">Nach 15 Jahren: 2078.93 Euro</pre></div></div>
+</div>
+<div class="cols" style="grid-template-columns: 1fr 1.2fr">
+<p><b>Ein <code>do</code>–<code>while</code> gibt es nicht.</b> Für „mindestens einmal“ schreibst du <code>while True:</code> mit einem <code>break</code> im Block. Das ist das typische Muster für eine Eingabeprüfung:</p>
+<pre class="code" style="margin-top:0">while True:
+    eingabe = input("Menge (1-99): ")
+    if eingabe.isdigit() and 1 <= int(eingabe) <= 99:
+        break
+    print("Ungültig, bitte noch einmal.")</pre>
+</div>
+
+<p><b><code>for x in folge:</code></b> läuft für <b>jedes Element</b> einmal durch. Einen Zähler oder <code>i++</code> brauchst du dafür nicht. Zahlenfolgen erzeugst du mit <code>range(start, stop, schritt)</code>: <b>start ist dabei, stop nicht.</b></p>
+<figure>
+<svg viewBox="0 0 560 70" width="520" xmlns="http://www.w3.org/2000/svg">
+<g font-size="12">
+<line x1="20" y1="35" x2="540" y2="35" stroke="#888"/>
+<g class="mono" text-anchor="middle" fill="#555"><text x="40" y="60">0</text><text x="110" y="60">1</text><text x="180" y="60">2</text><text x="250" y="60">3</text><text x="320" y="60">4</text><text x="390" y="60">5</text><text x="460" y="60">6</text></g>
+<g fill="#1f5fa8"><circle cx="110" cy="35" r="8"/><circle cx="180" cy="35" r="8"/><circle cx="250" cy="35" r="8"/><circle cx="320" cy="35" r="8"/><circle cx="390" cy="35" r="8"/></g>
+<circle cx="460" cy="35" r="8" fill="#fff" stroke="#b3261e" stroke-width="2"/><circle cx="40" cy="35" r="4" fill="#ccc"/>
+<text x="110" y="16" text-anchor="middle" fill="#1f5fa8">start = 1 (dabei)</text><text x="460" y="16" text-anchor="middle" fill="#b3261e">stop = 6 (nicht dabei)</text>
+<text x="285" y="16" text-anchor="middle" class="mono">range(1, 6) → 1 2 3 4 5</text>
+</g>
+</svg>
+</figure>
+<p>Weitere Folgen: <code>range(5)</code> → 0 1 2 3 4 (beginnt bei 0) · <code>range(2, 11, 2)</code> → 2 4 6 8 10 · <code>range(5, 0, -1)</code> → 5 4 3 2 1 (rückwärts, ohne die 0) · für „1 bis n“: <code>range(1, n + 1)</code>.</p>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">n = 7
+ergebnis = 1
+for i in range(1, n + 1):  # n + 1: stop gehört nicht dazu
+    ergebnis = ergebnis * i
+print(f"Fakultät von {n} ist: {ergebnis}")</pre><pre class="out">Fakultät von 7 ist: 5040</pre></div></div>
+<div class="ex"><div class="ex"><pre class="code">a, b = 0, 1
+for _ in range(10):        # _ = Variable wird nicht gebraucht
+    print(a, end=" ")
+    a, b = b, a + b        # gleichzeitig weiterschieben!
+print()</pre><pre class="out">0 1 1 2 3 5 8 13 21 34 </pre></div></div>
+</div>
+
+<p class="small" style="margin-bottom:0">Java-Zählschleife und Python im Vergleich:</p>
+<div class="cols">
+<pre class="code java">for (int i = 1; i &lt;= 5; i++) {
+    System.out.println(i);
+}</pre>
+<pre class="code">for i in range(1, 6):
+    print(i)</pre>
+</div>
+
+<h2>3.8 <code>break</code>, <code>continue</code> und typische Schleifenfehler</h2>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">for i in range(1, 11):
+    if i == 5:
+        break          # Schleife sofort verlassen
+    print(f"i = {i}")
+print("Nach der Schleife")</pre><pre class="out">i = 1
+i = 2
+i = 3
+i = 4
+Nach der Schleife</pre></div></div>
+<div class="ex"><div class="ex"><pre class="code">for i in range(1, 6):
+    if i == 3:
+        continue       # nur diesen Durchlauf auslassen
+    print(f"i = {i}")</pre><pre class="out">i = 1
+i = 2
+i = 4
+i = 5</pre></div></div>
+</div>
+<table>
+<tr><th>Fehler</th><th>Beispiel</th><th>Folge</th></tr>
+<tr><td>Endlosschleife</td><td>Zähler wird nicht verändert oder <code>zahl += 1</code> ist nicht eingerückt</td><td>hört nie auf (Strg+C)</td></tr>
+<tr><td>Off-by-one</td><td><code>range(1, 5)</code> für 1 bis 5</td><td>eine Runde zu wenig (endet bei 4)</td></tr>
+<tr><td>falscher Startwert</td><td><code>zahl = 10</code>, dann <code>while zahl &lt;= 5</code></td><td>läuft nie, <b>ohne</b> Meldung</td></tr>
+<tr><td>falsche Schrittweite</td><td><code>zahl += 2</code> statt <code>+= 1</code></td><td>überspringt Werte, ohne Meldung</td></tr>
+</table>
+<p class="small">Ein <code>else</code> nach einer Schleife läuft nur, wenn die Schleife <b>ohne</b> <code>break</code> endet. Das braucht man selten.</p>
+
+<h2>3.9 Listen</h2>
+<p>Eine Liste ist eine geordnete Sammlung unter einem Namen, auf die einzelnen Werte greifst du über den <b>Index</b> zu. Anders als ein Java-Array hat sie <b>keine feste Länge</b>. Guter Stil ist ein Typ pro Liste. Automatische Standardwerte gibt es nicht. Du legst also entweder eine leere Liste an und hängst mit <code>append</code> an oder schreibst <code>[0] * n</code>.</p>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">noten = [2, 1, 3, 2, 4]
+leer: list[int] = []      # Typangabe bei leerer Liste
+nullen = [0] * 3
+leer.append(7)
+noten[0] = 1              # ändern
+print(noten, leer, nullen)
+print(noten[0], noten[-1], noten[1:3])
+print(len(noten), sum(noten), min(noten), max(noten))
+print(3 in noten, sorted(noten), noten)
+print(noten[5])</pre><pre class="out">[1, 1, 3, 2, 4] [7] [0, 0, 0]
+1 4 [1, 3]
+5 11 1 4
+True [1, 1, 2, 3, 4] [1, 1, 3, 2, 4]
+Traceback … (gekürzt)
+IndexError: list index out of range</pre></div></div>
+<div class="ex"><div class="ex"><pre class="code">tage = ["Mo", "Di", "Mi"]
+werte = [12.5, -3.0, 7.0]
+for i in range(len(tage)):          # über Index
+    print(i, tage[i])
+for wert in werte:                  # Python-Weg
+    print(wert, end=" ")
+print()
+for i, tag in enumerate(tage):      # Index + Wert
+    print(i, tag, end=" | ")
+print()
+for tag, wert in zip(tage, werte, strict=True):
+    print(f"{tag}: {wert}")</pre><pre class="out">0 Mo
+1 Di
+2 Mi
+12.5 -3.0 7.0 
+0 Mo | 1 Di | 2 Mi | 
+Mo: 12.5
+Di: -3.0
+Mi: 7.0</pre></div></div>
+</div>
+<p><code>sorted(liste)</code> liefert eine sortierte <b>Kopie</b>, die Originalliste bleibt unverändert. <code>zip(..., strict=True)</code> geht zwei Listen im Gleichschritt durch und meldet einen Fehler, wenn sie unterschiedlich lang sind. <code>ruff</code> verlangt dieses <code>strict=</code>.</p>
+
+<h3>Mehrdimensionale Listen und die Verweis-Falle</h3>
+<p>Eine Tabelle ist eine Liste von Listen. <code>matrix[1][2]</code> heißt Zeile 1, Spalte 2. Durchlaufen wird sie mit zwei verschachtelten Schleifen.</p>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">falsch = [[0] * 4] * 3     # 3 Verweise auf EINE Zeile
+falsch[0][0] = 9
+print(falsch)
+
+richtig = []
+for _ in range(3):         # jede Zeile neu bauen
+    richtig.append([0] * 4)
+richtig[0][0] = 9
+print(richtig)</pre><pre class="out">[[9, 0, 0, 0], [9, 0, 0, 0], [9, 0, 0, 0]]
+[[9, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]</pre></div></div>
+<figure style="margin:0">
+<svg viewBox="0 0 330 200" width="330" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="a5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fa8"/></marker></defs>
+<g font-size="11">
+<text x="5" y="14" font-weight="bold" fill="#b3261e">[[0] * 4] * 3</text>
+<rect x="10" y="25" width="26" height="22" fill="#fff" stroke="#555"/><rect x="10" y="47" width="26" height="22" fill="#fff" stroke="#555"/><rect x="10" y="69" width="26" height="22" fill="#fff" stroke="#555"/>
+<g class="mono"><rect x="90" y="45" width="68" height="24" fill="#fdf0ee" stroke="#b3261e"/><text x="124" y="61" text-anchor="middle">9 0 0 0</text></g>
+<line x1="30" y1="36" x2="88" y2="52" stroke="#1f5fa8" marker-end="url(#a5)"/><line x1="30" y1="58" x2="88" y2="58" stroke="#1f5fa8" marker-end="url(#a5)"/><line x1="30" y1="80" x2="88" y2="64" stroke="#1f5fa8" marker-end="url(#a5)"/>
+<text x="5" y="112" fill="#555">eine Zeile, drei Pfeile</text>
+<text x="180" y="14" font-weight="bold" fill="#2e7d32">Schleife + append</text>
+<rect x="185" y="25" width="26" height="22" fill="#fff" stroke="#555"/><rect x="185" y="47" width="26" height="22" fill="#fff" stroke="#555"/><rect x="185" y="69" width="26" height="22" fill="#fff" stroke="#555"/>
+<g class="mono"><rect x="250" y="20" width="68" height="22" fill="#e8f3e8" stroke="#2e7d32"/><text x="284" y="35" text-anchor="middle">9 0 0 0</text>
+<rect x="250" y="47" width="68" height="22" fill="#e8f3e8" stroke="#2e7d32"/><text x="284" y="62" text-anchor="middle">0 0 0 0</text>
+<rect x="250" y="74" width="68" height="22" fill="#e8f3e8" stroke="#2e7d32"/><text x="284" y="89" text-anchor="middle">0 0 0 0</text></g>
+<line x1="205" y1="36" x2="248" y2="31" stroke="#1f5fa8" marker-end="url(#a5)"/><line x1="205" y1="58" x2="248" y2="58" stroke="#1f5fa8" marker-end="url(#a5)"/><line x1="205" y1="80" x2="248" y2="85" stroke="#1f5fa8" marker-end="url(#a5)"/>
+<text x="180" y="112" fill="#555">drei eigene Zeilen</text>
+<text x="5" y="140" fill="#333">Das <tspan class="mono">* 3</tspan> kopiert nur die Verweise,</text>
+<text x="5" y="156" fill="#333">nicht die Zeile selbst (wie zwei Namensschilder</text>
+<text x="5" y="172" fill="#333">an einem Objekt, Kap. 2.3).</text>
+</g>
+</svg>
+</figure>
+</div>
+<p><b>Tupel</b> <code>(3, 4)</code> sind wie Listen, aber <b>unveränderlich</b>: <code>punkt[0] = 5</code> gibt einen <code>TypeError</code>. Man nimmt sie für feste Zusammenstellungen wie Koordinaten oder mehrere Rückgabewerte.</p>
+
+<h2>3.10 Übungen Teil 2 (Musterlösungen)</h2>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">temperaturen = [-3.5, -1.0, -7.2, -0.5]
+maximum = temperaturen[0]  # nicht mit 0 starten!
+summe = 0.0
+for t in temperaturen:
+    summe += t
+    if t &gt; maximum:
+        maximum = t
+print(maximum, summe / len(temperaturen))
+print(max(temperaturen), sum(temperaturen) / len(temperaturen))</pre><pre class="out">-0.5 -3.05
+-0.5 -3.05</pre></div></div>
+<div class="ex"><div class="ex"><pre class="code"># Sieb des Eratosthenes bis N
+N = 30
+ist_prim = [True] * (N + 1)
+ist_prim[0] = ist_prim[1] = False
+p = 2
+while p * p &lt;= N:              # reicht bis √N
+    if ist_prim[p]:
+        for vielfaches in range(p * p, N + 1, p):
+            ist_prim[vielfaches] = False
+    p += 1
+for zahl, prim in enumerate(ist_prim):
+    if prim:
+        print(zahl, end=" ")
+print()</pre><pre class="out">2 3 5 7 11 13 17 19 23 29 </pre></div></div>
+</div>
+<p class="small">Weitere Übungen: gerade Zahlen 1–100 zählen (50), Multiplikation durch wiederholte Addition, erste durch 7 teilbare Zahl ab 100 mit <code>break</code> (105). Sieb: Folie streicht ab 2·p, Lösung ab p·p; beides richtig.</p>
+
+<div class="cols">
+<div class="box trap"><span class="t">Typische Fehler und Fallen</span>
+<ul>
+<li>Doppelpunkt vergessen: <code>SyntaxError: expected ':'</code>. Einrückung vergessen: <code>IndentationError</code>. <code>else</code> ohne direkt vorangehendes <code>if</code>: <code>SyntaxError</code>. Leerzeichen und Tabs nicht mischen.</li>
+<li>Eine nicht eingerückte Zeile gehört nicht mehr zum Block und läuft <b>immer</b>.</li>
+<li>Bei <code>elif</code> zählt nur der erste Treffer, und <code>match</code> kann keine Bereiche prüfen.</li>
+<li><code>"0"</code>, <code>-1</code> und <code>[0]</code> sind <b>wahr</b>. <code>0</code>, <code>""</code>, <code>[]</code> und <code>None</code> sind falsch.</li>
+<li>Ohne Klammern bindet <code>and</code> stärker als <code>or</code>. Die Absicherung (<code>x != 0 and …</code>) gehört nach vorn.</li>
+<li><code>range(1, 5)</code> endet bei 4. Fakultät also mit <code>range(1, n + 1)</code>.</li>
+<li>Fibonacci falsch: <code>a = b</code> und danach <code>b = a + b</code> rechnet schon mit dem neuen <code>a</code>. Richtig ist <code>a, b = b, a + b</code>.</li>
+<li>Maximum mit 0 starten ist falsch, wenn alle Werte negativ sind. Starte mit <code>liste[0]</code>.</li>
+</ul>
+</div>
+<div class="box must"><span class="t">Das musst du können</span>
+<ul>
+<li>die Ausgabe von if/elif/else, <code>match</code> und bedingten Ausdrücken für gegebene Werte vorhersagen</li>
+<li>Staffelpreis- und Gebührenaufgaben mit <code>if</code>/<code>elif</code>/<code>match</code> und <code>Final</code>-Konstanten programmieren</li>
+<li>zusammengesetzte Bedingungen mit Rangfolge, Kurzschluss und Umkehrung auswerten</li>
+<li><code>while</code>- und <code>for</code>-Schleifen in einer Trace-Tabelle verfolgen und die Folgen von <code>range</code> vorhersagen</li>
+<li><code>break</code> und <code>continue</code> unterscheiden und Endlosschleife, Off-by-one, falschen Startwert und falsche Schrittweite erkennen</li>
+<li>Listen anlegen, indizieren, slicen und mit Index, direkt, <code>enumerate</code> und <code>zip</code> durchlaufen</li>
+<li>Summe, Zähler, Maximum, Fibonacci und das Sieb mit Schleifen programmieren</li>
+<li>die Verweis-Falle erklären und Liste und Tupel unterscheiden</li>
+</ul>
+</div>
+</div>
+
+<!-- ================================================================ VL4 -->
+<h1><span class="vl">VL4</span>Funktionen und Rekursion</h1>
+
+<h2>4.1 Funktionen definieren und aufrufen</h2>
+<p>Eine <b>Funktion</b> ist ein abgeschlossener Codeblock mit einem Namen, der eine bestimmte Aufgabe erfüllt. Sie bekommt Eingaben (Parameter), rechnet damit und liefert ein Ergebnis, ähnlich einer kleinen Maschine. Einige kennst du schon: <code>print()</code>, <code>len()</code>, <code>int()</code>, <code>input()</code>. Funktionen machen Programme übersichtlich, wiederverwendbar und testbar. <code>def</code> legt eine Funktion nur an, ihr Rumpf läuft erst beim <b>Aufruf</b>. Weil Python von oben nach unten liest, muss die Definition vor dem ersten Aufruf stehen.</p>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">def begruessung(name: str) -&gt; None:  # Definition
+    print(f"Hallo {name}!")
+
+def addiere(a: int, b: int) -&gt; int:
+    summe = a + b
+    return summe          # Wert an den Aufrufer
+
+def main() -&gt; None:
+    begruessung("Bob")    # Aufruf: Argument "Bob"
+    ergebnis = addiere(5, 7)
+    print(ergebnis)
+    begruessung(42)       # läuft! Nur ty meldet es
+
+if __name__ == "__main__":
+    main()</pre><pre class="out">Hallo Bob!
+12
+Hallo 42!</pre></div></div>
+<div>
+<table>
+<tr><th>Begriff</th><th>Bedeutung</th></tr>
+<tr><td><b>Parameter</b></td><td>Platzhalter in der Definition (<code>name</code>). In der Funktion verhält er sich wie eine lokale Variable.</td></tr>
+<tr><td><b>Argument</b></td><td>der konkrete Wert beim Aufruf (<code>"Bob"</code>)</td></tr>
+<tr><td><b>Signatur</b></td><td>Name, Parameter mit Typen und Rückgabetyp: <code>def addiere(a: int, b: int) -&gt; int</code></td></tr>
+<tr><td><b>Typannotationen</b></td><td>schreiben wir im Kurs <b>immer</b>. Python ignoriert sie beim Ausführen, <code>ty check</code> meldet z. B. <code>invalid-argument-type</code>.</td></tr>
+</table>
+<p><b>Einstiegspunkt:</b> Ab VL4 steht der Programmablauf in <code>main()</code>. <code>__name__</code> hat den Wert <code>"__main__"</code>, wenn die Datei direkt gestartet wird. Wird sie von einer anderen Datei <b>importiert</b>, läuft <code>main()</code> nicht los, und ihre Funktionen können wiederverwendet und getestet werden. Das entspricht <code>public static void main</code> in Java, ist in Python aber nur eine Konvention.</p>
+</div>
+</div>
+<p><b>Kommandozeilenargumente:</b> Nach <code>import sys</code> ist <code>sys.argv</code> eine Liste von <code>str</code>. <code>sys.argv[0]</code> ist der Skriptname, die eigentlichen Argumente stehen in <code>sys.argv[1:]</code> (Java: <code>String[] args</code>).</p>
+
+<h2>4.2 Rückgabewerte und <code>None</code></h2>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">def ist_gerade(zahl: int) -&gt; bool:
+    return zahl % 2 == 0
+
+def min_max(zahlen: list[int]) -&gt; tuple[int, int]:
+    return min(zahlen), max(zahlen)   # ein Tupel
+
+def vorzeichen(x: int) -&gt; str:
+    if x &gt; 0:
+        return "positiv"
+    # x &lt;= 0: kein return → None!
+
+kleinste, groesste = min_max([4, 9, 2, 7])
+print(ist_gerade(7), kleinste, groesste)
+print(vorzeichen(5), vorzeichen(-3))
+print(print("Hi"))    # print liefert None</pre><pre class="out">False 2 9
+positiv None
+Hi
+None</pre></div></div>
+<div>
+<ul>
+<li>Der Rückgabetyp steht nach <code>-&gt;</code>, jeder Typ ist möglich.</li>
+<li><code>return</code> beendet die Funktion <b>sofort</b>, Code danach läuft nicht mehr.</li>
+<li>„Mehrere Rückgabewerte“ sind in Wahrheit <b>ein Tupel</b>, das der Aufrufer wieder auspackt.</li>
+<li><b>Ohne <code>return</code> liefert jede Funktion <code>None</code>.</b> Bei <code>-&gt; None</code> darf ein leeres <code>return</code> die Funktion vorzeitig beenden.</li>
+<li>Fehlt in einem Zweig das <code>return</code>, kommt dort <code>None</code> heraus. <code>ty</code> meldet <code>invalid-return-type: Function can implicitly return None</code>.</li>
+<li><b><code>print</code> ist nicht <code>return</code>:</b> Eine Funktion, die ihr Ergebnis nur ausgibt, liefert <code>None</code>.</li>
+</ul>
+</div>
+</div>
+
+<h3>Aufrufstapel (Call Stack)</h3>
+<p>Bei jedem Aufruf, z. B. <code>addiere(5, 7)</code>, legt Python einen neuen <b>Rahmen</b> (Stack Frame) an und bindet darin <code>a = 5</code> und <code>b = 7</code>. Währenddessen wartet <code>main</code>. Mit <code>return</code> geht 12 zurück an <code>main</code>, der Rahmen verschwindet samt <code>a</code>, <code>b</code> und <code>summe</code>, und <code>main</code> macht in derselben Zeile weiter.</p>
+
+<h3><code>break</code> vs. <code>return</code></h3>
+<table>
+<tr><th>Anweisung</th><th>verlässt …</th><th>danach</th></tr>
+<tr><td><code>break</code></td><td>nur die aktuelle (innerste) Schleife</td><td>Der Rest der Funktion läuft weiter.</td></tr>
+<tr><td><code>continue</code></td><td>nur den aktuellen Schleifendurchlauf</td><td>Es geht mit dem nächsten Wert weiter.</td></tr>
+<tr><td><code>return</code></td><td>die <b>ganze Funktion</b>, auch mitten in einer Schleife</td><td>Der Wert geht an den Aufrufer, der Rahmen verschwindet.</td></tr>
+</table>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">def mit_break() -&gt; None:
+    for i in range(1, 11):
+        if i == 5:
+            break
+        print(i, end=" ")
+    print("Schleife beendet.")
+
+mit_break()</pre><pre class="out">1 2 3 4 Schleife beendet.</pre></div></div>
+<div class="ex"><div class="ex"><pre class="code">def mit_return() -&gt; None:
+    for i in range(1, 11):
+        if i == 5:
+            return
+        print(i, end=" ")
+    print("Schleife beendet.")  # kommt nie dran
+
+mit_return()
+print()</pre><pre class="out">1 2 3 4 </pre></div></div>
+</div>
+<div class="box slide"><span class="t">Folienhinweis (VL4, „break und return im Ablauf 1/2“)</span>
+Im Ausgabefeld der Folie stehen nur <code>2</code>, <code>3</code>, <code>4</code> und „Schleife beendet.“, die <code>1</code> fehlt (vermutlich abgeschnitten). Richtig ist <b>1 2 3 4</b> und dann „Schleife beendet.“, siehe die Ausgabe oben.</div>
+
+<h2>4.3 Gültigkeitsbereiche (LEGB)</h2>
+<p>Variablen, die in einer Funktion entstehen, sind <b>lokal</b>. Sie existieren nur, solange die Funktion läuft, und außerhalb gibt es einen <code>NameError</code>. Zur Erinnerung: <code>if</code> und <code>for</code> haben keinen eigenen Gültigkeitsbereich, <b>Funktionen schon</b>. Einen Namen sucht Python in der Reihenfolge <b>LEGB</b>.</p>
+<div class="cols">
+<figure style="margin:0">
+<svg viewBox="0 0 330 200" width="330" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="a6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b3261e"/></marker></defs>
+<g font-size="11">
+<rect x="5" y="5" width="320" height="190" rx="6" fill="#f3f3f3" stroke="#888"/><text x="14" y="22" font-weight="bold">B – Built-in: print, len, int …</text>
+<rect x="20" y="30" width="290" height="155" rx="6" fill="#e4ebf4" stroke="#1f5fa8"/><text x="29" y="47" font-weight="bold">G – Global (Datei): MWST_SATZ, brutto</text>
+<rect x="35" y="55" width="260" height="120" rx="6" fill="#e8f3e8" stroke="#2e7d32"/><text x="44" y="72" font-weight="bold">E – Enclosing (umschließende Funktion)</text>
+<rect x="50" y="80" width="230" height="85" rx="6" fill="#fff3df" stroke="#b86a00"/><text x="59" y="97" font-weight="bold">L – Local (in der Funktion)</text>
+<text x="59" y="115" class="mono">netto, betrag</text>
+<text x="59" y="135" fill="#b3261e">Suche: von innen nach außen</text>
+<line x1="230" y1="150" x2="300" y2="150" stroke="#b3261e" stroke-width="1.5" marker-end="url(#a6)"/>
+<text x="59" y="155" fill="#555" font-size="10">erster Treffer gewinnt</text>
+</g>
+</svg>
+</figure>
+<div class="ex"><div class="ex"><pre class="code">MWST_SATZ = 0.19                  # global
+
+def brutto(netto: float) -&gt; float:
+    betrag = netto * (1 + MWST_SATZ)  # lesen geht
+    return betrag
+
+zaehler = 0
+
+def erhoehe() -&gt; None:
+    zaehler += 1   # Zuweisung → lokal!
+
+print(brutto(100.0))
+erhoehe()</pre><pre class="out">119.0
+Traceback … (gekürzt)
+UnboundLocalError: cannot access local variable 'zaehler' where it is not associated with a value</pre></div></div>
+</div>
+<p>Eine globale Variable <b>lesen</b> geht. Eine <b>Zuweisung</b> in der Funktion macht den Namen aber für die <i>ganze</i> Funktion lokal. Bei <code>zaehler += 1</code> wird dann gelesen, bevor ein Wert da ist, und es gibt einen <code>UnboundLocalError</code>. Besser ist es, den Wert als Parameter zu übergeben und das Ergebnis mit <code>return</code> zurückzugeben.</p>
+
+<h2>4.4 Parameterübergabe: Namen, keine Kopien</h2>
+<p>Python übergibt <b>Verweise auf Objekte</b>, man nennt das „call by object reference“. Der Parameter zeigt also auf <b>dasselbe Objekt</b> wie das Argument. Was das bewirkt, hängt davon ab, ob die Funktion das Objekt <b>verändert</b> oder den Namen nur <b>neu bindet</b>.</p>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">def aendere_zahl(wert: int) -&gt; None:
+    wert = wert + 1          # nur lokale Neubindung
+
+def aendere_liste(liste: list[int]) -&gt; None:
+    liste[0] = 99            # verändert DAS Objekt
+    liste = [7, 7, 7]        # nur lokale Neubindung
+
+zahl = 5
+zahlen = [1, 2, 3]
+aendere_zahl(zahl)
+aendere_liste(zahlen)
+print(zahl, zahlen)</pre><pre class="out">5 [99, 2, 3]</pre></div></div>
+<figure style="margin:0">
+<svg viewBox="0 0 330 185" width="330" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="a7" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fa8"/></marker>
+<marker id="a7g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#999"/></marker></defs>
+<g font-size="11">
+<rect x="5" y="10" width="120" height="50" rx="4" fill="#f3f3f3" stroke="#888"/><text x="12" y="25" fill="#555">Rahmen: Modul</text>
+<rect x="40" y="31" width="62" height="22" rx="3" fill="#e4ebf4" stroke="#1f5fa8"/><text x="71" y="46" text-anchor="middle" class="mono">zahlen</text>
+<rect x="5" y="95" width="120" height="50" rx="4" fill="#f3f3f3" stroke="#888"/><text x="12" y="110" fill="#555">Rahmen: aendere_liste</text>
+<rect x="40" y="116" width="62" height="22" rx="3" fill="#e4ebf4" stroke="#1f5fa8"/><text x="71" y="131" text-anchor="middle" class="mono">liste</text>
+<rect x="195" y="55" width="120" height="30" rx="3" fill="#fff3df" stroke="#b86a00"/><text x="255" y="75" text-anchor="middle" class="mono" font-size="13">[99, 2, 3]</text>
+<line x1="102" y1="42" x2="193" y2="64" stroke="#1f5fa8" stroke-width="1.5" marker-end="url(#a7)"/>
+<line x1="102" y1="122" x2="193" y2="78" stroke="#1f5fa8" stroke-width="1.5" marker-end="url(#a7)"/>
+<rect x="195" y="130" width="120" height="28" rx="3" fill="#f7f7f7" stroke="#999" stroke-dasharray="3 2"/><text x="255" y="149" text-anchor="middle" class="mono" fill="#888" font-size="13">[7, 7, 7]</text>
+<line x1="102" y1="132" x2="193" y2="143" stroke="#999" stroke-dasharray="4 3" marker-end="url(#a7g)"/>
+<text x="165" y="178" text-anchor="middle" fill="#555">liste[0] = 99 ändert das gemeinsame Objekt;</text>
+<text x="255" y="48" text-anchor="middle" fill="#555" font-size="10">ein Objekt, zwei Namen</text>
+<text x="255" y="124" text-anchor="middle" fill="#888" font-size="10">liste = [7, 7, 7]: nur lokal</text>
+</g>
+</svg>
+</figure>
+</div>
+<table>
+<tr><th>Was passiert in der Funktion?</th><th>Beispiel</th><th>Außen sichtbar?</th></tr>
+<tr><td>Name neu binden</td><td><code>wert = wert + 1</code>, <code>liste = [7, 7, 7]</code></td><td>nein, das bleibt lokal</td></tr>
+<tr><td>Objekt verändern</td><td><code>liste[0] = 99</code>, <code>liste.append(4)</code></td><td><b>ja</b>, das ist ein <b>Nebeneffekt</b> (Java verhält sich bei Arrays genauso)</td></tr>
+</table>
+<p><b>Falle: veränderbarer Standardwert.</b> Ein Standardwert wird <b>einmal beim Definieren</b> erzeugt und dann bei jedem Aufruf wiederverwendet. Bei einer Liste als Standardwert teilen sich also alle Aufrufe dieselbe Liste (<code>ruff</code> meldet B006). Richtig ist <code>None</code> als Standardwert, die Liste legst du erst im Rumpf an.</p>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">def falsch(wert: int, liste: list[int] = []) -&gt; list[int]:
+    liste.append(wert)
+    return liste
+
+print(falsch(1))
+print(falsch(2))     # erwartet [2]</pre><pre class="out">[1]
+[1, 2]</pre></div></div>
+<div class="ex"><div class="ex"><pre class="code">def anhaengen(wert: int, liste: list[int] | None = None) -&gt; list[int]:
+    if liste is None:
+        liste = []
+    liste.append(wert)
+    return liste
+
+print(anhaengen(1))
+print(anhaengen(2))</pre><pre class="out">[1]
+[2]</pre></div></div>
+</div>
+<p><b>Gute Funktionen:</b> Funktionen dürfen andere Funktionen aufrufen, so baust du ein Programm aus kleinen Bausteinen zusammen (<code>quadratsumme</code> nutzt z. B. <code>quadriere</code>). Faustregel: <b>eine Funktion, eine Aufgabe, und sie passt auf einen Bildschirm.</b> Dokumentiert wird mit einem Docstring im Google-Stil (Kap. 2.1), den <code>help(funktion)</code> anzeigt (Java: Javadoc).</p>
+
+<h2>4.5 Standardwerte, Schlüsselwortargumente, <code>*args</code> statt Überladung</h2>
+<p>Java löst „gleiche Aufgabe, andere Eingaben“ mit <b>Methodenüberladung</b>. <b>Python kennt keine Überladung.</b> Ein Name zeigt immer auf genau ein Objekt, ein zweites <code>def</code> mit demselben Namen <b>überschreibt</b> also das erste (<code>ruff</code>: F811). Ruft man danach die alte Variante auf, gibt es einen <code>TypeError</code>.</p>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">def brutto(netto: float, satz: float = 0.19) -&gt; float:
+    return round(netto * (1 + satz), 2)
+
+print(brutto(100))                   # Standardwert
+print(brutto(100, 0.07))             # Position
+print(brutto(satz=0.07, netto=100))  # Name
+print(brutto())</pre><pre class="out">119.0
+107.0
+107.0
+Traceback … (gekürzt)
+TypeError: brutto() missing 1 required positional argument: 'netto'</pre></div></div>
+<div class="ex"><div class="ex"><pre class="code">def summe(*zahlen: int) -&gt; int:   # sammelt in ein Tupel
+    print(zahlen, end=" → ")
+    ergebnis = 0
+    for zahl in zahlen:
+        ergebnis += zahl
+    return ergebnis
+
+print(summe(1, 2, 3, 4))
+print(summe())</pre><pre class="out">(1, 2, 3, 4) → 10
+() → 0</pre></div></div>
+</div>
+<p><b>So kommen Argumente zu den Parametern:</b> Zuerst ordnet Python die Argumente ohne Namen der Reihe nach zu. Parameter, für die kein Argument kommt, bekommen ihren Standardwert. Benannte Argumente (Schlüsselwortargumente) finden ihren Parameter über den Namen, die Reihenfolge ist dann egal. Fehlt ein Pflichtparameter, bricht Python schon beim Aufruf ab, die Funktion läuft gar nicht erst los. Parameter <b>mit</b> Standardwert müssen <b>hinter</b> denen ohne stehen, sonst gibt es <code>SyntaxError: parameter without a default follows parameter with a default</code>.</p>
+<table>
+<tr><th>Java</th><th>Python</th></tr>
+<tr><td>andere Parameteranzahl → Überladung</td><td>Standardwerte, <code>*args</code></td></tr>
+<tr><td>andere Parametertypen → Überladung</td><td>eine Funktion mit <code>int | float</code> oder getrennte Namen</td></tr>
+<tr><td>Variante ohne Parameter ruft die Variante mit Standardwert auf</td><td>Standardwert direkt in der Signatur</td></tr>
+<tr><td>Der Compiler wählt die Methode (Compile-Time Binding)</td><td>Pro Name gibt es genau eine Funktion.</td></tr>
+<tr><td>nur anderer Rückgabetyp → Compilerfehler</td><td>Das zweite <code>def</code> überschreibt das erste (F811).</td></tr>
+</table>
+<p class="small">Unterschiedliche Aufgaben bekommen besser unterschiedliche Namen: <code>flaeche_kreis()</code>, <code>flaeche_rechteck()</code>.</p>
+
+<h2>4.6 Imperative vs. applikative Programmierung</h2>
+<p>Ein <b>Paradigma</b> ist ein Denkmuster, das bestimmt, wie man Algorithmen formuliert und entwirft. Im Fokus stehen <b>imperative</b> und <b>applikative</b> Algorithmen. Weitere Paradigmen sind objektorientiert, logisch, genetisch, parallel, neuronal und agentenorientiert.</p>
+<table>
+<tr><th></th><th>Imperativ</th><th>Applikativ (funktional)</th></tr>
+<tr><td>Denkschema</td><td><b>Wie</b> mache ich es?</td><td><b>Was</b> ist das Ergebnis?</td></tr>
+<tr><td>Grundlage</td><td>Anweisungen und Variablen, sequenzielle Ausführung</td><td>Anwendung von Funktionen: <code>f(v1, …, vn) = t(v1, …, vn)</code> mit einem Term t</td></tr>
+<tr><td>Zustand / Variablen</td><td>ändert sich ständig</td><td>bleibt unverändert, Werte sind konstant</td></tr>
+<tr><td>Wiederholung</td><td><code>for</code>, <code>while</code></td><td>Rekursion</td></tr>
+<tr><td>Nebenwirkungen</td><td>häufig</td><td>unerwünscht, das Ergebnis hängt nur von den Eingaben ab</td></tr>
+<tr><td>Beispiel</td><td>Summieren mit <code>for</code></td><td>Summieren mit Selbstaufruf; Funktionen höherer Ordnung (<code>map</code>, <code>filter</code>, <code>reduce</code>)</td></tr>
+</table>
+<div class="cols">
+<pre class="code">FAC:                       (imperatives Schema)
+  var X, Y: int;
+  input X;
+  Y := 1;
+  while X &gt; 1 do
+    Y := Y · X;
+    X := X - 1
+  od
+  output Y.</pre>
+<div class="ex"><div class="ex"><pre class="code"># h(p,q,x,y) = if p ∧ q then 4x + 2y else 5x − 3y fi
+def h(p: bool, q: bool, x: int, y: int) -&gt; int:
+    return 4 * x + 2 * y if p and q else 5 * x - 3 * y
+
+print(h(True, False, 1, 3))   # 5 - 9
+print(h(True, True, 2, 8))    # 8 + 16</pre><pre class="out">-4
+24</pre></div></div>
+</div>
+<div class="box slide"><span class="t">Folienfehler (VL4, „Applikative Algorithmen“)</span>
+Im Code der Folie steht <code>else 5 * x - 3</code>, das <b><code>* y</code> fehlt</b>. Richtig ist <code>5 * x - 3 * y</code>, so wie in der mathematischen Definition. Mit dem Folien-Code käme <code>h(True, False, 1, 3) == 2</code> heraus und nicht die auf der Folie angegebene −4. Die Ausgaben −4 und 24 stimmen nur mit dem korrigierten Code (siehe oben).</div>
+
+<h2>4.7 Rekursion</h2>
+<p>Bei einer <b>Rekursion</b> ruft eine Funktion <b>sich selbst</b> auf, um ein kleineres Teilproblem derselben Art zu lösen. Das geht so lange weiter, bis ein einfacher Fall erreicht ist. Jede rekursive Funktion hat zwei Pflichtteile:</p>
+<ol>
+<li>eine <b>Abbruchbedingung</b> (Basisfall): Sie legt fest, wann die Rekursion aufhört, und verhindert endlose Rekursion.</li>
+<li>einen <b>rekursiven Aufruf</b> mit einem <b>vereinfachten</b> Argument, das sich der Abbruchbedingung nähert.</li>
+</ol>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">def fakultaet(n: int) -&gt; int:
+    """Berechnet n! rekursiv."""
+    if n == 0:                         # Abbruchbedingung
+        return 1
+    else:
+        return n * fakultaet(n - 1)    # rekursiver Aufruf
+
+def summe_bis(n: int) -&gt; int:
+    return 0 if n == 0 else n + summe_bis(n - 1)
+
+def countdown(n: int) -&gt; None:         # nur Aktion
+    if n == 0:
+        print("Start!")
+    else:
+        print(n, end=" ")
+        countdown(n - 1)
+
+print(fakultaet(3), fakultaet(5), summe_bis(7))
+countdown(3)</pre><pre class="out">6 120 28
+3 2 1 Start!</pre></div></div>
+<figure style="margin:0">
+<svg viewBox="0 0 330 250" width="330" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="a8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fa8"/></marker>
+<marker id="a8g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2e7d32"/></marker></defs>
+<g font-size="11">
+<text x="5" y="14" font-weight="bold">Aufrufstapel bei fakultaet(3)</text>
+<rect x="10" y="25" width="190" height="34" rx="4" fill="#e4ebf4" stroke="#1f5fa8"/><text x="18" y="40" class="mono">fakultaet  n = 3</text><text x="18" y="53" class="mono" fill="#555">wartet: 3 * fakultaet(2)</text>
+<rect x="30" y="77" width="190" height="34" rx="4" fill="#e4ebf4" stroke="#1f5fa8"/><text x="38" y="92" class="mono">fakultaet  n = 2</text><text x="38" y="105" class="mono" fill="#555">wartet: 2 * fakultaet(1)</text>
+<rect x="50" y="129" width="190" height="34" rx="4" fill="#e4ebf4" stroke="#1f5fa8"/><text x="58" y="144" class="mono">fakultaet  n = 1</text><text x="58" y="157" class="mono" fill="#555">wartet: 1 * fakultaet(0)</text>
+<rect x="70" y="181" width="190" height="34" rx="4" fill="#fff3df" stroke="#b86a00"/><text x="78" y="196" class="mono">fakultaet  n = 0</text><text x="78" y="209" class="mono" fill="#b86a00">Basisfall: return 1</text>
+<line x1="20" y1="59" x2="40" y2="75" stroke="#1f5fa8" marker-end="url(#a8)"/><line x1="40" y1="111" x2="60" y2="127" stroke="#1f5fa8" marker-end="url(#a8)"/><line x1="60" y1="163" x2="80" y2="179" stroke="#1f5fa8" marker-end="url(#a8)"/>
+<text x="5" y="238" fill="#1f5fa8">↓ Abstieg: neue Rahmen</text>
+<path d="M260 190 C 300 180, 300 150, 242 146" fill="none" stroke="#2e7d32" marker-end="url(#a8g)"/><text x="292" y="172" fill="#2e7d32">1</text>
+<path d="M240 140 C 290 130, 290 100, 222 94" fill="none" stroke="#2e7d32" marker-end="url(#a8g)"/><text x="276" y="120" fill="#2e7d32">1·1 = 1</text>
+<path d="M220 88 C 280 78, 280 48, 202 42" fill="none" stroke="#2e7d32" marker-end="url(#a8g)"/><text x="262" y="68" fill="#2e7d32">2·1 = 2</text>
+<text x="205" y="20" fill="#2e7d32" font-weight="bold">3·2 = 6</text>
+<text x="150" y="238" fill="#2e7d32">↑ Aufstieg: Werte zurück</text>
+</g>
+</svg>
+</figure>
+</div>
+<p>Im Speicher bekommt jeder Aufruf einen eigenen Rahmen mit einem eigenen <code>n</code>. Beim <b>Abstieg</b> wartet jeder Rahmen auf das Ergebnis des nächsten. Erst der Basisfall liefert einen Wert, danach rechnen beim <b>Aufstieg</b> alle wartenden Rahmen ihr Ergebnis aus.</p>
+<p><b>Ohne Abbruchbedingung</b>, oder wenn sie nie erreicht wird, wächst der Stapel immer weiter. <code>fakultaet(-1)</code> mit <code>if n == 0</code> läuft z. B. über −1, −2, … bis zum <code>RecursionError: maximum recursion depth exceeded</code> (Java: <code>StackOverflowError</code>). <code>sys.getrecursionlimit()</code> liefert etwa <b>1000</b> Rahmen. Python optimiert Rekursion nicht weg (keine „Tail-Call-Optimierung“), deshalb bricht auch <code>fakultaet(5000)</code> ab. Für große <code>n</code> löst man die Aufgabe <b>iterativ</b>, in echten Programmen mit <code>math.factorial()</code>.</p>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">def fakultaet_iterativ(n: int) -&gt; int:
+    ergebnis = 1                 # 0! = 1! = 1
+    for i in range(1, n + 1):
+        ergebnis *= i
+    return ergebnis
+
+print(fakultaet_iterativ(5), fakultaet_iterativ(0))</pre><pre class="out">120 1</pre></div></div>
+<p class="small">Beispiel: <code>fakultaet(-1)</code> mit der Abbruchbedingung <code>n == 0</code> endet in <code>RecursionError: maximum recursion depth exceeded</code>. Robuster wäre <code>if n &lt;= 0</code>.</p>
+</div>
+<table>
+<tr><th>Rekursion: Vorteile</th><th>Rekursion: Nachteile</th></tr>
+<tr><td>elegant und kurz bei selbstähnlichen Problemen (Fakultät, Fibonacci, Verzeichnisbäume, Sortieren)</td><td>speicherintensiv, denn jeder Aufruf braucht einen Rahmen (→ RecursionError)</td></tr>
+<tr><td>mathematische Definitionen lassen sich direkt umsetzen</td><td>langsamer als Schleifen, weil es viele Aufrufe gibt</td></tr>
+<tr><td>wenig Zustand und wenige Hilfsvariablen</td><td>schwerer zu debuggen; das „Rückwärtsdenken“ muss man lernen</td></tr>
+</table>
+
+<h3>Übungen Teil 2 (Lösungsansätze der Musterlösung)</h3>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">def maximum(zahlen: list[int], index: int = 0) -&gt; int:
+    if index == len(zahlen) - 1:      # letztes Element
+        return zahlen[index]
+    rest = maximum(zahlen, index + 1)
+    return zahlen[index] if zahlen[index] &gt; rest else rest
+
+def zaehle_zeichen(text: str, zeichen: str) -&gt; int:
+    if text == "":
+        return 0
+    treffer = 1 if text[0] == zeichen else 0
+    return treffer + zaehle_zeichen(text[1:], zeichen)
+
+print(maximum([3, 8, -2, 5]), maximum([-5, -2, -9]))
+print(zaehle_zeichen("banana", "a"))</pre><pre class="out">8 -2
+3</pre></div></div>
+<div class="ex"><div class="ex"><pre class="code">def fibonacci(n: int) -&gt; int:
+    if n &lt; 2:                 # fib(0) = 0, fib(1) = 1
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+def potenz(basis: float, exponent: int) -&gt; float:
+    if exponent == 0:
+        return 1.0
+    if exponent &lt; 0:
+        return 1 / potenz(basis, -exponent)
+    return basis * potenz(basis, exponent - 1)
+
+print(fibonacci(10), potenz(2, 4), potenz(2, -2))</pre><pre class="out">55 16.0 0.25</pre></div></div>
+</div>
+<p class="small">Die naive Fibonacci-Rekursion ist sehr langsam, weil sie dieselben Werte immer wieder neu berechnet: <code>fibonacci(n)</code> ruft sich <code>2 · fibonacci(n + 1) − 1</code>-mal auf, bei n = 25 also 242 785-mal. <code>@functools.cache</code> über der Funktion merkt sich jedes Ergebnis, dann wird jedes <code>n</code> nur einmal berechnet. Die Lösung zu <code>maximum([])</code> deckt die leere Liste nicht ab, der Aufruf endet in einem RecursionError.</p>
+
+<h2>4.8 Funktionen testen: <code>assert</code> und pytest</h2>
+<div class="cols">
+<div>
+<p><code>assert bedingung</code> tut nichts, wenn die Bedingung stimmt, und löst sonst einen <code>AssertionError</code> aus. <b>pytest</b> entspricht JUnit in Java. Die Testdatei heißt <code>test_….py</code> und liegt neben dem Code. Jede Testfunktion beginnt mit <code>test_</code> und enthält ein oder mehrere <code>assert</code>. Eingerichtet wird pytest einmal pro Projekt mit <code>uv add --dev pytest</code>, ausgeführt mit <code>uv run pytest</code>. In der Ausgabe steht <code>.</code> für einen bestandenen und <code>F</code> für einen fehlgeschlagenen Test.</p>
+<p>Der Import <code>from fakultaet import fakultaet</code> ist nur ohne Nebenwirkungen möglich, weil <code>main()</code> hinter <code>if __name__ == "__main__":</code> steht.</p>
+</div>
+<pre class="code"># test_fakultaet.py
+from fakultaet import fakultaet
+
+def test_fakultaet_null() -&gt; None:
+    assert fakultaet(0) == 1
+
+def test_fakultaet_fuenf() -&gt; None:
+    assert fakultaet(5) == 120
+
+# Steht aus Versehen n + fakultaet(n - 1) im Code,
+# meldet pytest: assert 16 == 120
+#   where 16 = fakultaet(5)</pre>
+</div>
+<p class="small">Teste auch Randfälle, etwa <code>maximum([3])</code>, <code>maximum([-5, -2, -9]) == -2</code> und <code>zaehle_zeichen("", "a") == 0</code>. Floats prüfst du nicht mit <code>==</code>: <code>potenz(0.1, 3)</code> ergibt <code>0.0010000000000000002</code>. <span class="erg">(Ergänzung)</span></p>
+
+<div class="box trap"><span class="t">Typische Fehler und Fallen</span>
+<ul>
+<li><code>def</code> allein führt nichts aus. Ohne Klammern (<code>main</code> statt <code>main()</code>) wird die Funktion nicht aufgerufen.</li>
+<li><code>print</code> statt <code>return</code>: Das Ergebnis ist <code>None</code>. Fehlt in einem Zweig das <code>return</code>, kommt dort ebenfalls <code>None</code> heraus.</li>
+<li>Eine lokale Variable außerhalb der Funktion benutzen gibt einen <code>NameError</code>. <code>zaehler += 1</code> auf eine globale Variable gibt einen <code>UnboundLocalError</code>.</li>
+<li>Neubindung (<code>liste = […]</code>) wirkt nur lokal, eine Veränderung (<code>liste[0] = …</code>, <code>append</code>) sieht auch der Aufrufer.</li>
+<li>Eine veränderbare Liste als Standardwert wird zwischen den Aufrufen geteilt, nimm <code>None</code>.</li>
+<li>Parameter mit Standardwert müssen hinter denen ohne stehen, sonst gibt es einen <code>SyntaxError</code>. Ein zweites <code>def</code> mit demselben Namen überschreibt das erste.</li>
+<li>Ist die Abbruchbedingung nicht erreichbar, z. B. bei <code>fakultaet(-1)</code> mit <code>n == 0</code>, gibt es einen <code>RecursionError</code>.</li>
+</ul>
+</div>
+<div class="box must"><span class="t">Das musst du können</span>
+<ul>
+<li>Funktionen mit Typannotationen, Docstring, <code>return</code> und <code>main()</code> samt <code>if __name__ == "__main__":</code> schreiben</li>
+<li>vorhersagen, was eine Funktion zurückgibt (auch <code>None</code>), und <code>break</code>, <code>continue</code> und <code>return</code> unterscheiden</li>
+<li>LEGB erklären und <code>NameError</code> und <code>UnboundLocalError</code> erkennen</li>
+<li>vorhersagen, ob eine Änderung im Aufrufer sichtbar ist (Neubindung oder Veränderung des Objekts)</li>
+<li>Standardwerte, Schlüsselwortargumente und <code>*args</code> verwenden und Javas Überladung in Python umsetzen</li>
+<li>rekursive Funktionen mit Abbruchbedingung schreiben (Fakultät, Summe, Fibonacci, Maximum, Zeichen zählen, Potenz) und den Aufrufstapel zeichnen</li>
+<li>imperativ und applikativ vergleichen; Tests mit <code>assert</code> und pytest schreiben</li>
+</ul>
+</div>
+
+<!-- ================================================================ VL5 -->
+<h1><span class="vl">VL5</span>Objektorientierte Programmierung I</h1>
+<div class="box info"><span class="t">Hinweis</span>VL5 findet am <b>23.10.2026</b> statt. Dieses Kapitel beruht auf den vorab veröffentlichten Folien und den Musterlösungen (VL05_Loesungen) und wird nach der Vorlesung bei Bedarf angepasst.</div>
+
+<h2>5.1 Klassen und Objekte</h2>
+<p>Bei der <b>objektorientierten Programmierung (OOP)</b> besteht ein Programm aus <b>Objekten</b>, die zusammenarbeiten. Ein Objekt hat <b>Attribute</b>, also Daten, die seinen Zustand beschreiben, und <b>Methoden</b>, also Funktionen, die sein Verhalten beschreiben und den Zustand ändern können. Jedes Objekt gehört zu einer <b>Klasse</b>, dem Bauplan, nach dem die Objekte gebaut werden. Aus einer Klasse kannst du beliebig viele Objekte erzeugen, ein Objekt heißt deshalb auch <b>Instanz</b> der Klasse. Jedes Objekt hat eigene Werte für die Attribute, die Methoden stehen aber nur einmal in der Klasse und gelten für alle Objekte.</p>
+<table>
+<tr><th>Begriff</th><th>Bedeutung</th><th>Beispiel</th></tr>
+<tr><td><b>Klasse</b></td><td>Bauplan, Name in PascalCase</td><td><code>class Konto:</code></td></tr>
+<tr><td><b>Objekt / Instanz</b></td><td>ein konkretes Exemplar nach diesem Bauplan</td><td><code>anna = Konto("Anna", 100)</code></td></tr>
+<tr><td><b>Attribut</b> (Instanzattribut)</td><td>Daten bzw. Zustand eines Objekts, Zugriff mit dem Punkt</td><td><code>anna.kontostand</code></td></tr>
+<tr><td><b>Methode</b></td><td>Funktion in der Klasse; ihr erster Parameter ist <code>self</code></td><td><code>anna.einzahlen(50)</code></td></tr>
+<tr><td><b>Konstruktor</b></td><td><code>__init__</code>: läuft automatisch beim Erzeugen und setzt den Anfangszustand</td><td><code>def __init__(self, …) -&gt; None:</code></td></tr>
+<tr><td><b><code>self</code></b></td><td>das Objekt, für das die Methode läuft (Java: <code>this</code>)</td><td><code>self.kontostand += betrag</code></td></tr>
+<tr><td><b>Klassenattribut</b></td><td>ein Wert, der der Klasse gehört und von allen Objekten geteilt wird (Java: <code>static</code>)</td><td><code>Konto.anzahl_konten</code></td></tr>
+</table>
+<p><b>Objekte benutzt du schon lange:</b> <code>42</code> ist ein Objekt der Klasse <code>int</code>, <code>"hallo"</code> ist ein <code>str</code>-Objekt mit Methoden wie <code>upper()</code>, und <code>noten.append(3)</code> verändert den Zustand eines <code>list</code>-Objekts. Auch <code>str(42)</code> und <code>list()</code> rufen Klassen auf und erzeugen damit Objekte.</p>
+
+<figure>
+<svg viewBox="0 0 680 215" width="660" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="a9" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="a9b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fa8"/></marker></defs>
+<g font-size="12">
+<text x="10" y="14" font-weight="bold" fill="#555">UML-Klassendiagramm (Bauplan)</text>
+<rect x="10" y="22" width="170" height="112" fill="#fff" stroke="#333"/>
+<rect x="10" y="22" width="170" height="24" fill="#e4ebf4" stroke="#333"/><text x="95" y="39" text-anchor="middle" font-weight="bold">Konto</text>
+<line x1="10" y1="88" x2="180" y2="88" stroke="#333"/>
+<text x="18" y="63" class="mono" font-size="11">kunde: Kunde</text><text x="18" y="80" class="mono" font-size="11">kontostand: int</text>
+<text x="18" y="105" class="mono" font-size="11">info() -&gt; str</text><text x="18" y="122" class="mono" font-size="11">einzahlen(betrag)</text>
+<rect x="290" y="22" width="150" height="90" fill="#fff" stroke="#333"/>
+<rect x="290" y="22" width="150" height="24" fill="#e4ebf4" stroke="#333"/><text x="365" y="39" text-anchor="middle" font-weight="bold">Kunde</text>
+<line x1="290" y1="88" x2="440" y2="88" stroke="#333"/>
+<text x="298" y="63" class="mono" font-size="11">name: str</text><text x="298" y="80" class="mono" font-size="11">ort: str</text>
+<line x1="180" y1="62" x2="288" y2="62" stroke="#333" marker-end="url(#a9)"/><text x="234" y="56" text-anchor="middle" font-style="italic">hat ein</text>
+<text x="95" y="150" text-anchor="middle" fill="#555" font-size="11">oben Name · Mitte Attribute (Zustand)</text>
+<text x="95" y="164" text-anchor="middle" fill="#555" font-size="11">unten Methoden (Verhalten)</text>
+<!-- objects -->
+<text x="470" y="14" font-weight="bold" fill="#555">Objekte im Speicher</text>
+<rect x="470" y="24" width="96" height="44" rx="4" fill="#fff3df" stroke="#b86a00"/><text x="518" y="40" text-anchor="middle" font-weight="bold" font-size="11">giro: Konto</text><text x="518" y="58" text-anchor="middle" class="mono" font-size="10">kontostand=100</text>
+<rect x="578" y="24" width="96" height="44" rx="4" fill="#fff3df" stroke="#b86a00"/><text x="626" y="40" text-anchor="middle" font-weight="bold" font-size="11">spar: Konto</text><text x="626" y="58" text-anchor="middle" class="mono" font-size="10">kontostand=2500</text>
+<rect x="510" y="130" width="130" height="50" rx="4" fill="#fff3df" stroke="#b86a00"/><text x="575" y="148" text-anchor="middle" font-weight="bold" font-size="11">anna: Kunde</text><text x="575" y="166" text-anchor="middle" class="mono" font-size="10">"Anna Berger"</text>
+<line x1="518" y1="68" x2="560" y2="128" stroke="#1f5fa8" stroke-width="1.5" marker-end="url(#a9b)"/><line x1="626" y1="68" x2="590" y2="128" stroke="#1f5fa8" stroke-width="1.5" marker-end="url(#a9b)"/>
+<text x="575" y="200" text-anchor="middle" fill="#555" font-size="11">giro.kunde is spar.kunde → True</text>
+</g>
+</svg>
+<figcaption>Eine Klasse beschreibt, welche Attribute und Methoden ihre Objekte haben. Beide Konten zeigen auf dasselbe Kunden-Objekt (Hat-ein-Beziehung, Kap. 5.6).</figcaption>
+</figure>
+
+<h2>5.2 Eine Klasse in Python: <code>__init__</code> und <code>self</code></h2>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">class Konto:
+    def __init__(self, inhaber: str, kontostand: int) -&gt; None:
+        self.inhaber = inhaber
+        self.kontostand = kontostand
+
+def main() -&gt; None:
+    anna = Konto("Anna", 100)
+    ben = Konto("Ben", 250)
+    ben.kontostand = 300
+    print(anna.inhaber, anna.kontostand)
+    print(ben.inhaber, ben.kontostand)
+
+if __name__ == "__main__":
+    main()</pre><pre class="out">Anna 100
+Ben 300</pre></div></div>
+<div>
+<p><b>Was bei <code>Konto("Anna", 100)</code> passiert:</b></p>
+<ol>
+<li>Python legt ein neues, noch leeres Objekt an und ruft damit <code>__init__</code> auf. <code>self</code> zeigt auf dieses neue Objekt.</li>
+<li><code>self.inhaber = inhaber</code> legt das Attribut im Objekt an. Links steht das Attribut, rechts der Parameter, und beide dürfen gleich heißen.</li>
+<li>Genauso entsteht <code>self.kontostand</code>. <code>__init__</code> gibt nichts zurück (<code>-&gt; None</code>).</li>
+<li>Der Rahmen von <code>__init__</code> verschwindet, das Objekt bleibt. <code>Konto(…)</code> liefert es zurück, und <code>anna</code> zeigt jetzt darauf.</li>
+</ol>
+<p><code>ben.kontostand = 300</code> ändert nur das Objekt, auf das <code>ben</code> zeigt.</p>
+</div>
+</div>
+<ul>
+<li>Ein <b><code>new</code> wie in Java gibt es nicht</b>, du rufst einfach die Klasse auf.</li>
+<li>Attribute werden <b>nicht vorab im Klassenrumpf deklariert</b> wie in Java. Sie entstehen in <code>__init__</code>, ihr Typ ergibt sich aus dem annotierten Parameter.</li>
+<li><b>Genau ein <code>__init__</code></b>, denn Überladung gibt es nicht. Varianten baust du mit Standardwerten: Mit <code>kontostand: int = 0</code> funktionieren <code>Konto("Anna", 100)</code> und <code>Konto("Ben")</code>. Ohne <code>__init__</code> erzeugt <code>Konto()</code> ein Objekt ohne Attribute.</li>
+<li>Namen mit doppelten Unterstrichen wie <code>__init__</code> haben für Python eine feste Bedeutung. Man nennt sie <b>Dunder-Methoden</b> („double underscore“).</li>
+<li>Beträge stehen auf den Folien als <code>int</code> in ganzen Euro, damit der Code kurz bleibt. Für Cent-Beträge nimmt man <code>Decimal</code>.</li>
+</ul>
+
+<h2>5.3 Methoden, <code>self</code>, <code>__str__</code> und <code>__repr__</code></h2>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">class Konto:
+    def __init__(self, inhaber: str, kontostand: int = 0) -&gt; None:
+        self.inhaber = inhaber
+        self.kontostand = kontostand
+
+    def einzahlen(self, betrag: int) -&gt; None:
+        self.kontostand += betrag
+
+    def abheben(self, betrag: int) -&gt; bool:
+        if betrag &gt; self.kontostand:
+            print("Abgelehnt: Der Kontostand reicht nicht.")
+            return False
+        self.kontostand -= betrag
+        return True
+
+anna = Konto("Anna", 100)
+ben = Konto("Ben", 250)
+anna.einzahlen(50)
+ben.einzahlen(20)
+print(anna.kontostand, ben.kontostand)
+print(anna.abheben(500))
+print(anna.abheben(30), anna.kontostand)
+Konto.einzahlen(anna, 10)   # dasselbe wie anna.einzahlen(10)
+print(anna.kontostand)</pre><pre class="out">150 270
+Abgelehnt: Der Kontostand reicht nicht.
+False
+True 120
+130</pre></div></div>
+<div>
+<p>Eine <b>Methode</b> ist eine Funktion, die in der Klasse steht. Ihr erster Parameter ist <code>self</code>. Über <code>self</code> liest und ändert die Methode die Attribute ihres Objekts. Die Regel „nur abheben, wenn genug Geld da ist“ steht damit an einer einzigen Stelle, nämlich in der Klasse.</p>
+<p><b>Woher kommt <code>self</code>?</b> Bei <code>anna.einzahlen(50)</code> sucht Python die Methode in der Klasse von <code>anna</code> und ruft <code>Konto.einzahlen(anna, 50)</code> auf. Das Objekt vor dem Punkt wird so zu <code>self</code> und die 50 zu <code>betrag</code>. Deshalb hat <code>einzahlen</code> zwei Parameter, beim Aufruf steht aber nur ein Argument in den Klammern.</p>
+<p><code>self</code> entspricht <code>this</code> in Java. In Python steht es aber ausdrücklich in jeder Methode, und vor Attribute schreibt man immer <code>self.</code></p>
+<p>Bei <code>ben.einzahlen(20)</code> zeigt <code>self</code> auf Bens Objekt. Es ist dieselbe Methode, aber ein anderes <code>self</code>.</p>
+</div>
+</div>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">class Konto:
+    def __init__(self, inhaber: str, kontostand: int = 0) -&gt; None:
+        self.inhaber = inhaber
+        self.kontostand = kontostand
+
+    def __str__(self) -&gt; str:        # für Menschen: print()
+        return f"Konto von {self.inhaber}: {self.kontostand} Euro"
+
+    def __repr__(self) -&gt; str:       # für Entwickler: REPL, Listen
+        return f"Konto({self.inhaber!r}, {self.kontostand})"
+
+anna = Konto("Anna", 100)
+print(anna)
+print(repr(anna))
+print([anna, Konto("Ben")])</pre><pre class="out">Konto von Anna: 100 Euro
+Konto('Anna', 100)
+[Konto('Anna', 100), Konto('Ben', 0)]</pre></div></div>
+<div>
+<table>
+<tr><th>Methode</th><th>wofür</th><th>wird genutzt von</th></tr>
+<tr><td><code>__str__</code></td><td>lesbarer Text für Menschen (Java: <code>toString()</code>)</td><td><code>print(obj)</code>, <code>str(obj)</code>, f-Strings</td></tr>
+<tr><td><code>__repr__</code></td><td>sieht möglichst aus wie der Aufruf, der das Objekt erzeugt; <code>!r</code> setzt die Anführungszeichen</td><td>REPL, Ausgabe von Listen, <code>repr(obj)</code></td></tr>
+</table>
+<p>Ohne diese Methoden gibt <code>print(anna)</code> nur etwas wie <code>&lt;konto.Konto object at 0x10349f770&gt;</code> aus.</p>
+</div>
+</div>
+
+<h2>5.4 Namen zeigen auf Objekte, auch bei eigenen Klassen</h2>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">class Konto:
+    def __init__(self, inhaber: str, kontostand: int = 0) -&gt; None:
+        self.inhaber = inhaber
+        self.kontostand = kontostand
+
+    def einzahlen(self, betrag: int) -&gt; None:
+        self.kontostand += betrag
+
+konto1 = Konto("Anna", 100)
+konto2 = konto1            # KEIN zweites Konto!
+konto2.einzahlen(50)
+konto3 = Konto("Anna", 150)
+print(konto1.kontostand)
+print(konto1 is konto2, konto1 == konto3)</pre><pre class="out">150
+True False</pre></div></div>
+<figure style="margin:0">
+<svg viewBox="0 0 330 190" width="330" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="a10" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f5fa8"/></marker></defs>
+<g font-size="11">
+<rect x="10" y="25" width="60" height="22" rx="3" fill="#e4ebf4" stroke="#1f5fa8"/><text x="40" y="40" text-anchor="middle" class="mono">konto1</text>
+<rect x="10" y="62" width="60" height="22" rx="3" fill="#e4ebf4" stroke="#1f5fa8"/><text x="40" y="77" text-anchor="middle" class="mono">konto2</text>
+<rect x="10" y="125" width="60" height="22" rx="3" fill="#e4ebf4" stroke="#1f5fa8"/><text x="40" y="140" text-anchor="middle" class="mono">konto3</text>
+<rect x="160" y="30" width="150" height="50" rx="4" fill="#fff3df" stroke="#b86a00"/><text x="235" y="46" text-anchor="middle" font-weight="bold">Konto-Objekt</text><text x="235" y="62" text-anchor="middle" class="mono" font-size="10">inhaber "Anna"</text><text x="235" y="75" text-anchor="middle" class="mono" font-size="10">kontostand 150</text>
+<rect x="160" y="112" width="150" height="50" rx="4" fill="#fff3df" stroke="#b86a00"/><text x="235" y="128" text-anchor="middle" font-weight="bold">Konto-Objekt</text><text x="235" y="144" text-anchor="middle" class="mono" font-size="10">inhaber "Anna"</text><text x="235" y="157" text-anchor="middle" class="mono" font-size="10">kontostand 150</text>
+<line x1="70" y1="36" x2="158" y2="48" stroke="#1f5fa8" stroke-width="1.5" marker-end="url(#a10)"/>
+<line x1="70" y1="73" x2="158" y2="62" stroke="#1f5fa8" stroke-width="1.5" marker-end="url(#a10)"/>
+<line x1="70" y1="136" x2="158" y2="136" stroke="#1f5fa8" stroke-width="1.5" marker-end="url(#a10)"/>
+<text x="10" y="14" fill="#2e7d32">konto1 is konto2 → True (dasselbe Objekt)</text>
+<text x="10" y="182" fill="#b3261e">konto1 == konto3 → False (ohne __eq__: Identität)</text>
+</g>
+</svg>
+</figure>
+</div>
+<ul>
+<li><code>konto2 = konto1</code> kopiert nichts. Es hängt nur ein zweites Namensschild an dasselbe Objekt, so wie bei Listen in VL3 und VL4. Eine Änderung über <code>konto2</code> siehst du deshalb auch über <code>konto1</code>.</li>
+<li><code>==</code> vergleicht Objekte einer eigenen Klasse <b>ohne <code>__eq__</code></b> nur auf <b>Identität</b>, also genauso wie <code>is</code>. Mit <code>@dataclass</code> ändert sich das (Kap. 5.7).</li>
+<li>Für „noch kein Objekt“ gibt es <code>None</code> (Java: <code>null</code>). Geprüft wird mit <code>if konto is None:</code>.</li>
+</ul>
+
+<h3>Attribute sind dynamisch, Tippfehler auch</h3>
+<div class="cols">
+<pre class="code">anna = Konto("Anna", 100)
+anna.kontostnad = 500   # Tippfehler: kein Fehler,
+                        # sondern ein NEUES Attribut!
+print(anna.kontostand)  # 100
+
+$ uv run ty check
+error[unresolved-attribute]: Unresolved attribute
+`kontostnad` on type `Konto`</pre>
+<div>
+<p>Python erlaubt, einem Objekt jederzeit neue Attribute zu geben, deshalb gibt es zur Laufzeit <b>keinen Fehler</b>. <code>ty</code> kennt aber die Attribute aus <code>__init__</code> und meldet den Tippfehler schon vor der Ausführung. <b>Deshalb legst du alle Attribute in <code>__init__</code> an</b>, auch die, die am Anfang leer sind (<code>None</code>, <code>[]</code>).</p>
+</div>
+</div>
+
+<h2>5.5 Klassenattribute</h2>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">class Konto:
+    anzahl_konten = 0        # Klassenattribut: einmal, in der Klasse
+
+    def __init__(self, inhaber: str, kontostand: int = 0) -&gt; None:
+        Konto.anzahl_konten += 1     # immer über den Klassennamen
+        self.nummer = f"K{Konto.anzahl_konten:03}"
+        self.inhaber = inhaber       # Instanzattribute
+        self.kontostand = kontostand
+
+anna = Konto("Anna", 100)
+ben = Konto("Ben")
+print(anna.nummer, ben.nummer, Konto.anzahl_konten)
+ben.anzahl_konten += 1       # FALLE
+print(ben.anzahl_konten, Konto.anzahl_konten, anna.anzahl_konten)</pre><pre class="out">K001 K002 2
+3 2 2</pre></div></div>
+<div>
+<p>Ein <b>Klassenattribut</b> steht direkt im Klassenrumpf. Es gibt den Wert nur einmal, nämlich in der Klasse, und alle Objekte teilen ihn. Hier zählt es die Konten und liefert die nächste Kontonummer (<code>:03</code> füllt auf drei Stellen mit Nullen auf). Klassenattribute entsprechen den <code>static</code>-Variablen in Java.</p>
+<p><b>Falle:</b> Über ein Objekt kannst du ein Klassenattribut <i>lesen</i>, denn <code>ben.anzahl_konten</code> findet das Klassenattribut, wenn das Objekt selbst keins mit diesem Namen hat. <i>Zuweisen</i> über ein Objekt (<code>ben.anzahl_konten += 1</code>) legt dagegen ein neues <b>Instanzattribut</b> an, das nur <code>ben</code> hat. Der Zähler in der Klasse bleibt bei 2. Klassenattribute änderst du deshalb <b>immer über den Klassennamen</b>.</p>
+</div>
+</div>
+
+<h2>5.6 Kapselung mit Properties</h2>
+<table>
+<tr><th>OOP-Prinzip</th><th>Bedeutung</th><th>wann</th></tr>
+<tr><td><b>Kapselung</b></td><td>Daten und Methoden gehören zusammen. Das Objekt bestimmt selbst, wie sein Zustand geändert wird, und zeigt nach außen nur das Nötige.</td><td>VL5</td></tr>
+<tr><td>Vererbung</td><td>Eine Klasse übernimmt Attribute und Methoden einer anderen („ist ein“: Ein Girokonto ist ein Konto).</td><td>VL6/7</td></tr>
+<tr><td>Polymorphismus</td><td>Objekte verschiedener Klassen reagieren unterschiedlich auf denselben Methodenaufruf.</td><td>VL6/7</td></tr>
+<tr><td>Abstraktion</td><td>Gemeinsamkeiten mehrerer Klassen werden in einer Oberklasse zusammengefasst, unwichtige Details weggelassen.</td><td>VL6/7</td></tr>
+</table>
+<p><b>Warum Kapselung?</b> Mit der Klasse aus 5.2 kann jeder Teil des Programms den Kontostand beliebig setzen, auch auf einen ungültigen Wert wie <code>anna.kontostand = -999</code>. Bei Kapselung schützt das Objekt seinen inneren Zustand: Die Klasse prüft selbst, ob eine Änderung erlaubt ist, und das Objekt bleibt immer in einem gültigen Zustand. Außerdem kannst du das Innere ändern, ohne anderen Code anpassen zu müssen.</p>
+
+<table>
+<tr><th>Java</th><th>Python</th><th>Bedeutung in Python</th></tr>
+<tr><td><code>public</code></td><td><code>kontostand</code></td><td>Standard: Alles ohne Unterstrich ist öffentlich.</td></tr>
+<tr><td><code>private</code></td><td><code>_kontostand</code></td><td>Konvention: intern, nur innerhalb der Klasse benutzen</td></tr>
+<tr><td><code>protected</code></td><td><code>_kontostand</code></td><td>wie oben, Python unterscheidet die beiden Fälle nicht</td></tr>
+<tr><td>package-private</td><td>–</td><td>gibt es nicht</td></tr>
+</table>
+<p>Java prüft die Sichtbarkeit beim Übersetzen. Python prüft den Unterstrich nicht: <code>anna._kontostand</code> funktioniert, aber wer es benutzt, verlässt sich auf Interna der Klasse. Bei <b>zwei</b> Unterstrichen (<code>__kontostand</code>) benennt Python das Attribut intern in <code>_Konto__kontostand</code> um. Das verhindert Namenskonflikte bei Vererbung, schützt den Wert aber nicht. <b>Getter und Setter</b> schreibt man in Java für fast jedes Attribut, in Python ist das unüblich. Solange es nichts zu prüfen gibt, bleibt das Attribut öffentlich, erst wenn es Regeln gibt, kommt eine <b>Property</b> dazu.</p>
+
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">class Mitarbeiter:
+    def __init__(self, name: str, monatsgehalt: int) -&gt; None:
+        self.name = name
+        self.monatsgehalt = monatsgehalt
+
+    @property
+    def jahresgehalt(self) -&gt; int:      # berechnet, nur lesbar
+        return self.monatsgehalt * 12
+
+lena = Mitarbeiter("Lena", 4200)
+print(lena.jahresgehalt)                # ohne Klammern!
+lena.monatsgehalt = 4500
+print(lena.jahresgehalt)
+lena.jahresgehalt = 60000</pre><pre class="out">50400
+54000
+Traceback … (gekürzt)
+AttributeError: property 'jahresgehalt' of 'Mitarbeiter' object has no setter</pre></div></div>
+<div>
+<p>Eine <b>Property</b> ist eine Methode, die man von außen wie ein Attribut benutzt, also ohne Klammern: <code>lena.jahresgehalt</code>. Ihr Wert wird bei jedem Zugriff neu berechnet und passt deshalb immer zum Monatsgehalt.</p>
+<p>Ohne Setter ist eine Property <b>nur lesbar</b>. <code>ty</code> meldet <code>Cannot assign to read-only property</code>, zur Laufzeit gibt es einen <code>AttributeError</code>.</p>
+</div>
+</div>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">from decimal import Decimal
+
+class Konto:
+    def __init__(self, inhaber: str, kontostand: Decimal) -&gt; None:
+        self.inhaber = inhaber
+        self._kontostand = Decimal(0)
+        self.kontostand = kontostand   # nutzt den Setter
+
+    @property
+    def kontostand(self) -&gt; Decimal:   # Getter
+        return self._kontostand
+
+    @kontostand.setter
+    def kontostand(self, neuer_wert: Decimal) -&gt; None:
+        if neuer_wert &lt; 0:
+            print("Ungültig: negativer Kontostand.")
+            return
+        self._kontostand = neuer_wert
+
+    def einzahlen(self, betrag: Decimal) -&gt; None:
+        self.kontostand += betrag
+
+anna = Konto("Anna", Decimal("100.00"))
+anna.einzahlen(Decimal("49.99"))
+print(repr(anna.kontostand))
+anna.kontostand = Decimal("-500")
+print(anna.kontostand)</pre><pre class="out">Decimal('149.99')
+Ungültig: negativer Kontostand.
+149.99</pre></div></div>
+<div>
+<p>Der Wert liegt im internen Attribut <code>_kontostand</code>, die Property <code>kontostand</code> ist die öffentliche Schnittstelle. <code>anna.kontostand</code> ruft den <b>Getter</b> auf, <code>anna.kontostand = x</code> den <b>Setter</b>.</p>
+<p>Auch der Konstruktor benutzt den Setter, damit die Regel schon beim Anlegen gilt.</p>
+<p class="small">Laut Folie wäre bei ungültigen Werten eigentlich eine Ausnahme üblich (<code>raise ValueError(…)</code>) statt <code>print</code>.</p>
+<table>
+<tr><th>Situation</th><th>In Python</th><th>Beispiel</th></tr>
+<tr><td>Wert darf frei geändert werden</td><td>öffentliches Attribut</td><td><code>self.inhaber</code></td></tr>
+<tr><td>von außen nur lesen</td><td><code>_attribut</code> + Property ohne Setter</td><td>Bestand, der sich nur über Methoden ändert</td></tr>
+<tr><td>Änderung nur unter Regeln</td><td><code>_attribut</code> + Property mit Setter</td><td><code>kontostand</code></td></tr>
+<tr><td>Wert wird berechnet</td><td>Property ohne eigenes Attribut</td><td><code>jahresgehalt</code></td></tr>
+</table>
+<p class="small">Von außen sieht eine Property aus wie ein Attribut. Du kannst also mit einem öffentlichen Attribut anfangen und später eine Property daraus machen, ohne dass sich der aufrufende Code ändert. Hilfsmethoden, die nur in der Klasse gebraucht werden, bekommen ebenfalls einen Unterstrich: <code>_pruefe_betrag()</code>.</p>
+</div>
+</div>
+<table>
+<tr><th>Java-Modifikator</th><th>Zweck</th><th>Python</th></tr>
+<tr><td><code>static</code> Variable</td><td>Zähler, geteilte Werte</td><td>Klassenattribut (<code>anzahl_konten = 0</code>)</td></tr>
+<tr><td><code>static final</code></td><td>Konstanten</td><td>Modulkonstante <code>MAX_KONTEN: Final = 100</code></td></tr>
+<tr><td><code>static</code> Methode</td><td>Hilfsmethoden</td><td>meist eine normale Funktion im Modul; <code>@staticmethod</code> gibt es auch</td></tr>
+<tr><td><code>final</code> Methode/Klasse</td><td>Überschreiben verhindern</td><td><code>@final</code> aus <code>typing</code>, prüft nur ty (VL6)</td></tr>
+<tr><td><code>abstract</code></td><td>unvollständige Klassen</td><td><code>abc.ABC</code>, <code>@abstractmethod</code> (VL6/07)</td></tr>
+</table>
+
+<h2>5.7 Zusammengesetzte Klassen, Module und <code>@dataclass</code></h2>
+<p>Objekte können andere Objekte als Attribute haben. Das nennt man eine <b>Hat-ein-Beziehung</b> (has-a): Ein Konto hat einen Kunden, eine Bestellung hat einen Kunden und mehrere Positionen, eine Abteilung hat mehrere Mitarbeiter. Damit bildest du Zusammenhänge aus der realen Welt direkt ab. Jede Klasse bleibt klein und kümmert sich um ihre eigene Aufgabe, und die Objekte arbeiten zusammen, indem sie gegenseitig ihre Methoden aufrufen.</p>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">class Kunde:
+    def __init__(self, name: str, ort: str) -&gt; None:
+        self.name = name
+        self.ort = ort
+
+class Konto:
+    def __init__(self, kunde: Kunde, kontostand: int = 0) -&gt; None:
+        self.kunde = kunde          # Konto HAT einen Kunden
+        self.kontostand = kontostand
+
+    def info(self) -&gt; str:
+        return f"{self.kunde.name}: {self.kontostand} Euro"
+
+anna = Kunde("Anna Berger", "Heilbronn")
+giro = Konto(anna, 100)
+spar = Konto(anna, 2500)
+print(spar.info())
+print(giro.kunde is spar.kunde)</pre><pre class="out">Anna Berger: 2500 Euro
+True</pre></div></div>
+<div>
+<p>Der Parameter <code>kunde</code> hat als Typ die eigene Klasse <code>Kunde</code>. Über das Attribut kommt das Konto an die Daten des Kunden heran: <code>self.kunde.name</code>. Beide Konten zeigen auf <b>dasselbe</b> Kunden-Objekt (siehe Diagramm in 5.1).</p>
+<p><b>Module und Pakete:</b> Jede <code>.py</code>-Datei ist ein <b>Modul</b>. Ein Ordner mit Modulen und einer Datei <code>__init__.py</code> (die leer sein darf) ist ein <b>Paket</b>. Pakete ordnen große Projekte und vermeiden Namenskonflikte, denn <code>banking.konto</code> und <code>lager.konto</code> dürfen beide existieren. Der Paketname ergibt sich aus dem Ordner, einen <code>package</code>-Kopf wie in Java gibt es nicht. Mehrere zusammengehörige Klassen dürfen in einem Modul stehen.</p>
+<pre class="code">bank/
+├── main.py      # from banking.konto import Konto
+└── banking/     # from banking.kunde import Kunde
+    ├── __init__.py
+    ├── konto.py
+    └── kunde.py</pre>
+</div>
+</div>
+
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">from dataclasses import dataclass
+
+@dataclass
+class Kunde:
+    name: str
+    ort: str
+
+k = Kunde("Anna Berger", "Heilbronn")
+print(k)
+print(k == Kunde("Anna Berger", "Heilbronn"))</pre><pre class="out">Kunde(name='Anna Berger', ort='Heilbronn')
+True</pre></div></div>
+<div>
+<p><b><code>@dataclass</code></b> ist eine Kurzform für Datenklassen. Aus den annotierten Attributen im Klassenrumpf erzeugt Python <code>__init__</code>, <code>__repr__</code> und <code>__eq__</code> automatisch. <code>==</code> vergleicht dann die <b>Werte</b> und nicht mehr die Identität. Von Hand müsstest du dafür <code>__eq__</code> mit <code>isinstance</code> und <code>NotImplemented</code> selbst schreiben. Auch eine Datenklasse darf Methoden und Properties haben. <code>@dataclass</code> nimmt dir nur Schreibarbeit ab, heraus kommt dieselbe Klasse, die du sonst von Hand schreiben würdest.</p>
+</div>
+</div>
+<table>
+<tr><th></th><th><code>@dataclass</code></th><th>normale Klasse</th></tr>
+<tr><td>Zweck</td><td>vor allem Daten bündeln</td><td>Verhalten und Regeln stehen im Vordergrund</td></tr>
+<tr><td>Beispiele</td><td><code>Kunde</code>, <code>Adresse</code>, <code>Bestellposition</code></td><td><code>Konto</code>, <code>Warenkorb</code>, <code>Lager</code></td></tr>
+<tr><td><code>==</code></td><td>vergleicht die Werte</td><td>vergleicht die Identität (ohne eigenes <code>__eq__</code>)</td></tr>
+<tr><td>Schreibarbeit</td><td>gering</td><td><code>__init__</code> usw. von Hand</td></tr>
+</table>
+
+<h3>Übung 5: Warenkorb (vereinfacht nach der Musterlösung; dort ist <code>Kunde</code> eine <code>@dataclass</code> mit <code>name</code> und <code>email</code>)</h3>
+<div class="ex"><div class="ex"><pre class="code">from dataclasses import dataclass
+from decimal import Decimal
+
+@dataclass
+class Produkt:            # in der Lösung: normale Klasse mit Properties (Übung 4)
+    name: str
+    preis: Decimal
+    bestand: int
+
+@dataclass
+class Position:           # eine Position HAT ein Produkt
+    produkt: Produkt
+    menge: int
+
+    def summe(self) -&gt; Decimal:
+        return self.produkt.preis * self.menge
+
+class Warenkorb:          # HAT einen Kunden und mehrere Positionen
+    def __init__(self, kunde: str) -&gt; None:
+        self.kunde = kunde
+        self.positionen: list[Position] = []   # leere Liste in __init__
+
+    def hinzufuegen(self, produkt: Produkt, menge: int) -&gt; None:
+        if menge &gt; produkt.bestand:
+            print(f"Nur noch {produkt.bestand} x {produkt.name} auf Lager.")
+            return
+        self.positionen.append(Position(produkt, menge))
+
+    def gesamtsumme(self) -&gt; Decimal:
+        summe = Decimal(0)
+        for position in self.positionen:
+            summe += position.summe()
+        return summe
+
+korb = Warenkorb("Anna Berger")
+kaffee = Produkt("Kaffee 1 kg", Decimal("12.99"), 40)
+korb.hinzufuegen(kaffee, 2)
+korb.hinzufuegen(Produkt("Grüner Tee", Decimal("3.49"), 120), 3)
+korb.hinzufuegen(kaffee, 50)
+print(f"Summe: {korb.gesamtsumme()} Euro")</pre><pre class="out">Nur noch 40 x Kaffee 1 kg auf Lager.
+Summe: 36.45 Euro</pre></div></div>
+<p class="small">Weitere Übungen aus der Musterlösung: In Übung 4 bekommt <code>Produkt</code> den Bruttopreis als Property: <code>(self._preis * (1 + MWST_SATZ)).quantize(Decimal("0.01"))</code> ergibt bei 12,99 € den Wert 15.46. <code>kaffee.bestand = 100</code> scheitert dort, weil <code>bestand</code> eine Property ohne Setter ist (AttributeError). In Übung 3 ergibt <code>kaffee.anzahl += 1</code> ein Instanzattribut, <code>Produkt.anzahl</code> bleibt unverändert.</p>
+
+<h3>OOP: Vor- und Nachteile, Geschichte</h3>
+<table>
+<tr><th>Vorteile</th><th>Nachteile</th></tr>
+<tr><td><b>Struktur</b>: Daten und Verhalten an einem Ort</td><td><b>Einstieg</b>: Vererbung, Polymorphismus und Referenzen brauchen Übung</td></tr>
+<tr><td><b>Wiederverwendung</b>: Klassen lassen sich erweitern und kombinieren</td><td><b>Aufwand</b>: Objekte brauchen mehr Speicher und Laufzeit</td></tr>
+<tr><td><b>Kapselung</b>: klar definierte Schnittstellen</td><td>für kleine Aufgaben oft zu umständlich</td></tr>
+<tr><td><b>Abstraktion</b>: Fokus auf das Wesentliche; <b>Erweiterbarkeit</b>: neue Klassen fügen sich leicht ein</td><td><b>Overengineering</b>: zu viele Klassen für ein kleines Problem</td></tr>
+</table>
+<p class="small">Geschichte: In den 1980ern stößt die prozedurale Programmierung bei großen Systemen an ihre Grenzen (wenig Modularität, schwer wartbar). <b>Simula</b> (1967) und <b>Smalltalk</b> (1970er) legen das Fundament mit Objekten und Nachrichten, <b>C++</b> (1980er) bringt OOP in die Industrie, <b>Java</b> (1995) verbreitet sie weiter. <b>Python</b> (1991) ist von Anfang an objektorientiert gebaut: Jeder Wert ist ein Objekt, eigene Klassen sind trotzdem freiwillig. Für kleine Aufgaben reichen oft Funktionen.</p>
+
+<div class="box trap"><span class="t">Typische Fehler und Fallen</span>
+<ul>
+<li><code>self</code> in der Methodendefinition vergessen: Beim Aufruf gibt es dann einen <code>TypeError</code>, weil Python das Objekt trotzdem als erstes Argument übergibt. Ebenso falsch ist, <code>self.</code> vor einem Attribut zu vergessen (<code>kontostand += betrag</code> statt <code>self.kontostand += betrag</code>).</li>
+<li><code>__init__</code> gibt nichts zurück (<code>-&gt; None</code>), das Objekt liefert der Aufruf <code>Konto(…)</code>. Ein <code>new</code> gibt es nicht.</li>
+<li><code>konto2 = konto1</code> erzeugt kein zweites Objekt.</li>
+<li><code>==</code> ohne <code>__eq__</code> bzw. ohne <code>@dataclass</code> vergleicht die Identität. Zwei Objekte mit gleichen Werten sind dann nicht gleich.</li>
+<li>Ein Tippfehler bei der Attributzuweisung legt still ein neues Attribut an, nur <code>ty</code> findet ihn.</li>
+<li>Ein Klassenattribut über ein Objekt ändern legt ein Instanzattribut an. Ändere es immer über den Klassennamen.</li>
+<li>Eine Property ruft man ohne Klammern auf (<code>lena.jahresgehalt</code>). Ohne Setter ist sie nur lesbar (AttributeError).</li>
+<li><code>_attribut</code> ist nur eine Konvention, Python schützt nichts.</li>
+<li>Ohne <code>__str__</code> zeigt <code>print(obj)</code> nur <code>&lt;… object at 0x…&gt;</code>.</li>
+</ul>
+</div>
+<div class="box must"><span class="t">Das musst du können</span>
+<ul>
+<li>Klasse, Objekt/Instanz, Attribut, Methode, Konstruktor, <code>self</code> und Klassenattribut erklären und an Code zeigen</li>
+<li>eine Klasse aus einem UML-Klassendiagramm programmieren (mit <code>__init__</code>, Typannotationen und Methoden mit Prüfregeln)</li>
+<li>erklären, warum <code>anna.einzahlen(50)</code> dasselbe ist wie <code>Konto.einzahlen(anna, 50)</code></li>
+<li><code>__str__</code> und <code>__repr__</code> schreiben und ihren Unterschied nennen</li>
+<li><code>is</code> und <code>==</code> bei eigenen Objekten vorhersagen, mit und ohne <code>@dataclass</code></li>
+<li>einen Zähler als Klassenattribut programmieren und die Zuweisungsfalle über das Objekt erklären</li>
+<li>Kapselung begründen; <code>_attribut</code>, eine Property ohne und mit Setter sowie eine berechnete Property schreiben</li>
+<li>die vier OOP-Prinzipien nennen; Hat-ein-Beziehungen, Module und Pakete erklären</li>
+</ul>
+</div>
+
+<!-- ================================================================ ANHANG -->
+<h1><span class="vl">Anhang</span>Fehlermeldungen und Selbsttest</h1>
+<h2>A.1 Fehlermeldungen auf einen Blick</h2>
+<table>
+<tr><th>Fehler</th><th>Typischer Auslöser</th><th>Kapitel</th></tr>
+<tr><td><code>SyntaxError</code></td><td>fehlende Klammer oder fehlender <code>:</code>, <code>x++</code>, <code>else</code> ohne <code>if</code>, Parameter ohne Standardwert hinter einem mit Standardwert</td><td>2, 3, 4</td></tr>
+<tr><td><code>IndentationError</code></td><td>Block nach <code>:</code> nicht eingerückt</td><td>3</td></tr>
+<tr><td><code>NameError</code></td><td>Name nie zugewiesen, Tippfehler bzw. Großschreibung, nur Typangabe, übersprungener Block, lokale Variable außerhalb der Funktion</td><td>2, 3, 4</td></tr>
+<tr><td><code>TypeError</code></td><td><code>"Alter: " + 36</code>, Pflichtargument fehlt, Tupel ändern, <code>self</code> vergessen</td><td>2, 3, 4, 5</td></tr>
+<tr><td><code>ValueError</code></td><td><code>int("zwei")</code>, <code>zip(…, strict=True)</code> mit unterschiedlich langen Listen</td><td>2, 3</td></tr>
+<tr><td><code>ZeroDivisionError</code></td><td>Division durch 0 (Absicherung mit Kurzschluss)</td><td>2, 3</td></tr>
+<tr><td><code>IndexError</code></td><td>Index außerhalb der Liste bzw. des Strings</td><td>3</td></tr>
+<tr><td><code>UnboundLocalError</code></td><td>Zuweisung an einen globalen Namen in der Funktion (<code>zaehler += 1</code>)</td><td>4</td></tr>
+<tr><td><code>RecursionError</code></td><td>Abbruchbedingung fehlt oder wird nie erreicht, Tiefe über etwa 1000</td><td>4</td></tr>
+<tr><td><code>AssertionError</code></td><td><code>assert</code> mit falscher Bedingung</td><td>4</td></tr>
+<tr><td><code>AttributeError</code></td><td>Zuweisung an eine Property ohne Setter, nicht vorhandenes Attribut lesen</td><td>5</td></tr>
+<tr><td><i>kein Fehler!</i></td><td>Logikfehler (<code>5 + 2 / 2</code>), falscher Startwert, Tippfehler bei einer Attributzuweisung, <code>int(19.99 * 100)</code></td><td>2, 3, 5</td></tr>
+</table>
+
+<h2>A.2 Selbsttest: Was gibt das aus?</h2>
+<p>Überleg dir zuerst selbst eine Antwort und schau dann auf die Ausgabe darunter.</p>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">print(17 // 5, 17 % 5, -17 // 5, 2 ** 3 ** 2)
+print(10 / 4, 10 // 4.0, int(-2.9))
+print("Ab" * 2 + "c", "Hallo"[-2:], len("a b"))</pre><pre class="out">3 2 -4 512
+2.5 2.0 -2
+AbAbc lo 3</pre></div></div>
+<div class="ex"><div class="ex"><pre class="code">x = 0
+for i in range(10, 0, -3):
+    x += i
+print(i, x)
+print(not 0 or 5 and "", bool(" "))</pre><pre class="out">1 22
+True True</pre></div></div>
+</div>
+<div class="cols">
+<div class="ex"><div class="ex"><pre class="code">def f(n: int) -&gt; int:
+    if n &lt;= 1:
+        return n
+    return f(n - 1) + n * 2
+
+def g(werte: list[int]) -&gt; None:
+    werte.append(len(werte))
+
+zahlen = [5]
+g(zahlen)
+g(zahlen)
+print(f(3), zahlen)</pre><pre class="out">11 [5, 1, 2]</pre></div></div>
+<div class="ex"><div class="ex"><pre class="code">class Zaehler:
+    stand = 0
+
+    def __init__(self) -&gt; None:
+        Zaehler.stand += 1
+        self.nr = Zaehler.stand
+
+a = Zaehler()
+b = Zaehler()
+c = b
+c.nr = 9
+print(a.nr, b.nr, Zaehler.stand, b is c)</pre><pre class="out">1 9 2 True</pre></div></div>
+</div>
+<p class="small">Hinweise: <code>**</code> wird von rechts ausgewertet (<code>3 ** 2</code> zuerst) <span class="erg">(Ergänzung)</span>. <code>10 // 4.0</code> ergibt bei einem float-Operanden auch einen float <span class="erg">(Ergänzung)</span>. <code>and</code> und <code>or</code> liefern einen der Operanden zurück, nicht unbedingt <code>True</code> oder <code>False</code> <span class="erg">(Ergänzung)</span>.</p>
+
+<div class="box info"><span class="t">Wird ergänzt</span>Nach VL6–VL11 kommen dazu: Vererbung, Polymorphismus und Abstraktion (OOP II–III), Standardbibliothek, Klausurvorbereitung, ein aktualisierter Abschnitt „Klausur auf einen Blick“ (Form, Hilfsmittel) und weitere Selbsttests.</div>
+
+</body>
+</html>
