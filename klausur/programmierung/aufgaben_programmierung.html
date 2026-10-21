@@ -1,0 +1,976 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Übungsaufgaben Programmierung</title><style>
+@page { size: A4; margin: 15mm 15mm 16mm 15mm;
+  @bottom-center { content: counter(page) " / " counter(pages); font-family: Arial, sans-serif; font-size: 8.5pt; color: #444; } }
+* { box-sizing: border-box; }
+:root { --ink: #111; --muted: #555; --rule: #9a9a9a; --soft: #f3f3f3; --accent: #1d3f6e; }
+html, body { background: #fff; color: var(--ink); }
+body { font-family: "DejaVu Sans", "Liberation Sans", Arial, sans-serif; font-size: 10.5pt; line-height: 1.38; margin: 0; }
+h1 { font-size: 19pt; margin: 0 0 3mm; color: var(--accent); }
+h2 { font-size: 14.5pt; margin: 0 0 3mm; padding-bottom: 1mm; border-bottom: 2px solid var(--accent); color: var(--accent); }
+h3 { font-size: 11.5pt; margin: 0 0 2mm; display: flex; justify-content: space-between; gap: 4mm;
+     border-bottom: 1px solid #000; padding-bottom: 0.6mm; break-after: avoid; }
+h4 { font-size: 10.5pt; margin: 3mm 0 1mm; break-after: avoid; }
+p { margin: 1.2mm 0; }
+.pts { white-space: nowrap; font-weight: bold; }
+.newpage { break-before: page; }
+section.task { margin: 0 0 6mm; }
+.keep { break-inside: avoid; }
+pre, code, .mono { font-family: "DejaVu Sans Mono", "Liberation Mono", monospace; }
+code { font-size: 9.4pt; background: var(--soft); padding: 0 0.6mm; border-radius: 1px; }
+pre { font-size: 9pt; line-height: 1.32; border: 1px solid #b8b8b8; background: var(--soft); padding: 1.8mm 2.5mm;
+      margin: 1.5mm 0 2mm; white-space: pre-wrap; break-inside: avoid; }
+pre.out { background: #fff; border-left: 3px solid #555; }
+.ln { color: #888; display: inline-block; width: 7mm; user-select: none; }
+.outlabel { font-size: 9pt; color: var(--muted); margin-top: 1.5mm; }
+.gap { display: inline-block; min-width: 26mm; border-bottom: 1.4px solid #000; height: 1.2em; vertical-align: bottom; background: #fff; }
+.gap sup { font-size: 7pt; color: #333; font-family: Arial, sans-serif; }
+pre.gapcode { line-height: 1.42; }
+pre.tight { font-size: 8.5pt; line-height: 1.24; }
+pre.gapcode.tight { line-height: 1.38; }
+.lines { margin: 1mm 0 3mm; }
+.lines .l { height: 8mm; border-bottom: 1px solid var(--rule); }
+.codebox { border: 1px solid #777; margin: 1.5mm 0 3mm; padding: 0 2mm; position: relative; }
+.codebox .cl { height: 7mm; border-bottom: 1px dotted #c4c4c4; }
+.codebox .boxlabel { position: absolute; right: 2mm; top: 0.5mm; font-size: 8pt; color: var(--muted); }
+ol.mc { padding-left: 6mm; margin: 1mm 0; }
+li.mcq { margin: 0 0 2.4mm; break-inside: avoid; }
+ul.opts { list-style: none; padding-left: 2mm; margin: 0.8mm 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0.6mm 6mm; }
+ul.opts.one, li.mcq.long ul.opts { grid-template-columns: 1fr; }
+.box { font-size: 13pt; line-height: 1; vertical-align: -1px; margin-right: 1mm; }
+table { border-collapse: collapse; width: 100%; margin: 1.5mm 0 3mm; break-inside: avoid; }
+th, td { border: 1px solid #555; padding: 1.2mm 1.8mm; text-align: left; vertical-align: top; font-size: 9.8pt; }
+th { background: #e8e8e8; }
+table.trace td { height: 8.5mm; }
+table.write td { height: 13mm; }
+table.compact td { height: auto; }
+.cover { min-height: 255mm; display: flex; flex-direction: column; }
+.cover .meta { color: var(--muted); margin-bottom: 6mm; }
+.fields { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm 8mm; margin: 4mm 0 6mm; }
+.field { border-bottom: 1px solid #000; height: 11mm; display: flex; align-items: flex-end; padding-bottom: 1mm; font-size: 9pt; color: var(--muted); }
+.matrikel { display: flex; gap: 0; }
+.matrikel span { width: 8mm; height: 10mm; border: 1px solid #000; margin-right: -1px; display: inline-block; }
+.hinweise { border: 1px solid #777; padding: 2mm 4mm; margin: 0 0 5mm; }
+.hinweise ul { margin: 1mm 0; padding-left: 5mm; }
+.punkte td, .punkte th { height: 7.5mm; vertical-align: middle; }
+.punkte td:nth-child(3), .punkte td:nth-child(4) { text-align: center; }
+.small { font-size: 9pt; color: var(--muted); }
+.eh { border: 1px solid #9bb0cc; background: #f2f6fb; padding: 1.5mm 3mm; margin: 2mm 0 1mm; break-inside: avoid; }
+.eh ul { margin: 0.5mm 0; padding-left: 5mm; }
+.note { border-left: 3px solid #b07a00; background: #fff8e8; padding: 1.2mm 3mm; margin: 2mm 0; font-size: 9.6pt; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+.two > div > pre { margin-top: 0; }
+.toc li { margin: 1mm 0; }
+.level { font-size: 8.5pt; color: var(--muted); font-weight: normal; }
+ol.sub { padding-left: 6mm; margin: 1mm 0; }
+ol.sub > li { margin: 0 0 1.5mm; }
+</style></head><body>
+<div class="cover">
+<h1>Übungsaufgaben – Grundlagen der Programmierung</h1>
+<div style="font-size:12pt;font-weight:bold">Python · DHBW Heilbronn · Wirtschaftsinformatik, 1. Semester · Dr. Markus Rosenfelder</div>
+<div class="meta">Klausur laut Lernplan: Fr, 11.12.2026, 120 Minuten · Stoff: VL1–VL5 (Stand 21.10.2026) · inoffizielles Übungsmaterial, es gibt keine Musterklausur</div>
+<p>Zwei Probeklausuren im Papierformat (je 120 Minuten, 120 Punkte) und ein Aufgabenpool je Vorlesung, aufsteigend schwer
+(★ leicht bis ★★★ anspruchsvoll). Die Lösungen stehen in der separaten Datei <code>loesungen_programmierung.pdf</code>.</p>
+<p><b>Empfehlung:</b> Erst den Pool der jeweiligen Vorlesung, dann eine Probeklausur am Stück unter Klausurbedingungen (ohne Rechner, 120 Minuten), danach mit dem
+Erwartungshorizont selbst korrigieren. Die zweite Probeklausur einige Tage später.</p>
+<h4>Inhalt</h4>
+<ol class="toc"><li>Probeklausur A</li><li>Probeklausur B</li><li>Aufgabenpool VL1: Einführung: Algorithmen, Datenstrukturen, Python-Werkzeuge (6 Aufgaben)</li><li>Aufgabenpool VL2: Variablen, Datentypen und Operatoren (7 Aufgaben)</li><li>Aufgabenpool VL3: Kontrollstrukturen und Listen (8 Aufgaben)</li><li>Aufgabenpool VL4: Funktionen, Rekursion und Tests (8 Aufgaben)</li><li>Aufgabenpool VL5: Objektorientierte Programmierung I (7 Aufgaben)</li></ol>
+<div class="note">Offen ist, ob die Klausur auf Papier oder am Rechner geschrieben wird. Die Probeklausuren sind als Papierklausur gestaltet; am Rechner
+lassen sich dieselben Aufgaben im Texteditor lösen und mit <code>uv run</code>, <code>ruff check</code> und <code>ty check</code> prüfen.
+Hilfsmittel (z. B. ein Spickzettel) sind nicht bekannt – angenommen ist „keine“.</div>
+<h4>Abgedeckte Themen</h4>
+<ul>
+<li>VL1: Algorithmusbegriff und Eigenschaften, Datenstrukturen, Interpreter/Compiler/Zwischencode, Python-Syntax, uv/ruff/ty</li>
+<li>VL2: Datentypen, Variablen, <code>Final</code>, Operatoren (<code>/ // % **</code>), Strings, f-Strings, Typumwandlung, <code>Decimal</code>, Syntax vs. Semantik</li>
+<li>VL3: <code>if/elif/else</code>, <code>match</code>, bedingter Ausdruck, truthy/falsy, Kurzschluss, <code>while</code>, <code>for</code>/<code>range</code>, <code>break</code>/<code>continue</code>, Listen, <code>enumerate</code>, <code>zip</code>, Matrix, Tupel</li>
+<li>VL4: Funktionen, Typannotationen, Docstrings, <code>main()</code>, <code>return</code>/<code>None</code>, Gültigkeit (LEGB, <code>UnboundLocalError</code>), Parameterübergabe, Standardwerte, <code>*args</code>, Rekursion, <code>assert</code>, pytest</li>
+<li>VL5: Klassen, Objekte, <code>__init__</code>, <code>self</code>, Methoden, <code>__str__</code>/<code>__repr__</code>, Identität, Klassenattribute, Kapselung, <code>@property</code>, Hat-ein-Beziehung, <code>@dataclass</code></li>
+</ul>
+</div>
+<div class="cover newpage">
+  <h1>Probeklausur A</h1>
+  <div style="font-size:13pt;font-weight:bold">Grundlagen der Programmierung (Python)</div>
+  <div class="meta">DHBW Heilbronn · Wirtschaftsinformatik · 1. Semester · Dr. Markus Rosenfelder<br>
+  Übungsklausur zur Vorbereitung auf die Klausur am Fr, 11.12.2026 – <b>keine offizielle Musterklausur</b></div>
+  <div class="fields">
+    <div class="field">Name, Vorname</div>
+    <div class="field">Kurs</div>
+  </div>
+  <div style="margin-bottom:5mm"><div class="small" style="margin-bottom:1mm">Matrikelnummer</div>
+    <div class="matrikel"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+  <div class="hinweise"><b>Hinweise</b>
+    <ul>
+      <li>Bearbeitungszeit: <b>120 Minuten</b>. Erreichbar sind <b>120 Punkte</b> (Faustregel: 1 Punkt ≈ 1 Minute).</li>
+      <li>Hilfsmittel: keine (Annahme – bitte für die echte Klausur erfragen). Schreiben Sie mit dokumentenechtem Stift, nicht mit Rot.</li>
+      <li>Schreiben Sie Python&nbsp;3.14 mit Typannotationen an Parametern und Rückgabewerten. Machen Sie Einrückungen deutlich sichtbar (4 Leerzeichen pro Ebene).</li>
+      <li>Multiple Choice: Pro Frage ist <b>genau eine</b> Antwort richtig. Falsche Kreuze geben 0 Punkte, keine Minuspunkte.</li>
+      <li>Verwenden Sie nur Sprachmittel aus VL1–VL5. Eingebaute Funktionen wie <code>max()</code> oder <code>str.count()</code> sind erlaubt, wenn die Aufgabe sie nicht ausdrücklich verbietet.</li>
+      <li>Reicht der Platz nicht, schreiben Sie auf die Rückseite und vermerken Sie das bei der Aufgabe.</li>
+    </ul>
+  </div>
+  <table class="punkte"><colgroup><col style="width:16mm"><col><col style="width:22mm"><col style="width:26mm"></colgroup>
+    <thead><tr><th>Aufgabe</th><th>Thema</th><th>max. P</th><th>erreicht</th></tr></thead><tbody><tr><td>1</td><td>Multiple Choice (VL1–VL5)</td><td>12</td><td></td></tr><tr><td>2</td><td>Ausdrücke auswerten (VL2)</td><td>10</td><td></td></tr><tr><td>3</td><td>Was gibt dieser Code aus? (VL3, VL4)</td><td>10</td><td></td></tr><tr><td>4</td><td>Trace-Tabelle (VL3)</td><td>10</td><td></td></tr><tr><td>5</td><td>Fehler finden und korrigieren (VL2–VL4)</td><td>14</td><td></td></tr><tr><td>6</td><td>Lückencode mit match (VL3, VL4)</td><td>10</td><td></td></tr><tr><td>7</td><td>Funktion schreiben (VL4)</td><td>12</td><td></td></tr><tr><td>8</td><td>Rekursion (VL4)</td><td>12</td><td></td></tr><tr><td>9</td><td>Tests mit pytest (VL4)</td><td>8</td><td></td></tr><tr><td>10</td><td>Klassen und Objekte (VL5)</td><td>14</td><td></td></tr><tr><td>11</td><td>Konzeptfragen (VL1, VL4, VL5)</td><td>8</td><td></td></tr><tr><th></th><th>Summe</th><th>120</th><th></th></tr></tbody></table>
+</div>
+<div class="newpage"></div>
+<section class="task "><h3><span>Aufgabe A1: Multiple Choice</span><span class="pts">12 P</span></h3>
+<p>Kreuzen Sie jeweils <b>genau eine</b> richtige Antwort an (je 2 P).</p>
+<ol class="mc" type="a">
+<li class="mcq long">Wie führt CPython die Datei <code>hallo.py</code> aus?<ul class="opts"><li><span class="box">&#9633;</span> Ein Compiler erzeugt vorab eine eigenständige Maschinencode-Datei für die Zielplattform.</li><li><span class="box">&#9633;</span> Der Quellcode wird in Bytecode übersetzt, den die Python-VM ausführt.</li><li><span class="box">&#9633;</span> Die CPU führt den Quelltext ohne jede Übersetzung direkt aus.</li><li><span class="box">&#9633;</span> Der Code wird in Java-Bytecode übersetzt und von der JVM ausgeführt.</li></ul></li>
+<li class="mcq">Welchen Wert hat <code>-7 // 2</code>?<ul class="opts"><li><span class="box">&#9633;</span> <code>-3</code></li><li><span class="box">&#9633;</span> <code>-3.5</code></li><li><span class="box">&#9633;</span> <code>-4</code></li><li><span class="box">&#9633;</span> <code>3</code></li></ul></li>
+<li class="mcq">Welcher Wert gilt in <code>if wert:</code> als <i>falsch</i>?<ul class="opts"><li><span class="box">&#9633;</span> <code>"0"</code></li><li><span class="box">&#9633;</span> <code>[0]</code></li><li><span class="box">&#9633;</span> <code>-1</code></li><li><span class="box">&#9633;</span> <code>0.0</code></li></ul></li>
+<li class="mcq">Welche Werte nimmt <code>i</code> in <code>for i in range(2, 11, 3):</code> an?<ul class="opts"><li><span class="box">&#9633;</span> 2, 5, 8, 11</li><li><span class="box">&#9633;</span> 2, 5, 8</li><li><span class="box">&#9633;</span> 3, 6, 9</li><li><span class="box">&#9633;</span> 2, 4, 6, 8, 10</li></ul></li>
+<li class="mcq long">Ein Algorithmus heißt <i>determiniert</i>, wenn …<ul class="opts"><li><span class="box">&#9633;</span> er bei jeder erlaubten Eingabe nach endlich vielen Schritten endet.</li><li><span class="box">&#9633;</span> gleiche Eingaben und Startbedingungen immer das gleiche Ergebnis liefern.</li><li><span class="box">&#9633;</span> zu jedem Zeitpunkt der nächste Schritt eindeutig festgelegt ist.</li><li><span class="box">&#9633;</span> er sparsam mit Zeit und Speicher umgeht.</li></ul></li>
+<li class="mcq"><code>anna</code> ist ein Objekt der Klasse <code>Konto</code>. Welcher Aufruf bedeutet dasselbe wie <code>anna.einzahlen(50)</code>?<ul class="opts"><li><span class="box">&#9633;</span> <code>Konto.einzahlen(50)</code></li><li><span class="box">&#9633;</span> <code>Konto.einzahlen(anna, 50)</code></li><li><span class="box">&#9633;</span> <code>self.einzahlen(50)</code></li><li><span class="box">&#9633;</span> <code>anna.einzahlen(anna, 50)</code></li></ul></li>
+</ol></section>
+<section class="task keep"><h3><span>Aufgabe A2: Ausdrücke auswerten</span><span class="pts">10 P</span></h3>
+<p>Geben Sie für jeden Ausdruck den <b>Wert</b> und den <b>Typ</b> (<code>int</code>, <code>float</code>, <code>str</code>, <code>bool</code>) an.
+Strings schreiben Sie mit Anführungszeichen. (je ½ P für Wert und Typ)</p>
+<table class="grid write"><colgroup><col style="width:7mm"><col style="width:62mm"><col style="width:"><col style="width:30mm"></colgroup><thead><tr><th></th><th>Ausdruck</th><th>Wert</th><th>Typ</th></tr></thead><tbody><tr><td>a)</td><td><code>7 / 2</code></td><td></td><td></td></tr><tr><td>b)</td><td><code>2 + 3 * 4 ** 2</code></td><td></td><td></td></tr><tr><td>c)</td><td><code>int(9.99)</code></td><td></td><td></td></tr><tr><td>d)</td><td><code>"Py" * 2 + "!"</code></td><td></td><td></td></tr><tr><td>e)</td><td><code>"Heilbronn"[1:4]</code></td><td></td><td></td></tr><tr><td>f)</td><td><code>len("DHBW Heilbronn")</code></td><td></td><td></td></tr><tr><td>g)</td><td><code>17 % 5 == 2 and not False</code></td><td></td><td></td></tr><tr><td>h)</td><td><code>True + 1</code></td><td></td><td></td></tr><tr><td>i)</td><td><code>5 + 2.0</code></td><td></td><td></td></tr><tr><td>j)</td><td><code>"30" == 30</code></td><td></td><td></td></tr></tbody></table></section>
+<section class="task keep"><h3><span>Aufgabe A3: Was gibt dieser Code aus?</span><span class="pts">10 P</span></h3>
+<h4>a) Schleife mit <code>continue</code> und <code>break</code> (4 P)</h4>
+<pre class="">for i in range(1, 10):
+    if i % 3 == 0:
+        continue
+    if i == 8:
+        break
+    print(i, end=" ")
+print("Ende")</pre>
+<p>Ausgabe:</p><div class="lines"><div class="l"></div><div class="l"></div></div>
+<h4>b) Parameterübergabe (6 P)</h4>
+<pre class="">def bearbeite(zahl: int, liste: list[int]) -&gt; None:
+    zahl = zahl + 1
+    liste[0] = 99
+    liste.append(4)
+    liste = [7, 7, 7]
+    liste.append(5)
+
+
+def main() -&gt; None:
+    zahl = 5
+    werte = [1, 2, 3]
+    bearbeite(zahl, werte)
+    print(zahl, werte)
+
+
+if __name__ == "__main__":
+    main()</pre>
+<p>Ausgabe (3 P) und Begründung in ein bis zwei Sätzen, warum sich <code>werte</code> ändert, <code>zahl</code> aber nicht (3 P):</p>
+<div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe A4: Trace-Tabelle</span><span class="pts">10 P</span></h3>
+<pre class=""><span class="ln">1</span>zahl = 4271
+<span class="ln">2</span>summe = 0
+<span class="ln">3</span>stellen = 0
+<span class="ln">4</span>while zahl &gt; 0:
+<span class="ln">5</span>    summe += zahl % 10
+<span class="ln">6</span>    zahl //= 10
+<span class="ln">7</span>    stellen += 1
+<span class="ln">8</span>print(f"{stellen} Stellen, Quersumme {summe}")</pre>
+<p>a) Verfolgen Sie den Ablauf. Tragen Sie für jeden Schleifendurchlauf die Werte <b>am Ende</b> des Durchlaufs ein.
+Nicht benötigte Zeilen bleiben leer. (6 P)</p>
+<table class="grid trace"><thead><tr><th>Durchlauf</th><th><code>zahl % 10</code> (Z. 5)</th><th><code>summe</code></th><th><code>zahl</code></th><th><code>stellen</code></th><th><code>zahl &gt; 0</code>?</th></tr></thead><tbody><tr><td>Start</td><td>–</td><td>0</td><td>4271</td><td>0</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>
+<p>b) Was gibt Zeile 8 aus? (1 P)</p><div class="lines"><div class="l"></div></div>
+<p>c) Was gibt das Programm aus, wenn in Zeile 1 <code>zahl = 0</code> steht? Begründen Sie mit der Arbeitsweise von <code>while</code>. (3 P)</p>
+<div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task newpage"><h3><span>Aufgabe A5: Fehler finden und korrigieren</span><span class="pts">14 P</span></h3>
+<p>Das Programm soll den Rabatt einer Bestellung bestimmen (ab 50 Euro 5 %, ab 100 Euro 10 %), den Rabatt ausgeben,
+die Bestellung im Zähler <code>bestellungen_gesamt</code> mitzählen und bei Beträgen über 100 Euro „Großbestellung“ melden.
+Es enthält <b>genau vier Fehler</b> (Syntax-, Laufzeit- und Logikfehler).</p>
+<pre class=""><span class="ln"> 1</span>from typing import Final
+<span class="ln"> 2</span>
+<span class="ln"> 3</span>RABATT_GRENZE: Final = 100
+<span class="ln"> 4</span>bestellungen_gesamt = 0
+<span class="ln"> 5</span>
+<span class="ln"> 6</span>
+<span class="ln"> 7</span>def rabatt_prozent(betrag: float) -&gt; int:
+<span class="ln"> 8</span>    if betrag &gt;= 50:
+<span class="ln"> 9</span>        return 5
+<span class="ln">10</span>    elif betrag &gt;= 100:
+<span class="ln">11</span>        return 10
+<span class="ln">12</span>    return 0
+<span class="ln">13</span>
+<span class="ln">14</span>
+<span class="ln">15</span>def zaehle_bestellung() -&gt; None:
+<span class="ln">16</span>    bestellungen_gesamt += 1
+<span class="ln">17</span>
+<span class="ln">18</span>
+<span class="ln">19</span>def main() -&gt; None:
+<span class="ln">20</span>    betrag = 120.0
+<span class="ln">21</span>    prozent = rabatt_prozent(betrag)
+<span class="ln">22</span>    print("Rabatt: " + prozent + " %")
+<span class="ln">23</span>    zaehle_bestellung()
+<span class="ln">24</span>    if betrag &gt; RABATT_GRENZE
+<span class="ln">25</span>        print("Großbestellung")
+<span class="ln">26</span>
+<span class="ln">27</span>
+<span class="ln">28</span>if __name__ == "__main__":
+<span class="ln">29</span>    main()</pre>
+<p>a) Tragen Sie jeden Fehler ein: Zeile, Fehlerart (Syntax / Laufzeit mit Name der Exception / Logik) und eine Korrektur. (je 3 P)</p>
+<table class="grid write"><colgroup><col style="width:10mm"><col style="width:14mm"><col style="width:48mm"><col style="width:"></colgroup><thead><tr><th>Nr.</th><th>Zeile</th><th>Fehlerart</th><th>Korrektur (Code)</th></tr></thead><tbody><tr><td>1</td><td>&nbsp;</td><td>&nbsp;</td><td style="height:12.5mm">&nbsp;</td></tr><tr><td>2</td><td>&nbsp;</td><td>&nbsp;</td><td style="height:12.5mm">&nbsp;</td></tr><tr><td>3</td><td>&nbsp;</td><td>&nbsp;</td><td style="height:12.5mm">&nbsp;</td></tr><tr><td>4</td><td>&nbsp;</td><td>&nbsp;</td><td style="height:12.5mm">&nbsp;</td></tr></tbody></table>
+<p>b) Sie starten das unveränderte Programm mit <code>uv run bestellung.py</code>. Welcher Fehler wird zuerst gemeldet, und welcher der vier Fehler wird
+nie durch eine Fehlermeldung angezeigt? (2 P)</p><div class="lines"><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep newpage"><h3><span>Aufgabe A6: Lückencode mit <code>match</code></span><span class="pts">10 P</span></h3>
+<p>Die Funktion <code>versandkosten</code> liefert für eine Versandzone die Kosten oder <code>None</code>, wenn nicht geliefert wird.
+Ergänzen Sie die Lücken (je 1 P).</p>
+<pre class="gapcode">def versandkosten(zone: str, gewicht_kg: float) -&gt; <span class="gap"><sup>(1)</sup></span>:
+    <span class="gap"><sup>(2)</sup></span> zone:
+        case "DE":
+            kosten = 4.90
+        <span class="gap"><sup>(3)</sup></span>:                      # "EU" oder "CH"
+            kosten = 9.90
+        <span class="gap"><sup>(4)</sup></span>:                      # alle anderen Zonen
+            return None
+    if gewicht_kg &gt; 5:
+        kosten += 1.50
+    return kosten
+
+
+def main() -&gt; None:
+    zonen = ["DE", "CH", "US"]
+    gewichte = [2.0, 7.5, 1.0]
+    for zone, gewicht in <span class="gap"><sup>(5)</sup></span>:     # beide Listen im Gleichschritt
+        preis = versandkosten(zone, gewicht)
+        if <span class="gap"><sup>(6)</sup></span>:
+            print(f"{zone}: nicht lieferbar")
+        else:
+            print(f"{zone}: {<span class="gap"><sup>(7)</sup></span>} Euro")   # genau zwei Nachkommastellen
+
+
+if __name__ == "__main__":
+    main()</pre>
+<table class="grid"><colgroup><col style="width:16mm"><col style="width:"></colgroup><thead><tr><th>Lücke</th><th>Ihr Code</th></tr></thead><tbody><tr><td>(1)</td><td style="height:6.5mm"></td></tr><tr><td>(2)</td><td style="height:6.5mm"></td></tr><tr><td>(3)</td><td style="height:6.5mm"></td></tr><tr><td>(4)</td><td style="height:6.5mm"></td></tr><tr><td>(5)</td><td style="height:6.5mm"></td></tr><tr><td>(6)</td><td style="height:6.5mm"></td></tr><tr><td>(7)</td><td style="height:6.5mm"></td></tr></tbody></table>
+<p>Was gibt <code>main()</code> aus? (3 P)</p><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task newpage"><h3><span>Aufgabe A7: Funktion schreiben</span><span class="pts">12 P</span></h3>
+<p>Schreiben Sie eine Funktion <code>bestellwert</code> mit Typannotationen und einem Docstring im Google-Stil (Kurzbeschreibung, <code>Args:</code>, <code>Returns:</code>).</p>
+<ul>
+<li>Parameter: <code>preise</code> (Liste von Stückpreisen als <code>float</code>), <code>mengen</code> (Liste von <code>int</code>, gleich lang wie <code>preise</code>)
+und <code>rabatt</code> (Anteil als <code>float</code>, Standardwert <code>0.0</code>).</li>
+<li>Die Funktion summiert Preis × Menge über alle Positionen und zieht den Rabatt ab: <code>summe * (1 - rabatt)</code>.</li>
+<li>Ein Rabatt unter 0 oder über 0.5 ist ungültig; dann wird ohne Rabatt gerechnet.</li>
+<li>Das Ergebnis wird mit <code>round</code> auf zwei Nachkommastellen gerundet zurückgegeben.</li>
+</ul>
+<p>Beispiele: <code>bestellwert([2.5, 10.0], [4, 3])</code> → <code>40.0</code> · <code>bestellwert([2.5, 10.0], [4, 3], 0.1)</code> → <code>36.0</code> ·
+<code>bestellwert([2.5, 10.0], [4, 3], 0.8)</code> → <code>40.0</code></p>
+<p>a) Funktion (10 P)</p><div class="codebox"><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div></div>
+<p>b) Schreiben Sie den Aufruf für Preise 2.5 und 10.0, Mengen 4 und 3 und 10 % Rabatt nur mit <b>Schlüsselwortargumenten</b>, und zwar
+in der Reihenfolge <code>mengen</code>, <code>preise</code>, <code>rabatt</code>. (2 P)</p><div class="lines"><div class="l"></div><div class="l"></div></div></section>
+<section class="task "><h3><span>Aufgabe A8: Rekursion</span><span class="pts">12 P</span></h3>
+<h4>a) Rekursion nachvollziehen (4 P)</h4>
+<pre class="">def r(n: int) -&gt; int:
+    if n &lt;= 1:
+        return 1
+    return n + 2 * r(n - 2)</pre>
+<p>Berechnen Sie <code>r(5)</code> und <code>r(6)</code>. Schreiben Sie die Aufrufkette mit auf (Abstieg und Aufstieg).</p>
+<div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div>
+<h4>b) Rekursive Funktion schreiben (6 P)</h4>
+<p>Schreiben Sie eine <b>rekursive</b> Funktion <code>quersumme(n: int) -&gt; int</code>, die die Quersumme einer nicht negativen ganzen Zahl
+berechnet, z. B. <code>quersumme(4271) == 14</code>. Verwenden Sie keine Schleife und kein <code>str()</code>. Benennen Sie im Code
+(als Kommentar) die Abbruchbedingung und den rekursiven Aufruf.</p>
+<div class="codebox"><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div></div>
+<h4>c) Fehlende Abbruchbedingung (2 P)</h4>
+<p>Gegeben ist <code>fakultaet</code> mit der Abbruchbedingung <code>if n == 0: return 1</code> und dem Aufruf <code>n * fakultaet(n - 1)</code>.
+Was passiert bei <code>fakultaet(-1)</code>? Wie machen Sie die Funktion robuster?</p>
+<div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task "><h3><span>Aufgabe A9: Tests mit pytest</span><span class="pts">8 P</span></h3>
+<p>Die Funktion <code>bestellwert</code> aus Aufgabe A7 steht in der Datei <code>bestellung.py</code>.</p>
+<p>a) Schreiben Sie eine vollständige Testdatei für pytest mit mindestens <b>drei</b> Testfunktionen, darunter ein Randfall
+(z. B. leere Bestellung oder ungültiger Rabatt). Geben Sie auch den Dateinamen an. (6 P)</p>
+<p>Dateiname: ____________________________</p><div class="codebox"><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div></div>
+<p>b) Mit welchem Befehl starten Sie die Tests? Was bedeutet die Ausgabezeile <code>test_bestellung.py .F.</code>? (2 P)</p><div class="lines"><div class="l"></div><div class="l"></div></div></section>
+<section class="task "><h3><span>Aufgabe A10: Klassen und Objekte</span><span class="pts">14 P</span></h3>
+<h4>a) Klasse schreiben (10 P)</h4>
+<p>Schreiben Sie eine Klasse <code>Artikel</code> (Beträge als <code>Decimal</code>, <code>from decimal import Decimal</code> dürfen Sie voraussetzen):</p>
+<ul>
+<li>Klassenattribut <code>anzahl</code>, das jeden neuen Artikel mitzählt; jeder Artikel erhält daraus in <code>__init__</code> eine Nummer
+<code>A001</code>, <code>A002</code>, … im Attribut <code>nummer</code>.</li>
+<li><code>__init__(self, name: str, preis: Decimal, bestand: int = 0)</code> speichert <code>name</code> und <code>bestand</code> als öffentliche Attribute.</li>
+<li>Der Preis liegt intern in <code>_preis</code>. Eine Property <code>preis</code> liefert ihn; ihr Setter weist negative Preise mit einer Meldung ab
+(der alte Preis bleibt). Auch <code>__init__</code> benutzt den Setter.</li>
+<li><code>verkaufen(self, menge: int) -&gt; bool</code> verringert den Bestand und liefert <code>True</code>. Ist die Menge nicht positiv oder größer
+als der Bestand, gibt die Methode eine Meldung aus und liefert <code>False</code>.</li>
+<li><code>__str__</code> liefert z. B. <code>A001 Kaffee 1 kg: 12.99 Euro, Bestand 40</code>.</li>
+</ul>
+<div class="codebox"><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div></div>
+<h4>b) Klassenattribute und Namen (4 P)</h4>
+<p>Was gibt dieser Code aus?</p>
+<pre class="">class Zaehler:
+    stand = 0
+
+    def __init__(self, name: str) -&gt; None:
+        self.name = name
+        Zaehler.stand += 1
+
+
+a = Zaehler("a")
+b = Zaehler("b")
+c = b
+c.name = "c"
+b.stand += 10
+print(a.name, b.name, c.name)
+print(Zaehler.stand, a.stand, b.stand)
+print(b is c, a == Zaehler("a"))</pre>
+<div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe A11: Konzeptfragen</span><span class="pts">8 P</span></h3>
+<p>Antworten Sie jeweils in ein bis zwei Sätzen (je 2 P).</p>
+<p>a) Was ist der Unterschied zwischen einem <i>Parameter</i> und einem <i>Argument</i>? Nennen Sie ein Beispiel.</p><div class="lines"><div class="l"></div><div class="l"></div></div>
+<p>b) Nennen Sie je einen Vorteil und einen Nachteil der Rekursion gegenüber einer Schleife.</p><div class="lines"><div class="l"></div><div class="l"></div></div>
+<p>c) Was bedeutet <i>Kapselung</i>, und mit welchen zwei Mitteln setzt Python sie um?</p><div class="lines"><div class="l"></div><div class="l"></div></div>
+<p>d) Warum steht der Aufruf <code>main()</code> hinter <code>if __name__ == "__main__":</code>?</p><div class="lines"><div class="l"></div><div class="l"></div></div></section>
+<div class="cover newpage">
+  <h1>Probeklausur B</h1>
+  <div style="font-size:13pt;font-weight:bold">Grundlagen der Programmierung (Python)</div>
+  <div class="meta">DHBW Heilbronn · Wirtschaftsinformatik · 1. Semester · Dr. Markus Rosenfelder<br>
+  Übungsklausur zur Vorbereitung auf die Klausur am Fr, 11.12.2026 – <b>keine offizielle Musterklausur</b></div>
+  <div class="fields">
+    <div class="field">Name, Vorname</div>
+    <div class="field">Kurs</div>
+  </div>
+  <div style="margin-bottom:5mm"><div class="small" style="margin-bottom:1mm">Matrikelnummer</div>
+    <div class="matrikel"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+  <div class="hinweise"><b>Hinweise</b>
+    <ul>
+      <li>Bearbeitungszeit: <b>120 Minuten</b>. Erreichbar sind <b>120 Punkte</b> (Faustregel: 1 Punkt ≈ 1 Minute).</li>
+      <li>Hilfsmittel: keine (Annahme – bitte für die echte Klausur erfragen). Schreiben Sie mit dokumentenechtem Stift, nicht mit Rot.</li>
+      <li>Schreiben Sie Python&nbsp;3.14 mit Typannotationen an Parametern und Rückgabewerten. Machen Sie Einrückungen deutlich sichtbar (4 Leerzeichen pro Ebene).</li>
+      <li>Multiple Choice: Pro Frage ist <b>genau eine</b> Antwort richtig. Falsche Kreuze geben 0 Punkte, keine Minuspunkte.</li>
+      <li>Verwenden Sie nur Sprachmittel aus VL1–VL5. Eingebaute Funktionen wie <code>max()</code> oder <code>str.count()</code> sind erlaubt, wenn die Aufgabe sie nicht ausdrücklich verbietet.</li>
+      <li>Reicht der Platz nicht, schreiben Sie auf die Rückseite und vermerken Sie das bei der Aufgabe.</li>
+    </ul>
+  </div>
+  <table class="punkte"><colgroup><col style="width:16mm"><col><col style="width:22mm"><col style="width:26mm"></colgroup>
+    <thead><tr><th>Aufgabe</th><th>Thema</th><th>max. P</th><th>erreicht</th></tr></thead><tbody><tr><td>1</td><td>Multiple Choice (VL1–VL5)</td><td>12</td><td></td></tr><tr><td>2</td><td>Ausdrücke auswerten (VL2, VL3)</td><td>10</td><td></td></tr><tr><td>3</td><td>Was gibt dieser Code aus? (VL3, VL4)</td><td>10</td><td></td></tr><tr><td>4</td><td>Trace-Tabelle (VL3)</td><td>10</td><td></td></tr><tr><td>5</td><td>Fehler finden und korrigieren (VL3, VL4)</td><td>14</td><td></td></tr><tr><td>6</td><td>Lückencode: Klasse mit Property (VL5)</td><td>10</td><td></td></tr><tr><td>7</td><td>Funktion schreiben (VL1, VL3, VL4)</td><td>12</td><td></td></tr><tr><td>8</td><td>Rekursion (VL4)</td><td>12</td><td></td></tr><tr><td>9</td><td>Tests mit pytest (VL4)</td><td>8</td><td></td></tr><tr><td>10</td><td>Klassen, Hat-ein-Beziehung, @dataclass (VL5)</td><td>14</td><td></td></tr><tr><td>11</td><td>Konzeptfragen (VL1, VL2, VL4)</td><td>8</td><td></td></tr><tr><th></th><th>Summe</th><th>120</th><th></th></tr></tbody></table>
+</div>
+<div class="newpage"></div>
+<section class="task "><h3><span>Aufgabe B1: Multiple Choice</span><span class="pts">12 P</span></h3>
+<p>Kreuzen Sie jeweils <b>genau eine</b> richtige Antwort an (je 2 P).</p>
+<ol class="mc" type="a">
+<li class="mcq">Welche Datenstruktur passt zur Zurück-Taste im Browser?<ul class="opts"><li><span class="box">&#9633;</span> Warteschlange (Queue, FIFO)</li><li><span class="box">&#9633;</span> Stapel (Stack, LIFO)</li><li><span class="box">&#9633;</span> Baum</li><li><span class="box">&#9633;</span> Graph</li></ul></li>
+<li class="mcq">Wie lässt sich das Typsystem von Python beschreiben?<ul class="opts"><li><span class="box">&#9633;</span> statisch und schwach typisiert</li><li><span class="box">&#9633;</span> dynamisch, aber stark typisiert</li><li><span class="box">&#9633;</span> dynamisch und schwach typisiert</li><li><span class="box">&#9633;</span> statisch und stark typisiert</li></ul></li>
+<li class="mcq">Was ergibt <code>0.1 + 0.2 == 0.3</code>?<ul class="opts"><li><span class="box">&#9633;</span> <code>True</code></li><li><span class="box">&#9633;</span> <code>False</code></li><li><span class="box">&#9633;</span> <code>TypeError</code></li><li><span class="box">&#9633;</span> <code>0.3</code></li></ul></li>
+<li class="mcq">Wie wertet Python <code>a or b and not c</code> aus?<ul class="opts"><li><span class="box">&#9633;</span> <code>(a or b) and (not c)</code></li><li><span class="box">&#9633;</span> <code>a or (b and (not c))</code></li><li><span class="box">&#9633;</span> <code>not (a or b and c)</code></li><li><span class="box">&#9633;</span> <code>(a or b and not) c</code></li></ul></li>
+<li class="mcq">Was liefert eine Funktion, deren Rumpf kein <code>return</code> enthält?<ul class="opts"><li><span class="box">&#9633;</span> <code>0</code></li><li><span class="box">&#9633;</span> <code>""</code></li><li><span class="box">&#9633;</span> <code>None</code></li><li><span class="box">&#9633;</span> Sie löst einen <code>SyntaxError</code> aus.</li></ul></li>
+<li class="mcq long">Was erzeugt <code>@dataclass</code> aus den annotierten Attributen automatisch?<ul class="opts"><li><span class="box">&#9633;</span> nur <code>__init__</code></li><li><span class="box">&#9633;</span> <code>__init__</code>, <code>__repr__</code> und <code>__eq__</code></li><li><span class="box">&#9633;</span> Getter und Setter für jedes Attribut</li><li><span class="box">&#9633;</span> <code>__str__</code> und eine Property je Attribut</li></ul></li>
+</ol></section>
+<section class="task keep"><h3><span>Aufgabe B2: Ausdrücke auswerten</span><span class="pts">10 P</span></h3>
+<p>Geben Sie für jeden Ausdruck den <b>Wert</b> und den <b>Typ</b> an (je ½ P).</p>
+<table class="grid write"><colgroup><col style="width:7mm"><col style="width:62mm"><col style="width:"><col style="width:30mm"></colgroup><thead><tr><th></th><th>Ausdruck</th><th>Wert</th><th>Typ</th></tr></thead><tbody><tr><td>a)</td><td><code>17 // 5</code></td><td></td><td></td></tr><tr><td>b)</td><td><code>17 % 5</code></td><td></td><td></td></tr><tr><td>c)</td><td><code>6 / 3</code></td><td></td><td></td></tr><tr><td>d)</td><td><code>int("42") + 1</code></td><td></td><td></td></tr><tr><td>e)</td><td><code>float(5)</code></td><td></td><td></td></tr><tr><td>f)</td><td><code>"Hallo"[-1]</code></td><td></td><td></td></tr><tr><td>g)</td><td><code>"ll" in "Hallo"</code></td><td></td><td></td></tr><tr><td>h)</td><td><code>18 &lt;= 17 &lt;= 65</code></td><td></td><td></td></tr><tr><td>i)</td><td><code>[0] * 3</code></td><td></td><td></td></tr><tr><td>j)</td><td><code>round(2.675, 2)</code></td><td></td><td></td></tr></tbody></table></section>
+<section class="task keep"><h3><span>Aufgabe B3: Was gibt dieser Code aus?</span><span class="pts">10 P</span></h3>
+<h4>a) Verschachtelte Schleifen (5 P)</h4>
+<pre class="">matrix = [[1, 2, 3], [4, 5, 6]]
+summe = 0
+for zeile in matrix:
+    for wert in zeile:
+        if wert % 2 == 0:
+            print(wert, end=" ")
+            summe += wert
+    print()
+print(f"Summe: {summe}")</pre>
+<p>Ausgabe (Leerzeichen am Zeilenende müssen Sie nicht kennzeichnen):</p><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div></div>
+<h4>b) <code>return</code> in einer Schleife (5 P)</h4>
+<pre class="">def suche(werte: list[int], ziel: int) -&gt; int:
+    for i, wert in enumerate(werte):
+        if wert == ziel:
+            return i
+        print(f"prüfe {wert}")
+    return -1
+
+
+def main() -&gt; None:
+    print(suche([4, 8, 15, 16], 15))
+    print(suche([4, 8], 99))
+
+
+if __name__ == "__main__":
+    main()</pre>
+<p>Ausgabe:</p><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe B4: Trace-Tabelle</span><span class="pts">10 P</span></h3>
+<p>Das Programm berechnet den größten gemeinsamen Teiler (Euklid).</p>
+<pre class=""><span class="ln">1</span>a, b = 252, 105
+<span class="ln">2</span>schritte = 0
+<span class="ln">3</span>while b != 0:
+<span class="ln">4</span>    a, b = b, a % b
+<span class="ln">5</span>    schritte += 1
+<span class="ln">6</span>print(f"ggT = {a} nach {schritte} Schritten")</pre>
+<p>a) Tragen Sie für jeden Durchlauf <code>a % b</code> (berechnet vor der Zuweisung in Zeile 4) und die Werte am Ende des Durchlaufs ein. (6 P)</p>
+<table class="grid trace"><thead><tr><th>Durchlauf</th><th><code>a % b</code></th><th><code>a</code></th><th><code>b</code></th><th><code>schritte</code></th><th><code>b != 0</code>?</th></tr></thead><tbody><tr><td>Start</td><td>–</td><td>252</td><td>105</td><td>0</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>
+<p>b) Was gibt Zeile 6 aus? (1 P)</p><div class="lines"><div class="l"></div></div>
+<p>c) Jemand ersetzt Zeile 4 durch die zwei Zeilen <code>a = b</code> und <code>b = a % b</code>. Was gibt das Programm jetzt aus, und warum? (3 P)</p><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task newpage"><h3><span>Aufgabe B5: Fehler finden und korrigieren</span><span class="pts">14 P</span></h3>
+<p>Das Programm verwaltet Messwerte. <code>merke</code> soll ohne zweites Argument jedes Mal eine <b>neue</b> Liste anlegen,
+<code>bewerte</code> soll für jede Temperatur einen Hinweis liefern („heiß“, „Frost“ oder „normal“), <code>mittelwert</code> liefert für eine leere Liste 0.0,
+und <code>drucke_balken</code> gibt pro <b>volle</b> 10 Einheiten ein <code>#</code> aus (35.0 → <code>###</code>).
+Es enthält <b>genau vier Fehler</b>.</p>
+<pre class="tight"><span class="ln"> 1</span>def mittelwert(werte: list[float]) -&gt; float:
+<span class="ln"> 2</span>    if len(werte) &gt; 0:
+<span class="ln"> 3</span>        return sum(werte) / len(werte)
+<span class="ln"> 4</span>
+<span class="ln"> 5</span>
+<span class="ln"> 6</span>def merke(wert: float, verlauf: list[float] = []) -&gt; list[float]:
+<span class="ln"> 7</span>    verlauf.append(wert)
+<span class="ln"> 8</span>    return verlauf
+<span class="ln"> 9</span>
+<span class="ln">10</span>
+<span class="ln">11</span>def bewerte(temperatur: float) -&gt; str:
+<span class="ln">12</span>    if temperatur &gt; 30:
+<span class="ln">13</span>        hinweis = "heiß"
+<span class="ln">14</span>    elif temperatur &lt; 0:
+<span class="ln">15</span>        hinweis = "Frost"
+<span class="ln">16</span>    return hinweis
+<span class="ln">17</span>
+<span class="ln">18</span>
+<span class="ln">19</span>def drucke_balken(wert: float) -&gt; None:
+<span class="ln">20</span>    for _ in range(wert / 10):
+<span class="ln">21</span>        print("#", end="")
+<span class="ln">22</span>    print()
+<span class="ln">23</span>
+<span class="ln">24</span>
+<span class="ln">25</span>def main() -&gt; None:
+<span class="ln">26</span>    print(merke(21.5))
+<span class="ln">27</span>    print(merke(19.0))  # erwartet: [19.0]
+<span class="ln">28</span>    print(bewerte(20.0))
+<span class="ln">29</span>    print(mittelwert([]) + 1)
+<span class="ln">30</span>    drucke_balken(35.0)
+<span class="ln">31</span>
+<span class="ln">32</span>
+<span class="ln">33</span>if __name__ == "__main__":
+<span class="ln">34</span>    main()</pre>
+<p>a) Tragen Sie jeden Fehler ein: Zeile(n), Fehlerart (bei Laufzeitfehlern mit Name der Exception) und Korrektur. (je 3 P)</p>
+<table class="grid write"><colgroup><col style="width:10mm"><col style="width:14mm"><col style="width:48mm"><col style="width:"></colgroup><thead><tr><th>Nr.</th><th>Zeile</th><th>Fehlerart</th><th>Korrektur (Code)</th></tr></thead><tbody><tr><td>1</td><td>&nbsp;</td><td>&nbsp;</td><td style="height:12.5mm">&nbsp;</td></tr><tr><td>2</td><td>&nbsp;</td><td>&nbsp;</td><td style="height:12.5mm">&nbsp;</td></tr><tr><td>3</td><td>&nbsp;</td><td>&nbsp;</td><td style="height:12.5mm">&nbsp;</td></tr><tr><td>4</td><td>&nbsp;</td><td>&nbsp;</td><td style="height:12.5mm">&nbsp;</td></tr></tbody></table>
+<p>b) Welche Ausgabe bzw. Fehlermeldung erscheint beim Start des unveränderten Programms <b>als Erstes</b> – und warum fällt der Fehler in
+<code>merke</code> nicht durch eine Fehlermeldung auf? (2 P)</p><div class="lines"><div class="l"></div><div class="l"></div></div></section>
+<section class="task newpage"><h3><span>Aufgabe B6: Lückencode: Klasse mit Property</span><span class="pts">10 P</span></h3>
+<p>Ergänzen Sie die Lücken (je 1 P).</p>
+<pre class="gapcode tight">from decimal import Decimal
+
+
+class Konto:
+    <span class="gap"><sup>(1)</sup></span> = 0                          # Klassenattribut: Anzahl der Konten
+
+    def __init__(<span class="gap"><sup>(2)</sup></span>, inhaber: str, kontostand: Decimal) -&gt; None:
+        Konto.anzahl += 1
+        self.nummer = f"K{<span class="gap"><sup>(3)</sup></span>:03}"
+        self.inhaber = inhaber
+        self._kontostand = Decimal(0)
+        <span class="gap"><sup>(4)</sup></span> = kontostand              # soll den Setter benutzen
+
+    <span class="gap"><sup>(5)</sup></span>
+    def kontostand(self) -&gt; Decimal:
+        return self._kontostand
+
+    <span class="gap"><sup>(6)</sup></span>
+    def kontostand(self, neuer_wert: Decimal) -&gt; None:
+        if neuer_wert &lt; 0:
+            print("Ungültig: negativer Kontostand.")
+            return
+        self._kontostand = neuer_wert
+
+    def __str__(self) -&gt; str:
+        return <span class="gap"><sup>(7)</sup></span>                   # z. B. "K001 Anna: 100.00 Euro"
+
+
+def main() -&gt; None:
+    anna = Konto("Anna", Decimal("100.00"))
+    ben = Konto("Ben", Decimal("-5"))
+    print(anna)
+    print(ben)
+    ben.kontostand = Decimal("20")
+    anna.kontostand -= Decimal("150")
+    print(anna.kontostand, ben.kontostand)</pre>
+<table class="grid"><colgroup><col style="width:16mm"><col style="width:"></colgroup><thead><tr><th>Lücke</th><th>Ihr Code</th></tr></thead><tbody><tr><td>(1)</td><td style="height:6.5mm"></td></tr><tr><td>(2)</td><td style="height:6.5mm"></td></tr><tr><td>(3)</td><td style="height:6.5mm"></td></tr><tr><td>(4)</td><td style="height:6.5mm"></td></tr><tr><td>(5)</td><td style="height:6.5mm"></td></tr><tr><td>(6)</td><td style="height:6.5mm"></td></tr><tr><td>(7)</td><td style="height:6.5mm"></td></tr></tbody></table>
+<p>Was gibt <code>main()</code> aus? (3 P)</p><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task newpage"><h3><span>Aufgabe B7: Funktion schreiben: Nachbestellung</span><span class="pts">12 P</span></h3>
+<p>Der Nachbestell-Algorithmus aus VL1: Liegt der Bestand eines Artikels <b>unter</b> dem Meldebestand, wird bis zum Höchstbestand aufgefüllt
+(Bestellmenge = Höchstbestand − Bestand), sonst nicht (Menge 0).</p>
+<p>a) Schreiben Sie <code>nachbestellmengen(bestaende, meldebestaende, hoechstbestaende)</code> mit Typannotationen (drei Listen von <code>int</code>,
+Rückgabe Liste von <code>int</code>) und Docstring im Google-Stil. Beispiel:
+<code>nachbestellmengen([12, 45, 8], [20, 30, 25], [100, 150, 120])</code> → <code>[88, 0, 112]</code>. (8 P)</p>
+<div class="codebox"><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div></div>
+<p>b) Schreiben Sie eine Funktion <code>main()</code>, die für die Artikel <code>["Schrauben M8", "Dichtringe", "Muttern M8"]</code> mit den Werten aus dem
+Beispiel nur die tatsächlich nötigen Bestellungen ausgibt, z. B. <code>Bestellung: Schrauben M8 - 88 Stück</code>, und so aufgerufen wird,
+dass sie beim Import der Datei nicht startet. (4 P)</p>
+<div class="codebox"><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div></div></section>
+<section class="task "><h3><span>Aufgabe B8: Rekursion</span><span class="pts">12 P</span></h3>
+<h4>a) Rekursive Funktion schreiben (5 P)</h4>
+<p>Schreiben Sie <code>umdrehen(text: str) -&gt; str</code> <b>rekursiv</b>, ohne Schleife und ohne <code>[::-1]</code>:
+<code>umdrehen("abc") == "cba"</code>, <code>umdrehen("") == ""</code>. Tipp: <code>text[0]</code> und <code>text[1:]</code>.</p>
+<div class="codebox"><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div></div>
+<h4>b) Aufrufstapel (3 P)</h4>
+<p>Notieren Sie für <code>umdrehen("abc")</code> alle Aufrufe (Abstieg) und die Rückgabewerte (Aufstieg).</p>
+<table class="grid trace"><colgroup><col style="width:16mm"><col style="width:"><col style="width:"></colgroup><thead><tr><th>Ebene</th><th>Aufruf</th><th>Rückgabewert</th></tr></thead><tbody><tr><td>1</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>3</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>4</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>
+<h4>c) Fehlender Basisfall (4 P)</h4>
+<pre class="">def summe_liste(zahlen: list[int]) -&gt; int:
+    if len(zahlen) == 1:
+        return zahlen[0]
+    return zahlen[0] + summe_liste(zahlen[1:])</pre>
+<p>Was liefert <code>summe_liste([4, 1, 5])</code>? Was passiert bei <code>summe_liste([])</code> (mit Name der Exception)? Korrigieren Sie die Abbruchbedingung so, dass die
+leere Liste 0 ergibt.</p><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task "><h3><span>Aufgabe B9: Tests mit pytest</span><span class="pts">8 P</span></h3>
+<p>a) Schreiben Sie für <code>nachbestellmengen</code> aus B7 (Datei <code>lager.py</code>) eine Testdatei mit drei Testfunktionen. Testen Sie auch die Grenze
+„Bestand gleich Meldebestand“ und leere Listen. (4 P)</p>
+<div class="codebox"><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div></div>
+<p>b) Eine Kommilitonin hat <code>potenz</code> geschrieben und getestet:</p>
+<pre class="">def potenz(basis: float, exponent: int) -&gt; float:
+    if exponent == 0:
+        return 1.0
+    return basis + potenz(basis, exponent - 1)</pre><pre class="">from potenz import potenz
+
+
+def test_potenz_null() -&gt; None:
+    assert potenz(5, 0) == 1.0
+
+
+def test_potenz_vier() -&gt; None:
+    assert potenz(2, 4) == 16.0
+
+
+def test_potenz_eins() -&gt; None:
+    assert potenz(7, 1) == 7.0</pre>
+<pre class="">$ uv run pytest
+collected 3 items
+
+test_potenz.py .FF                                                       [100%]
+
+=================================== FAILURES ===================================
+_______________________________ test_potenz_vier _______________________________
+
+    def test_potenz_vier() -&gt; None:
+&gt;       assert potenz(2, 4) == 16.0
+E       assert 9.0 == 16.0
+E        +  where 9.0 = potenz(2, 4)
+
+test_potenz.py:9: AssertionError
+...
+========================= 2 failed, 1 passed in 0.01s ==========================</pre>
+<p class="small">(Ausgabe gekürzt, im Format der pytest-Folie aus VL04)</p>
+<p>Welcher Test ist bestanden, und warum gerade dieser? Welcher Wert kam tatsächlich heraus, welcher wurde erwartet? Korrigieren Sie <code>potenz</code>. (4 P)</p>
+<div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task "><h3><span>Aufgabe B10: Klassen, Hat-ein-Beziehung und <code>@dataclass</code></span><span class="pts">14 P</span></h3>
+<h4>a) Klasse <code>Mitarbeiter</code> (7 P)</h4>
+<ul>
+<li>Klassenattribut <code>anzahl</code>; jedes neue Objekt erhält daraus die Personalnummer <code>M001</code>, <code>M002</code>, … im Attribut <code>personalnummer</code>.</li>
+<li><code>__init__(self, name: str, monatsgehalt: int)</code> speichert beide Werte als öffentliche Attribute.</li>
+<li>Nur lesbare Property <code>jahresgehalt</code> (12 × Monatsgehalt, ohne eigenes Attribut).</li>
+<li><code>gehalt_erhoehen(self, prozent: int) -&gt; bool</code>: Erlaubt sind 1 bis 20 Prozent. Dann wird das Monatsgehalt auf
+<code>monatsgehalt * (100 + prozent) // 100</code> gesetzt und <code>True</code> geliefert; sonst Meldung und <code>False</code>.</li>
+<li><code>__str__</code> liefert z. B. <code>M001 Lena: 4200 Euro/Monat</code>.</li>
+</ul>
+<div class="codebox"><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div></div>
+<h4>b) Klasse <code>Abteilung</code> (4 P)</h4>
+<p>Eine Abteilung <b>hat</b> einen Namen und mehrere Mitarbeiter: <code>__init__(self, name: str)</code> legt eine leere, typannotierte Liste
+<code>self.mitarbeitende</code> an; <code>aufnehmen(self, mitarbeiter: Mitarbeiter) -&gt; None</code> hängt an; <code>personalkosten(self) -&gt; int</code>
+liefert die Summe aller Jahresgehälter. Ergebnis für Lena (4410 €) und Tim (3800 €): 98520.</p>
+<div class="codebox"><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div></div>
+<h4>c) Datenklasse (3 P)</h4>
+<p>Schreiben Sie eine <code>@dataclass Adresse</code> mit <code>strasse</code>, <code>plz</code> und <code>ort</code> (alle <code>str</code>). Was ergeben <code>a1 == a2</code> und
+<code>a1 is a2</code> für zwei Adressen mit gleichen Werten – und was ergäbe <code>==</code> bei einer normalen Klasse ohne <code>__eq__</code>?</p>
+<div class="codebox"><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div></div><div class="lines"><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe B11: Konzeptfragen</span><span class="pts">8 P</span></h3>
+<p>Antworten Sie jeweils in ein bis zwei Sätzen (je 2 P).</p>
+<p>a) Erklären Sie den Unterschied zwischen <i>Syntax</i> und <i>Semantik</i> und geben Sie zu beiden je ein Fehlerbeispiel.</p><div class="lines"><div class="l"></div><div class="l"></div></div>
+<p>b) Nennen Sie je einen Vorteil eines Compilers und eines Interpreters.</p><div class="lines"><div class="l"></div><div class="l"></div></div>
+<p>c) Grenzen Sie imperative und applikative Programmierung voneinander ab.</p><div class="lines"><div class="l"></div><div class="l"></div></div>
+<p>d) Python kennt keine Methodenüberladung. Was passiert, wenn man zwei Funktionen <code>addiere</code> mit unterschiedlich vielen Parametern definiert, und
+was verwendet man stattdessen?</p><div class="lines"><div class="l"></div><div class="l"></div></div></section><h2 class="newpage">Aufgabenpool VL1: Einführung: Algorithmen, Datenstrukturen, Python-Werkzeuge</h2>
+<section class="task keep"><h3><span>Aufgabe 1.1: Eigenschaften von Algorithmen</span><span class="level">★ leicht</span></h3>
+<p>Ordnen Sie zu: <i>terminierend</i>, <i>determiniert</i>, <i>deterministisch</i>.</p>
+<ol class="sub" type="a"><li>Zu jedem Zeitpunkt sind der nächste Schritt und der Zustand eindeutig festgelegt.</li>
+<li>Bei jeder erlaubten Eingabe endet der Algorithmus nach endlich vielen Schritten.</li>
+<li>Gleiche Eingaben und Startbedingungen liefern immer das gleiche Ergebnis.</li></ol>
+<p>d) Nennen Sie die vier Anforderungen an nützliche Algorithmen aus der Vorlesung.</p><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 1.2: Datenstrukturen wählen</span><span class="level">★ leicht</span></h3>
+<p>Welche Datenstruktur aus VL1 (Array, Liste, Baum, Graph, Stapel, Warteschlange) passt jeweils am besten? Begründen Sie kurz.</p>
+<ol class="sub" type="a"><li>Druckaufträge, die in der Reihenfolge ihres Eingangs gedruckt werden</li><li>„Rückgängig“ in einer Textverarbeitung</li>
+<li>Organigramm eines Unternehmens</li><li>Lieferrouten zwischen fünf Lagerstandorten</li><li>Ablage von Rechnungen nach Jahr, Lieferant und Monat</li></ol><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 1.3: Nachbestell-Algorithmus durchspielen</span><span class="level">★★ mittel</span></h3>
+<p>Führen Sie den Algorithmus aus VL1 aus: „Ist der Bestand <b>kleiner</b> als der Meldebestand, dann Bestellmenge = Höchstbestand − Bestand.“
+Welche Bestellungen werden ausgelöst?</p><table class="grid write"><thead><tr><th>Artikel</th><th>Bestand</th><th>Meldebestand</th><th>Höchstbestand</th><th>Bestellung?</th></tr></thead><tbody><tr><td>Kabelbinder</td><td>5</td><td>10</td><td>50</td><td></td></tr><tr><td>Dübel</td><td>30</td><td>30</td><td>80</td><td></td></tr><tr><td>Schrauben M8</td><td>12</td><td>20</td><td>100</td><td></td></tr><tr><td>Unterlegscheiben</td><td>0</td><td>40</td><td>200</td><td></td></tr><tr><td>Muttern M8</td><td>41</td><td>25</td><td>120</td><td></td></tr></tbody></table></section>
+<section class="task keep"><h3><span>Aufgabe 1.4: Einen Algorithmus aufschreiben</span><span class="level">★★ mittel</span></h3>
+<p>Beschreiben Sie in nummerierten Schritten, wie ein Urlaubsantrag geprüft wird (Resturlaub, Vertretung, Sperrzeiten).
+Prüfen Sie Ihren Algorithmus an den vier Anforderungen. Welcher Schritt ist bei „Antrag kurz ansehen“ problematisch?</p><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 1.5: Vom Quellcode zum Programm</span><span class="level">★★ mittel</span></h3>
+<p>a) Ergänzen Sie die Tabelle.</p><table class="grid write"><thead><tr><th>Strategie</th><th>Ablauf</th><th>Vorteil</th><th>Nachteil</th><th>Beispiel</th></tr></thead><tbody><tr><td>Interpreter</td><td></td><td></td><td></td><td></td></tr><tr><td>Compiler</td><td></td><td></td><td></td><td></td></tr><tr><td>Zwischencode</td><td></td><td></td><td></td><td></td></tr></tbody></table><p>b) Zu welcher Strategie gehört Python (CPython)? Was bedeutet JIT?</p><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 1.6: Syntax und Werkzeuge</span><span class="level">★★★ anspruchsvoll</span></h3>
+<p>a) Welche Fehlermeldung erscheint beim Start dieses Programms, und welche erscheint, nachdem Sie diesen Fehler behoben haben?</p><pre class=""><span class="ln">1</span># Begruessung
+<span class="ln">2</span>Print("Hallo DHBW")
+<span class="ln">3</span>if True:
+<span class="ln">4</span>print("eingerückt?")</pre><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div></div>
+<p>b) Was bewirken <code>pwd</code>, <code>cd ..</code>, <code>uv run hallo.py</code>, <code>uv run ruff check .</code> und <code>uv run ty check</code>?</p><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<h2 class="newpage">Aufgabenpool VL2: Variablen, Datentypen und Operatoren</h2>
+<section class="task keep"><h3><span>Aufgabe 2.1: Datentypen</span><span class="level">★ leicht</span></h3><p>Was gibt das Programm aus?</p><pre class="">print(type(42))
+print(type(3.0))
+print(type("42"))
+print(type(True))
+print(type(None))
+wert = 3,5
+print(wert, type(wert))</pre><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 2.2: Namen und Konventionen</span><span class="level">★ leicht</span></h3>
+<p>Ist der Name gültig? Wenn ja: Wofür verwendet man ihn nach Python-Konvention (Variable/Funktion, Konstante, Klasse) – oder verstößt er gegen die Konvention?</p>
+<table class="grid write"><colgroup><col style="width:40mm"><col style="width:22mm"><col style="width:"></colgroup><thead><tr><th>Name</th><th>gültig?</th><th>Konvention / Verwendung</th></tr></thead><tbody><tr><td><code>kunden_anzahl</code></td><td></td><td></td></tr><tr><td><code>2tes_konto</code></td><td></td><td></td></tr><tr><td><code>MWST_SATZ</code></td><td></td><td></td></tr><tr><td><code>kundenAnzahl</code></td><td></td><td></td></tr><tr><td><code>netto-preis</code></td><td></td><td></td></tr><tr><td><code>class</code></td><td></td><td></td></tr><tr><td><code>groesse</code></td><td></td><td></td></tr><tr><td><code>Kunde</code></td><td></td><td></td></tr></tbody></table></section>
+<section class="task keep"><h3><span>Aufgabe 2.3: Zuweisungen nachvollziehen</span><span class="level">★★ mittel</span></h3><p>Was gibt das Programm aus? Notieren Sie Zwischenwerte.</p><pre class="">x = 5
+x *= 3
+x -= 1
+x //= 4
+x **= 2
+print(x)
+a, b = 1, 2
+a, b = b, a + b
+a, b = b, a + b
+print(a, b)
+y = 7
+++y
+print(y)</pre><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 2.4: Euro in Cent</span><span class="level">★★ mittel</span></h3><p>Was gibt das Programm aus? Erklären Sie die zweite Zeile und nennen Sie zwei Abhilfen.</p><pre class="">from decimal import Decimal
+
+print(int(9.99 * 100))
+print(int(19.99 * 100))
+print(19.99 * 100)
+print(round(19.99 * 100))
+print(int(Decimal("19.99") * 100))</pre><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 2.5: f-Strings und Umwandlungen</span><span class="level">★★ mittel</span></h3><p>Was gibt das Programm aus?</p><pre class="">name = "Ada"
+alter = 20
+preis = 7.5
+netto = 49.9
+print(f"{preis:.2f} €")
+print(f"{name} ist {alter + 1} Jahre alt")
+print(f"Brutto: {netto * 1.19:.2f}")
+print(f"{name * 2}|{len(name)}|{name[0]}{name[-1]}")
+print(int(-3.7), float(5), str(42) + "1")</pre><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 2.6: Fehlerarten erkennen</span><span class="level">★★ mittel</span></h3>
+<p>Welche Fehlerart liegt vor (Syntaxfehler, Typfehler, Laufzeitfehler, Logikfehler)? Wann wird er bemerkt? Wie lautet die letzte Zeile der Fehlermeldung ungefähr?</p>
+<div class="two"><div><p class='small'>a)</p><pre class="">zahl: int = 10
+print(f"Die Zahl ist {zahl}"</pre></div><div><p class='small'>b)</p><pre class="">alter = 36
+print("Alter: " + alter)</pre></div><div><p class='small'>c)</p><pre class="">a = 10
+b = 0
+print(a / b)</pre></div><div><p class='small'>d)</p><pre class="">anzahl: int
+print(anzahl)</pre></div><div><p class='small'>e)</p><pre class="">print(int("12.5"))</pre></div><div><p class='small'>f)</p><pre class="">x = 5
+x++</pre></div></div><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 2.7: Mini-Rechner und Jahreszahl ohne <code>int()</code></span><span class="level">★★★ anspruchsvoll</span></h3>
+<p>a) Gegeben <code>a = "12"</code> und <code>b = "3"</code>. Geben Sie genau <code>a=12, b=3 | sum=15, diff=9, prod=36, quot=4.0</code> aus. Was ergeben <code>a + b</code> und <code>a * 3</code>?</p>
+<p>b) Wandeln Sie <code>jahr = "2026"</code> <b>ohne</b> <code>int()</code> in die Zahl 2026 um. Tipp: <code>ord("7") - ord("0")</code> ergibt 7.</p><div class="codebox"><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div></div></section>
+<h2 class="newpage">Aufgabenpool VL3: Kontrollstrukturen und Listen</h2>
+<section class="task keep"><h3><span>Aufgabe 3.1: Noten mit <code>if</code>/<code>elif</code></span><span class="level">★ leicht</span></h3>
+<p>Ab 90 Punkten „sehr gut“, ab 75 „gut“, ab 60 „befriedigend“, ab 50 „ausreichend“, sonst „nicht bestanden“. Was gibt der Code aus, warum ist er falsch?
+Schreiben Sie ihn richtig und nennen Sie sinnvolle Testwerte.</p><pre class="">def note(punkte: int) -&gt; str:
+    if punkte &gt;= 50:
+        return "ausreichend"
+    elif punkte &gt;= 75:
+        return "gut"
+    elif punkte &gt;= 90:
+        return "sehr gut"
+    return "nicht bestanden"
+
+
+print(note(95))</pre><div class="codebox"><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 3.2: Kurzschlussauswertung</span><span class="level">★ leicht</span></h3><p>Es gilt <code>x = 0</code>. Welche Ausdrücke liefern einen Wert, welche einen <code>ZeroDivisionError</code>?</p>
+<ol class="sub" type="a"><li><code>x != 0 and 10 / x &gt; 1</code></li><li><code>10 / x &gt; 1 and x != 0</code></li><li><code>x == 0 or 10 / x &gt; 1</code></li><li><code>x &gt; 0 or 10 / x &gt; 1</code></li></ol><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 3.3: Wahrheitswerte und bedingter Ausdruck</span><span class="level">★★ mittel</span></h3><p>Was gibt das Programm aus?</p><pre class="">for wert in [[], "0", 0, " ", None, [0], -1, ""]:
+    print("ja" if wert else "nein", end=" ")
+print()
+a, b, c = False, True, False
+print(a or b and not c)
+print(not a and c)
+print(a != b)</pre><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 3.4: Schleifen: <code>range</code>, <code>break</code>, <code>continue</code></span><span class="level">★★ mittel</span></h3><p>Was gibt das Programm aus?</p><pre class="">for i in range(5, 0, -2):
+    print(i, end=" ")
+print()
+for i in range(1, 20, 4):
+    print(i, end=" ")
+print()
+for i in range(10, 3):
+    print(i, end=" ")
+print("leer?")
+for i in range(1, 11):
+    if i % 3 == 0:
+        continue
+    if i &gt; 8:
+        break
+    print(i, end=" ")
+print()
+n = 10
+while n &gt; 1:
+    if n % 2 == 0:
+        n = n // 2
+    else:
+        n = 3 * n + 1
+    print(n, end=" ")
+print()
+for i in range(3):
+    for j in range(i):
+        print(f"{i}{j}", end=" ")
+print()</pre><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 3.5: Parkgebühren mit <code>match</code></span><span class="level">★★ mittel</span></h3><p>Was geben die fünf Aufrufe aus? Rechnen Sie nach.</p><pre class="">from typing import Final
+
+GRUNDGEBUEHR: Final = 1.50
+HOECHSTPREIS: Final = 50.0
+
+
+def parkgebuehr(typ: str, stunden: int) -&gt; None:
+    gueltig = True
+    kosten = 0.0
+    match typ:
+        case "PKW":
+            kosten = stunden * 2.0
+            if stunden &gt;= 10:
+                kosten *= 0.90
+        case "Motorrad":
+            kosten = stunden * 1.0
+        case "Transporter":
+            kosten = stunden * 3.50
+            if stunden &gt;= 5:
+                kosten *= 0.80
+        case _:
+            print(f"Unbekannter Fahrzeugtyp: {typ}")
+            gueltig = False
+    if gueltig:
+        kosten += GRUNDGEBUEHR
+        if kosten &gt; HOECHSTPREIS:
+            kosten = HOECHSTPREIS
+        print(f"{typ}, {stunden} h: {kosten:.2f} Euro")
+
+
+parkgebuehr("Transporter", 6)
+parkgebuehr("PKW", 12)
+parkgebuehr("PKW", 9)
+parkgebuehr("Motorrad", 60)
+parkgebuehr("LKW", 2)</pre><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 3.6: Schaltjahr</span><span class="level">★★ mittel</span></h3><p>Schreiben Sie <code>ist_schaltjahr(jahr: int) -&gt; bool</code> mit einem einzigen logischen Ausdruck: durch 4 teilbar, aber nicht durch 100 – außer durch 400.
+Welche Ergebnisse erwarten Sie für 1900, 2000, 2024, 2026?</p><div class="codebox"><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 3.7: Temperaturliste</span><span class="level">★★★ anspruchsvoll</span></h3><p>Gegeben <code>wochentage = ["Mo", "Di", "Mi", "Do", "Fr"]</code> und <code>temperaturen = [-3.5, -1.0, -4.5, -2.0, -0.5]</code>.
+Geben Sie jeden Tag mit Temperatur aus und berechnen Sie Durchschnitt und Maximum mit einer Schleife (ohne <code>sum</code>/<code>max</code>), danach mit
+eingebauten Funktionen. Warum darf das Maximum nicht mit 0 starten?</p><div class="codebox"><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 3.8: Listenfalle und Sieb des Eratosthenes</span><span class="level">★★★ anspruchsvoll</span></h3>
+<p>a) Was gibt der Code aus? Erklären Sie die erste Zeile.</p><pre class="">falsch = [[0] * 3] * 2
+falsch[0][0] = 1
+print(falsch)
+
+richtig = []
+for _ in range(2):
+    richtig.append([0] * 3)
+richtig[0][0] = 1
+print(richtig)
+
+noten = [2.3, 1.0, 3.7, 1.7]
+print(noten[1:3], noten[-1], sorted(noten), noten)</pre><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div>
+<p>b) Geben Sie mit dem Sieb des Eratosthenes alle Primzahlen bis 30 aus. Verwenden Sie eine <code>bool</code>-Liste <code>ist_prim</code>.</p><div class="codebox"><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div></div></section>
+<h2 class="newpage">Aufgabenpool VL4: Funktionen, Rekursion und Tests</h2>
+<section class="task keep"><h3><span>Aufgabe 4.1: Standardwerte und Schlüsselwortargumente</span><span class="level">★ leicht</span></h3>
+<p>a) Was geben die Aufrufe aus? Was passiert in der letzten Zeile?</p><pre class="">def brutto(netto: float, satz: float = 0.19) -&gt; float:
+    return round(netto * (1 + satz), 2)
+
+
+print(brutto(100))
+print(brutto(100, 0.07))
+print(brutto(satz=0.07, netto=100))
+print(brutto(19.99))
+print(brutto())</pre><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div>
+<p>b) Warum lässt sich diese Funktion gar nicht erst definieren?</p><pre class="">def f(a: int = 1, b: int) -&gt; int:
+    return a + b</pre><div class="lines"><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 4.2: Gültigkeitsbereiche</span><span class="level">★★ mittel</span></h3><p>Was geben die drei Programme aus (bzw. welcher Fehler)?</p>
+<div class="two"><div><pre class="">def f() -&gt; None:
+    y = 3
+    print("in f:", y)
+
+
+f()
+print(y)</pre></div><div><pre class="">def erhoehe(wert: int) -&gt; None:
+    wert = wert + 1
+    print(f"In der Funktion: {wert}")
+
+
+zahl = 5
+erhoehe(zahl)
+print(f"Nach dem Aufruf: {zahl}")</pre></div></div><pre class="">MWST_SATZ = 0.19
+zaehler = 0
+
+
+def preis(netto: float) -&gt; float:
+    return netto * (1 + MWST_SATZ)
+
+
+def erhoehe() -&gt; None:
+    zaehler += 1
+
+
+print(preis(100.0))
+erhoehe()</pre><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 4.3: <code>break</code> oder <code>return</code>?</span><span class="level">★★ mittel</span></h3><p>Was gibt das Programm aus?</p><pre class="">def mit_break() -&gt; None:
+    for i in range(1, 11):
+        if i == 4:
+            break
+        print(i, end=" ")
+    print("Schleife beendet.")
+
+
+def mit_return() -&gt; None:
+    for i in range(1, 11):
+        if i == 4:
+            return
+        print(i, end=" ")
+    print("Schleife beendet.")
+
+
+mit_break()
+mit_return()
+print("| fertig")</pre><div class="lines"><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 4.4: Veränderbarer Standardwert</span><span class="level">★★ mittel</span></h3><p>Was gibt das Programm aus? Korrigieren Sie <code>anhaengen</code>.</p><pre class="">def anhaengen(wert: int, liste: list[int] = []) -&gt; list[int]:
+    liste.append(wert)
+    return liste
+
+
+a = anhaengen(1)
+b = anhaengen(2)
+c = anhaengen(3, [0])
+print(a, b, c)
+print(a is b)</pre><div class="lines"><div class="l"></div><div class="l"></div></div><div class="codebox"><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 4.5: Tupel als Rückgabe und <code>*args</code></span><span class="level">★★ mittel</span></h3>
+<p>a) Was gibt das Programm aus?</p><pre class="">def min_max(zahlen: list[int]) -&gt; tuple[int, int]:
+    return min(zahlen), max(zahlen)
+
+
+def summe(*zahlen: int) -&gt; int:
+    ergebnis = 0
+    for zahl in zahlen:
+        ergebnis += zahl
+    return ergebnis
+
+
+kleinste, groesste = min_max([4, 9, 2, 7])
+print(kleinste, groesste)
+print(min_max([5]))
+print(summe(1, 2, 3, 4), summe())</pre><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div></div>
+<p>b) Schreiben Sie <code>durchschnitt(*werte: float) -&gt; float</code> mit Docstring; ohne Argumente soll 0.0 herauskommen.</p><div class="codebox"><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 4.6: Rekursion nachvollziehen</span><span class="level">★★ mittel</span></h3>
+<p>Was gibt das Programm aus? Zeichnen Sie den Aufrufstapel für <code>summe_bis(4)</code> (Abstieg und Aufstieg). Warum erscheinen die Zahlen bei <code>raetsel</code> aufsteigend?</p>
+<pre class="">def summe_bis(n: int) -&gt; int:
+    return 0 if n == 0 else n + summe_bis(n - 1)
+
+
+def raetsel(n: int) -&gt; None:
+    if n &gt; 0:
+        raetsel(n - 1)
+        print(n, end=" ")
+
+
+print(summe_bis(4))
+raetsel(4)
+print()</pre><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 4.7: Rekursive Funktionen schreiben</span><span class="level">★★★ anspruchsvoll</span></h3>
+<p>Schreiben Sie jeweils rekursiv, mit Typannotationen und einzeiligem Docstring:</p>
+<ol class="sub" type="a"><li><code>zaehle_zeichen(text, zeichen) -&gt; int</code> ohne <code>text.count()</code>; <code>("banana", "a")</code> → 3</li>
+<li><code>potenz(basis: float, exponent: int) -&gt; float</code> ohne <code>**</code>, auch für negative Exponenten; <code>potenz(2, -2)</code> → 0.25</li>
+<li><code>maximum(zahlen: list[int], index: int = 0) -&gt; int</code> ohne <code>max()</code>; von außen ohne <code>index</code> aufrufbar</li></ol><div class="codebox"><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 4.8: Applikativ programmieren und testen</span><span class="level">★★★ anspruchsvoll</span></h3>
+<p>a) Setzen Sie die Funktion <code>h(p, q, x, y) = if p ∧ q then 4x + 2y else 5x − 3y fi</code> als Python-Funktion mit einem bedingten Ausdruck um.</p>
+<p>b) Schreiben Sie <code>fibonacci(n: int) -&gt; int</code> rekursiv (<code>fibonacci(0) == 0</code>, <code>fibonacci(1) == 1</code>).</p>
+<p>c) Schreiben Sie eine Testdatei für pytest mit mindestens vier Tests (beide Zweige von <code>h</code>, Randfälle von <code>fibonacci</code>).</p>
+<p>d) Warum ist die naive Fibonacci-Rekursion langsam?</p><div class="codebox"><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div></div></section>
+<h2 class="newpage">Aufgabenpool VL5: Objektorientierte Programmierung I</h2>
+<section class="task keep"><h3><span>Aufgabe 5.1: Grundbegriffe und UML</span><span class="level">★ leicht</span></h3>
+<p>a) Erklären Sie Klasse, Objekt (Instanz), Attribut und Methode am Beispiel eines Mitarbeiters. Zeichnen Sie ein UML-Klassendiagramm mit zwei Attributen und zwei Methoden.</p><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div>
+<p>b) Was passiert bei diesem Code, und warum?</p><pre class="">class Produkt:
+    def __init__(name: str, preis: float) -&gt; None:
+        self.name = name
+
+
+kaffee = Produkt("Kaffee", 12.99)</pre><div class="lines"><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 5.2: Methoden und <code>__str__</code>/<code>__repr__</code></span><span class="level">★ leicht</span></h3><p>Was gibt <code>main()</code> aus?</p><pre class="">class Konto:
+    def __init__(self, inhaber: str, kontostand: int = 0) -&gt; None:
+        self.inhaber = inhaber
+        self.kontostand = kontostand
+
+    def einzahlen(self, betrag: int) -&gt; None:
+        self.kontostand += betrag
+
+    def abheben(self, betrag: int) -&gt; bool:
+        if betrag &gt; self.kontostand:
+            print("Abgelehnt: Der Kontostand reicht nicht.")
+            return False
+        self.kontostand -= betrag
+        return True
+
+    def __str__(self) -&gt; str:
+        return f"Konto von {self.inhaber}: {self.kontostand} Euro"
+
+    def __repr__(self) -&gt; str:
+        return f"Konto({self.inhaber!r}, {self.kontostand})"
+
+
+def main() -&gt; None:
+    anna = Konto("Anna", 100)
+    ben = Konto("Ben")
+    anna.einzahlen(50)
+    print(anna.abheben(500))
+    print(anna.abheben(30))
+    Konto.einzahlen(ben, 25)
+    print(anna)
+    print([anna, ben])
+
+
+if __name__ == "__main__":
+    main()</pre><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 5.3: Namen, Identität und Gleichheit</span><span class="level">★★ mittel</span></h3><p>Was gibt <code>main()</code> aus?</p><pre class="">from dataclasses import dataclass
+
+
+class Konto:
+    def __init__(self, inhaber: str, kontostand: int = 0) -&gt; None:
+        self.inhaber = inhaber
+        self.kontostand = kontostand
+
+    def einzahlen(self, betrag: int) -&gt; None:
+        self.kontostand += betrag
+
+
+@dataclass
+class Kunde:
+    name: str
+    ort: str
+
+
+def main() -&gt; None:
+    konto1 = Konto("Clara", 100)
+    konto2 = konto1
+    konto2.einzahlen(50)
+    konto3 = Konto("Clara", 150)
+    print(konto1.kontostand)
+    print(konto1 is konto2, konto1 == konto3)
+    konto2 = Konto("Clara")
+    print(konto1.kontostand, konto2.kontostand)
+    k1 = Kunde("Anna Berger", "Heilbronn")
+    k2 = Kunde("Anna Berger", "Heilbronn")
+    print(k1 == k2, k1 is k2)
+    print(k1)
+
+
+if __name__ == "__main__":
+    main()</pre><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 5.4: Klassenattribute und Tippfehler</span><span class="level">★★ mittel</span></h3><p>Was gibt das Programm aus? Was würde <code>ty check</code> zur vorletzten Zeile sagen?</p><pre class="">class Konto:
+    anzahl_konten = 0
+
+    def __init__(self, inhaber: str) -&gt; None:
+        Konto.anzahl_konten += 1
+        self.nummer = f"K{Konto.anzahl_konten:03}"
+        self.inhaber = inhaber
+        self.kontostand = 0
+
+
+anna = Konto("Anna")
+ben = Konto("Ben")
+print(anna.nummer, ben.nummer)
+ben.anzahl_konten += 1
+print(Konto.anzahl_konten, anna.anzahl_konten, ben.anzahl_konten)
+Konto.anzahl_konten += 10
+print(Konto.anzahl_konten, anna.anzahl_konten, ben.anzahl_konten)
+anna.kontostnad = 500
+print(anna.kontostand)</pre><div class="lines"><div class="l"></div><div class="l"></div><div class="l"></div><div class="l"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 5.5: Klasse <code>Produkt</code> schreiben</span><span class="level">★★ mittel</span></h3>
+<p>Schreiben Sie eine Klasse <code>Produkt</code> mit <code>name: str</code>, <code>preis: Decimal</code>, <code>bestand: int</code> und den Methoden
+<code>lagerwert() -&gt; Decimal</code>, <code>einlagern(menge) -&gt; None</code> (nicht positive Mengen: Meldung, keine Änderung),
+<code>verkaufen(menge) -&gt; bool</code> (zu wenig Bestand: Meldung, <code>False</code>), <code>__str__</code> (<code>Kaffee 1 kg: 12.99 Euro, Bestand 40</code>) und <code>__repr__</code>.
+Testen Sie in <code>main()</code>: 5 verkaufen, 100 verkaufen, 10 einlagern, −3 einlagern, Produkt und Lagerwert ausgeben.</p><div class="codebox"><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 5.6: Kapselung mit Properties</span><span class="level">★★★ anspruchsvoll</span></h3>
+<p>Ändern Sie <code>Produkt</code>: Bestand in <code>_bestand</code> mit nur lesbarer Property <code>bestand</code>; Preis in <code>_preis</code> mit Property und Setter,
+der negative Preise mit Meldung abweist (auch <code>__init__</code> nutzt den Setter); berechnete Property <code>bruttopreis</code> (19 % MwSt.,
+<code>MWST_SATZ: Final = Decimal("0.19")</code>, gerundet mit <code>.quantize(Decimal("0.01"))</code>). Was passiert bei <code>kaffee.bestand = 100</code>?</p><div class="codebox"><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div></div></section>
+<section class="task keep"><h3><span>Aufgabe 5.7: Warenkorb: Hat-ein-Beziehung und <code>@dataclass</code></span><span class="level">★★★ anspruchsvoll</span></h3>
+<p>Schreiben Sie <code>@dataclass Kunde</code> (<code>name</code>, <code>email</code>), <code>@dataclass Position</code> (<code>produkt: Produkt</code>, <code>menge: int</code>, Methode <code>summe()</code>)
+und eine normale Klasse <code>Warenkorb</code>, die einen Kunden und eine Liste von Positionen <b>hat</b>: <code>hinzufuegen(produkt, menge)</code> (nur, wenn der Bestand reicht),
+<code>gesamtsumme() -&gt; Decimal</code> und <code>ausgeben()</code>. Testen Sie mit Kaffee (12.99 €, Bestand 40) und Tee (3.49 €, Bestand 120): 2 × Kaffee, 3 × Tee, 50 × Kaffee.
+Warum ist <code>Warenkorb</code> keine Datenklasse?</p><div class="codebox"><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div><div class="cl"></div></div></section></body></html>

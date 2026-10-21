@@ -1,0 +1,1277 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Lösungen Programmierung</title><style>
+@page { size: A4; margin: 15mm 15mm 16mm 15mm;
+  @bottom-center { content: counter(page) " / " counter(pages); font-family: Arial, sans-serif; font-size: 8.5pt; color: #444; } }
+* { box-sizing: border-box; }
+:root { --ink: #111; --muted: #555; --rule: #9a9a9a; --soft: #f3f3f3; --accent: #1d3f6e; }
+html, body { background: #fff; color: var(--ink); }
+body { font-family: "DejaVu Sans", "Liberation Sans", Arial, sans-serif; font-size: 10.5pt; line-height: 1.38; margin: 0; }
+h1 { font-size: 19pt; margin: 0 0 3mm; color: var(--accent); }
+h2 { font-size: 14.5pt; margin: 0 0 3mm; padding-bottom: 1mm; border-bottom: 2px solid var(--accent); color: var(--accent); }
+h3 { font-size: 11.5pt; margin: 0 0 2mm; display: flex; justify-content: space-between; gap: 4mm;
+     border-bottom: 1px solid #000; padding-bottom: 0.6mm; break-after: avoid; }
+h4 { font-size: 10.5pt; margin: 3mm 0 1mm; break-after: avoid; }
+p { margin: 1.2mm 0; }
+.pts { white-space: nowrap; font-weight: bold; }
+.newpage { break-before: page; }
+section.task { margin: 0 0 6mm; }
+.keep { break-inside: avoid; }
+pre, code, .mono { font-family: "DejaVu Sans Mono", "Liberation Mono", monospace; }
+code { font-size: 9.4pt; background: var(--soft); padding: 0 0.6mm; border-radius: 1px; }
+pre { font-size: 9pt; line-height: 1.32; border: 1px solid #b8b8b8; background: var(--soft); padding: 1.8mm 2.5mm;
+      margin: 1.5mm 0 2mm; white-space: pre-wrap; break-inside: avoid; }
+pre.out { background: #fff; border-left: 3px solid #555; }
+.ln { color: #888; display: inline-block; width: 7mm; user-select: none; }
+.outlabel { font-size: 9pt; color: var(--muted); margin-top: 1.5mm; }
+.gap { display: inline-block; min-width: 26mm; border-bottom: 1.4px solid #000; height: 1.2em; vertical-align: bottom; background: #fff; }
+.gap sup { font-size: 7pt; color: #333; font-family: Arial, sans-serif; }
+pre.gapcode { line-height: 1.42; }
+pre.tight { font-size: 8.5pt; line-height: 1.24; }
+pre.gapcode.tight { line-height: 1.38; }
+.lines { margin: 1mm 0 3mm; }
+.lines .l { height: 8mm; border-bottom: 1px solid var(--rule); }
+.codebox { border: 1px solid #777; margin: 1.5mm 0 3mm; padding: 0 2mm; position: relative; }
+.codebox .cl { height: 7mm; border-bottom: 1px dotted #c4c4c4; }
+.codebox .boxlabel { position: absolute; right: 2mm; top: 0.5mm; font-size: 8pt; color: var(--muted); }
+ol.mc { padding-left: 6mm; margin: 1mm 0; }
+li.mcq { margin: 0 0 2.4mm; break-inside: avoid; }
+ul.opts { list-style: none; padding-left: 2mm; margin: 0.8mm 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0.6mm 6mm; }
+ul.opts.one, li.mcq.long ul.opts { grid-template-columns: 1fr; }
+.box { font-size: 13pt; line-height: 1; vertical-align: -1px; margin-right: 1mm; }
+table { border-collapse: collapse; width: 100%; margin: 1.5mm 0 3mm; break-inside: avoid; }
+th, td { border: 1px solid #555; padding: 1.2mm 1.8mm; text-align: left; vertical-align: top; font-size: 9.8pt; }
+th { background: #e8e8e8; }
+table.trace td { height: 8.5mm; }
+table.write td { height: 13mm; }
+table.compact td { height: auto; }
+.cover { min-height: 255mm; display: flex; flex-direction: column; }
+.cover .meta { color: var(--muted); margin-bottom: 6mm; }
+.fields { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm 8mm; margin: 4mm 0 6mm; }
+.field { border-bottom: 1px solid #000; height: 11mm; display: flex; align-items: flex-end; padding-bottom: 1mm; font-size: 9pt; color: var(--muted); }
+.matrikel { display: flex; gap: 0; }
+.matrikel span { width: 8mm; height: 10mm; border: 1px solid #000; margin-right: -1px; display: inline-block; }
+.hinweise { border: 1px solid #777; padding: 2mm 4mm; margin: 0 0 5mm; }
+.hinweise ul { margin: 1mm 0; padding-left: 5mm; }
+.punkte td, .punkte th { height: 7.5mm; vertical-align: middle; }
+.punkte td:nth-child(3), .punkte td:nth-child(4) { text-align: center; }
+.small { font-size: 9pt; color: var(--muted); }
+.eh { border: 1px solid #9bb0cc; background: #f2f6fb; padding: 1.5mm 3mm; margin: 2mm 0 1mm; break-inside: avoid; }
+.eh ul { margin: 0.5mm 0; padding-left: 5mm; }
+.note { border-left: 3px solid #b07a00; background: #fff8e8; padding: 1.2mm 3mm; margin: 2mm 0; font-size: 9.6pt; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+.two > div > pre { margin-top: 0; }
+.toc li { margin: 1mm 0; }
+.level { font-size: 8.5pt; color: var(--muted); font-weight: normal; }
+ol.sub { padding-left: 6mm; margin: 1mm 0; }
+ol.sub > li { margin: 0 0 1.5mm; }
+</style></head><body>
+<div class="cover">
+<h1>Lösungen – Grundlagen der Programmierung</h1>
+<div style="font-size:12pt;font-weight:bold">Python · DHBW Heilbronn · Wirtschaftsinformatik, 1. Semester · Dr. Markus Rosenfelder</div>
+<div class="meta">Klausur laut Lernplan: Fr, 11.12.2026, 120 Minuten · Stoff: VL1–VL5 (Stand 21.10.2026) · inoffizielles Übungsmaterial, es gibt keine Musterklausur</div>
+<p>Musterlösungen, erwartete Ausgaben, Trace-Tabellen und Punktvergabe (Erwartungshorizont) zu beiden Probeklausuren und zum Aufgabenpool.</p>
+<p><b>Geprüft:</b> Alle Programme, Ausgaben und Fehlermeldungen in dieser Datei wurden beim Erstellen tatsächlich mit <b>Python 3.14</b> (<code>python3.14 -I</code>)
+ausgeführt und automatisch eingefügt; Dateipfade in Tracebacks sind auf den Dateinamen gekürzt. pytest war in der Prüfumgebung nicht installiert: Die
+Testdateien wurden stattdessen durch direkten Aufruf aller <code>test_</code>-Funktionen geprüft. Die pytest-Ausgabe in Aufgabe B9 ist dem Format der VL04-Folie nachgebildet.</p>
+<h4>Inhalt</h4>
+<ol class="toc"><li>Probeklausur A</li><li>Probeklausur B</li><li>Aufgabenpool VL1: Einführung: Algorithmen, Datenstrukturen, Python-Werkzeuge (6 Aufgaben)</li><li>Aufgabenpool VL2: Variablen, Datentypen und Operatoren (7 Aufgaben)</li><li>Aufgabenpool VL3: Kontrollstrukturen und Listen (8 Aufgaben)</li><li>Aufgabenpool VL4: Funktionen, Rekursion und Tests (8 Aufgaben)</li><li>Aufgabenpool VL5: Objektorientierte Programmierung I (7 Aufgaben)</li></ol>
+<div class="note">Offen ist, ob die Klausur auf Papier oder am Rechner geschrieben wird. Die Probeklausuren sind als Papierklausur gestaltet; am Rechner
+lassen sich dieselben Aufgaben im Texteditor lösen und mit <code>uv run</code>, <code>ruff check</code> und <code>ty check</code> prüfen.
+Hilfsmittel (z. B. ein Spickzettel) sind nicht bekannt – angenommen ist „keine“.</div>
+<h4>Abgedeckte Themen</h4>
+<ul>
+<li>VL1: Algorithmusbegriff und Eigenschaften, Datenstrukturen, Interpreter/Compiler/Zwischencode, Python-Syntax, uv/ruff/ty</li>
+<li>VL2: Datentypen, Variablen, <code>Final</code>, Operatoren (<code>/ // % **</code>), Strings, f-Strings, Typumwandlung, <code>Decimal</code>, Syntax vs. Semantik</li>
+<li>VL3: <code>if/elif/else</code>, <code>match</code>, bedingter Ausdruck, truthy/falsy, Kurzschluss, <code>while</code>, <code>for</code>/<code>range</code>, <code>break</code>/<code>continue</code>, Listen, <code>enumerate</code>, <code>zip</code>, Matrix, Tupel</li>
+<li>VL4: Funktionen, Typannotationen, Docstrings, <code>main()</code>, <code>return</code>/<code>None</code>, Gültigkeit (LEGB, <code>UnboundLocalError</code>), Parameterübergabe, Standardwerte, <code>*args</code>, Rekursion, <code>assert</code>, pytest</li>
+<li>VL5: Klassen, Objekte, <code>__init__</code>, <code>self</code>, Methoden, <code>__str__</code>/<code>__repr__</code>, Identität, Klassenattribute, Kapselung, <code>@property</code>, Hat-ein-Beziehung, <code>@dataclass</code></li>
+</ul>
+</div><h2 class="newpage">Probeklausur A – Lösungen und Erwartungshorizont</h2>
+<section class="task"><h3><span>Lösung A1: Multiple Choice</span><span class="pts">12 P</span></h3>
+<table class="grid compact"><colgroup><col style="width:14mm"><col style="width:45mm"><col style="width:"></colgroup><thead><tr><th>Frage</th><th>richtig</th><th>Begründung</th></tr></thead><tbody><tr><td>a</td><td>2. Option</td><td>CPython übersetzt in Bytecode, die Python-VM führt ihn aus (Variante Zwischencode, VL1).</td></tr><tr><td>b</td><td><code>-4</code></td><td><code>//</code> rundet ab (Richtung −∞), Java liefert −3. Geprüft: -4</td></tr><tr><td>c</td><td><code>0.0</code></td><td>Falsy sind <code>False, None, 0, 0.0, "", []</code>; <code>"0"</code>, <code>[0]</code>, <code>-1</code> sind wahr.</td></tr><tr><td>d</td><td>2, 5, 8</td><td><code>stop</code> (11) gehört nicht dazu. Geprüft: <code>[2, 5, 8]</code></td></tr><tr><td>e</td><td>2. Option</td><td>1. = terminierend, 3. = deterministisch, 4. = Effizienz.</td></tr><tr><td>f</td><td><code>Konto.einzahlen(anna, 50)</code></td><td>Das Objekt vor dem Punkt wird als erstes Argument (<code>self</code>) übergeben.</td></tr></tbody></table>
+<div class="eh"><b>Erwartungshorizont</b><ul><li>je 2 P pro richtig angekreuzter Frage, 0 P bei falschem oder mehrfachem Kreuz</li></ul></div></section>
+<section class="task"><h3><span>Lösung A2: Ausdrücke auswerten</span><span class="pts">10 P</span></h3>
+<table class="grid compact"><colgroup><col style="width:7mm"><col style="width:70mm"><col style="width:"><col style="width:28mm"></colgroup><thead><tr><th></th><th>Ausdruck</th><th>Wert</th><th>Typ</th></tr></thead><tbody><tr><td>a)</td><td><code>7 / 2</code></td><td><code>3.5</code></td><td><code>float</code></td></tr><tr><td>b)</td><td><code>2 + 3 * 4 ** 2</code></td><td><code>50</code></td><td><code>int</code></td></tr><tr><td>c)</td><td><code>int(9.99)</code></td><td><code>9</code></td><td><code>int</code></td></tr><tr><td>d)</td><td><code>"Py" * 2 + "!"</code></td><td><code>'PyPy!'</code></td><td><code>str</code></td></tr><tr><td>e)</td><td><code>"Heilbronn"[1:4]</code></td><td><code>'eil'</code></td><td><code>str</code></td></tr><tr><td>f)</td><td><code>len("DHBW Heilbronn")</code></td><td><code>14</code></td><td><code>int</code></td></tr><tr><td>g)</td><td><code>17 % 5 == 2 and not False</code></td><td><code>True</code></td><td><code>bool</code></td></tr><tr><td>h)</td><td><code>True + 1</code></td><td><code>2</code></td><td><code>int</code></td></tr><tr><td>i)</td><td><code>5 + 2.0</code></td><td><code>7.0</code></td><td><code>float</code></td></tr><tr><td>j)</td><td><code>"30" == 30</code></td><td><code>False</code></td><td><code>bool</code></td></tr></tbody></table>
+<p class="small">Hinweise: <code>/</code> liefert immer <code>float</code>; <code>**</code> vor <code>*</code> vor <code>+</code> (2 + 3·16 = 50);
+<code>int()</code> schneidet ab; Slicing <code>[1:4]</code> nimmt Index 1 bis 3; <code>17 % 5</code> ist 2; <code>True</code> zählt als 1;
+<code>int + float</code> ergibt <code>float</code>; <code>str</code> und <code>int</code> sind nie gleich.</p>
+<div class="eh"><b>Erwartungshorizont</b><ul><li>je ½ P für richtigen Wert und ½ P für richtigen Typ</li><li>Strings ohne Anführungszeichen: Wert trotzdem werten, wenn der Typ <code>str</code> richtig angegeben ist</li></ul></div></section>
+<section class="task"><h3><span>Lösung A3: Was gibt dieser Code aus?</span><span class="pts">10 P</span></h3>
+<h4>a)</h4><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">1 2 4 5 7 Ende</pre>
+<p>3, 6 werden mit <code>continue</code> übersprungen, bei 8 beendet <code>break</code> die Schleife, danach läuft <code>print("Ende")</code>.</p>
+<h4>b)</h4><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">5 [99, 2, 3, 4]</pre>
+<p>Python übergibt Namen, keine Kopien: <code>liste</code> zeigt zunächst auf dasselbe Listenobjekt wie <code>werte</code>.
+<code>liste[0] = 99</code> und <code>append(4)</code> verändern dieses Objekt (Nebeneffekt, außen sichtbar). <code>liste = [7, 7, 7]</code> bindet nur das
+lokale Namensschild neu; das <code>append(5)</code> betrifft die neue Liste. <code>zahl = zahl + 1</code> bindet ebenfalls nur lokal neu, und <code>int</code> ist
+unveränderlich – außen bleibt 5.</p>
+<div class="eh"><b>Erwartungshorizont</b><ul><li>a) 4 P: alle Zahlen in einer Zeile richtig (1 2 4 5 7) 3 P, „Ende“ in derselben Zeile 1 P; je falscher/fehlender Zahl −1 P</li><li>b) Ausgabe 3 P: <code>5</code> 1 P, <code>[99, 2, 3, 4]</code> 2 P (nur <code>[99, 2, 3]</code>: 1 P)</li><li>b) Begründung 3 P: gleiches Objekt / Verweis 1 P, Veränderung des Objekts vs. Neubindung 1 P, int unveränderlich bzw. nur lokale Neubindung 1 P</li></ul></div></section>
+<section class="task"><h3><span>Lösung A4: Trace-Tabelle</span><span class="pts">10 P</span></h3>
+<table class="grid compact"><thead><tr><th>Durchlauf</th><th>zahl % 10</th><th>summe</th><th>zahl</th><th>stellen</th><th>zahl &gt; 0?</th></tr></thead><tbody><tr><td>Start</td><td>–</td><td>0</td><td>4271</td><td>0</td><td>wahr</td></tr><tr><td>1</td><td>1</td><td>1</td><td>427</td><td>1</td><td>wahr</td></tr><tr><td>2</td><td>7</td><td>8</td><td>42</td><td>2</td><td>wahr</td></tr><tr><td>3</td><td>2</td><td>10</td><td>4</td><td>3</td><td>wahr</td></tr><tr><td>4</td><td>4</td><td>14</td><td>0</td><td>4</td><td>falsch → Ende</td></tr></tbody></table>
+<p class="small">Selbst nachverfolgt (Zwischenausgabe je Durchlauf: zahl, summe, stellen):</p><pre class="">Start 4271 0 0
+   427 1 1
+   42 8 2
+   4 10 3
+   0 14 4
+4 Stellen, Quersumme 14</pre>
+<p>b) <div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">4 Stellen, Quersumme 14</pre></p>
+<p>c) <div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">0 Stellen, Quersumme 0</pre>
+<code>while</code> prüft die Bedingung <b>vor</b> dem ersten Durchlauf. <code>0 &gt; 0</code> ist falsch, der Rumpf läuft kein einziges Mal, alle Werte bleiben beim Startwert 0.
+(Fachlich stimmt das Ergebnis nicht ganz: Die Zahl 0 hat eine Stelle.)</p>
+<div class="eh"><b>Erwartungshorizont</b><ul><li>a) 6 P: je Durchlauf 1,5 P (alle vier Werte richtig), Bedingungsspalte mit „falsch“ am Ende nötig; Folgefehler werden nur einmal abgezogen</li><li>b) 1 P: <code>4 Stellen, Quersumme 14</code></li><li>c) 3 P: Ausgabe 1 P, „Bedingung wird vorher geprüft, Schleife läuft nie“ 2 P</li></ul></div></section>
+<section class="task"><h3><span>Lösung A5: Fehler finden und korrigieren</span><span class="pts">14 P</span></h3>
+<table class="grid compact"><colgroup><col style="width:9mm"><col style="width:12mm"><col style="width:62mm"><col style="width:"></colgroup><thead><tr><th>Nr.</th><th>Zeile</th><th>Fehlerart</th><th>Korrektur</th></tr></thead><tbody><tr><td>1</td><td>24</td><td>Syntaxfehler: fehlender Doppelpunkt</td><td><code>if betrag &gt; RABATT_GRENZE:</code></td></tr><tr><td>2</td><td>22</td><td>Laufzeitfehler <code>TypeError</code>: <code>str + int</code></td><td><code>print(f"Rabatt: {{prozent}} %")</code> oder <code>str(prozent)</code></td></tr><tr><td>3</td><td>16</td><td>Laufzeitfehler <code>UnboundLocalError</code>: Zuweisung (<code>+=</code>) macht den Namen lokal, er wird vor der Zuweisung gelesen</td><td>Zähler als Parameter übergeben und neuen Wert zurückgeben: <code>def zaehle_bestellung(anzahl: int) -&gt; int: return anzahl + 1</code>; in <code>main</code>: <code>bestellungen_gesamt = zaehle_bestellung(bestellungen_gesamt)</code> mit lokaler Variable <code>bestellungen_gesamt = 0</code></td></tr><tr><td>4</td><td>8–11</td><td>Logikfehler: <code>elif</code> prüft nacheinander, 120 trifft schon <code>&gt;= 50</code> → 5 % statt 10 %</td><td>größte Grenze zuerst: <code>if betrag &gt;= 100: return 10</code>, dann <code>elif betrag &gt;= 50: return 5</code></td></tr></tbody></table>
+<h4>Reale Fehlermeldungen (Python 3.14, Pfade gekürzt)</h4>
+<p>Unverändertes Programm – der Syntaxfehler wird <b>vor dem Start</b> gemeldet, keine Zeile läuft:</p><pre class="">  File "a5_bestellung.py", line 24
+    if betrag &gt; RABATT_GRENZE
+                             ^
+SyntaxError: expected ':'</pre>
+<p>Nach Korrektur von Fehler 1:</p><pre class="">Traceback (most recent call last):
+  File "a5_stufe2.py", line 29, in &lt;module&gt;
+    main()
+    ~~~~^^
+  File "a5_stufe2.py", line 22, in main
+    print("Rabatt: " + prozent + " %")
+          ~~~~~~~~~~~^~~~~~~~~
+TypeError: can only concatenate str (not "int") to str</pre>
+<p>Nach Korrektur von Fehler 1 und 2 (die Ausgabe „Rabatt: 5 %“ zeigt den Logikfehler):</p><pre class="">Rabatt: 5 %
+Traceback (most recent call last):
+  File "a5_stufe3.py", line 29, in &lt;module&gt;
+    main()
+    ~~~~^^
+  File "a5_stufe3.py", line 23, in main
+    zaehle_bestellung()
+    ~~~~~~~~~~~~~~~~~^^
+  File "a5_stufe3.py", line 16, in zaehle_bestellung
+    bestellungen_gesamt += 1
+    ^^^^^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'bestellungen_gesamt' where it is not associated with a value</pre>
+<p>Vollständig korrigierte Fassung:</p><pre class="">from typing import Final
+
+RABATT_GRENZE: Final = 100
+
+
+def rabatt_prozent(betrag: float) -&gt; int:
+    if betrag &gt;= 100:
+        return 10
+    elif betrag &gt;= 50:
+        return 5
+    return 0
+
+
+def zaehle_bestellung(anzahl: int) -&gt; int:
+    return anzahl + 1
+
+
+def main() -&gt; None:
+    bestellungen_gesamt = 0
+    betrag = 120.0
+    prozent = rabatt_prozent(betrag)
+    print(f"Rabatt: {prozent} %")
+    bestellungen_gesamt = zaehle_bestellung(bestellungen_gesamt)
+    if betrag &gt; RABATT_GRENZE:
+        print("Großbestellung")
+    print(bestellungen_gesamt)
+
+
+if __name__ == "__main__":
+    main()
+    assert rabatt_prozent(120.0) == 10
+    assert rabatt_prozent(50) == 5
+    assert rabatt_prozent(49.99) == 0
+    assert rabatt_prozent(100) == 10</pre><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">Rabatt: 10 %
+Großbestellung
+1</pre>
+<p>b) Zuerst der <b>Syntaxfehler</b> (Zeile 24), weil Python die ganze Datei vor dem Ausführen übersetzt. Der <b>Logikfehler</b> (Rabattreihenfolge) erzeugt nie eine Fehlermeldung – nur ein falsches Ergebnis.</p>
+<div class="eh"><b>Erwartungshorizont</b><ul><li>a) je Fehler 3 P: Zeile 1 P, Fehlerart (bei Laufzeitfehlern mit Exception-Namen) 1 P, korrekte Korrektur 1 P</li><li>Fehler 3: auch andere korrekte Lösungen (Zähler in <code>main</code> führen) zählen; nur „Zeile löschen“ gibt 0 P für die Korrektur</li><li>b) 2 P: Syntaxfehler zuerst 1 P, Logikfehler nie gemeldet 1 P</li></ul></div></section>
+<section class="task"><h3><span>Lösung A6: Lückencode mit <code>match</code></span><span class="pts">10 P</span></h3>
+<table class="grid compact"><colgroup><col style="width:16mm"><col style="width:"></colgroup><thead><tr><th>Lücke</th><th>Lösung</th></tr></thead><tbody><tr><td>(1)</td><td><code>float | None</code></td></tr><tr><td>(2)</td><td><code>match</code></td></tr><tr><td>(3)</td><td><code>case "EU" | "CH"</code></td></tr><tr><td>(4)</td><td><code>case _</code></td></tr><tr><td>(5)</td><td><code>zip(zonen, gewichte, strict=True)</code></td></tr><tr><td>(6)</td><td><code>preis is None</code></td></tr><tr><td>(7)</td><td><code>preis:.2f</code></td></tr></tbody></table>
+<pre class="">def versandkosten(zone: str, gewicht_kg: float) -&gt; float | None:
+    match zone:
+        case "DE":
+            kosten = 4.90
+        case "EU" | "CH":
+            kosten = 9.90
+        case _:
+            return None
+    if gewicht_kg &gt; 5:
+        kosten += 1.50
+    return kosten
+
+
+def main() -&gt; None:
+    zonen = ["DE", "CH", "US"]
+    gewichte = [2.0, 7.5, 1.0]
+    for zone, gewicht in zip(zonen, gewichte, strict=True):
+        preis = versandkosten(zone, gewicht)
+        if preis is None:
+            print(f"{zone}: nicht lieferbar")
+        else:
+            print(f"{zone}: {preis:.2f} Euro")
+
+
+if __name__ == "__main__":
+    main()</pre><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">DE: 4.90 Euro
+CH: 11.40 Euro
+US: nicht lieferbar</pre>
+<p class="small">CH: 9.90 + 1.50 = 11.40, weil 7,5 kg &gt; 5 kg.</p>
+<div class="eh"><b>Erwartungshorizont</b><ul><li>je Lücke 1 P (7 P); bei (5) ohne <code>strict=True</code> volle Punktzahl, (6) <code>preis == None</code> ½ P</li><li>Ausgabe 3 P: je Zeile 1 P; „11.4“ statt „11.40“ ½ P Abzug</li></ul></div></section>
+<section class="task"><h3><span>Lösung A7: Funktion schreiben</span><span class="pts">12 P</span></h3>
+<pre class="">def bestellwert(preise: list[float], mengen: list[int], rabatt: float = 0.0) -&gt; float:
+    """Berechnet den Wert einer Bestellung nach Rabatt.
+
+    Args:
+        preise: Stückpreise der Positionen in Euro.
+        mengen: Bestellmengen, passend zu preise.
+        rabatt: Rabatt als Anteil zwischen 0 und 0.5, Standard 0.0.
+
+    Returns:
+        Den Bestellwert in Euro, auf zwei Nachkommastellen gerundet.
+    """
+    if rabatt &lt; 0 or rabatt &gt; 0.5:
+        rabatt = 0.0
+    summe = 0.0
+    for preis, menge in zip(preise, mengen, strict=True):
+        summe += preis * menge
+    return round(summe * (1 - rabatt), 2)
+
+
+def main() -&gt; None:
+    print(bestellwert([2.5, 10.0], [4, 3]))
+    print(bestellwert([2.5, 10.0], [4, 3], 0.1))
+    print(bestellwert([2.5, 10.0], [4, 3], 0.8))
+    print(bestellwert(mengen=[4, 3], preise=[2.5, 10.0], rabatt=0.1))
+    print(bestellwert([], []))
+    print(bestellwert([19.99], [3], 0.5))
+
+
+if __name__ == "__main__":
+    main()</pre>
+<div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">40.0
+36.0
+40.0
+36.0
+0.0
+29.98</pre>
+<p>b) <code>bestellwert(mengen=[4, 3], preise=[2.5, 10.0], rabatt=0.1)</code> → <code>36.0</code> (vierte Zeile der Ausgabe oben).</p>
+<p class="small">Alternative ohne <code>zip</code>: <code>for i in range(len(preise)): summe += preise[i] * mengen[i]</code>. Mit <code>strict=True</code>
+meldet Python ungleich lange Listen: <code>ValueError: zip() argument 2 is longer than argument 1</code></p>
+<div class="eh"><b>Erwartungshorizont</b><ul><li>Signatur mit allen Typannotationen und Standardwert <code>rabatt: float = 0.0</code>: 2 P</li><li>Docstring im Google-Stil mit <code>Args:</code> und <code>Returns:</code>: 2 P</li><li>Summe Preis × Menge über alle Positionen (Schleife korrekt, Startwert 0): 3 P</li><li>Prüfung des ungültigen Rabatts (&lt; 0 oder &gt; 0.5) mit Rückfall auf 0: 2 P</li><li><code>return round(..., 2)</code> mit Rabattabzug: 1 P</li><li>b) 2 P: Schlüsselwortargumente in geforderter Reihenfolge 1 P, Ergebnis 36.0 1 P</li></ul></div></section>
+<section class="task"><h3><span>Lösung A8: Rekursion</span><span class="pts">12 P</span></h3>
+<p>a) Abstieg <code>r(5) → r(3) → r(1)</code>; <code>r(1) = 1</code> (Abbruch, da 1 ≤ 1). Aufstieg: <code>r(3) = 3 + 2·1 = 5</code>, <code>r(5) = 5 + 2·5 = 15</code>.<br>
+Abstieg <code>r(6) → r(4) → r(2) → r(0)</code>; <code>r(0) = 1</code>. Aufstieg: <code>r(2) = 2 + 2·1 = 4</code>, <code>r(4) = 4 + 2·4 = 12</code>, <code>r(6) = 6 + 2·12 = 30</code>.</p>
+<div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">15
+30</pre>
+<p>b)</p><pre class="">def quersumme(n: int) -&gt; int:
+    """Berechnet die Quersumme einer nicht negativen ganzen Zahl rekursiv.
+
+    Args:
+        n: Nicht negative ganze Zahl.
+
+    Returns:
+        Die Summe der Ziffern von n.
+    """
+    if n &lt; 10:
+        return n
+    return n % 10 + quersumme(n // 10)
+
+
+def main() -&gt; None:
+    print(quersumme(4271), quersumme(7), quersumme(0), quersumme(1000))
+
+
+if __name__ == "__main__":
+    main()</pre><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">14 7 0 1</pre>
+<p>c) Die Abbruchbedingung <code>n == 0</code> wird nie erreicht (−1, −2, −3, …). Der Aufrufstapel wächst, bis Python abbricht (letzte Zeilen der echten Meldung):</p>
+<pre class="">  [Previous line repeated 996 more times]
+RecursionError: maximum recursion depth exceeded</pre>
+<p>Robuster: <code>if n &lt;= 0: return 1</code> (oder negative Werte vorher abweisen).</p>
+<div class="eh"><b>Erwartungshorizont</b><ul><li>a) 4 P: r(5) = 15 mit Aufrufkette 2 P, r(6) = 30 mit Aufrufkette 2 P (nur Ergebnis: je 1 P)</li><li>b) 6 P: Signatur mit Typen 1 P, korrekte Abbruchbedingung (<code>n &lt; 10</code> oder <code>n == 0 → 0</code>) 2 P, rekursiver Aufruf mit <code>n // 10</code> und <code>n % 10</code> 2 P, Kommentare Abbruch/Rekursion 1 P</li><li>Schleife oder <code>str()</code> verwendet: höchstens 2 P</li><li>c) 2 P: RecursionError bzw. Abbruch nie erreicht 1 P, Korrektur <code>n &lt;= 0</code> 1 P</li></ul></div></section>
+<section class="task"><h3><span>Lösung A9: Tests mit pytest</span><span class="pts">8 P</span></h3>
+<p>Dateiname: <code>test_bestellung.py</code> (pytest findet nur Dateien <code>test_*.py</code> und Funktionen <code>test_…</code>).</p>
+<pre class="">from bestellung import bestellwert
+
+
+def test_ohne_rabatt() -&gt; None:
+    assert bestellwert([2.5, 10.0], [4, 3]) == 40.0
+
+
+def test_mit_rabatt() -&gt; None:
+    assert bestellwert([2.5, 10.0], [4, 3], 0.1) == 36.0
+
+
+def test_ungueltiger_rabatt() -&gt; None:
+    assert bestellwert([2.5, 10.0], [4, 3], 0.8) == 40.0
+    assert bestellwert([2.5, 10.0], [4, 3], -0.1) == 40.0
+
+
+def test_leere_bestellung() -&gt; None:
+    assert bestellwert([], []) == 0.0
+
+
+def test_grenze_halber_rabatt() -&gt; None:
+    assert bestellwert([10.0], [2], 0.5) == 10.0</pre>
+<p class="small">Geprüft ohne pytest (in dieser Umgebung nicht installiert) durch Aufruf aller <code>test_</code>-Funktionen:
+<code>test_bestellung: 5 Tests bestanden</code></p>
+<p>b) <code>uv run pytest</code> (einmalig vorher <code>uv add --dev pytest</code>). <code>.F.</code>: drei Tests in der Datei, der erste und dritte bestanden (<code>.</code>), der zweite fehlgeschlagen (<code>F</code>).</p>
+<div class="eh"><b>Erwartungshorizont</b><ul><li>a) 6 P: Import <code>from bestellung import bestellwert</code> 1 P, drei korrekt benannte Testfunktionen mit <code>assert</code> je 1 P, sinnvoller Randfall 1 P, korrekte Erwartungswerte und Dateiname 1 P</li><li>Vergleich gerundeter Werte mit <code>==</code> ist hier zulässig, weil die Funktion selbst rundet</li><li>b) 2 P: Befehl 1 P, Bedeutung von <code>.</code>/<code>F</code> 1 P</li></ul></div></section>
+<section class="task"><h3><span>Lösung A10: Klassen und Objekte</span><span class="pts">14 P</span></h3>
+<h4>a)</h4><pre class="">from decimal import Decimal
+
+
+class Artikel:
+    anzahl = 0
+
+    def __init__(self, name: str, preis: Decimal, bestand: int = 0) -&gt; None:
+        Artikel.anzahl += 1
+        self.nummer = f"A{Artikel.anzahl:03}"
+        self.name = name
+        self._preis = Decimal(0)
+        self.preis = preis
+        self.bestand = bestand
+
+    @property
+    def preis(self) -&gt; Decimal:
+        return self._preis
+
+    @preis.setter
+    def preis(self, neuer_preis: Decimal) -&gt; None:
+        if neuer_preis &lt; 0:
+            print(f"Ungültiger Preis: {neuer_preis}")
+            return
+        self._preis = neuer_preis
+
+    def verkaufen(self, menge: int) -&gt; bool:
+        if menge &lt;= 0 or menge &gt; self.bestand:
+            print(f"Verkauf von {menge} x {self.name} nicht möglich.")
+            return False
+        self.bestand -= menge
+        return True
+
+    def __str__(self) -&gt; str:
+        return f"{self.nummer} {self.name}: {self.preis} Euro, Bestand {self.bestand}"
+
+
+def main() -&gt; None:
+    kaffee = Artikel("Kaffee 1 kg", Decimal("12.99"), 40)
+    tee = Artikel("Grüner Tee", Decimal("3.49"))
+    print(kaffee)
+    print(tee)
+    print(kaffee.verkaufen(5), kaffee.verkaufen(100), tee.verkaufen(1))
+    kaffee.preis = Decimal("-5")
+    print(kaffee)
+    print(Artikel.anzahl)
+
+
+if __name__ == "__main__":
+    main()</pre><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">A001 Kaffee 1 kg: 12.99 Euro, Bestand 40
+A002 Grüner Tee: 3.49 Euro, Bestand 0
+Verkauf von 100 x Kaffee 1 kg nicht möglich.
+Verkauf von 1 x Grüner Tee nicht möglich.
+True False False
+Ungültiger Preis: -5
+A001 Kaffee 1 kg: 12.99 Euro, Bestand 35
+2</pre>
+<h4>b)</h4><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">a c c
+2 2 12
+True False</pre>
+<p class="small">Erklärung: <code>c = b</code> erzeugt kein neues Objekt, also
+ändert <code>c.name</code> auch <code>b</code>. <code>b.stand += 10</code> liest das Klassenattribut (2) und legt ein <b>Instanzattribut</b> <code>stand = 12</code> nur für <code>b</code> an;
+<code>Zaehler.stand</code> und <code>a.stand</code> bleiben 2. <code>b is c</code> ist <code>True</code>; <code>==</code> vergleicht bei normalen Klassen die Identität → <code>False</code>
+(das neue Objekt erhöht den Zähler danach auf 3).</p>
+<div class="eh"><b>Erwartungshorizont</b><ul><li>a) 10 P: Klassenattribut und Zählen über <code>Artikel.anzahl</code> 1 P, Nummer mit <code>f"A{{Artikel.anzahl:03}}"</code> 1 P, <code>__init__</code> mit Typen, Standardwert und <code>self.</code>-Attributen 2 P, Property mit <code>@property</code> 1 P, Setter <code>@preis.setter</code> mit Prüfung und Rückkehr ohne Änderung 2 P, Setter-Nutzung in <code>__init__</code> 1 P, <code>verkaufen</code> mit beiden Prüfungen und Rückgabewerten 1 P, <code>__str__</code> 1 P</li><li>Klassenattribut über <code>self.anzahl += 1</code> erhöht: −1 P (legt Instanzattribut an)</li><li>b) 4 P: Zeile 1 1 P, Zeile 2 2 P (je falscher Zahl −1), Zeile 3 1 P</li></ul></div></section>
+<section class="task"><h3><span>Lösung A11: Konzeptfragen</span><span class="pts">8 P</span></h3>
+<ol class="sub" type="a">
+<li><b>Parameter</b> ist der Platzhalter in der Definition (<code>def begruessung(name: str)</code> → <code>name</code>), <b>Argument</b> der konkrete Wert beim Aufruf (<code>begruessung("Bob")</code> → <code>"Bob"</code>).</li>
+<li>Vorteil: elegant und kurz bei selbstähnlichen Problemen, mathematische Definition direkt umsetzbar, wenig Zustand. Nachteil: speicherintensiv (ein Rahmen pro Aufruf, <code>RecursionError</code> ab ca. 1000 Ebenen), langsamer, schwerer zu debuggen.</li>
+<li>Kapselung: Ein Objekt schützt seinen inneren Zustand und bestimmt selbst, wie er geändert wird; nach außen nur das Nötige. Mittel in Python: Unterstrich-Konvention (<code>_kontostand</code>) und Properties (<code>@property</code>, ggf. mit Setter, der prüft).</li>
+<li><code>__name__</code> ist nur beim direkten Start <code>"__main__"</code>. Wird die Datei importiert (z. B. von einer Testdatei), läuft <code>main()</code> nicht los – die Funktionen lassen sich wiederverwenden und testen.</li>
+</ol><div class="eh"><b>Erwartungshorizont</b><ul><li>je Teilaufgabe 2 P: Kernaussage 1 P, Beispiel/zweiter Aspekt 1 P</li></ul></div></section><h2 class="newpage">Probeklausur B – Lösungen und Erwartungshorizont</h2>
+<section class="task"><h3><span>Lösung B1: Multiple Choice</span><span class="pts">12 P</span></h3>
+<table class="grid compact"><colgroup><col style="width:14mm"><col style="width:52mm"><col style="width:"></colgroup><thead><tr><th>Frage</th><th>richtig</th><th>Begründung</th></tr></thead><tbody><tr><td>a</td><td>Stapel (Stack, LIFO)</td><td>Die zuletzt besuchte Seite kommt zuerst zurück.</td></tr><tr><td>b</td><td>dynamisch, aber stark typisiert</td><td>Werte haben feste Typen, Variablen nicht; Python rät nicht (<code>"1" + 1</code> → <code>TypeError</code>).</td></tr><tr><td>c</td><td><code>False</code></td><td><code>float</code> ist binär gespeichert und ungenau. Geprüft: <code>False</code></td></tr><tr><td>d</td><td><code>a or (b and (not c))</code></td><td>Rangfolge: Vergleiche → <code>not</code> → <code>and</code> → <code>or</code>.</td></tr><tr><td>e</td><td><code>None</code></td><td>Geprüft: <code>print(f())</code> → <code>None</code></td></tr><tr><td>f</td><td><code>__init__</code>, <code>__repr__</code>, <code>__eq__</code></td><td>Laut Folie VL05; <code>==</code> vergleicht dann die Werte.</td></tr></tbody></table>
+<div class="eh"><b>Erwartungshorizont</b><ul><li>je 2 P pro richtig angekreuzter Frage</li></ul></div></section>
+<section class="task"><h3><span>Lösung B2: Ausdrücke auswerten</span><span class="pts">10 P</span></h3>
+<table class="grid compact"><colgroup><col style="width:7mm"><col style="width:70mm"><col style="width:"><col style="width:28mm"></colgroup><thead><tr><th></th><th>Ausdruck</th><th>Wert</th><th>Typ</th></tr></thead><tbody><tr><td>a)</td><td><code>17 // 5</code></td><td><code>3</code></td><td><code>int</code></td></tr><tr><td>b)</td><td><code>17 % 5</code></td><td><code>2</code></td><td><code>int</code></td></tr><tr><td>c)</td><td><code>6 / 3</code></td><td><code>2.0</code></td><td><code>float</code></td></tr><tr><td>d)</td><td><code>int("42") + 1</code></td><td><code>43</code></td><td><code>int</code></td></tr><tr><td>e)</td><td><code>float(5)</code></td><td><code>5.0</code></td><td><code>float</code></td></tr><tr><td>f)</td><td><code>"Hallo"[-1]</code></td><td><code>'o'</code></td><td><code>str</code></td></tr><tr><td>g)</td><td><code>"ll" in "Hallo"</code></td><td><code>True</code></td><td><code>bool</code></td></tr><tr><td>h)</td><td><code>18 &lt;= 17 &lt;= 65</code></td><td><code>False</code></td><td><code>bool</code></td></tr><tr><td>i)</td><td><code>[0] * 3</code></td><td><code>[0, 0, 0]</code></td><td><code>list</code></td></tr><tr><td>j)</td><td><code>round(2.675, 2)</code></td><td><code>2.67</code></td><td><code>float</code></td></tr></tbody></table>
+<p class="small"><code>round(2.675, 2)</code> ergibt 2.67, weil 2.675 als <code>float</code> minimal kleiner gespeichert ist (Folie VL02). <code>18 &lt;= 17 &lt;= 65</code> ist ein verketteter Vergleich: schon <code>18 &lt;= 17</code> ist falsch.</p>
+<div class="eh"><b>Erwartungshorizont</b><ul><li>je ½ P für Wert und ½ P für Typ</li></ul></div></section>
+<section class="task"><h3><span>Lösung B3: Was gibt dieser Code aus?</span><span class="pts">10 P</span></h3>
+<h4>a)</h4><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">2 
+4 6 
+Summe: 12</pre>
+<p>Nur gerade Werte werden ausgegeben (mit <code>end=" "</code> in einer Zeile); das <code>print()</code> nach jeder Zeile der Matrix erzeugt den Zeilenumbruch. Summe 2 + 4 + 6 = 12.</p>
+<h4>b)</h4><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">prüfe 4
+prüfe 8
+2
+prüfe 4
+prüfe 8
+-1</pre>
+<p><code>return i</code> beendet die ganze Funktion sofort, also wird 15 nicht mehr „geprüft“. Im zweiten Aufruf wird nichts gefunden: Nach der Schleife kommt <code>return -1</code>.</p>
+<div class="eh"><b>Erwartungshorizont</b><ul><li>a) 5 P: Zeile „2“ 1 P, Zeile „4 6“ 2 P, „Summe: 12“ 1 P, richtige Zeilenumbrüche 1 P</li><li>b) 5 P: erster Aufruf (prüfe 4, prüfe 8, 2) 3 P, zweiter Aufruf (prüfe 4, prüfe 8, −1) 2 P; „prüfe 15“ ausgegeben: −1 P</li></ul></div></section>
+<section class="task"><h3><span>Lösung B4: Trace-Tabelle</span><span class="pts">10 P</span></h3>
+<table class="grid compact"><thead><tr><th>Durchlauf</th><th>a % b</th><th>a</th><th>b</th><th>schritte</th><th>b != 0?</th></tr></thead><tbody><tr><td>Start</td><td>–</td><td>252</td><td>105</td><td>0</td><td>wahr</td></tr><tr><td>1</td><td>42</td><td>105</td><td>42</td><td>1</td><td>wahr</td></tr><tr><td>2</td><td>21</td><td>42</td><td>21</td><td>2</td><td>wahr</td></tr><tr><td>3</td><td>0</td><td>21</td><td>0</td><td>3</td><td>falsch → Ende</td></tr></tbody></table>
+<p class="small">Selbst nachverfolgt mit Zwischenausgaben (a, b, schritte):</p><pre class="">start 252 105 0
+   a % b = 42
+   105 42 1
+   a % b = 21
+   42 21 2
+   a % b = 0
+   21 0 3</pre>
+<p>b) <div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">ggT = 21 nach 3 Schritten</pre></p>
+<p>c) <div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">ggT = 105 nach 1 Schritten</pre>
+Bei der Tupel-Zuweisung wird die rechte Seite <b>vollständig</b> mit den alten Werten berechnet, bevor zugewiesen wird. In der Variante ist <code>a</code> beim
+Rechnen von <code>a % b</code> schon gleich <code>b</code>, also gilt <code>b % b = 0</code>: Die Schleife endet nach einem Durchlauf mit dem falschen Ergebnis 105.</p>
+<div class="eh"><b>Erwartungshorizont</b><ul><li>a) 6 P: je Durchlauf 2 P (Folgefehler nur einmal abziehen)</li><li>b) 1 P</li><li>c) 3 P: Ausgabe 1 P, Erklärung „rechte Seite zuerst / b % b = 0“ 2 P</li></ul></div></section>
+<section class="task"><h3><span>Lösung B5: Fehler finden und korrigieren</span><span class="pts">14 P</span></h3>
+<table class="grid compact"><colgroup><col style="width:9mm"><col style="width:13mm"><col style="width:70mm"><col style="width:"></colgroup><thead><tr><th>Nr.</th><th>Zeile</th><th>Fehlerart</th><th>Korrektur</th></tr></thead><tbody><tr><td>1</td><td>1–3</td><td>fehlendes <code>return</code> im Zweig der leeren Liste → implizit <code>None</code>; in Zeile 29 dann <code>TypeError</code> (<code>None + 1</code>)</td><td>nach dem <code>if</code>: <code>return 0.0</code></td></tr><tr><td>2</td><td>6</td><td>Logikfehler: veränderbarer Standardwert <code>[]</code> wird nur einmal beim Definieren erzeugt und zwischen Aufrufen geteilt (ruff B006)</td><td><code>verlauf: list[float] | None = None</code>, im Rumpf <code>if verlauf is None: verlauf = []</code></td></tr><tr><td>3</td><td>12–16</td><td>Laufzeitfehler <code>UnboundLocalError</code>: bei 0 ≤ t ≤ 30 wird <code>hinweis</code> nie zugewiesen</td><td><code>else: hinweis = "normal"</code> ergänzen</td></tr><tr><td>4</td><td>20</td><td>Laufzeitfehler <code>TypeError</code>: <code>/</code> liefert immer <code>float</code>, <code>range</code> braucht <code>int</code></td><td><code>range(int(wert // 10))</code> oder <code>range(int(wert) // 10)</code></td></tr></tbody></table>
+<h4>Reale Ausgaben und Fehlermeldungen (Python 3.14, Pfade gekürzt)</h4>
+<p>Unverändertes Programm:</p><pre class="">[21.5]
+[21.5, 19.0]
+Traceback (most recent call last):
+  File "b5_messwerte.py", line 34, in &lt;module&gt;
+    main()
+    ~~~~^^
+  File "b5_messwerte.py", line 28, in main
+    print(bewerte(20.0))
+          ~~~~~~~^^^^^^
+  File "b5_messwerte.py", line 16, in bewerte
+    return hinweis
+           ^^^^^^^
+UnboundLocalError: cannot access local variable 'hinweis' where it is not associated with a value</pre>
+<p>Nach Korrektur von Fehler 3 (Zeilennummern verschieben sich um die eingefügten Zeilen):</p><pre class="">[21.5]
+[21.5, 19.0]
+normal
+Traceback (most recent call last):
+  File "b5_stufe2.py", line 36, in &lt;module&gt;
+    main()
+    ~~~~^^
+  File "b5_stufe2.py", line 31, in main
+    print(mittelwert([]) + 1)
+          ~~~~~~~~~~~~~~~^~~
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'</pre>
+<p>Zusätzlich Fehler 1 korrigiert:</p><pre class="">[21.5]
+[21.5, 19.0]
+normal
+1.0
+Traceback (most recent call last):
+  File "b5_stufe3.py", line 37, in &lt;module&gt;
+    main()
+    ~~~~^^
+  File "b5_stufe3.py", line 33, in main
+    drucke_balken(35.0)
+    ~~~~~~~~~~~~~^^^^^^
+  File "b5_stufe3.py", line 23, in drucke_balken
+    for _ in range(wert / 10):
+             ~~~~~^^^^^^^^^^^
+TypeError: 'float' object cannot be interpreted as an integer</pre>
+<p>Vollständig korrigiert:</p><pre class="">def mittelwert(werte: list[float]) -&gt; float:
+    if len(werte) &gt; 0:
+        return sum(werte) / len(werte)
+    return 0.0
+
+
+def merke(wert: float, verlauf: list[float] | None = None) -&gt; list[float]:
+    if verlauf is None:
+        verlauf = []
+    verlauf.append(wert)
+    return verlauf
+
+
+def bewerte(temperatur: float) -&gt; str:
+    if temperatur &gt; 30:
+        hinweis = "heiß"
+    elif temperatur &lt; 0:
+        hinweis = "Frost"
+    else:
+        hinweis = "normal"
+    return hinweis
+
+
+def drucke_balken(wert: float) -&gt; None:
+    for _ in range(int(wert // 10)):
+        print("#", end="")
+    print()
+
+
+def main() -&gt; None:
+    print(merke(21.5))
+    print(merke(19.0))  # erwartet: [19.0]
+    print(bewerte(20.0))
+    print(mittelwert([]) + 1)
+    drucke_balken(35.0)
+
+
+if __name__ == "__main__":
+    main()</pre><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">[21.5]
+[19.0]
+normal
+1.0
+###</pre>
+<p>b) Zuerst erscheinen <code>[21.5]</code> und <code>[21.5, 19.0]</code>, dann der <code>UnboundLocalError</code> aus <code>bewerte</code>. Der Fehler in <code>merke</code> ist ein
+<b>Logikfehler</b>: Der Code ist gültig und läuft, er liefert nur ein falsches Ergebnis (<code>[21.5, 19.0]</code> statt <code>[19.0]</code>).</p>
+<div class="eh"><b>Erwartungshorizont</b><ul><li>a) je Fehler 3 P: Stelle 1 P, Fehlerart/Ursache 1 P, Korrektur 1 P</li><li>Fehler 1 auch als Rückgabetyp <code>float | None</code> plus Prüfung beim Aufrufer akzeptieren</li><li>b) 2 P: erste Ausgabe(n) und UnboundLocalError 1 P, Begründung Logikfehler 1 P</li></ul></div></section>
+<section class="task"><h3><span>Lösung B6: Lückencode: Klasse mit Property</span><span class="pts">10 P</span></h3>
+<table class="grid compact"><colgroup><col style="width:16mm"><col style="width:"></colgroup><thead><tr><th>Lücke</th><th>Lösung</th></tr></thead><tbody><tr><td>(1)</td><td><code>anzahl</code></td></tr><tr><td>(2)</td><td><code>self</code></td></tr><tr><td>(3)</td><td><code>Konto.anzahl</code></td></tr><tr><td>(4)</td><td><code>self.kontostand</code> (nicht <code>self._kontostand</code>, sonst wird der Setter umgangen)</td></tr><tr><td>(5)</td><td><code>@property</code></td></tr><tr><td>(6)</td><td><code>@kontostand.setter</code></td></tr><tr><td>(7)</td><td><code>f"{{self.nummer}} {{self.inhaber}}: {{self.kontostand}} Euro"</code></td></tr></tbody></table>
+<div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">Ungültig: negativer Kontostand.
+K001 Anna: 100.00 Euro
+K002 Ben: 0 Euro
+Ungültig: negativer Kontostand.
+100.00 20</pre>
+<p>Ben wird mit −5 angelegt: Der Setter weist den Wert ab, es bleibt <code>Decimal(0)</code>, das als <code>0</code> ausgegeben wird.
+<code>anna.kontostand -= Decimal("150")</code> ruft erst den Getter, dann den Setter mit −50 auf → abgewiesen, Annas Stand bleibt 100.00.</p>
+<div class="eh"><b>Erwartungshorizont</b><ul><li>je Lücke 1 P (7 P)</li><li>Ausgabe 3 P: beide Meldungen „Ungültig …“ an der richtigen Stelle 1 P, die zwei <code>print</code>-Zeilen der Objekte 1 P, letzte Zeile 1 P</li></ul></div></section>
+<section class="task"><h3><span>Lösung B7: Funktion schreiben: Nachbestellung</span><span class="pts">12 P</span></h3>
+<pre class="">def nachbestellmengen(
+    bestaende: list[int], meldebestaende: list[int], hoechstbestaende: list[int]
+) -&gt; list[int]:
+    """Berechnet für jeden Artikel die Nachbestellmenge.
+
+    Liegt der Bestand unter dem Meldebestand, wird bis zum Höchstbestand
+    aufgefüllt, sonst wird nichts bestellt (Menge 0).
+
+    Args:
+        bestaende: Aktuelle Bestände je Artikel.
+        meldebestaende: Meldebestände je Artikel.
+        hoechstbestaende: Höchstbestände je Artikel.
+
+    Returns:
+        Eine Liste mit der Bestellmenge je Artikel.
+    """
+    mengen: list[int] = []
+    for bestand, melde, hoechst in zip(
+        bestaende, meldebestaende, hoechstbestaende, strict=True
+    ):
+        if bestand &lt; melde:
+            mengen.append(hoechst - bestand)
+        else:
+            mengen.append(0)
+    return mengen
+
+
+def main() -&gt; None:
+    artikel = ["Schrauben M8", "Dichtringe", "Muttern M8"]
+    mengen = nachbestellmengen([12, 45, 8], [20, 30, 25], [100, 150, 120])
+    for name, menge in zip(artikel, mengen, strict=True):
+        if menge &gt; 0:
+            print(f"Bestellung: {name} - {menge} Stück")
+
+
+if __name__ == "__main__":
+    main()</pre><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">Bestellung: Schrauben M8 - 88 Stück
+Bestellung: Muttern M8 - 112 Stück</pre>
+<div class="eh"><b>Erwartungshorizont</b><ul><li>a) 8 P: Signatur mit Typannotationen 2 P, Docstring mit Args/Returns 2 P, Schleife über alle drei Listen (zip oder Index) 2 P, korrekte Bedingung „&lt;“ und Menge 1 P, Rückgabe der Liste 1 P</li><li>„&lt;=“ statt „&lt;“: −1 P (Folie: „kleiner als der Meldebestand“)</li><li>b) 4 P: Funktionsaufruf und Schleife mit Namen 2 P, nur Mengen &gt; 0 ausgeben 1 P, <code>if __name__ == "__main__": main()</code> 1 P</li></ul></div></section>
+<section class="task"><h3><span>Lösung B8: Rekursion</span><span class="pts">12 P</span></h3>
+<h4>a) und c)</h4><pre class="">def umdrehen(text: str) -&gt; str:
+    """Dreht einen Text rekursiv um.
+
+    Args:
+        text: Beliebiger Text, auch leer.
+
+    Returns:
+        Den Text in umgekehrter Reihenfolge.
+    """
+    if text == "":
+        return ""
+    return umdrehen(text[1:]) + text[0]
+
+
+def summe_liste(zahlen: list[int]) -&gt; int:
+    if len(zahlen) == 0:
+        return 0
+    return zahlen[0] + summe_liste(zahlen[1:])
+
+
+def main() -&gt; None:
+    print(umdrehen("abc"), umdrehen("Heilbronn"), repr(umdrehen("")))
+    print(summe_liste([4, 1, 5]), summe_liste([]))
+
+
+if __name__ == "__main__":
+    main()</pre><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">cba nnorblieH ''
+10 0</pre>
+<h4>b)</h4>
+<table class="grid compact"><colgroup><col style="width:16mm"><col style="width:"><col style="width:"></colgroup><thead><tr><th>Ebene</th><th>Aufruf</th><th>Rückgabewert</th></tr></thead><tbody><tr><td>1</td><td><code>umdrehen("abc")</code></td><td><code>umdrehen("bc") + "a"</code> = <code>"cba"</code></td></tr><tr><td>2</td><td><code>umdrehen("bc")</code></td><td><code>umdrehen("c") + "b"</code> = <code>"cb"</code></td></tr><tr><td>3</td><td><code>umdrehen("c")</code></td><td><code>umdrehen("") + "c"</code> = <code>"c"</code></td></tr><tr><td>4</td><td><code>umdrehen("")</code></td><td><code>""</code> (Abbruchbedingung)</td></tr></tbody></table>
+<h4>c) Originalfunktion</h4><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">10
+Traceback (most recent call last):
+  File "b8_summe.py", line 8, in &lt;module&gt;
+    print(summe_liste([]))
+          ~~~~~~~~~~~^^^^
+  File "b8_summe.py", line 4, in summe_liste
+    return zahlen[0] + summe_liste(zahlen[1:])
+           ~~~~~~^^^
+IndexError: list index out of range</pre>
+<p><code>summe_liste([4, 1, 5])</code> = 10. Bei <code>[]</code> ist <code>len(zahlen) == 1</code> falsch, also wird <code>zahlen[0]</code> gelesen → <code>IndexError</code>.
+Korrektur: <code>if len(zahlen) == 0: return 0</code> (dann deckt die Rekursion auch einelementige Listen ab).</p>
+<div class="eh"><b>Erwartungshorizont</b><ul><li>a) 5 P: Signatur 1 P, Abbruchbedingung leerer Text 2 P, rekursiver Aufruf mit <code>text[1:]</code> und Anhängen von <code>text[0]</code> 2 P</li><li>b) 3 P: vier Ebenen 1 P, Rückgabewerte im Aufstieg 2 P</li><li>c) 4 P: 10 1 P, IndexError 1 P, Begründung 1 P, Korrektur 1 P</li></ul></div></section>
+<section class="task"><h3><span>Lösung B9: Tests mit pytest</span><span class="pts">8 P</span></h3>
+<h4>a)</h4><pre class="">from lager import nachbestellmengen
+
+
+def test_beispiel_aus_der_vorlesung() -&gt; None:
+    assert nachbestellmengen([12, 45, 8], [20, 30, 25], [100, 150, 120]) == [88, 0, 112]
+
+
+def test_grenze_bestand_gleich_meldebestand() -&gt; None:
+    assert nachbestellmengen([20], [20], [100]) == [0]
+
+
+def test_leere_listen() -&gt; None:
+    assert nachbestellmengen([], [], []) == []
+
+
+def test_bestand_null() -&gt; None:
+    assert nachbestellmengen([0], [5], [50]) == [50]</pre>
+<p class="small">Geprüft ohne pytest (nicht installiert) durch Aufruf aller <code>test_</code>-Funktionen: <code>test_lager: 4 Tests bestanden</code></p>
+<h4>b)</h4>
+<p>Echte Rückgabewerte der fehlerhaften Funktion (selbst ausgeführt): <pre class="">test_potenz_null .
+test_potenz_vier F
+test_potenz_eins F
+9.0 8.0 1.0</pre></p>
+<p><code>test_potenz_null</code> besteht als einziger, weil bei Exponent 0 sofort die (richtige) Abbruchbedingung <code>return 1.0</code> greift – der fehlerhafte
+rekursive Zweig läuft gar nicht. Tatsächlich kam <code>9.0</code> heraus, erwartet war <code>16.0</code> (2 + 2 + 2 + 2 + 1). Fehler: <code>+</code> statt <code>*</code>.
+Korrektur: <code>return basis * potenz(basis, exponent - 1)</code>.</p>
+<div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">16.0 7.0 1.0</pre>
+<div class="eh"><b>Erwartungshorizont</b><ul><li>a) 4 P: Import 1 P, drei Testfunktionen mit korrekten Erwartungen 2 P (Grenze und leere Liste enthalten), Namen mit <code>test_</code> 1 P</li><li>b) 4 P: bestandener Test und Grund 1 P, tatsächlich 9.0 / erwartet 16.0 1 P, Fehler erkannt 1 P, Korrektur 1 P</li></ul></div></section>
+<section class="task"><h3><span>Lösung B10: Klassen, Hat-ein-Beziehung und <code>@dataclass</code></span><span class="pts">14 P</span></h3>
+<pre class="">from dataclasses import dataclass
+
+
+class Mitarbeiter:
+    anzahl = 0
+
+    def __init__(self, name: str, monatsgehalt: int) -&gt; None:
+        Mitarbeiter.anzahl += 1
+        self.personalnummer = f"M{Mitarbeiter.anzahl:03}"
+        self.name = name
+        self.monatsgehalt = monatsgehalt
+
+    @property
+    def jahresgehalt(self) -&gt; int:
+        return self.monatsgehalt * 12
+
+    def gehalt_erhoehen(self, prozent: int) -&gt; bool:
+        if prozent &lt; 1 or prozent &gt; 20:
+            print(f"Erhöhung um {prozent} % nicht erlaubt.")
+            return False
+        self.monatsgehalt = self.monatsgehalt * (100 + prozent) // 100
+        return True
+
+    def __str__(self) -&gt; str:
+        return f"{self.personalnummer} {self.name}: {self.monatsgehalt} Euro/Monat"
+
+
+class Abteilung:
+    def __init__(self, name: str) -&gt; None:
+        self.name = name
+        self.mitarbeitende: list[Mitarbeiter] = []
+
+    def aufnehmen(self, mitarbeiter: Mitarbeiter) -&gt; None:
+        self.mitarbeitende.append(mitarbeiter)
+
+    def personalkosten(self) -&gt; int:
+        summe = 0
+        for m in self.mitarbeitende:
+            summe += m.jahresgehalt
+        return summe
+
+
+@dataclass
+class Adresse:
+    strasse: str
+    plz: str
+    ort: str
+
+
+def main() -&gt; None:
+    lena = Mitarbeiter("Lena", 4200)
+    tim = Mitarbeiter("Tim", 3800)
+    print(lena)
+    print(lena.jahresgehalt)
+    print(lena.gehalt_erhoehen(5), lena.gehalt_erhoehen(50))
+    print(lena, lena.jahresgehalt)
+    it = Abteilung("IT")
+    it.aufnehmen(lena)
+    it.aufnehmen(tim)
+    print(it.personalkosten())
+    a1 = Adresse("Bildungscampus 4", "74076", "Heilbronn")
+    a2 = Adresse("Bildungscampus 4", "74076", "Heilbronn")
+    print(a1 == a2, a1 is a2)
+    print(a1)
+    try:
+        lena.jahresgehalt = 1  # type: ignore
+    except AttributeError as e:
+        print("AttributeError:", e)
+
+
+if __name__ == "__main__":
+    main()</pre><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">M001 Lena: 4200 Euro/Monat
+50400
+Erhöhung um 50 % nicht erlaubt.
+True False
+M001 Lena: 4410 Euro/Monat 52920
+98520
+True False
+Adresse(strasse='Bildungscampus 4', plz='74076', ort='Heilbronn')
+AttributeError: property 'jahresgehalt' of 'Mitarbeiter' object has no setter</pre>
+<p class="small">Die letzte Zeile zeigt zusätzlich, dass die Property ohne Setter nur lesbar ist (gehört nicht zur Aufgabe).
+Hinweis: Die Meldung „Erhöhung um 50 % …“ steht vor <code>True False</code>, weil Python erst beide Argumente von <code>print</code> auswertet.</p>
+<p>c) <code>a1 == a2</code> → <code>True</code> (dataclass vergleicht die Werte), <code>a1 is a2</code> → <code>False</code> (zwei Objekte). Bei einer normalen Klasse ohne
+<code>__eq__</code> vergleicht <code>==</code> die Identität → <code>False</code>.</p>
+<div class="eh"><b>Erwartungshorizont</b><ul><li>a) 7 P: Klassenattribut/Nummer 2 P, <code>__init__</code> 1 P, Property <code>jahresgehalt</code> ohne Setter 1 P, <code>gehalt_erhoehen</code> mit Grenzen, Rechnung und Rückgaben 2 P, <code>__str__</code> 1 P</li><li>b) 4 P: leere Liste mit Typannotation <code>list[Mitarbeiter]</code> in <code>__init__</code> 1 P, <code>aufnehmen</code> 1 P, <code>personalkosten</code> mit Schleife über <code>jahresgehalt</code> 2 P</li><li>Liste als Klassenattribut statt in <code>__init__</code>: −1 P (würde von allen Abteilungen geteilt)</li><li>c) 3 P: dataclass korrekt 1 P, <code>True</code>/<code>False</code> 1 P, normale Klasse → Identität 1 P</li></ul></div></section>
+<section class="task"><h3><span>Lösung B11: Konzeptfragen</span><span class="pts">8 P</span></h3>
+<ol class="sub" type="a">
+<li><b>Syntax</b> = Form/Grammatik (Fehler: <code>print("Hallo"</code> → <code>SyntaxError</code>, vor dem Start), <b>Semantik</b> = Bedeutung/Wirkung (Fehler: <code>5 + 2 / 2</code> statt <code>(5 + 2) / 2</code> – läuft, Ergebnis falsch).</li>
+<li>Compiler: hohe Ausführungsgeschwindigkeit (alles vorab in Maschinencode). Interpreter: schnelles Ausprobieren, Änderungen sofort sichtbar, kein Kompilierschritt.</li>
+<li>Imperativ: das „Wie“ – veränderbarer Zustand, Anweisungen in fester Reihenfolge, Schleifen. Applikativ: das „Was“ – Programme entstehen durch Anwendung von Funktionen ohne Nebenwirkungen, Rekursion statt Schleifen.</li>
+<li>Das zweite <code>def</code> überschreibt das erste (ruff F811); ein Aufruf mit zwei Argumenten scheitert dann mit <code>TypeError: addiere() missing 1 required positional argument: 'c'</code>. Stattdessen: Standardwerte (<code>c: int = 0</code>), <code>*args</code> oder unterschiedliche Funktionsnamen.</li>
+</ol><div class="eh"><b>Erwartungshorizont</b><ul><li>je Teilaufgabe 2 P: Kernaussage 1 P, Beispiel/Begründung 1 P</li></ul></div></section><h2 class="newpage">Aufgabenpool VL1 – Lösungen</h2>
+<section class="task"><h3><span>Lösung 1.1: Eigenschaften von Algorithmen</span></h3><p>a) deterministisch · b) terminierend · c) determiniert · d) Endlichkeit, Ausführbarkeit, Korrektheit, Effizienz.</p></section>
+<section class="task"><h3><span>Lösung 1.2: Datenstrukturen wählen</span></h3><p>a) Warteschlange (FIFO) · b) Stapel (LIFO, die letzte Aktion wird zuerst zurückgenommen) · c) Baum (Hierarchie) ·
+d) Graph (Knoten = Lager, Kanten = Routen) · e) Baum (Jahr → Lieferant → Monat), wie in der Musterlösung VL01.</p></section>
+<section class="task"><h3><span>Lösung 1.3: Nachbestell-Algorithmus durchspielen</span></h3><p>Geprüft mit einem kleinen Programm (gleiche Regel):</p><pre class="">artikel = [
+    ("Kabelbinder", 5, 10, 50),
+    ("Dübel", 30, 30, 80),
+    ("Schrauben M8", 12, 20, 100),
+    ("Unterlegscheiben", 0, 40, 200),
+    ("Muttern M8", 41, 25, 120),
+]
+for name, bestand, melde, hoechst in artikel:
+    if bestand &lt; melde:
+        print(f"{name}: {hoechst - bestand}")</pre><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">Kabelbinder: 45
+Schrauben M8: 88
+Unterlegscheiben: 200</pre>
+<p>Dübel: 30 ist <b>nicht kleiner</b> als 30 → keine Bestellung (Grenzfall). Muttern: 41 ≥ 25 → keine Bestellung.</p></section>
+<section class="task"><h3><span>Lösung 1.4: Einen Algorithmus aufschreiben</span></h3><ol class="sub"><li>Antrag entgegennehmen: Zeitraum und Anzahl Urlaubstage ablesen.</li><li>Resturlaub nachsehen. Reicht er nicht: ablehnen, weiter mit 6.</li>
+<li>Prüfen, ob der Zeitraum in einer Sperrzeit liegt. Ja: ablehnen, weiter mit 6.</li><li>Prüfen, ob eine Vertretung eingetragen ist. Nein: zurück an Antragsteller, weiter mit 6.</li>
+<li>Antrag genehmigen, Resturlaub um die Tage verringern.</li><li>Entscheidung mitteilen. Fertig.</li></ol>
+<p>Jeder Zweig endet (Endlichkeit), jeder Schritt ist konkret ausführbar. „Antrag kurz ansehen“ ist nicht ausführbar/eindeutig: Was genau wird geprüft,
+und was passiert bei einer Abweichung? (vgl. Musterlösung VL01, Aufgabe 2)</p></section>
+<section class="task"><h3><span>Lösung 1.5: Vom Quellcode zum Programm</span></h3><table class="grid compact"><thead><tr><th>Strategie</th><th>Ablauf</th><th>Vorteil</th><th>Nachteil</th><th>Beispiel</th></tr></thead><tbody><tr><td>Interpreter</td><td>Anweisung für Anweisung lesen und sofort ausführen</td><td>schnelles Ausprobieren</td><td>langsamere Ausführung</td><td>Shell-Skripte</td></tr><tr><td>Compiler</td><td>gesamter Code vorab in Maschinencode</td><td>hohe Performance</td><td>Kompilierschritt vor jedem Test, nur Zielplattform</td><td>C, C++, Rust, Go</td></tr><tr><td>Zwischencode</td><td>Bytecode, den eine virtuelle Maschine ausführt</td><td>portabel</td><td>Laufzeitumgebung nötig, längerer Start</td><td>Java, C#, Python</td></tr></tbody></table><p>b) Zwischencode: CPython übersetzt in Bytecode, die Python-VM führt ihn aus. JIT (Just-in-Time): häufig genutzter Code wird zur Laufzeit in Maschinencode übersetzt (in Python seit 3.13 experimentell).</p></section>
+<section class="task"><h3><span>Lösung 1.6: Syntax und Werkzeuge</span></h3><p>a) Zuerst meldet Python die fehlende Einrückung – noch vor dem Start, deshalb erscheint der <code>NameError</code> nicht:</p><pre class="">  File "s1_6.py", line 4
+    print("eingerückt?")
+    ^^^^^
+IndentationError: expected an indented block after 'if' statement on line 3</pre>
+<p>Ist Zeile 4 eingerückt, läuft das Programm bis Zeile 2 und meldet dann (Groß-/Kleinschreibung zählt):</p><pre class="">Traceback (most recent call last):
+  File "s1_6b.py", line 2, in &lt;module&gt;
+    Print("Hallo DHBW")
+    ^^^^^
+NameError: name 'Print' is not defined. Did you mean: 'print'?</pre>
+<p>b) <code>pwd</code> zeigt den aktuellen Ordner, <code>cd ..</code> wechselt eine Ebene nach oben, <code>uv run hallo.py</code> führt das Programm in der Projektumgebung aus,
+<code>ruff check</code> findet typische Fehler und Stilprobleme, <code>ty check</code> prüft die Datentypen, ohne das Programm auszuführen.</p></section>
+<h2 class="newpage">Aufgabenpool VL2 – Lösungen</h2>
+<section class="task"><h3><span>Lösung 2.1: Datentypen</span></h3><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">&lt;class 'int'&gt;
+&lt;class 'float'&gt;
+&lt;class 'str'&gt;
+&lt;class 'bool'&gt;
+&lt;class 'NoneType'&gt;
+(3, 5) &lt;class 'tuple'&gt;</pre><p>Achtung: <code>3,5</code> ist ein Tupel aus zwei Zahlen, keine Kommazahl – Dezimaltrenner ist der Punkt.</p></section>
+<section class="task"><h3><span>Lösung 2.2: Namen und Konventionen</span></h3><pre class="">kunden_anzahl   gueltig=True
+2tes_konto      gueltig=False
+MWST_SATZ       gueltig=True
+kundenAnzahl    gueltig=True
+netto-preis     gueltig=False
+class           gueltig=False
+groesse         gueltig=True
+Kunde           gueltig=True</pre>
+<table class="grid compact"><colgroup><col style="width:40mm"><col style="width:"></colgroup><thead><tr><th>Name</th><th>Bewertung</th></tr></thead><tbody><tr><td><code>kunden_anzahl</code></td><td>gültig, snake_case: Variable/Funktion</td></tr><tr><td><code>2tes_konto</code></td><td>ungültig: beginnt mit Ziffer</td></tr><tr><td><code>MWST_SATZ</code></td><td>gültig, UPPER_SNAKE_CASE: Konstante (mit <code>Final</code>)</td></tr><tr><td><code>kundenAnzahl</code></td><td>gültig, aber camelCase (Java-Stil) – ruff meldet (N)</td></tr><tr><td><code>netto-preis</code></td><td>ungültig: <code>-</code> ist Minus (kebab-case)</td></tr><tr><td><code>class</code></td><td>ungültig: Schlüsselwort</td></tr><tr><td><code>groesse</code></td><td>gültig, snake_case, ohne Umlaut</td></tr><tr><td><code>Kunde</code></td><td>gültig, PascalCase: Klasse</td></tr></tbody></table></section>
+<section class="task"><h3><span>Lösung 2.3: Zuweisungen nachvollziehen</span></h3><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">9
+3 5
+7</pre><p>x: 5 → 15 → 14 → 3 → 9. a, b: (1, 2) → (2, 3) → (3, 5). <code>++y</code> ist zweimal das Vorzeichen +, ändert nichts (ruff B002); <code>y++</code> wäre ein <code>SyntaxError</code>.</p></section>
+<section class="task"><h3><span>Lösung 2.4: Euro in Cent</span></h3><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">999
+1998
+1998.9999999999998
+1999
+1999</pre><p><code>19.99 * 100</code> ist als <code>float</code> 1998.9999…, <code>int()</code> schneidet ab → ein Cent fehlt. Abhilfen: <code>round()</code> oder <code>Decimal("19.99")</code> (als Text übergeben).</p></section>
+<section class="task"><h3><span>Lösung 2.5: f-Strings und Umwandlungen</span></h3><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">7.50 €
+Ada ist 21 Jahre alt
+Brutto: 59.38
+AdaAda|3|Aa
+-3 5.0 421</pre><p><code>int(-3.7)</code> schneidet ab (Richtung 0), <code>str(42) + "1"</code> verkettet Texte.</p></section>
+<section class="task"><h3><span>Lösung 2.6: Fehlerarten erkennen</span></h3><p class='small'>a)</p><pre class="">  File "p2_fehler4.py", line 2
+    print(f"Die Zahl ist {zahl}"
+         ^
+SyntaxError: '(' was never closed</pre><p class='small'>b)</p><pre class="">Traceback (most recent call last):
+  File "p2_fehler1.py", line 2, in &lt;module&gt;
+    print("Alter: " + alter)
+          ~~~~~~~~~~^~~~~~~
+TypeError: can only concatenate str (not "int") to str</pre><p class='small'>c)</p><pre class="">Traceback (most recent call last):
+  File "p2_fehler2.py", line 3, in &lt;module&gt;
+    print(a / b)
+          ~~^~~
+ZeroDivisionError: division by zero</pre><p class='small'>d)</p><pre class="">Traceback (most recent call last):
+  File "p2_fehler6.py", line 2, in &lt;module&gt;
+    print(anzahl)
+          ^^^^^^
+NameError: name 'anzahl' is not defined</pre><p class='small'>e)</p><pre class="">Traceback (most recent call last):
+  File "p2_fehler5.py", line 1, in &lt;module&gt;
+    print(int("12.5"))
+          ~~~^^^^^^^^
+ValueError: invalid literal for int() with base 10: '12.5'</pre><p class='small'>f)</p><pre class="">  File "p2_fehler3.py", line 2
+    x++
+       ^
+SyntaxError: invalid syntax</pre><p>a) und f) Syntaxfehler (vor dem Start), b) Typfehler (<code>ty</code> vorher, sonst <code>TypeError</code> beim Ausführen), c) Laufzeitfehler, d) <code>NameError</code>: eine bloße Typangabe legt keine Variable an, e) Laufzeitfehler <code>ValueError</code> (ungültiger Text für <code>int</code>). Traceback von unten nach oben lesen.</p></section>
+<section class="task"><h3><span>Lösung 2.7: Mini-Rechner und Jahreszahl ohne <code>int()</code></span></h3><pre class=""># Teil a: Mini-Rechner
+a = "12"
+b = "3"
+ai = int(a)
+bi = int(b)
+print(f"a={ai}, b={bi} | sum={ai + bi}, diff={ai - bi}, prod={ai * bi}, quot={ai / bi}")
+print(a + b, a * 3)
+
+# Teil b: Jahreszahl ohne int()
+jahr = "2026"
+null = ord("0")
+zahl = (
+    (ord(jahr[0]) - null) * 1000
+    + (ord(jahr[1]) - null) * 100
+    + (ord(jahr[2]) - null) * 10
+    + (ord(jahr[3]) - null)
+)
+print(zahl, zahl + 1)</pre><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">a=12, b=3 | sum=15, diff=9, prod=36, quot=4.0
+123 121212
+2026 2027</pre></section>
+<h2 class="newpage">Aufgabenpool VL3 – Lösungen</h2>
+<section class="task"><h3><span>Lösung 3.1: Noten mit <code>if</code>/<code>elif</code></span></h3><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">ausreichend</pre><p><code>elif</code> prüft nacheinander und stoppt beim ersten Treffer: 95 ≥ 50 trifft sofort (Logikfehler ohne Fehlermeldung). Größte Grenze zuerst:</p>
+<pre class="">def note(punkte: int) -&gt; str:
+    if punkte &gt;= 90:
+        return "sehr gut"
+    elif punkte &gt;= 75:
+        return "gut"
+    elif punkte &gt;= 60:
+        return "befriedigend"
+    elif punkte &gt;= 50:
+        return "ausreichend"
+    else:
+        return "nicht bestanden"
+
+
+for p in [95, 90, 89, 75, 74, 60, 59, 50, 49]:
+    print(p, note(p))</pre><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">95 sehr gut
+90 sehr gut
+89 gut
+75 gut
+74 befriedigend
+60 befriedigend
+59 ausreichend
+50 ausreichend
+49 nicht bestanden</pre><p>Testwerte: jeweils auf und knapp unter jeder Grenze.</p></section>
+<section class="task"><h3><span>Lösung 3.2: Kurzschlussauswertung</span></h3><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">x != 0 and 10 / x &gt; 1 -&gt; False
+10 / x &gt; 1 and x != 0 -&gt; ZeroDivisionError: division by zero
+x == 0 or 10 / x &gt; 1 -&gt; True
+x &gt; 0 or 10 / x &gt; 1 -&gt; ZeroDivisionError: division by zero</pre><p>Python wertet von links nach rechts aus und hört auf, sobald das Ergebnis feststeht. Bei a) ist <code>and</code> nach <code>False</code> entschieden, bei c) <code>or</code> nach <code>True</code> – Absicherung gehört nach vorn.</p></section>
+<section class="task"><h3><span>Lösung 3.3: Wahrheitswerte und bedingter Ausdruck</span></h3><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">nein ja nein ja nein ja ja nein 
+True
+False
+True</pre><p>Falsy: <code>[]</code>, <code>0</code>, <code>None</code>, <code>""</code>. Wahr: <code>"0"</code>, <code>" "</code>, <code>[0]</code>, <code>-1</code>. Rangfolge: <code>not</code> vor <code>and</code> vor <code>or</code>; <code>a != b</code> ist XOR.</p></section>
+<section class="task"><h3><span>Lösung 3.4: Schleifen: <code>range</code>, <code>break</code>, <code>continue</code></span></h3><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">5 3 1 
+1 5 9 13 17 
+leer?
+1 2 4 5 7 8 
+5 16 8 4 2 1 
+10 20 21 </pre><p><code>range(10, 3)</code> ist leer (Startwert schon ≥ stop, kein Fehler). Bei der <code>while</code>-Schleife ist die Zahl der Durchläufe vorher unbekannt.</p></section>
+<section class="task"><h3><span>Lösung 3.5: Parkgebühren mit <code>match</code></span></h3><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">Transporter, 6 h: 18.30 Euro
+PKW, 12 h: 23.10 Euro
+PKW, 9 h: 19.50 Euro
+Motorrad, 60 h: 50.00 Euro
+Unbekannter Fahrzeugtyp: LKW</pre><p>Transporter: 6 · 3,50 = 21,00, −20 % = 16,80, + 1,50 = 18,30. PKW 12 h: 24 · 0,9 = 21,60 + 1,50. Motorrad: 61,50 → Deckel 50. Reihenfolge: Rabatt → Grundgebühr → Deckel. Kein <code>break</code> nötig, kein Durchfallen; <code>case _</code> fängt alles andere.</p></section>
+<section class="task"><h3><span>Lösung 3.6: Schaltjahr</span></h3><pre class="">def ist_schaltjahr(jahr: int) -&gt; bool:
+    return jahr % 4 == 0 and (jahr % 100 != 0 or jahr % 400 == 0)
+
+
+for jahr in [1900, 2000, 2024, 2026]:
+    print(jahr, ist_schaltjahr(jahr))</pre><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">1900 False
+2000 True
+2024 True
+2026 False</pre></section>
+<section class="task"><h3><span>Lösung 3.7: Temperaturliste</span></h3><pre class="">wochentage = ["Mo", "Di", "Mi", "Do", "Fr"]
+temperaturen = [-3.5, -1.0, -4.5, -2.0, -0.5]
+
+summe = 0.0
+maximum = temperaturen[0]  # nicht 0, sonst falsch bei lauter negativen Werten
+for tag, temp in zip(wochentage, temperaturen, strict=True):
+    print(f"{tag}: {temp} Grad")
+    summe += temp
+    if temp &gt; maximum:
+        maximum = temp
+print(f"Durchschnitt: {summe / len(temperaturen):.2f} Grad, Maximum: {maximum} Grad")
+
+# Kurzform mit eingebauten Funktionen
+print(f"Durchschnitt: {sum(temperaturen) / len(temperaturen):.2f} Grad, Maximum: {max(temperaturen)} Grad")</pre><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">Mo: -3.5 Grad
+Di: -1.0 Grad
+Mi: -4.5 Grad
+Do: -2.0 Grad
+Fr: -0.5 Grad
+Durchschnitt: -2.30 Grad, Maximum: -0.5 Grad
+Durchschnitt: -2.30 Grad, Maximum: -0.5 Grad</pre><p>Mit Startwert 0 käme bei lauter negativen Werten fälschlich 0 heraus.</p></section>
+<section class="task"><h3><span>Lösung 3.8: Listenfalle und Sieb des Eratosthenes</span></h3><p>a)</p><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">[[1, 0, 0], [1, 0, 0]]
+[[1, 0, 0], [0, 0, 0]]
+[1.0, 3.7] 1.7 [1.0, 1.7, 2.3, 3.7] [2.3, 1.0, 3.7, 1.7]</pre><p><code>[[0] * 3] * 2</code> kopiert nur den Verweis: beide Zeilen sind <b>dieselbe</b> Liste. Richtig: Zeilen in einer Schleife einzeln anlegen. <code>sorted</code> liefert eine sortierte Kopie.</p>
+<p>b)</p><pre class="">from typing import Final
+
+N: Final = 30
+
+ist_prim = [True] * (N + 1)
+ist_prim[0] = False
+ist_prim[1] = False
+p = 2
+while p * p &lt;= N:
+    if ist_prim[p]:
+        for vielfaches in range(p * p, N + 1, p):
+            ist_prim[vielfaches] = False
+    p += 1
+
+for zahl, prim in enumerate(ist_prim):
+    if prim:
+        print(zahl, end=" ")
+print()</pre><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">2 3 5 7 11 13 17 19 23 29 </pre><p>Abbruch ab <code>p * p &gt; N</code>; Streichen ab <code>p * p</code> (kleinere Vielfache sind schon gestrichen).</p></section>
+<h2 class="newpage">Aufgabenpool VL4 – Lösungen</h2>
+<section class="task"><h3><span>Lösung 4.1: Standardwerte und Schlüsselwortargumente</span></h3><p>a)</p><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">119.0
+107.0
+107.0
+23.79
+Traceback (most recent call last):
+  File "s4_1.py", line 9, in &lt;module&gt;
+    print(brutto())
+          ~~~~~~^^
+TypeError: brutto() missing 1 required positional argument: 'netto'</pre><p><code>brutto(100)</code> nutzt den Standardwert 0.19; Position und Schlüsselwortargumente liefern beide 107.0 (bei Schlüsselwörtern ist die Reihenfolge egal); 19.99 · 1.19 wird auf 23.79 gerundet. Fehlt ein Pflichtparameter, läuft die Funktion gar nicht erst los.</p>
+<p>b)</p><pre class="">  File "s4_1b.py", line 1
+    def f(a: int = 1, b: int) -&gt; int:
+                      ^^^^^^
+SyntaxError: parameter without a default follows parameter with a default</pre><p>Parameter mit Standardwert müssen hinter denen ohne stehen.</p></section>
+<section class="task"><h3><span>Lösung 4.2: Gültigkeitsbereiche</span></h3><p>Links:</p><pre class="">in f: 3
+Traceback (most recent call last):
+  File "s4_2a.py", line 7, in &lt;module&gt;
+    print(y)
+          ^
+NameError: name 'y' is not defined</pre><p>Rechts:</p><pre class="">In der Funktion: 6
+Nach dem Aufruf: 5</pre><p>Unten:</p><pre class="">119.0
+Traceback (most recent call last):
+  File "s4_2b.py", line 14, in &lt;module&gt;
+    erhoehe()
+    ~~~~~~~^^
+  File "s4_2b.py", line 10, in erhoehe
+    zaehler += 1
+    ^^^^^^^
+UnboundLocalError: cannot access local variable 'zaehler' where it is not associated with a value</pre>
+<p>Lokale Variablen existieren nur während des Aufrufs. Globale Werte lesen geht (LEGB), eine Zuweisung (<code>+=</code>) macht den Namen lokal → <code>UnboundLocalError</code>. <code>wert = wert + 1</code> bindet nur das lokale Namensschild neu.</p></section>
+<section class="task"><h3><span>Lösung 4.3: <code>break</code> oder <code>return</code>?</span></h3><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">1 2 3 Schleife beendet.
+1 2 3 | fertig</pre><p><code>break</code> verlässt nur die Schleife, der Rest der Funktion läuft. <code>return</code> verlässt die ganze Funktion – „Schleife beendet.“ erscheint nicht.</p></section>
+<section class="task"><h3><span>Lösung 4.4: Veränderbarer Standardwert</span></h3><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">[1, 2] [1, 2] [0, 3]
+True</pre><p>Die Standardliste wird einmal beim Definieren erzeugt und bei jedem Aufruf ohne zweites Argument wiederverwendet (ruff B006). Richtig:</p>
+<pre class="">def anhaengen(wert: int, liste: list[int] | None = None) -&gt; list[int]:
+    if liste is None:
+        liste = []
+    liste.append(wert)
+    return liste
+
+
+a = anhaengen(1)
+b = anhaengen(2)
+c = anhaengen(3, [0])
+print(a, b, c)
+print(a is b)</pre><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">[1] [2] [0, 3]
+False</pre></section>
+<section class="task"><h3><span>Lösung 4.5: Tupel als Rückgabe und <code>*args</code></span></h3><p>a)</p><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">2 9
+(5, 5)
+10 0</pre><p>„Mehrere Rückgabewerte“ sind ein Tupel; <code>*zahlen</code> sammelt alle Argumente in einem Tupel (ohne Argumente: <code>()</code>).</p>
+<p>b)</p><pre class="">def durchschnitt(*werte: float) -&gt; float:
+    """Berechnet den Durchschnitt beliebig vieler Werte.
+
+    Args:
+        werte: Beliebig viele Zahlen.
+
+    Returns:
+        Den Durchschnitt, 0.0 wenn keine Werte übergeben wurden.
+    """
+    if len(werte) == 0:
+        return 0.0
+    gesamt = 0.0
+    for wert in werte:
+        gesamt += wert
+    return gesamt / len(werte)
+
+
+print(durchschnitt(2, 4, 9), durchschnitt(), durchschnitt(1.5))</pre><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">5.0 0.0 1.5</pre></section>
+<section class="task"><h3><span>Lösung 4.6: Rekursion nachvollziehen</span></h3><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">10
+1 2 3 4 </pre><p>Abstieg: <code>summe_bis(4)</code> wartet auf <code>summe_bis(3)</code> … bis <code>summe_bis(0) = 0</code>.
+Aufstieg: 1 + 0 = 1, 2 + 1 = 3, 3 + 3 = 6, 4 + 6 = 10. Bei <code>raetsel</code> steht <code>print</code> <b>nach</b> dem rekursiven Aufruf: Ausgegeben wird erst im Aufstieg, also beginnend bei 1.</p></section>
+<section class="task"><h3><span>Lösung 4.7: Rekursive Funktionen schreiben</span></h3><pre class="">def zaehle_zeichen(text: str, zeichen: str) -&gt; int:
+    """Zählt rekursiv, wie oft zeichen in text vorkommt."""
+    if text == "":
+        return 0
+    treffer = 1 if text[0] == zeichen else 0
+    return treffer + zaehle_zeichen(text[1:], zeichen)
+
+
+def potenz(basis: float, exponent: int) -&gt; float:
+    """Berechnet basis hoch exponent rekursiv, auch für negative Exponenten."""
+    if exponent == 0:
+        return 1.0
+    if exponent &lt; 0:
+        return 1 / potenz(basis, -exponent)
+    return basis * potenz(basis, exponent - 1)
+
+
+def maximum(zahlen: list[int], index: int = 0) -&gt; int:
+    """Liefert rekursiv das größte Element einer nicht leeren Liste."""
+    if index == len(zahlen) - 1:
+        return zahlen[index]
+    rest = maximum(zahlen, index + 1)
+    return zahlen[index] if zahlen[index] &gt; rest else rest
+
+
+def main() -&gt; None:
+    print(zaehle_zeichen("banana", "a"), zaehle_zeichen("", "a"))
+    print(potenz(2, 4), potenz(2, -2), potenz(5, 0))
+    print(maximum([4, 9, 2, 7, 5]), maximum([3]), maximum([-5, -2, -9]))
+
+
+if __name__ == "__main__":
+    main()</pre><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">3 0
+16.0 0.25 1.0
+9 3 -2</pre><p class='small'>Achtung: <code>maximum([])</code> erreicht die Abbruchbedingung nie (<code>index == -1</code>) – leere Listen sind ausgeschlossen. Tests mit <code>float</code>: <code>potenz(0.1, 3)</code> ergibt 0.0010000000000000002, nicht mit <code>== 0.001</code> prüfen.</p></section>
+<section class="task"><h3><span>Lösung 4.8: Applikativ programmieren und testen</span></h3><pre class="">def h(p: bool, q: bool, x: int, y: int) -&gt; int:
+    """h(p, q, x, y) = if p und q then 4x + 2y else 5x - 3y."""
+    return 4 * x + 2 * y if p and q else 5 * x - 3 * y
+
+
+def fibonacci(n: int) -&gt; int:
+    """Liefert die n-te Fibonacci-Zahl rekursiv (fibonacci(0) = 0)."""
+    if n &lt; 2:
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+
+if __name__ == "__main__":
+    print(h(True, False, 1, 3), h(True, True, 2, 8), fibonacci(10), fibonacci(20))</pre><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">-4 24 55 6765</pre><pre class="">from applikativ import fibonacci, h
+
+
+def test_h_else_zweig() -&gt; None:
+    assert h(True, False, 1, 3) == -4
+
+
+def test_h_then_zweig() -&gt; None:
+    assert h(True, True, 2, 8) == 24
+
+
+def test_h_beide_falsch() -&gt; None:
+    assert h(False, False, 2, 1) == 7
+
+
+def test_fibonacci_anfang() -&gt; None:
+    assert fibonacci(0) == 0
+    assert fibonacci(1) == 1
+
+
+def test_fibonacci_zehn() -&gt; None:
+    assert fibonacci(10) == 55</pre>
+<p class="small">Geprüft ohne pytest: <code>test_applikativ: 5 Tests bestanden</code></p>
+<p>d) Dieselben Werte werden immer wieder neu berechnet; die Zahl der Aufrufe wächst exponentiell (für n = 10 schon 177 Aufrufe, selbst nachgezählt; allgemein 2·fib(n+1) − 1).
+Abhilfe laut VL04: <code>@functools.cache</code> oder iterativ.</p></section>
+<h2 class="newpage">Aufgabenpool VL5 – Lösungen</h2>
+<section class="task"><h3><span>Lösung 5.1: Grundbegriffe und UML</span></h3><p>a) Die <b>Klasse</b> ist der Bauplan (<code>Mitarbeiter</code>), ein <b>Objekt</b> ein danach gebautes Exemplar mit eigenen Werten (Lena, 4200 €). <b>Attribute</b> beschreiben den Zustand
+(<code>name</code>, <code>monatsgehalt</code>), <b>Methoden</b> das Verhalten (<code>gehalt_erhoehen()</code>, <code>abteilung_wechseln()</code>). UML: Kasten mit Name oben, Attributen in der Mitte, Methoden unten.</p>
+<p>b)</p><pre class="">Traceback (most recent call last):
+  File "s5_1_ohne_self.py", line 6, in &lt;module&gt;
+    kaffee = Produkt("Kaffee", 12.99)
+TypeError: Produkt.__init__() takes 2 positional arguments but 3 were given</pre><p>Python übergibt das neue Objekt automatisch als erstes Argument. Ohne <code>self</code> sind es drei Argumente für zwei Parameter. (Außerdem wäre <code>self</code> im Rumpf unbekannt.)</p></section>
+<section class="task"><h3><span>Lösung 5.2: Methoden und <code>__str__</code>/<code>__repr__</code></span></h3><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">Abgelehnt: Der Kontostand reicht nicht.
+False
+True
+Konto von Anna: 120 Euro
+[Konto('Anna', 120), Konto('Ben', 25)]</pre><p>100 + 50 = 150, Abheben von 500 abgelehnt, 30 abgehoben → 120. <code>Konto.einzahlen(ben, 25)</code> ist dasselbe wie <code>ben.einzahlen(25)</code>. <code>print</code> nutzt <code>__str__</code>, eine Liste zeigt ihre Elemente mit <code>__repr__</code>.</p></section>
+<section class="task"><h3><span>Lösung 5.3: Namen, Identität und Gleichheit</span></h3><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">150
+True False
+150 0
+True False
+Kunde(name='Anna Berger', ort='Heilbronn')</pre><p><code>konto2 = konto1</code> erzeugt kein neues Konto, sondern einen zweiten Namen. <code>==</code> vergleicht bei normalen Klassen die Identität, bei <code>@dataclass</code> die Werte. Die Neuzuweisung <code>konto2 = Konto(...)</code> ändert <code>konto1</code> nicht.</p></section>
+<section class="task"><h3><span>Lösung 5.4: Klassenattribute und Tippfehler</span></h3><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">K001 K002
+2 2 3
+12 12 3
+0</pre><p><code>ben.anzahl_konten += 1</code> liest das Klassenattribut und legt ein neues <b>Instanzattribut</b> nur für <code>ben</code> an; die Klasse bleibt bei 2. Klassenattribute immer über den Klassennamen ändern. Der Tippfehler <code>kontostnad</code> legt zur Laufzeit stillschweigend ein neues Attribut an; <code>ty</code> meldet <code>error[unresolved-attribute]</code>.</p></section>
+<section class="task"><h3><span>Lösung 5.5: Klasse <code>Produkt</code> schreiben</span></h3><pre class="">from decimal import Decimal
+
+
+class Produkt:
+    def __init__(self, name: str, preis: Decimal, bestand: int) -&gt; None:
+        self.name = name
+        self.preis = preis
+        self.bestand = bestand
+
+    def lagerwert(self) -&gt; Decimal:
+        return self.preis * self.bestand
+
+    def einlagern(self, menge: int) -&gt; None:
+        if menge &lt;= 0:
+            print(f"Ungültige Menge: {menge}")
+            return
+        self.bestand += menge
+
+    def verkaufen(self, menge: int) -&gt; bool:
+        if menge &gt; self.bestand:
+            print(f"Nicht genug {self.name} auf Lager (Bestand {self.bestand}).")
+            return False
+        self.bestand -= menge
+        return True
+
+    def __str__(self) -&gt; str:
+        return f"{self.name}: {self.preis} Euro, Bestand {self.bestand}"
+
+    def __repr__(self) -&gt; str:
+        return f"Produkt({self.name!r}, Decimal('{self.preis}'), {self.bestand})"
+
+
+def main() -&gt; None:
+    kaffee = Produkt("Kaffee 1 kg", Decimal("12.99"), 40)
+    tee = Produkt("Grüner Tee", Decimal("3.49"), 120)
+    print(kaffee.verkaufen(5))
+    print(kaffee.verkaufen(100))
+    kaffee.einlagern(10)
+    kaffee.einlagern(-3)
+    print(kaffee)
+    print(kaffee.lagerwert())
+    print([kaffee, tee])
+
+
+if __name__ == "__main__":
+    main()</pre><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">True
+Nicht genug Kaffee 1 kg auf Lager (Bestand 35).
+False
+Ungültige Menge: -3
+Kaffee 1 kg: 12.99 Euro, Bestand 45
+584.55
+[Produkt('Kaffee 1 kg', Decimal('12.99'), 45), Produkt('Grüner Tee', Decimal('3.49'), 120)]</pre></section>
+<section class="task"><h3><span>Lösung 5.6: Kapselung mit Properties</span></h3><pre class="">from decimal import Decimal
+from typing import Final
+
+MWST_SATZ: Final = Decimal("0.19")
+
+
+class Produkt:
+    def __init__(self, name: str, preis: Decimal, bestand: int) -&gt; None:
+        self.name = name
+        self._preis = Decimal(0)
+        self.preis = preis  # nutzt den Setter
+        self._bestand = bestand
+
+    @property
+    def bestand(self) -&gt; int:
+        return self._bestand
+
+    @property
+    def preis(self) -&gt; Decimal:
+        return self._preis
+
+    @preis.setter
+    def preis(self, neuer_preis: Decimal) -&gt; None:
+        if neuer_preis &lt; 0:
+            print(f"Ungültiger Preis: {neuer_preis}")
+            return
+        self._preis = neuer_preis
+
+    @property
+    def bruttopreis(self) -&gt; Decimal:
+        return (self._preis * (1 + MWST_SATZ)).quantize(Decimal("0.01"))
+
+    def verkaufen(self, menge: int) -&gt; bool:
+        if menge &gt; self._bestand:
+            return False
+        self._bestand -= menge
+        return True
+
+
+def main() -&gt; None:
+    kaffee = Produkt("Kaffee 1 kg", Decimal("12.99"), 40)
+    print(kaffee.bruttopreis)
+    kaffee.preis = Decimal("-5")
+    print(kaffee.preis)
+    kaffee.verkaufen(5)
+    print(kaffee.bestand)
+    kaffee.bestand = 100
+
+
+if __name__ == "__main__":
+    main()</pre><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">15.46
+Ungültiger Preis: -5
+12.99
+35
+Traceback (most recent call last):
+  File "s5_6.py", line 51, in &lt;module&gt;
+    main()
+    ~~~~^^
+  File "s5_6.py", line 47, in main
+    kaffee.bestand = 100
+    ^^^^^^^^^^^^^^
+AttributeError: property 'bestand' of 'Produkt' object has no setter</pre><p><code>ty check</code> meldet die letzte Zeile schon vorher als Zuweisung an eine read-only property.</p></section>
+<section class="task"><h3><span>Lösung 5.7: Warenkorb: Hat-ein-Beziehung und <code>@dataclass</code></span></h3><pre class="">from dataclasses import dataclass
+from decimal import Decimal
+
+
+class Produkt:
+    def __init__(self, name: str, preis: Decimal, bestand: int) -&gt; None:
+        self.name = name
+        self._preis = preis
+        self._bestand = bestand
+
+    @property
+    def preis(self) -&gt; Decimal:
+        return self._preis
+
+    @property
+    def bestand(self) -&gt; int:
+        return self._bestand
+
+
+@dataclass
+class Kunde:
+    name: str
+    email: str
+
+
+@dataclass
+class Position:
+    produkt: Produkt
+    menge: int
+
+    def summe(self) -&gt; Decimal:
+        return self.produkt.preis * self.menge
+
+
+class Warenkorb:
+    def __init__(self, kunde: Kunde) -&gt; None:
+        self.kunde = kunde
+        self.positionen: list[Position] = []
+
+    def hinzufuegen(self, produkt: Produkt, menge: int) -&gt; None:
+        if menge &gt; produkt.bestand:
+            print(f"Nur noch {produkt.bestand} x {produkt.name} auf Lager.")
+            return
+        self.positionen.append(Position(produkt, menge))
+
+    def gesamtsumme(self) -&gt; Decimal:
+        summe = Decimal(0)
+        for position in self.positionen:
+            summe += position.summe()
+        return summe
+
+    def ausgeben(self) -&gt; None:
+        print(f"Warenkorb von {self.kunde.name}")
+        for p in self.positionen:
+            print(f"{p.menge} x {p.produkt.name}: {p.summe()} Euro")
+        print(f"Summe: {self.gesamtsumme()} Euro")
+
+
+def main() -&gt; None:
+    anna = Kunde("Anna Berger", "anna.berger@example.com")
+    kaffee = Produkt("Kaffee 1 kg", Decimal("12.99"), 40)
+    tee = Produkt("Grüner Tee", Decimal("3.49"), 120)
+    korb = Warenkorb(anna)
+    korb.hinzufuegen(kaffee, 2)
+    korb.hinzufuegen(tee, 3)
+    korb.hinzufuegen(kaffee, 50)
+    korb.ausgeben()
+
+
+if __name__ == "__main__":
+    main()</pre><div class="outlabel">Ausgabe (geprüft mit Python 3.14):</div><pre class="out">Nur noch 40 x Kaffee 1 kg auf Lager.
+Warenkorb von Anna Berger
+2 x Kaffee 1 kg: 25.98 Euro
+3 x Grüner Tee: 10.47 Euro
+Summe: 36.45 Euro</pre><p><code>Kunde</code> und <code>Position</code> bündeln vor allem Daten → <code>@dataclass</code>. Beim <code>Warenkorb</code> stehen Verhalten und Regeln im Vordergrund (Bestandsprüfung) → normale Klasse.</p></section></body></html>
