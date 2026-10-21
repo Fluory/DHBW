@@ -14,7 +14,8 @@ Zahlensysteme (09. + 14.10.) → Rechnerarchitektur (16.10.) → relationale Dat
 | 2 | 09.10.2026 | Grundlegende Konzepte: Zahlensysteme, Zweierkomplement, Logikgatter, Datenstrukturen, Bäume, Suchen und Sortieren | Folien „GIT VL02 Rückschau“ + „VL02 v3“ | [02](vorlesungen/02_2026-10-09.md) |
 | 3 | 14.10.2026 | Programmiersprachen, Fehlerquellen, Modellierung, Werkzeuge (Compiler, Linker, Lader, Debugger), Rekursion; Kodierungen/O-Notation nicht belegt | Folien „GIT VL02 – final“ + „Rückschau final“ | [03](vorlesungen/03_2026-10-14.md) |
 | 4 | 16.10.2026 | Rechnerarchitektur: Von-Neumann, Harvard, Komponenten (CPU, Cache, Bus, Speicherhierarchie, RAID 0/1/5/6, GPU), KI-Exkurs (GPU/NPU/TPU) | Folien „VL03a/b Rückschau“ + „VL03c KI-Exkurs“ | [04](vorlesungen/04_2026-10-16.md) |
-| 5 | 19.10.2026 | Datenbanken: Dateiansatz vs. DBMS, ER-Modell, relationales Modell, SQL, OLTP/OLAP | Folien „GIT VL04 – Datenbanken“ | [05](vorlesungen/05_2026-10-19.md) |
+| 5 | 19.10.2026 | Datenbanken: Dateiansatz vs. DBMS, ER-Modell, relationales Modell, SQL, OLTP/OLAP | Folien „GIT VL04 – Datenbanken“ + „VL04 Rückschau“ | [05](vorlesungen/05_2026-10-19.md) |
+| 6 | 21.10.2026 | Klausurvorbereitung: Themenschwerpunkte, Punkteverteilung, MC-Regeln, Operatoren | Folien „GIT VL05 – Klausurvorbereitung“ | [06](vorlesungen/06_2026-10-21.md) |
 
 ## Materialien in Moodle
 
@@ -36,6 +37,9 @@ Zahlensysteme (09. + 14.10.) → Rechnerarchitektur (16.10.) → relationale Dat
 | GIT VL03b – Rückschau | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190915) | 19.10.2026 | Termin 4 (zeigt den behandelten Stoff) |
 | GIT VL03c – KI-Exkurs (AI Accelerator) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190965) | 19.10.2026 | Termin 4 |
 | GIT VL04 – Datenbanken | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190916) | 19.10.2026 | Termin 5 |
+| GIT – VL04 – Rückschau | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191105) | 21.10.2026 | Termin 5 (zeigt den behandelten Stoff) |
+| GIT – VL05 – Klausurvorbereitung | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191106) | 21.10.2026 | Termin 6, Klausurvorbereitung |
+| Exkurs Motivation – II | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191107) | 21.10.2026 | Termin 6 (nicht klausurrelevant) |
 
 ## Eigene Notizen
 
