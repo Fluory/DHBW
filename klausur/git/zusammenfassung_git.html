@@ -1,0 +1,1533 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grundlagen der IT – Klausurzusammenfassung</title>
+<style>
+:root{
+  --ink:#000; --mute:#444; --line:#000; --soft:#e9e9e9; --soft2:#f5f5f5; --mid:#bdbdbd;
+}
+@page{ size:A4; margin:14mm 14mm 16mm 14mm;
+  @bottom-center{ content: "Grundlagen der IT · Klausurzusammenfassung · Seite " counter(page) " / " counter(pages); font: 8pt "Inter","DejaVu Sans",sans-serif; color:#555; }
+}
+*{box-sizing:border-box}
+html,body{background:#fff;color:var(--ink)}
+body{font:10.5pt/1.34 "Bitstream Charter","DejaVu Serif",serif;margin:0;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact}
+h1,h2,h3,h4,.sans{font-family:"Inter","DejaVu Sans",sans-serif}
+h1{font-size:19pt;margin:0 0 2mm;letter-spacing:-.2px}
+h2{font-size:15pt;margin:0 0 3mm;padding:2mm 3mm;border:1.6pt solid #000;background:var(--soft);break-before:page;break-after:avoid}
+h2 .pts{float:right;font-size:11pt;font-weight:700;border:1pt solid #000;background:#fff;padding:0 2mm;margin-top:1pt}
+h3{font-size:11.6pt;margin:3.4mm 0 1.4mm;border-bottom:1pt solid #000;padding-bottom:.6mm;break-after:avoid}
+h4{font-size:10.5pt;margin:3mm 0 1mm;break-after:avoid}
+p{margin:0 0 2mm}
+ul,ol{margin:0 0 2mm;padding-left:5.5mm}
+li{margin:0 0 .6mm}
+code,.mono,pre{font-family:"DejaVu Sans Mono","Liberation Mono",monospace;font-size:8.9pt}
+pre{background:var(--soft2);border:.6pt solid #888;padding:2mm 3mm;margin:0 0 2.4mm;white-space:pre;line-height:1.3;break-inside:avoid;overflow:hidden}
+table{border-collapse:collapse;width:100%;margin:0 0 2.2mm;font-size:9.2pt;line-height:1.25;break-inside:avoid}
+th,td{border:.6pt solid #000;padding:.7mm 1.4mm;vertical-align:top;text-align:left}
+th{background:var(--soft);font-family:"Inter","DejaVu Sans",sans-serif;font-weight:600;font-size:8.9pt}
+td.c,th.c{text-align:center}
+td.m{font-family:"DejaVu Sans Mono",monospace;font-size:8.8pt}
+table.tt{width:auto;margin-right:5mm;display:inline-table;vertical-align:top}
+table.tt td,table.tt th{text-align:center;padding:.6mm 2.4mm;font-family:"DejaVu Sans Mono",monospace}
+.box{border:1.2pt solid #000;padding:2.2mm 3mm;margin:2.6mm 0;break-inside:avoid}
+.box>.t{font-family:"Inter","DejaVu Sans",sans-serif;font-weight:700;font-size:9.6pt;margin-bottom:1mm;text-transform:uppercase;letter-spacing:.4px}
+.trap{border:1.8pt dashed #000}
+.trap>.t::before{content:"⚠ "}
+.must{background:var(--soft2);border:1.8pt solid #000}
+.must ul{list-style:none;padding-left:1mm;columns:2;column-gap:6mm}
+.must li{padding-left:5mm;text-indent:-5mm;break-inside:avoid}
+.must li::before{content:"☐ ";font-family:"DejaVu Sans",sans-serif}
+.def{border-left:3pt solid #000;padding:1mm 3mm;margin:2mm 0;background:var(--soft2);break-inside:avoid}
+.err{border:1pt solid #000;border-left:5pt double #000;padding:1.6mm 3mm;margin:2.4mm 0;font-size:9.5pt;break-inside:avoid}
+.err>b:first-child{font-family:"Inter","DejaVu Sans",sans-serif}
+.erg{font-style:italic;color:#333}
+.tag{font-family:"Inter","DejaVu Sans",sans-serif;font-size:7.6pt;border:.6pt solid #000;padding:0 1.2mm;border-radius:2mm;white-space:nowrap;vertical-align:1pt}
+.small{font-size:9pt}
+.cols{display:flex;gap:5mm;align-items:flex-start}
+.cols>*{flex:1;min-width:0}
+figure{margin:2mm 0 3mm;text-align:center;break-inside:avoid}
+figure svg{max-width:100%;height:auto}
+figcaption{font-size:8.6pt;color:#333;margin-top:1mm;font-family:"Inter","DejaVu Sans",sans-serif}
+svg text{font-family:"Inter","DejaVu Sans",sans-serif}
+.calc{font-family:"DejaVu Sans Mono",monospace;font-size:8.9pt;white-space:pre;line-height:1.3}
+.nobreak{break-inside:avoid}
+.cover-meta{display:grid;grid-template-columns:auto 1fr;gap:1mm 5mm;margin:2mm 0 3mm;font-size:10.5pt}
+.cover-meta b{font-family:"Inter","DejaVu Sans",sans-serif}
+.legend{font-size:8.8pt;border:.6pt solid #000;padding:1.4mm 2.4mm;margin:2mm 0}
+.prio td:first-child{font-weight:700;font-family:"Inter","DejaVu Sans",sans-serif;white-space:nowrap}
+sub,sup{font-size:70%;line-height:0}
+.u{text-decoration:underline}
+</style>
+</head>
+<body>
+
+<!-- ===================================================== -->
+<h1>Grundlagen der IT – Klausurzusammenfassung</h1>
+<div class="sans small" style="margin-bottom:3mm">DHBW Heilbronn · Wirtschaftsinformatik · 1. Semester · Dozent: Dipl.-Inform. Gisbert Loff · Stand: 21.10.2026</div>
+
+<h3 style="margin-top:1mm">Klausur auf einen Blick</h3>
+<div class="cover-meta">
+  <b>Termin</b><span>Montag, 07.12.2026</span>
+  <b>Dauer</b><span>48 Minuten, ca. 48–52 Punkte → <b>etwa 1 Punkt pro Minute</b></span>
+  <b>Formales</b><span>Matrikelnummer auf Deckblatt und „Matelbogen“, <b>nicht den Namen</b>. Deutlich schreiben („Ich kann nur Punkte finden, wenn ich es lesen kann“). Antwortfelder im Klausurbogen nutzen.</span>
+</div>
+
+<div class="cols">
+<div>
+<table>
+<tr><th>Nr.</th><th>Block (exemplarische Punkteverteilung, VL05)</th><th class="c">Punkte</th></tr>
+<tr><td>1</td><td>Information und Digitalisierung</td><td class="c">3</td></tr>
+<tr><td>2</td><td>IT-Infrastruktur und Cloud-Computing</td><td class="c">4</td></tr>
+<tr><td>3</td><td>Mooresches Gesetz</td><td class="c">2</td></tr>
+<tr><td>4</td><td>Zahlendarstellung und Rechnen</td><td class="c">3</td></tr>
+<tr><td>5</td><td>Wahrheitstabelle, Boolesche Ausdrücke, Logikgatter</td><td class="c">4</td></tr>
+<tr><td>6</td><td>Programmierung</td><td class="c">2</td></tr>
+<tr><td>7</td><td><b>Datenstrukturen</b> (Bedeutung, Funktionsweise, APIs)</td><td class="c"><b>6–8</b></td></tr>
+<tr><td>8</td><td><b>Suchen und Sortieren</b> (Eigenschaften)</td><td class="c"><b>6</b></td></tr>
+<tr><td>9</td><td><b>Rechnerarchitektur</b>: v. Neumann vs. Harvard</td><td class="c"><b>8</b></td></tr>
+<tr><td>10</td><td>Speicher (Hierarchie, RAID)</td><td class="c">4</td></tr>
+<tr><td>11</td><td>Datenbanken (Eigenschaften, SQL lesen/schreiben)</td><td class="c">4–6</td></tr>
+</table>
+</div>
+<div>
+<div class="box" style="margin-top:0">
+<div class="t">Multiple Choice – Regeln</div>
+<ul class="small">
+<li>Alle richtigen Antworten ankreuzen. <b>Mindestens eine</b> ist immer richtig.</li>
+<li>Jede richtig angekreuzte <b>und</b> jede richtig <i>nicht</i> angekreuzte Option: <b>+½ Punkt</b>.</li>
+<li>Jede falsch angekreuzte <b>und</b> jede falsch <i>nicht</i> angekreuzte Option: <b>−½ Punkt</b>.</li>
+<li>Negative Summe → 0 Punkte. <b>Gar nichts angekreuzt</b> → „nicht bearbeitet“ → 0 Punkte.</li>
+<li>Folge: Bei 4 Optionen bringt jede sicher beurteilte Option +½. Raten lohnt nur, wenn du mehr als die Hälfte der Optionen sicher einschätzen kannst.</li>
+</ul>
+</div>
+<table>
+<tr><th>Operator</th><th>Was wird erwartet?</th></tr>
+<tr><td><b>Nennen</b></td><td>Stichpunktartige Aufzählung der Begriffe, keine Erklärung</td></tr>
+<tr><td><b>Kurz erläutern</b></td><td>1–2 (ggf. stichpunktartige) Sätze</td></tr>
+<tr><td><b>Erläutern</b></td><td>Mehrere, i. d. R. <b>deutlich mehr als 2</b>, vollständige Sätze</td></tr>
+<tr><td><b>Skizzieren</b></td><td>Zeichnung (Diagramm, Abbildung), sauber beschriftet</td></tr>
+</table>
+</div>
+</div>
+
+<h3>Prioritäten beim Lernen</h3>
+<table class="prio">
+<tr><th style="width:24mm">Priorität</th><th>Themen</th><th style="width:58mm">Warum</th></tr>
+<tr><td>1 – sicher üben</td><td>Von-Neumann- und Harvard-Skizze aus dem Kopf zeichnen, 5 Komponenten, 5-Phasen-Zyklus, Pro/Contra · Stack/Queue/Liste/Baum mit Operationen · Binärbaum aufbauen und löschen · Such- und Sortierverfahren mit O(…)</td><td>Zusammen <b>20–22 Punkte</b> (fast die Hälfte)</td></tr>
+<tr><td>2 – rechnen üben</td><td>Umrechnung 2/8/10/16, Zweierkomplement mit fester Bitbreite inkl. Überlauf, Wahrheitstabelle → DNF → Schaltung (IEC-Symbole), SQL lesen und schreiben</td><td>„DAS IST ÜBUNGSSACHE!!“ – laut Dozent „sieht oft einfacher aus als es ist“</td></tr>
+<tr><td>3 – Begriffe lernen</td><td>Daten/Information, Sichtweisen und Phasen der Digitalisierung, 7 Komponenten der IT-Infrastruktur, Epochen, Cloud, Moore + Interpretationen, Speicherhierarchie, RAID-Level, DBMS-Begriffe, OLTP/OLAP</td><td>Schnelle Punkte durch Nennen und MC</td></tr>
+<tr><td>4 – nur kennen</td><td>Gleitkomma (IEEE 754), Shift, Compiler-Phasen, Linker/Lader, Kodierungen, KI-Hardware</td><td>Exkurse oder nicht in den Rückschauen</td></tr>
+</table>
+
+<div class="legend"><b class="sans">Legende.</b> Grundlage sind die Folien VL01–VL05; Vorrang haben die <b>Rückschauen</b> (dort steht, was tatsächlich behandelt wurde). <span class="tag">Rückschau</span> = in einer Rückschau, also sicher behandelt. <span class="tag">nur Folie</span> = im Foliensatz, aber nicht in der Rückschau. <span class="erg">(Ergänzung)</span> = steht nicht auf den Folien, nur zum Verständnis, nicht als Klausurstoff verlassen. Kästen: <b>gestrichelt</b> = typische Klausurfallen, <b>grau hinterlegt</b> = Checkliste „Das musst du können“, <b>Doppellinie links</b> = Folienfehler. Alle Rechenbeispiele wurden mit Python nachgerechnet.</div>
+
+<!-- ===================================================== -->
+<h2>1 · Information und Digitalisierung <span class="pts">3 P</span></h2>
+
+<h3>Daten, Information, Wissen, Handlung <span class="tag">Rückschau</span></h3>
+<p><b>Daten</b> sind Rohdaten, also unverarbeitete Fakten wie Zahlen, Texte oder Symbole. Für sich allein haben sie keine Bedeutung. Erst wenn ein <b>Kontext</b> dazukommt, werden aus Daten <b>Informationen</b>: verarbeitete Daten mit Bedeutung, die Entscheidungen unterstützen. Informationen verdichten sich zu <b>Wissen</b>, und Wissen führt zu <b>Handlung</b>. Dieselben Daten können je nach Kontext eine völlig andere Information sein, wie das Folienbeispiel zeigt:</p>
+<table>
+<tr><th>Daten</th><th>Kontext</th><th>Information</th><th>Wissen</th><th>Handlung</th></tr>
+<tr><td class="m">000101010 → 42</td><td>Kontostand in Euro</td><td>Ich habe 42 €</td><td>Kinokarte kostet 14 €</td><td>Ich gehe ins Kino</td></tr>
+<tr><td class="m">000000111 → 7</td><td>Temperatur °C (DE)</td><td>Es ist 7 Grad</td><td>Es ist kalt</td><td>Jacke anziehen</td></tr>
+<tr><td class="m">000000111 → 7</td><td>Temperatur °C (Kanada)</td><td>Es ist 7 Grad</td><td>Es ist warm</td><td>kurze Hose</td></tr>
+<tr><td class="m">000000111 → 7</td><td>Temperatur °F (USA)</td><td>Es ist 7 Grad</td><td>sehr kalt (≈ −13 °C)</td><td>Wintersachen</td></tr>
+</table>
+<p class="small">Verwandt (VL02, <span class="tag">nur Folie</span>): Information hat drei Aspekte: <b>syntaktisch</b> (Form, auswertbar), <b>semantisch</b> (Bedeutung durch Kontext), <b>pragmatisch</b> (was tue ich damit?). Computer arbeiten nach dem <b>EVA-Prinzip</b> (Eingabe – Verarbeitung – Ausgabe). Rechner arbeiten <b>binär</b>: 0 = keine Spannung, 1 = Spannung. <b>1 Bit</b> ist die kleinste Informationseinheit, <b>1 Byte = 8 Bit</b>; auf den Folien gilt 1 KB = 1024 Byte, 1 MB = 1024 KB usw.</p>
+<p class="small">Informationstheorie nach Shannon (1948, VL01, <span class="tag">nur Folie</span>): Modell Quelle → Sender → Kanal → Empfänger → Ziel; das Bit als Grundeinheit; <b>Entropie</b> = mittlerer Informationsgehalt; <b>Redundanz</b> entfernen = Kompression (z. B. RLE <span class="mono">AAAABBBCC → 4A3B2C</span>, Huffman), Redundanz hinzufügen = Fehlererkennung/-korrektur (Paritätsbit, Hamming-Code).</p>
+
+<h3>Digitalisierung – drei Sichtweisen <span class="tag">Rückschau</span></h3>
+<table>
+<tr><th style="width:30mm">Sichtweise</th><th>Kernaussage</th></tr>
+<tr><td><b>Betriebswirtschaftlich</b></td><td>Verwendung von Daten und algorithmischen Systemen für <b>neue oder verbesserte Prozesse, Produkte und Geschäftsmodelle</b> (BMWK). Analoge Leistungserbringung wird ganz oder teilweise durch Leistungserbringung in einem digitalen, computerhandhabbaren Modell ersetzt. Querschnittstechnologie in praktisch allen Sektoren.</td></tr>
+<tr><td><b>Gesellschaftlich</b></td><td>Übertragung der Lebens- und Arbeitswelten des Menschen auf eine digitale Ebene; heute oft im Kontext umwälzender ökonomischer Innovationen („<b>Disruption</b>“).</td></tr>
+<tr><td><b>Technisch</b></td><td>Begriff aus der Elektrotechnik/Digitaltechnik: Überführung <b>analoger</b> in <b>zeit- und wertediskrete</b> (insbesondere binäre) Signale, um sie elektronisch zu übertragen, zu speichern und zu verarbeiten. Texte, Bilder, Töne, Filme werden als Folgen von 0 und 1 dargestellt.</td></tr>
+</table>
+
+<h3>Phasen der Digitalisierung (wirtschaftliche Sicht, nach Österle/Fleisch/Alt 2000) <span class="tag">Rückschau</span></h3>
+<table>
+<tr><th class="c">Phase</th><th>Was wird digitalisiert?</th><th>Beispiel</th></tr>
+<tr><td class="c">1</td><td>einzelne <b>Funktionen</b></td><td>automatisierte Erstellung von Rechnungen</td></tr>
+<tr><td class="c">2</td><td>ganze <b>Funktionsbereiche</b> bzw. Organisationseinheiten</td><td>Rechnungswesen</td></tr>
+<tr><td class="c">3</td><td><b>integrierte Prozesse</b> über Grenzen der Aufbauorganisation hinweg</td><td>Auftragsbearbeitung</td></tr>
+<tr><td class="c">4</td><td>individuelle <b>1:1-Integration</b> überbetrieblicher Prozesse</td><td>lieferantengeführte Bestände</td></tr>
+<tr><td class="c">heute</td><td>durchgängige <b>m:n-Integration</b> überbetrieblicher Prozesse bis zum Endkunden über eine globale Infrastruktur</td><td>B2B-/B2C-Marktplätze, Produktion on demand, Availability to promise, Long-Tail- und Digital-only-Produkte</td></tr>
+</table>
+
+<h3>Rolle und Nutzen der IT im Unternehmen <span class="tag">nur Folie</span></h3>
+<ul>
+<li><b>Früher</b> (vor dem Internet): IT als untergeordnete „EDV-Abteilung“ für Effizienz in Routineabläufen, nicht strategisch (Carr 2003: „IT doesn’t matter“). <b>Heute</b>: IT ist Teil des Kerngeschäfts (Online-Vertrieb, CRM, digitale Produkte wie Spotify, Cloud-Betriebsmodelle, Data Analytics und KI).</li>
+<li>Nutzen in drei Stufen: <b>Automatisierung</b> (Abläufe „in IT gegossen“, schneller und standardisiert) → <b>Informatisierung</b> (die entstehenden Daten unterstützen Managemententscheidungen: BI, Data Warehouse) → <b>Transformation</b> (völlig neue Geschäftsprozesse, Business Process Reengineering).</li>
+<li>Ökonomische Effekte: verschobenes Verhältnis Fix-/variable Kosten, Netzwerkeffekte, Plattformökonomie (Uber, Airbnb), Long Tail, Freemium, sinkende Eintrittsbarrieren, Konvergenz von Branchen.</li>
+</ul>
+
+<div class="box trap"><div class="t">Typische Klausurfallen</div>
+<ul>
+<li><b>Daten ≠ Information</b>: Daten haben ohne Kontext keine Bedeutung. Das 7-Grad-Beispiel zeigt: gleiche Daten, verschiedene Informationen.</li>
+<li><b>Phasen der Digitalisierung</b> (wirtschaftlich, 1 → m:n-Integration) nicht mit den <b>Epochen der IT-Infrastruktur</b> (technisch, Großrechner → Cloud, Block 2) verwechseln. Die Folie warnt ausdrücklich davor.</li>
+<li>Technische Sicht: <b>zeit- und wertediskret</b>, nicht „zeitkontinuierlich“.</li>
+<li>„Erläutern“ heißt mehr als 2 ganze Sätze. Bei „Nennen“ reichen Stichpunkte, Erklärungen kosten nur Zeit.</li>
+</ul></div>
+<div class="box must"><div class="t">Das musst du können</div>
+<ul>
+<li>Daten/Information/Wissen/Handlung mit Beispiel erklären</li>
+<li>die drei Sichtweisen der Digitalisierung nennen und kurz erläutern</li>
+<li>die Phasen der Digitalisierung in der richtigen Reihenfolge nennen</li>
+<li>Bit, Byte, binär, EVA erklären</li>
+<li>Automatisierung – Informatisierung – Transformation unterscheiden</li>
+<li>Redundanz: Kompression vs. Fehlerkorrektur</li>
+</ul></div>
+
+<!-- ===================================================== -->
+<h2>2 · IT-Infrastruktur und Cloud-Computing <span class="pts">4 P</span></h2>
+<p>Die Klausuraufgabe fragt laut VL05: „Welche Komponenten können Sie in einem Unternehmen vorfinden?“ und „Wie kann die IT-Landschaft strukturiert werden?“. Dafür brauchst du die sieben Komponenten, die fünf Epochen und die Client-Server- bzw. Cloud-Idee.</p>
+
+<h3>Sieben Hauptkomponenten einer modernen IT-Infrastruktur <span class="tag">Rückschau</span></h3>
+<div class="cols">
+<ol>
+<li>Hardwareplattformen</li>
+<li>Betriebssystem-Plattformen</li>
+<li>Datenverwaltung und -speicherung</li>
+<li>Netzwerke und Telekommunikation</li>
+<li>Anwendungssysteme</li>
+<li>Internet (als Plattform)</li>
+<li>Beratungsdienste und Systemintegratoren</li>
+</ol>
+<div class="def small">Merkhilfe <span class="erg">(Ergänzung)</span>: von unten nach oben denken – <b>Hardware</b> → <b>Betriebssystem</b> → <b>Daten</b> → <b>Netz</b> → <b>Anwendungen</b> → <b>Internet</b> → <b>Menschen, die alles zusammenbauen</b> (Berater, Integratoren). Beispiele: Server/PCs; Windows/Linux; Datenbank-Server, Speichersysteme; LAN/WLAN/Router; ERP (SAP), CRM; Webdienste; Systemhäuser.</div>
+</div>
+
+<h3>Fünf Epochen der IT-Infrastruktur (technische Sicht) <span class="tag">nur Folie</span> (Epoche 4 und 5 in Rückschau)</h3>
+<p>Die Epochen überlagern sich: Technik einer Epoche lebt in späteren weiter (deshalb steht überall „– heute“). Treiber sind schnellere, kleinere, billigere Hardware sowie neue Architekturen und Algorithmen.</p>
+<table>
+<tr><th>Epoche</th><th>Zeit</th><th>Kennzeichen</th><th>Beispiele</th></tr>
+<tr><td>1. Groß- und Minirechner</td><td>1959 – heute</td><td>Großrechner bedient Tausende Terminals; alles von einem Anbieter. Minicomputer machen EDV günstiger und dezentraler.</td><td>IBM 1401/7090; DEC PDP-11, VAX</td></tr>
+<tr><td>2. Personal Computing</td><td>1981 – heute</td><td>Arbeitsplatzrechner, „Wintel“-Standard, Tabellenkalkulation und Textverarbeitung; erst ab ca. 1990 vernetzt.</td><td>IBM-PC; Novell NetWare, Ethernet</td></tr>
+<tr><td>3. Client-Server</td><td>1983 – heute</td><td>Clients (Eingabe) mit leistungsstarken Servern (gemeinsame Daten, Webseiten, Netzverwaltung) vernetzt; Rechenlast auf viele günstige Maschinen verteilt; 2-Tier/N-Tier.</td><td>SAP R/3 mit Internet Transaction Server + Datenbankserver</td></tr>
+<tr><td>4. Betriebliche und internetbasierte Informationssysteme</td><td>1992 – heute</td><td>Netzwerkstandards integrieren unternehmensweite Anwendungen; ab 1995 TCP/IP verbindet heterogene Netze; verteilte Anwendungen (heute REST-APIs), Load Balancing; Kunden und Lieferanten verbinden sich über das Internet.</td><td>Supply Chain, Shops mit Lagerzugriff, Marktplätze</td></tr>
+<tr><td>5. Cloud Computing</td><td>2000 – heute</td><td>Lösungen werden von externen Anbietern über das Internet bezogen (IaaS, PaaS, SaaS), meist im Abo, Zugang über den Browser; flexible virtuelle Instanzen.</td><td>AWS, Azure, Google Cloud, STACKIT; Salesforce (SaaS)</td></tr>
+</table>
+
+<h3>Client-Server und mehrschichtige Architektur (N-Tier)</h3>
+<p>Beim <b>Client-Server-Computing</b> ist der <b>Client</b> (Desktop, Laptop, Browser) die Eingabestelle des Benutzers. Der <b>Server</b> verarbeitet und speichert gemeinsam genutzte Daten, liefert Webseiten oder verwaltet Netzwerkaktivitäten. Bei <b>2-Tier</b> spricht der Client direkt mit einem Server. Die meisten Unternehmen haben <b>mehrschichtige (N-Tier-)Architekturen</b>: Die Arbeit wird über mehrere Server-Ebenen verteilt, z. B. Webserver → Anwendungsserver → Datenbankserver. Das Internet dient dabei „nur“ als technischer Zugang zum Web-/Anwendungsserver.</p>
+<figure>
+<svg viewBox="0 0 680 150" width="620" xmlns="http://www.w3.org/2000/svg">
+ <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker></defs>
+ <g font-size="12" text-anchor="middle">
+  <text x="90" y="16" font-weight="700">2-Tier</text>
+  <rect x="10" y="30" width="70" height="40" fill="#fff" stroke="#000"/><text x="45" y="55">Client</text>
+  <rect x="110" y="30" width="80" height="40" fill="#e6e6e6" stroke="#000"/><text x="150" y="48">Server</text><text x="150" y="63" font-size="10">(Daten)</text>
+  <line x1="80" y1="50" x2="108" y2="50" stroke="#000" marker-end="url(#ar)" marker-start="url(#ar)"/>
+  <rect x="10" y="85" width="70" height="40" fill="#fff" stroke="#000"/><text x="45" y="110">Client</text>
+  <line x1="80" y1="105" x2="120" y2="72" stroke="#000" marker-end="url(#ar)" marker-start="url(#ar)"/>
+  <line x1="225" y1="10" x2="225" y2="140" stroke="#000" stroke-dasharray="4 3"/>
+  <text x="430" y="16" font-weight="700">N-Tier (hier 3 Server-Schichten)</text>
+  <rect x="245" y="55" width="70" height="40" fill="#fff" stroke="#000"/><text x="280" y="72">Client</text><text x="280" y="86" font-size="10">(Browser)</text>
+  <text x="345" y="45" font-size="10">Internet</text>
+  <rect x="375" y="55" width="80" height="40" fill="#f2f2f2" stroke="#000"/><text x="415" y="80">Webserver</text>
+  <rect x="470" y="55" width="90" height="40" fill="#e0e0e0" stroke="#000"/><text x="515" y="72">Anwendungs-</text><text x="515" y="86">server</text>
+  <rect x="580" y="55" width="90" height="40" fill="#cfcfcf" stroke="#000"/><text x="625" y="72">Datenbank-</text><text x="625" y="86">server</text>
+  <line x1="315" y1="75" x2="373" y2="75" stroke="#000" marker-end="url(#ar)" marker-start="url(#ar)"/>
+  <line x1="455" y1="75" x2="468" y2="75" stroke="#000" marker-end="url(#ar)" marker-start="url(#ar)"/>
+  <line x1="560" y1="75" x2="578" y2="75" stroke="#000" marker-end="url(#ar)" marker-start="url(#ar)"/>
+  <text x="460" y="125" font-size="9.5">Beispiel SAP R/3: Internet Transaction Server + Anwendung + separater Datenbankserver</text>
+ </g>
+</svg>
+<figcaption>Abb. 2.1 – 2-Tier vs. N-Tier (eigene Skizze nach VL01)</figcaption>
+</figure>
+
+<h3>Cloud Computing <span class="tag">Rückschau</span> (Vertiefung im 2. Semester)</h3>
+<div class="def"><b>Definition (Folie):</b> Vormals im Unternehmen betriebene Lösungen werden von externen Anbietern <b>über das Internet bezogen</b> (IaaS, PaaS, SaaS). Programme und Daten liegen nicht mehr auf lokalen Ressourcen des Unternehmens, sondern werden über das Internet bezogen, <b>meist als Abo</b>; der Zugang erfolgt i. d. R. über den <b>Browser</b>.</div>
+<table>
+<tr><th>Modell</th><th>Was mietest du? <span class="erg">(Erklärung = Ergänzung)</span></th><th>Beispiel <span class="erg">(Ergänzung)</span></th></tr>
+<tr><td><b>IaaS</b> – Infrastructure as a Service</td><td>Rechenleistung, Speicher, Netz als virtuelle Maschinen; Betriebssystem und Anwendungen verwaltest du selbst.</td><td>virtuelle Server bei AWS EC2, STACKIT</td></tr>
+<tr><td><b>PaaS</b> – Platform as a Service</td><td>zusätzlich Laufzeitumgebung, Datenbank, Entwicklungsplattform; du lieferst nur deine Anwendung.</td><td>Google App Engine, SAP BTP</td></tr>
+<tr><td><b>SaaS</b> – Software as a Service</td><td>fertige Anwendung über den Browser, im Abo; nichts selbst betreiben.</td><td><b>Salesforce</b> (CRM, SaaS-Pionier – Folie), Microsoft 365</td></tr>
+</table>
+<ul>
+<li><b>Ursprung:</b> Amazon musste hohe Rechenleistung für Weihnachts- und „Back2School“-Geschäft vorhalten und fragte sich, wie man sie sonst nutzt bzw. monetarisiert → <b>AWS seit 2002</b>.</li>
+<li><b>Hyperscaler (Auswahl):</b> Amazon (AWS), Microsoft (Azure), Google Cloud (GCP), STACKIT (Schwarz-Gruppe, Neckarsulm, seit 2022).</li>
+<li><b>Eigenschaften:</b> flexible virtuelle Instanzen verschiedener Betriebssysteme, skalierbar; Hadoop verteilt parallelisierbare Last. Beispiel: Die New York Times wandelte mit gemieteten AWS-Instanzen ca. 11 Mio. Artikel in 24 Stunden in PDF um.</li>
+</ul>
+
+<h3>Treiber des technischen Fortschritts <span class="tag">nur Folie</span> (teilweise Rückschau)</h3>
+<table>
+<tr><th>Treiber</th><th>Aussage</th></tr>
+<tr><td>Mooresches Gesetz</td><td>siehe Block 3</td></tr>
+<tr><td>Digitale Massenspeicher</td><td>exponentieller Kapazitätszuwachs bei drastisch fallenden Preisen; Datenmenge verdoppelt sich grob jedes Jahr (Lyman/Varian 2003)</td></tr>
+<tr><td>Gesetz von Metcalfe</td><td>bei n Teilnehmern n·(n−1) mögliche Verbindungen → Wert eines Netzes wächst überproportional mit der Teilnehmerzahl. Beispiel: 10 Teilnehmer → 10·9 = 90 (gerichtete) Verbindungen. <span class="erg">(Ergänzung: ungerichtet n·(n−1)/2 = 45, vgl. „alle stoßen an“ in Block 8.)</span></td></tr>
+<tr><td>Sinkende Kommunikationskosten</td><td>nähern sich 0; über 5 Mrd. Menschen online; keine freien IPv4-Adressen mehr</td></tr>
+<tr><td>Standardisierung</td><td>Spezifikationen für Kompatibilität → Skaleneffekte, Preissenkungen (Ethernet, TCP/IP, HTTP, ASCII, HTML …)</td></tr>
+</table>
+
+<div class="box trap"><div class="t">Typische Klausurfallen</div>
+<ul>
+<li>Es sind <b>sieben</b> Komponenten – die oft vergessenen sind „Internet als Plattform“ und „Beratungsdienste/Systemintegratoren“.</li>
+<li>Epochen <b>lösen sich nicht ab</b>, sie überlagern sich (Großrechner gibt es heute noch).</li>
+<li>Client = Eingabestelle des Benutzers, Server = gemeinsame Daten/Dienste – nicht umgekehrt.</li>
+<li>Cloud: Daten liegen <b>nicht</b> mehr lokal im Unternehmen; Bezug über das Internet, meist im Abo.</li>
+</ul></div>
+<div class="box must"><div class="t">Das musst du können</div>
+<ul>
+<li>7 Komponenten der IT-Infrastruktur nennen</li>
+<li>5 Epochen in Reihenfolge mit je einem Merkmal</li>
+<li>Client-Server und N-Tier erklären/skizzieren</li>
+<li>Cloud Computing definieren, IaaS/PaaS/SaaS unterscheiden</li>
+<li>Hyperscaler nennen, Ursprung AWS</li>
+<li>Metcalfe n·(n−1) anwenden</li>
+</ul></div>
+
+<!-- ===================================================== -->
+<h2>3 · Mooresches Gesetz <span class="pts">2 P</span></h2>
+<h3>Was Moore tatsächlich gesagt hat <span class="tag">Rückschau</span></h3>
+<p><b>Gordon Moore</b>, damals Direktor der Forschungslabore von Fairchild Semiconductor und später Mitgründer von <b>Intel</b>, schrieb <b>1965</b> im <i>Electronics Magazine</i>, dass sich seit dem ersten Mikrochip (1959) die <b>Anzahl der (niedrigpreisigen) Komponenten, im Allgemeinen Transistoren, auf einem Chip jährlich verdoppelt</b> habe, und sagte das für die nächsten 10 Jahre voraus. Später <b>korrigierte er die Rate auf eine Verdopplung alle zwei Jahre</b>. Diese Aussage begründet das Mooresche Gesetz. Es beschreibt eine <b>exponentielle</b> Zunahme der Verarbeitungsleistung bei gleichzeitig sinkenden Kosten.</p>
+<h3>Interpretationen – <u>keine</u> davon stammt von Moore selbst <span class="tag">Rückschau</span></h3>
+<ol>
+<li>Die Leistung von <b>Mikroprozessoren</b> verdoppelt sich alle <b>18 Monate</b>.</li>
+<li>Die Leistung von <b>Computern</b> verdoppelt sich alle <b>18 Monate</b>.</li>
+<li>Der <b>Preis</b> für rechnergestützte Informationsverarbeitung <b>halbiert</b> sich alle <b>18 Monate</b>.</li>
+</ol>
+<p>Begründung: <b>Fläche</b> ist der wichtigste Kostenfaktor bei Mikrochips – mehr Transistoren auf gleicher Fläche bedeuten mehr Leistung pro Euro. <b>Grenzen</b> (VL01): Kosten pro Transistor steigen bei sehr kleinen Strukturen wieder, Energie- und Kühlungsbedarf wächst. <b>Auswege</b>: neue Materialien und Lithographie (ASML, TSMC), 3D-Chipdesign, Quantencomputer und vor allem <b>Skalierung über mehrere GPUs/Cluster/Rechenzentren</b> (Stand 2025: keine „größeren“ Chips mehr). Beispiel Nvidia Blackwell: 208 Mrd. Transistoren (TSMC 3 nm).</p>
+
+<h3>Rechnen mit exponentiellem Wachstum <span class="erg">(Ergänzung zur Veranschaulichung)</span></h3>
+<p>Verdopplung alle T Jahre → nach t Jahren Faktor 2<sup>t/T</sup>. Beispiele: 10 Jahre bei Verdopplung alle 2 Jahre → 2<sup>5</sup> = <b>32-fach</b>. 6 Jahre bei Verdopplung alle 18 Monate → 2<sup>4</sup> = <b>16-fach</b>.</p>
+
+<h3>Beispiel-MC aus VL05 (2 Punkte) mit Lösung</h3>
+<table>
+<tr><th>Antwortoption: „Korrekte Interpretation des Mooreschen Gesetzes?“</th><th class="c">Lösung</th><th>Warum</th></tr>
+<tr><td>Die Anzahl der Transistoren auf einem Chip <b>verdreifacht</b> sich alle 1–2 Jahre</td><td class="c">✗</td><td>verdoppelt, nicht verdreifacht</td></tr>
+<tr><td>Die <b>Leistung von Mikroprozessoren verdoppelt sich alle ca. 18 Monate</b></td><td class="c">✓</td><td>Interpretation 1 der Folie</td></tr>
+<tr><td>Die in einem Computer verbaute <b>Speicherkapazität</b> verdoppelt sich regelmäßig alle 18 Monate</td><td class="c">✗</td><td>keine der drei Interpretationen</td></tr>
+<tr><td>Die <b>Größe</b> eines Transistors halbiert sich alle 1–2 Jahre</td><td class="c">✗</td><td>keine der Interpretationen (Fläche ≠ Anzahl)</td></tr>
+</table>
+<p class="small">Punktelogik: Wer nur Option 2 ankreuzt, bekommt 4 × ½ = 2 Punkte. Wer zusätzlich Option 3 ankreuzt: 3 × ½ − ½ = 1 Punkt.</p>
+
+<div class="box trap"><div class="t">Typische Klausurfallen</div>
+<ul>
+<li><b>Original</b> (Moore): <b>Transistoren pro Chip</b> verdoppeln sich – erst jährlich, später alle <b>2 Jahre</b>. <b>Interpretationen</b> (nicht Moore): Leistung bzw. Kosten, <b>18 Monate</b>. Zahlen und Bezugsgrößen nicht mischen.</li>
+<li>Die Fallen stecken in einzelnen Wörtern: verdreifacht statt verdoppelt, Speicherkapazität statt Leistung, Größe statt Anzahl.</li>
+<li>„Kosten halbieren sich“ ist richtig (Interpretation 3), „Kosten verdoppeln sich“ falsch.</li>
+<li>Moore war bei Fairchild, später <b>Intel</b>-Gründer (nicht AMD, nicht IBM).</li>
+</ul></div>
+<div class="box must"><div class="t">Das musst du können</div>
+<ul>
+<li>Moores ursprüngliche Aussage mit Jahreszahl 1965 wiedergeben</li>
+<li>Korrektur auf 2 Jahre kennen</li>
+<li>alle 3 Interpretationen nennen</li>
+<li>„Fläche ist wichtigster Kostenfaktor“ erklären</li>
+<li>Grenzen und Auswege nennen</li>
+<li>MC-Optionen wortgenau prüfen</li>
+</ul></div>
+
+<!-- ===================================================== -->
+<h2>4 · Zahlendarstellung und Rechnen <span class="pts">3 P</span></h2>
+<p>Der Dozent: „<b>DAS IST ÜBUNGSSACHE!!</b>“ und „<b>sauber schreiben</b>“. Kernaufgaben sind (1) Umwandlung zwischen den Basen 2, 8, 10, 16, (2) binäres Rechnen mit positiven und negativen ganzen Zahlen, (3) Darstellung nicht ganzzahliger Werte.</p>
+
+<h3>Stellenwertsysteme <span class="tag">Rückschau</span></h3>
+<p>In einem Stellenwertsystem hängt der Wert einer Ziffer von ihrer <b>Position</b> ab. Jede Stelle hat die Wertigkeit Basis<sup>Position</sup>, von rechts beginnend bei Position 0. Beispiel: 235<sub>10</sub> = 2·10² + 3·10¹ + 5·10⁰. (Das römische System hat keine Stellenwerte und keine Null.)</p>
+<div class="cols">
+<table>
+<tr><th>System</th><th class="c">Basis</th><th>Ziffern</th><th>235<sub>10</sub> =</th></tr>
+<tr><td>Dual/Binär</td><td class="c">2</td><td>0, 1</td><td class="m">1110 1011</td></tr>
+<tr><td>Oktal</td><td class="c">8</td><td>0–7</td><td class="m">353</td></tr>
+<tr><td>Dezimal</td><td class="c">10</td><td>0–9</td><td class="m">235</td></tr>
+<tr><td>Hexadezimal</td><td class="c">16</td><td>0–9, A–F</td><td class="m">EB</td></tr>
+</table>
+<table class="small">
+<tr><th>dez</th><th>bin</th><th>okt</th><th>hex</th><th>dez</th><th>bin</th><th>okt</th><th>hex</th></tr>
+<tr><td>0</td><td class="m">0000</td><td>0</td><td>0</td><td>8</td><td class="m">1000</td><td>10</td><td>8</td></tr>
+<tr><td>1</td><td class="m">0001</td><td>1</td><td>1</td><td>9</td><td class="m">1001</td><td>11</td><td>9</td></tr>
+<tr><td>2</td><td class="m">0010</td><td>2</td><td>2</td><td>10</td><td class="m">1010</td><td>12</td><td>A</td></tr>
+<tr><td>3</td><td class="m">0011</td><td>3</td><td>3</td><td>11</td><td class="m">1011</td><td>13</td><td>B</td></tr>
+<tr><td>4</td><td class="m">0100</td><td>4</td><td>4</td><td>12</td><td class="m">1100</td><td>14</td><td>C</td></tr>
+<tr><td>5</td><td class="m">0101</td><td>5</td><td>5</td><td>13</td><td class="m">1101</td><td>15</td><td>D</td></tr>
+<tr><td>6</td><td class="m">0110</td><td>6</td><td>6</td><td>14</td><td class="m">1110</td><td>16</td><td>E</td></tr>
+<tr><td>7</td><td class="m">0111</td><td>7</td><td>7</td><td>15</td><td class="m">1111</td><td>17</td><td>F</td></tr>
+</table>
+</div>
+<p class="small">Zweierpotenzen auswendig: 2⁰=1, 2¹=2, 2²=4, 2³=8, 2⁴=16, 2⁵=32, 2⁶=64, 2⁷=128, 2⁸=256, 2⁹=512, 2¹⁰=1024. Sechzehnerpotenzen: 16⁰=1, 16¹=16, 16²=256, 16³=4096. Achterpotenzen: 1, 8, 64, 512.</p>
+
+<h3>Verfahren A: beliebige Basis → dezimal (Stellenwerte aufsummieren)</h3>
+<div class="calc">1110 1011₂ = 1·128 + 1·64 + 1·32 + 0·16 + 1·8 + 0·4 + 1·2 + 1·1 = 235
+353₈      = 3·64 + 5·8 + 3·1   = 192 + 40 + 3   = 235
+EB₁₆      = 14·16 + 11·1       = 224 + 11       = 235
+2AF₁₆     = 2·256 + 10·16 + 15 = 512 + 160 + 15 = 687
+753₈      = 7·64 + 5·8 + 3     = 448 + 40 + 3   = 491</div>
+
+<h3>Verfahren B: dezimal → Basis b (Restwertmethode) <span class="tag">Rückschau</span></h3>
+<p>Zahl fortlaufend <b>ganzzahlig durch die Basis teilen</b> und jeweils den <b>Rest</b> notieren, bis der Quotient 0 ist. Die Reste <b>von unten nach oben</b> gelesen ergeben die Zahl. Tipp der Folie: die Reste gleich von rechts nach links notieren.</p>
+<div class="cols">
+<div class="calc">235 : 2 = 117  Rest 1   ← letzte Stelle
+117 : 2 =  58  Rest 1
+ 58 : 2 =  29  Rest 0
+ 29 : 2 =  14  Rest 1
+ 14 : 2 =   7  Rest 0
+  7 : 2 =   3  Rest 1
+  3 : 2 =   1  Rest 1
+  1 : 2 =   0  Rest 1   ← erste Stelle
+von unten lesen: 1110 1011₂</div>
+<div class="calc">235 : 8 = 29  Rest 3
+ 29 : 8 =  3  Rest 5
+  3 : 8 =  0  Rest 3
+→ 353₈
+
+235 : 16 = 14  Rest 11 (= B)
+ 14 : 16 =  0  Rest 14 (= E)
+→ EB₁₆</div>
+</div>
+
+<h3>Verfahren C: binär ↔ oktal/hex durch Gruppenbildung <span class="tag">Rückschau</span></h3>
+<p>Weil 8 = 2³ und 16 = 2⁴ ist, entspricht eine Oktalziffer genau <b>3 Bit</b>, eine Hexziffer genau <b>4 Bit</b>. Gruppen immer <b>von rechts</b> bilden und links mit Nullen auffüllen. Oktal ↔ Hex geht am einfachsten über den Umweg binär.</p>
+<div class="calc">1110 1011₂  → Dreiergruppen: 011 | 101 | 011  →  3 5 3₈
+           → Vierergruppen: 1110 | 1011      →  E B₁₆
+1335₈ → binär: 001 011 011 101 = 1011011101₂ → Vierergruppen 0010 | 1101 | 1101 → 2DD₁₆ (= 733₁₀)</div>
+
+<h4>Übungsaufgaben von den Folien (gelöst)</h4>
+<ul>
+<li>458<sub>10</sub> = <b>1 1100 1010<sub>2</sub></b> = <b>712<sub>8</sub></b> (Dreiergruppen 111 001 010).</li>
+<li>1001 0010<sub>2</sub> = <b>222<sub>8</sub></b> (010 010 010) = <b>92<sub>16</sub></b> (1001 0010) = 146<sub>10</sub>.</li>
+<li>Was ist größer: E7E5<sub>16</sub>, 59364<sub>10</sub> oder 1110 0111 1110 0110<sub>2</sub>? → E7E5<sub>16</sub> = 59365, die Binärzahl = E7E6<sub>16</sub> = 59366. <b>Die Binärzahl ist am größten</b>, 59364 am kleinsten. (Tipp: Binär direkt in Hex gruppieren und nur die letzte Ziffer vergleichen.)</li>
+</ul>
+
+<h3>Binäre Addition <span class="tag">Rückschau</span></h3>
+<p>Regeln: 0+0 = 0, 0+1 = 1, 1+0 = 1, <b>1+1 = 0 Übertrag 1</b> (und 1+1+1 = 1 Übertrag 1). Wie schriftliches Addieren von rechts nach links.</p>
+<div class="cols">
+<div class="calc">  0100 0001   (65)
++ 0101 1010   (90)
+Übertrag  1
+= 1001 1011   (155)</div>
+<div class="calc">    111 1111   (127)
++   111 1111   (127)
+= 1111 1110   (254)  ← Folienaufgabe:
+  Ergebnis braucht ein Bit mehr!</div>
+</div>
+<p>Der <b>Datentyp</b> legt die Bitbreite und damit den Wertebereich fest. Passt das Ergebnis nicht mehr hinein, entsteht ein <b>Überlauf</b>.</p>
+
+<h3>Negative Zahlen – drei Darstellungen (8 Bit, Beispiel ±42) <span class="tag">Rückschau</span></h3>
+<table>
+<tr><th>Darstellung</th><th>Bildung von −42</th><th>+42 / −42</th><th>Wertebereich (8 Bit)</th><th>Eigenschaften</th></tr>
+<tr><td><b>Vorzeichen und Betrag</b></td><td>erstes Bit = Vorzeichen (0 +, 1 −), 7 Bit Betrag</td><td class="m">0 0101010<br>1 0101010</td><td>−127 … +127</td><td>sehr anschaulich; <b>zwei Nullen</b> (+0, −0); Addition braucht Sonderregeln/Fallunterscheidungen</td></tr>
+<tr><td><b>Einerkomplement</b></td><td>alle Bits invertieren</td><td class="m">0 0101010<br>1 1010101</td><td>−127 … +127</td><td>einfach; <b>zwei Nullen</b>; Übertrag aus dem höchsten Bit muss unten wieder addiert werden (<b>End-around Carry</b>)</td></tr>
+<tr><td><b>Zweierkomplement</b> (Standard)</td><td>alle Bits invertieren, <b>dann +1</b></td><td class="m">0 0101010<br>1 1010110</td><td><b>−128 … +127</b></td><td><b>nur eine Null</b>; höchstes Bit hat Wertigkeit <b>−128</b>; Addition und Subtraktion mit <b>derselben</b> Addierschaltung, letzter Übertrag wird ignoriert</td></tr>
+</table>
+<p class="small">Allgemein für n Bit <span class="erg">(Ergänzung)</span>: Zweierkomplement −2<sup>n−1</sup> … 2<sup>n−1</sup>−1 (8 Bit: −128 … 127; 16 Bit: −32768 … 32767 = Java <span class="mono">short</span>). Vorzeichen-Betrag und Einerkomplement: −(2<sup>n−1</sup>−1) … 2<sup>n−1</sup>−1.</p>
+
+<h4>Zweierkomplement Schritt für Schritt</h4>
+<ol>
+<li><b>Bitbreite festlegen</b> (z. B. 8 Bit). Ohne feste Bitbreite ist das Zweierkomplement nicht definiert.</li>
+<li>Positive Zahl binär mit führenden Nullen auf volle Breite: 17 = <span class="mono">0001 0001</span>.</li>
+<li>Alle Bits invertieren (Einerkomplement): <span class="mono">1110 1110</span>.</li>
+<li><b>+1</b> addieren: <span class="mono">1110 1111</span> = −17.</li>
+<li><b>Probe</b> über die Wertigkeiten: −128 + 64 + 32 + 8 + 4 + 2 + 1 = −17 ✓. Rückweg: negative Zahl erneut invertieren und +1 → Betrag.</li>
+</ol>
+<table class="small">
+<tr><th>Wert</th><th>42</th><th>−17</th><th>−42</th><th>0</th><th>−1</th><th>127</th><th>−128</th></tr>
+<tr><td>8 Bit</td><td class="m">0010 1010</td><td class="m">1110 1111</td><td class="m">1101 0110</td><td class="m">0000 0000</td><td class="m">1111 1111</td><td class="m">0111 1111</td><td class="m">1000 0000</td></tr>
+</table>
+
+<h4>Subtraktion = Addition des Zweierkomplements (Folienaufgaben, 8 Bit)</h4>
+<div class="cols">
+<div class="calc">42 − 17 = 42 + (−17)
+   0010 1010   (42)
+ + 1110 1111   (−17)
+ (1)0001 1001  → Übertrag (1) weg
+ = 0001 1001 = 25 ✓
+
+42 − 42:
+   0010 1010 + 1101 0110
+ = (1)0000 0000 = 0 ✓</div>
+<div class="calc">−42 − 17:
+   1101 0110   (−42)
+ + 1110 1111   (−17)
+ = (1)1100 0101 = −59 ✓
+   Probe: −128+64+4+1 = −59
+
+−1 − 17:
+   1111 1111 + 1110 1111
+ = (1)1110 1110 = −18 ✓</div>
+</div>
+<p class="small">Folienbeispiel mit <b>5 Bit</b>: 14 + (−9): 9 = 01001 → invertiert 10110 → +1 = <b>10111</b>; 01110 + 10111 = (1)00101 = <b>5</b> ✓.</p>
+
+<h4>Überlauf erkennen</h4>
+<p>Der weggeworfene <b>Übertrag</b> aus dem höchsten Bit ist <b>kein</b> Fehler. Ein <b>Überlauf</b> liegt vor, wenn das echte Ergebnis außerhalb des Wertebereichs liegt. Faustregel <span class="erg">(Ergänzung)</span>: Überlauf genau dann, wenn <b>beide Summanden dasselbe Vorzeichen</b> haben, das <b>Ergebnis aber das andere</b>. Zwei Zahlen mit verschiedenen Vorzeichen können nie überlaufen.</p>
+<div class="cols">
+<div class="calc">100 + 50 (8 Bit):
+   0110 0100   (+100)
+ + 0011 0010   (+50)
+ = 1001 0110   → −106 ✗
+ positiv + positiv = negativ
+ → ÜBERLAUF (150 > 127)</div>
+<div class="calc">−100 + (−50):
+   1001 1100   (−100)
+ + 1100 1110   (−50)
+ = (1)0110 1010 → +106 ✗
+ negativ + negativ = positiv
+ → ÜBERLAUF (−150 < −128)</div>
+<div class="calc">127 + 1:
+   0111 1111
+ + 0000 0001
+ = 1000 0000 → −128 ✗
+ ÜBERLAUF
+ (typischer MC-Fall)</div>
+</div>
+<p class="small"><b>Einerkomplement</b> mit End-around Carry (Folie, 4 Bit): −4 + 6 = 1011 + 0110 = (1)0001 → Übertrag 1 unten addieren: 0001 + 1 = <b>0010 = +2</b> ✓. Bei −4 + 3 = 1011 + 0011 = 1110 (−1) entsteht kein Übertrag.</p>
+
+<h3>Exkurs: Shift-Operator <span class="tag">nur Folie</span></h3>
+<p class="small">Verschieben um 1 Bit nach links = ×2, nach rechts = ganzzahlig ÷2 (für vorzeichenlose Ganzzahlen). Java: 23 = 0001 0111; <span class="mono">23 &lt;&lt; 1</span> = 0010 1110 = 46; <span class="mono">23 &lt;&lt; 2</span> = 0101 1100 = 92; <span class="mono">23 &gt;&gt; 1</span> = 11. Rechenwerke haben dafür Shift-Register.</p>
+
+<h3>Nicht ganzzahlige Werte <span class="tag">nur Folie</span> (Exkurs in VL02, aber Kernaufgabe in VL05)</h3>
+<h4>Binäre Kommazahlen (Festkomma)</h4>
+<p>Nach dem Komma haben die Stellen die Wertigkeiten 2⁻¹ = ½, 2⁻² = ¼, 2⁻³ = ⅛ usw. Vorkommateil wie gewohnt umrechnen; den <b>Nachkommateil fortlaufend mit 2 multiplizieren</b>, die Vorkommastelle (0 oder 1) ist das nächste Bit, weiter mit dem Rest, bis 0 herauskommt. Die Bits <b>von oben nach unten</b> lesen.</p>
+<div class="cols">
+<div class="calc">4,375₁₀:  4 = 100₂
+0,375 · 2 = 0,75 → 0   (2⁻¹)
+0,75  · 2 = 1,5  → 1   (2⁻²)
+0,5   · 2 = 1,0  → 1   (2⁻³)  fertig
+0,375 = 0·½ + 1·¼ + 1·⅛ = 0,011₂
+4,375₁₀ = 100,011₂</div>
+<div class="calc">0,4₁₀:
+0,4·2=0,8→0  0,8·2=1,6→1
+0,6·2=1,2→1  0,2·2=0,4→0
+0,4·2=0,8→0  … wiederholt sich
+0,4₁₀ = 0,0110 0110 0110…₂ (periodisch!)
+→ nicht exakt darstellbar</div>
+</div>
+<p class="small">Mit <b>fester</b> Anzahl Vor- und Nachkommabits nennt man das <b>Festkommadarstellung</b> <span class="erg">(Begriff = Ergänzung)</span>: einfach, aber kleiner Wertebereich.</p>
+
+<h4>Gleitkomma (Fließkomma, Floating Point)</h4>
+<p>Eine Gleitkommazahl besteht aus drei Teilen: <b>Mantisse m</b> (üblicherweise nicht ganzzahliger Anteil), <b>Basis b</b> und <b>Exponent e</b>: <b>Z = m · b<sup>e</sup></b>. Beispiel: 2022 = 2,022 · 10³. Vorteil: Der darstellbare Zahlenraum wird um nicht ganzzahlige Zahlen <b>und</b> durch die Potenzen in seiner Größe erweitert. Gerechnet wird mit Coprozessoren oder speziellen Prozessorbefehlen.</p>
+<table class="small">
+<tr><th>IEEE 754</th><th>Vorzeichen</th><th>Exponent</th><th>Mantisse</th><th>Bias</th><th>Java</th></tr>
+<tr><td>einfache Genauigkeit, 32 Bit</td><td>1 Bit</td><td>8 Bit</td><td>23 Bit</td><td>127</td><td class="m">float</td></tr>
+<tr><td>doppelte Genauigkeit, 64 Bit</td><td>1 Bit</td><td>11 Bit</td><td>52 Bit</td><td>1023</td><td class="m">double</td></tr>
+</table>
+<div class="calc">Folienbeispiel 18,4 in 32 Bit:
+1. Vorzeichen:       0 (positiv)
+2. Vorkomma:         18 = 10010₂ ;  Nachkomma 0,4 = 0,0110 0110 …₂
+3. Zwischenergebnis: 10010,0110 0110 0110 … · 2⁰
+4. Normalisieren:    1,0010 0110 0110 … · 2⁴   → Exponent 4 (Komma 4 Stellen nach links)
+5. Mantisse:         0010 0110 0110 … (die führende 1 = „Hidden Bit“ wird nicht gespeichert)
+6. Charakteristik:   Exponent + Bias = 4 + 127 = 131 = 1000 0011₂
+7. Ergebnis:         0 | 10000011 | 00100110011001100110011
+   gespeichert ist eigentlich 18,3999996…  → Ungenauigkeit durch „Abschneiden“ der Mantisse!</div>
+
+<div class="box trap"><div class="t">Typische Klausurfallen</div>
+<ul>
+<li>Restwertmethode: Reste <b>von unten nach oben</b> lesen. Bei Hex die Reste 10–15 als <b>A–F</b> schreiben.</li>
+<li>Gruppen für Oktal (3) und Hex (4) immer <b>von rechts</b> bilden, links mit Nullen auffüllen.</li>
+<li>Zweierkomplement immer mit der <b>angegebenen Bitbreite</b> (führende Nullen!). −17 in 8 Bit ist <span class="mono">1110 1111</span>, nicht <span class="mono">101111</span>.</li>
+<li>Zweierkomplement = invertieren <b>plus 1</b>; Einerkomplement = nur invertieren. Positive Zahlen bleiben unverändert.</li>
+<li>Wertebereich 8 Bit Zweierkomplement: <b>−128 bis +127</b> (asymmetrisch!), Vorzeichen-Betrag/Einerkomplement: −127 bis +127 mit zwei Nullen.</li>
+<li><b>Übertrag ≠ Überlauf.</b> Der Übertrag aus dem höchsten Bit wird im Zweierkomplement ignoriert; Überlauf erkennst du am Vorzeichen.</li>
+<li>0,4 oder 0,1 sind binär <b>periodisch</b> → Gleitkommazahlen sind oft ungenau.</li>
+<li>IEEE 754: Exponent wird <b>mit Bias</b> gespeichert (4 → 131), die führende 1 der Mantisse wird weggelassen.</li>
+</ul></div>
+<div class="box must"><div class="t">Das musst du können</div>
+<ul>
+<li>2 ↔ 8 ↔ 10 ↔ 16 in alle Richtungen umrechnen</li>
+<li>Restwertmethode sauber aufschreiben</li>
+<li>binär addieren mit Überträgen</li>
+<li>±x in Vorzeichen-Betrag, Einer- und Zweierkomplement</li>
+<li>a − b im Zweierkomplement rechnen</li>
+<li>Überlauf erkennen und begründen</li>
+<li>Wertebereiche nennen</li>
+<li>Dezimalbruch → binäre Kommazahl</li>
+<li>Gleitkomma m · b<sup>e</sup> und IEEE-Aufbau erklären</li>
+</ul></div>
+
+<!-- ===================================================== -->
+<h2>5 · Wahrheitstabellen, Boolesche Ausdrücke, Logikgatter <span class="pts">4 P</span></h2>
+<p>„<b>AUCH ÜBUNGSSACHE!!</b>“ Aufgabentypen laut VL05: Wahrheitstabelle aus textueller Beschreibung aufstellen; Booleschen Ausdruck aus Wertetabelle aufstellen; einfache Schaltung aus <b>genormten Logikbausteinen</b> aus Tabelle oder Ausdruck entwickeln (Analyse und Synthese).</p>
+
+<h3>Boolesche Algebra und Grundoperatoren <span class="tag">Rückschau</span></h3>
+<p>Die Boolesche Algebra (George Boole, 19. Jh.) kennt nur die Werte <b>0 (falsch)</b> und <b>1 (wahr)</b>. Sie ist die Grundlage der Digitaltechnik: In Chips übernehmen <b>Transistoren</b> die Rolle von Schaltern. AND entspricht einer Reihenschaltung, OR einer Parallelschaltung.</p>
+<table>
+<tr><th>Operator</th><th>Schreibweisen</th><th>Bedeutung</th></tr>
+<tr><td><b>AND</b> (Konjunktion, logisches Produkt)</td><td>A ∧ B, A · B, A &amp; B</td><td>1 nur, wenn <b>alle</b> Eingänge 1 sind</td></tr>
+<tr><td><b>OR</b> (Disjunktion, logische Summe)</td><td>A ∨ B, A + B</td><td>1, wenn <b>mindestens ein</b> Eingang 1 ist</td></tr>
+<tr><td><b>NOT</b> (Negation, Invertierung)</td><td>¬A, Ā</td><td>kehrt den Wert um</td></tr>
+</table>
+
+<h3>Die sieben Gatter – Wahrheitstabelle und Symbole nach IEC 60617 <span class="tag">Rückschau</span></h3>
+<table class="small">
+<tr><th class="c">A</th><th class="c">B</th><th class="c">AND</th><th class="c">OR</th><th class="c">XOR</th><th class="c">NAND</th><th class="c">NOR</th><th class="c">XNOR</th><th class="c">NOT A</th></tr>
+<tr><td class="c">0</td><td class="c">0</td><td class="c">0</td><td class="c">0</td><td class="c">0</td><td class="c">1</td><td class="c">1</td><td class="c">1</td><td class="c">1</td></tr>
+<tr><td class="c">0</td><td class="c">1</td><td class="c">0</td><td class="c">1</td><td class="c">1</td><td class="c">1</td><td class="c">0</td><td class="c">0</td><td class="c">1</td></tr>
+<tr><td class="c">1</td><td class="c">0</td><td class="c">0</td><td class="c">1</td><td class="c">1</td><td class="c">1</td><td class="c">0</td><td class="c">0</td><td class="c">0</td></tr>
+<tr><td class="c">1</td><td class="c">1</td><td class="c">1</td><td class="c">1</td><td class="c">0</td><td class="c">0</td><td class="c">0</td><td class="c">1</td><td class="c">0</td></tr>
+<tr><td colspan="2" class="c">Merkhilfe</td><td class="c">alle 1</td><td class="c">mind. eine 1</td><td class="c">„ungleich“</td><td class="c">nicht AND</td><td class="c">nicht OR</td><td class="c">„gleich“</td><td class="c">umkehren</td></tr>
+</table>
+<figure>
+<svg viewBox="0 0 700 92" width="680" xmlns="http://www.w3.org/2000/svg">
+ <g stroke="#000" stroke-width="1.6" fill="#fff" font-size="15" text-anchor="middle">
+  <!-- AND -->
+  <line x1="12" y1="34" x2="30" y2="34"/><line x1="12" y1="54" x2="30" y2="54"/><rect x="30" y="24" width="38" height="40"/><line x1="68" y1="44" x2="86" y2="44"/>
+  <text x="49" y="50" stroke="none" fill="#000">&amp;</text><text x="49" y="84" stroke="none" fill="#000" font-size="12" font-weight="700">AND</text>
+  <!-- OR -->
+  <line x1="110" y1="34" x2="128" y2="34"/><line x1="110" y1="54" x2="128" y2="54"/><rect x="128" y="24" width="38" height="40"/><line x1="166" y1="44" x2="184" y2="44"/>
+  <text x="147" y="50" stroke="none" fill="#000">≥1</text><text x="147" y="84" stroke="none" fill="#000" font-size="12" font-weight="700">OR</text>
+  <!-- NOT -->
+  <line x1="208" y1="44" x2="226" y2="44"/><rect x="226" y="24" width="38" height="40"/><circle cx="268" cy="44" r="4"/><line x1="272" y1="44" x2="288" y2="44"/>
+  <text x="245" y="50" stroke="none" fill="#000">1</text><text x="247" y="84" stroke="none" fill="#000" font-size="12" font-weight="700">NOT</text>
+  <!-- XOR -->
+  <line x1="306" y1="34" x2="324" y2="34"/><line x1="306" y1="54" x2="324" y2="54"/><rect x="324" y="24" width="38" height="40"/><line x1="362" y1="44" x2="380" y2="44"/>
+  <text x="343" y="50" stroke="none" fill="#000">=1</text><text x="343" y="84" stroke="none" fill="#000" font-size="12" font-weight="700">XOR</text>
+  <!-- NAND -->
+  <line x1="402" y1="34" x2="420" y2="34"/><line x1="402" y1="54" x2="420" y2="54"/><rect x="420" y="24" width="38" height="40"/><circle cx="462" cy="44" r="4"/><line x1="466" y1="44" x2="482" y2="44"/>
+  <text x="439" y="50" stroke="none" fill="#000">&amp;</text><text x="441" y="84" stroke="none" fill="#000" font-size="12" font-weight="700">NAND</text>
+  <!-- NOR -->
+  <line x1="500" y1="34" x2="518" y2="34"/><line x1="500" y1="54" x2="518" y2="54"/><rect x="518" y="24" width="38" height="40"/><circle cx="560" cy="44" r="4"/><line x1="564" y1="44" x2="580" y2="44"/>
+  <text x="537" y="50" stroke="none" fill="#000">≥1</text><text x="539" y="84" stroke="none" fill="#000" font-size="12" font-weight="700">NOR</text>
+  <!-- XNOR -->
+  <line x1="598" y1="34" x2="616" y2="34"/><line x1="598" y1="54" x2="616" y2="54"/><rect x="616" y="24" width="38" height="40"/><circle cx="658" cy="44" r="4"/><line x1="662" y1="44" x2="678" y2="44"/>
+  <text x="635" y="50" stroke="none" fill="#000">=1</text><text x="637" y="84" stroke="none" fill="#000" font-size="12" font-weight="700">XNOR</text>
+ </g>
+ <text x="350" y="12" font-size="10" text-anchor="middle">Kreis am Ausgang = Negation · Eingänge links, Ausgang rechts</text>
+</svg>
+<figcaption>Abb. 5.1 – Logikgatter nach IEC 60617 (wie auf der Folie markiert). In Europa gilt IEC 60617, in US-Schaltplänen oft ANSI 91-1984 (runde/spitze Formen); DIN 40700 ist veraltet.</figcaption>
+</figure>
+
+<h3>De-Morgan-Gesetze und NAND als Universalgatter</h3>
+<div class="def"><b>De Morgan:</b> ¬(A ∧ B) = ¬A ∨ ¬B  und  ¬(A ∨ B) = ¬A ∧ ¬B. Merksatz: <b>Negation über die Klammer ziehen → AND und OR tauschen, jede Variable negieren.</b></div>
+<table class="small">
+<tr><th class="c">A</th><th class="c">B</th><th class="c">A ∧ B</th><th class="c">¬(A ∧ B)</th><th class="c">¬A</th><th class="c">¬B</th><th class="c">¬A ∨ ¬B</th></tr>
+<tr><td class="c">0</td><td class="c">0</td><td class="c">0</td><td class="c"><b>1</b></td><td class="c">1</td><td class="c">1</td><td class="c"><b>1</b></td></tr>
+<tr><td class="c">0</td><td class="c">1</td><td class="c">0</td><td class="c"><b>1</b></td><td class="c">1</td><td class="c">0</td><td class="c"><b>1</b></td></tr>
+<tr><td class="c">1</td><td class="c">0</td><td class="c">0</td><td class="c"><b>1</b></td><td class="c">0</td><td class="c">1</td><td class="c"><b>1</b></td></tr>
+<tr><td class="c">1</td><td class="c">1</td><td class="c">1</td><td class="c"><b>0</b></td><td class="c">0</td><td class="c">0</td><td class="c"><b>0</b></td></tr>
+</table>
+<p><b>NAND (ebenso NOR) ist vollständig</b>: Allein damit lässt sich jede logische Funktion bauen – praktisch für die Chipfertigung und FPGAs. Folienübung „AND nur aus NAND“:</p>
+<ul>
+<li><b>NOT A</b> = NAND(A, A) (beide Eingänge zusammenschalten).</li>
+<li><b>A AND B</b> = NOT(NAND(A, B)) = NAND(NAND(A,B), NAND(A,B)) → 2 NAND-Gatter.</li>
+<li><b>A OR B</b> = NAND(¬A, ¬B) = NAND(NAND(A,A), NAND(B,B)) → 3 NAND-Gatter (Begründung De Morgan: ¬(¬A ∧ ¬B) = A ∨ B).</li>
+</ul>
+
+<h3>Synthese: Wahrheitstabelle → Boolescher Ausdruck (DNF) → Schaltung <span class="tag">Rückschau</span></h3>
+<p>Das „Standard-Vorgehen“ der Folie heißt in der Fachsprache <b>disjunktive Normalform (DNF)</b> <span class="erg">(Begriff = Ergänzung)</span>:</p>
+<ol>
+<li>Alle Zeilen suchen, in denen der <b>Ausgang 1</b> ist.</li>
+<li>Für jede dieser Zeilen einen <b>UND-Term</b> bilden: Variable mit Wert 1 → <b>A</b>, Variable mit Wert 0 → <b>¬A</b>. Der Term ist genau in dieser Zeile 1.</li>
+<li>Alle UND-Terme mit <b>ODER</b> verknüpfen.</li>
+<li>Optional vereinfachen (z. B. Spezialgatter wie XNOR erkennen oder ausklammern).</li>
+<li>Schaltung: Inverter für negierte Eingänge → je Term ein &amp;-Gatter → ein ≥1-Gatter am Ende.</li>
+</ol>
+<p><b>Folienbeispiele:</b> Tabelle mit Out = 1 nur bei A=1, B=0 → <b>A ∧ ¬B</b>. Tabelle mit Out = 1 nur bei A=0, B=1 → <b>B ∧ ¬A</b>. Tabelle mit Out = 1 bei (0,0) und (1,1):</p>
+<div class="cols">
+<div>
+<table class="tt">
+<tr><th>A</th><th>B</th><th>Out</th><th>Teilterm</th></tr>
+<tr><td>0</td><td>0</td><td><b>1</b></td><td>¬A ∧ ¬B</td></tr>
+<tr><td>0</td><td>1</td><td>0</td><td></td></tr>
+<tr><td>1</td><td>0</td><td>0</td><td></td></tr>
+<tr><td>1</td><td>1</td><td><b>1</b></td><td>A ∧ B</td></tr>
+</table>
+<p class="small" style="margin-top:2mm">Ergebnis: <b>Out = (¬A ∧ ¬B) ∨ (A ∧ B)</b><br>Abkürzung: Das ist genau <b>XNOR</b> („gleich“) → ein einziges Gatter =1 mit Negationskreis.</p>
+</div>
+<figure style="margin:0">
+<svg viewBox="0 0 340 150" width="330" xmlns="http://www.w3.org/2000/svg">
+ <g stroke="#000" stroke-width="1.4" fill="none" font-size="13">
+  <text x="4" y="34" stroke="none" fill="#000" font-weight="700">A</text><text x="4" y="94" stroke="none" fill="#000" font-weight="700">B</text>
+  <!-- A line -->
+  <line x1="16" y1="30" x2="80" y2="30"/><circle cx="34" cy="30" r="2.5" fill="#000"/>
+  <line x1="34" y1="30" x2="34" y2="120"/><line x1="34" y1="120" x2="190" y2="120"/>
+  <!-- B line -->
+  <line x1="16" y1="90" x2="80" y2="90"/><circle cx="50" cy="90" r="2.5" fill="#000"/>
+  <line x1="50" y1="90" x2="50" y2="134"/><line x1="50" y1="134" x2="190" y2="134"/>
+  <!-- NOT A -->
+  <rect x="80" y="18" width="30" height="24" fill="#fff"/><text x="95" y="35" stroke="none" fill="#000" text-anchor="middle">1</text><circle cx="114" cy="30" r="3.5" fill="#fff"/>
+  <!-- NOT B -->
+  <rect x="80" y="78" width="30" height="24" fill="#fff"/><text x="95" y="95" stroke="none" fill="#000" text-anchor="middle">1</text><circle cx="114" cy="90" r="3.5" fill="#fff"/>
+  <line x1="118" y1="30" x2="190" y2="30"/><line x1="118" y1="90" x2="160" y2="90"/><line x1="160" y1="90" x2="160" y2="46"/><line x1="160" y1="46" x2="190" y2="46"/>
+  <!-- AND1 -->
+  <rect x="190" y="20" width="34" height="36" fill="#fff"/><text x="207" y="43" stroke="none" fill="#000" text-anchor="middle">&amp;</text>
+  <!-- AND2 -->
+  <rect x="190" y="110" width="34" height="34" fill="#fff"/><text x="207" y="132" stroke="none" fill="#000" text-anchor="middle">&amp;</text>
+  <!-- OR -->
+  <line x1="224" y1="38" x2="250" y2="38"/><line x1="250" y1="38" x2="250" y2="72"/><line x1="250" y1="72" x2="270" y2="72"/>
+  <line x1="224" y1="127" x2="250" y2="127"/><line x1="250" y1="127" x2="250" y2="92"/><line x1="250" y1="92" x2="270" y2="92"/>
+  <rect x="270" y="62" width="34" height="40" fill="#fff"/><text x="287" y="87" stroke="none" fill="#000" text-anchor="middle">≥1</text>
+  <line x1="304" y1="82" x2="325" y2="82"/><text x="306" y="74" stroke="none" fill="#000" font-size="11">Out</text>
+ </g>
+</svg>
+<figcaption>Abb. 5.2 – Standard-Vorgehen als Schaltung (Folie 24)</figcaption>
+</figure>
+</div>
+
+<h3>Von der textuellen Beschreibung zur Schaltung – durchgerechnetes Beispiel <span class="erg">(eigenes Übungsbeispiel)</span></h3>
+<p><i>„Eine Alarmanlage (Y) soll auslösen, wenn sie scharf geschaltet ist (S) und die Tür (T) oder das Fenster (F) geöffnet ist.“</i></p>
+<div class="cols">
+<div>
+<table class="tt">
+<tr><th>S</th><th>T</th><th>F</th><th>Y</th><th>UND-Term</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>0</td><td></td></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>0</td><td></td></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>0</td><td></td></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td>1</td><td>0</td><td>1</td><td><b>1</b></td><td>S ∧ ¬T ∧ F</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td><b>1</b></td><td>S ∧ T ∧ ¬F</td></tr>
+<tr><td>1</td><td>1</td><td>1</td><td><b>1</b></td><td>S ∧ T ∧ F</td></tr>
+</table>
+</div>
+<div>
+<p class="small"><b>1. Tabelle:</b> 3 Eingänge → 2³ = <b>8 Zeilen</b>; Eingänge wie Binärzahlen 000 bis 111 hochzählen.</p>
+<p class="small"><b>2. DNF:</b> Y = (S ∧ ¬T ∧ F) ∨ (S ∧ T ∧ ¬F) ∨ (S ∧ T ∧ F)</p>
+<p class="small"><b>3. Vereinfachen:</b> S steckt in jedem Term → ausklammern; die drei Rest-Terme sind genau dann 1, wenn T oder F gilt: <b>Y = S ∧ (T ∨ F)</b>. Beide Ausdrücke liefern dieselbe Tabelle (mit Python geprüft). Die DNF ist immer richtig, wenn die Zeit knapp ist.</p>
+<figure style="margin:1mm 0">
+<svg viewBox="0 0 300 100" width="280" xmlns="http://www.w3.org/2000/svg">
+ <g stroke="#000" stroke-width="1.4" fill="none" font-size="13">
+  <text x="4" y="24" stroke="none" fill="#000" font-weight="700">T</text><text x="4" y="54" stroke="none" fill="#000" font-weight="700">F</text><text x="4" y="88" stroke="none" fill="#000" font-weight="700">S</text>
+  <line x1="18" y1="20" x2="80" y2="20"/><line x1="18" y1="50" x2="80" y2="50"/>
+  <rect x="80" y="10" width="36" height="50" fill="#fff"/><text x="98" y="40" stroke="none" fill="#000" text-anchor="middle">≥1</text>
+  <line x1="116" y1="35" x2="150" y2="35"/><line x1="150" y1="35" x2="150" y2="50"/><line x1="150" y1="50" x2="180" y2="50"/>
+  <line x1="18" y1="84" x2="150" y2="84"/><line x1="150" y1="84" x2="150" y2="70"/><line x1="150" y1="70" x2="180" y2="70"/>
+  <rect x="180" y="40" width="36" height="40" fill="#fff"/><text x="198" y="65" stroke="none" fill="#000" text-anchor="middle">&amp;</text>
+  <line x1="216" y1="60" x2="250" y2="60"/><text x="255" y="64" stroke="none" fill="#000" font-weight="700">Y</text>
+ </g>
+</svg>
+<figcaption>Abb. 5.3 – Y = S ∧ (T ∨ F)</figcaption>
+</figure>
+</div>
+</div>
+
+<h3>Analyse: Ausdruck oder Schaltung → Wahrheitstabelle</h3>
+<p>Umgekehrt gehst du so vor: Spalten für alle Eingänge (2<sup>n</sup> Zeilen), dann <b>Hilfsspalten für Zwischenergebnisse</b> (z. B. Ausgang jedes Gatters), zuletzt der Ausgang. Beispiel Y = (A ∨ B) ∧ ¬C: Hilfsspalten A ∨ B und ¬C; Y ist 1 in den Zeilen (A,B,C) = (0,1,0), (1,0,0), (1,1,0), sonst 0.</p>
+
+<h3>Rechnen mit Gattern: Halbaddierer und Volladdierer <span class="tag">Rückschau</span></h3>
+<div class="cols">
+<table class="tt">
+<tr><th>A</th><th>B</th><th>s</th><th>c<sub>out</sub></th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+</table>
+<div>
+<p>Ein <b>Halbaddierer</b> addiert zwei Bits: Summe <b>s = A XOR B</b>, Übertrag <b>c = A AND B</b>. Ein <b>Volladdierer</b> berücksichtigt zusätzlich einen eingehenden Übertrag (c<sub>in</sub>) und besteht aus <b>zwei Halbaddierern und einem OR-Gatter</b>. Mehrere Volladdierer hintereinander, die den Übertrag weiterreichen, ergeben ein <b>Addierwerk</b> (z. B. 4 Bit).</p>
+</div>
+</div>
+<div class="err"><b>Folienhinweis (Exkurs Flipflop, VL02):</b> Ein Flipflop (bistabile Kippstufe aus zwei rückgekoppelten NOR- oder NAND-Gattern) speichert 1 Bit: Set → 1, Reset → 0, S = R = 0 → Zustand bleibt. Die Zustandstabelle auf der Folie vertauscht S und R – im Zweifel nach dieser Regel gehen. Der Flipflop-Exkurs steht nicht in der Rückschau.</div>
+
+<div class="box trap"><div class="t">Typische Klausurfallen</div>
+<ul>
+<li>Bei n Eingängen hat die Tabelle <b>2<sup>n</sup> Zeilen</b> (3 Eingänge = 8 Zeilen). Systematisch wie Binärzahlen hochzählen, sonst vergisst du Zeilen.</li>
+<li>In der DNF wird eine <b>0 in der Zeile zu ¬Variable</b>, eine 1 zur Variable. Nur Zeilen mit Ausgang 1 verwenden.</li>
+<li>XOR ist 0 bei (1,1) – „entweder oder“. XNOR = „gleich“.</li>
+<li>De Morgan: ¬(A ∧ B) ist <b>nicht</b> ¬A ∧ ¬B, sondern ¬A <b>∨</b> ¬B.</li>
+<li>IEC-Symbole: AND = <b>&amp;</b>, OR = <b>≥1</b>, XOR = <b>=1</b>, NOT = <b>1</b> mit Kreis. Negation = <b>Kreis am Ausgang</b>. Nicht die US-Formen mischen.</li>
+<li>Halbaddierer: Summe = XOR (nicht OR!), Übertrag = AND.</li>
+</ul></div>
+<div class="box must"><div class="t">Das musst du können</div>
+<ul>
+<li>Wahrheitstabellen aller 7 Gatter aufschreiben</li>
+<li>IEC-Symbole zeichnen</li>
+<li>Text → Wahrheitstabelle</li>
+<li>Tabelle → DNF-Ausdruck</li>
+<li>Ausdruck → Schaltung mit &amp;, ≥1, 1</li>
+<li>Schaltung/Ausdruck → Tabelle (Hilfsspalten)</li>
+<li>De Morgan anwenden</li>
+<li>AND/OR/NOT nur aus NAND bauen</li>
+<li>Halbaddierer erklären</li>
+</ul></div>
+
+<!-- ===================================================== -->
+<h2>6 · Programmierung <span class="pts">2 P</span></h2>
+<p>Laut VL01: „Dies ist <b>KEIN</b> Programmierkurs.“ Die Klausur stellt hier „allgemeine Fragen“ – Begriffe, Unterschiede, Rekursion.</p>
+
+<h3>Algorithmus, Programm, Prozess <span class="tag">Rückschau</span></h3>
+<table>
+<tr><th style="width:25mm">Begriff</th><th>Definition (Folie)</th><th>Beispiel</th></tr>
+<tr><td><b>Algorithmus</b></td><td>Handlungsvorschrift zur Lösung eines Problems oder Erreichen eines Ziels <b>in endlicher Zeit</b>. Grafisch modellierbar als <b>Struktogramm</b> (erlaubt kein GOTO) oder <b>UML-Aktivitätsdiagramm</b>.</td><td>Kuchenrezept; Zahlen sortieren (Folie: Selection Sort als Struktogramm)</td></tr>
+<tr><td><b>Programm</b></td><td>Umgesetzte Version eines oder mehrerer Algorithmen in einer bestimmten Programmiersprache; darf auch <b>unendlich</b> laufen.</td><td>Serverprozess; „Gib jede Sekunde eine um 1 erhöhte Zahl aus“ = Programm, aber <b>kein</b> Algorithmus (nicht endlich)</td></tr>
+<tr><td><b>Prozess</b></td><td>Ein <b>laufendes</b> Programm mit allen Daten, Variablenwerten und Verwaltungsinformationen des Betriebssystems (→ 2. Semester).</td><td>geöffneter Browser im Taskmanager</td></tr>
+</table>
+
+<h3>Von der Maschinensprache zur Hochsprache <span class="tag">Rückschau</span></h3>
+<p>Ein Computer kann nur <b>binäre Maschinenbefehle</b> ausführen. Diese sind für Menschen praktisch unlesbar und <b>je nach Prozessor verschieden</b>. Die erste Abstraktion war <b>Assembler</b>: symbolische Namen für Maschinenbefehle (z. B. <span class="mono">ADD</span>, beim 6502 <span class="mono">LDA NUM1 / ADC NUM2 / STA RES</span>: Wert ins Register laden, addieren, Ergebnis an eine Adresse schreiben). Mit wachsender Komplexität wurde Assembler unübersichtlich; <b>höhere Programmiersprachen</b> (Python, Java, C++) formulieren Algorithmen in für Menschen verständlicher Form und brauchen ein Übersetzungsprogramm. Entwicklungslinie <span class="tag">nur Folie</span>: BASIC (GOTO) → strukturierte Programmierung (Pascal) → Objektorientierung/Kapselung (C++, Java) → Speichersicherheit (Rust). Der <b>TIOBE-Index</b> misst die <b>Popularität</b> einer Sprache, nicht ihre Qualität.</p>
+
+<h3>Werkzeuge der Softwareentwicklung <span class="tag">nur Folie</span> (im Rückblick VL03a genannt)</h3>
+<table class="small">
+<tr><th>Werkzeug</th><th>Aufgabe</th></tr>
+<tr><td><b>Compiler</b></td><td>übersetzt das Programm <b>vorab</b> vollständig in Maschinencode für eine bestimmte Hardware. Phasen: Scanner (lexikalische Analyse) → Parser (Syntaxanalyse, Syntaxbaum) → semantische Analyse/Optimierung → Codeerzeugung.</td></tr>
+<tr><td><b>Interpreter</b></td><td>übersetzt und führt die Befehle erst <b>zur Laufzeit</b> aus; Optimierung durch Vorübersetzen in maschinenunabhängigen <b>Bytecode</b> (Java, Python).</td></tr>
+<tr><td><b>Linker</b></td><td>verbindet getrennt übersetzte Module zu einem ausführbaren Programm. <b>Statisch</b>: alles in eine Datei; <b>dynamisch</b>: Bibliotheken (DLL) erst zur Laufzeit – teilbar und austauschbar, aber Abbruch, wenn eine fehlt.</td></tr>
+<tr><td><b>Lader</b></td><td>lädt den Maschinencode an eine Speicheradresse und passt die Adressen an; beim Rechnerstart: Bootstrap.</td></tr>
+<tr><td><b>Debugger / IDE</b></td><td>schrittweise Ausführung mit Haltepunkten / Editor + Compiler + Debugger in einer Umgebung (z. B. Eclipse).</td></tr>
+</table>
+
+<h3>Fehlerarten: Syntax, Semantik, Typen <span class="tag">nur Folie</span></h3>
+<ul>
+<li><b>Syntaxfehler</b>: falsche Schreibweise (z. B. fehlende Klammer) → der Compiler meldet einen Fehler.</li>
+<li><b>Semantikfehler</b>: korrekt geschrieben, aber falsche Bedeutung (z. B. Werte vertauscht) → <b>kein</b> Fehler gemeldet, Ergebnis falsch.</li>
+<li><b>Typfalle in Java</b>: <span class="mono">int z1 = 10; int z2 = 3; double res = z1 / z2;</span> ergibt <b>3.0</b>, weil erst <span class="mono">int / int</span> ganzzahlig geteilt (3) und dann in double umgewandelt wird. Richtig: <span class="mono">(double) z1 / z2</span> → 3.333…</li>
+</ul>
+<div class="err"><b>Folienfehler (VL02 F. 86):</b> <span class="mono">double(z1) / z2</span> ist kein gültiges Java (C++-Schreibweise). In Java heißt der Cast <span class="mono">(double) z1</span>; außerdem steht dort <span class="mono">Int</span> statt <span class="mono">int</span>.</div>
+
+<h3>Elementare Datentypen (Java) <span class="tag">nur Folie</span></h3>
+<table class="small">
+<tr><th>Typ</th><th>byte</th><th>short</th><th>int</th><th>long</th><th>float</th><th>double</th><th>char</th><th>boolean</th></tr>
+<tr><td>Größe</td><td>8 Bit</td><td>16 Bit</td><td>32 Bit</td><td>64 Bit</td><td>32 Bit</td><td>64 Bit</td><td>16 Bit (Unicode)</td><td>1 Bit (laut Folie)</td></tr>
+<tr><td>Bereich</td><td>−128…127</td><td>−32768…32767</td><td>ca. ±2,1 Mrd.</td><td>ca. ±9,2·10¹⁸</td><td colspan="2">Gleitkomma IEEE 754</td><td>Zeichen</td><td>true/false</td></tr>
+</table>
+
+<h3>Rekursion: Teile und Herrsche <span class="tag">Rückschau</span></h3>
+<p><b>Teile und Herrsche (Divide and Conquer)</b>: Eine Aufgabe wird in (zwei) gleichartige Teilaufgaben mit verkleinerter (halbierter) Eingabe zerlegt (z. B. Merge Sort). <b>Rekursion</b> ist der Implementierungsaspekt: Eine Funktion ruft sich (ggf. mehrfach) <b>selbst</b> mit geänderten Eingabewerten auf. Sie braucht eine <b>Abbruchbedingung</b>, sonst ruft sie sich endlos auf (Stack-Überlauf).</p>
+<div class="cols">
+<pre>// iterativ (Schleife)
+public static long fakite(int number) {
+  long sum = 1;
+  for (int i = 1; i &lt;= number; i++) {
+    sum = sum * i;
+  }
+  return sum;
+}</pre>
+<pre>// rekursiv (Selbstaufruf)
+public static long fakrek(int number) {
+  if (number == 1 || number == 0) {
+    return 1;          // Abbruchbedingung
+  }
+  else return number * fakrek(number - 1);
+}</pre>
+</div>
+<div class="calc">fakrek(4) = 4 · fakrek(3) = 4 · 3 · fakrek(2) = 4 · 3 · 2 · fakrek(1) = 4 · 3 · 2 · 1 = 24
+N! = 1 · 2 · … · N;  0! = 1! = 1.   Türme von Hanoi: n Scheiben brauchen 2ⁿ − 1 Züge (3 Scheiben → 7).</div>
+
+<div class="box trap"><div class="t">Typische Klausurfallen</div>
+<ul>
+<li>Ein Algorithmus muss <b>endlich</b> sein, ein Programm nicht (Endlosschleife/Server = Programm, kein Algorithmus).</li>
+<li>Programm ≠ Prozess: Prozess = <b>laufendes</b> Programm mit Daten und Verwaltungsinformationen.</li>
+<li>Maschinensprache ist <b>prozessorabhängig</b>; Assembler ist nur eine symbolische Schreibweise davon.</li>
+<li>Compiler übersetzt vorab, Interpreter zur Laufzeit. Syntaxfehler meldet der Compiler, Semantikfehler nicht.</li>
+<li>Rekursion ohne Abbruchbedingung terminiert nicht.</li>
+</ul></div>
+<div class="box must"><div class="t">Das musst du können</div>
+<ul>
+<li>Algorithmus/Programm/Prozess abgrenzen</li>
+<li>Maschinensprache/Assembler/Hochsprache</li>
+<li>Compiler vs. Interpreter</li>
+<li>Syntax- vs. Semantikfehler</li>
+<li>Rekursion + Abbruchbedingung erklären</li>
+<li>Fakultät rekursiv nachvollziehen</li>
+</ul></div>
+
+<!-- ===================================================== -->
+<h2>7 · Datenstrukturen <span class="pts">6–8 P</span></h2>
+<p>Gefragt werden laut VL05 „<b>Bedeutung, Funktionsweise und APIs</b>“ sowie die „Anwendung der Datenstrukturen Stack, Queue, Liste, sortierte Liste, binäre Bäume“. Du musst also Operationen ausführen können („Was liegt nach push(3), push(7), pop() oben?“) und Vor-/Nachteile begründen.</p>
+
+<h3>Elementare Datentypen vs. Datenstrukturen <span class="tag">Rückschau</span></h3>
+<p><b>Elementare Datentypen</b> sind die Grundbausteine, z. B. eine ganze Zahl mit 32 Bit oder ein Zeichen mit 1 Byte. <b>Datenstrukturen</b> dienen der strukturierten Ablage von Daten im Hauptspeicher: Mehrere Daten (auch verschiedener Typen) werden gemeinsam adressiert, Schachtelungen sind möglich, und die Struktur hängt vom Anwendungskontext ab. Manche sind in der Sprache vorgegeben, andere frei definierbar.</p>
+<ul>
+<li><b>String</b>: Folge von Zeichen (char) im Speicher; Operationen: vergleichen, Zeichen anfügen, Teile auslesen.</li>
+<li><b>Selbstdefinierte Struktur „Kunde“</b>: ID-Nummer (Int), Name (String), durchschnittlicher Umsatz/Jahr (Float). So eine „flache“ Struktur entspricht einer Zeile in einer relationalen Datenbank.</li>
+<li><b>Tabelle</b> (Vorgriff auf SQL): Kombination aus selbstdefinierter Struktur und Array/Liste; eine Spalte enthält einen <b>eindeutigen Schlüssel</b> (Kundennummer).</li>
+</ul>
+
+<h3>Array (Feld) <span class="tag">Rückschau</span></h3>
+<p>Älteste Datenstruktur, vergleichbar mit Vektoren/Matrizen. Elemente werden unter einem <b>fortlaufenden Index</b> gespeichert (beginnend bei 0) und können direkt darüber angesprochen werden. Arrays haben eine <b>feste Länge</b>, die beim Anlegen festgelegt wird; mehrdimensional möglich.</p>
+<table class="small" style="width:auto"><tr><th>Index</th><td>0</td><td>1</td><td>2</td><td>3</td><td>…</td><td>9</td></tr><tr><th>Wert</th><td>Walter</td><td>Heinz</td><td>Frank</td><td>Karl</td><td>…</td><td>Horst</td></tr></table>
+<p><b>Vorteile:</b> einfach; effizienter <b>direkter Zugriff</b> über den Index. <b>Nachteile:</b> Länge nicht direkt änderbar (in neues Array umkopieren); Einfügen und Entfernen nicht direkt möglich (Elemente umkopieren/verschieben).</p>
+
+<h3>Verkettete Listen <span class="tag">Rückschau</span></h3>
+<p>In einer <b>einfach verketteten Liste</b> gibt es nicht zwingend einen Index. Bekannt ist nur die Position des <b>ersten Elements</b> (Kopf); alle weiteren Elemente können verstreut im Speicher liegen, und <b>jedes Element kennt nur seinen Nachfolger</b> (Zeiger). Neue Elemente werden dynamisch angelegt und durch Umhängen von Zeigern eingefügt. Die <b>Suche</b> erfordert das Durchlaufen ab dem Startelement.</p>
+<figure>
+<svg viewBox="0 0 620 130" width="600" xmlns="http://www.w3.org/2000/svg">
+ <defs><marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker></defs>
+ <g font-size="13" text-anchor="middle" stroke="#000" stroke-width="1.3">
+  <text x="30" y="34" stroke="none" fill="#000" font-size="11">Kopf</text>
+  <line x1="30" y1="40" x2="30" y2="55" stroke="none"/>
+  <line x1="50" y1="30" x2="78" y2="30" marker-end="url(#a2)"/>
+  <rect x="80" y="15" width="50" height="30" fill="#fff"/><rect x="130" y="15" width="22" height="30" fill="#e6e6e6"/><text x="105" y="35" stroke="none" fill="#000">A</text><circle cx="141" cy="30" r="2.5" fill="#000"/>
+  <line x1="141" y1="30" x2="228" y2="30" marker-end="url(#a2)"/>
+  <rect x="230" y="15" width="50" height="30" fill="#fff"/><rect x="280" y="15" width="22" height="30" fill="#e6e6e6"/><text x="255" y="35" stroke="none" fill="#000">B</text><circle cx="291" cy="30" r="2.5" fill="#000"/>
+  <line x1="291" y1="30" x2="378" y2="30" marker-end="url(#a2)"/>
+  <rect x="380" y="15" width="50" height="30" fill="#fff"/><rect x="430" y="15" width="22" height="30" fill="#e6e6e6"/><text x="405" y="35" stroke="none" fill="#000">C</text><text x="441" y="35" stroke="none" fill="#000" font-size="11">∅</text>
+  <!-- insert X -->
+  <rect x="170" y="80" width="50" height="30" fill="#fff" stroke-dasharray="4 2"/><rect x="220" y="80" width="22" height="30" fill="#e6e6e6" stroke-dasharray="4 2"/><text x="195" y="100" stroke="none" fill="#000">X</text><circle cx="231" cy="95" r="2.5" fill="#000"/>
+  <path d="M141,36 C150,70 160,90 168,93" fill="none" stroke-dasharray="4 2" marker-end="url(#a2)"/>
+  <path d="M231,95 C245,80 250,60 253,47" fill="none" stroke-dasharray="4 2" marker-end="url(#a2)"/>
+  <text x="470" y="85" stroke="none" fill="#000" font-size="11" text-anchor="start">Einfügen von X zwischen A und B:</text>
+  <text x="470" y="100" stroke="none" fill="#000" font-size="11" text-anchor="start">1. X.next = A.next (zeigt auf B)</text>
+  <text x="470" y="115" stroke="none" fill="#000" font-size="11" text-anchor="start">2. A.next = X  (gestrichelt)</text>
+ </g>
+</svg>
+<figcaption>Abb. 7.1 – Einfach verkettete Liste; Einfügen = nur zwei Zeiger umhängen, nichts umkopieren. Löschen von B: A.next = B.next.</figcaption>
+</figure>
+<p>Bei der <b>doppelt verketteten Liste</b> kennt jedes Element <b>Vorgänger und Nachfolger</b>. Bestimmte Operationen werden einfacher: Kennt man das zu löschende Element schon, muss man nicht erst die Liste durchlaufen, um den Vorgänger zu finden.</p>
+<p><b>Sortierte Liste</b> <span class="erg">(steht in der VL05-Themenliste, Erklärung = Ergänzung)</span>: Die Elemente werden beim Einfügen gleich an der <b>richtigen Position</b> (nach dem Sortierkriterium) eingehängt. Dafür muss man die Liste ab dem Kopf durchlaufen, bis das erste größere Element kommt (Aufwand O(n)); dafür ist die Liste jederzeit sortiert, und die Suche kann abbrechen, sobald ein größeres Element erreicht ist. Beispiel: In 10 → 19 → 36 wird 25 zwischen 19 und 36 eingehängt. Binäre Suche lohnt sich auf einer verketteten Liste nicht, weil man die Mitte nicht direkt per Index anspringen kann, sondern hinlaufen muss (vgl. Folienbild „19?“).</p>
+
+<h3>Stack (Stapel) und Queue (Warteschlange) <span class="tag">Rückschau</span></h3>
+<div class="cols">
+<div>
+<p><b>Stack</b>: spezielle Liste ohne freien Zugriff auf die Elemente; Prinzip <b>LIFO</b> (Last In, First Out) – wie ein Tellerstapel.</p>
+<ul class="small">
+<li><span class="mono">push(x)</span>: neues Element oben auflegen</li>
+<li><span class="mono">pop()</span>: oberstes Element entnehmen</li>
+<li><span class="mono">top()</span>: oberstes Element lesen, aber liegen lassen</li>
+<li>Fehlerfall: <span class="mono">pop()</span>/<span class="mono">top()</span> auf leerem Stapel</li>
+</ul>
+<p class="small">Anwendungen <span class="erg">(Ergänzung)</span>: Funktionsaufrufe/Rekursion (Aufrufstack), „Rückgängig“, Klammerprüfung.</p>
+</div>
+<div>
+<p><b>Queue</b>: listenartige Struktur, Prinzip <b>FIFO</b> (First In, First Out) – wie eine Warteschlange an der Kasse.</p>
+<ul class="small">
+<li><span class="mono">put(x)</span>: Element <b>am Ende</b> einfügen (oft auch <span class="mono">enqueue</span>)</li>
+<li><span class="mono">get()</span>: Element <b>am Anfang</b> entnehmen (oft auch <span class="mono">dequeue</span>)</li>
+<li>Fehlerfall: <span class="mono">get()</span> auf leerer Queue</li>
+</ul>
+<p class="small">Anwendungen <span class="erg">(Ergänzung)</span>: Druckerwarteschlange, Nachrichten zwischen Systemen, Aufträge der Reihe nach abarbeiten.</p>
+</div>
+</div>
+<table class="small">
+<tr><th>Operation</th><th>Stack (oben = rechts)</th><th>Ausgabe</th><th>Operation</th><th>Queue (vorne = links)</th><th>Ausgabe</th></tr>
+<tr><td class="m">push(3)</td><td class="m">[3]</td><td></td><td class="m">put(3)</td><td class="m">[3]</td><td></td></tr>
+<tr><td class="m">push(7)</td><td class="m">[3, 7]</td><td></td><td class="m">put(7)</td><td class="m">[3, 7]</td><td></td></tr>
+<tr><td class="m">pop()</td><td class="m">[3]</td><td><b>7</b></td><td class="m">get()</td><td class="m">[7]</td><td><b>3</b></td></tr>
+<tr><td class="m">push(1)</td><td class="m">[3, 1]</td><td></td><td class="m">put(1)</td><td class="m">[7, 1]</td><td></td></tr>
+<tr><td class="m">top()</td><td class="m">[3, 1]</td><td><b>1</b> (bleibt)</td><td class="m">put(9)</td><td class="m">[7, 1, 9]</td><td></td></tr>
+<tr><td class="m">push(9)</td><td class="m">[3, 1, 9]</td><td></td><td class="m">get()</td><td class="m">[1, 9]</td><td><b>7</b></td></tr>
+<tr><td class="m">pop(); pop()</td><td class="m">[3]</td><td><b>9, 1</b></td><td class="m">get()</td><td class="m">[9]</td><td><b>1</b></td></tr>
+</table>
+
+<h3>Bäume – Begriffe <span class="tag">Rückschau</span></h3>
+<p>Bäume sind eine <b>zweidimensionale Erweiterung verketteter Listen</b>. Ein Baum ist eine nicht-leere Menge von <b>Knoten</b> und <b>Kanten</b> (Verbindungen zwischen zwei Knoten). Die <b>Wurzel</b> ist der Ursprung; ein <b>Pfad</b> ist eine Folge unterschiedlicher, durch Kanten verbundener Knoten.</p>
+<div class="cols">
+<ul class="small">
+<li>Jeder Knoten außer der Wurzel hat <b>genau einen Vorgänger</b> und 0 bis n Nachfolger.</li>
+<li><b>Blätter</b> (Endknoten): keine Nachfolger. <b>Innere Knoten</b>: mindestens ein Nachfolger.</li>
+<li>Jeder Knoten ist Wurzel eines <b>Unterbaums</b>.</li>
+<li><b>Ebene</b> eines Knotens = Anzahl Kanten von der Wurzel bis zu ihm; <b>Höhe</b> = höchste Ebene; <b>Pfadlänge</b> = Summe der Ebenen aller Knoten.</li>
+<li><b>Wald</b> = Menge von Bäumen; <b>n-ärer Baum</b> = höchstens n Nachfolger.</li>
+</ul>
+<ul class="small">
+<li><b>Binärbaum</b>: höchstens zwei Nachfolger (links/rechts).</li>
+<li><b>Geordnet</b> (binärer Suchbaum): Jeder Knoten ist <b>größer als sein linker</b> und <b>kleiner als sein rechter</b> Nachfolger – also links kleiner, rechts größer.</li>
+<li><b>Voll</b> (Folie, <span class="tag">nur Folie</span>): keine „Halbblätter“ (Knoten mit genau einem Nachfolger).</li>
+<li><b>Vollständig</b> (Folie): voller Baum, bei dem alle Blätter auf der letzten Ebene liegen.</li>
+<li><b>Balanciert</b>: Blätter nur auf letzter/vorletzter Ebene, Tiefe ≈ log₂(n+1). <b>Degeneriert</b>: jeder Knoten hat höchstens ein Kind → praktisch eine Liste.</li>
+</ul>
+</div>
+<p><b>Wozu?</b> Binäre Bäume vereinen die Vorteile von Arrays (<b>schnelles Auffinden</b>) mit denen von Listen (<b>leichtes Einfügen/Entfernen</b>). Operationen: <b>Suchen, Einfügen, Löschen</b>.</p>
+
+<h3>Binärbaum aufbauen, suchen, löschen – Folienaufgabe gelöst</h3>
+<p><b>Einfügen</b>: An der Wurzel beginnen; ist der neue Wert kleiner, nach links, sonst nach rechts gehen, bis ein freier Platz kommt; dort als Blatt anhängen. <b>Suchen</b> genauso: pro Ebene ein Vergleich. <b>Löschen</b> – drei Fälle: (1) Blatt → einfach entfernen; (2) ein Kind → das Kind rückt an die Stelle; (3) zwei Kinder → durch den <b>größten Knoten im linken</b> oder den <b>kleinsten Knoten im rechten Teilbaum</b> ersetzen (Folienregel).</p>
+<p>Aufgabe: Binärbaum aus <b>[26, 5, 18, 16, 1, 43, 39, 27, 12]</b> (in dieser Reihenfolge einfügen):</p>
+<figure>
+<svg viewBox="0 0 640 230" width="620" xmlns="http://www.w3.org/2000/svg">
+ <g stroke="#000" stroke-width="1.3" font-size="13" text-anchor="middle">
+  <line x1="170" y1="25" x2="90" y2="75"/><line x1="170" y1="25" x2="250" y2="75"/>
+  <line x1="90" y1="75" x2="50" y2="125"/><line x1="90" y1="75" x2="130" y2="125"/>
+  <line x1="130" y1="125" x2="105" y2="175"/><line x1="105" y1="175" x2="80" y2="215"/>
+  <line x1="250" y1="75" x2="215" y2="125"/><line x1="215" y1="125" x2="190" y2="175"/>
+  <circle cx="170" cy="25" r="15" fill="#e0e0e0"/><text x="170" y="30" stroke="none">26</text>
+  <circle cx="90" cy="75" r="15" fill="#fff"/><text x="90" y="80" stroke="none">5</text>
+  <circle cx="250" cy="75" r="15" fill="#fff"/><text x="250" y="80" stroke="none">43</text>
+  <circle cx="50" cy="125" r="15" fill="#fff"/><text x="50" y="130" stroke="none">1</text>
+  <circle cx="130" cy="125" r="15" fill="#fff" stroke-width="2.6"/><text x="130" y="130" stroke="none">18</text>
+  <circle cx="215" cy="125" r="15" fill="#fff"/><text x="215" y="130" stroke="none">39</text>
+  <circle cx="105" cy="175" r="15" fill="#fff"/><text x="105" y="180" stroke="none">16</text>
+  <circle cx="190" cy="175" r="15" fill="#fff"/><text x="190" y="180" stroke="none">27</text>
+  <circle cx="80" cy="212" r="14" fill="#fff"/><text x="80" y="217" stroke="none">12</text>
+  <text x="170" y="-2" stroke="none" font-size="11">Ausgangsbaum (Höhe 4)</text>
+  <!-- after delete 18 -->
+  <line x1="320" y1="5" x2="320" y2="228" stroke-dasharray="4 3"/>
+  <line x1="480" y1="25" x2="410" y2="75"/><line x1="480" y1="25" x2="560" y2="75"/>
+  <line x1="410" y1="75" x2="375" y2="125"/><line x1="410" y1="75" x2="445" y2="125"/>
+  <line x1="445" y1="125" x2="425" y2="175"/>
+  <line x1="560" y1="75" x2="530" y2="125"/><line x1="530" y1="125" x2="510" y2="175"/>
+  <circle cx="480" cy="25" r="15" fill="#e0e0e0"/><text x="480" y="30" stroke="none">26</text>
+  <circle cx="410" cy="75" r="15" fill="#fff"/><text x="410" y="80" stroke="none">5</text>
+  <circle cx="560" cy="75" r="15" fill="#fff"/><text x="560" y="80" stroke="none">43</text>
+  <circle cx="375" cy="125" r="15" fill="#fff"/><text x="375" y="130" stroke="none">1</text>
+  <circle cx="445" cy="125" r="15" fill="#fff" stroke-width="2.6"/><text x="445" y="130" stroke="none">16</text>
+  <circle cx="530" cy="125" r="15" fill="#fff"/><text x="530" y="130" stroke="none">39</text>
+  <circle cx="425" cy="175" r="15" fill="#fff"/><text x="425" y="180" stroke="none">12</text>
+  <circle cx="510" cy="175" r="15" fill="#fff"/><text x="510" y="180" stroke="none">27</text>
+  <text x="480" y="215" stroke="none" font-size="11">nach Löschen von 18 (ein Kind → 16 rückt nach)</text>
+ </g>
+</svg>
+<figcaption>Abb. 7.2 – Folienaufgabe Bäume. Wurzel grau, der Knoten mit dickem Rand ist der gelöschte bzw. nachgerückte.</figcaption>
+</figure>
+<ul class="small">
+<li><b>Aufbau</b>: 26 Wurzel; 5 &lt; 26 → links; 18: &lt;26, &gt;5 → rechts von 5; 16: &lt;26, &gt;5, &lt;18 → links von 18; 1 → links von 5; 43 → rechts von 26; 39 → links von 43; 27 → links von 39; 12: &lt;26, &gt;5, &lt;18, &lt;16 → links von 16.</li>
+<li><b>18 löschen</b> (hat nur ein Kind, 16): 16 rückt mit seinem Unterbaum nach. Der Baum ist danach <b>weder voll</b> (Halbblätter 16, 43, 39) <b>noch vollständig</b>.</li>
+<li><b>26 löschen</b> (zwei Kinder): Variante „größter links“ → <b>16</b> wird Wurzel: 16(5(1, 12), 43(39(27))). Variante „kleinster rechts“ → <b>27</b> wird Wurzel: 27(5(1, 16(12)), 43(39)).</li>
+<li><b>12 löschen</b> (Blatt): Variante 16 → 16(5(1), 43(39(27))); Variante 27 → 27(5(1, 16), 43(39)). In beiden Fällen <b>weder voll noch vollständig</b> (es gibt Halbblätter).</li>
+<li><b>Degeneriert</b>: Fügt man bereits sortierte Werte ein (1, 2, 3, 4), hängt jeder Knoten rechts am vorherigen → Liste, Suche O(n) statt O(log n).</li>
+</ul>
+<p class="small">Folienbeispiel „Aufbau“: Einfügen 7, 13, 11, 5, 14, 2 ergibt 7(5(2), 13(11, 14)). <span class="erg">(Ergänzung: Liest man links – Knoten – rechts („Inorder“), erhält man die sortierte Folge 2, 5, 7, 11, 13, 14.)</span></p>
+
+<h3>Vergleich der Datenstrukturen</h3>
+<table class="small">
+<tr><th>Struktur</th><th>Prinzip</th><th>Operationen (API)</th><th>Zugriff/Suche</th><th>Einfügen/Löschen</th><th>Vorteil / Nachteil</th></tr>
+<tr><td><b>Array</b></td><td>feste Länge, Index 0…n−1</td><td>a[i] lesen/schreiben</td><td>direkt über Index (O(1)); Suche linear oder binär (wenn sortiert)</td><td>nur durch Umkopieren</td><td>einfach, schneller Indexzugriff / starre Länge</td></tr>
+<tr><td><b>Einfach verkettete Liste</b></td><td>Element + Zeiger auf Nachfolger; nur Kopf bekannt</td><td>einfügen, löschen, durchlaufen</td><td>nur sequentiell ab Kopf (O(n))</td><td>Zeiger umhängen, kein Umkopieren</td><td>dynamische Größe / langsame Suche</td></tr>
+<tr><td><b>Doppelt verkettete Liste</b></td><td>Zeiger auf Vorgänger und Nachfolger</td><td>wie oben, in beide Richtungen</td><td>sequentiell (O(n))</td><td>Löschen ohne Vorgängersuche</td><td>bequemer / mehr Speicher für Zeiger</td></tr>
+<tr><td><b>Sortierte Liste</b></td><td>Elemente stets geordnet</td><td>sortiert einfügen, löschen, suchen</td><td>sequentiell, Abbruch beim ersten größeren</td><td>Einfügeposition suchen (O(n))</td><td>immer sortiert / Einfügen teurer</td></tr>
+<tr><td><b>Stack</b></td><td><b>LIFO</b></td><td>push, pop, top</td><td>nur oberstes Element</td><td>nur oben</td><td>sehr einfach / kein freier Zugriff</td></tr>
+<tr><td><b>Queue</b></td><td><b>FIFO</b></td><td>put (enqueue), get (dequeue)</td><td>nur vorderstes Element</td><td>hinten rein, vorne raus</td><td>faire Reihenfolge / kein freier Zugriff</td></tr>
+<tr><td><b>Geordneter Binärbaum</b></td><td>links kleiner, rechts größer</td><td>suchen, einfügen, löschen</td><td>pro Ebene 1 Vergleich, balanciert O(log n)</td><td>leicht (Blatt anhängen / Ersatzknoten)</td><td>schnell suchen + leicht einfügen / kann degenerieren</td></tr>
+</table>
+<p class="small">Die O(…)-Angaben in dieser Tabelle sind teils <span class="erg">Ergänzung</span>; auf den Folien stehen O(n) und O(log n) bei den Suchverfahren (Block 8).</p>
+
+<div class="box trap"><div class="t">Typische Klausurfallen</div>
+<ul>
+<li><b>Stack = LIFO, Queue = FIFO</b> – nicht vertauschen. <span class="mono">top()</span> entfernt <b>nicht</b>, <span class="mono">pop()</span> schon.</li>
+<li>Auf den Folien heißen die Queue-Operationen <b>Put()/Get()</b>, in VL05 werden auch enqueue/dequeue genannt – beide Namen kennen.</li>
+<li>Immer an den <b>Fehlerfall</b> denken: pop/top/get auf leerer Struktur.</li>
+<li>Array: <b>feste</b> Länge, Index beginnt bei <b>0</b>. Liste: kein Index, nur der Kopf ist bekannt.</li>
+<li>Binärbaum: Gleiche Zahlenfolge in anderer Reihenfolge → anderer Baum. Reihenfolge genau einhalten.</li>
+<li>Löschen mit zwei Kindern: Ersatz ist der <b>größte im linken</b> oder <b>kleinste im rechten</b> Teilbaum – nicht einfach das linke Kind.</li>
+<li>„Voll“ und „vollständig“ nach Foliendefinition beantworten (voll = keine Halbblätter).</li>
+</ul></div>
+<div class="box must"><div class="t">Das musst du können</div>
+<ul>
+<li>Array vs. Liste mit Vor-/Nachteilen</li>
+<li>Einfügen/Löschen in Liste erklären (Zeiger)</li>
+<li>einfach vs. doppelt verkettet</li>
+<li>sortierte Liste erklären</li>
+<li>Stack: push/pop/top, LIFO, Fehlerfall</li>
+<li>Queue: put/get, FIFO, Fehlerfall</li>
+<li>Operationsfolgen „durchspielen“</li>
+<li>Baumbegriffe (Wurzel, Blatt, Ebene, Höhe)</li>
+<li>Binärbaum aus Zahlenfolge aufbauen</li>
+<li>Knoten löschen (3 Fälle)</li>
+<li>voll / vollständig / degeneriert beurteilen</li>
+</ul></div>
+
+<!-- ===================================================== -->
+<h2>8 · Suchen und Sortieren <span class="pts">6 P</span></h2>
+<p>Gefragt werden die „<b>Eigenschaften der verschiedenen Verfahren</b>“: Voraussetzungen, Funktionsweise, Aufwand (O-Notation). Zu den meistgenutzten Algorithmen zählen laut Folie: Sortieren (Mergesort, Quicksort, naiv Bubblesort), Suchen (lineare und binäre Suche), Graphen/kürzeste Wege, Klassifikation/Machine Learning/Data Mining.</p>
+
+<h3>O-Notation – wie skaliert ein Algorithmus? <span class="tag">nur Folie</span> (Exkurs, aber bei allen Verfahren verwendet)</h3>
+<p>Die O-Notation beschreibt die <b>asymptotische Laufzeit</b> in Abhängigkeit von der Eingabegröße n: Wie wächst der Aufwand, wenn die Datenmenge wächst? Konstante Faktoren werden weggelassen.</p>
+<table class="small">
+<tr><th>Klasse</th><th>Name</th><th>Beispiele (Folie)</th><th class="c">n = 1.000</th><th class="c">n = 1.000.000</th></tr>
+<tr><td><b>O(1)</b></td><td>konstant</td><td>Addition von 10 Zahlen</td><td class="c">1</td><td class="c">1</td></tr>
+<tr><td><b>O(log n)</b></td><td>logarithmisch</td><td>binäre Suche in sortiertem Array</td><td class="c">≈ 10</td><td class="c">≈ 20</td></tr>
+<tr><td><b>O(n)</b></td><td>linear</td><td>lineare Suche in unsortierter Liste; Skalarprodukt</td><td class="c">1.000</td><td class="c">10⁶</td></tr>
+<tr><td><b>O(n log n)</b></td><td>„n log n“</td><td>Merge Sort</td><td class="c">≈ 10.000</td><td class="c">≈ 2·10⁷</td></tr>
+<tr><td><b>O(n²)</b></td><td>quadratisch</td><td>Bubble Sort („jeder mit jedem“); alle stoßen an: n·(n−1)/2</td><td class="c">10⁶</td><td class="c">10¹²</td></tr>
+</table>
+<div class="err"><b>Folienfehler (VL02 F. 138):</b> Dort steht die Multiplikation zweier Matrizen unter O(n²). Für n×n-Matrizen ist das naive Verfahren <b>O(n³)</b> – so steht es auch korrekt im KI-Exkurs VL03c.</div>
+
+<h3>Suchverfahren <span class="tag">Rückschau</span></h3>
+<div class="cols">
+<div>
+<h4>Lineare Suche</h4>
+<p>Es werden <b>alle</b> Elemente des Arrays oder der Liste nacheinander angesprungen und mit dem Suchkriterium verglichen. Geeignet auch für <b>unsortierte</b> Daten. Der Aufwand steigt <b>linear</b> mit der Anzahl der Elemente: <b>O(n)</b>.</p>
+</div>
+<div>
+<h4>Binäre Suche</h4>
+<p>Setzt voraus, dass die Daten bereits <b>sortiert</b> sind. Man prüft das <b>mittlere</b> Element; ist der Suchwert größer, sucht man in der rechten Hälfte weiter, ist er kleiner, in der linken. Die Datenmenge wird so wiederholt halbiert; der Aufwand ist auf die Anzahl der Halbierungen begrenzt: <b>O(log n)</b>.</p>
+</div>
+</div>
+<div class="calc">Array (sortiert): Index  0   1   2   3   4   5   6   7   8
+                 Wert  10  19  23  25  36  61  79  81  99
+Suche 61:  Mitte Index 4 = 36 → 61 > 36 → rechts weiter (Index 5–8)
+           Mitte Index 6 = 79 → 61 < 79 → links weiter (Index 5)
+           Index 5 = 61 → gefunden nach 3 Vergleichen  (Folie identisch)
+Suche 19:  Mitte 36 → 19 < 36 → links (Index 0–3); Mitte (0+3)/2 = 1 → 19 gefunden (2 Vergleiche)
+Suche 80:  36 → 79 → 81 → Bereich leer → nicht vorhanden (3 Vergleiche statt 9 bei linearer Suche)</div>
+<p class="small">Bei gerader Anzahl gibt es zwei „Mitten“ – welche man nimmt, ist Konvention. Die Folie wählt bei 19 im linken Teil 23 und braucht 3 Schritte; das Ergebnis ist dasselbe. Merke: 1.000 Elemente → max. ca. 10 Vergleiche, 1 Mio. → ca. 20.</p>
+
+<h3>Sortierverfahren</h3>
+<h4>Bubble Sort <span class="tag">Rückschau</span></h4>
+<p>Je zwei <b>benachbarte</b> Elemente werden verglichen und, falls sie in der falschen Reihenfolge stehen, <b>vertauscht</b>. Am Ende des ersten Durchlaufs steht das <b>größte Element am Ende</b> („steigt auf wie eine Blase“). Es sind (höchstens) so viele Durchläufe nötig, wie es Elemente gibt. Der Aufwand steigt <b>quadratisch</b>: <b>O(n²)</b>.</p>
+<div class="calc">Start:        [5, 1, 4, 2, 8]
+Durchlauf 1:  5↔1 → [1,5,4,2,8]; 5↔4 → [1,4,5,2,8]; 5↔2 → [1,4,2,5,8]; 5<8 bleibt  → [1, 4, 2, 5, 8]  (8 sitzt fest)
+Durchlauf 2:  1<4; 4↔2 → [1,2,4,5,8]; 4<5                                     → [1, 2, 4, 5, 8]
+Durchlauf 3:  keine Vertauschung mehr → fertig (Abbruch möglich, Ergänzung)</div>
+
+<h4>Merge Sort <span class="tag">Rückschau</span></h4>
+<p>Das Array wird in <b>zwei Hälften</b> geteilt, beide Hälften werden <b>jede für sich (rekursiv) sortiert</b>, anschließend werden die beiden bereits sortierten Hälften wieder <b>zusammengeführt („Merge“)</b>: Man vergleicht jeweils die vordersten Elemente beider Hälften und übernimmt das kleinere. Prinzip <b>Teile und Herrsche</b>, implementiert über <b>Rekursion</b>. Aufwand <b>O(n log n)</b>.</p>
+<div class="calc">[38, 27, 43, 3, 9, 82, 10]
+Teilen:   [38, 27, 43]            |  [3, 9, 82, 10]
+          [38] [27, 43]           |  [3, 9]   [82, 10]
+               [27] [43]          |  [3] [9]  [82] [10]
+Mergen:   [27, 43] → [27, 38, 43] |  [3, 9]   [10, 82] → [3, 9, 10, 82]
+Merge:    [27, 38, 43] + [3, 9, 10, 82] → [3, 9, 10, 27, 38, 43, 82]</div>
+
+<h4>Weitere Verfahren <span class="erg">(auf den Folien nur genannt – Erklärung = Ergänzung)</span></h4>
+<ul class="small">
+<li><b>Quicksort</b> (in der Liste der meistgenutzten Algorithmen): wählt ein Pivot-Element, teilt in „kleiner als Pivot“ und „größer als Pivot“ und sortiert beide Teile rekursiv; im Mittel O(n log n), im schlechtesten Fall O(n²).</li>
+<li><b>Selection Sort</b> (Folienbeispiel für Struktogramm/UML-Diagramm): sucht jeweils das kleinste Element im unsortierten Rest und stellt es nach vorne; O(n²).</li>
+</ul>
+
+<h3>Vergleich der Such- und Sortierverfahren</h3>
+<table class="small">
+<tr><th>Verfahren</th><th>Typ</th><th>Voraussetzung</th><th>Prinzip</th><th>Aufwand</th><th>stabil? <span class="erg">(Ergänzung)</span></th></tr>
+<tr><td><b>Lineare Suche</b></td><td>Suchen</td><td>keine (auch unsortiert)</td><td>alle Elemente nacheinander prüfen</td><td><b>O(n)</b></td><td>–</td></tr>
+<tr><td><b>Binäre Suche</b></td><td>Suchen</td><td><b>sortiert</b>, direkter Zugriff (Array)</td><td>Mitte prüfen, Hälfte verwerfen</td><td><b>O(log n)</b></td><td>–</td></tr>
+<tr><td><b>Suche im Binärbaum</b></td><td>Suchen</td><td>geordneter Binärbaum</td><td>links kleiner, rechts größer</td><td>O(log n) balanciert, O(n) degeneriert</td><td>–</td></tr>
+<tr><td><b>Bubble Sort</b></td><td>Sortieren</td><td>–</td><td>Nachbarn vergleichen und tauschen</td><td><b>O(n²)</b></td><td>ja</td></tr>
+<tr><td><b>Merge Sort</b></td><td>Sortieren</td><td>–</td><td>Teile und Herrsche, rekursiv, Merge</td><td><b>O(n log n)</b></td><td>ja (braucht Zusatzspeicher)</td></tr>
+<tr><td>Quicksort <span class="erg">(Erg.)</span></td><td>Sortieren</td><td>–</td><td>Pivot, Teile und Herrsche</td><td>Ø O(n log n), schlechtester Fall O(n²)</td><td>nein</td></tr>
+<tr><td>Selection Sort <span class="erg">(Erg.)</span></td><td>Sortieren</td><td>–</td><td>Minimum suchen, nach vorne tauschen</td><td>O(n²)</td><td>nein</td></tr>
+</table>
+<p class="small"><b>Stabil</b> <span class="erg">(Ergänzung)</span> heißt: Elemente mit gleichem Sortierschlüssel behalten ihre ursprüngliche Reihenfolge (wichtig, wenn man z. B. erst nach Name und dann nach Abteilung sortiert).</p>
+
+<div class="box trap"><div class="t">Typische Klausurfallen</div>
+<ul>
+<li>Binäre Suche funktioniert <b>nur auf sortierten</b> Daten. Die lineare Suche geht immer.</li>
+<li>Binäre Suche = O(<b>log n</b>), nicht O(n log n). Merge Sort = O(<b>n log n</b>), Bubble Sort = O(<b>n²</b>).</li>
+<li>Bubble Sort: Nach dem 1. Durchlauf steht das <b>größte</b> Element am <b>Ende</b> (nicht das kleinste vorne).</li>
+<li>Merge Sort teilt zuerst und sortiert dann – das eigentliche Sortieren passiert beim <b>Zusammenführen</b>.</li>
+<li>„Teile und Herrsche“ ist das Prinzip, „Rekursion“ die Implementierung – nicht gleichsetzen.</li>
+<li>Bei Wachstumsfragen: Verdopplung von n verdoppelt O(n), vervierfacht O(n²), erhöht O(log n) nur um 1 Schritt.</li>
+</ul></div>
+<div class="box must"><div class="t">Das musst du können</div>
+<ul>
+<li>lineare vs. binäre Suche: Voraussetzung, Aufwand</li>
+<li>binäre Suche Schritt für Schritt</li>
+<li>Bubble Sort einen Durchlauf zeigen</li>
+<li>Merge Sort Teilen/Mergen skizzieren</li>
+<li>Teile und Herrsche / Rekursion erklären</li>
+<li>O(1), O(log n), O(n), O(n log n), O(n²) zuordnen</li>
+<li>meistgenutzte Algorithmen nennen</li>
+</ul></div>
+
+<!-- ===================================================== -->
+<h2>9 · Rechnerarchitektur: Von Neumann vs. Harvard <span class="pts">8 P</span></h2>
+<p>Größter Einzelblock. Laut VL05: „<b>Skizzen, Eigenschaften, Pro und Con</b>“. Übe die beiden Skizzen so oft, bis du sie in 2 Minuten sauber zeichnen kannst.</p>
+
+<h3>Von-Neumann-Architektur („Princeton-Architektur“) <span class="tag">Rückschau</span></h3>
+<p><b>Idee:</b> ein <b>Universalrechner</b>, der <b>nicht an ein festes Programm gebunden</b> ist und über Ein-/Ausgabegeräte verfügt; 1946 von John von Neumann beschrieben. Im Von-Neumann-Rechner werden <b>Daten und Programme binär kodiert und liegen im gleichen Speicher</b>: Es gibt <b>nur einen gemeinsamen Speicher</b>, und Programmcode und Daten werden <b>über den gleichen Bus</b> transportiert. Programme können daher wie Daten geladen und geändert werden (Stored-Program-Prinzip, <span class="erg">Begriff = Ergänzung</span>). Von Neumanns Verdienste: erste wissenschaftlich-mathematische Beschäftigung mit der Konstruktion von Rechenmaschinen und das <b>sequentielle Prinzip</b> (Von-Neumann-Zyklus).</p>
+<div class="cols">
+<figure style="flex:1.15">
+<svg viewBox="0 0 400 270" width="390" xmlns="http://www.w3.org/2000/svg">
+ <defs><marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker></defs>
+ <g font-size="13" text-anchor="middle" stroke="#000" stroke-width="1.4">
+  <rect x="40" y="8" width="320" height="100" fill="#f2f2f2" stroke-width="2"/>
+  <text x="200" y="26" stroke="none" font-weight="700" font-size="14">CPU (Prozessor)</text>
+  <rect x="58" y="36" width="130" height="58" fill="#fff"/><text x="123" y="60" stroke="none" font-weight="700">Steuerwerk</text><text x="123" y="76" stroke="none" font-size="10">(Control Unit, Leitwerk)</text><text x="123" y="88" stroke="none" font-size="10">Befehlszähler, Befehlsreg.</text>
+  <rect x="212" y="36" width="130" height="58" fill="#fff"/><text x="277" y="60" stroke="none" font-weight="700">Rechenwerk</text><text x="277" y="76" stroke="none" font-size="10">(ALU)</text><text x="277" y="88" stroke="none" font-size="10">Register/Akkumulator</text>
+  <line x1="123" y1="110" x2="123" y2="138" marker-start="url(#a3)" marker-end="url(#a3)"/>
+  <line x1="277" y1="110" x2="277" y2="138" marker-start="url(#a3)" marker-end="url(#a3)"/>
+  <rect x="10" y="140" width="380" height="34" fill="#d0d0d0" stroke-width="2"/>
+  <text x="200" y="157" stroke="none" font-weight="700">Bus-System (EIN gemeinsamer Bus)</text>
+  <text x="200" y="170" stroke="none" font-size="10">Steuerbus · Adressbus · Datenbus – Befehle UND Daten</text>
+  <line x1="110" y1="176" x2="110" y2="204" marker-start="url(#a3)" marker-end="url(#a3)"/>
+  <line x1="290" y1="176" x2="290" y2="204" marker-start="url(#a3)" marker-end="url(#a3)"/>
+  <rect x="20" y="206" width="180" height="58" fill="#fff" stroke-width="2"/><text x="110" y="226" stroke="none" font-weight="700">Speicherwerk (RAM)</text>
+  <line x1="20" y1="236" x2="200" y2="236" stroke-dasharray="3 2"/><text x="110" y="252" stroke="none" font-size="11">Programme + Daten</text><text x="110" y="262" stroke="none" font-size="9">(gemeinsamer Speicher)</text>
+  <rect x="220" y="206" width="160" height="58" fill="#fff" stroke-width="2"/><text x="300" y="228" stroke="none" font-weight="700">Ein-/Ausgabewerk</text><text x="300" y="246" stroke="none" font-size="10">(I/O Unit: Tastatur,</text><text x="300" y="258" stroke="none" font-size="10">Bildschirm, Schnittstellen)</text>
+ </g>
+</svg>
+<figcaption>Abb. 9.1 – Von-Neumann-Rechner: 5 Komponenten, ein Speicher, ein Bus</figcaption>
+</figure>
+<div style="flex:1">
+<table class="small">
+<tr><th>Komponente</th><th>Aufgabe</th></tr>
+<tr><td><b>Rechenwerk</b> (ALU, Arithmetic Logic Unit)</td><td>führt Rechenoperationen und boolesche Verknüpfungen aus</td></tr>
+<tr><td><b>Steuerwerk</b> (Control Unit, Leitwerk)</td><td>interpretiert die Befehle des Programms, verschaltet Datenquelle, Datensenke und ALU-Komponenten, regelt die Befehlsfolge</td></tr>
+<tr><td><b>Bus-System</b></td><td>Kommunikation zwischen den Komponenten (Steuer-, Adress-, Datenbus)</td></tr>
+<tr><td><b>Speicherwerk</b> (Memory, RAM)</td><td>speichert <b>sowohl Programme als auch Daten</b></td></tr>
+<tr><td><b>Ein-/Ausgabewerk</b> (I/O Unit)</td><td>Ein- und Ausgabe zum Anwender (Tastatur, Bildschirm) oder zu anderen Systemen (Schnittstellen)</td></tr>
+</table>
+<p class="small">Steuerwerk + Rechenwerk (+ Register) bilden zusammen die <b>CPU</b>.</p>
+</div>
+</div>
+
+<h3>Von-Neumann-Zyklus – 5 Phasen (auf der Folie mit „!“ markiert) <span class="tag">Rückschau</span></h3>
+<p>Sequentielle Arbeitsweise: Jede Phase kann mehrere Takte dauern; Prozessor und Speicher kommunizieren direkt über <b>einen</b> Bus, über den Befehle <b>und</b> Daten transportiert werden.</p>
+<table>
+<tr><th class="c">#</th><th>Phase</th><th>Was passiert?</th></tr>
+<tr><td class="c">1</td><td><b>FETCH</b></td><td>abzuarbeitenden Befehl aus dem Speicher in das <b>Befehlsregister</b> der CPU laden</td></tr>
+<tr><td class="c">2</td><td><b>DECODE</b></td><td>Steuerwerk löst den Befehl in Schaltinstruktionen für das Rechenwerk auf</td></tr>
+<tr><td class="c">3</td><td><b>FETCH OPERANDS</b></td><td>Parameter (Operanden) für den Befehl aus dem Speicher holen</td></tr>
+<tr><td class="c">4</td><td><b>EXECUTE</b></td><td>Rechenwerk führt die Operation aus, ggf. Ergebnis in den Speicher schreiben</td></tr>
+<tr><td class="c">5</td><td><b>UPDATE INSTRUCTION POINTER</b></td><td><b>Befehlszähler</b> wird erhöht bzw. bei Sprüngen entsprechend gesetzt; dann beginnt der Zyklus von vorne</td></tr>
+</table>
+<p class="small">Beispiel <span class="erg">(Ergänzung, Bezug zum 6502-Assembler aus VL02)</span>: <span class="mono">ADC NUM2</span> – FETCH holt den Befehl von der Adresse im Befehlszähler, DECODE erkennt „addiere zum Akkumulator“, FETCH OPERANDS holt den Wert von NUM2 aus dem Speicher, EXECUTE rechnet in der ALU, dann zeigt der Befehlszähler auf den nächsten Befehl.</p>
+
+<h3>Harvard-Architektur <span class="tag">Rückschau</span></h3>
+<div class="cols">
+<div style="flex:1">
+<p>Entwickelt, um den <b>Engpass der Von-Neumann-Architektur zu überwinden</b> (Ursprung Harvard Mark I, 1944).</p>
+<ul class="small">
+<li><b>Separate Speicher</b>: getrennte Speicherbänke mit separaten physischen Adressen für <b>Befehle</b> und <b>Daten</b>.</li>
+<li><b>Separate Busse</b> für Befehle und Daten.</li>
+<li><b>Ausführung</b>: „Einzelzyklus“ – Befehl und Daten können <b>in einem Schritt</b> gleichzeitig über die verschiedenen Busse geholt werden → <b>schneller</b>.</li>
+<li><b>Kosten</b>: in der Regel <b>teurer</b>.</li>
+<li><b>Verwendung</b>: Mikrocontroller, Signalverarbeitung (DSP), spezielle Rechner für maschinelles Lernen/neuronale Netze, zunehmend auch PCs/Server.</li>
+</ul>
+<p class="small"><span class="tag">nur Folie</span> Prozessorbeispiele: Intel x86 = Von Neumann; AVR (Arduino) = Harvard; ARM und Apple M = <b>modifizierte Harvard-Architektur</b> (getrennte Busse/Caches, gemeinsamer Hauptspeicher).</p>
+</div>
+<figure style="flex:1.1">
+<svg viewBox="0 0 410 250" width="395" xmlns="http://www.w3.org/2000/svg">
+ <defs><marker id="a4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker></defs>
+ <g font-size="13" text-anchor="middle" stroke="#000" stroke-width="1.4">
+  <rect x="135" y="40" width="140" height="110" fill="#f2f2f2" stroke-width="2"/>
+  <text x="205" y="58" stroke="none" font-weight="700">CPU</text>
+  <rect x="148" y="66" width="114" height="34" fill="#fff"/><text x="205" y="88" stroke="none" font-weight="700" font-size="12">Steuerwerk</text>
+  <rect x="148" y="106" width="114" height="34" fill="#fff"/><text x="205" y="128" stroke="none" font-weight="700" font-size="12">Rechenwerk (ALU)</text>
+  <rect x="5" y="55" width="95" height="80" fill="#fff" stroke-width="2"/><text x="52" y="82" stroke="none" font-weight="700" font-size="12">Befehls-</text><text x="52" y="97" stroke="none" font-weight="700" font-size="12">speicher</text><text x="52" y="116" stroke="none" font-size="10">(nur Programm)</text>
+  <rect x="310" y="55" width="95" height="80" fill="#fff" stroke-width="2"/><text x="357" y="82" stroke="none" font-weight="700" font-size="12">Daten-</text><text x="357" y="97" stroke="none" font-weight="700" font-size="12">speicher</text><text x="357" y="116" stroke="none" font-size="10">(nur Daten)</text>
+  <line x1="102" y1="95" x2="133" y2="95" marker-start="url(#a4)" marker-end="url(#a4)" stroke-width="3"/>
+  <text x="117" y="40" stroke="none" font-size="10">Befehlsbus</text><line x1="117" y1="44" x2="117" y2="90" stroke-dasharray="2 2" stroke-width="0.8"/>
+  <line x1="277" y1="95" x2="308" y2="95" marker-start="url(#a4)" marker-end="url(#a4)" stroke-width="3"/>
+  <text x="293" y="40" stroke="none" font-size="10">Datenbus</text><line x1="293" y1="44" x2="293" y2="90" stroke-dasharray="2 2" stroke-width="0.8"/>
+  <line x1="205" y1="152" x2="205" y2="188" marker-start="url(#a4)" marker-end="url(#a4)"/>
+  <rect x="135" y="190" width="140" height="40" fill="#fff" stroke-width="2"/><text x="205" y="208" stroke="none" font-weight="700" font-size="12">Ein-/Ausgabewerk</text><text x="205" y="222" stroke="none" font-size="10">(I/O)</text>
+  <text x="205" y="18" stroke="none" font-size="11">zwei Speicher · zwei Busse · gleichzeitiger Zugriff</text>
+ </g>
+</svg>
+<figcaption>Abb. 9.2 – Harvard-Rechner: getrennte Speicher und Busse für Befehle und Daten</figcaption>
+</figure>
+</div>
+
+<h3>Vergleich und Bewertung (Pro und Contra)</h3>
+<table>
+<tr><th style="width:26mm">Kriterium</th><th>Von-Neumann</th><th>Harvard</th></tr>
+<tr><td>Speicher</td><td><b>ein gemeinsamer</b> Speicher für Programme und Daten</td><td><b>getrennte</b> Speicher (eigene Adressräume) für Befehle und Daten</td></tr>
+<tr><td>Bus</td><td><b>ein gemeinsamer</b> Bus für Befehle und Daten</td><td><b>getrennte</b> Busse für Befehle und Daten</td></tr>
+<tr><td>Ablauf</td><td>Befehl und Daten <b>nacheinander</b> über den Bus → mind. 2 Taktzyklen pro Anweisung</td><td>Befehl und Daten <b>gleichzeitig</b> in einem Schritt („Einzelzyklus“)</td></tr>
+<tr><td>Geschwindigkeit</td><td>begrenzt durch den <b>Von-Neumann-Flaschenhals</b> (Bottleneck)</td><td><b>schneller</b> – vermeidet den Bottleneck</td></tr>
+<tr><td>Kosten/Aufwand</td><td><b>Pro:</b> einfachere Implementierung, <b>geringere Kosten</b></td><td><b>Contra:</b> in der Regel <b>teurer</b> (doppelte Speicher-/Busstruktur)</td></tr>
+<tr><td>Flexibilität <span class="erg">(Erg.)</span></td><td>Speicher frei zwischen Programm und Daten aufteilbar; Programme zur Laufzeit ladbar</td><td>feste Aufteilung der Speichergrößen</td></tr>
+<tr><td>Sicherheit</td><td><b>Contra:</b> Angriffsvektoren, z. B. <b>Buffer-Überlauf</b> bzw. Einschleusen von als Daten getarntem Code</td><td>Code und Daten physisch getrennt → dieser Angriff ist erschwert <span class="erg">(Erg.)</span></td></tr>
+<tr><td>Einsatz</td><td>klassische PCs/Universalrechner (x86)</td><td>Mikrocontroller, Signalverarbeitung, KI-Spezialrechner, zunehmend PCs/Server</td></tr>
+</table>
+<div class="def"><b>Musterantwort „Erläutern Sie den Unterschied“ (≈ 4 Sätze):</b> Beim Von-Neumann-Rechner liegen Programme und Daten binär kodiert in einem gemeinsamen Speicher und werden über einen gemeinsamen Bus transportiert. Deshalb müssen Befehl und Daten nacheinander geholt werden, was als Von-Neumann-Flaschenhals die Geschwindigkeit begrenzt; zudem kann als Daten getarnter Code eingeschleust werden (Buffer Overflow). Die Harvard-Architektur trennt Befehls- und Datenspeicher physisch und nutzt getrennte Busse, sodass Befehl und Daten in einem Schritt gleichzeitig geladen werden können. Sie ist dadurch schneller, aber aufwendiger und teurer, während Von-Neumann einfacher und günstiger zu realisieren ist.</div>
+
+<h3>Komponenten im Detail: CPU, Register, Bussystem <span class="tag">Rückschau</span></h3>
+<ul>
+<li><b>Steuerwerk</b>: holt Befehle aus dem Hauptspeicher, bestimmt den Befehlstyp, lädt Operanden in Register, lässt das Rechenwerk rechnen und entscheidet (ggf. abhängig vom Ergebnis), wo es weitergeht. <b>Rechenwerk</b>: arithmetische und logische Operationen, teils an Coprozessoren ausgelagert.</li>
+<li><b>Register</b>: kleine Hochgeschwindigkeitsspeicher in der CPU für je einen Wert; Datenschnittstelle zum Rechenwerk. Wichtigstes Register ist der <b>Befehlszähler</b> (Program Counter: <b>Adresse</b> des nächsten Befehls), dann das <b>Befehlsregister</b> (der <b>aktuelle Befehl</b> selbst).</li>
+<li><b>Bussystem</b> – Lesen: Lesebefehl über den <b>Steuerbus</b>, Adresse der Speicherzelle über den <b>Adressbus</b>, Daten über den <b>Datenbus</b> zur CPU. Schreiben: Schreibbefehl über den Steuerbus, Adresse über den Adressbus, Daten über den Datenbus zur Zelle. Adress- und Datenbus arbeiten <b>parallel</b> (viele Leitungen gleichzeitig, z. B. Apple M1: 64-Bit-Adressbus, 128-Bit-Datenbus); Peripherie meist <b>seriell</b> (USB = Universal Serial Bus).</li>
+</ul>
+<div class="err"><b>Folienfehler/-ungenauigkeit (Rückschau VL03a F. 3):</b> „Wesentliche Ideen … 1937 in der Zuse Z1 realisiert“ ist umstritten: Die Z1 las ihr Programm von Lochstreifen, ein gemeinsamer Programm-/Datenspeicher (Stored Program) fehlte. Für die Klausur: Von-Neumann-Architektur = 1946, John von Neumann.</div>
+<p class="small"><b>Exkurs KI-Hardware (VL03c, vermutlich nicht klausurrelevant):</b> 3D-Grafik und neuronale Netze bestehen hauptsächlich aus Matrix-/Vektoroperationen (Skalarprodukte) → GPUs als KI-Beschleuniger; Engpass ist die Speicherbandbreite (HBM, Unified Memory); spezialisierte Chips: NPU (PC/Smartphone), TPU (Rechenzentrum).</p>
+
+<div class="box trap"><div class="t">Typische Klausurfallen</div>
+<ul>
+<li>Von Neumann = gemeinsamer Speicher <b>und</b> gemeinsamer Bus. Harvard = getrennte Speicher <b>und</b> getrennte Busse. Beides nennen!</li>
+<li>Es sind <b>fünf</b> Komponenten (Rechenwerk, Steuerwerk, Bus, Speicherwerk, E/A-Werk) – der Bus wird gern vergessen.</li>
+<li>Der Zyklus hat <b>fünf</b> Phasen, nicht nur Fetch – Decode – Execute. Reihenfolge: Fetch, Decode, Fetch Operands, Execute, Update Instruction Pointer.</li>
+<li><b>Befehlszähler</b> = Adresse des <i>nächsten</i> Befehls; <b>Befehlsregister</b> = <i>aktueller</i> Befehl.</li>
+<li>Harvard ist schneller, aber <b>teurer</b>; Von Neumann einfacher und <b>billiger</b> – Pro/Contra immer paarweise.</li>
+<li>Der Flaschenhals ist der <b>Bus</b> (Befehle und Daten nacheinander), nicht die ALU.</li>
+<li>Skizze: alle Kästen <b>beschriften</b>, Pfeile in beide Richtungen, bei Harvard <b>zwei</b> getrennte Speicher und Busse zeichnen.</li>
+</ul></div>
+<div class="box must"><div class="t">Das musst du können</div>
+<ul>
+<li>Von-Neumann-Skizze aus dem Kopf</li>
+<li>Harvard-Skizze aus dem Kopf</li>
+<li>5 Komponenten nennen und erläutern</li>
+<li>5 Phasen des Zyklus in Reihenfolge</li>
+<li>Flaschenhals erklären</li>
+<li>Sicherheitsproblem (Buffer Overflow)</li>
+<li>Pro/Contra beider Architekturen</li>
+<li>Einsatzgebiete Harvard nennen</li>
+<li>Steuer-/Adress-/Datenbus beim Lesen/Schreiben</li>
+<li>Befehlszähler vs. Befehlsregister</li>
+</ul></div>
+
+<!-- ===================================================== -->
+<h2>10 · Speicher: Arten, Hierarchie, RAID <span class="pts">4 P</span></h2>
+
+<h3>Speicherarten <span class="tag">Rückschau</span></h3>
+<table>
+<tr><th>Art</th><th>Eigenschaften</th></tr>
+<tr><td><b>Register</b></td><td>in der CPU, extrem schnell, sehr klein, teuer</td></tr>
+<tr><td><b>Cache</b> (L1, L2, L3)</td><td>sehr schneller Zwischenspeicher in/vor der CPU, begrenzte Größe</td></tr>
+<tr><td><b>Hauptspeicher / RAM</b></td><td>Programme und Daten, die nach dem Start erst geladen werden; bei Von Neumann gemeinsam, bei Harvard getrennt adressiert; <b>flüchtig</b></td></tr>
+<tr><td><b>Flash</b> (früher ROM/EPROM)</td><td>meist nur gelesen (BIOS, Firmware); behält den Inhalt <b>ohne Strom</b></td></tr>
+</table>
+
+<h3>Cache und Lokalität <span class="tag">Rückschau</span></h3>
+<p>Problem: Die CPU wird immer schneller als der Hauptspeicher, den ganzen Speicher auf die CPU zu bauen ist zu teuer. Kompromiss: ein kleiner, schneller <b>Cache</b>. Er funktioniert wegen der <b>Lokalität</b>: Programme greifen in kurzer Zeit nur auf einen kleinen Teil des Speichers zu. Deshalb lädt man beim Zugriff auf ein Wort auch seine <b>Nachbarn</b> in den Cache. Beispiele: <b>Schleifen</b> (derselbe Code mehrfach) und <b>Arrays/Tabellen</b> (benachbarte Datensätze). Liegen Daten wider Erwarten nicht im Cache, müssen sie über den Bus nachgeladen werden (Cache-Miss).</p>
+
+<h3>Arbeitsspeicher und Adressbusbreite <span class="tag">Rückschau</span></h3>
+<p>Der Arbeitsspeicher besteht aus Zellen mit je einer <b>Adresse</b>; kleinste adressierbare Einheit ist das <b>Byte</b>. Mit <b>n</b> Adressleitungen kann man <b>2<sup>n</sup></b> Zellen (Bytes) adressieren.</p>
+<div class="calc">16 Leitungen → 2¹⁶ = 65.536 Byte = 64 KB   (z. B. 6502, 1975)
+20 Leitungen → 2²⁰ = 1.048.576 Byte = 1 MB
+32 Leitungen → 2³² Byte = 4 GB          (umgekehrt: 4 GB = 2² · 2³⁰ = 2³² → 32 Leitungen)
+512 GB = 2⁹ · 2³⁰ = 2³⁹ Byte → 39 Adressleitungen
+48 Leitungen → 2⁴⁸ Byte = 256 TB        (laut Folie Intel Core i7, 14. Gen.)</div>
+
+<h3>Speicherhierarchie <span class="tag">Rückschau</span></h3>
+<div class="cols">
+<figure style="flex:1.25">
+<svg viewBox="0 0 470 300" width="450" xmlns="http://www.w3.org/2000/svg">
+ <defs><marker id="a5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker></defs>
+ <g stroke="#000" stroke-width="1.2" font-size="11.5" text-anchor="middle">
+  <polygon points="242,8 258,8 278,42 222,42" fill="#5a5a5a"/>
+  <polygon points="220,45 280,45 300,79 200,79" fill="#7a7a7a"/>
+  <polygon points="198,82 302,82 322,116 178,116" fill="#9a9a9a"/>
+  <polygon points="176,119 324,119 344,153 156,153" fill="#b8b8b8"/>
+  <polygon points="154,160 346,160 366,194 134,194" fill="#d2d2d2"/>
+  <polygon points="132,197 368,197 388,231 112,231" fill="#e2e2e2"/>
+  <polygon points="110,234 390,234 410,268 90,268" fill="#f2f2f2"/>
+  <text x="250" y="32" stroke="none" fill="#fff" font-size="9.5">Reg.</text>
+  <text x="250" y="66" stroke="none" fill="#fff">L1-Cache (kB)</text>
+  <text x="250" y="103" stroke="none" fill="#000">L2/L3-Cache (MB)</text>
+  <text x="250" y="140" stroke="none" fill="#000">Hauptspeicher/RAM (GB)</text>
+  <text x="250" y="181" stroke="none">Flash / SSD (TB)</text>
+  <text x="250" y="218" stroke="none">Festplatte/HDD (TB)</text>
+  <text x="250" y="255" stroke="none">Optisch, Band, Cloud (Backup)</text>
+  <line x1="120" y1="156.5" x2="440" y2="156.5" stroke-dasharray="5 3" stroke-width="1.4"/>
+  <text x="420" y="150" stroke="none" font-size="10.5" font-weight="700">volatil</text>
+  <text x="420" y="170" stroke="none" font-size="10.5" font-weight="700">persistent</text>
+  <line x1="40" y1="20" x2="40" y2="262" marker-start="url(#a5)" marker-end="url(#a5)"/>
+  <text x="2" y="12" stroke="none" font-size="10" text-anchor="start">kleiner, schneller, teurer</text>
+  <text x="2" y="286" stroke="none" font-size="10" text-anchor="start">größer, langsamer, billiger</text>
+ </g>
+</svg>
+<figcaption>Abb. 10.1 – Speicherhierarchie (nach VL03b-Rückschau F. 9); L1 im Kern, L2 außerhalb des Kerns, L3 zwischen den Kernen</figcaption>
+</figure>
+<div style="flex:1">
+<p>Je weiter unten in der Pyramide, desto <b>größer</b> werden <b>Zugriffszeit</b> (langsamer), <b>Kapazität</b> und <b>Bits pro Euro</b> (billiger pro Bit). Ganz oben: klein, schnell, teuer.</p>
+<p>Die gestrichelte Linie trennt <b>volatile</b> (flüchtige: Inhalt geht ohne Strom verloren – Register, Cache, RAM) von <b>persistenten</b> Speichern (Inhalt bleibt erhalten – Flash/SSD, Festplatte, Band).</p>
+<p class="small"><span class="tag">nur Folie</span> Festplatte: magnetische Scheiben, schwebender Lesekopf; SSD: Flash ohne bewegliche Teile, begrenzte Schreibzyklen; LTO-Band für Backup/Archiv.</p>
+</div>
+</div>
+
+<h3>RAID – Redundant Array of Independent Disks <span class="tag">Rückschau</span></h3>
+<p>Mehrere Festplatten erscheinen dem System als <b>ein logisches Laufwerk</b>. Ziel: höherer <b>Durchsatz</b> und/oder <b>Ausfallsicherheit</b>. NAS-Systeme lassen sich für verschiedene RAID-Level konfigurieren. Die „gebräuchlichsten“ Level laut Folie sind 0, 1 und 5 (dazu 6):</p>
+<table>
+<tr><th>Level</th><th>Name / Prinzip</th><th class="c">min. Platten</th><th class="c">Ausfall verkraftet</th><th>Nutzkapazität (n Platten à C)</th><th>4 × 2 TB</th><th>5 × 4 TB</th></tr>
+<tr><td><b>RAID 0</b></td><td><b>Striping</b>: Datenblöcke („Strips“) reihum auf alle Platten → schnell, <b>keine Redundanz</b></td><td class="c">2 <span class="erg">(Erg.)</span></td><td class="c"><b>0</b></td><td>n · C</td><td>8 TB</td><td>20 TB</td></tr>
+<tr><td><b>RAID 1</b></td><td><b>Mirroring</b>: jede Platte wird gespiegelt</td><td class="c">2 <span class="erg">(Erg.)</span></td><td class="c">1 je Spiegelpaar</td><td>n · C / 2</td><td>4 TB</td><td>(gerade Anzahl nötig)</td></tr>
+<tr><td><b>RAID 5</b></td><td><b>Leistung und Parität</b>: Striping + Paritätsblock, reihum über alle Platten verteilt</td><td class="c"><b>3</b></td><td class="c"><b>1</b></td><td>(n − 1) · C</td><td>6 TB</td><td>16 TB</td></tr>
+<tr><td><b>RAID 6</b></td><td>wie RAID 5, aber doppelte Paritätsinformation</td><td class="c"><b>4</b></td><td class="c"><b>2</b></td><td>(n − 2) · C</td><td>4 TB</td><td>12 TB</td></tr>
+</table>
+<div class="cols small">
+<div><b>Layout RAID 5 mit 4 Platten</b> (P = Parität, rotiert):
+<table class="tt" style="margin-top:1mm"><tr><th>Platte 1</th><th>Platte 2</th><th>Platte 3</th><th>Platte 4</th></tr>
+<tr><td>Strip 0</td><td>Strip 1</td><td>Strip 2</td><td>P 0–2</td></tr>
+<tr><td>Strip 3</td><td>Strip 4</td><td>P 3–5</td><td>Strip 5</td></tr>
+<tr><td>Strip 6</td><td>P 6–8</td><td>Strip 7</td><td>Strip 8</td></tr></table></div>
+<div><b>Wie hilft Parität?</b> <span class="erg">(Ergänzung)</span> Der Paritätsblock ist das XOR der Datenblöcke derselben Zeile. Beispiel: 1011 XOR 0110 XOR 1100 = <b>0001</b>. Fällt die Platte mit 0110 aus, rechnet man 1011 XOR 1100 XOR 0001 = <b>0110</b> zurück. <b>RAID ersetzt kein Backup</b> (versehentliches Löschen wird mitgespiegelt).</div>
+</div>
+<div class="err"><b>Folienungenauigkeiten (VL03b-Rückschau):</b> F. 9 nennt Flash „local primary storage“ – üblich ist: <b>Primärspeicher = Arbeitsspeicher</b>, SSD/HDD = Sekundär-/Massenspeicher. F. 4 „Cache-fault“ – Fachbegriff ist <b>Cache-Miss</b>. F. 10 „Bei RAID 2 &amp; 3 … Ebene der einzelnen Bits“ – nur RAID 2 arbeitet bitweise, RAID 3 byteweise. F. 11: Das Bild zu RAID 1 zeigt gestreifte <i>und</i> gespiegelte Platten (eigentlich RAID 10); für die Klausur gilt RAID 1 = Spiegelung. F. 5 vs. F. 6: 64-Bit- bzw. 48-Bit-Adressbus widersprechen sich (real nutzen CPUs weniger als 64 physische Adressbits).</div>
+
+<div class="box trap"><div class="t">Typische Klausurfallen</div>
+<ul>
+<li>Nach unten in der Hierarchie: <b>langsamer, größer, billiger pro Bit</b>. „Zugriffszeit steigt“ = langsamer.</li>
+<li>RAM ist <b>volatil</b>, Flash/SSD ist <b>persistent</b>.</li>
+<li>Adressbus: <b>2<sup>n</sup></b> Bytes, nicht n · 8 oder 2 · n. 1 KB = 2¹⁰, 1 MB = 2²⁰, 1 GB = 2³⁰ Byte.</li>
+<li><b>RAID 0 hat keine Redundanz</b> – trotz „R“ im Namen.</li>
+<li>RAID 5: <b>mindestens 3</b> Platten, <b>1</b> Ausfall; RAID 6: <b>mindestens 4</b> Platten, <b>2</b> Ausfälle. RAID 1: halbe Kapazität.</li>
+<li>Cache lohnt sich wegen <b>Lokalität</b> (Schleifen, Arrays), nicht weil er groß ist.</li>
+</ul></div>
+<div class="box must"><div class="t">Das musst du können</div>
+<ul>
+<li>Speicherarten nennen und einordnen</li>
+<li>Hierarchie-Pyramide skizzieren</li>
+<li>volatil/persistent zuordnen</li>
+<li>Cache und Lokalität erläutern</li>
+<li>Adressleitungen ↔ Speichergröße rechnen</li>
+<li>RAID 0/1/5/6: Prinzip, Mindestplatten, Ausfälle</li>
+<li>Nutzkapazität berechnen</li>
+</ul></div>
+
+<!-- ===================================================== -->
+<h2>11 · Datenbanken und SQL <span class="pts">4–6 P</span></h2>
+<p>Laut VL05: „Eigenschaften, <b>Analyse</b> SQL, <b>Synthese</b> SQL“ sowie „Modellierung einfacher Entitäten, <b>Dictionary</b>“. Du musst also ein SQL-Statement anhand vorgegebener Tabellen „ausführen“ und selbst einfache Abfragen schreiben können.</p>
+
+<h3>Vom Dateiansatz zum DBMS <span class="tag">Rückschau</span></h3>
+<p>Bis in die 1970er stellte das Betriebssystem <b>Dateien</b> bereit; jede Abteilung (Buchhaltung, Personal, Vertrieb …) baute eigene Anwendungen mit eigenen Dateien. <b>Probleme des Dateiansatzes:</b></p>
+<ul class="small">
+<li><b>Redundanz und Inkonsistenz</b>: dieselben Daten mehrfach gespeichert → widersprüchliche Kopien (Adresse nur in der Buchhaltung geändert).</li>
+<li><b>Abhängigkeit zwischen Programm und Daten</b>: ändert sich die Datenstruktur, muss das Programm geändert werden.</li>
+<li><b>Fehlender Datenaustausch</b>, mangelnde Flexibilität bei abteilungsübergreifenden Prozessen.</li>
+<li><b>Mangelnde Datensicherheit</b>: keine stringente Verwaltung von Zugriffsrechten.</li>
+</ul>
+<div class="def"><b>Datenbank (DB)</b>: Sammlung logisch zusammenhängender Daten mit bestimmter Bedeutung, für einen bestimmten Zweck entworfen. <b>Datenbankmanagementsystem (DBMS)</b>: Software, mit der Benutzer eine Datenbank anlegen, pflegen und abfragen. <b>Datenbanksystem = DB + DBMS</b> (+ Anwendungen). Das DBMS verwaltet zwei Bestände: <b>Metadaten im Data Dictionary</b> (Datenkatalog: welche Tabellen, Attribute, Datentypen, Einschränkungen) und die <b>Nutzdaten</b> (Kunden, Lieferanten …).</div>
+<div class="cols small">
+<div><b>Merkmale des Datenbankansatzes:</b> Datenkatalog (Data Dictionary) mit Metadaten · Datenisolation/-abstraktion (interne Speicherung verborgen) · mehrere Sichten (Views) · Mehrbenutzerzugriff und -kontrolle.<br><br><b>Nachteile:</b> hohe Anfangsinvestition, für einfache Fälle zu komplex, Mehraufwand für Sicherheit, Nebenläufigkeit, Recovery. Dateien bleiben sinnvoll bei einfachen, stabilen Daten, harten Echtzeitanforderungen oder ohne Mehrbenutzerzugriff.</div>
+<div><b>Vorteile eines DBMS:</b> Redundanzkontrolle · Zugriffsbeschränkungen (Autorisierung) · persistente Speicherung · Ableitungen anhand von Regeln · Mehrbenutzerschnittstellen (grafisch, textuell, ODBC) · Beziehungen zwischen Daten werden überwacht · Integritätsbedingungen (z. B. gültige Punkteskala) · Recovery nach Fehlern (Transaktionen).</div>
+</div>
+
+<h3>Datenmodelle und ER-Modell <span class="tag">Rückschau</span></h3>
+<table class="small">
+<tr><th>Ebene</th><th>Beschreibt</th><th>Beispiel</th></tr>
+<tr><td><b>konzeptuell</b></td><td>die reale Welt aus Benutzersicht, <b>unabhängig vom DBMS</b></td><td>ER-Modell</td></tr>
+<tr><td><b>logisch</b></td><td>für eine <b>Klasse</b> von DBMS, nah an der Speicherung</td><td>relationales Modell (Tabellen)</td></tr>
+<tr><td><b>physisch</b></td><td>Details der Speicherung auf dem Rechner</td><td>Dateien, Indizes</td></tr>
+</table>
+<p>Das <b>Entity-Relationship-Modell</b> (Peter Chen, 1976) ist der wichtigste Ansatz der konzeptuellen Modellierung. Begriffe: <b>Entität</b> = „Phänomen“ (Person, Ort, Ding, Ereignis), über das Daten gespeichert werden; <b>Entitätstyp</b> = Abstraktion gleichartiger Entitäten mit gemeinsamen Attributen (ANGESTELLTER); <b>Entitätsmenge</b> = alle Entitäten eines Typs; <b>Attribut</b> = Eigenschaft (Name, Alter); <b>Schlüsselattribut</b> = eindeutig für jede Entität (unterstrichen), ggf. zusammengesetzt (Kennzeichen + Land); <b>Beziehungstyp</b> = Zusammenhang zwischen Entitätstypen (kann eigene Attribute haben); <b>Grad</b> = Anzahl beteiligter Entitätstypen (binär = 2, ternär = 3).</p>
+<div class="cols">
+<figure style="flex:1.3">
+<svg viewBox="0 0 470 200" width="460" xmlns="http://www.w3.org/2000/svg">
+ <g stroke="#000" stroke-width="1.3" font-size="12" text-anchor="middle">
+  <!-- Leser -->
+  <rect x="20" y="85" width="90" height="36" fill="#fff" stroke-width="2"/><text x="65" y="108" stroke="none" font-weight="700">Leser</text>
+  <ellipse cx="40" cy="30" rx="30" ry="15" fill="#fff"/><text x="40" y="34" stroke="none" text-decoration="underline">ID</text>
+  <ellipse cx="110" cy="30" rx="34" ry="15" fill="#fff"/><text x="110" y="34" stroke="none">Name</text>
+  <ellipse cx="55" cy="175" rx="40" ry="15" fill="#fff"/><text x="55" y="179" stroke="none">Vorname</text>
+  <line x1="45" y1="45" x2="55" y2="85"/><line x1="105" y1="45" x2="80" y2="85"/><line x1="58" y1="160" x2="62" y2="121"/>
+  <!-- Beziehung -->
+  <polygon points="235,78 290,103 235,128 180,103" fill="#e6e6e6" stroke-width="2"/><text x="235" y="107" stroke="none" font-weight="700">leiht aus</text>
+  <line x1="110" y1="103" x2="180" y2="103"/><text x="128" y="97" stroke="none" font-weight="700">1</text>
+  <line x1="290" y1="103" x2="360" y2="103"/><text x="342" y="97" stroke="none" font-weight="700">n</text>
+  <ellipse cx="235" cy="170" rx="58" ry="15" fill="#fff"/><text x="235" y="174" stroke="none">Rückgabedatum</text><line x1="235" y1="128" x2="235" y2="155"/>
+  <!-- Buch -->
+  <rect x="360" y="85" width="90" height="36" fill="#fff" stroke-width="2"/><text x="405" y="108" stroke="none" font-weight="700">Buch</text>
+  <ellipse cx="360" cy="30" rx="34" ry="15" fill="#fff"/><text x="360" y="34" stroke="none" text-decoration="underline">InvNr</text>
+  <ellipse cx="435" cy="30" rx="30" ry="15" fill="#fff"/><text x="435" y="34" stroke="none">Titel</text>
+  <ellipse cx="420" cy="175" rx="34" ry="15" fill="#fff"/><text x="420" y="179" stroke="none">Verlag</text>
+  <line x1="365" y1="45" x2="390" y2="85"/><line x1="432" y1="45" x2="420" y2="85"/><line x1="418" y1="160" x2="412" y2="121"/>
+ </g>
+</svg>
+<figcaption>Abb. 11.1 – ER-Diagramm (Chen-Notation) nach dem Folienbeispiel „Bibliothek“: Rechteck = Entitätstyp, Raute = Beziehungstyp, Ellipse = Attribut, unterstrichen = Schlüssel</figcaption>
+</figure>
+<div style="flex:1" class="small">
+<p><b>Lesart:</b> Ein Leser kann n Bücher ausleihen; ein Buch ist zu einem Zeitpunkt an höchstens einen Leser verliehen. Das <b>Rückgabedatum</b> gehört weder zum Buch noch zum Leser, sondern zur <b>Beziehung</b>.</p>
+<p><b>Kardinalitäten</b> (an wie vielen Beziehungen nimmt eine Entität teil?):<br><b>1:1</b> Leser – Bibliothekskarte<br><b>1:n</b> Rechnung – Posten<br><b>m:n</b> Leser bestellt Buch; Student besucht Vorlesung</p>
+<p>Weitere Chen-Symbole <span class="tag">Rückschau</span>: doppeltes Rechteck = schwache Entität; doppelte Ellipse = mehrwertiges Attribut; gestrichelte Ellipse = abgeleitetes Attribut; Doppellinie = totale Teilnahme.</p>
+</div>
+</div>
+
+<h3>Relationales Modell <span class="tag">Rückschau</span></h3>
+<p>Vom IBM-Forscher <b>Edgar F. Codd</b> 1970 entwickelt, heute das verbreitetste logische Modell (Oracle, IBM DB2, MS SQL Server, MySQL …). Eine Datenbank ist eine Sammlung von <b>Relationen = Tabellen</b>. Eine <b>Zeile</b> heißt <b>Tupel</b> (Datensatz), eine <b>Spalte</b> heißt <b>Attribut</b>. Jedes Attribut hat einen <b>Wertebereich (Domäne)</b>, und jeder Wert ist <b>atomar</b> (nicht weiter zerlegbar). <span class="mono">null</span> = Wert unbekannt/nicht vorhanden. Beziehungen werden über <b>Fremdschlüssel</b> abgebildet: ein Attribut, das auf den (Primär-)Schlüssel einer anderen Tabelle verweist. Eine <b>m:n</b>-Beziehung braucht eine eigene <b>Hilfstabelle</b> mit beiden Fremdschlüsseln.</p>
+<table class="small">
+<tr><th>ER-Element</th><th>wird im relationalen Modell zu … <span class="erg">(Faustregeln aus den Folienbeispielen)</span></th></tr>
+<tr><td>Entitätstyp</td><td>eigene Tabelle; Schlüsselattribut → Primärschlüssel</td></tr>
+<tr><td>1:n-Beziehung</td><td>Fremdschlüssel auf der <b>n-Seite</b> (PROJEKT.ABTNR → ABTEILUNG)</td></tr>
+<tr><td>1:1-Beziehung</td><td>Fremdschlüssel auf einer der beiden Seiten (ABTEILUNG.MGRSSN → ANGESTELLTER)</td></tr>
+<tr><td>m:n-Beziehung</td><td>Hilfstabelle mit beiden Fremdschlüsseln als zusammengesetztem Schlüssel + Beziehungsattributen: ARBEITET_AN(<u>ESSN, PNR</u>, STUNDEN)</td></tr>
+</table>
+
+<h3>SQL – Structured Query Language <span class="tag">Rückschau</span></h3>
+<p>In den 1970ern bei IBM entwickelt, seit 1987 ISO-Standard, <b>deklarativ</b> (man beschreibt, <i>was</i> man will, nicht <i>wie</i>). Teile: <b>Data Definition</b> (CREATE: Schema anlegen), <b>Data Manipulation</b> (INSERT, UPDATE, DELETE), <b>Data Query</b> (SELECT).</p>
+<div class="cols">
+<pre>CREATE TABLE Firma
+( Kurzname       char(15) not null,
+  Name           char(40),
+  Adresse        char(60),
+  Kurzmitteilung char(400) );
+
+INSERT INTO Student (MatrNr, Vorname, Name, Semester)
+VALUES (12345678, 'Peter', 'Hinz', 4),
+       (10101010, 'Petra', 'Kunz', 2);</pre>
+<pre>UPDATE Student
+SET    Exmatrikuliert = TRUE
+WHERE  Semester &gt; 99;
+
+DELETE FROM Student
+WHERE  MatrNr = 87654321;
+
+-- Grundstruktur einer Abfrage:
+SELECT &lt;Attributliste&gt;   -- welche Spalten
+FROM   &lt;Tabellenliste&gt;   -- aus welchen Tabellen
+WHERE  &lt;Bedingung&gt;;      -- welche Zeilen</pre>
+</div>
+<p class="small"><span class="mono">char(n)</span> = Text fester Länge, <span class="mono">not null</span> = Pflichtfeld. Ohne <span class="mono">WHERE</span> wirken UPDATE und DELETE auf <b>alle</b> Zeilen. Aggregatfunktionen fassen mehrere Zeilen zu einem Wert zusammen: <b>SUM, MAX, MIN, AVG, COUNT</b>; <b>GROUP BY</b> liefert eine Ergebniszeile pro Gruppe.</p>
+
+<h4>Beispieldaten (Auszug „Firma“, Folie)</h4>
+<div class="cols">
+<table class="small" style="flex:1.6">
+<tr><th colspan="6">ANGESTELLTER (Primärschlüssel SSN, Fremdschlüssel ABT → ABTEILUNG)</th></tr>
+<tr><th>VNAME</th><th>NNAME</th><th>SSN</th><th>GDATUM</th><th>GEHALT</th><th>ABT</th></tr>
+<tr><td>John</td><td>Smith</td><td>123456789</td><td>1965-01-09</td><td>30000</td><td>5</td></tr>
+<tr><td>Franklin</td><td>Wong</td><td>333445555</td><td>1955-12-08</td><td>40000</td><td>5</td></tr>
+<tr><td>Alicia</td><td>Zelaya</td><td>999887777</td><td>1968-07-19</td><td>25000</td><td>4</td></tr>
+<tr><td>Jennifer</td><td>Wallace</td><td>987654321</td><td>1941-06-20</td><td>43000</td><td>4</td></tr>
+<tr><td>Ramesh</td><td>Narayan</td><td>666884444</td><td>1962-09-15</td><td>38000</td><td>5</td></tr>
+<tr><td>Joyce</td><td>English</td><td>453453453</td><td>1972-07-31</td><td>25000</td><td>5</td></tr>
+<tr><td>Ahmad</td><td>Jabbar</td><td>987987987</td><td>1969-03-29</td><td>25000</td><td>4</td></tr>
+<tr><td>James</td><td>Borg</td><td>888665555</td><td>1937-11-10</td><td>55000</td><td>1</td></tr>
+</table>
+<div style="flex:1">
+<table class="small">
+<tr><th colspan="3">ABTEILUNG (PS ABTNUMMER)</th></tr>
+<tr><th>ANAME</th><th>ABTNUMMER</th><th>MGRSSN</th></tr>
+<tr><td>Research</td><td>5</td><td>333445555</td></tr>
+<tr><td>Administration</td><td>4</td><td>987654321</td></tr>
+<tr><td>Headquarters</td><td>1</td><td>888665555</td></tr>
+</table>
+<table class="small">
+<tr><th colspan="3">PROJEKT (PS PNUMMER)</th></tr>
+<tr><th>PNUMMER</th><th>PSTANDORT</th><th>ABTNR</th></tr>
+<tr><td>1</td><td>Bellaire</td><td>5</td></tr>
+<tr><td>2</td><td>Sugarland</td><td>5</td></tr>
+<tr><td>3</td><td>Houston</td><td>5</td></tr>
+<tr><td>10</td><td>Stafford</td><td>4</td></tr>
+<tr><td>20</td><td>Houston</td><td>1</td></tr>
+<tr><td>30</td><td>Stafford</td><td>4</td></tr>
+</table>
+</div>
+</div>
+
+<h4>Analyse: Was liefert die Abfrage? (alle Ergebnisse mit SQLite nachgeprüft)</h4>
+<p>Vorgehen bei der Analyse: (1) <b>FROM</b> – welche Tabellen? Bei mehreren: alle Kombinationen, die die Join-Bedingung erfüllen. (2) <b>WHERE</b> – Zeilen filtern. (3) <b>GROUP BY</b> – Gruppen bilden. (4) <b>SELECT</b> – Spalten bzw. Aggregate ausgeben.</p>
+<table class="small">
+<tr><th style="width:52%">Abfrage</th><th>Ergebnis</th></tr>
+<tr><td class="m">SELECT VNAME, NNAME, GEHALT<br>FROM ANGESTELLTER<br>WHERE ABT = 5 AND GEHALT &gt; 30000;</td><td>Franklin Wong 40000<br>Ramesh Narayan 38000<br><i>(Smith hat genau 30000 → nicht &gt; 30000!)</i></td></tr>
+<tr><td class="m">SELECT SUM(GEHALT), MAX(GEHALT),<br>       MIN(GEHALT), AVG(GEHALT)<br>FROM ANGESTELLTER;</td><td>281000 | 55000 | 25000 | 35125<br><i>(eine einzige Ergebniszeile, Folienbeispiel)</i></td></tr>
+<tr><td class="m">SELECT ABT, COUNT(*), AVG(GEHALT)<br>FROM ANGESTELLTER<br>GROUP BY ABT;</td><td>5 | 4 | 33250<br>4 | 3 | 31000<br>1 | 1 | 55000</td></tr>
+<tr><td class="m">SELECT PNUMMER, ABTNR, NNAME, GDATUM<br>FROM PROJEKT, ABTEILUNG, ANGESTELLTER<br>WHERE ABTNR = ABTNUMMER<br>  AND MGRSSN = SSN<br>  AND PSTANDORT = 'Stafford';</td><td>10 | 4 | Wallace | 1941-06-20<br>30 | 4 | Wallace | 1941-06-20<br><i>Join: Projekt → kontrollierende Abteilung → deren Managerin</i> <span class="tag">nur Folie</span></td></tr>
+<tr><td class="m">SELECT GDATUM, ADRESSE FROM ANGESTELLTER<br>WHERE VNAME = 'John' AND INITIAL = 'B'<br>  AND NNAME = 'Smith';</td><td>1965-01-09 | 731 Fondren, Houston, TX <i>(Folienbeispiel; die Spalten INITIAL und ADRESSE stehen in der Folientabelle, sind oben aus Platzgründen weggelassen)</i></td></tr>
+</table>
+
+<h4>Synthese: Abfrage selbst schreiben – Rezept</h4>
+<ol class="small">
+<li>Welche <b>Spalten</b> sollen ausgegeben werden? → <span class="mono">SELECT</span> (bei „wie viele“, „Summe“, „Durchschnitt“ → Aggregatfunktion).</li>
+<li>In welchen <b>Tabellen</b> stehen diese Spalten und die Bedingungen? → <span class="mono">FROM</span>; bei mehreren Tabellen die <b>Join-Bedingung</b> Fremdschlüssel = Primärschlüssel in WHERE.</li>
+<li>Welche <b>Zeilen</b>? → <span class="mono">WHERE</span> mit <span class="mono">AND/OR</span>, Texte in <b>geraden einfachen Hochkommas</b> <span class="mono">'…'</span>.</li>
+<li>„pro …“/„je …“ → <span class="mono">GROUP BY</span> über diese Spalte.</li>
+</ol>
+<div class="calc">„Wie viele Projekte kontrolliert jede Abteilung?“   → SELECT ABTNR, COUNT(*) FROM PROJEKT GROUP BY ABTNR;
+                                                     Ergebnis: 1 | 1,  4 | 2,  5 | 3
+„Namen aller Angestellten mit Gehalt ≥ 40000“        → SELECT NNAME FROM ANGESTELLTER WHERE GEHALT &gt;= 40000;
+                                                     Ergebnis: Wong, Wallace, Borg
+„Erhöhe die Gehälter der Abteilung 4 um 10 %“         → UPDATE ANGESTELLTER SET GEHALT = GEHALT * 1.1 WHERE ABT = 4;</div>
+<p class="small">Folienbeispiel GROUP BY: <span class="mono">SELECT Kunden.KNr, COUNT(Bestellungen.BestNr) AS Anzahl FROM Kunden, Bestellungen WHERE Kunden.Land='CH' AND Kunden.KNr=Bestellungen.KNr GROUP BY Kunden.KNr</span> zählt die Bestellungen je Schweizer Kunde. Hinweis der Folie: <b>Kunden ohne Bestellungen werden nicht ausgegeben</b> (die Join-Bedingung ist für sie nie erfüllt).</p>
+
+<h3>OLTP und OLAP <span class="tag">Rückschau</span></h3>
+<table>
+<tr><th></th><th>OLTP – Online Transaction Processing</th><th>OLAP – Online Analytical Processing</th></tr>
+<tr><td>Zweck</td><td>operatives Tagesgeschäft, Transaktionen (Bestellung, Buchung)</td><td>Analyse: BI, Data Warehouse</td></tr>
+<tr><td>Daten</td><td><b>aktuelle</b> Daten</td><td>inkl. <b>Historie</b></td></tr>
+<tr><td>Zugriff</td><td><b>Lesen und Schreiben</b>, ganze Datensätze</td><td>(fast) <b>nur Lesen</b> („read only“ Analytics)</td></tr>
+<tr><td>Speicherung</td><td><b>Row Store</b> – zeilenweise Ablage („klassisch“)</td><td><b>Column Store</b> – spaltenweise Ablage; schnell, wenn nur wenige Spalten gebraucht werden; gut komprimierbar → oft komplett im Hauptspeicher (<b>In-Memory-DB</b>)</td></tr>
+<tr><td>Beispiele</td><td>Oracle, MySQL</td><td>Amazon Redshift, SAP HANA</td></tr>
+</table>
+<p class="small">Daten wandern per <b>ETL</b> (Extract, Transform, Load) vom OLTP-System ins Data Warehouse. Beispiel (Country, Product, Sales) = (US, Alpha, 3000), (US, Beta, 1250), (JP, Alpha, 700), (UK, Alpha, 450): Row Store speichert <span class="mono">US Alpha 3000 | US Beta 1250 | …</span>, Column Store <span class="mono">US US JP UK | Alpha Beta Alpha Alpha | 3000 1250 700 450</span>. Für den Gesamtumsatz (5400) muss der Column Store nur die Sales-Spalte lesen.</p>
+
+<div class="err"><b>Folienfehler (VL04 bzw. Rückschau):</b> „tertiär“ (3 Entitätstypen) heißt richtig <b>ternär</b>. Beziehungstypen werden im Firmenbeispiel „Relationen“ genannt – im relationalen Modell ist eine <b>Relation aber eine Tabelle</b>. Im INSERT-Beispiel enden <span class="mono">'Hinz‘</span> und <span class="mono">'Kunz‘</span> mit typografischem Anführungszeichen → in SQL nur gerade Apostrophe <span class="mono">'…'</span>. <span class="mono">DELETE Student WHERE …</span> – Standard-SQL verlangt <span class="mono">DELETE FROM</span>. Im SELECT-Beispiel heißt die Spalte <span class="mono">NNAME</span>, nicht <span class="mono">NAME</span>. Kommentare mit <span class="mono">//</span> (Join-Folie) sind kein SQL – richtig <span class="mono">--</span>. „Tedd Codd“ → Edgar F. „Ted“ Codd. ARBEITET_AN ist insgesamt <b>m:n</b>, nicht „1:N / 1:N“.</div>
+
+<div class="box trap"><div class="t">Typische Klausurfallen</div>
+<ul>
+<li><b>Relation = Tabelle</b>, nicht Beziehung. <b>Tupel = Zeile</b>, <b>Attribut = Spalte</b>.</li>
+<li>DB ≠ DBMS ≠ Datenbanksystem (DB + DBMS). Data Dictionary = <b>Metadaten</b>, nicht Nutzdaten.</li>
+<li>Fremdschlüssel bei 1:n auf die <b>n-Seite</b>; m:n braucht <b>immer</b> eine Hilfstabelle.</li>
+<li>Bei der Analyse auf <b>&gt;</b> vs. <b>&gt;=</b> achten (Smith mit genau 30000!) und auf AND vs. OR.</li>
+<li>Aggregat ohne GROUP BY → genau <b>eine</b> Ergebniszeile. Mit GROUP BY → eine Zeile <b>pro Gruppe</b>.</li>
+<li>UPDATE/DELETE ohne WHERE trifft <b>alle</b> Zeilen.</li>
+<li>Join über Komma + WHERE: Zeilen ohne Partner (Kunde ohne Bestellung) erscheinen nicht.</li>
+<li>OLTP = Row Store, Lesen und Schreiben, aktuell; OLAP = Column Store, Lesen, Historie.</li>
+</ul></div>
+<div class="box must"><div class="t">Das musst du können</div>
+<ul>
+<li>Probleme des Dateiansatzes nennen</li>
+<li>DB, DBMS, Data Dictionary definieren</li>
+<li>Vor-/Nachteile DBMS nennen</li>
+<li>ER-Diagramm mit Kardinalitäten zeichnen</li>
+<li>Entität/Attribut/Schlüssel/Beziehung erklären</li>
+<li>relationale Begriffe (Tupel, Attribut, Domäne, PK, FK)</li>
+<li>ER → Tabellen (1:n, m:n)</li>
+<li>SELECT … FROM … WHERE lesen und schreiben</li>
+<li>Join, Aggregat, GROUP BY</li>
+<li>INSERT/UPDATE/DELETE</li>
+<li>OLTP vs. OLAP, Row vs. Column Store</li>
+</ul></div>
+
+<div class="box" style="margin-top:5mm">
+<div class="t">Zum Schluss – Strategie in der Klausur</div>
+<ul class="small">
+<li>Zuerst die Aufgaben mit sicheren Punkten (Nennen, MC, Skizzen), dann Rechnen. Pro Punkt etwa 1 Minute einplanen.</li>
+<li>Bei Rechnungen den <b>Rechenweg</b> hinschreiben (Restwertmethode, Invertieren +1, DNF-Terme) – das zeigt Verständnis, auch wenn am Ende ein Fehler steckt.</li>
+<li>Bei MC jede Option einzeln als wahr/falsch prüfen; nur ankreuzen, was du sicher als richtig erkennst.</li>
+<li>Skizzen groß, beschriftet, mit Pfeilen; Operator beachten („nennen“ = Stichpunkte, „erläutern“ = mehrere Sätze).</li>
+</ul>
+</div>
+
+</body>
+</html>
