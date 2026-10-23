@@ -1,0 +1,673 @@
+<title>Zahlen und Logik · GIT</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: Datenblatt eines Bauteils – schmale Lesespalte, Kapitelnummern als Randmarke, Bitmuster in Mono, Quellen als kleine Stempel */
+:root{
+  --paper:#f6f8f6; --sheet:#ffffff; --ink:#15201b; --muted:#56635c; --line:#d5ddd8;
+  --accent:#1d6b4f; --accent-soft:#e3f0ea; --signal:#a8540a; --signal-soft:#fbeedd;
+  --bad:#b4233a; --ok:#1d6b4f; --mid:#a8540a;
+  --code:#eef2ef;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --body:"Source Sans 3","Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#101613; --sheet:#151d19; --ink:#e3ebe6; --muted:#9aa8a0; --line:#2b3832;
+  --accent:#5cc497; --accent-soft:#183a2c; --signal:#f0a35a; --signal-soft:#3a2714;
+  --bad:#f07a8c; --ok:#5cc497; --mid:#f0a35a; --code:#1c2621; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#101613; --sheet:#151d19; --ink:#e3ebe6; --muted:#9aa8a0; --line:#2b3832;
+  --accent:#5cc497; --accent-soft:#183a2c; --signal:#f0a35a; --signal-soft:#3a2714;
+  --bad:#f07a8c; --ok:#5cc497; --mid:#f0a35a; --code:#1c2621; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.wrap{max-width:860px;margin:0 auto;padding-block:28px 64px}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.2;text-wrap:balance;margin:0}
+h1{font-size:clamp(30px,6vw,44px);font-weight:800;letter-spacing:-.01em}
+h2{font-size:clamp(24px,4.4vw,32px);font-weight:800;margin-top:8px}
+h3{font-size:21px;font-weight:700;margin-top:34px;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+h4{font-size:17px;font-weight:700;margin-top:22px}
+p{margin:10px 0;max-width:68ch}
+ul,ol{margin:10px 0;padding-left:22px;max-width:68ch}
+li{margin:4px 0}
+a{color:var(--accent)}
+.lede{color:var(--muted);font-size:18px;max-width:62ch}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--line);
+  margin:18px 0 0;padding:10px 0;display:flex;gap:6px;flex-wrap:wrap}
+nav.top a{font-family:var(--display);font-weight:700;font-size:14px;text-decoration:none;color:var(--ink);
+  border:1px solid var(--line);border-radius:999px;padding:5px 12px;background:var(--sheet)}
+nav.top a:hover,nav.top a:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+section.kap{margin-top:46px;padding-top:12px;border-top:3px solid var(--ink)}
+.kapnr{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.tag{font-family:var(--mono);font-size:11px;font-weight:600;border:1px solid var(--line);border-radius:4px;padding:1px 6px;color:var(--muted);white-space:nowrap}
+.tag.R{border-color:var(--accent);color:var(--accent)}
+.tag.K{background:var(--accent);border-color:var(--accent);color:var(--sheet)}
+.tag.F{border-color:var(--signal);color:var(--signal)}
+.tag.E{border-style:dashed}
+.src{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.box{background:var(--sheet);border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:14px 0}
+.box.warn{border-left:4px solid var(--signal);background:var(--signal-soft)}
+.box.key{border-left:4px solid var(--accent);background:var(--accent-soft)}
+.box.q{border-left:4px solid var(--ink)}
+.box.q .qq{font-family:var(--display);font-weight:700;margin-bottom:4px}
+.box p:first-child{margin-top:0}.box p:last-child{margin-bottom:0}
+.focus{display:inline-block;background:var(--signal);color:var(--sheet);font-family:var(--mono);font-size:11px;font-weight:600;padding:2px 7px;border-radius:4px;letter-spacing:.05em;text-transform:uppercase}
+pre,code{font-family:var(--mono)}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font-size:.9em}
+pre{background:var(--code);border-radius:8px;padding:12px 14px;font-size:14px;line-height:1.5;overflow-x:auto;margin:12px 0}
+.scroll{overflow-x:auto;margin:12px 0}
+table{border-collapse:collapse;font-size:15px;min-width:100%}
+th,td{border-bottom:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{font-family:var(--display);font-size:13px;letter-spacing:.03em;text-transform:uppercase;color:var(--muted);font-weight:700}
+td.num,th.num{font-variant-numeric:tabular-nums;text-align:right}
+.tt td,.tt th{font-family:var(--mono);text-align:center;padding:4px 10px}
+.tt td.hl{background:var(--signal-soft);font-weight:600}
+.tt td.out{font-weight:600}
+select.st{font-family:var(--mono);font-size:13px;padding:3px 4px;border-radius:6px;border:1px solid var(--line);background:var(--sheet);color:var(--ink)}
+select.st:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+select.st[data-v="ok"]{border-color:var(--ok);color:var(--ok)}
+select.st[data-v="mid"]{border-color:var(--mid);color:var(--mid)}
+select.st[data-v="no"]{border-color:var(--bad);color:var(--bad)}
+.progress{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-family:var(--mono);font-size:13px;color:var(--muted);margin:8px 0}
+.bar{flex:1 1 180px;height:8px;background:var(--line);border-radius:99px;overflow:hidden;min-width:120px}
+.bar i{display:block;height:100%;width:0;background:var(--accent);transition:width .3s}
+.legend{display:flex;gap:12px 18px;flex-wrap:wrap;font-size:14px;color:var(--muted);margin:10px 0}
+.legend span{display:flex;gap:6px;align-items:center}
+.status{font-family:var(--mono);font-size:12px;font-weight:600;padding:2px 8px;border-radius:99px;white-space:nowrap}
+.status.done{background:var(--accent-soft);color:var(--accent)}
+.status.wip{background:var(--signal-soft);color:var(--signal)}
+.status.open{border:1px solid var(--line);color:var(--muted)}
+details{background:var(--sheet);border:1px solid var(--line);border-radius:8px;margin:10px 0}
+details>summary{cursor:pointer;padding:9px 14px;font-family:var(--display);font-weight:700;font-size:15px;color:var(--accent)}
+details>summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+details>div{padding:0 14px 10px}
+.task{background:var(--sheet);border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:12px 0}
+.task .tn{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.task p{margin:6px 0}
+.task details{margin:8px 0 0;background:var(--paper)}
+svg.circ{max-width:100%;height:auto;display:block;margin:10px 0}
+svg.circ text{font-family:var(--mono);fill:var(--ink)}
+svg.circ .w{stroke:var(--ink);stroke-width:1.6;fill:none}
+svg.circ .g{stroke:var(--ink);stroke-width:1.6;fill:var(--sheet)}
+svg.circ .n{stroke:var(--ink);stroke-width:1.6;fill:var(--sheet)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.grid2>*{min-width:0}
+footer{margin-top:56px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);padding-top:14px}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Grundlagen der IT · DHBW Heilbronn · Klausur Mo 07.12.2026, 48 Min.</div>
+  <h1>Zahlen und Logik</h1>
+  <p class="lede">Lernseite zu den Klausurblöcken 4 (Zahlendarstellung und Rechnen) und 5 (Wahrheitstabellen, Boolesche Ausdrücke, Logikgatter), gegliedert nach Kapiteln mit Quellenangabe. Bei jedem Unterkapitel trägst du ein, wie sicher du bist; die Balken zeigen dann, wie viel du schon kannst.</p>
+  <div class="legend">
+    <span><b class="tag K">K</b> in „VL05 Klausurvorbereitung“ als Klausurthema genannt</span>
+    <span><b class="tag R">R</b> steht in der Rückschau, wurde sicher behandelt</span>
+    <span><b class="tag F">F</b> nur auf den Vorlesungsfolien (oft Exkurs)</span>
+    <span><b class="tag E">E</b> Ergänzung, nicht auf den Folien</span>
+  </div>
+  <p class="src">Folien: „GIT VL02 – final“ (= VL), „VL02 Rückschau final“ (= Rü), „VL05 Klausurvorbereitung“ (= KV). Foliennummern wie im jeweiligen PDF.</p>
+</header>
+
+<nav class="top" aria-label="Kapitel">
+  <a href="#uebersicht">Übersicht</a><a href="#kap4">4 Zahlen</a><a href="#kap5">5 Logik</a><a href="#vereinfachen">5.7 Vereinfachen</a><a href="#uebungen">Übungen</a><a href="#quellen">Quellen</a>
+</nav>
+
+<!-- ============ ÜBERSICHT ============ -->
+<section class="kap" id="uebersicht">
+  <div class="kapnr">Übersicht</div>
+  <h2>Alle GIT-Klausurthemen</h2>
+  <p>Die elf Blöcke und Punkte stammen aus der exemplarischen Punkteverteilung (KV F. 8–9). Insgesamt sind es etwa 50 Punkte in 48 Minuten, also rund ein Punkt pro Minute. Rechnen und Logik nennt der Dozent ausdrücklich „Übungssache“ (KV F. 2).</p>
+  <div class="progress" aria-live="polite"><span>Blöcke 4 + 5 sicher:</span><span class="bar"><i id="bar-all"></i></span><span id="txt-all">0 %</span></div>
+  <div class="scroll"><table>
+    <thead><tr><th>Block</th><th>Thema</th><th class="num">Punkte</th><th>Quelle</th><th>Stand</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Information und Digitalisierung</td><td class="num">3</td><td class="src">VL01, Rü01</td><td><span class="status open">offen</span></td></tr>
+      <tr><td>2</td><td>IT-Infrastruktur und Cloud-Computing</td><td class="num">4</td><td class="src">VL01, Rü01</td><td><span class="status open">offen</span></td></tr>
+      <tr><td>3</td><td>Mooresches Gesetz</td><td class="num">2</td><td class="src">VL01</td><td><span class="status open">offen</span></td></tr>
+      <tr><td><a href="#kap4">4</a></td><td><a href="#kap4">Zahlendarstellung und Rechnen</a></td><td class="num">3</td><td class="src">VL F. 13–48, Rü F. 3–18</td><td><span class="status done">gelernt</span> <span class="src">Kommazahlen offen</span></td></tr>
+      <tr><td><a href="#kap5">5</a></td><td><a href="#kap5">Wahrheitstabelle, Boolesche Ausdrücke, Logikgatter</a></td><td class="num">4</td><td class="src">VL F. 50–72, Rü F. 19–26</td><td><span class="status wip">in Arbeit</span> <span class="src">Vereinfachen üben!</span></td></tr>
+      <tr><td>6</td><td>Programmierung (allgemeine Fragen)</td><td class="num">2</td><td class="src">VL02 F. 73 ff.</td><td><span class="status open">offen</span></td></tr>
+      <tr><td>7</td><td>Datenstrukturen (Stack, Queue, Liste, Baum)</td><td class="num">6–8</td><td class="src">VL02, Rü02</td><td><span class="status open">offen</span></td></tr>
+      <tr><td>8</td><td>Suchen und Sortieren</td><td class="num">6</td><td class="src">VL02, Rü02</td><td><span class="status open">offen</span></td></tr>
+      <tr><td>9</td><td>Rechnerarchitektur: Von-Neumann vs. Harvard</td><td class="num">8</td><td class="src">VL03a, Rü03a</td><td><span class="status open">offen</span></td></tr>
+      <tr><td>10</td><td>Speicher (Hierarchie, RAID)</td><td class="num">4</td><td class="src">VL03b, Rü03b</td><td><span class="status open">offen</span></td></tr>
+      <tr><td>11</td><td>Datenbanken (Eigenschaften, SQL)</td><td class="num">4–6</td><td class="src">VL04, Rü04</td><td><span class="status open">offen</span></td></tr>
+    </tbody>
+  </table></div>
+  <p>Die drei größten Brocken sind Rechnerarchitektur, Datenstrukturen und Suchen/Sortieren mit zusammen rund 20 Punkten. Die Blöcke 4 und 5 bringen nur 7 Punkte, sind aber die Grundlage für alles, was im Rechner passiert, und lassen sich nur durch Üben sicher lernen.</p>
+</section>
+
+<!-- ============ KAPITEL 4 ============ -->
+<section class="kap" id="kap4">
+  <div class="kapnr">Block 4 · 3 Punkte · „DAS IST ÜBUNGSSACHE!!“</div>
+  <h2>4 Zahlendarstellung und Rechnen</h2>
+  <p>Laut KV F. 2 gibt es drei Kernaufgaben: Umwandlung zwischen den Basen 2, 8, 10 und 16, binäres Rechnen im positiven und negativen ganzzahligen Bereich und die Darstellung nicht ganzzahliger Werte.</p>
+  <div class="progress"><span>Kapitel 4:</span><span class="bar"><i data-bar="4"></i></span><span data-txt="4">0 %</span></div>
+
+  <div class="scroll"><table class="check" data-kap="4">
+    <thead><tr><th>Nr</th><th>Unterkapitel</th><th>Quelle</th><th>Folie</th><th>Kann ich</th></tr></thead>
+    <tbody>
+      <tr><td>4.1.1</td><td>Bit und Byte, warum binär</td><td><span class="tag F">F</span></td><td class="src">VL 16–17</td><td data-id="4.1.1"></td></tr>
+      <tr><td>4.1.2</td><td>Stellenwertsystem: Basis<sup>Position</sup></td><td><span class="tag R">R</span></td><td class="src">VL 19–21, Rü 3</td><td data-id="4.1.2"></td></tr>
+      <tr><td>4.1.3</td><td>Systeme 2, 8, 10, 16 und Ziffern A–F</td><td><span class="tag R">R</span> <span class="tag K">K</span></td><td class="src">VL 22–24, Rü 4–6</td><td data-id="4.1.3"></td></tr>
+      <tr><td>4.1.4</td><td>Potenzen von 2, 8, 16 auswendig</td><td><span class="tag R">R</span></td><td class="src">VL 22–24</td><td data-id="4.1.4"></td></tr>
+      <tr><td>4.2.1</td><td>Beliebige Basis → dezimal</td><td><span class="tag R">R</span> <span class="tag K">K</span></td><td class="src">VL 21–24, Rü 3–6</td><td data-id="4.2.1"></td></tr>
+      <tr><td>4.2.2</td><td>Dezimal → Basis (Restwertmethode)</td><td><span class="tag R">R</span> <span class="tag K">K</span></td><td class="src">VL 25–27, Rü 7–9</td><td data-id="4.2.2"></td></tr>
+      <tr><td>4.2.3</td><td>Binär ↔ Oktal/Hex über Gruppen</td><td><span class="tag R">R</span> <span class="tag K">K</span></td><td class="src">VL 28–29, Rü 10–11</td><td data-id="4.2.3"></td></tr>
+      <tr><td>4.2.4</td><td>Folienaufgaben (458, 1001 0010, Größenvergleich)</td><td><span class="tag F">F</span></td><td class="src">VL 30, 33</td><td data-id="4.2.4"></td></tr>
+      <tr><td>4.3.1</td><td>Binär addieren, Übertrag</td><td><span class="tag R">R</span> <span class="tag K">K</span></td><td class="src">VL 31–32, Rü 12</td><td data-id="4.3.1"></td></tr>
+      <tr><td>4.3.2</td><td>Feste Bitbreite, 8 Bit, Byte</td><td><span class="tag R">R</span></td><td class="src">VL 17, 32</td><td data-id="4.3.2"></td></tr>
+      <tr><td>4.4.1</td><td>Vorzeichen-Betrag</td><td><span class="tag R">R</span></td><td class="src">VL 34, Rü 13</td><td data-id="4.4.1"></td></tr>
+      <tr><td>4.4.2</td><td>Einerkomplement mit End-around Carry</td><td><span class="tag R">R</span></td><td class="src">VL 35, 37, Rü 14, 16</td><td data-id="4.4.2"></td></tr>
+      <tr><td>4.4.3</td><td>Zweierkomplement: invertieren + 1</td><td><span class="tag R">R</span> <span class="tag K">K</span></td><td class="src">VL 36, 38–39, Rü 15, 17</td><td data-id="4.4.3"></td></tr>
+      <tr><td>4.4.4</td><td>Negative Zahl ablesen (−128-Probe)</td><td><span class="tag R">R</span></td><td class="src">VL 36, Rü 15</td><td data-id="4.4.4"></td></tr>
+      <tr><td>4.4.5</td><td>Wertebereiche (8 Bit: −128 … 127)</td><td><span class="tag R">R</span> <span class="tag E">E</span></td><td class="src">VL 36</td><td data-id="4.4.5"></td></tr>
+      <tr><td>4.5.1</td><td>Subtraktion a − b = a + (−b)</td><td><span class="tag R">R</span> <span class="tag K">K</span></td><td class="src">VL 38, 40, Rü 17–18</td><td data-id="4.5.1"></td></tr>
+      <tr><td>4.6.1</td><td>Überlauf vs. Übertrag</td><td><span class="tag R">R</span></td><td class="src">VL 32, 38</td><td data-id="4.6.1"></td></tr>
+      <tr><td>4.6.2</td><td>Faustregel über die Vorzeichen</td><td><span class="tag E">E</span></td><td class="src">–</td><td data-id="4.6.2"></td></tr>
+      <tr><td>4.7.1</td><td>Binäre Kommazahlen (×2-Verfahren)</td><td><span class="tag F">F</span> <span class="tag K">K</span></td><td class="src">VL 45</td><td data-id="4.7.1"></td></tr>
+      <tr><td>4.7.2</td><td>Gleitkomma m · b<sup>e</sup>, IEEE 754</td><td><span class="tag F">F</span> <span class="tag K">K</span></td><td class="src">VL 46–48</td><td data-id="4.7.2"></td></tr>
+      <tr><td>4.8</td><td>Exkurs Shift-Operator</td><td><span class="tag F">F</span></td><td class="src">VL 42–44</td><td data-id="4.8"></td></tr>
+    </tbody>
+  </table></div>
+  <p class="src">Pflicht sind alle Zeilen mit R oder K. Bei 4.7 (nur Folie, aber in KV genannt) solltest du das Prinzip erklären können; IEEE 754 im Detail und der Shift-Operator sind „nice to have“.</p>
+
+  <h3><span class="kapnr">4.1</span> Grundlagen: Bits, Bytes und Stellenwerte <span class="tag F">F</span><span class="tag R">R</span></h3>
+  <p>Ein Computer besteht aus Milliarden winziger elektronischer Schalter. Jeder kennt nur zwei Zustände: Spannung liegt an oder nicht. Diesen Zuständen ordnet man die Ziffern 1 und 0 zu (VL F. 16). Eine einzelne solche Stelle heißt <b>Bit</b>, acht Bits zusammen ein <b>Byte</b> (VL F. 17). Alles, was ein Rechner verarbeitet, also Zahlen, Buchstaben und Bilder, muss deshalb als Folge von Bits dargestellt werden.</p>
+
+  <div class="box q"><div class="qq">Was sind 8 Bit?</div>
+    <p>Acht Bit heißt: Du hast genau acht Stellen nebeneinander, nicht mehr und nicht weniger. Jede Stelle hat einen festen Wert:</p>
+    <pre>Stellenwert: 128  64  32  16   8   4   2   1
+Bits:          0   1   0   0   0   0   0   1   = 64 + 1 = 65</pre>
+    <p>Mit acht Stellen gibt es 2⁸ = 256 verschiedene Muster, also die Zahlen 0 bis 255 ohne Vorzeichen, oder −128 bis +127 im Zweierkomplement (4.4). Stell es dir vor wie einen Kilometerzähler mit fester Stellenzahl: Er hat genau so viele Ziffern, wie eingebaut sind. Im Computer legt der <b>Datentyp</b> fest, wie viele Bits eine Zahl bekommt, zum Beispiel 8, 16, 32 oder 64.</p>
+  </div>
+
+  <p>Das Prinzip hinter allen Zahlensystemen ist das <b>Stellenwertsystem</b> (VL F. 19–21): Der Wert einer Ziffer hängt von ihrer Position ab. Jede Stelle hat die Wertigkeit <i>Basis hoch Position</i>, gezählt von rechts ab 0. Aus dem Alltag kennst du das vom Dezimalsystem: 235 = 2·10² + 3·10¹ + 5·10⁰. Das römische System hat dagegen keine Stellenwerte und keine Null.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>System</th><th class="num">Basis</th><th>Ziffern</th><th>235₁₀ =</th></tr></thead>
+    <tbody>
+      <tr><td>Dual / Binär</td><td class="num">2</td><td><code>0 1</code></td><td><code>1110 1011</code></td></tr>
+      <tr><td>Oktal</td><td class="num">8</td><td><code>0–7</code></td><td><code>353</code></td></tr>
+      <tr><td>Dezimal</td><td class="num">10</td><td><code>0–9</code></td><td><code>235</code></td></tr>
+      <tr><td>Hexadezimal</td><td class="num">16</td><td><code>0–9, A=10 … F=15</code></td><td><code>EB</code></td></tr>
+    </tbody>
+  </table></div>
+  <div class="box key"><p><b>Auswendig lernen:</b> Zweierpotenzen 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024 · Achterpotenzen 1, 8, 64, 512 · Sechzehnerpotenzen 1, 16, 256, 4096 · Hexziffern A = 10, B = 11, C = 12, D = 13, E = 14, F = 15.</p></div>
+
+  <h3><span class="kapnr">4.2</span> Umrechnen <span class="tag R">R</span><span class="tag K">K</span></h3>
+  <h4>4.2.1 Beliebige Basis → dezimal</h4>
+  <p>Jede Ziffer wird mit ihrer Stellenwertigkeit multipliziert, dann wird alles addiert. Bei Binärzahlen schreibst du am besten die Stellenwerte über die Bits und addierst nur dort, wo eine 1 steht.</p>
+  <pre>128  64  32  16   8   4   2   1
+  1   1   1   0   1   0   1   1   →  128+64+32+8+2+1 = 235
+
+353₈ = 3·64 + 5·8 + 3·1 = 235        EB₁₆ = 14·16 + 11·1 = 235</pre>
+  <h4>4.2.2 Dezimal → Basis b: Restwertmethode</h4>
+  <p>Die Zahl wird fortlaufend ganzzahlig durch die Basis geteilt, bis 0 herauskommt. Die Reste <b>von unten nach oben</b> gelesen ergeben die Zahl. Der Rest beim Teilen durch 2 sagt, ob die Zahl gerade ist, und das ist genau das letzte Bit.</p>
+  <pre>235 : 2 = 117 Rest 1   ← letzte Stelle
+117 : 2 =  58 Rest 1
+ 58 : 2 =  29 Rest 0
+ 29 : 2 =  14 Rest 1
+ 14 : 2 =   7 Rest 0
+  7 : 2 =   3 Rest 1
+  3 : 2 =   1 Rest 1
+  1 : 2 =   0 Rest 1   ← erste Stelle      → 1110 1011₂
+
+235 : 16 = 14 Rest 11 (B)
+ 14 : 16 =  0 Rest 14 (E)                  → EB₁₆</pre>
+  <h4>4.2.3 Binär ↔ Oktal/Hex über Gruppen</h4>
+  <p>Weil 8 = 2³ und 16 = 2⁴ ist, entspricht eine Oktalziffer genau drei Bit und eine Hexziffer genau vier Bit. Die Gruppen werden <b>immer von rechts</b> gebildet; links wird mit Nullen aufgefüllt. Zwischen Oktal und Hex rechnest du am einfachsten über den Umweg Binär.</p>
+  <pre>1110 1011₂  → Vierergruppen  1110 | 1011       → E B₁₆
+            → Dreiergruppen  011 | 101 | 011   → 3 5 3₈
+
+100₁₀ = 0110 0100₂ → von rechts: 001 | 100 | 100 → 1 4 4₈   (nicht 344!)</pre>
+  <div class="box warn"><p><b>Typischer Fehler:</b> Gruppen von links bilden. Bei 0110 0100 ergibt das die falsche 3 vorne. Probe: 1·64 + 4·8 + 4 = 100 ✓.</p></div>
+
+  <h3><span class="kapnr">4.3</span> Binär addieren und feste Bitbreite <span class="tag R">R</span><span class="tag K">K</span></h3>
+  <p>Binär addiert man genauso schriftlich wie im Dezimalsystem, von rechts nach links und mit Übertrag. Es gibt nur vier Regeln: 0+0 = 0, 0+1 = 1, 1+1 = 0 mit Übertrag 1, und 1+1+1 = 1 mit Übertrag 1. Schreib die Überträge klein über die nächste Spalte links, dann vergisst du keinen.</p>
+  <pre>  Überträge:  1 1 1 1 1
+              0001 1110   (30)
+            + 1101 0011   (−45)
+            = 1111 0001   (−15)</pre>
+  <div class="scroll"><table>
+    <thead><tr><th>Bit</th><th>Rechnung</th><th>Ergebnis</th><th>Übertrag</th></tr></thead>
+    <tbody>
+      <tr><td>0 (rechts)</td><td>0 + 1</td><td>1</td><td>0</td></tr>
+      <tr><td>1</td><td>1 + 1</td><td>0</td><td>1</td></tr>
+      <tr><td>2</td><td>1 + 0 + 1</td><td>0</td><td>1</td></tr>
+      <tr><td>3</td><td>1 + 0 + 1</td><td>0</td><td>1</td></tr>
+      <tr><td>4</td><td>1 + 1 + 1</td><td>1</td><td>1</td></tr>
+      <tr><td>5</td><td>0 + 0 + 1</td><td>1</td><td>0</td></tr>
+      <tr><td>6</td><td>0 + 1</td><td>1</td><td>0</td></tr>
+      <tr><td>7 (links)</td><td>0 + 1</td><td>1</td><td>0</td></tr>
+    </tbody>
+  </table></div>
+  <p>Im Rechner hat jede Zahl eine <b>feste Bitbreite</b>. Die Folie zeigt mit 127 + 127 = 254, dass das Ergebnis einer Addition ein Bit mehr brauchen kann als die Summanden: 127 ist <code>111 1111</code> und passt in 7 Bit, 254 ist <code>1111 1110</code> und braucht 8. Ob das zum Problem wird, hängt vom Datentyp ab, und genau das ist der Überlauf (4.6).</p>
+
+  <h3><span class="kapnr">4.4</span> Negative Zahlen <span class="tag R">R</span><span class="tag K">K</span></h3>
+  <p>Bits kennen kein Minuszeichen, das Vorzeichen muss also in den Bits stecken. Die Folien zeigen drei Verfahren (VL F. 34–36); Standard ist das Zweierkomplement. Beispiel −42 in 8 Bit, wobei +42 = <code>0010 1010</code> ist:</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Darstellung</th><th>So bildet man −42</th><th>Ergebnis</th><th>Wertebereich 8 Bit</th><th>Eigenschaft</th></tr></thead>
+    <tbody>
+      <tr><td>Vorzeichen-Betrag</td><td>erstes Bit = 1</td><td><code>1010 1010</code></td><td>−127 … +127</td><td>zwei Nullen, Rechnen umständlich</td></tr>
+      <tr><td>Einerkomplement</td><td>alle Bits invertieren</td><td><code>1101 0101</code></td><td>−127 … +127</td><td>zwei Nullen, Übertrag wird unten wieder addiert (End-around Carry)</td></tr>
+      <tr><td><b>Zweierkomplement</b></td><td>invertieren, dann +1</td><td><code>1101 0110</code></td><td>−128 … +127</td><td>eine Null, Subtraktion mit derselben Addierschaltung</td></tr>
+    </tbody>
+  </table></div>
+  <h4>4.4.3 Zweierkomplement Schritt für Schritt (−25 in 8 Bit)</h4>
+  <ol>
+    <li><b>Bitbreite festlegen:</b> 8 Bit. Ohne feste Breite ist das Zweierkomplement nicht definiert.</li>
+    <li><b>Betrag binär mit führenden Nullen:</b> 25 = 16 + 8 + 1 = <code>0001 1001</code></li>
+    <li><b>Alle Bits umdrehen:</b> <code>1110 0110</code></li>
+    <li><b>+1 addieren:</b> <code>1110 0111</code> = −25</li>
+  </ol>
+  <h4>4.4.4 Eine negative Zahl ablesen</h4>
+  <p>Zuerst schaust du aufs erste Bit: 0 heißt positiv, 1 heißt negativ. Eine negative Zahl kannst du nicht wie eine normale Binärzahl ablesen, denn <code>1111 0001</code> wäre sonst 241. Es gibt zwei Wege:</p>
+  <ul>
+    <li><b>−128-Probe:</b> Im Zweierkomplement zählt das höchste Bit −128, alle anderen wie gewohnt. <code>1111 0001</code> = −128 + 64 + 32 + 16 + 1 = −15. Das Minus kommt automatisch heraus.</li>
+    <li><b>Umdrehen und +1:</b> <code>1111 0001</code> → <code>0000 1110</code> → +1 = <code>0000 1111</code> = 15. Das ist nur der <b>Betrag</b>; das Minus, das du am ersten Bit gesehen hast, setzt du wieder davor: −15.</li>
+  </ul>
+  <div class="box warn"><p><b>Typischer Fehler:</b> Nach dem Umdrehen das Minus vergessen und 15 als Ergebnis hinschreiben. Das Ergebnis im Rechner bleibt <code>1111 0001</code>; die 15 ist nur ein Hilfsschritt.</p></div>
+
+  <h3><span class="kapnr">4.5</span> Subtrahieren über das Zweierkomplement <span class="tag R">R</span><span class="tag K">K</span></h3>
+  <p>Der Rechner braucht keine eigene Subtrahierschaltung. Aus a − b wird a + (−b): Von der Zahl <b>hinter dem Minus</b> bildest du das Zweierkomplement und addierst. Ein Übertrag, der links aus den 8 Bit herausfällt, wird ignoriert.</p>
+  <pre>42 − 17 = 42 + (−17)                         (VL F. 40, Rü F. 18)
+   0010 1010   (42)
+ + 1110 1111   (−17: 0001 0001 → 1110 1110 → +1)
+ = (1)0001 1001  → Übertrag weglassen → 0001 1001 = 25 ✓</pre>
+  <div class="box warn"><p><b>Typischer Fehler:</b> Das Komplement von der falschen Zahl bilden. Bei 30 − 45 muss die 45 negativ werden. Wer stattdessen −30 bildet, rechnet in Wahrheit 45 − 30 = +15.</p></div>
+
+  <h3><span class="kapnr">4.6</span> Überlauf <span class="tag R">R</span><span class="tag E">E</span></h3>
+  <div class="box q"><div class="qq">Was meint Überlauf?</div>
+    <p>Ein Überlauf passiert, wenn das Ergebnis einer Rechnung mehr Platz bräuchte, als der Datentyp hat. Es passt nicht in den Wertebereich und wird deshalb falsch angezeigt. Beim Kilometerzähler mit sechs Stellen springt 999 999 + 1 auf 000 000, weil die führende 1 keinen Platz mehr hat.</p>
+    <pre>8 Bit ohne Vorzeichen (0 … 255)        8 Bit Zweierkomplement (−128 … 127)
+  1111 1111   (255)                       0111 1111   (127)
++ 0000 0001   (1)                       + 0000 0001   (1)
+= 1 0000 0000 → 9. Bit fällt weg → 0    = 1000 0000   → wird als −128 gelesen</pre>
+    <p>Beim Folienbeispiel 127 + 127 = 254 hängt es vom Datentyp ab: 8 Bit ohne Vorzeichen fassen 254, im 8-Bit-Zweierkomplement ist es ein Überlauf.</p>
+  </div>
+  <p><b>Übertrag und Überlauf sind nicht dasselbe.</b> Der Übertrag, der links herausfällt, ist im Zweierkomplement normal und wird ignoriert (siehe 42 − 17). Ein Überlauf ist ein echter Fehler. Eine Faustregel (Ergänzung): Ein Überlauf liegt genau dann vor, wenn beide Summanden dasselbe Vorzeichen haben, das Ergebnis aber das andere. Eine positive plus eine negative Zahl kann nie überlaufen. Beispiel 90 + 60 = 150 in 8 Bit: Ergebnis <code>1001 0110</code>, also plus + plus ergibt scheinbar minus (−106). Das ist ein Überlauf, weil 150 > 127.</p>
+
+  <h3><span class="kapnr">4.7</span> Nicht ganzzahlige Werte <span class="tag F">F</span><span class="tag K">K</span></h3>
+  <p>Nach dem Komma haben die Stellen die Wertigkeiten ½, ¼, ⅛ und so weiter (VL F. 45). Den Vorkommateil rechnest du wie gewohnt um. Den Nachkommateil multiplizierst du fortlaufend mit 2: Die Ziffer vor dem Komma (0 oder 1) ist das nächste Bit, dann rechnest du mit dem Rest weiter.</p>
+  <pre>4,375₁₀:  4 = 100₂
+          0,375·2 = 0,75 → 0
+          0,75 ·2 = 1,5  → 1
+          0,5  ·2 = 1,0  → 1   fertig        → 100,011₂
+
+0,4₁₀ = 0,0110 0110 0110…₂  (periodisch, nicht exakt darstellbar)</pre>
+  <p>Eine <b>Gleitkommazahl</b> besteht aus Mantisse m, Basis b und Exponent e: Z = m · b<sup>e</sup>, zum Beispiel 2022 = 2,022 · 10³ (VL F. 46–47). Nach IEEE 754 (VL F. 48) hat eine 32-Bit-Zahl 1 Bit Vorzeichen, 8 Bit Exponent und 23 Bit Mantisse. Der Exponent wird mit einem Bias von +127 gespeichert, und die führende 1 der Mantisse lässt man weg („Hidden Bit“). Weil viele Dezimalbrüche binär periodisch sind, werden sie abgeschnitten: Gespeichert wird statt 18,4 in Wahrheit 18,3999996…</p>
+
+  <h3><span class="kapnr">4.8</span> Exkurs: Shift-Operator <span class="tag F">F</span></h3>
+  <p>Alle Bits eine Stelle nach links schieben verdoppelt eine vorzeichenlose Zahl, nach rechts schieben halbiert sie ganzzahlig: 23 = <code>0001 0111</code>, 23 &lt;&lt; 1 = <code>0010 1110</code> = 46, 23 &gt;&gt; 1 = 11 (VL F. 42–44).</p>
+</section>
+
+<!-- ============ KAPITEL 5 ============ -->
+<section class="kap" id="kap5">
+  <div class="kapnr">Block 5 · 4 Punkte · „AUCH ÜBUNGSSACHE!!“</div>
+  <h2>5 Wahrheitstabellen, Boolesche Ausdrücke, Logikgatter</h2>
+  <p>In Block 4 waren die Bits Zahlen, hier sind sie Wahrheitswerte. In der Klausur ist dieser Block 4 Punkte wert und verlangt „Analyse und Synthese von Wahrheitstabellen, Ausdrücken und Schaltungen“ (KV F. 8).</p>
+  <div class="progress"><span>Kapitel 5:</span><span class="bar"><i data-bar="5"></i></span><span data-txt="5">0 %</span></div>
+
+  <div class="scroll"><table class="check" data-kap="5">
+    <thead><tr><th>Nr</th><th>Unterkapitel</th><th>Quelle</th><th>Folie</th><th>Kann ich</th></tr></thead>
+    <tbody>
+      <tr><td>5.1.1</td><td>Boolesche Algebra: nur 0 und 1</td><td><span class="tag F">F</span></td><td class="src">VL 50</td><td data-id="5.1.1"></td></tr>
+      <tr><td>5.1.2</td><td>AND, OR, NOT und Schreibweisen</td><td><span class="tag R">R</span> <span class="tag K">K</span></td><td class="src">VL 51–52, Rü 19</td><td data-id="5.1.2"></td></tr>
+      <tr><td>5.1.3</td><td>Transistor, Schalter, Serie und Parallel</td><td><span class="tag F">F</span></td><td class="src">VL 53–54</td><td data-id="5.1.3"></td></tr>
+      <tr><td>5.2.1</td><td>Die 7 Gatter und ihre Tabellen</td><td><span class="tag R">R</span> <span class="tag K">K</span></td><td class="src">VL 56, Rü 20</td><td data-id="5.2.1"></td></tr>
+      <tr><td>5.2.2</td><td>IEC-60617-Symbole zeichnen</td><td><span class="tag R">R</span> <span class="tag K">K</span></td><td class="src">VL 57, Rü 21</td><td data-id="5.2.2"></td></tr>
+      <tr><td>5.3</td><td>Rechengesetze und De Morgan</td><td><span class="tag F">F</span></td><td class="src">VL 59, 61</td><td data-id="5.3"></td></tr>
+      <tr><td>5.4</td><td>Die Aufgabentypen der Klausur</td><td><span class="tag K">K</span></td><td class="src">KV 2, 8</td><td data-id="5.4"></td></tr>
+      <tr><td>5.5</td><td>Text → Wahrheitstabelle</td><td><span class="tag K">K</span> <span class="tag E">E</span></td><td class="src">KV 2</td><td data-id="5.5"></td></tr>
+      <tr><td>5.6</td><td>Wahrheitstabelle → Ausdruck (Teilausdrücke, DNF)</td><td><span class="tag R">R</span> <span class="tag K">K</span></td><td class="src">VL 62–67, Rü 22–23</td><td data-id="5.6"></td></tr>
+      <tr><td>5.7</td><td><b>Ausdrücke vereinfachen</b> <span class="focus">üben!</span></td><td><span class="tag F">F</span> <span class="tag E">E</span></td><td class="src">VL 59</td><td data-id="5.7"></td></tr>
+      <tr><td>5.8</td><td>Ausdruck/Tabelle → Schaltung</td><td><span class="tag R">R</span> <span class="tag K">K</span></td><td class="src">VL 68, Rü 24</td><td data-id="5.8"></td></tr>
+      <tr><td>5.9</td><td>Schaltung/Ausdruck → Tabelle (Analyse)</td><td><span class="tag K">K</span> <span class="tag E">E</span></td><td class="src">KV 8</td><td data-id="5.9"></td></tr>
+      <tr><td>5.10</td><td>NAND-Substitution, AND ohne AND</td><td><span class="tag F">F</span></td><td class="src">VL 58, 60–61</td><td data-id="5.10"></td></tr>
+      <tr><td>5.11</td><td>Halbaddierer, Volladdierer, Addierwerk</td><td><span class="tag R">R</span></td><td class="src">VL 70–71, Rü 25–26</td><td data-id="5.11"></td></tr>
+      <tr><td>5.12</td><td>Exkurs Flipflop</td><td><span class="tag F">F</span></td><td class="src">VL 72</td><td data-id="5.12"></td></tr>
+    </tbody>
+  </table></div>
+
+  <h3><span class="kapnr">5.1</span> Boolesche Algebra, Transistoren und Gatter <span class="tag F">F</span><span class="tag R">R</span></h3>
+  <p>Die Boolesche Algebra geht auf George Boole (Mitte des 19. Jahrhunderts) zurück und kennt nur zwei Werte: 0 für falsch (kein Strom, keine Spannung) und 1 für wahr (Strom, Spannung). Sie liefert Rechenregeln für die Mengenlehre, die Aussagenlogik und die Schaltalgebra und ist damit die Grundlage der Digitaltechnik (VL F. 50).</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Operator</th><th>Schreibweisen</th><th>In Worten (VL F. 52)</th></tr></thead>
+    <tbody>
+      <tr><td>AND (Konjunktion, logisches Produkt)</td><td><code>A ∧ B</code>, <code>A · B</code>, <code>A &amp; B</code></td><td>nur wahr, wenn alle Einzelbedingungen wahr sind</td></tr>
+      <tr><td>OR (Disjunktion, logische Summe)</td><td><code>A ∨ B</code>, <code>A + B</code></td><td>nur falsch, wenn alle Einzelbedingungen falsch sind</td></tr>
+      <tr><td>NOT (Negation, Invertierung)</td><td><code>¬A</code>, <code>Ā</code></td><td>kehrt den Wert um</td></tr>
+    </tbody>
+  </table></div>
+  <div class="box q"><div class="qq">Was ist der Unterschied zwischen Transistor und Gatter?</div>
+    <p>Ein <b>Transistor</b> erkennt nicht 0 und 1, er ist ein elektronischer Schalter. Die Folie nennt ihn „Lichtschalter“ (VL F. 53). Statt mit dem Finger wird er über seinen Steuereingang, das <b>Gate</b>, mit Spannung geschaltet: Liegt dort 1 an, fließt Strom; bei 0 nicht. Der heute übliche Typ heißt MOSFET. Er schaltet bis zu 100 Milliarden Mal pro Sekunde, und auf einen fingernagelgroßen Chip passen rund 50 Milliarden davon. Der Clou ist, dass der Ausgang eines Transistors das Gate eines anderen steuern kann. So schalten Schalter andere Schalter, und daraus entsteht Logik.</p>
+    <p>Ein <b>Gatter</b> ist eine kleine Schaltung aus mehreren Transistoren, die eine Logikregel umsetzt. Zwei Schalter in <b>Serie</b> ergeben ein AND, weil nur Strom fließt, wenn beide geschlossen sind. Zwei Schalter <b>parallel</b> ergeben ein OR, weil einer reicht (VL F. 54).</p>
+    <pre>Transistor → Gatter       → Rechenbaustein   → Rechenwerk    → CPU
+(Schalter)   (AND, OR, …)   (Halbaddierer)     (Addierwerk)    (Rechen- + Steuerwerk …)</pre>
+    <p>Für die Klausur reicht es, auf der Ebene der Gatter zu denken. Wie die Transistoren darin verschaltet sind, wird nicht verlangt.</p>
+  </div>
+
+  <h3><span class="kapnr">5.2</span> Die 7 Gatter und ihre Symbole <span class="tag R">R</span><span class="tag K">K</span></h3>
+  <div class="scroll"><table class="tt">
+    <thead><tr><th>A</th><th>B</th><th>AND</th><th>OR</th><th>XOR</th><th>NAND</th><th>NOR</th><th>XNOR</th></tr></thead>
+    <tbody>
+      <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td></tr>
+      <tr><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td></tr>
+      <tr><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td></tr>
+      <tr><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td></tr>
+    </tbody>
+  </table></div>
+  <p>NOT hat nur einen Eingang: aus 0 wird 1 und umgekehrt. Die Merkhilfe der Folie lautet: <b>XOR ist „ungleich“</b>, also 1, wenn die Eingänge verschieden sind; <b>XNOR ist „gleich“</b>. NAND, NOR und XNOR musst du nicht extra lernen, sie sind einfach AND, OR und XOR mit umgedrehter Spalte.</p>
+  <p>Klausurrelevant ist die europäische Norm <b>IEC 60617-12</b> (VL F. 57): rechteckige Kästchen mit einem Zeichen. Ein Kreis am Ausgang bedeutet Negation. Die runden US-Symbole (ANSI 91-1984) siehst du in Schaltplänen auch, DIN 40700 ist veraltet.</p>
+  <svg class="circ" viewBox="0 0 700 110" role="img" aria-label="IEC-Symbole: AND &amp;, OR ≥1, NOT 1 mit Kreis, XOR =1, NAND &amp; mit Kreis, NOR ≥1 mit Kreis, XNOR =1 mit Kreis">
+    <g font-size="15">
+      <g transform="translate(10,20)"><line class="w" x1="0" y1="18" x2="16" y2="18"/><line class="w" x1="0" y1="42" x2="16" y2="42"/><rect class="g" x="16" y="6" width="44" height="48"/><text x="31" y="35">&amp;</text><line class="w" x1="60" y1="30" x2="78" y2="30"/><text x="20" y="80" font-size="12">AND</text></g>
+      <g transform="translate(108,20)"><line class="w" x1="0" y1="18" x2="16" y2="18"/><line class="w" x1="0" y1="42" x2="16" y2="42"/><rect class="g" x="16" y="6" width="44" height="48"/><text x="24" y="35">≥1</text><line class="w" x1="60" y1="30" x2="78" y2="30"/><text x="26" y="80" font-size="12">OR</text></g>
+      <g transform="translate(206,20)"><line class="w" x1="0" y1="30" x2="16" y2="30"/><rect class="g" x="16" y="6" width="44" height="48"/><text x="33" y="35">1</text><circle class="n" cx="64" cy="30" r="4"/><line class="w" x1="68" y1="30" x2="82" y2="30"/><text x="22" y="80" font-size="12">NOT</text></g>
+      <g transform="translate(304,20)"><line class="w" x1="0" y1="18" x2="16" y2="18"/><line class="w" x1="0" y1="42" x2="16" y2="42"/><rect class="g" x="16" y="6" width="44" height="48"/><text x="24" y="35">=1</text><line class="w" x1="60" y1="30" x2="78" y2="30"/><text x="22" y="80" font-size="12">XOR</text></g>
+      <g transform="translate(402,20)"><line class="w" x1="0" y1="18" x2="16" y2="18"/><line class="w" x1="0" y1="42" x2="16" y2="42"/><rect class="g" x="16" y="6" width="44" height="48"/><text x="31" y="35">&amp;</text><circle class="n" cx="64" cy="30" r="4"/><line class="w" x1="68" y1="30" x2="82" y2="30"/><text x="18" y="80" font-size="12">NAND</text></g>
+      <g transform="translate(500,20)"><line class="w" x1="0" y1="18" x2="16" y2="18"/><line class="w" x1="0" y1="42" x2="16" y2="42"/><rect class="g" x="16" y="6" width="44" height="48"/><text x="24" y="35">≥1</text><circle class="n" cx="64" cy="30" r="4"/><line class="w" x1="68" y1="30" x2="82" y2="30"/><text x="22" y="80" font-size="12">NOR</text></g>
+      <g transform="translate(598,20)"><line class="w" x1="0" y1="18" x2="16" y2="18"/><line class="w" x1="0" y1="42" x2="16" y2="42"/><rect class="g" x="16" y="6" width="44" height="48"/><text x="24" y="35">=1</text><circle class="n" cx="64" cy="30" r="4"/><line class="w" x1="68" y1="30" x2="82" y2="30"/><text x="18" y="80" font-size="12">XNOR</text></g>
+    </g>
+  </svg>
+
+  <h3><span class="kapnr">5.3</span> Rechengesetze und De Morgan <span class="tag F">F</span></h3>
+  <p>Die Rechengesetze auf VL F. 59 brauchst du zum Umformen und Vereinfachen (5.7). Die Rangfolge ist wie Punkt vor Strich: zuerst Negation ¬, dann UND ∧, dann ODER ∨.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Gesetz</th><th>UND</th><th>ODER</th></tr></thead>
+    <tbody>
+      <tr><td>Kommutativ</td><td><code>a ∧ b = b ∧ a</code></td><td><code>a ∨ b = b ∨ a</code></td></tr>
+      <tr><td>Distributiv</td><td><code>a ∧ (b ∨ c) = (a∧b) ∨ (a∧c)</code></td><td><code>a ∨ (b ∧ c) = (a∨b) ∧ (a∨c)</code></td></tr>
+      <tr><td>Idempotenz</td><td><code>a ∧ a = a</code></td><td><code>a ∨ a = a</code></td></tr>
+      <tr><td>Neutralität</td><td><code>a ∧ 1 = a</code></td><td><code>a ∨ 0 = a</code></td></tr>
+      <tr><td>Extremal</td><td><code>a ∧ 0 = 0</code></td><td><code>a ∨ 1 = 1</code></td></tr>
+      <tr><td>Komplement</td><td><code>a ∧ ¬a = 0</code></td><td><code>a ∨ ¬a = 1</code></td></tr>
+      <tr><td>Doppelnegation</td><td colspan="2"><code>¬¬a = a</code></td></tr>
+      <tr><td><b>De Morgan</b></td><td><code>¬(a ∧ b) = ¬a ∨ ¬b</code></td><td><code>¬(a ∨ b) = ¬a ∧ ¬b</code></td></tr>
+      <tr><td>Absorption</td><td><code>a ∨ (a ∧ b) = a</code></td><td><code>a ∧ (a ∨ b) = a</code></td></tr>
+    </tbody>
+  </table></div>
+  <div class="box key"><p><b>De Morgan in einem Satz:</b> Ziehst du die Negation über die Klammer, wird aus UND ein ODER (und umgekehrt), und jede Variable wird negiert. Beispiel: ¬(¬A ∨ B) = ¬¬A ∧ ¬B = A ∧ ¬B. Die Folie hebt dieses Gesetz hervor, weil man damit beim Schaltungsentwurf Gattertypen gegeneinander austauscht (VL F. 61).</p></div>
+  <div class="box warn"><p><b>Typischer Fehler:</b> ¬(A ∧ B) = ¬A ∧ ¬B. Falsch, das ∧ muss zu ∨ werden.</p></div>
+
+  <h3><span class="kapnr">5.4</span> Die Aufgabentypen der Klausur <span class="tag K">K</span></h3>
+  <div class="box q"><div class="qq">Woher kommen die Aufgabentypen?</div>
+    <p>Die Folie „VL05 Klausurvorbereitung“ nennt unter „Logik // AUCH ÜBUNGSSACHE !!“ (KV F. 2) wörtlich drei Typen: Wahrheitstabellen aus einer textuellen Beschreibung aufstellen, Boolesche Ausdrücke aufgrund von Wertetabellen aufstellen und einfache Schaltungen aus genormten Logikbausteinen durch Analyse von Wahrheitstabellen oder Booleschen Ausdrücken erstellen. Die Punkteverteilung (KV F. 8) spricht von „Analyse und Synthese“, also auch dem Rückweg von der Schaltung zur Tabelle.</p>
+    <p>Auf den Vorlesungsfolien werden die Typen so geübt: Tabelle → Ausdruck auf VL F. 62–67, Tabelle → Schaltung auf F. 68 und das Umbauen einer Schaltung auf F. 60–61. Für „Text → Tabelle“ gibt es kein Folienbeispiel; die Alarmanlage unten ist ein eigenes Übungsbeispiel.</p>
+  </div>
+  <pre>Text ──5.5──▶ Wahrheitstabelle ──5.6──▶ Ausdruck (DNF) ──5.7──▶ einfacher Ausdruck ──5.8──▶ Schaltung
+                    ▲                                                                       │
+                    └──────────────────────────── 5.9 Analyse ──────────────────────────────┘</pre>
+
+  <h3><span class="kapnr">5.5</span> Text → Wahrheitstabelle <span class="tag K">K</span><span class="tag E">E</span></h3>
+  <p>Beispiel: <i>„Eine Alarmanlage Y soll auslösen, wenn sie scharf geschaltet ist (S) und die Tür (T) oder das Fenster (F) offen ist.“</i> Zuerst zählst du die Eingänge: drei, also 2³ = 8 Zeilen. Dann zählst du die Eingänge wie Binärzahlen von 000 bis 111 hoch, damit keine Zeile fehlt. Für jede Zeile fragst du dich, ob der Alarm auslöst.</p>
+  <div class="scroll"><table class="tt">
+    <thead><tr><th>S</th><th>T</th><th>F</th><th>Y</th><th>Teilausdruck</th></tr></thead>
+    <tbody>
+      <tr><td>0</td><td>0</td><td>0</td><td class="out">0</td><td></td></tr>
+      <tr><td>0</td><td>0</td><td>1</td><td class="out">0</td><td></td></tr>
+      <tr><td>0</td><td>1</td><td>0</td><td class="out">0</td><td></td></tr>
+      <tr><td>0</td><td>1</td><td>1</td><td class="out">0</td><td></td></tr>
+      <tr><td>1</td><td>0</td><td>0</td><td class="out">0</td><td></td></tr>
+      <tr><td>1</td><td>0</td><td>1</td><td class="out hl">1</td><td class="hl">S ∧ ¬T ∧ F</td></tr>
+      <tr><td>1</td><td>1</td><td>0</td><td class="out hl">1</td><td class="hl">S ∧ T ∧ ¬F</td></tr>
+      <tr><td>1</td><td>1</td><td>1</td><td class="out hl">1</td><td class="hl">S ∧ T ∧ F</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3><span class="kapnr">5.6</span> Wahrheitstabelle → Ausdruck <span class="tag R">R</span><span class="tag K">K</span></h3>
+  <p>Das Verfahren der Folien mit der Spalte „Teilausdruck“ (VL F. 65–67) heißt in der Fachsprache <b>disjunktive Normalform (DNF)</b>. Die Idee: Jede Zeile mit Ausgang 1 ist ein Fall, in dem die Schaltung „an“ sein soll. Der Ausgang ist also 1, wenn Fall 1 vorliegt oder Fall 2 oder Fall 3.</p>
+  <ol>
+    <li><b>Nur die Zeilen mit Ausgang 1 nehmen.</b> Die Zeilen mit 0 brauchst du nicht: Trifft keiner der 1-Fälle zu, ist das ODER automatisch 0.</li>
+    <li><b>Für jede 1-Zeile einen UND-Term bauen.</b> Eine 1 in der Zeile wird zur Variablen (S heißt „S ist an“), eine 0 zur negierten Variablen (¬T heißt „T ist aus“). Alle Variablen der Zeile verbindest du mit ∧, weil alle Bedingungen gleichzeitig gelten müssen. Zeile 1 0 1 wird so zu S ∧ ¬T ∧ F, also „scharf und Tür zu und Fenster offen“. Weil ein UND nur 1 ist, wenn alle Teile 1 sind, ist dieser Term genau in dieser einen Zeile wahr.</li>
+    <li><b>Alle UND-Terme mit ∨ verbinden.</b> Das ODER ist 1, sobald einer der Terme 1 ist, also genau in den Fall-Zeilen.</li>
+  </ol>
+  <pre>Y = (S ∧ ¬T ∧ F) ∨ (S ∧ T ∧ ¬F) ∨ (S ∧ T ∧ F)</pre>
+  <p>Weil der Ausdruck die Tabelle Zeile für Zeile nachbaut, funktioniert die DNF immer. Die Klammern um die UND-Terme sind wegen der Rangfolge eigentlich nicht nötig; schreib sie in der Klausur trotzdem hin, das ist übersichtlicher. Das Folienbeispiel (VL F. 65–67): Bei Out = 1 in den Zeilen 00 und 11 ergibt sich (¬A ∧ ¬B) ∨ (A ∧ B).</p>
+  <div class="box key"><p><b>Kurzrezept:</b> 2ⁿ Zeilen wie Binärzahlen hochzählen. Neben jede 1-Zeile den Teilausdruck schreiben (1 → Variable, 0 → ¬Variable, mit ∧). Alle Teilausdrücke in Klammern mit ∨ verbinden. Nur wenn Zeit ist, vereinfachen und mit einer Zeile durch Einsetzen prüfen. Die unvereinfachte DNF ist immer korrekt und bringt die Punkte, sofern nicht ausdrücklich „vereinfachen“ verlangt ist.</p></div>
+
+  <h3 id="vereinfachen"><span class="kapnr">5.7</span> Ausdrücke vereinfachen <span class="tag F">F</span><span class="tag E">E</span> <span class="focus">Schwerpunkt: üben</span></h3>
+  <p>Vereinfachen heißt, die Rechengesetze aus 5.3 so lange anzuwenden, bis der Ausdruck kürzer wird. Die Wahrheitstabelle bleibt dabei dieselbe. In der Praxis brauchst du fast immer nur eine Kernregel und ein paar Hilfsgesetze.</p>
+  <h4>Die Kernregel: zwei Terme, die sich nur in einer Variablen unterscheiden</h4>
+  <p>Kommt eine Variable in zwei sonst gleichen UND-Termen einmal normal und einmal negiert vor, fällt sie weg:</p>
+  <pre>(A ∧ B) ∨ (A ∧ ¬B)
+= A ∧ (B ∨ ¬B)      ← A ausklammern        (Distributivgesetz)
+= A ∧ 1             ← B ∨ ¬B = 1            (Komplementgesetz)
+= A                 ← A ∧ 1 = A             (Neutralitätsgesetz)</pre>
+  <p>Die Logik dahinter: Wenn der Ausgang 1 ist, egal ob B gleich 0 oder 1 ist, dann spielt B keine Rolle.</p>
+  <h4>Das Vorgehen</h4>
+  <ol>
+    <li><b>Paare suchen:</b> Welche Terme unterscheiden sich in genau einer Variablen? In der Tabelle sind das zwei 1-Zeilen, die sich nur in einer Spalte unterscheiden.</li>
+    <li><b>Ausklammern,</b> was beide gemeinsam haben.</li>
+    <li><b>X ∨ ¬X = 1 streichen.</b></li>
+    <li><b>Wiederholen,</b> bis kein Paar mehr übrig ist.</li>
+    <li><b>Trick:</b> Ein Term darf mehrfach benutzt werden, weil x ∨ x = x (Idempotenz). So fasst du einen Term mit zwei verschiedenen Partnern zusammen.</li>
+  </ol>
+  <h4>Beispiel 1: Alarmanlage</h4>
+  <pre>Y = (S ∧ ¬T ∧ F) ∨ (S ∧ T ∧ ¬F) ∨ (S ∧ T ∧ F)
+
+Der Term S∧T∧F passt zu beiden anderen → zweimal verwenden:
+(S ∧ ¬T ∧ F) ∨ (S ∧ T ∧ F)  = S ∧ F ∧ (¬T ∨ T) = S ∧ F     (T fällt weg)
+(S ∧ T ∧ ¬F) ∨ (S ∧ T ∧ F)  = S ∧ T ∧ (¬F ∨ F) = S ∧ T     (F fällt weg)
+
+Y = (S ∧ F) ∨ (S ∧ T) = S ∧ (T ∨ F)                         (S ausklammern)</pre>
+  <p>Das Ergebnis ist genau der Satz aus der Aufgabe: scharf und (Tür oder Fenster).</p>
+  <h4>Beispiel 2: Mehrheitsentscheid mit drei Personen</h4>
+  <pre>Y = (A∧B∧C) ∨ (A∧B∧¬C) ∨ (A∧¬B∧C) ∨ (¬A∧B∧C)
+
+A∧B∧C passt zu allen drei anderen → dreimal verwenden:
+(A∧B∧C) ∨ (A∧B∧¬C) = A ∧ B
+(A∧B∧C) ∨ (A∧¬B∧C) = A ∧ C
+(A∧B∧C) ∨ (¬A∧B∧C) = B ∧ C
+
+Y = (A ∧ B) ∨ (A ∧ C) ∨ (B ∧ C)       „irgendein Paar stimmt zu“</pre>
+  <h4>Weitere Hilfen</h4>
+  <ul>
+    <li><b>Absorption:</b> A ∨ (A ∧ B) = A. Steckt ein kurzer Term ganz in einem längeren, fällt der längere weg.</li>
+    <li><b>De Morgan,</b> um Negationen vor Klammern aufzulösen.</li>
+    <li><b>Muster erkennen:</b> (¬A ∧ B) ∨ (A ∧ ¬B) ist XOR. (¬A ∧ ¬B) ∨ (A ∧ B) ist XNOR, das ist die „mögliche Alternative“ auf VL F. 68: ein Gatter statt fünf.</li>
+    <li><b>Zum Schluss prüfen:</b> eine 1-Zeile und eine 0-Zeile in den vereinfachten Ausdruck einsetzen. Kommt dasselbe heraus wie in der Tabelle, stimmt es.</li>
+  </ul>
+  <p class="src">Ergänzung, nicht auf den Folien: Für größere Tabellen gibt es das KV-Diagramm. Es wird in der Klausur nicht verlangt.</p>
+  <div class="box warn"><p><b>Persönliche Schwachstelle (Lernsitzung 23.10.):</b> Die DNF aufstellen klappt, das Vereinfachen noch nicht. Übe die Aufgaben V1–V8 im Übungsteil, bis du die Paare ohne Nachdenken siehst.</p></div>
+
+  <h3><span class="kapnr">5.8</span> Ausdruck → Schaltung <span class="tag R">R</span><span class="tag K">K</span></h3>
+  <p>Du baust den Ausdruck von innen nach außen nach; jede Operation wird ein Gatter. Das „Standard-Vorgehen“ der Folie (VL F. 68) setzt die DNF direkt um: NOT-Gatter für die negierten Eingänge, ein UND je Teilausdruck, ein ODER am Ende.</p>
+  <div class="grid2">
+    <figure style="margin:0">
+      <svg class="circ" viewBox="0 0 330 170" role="img" aria-label="Standard-Vorgehen: A und B über NOT in ein UND, A und B direkt in ein zweites UND, beide in ein ODER">
+        <g font-size="14">
+          <text x="4" y="34">A</text><text x="4" y="94">B</text>
+          <line class="w" x1="18" y1="30" x2="40" y2="30"/><line class="w" x1="18" y1="90" x2="40" y2="90"/>
+          <line class="w" x1="30" y1="30" x2="30" y2="130"/><line class="w" x1="30" y1="130" x2="170" y2="130"/>
+          <line class="w" x1="24" y1="90" x2="24" y2="146"/><line class="w" x1="24" y1="146" x2="170" y2="146"/>
+          <rect class="g" x="40" y="16" width="36" height="28"/><text x="54" y="35">1</text><circle class="n" cx="80" cy="30" r="4"/>
+          <rect class="g" x="40" y="76" width="36" height="28"/><text x="54" y="95">1</text><circle class="n" cx="80" cy="90" r="4"/>
+          <line class="w" x1="84" y1="30" x2="170" y2="30"/><line class="w" x1="84" y1="90" x2="140" y2="90"/><line class="w" x1="140" y1="90" x2="140" y2="50"/><line class="w" x1="140" y1="50" x2="170" y2="50"/>
+          <rect class="g" x="170" y="18" width="40" height="44"/><text x="184" y="45">&amp;</text>
+          <rect class="g" x="170" y="118" width="40" height="40"/><text x="184" y="143">&amp;</text>
+          <line class="w" x1="210" y1="40" x2="240" y2="40"/><line class="w" x1="240" y1="40" x2="240" y2="80"/><line class="w" x1="240" y1="80" x2="256" y2="80"/>
+          <line class="w" x1="210" y1="138" x2="240" y2="138"/><line class="w" x1="240" y1="138" x2="240" y2="100"/><line class="w" x1="240" y1="100" x2="256" y2="100"/>
+          <rect class="g" x="256" y="68" width="40" height="44"/><text x="263" y="95">≥1</text>
+          <line class="w" x1="296" y1="90" x2="314" y2="90"/><text x="300" y="80" font-size="12">Out</text>
+        </g>
+      </svg>
+      <figcaption class="src">(¬A ∧ ¬B) ∨ (A ∧ B), VL F. 68 – oder ein einzelnes XNOR</figcaption>
+    </figure>
+    <figure style="margin:0">
+      <svg class="circ" viewBox="0 0 270 130" role="img" aria-label="Alarmanlage: T und F in ein ODER, dessen Ausgang mit S in ein UND">
+        <g font-size="14">
+          <text x="4" y="30">T</text><text x="4" y="66">F</text><text x="4" y="110">S</text>
+          <line class="w" x1="18" y1="26" x2="60" y2="26"/><line class="w" x1="18" y1="62" x2="60" y2="62"/>
+          <rect class="g" x="60" y="12" width="44" height="64"/><text x="68" y="49">≥1</text>
+          <line class="w" x1="104" y1="44" x2="140" y2="44"/><line class="w" x1="140" y1="44" x2="140" y2="64"/><line class="w" x1="140" y1="64" x2="160" y2="64"/>
+          <line class="w" x1="18" y1="106" x2="140" y2="106"/><line class="w" x1="140" y1="106" x2="140" y2="88"/><line class="w" x1="140" y1="88" x2="160" y2="88"/>
+          <rect class="g" x="160" y="52" width="44" height="48"/><text x="176" y="81">&amp;</text>
+          <line class="w" x1="204" y1="76" x2="232" y2="76"/><text x="236" y="81">Y</text>
+        </g>
+      </svg>
+      <figcaption class="src">Alarmanlage vereinfacht: Y = S ∧ (T ∨ F), zwei Gatter</figcaption>
+    </figure>
+  </div>
+
+  <h3><span class="kapnr">5.9</span> Rückwärts: Schaltung → Tabelle (Analyse) <span class="tag K">K</span><span class="tag E">E</span></h3>
+  <p>Für jedes Zwischenergebnis, also den Ausgang jedes Gatters, legst du eine Hilfsspalte an und rechnest Zeile für Zeile. Beispiel Y = (A ∨ B) ∧ ¬C:</p>
+  <div class="scroll"><table class="tt">
+    <thead><tr><th>A</th><th>B</th><th>C</th><th>A∨B</th><th>¬C</th><th>Y</th></tr></thead>
+    <tbody>
+      <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td class="out">0</td></tr>
+      <tr><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td class="out">0</td></tr>
+      <tr><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td class="out hl">1</td></tr>
+      <tr><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td class="out">0</td></tr>
+      <tr><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td class="out hl">1</td></tr>
+      <tr><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td class="out">0</td></tr>
+      <tr><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td><td class="out hl">1</td></tr>
+      <tr><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td class="out">0</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3><span class="kapnr">5.10</span> NAND-Substitution <span class="tag F">F</span></h3>
+  <p>NAND und NOR sind ein AND bzw. OR mit nachgeschaltetem NOT. Allein aus NAND-Gattern (oder allein aus NOR) lässt sich jede logische Verknüpfung bauen; die Folie nennt das „vollständige Abbildung“ (VL F. 58). Vorteile: einfachere Chip-Produktion, programmierbare Logikbausteine (FPGA) und beim diskreten Entwurf nur eine Sorte ICs.</p>
+  <ul>
+    <li><b>NOT A</b> = NAND(A, A): beide Eingänge zusammenschalten.</li>
+    <li><b>A AND B</b> = zwei NANDs hintereinander. Das erste liefert ¬(A ∧ B), das zweite dreht es zurück. Das ist die Lösung der Folienaufgabe „AND ohne AND-Gatter“ (VL F. 60–61).</li>
+    <li><b>A OR B</b> = NAND(¬A, ¬B), also drei NANDs. Nach De Morgan ist ¬(¬A ∧ ¬B) = A ∨ B.</li>
+    <li><b>XOR</b> braucht laut Folie vier NANDs.</li>
+  </ul>
+
+  <h3><span class="kapnr">5.11</span> Rechnen mit Gattern: Halb- und Volladdierer <span class="tag R">R</span></h3>
+  <p>Hier treffen sich Block 4 und 5: Die Additionsregeln für Bits sind eine Wahrheitstabelle (VL F. 70).</p>
+  <div class="scroll"><table class="tt">
+    <thead><tr><th>A</th><th>B</th><th>Summe s</th><th>Übertrag c</th></tr></thead>
+    <tbody>
+      <tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+      <tr><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+      <tr><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+    </tbody>
+  </table></div>
+  <p>Die Summenspalte ist genau XOR, die Übertragsspalte genau AND. Ein <b>Halbaddierer</b> besteht also aus einem XOR- und einem AND-Gatter. Ein <b>Volladdierer</b> berücksichtigt zusätzlich den Übertrag aus der Stelle davor (carry-in) und besteht aus zwei Halbaddierern und einem ODER-Gatter. Mehrere Volladdierer hintereinander ergeben ein Addierwerk, zum Beispiel für 4 Bit (VL F. 71).</p>
+  <div class="box warn"><p><b>Typischer Fehler:</b> Summe = OR. Bei 1 + 1 muss die Summe 0 sein, deshalb XOR.</p></div>
+
+  <h3><span class="kapnr">5.12</span> Exkurs: Flipflop <span class="tag F">F</span></h3>
+  <p>Ein Flipflop (bistabile Kippstufe) besteht aus zwei rückgekoppelten NOR- oder NAND-Gattern und kann sich ein Bit merken: Set setzt auf 1, Reset auf 0, und bei S = R = 0 bleibt der Zustand erhalten (VL F. 72). Es steht nicht in der Rückschau.</p>
+</section>
+
+<!-- ============ ÜBUNGEN ============ -->
+<section class="kap" id="uebungen">
+  <div class="kapnr">Übungsblatt</div>
+  <h2>Übungsaufgaben</h2>
+  <p>Erst selbst auf Papier rechnen, dann die Lösung aufklappen. Aufgaben mit „Folie“ stammen von den Vorlesungsfolien, alle anderen sind eigene Übungsaufgaben; alle Ergebnisse sind nachgerechnet.</p>
+
+  <h3><span class="kapnr">Ü4</span> Zahlendarstellung und Rechnen</h3>
+  <div class="task"><div class="tn">4.1 · Umrechnen (4.2)</div><p>Rechne 100₁₀ ins Dual-, Oktal- und Hexadezimalsystem um.</p>
+    <details><summary>Lösung</summary><div><p><code>0110 0100₂</code> · Oktal: von rechts <code>001 | 100 | 100</code> = <b>144₈</b> · Hex: <code>0110 | 0100</code> = <b>64₁₆</b></p></div></details></div>
+  <div class="task"><div class="tn">4.2 · Umrechnen (4.2.1)</div><p>Rechne 3C₁₆ und 157₈ ins Dezimalsystem um.</p>
+    <details><summary>Lösung</summary><div><p>3·16 + 12 = <b>60</b> · 1·64 + 5·8 + 7 = <b>111</b></p></div></details></div>
+  <div class="task"><div class="tn">4.3 · Umrechnen (4.2.1)</div><p>Welcher Dezimalzahl entspricht <code>1011 0110₂</code> (ohne Vorzeichen)?</p>
+    <details><summary>Lösung</summary><div><p>128 + 32 + 16 + 4 + 2 = <b>182</b></p></div></details></div>
+  <div class="task"><div class="tn">4.4 · Folie VL 30 (4.2.2, 4.2.3)</div><p>Rechne 458₁₀ ins Dual- und Oktalsystem um.</p>
+    <details><summary>Lösung</summary><div><p><code>1 1100 1010₂</code> · Dreiergruppen <code>111 001 010</code> = <b>712₈</b></p></div></details></div>
+  <div class="task"><div class="tn">4.5 · Folie VL 33 (4.2.3)</div><p>Rechne <code>1001 0010₂</code> ins Oktal-, Hex- und Dezimalsystem um.</p>
+    <details><summary>Lösung</summary><div><p><code>010 010 010</code> = <b>222₈</b> · <code>1001 0010</code> = <b>92₁₆</b> · <b>146₁₀</b></p></div></details></div>
+  <div class="task"><div class="tn">4.6 · Folie VL 33 (4.2)</div><p>Was ist am größten: E7E5₁₆, 59364₁₀ oder <code>1110 0111 1110 0110₂</code>?</p>
+    <details><summary>Lösung</summary><div><p>E7E5₁₆ = 59365. Die Binärzahl in Vierergruppen ist E7E6₁₆ = 59366. Also ist die <b>Binärzahl am größten</b>, 59364 am kleinsten. Tipp: Binär direkt in Hex gruppieren und nur die letzte Ziffer vergleichen.</p></div></details></div>
+  <div class="task"><div class="tn">4.7 · Negative Zahlen (4.4)</div><p>Stelle −42 in 8 Bit als Vorzeichen-Betrag, Einerkomplement und Zweierkomplement dar.</p>
+    <details><summary>Lösung</summary><div><p>+42 = <code>0010 1010</code> · VB <code>1010 1010</code> · EK <code>1101 0101</code> · ZK <code>1101 0110</code></p></div></details></div>
+  <div class="task"><div class="tn">4.8 · Zweierkomplement (4.4.3)</div><p>Bilde −25 im 8-Bit-Zweierkomplement und mache die Probe.</p>
+    <details><summary>Lösung</summary><div><p>25 = <code>0001 1001</code> → umdrehen <code>1110 0110</code> → +1 = <b><code>1110 0111</code></b>. Probe: −128 + 64 + 32 + 4 + 2 + 1 = −25 ✓</p></div></details></div>
+  <div class="task"><div class="tn">4.9 · Folie VL 40 (4.5)</div><p>Berechne 42 − 17 im 8-Bit-Zweierkomplement.</p>
+    <details><summary>Lösung</summary><div><p><code>0010 1010</code> + <code>1110 1111</code> = (1)<code>0001 1001</code> → Übertrag weglassen → <b>25</b></p></div></details></div>
+  <div class="task"><div class="tn">4.10 · Subtraktion (4.5, 4.4.4)</div><p>Berechne 30 − 45 im 8-Bit-Zweierkomplement und lies das Ergebnis ab.</p>
+    <details><summary>Lösung</summary><div><p><code>0001 1110</code> + <code>1101 0011</code> (−45) = <code>1111 0001</code>. Erstes Bit 1, also negativ: −128 + 64 + 32 + 16 + 1 = <b>−15</b></p></div></details></div>
+  <div class="task"><div class="tn">4.11 · Überlauf (4.6)</div><p>Ist 90 + 60 in 8 Bit (Zweierkomplement) ein Überlauf? Und 127 + 1?</p>
+    <details><summary>Lösung</summary><div><p>Beides ja. Der Bereich ist −128 … +127. 90 + 60 = 150 ergibt <code>1001 0110</code>, gelesen −106. 127 + 1 ergibt <code>1000 0000</code>, gelesen −128. Jeweils plus + plus ergibt scheinbar minus.</p></div></details></div>
+  <div class="task"><div class="tn">4.12 · Folie VL 37 (4.4.2)</div><p>Berechne −4 + 6 im 4-Bit-Einerkomplement.</p>
+    <details><summary>Lösung</summary><div><p>−4 = <code>1011</code>, 6 = <code>0110</code>. Summe (1)<code>0001</code>, Übertrag unten wieder addieren: <code>0001</code> + 1 = <code>0010</code> = <b>+2</b></p></div></details></div>
+  <div class="task"><div class="tn">4.13 · Kommazahlen (4.7)</div><p>Wandle 4,375₁₀ in eine binäre Kommazahl um.</p>
+    <details><summary>Lösung</summary><div><p>4 = <code>100</code>; 0,375 → 0,75 (0) → 1,5 (1) → 1,0 (1) → <b><code>100,011₂</code></b></p></div></details></div>
+
+  <h3><span class="kapnr">Ü5</span> Logik</h3>
+  <div class="task"><div class="tn">5.1 · Text → Tabelle (5.5)</div><p>Eine Lampe L leuchtet, wenn genau einer der beiden Schalter A und B an ist. Stelle die Wahrheitstabelle und den DNF-Ausdruck auf. Welches Gatter ist das?</p>
+    <details><summary>Lösung</summary><div><p>L = 0, 1, 1, 0 für AB = 00, 01, 10, 11. DNF: <code>(¬A ∧ B) ∨ (A ∧ ¬B)</code> = <b>XOR</b></p></div></details></div>
+  <div class="task"><div class="tn">5.2 · Folie VL 62–64 (5.6)</div><p>Zur Auswahl: A ∧ B, A ∨ B, A ∧ ¬B, B ∧ ¬A. Tabelle 1 hat Out = 1 nur bei A = 1, B = 0; Tabelle 2 nur bei A = 0, B = 1. Welcher Ausdruck gehört zu welcher Tabelle?</p>
+    <details><summary>Lösung</summary><div><p>Tabelle 1: <b>A ∧ ¬B</b> · Tabelle 2: <b>B ∧ ¬A</b></p></div></details></div>
+  <div class="task"><div class="tn">5.3 · Folie VL 65–68 (5.6, 5.8)</div><p>Out = 1, 0, 0, 1 für AB = 00, 01, 10, 11. Bestimme den Ausdruck mit der Teilausdruck-Spalte und zeichne die Schaltung nach Standard-Vorgehen. Welches einzelne Gatter geht auch?</p>
+    <details><summary>Lösung</summary><div><p><code>(¬A ∧ ¬B) ∨ (A ∧ B)</code>; Schaltung: 2 NOT, 2 UND, 1 ODER (siehe 5.8). Alternative: ein <b>XNOR</b>.</p></div></details></div>
+  <div class="task"><div class="tn">5.4 · Text → Tabelle → DNF (5.5, 5.6)</div><p>Mehrheitsentscheid: Y = 1, wenn mindestens zwei von A, B, C zustimmen. Stelle Tabelle und DNF auf.</p>
+    <details><summary>Lösung</summary><div><p>1-Zeilen: 011, 101, 110, 111. <code>(¬A∧B∧C) ∨ (A∧¬B∧C) ∨ (A∧B∧¬C) ∨ (A∧B∧C)</code>. Vereinfacht siehe V6 bzw. 5.7.</p></div></details></div>
+  <div class="task"><div class="tn">5.5 · Analyse (5.9)</div><p>Stelle die Tabelle für Y = ¬(A ∨ B) ∧ C mit Hilfsspalten auf. In wie vielen Zeilen ist Y = 1?</p>
+    <details><summary>Lösung</summary><div><p>Nur in <b>einer</b> Zeile: A = 0, B = 0, C = 1. ¬(A ∨ B) ist nur bei A = B = 0 wahr, dazu muss C = 1 sein.</p></div></details></div>
+  <div class="task"><div class="tn">5.6 · De Morgan (5.3)</div><p>Forme um, sodass keine Negation mehr vor einer Klammer steht: a) ¬(A ∧ B) b) ¬(¬A ∨ B)</p>
+    <details><summary>Lösung</summary><div><p>a) <code>¬A ∨ ¬B</code> b) <code>¬¬A ∧ ¬B</code> = <code>A ∧ ¬B</code></p></div></details></div>
+  <div class="task"><div class="tn">5.7 · Folie VL 60–61 (5.10)</div><p>Baue eine AND-Schaltung nach IEC 60617-12 für a und b, ohne ein AND-Gatter zu verwenden.</p>
+    <details><summary>Lösung</summary><div><p>Zwei NAND-Gatter hintereinander: Das erste liefert ¬(a ∧ b), das zweite (beide Eingänge verbunden) wirkt als NOT und liefert y = a ∧ b.</p></div></details></div>
+  <div class="task"><div class="tn">5.8 · Halbaddierer (5.11)</div><p>Stelle die Tabelle des Halbaddierers auf und nenne die beiden Gatter.</p>
+    <details><summary>Lösung</summary><div><p>s = 0, 1, 1, 0 und c = 0, 0, 0, 1 → Summe = <b>XOR</b>, Übertrag = <b>AND</b></p></div></details></div>
+
+  <h3 id="training"><span class="kapnr">V</span> Training Vereinfachen <span class="focus">Schwerpunkt</span></h3>
+  <p>Vereinfache so weit wie möglich und prüfe mit einer 1-Zeile und einer 0-Zeile. Alle Ergebnisse sind mit vollständigen Wahrheitstabellen geprüft.</p>
+  <div class="task"><div class="tn">V1 · Kernregel</div><p><code>(A ∧ B) ∨ (A ∧ ¬B)</code></p>
+    <details><summary>Lösung</summary><div><p>A ∧ (B ∨ ¬B) = A ∧ 1 = <b>A</b></p></div></details></div>
+  <div class="task"><div class="tn">V2 · Kernregel</div><p><code>(¬A ∧ B) ∨ (A ∧ B)</code></p>
+    <details><summary>Lösung</summary><div><p>B ∧ (¬A ∨ A) = <b>B</b></p></div></details></div>
+  <div class="task"><div class="tn">V3 · Absorption</div><p><code>A ∨ (A ∧ B)</code></p>
+    <details><summary>Lösung</summary><div><p><b>A</b>. Ist A = 1, ist alles 1; ist A = 0, ist auch A ∧ B = 0.</p></div></details></div>
+  <div class="task"><div class="tn">V4 · De Morgan</div><p><code>¬(¬A ∧ ¬B)</code></p>
+    <details><summary>Lösung</summary><div><p>¬¬A ∨ ¬¬B = <b>A ∨ B</b></p></div></details></div>
+  <div class="task"><div class="tn">V5 · Term mehrfach nutzen</div><p><code>(¬A ∧ ¬B) ∨ (¬A ∧ B) ∨ (A ∧ ¬B)</code></p>
+    <details><summary>Lösung</summary><div><p>¬A∧¬B mit ¬A∧B → ¬A; ¬A∧¬B mit A∧¬B → ¬B. Ergebnis <b>¬A ∨ ¬B</b> (= NAND). Probe: nur bei A = B = 1 ist es 0 ✓</p></div></details></div>
+  <div class="task"><div class="tn">V6 · Drei Variablen</div><p><code>(A∧B∧C) ∨ (A∧B∧¬C) ∨ (A∧¬B∧C)</code></p>
+    <details><summary>Lösung</summary><div><p>A∧B∧C mit A∧B∧¬C → A∧B; A∧B∧C mit A∧¬B∧C → A∧C. Also (A∧B) ∨ (A∧C) = <b>A ∧ (B ∨ C)</b></p></div></details></div>
+  <div class="task"><div class="tn">V7 · Aus der Tabelle</div><p>Y = 1 genau in den Zeilen ABC = 001, 011, 101, 111. Stelle die DNF auf und vereinfache.</p>
+    <details><summary>Lösung</summary><div><p>In allen 1-Zeilen ist C = 1, A und B sind beliebig. Paarweise zusammenfassen: 001 + 011 → ¬A∧C, 101 + 111 → A∧C, dann (¬A∧C) ∨ (A∧C) = <b>C</b></p></div></details></div>
+  <div class="task"><div class="tn">V8 · Muster erkennen</div><p><code>(¬A ∧ B) ∨ (A ∧ ¬B)</code>. Lässt sich das mit der Kernregel kürzen?</p>
+    <details><summary>Lösung</summary><div><p>Nein, die Terme unterscheiden sich in <b>zwei</b> Variablen. Das Muster ist aber <b>XOR</b> und damit ein einziges Gatter.</p></div></details></div>
+</section>
+
+<section class="kap" id="quellen">
+  <div class="kapnr">Quellen</div>
+  <h2>Woher die Inhalte stammen</h2>
+  <ul>
+    <li><b>VL</b> – Gisbert Loff, „GIT VL02 – final“ (161 Folien), Moodle Kurs 18618: Zahlensysteme F. 13–48, Logik F. 50–72.</li>
+    <li><b>Rü</b> – „GIT VL02 – Rückschau final“ (56 Folien): Zahlen F. 3–18, Logik F. 19–26. Was hier steht, wurde in der Vorlesung behandelt.</li>
+    <li><b>KV</b> – „GIT – VL05 – Klausurvorbereitung“ (12 Folien): Themenschwerpunkte F. 2–3, Punkteverteilung F. 8–9.</li>
+    <li><b>E</b> – eigene Ergänzungen und Übungsaufgaben: Kilometerzähler-Bild, Überlauf-Faustregel, Alarmanlage, Mehrheitsentscheid, Training V1–V8. Alle Rechnungen wurden mit Python nachgeprüft.</li>
+  </ul>
+</section>
+
+<footer>Stand 23.10.2026 · Deine Einträge bei „Kann ich“ speichert nur dein eigener Browser.</footer>
+</div>
+
+<script>
+(function(){
+  var KEY='git-zahlen-logik-v1', state={};
+  try{state=JSON.parse(localStorage.getItem(KEY)||'{}')||{}}catch(e){state={}}
+  var opts=[['','– offen'],['no','✗ kann ich nicht'],['mid','~ unsicher'],['ok','✓ kann ich']];
+  document.querySelectorAll('td[data-id]').forEach(function(td){
+    var id=td.getAttribute('data-id'), s=document.createElement('select');
+    s.className='st'; s.id='st-'+id.replace(/\./g,'-'); s.setAttribute('aria-label','Stand '+id);
+    opts.forEach(function(o){var op=document.createElement('option');op.value=o[0];op.textContent=o[1];s.appendChild(op)});
+    s.value=state[id]||''; s.setAttribute('data-v',s.value);
+    s.addEventListener('change',function(){state[id]=s.value;s.setAttribute('data-v',s.value);
+      try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){} update()});
+    td.appendChild(s);
+  });
+  function score(sel){var n=0,p=0;document.querySelectorAll(sel+' select.st').forEach(function(s){n++;p+=s.value==='ok'?1:s.value==='mid'?0.5:0});return n?Math.round(p/n*100):0}
+  function update(){
+    ['4','5'].forEach(function(k){var v=score('table[data-kap="'+k+'"]');
+      var b=document.querySelector('[data-bar="'+k+'"]'),t=document.querySelector('[data-txt="'+k+'"]');
+      if(b)b.style.width=v+'%'; if(t)t.textContent=v+' %';});
+    var a=score('table.check'); document.getElementById('bar-all').style.width=a+'%'; document.getElementById('txt-all').textContent=a+' %';
+  }
+  update();
+})();
+</script>
