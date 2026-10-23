@@ -8,8 +8,8 @@ Moodle: [Kurs 18616](https://moodle.heilbronn.dhbw.de/course/view.php?id=18616) 
 
 | Nr | Datum | Thema | Grundlage | Notiz |
 |---|---|---|---|---|
-| 1 | 15.10.2026 | BWL als Wissenschaft, Produktionsfaktoren, Güter, ökonomisches Prinzip, Kennzahlen | vermutet (Skript Kap. 1) | [01](vorlesungen/01_2026-10-15.md) |
-| 2 | 22.10.2026 | Übung 6 (Kennzahlen), Betrieb und Unternehmung: Typologie, Makroumfeld, normativer Rahmen, Ziele, Mitbestimmung | vermutet (Skript Kap. 2) | [02](vorlesungen/02_2026-10-22.md) |
+| 1 | 15.10.2026 | BWL als Wissenschaft, Produktionsfaktoren, Güter, ökonomisches Prinzip, Kennzahlen (inkl. Übung 6) | Folien „1. Einführung“ + Skript Kap. 1 + Lösungen | [01](vorlesungen/01_2026-10-15.md) |
+| 2 | 22.10.2026 | Betrieb und Unternehmung: Typologie, Makroumfeld, normativer Rahmen, Ziele, Mitbestimmung | Folien „2. Betrieb und Unternehmung“ + Skript Kap. 2 | [02](vorlesungen/02_2026-10-22.md) |
 
 ## Materialien in Moodle
 
