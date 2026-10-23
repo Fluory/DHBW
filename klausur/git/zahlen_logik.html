@@ -5,21 +5,21 @@
 <style>
 /* Layout: ruhige Lernseite – Kopf mit Reitern, darunter je ein Bereich als weißes Blatt; Bitmuster in Mono, Quellen als kleine Marken */
 :root{
-  --bg:#ffffff; --sheet:#ffffff; --ink:#111111; --muted:#6e6e6e; --line:#ededed; --line-strong:#dcdcdc;
-  --accent:#111111; --accent-soft:#f3f3f3; --signal:#c2410c; --signal-soft:#fff4ec;
-  --bad:#c0262d; --ok:#111111; --mid:#c2410c; --code:#f6f6f6;
+  --bg:#ffffff; --sheet:#ffffff; --ink:#22262f; --muted:#6b7280; --line:#eceef2; --line-strong:#dde1e8;
+  --accent:#4f5fa8; --accent-soft:#f1f3fb; --signal:#b4652a; --signal-soft:#fcf5ee;
+  --bad:#b84a4a; --ok:#4f5fa8; --mid:#b4652a; --code:#f6f7f9;
   --display:"Geist","Helvetica Neue",Arial,sans-serif;
   --body:"Geist","Helvetica Neue",Arial,sans-serif;
   --mono:"Geist Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0c0c0c; --sheet:#0c0c0c; --ink:#f2f2f2; --muted:#9a9a9a; --line:#222222; --line-strong:#333333;
-  --accent:#f2f2f2; --accent-soft:#1b1b1b; --signal:#fb923c; --signal-soft:#2a1609;
-  --bad:#f87171; --ok:#f2f2f2; --mid:#fb923c; --code:#171717; color-scheme:dark}}
+  --bg:#15171c; --sheet:#15171c; --ink:#e6e8ee; --muted:#9aa1ad; --line:#262a33; --line-strong:#323743;
+  --accent:#a3b0ea; --accent-soft:#1f2433; --signal:#e3a06a; --signal-soft:#2b2118;
+  --bad:#e88a8a; --ok:#a3b0ea; --mid:#e3a06a; --code:#1c1f26; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#0c0c0c; --sheet:#0c0c0c; --ink:#f2f2f2; --muted:#9a9a9a; --line:#222222; --line-strong:#333333;
-  --accent:#f2f2f2; --accent-soft:#1b1b1b; --signal:#fb923c; --signal-soft:#2a1609;
-  --bad:#f87171; --ok:#f2f2f2; --mid:#fb923c; --code:#171717; color-scheme:dark}
+  --bg:#15171c; --sheet:#15171c; --ink:#e6e8ee; --muted:#9aa1ad; --line:#262a33; --line-strong:#323743;
+  --accent:#a3b0ea; --accent-soft:#1f2433; --signal:#e3a06a; --signal-soft:#2b2118;
+  --bad:#e88a8a; --ok:#a3b0ea; --mid:#e3a06a; --code:#1c1f26; color-scheme:dark}
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.62;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
@@ -34,7 +34,7 @@ h4{font-size:16px;font-weight:700;margin-top:22px}
 p{margin:10px 0;max-width:68ch}
 ul,ol{margin:10px 0;padding-left:22px;max-width:68ch}
 li{margin:5px 0}
-a{color:var(--ink);text-underline-offset:3px;text-decoration-color:var(--line-strong)}
+a{color:var(--accent);text-underline-offset:3px;text-decoration-color:var(--line-strong)}
 /* Kopf */
 .head{background:var(--sheet);margin:0 calc(-1 * max(16px,env(safe-area-inset-left,0px))) 0;padding:40px max(16px,env(safe-area-inset-right,0px)) 8px max(16px,env(safe-area-inset-left,0px))}
 .head-in{max-width:880px;margin:0 auto}
@@ -50,9 +50,9 @@ a{color:var(--ink);text-underline-offset:3px;text-decoration-color:var(--line-st
   font-family:var(--display);font-weight:500;font-size:15px;border-bottom:2px solid transparent;white-space:nowrap}
 .tab:hover{color:var(--ink)}
 .tab:focus-visible{outline:2px solid var(--accent);outline-offset:-2px;border-radius:4px}
-.tab[aria-selected="true"]{color:var(--ink);font-weight:600;border-bottom-color:var(--ink)}
+.tab[aria-selected="true"]{color:var(--ink);font-weight:600;border-bottom-color:var(--accent)}
 .tab .pct{font-family:var(--mono);font-size:11px;font-weight:500;color:var(--muted);background:var(--accent-soft);border-radius:99px;padding:1px 7px}
-.tab[aria-selected="true"] .pct{background:var(--ink);color:var(--sheet)}
+.tab[aria-selected="true"] .pct{background:var(--accent-soft);color:var(--accent)}
 /* Bereiche */
 .panel{padding:36px 0 8px;margin-top:0}
 .js .panel[data-hidden]{display:none}
@@ -65,7 +65,7 @@ a{color:var(--ink);text-underline-offset:3px;text-decoration-color:var(--line-st
 .tag.K{background:var(--accent);border-color:var(--accent);color:var(--sheet)}
 .tag.F{border-color:var(--signal);color:var(--signal)}
 .tag.E{border-style:dashed}
-.focus{display:inline-block;background:var(--signal);color:var(--sheet);font-family:var(--mono);font-size:11px;font-weight:600;padding:1px 7px;border-radius:4px;letter-spacing:.04em;text-transform:uppercase;vertical-align:middle}
+.focus{display:inline-block;background:var(--signal-soft);color:var(--signal);font-family:var(--mono);font-size:11px;font-weight:600;padding:1px 7px;border-radius:4px;letter-spacing:.04em;text-transform:uppercase;vertical-align:middle}
 .src{font-family:var(--mono);font-size:12px;color:var(--muted)}
 .legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px 16px;font-size:14px;color:var(--muted);margin:14px 0}
 .legend span{display:flex;gap:8px;align-items:baseline}
@@ -108,18 +108,18 @@ select.st[data-v="no"]{border-color:var(--bad);color:var(--bad)}
 /* Übersichtskarten */
 .blocks{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px;margin:16px 0}
 .blk{border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:6px;min-width:0;background:var(--sheet);text-decoration:none;color:var(--ink)}
-a.blk:hover{border-color:var(--ink)}
+a.blk:hover{border-color:var(--accent)}
 .blk-top{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
 .blk-nr{font-family:var(--mono);font-size:12px;color:var(--muted)}
 .blk-pt{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--ink)}
 .blk-title{font-family:var(--display);font-weight:600;font-size:16px;line-height:1.3}
 .status{align-self:flex-start;font-family:var(--mono);font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:99px;white-space:nowrap}
-.status.done{background:var(--ink);color:var(--sheet)}
+.status.done{background:var(--accent-soft);color:var(--accent)}
 .status.wip{background:var(--signal-soft);color:var(--signal)}
 .status.open{background:var(--accent-soft);color:var(--muted)}
 /* Aufgaben */
 details{border:1px solid var(--line);border-radius:8px;margin:10px 0;background:var(--sheet)}
-details>summary{cursor:pointer;padding:8px 12px;font-family:var(--display);font-weight:500;font-size:14px;color:var(--ink);list-style-position:inside}
+details>summary{cursor:pointer;padding:8px 12px;font-family:var(--display);font-weight:500;font-size:14px;color:var(--accent);list-style-position:inside}
 details>summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 details>div{padding:0 12px 8px}
 .task{border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:12px 0}
@@ -137,7 +137,7 @@ figure{margin:0}
 .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
 .grid2>*{min-width:0}
 .nextprev{display:flex;justify-content:space-between;gap:12px;margin-top:32px;padding-top:16px;border-top:1px solid var(--line);flex-wrap:wrap}
-.nextprev a{font-family:var(--display);font-weight:500;text-decoration:none;color:var(--ink)}
+.nextprev a{font-family:var(--display);font-weight:500;text-decoration:none;color:var(--accent)}
 .panel{scroll-margin-top:72px}
 @media (max-width:640px){
   .panel{padding:26px 0 8px}
@@ -351,6 +351,22 @@ Bits:          0   1   0   0   0   0   0   1   = 64 + 1 = 65</pre>
 
   <h3 id="s4-8"><span class="kicker">4.8</span> Exkurs: Shift-Operator <span class="tag F">F</span></h3>
   <p>Alle Bits eine Stelle nach links schieben verdoppelt eine vorzeichenlose Zahl, nach rechts schieben halbiert sie ganzzahlig: 23 = <code>0001 0111</code>, 23 &lt;&lt; 1 = <code>0010 1110</code> = 46, 23 &gt;&gt; 1 = 11 (VL F. 42–44).</p>
+<h3 id="s4-ue"><span class="kicker">Übungen</span> Aufgaben zu Kapitel 4</h3>
+<p>Erst selbst rechnen, dann die Lösung aufklappen. Dieselben Aufgaben stehen auch im Reiter „Übungen“.</p>
+<div class="task"><div class="tn">4.1 · Umrechnen (4.2)</div><p>Rechne 100₁₀ ins Dual-, Oktal- und Hexadezimalsystem um.</p>
+    <details><summary>Lösung</summary><div><p><code>0110 0100₂</code> · Oktal: von rechts <code>001 | 100 | 100</code> = <b>144₈</b> · Hex: <code>0110 | 0100</code> = <b>64₁₆</b></p></div></details></div><div class="task"><div class="tn">4.2 · Umrechnen (4.2.1)</div><p>Rechne 3C₁₆ und 157₈ ins Dezimalsystem um.</p>
+    <details><summary>Lösung</summary><div><p>3·16 + 12 = <b>60</b> · 1·64 + 5·8 + 7 = <b>111</b></p></div></details></div><div class="task"><div class="tn">4.3 · Umrechnen (4.2.1)</div><p>Welcher Dezimalzahl entspricht <code>1011 0110₂</code> (ohne Vorzeichen)?</p>
+    <details><summary>Lösung</summary><div><p>128 + 32 + 16 + 4 + 2 = <b>182</b></p></div></details></div><div class="task"><div class="tn">4.4 · Folie VL 30 (4.2.2, 4.2.3)</div><p>Rechne 458₁₀ ins Dual- und Oktalsystem um.</p>
+    <details><summary>Lösung</summary><div><p><code>1 1100 1010₂</code> · Dreiergruppen <code>111 001 010</code> = <b>712₈</b></p></div></details></div><div class="task"><div class="tn">4.5 · Folie VL 33 (4.2.3)</div><p>Rechne <code>1001 0010₂</code> ins Oktal-, Hex- und Dezimalsystem um.</p>
+    <details><summary>Lösung</summary><div><p><code>010 010 010</code> = <b>222₈</b> · <code>1001 0010</code> = <b>92₁₆</b> · <b>146₁₀</b></p></div></details></div><div class="task"><div class="tn">4.6 · Folie VL 33 (4.2)</div><p>Was ist am größten: E7E5₁₆, 59364₁₀ oder <code>1110 0111 1110 0110₂</code>?</p>
+    <details><summary>Lösung</summary><div><p>E7E5₁₆ = 59365. Die Binärzahl in Vierergruppen ist E7E6₁₆ = 59366. Also ist die <b>Binärzahl am größten</b>, 59364 am kleinsten. Tipp: Binär direkt in Hex gruppieren und nur die letzte Ziffer vergleichen.</p></div></details></div><div class="task"><div class="tn">4.7 · Negative Zahlen (4.4)</div><p>Stelle −42 in 8 Bit als Vorzeichen-Betrag, Einerkomplement und Zweierkomplement dar.</p>
+    <details><summary>Lösung</summary><div><p>+42 = <code>0010 1010</code> · VB <code>1010 1010</code> · EK <code>1101 0101</code> · ZK <code>1101 0110</code></p></div></details></div><div class="task"><div class="tn">4.8 · Zweierkomplement (4.4.3)</div><p>Bilde −25 im 8-Bit-Zweierkomplement und mache die Probe.</p>
+    <details><summary>Lösung</summary><div><p>25 = <code>0001 1001</code> → umdrehen <code>1110 0110</code> → +1 = <b><code>1110 0111</code></b>. Probe: −128 + 64 + 32 + 4 + 2 + 1 = −25 ✓</p></div></details></div><div class="task"><div class="tn">4.9 · Folie VL 40 (4.5)</div><p>Berechne 42 − 17 im 8-Bit-Zweierkomplement.</p>
+    <details><summary>Lösung</summary><div><p><code>0010 1010</code> + <code>1110 1111</code> = (1)<code>0001 1001</code> → Übertrag weglassen → <b>25</b></p></div></details></div><div class="task"><div class="tn">4.10 · Subtraktion (4.5, 4.4.4)</div><p>Berechne 30 − 45 im 8-Bit-Zweierkomplement und lies das Ergebnis ab.</p>
+    <details><summary>Lösung</summary><div><p><code>0001 1110</code> + <code>1101 0011</code> (−45) = <code>1111 0001</code>. Erstes Bit 1, also negativ: −128 + 64 + 32 + 16 + 1 = <b>−15</b></p></div></details></div><div class="task"><div class="tn">4.11 · Überlauf (4.6)</div><p>Ist 90 + 60 in 8 Bit (Zweierkomplement) ein Überlauf? Und 127 + 1?</p>
+    <details><summary>Lösung</summary><div><p>Beides ja. Der Bereich ist −128 … +127. 90 + 60 = 150 ergibt <code>1001 0110</code>, gelesen −106. 127 + 1 ergibt <code>1000 0000</code>, gelesen −128. Jeweils plus + plus ergibt scheinbar minus.</p></div></details></div><div class="task"><div class="tn">4.12 · Folie VL 37 (4.4.2)</div><p>Berechne −4 + 6 im 4-Bit-Einerkomplement.</p>
+    <details><summary>Lösung</summary><div><p>−4 = <code>1011</code>, 6 = <code>0110</code>. Summe (1)<code>0001</code>, Übertrag unten wieder addieren: <code>0001</code> + 1 = <code>0010</code> = <b>+2</b></p></div></details></div><div class="task"><div class="tn">4.13 · Kommazahlen (4.7)</div><p>Wandle 4,375₁₀ in eine binäre Kommazahl um.</p>
+    <details><summary>Lösung</summary><div><p>4 = <code>100</code>; 0,375 → 0,75 (0) → 1,5 (1) → 1,0 (1) → <b><code>100,011₂</code></b></p></div></details></div>
 <div class="nextprev"><span><a href="#uebersicht">← Übersicht</a></span><a href="#kap5">Weiter: 5 Logik →</a></div>
 </section>
 
@@ -603,6 +619,27 @@ Y = (A ∧ B) ∨ (A ∧ C) ∨ (B ∧ C)       „irgendein Paar stimmt zu“</
 
   <h3 id="s5-12"><span class="kicker">5.12</span> Exkurs: Flipflop <span class="tag F">F</span></h3>
   <p>Ein Flipflop (bistabile Kippstufe) besteht aus zwei rückgekoppelten NOR- oder NAND-Gattern und kann sich ein Bit merken: Set setzt auf 1, Reset auf 0, und bei S = R = 0 bleibt der Zustand erhalten (VL F. 72). Es steht nicht in der Rückschau.</p>
+<h3 id="s5-ue"><span class="kicker">Übungen</span> Aufgaben zu Kapitel 5</h3>
+<p>Erst selbst lösen, dann aufklappen. Die Aufgaben stehen auch im Reiter „Übungen“.</p>
+<div class="task"><div class="tn">5.1 · Text → Tabelle (5.5)</div><p>Eine Lampe L leuchtet, wenn genau einer der beiden Schalter A und B an ist. Stelle die Wahrheitstabelle und den DNF-Ausdruck auf. Welches Gatter ist das?</p>
+    <details><summary>Lösung</summary><div><p>L = 0, 1, 1, 0 für AB = 00, 01, 10, 11. DNF: <code>(¬A ∧ B) ∨ (A ∧ ¬B)</code> = <b>XOR</b></p></div></details></div><div class="task"><div class="tn">5.2 · Folie VL 62–64 (5.6)</div><p>Zur Auswahl: A ∧ B, A ∨ B, A ∧ ¬B, B ∧ ¬A. Tabelle 1 hat Out = 1 nur bei A = 1, B = 0; Tabelle 2 nur bei A = 0, B = 1. Welcher Ausdruck gehört zu welcher Tabelle?</p>
+    <details><summary>Lösung</summary><div><p>Tabelle 1: <b>A ∧ ¬B</b> · Tabelle 2: <b>B ∧ ¬A</b></p></div></details></div><div class="task"><div class="tn">5.3 · Folie VL 65–68 (5.6, 5.8)</div><p>Out = 1, 0, 0, 1 für AB = 00, 01, 10, 11. Bestimme den Ausdruck mit der Teilausdruck-Spalte und zeichne die Schaltung nach Standard-Vorgehen. Welches einzelne Gatter geht auch?</p>
+    <details><summary>Lösung</summary><div><p><code>(¬A ∧ ¬B) ∨ (A ∧ B)</code>; Schaltung: 2 NOT, 2 UND, 1 ODER (siehe 5.8). Alternative: ein <b>XNOR</b>.</p></div></details></div><div class="task"><div class="tn">5.4 · Text → Tabelle → DNF (5.5, 5.6)</div><p>Mehrheitsentscheid: Y = 1, wenn mindestens zwei von A, B, C zustimmen. Stelle Tabelle und DNF auf.</p>
+    <details><summary>Lösung</summary><div><p>1-Zeilen: 011, 101, 110, 111. <code>(¬A∧B∧C) ∨ (A∧¬B∧C) ∨ (A∧B∧¬C) ∨ (A∧B∧C)</code>. Vereinfacht siehe V6 bzw. 5.7.</p></div></details></div><div class="task"><div class="tn">5.5 · Analyse (5.9)</div><p>Stelle die Tabelle für Y = ¬(A ∨ B) ∧ C mit Hilfsspalten auf. In wie vielen Zeilen ist Y = 1?</p>
+    <details><summary>Lösung</summary><div><p>Nur in <b>einer</b> Zeile: A = 0, B = 0, C = 1. ¬(A ∨ B) ist nur bei A = B = 0 wahr, dazu muss C = 1 sein.</p></div></details></div><div class="task"><div class="tn">5.6 · De Morgan (5.3)</div><p>Forme um, sodass keine Negation mehr vor einer Klammer steht: a) ¬(A ∧ B) b) ¬(¬A ∨ B)</p>
+    <details><summary>Lösung</summary><div><p>a) <code>¬A ∨ ¬B</code> b) <code>¬¬A ∧ ¬B</code> = <code>A ∧ ¬B</code></p></div></details></div><div class="task"><div class="tn">5.7 · Folie VL 60–61 (5.10)</div><p>Baue eine AND-Schaltung nach IEC 60617-12 für a und b, ohne ein AND-Gatter zu verwenden.</p>
+    <details><summary>Lösung</summary><div><p>Zwei NAND-Gatter hintereinander: Das erste liefert ¬(a ∧ b), das zweite (beide Eingänge verbunden) wirkt als NOT und liefert y = a ∧ b.</p></div></details></div><div class="task"><div class="tn">5.8 · Halbaddierer (5.11)</div><p>Stelle die Tabelle des Halbaddierers auf und nenne die beiden Gatter.</p>
+    <details><summary>Lösung</summary><div><p>s = 0, 1, 1, 0 und c = 0, 0, 0, 1 → Summe = <b>XOR</b>, Übertrag = <b>AND</b></p></div></details></div>
+<h4>Training Vereinfachen <span class="focus">Schwerpunkt</span></h4>
+<div class="task"><div class="tn">V1 · Kernregel</div><p><code>(A ∧ B) ∨ (A ∧ ¬B)</code></p>
+    <details><summary>Lösung</summary><div><p>A ∧ (B ∨ ¬B) = A ∧ 1 = <b>A</b></p></div></details></div><div class="task"><div class="tn">V2 · Kernregel</div><p><code>(¬A ∧ B) ∨ (A ∧ B)</code></p>
+    <details><summary>Lösung</summary><div><p>B ∧ (¬A ∨ A) = <b>B</b></p></div></details></div><div class="task"><div class="tn">V3 · Absorption</div><p><code>A ∨ (A ∧ B)</code></p>
+    <details><summary>Lösung</summary><div><p><b>A</b>. Ist A = 1, ist alles 1; ist A = 0, ist auch A ∧ B = 0.</p></div></details></div><div class="task"><div class="tn">V4 · De Morgan</div><p><code>¬(¬A ∧ ¬B)</code></p>
+    <details><summary>Lösung</summary><div><p>¬¬A ∨ ¬¬B = <b>A ∨ B</b></p></div></details></div><div class="task"><div class="tn">V5 · Term mehrfach nutzen</div><p><code>(¬A ∧ ¬B) ∨ (¬A ∧ B) ∨ (A ∧ ¬B)</code></p>
+    <details><summary>Lösung</summary><div><p>¬A∧¬B mit ¬A∧B → ¬A; ¬A∧¬B mit A∧¬B → ¬B. Ergebnis <b>¬A ∨ ¬B</b> (= NAND). Probe: nur bei A = B = 1 ist es 0 ✓</p></div></details></div><div class="task"><div class="tn">V6 · Drei Variablen</div><p><code>(A∧B∧C) ∨ (A∧B∧¬C) ∨ (A∧¬B∧C)</code></p>
+    <details><summary>Lösung</summary><div><p>A∧B∧C mit A∧B∧¬C → A∧B; A∧B∧C mit A∧¬B∧C → A∧C. Also (A∧B) ∨ (A∧C) = <b>A ∧ (B ∨ C)</b></p></div></details></div><div class="task"><div class="tn">V7 · Aus der Tabelle</div><p>Y = 1 genau in den Zeilen ABC = 001, 011, 101, 111. Stelle die DNF auf und vereinfache.</p>
+    <details><summary>Lösung</summary><div><p>In allen 1-Zeilen ist C = 1, A und B sind beliebig. Paarweise zusammenfassen: 001 + 011 → ¬A∧C, 101 + 111 → A∧C, dann (¬A∧C) ∨ (A∧C) = <b>C</b></p></div></details></div><div class="task"><div class="tn">V8 · Muster erkennen</div><p><code>(¬A ∧ B) ∨ (A ∧ ¬B)</code>. Lässt sich das mit der Kernregel kürzen?</p>
+    <details><summary>Lösung</summary><div><p>Nein, die Terme unterscheiden sich in <b>zwei</b> Variablen. Das Muster ist aber <b>XOR</b> und damit ein einziges Gatter.</p></div></details></div>
 <div class="nextprev"><span><a href="#kap4">← 4 Zahlen</a></span><a href="#uebungen">Weiter: Übungen →</a></div>
 </section>
 
