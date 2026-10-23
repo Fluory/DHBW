@@ -5,21 +5,21 @@
 <style>
 /* Layout: ruhige Lernseite – Kopf mit Reitern, darunter je ein Bereich als weißes Blatt; Bitmuster in Mono, Quellen als kleine Marken */
 :root{
-  --bg:#f3f5f4; --sheet:#ffffff; --ink:#17201c; --muted:#5d6a63; --line:#e1e7e3; --line-strong:#c9d3cd;
-  --accent:#1d6b4f; --accent-soft:#e6f2ec; --signal:#a8540a; --signal-soft:#fcf1e3;
-  --bad:#b4233a; --ok:#1d6b4f; --mid:#a8540a; --code:#f1f4f2;
+  --bg:#f3f5f8; --sheet:#ffffff; --ink:#161b26; --muted:#5c6577; --line:#e2e6ee; --line-strong:#cbd2de;
+  --accent:#2a4bb3; --accent-soft:#e9eefb; --signal:#a8540a; --signal-soft:#fcf1e3;
+  --bad:#b4233a; --ok:#2a4bb3; --mid:#a8540a; --code:#f1f3f7;
   --display:"Archivo","Arial Narrow",Arial,sans-serif;
   --body:"Source Sans 3","Segoe UI",Helvetica,Arial,sans-serif;
   --mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0f1512; --sheet:#151c18; --ink:#e4ebe7; --muted:#9aa7a0; --line:#25302b; --line-strong:#34413a;
-  --accent:#62c99c; --accent-soft:#17352a; --signal:#f0a35a; --signal-soft:#36240f;
-  --bad:#f07a8c; --ok:#62c99c; --mid:#f0a35a; --code:#1b231f; color-scheme:dark}}
+  --bg:#0f131a; --sheet:#151a23; --ink:#e4e8f0; --muted:#9ba3b4; --line:#262d3a; --line-strong:#353e4f;
+  --accent:#8fa8ff; --accent-soft:#1d2848; --signal:#f0a35a; --signal-soft:#36240f;
+  --bad:#f07a8c; --ok:#8fa8ff; --mid:#f0a35a; --code:#1b212c; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#0f1512; --sheet:#151c18; --ink:#e4ebe7; --muted:#9aa7a0; --line:#25302b; --line-strong:#34413a;
-  --accent:#62c99c; --accent-soft:#17352a; --signal:#f0a35a; --signal-soft:#36240f;
-  --bad:#f07a8c; --ok:#62c99c; --mid:#f0a35a; --code:#1b231f; color-scheme:dark}
+  --bg:#0f131a; --sheet:#151a23; --ink:#e4e8f0; --muted:#9ba3b4; --line:#262d3a; --line-strong:#353e4f;
+  --accent:#8fa8ff; --accent-soft:#1d2848; --signal:#f0a35a; --signal-soft:#36240f;
+  --bad:#f07a8c; --ok:#8fa8ff; --mid:#f0a35a; --code:#1b212c; color-scheme:dark}
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.62;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
