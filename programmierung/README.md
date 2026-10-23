@@ -14,6 +14,7 @@ Terminal, `uv`, Python 3.14, `ruff`, `ty` – bewusst ohne IDE und ohne KI-Assis
 | 2 | 09.10.2026 | Variablen, Datentypen und Operatoren | Folien „Vorlesung 2“ | [02](vorlesungen/02_2026-10-09.md) |
 | 3 | 13.10.2026 | Kontrollstrukturen und Listen | Folien „Vorlesung 3“ | [03](vorlesungen/03_2026-10-13.md) |
 | 4 | 16.10.2026 | Funktionen (Parameter, Rückgabe, main, Gültigkeit, Übergabe), Standardwerte, Rekursion, Testen mit pytest | Folien „vl04_funktionen_rekursion“ | [04](vorlesungen/04_2026-10-16.md) |
+| 5 | 23.10.2026 | OOP I (Klassen, Objekte, self, Klassenattribute, Kapselung/Property, dataclass) und vermutlich OOP II (Vererbung, Überschreiben, Polymorphie, abstrakte Klassen) | Folien „vl05_oop_1“ + „vl06_oop_2“ | [05](vorlesungen/05_2026-10-23.md) |
 
 ## Materialien in Moodle
 
