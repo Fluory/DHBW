@@ -31,9 +31,18 @@ Terminal, `uv`, Python 3.14, `ruff`, `ty` – bewusst ohne IDE und ohne KI-Assis
 | Vorlesung 4 – Funktionen und Rekursion (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190871) | 16.10.2026 | Termin 4 |
 | Vorlesung 4 – Folien als HTML mit Animationen | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190872) | 16.10.2026 | Termin 4 (interaktiv) |
 | Vorlesung 4 – Lösungen als Python-Dateien (ZIP) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190873) | 16.10.2026 | Termin 4 (Musterlösungen) |
-| Vorlesung 5 – Objektorientierte Programmierung I (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190874) | 16.10.2026 | noch nicht ausgewertet (Termin 5) |
-| Vorlesung 5 – Folien als HTML mit Animationen | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190875) | 16.10.2026 | noch nicht ausgewertet |
-| Vorlesung 5 – Lösungen als Python-Dateien | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190876) | 16.10.2026 | noch nicht ausgewertet |
+| Vorlesung 5 – Objektorientierte Programmierung I (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190874) | 16.10.2026 | Termin 5 |
+| Vorlesung 5 – Folien als HTML mit Animationen | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190875) | 16.10.2026 | Termin 5 |
+| Vorlesung 5 – Lösungen als Python-Dateien | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190876) | 16.10.2026 | Termin 5 |
+| Vorlesung 2 – Folien als HTML mit Animationen | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191318) | 23.10.2026 | Termin 2 (interaktiv) |
+| Vorlesung 2 – Selbsttest-Quiz (HTML) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191319) | 23.10.2026 | Termin 2 (Selbsttest) |
+| Vorlesung 3 – Selbsttest-Quiz (HTML) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191320) | 23.10.2026 | Termin 3 (Selbsttest) |
+| Vorlesung 4 – Selbsttest-Quiz (HTML) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191321) | 23.10.2026 | Termin 4 (Selbsttest) |
+| Vorlesung 5 – Selbsttest-Quiz (HTML) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191322) | 23.10.2026 | Termin 5 (Selbsttest) |
+| Vorlesung 6 – Objektorientierte Programmierung II (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191323) | 23.10.2026 | Termin 5 (vermutlich nachmittags) |
+| Vorlesung 6 – Folien als HTML mit Animationen | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191324) | 23.10.2026 | Termin 5 (interaktiv) |
+| Vorlesung 6 – Lösungen als Python-Dateien (ZIP) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191325) | 23.10.2026 | Termin 5 (Musterlösungen) |
+| Vorlesung 6 – Selbsttest-Quiz (HTML) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191326) | 23.10.2026 | Termin 5 (Selbsttest) |
 
 ## Eigene Notizen
 
