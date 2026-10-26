@@ -10,6 +10,7 @@ Moodle: [Kurs 18614](https://moodle.heilbronn.dhbw.de/course/view.php?id=18614) 
 |---|---|---|---|---|
 | 1 | 13.10.2026 | Einführung, Personen, Willenserklärung, Vertrag | vermutet (Skript Kap. 1–4 BGB AT) | [01](vorlesungen/01_2026-10-13.md) |
 | 2 | 15.10.2026 | Nichtigkeit, Anfechtung, Geschäftsfähigkeit, ggf. Stellvertretung | vermutet (Skript Kap. 5–7 BGB AT) | [02](vorlesungen/02_2026-10-15.md) |
+| 3 | 26.10.2026 | Vertreter ohne Vertretungsmacht, Fristen, Verjährung, Einstieg Schuldrecht AT (Neuerungen 2022, Schuldverhältnis, Erlöschen) | vermutet (Skript S. 23–37) | [03](vorlesungen/03_2026-10-26.md) |
 
 ## Materialien in Moodle
 
