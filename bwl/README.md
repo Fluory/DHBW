@@ -10,6 +10,7 @@ Moodle: [Kurs 18616](https://moodle.heilbronn.dhbw.de/course/view.php?id=18616) 
 |---|---|---|---|---|
 | 1 | 15.10.2026 | BWL als Wissenschaft, Produktionsfaktoren, Güter, ökonomisches Prinzip, Kennzahlen (inkl. Übung 6) | Folien „1. Einführung“ + Skript Kap. 1 + Lösungen | [01](vorlesungen/01_2026-10-15.md) |
 | 2 | 22.10.2026 | Betrieb und Unternehmung: Typologie, Makroumfeld, normativer Rahmen, Ziele, Mitbestimmung | Folien „2. Betrieb und Unternehmung“ + Skript Kap. 2 | [02](vorlesungen/02_2026-10-22.md) |
+| 3 | 26.10.2026 | Rechtsformen I: Firma, Handelsregister, Einzelunternehmung, GbR, OHG, KG, stille Gesellschaft (Kapitalgesellschaften evtl. 27.10.) | vermutet (Skript Kap. 3) | [03](vorlesungen/03_2026-10-26.md) |
 
 ## Materialien in Moodle
 
