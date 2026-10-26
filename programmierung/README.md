@@ -44,6 +44,12 @@ Terminal, `uv`, Python 3.14, `ruff`, `ty` – bewusst ohne IDE und ohne KI-Assis
 | Vorlesung 6 – Folien als HTML mit Animationen | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191324) | 23.10.2026 | Termin 5 (interaktiv) |
 | Vorlesung 6 – Lösungen als Python-Dateien (ZIP) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191325) | 23.10.2026 | Termin 5 (Musterlösungen) |
 | Vorlesung 6 – Selbsttest-Quiz (HTML) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191326) | 23.10.2026 | Termin 5 (Selbsttest) |
+| Vorlesung 7 – Projekt Kaffeeshop (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191374) | 26.10.2026 | noch nicht ausgewertet (vermutlich Termin 6+) |
+| Vorlesung 7 – Projekt Kaffeeshop (Startpaket) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191372) | 26.10.2026 | noch nicht ausgewertet |
+| Vorlesung 8 – Standardbibliothek und Datenstrukturen (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191387) | 26.10.2026 | noch nicht ausgewertet |
+| Vorlesung 8 – Folien als HTML mit Animationen | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191388) | 26.10.2026 | noch nicht ausgewertet |
+| Vorlesung 8 – Lösungen als Python-Dateien | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191389) | 26.10.2026 | noch nicht ausgewertet |
+| Vorlesung 8 – Selbsttest-Quiz (HTML) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191390) | 26.10.2026 | noch nicht ausgewertet |
 
 ## Eigene Notizen
 
