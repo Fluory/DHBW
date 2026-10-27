@@ -15,6 +15,7 @@ Terminal, `uv`, Python 3.14, `ruff`, `ty` – bewusst ohne IDE und ohne KI-Assis
 | 3 | 13.10.2026 | Kontrollstrukturen und Listen | Folien „Vorlesung 3“ | [03](vorlesungen/03_2026-10-13.md) |
 | 4 | 16.10.2026 | Funktionen (Parameter, Rückgabe, main, Gültigkeit, Übergabe), Standardwerte, Rekursion, Testen mit pytest | Folien „vl04_funktionen_rekursion“ | [04](vorlesungen/04_2026-10-16.md) |
 | 5 | 23.10.2026 | Wiederholung, Selbsttest-Quizze; OOP I bis Übung 3 (Klassen, Objekte, Methoden, self, Klassenattribute) – Properties, dataclass und OOP II folgen | Folien „vl05_oop_1“ (bis Folie 41) + Rückmeldung | [05](vorlesungen/05_2026-10-23.md) |
+| 6 | 27.10.2026 | (vorbereitet) Rest OOP I: Kapselung/Properties (Ü4), Hat-ein, Module, @dataclass (Ü5); Start OOP II: Vererbung, super(), Überschreiben, @override (Ü1–2), evtl. Polymorphie/ABC | Folien „vl05_oop_1“ ab Folie 42 + „vl06_oop_2“ (Sicherheit mittel) | [06](vorlesungen/06_2026-10-27.md) |
 
 ## Materialien in Moodle
 
@@ -32,24 +33,24 @@ Terminal, `uv`, Python 3.14, `ruff`, `ty` – bewusst ohne IDE und ohne KI-Assis
 | Vorlesung 4 – Funktionen und Rekursion (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190871) | 16.10.2026 | Termin 4 |
 | Vorlesung 4 – Folien als HTML mit Animationen | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190872) | 16.10.2026 | Termin 4 (interaktiv) |
 | Vorlesung 4 – Lösungen als Python-Dateien (ZIP) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190873) | 16.10.2026 | Termin 4 (Musterlösungen) |
-| Vorlesung 5 – Objektorientierte Programmierung I (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190874) | 16.10.2026 | Termin 5 |
-| Vorlesung 5 – Folien als HTML mit Animationen | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190875) | 16.10.2026 | Termin 5 |
-| Vorlesung 5 – Lösungen als Python-Dateien | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190876) | 16.10.2026 | Termin 5 |
+| Vorlesung 5 – Objektorientierte Programmierung I (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190874) | 16.10.2026 | Termin 5 (Folie 1–41), Termin 6 (ab Folie 42) |
+| Vorlesung 5 – Folien als HTML mit Animationen | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190875) | 16.10.2026 | Termin 5–6 |
+| Vorlesung 5 – Lösungen als Python-Dateien | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190876) | 16.10.2026 | Termin 5 (Ü1–3), Termin 6 (Ü4–5) |
 | Vorlesung 2 – Folien als HTML mit Animationen | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191318) | 23.10.2026 | Termin 2 (interaktiv) |
 | Vorlesung 2 – Selbsttest-Quiz (HTML) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191319) | 23.10.2026 | Termin 2 (Selbsttest) |
 | Vorlesung 3 – Selbsttest-Quiz (HTML) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191320) | 23.10.2026 | Termin 3 (Selbsttest) |
 | Vorlesung 4 – Selbsttest-Quiz (HTML) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191321) | 23.10.2026 | Termin 4 (Selbsttest) |
 | Vorlesung 5 – Selbsttest-Quiz (HTML) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191322) | 23.10.2026 | Termin 5 (Selbsttest) |
-| Vorlesung 6 – Objektorientierte Programmierung II (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191323) | 23.10.2026 | Termin 5 (vermutlich nachmittags) |
-| Vorlesung 6 – Folien als HTML mit Animationen | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191324) | 23.10.2026 | Termin 5 (interaktiv) |
-| Vorlesung 6 – Lösungen als Python-Dateien (ZIP) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191325) | 23.10.2026 | Termin 5 (Musterlösungen) |
-| Vorlesung 6 – Selbsttest-Quiz (HTML) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191326) | 23.10.2026 | Termin 5 (Selbsttest) |
-| Vorlesung 7 – Projekt Kaffeeshop (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191374) | 26.10.2026 | noch nicht ausgewertet (vermutlich Termin 6+) |
-| Vorlesung 7 – Projekt Kaffeeshop (Startpaket) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191372) | 26.10.2026 | noch nicht ausgewertet |
-| Vorlesung 8 – Standardbibliothek und Datenstrukturen (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191387) | 26.10.2026 | noch nicht ausgewertet |
-| Vorlesung 8 – Folien als HTML mit Animationen | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191388) | 26.10.2026 | noch nicht ausgewertet |
-| Vorlesung 8 – Lösungen als Python-Dateien | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191389) | 26.10.2026 | noch nicht ausgewertet |
-| Vorlesung 8 – Selbsttest-Quiz (HTML) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191390) | 26.10.2026 | noch nicht ausgewertet |
+| Vorlesung 6 – Objektorientierte Programmierung II (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191323) | 23.10.2026 | Termin 6 (Start, Ü1–2), Rest vermutlich Termin 7 |
+| Vorlesung 6 – Folien als HTML mit Animationen | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191324) | 23.10.2026 | Termin 6–7 (interaktiv) |
+| Vorlesung 6 – Lösungen als Python-Dateien (ZIP) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191325) | 23.10.2026 | Termin 6–7 (Musterlösungen) |
+| Vorlesung 6 – Selbsttest-Quiz (HTML) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191326) | 23.10.2026 | Termin 6–7 (Selbsttest) |
+| Vorlesung 7 – Projekt Kaffeeshop (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191374) | 26.10.2026 | ausgewertet 27.10.: Projekttag zu zweit (Stufen 1–3), setzt komplette VL06 voraus → vermutlich Termin 7/8 |
+| Vorlesung 7 – Projekt Kaffeeshop (Startpaket) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191372) | 26.10.2026 | VL07-Projekt (produkt.py, daten.py, main.py) → vermutlich Termin 7/8 |
+| Vorlesung 8 – Standardbibliothek und Datenstrukturen (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191387) | 26.10.2026 | vermutlich Termin 8/9 (nach VL07; nicht im Detail ausgewertet) |
+| Vorlesung 8 – Folien als HTML mit Animationen | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191388) | 26.10.2026 | vermutlich Termin 8/9 (nach VL07; nicht im Detail ausgewertet) |
+| Vorlesung 8 – Lösungen als Python-Dateien | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191389) | 26.10.2026 | vermutlich Termin 8/9 (nach VL07; nicht im Detail ausgewertet) |
+| Vorlesung 8 – Selbsttest-Quiz (HTML) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191390) | 26.10.2026 | vermutlich Termin 8/9 (nach VL07; nicht im Detail ausgewertet) |
 
 ## Eigene Notizen
 
