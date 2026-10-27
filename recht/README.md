@@ -17,6 +17,7 @@ Moodle: [Kurs 18614](https://moodle.heilbronn.dhbw.de/course/view.php?id=18614) 
 | Material | Link | gesehen am | genutzt für |
 |---|---|---|---|
 | Skript Bürgerliches Recht Teil 1 – BGB AT + Schuldrecht AT (Silke Hennig, 51 S.) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190423) | 09.10.2026 | Termin 1 (BGB AT Kap. 1–4), Termin 2 (Kap. 5–7) |
+| Lösungen Zugang WE, Anfechtung (Lösungen zu Skript S. 11, 14–15, 18) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191512) | 27.10.2026 | Termin 1 (Zugang, Vertragsschluss), Termin 2 (Anfechtung) |
 
 ## Eigene Notizen
 
