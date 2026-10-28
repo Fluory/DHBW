@@ -51,6 +51,7 @@ Terminal, `uv`, Python 3.14, `ruff`, `ty` – bewusst ohne IDE und ohne KI-Assis
 | Vorlesung 8 – Folien als HTML mit Animationen | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191388) | 26.10.2026 | vermutlich Termin 8/9 (nach VL07; nicht im Detail ausgewertet) |
 | Vorlesung 8 – Lösungen als Python-Dateien | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191389) | 26.10.2026 | vermutlich Termin 8/9 (nach VL07; nicht im Detail ausgewertet) |
 | Vorlesung 8 – Selbsttest-Quiz (HTML) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191390) | 26.10.2026 | vermutlich Termin 8/9 (nach VL07; nicht im Detail ausgewertet) |
+| Vorlesung 5 – Prompt für KI-Lernpartner (Text, Stoff VL01–VL05) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191612) | 28.10.2026 | Klausurvorbereitung (Abfrage VL01–VL05) |
 
 ## Eigene Notizen
 
