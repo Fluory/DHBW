@@ -9,6 +9,7 @@ Moodle: [Kurs 18619](https://moodle.heilbronn.dhbw.de/course/view.php?id=18619) 
 | Nr | Datum | Thema | Grundlage | Notiz |
 |---|---|---|---|---|
 | 1 | 28.10.2026 | Grundlagen der WI, Arten betrieblicher IS (ERP/CRM/SCM, Integration), Geschäftsprozessmodellierung (EPK), Datenmodellierung (ER, Relationenmodell) | Folien Tag 1 Blocks 1–4 | [01](vorlesungen/01_2026-10-28.md) |
+| 2 | 29.10.2026 | IS gestalten und einordnen: Geschäftsmodell, Organisation und Anforderungen an IS; Informationsmanagement (planen, beschaffen, einführen, betreiben); BI und Data Science (inkl. Process Mining); digitale Transformation, GenAI und Agenten | vermutet (Agenda Tag 1 Block 1 + Modulbeschreibung; Folien Tag 2 noch nicht in Moodle) | [02](vorlesungen/02_2026-10-29.md) |
 
 ## Materialien in Moodle
 
