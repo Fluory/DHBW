@@ -1,0 +1,1898 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Einführung in die BWL – Klausurzusammenfassung</title>
+<style>
+:root{
+  --ink:#1c2230; --muted:#5b6475; --line:#d5dae3; --soft:#f5f7fb;
+  --blue:#2457a6; --blue-bg:#eef3fb;
+  --indigo:#4338ca; --indigo-bg:#f0f0fd;
+  --violet:#7c3aed; --violet-bg:#f6f1fe;
+  --rose:#be123c; --rose-bg:#fdf1f4;
+  --amber:#b45309; --amber-bg:#fdf6ea;
+  --slate:#475569; --slate-bg:#f3f5f8;
+  --sky:#0369a1; --sky-bg:#eef7fc;
+}
+@page{ size:A4; margin:14mm 13mm 16mm 13mm; }
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#fff;color:var(--ink)}
+body{font:9.9pt/1.36 "Inter","Liberation Sans","DejaVu Sans",Arial,sans-serif;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact}
+main{max-width:184mm;margin:0 auto;padding:0 2mm}
+h1{font-size:21pt;margin:0 0 1mm;color:var(--blue);letter-spacing:-.3px}
+h2{font-size:15pt;margin:0 0 3mm;padding:2.2mm 3.5mm;color:#fff;background:linear-gradient(90deg,var(--blue),#3b6fc4);
+  border-radius:2.5mm;break-before:page;break-after:avoid}
+h2.nb{break-before:auto}
+h2 .badge{float:right;margin-top:1pt}
+h3{font-size:12pt;margin:4.2mm 0 1.6mm;color:var(--blue);border-bottom:1.2pt solid #c9d6ee;padding-bottom:.8mm;break-after:avoid}
+h4{font-size:10.3pt;margin:3mm 0 1mm;color:#24324d;break-after:avoid}
+p{margin:0 0 1.8mm}
+ul,ol{margin:0 0 2mm;padding-left:5.5mm}
+li{margin:0 0 .5mm}
+b,strong{font-weight:650}
+code,.mono{font-family:"DejaVu Sans Mono","Liberation Mono",monospace;font-size:8.8pt}
+table{border-collapse:collapse;width:100%;margin:1.2mm 0 2.6mm;font-size:8.9pt;line-height:1.28}
+tr{break-inside:avoid}
+th,td{border:.6pt solid var(--line);padding:.8mm 1.5mm;vertical-align:top;text-align:left}
+th{background:var(--blue-bg);color:#1d3f78;font-weight:650}
+td.c,th.c{text-align:center}
+td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}
+tr.sum td{font-weight:650;background:var(--soft)}
+table.zebra tr:nth-child(even) td{background:#fafbfd}
+.box{border:1pt solid var(--line);border-left:4.5pt solid var(--slate);border-radius:2mm;padding:2mm 3mm;margin:2.4mm 0;background:var(--slate-bg);break-inside:avoid}
+.box>.t{display:block;font-weight:700;font-size:9.4pt;margin-bottom:1mm;letter-spacing:.2px;text-transform:uppercase}
+.box ul,.box ol{margin-bottom:.5mm}
+.box table{font-size:8.3pt}
+.cols .f,.cols .calc{font-size:7.4pt}
+.box th,.box td{padding:.6mm 1.1mm}
+.box p:last-child{margin-bottom:0}
+.kern{border-left-color:var(--blue);background:var(--blue-bg)} .kern>.t{color:var(--blue)}
+.merk{border-left-color:var(--violet);background:var(--violet-bg)} .merk>.t{color:var(--violet)}
+.formel{border-left-color:var(--indigo);background:var(--indigo-bg)} .formel>.t{color:var(--indigo)}
+.bsp{border-left-color:var(--sky);background:var(--sky-bg)} .bsp>.t{color:var(--sky)}
+.trap{border-left-color:var(--rose);background:var(--rose-bg)} .trap>.t{color:var(--rose)}
+.trap>.t::before{content:"⚠ "}
+.klausur{border-left-color:var(--amber);background:var(--amber-bg)} .klausur>.t{color:var(--amber)}
+.korr{border:1.2pt dashed var(--rose);border-left:4.5pt solid var(--rose);background:#fff} .korr>.t{color:var(--rose)}
+.def{margin:1.2mm 0 2mm;padding:1.2mm 3mm;border-left:3pt solid var(--blue);background:#fbfcfe;break-inside:avoid}
+.def b:first-child{color:var(--blue)}
+dl.defs{margin:0 0 2mm;display:grid;grid-template-columns:max-content 1fr;gap:.8mm 3mm}
+dl.defs dt{font-weight:650;color:#1d3f78}
+dl.defs dd{margin:0}
+.f{font-family:"DejaVu Sans Mono","Liberation Mono",monospace;font-size:8.1pt;background:#fff;border:.6pt solid #cfd3f3;border-radius:1.2mm;padding:1mm 2mm;margin:.8mm 0;display:block;white-space:pre-wrap;line-height:1.38}
+.calc{font-family:"DejaVu Sans Mono","Liberation Mono",monospace;font-size:8.0pt;white-space:pre-wrap;line-height:1.38;margin:.5mm 0 1mm}
+.badge{display:inline-block;font-size:7.8pt;font-weight:700;padding:.4mm 2mm;border-radius:3mm;letter-spacing:.2px;vertical-align:1pt;white-space:nowrap}
+.b-done{background:#fff;color:var(--blue);border:1pt solid #fff}
+h2 .b-done{background:#ffffffe6}
+.b-next{background:#fde7c4;color:#7a3d00}
+.b-open{background:#e9ecf2;color:#3d4657}
+.tag{display:inline-block;font-size:7.4pt;font-weight:650;padding:0 1.6mm;border-radius:2mm;border:.6pt solid currentColor;vertical-align:1pt;white-space:nowrap}
+.t-off{color:var(--blue)} .t-own{color:var(--amber)} .t-fol{color:var(--violet)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:4mm;align-items:start}
+.cols>*{min-width:0}
+.cols>.box{margin-top:0}
+.cols3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3mm;align-items:start}
+.small{font-size:8.6pt;color:var(--muted)}
+.erg{color:var(--violet);font-style:italic}
+.muted{color:var(--muted)}
+.hl{background:linear-gradient(transparent 55%,#fde7c4 55%)}
+.title{border-radius:3mm;padding:5mm 6mm 4mm;margin:0 0 4mm;background:linear-gradient(120deg,#eef3fb,#f6f1fe);border:1pt solid #d9e1f2}
+.title .sub{color:var(--muted);font-size:9.6pt}
+.meta{display:grid;grid-template-columns:max-content 1fr;gap:1mm 5mm;margin:3mm 0 0;font-size:9.8pt}
+.meta b{color:#1d3f78}
+.toc{columns:2;column-gap:8mm;font-size:9.4pt;margin:1mm 0 2mm}
+.toc div{break-inside:avoid;margin-bottom:.8mm}
+.toc .n{display:inline-block;width:7mm;font-weight:700;color:var(--blue)}
+figure{margin:2mm 0 3mm;text-align:center;break-inside:avoid}
+figure svg{max-width:100%;height:auto}
+figcaption{font-size:8.4pt;color:var(--muted);margin-top:1mm}
+svg text{font-family:"Inter","Liberation Sans","DejaVu Sans",sans-serif}
+.ue{margin:0 0 1.6mm;padding:1mm 2.5mm;border-left:2.5pt solid #c9d6ee;break-inside:avoid}
+.ue>b:first-child{color:var(--blue)}
+.ue .q{color:var(--muted);font-size:8.6pt}
+.nobreak{break-inside:avoid}
+.pb{break-before:page}
+@media screen{
+  body{background:#eef1f6}
+  main{background:#fff;padding:10mm 12mm;margin:6mm auto;border-radius:3mm;box-shadow:0 2px 14px #0001;max-width:200mm}
+  h2{margin-top:10mm}
+}
+@media print{ a{color:inherit;text-decoration:none} }
+</style>
+</head>
+<body>
+<main>
+
+<div class="title">
+  <h1>Einführung in die BWL – Klausurzusammenfassung</h1>
+  <div class="sub">DHBW Heilbronn · Wirtschaftsinformatik · 1. Semester · Dozentin: Michaela Geiger · Stand: 30.10.2026 · deckt das <b>ganze Skript</b> (Kap. 1–10) ab</div>
+  <div class="meta">
+    <b>Klausur</b><span><b>72 Minuten, 72 Punkte</b> → etwa <b>1 Punkt pro Minute</b>. Wissens- und Verständnisfragen, Transferfragen (Fallbeispiel, Fallstudie), Multiple Choice.</span>
+    <b>Grundlage</b><span>Skript „Einführung in die Betriebswirtschaftslehre 2026“ (Kap. 1–10, Übungen 1–56), Kapitelfolien 1–4 mit offiziellen Lösungen zu Übung 1–25, Musterklausur „Klausur 2025“, eigene Vorlesungsnotizen.</span>
+    <b>Rechnen</b><span>Rund die Hälfte der Musterklausur sind Rechenaufgaben: Kennzahlen, KG-Gewinnverteilung, Zweipunktverfahren, Deckungsbeitrag, ROI, Andler-Formel, Meldebestand, ABC-Analyse. <b>Rechenweg immer hinschreiben</b> und die verlangte Nachkommastellen-Genauigkeit einhalten.</span>
+  </div>
+</div>
+
+<div class="cols">
+<div>
+<h3 style="margin-top:0">Stoffstand (Termine bis 27.10.)</h3>
+<table>
+<tr><th>Kap.</th><th>Thema</th><th>Status</th></tr>
+<tr><td class="c">1</td><td>Einführung</td><td><span class="badge b-done" style="border-color:var(--blue)">behandelt 15.10.</span></td></tr>
+<tr><td class="c">2</td><td>Betrieb und Unternehmung</td><td><span class="badge b-done" style="border-color:var(--blue)">behandelt 22.10.</span></td></tr>
+<tr><td class="c">3</td><td>Rechtsformen der Unternehmung</td><td><span class="badge b-done" style="border-color:var(--blue)">behandelt 26./27.10.</span></td></tr>
+<tr><td class="c">4</td><td>Konzentration und Kooperation</td><td><span class="badge b-done" style="border-color:var(--blue)">behandelt 27.10.</span></td></tr>
+<tr><td class="c">5</td><td>Standortentscheidungen</td><td><span class="badge b-next">nächster Termin 03.11.</span></td></tr>
+<tr><td class="c">6</td><td>Rechnungswesen</td><td><span class="badge b-open">noch nicht behandelt</span></td></tr>
+<tr><td class="c">7</td><td>Planung und Kontrolle</td><td><span class="badge b-open">noch nicht behandelt</span></td></tr>
+<tr><td class="c">8</td><td>Organisation</td><td><span class="badge b-open">noch nicht behandelt</span></td></tr>
+<tr><td class="c">9</td><td>Materialwirtschaft</td><td><span class="badge b-open">noch nicht behandelt</span></td></tr>
+<tr><td class="c">10</td><td>Produktion</td><td><span class="badge b-open">noch nicht behandelt</span></td></tr>
+</table>
+<p class="small">Kap. 1–4 stammen aus Skript + Kapitelfolien (mit offiziellen Lösungen). Kap. 5–10 stammen nur aus dem Skript; dazu gibt es noch <b>keine offiziellen Lösungen</b> – alle Lösungen dort sind eigene Lösungsskizzen und werden ergänzt, sobald die Folien da sind.</p>
+</div>
+<div>
+<h3 style="margin-top:0">Musterklausur 2025 – Punkteverteilung</h3>
+<table>
+<tr><th>Aufg.</th><th>Inhalt</th><th class="c">Kap.</th><th class="r">P.</th></tr>
+<tr><td>1a–c</td><td>Werkstoffe, Kennzahlen, Güter ankreuzen</td><td class="c">1</td><td class="r">16</td></tr>
+<tr><td>2a–c</td><td>KG-Gewinnverteilung, UG-Zwangsthesaurierung, AG-Organe</td><td class="c">3</td><td class="r">13</td></tr>
+<tr><td>3</td><td>Zweipunktverfahren (fixe/variable Kosten)</td><td class="c">6</td><td class="r">4</td></tr>
+<tr><td>4</td><td>Deckungsbeitragsrechnung</td><td class="c">6</td><td class="r">6</td></tr>
+<tr><td>5a–b</td><td>Gewinn, Kapitalumschlag, ROI; Anforderungen an Kennzahlen</td><td class="c">7</td><td class="r">11</td></tr>
+<tr><td>6a–b</td><td>Optimale Bestellmenge (Andler), Meldebestand</td><td class="c">9</td><td class="r">7</td></tr>
+<tr><td>7a–b</td><td>ABC-Analyse, Just-in-Time</td><td class="c">9</td><td class="r">9</td></tr>
+<tr><td>8</td><td>Ziele von Standortentscheidungen</td><td class="c">5</td><td class="r">6</td></tr>
+<tr class="sum"><td></td><td>Summe</td><td></td><td class="r">72</td></tr>
+</table>
+<p class="small">Kap. 2, 4, 8 und 10 kamen 2025 nicht vor, sind aber Stoff. Die vollständigen Lösungsskizzen findest du am Ende („Musterklausur 2025 – Lösungen“).</p>
+</div>
+</div>
+
+<h3>Prioritäten beim Lernen</h3>
+<table class="zebra">
+<tr><th style="width:30mm">Priorität</th><th>Was</th><th style="width:44mm">Warum</th></tr>
+<tr><td><b>1 – rechnen können</b></td><td>Produktivität / Wirtschaftlichkeit / Rentabilität · KG-Gewinnverteilung (Tätigkeitsvergütung, Zinsen, Rest nach Schlüssel) · Zweipunktverfahren · Deckungsbeitrag · ROI und Kapitalumschlag · Andler-Formel · Meldebestand · ABC-Wertanteil</td><td>2025 zusammen rund <b>43 von 72 Punkten</b></td></tr>
+<tr><td><b>2 – Tabellen im Kopf</b></td><td>Rechtsformen-Vergleich (Gründer, Kapital, Haftung, Organe, Gewinn) · Organe der AG · Werkstoffarten · Güterklassifikation · Kooperation vs. Konzentration</td><td>Nennen/Erklären-Aufgaben, schnelle Punkte</td></tr>
+<tr><td><b>3 – Begriffe</b></td><td>Ökonomisches Prinzip, Firmengrundsätze, Kaufmannsarten, SMART, Zielbeziehungen, Kartellarten, Holdingformen, Standortziele, Planungsebenen, Organisationsformen, Fertigungstypen</td><td>Definitionen und Beispiele</td></tr>
+</table>
+
+<div class="box kern"><span class="t">Legende</span>
+<span class="tag t-off">offiziell</span> = Lösung aus den Kapitelfolien bzw. der Lösungsdatei der Dozentin (hat Vorrang). <span class="tag t-own">eigene Lösung</span> = selbst gerechnet bzw. formuliert, keine Musterlösung vorhanden. <span class="erg">(Ergänzung)</span> = steht nicht im Skript, nur zum Verständnis. Kästen: <b style="color:var(--blue)">blau</b> Kernaussagen · <b style="color:var(--indigo)">indigo</b> Formeln · <b style="color:var(--sky)">hellblau</b> Rechenbeispiel · <b style="color:var(--violet)">violett</b> Merksätze · <b style="color:var(--rose)">rot</b> Klausurfallen · <b style="color:var(--amber)">orange</b> „So kommt es in der Klausur“.
+</div>
+
+<div class="box korr"><span class="t">Bekannte Korrekturen – so in der Klausur antworten</span>
+<ul>
+<li><b>Entscheidungsprozess (Heinen) hat 5 Phasen:</b> Anregung → Suche → Auswahl → Vollzug → Kontrolle (offizielle Lösung Übung 2).</li>
+<li><b>Verpackungskartons beim Nudelhersteller = Rohstoff</b> (nicht Hilfsstoff) – so in der offiziellen Lösung zu Übung 1.</li>
+<li><b>GmbH-Stimmrecht: 1 € Nennbetrag = 1 Stimme</b> (§ 47 Abs. 2 GmbHG). Übung 18.5: Bertrand + Schneider 81.000 Stimmen &gt; Wehrle 69.000 → <b>Schneider wird Geschäftsführer</b>.</li>
+<li><b>Übung 23i: Eine Beteiligung von über 50 % genügt</b> (Beschlüsse der GmbH mit einfacher Mehrheit) – nicht „besser 75 %“.</li>
+<li><b>Die 4-%-Regel bei OHG/KG gilt nicht mehr</b> (Folie durchgestrichen, MoPeG seit 1.1.2024). Gewinn nach Vertrag → Beteiligungsverhältnis/Wert der Beiträge → nach Köpfen.</li>
+<li><b>GmbH-Aufsichtsrat:</b> Die Gesellschafterversammlung bestellt den Geschäftsführer; der Aufsichtsrat bestellt ihn erst bei paritätischer Mitbestimmung, also <b>ab 2.001 Arbeitnehmern</b> (§ 31 MitbestG).</li>
+<li><b>Fusionskontrolle:</b> Die Inlandsschwelle im Skript (ein Beteiligter &gt; 25 Mio. €) ist veraltet. Heute: weltweit &gt; 500 Mio. €, im Inland ein Beteiligter &gt; 50 Mio. € und ein weiterer &gt; 17,5 Mio. €. Beide Werte kennen, Folienwert nennen und Aktualisierung dazuschreiben.</li>
+</ul>
+</div>
+
+<h3>Inhalt</h3>
+<div class="toc">
+<div><span class="n">1</span>Einführung</div>
+<div><span class="n">2</span>Betrieb und Unternehmung</div>
+<div><span class="n">3</span>Rechtsformen der Unternehmung</div>
+<div><span class="n">4</span>Konzentration und Kooperation</div>
+<div><span class="n">5</span>Standortentscheidungen</div>
+<div><span class="n">6</span>Rechnungswesen</div>
+<div><span class="n">7</span>Planung und Kontrolle</div>
+<div><span class="n">8</span>Organisation</div>
+<div><span class="n">9</span>Materialwirtschaft</div>
+<div><span class="n">10</span>Produktion</div>
+<div><span class="n">A</span>Formelsammlung</div>
+<div><span class="n">B</span>Musterklausur 2025 – Lösungen</div>
+<div><span class="n">C</span>Alle Übungen 1–56 mit Kurzlösungen</div>
+</div>
+
+<!-- ============================ KAPITEL 1 ============================ -->
+<h2>1 · Einführung <span class="badge b-done">behandelt 15.10.</span></h2>
+
+<div class="box kern"><span class="t">Kernaussagen</span>
+<ul>
+<li>Die BWL ist eine <b>Realwissenschaft</b> und gehört (OECD-Klassifikation FOS) zu den <b>Sozialwissenschaften</b>. Erfahrungsobjekt ist der <b>Betrieb</b>, Erkenntnisobjekt das <b>Wirtschaften im Betrieb</b>, Auswahlprinzip das <b>ökonomische Prinzip</b>.</li>
+<li>Drei klassische Ansätze: <b>Gutenberg</b> (produktivitätsorientiert, Produktionsfaktoren), <b>Heinen</b> (entscheidungsorientiert, 5 Phasen), <b>Ulrich</b> (systemorientiert, Regelkreis).</li>
+<li>Güter werden nach ihrem <b>Verwendungszweck</b> eingeordnet: Dasselbe Gut (Strom) ist im Haushalt Konsumgut, im Industriebetrieb Investitionsgut.</li>
+<li>Die drei Kernkennzahlen: <b>Produktivität</b> (Menge/Menge), <b>Wirtschaftlichkeit</b> (Wert/Wert), <b>Rentabilität</b> (Gewinn/Kapital in %).</li>
+</ul>
+</div>
+
+<h3>1.1 Die BWL als Wissenschaft</h3>
+<div class="cols">
+<div>
+<dl class="defs">
+<dt>Erkenntnisobjekt</dt><dd>Ausschnitt der Realität, mit dem sich die Wissenschaft befasst – BWL: das <b>Wirtschaften im Betrieb</b></dd>
+<dt>Erkenntnisziel</dt><dd>warum man sich damit beschäftigt – BWL: <b>optimales Wirtschaften</b> im Betrieb</dd>
+<dt>Methodik</dt><dd>Weg zur Erkenntnis: experimentell, <b>induktiv</b> (Einzelfall → allgemein, BWL), <b>deduktiv</b> (allgemein → Einzelfall, VWL)</dd>
+<dt>System</dt><dd>Erkenntnisse als geordneter Zusammenhang (nach Wöhe)</dd>
+</dl>
+<p><b>Allgemeine BWL (ABWL):</b> Fragen, die für alle Betriebe gleich sind (unabhängig von Branche, Rechtsform, Eigentum), z. B. Rechtsform- und Standortwahl. <b>Spezielle BWL (SBWL):</b> Probleme einzelner Wirtschaftszweige (Industrie-, Handels-, Bank-, Versicherungsbetriebslehre …).</p>
+</div>
+<div>
+<table>
+<tr><th>Gliederung der BWL</th><th>Idee</th></tr>
+<tr><td><b>funktional</b></td><td>nach Funktionen: Unternehmensführung; primär/wertschöpfend (Material, Produktion, Absatz); sekundär/unterstützend (Personal, Rechnungswesen, Finanzen)</td></tr>
+<tr><td><b>institutionell</b></td><td>ABWL vs. SBWL (Branchen)</td></tr>
+<tr><td><b>genetisch</b></td><td>Lebensweg: Gründung → Wachstum → Liquidation</td></tr>
+<tr><td><b>prozessorientiert</b></td><td>Ziele, Planung, Entscheidung, Kontrolle – <b>PDCA</b>: Plan → Do → Check → Act</td></tr>
+</table>
+<p class="small">Zeitstrahl (nur zum Einordnen): 1494 Pacioli (doppelte Buchführung) · 1898 Handelshochschulen = Beginn der BWL als Wissenschaft · 1951 Gutenberg „Grundlagen der BWL“ · 1960 Wöhe.</p>
+</div>
+</div>
+
+<h3>1.2 Theoretische Ansätze und Modelle</h3>
+<table>
+<tr><th style="width:36mm">Ansatz</th><th>Kerngedanke</th><th style="width:58mm">Stichworte für die Klausur</th></tr>
+<tr><td><b>Produktivitätsorientiert</b> (faktortheoretisch) – Erich Gutenberg</td><td>Kombination der Produktionsfaktoren; Beziehung Faktoreinsatz ↔ Faktorertrag; Grundziel <b>Gewinnmaximierung</b></td><td>Elementarfaktoren + dispositiver Faktor</td></tr>
+<tr><td><b>Entscheidungsorientiert</b> – Edmund Heinen</td><td>Entscheidungsmodelle: mathematisch-normativ (optimale) und verhaltenswissenschaftlich (reale Entscheidungen); Sicherheit, Risiko, Unsicherheit</td><td>5 Phasen: <b>Anregung → Suche → Auswahl → Vollzug → Kontrolle</b> (Willensbildung / Willensdurchsetzung)</td></tr>
+<tr><td><b>Systemorientiert</b> – Hans Ulrich</td><td>Unternehmen als kybernetisches System; Probleme <b>nicht isoliert</b> betrachten, interdisziplinär</td><td>Regelkreis: Soll-Ist-Vergleich und Gegensteuerung</td></tr>
+<tr><td><b>Situativ</b> (Kontingenzansatz)</td><td>Kombination der Ansätze; Unternehmen als offenes System</td><td>„Wenn-dann“-Betrachtung</td></tr>
+<tr><td>Verhaltensorientiert <span class="small">(Folien)</span></td><td>Mensch als soziales Wesen, Rationalprinzip wird aufgegeben</td><td>Motivation, Bedürfnisse</td></tr>
+<tr><td>Institutionenökonomisch – Ronald Coase <span class="small">(Folien)</span></td><td>Institutionen existieren, weil Marktnutzung Kosten verursacht; Verfügungsrechte</td><td>Informationsökonomik, Property Rights, Transaktionskosten, Principal-Agent</td></tr>
+</table>
+
+<div class="cols">
+<div>
+<h4>Produktionsfaktoren nach Gutenberg</h4>
+<figure>
+<svg viewBox="0 0 330 150" width="330" height="150" role="img" aria-label="Produktionsfaktoren nach Gutenberg">
+<rect x="105" y="4" width="120" height="24" rx="5" fill="#2457a6"/><text x="165" y="20" fill="#fff" font-size="10" text-anchor="middle" font-weight="700">Produktionsfaktoren</text>
+<line x1="165" y1="28" x2="165" y2="38" stroke="#8aa3cf"/><line x1="80" y1="38" x2="255" y2="38" stroke="#8aa3cf"/>
+<line x1="80" y1="38" x2="80" y2="48" stroke="#8aa3cf"/><line x1="255" y1="38" x2="255" y2="48" stroke="#8aa3cf"/>
+<rect x="20" y="48" width="120" height="22" rx="5" fill="#eef3fb" stroke="#2457a6"/><text x="80" y="63" font-size="9.5" text-anchor="middle" font-weight="700" fill="#1d3f78">Elementarfaktoren</text>
+<rect x="195" y="48" width="120" height="22" rx="5" fill="#f6f1fe" stroke="#7c3aed"/><text x="255" y="63" font-size="9.5" text-anchor="middle" font-weight="700" fill="#5b21b6">dispositiver Faktor</text>
+<line x1="80" y1="70" x2="80" y2="80" stroke="#8aa3cf"/><line x1="25" y1="80" x2="135" y2="80" stroke="#8aa3cf"/>
+<line x1="25" y1="80" x2="25" y2="90" stroke="#8aa3cf"/><line x1="80" y1="80" x2="80" y2="90" stroke="#8aa3cf"/><line x1="135" y1="80" x2="135" y2="90" stroke="#8aa3cf"/>
+<rect x="2" y="90" width="48" height="34" rx="4" fill="#fff" stroke="#2457a6"/><text x="26" y="104" font-size="8" text-anchor="middle">ausführende</text><text x="26" y="114" font-size="8" text-anchor="middle">Arbeit</text>
+<rect x="55" y="90" width="50" height="34" rx="4" fill="#fff" stroke="#2457a6"/><text x="80" y="104" font-size="8" text-anchor="middle">Betriebs-</text><text x="80" y="114" font-size="8" text-anchor="middle">mittel</text>
+<rect x="110" y="90" width="50" height="34" rx="4" fill="#fff" stroke="#2457a6"/><text x="135" y="104" font-size="8" text-anchor="middle">Werkstoffe</text>
+<text x="80" y="140" font-size="7.5" text-anchor="middle" fill="#5b6475">Maschinen, Gebäude, Fuhrpark</text>
+<line x1="255" y1="70" x2="255" y2="90" stroke="#b9a3e8"/>
+<rect x="195" y="90" width="120" height="34" rx="4" fill="#fff" stroke="#7c3aed"/><text x="255" y="104" font-size="8" text-anchor="middle">Planung · Führung/Organisation</text><text x="255" y="114" font-size="8" text-anchor="middle">· Kontrolle (Management)</text>
+</svg>
+</figure>
+</div>
+<div>
+<h4>Werkstoffarten (Beispiel Möbelfabrik)</h4>
+<table>
+<tr><th>Art</th><th>Merkmal</th><th>Beispiel</th></tr>
+<tr><td><b>Rohstoff</b></td><td>Hauptbestandteil</td><td>Holz, Bleche (Auto), Leder (Schuhe)</td></tr>
+<tr><td><b>Vorprodukt / Fremdbauteil</b></td><td>zugekaufte Teile</td><td>Schlösser, Autositze, E-Motoren</td></tr>
+<tr><td><b>Hilfsstoff</b></td><td>Nebenbestandteil</td><td>Nägel, Schrauben, Leim, Lack</td></tr>
+<tr><td><b>Betriebsstoff</b></td><td>geht <b>nicht</b> ins Produkt ein, wird verbraucht</td><td>Öl, Strom, Brennstoffe</td></tr>
+<tr><td>Handelsware</td><td>unverändert weiterverkauft</td><td>Teppiche, Bilder</td></tr>
+</table>
+</div>
+</div>
+
+<div class="cols">
+<div>
+<h4>Regelkreis (systemorientierter Ansatz) – Übung 3</h4>
+<table>
+<tr><th>Element</th><th>Thermostat</th><th>Fehlzeiten-Fall <span class="tag t-off">offiziell</span></th></tr>
+<tr><td>Regelstrecke</td><td>Zimmer</td><td>Abteilung</td></tr>
+<tr><td>Störgröße</td><td>offenes Fenster</td><td>autoritärer Führungsstil</td></tr>
+<tr><td>Führungsgröße (Soll)</td><td>Soll-Temperatur</td><td>max. 3 % Fehlzeiten</td></tr>
+<tr><td>Regelgröße (Ist)</td><td>Ist-Temperatur</td><td>15 % Fehlzeiten</td></tr>
+<tr><td>Regler</td><td>Thermostat</td><td>Controller (Soll-Ist-Vergleich)</td></tr>
+<tr><td>Stellgröße</td><td>Heizung an/aus</td><td>Vorgesetzten anders einsetzen</td></tr>
+</table>
+</div>
+<div>
+<h4>Modelltypen</h4>
+<table>
+<tr><th>Modell</th><th>Frage</th><th>Beispiel</th></tr>
+<tr><td>Beschreibungsmodell</td><td>Was ist geschehen?</td><td>Rechnungswesen, Organigramm</td></tr>
+<tr><td>Erklärungsmodell</td><td>Warum? (Ursache–Wirkung)</td><td>Arbeitsbedingungen → Leistung</td></tr>
+<tr><td>Prognosemodell</td><td>Was wird geschehen?</td><td>Marktprognose, Regression</td></tr>
+<tr><td>Entscheidungsmodell</td><td>Was soll geschehen?</td><td>Entscheidungsbaum, -matrix</td></tr>
+</table>
+</div>
+</div>
+
+<h3>1.3 Güter (nach Kosiol)</h3>
+<div class="cols">
+<div>
+<ul>
+<li><b>Freie Güter</b>: unbegrenzt, nicht knapp, kein Preis (Luft) · <b>Wirtschaftsgüter</b>: knapp → materiell (Sachgüter) oder immateriell (Dienstleistungen, Rechte).</li>
+<li>Vier Einteilungskriterien der Wirtschaftsgüter:
+<ul>
+<li>Stellung im Prozess: <b>Input- / Outputgut</b></li>
+<li>Verwendungszweck: <b>Investitions-(Produktions-) / Konsumgut</b></li>
+<li>Verwendbarkeit: <b>Gebrauchsgut</b> (mehrfach nutzbar) / <b>Verbrauchsgut</b> (geht beim Einsatz unter)</li>
+<li>Art: <b>Real- / Nominalgut</b> (Nominalgut = Geld und Ansprüche auf Geld; Folienlösung: Lizenz = Nominalgut)</li>
+</ul></li>
+<li>Outputgüter: unfertige Erzeugnisse, fertige Erzeugnisse, <b>Eigenleistungen</b> (selbst hergestellt und selbst genutzt), <b>Waren</b> (zugekauft, unverändert verkauft).</li>
+</ul>
+</div>
+<div>
+<div class="box bsp" style="margin-top:0"><span class="t">Musterklausur 1c (4 P.) – Lösung</span>
+<table>
+<tr><th>Inputgut</th><th class="c">Gebr.</th><th class="c">Verbr.</th><th class="c">Invest.</th><th class="c">Konsum</th></tr>
+<tr><td>Wohnhaus einer Familie</td><td class="c">X</td><td class="c">–</td><td class="c">–</td><td class="c">X</td></tr>
+<tr><td>Strom im Industrieunternehmen</td><td class="c">–</td><td class="c">X</td><td class="c">X</td><td class="c">–</td></tr>
+<tr><td>Klimaanlage in einer Bank</td><td class="c">X</td><td class="c">–</td><td class="c">X</td><td class="c">–</td></tr>
+<tr><td>Katzenfutter im Privathaushalt</td><td class="c">–</td><td class="c">X</td><td class="c">–</td><td class="c">X</td></tr>
+</table>
+<p class="small">Formal: Kreuz für zutreffend, <b>horizontaler Strich</b> für nicht zutreffend – leere Felder kosten Punkte.</p>
+</div>
+</div>
+</div>
+
+<h3>1.4 Grundlegende Aspekte des Wirtschaftens</h3>
+<div class="cols">
+<div>
+<p><b>Wirtschaften</b> = Disposition <b>knapper</b> Güter zur Befriedigung <b>unbegrenzter</b> Bedürfnisse.</p>
+<table>
+<tr><th>Ökonomisches Prinzip</th><th>Vorgabe</th><th>Beispiel</th></tr>
+<tr><td><b>Maximalprinzip</b> (Ergiebigkeit)</td><td>Input fest → Output max.</td><td>mit 10 h Lernen die beste Note</td></tr>
+<tr><td><b>Minimalprinzip</b> (Sparsamkeit)</td><td>Output fest → Input min.</td><td>200 km mit möglichst wenig Benzin</td></tr>
+<tr><td><b>Optimumprinzip</b> (Extremum)</td><td>nichts fest → bestes Verhältnis</td><td>Gewinn = Ertrag − Aufwand maximieren</td></tr>
+</table>
+</div>
+<div>
+<div class="box trap" style="margin-top:0"><span class="t">Falle</span>
+„Mit minimalem Einsatz maximalen Ertrag“ ist <b>unsinnig</b> – man kann nicht beides gleichzeitig extremieren. Es ist immer <b>eine</b> Größe fest.</div>
+<p><b>Magisches Dreieck</b> (Folien): ökonomisches Prinzip (Profit) – Humanitätsprinzip (People) – Umweltschonungsprinzip (Planet).</p>
+</div>
+</div>
+
+<h3>1.5 Betriebswirtschaftliche Kennzahlen</h3>
+<div class="box formel"><span class="t">Formeln</span>
+<div class="cols">
+<div>
+<span class="f">Umsatz       = Menge · Preis
+Gewinn       = Ertrag − Aufwand
+Produktivität = Output / Input   (mengenmäßig)
+  Arbeitsprod. = Menge / Arbeitsstunden
+  Materialprod. = Menge / Materialeinsatz
+  Betriebsmittelprod. = Menge / Maschinenstd.</span>
+</div>
+<div>
+<span class="f">Wirtschaftlichkeit (wertmäßig)
+  = Ertrag / Aufwand = Leistung / Kosten
+  &gt;1 Gewinn · =1 ausgeglichen · &lt;1 Verlust
+EK-Rent. = Gewinn · 100 / EK
+GK-Rent. = (Gewinn + FK-Zinsen) · 100 / GK
+Umsatzrent. = Gewinn · 100 / Umsatz</span>
+</div>
+</div>
+</div>
+
+<div class="cols">
+<div class="box bsp" style="margin-top:0"><span class="t">Rechenbeispiel – Musterklausur 1b (6 P.)</span>
+Preis 300 €, variable Kosten 250 €/Stück, Fixkosten 2 Mio. €, 120.000 Stück, 80.000 Arbeitsstunden, EK 20 Mio. €.
+<div class="calc">Umsatz  = 120.000 · 300        = 36,0 Mio. €
+Kosten  = 2 Mio. + 120.000 · 250 = 32,0 Mio. €
+Gewinn  = 36 − 32               =  4,0 Mio. €
+Wirtschaftlichkeit = 36 / 32    = <b>1,125</b> (≈ 1,1)
+Arbeitsproduktivität = 120.000 / 80.000
+                     = <b>1,5 Stück je Stunde</b>
+EK-Rentabilität = 4 / 20 · 100  = <b>20,0 %</b></div>
+<span class="tag t-own">eigene Lösung</span></div>
+<div class="box bsp" style="margin-top:0"><span class="t">Übung 6a – Siller GmbH <span class="tag t-off">offiziell</span></span>
+<div class="calc">Arbeitsprod. 20x1 = 23.625 / (225 · 14) = 7,5
+             20x2 = 33.120 / (230 · 16) = 9,0
+Wirtschaftl. 20x1 = 945.000 / 825.000   ≈ 1,15
+             20x2 = 1.159.200 / 1.120.000 ≈ 1,035
+EK-Rent.     20x1 = 120.000 / 450.000 = 26,67 %
+             20x2 =  39.200 / 550.000 =  7,13 %</div>
+<p class="small">Produktivität steigt (Abläufe, Normteile, Qualifikation). Wirtschaftlichkeit sinkt, weil der <b>Stückerlös von 40 € auf 35 €</b> fällt, obwohl die Stückkosten sinken. Rentabilität sinkt: weniger Gewinn, mehr EK.</p>
+</div>
+</div>
+
+<div class="cols">
+<div class="box merk" style="margin-top:0"><span class="t">Merksätze</span>
+<ul>
+<li>Produktivität = <b>Mengen</b>, Wirtschaftlichkeit = <b>Werte</b>, Rentabilität = <b>Gewinn zu Kapital</b>.</li>
+<li>Der absolute Gewinn sagt nichts über die Rentabilität: Filiale A 100.000 € Gewinn auf 500.000 € EK = 20 % schlägt Filiale B mit 200.000 € auf 2 Mio. € = 10 %.</li>
+<li>Kennzahlen sind vor allem im <b>Zeitvergleich</b> aussagekräftig.</li>
+<li>Teurere Bauteile ändern die Produktivität <b>nicht</b> (rein mengenmäßig), senken aber die Wirtschaftlichkeit (Übung 6b).</li>
+</ul></div>
+<div class="box trap" style="margin-top:0"><span class="t">Klausurfallen</span>
+<ul>
+<li>Arbeitsproduktivität mit <b>Arbeitstagen · Mitarbeitern</b> bilden, wenn keine Stunden gegeben sind (Übung 6a).</li>
+<li>Wirtschaftlichkeit ist <b>keine Prozentzahl</b>, sondern ein Faktor (1,125).</li>
+<li>Gesamtkapitalrentabilität: <b>FK-Zinsen zum Gewinn addieren</b>.</li>
+<li>Bei Übung 6b Rentabilität auf den <b>durchschnittlichen Kapitaleinsatz</b> beziehen.</li>
+<li>Werkstoffe ≠ Betriebsmittel: Maschinen sind Betriebsmittel, Schmieröl ist Betriebs<b>stoff</b>.</li>
+</ul></div>
+</div>
+
+<div class="box klausur"><span class="t">So kommt es in der Klausur</span>
+<ul>
+<li><b>Musterklausur 1a (6 P.):</b> „Nennen Sie drei Arten von Werkstoffen und je ein Beispiel“ (Gartenmöbel-KG, Tische) → Rohstoff: Holz/Recyclingkunststoff · Hilfsstoff: Schrauben, Leim · Betriebsstoff: Strom, Schmieröl. Pro Art 1 P. Begriff + 1 P. Beispiel.</li>
+<li><b>1b (6 P.):</b> Wirtschaftlichkeit, Arbeitsproduktivität, EK-Rentabilität aus Stückdaten (siehe oben). Erst Umsatz, Kosten, Gewinn ausrechnen.</li>
+<li><b>1c (4 P.):</b> Güter ankreuzen – Kreuz/Strich-Tabelle. Variante der Folien: Nominal-/Output-/Gebrauchs-/Konsumgut; trifft nichts zu → <b>durchgehender Strich</b> (Holzleim beim Möbelhersteller).</li>
+<li>Typische Wissensfragen: Ansätze mit Namen zuordnen, Phasen des Entscheidungsprozesses, Regelkreis erklären, Max-/Minimalprinzip zuordnen.</li>
+</ul></div>
+
+<!-- ============================ KAPITEL 2 ============================ -->
+<h2>2 · Betrieb und Unternehmung <span class="badge b-done">behandelt 22.10.</span></h2>
+
+<div class="box kern"><span class="t">Kernaussagen</span>
+<ul>
+<li><b>Betrieb</b> = Wirtschaftseinheit, die Güter für <b>fremden Bedarf</b> herstellt und absetzt. <b>Unternehmen</b> = Betrieb in der Marktwirtschaft. <b>Firma</b> = <b>Name</b> des Kaufmanns. <b>Fabrik</b> = Produktionsstätte.</li>
+<li>Der normative Rahmen (Purpose, Vision, Mission, Werte, CI, Grundsätze) gibt Orientierung; daraus leiten sich die Ziele ab.</li>
+<li>Ziele müssen <b>operational</b> (Inhalt, Ausmaß, Zeitbezug, Geltungsbereich) bzw. <b>SMART</b> sein und stehen komplementär, konkurrierend oder indifferent zueinander.</li>
+<li>Mitbestimmung: arbeitsrechtlich über den <b>Betriebsrat</b>, unternehmerisch über Arbeitnehmervertreter im <b>Aufsichtsrat</b>.</li>
+</ul></div>
+
+<h3>2.1–2.4 Betrieb, Typologie, Umfeld, Bereiche</h3>
+<div class="cols">
+<div>
+<table>
+<tr><th>Typologie-Kriterium</th><th>Ausprägungen</th></tr>
+<tr><td>Wirtschaftszweig</td><td>Land-/Forstwirtschaft, Bergbau/Energie, verarbeitendes Gewerbe, Bau, Handel, Kreditinstitute/Versicherungen, Dienstleistungen</td></tr>
+<tr><td>Art der Leistung</td><td>Sachleistungsbetriebe vs. Dienstleistungsbetriebe (Dienstleistungen ≈ 71 % der Bruttowertschöpfung)</td></tr>
+<tr><td>Leistungserstellung</td><td>Massen-, Sorten-, Serien-, Chargen-, Einzelfertigung</td></tr>
+<tr><td>vorherrschender Faktor</td><td>arbeits-, anlagen-, materialintensiv</td></tr>
+<tr><td>Betriebsgröße</td><td>kleinst, klein, mittel, groß (2 von 3 Merkmalen, Tabelle Kap. 3.4)</td></tr>
+<tr><td>Rechtsform</td><td>Einzelunternehmen, Personen-, Kapitalgesellschaft</td></tr>
+<tr><td>Standortabhängigkeit</td><td>starr (Kraftwerk) vs. flexibel (Lidl-Filiale)</td></tr>
+</table>
+</div>
+<div>
+<p><b>Unternehmen im Wirtschaftsprozess:</b> Input von Beschaffungsmärkten (Betriebsmittel, Werkstoffe), Arbeitsmarkt (Mitarbeiter) und Finanzmarkt (Kapital) → Produktionsprozess → Output an Absatzmärkte.</p>
+<p><b>Makroumfeld</b> (Merkhilfe <b>PESTEL</b><span class="erg"> – Ergänzung</span>): politisch, ökonomisch, soziokulturell, technologisch, ökologisch, rechtlich.</p>
+<p><b>Unternehmensbereiche:</b> Leistungsbereich (Material, Produktion, Marketing) · Finanzbereich (Finanzierung, Investition) · Personalbereich · Rechnungswesen · Controlling.</p>
+<p class="small">Industrie 1.0 Mechanisierung/Dampf · 2.0 Fließband/Elektrizität · 3.0 Automatisierung/Computer · 4.0 cyber-physische Systeme, IoT · 5.0 (ab ca. 2025) kollaborative Roboter, AR/VR.</p>
+</div>
+</div>
+
+<h3>2.5 Normativer Rahmen</h3>
+<div class="cols">
+<div>
+<dl class="defs">
+<dt>Purpose</dt><dd>Daseinszweck – „Warum gibt es uns?“ (Google: Informationen der Welt organisieren)</dd>
+<dt>Vision</dt><dd>realistisches, glaubwürdiges Bild einer <b>erreichbaren Zukunft</b> – „Wo wollen wir hin?“</dd>
+<dt>Mission</dt><dd><b>Zweck und Gegenstand des heutigen Handelns</b> – „Wozu sind wir da?“</dd>
+<dt>Werte</dt><dd>Haltung – „Wie wollen wir handeln?“</dd>
+<dt>Wertesystem</dt><dd>= Unternehmensidentität + Unternehmensgrundsätze</dd>
+</dl>
+<p><b>Corporate Identity</b> („Wer sind wir?“) bestimmt das <b>Image</b>; einheitliches Auftreten ohne Widersprüche:</p>
+<ul>
+<li><b>Corporate Design</b> – Logo, Briefpapier, Website, Gebäude</li>
+<li><b>Corporate Communication</b> – Auftreten und Sprache nach außen</li>
+<li><b>Corporate Behaviour</b> – Verhalten gegenüber Kunden, Lieferanten, Mitarbeitern</li>
+</ul>
+<p><b>Unternehmensgrundsätze:</b> <b>Corporate Governance</b> (Regeln für Leitung und Überwachung, v. a. Vorstand/AR, wichtig für Großanleger) und <b>Codes of Conduct</b> (moralische Standards für alle Mitarbeiter gegenüber externen Stakeholdern).</p>
+</div>
+<div>
+<div class="box bsp" style="margin-top:0"><span class="t">Übung 7 – Mission vs. Vision <span class="tag t-off">offiziell</span></span>
+<table>
+<tr><th></th><th>Mission</th><th>Vision</th></tr>
+<tr><td>Definition</td><td>Wirkungsversprechen, das das Unternehmen für seine Kunden dauerhaft erfüllt</td><td>konkretes Bild einer faszinierenden, gemeinsam erstrebten, realisierbaren Zukunft</td></tr>
+<tr><td>Zweck</td><td>klärt die Aufgabe: Wozu sind wir da?</td><td>gibt Richtung: Wo wollen wir hin?</td></tr>
+<tr><td>Inhalt</td><td>Zweck, Aufgabe, Tätigkeit, Wirkung</td><td>erstrebte Situation als Ergebnis der erfüllten Mission</td></tr>
+<tr><td>Zeithorizont</td><td>heute und für immer</td><td>Zeitpunkt in der Zukunft</td></tr>
+<tr><td>Notwendigkeit</td><td>unverzichtbar</td><td>bedingt verzichtbar</td></tr>
+<tr><td>Synonyme</td><td>Auftrag, Zweck, Why, Purpose</td><td>Zielbild, Aspiration, Moonshot</td></tr>
+</table></div>
+</div>
+</div>
+
+<h3>2.6 Ziele</h3>
+<div class="cols">
+<div>
+<p><b>Zielhierarchie:</b> übergeordnete Ziele (Unternehmenszweck/Purpose → Grundsätze → CI) → Handlungsziele (Oberziele → Funktionsbereichsziele → Zwischenziele → Unterziele).</p>
+<p><b>Operationale Ziele</b> – vier Dimensionen: <b>Inhalt</b> (was?) · <b>Ausmaß</b> (wie viel?) · <b>Zeitbezug</b> (wann?) · <b>Geltungsbereich</b> (wo?).</p>
+<table>
+<tr><th>Zeitbezug</th><th>Horizont</th></tr>
+<tr><td>strategisch</td><td>&gt; 5 Jahre (Skript: 5–10 J.)</td></tr>
+<tr><td>taktisch</td><td>1–5 Jahre</td></tr>
+<tr><td>operativ</td><td>bis 1 Jahr</td></tr>
+</table>
+<p><b>SMART:</b> <b>S</b>pezifisch · <b>M</b>essbar · <b>A</b>kzeptiert (achievable) · <b>R</b>ealistisch · <b>T</b>erminiert.<br><span class="small">Beispiel: „Umsatz im Online-Shop in Deutschland bis 31.12.2027 um 10 % gegenüber 2026 steigern.“</span></p>
+</div>
+<div>
+<table>
+<tr><th>Zielart</th><th>Beispiele</th></tr>
+<tr><td>monetär</td><td>Umsatz, Gewinn/Rentabilität, Liquidität, Kreditwürdigkeit, Firmenwert</td></tr>
+<tr><td>nicht-monetär</td><td>Marktanteil, neue Märkte, Image, Macht, Unabhängigkeit</td></tr>
+<tr><td>ethisch-sozial</td><td>Arbeitsplätze sichern, Arbeitszufriedenheit, Entwicklung</td></tr>
+<tr><td>ökologisch</td><td>geringe Umweltbelastung und Ressourcennutzung</td></tr>
+</table>
+<table>
+<tr><th>Zielbeziehung</th><th>Bedeutung · Beispiel</th></tr>
+<tr><td><b>komplementär</b></td><td>Z1 ↑ → Z2 ↑ · niedrigere Einstandspreise → mehr Gewinn</td></tr>
+<tr><td><b>konkurrierend</b></td><td>Z1 ↑ → Z2 ↓ · erneuerbare Energien vs. Kostensenkung</td></tr>
+<tr><td><b>indifferent</b></td><td>keine Wirkung · Kundenkommunikation vs. Produktivität</td></tr>
+</table>
+</div>
+</div>
+
+<div class="cols">
+<div class="box bsp" style="margin-top:0"><span class="t">Übung 8 – Umweltschutz vs. … <span class="tag t-off">offiziell</span></span>
+<ul>
+<li><b>Langfristige Gewinnmaximierung:</b> kurzfristig Zielkonflikt (höhere Kosten, unsichere Absatzchancen), mittel-/langfristig Zielharmonie möglich.</li>
+<li><b>Arbeitsplätze:</b> grundsätzlich <b>komplementär</b> – umweltfreundliche Produkte sichern Absatz und damit Jobs.</li>
+<li><b>Image:</b> <b>immer komplementär</b> (Umweltsponsoring als Marketinginstrument).</li>
+</ul></div>
+<div class="box bsp" style="margin-top:0"><span class="t">Übung 9 – Shareholder vs. Stakeholder <span class="tag t-off">offiziell</span></span>
+<table>
+<tr><th></th><th>Shareholder Value</th><th>Stakeholder Value</th></tr>
+<tr><td>Ausrichtung</td><td>Anteilseigner</td><td>alle Anspruchsgruppen, intern + extern</td></tr>
+<tr><td>Ziel</td><td>Wertsteigerung für Anteilseigner</td><td>gleichrangige Befriedigung aller Gruppen</td></tr>
+<tr><td>Problem</td><td>andere Gruppen werden vernachlässigt</td><td>Auswahl, Abgrenzung, Ausbalancieren</td></tr>
+</table></div>
+</div>
+
+<h3>2.7 Träger von Führungsentscheidungen und Mitbestimmung</h3>
+<div class="cols">
+<div>
+<p><b>Eigentümer-Unternehmung:</b> Eigentümer trägt Risiko <b>und</b> leitet. <b>Geschäftsführer-Unternehmung:</b> Anteilseigner tragen Risiko, Manager leiten → Interessengegensatz (Verzinsung vs. Wachstum/Rücklagen).</p>
+<table>
+<tr><th>Übung 10 <span class="tag t-off">offiziell</span></th><th>Unternehmer</th><th>Manager</th></tr>
+<tr><td>Haftung</td><td>unbeschränkte Vollhaftung</td><td>nur im Rahmen der Verantwortung</td></tr>
+<tr><td>Motivation</td><td>Selbstverwirklichung</td><td>Machtausübung</td></tr>
+<tr><td>Verpflichtung</td><td>zeitlich unbegrenzt</td><td>bis eine bessere Position frei wird</td></tr>
+<tr><td>Fehler</td><td>Chance zum Lernen</td><td>so weit wie möglich vermeiden</td></tr>
+</table>
+<p><b>Unternehmerische Mitbestimmung</b> (AN-Vertreter im Aufsichtsrat): ab <b>&gt; 500</b> AN Drittelbeteiligung (Skript: BetrVG 1952, heute DrittelbG), ab <b>&gt; 2.000</b> AN paritätisch (MitbestG).</p>
+<p><b>Betriebsrat:</b> ab 5 ständigen wahlberechtigten AN (davon 3 wählbar); aktives Wahlrecht ab 18, passives nach 6 Monaten; Wahl alle 4 Jahre (1.3.–31.5.); Ehrenamt, Kosten trägt der Arbeitgeber. Größe z. B. 5–20 AN → 1, 21–50 → 3, 51–100 → 5. Betriebsversammlung vierteljährlich.</p>
+</div>
+<div>
+<table>
+<tr><th>Stufe der BR-Rechte</th><th>Bereich · Beispiele</th><th>bei Streit</th></tr>
+<tr><td><b>Information / Beratung</b></td><td>wirtschaftlich: wirtschaftliche Lage (§ 106), Planung von Bauten/Arbeitsplätzen (§ 90), Personalplanung (§ 92), Betriebsänderungen (§ 111)</td><td>–</td></tr>
+<tr><td><b>Mitwirkung</b> (eingeschränkt)</td><td>personell: Einstellung, Eingruppierung, Versetzung (§ 99), Kündigung (§ 102) – Zustimmung verweigern/widersprechen</td><td><b>Arbeitsgericht</b></td></tr>
+<tr><td><b>Mitbestimmung</b> (echt)</td><td>sozial: Arbeitszeit, Urlaubsplan, Lohngestaltung, Unfallschutz (§ 87), Sozialplan (§ 112), Personalfragebögen (§ 94)</td><td><b>Einigungsstelle</b></td></tr>
+</table>
+<p><b>Organe der Mitbestimmung:</b> Betriebsrat, Jugend- und Auszubildendenvertretung, Sprecherausschuss (leitende Angestellte), Wirtschaftsausschuss.</p>
+<p><b>Wirtschaftsausschuss:</b> ab <b>&gt; 100 AN</b>, 3–7 Mitglieder (mind. 1 BR-Mitglied), berät wirtschaftliche Angelegenheiten, tagt monatlich.<br>
+<b>Einigungsstelle:</b> gleich viele Beisitzer von AG und BR + <b>unparteiischer Vorsitzender</b> (sonst bestellt vom Arbeitsgericht); Kosten trägt der AG.</p>
+</div>
+</div>
+
+<div class="cols">
+<div class="box bsp" style="margin-top:0"><span class="t">Übung 11 – Mitbestimmung <span class="tag t-off">offiziell</span></span>
+<b>Pro:</b> Demokratisierung der Wirtschaft · Kontrolle wirtschaftlicher Macht · Humanisierung des Arbeitslebens · höhere Motivation · weniger Fluktuation · sozialer Frieden · Abhängigkeit von Arbeit und Kapital.<br>
+<b>Kontra:</b> Mitbestimmung ohne gleichwertiges Risiko · erschwerte Entscheidungen · evtl. fehlende Sachkenntnis · mehr Bürokratie · steigende Kosten · evtl. Kapitalflucht ins Ausland.</div>
+<div>
+<div class="box trap" style="margin-top:0"><span class="t">Klausurfallen</span>
+<ul>
+<li><b>Firma ≠ Unternehmen</b>: Die Firma ist nur der Name.</li>
+<li>Vision = <b>Zukunft</b>, Mission = <b>heute</b>. Nicht vertauschen.</li>
+<li>Mitwirkung → Arbeitsgericht, Mitbestimmung → Einigungsstelle.</li>
+<li>Schwellen: BR ab 5 AN, Wirtschaftsausschuss &gt; 100, AR-Drittelbeteiligung &gt; 500, paritätisch &gt; 2.000.</li>
+</ul></div>
+<div class="box klausur"><span class="t">So kommt es in der Klausur</span>
+2025 ohne eigene Aufgabe. Erwartbar: Vision/Mission vergleichen, SMART-Ziel formulieren, Zielbeziehung mit Begründung (Übung 8), Pro/Contra Mitbestimmung, Stufen der BR-Rechte zuordnen. Transfer: „Formulieren Sie ein operationales Ziel für die Miller Gartenmöbel KG“.</div>
+</div>
+</div>
+
+<!-- ============================ KAPITEL 3 ============================ -->
+<h2>3 · Rechtsformen der Unternehmung <span class="badge b-done">behandelt 26./27.10.</span></h2>
+
+<div class="box kern"><span class="t">Kernaussagen</span>
+<ul>
+<li>Rechtsform (Kap. 3), Zusammenarbeit (Kap. 4) und Standort (Kap. 5) sind <b>konstitutive Entscheidungen</b>: langfristig, grundlegend, Rahmen für alle Folgeentscheidungen.</li>
+<li><b>Personengesellschaften</b> (GbR, OHG, KG, stille G.): persönliche Mitarbeit, persönliche Haftung, kein Mindestkapital, HR-Eintrag (bei OHG/KG) nur <b>deklaratorisch</b>.</li>
+<li><b>Kapitalgesellschaften</b> (GmbH/UG, AG, KGaA, SE) sind <b>juristische Personen</b>: Haftung nur mit dem Gesellschaftsvermögen, Mindestkapital, Fremdorganschaft möglich, HR-Eintrag <b>konstitutiv</b>.</li>
+<li>Gewinnverteilung bei OHG/KG seit 2024 (MoPeG): <b>Vertrag → Beteiligungsverhältnis bzw. Wert der Beiträge → nach Köpfen</b>. Die alte 4-%-Regel gilt nicht mehr.</li>
+</ul></div>
+
+<h3>3.1 Grundlagen: Firma, Kaufmann, Handelsregister</h3>
+<div class="cols">
+<div>
+<p><b>Firma</b> (§ 17 HGB) = Name, unter dem der Kaufmann seine Geschäfte betreibt und unterschreibt = <b>Firmenkern</b> (Personen-, Sach-, Fantasiefirma oder gemischt) + <b>Rechtsformzusatz</b> (e. K., OHG, KG, GmbH, AG).</p>
+<table>
+<tr><th>Firmengrundsatz</th><th>Inhalt</th></tr>
+<tr><td>Firmenklarheit</td><td>kennzeichnet den Kaufmann, Unterscheidungskraft (§ 18 I)</td></tr>
+<tr><td>Firmenwahrheit</td><td>keine Irreführung (§ 18 II) – kein „Weltmarktführer“ als Ein-Mann-Betrieb</td></tr>
+<tr><td>Firmenausschließlichkeit</td><td>keine Verwechslung am selben Ort (§ 30)</td></tr>
+<tr><td>Firmenbeständigkeit</td><td>Fortführung bei Namensänderung, Inhaberwechsel (mit Einwilligung), Gesellschafterwechsel; <b>kein Verkauf der Firma ohne Geschäft</b></td></tr>
+<tr><td>Firmenöffentlichkeit</td><td>HR-Eintrag, Angabe auf Geschäftsbriefen, Zusatz zeigt die Haftung</td></tr>
+</table>
+</div>
+<div>
+<table>
+<tr><th>Kaufmann nach HGB</th><th>Wer?</th><th>HR-Eintrag</th></tr>
+<tr><td><b>Istkaufmann</b> (§ 1)</td><td>Gewerbe <b>mit</b> kaufmännischer Organisation (z. B. OHG)</td><td>deklaratorisch</td></tr>
+<tr><td><b>Kannkaufmann</b> (§§ 2, 3)</td><td>Kleingewerbe ohne kfm. Organisation; Land-/Forstwirte</td><td>konstitutiv</td></tr>
+<tr><td><b>Formkaufmann</b> (§ 6)</td><td>kraft Rechtsform: GmbH, AG (auch eG)</td><td>konstitutiv</td></tr>
+<tr><td>Nicht-Kaufmann</td><td>Kleingewerbe ohne Eintrag → <b>BGB</b> gilt; Freiberufler sind keine Kaufleute</td><td>–</td></tr>
+</table>
+<p><b>Handelsregister</b>: öffentliches, elektronisches Verzeichnis beim Amtsgericht. <b>Abt. A</b>: Einzelunternehmen, Personengesellschaften · <b>Abt. B</b>: Kapitalgesellschaften. Einsicht für jeden (§ 9), <b>öffentlicher Glaube</b> (§ 15).</p>
+<p><b>Deklaratorisch</b> (rechtsbezeugend): bestätigt nur – e. K., OHG, KG, <b>Prokura</b>. <b>Konstitutiv</b> (rechtserzeugend): GmbH/AG entstehen erst mit Eintrag; Kannkaufleute.</p>
+</div>
+</div>
+
+<div class="cols">
+<div class="box bsp" style="margin-top:0"><span class="t">Übung 12 – Kaufmann vs. Nicht-Kaufmann <span class="tag t-off">offiziell</span></span>
+<table>
+<tr><th></th><th>Kaufmann (HGB)</th><th>Nicht-Kaufmann (BGB)</th></tr>
+<tr><td>Firma</td><td>übertragbar, bleibt bei Tod/Verkauf, Goodwill</td><td>keine Firma, nicht übertragbar</td></tr>
+<tr><td>Buchführung</td><td>volle Pflicht</td><td>vereinfachte Aufzeichnungen</td></tr>
+<tr><td>Unternehmensform</td><td>alle</td><td>nur GbR</td></tr>
+<tr><td>Bürgschaft</td><td>auch mündlich</td><td>Schriftform</td></tr>
+<tr><td>Prokura</td><td>möglich</td><td>nicht möglich</td></tr>
+<tr><td>Prüf-/Rügepflicht</td><td>unverzüglich</td><td>„innerhalb 6 Monaten“ (Folie)</td></tr>
+</table></div>
+<div class="box bsp" style="margin-top:0"><span class="t">Beispiel deklaratorisch vs. konstitutiv (Folie)</span>
+OHG-Vertrag 07.09., erstes Geschäft 15.09., HR-Eintrag 30.09. → Die OHG <b>besteht schon</b> (innen ab Vertrag, außen ab erstem Geschäft); der Eintrag bestätigt nur.<br>
+GmbH-Satzung 07.09., Eintrag 30.09. → Die GmbH <b>entsteht erst am 30.09.</b>; wer vorher in ihrem Namen handelt, haftet persönlich.
+<p class="small" style="margin-top:1mm">Statistik 2024: 3,54 Mio. Unternehmen – 58 % Einzelunternehmer, 24 % Kapitalgesellschaften, 13 % Personengesellschaften, 5 % sonstige.</p></div>
+</div>
+
+<h3>3.2 Einzelunternehmung (e. K.)</h3>
+<div class="cols">
+<div><p>Rechtsgrundlage HGB · Zusatz „e. K.“, „e. Kfm.“, „e. Kfr.“ · Gründung durch HR-Eintrag (bzw. Aufnahme des Gewerbes) · <b>1 Gründer, kein Mindestkapital</b> · Inhaber führt allein · haftet <b>allein und unbeschränkt</b> (auch privat) · Gewinn steht ihm allein zu.</p></div>
+<div><p><b>Übung 13</b> <span class="tag t-fol">Folie</span> – Vorteile: schnelle Entscheidungen, keine Streitigkeiten in der Führung, keine Gewinnaufteilung. Nachteile: keine Risiko-/Haftungsteilung, begrenzte Kapitalbeschaffung, einseitige Unternehmenspolitik, evtl. Arbeitsüberlastung.</p></div>
+</div>
+
+<h3>3.3 Personengesellschaften</h3>
+<p><b>Gründe für Gesellschaften:</b> Fachleute heranziehen · Kapital vermehren · Arbeitslast verteilen · Risiko aufteilen · Kreditwürdigkeit steigt. <b>Nachteile:</b> eingeschränkte Entscheidungsfreiheit, Streit verzögert, Gewinn muss geteilt werden.</p>
+
+<h4>3.3.1 GbR (§§ 705 ff. BGB)</h4>
+<div class="cols">
+<div><p>Formfreier Gesellschaftsvertrag mit <b>gemeinsamem Zweck</b> und <b>Förderpflichten</b>; mind. 2 Gesellschafter; kein Mindestkapital; Haftung <b>unbeschränkt</b>; Leitung gemeinsam (<b>Einstimmigkeitsprinzip</b>). Beispiele: ARGE am Bau, Praxisgemeinschaft, Tippgemeinschaft.</p></div>
+<div><p><b>eGbR</b> (seit 1.1.2024, MoPeG): Eintragung ins <b>Gesellschaftsregister</b> (notariell beglaubigte Anmeldung), Zusatz „eGbR“ Pflicht, Namensschutz, Nachweis von Existenz und Vertretung über das Register (guter Glaube). Für Grundstückskäufe faktisch nötig.</p></div>
+</div>
+
+<h4>3.3.2 Offene Handelsgesellschaft (OHG, §§ 105 ff. HGB)</h4>
+<div class="cols">
+<div>
+<ul>
+<li>Formfreier Vertrag (Schriftform empfohlen; notariell, wenn ein Grundstück eingebracht wird) · mind. 2 Gesellschafter (natürliche oder juristische Personen) · kein Mindestkapital · HR Abt. A, deklaratorisch.</li>
+<li><b>Geschäftsführung (Innenverhältnis, „Dürfen“):</b> jeder ist berechtigt und verpflichtet; gewöhnliche Geschäfte <b>allein</b> (Einzelgeschäftsführung), außergewöhnliche nur mit <b>Zustimmung aller</b>.</li>
+<li><b>Vertretung (Außenverhältnis, „Können“):</b> <b>Einzelvertretung</b> für gewöhnliche <b>und</b> außergewöhnliche Geschäfte – Schutz Dritter. Interne Beschränkungen wirken nach außen nicht (Kauf für 200.000 € trotz interner 50.000-€-Grenze ist wirksam, aber schadensersatzpflichtig).</li>
+<li><b>Rechte:</b> Geschäftsführung/Vertretung, Gewinnanteil, Privatentnahme, Kontrolle, Kündigung (6 Monate zum GJ-Ende), Liquidationserlös. <b>Pflichten:</b> Mitarbeit, Haftung, Einlage, <b>Wettbewerbsverbot</b>.</li>
+</ul>
+</div>
+<div>
+<div class="box merk" style="margin-top:0"><span class="t">Haftung OHG / Komplementär – drei Merkmale</span>
+<ul>
+<li><b>unbeschränkt</b> – mit Geschäfts- und Privatvermögen</li>
+<li><b>unmittelbar</b> – Gläubiger kann direkt jeden Gesellschafter in Anspruch nehmen</li>
+<li><b>solidarisch</b> (gesamtschuldnerisch) – jeder haftet für alle Schulden; danach interner Ausgleich</li>
+</ul>
+<p><b>Eintritt:</b> Neuer Gesellschafter haftet auch für <b>Altschulden</b> (Ausschluss nur intern wirksam). <b>Austritt:</b> <b>5 Jahre Nachhaftung</b> für bestehende Verbindlichkeiten; Abfindung = echter Anteil inkl. stiller Reserven und Goodwill.</p></div>
+</div>
+</div>
+
+<div class="cols">
+<div class="box formel" style="margin-top:0"><span class="t">Gewinnverteilung OHG/KG seit 2024</span>
+<ol>
+<li><b>Gesellschaftsvertrag</b> (vereinbartes Beteiligungsverhältnis)</li>
+<li>sonst nach <b>Beteiligungsverhältnis bzw. Wert der vereinbarten Beiträge</b></li>
+<li>ist auch das nicht vereinbart: <b>nach Köpfen</b></li>
+</ol>
+Verlust: nach Vertrag bzw. Beteiligungsverhältnis; wird vom <b>Kapitalkonto abgezogen</b>.<br>
+<s>Alt (§ 121 HGB a. F.): 4 % auf den Kapitalanteil, Rest nach Köpfen</s> – <b>gilt nicht mehr</b>.</div>
+<div class="box bsp" style="margin-top:0"><span class="t">Übung 14 – Bauer &amp; Müller OHG <span class="tag t-off">offiziell</span></span>
+Gewinn 100.000 €; Einlagen Bauer 200.000 €, Müller 100.000 €.
+<div class="calc">Fall 1  60:40 vereinbart → B 60.000 · M 40.000
+Fall 2  Wertbeiträge 2 : 1 → B 66.666,67 · M 33.333,33
+Fall 3  nichts vereinbart → je 50.000 (nach Köpfen)
+Fall 4  Verlust 100.000 (60:40) → B −60.000, M −40.000
+        Kapitalkonten danach B 140.000 · M 60.000</div></div>
+</div>
+
+<h4>3.3.3 Kommanditgesellschaft (KG, §§ 161 ff. HGB)</h4>
+<div class="cols">
+<div>
+<table>
+<tr><th></th><th>Komplementär (Vollhafter)</th><th>Kommanditist (Teilhafter)</th></tr>
+<tr><td>Haftung</td><td>wie OHG: unbeschränkt, unmittelbar, solidarisch</td><td>nur mit der im HR eingetragenen <b>Haftsumme</b>; erst <b>nach HR-Eintrag</b></td></tr>
+<tr><td>Geschäftsführung / Vertretung</td><td>ja</td><td><b>ausgeschlossen</b> (§§ 164, 170)</td></tr>
+<tr><td>Mitwirkung</td><td>Mitarbeitspflicht</td><td><b>Widerspruchsrecht</b> bei außergewöhnlichen Geschäften, Kontrollrecht (Jahresabschluss, § 166)</td></tr>
+<tr><td>Wettbewerbsverbot</td><td>ja</td><td>nein</td></tr>
+</table>
+<p><b>Haftung des Kommanditisten:</b> unmittelbar nur für den <b>nicht eingezahlten Teil</b> der Einlage (Haftsumme 50.000, eingezahlt 30.000 → noch 20.000). Vor seinem HR-Eintrag (bzw. vor Eintrag der KG) haftet er <b>wie ein Vollhafter</b>.</p>
+<p><b>Übung 15</b> <span class="tag t-off">offiziell</span> – Vorteile KG vs. OHG: leichtere Kapitalbeschaffung durch Kommanditisten · Haftungsbeschränkung der Kommanditisten · Kommanditisten ohne wesentlichen Einfluss auf die Geschäftsführung · keine Mitarbeitspflicht.</p>
+</div>
+<div>
+<div class="box formel" style="margin-top:0"><span class="t">Rechenschema KG-Gewinnverteilung</span>
+<span class="f">1. Zinsen auf Einlagen (falls vereinbart)
+   Zinsen = K · p · Tage / (100 · 360)
+   Entnahmen/Einlagen zeitanteilig, 30 Tage/Monat
+2. Tätigkeitsvergütung der Komplementäre
+3. Restgewinn = Gewinn − Zinsen − Vergütungen
+   → nach vereinbartem Schlüssel verteilen
+Gesamt je Gesellschafter = Zinsen + TV + Rest</span></div>
+<div class="box bsp"><span class="t">Übung 16 – AB-KG <span class="tag t-off">offiziell</span></span>
+Gewinn 250.000 €, TV 50.000 € <b>je</b> Komplementär, Rest nach Kapital 400 : 350 : 450.
+<table>
+<tr><th>Ges.</th><th class="r">Kapital</th><th class="r">TV</th><th class="r">Rest</th><th class="r">Gesamt</th></tr>
+<tr><td>A</td><td class="r">400.000</td><td class="r">50.000</td><td class="r">50.000</td><td class="r"><b>100.000</b></td></tr>
+<tr><td>B</td><td class="r">350.000</td><td class="r">50.000</td><td class="r">43.750</td><td class="r"><b>93.750</b></td></tr>
+<tr><td>C</td><td class="r">450.000</td><td class="r">–</td><td class="r">56.250</td><td class="r"><b>56.250</b></td></tr>
+<tr class="sum"><td>Σ</td><td class="r">1,2 Mio.</td><td class="r">100.000</td><td class="r">150.000</td><td class="r">250.000</td></tr>
+</table></div>
+</div>
+</div>
+
+<div class="cols">
+<div class="box bsp" style="margin-top:0"><span class="t">Rechenbeispiel – Musterklausur 2a (6 P.)</span>
+Gewinn 450.000 €. Komplementär C: TV <b>10.000 € monatlich</b>. Rest nach Einlagen A 150.000, B 300.000, C 50.000 (Σ 500.000).
+<div class="calc">TV C  = 12 · 10.000           = 120.000 €
+Rest  = 450.000 − 120.000      = 330.000 €
+A: 150/500 = 30 % · 330.000    =  <b>99.000 €</b>
+B: 300/500 = 60 % · 330.000    = <b>198.000 €</b>
+C: 10 % · 330.000 = 33.000 + 120.000 = <b>153.000 €</b>
+Probe: 99.000 + 198.000 + 153.000 = 450.000 ✓</div>
+<span class="tag t-own">eigene Lösung</span></div>
+<div class="box bsp" style="margin-top:0"><span class="t">Übung 17.3 – Bertold Becker KG <span class="tag t-off">offiziell</span></span>
+Gewinn 344.770,83 €, 5 % Zinsen, TV Becker 3.500 €/Monat, Entnahme Becker 10.000 € am 15.07., Rest 4 : 3 : 2.
+<div class="calc">Zinsen Entnahme 15.7.–31.12. = 165 Tage
+  10.000 · 5 · 165 / 36.000    =    229,17
+Zinsen Becker 25.000 − 229,17   = 24.770,83
+Kroner 20.000 · Stehler 15.000
+TV Becker 12 · 3.500           = 42.000
+Rest = 344.770,83 − 59.770,83 − 42.000 = 243.000
+  → 108.000 : 81.000 : 54.000
+Becker <b>174.770,83</b> · Kroner <b>101.000</b> · Stehler <b>69.000</b></div></div>
+</div>
+
+<h4>3.3.4 Stille Gesellschaft (§§ 230 ff. HGB)</h4>
+<p>Der Stille beteiligt sich am Handelsgewerbe eines <b>anderen</b>; <b>reine Innengesellschaft</b>: keine eigene Firma, kein HR-Eintrag, formloser Vertrag, nach außen tritt nur der Inhaber auf. Der Stille hat <b>keine Geschäftsführung</b>, nur Kontrollrechte (§ 233); <b>Gewinnbeteiligung zwingend</b>, Verlustbeteiligung kann ausgeschlossen werden; haftet Gläubigern gegenüber nicht (verliert höchstens seine Einlage). Beispiel: Tante steckt 50.000 € in die Bäckerei ihres Neffen.</p>
+
+<h3>3.4 Kapitalgesellschaften</h3>
+<div class="cols">
+<div>
+<p><b>Juristische Person</b> = Personenvereinigung oder Vermögensmasse mit eigener Rechtsfähigkeit: Die Gesellschaft schließt Verträge, besitzt Vermögen, klagt und wird verklagt. Merkmale: Kapitaleinlage · Haftung auf die Einlage begrenzt · Trennung von Beteiligung und Geschäftsführung möglich (<b>Fremdorganschaft</b>) · Anteile vererblich und veräußerlich.</p>
+</div>
+<div>
+<table>
+<tr><th>Größe (§ 267 HGB, ab 2024; 2 von 3)</th><th>Bilanzsumme</th><th>Umsatz</th><th>AN</th></tr>
+<tr><td>Kleinst</td><td>≤ 450.000 €</td><td>≤ 900.000 €</td><td>≤ 10</td></tr>
+<tr><td>klein</td><td>≤ 7,5 Mio. €</td><td>≤ 15 Mio. €</td><td>≤ 50</td></tr>
+<tr><td>mittelgroß</td><td>≤ 25 Mio. €</td><td>≤ 50 Mio. €</td><td>≤ 250</td></tr>
+<tr><td>groß</td><td>&gt; 25 Mio. €</td><td>&gt; 50 Mio. €</td><td>&gt; 250</td></tr>
+</table>
+<p class="small">Prüfungspflicht ab mittelgroß (WP oder vereidigter Buchprüfer), groß nur WP. Kleinst: Jahresabschluss nur hinterlegen. Beispiel: 9 Mio. € BS, 14 Mio. € Umsatz, 60 AN → mittelgroß.</p>
+</div>
+</div>
+
+<h4>3.4.1 GmbH und UG (haftungsbeschränkt)</h4>
+<div class="cols">
+<div>
+<dl class="defs">
+<dt>Stammkapital</dt><dd>gezeichnetes Kapital = Summe der Nennbeträge, <b>mind. 25.000 €</b></dd>
+<dt>Nennbetrag (Stammeinlage)</dt><dd>Anteil eines Gesellschafters am Stammkapital, volle Euro, <b>mind. 1 €</b></dd>
+<dt>Geschäftsanteil</dt><dd>Anteil am <b>echten Vermögen</b> inkl. Rücklagen – nicht mit dem Nennbetrag verwechseln</dd>
+</dl>
+<ul>
+<li>Gründung: <b>notariell beurkundeter Gesellschaftsvertrag</b> oder Musterprotokoll (bis 3 Gesellschafter, 1 Geschäftsführer); <b>1 Gründer</b> genügt; Eintrag HR Abt. B, <b>konstitutiv</b>.</li>
+<li><b>Mindesteinzahlung vor Anmeldung:</b> <b>25 % auf jeden Anteil</b> und insgesamt <b>mind. 12.500 €</b>; Sacheinlagen voll.</li>
+<li>Anteilsübertragung nur <b>notariell</b>. Gewinn/Verlust nach Geschäftsanteilen (§ 29 III).</li>
+<li><b>Organe:</b> Geschäftsführer (Leitung, Vertretung), Gesellschafterversammlung (<b>oberstes Organ</b>, Weisungsrecht), Aufsichtsrat (Pflicht ab 501 AN: ⅓ AN-Vertreter; ab 2.001 AN: ½, MitbestG).</li>
+<li><b>Stimmrecht: 1 € Nennbetrag = 1 Stimme</b> (§ 47 II); Satzungsänderung ¾-Mehrheit.</li>
+<li>Geschäftsführer: Vertretungsmacht nach außen unbeschränkbar; mehrere → Gesamtvertretung; Amtszeit unbegrenzt, jederzeit abberufbar; Gesellschafter- oder Fremdgeschäftsführer.</li>
+</ul>
+</div>
+<div>
+<div class="box bsp" style="margin-top:0"><span class="t">Übung 18 – BSW Fenster GmbH <span class="tag t-off">offiziell</span></span>
+Stammkapital 150.000 €: Bertrand 30.000, Schneider 51.000, Wehrle 69.000 (bar).
+<div class="calc">Mindesteinzahlung je ¼:
+  Bertrand 7.500 · Schneider 12.750 · Wehrle 17.250
+  = 37.500 € ≥ 12.500 € ✓
+Gewinn 2.250.000 nach Anteilen (20/34/46 %):
+  450.000 · 765.000 · 1.035.000
+GF-Wahl (1 € = 1 Stimme):
+  Bertrand + Schneider 81.000 &gt; Wehrle 69.000
+  → <b>Schneider wird Geschäftsführer</b></div>
+<p class="small">Einsicht in die Bücher (§ 51a GmbHG) darf Bertrand nicht verweigert werden.</p></div>
+<div class="box merk"><span class="t">UG (haftungsbeschränkt) – „Mini-GmbH“ (§ 5a GmbHG)</span>
+<ul>
+<li>Stammkapital <b>1 € bis 24.999 €</b>, <b>voll und bar</b> einzahlen, <b>Sachgründung verboten</b>; Zusatz „UG (haftungsbeschränkt)“ Pflicht.</li>
+<li><b>Zwangsthesaurierung:</b> jährlich <b>25 % des (um Verlustvortrag geminderten) Jahresüberschusses</b> in die gesetzliche Rücklage, bis über eine Kapitalerhöhung aus Gesellschaftsmitteln <b>25.000 €</b> erreicht sind → dann Umfirmierung zur GmbH möglich. Zweck: Gläubigerschutz.</li>
+<li>Beispiel: JÜ 8.000 €, Verlustvortrag 2.000 € → (8.000 − 2.000) · 25 % = <b>1.500 €</b> Rücklage.</li>
+</ul></div>
+</div>
+</div>
+
+<h4>3.4.2 GmbH &amp; Co. KG</h4>
+<div class="cols">
+<div><p>Eine <b>KG, deren Komplementär eine GmbH</b> ist; die Gesellschafter der GmbH sind meist zugleich Kommanditisten. Rechtlich eine <b>Personengesellschaft</b> (HR Abt. A). Gründe: Haftungsbeschränkung (die GmbH haftet voll, ihre Gesellschafter nur mit ihren Anteilen) · leichtere Kapitalbeschaffung · <b>Nachfolge</b> („unsterbliche“ GmbH als Vollhafter, Familienunternehmen) · externe Geschäftsführer möglich.</p></div>
+<div><p><b>Übung 19</b> <span class="tag t-off">offiziell</span> – Nachteil: Es liegen <b>zwei Gesellschaften</b> vor → höherer Aufwand: <b>zwei Buchhaltungen, zwei Jahresabschlüsse, zwei Steuererklärungen</b>.</p></div>
+</div>
+
+<h4>3.4.3 Aktiengesellschaft (AG, AktG)</h4>
+<div class="cols">
+<div>
+<ul>
+<li>Mind. <b>1 Gründer</b>, notariell beurkundete <b>Satzung</b>, Bar- oder Sachgründung, <b>Grundkapital mind. 50.000 €</b>, in Aktien zerlegt (Nennbetrag mind. 1 € oder Stückaktie); Mindesteinzahlung <b>25 % des Nennwerts + volles Agio</b>; HR Abt. B, konstitutiv.</li>
+<li>Ausgabe <b>unter pari verboten</b>, über pari erlaubt; <b>Agio</b> = Ausgabebetrag − Nennwert → Kapitalrücklage (1 Mio. Aktien à 1 €, Ausgabe zu 3 € → Agio 2 Mio. €).</li>
+<li>Gewinnverwendung beschließt die HV auf Vorschlag des Vorstands → <b>Dividende</b>.</li>
+<li><b>Kleine AG</b>: nicht börsennotiert, Einmann-Gründung, vereinfachte HV, unter 500 AN mitbestimmungsfrei.</li>
+<li><b>Aktionärsrechte:</b> Teilnahme und Stimmrecht in der HV, Auskunft, Anfechtung, Dividende, <b>Bezugsrecht</b> auf junge Aktien (GK 4 Mio., Erhöhung 1 Mio. → 4 : 1), Liquidationserlös. <b>Pflichten:</b> Einlage leisten, ggf. Nebenverpflichtungen.</li>
+</ul>
+</div>
+<div>
+<table>
+<tr><th>Organ</th><th>Funktion</th><th>Aufgaben</th></tr>
+<tr><td><b>Vorstand</b></td><td><b>Leitungsorgan</b></td><td>Geschäftsführung und Vertretung (eigenverantwortlich, weisungsfrei), Jahresabschluss aufstellen, HV einberufen, Gewinnverwendung vorschlagen; Bestellung max. <b>5 Jahre</b></td></tr>
+<tr><td><b>Aufsichtsrat</b></td><td><b>Überwachungsorgan</b></td><td>Vorstand bestellen, überwachen, abberufen; Jahresabschluss prüfen; außerordentliche HV einberufen; Aktionärs- + AN-Vertreter, Wahl auf 4 Jahre</td></tr>
+<tr><td><b>Hauptversammlung</b></td><td><b>Beschlussorgan</b> (Eigentümer)</td><td>wählt Aktionärsvertreter in den AR, Entlastung von Vorstand und AR, Verwendung des Bilanzgewinns, Abschlussprüfer, Satzungsänderungen (<b>75 %</b>)</td></tr>
+</table>
+<div class="box merk"><span class="t">Merksatz</span>HV wählt AR → AR bestellt Vorstand → Vorstand führt. „Vorstand <b>führt</b>, Aufsichtsrat <b>überwacht</b>, Hauptversammlung <b>beschließt</b>.“</div>
+<p><b>Übung 20a</b> <span class="tag t-off">offiziell</span> – Vorteile: große Finanzvolumen über die Börse; einfache Übertragung (Inhaberaktie: Einigung und Übergabe). Nachteile: komplizierte Gründung, hohe Gründungs- und laufende Kosten, umfassende Prüfungs- und Publizitätspflichten, Interessenkonflikte über die Gewinnverwendung (Fusionen → Marktbeherrschung).</p>
+</div>
+</div>
+
+<h4>3.4.4 KGaA · 3.4.5 SE · 3.5 eG und Stiftung</h4>
+<div class="cols">
+<div>
+<p><b>KGaA</b> (§§ 278 ff. AktG): Mischform aus KG und AG. <b>Persönlich haftender Gesellschafter</b> (Komplementär) führt und haftet voll; <b>Kommanditaktionäre</b> haften beschränkt, keine Geschäftsführung. Mindestkapital 50.000 € (Skript: „fünf Gründer“ – veraltet, heute genügt 1). Organe: HV, AR, Komplementär (kein Vorstand). Zweck: Familie/Verein behält die Leitung, holt Kapital über Aktien. Beispiele: BVB, Merck, Henkel.</p>
+<p><b>SE</b> (seit 2005): Aktiengesellschaft europäischen Rechts, Sitz in EU/EWR, <b>Mindestkapital 120.000 €</b>, Sitzverlegung ohne Auflösung; Beispiele Allianz, SAP, Airbus.</p>
+</div>
+<div>
+<p><b>Eingetragene Genossenschaft (eG, GenG):</b> nicht geschlossene Mitgliederzahl; <b>Förderauftrag</b> statt Gewinnmaximierung; <b>mind. 3 Gründer</b>, schriftliche Satzung (Statut), <b>Genossenschaftsregister</b>, kein Mindestkapital; Organe <b>Vorstand</b> (muss Mitglied sein), <b>Aufsichtsrat</b>, <b>Generalversammlung</b> (grundsätzlich <b>1 Mitglied = 1 Stimme</b>); Haftung mit dem Gesellschaftsvermögen, ggf. Nachschusspflicht. Beispiele: Volksbanken, EDEKA, REWE, Winzergenossenschaft.</p>
+<p><b>Stiftung</b> (§§ 80 ff. BGB): <b>rechtlich verselbstständigte Vermögensmasse (Zweckvermögen)</b> mit eigener Rechtspersönlichkeit, die einen vom Stifter festgelegten Zweck dauerhaft fördert. Entsteht durch Stiftungsgeschäft + Anerkennung der Landesbehörde; Vorstand leitet; keine Gewinnverteilung; Stifter haftet nicht. <b>Familienstiftung</b>: verhindert Zersplitterung der Anteile; Begünstigte = <b>Destinatäre</b>. Beispiel: Dieter Schwarz Stiftung gGmbH (Bildungscampus, experimenta).</p>
+</div>
+</div>
+
+<h3 class="pb">Rechtsformen im Vergleich</h3>
+<table class="zebra">
+<tr><th style="width:23mm">Rechtsform</th><th style="width:15mm">Gründer</th><th style="width:22mm">Mindestkapital</th><th>Haftung</th><th>Leitung / Organe</th><th>Gewinnverteilung</th><th style="width:15mm">HR</th></tr>
+<tr><td><b>e. K.</b></td><td>1</td><td>keins</td><td>Inhaber unbeschränkt</td><td>Inhaber</td><td>alles an Inhaber</td><td>A, dekl.</td></tr>
+<tr><td><b>GbR</b></td><td>2</td><td>keins</td><td>alle unbeschränkt</td><td>alle gemeinsam (Einstimmigkeit)</td><td>Vertrag, sonst Beteiligung/Köpfe</td><td>(Ges.-Reg.)</td></tr>
+<tr><td><b>OHG</b></td><td>2</td><td>keins</td><td>alle unbeschränkt, unmittelbar, solidarisch</td><td>alle Gesellschafter</td><td>Vertrag → Beteiligung/Beiträge → Köpfe</td><td>A, dekl.</td></tr>
+<tr><td><b>KG</b></td><td>2 (1 V + 1 T)</td><td>keins</td><td>Komplementär voll; Kommanditist bis Haftsumme</td><td>Komplementäre; Kommanditisten Kontrolle/Widerspruch</td><td>Zinsen + TV, Rest nach Schlüssel</td><td>A, dekl.</td></tr>
+<tr><td><b>Stille G.</b></td><td>2</td><td>keins</td><td>Inhaber voll; Stiller nur mit Einlage (bei Verlustbeteiligung)</td><td>Inhaber allein</td><td>Gewinnbeteiligung zwingend</td><td>keine</td></tr>
+<tr><td><b>GmbH</b></td><td>1</td><td><b>25.000 €</b> (½ bzw. 12.500 € einzahlen)</td><td>nur Gesellschaftsvermögen</td><td>Geschäftsführer, Gesellschafterversammlung, AR ab 501 AN</td><td>nach Geschäftsanteilen</td><td>B, konst.</td></tr>
+<tr><td><b>UG</b></td><td>1</td><td><b>1 €</b> (voll, bar)</td><td>nur Gesellschaftsvermögen</td><td>wie GmbH</td><td>25 % Zwangsrücklage</td><td>B, konst.</td></tr>
+<tr><td><b>GmbH &amp; Co. KG</b></td><td>2 (GmbH + T)</td><td>GmbH 25.000 €</td><td>GmbH voll (mit ihrem Vermögen), Kommanditisten bis Haftsumme</td><td>GmbH (über ihren GF)</td><td>wie KG</td><td>A</td></tr>
+<tr><td><b>AG</b></td><td>1</td><td><b>50.000 €</b> (25 % + Agio)</td><td>nur Gesellschaftsvermögen</td><td>Vorstand, Aufsichtsrat, Hauptversammlung</td><td>Dividende nach HV-Beschluss</td><td>B, konst.</td></tr>
+<tr><td><b>KGaA</b></td><td>1</td><td><b>50.000 €</b></td><td>Komplementär voll, Kommanditaktionäre beschränkt</td><td>Komplementär, AR, HV</td><td>HV stellt fest, Komplementär stimmt zu</td><td>B</td></tr>
+<tr><td><b>SE</b></td><td>–</td><td><b>120.000 €</b></td><td>nur Gesellschaftsvermögen</td><td>wie AG oder Verwaltungsrat</td><td>Dividende</td><td>B</td></tr>
+<tr><td><b>eG</b></td><td><b>3</b></td><td>keins</td><td>Gesellschaftsvermögen, ggf. Nachschusspflicht</td><td>Vorstand, AR, Generalversammlung</td><td>nach eingezahltem Geschäftsguthaben</td><td>Gen.-Reg.</td></tr>
+<tr><td><b>Stiftung</b></td><td>1 Stifter</td><td>keins (ausreichendes Vermögen)</td><td>Stiftung selbst</td><td>Vorstand, ggf. Kuratorium</td><td>keine – Stiftungszweck</td><td>Behörde</td></tr>
+</table>
+
+<div class="cols">
+<div>
+<table>
+<tr><th>Übung 22b <span class="tag t-off">offiziell</span></th><th>Personengesellschaft</th><th>Kapitalgesellschaft</th></tr>
+<tr><td>Beziehung Gesellschafter–Gesellschaft</td><td>eng, persönlich</td><td>lose, kapitalbasiert</td></tr>
+<tr><td>Anzahl Gesellschafter</td><td>kleinere Zahl</td><td>größere Zahl</td></tr>
+<tr><td>Dauer der Zugehörigkeit</td><td>fortgesetzt</td><td>nicht fortgesetzt</td></tr>
+<tr><td>Verselbstständigung des Vermögens</td><td>niedrig (Gesamthandsvermögen)</td><td>hoch (<b>Trennungsprinzip</b>)</td></tr>
+</table>
+<p><b>Kriterien der Rechtsformwahl</b> (Übung 21d <span class="tag t-off">offiziell</span>): Firma · Gründungskapital · Geschäftsführung durch Dritte · Haftung · Steuern · Mitbestimmung · Publizität · Kosten · Kapitalbeschaffung · Vererbung.</p>
+</div>
+<div>
+<div class="box trap" style="margin-top:0"><span class="t">Klausurfallen</span>
+<ul>
+<li><b>Geschäftsführung</b> = Innenverhältnis (dürfen), <b>Vertretung</b> = Außenverhältnis (können).</li>
+<li>KG: Tätigkeitsvergütung bekommt <b>nur der Komplementär</b>; monatliche Angaben <b>× 12</b>.</li>
+<li>Keine 4-%-Verzinsung mehr ansetzen, außer Zinsen sind ausdrücklich vereinbart (Übung 17: 5 %).</li>
+<li>GmbH-Einzahlung: 25 % je Anteil <b>und</b> ≥ 12.500 € – 25 % von 25.000 € (6.250 €) reichen <b>nicht</b>.</li>
+<li>GmbH-Stimmen nach <b>Euro</b>, eG nach <b>Köpfen</b>.</li>
+<li>Der Kommanditist haftet <b>vor dem HR-Eintrag voll</b>.</li>
+<li>OHG-Eintrag deklaratorisch, GmbH/AG-Eintrag konstitutiv.</li>
+<li>Gesamthandsvermögen (Folie): Vermögen gehört allen Gesellschaftern – seit MoPeG gehört es der rechtsfähigen Gesellschaft selbst. Folienantwort geben, Hinweis ergänzen.</li>
+</ul></div>
+</div>
+</div>
+
+<div class="box klausur"><span class="t">So kommt es in der Klausur</span>
+<ul>
+<li><b>Musterklausur 2a (6 P.):</b> KG-Gewinnverteilung mit monatlicher Tätigkeitsvergütung → Lösung oben (A 99.000 · B 198.000 · C 153.000 €).</li>
+<li><b>2b (4 P.):</b> „Erklären Sie die Zwangsthesaurierungspflicht bei der UG“ → wer (UG, Stammkapital &lt; 25.000 €), was (25 % des Jahresüberschusses abzüglich Verlustvortrag in gesetzliche Rücklage), wie lange (bis 25.000 € erreicht, dann Umfirmierung), warum (Gläubigerschutz).</li>
+<li><b>2c (3 P.):</b> „Organe der AG und ihre Funktion“ → Vorstand = Leitung, Aufsichtsrat = Überwachung, Hauptversammlung = Beschlussfassung. Je Organ 1 P.</li>
+<li>Weitere typische Aufgaben: Übung 18 (Mindesteinzahlung, Stimmen), Übung 17.2 (Rechtslage Kommanditist), Übung 22a (Vergleichstabelle KG/GmbH/AG).</li>
+</ul></div>
+
+<!-- ============================ KAPITEL 4 ============================ -->
+<h2>4 · Konzentration und Kooperation <span class="badge b-done">behandelt 27.10.</span></h2>
+
+<div class="box kern"><span class="t">Kernaussagen</span>
+<ul>
+<li>Unternehmenszusammenschlüsse verbinden bisher rechtlich und wirtschaftlich selbstständige Unternehmen; ihre Selbstständigkeit wird <b>unterschiedlich stark</b> eingeschränkt.</li>
+<li><b>Kooperation:</b> vertragliche Zusammenarbeit, wirtschaftliche Selbstständigkeit bleibt <b>teilweise</b> erhalten (Kartell, Franchise, Joint Venture). <b>Konzentration:</b> <b>einheitliche Leitung</b>, wirtschaftliche Selbstständigkeit geht verloren (Konzern, Fusion).</li>
+<li>Kartelle sind grundsätzlich <b>verboten (§ 1 GWB)</b>; Ausnahmen: Mittelstandskartell, Legalausnahme nach § 2 GWB, Landwirtschaft/Presse.</li>
+<li>Das <b>Bundeskartellamt</b> schützt den Wettbewerb (Kartellverbot, Fusionskontrolle, Missbrauchsaufsicht); der Minister kann untersagte Fusionen erlauben (§ 42 GWB).</li>
+</ul></div>
+
+<h3>4.1–4.2 Richtungen und Ziele</h3>
+<div class="cols">
+<div>
+<table>
+<tr><th>Richtung</th><th>Wer?</th><th>Ziel</th><th>Beispiel</th></tr>
+<tr><td><b>horizontal</b></td><td>gleiche Produktions-/Handelsstufe</td><td>Marktposition stärken</td><td>Schuhfabrik + Schuhfabrik</td></tr>
+<tr><td><b>vertikal</b></td><td>aufeinanderfolgende Stufen derselben Branche</td><td>Beschaffung und Absatz sichern</td><td>Schuhfabrik + Schuhhandel</td></tr>
+<tr><td><b>anorganisch</b> (diagonal)</td><td>verschiedene Branchen</td><td>Branchenrisiko streuen</td><td>Brauerei + Verlag + Schuhfabrik</td></tr>
+</table>
+</div>
+<div>
+<p><b>Gewinnbezogene Ziele</b> (Oberziel Gewinnmaximierung): Umsatz steigern, Wirtschaftlichkeit erhöhen, günstigere Beschaffung, bessere Kapitalauslastung, kostengünstigere Produktion, geringere F&amp;E-Kosten, Finanzkraft stärken, Steuervorteile. <b>Nicht gewinnbezogen:</b> Prestige, Marktmacht.</p>
+<p><b>Probleme für Verbraucher:</b> Wettbewerbsbeschränkung, überhöhte Preise, Angebotsverknappung, Machtmissbrauch. <b>Risiken der Kooperation für Unternehmen:</b> Abstimmungsaufwand, Know-how-Abfluss, Abhängigkeit, weniger Entscheidungsfreiheit.</p>
+</div>
+</div>
+
+<h3>4.3 Formen nach Bindungsintensität</h3>
+<figure>
+<svg viewBox="0 0 640 74" width="640" height="74" role="img" aria-label="Formen nach steigender Bindungsintensität">
+<defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#dfe8f7"/><stop offset="1" stop-color="#2457a6"/></linearGradient></defs>
+<rect x="4" y="30" width="620" height="12" rx="6" fill="url(#g1)"/><polygon points="624,24 638,36 624,48" fill="#2457a6"/>
+<g font-size="9" text-anchor="middle" fill="#1c2230">
+<text x="45" y="20">Verbände</text><text x="120" y="20">Gelegenheits-</text><text x="120" y="10">ges. (ARGE)</text><text x="195" y="20" font-weight="700">Kartell</text><text x="265" y="20" font-weight="700">Franchise</text><text x="335" y="20">Genossensch.</text><text x="410" y="20" font-weight="700">Joint Venture</text>
+<text x="500" y="20" font-weight="700" fill="#7c3aed">Konzern</text><text x="578" y="20" font-weight="700" fill="#7c3aed">Fusion</text>
+</g>
+<text x="230" y="62" font-size="9.5" text-anchor="middle" fill="#2457a6" font-weight="700">Kooperation – wirtschaftliche Selbstständigkeit teilweise erhalten</text>
+<text x="540" y="62" font-size="9.5" text-anchor="middle" fill="#7c3aed" font-weight="700">Konzentration – einheitliche Leitung</text>
+<line x1="455" y1="26" x2="455" y2="70" stroke="#7c3aed" stroke-dasharray="3 2"/>
+</svg>
+<figcaption>Steigende Bindungsintensität (fett = Schwerpunkte der Folien)</figcaption>
+</figure>
+<table>
+<tr><th>Art</th><th>Beispiel</th><th>rechtliche Selbstständigkeit</th><th>wirtschaftliche Selbstständigkeit</th><th>Verbindung</th></tr>
+<tr><td>Kartell</td><td>„Frühstückskartell“</td><td>bleibt voll</td><td>großteils erhalten, kleiner Teil verloren</td><td>Kooperation</td></tr>
+<tr><td>Arbeitsgemeinschaft / Konsortium</td><td>Bauprojekt / Bankenkonsortium</td><td>bleibt voll</td><td>großteils erhalten</td><td>Kooperation</td></tr>
+<tr><td>Interessengemeinschaft</td><td>Gewinngemeinschaft</td><td>bleibt voll</td><td>großer Teil verloren</td><td>Kooperation</td></tr>
+<tr><td><b>Konzern</b></td><td>Mutter-Tochter</td><td><b>bleibt voll</b></td><td><b>voll verloren</b></td><td>Konzentration</td></tr>
+<tr><td><b>Fusion</b> (Trust)</td><td>Verschmelzung</td><td><b>voll verloren</b></td><td><b>voll verloren</b></td><td>Konzentration</td></tr>
+</table>
+
+<h3>4.3.1 Formen der Kooperation</h3>
+<div class="cols">
+<div>
+<h4>Kartelle</h4>
+<p><b>Kartell</b> = zwischenbetriebliche Verbindung rechtlich selbstständig bleibender Unternehmen mit dem Ziel, den <b>Wettbewerb einzuschränken</b>.</p>
+<table>
+<tr><th>Kartellart</th><th>Absprache über</th></tr>
+<tr><td>Preiskartell</td><td>Einheits-/Mindestpreise; Sonderfall <b>Submissionskartell</b> (Ausschreibungen)</td></tr>
+<tr><td>Kalkulationskartell</td><td>einheitliche Kalkulationssätze</td></tr>
+<tr><td>Kontingentierung</td><td><b>Gebietskartell</b> (Absatzgebiete), <b>Quoten-/Mengenkartell</b> (Produktionsquoten)</td></tr>
+<tr><td>Konditionen-/Rabattkartell</td><td>Liefer-/Zahlungsbedingungen, Rabatte</td></tr>
+<tr><td>Rationalisierungskartell</td><td>Normen, Typen, Spezialisierung, Einkaufs-/Verkaufssyndikat</td></tr>
+<tr><td>Import-/Exportkartell</td><td>gemeinsame Ein-/Ausfuhr</td></tr>
+<tr><td>Mittelstandskartell (§ 3)</td><td>Zusammenarbeit von KMU, Wettbewerb nicht wesentlich beeinträchtigt → <b>erlaubt</b></td></tr>
+</table>
+<p><b>Legalausnahme § 2 GWB</b> („gutes Kartell“, ohne Genehmigung): Verbraucher <b>angemessen am Gewinn beteiligt</b> · Verbesserung von Erzeugung/Verteilung oder technischer/wirtschaftlicher Fortschritt · kein Missbrauch einer marktbeherrschenden Stellung · <b>Wettbewerb nicht ausgeschaltet</b>. Kurz: Ist der Verbrauchervorteil größer als der Kooperationsvorteil? Bei Unsicherheit: <b>Negativtest</b> (§ 32c) → „kein Anlass zum Tätigwerden“.</p>
+</div>
+<div>
+<h4>Franchising</h4>
+<p>Der <b>Franchisegeber</b> (FG) mit erprobtem Konzept überlässt dem <b>Franchisenehmer</b> (FN) Marke, Know-how, Ausstattung, Werbung; der FN gründet mit <b>eigenem Kapital</b>, bleibt <b>rechtlich und wirtschaftlich selbstständig</b>, zahlt Einstandsgebühr + laufende Beiträge und erlaubt Kontrollen. Beispiele: McDonald's, Fressnapf, Subway.</p>
+<table>
+<tr><th>Übung 23a <span class="tag t-off">offiziell</span></th><th>Vorteile</th></tr>
+<tr><td>Franchisegeber</td><td>spart teure Investitionen in eigenes Vertriebssystem · Expansion mit wenig Risiko · Kontrollmöglichkeiten</td></tr>
+<tr><td>Franchisenehmer</td><td>nutzt Erfahrung, Wissen, Name, Design, Geschäftsidee · Beteiligung am Erfolg eines bekannten Produkts · geringeres Unternehmerrisiko</td></tr>
+</table>
+<h4>Gemeinschaftsunternehmen (Joint Venture)</h4>
+<p>Mehrere unabhängige Unternehmen gründen gemeinsam ein <b>rechtlich selbstständiges</b> Unternehmen für Aufgaben im gemeinsamen Interesse; die Mütter bleiben selbstständig. Beispiel: Leonardo Rheinmetall Military Vehicles (50:50). <b>Vorteile:</b> geteilte Investitionen/Risiken, Zugang zu Technologie, schneller Markteintritt. <b>Risiken:</b> Know-how-Abfluss, Konflikte, geteilte Führung, interkulturelle Missverständnisse.</p>
+</div>
+</div>
+
+<h3>4.3.2 Konzentration</h3>
+<div class="cols">
+<div>
+<p><b>Konzern</b> (§ 18 AktG): rechtlich selbstständige Unternehmen unter <b>einheitlicher Leitung</b> – entscheidende Voraussetzung (Übung 23h).</p>
+<ul>
+<li><b>Unterordnungskonzern:</b> herrschendes + abhängige Unternehmen (faktischer, Vertrags-, Eingliederungskonzern); bei Mehrheitsbeteiligung wird Abhängigkeit vermutet.</li>
+<li><b>Gleichordnungskonzern:</b> einheitliche Leitung ohne Abhängigkeit – selten.</li>
+</ul>
+<p><b>Holding</b>: keine Rechtsform, gesetzlich nicht definiert; Dachgesellschaft hält Beteiligungen an rechtlich selbstständigen Töchtern.</p>
+<table>
+<tr><th>Form</th><th>Zentrale …</th><th>Beispiel</th></tr>
+<tr><td>Stammhauskonzern</td><td>zentralisiert <b>alle</b> Funktionen</td><td>–</td></tr>
+<tr><td>Operative Holding</td><td>ist <b>selbst am Markt tätig</b>, Töchter ergänzen</td><td>Aldi</td></tr>
+<tr><td>Managementholding</td><td>kein operatives Geschäft, aber <b>strategische Führung</b></td><td>Zeppelin GmbH</td></tr>
+<tr><td>Finanzholding</td><td>nur <b>Vermögensverwaltung</b>, Einfluss mittelbar</td><td>Gothaer Finanzholding</td></tr>
+</table>
+<p><b>Übung 23b</b> <span class="tag t-off">offiziell</span> – Holding-Vorteile: Steuervorteile (auch durch Sitzverlegung), Umgehung von Beteiligungsgrenzen (indirekte Beteiligungen, Zwischenholdings), Größen-/Spezialisierungsvorteile bei der Kapitalanlage, leichte Integration gekaufter Unternehmen. Nachteile: Töchter entwickeln „Blindheit“ für Konzernziele; höherer Verwaltungsaufwand.</p>
+</div>
+<div>
+<p><b>Fusion:</b> Verlust der wirtschaftlichen <b>und</b> rechtlichen Selbstständigkeit.</p>
+<ul>
+<li><b>Fusion durch Aufnahme (Übernahme):</b> A nimmt B auf, B wird im HR gelöscht → nur A bleibt.</li>
+<li><b>Fusion durch Neugründung (Verschmelzung):</b> A + B gehen in neuer C auf, beide werden gelöscht.</li>
+</ul>
+<div class="box korr" style="margin-top:1mm"><span class="t">Fusionskontrolle – Schwellenwerte</span>
+Skript/Folie: Anmeldung, wenn weltweiter Umsatz &gt; 500 Mio. € <b>und</b> ein Beteiligter im Inland &gt; 25 Mio. €. <b>Veraltet</b> – seit 2021 (§ 35 GWB): weltweit &gt; 500 Mio. €, Inland ein Beteiligter &gt; <b>50 Mio. €</b> und ein weiterer &gt; <b>17,5 Mio. €</b>. Das Bundeskartellamt untersagt, wenn eine marktbeherrschende Stellung entsteht oder verstärkt wird.</div>
+<p><b>Ministererlaubnis (§ 42 GWB, Übung 24</b> <span class="tag t-off">offiziell</span>): Der Bundeswirtschaftsminister kann einen untersagten Zusammenschluss erlauben, wenn <b>gesamtwirtschaftliche Vorteile</b> die Wettbewerbsbeschränkung aufwiegen <b>oder</b> ein <b>überragendes Interesse der Allgemeinheit</b> vorliegt – nur, wenn die <b>marktwirtschaftliche Ordnung nicht gefährdet</b> wird; Bedingungen/Auflagen möglich. Fall: Zollern/Miba 2019 (Gleitlager, Energiewende). Bewertung: Konzentration widerspricht den Grundregeln der sozialen Marktwirtschaft, aber ohne sie wären deutsche Unternehmen in Europa weniger konkurrenzfähig; Wettbewerb verlagert sich auf die EU-Ebene.</p>
+<p><b>Bundeskartellamt</b> (Bonn, GWB seit 1958): Durchsetzung des Kartellverbots · Fusionskontrolle · Missbrauchsaufsicht · Vergabeprüfung · Sektoruntersuchungen; laut Übung 23g auch Marktbeobachtung und Negativtests.</p>
+</div>
+</div>
+
+<div class="cols">
+<div class="box merk" style="margin-top:0"><span class="t">Merksätze</span>
+<ul>
+<li>Konzern: rechtlich <b>selbstständig</b>, wirtschaftlich <b>unselbstständig</b>. Fusion: beides weg.</li>
+<li>Die pauschale Folienaussage „Bei Konzentration bleibt die rechtliche Selbstständigkeit“ gilt nur für den Konzern.</li>
+<li>Konzern ist ein <b>juristischer</b> Begriff (AktG), Holding ein <b>beschreibender</b> Begriff.</li>
+</ul></div>
+<div class="box trap" style="margin-top:0"><span class="t">Klausurfallen</span>
+<ul>
+<li>Vertikal = verschiedene Stufen <b>derselben Branche</b>; verschiedene Branchen = anorganisch.</li>
+<li>Kartell = Kooperation (nicht Konzentration).</li>
+<li>Übung 25b: Neugründung heißt auch <b>Verschmelzung</b>.</li>
+<li>Übung 23i3: Für die Beherrschung einer GmbH genügen <b>über 50 %</b> (einfache Mehrheit).</li>
+</ul></div>
+</div>
+
+<div class="box klausur"><span class="t">So kommt es in der Klausur</span>
+2025 ohne eigene Aufgabe. Erwartbar: Kooperation vs. Konzentration mit Beispiel (Übung 23e), horizontal/vertikal/anorganisch mit Beispiel (23f), Kartellarten nennen (25d: Preis-, Mengen-, Konditionen-/Rabatt-, Submissions-, Gebietskartell), Holdingformen, Ministererlaubnis. Transfer: Fallbeispiel Tengelmann/Bronner (23i): Gründe (Filialnetz, Gewinn, Marktmacht), Vorteile gegenüber Neugründung (Mitarbeiter, Kundenstamm, geringere Anlaufkosten, weniger Werbung), Höhe &gt; 50 %, Verbrauchersicht (Marktmacht vs. weitergegebene Einkaufsvorteile).</div>
+
+<!-- ============================ KAPITEL 5 ============================ -->
+<h2>5 · Standortentscheidungen <span class="badge b-next">nächster Termin 03.11.</span></h2>
+<p class="small">Noch nicht in der Vorlesung behandelt, noch keine Folien und keine offiziellen Lösungen. Grundlage: Skript S. 61–65. <b>Musterklausur 2025 Aufgabe 8 (6 P.) stammt aus diesem Kapitel.</b></p>
+
+<div class="box kern"><span class="t">Kernaussagen</span>
+<ul>
+<li><b>Standort</b> = geografischer Ort, an dem ein Unternehmen seine Produktionsfaktoren einsetzt. <b>Standortentscheidung</b> = an wie vielen und welchen Orten welche Leistungen erstellt und abgesetzt werden.</li>
+<li>Anlässe: <b>Gründung</b> oder <b>Verlagerung</b> von Unternehmensteilen; nötig, weil die Fläche <b>inhomogen</b> ist (Kosten, Arbeitskräfte, Märkte unterscheiden sich).</li>
+<li>Ziele: <b>Wachstums-, Strukturveränderungs-, Schrumpfungsziele</b>.</li>
+<li>Bewertung von Standorten typischerweise mit der <b>Nutzwertanalyse</b> (gewichtete Punktbewertung).</li>
+</ul></div>
+
+<div class="cols">
+<div>
+<h3>5.1–5.2 Begriffe und Ziele</h3>
+<ul>
+<li><b>Gebundene</b> Standortwahl (an Rohstoff/Ort gebunden, z. B. Bergbau, Kraftwerk am Fluss) vs. <b>freie</b> Standortwahl.</li>
+<li>Internationalisierungsstufen: nationale → internationale → multinationale Unternehmen.</li>
+</ul>
+<table>
+<tr><th>Zielkategorie</th><th>Inhalt</th><th>Beispiel</th></tr>
+<tr><td><b>Wachstumsziele</b></td><td>Errichtung oder Erweiterung von Standorten</td><td>neues Werk für einen neuen Absatzmarkt (USA), neue Beschaffungsquelle, mehr Kapazität</td></tr>
+<tr><td><b>Strukturveränderungsziele</b></td><td>Aufteilung, Verlagerung oder Vereinigung von Standorten</td><td>Werk näher an den Autohersteller wegen JIT; Verlagerung wegen Arbeits-/Transportkosten, Zöllen, Steuern, Wechselkursen</td></tr>
+<tr><td><b>Schrumpfungsziele</b></td><td>teilweise oder komplette Stilllegung</td><td>Werk schließen, weil Kapazität oder Sortiment verkleinert wird</td></tr>
+</table>
+</div>
+<div>
+<h3>5.3 Standortplanung</h3>
+<ul>
+<li><b>Strategisch:</b> In welchen Staaten welche Produkte in welchem Umfang? → internationale Standortstruktur → <b>Soll-Standortstruktur</b>.</li>
+<li><b>Operativ:</b> Soll- mit Ist-Standortstruktur vergleichen, Maßnahmen ableiten; bei neuen Standorten zusätzlich Standortbestimmung.</li>
+</ul>
+<table>
+<tr><th>Standortstruktur</th><th>wofür</th></tr>
+<tr><td><b>lokal-differenziert</b></td><td>Vertrieb, Kundendienst – nahe beim Kunden</td></tr>
+<tr><td><b>global-lokal</b></td><td>Produktion: Integration (Erfahrungskurve, geringe interne Logistik) vs. mehrere Standorte (Zölle umgehen, Währungsrisiko, Transportkosten, Risikostreuung)</td></tr>
+<tr><td><b>global-integriert</b></td><td>Unternehmensführung, Forschung – an einem Ort für schnelle Kommunikation</td></tr>
+</table>
+<p class="small"><span class="erg">Ergänzung (Branchenbeispiele des Skripts ohne Lösung):</span> Fitnesscenter → lokal (Kunde muss hinkommen) · Bier → eher lokal/regional (Transportkosten, Herkunft) · Halbleiter → global-integriert (riesige Fixkosten, Erfahrungskurve) · Großturbinen/-pressen → global, wenige Standorte.</p>
+</div>
+</div>
+
+<h3>5.4 Standortfaktoren</h3>
+<table>
+<tr><th>unternehmensbezogen</th><th>produktionsbezogen</th><th>absatzbezogen</th></tr>
+<tr><td>Gesellschaft (Ausbildung, Kultur, Kriminalität) · politische Situation · Wirtschaftspolitik (Allokations-, Stabilisierungs-, Steuer-, Förderpolitik) · rechtliche Situation (<b>Local-content-Bedingungen</b>, Beschränkungen im Kapitalverkehr) · staatliche Verwaltung</td>
+<td>Klima, Geologie · Grundstücke/Gebäude (Kauf, Miete) · Produktionseinrichtungen · Material (Zulieferer, Energie, Wasser) · Arbeitskräfte (Verfügbarkeit, Kosten, Gewerkschaften) · Verkehrs-/Kommunikationsinfrastruktur · Dienstleistungen (Entsorgung, Forschung) · Kapital · Importmöglichkeiten</td>
+<td>lokale Nachfrage (<b>Herkunftsgoodwill</b>, Entfernung) · Konkurrenz (konkurrenzmeidend/-suchend) · Absatzinfrastruktur · Exportmöglichkeiten (Exportförderung, Wechselkursstabilität)</td></tr>
+</table>
+<div class="cols">
+<div><p><b>Herkunftsgoodwill:</b> positives Image, das ein Produkt durch seinen Herkunftsort bekommt – „Made in Germany“ bei Maschinen, Schweizer Uhren, Champagner aus der Champagne.</p></div>
+<div><p><b>Local-content-Bedingungen:</b> Vorgabe eines Staates, dass ein Mindestanteil der Wertschöpfung im Inland erbracht werden muss (z. B. 40 % der Teile eines dort verkauften Autos aus heimischer Produktion).</p></div>
+</div>
+
+<h3>5.5 Methoden der Standortentscheidung</h3>
+<div class="cols">
+<div>
+<table>
+<tr><th>Stufe</th><th>Methode</th></tr>
+<tr><td>Vorauswahl</td><td>Prüflistenverfahren (Ausschlusskriterien)</td></tr>
+<tr><td>Partialmodelle (einzelne Eigenschaften)</td><td>Spieltheorie, Standortoptimierung, Simulation, Investitionsrechnung</td></tr>
+<tr><td>Gesamtbewertung</td><td><b>Nutzwertanalyse</b> (Scoring)</td></tr>
+</table>
+<div class="box formel"><span class="t">Nutzwertanalyse (NWA)</span>
+<ol>
+<li>Kriterien (Standortfaktoren) festlegen</li>
+<li>gewichten (Summe 100 %)</li>
+<li>Erfüllungsgrad je Standort bewerten (z. B. 0–10, je höher desto besser)</li>
+<li><b>Teilnutzen = Gewicht · Erfüllungsgrad</b>, aufsummieren</li>
+<li>höchster Nutzwert gewinnt; Sensitivität prüfen</li>
+</ol></div>
+</div>
+<div>
+<div class="box bsp" style="margin-top:0"><span class="t">Übung 26 – NWA Maschinenbau-Werk <span class="tag t-own">eigene Lösung</span></span>
+<table>
+<tr><th>Faktor</th><th class="r">Gew.</th><th class="r">D</th><th class="r">USA</th><th class="r">CZ</th></tr>
+<tr><td>Lohnkosten</td><td class="r">10</td><td class="r">2 → 20</td><td class="r">5 → 50</td><td class="r">8 → 80</td></tr>
+<tr><td>Qualifizierung</td><td class="r">20</td><td class="r">9 → 180</td><td class="r">6 → 120</td><td class="r">3 → 60</td></tr>
+<tr><td>Investitionshöhe</td><td class="r">20</td><td class="r">4 → 80</td><td class="r">7 → 140</td><td class="r">9 → 180</td></tr>
+<tr><td>Logistikkosten</td><td class="r">5</td><td class="r">8 → 40</td><td class="r">5 → 25</td><td class="r">4 → 20</td></tr>
+<tr><td>Kundennähe</td><td class="r">10</td><td class="r">7 → 70</td><td class="r">5 → 50</td><td class="r">3 → 30</td></tr>
+<tr><td>Steuerbelastung</td><td class="r">20</td><td class="r">3 → 60</td><td class="r">9 → 180</td><td class="r">8 → 160</td></tr>
+<tr><td>Polit. Stabilität</td><td class="r">10</td><td class="r">9 → 90</td><td class="r">7 → 70</td><td class="r">6 → 60</td></tr>
+<tr><td>Umweltauflagen</td><td class="r">5</td><td class="r">3 → 15</td><td class="r">5 → 25</td><td class="r">8 → 40</td></tr>
+<tr class="sum"><td>Nutzwert</td><td class="r">100</td><td class="r">555</td><td class="r"><b>660</b></td><td class="r">630</td></tr>
+</table>
+<p class="small">→ <b>USA</b> hat den höchsten Nutzwert, knapp vor Tschechien. Kritik: Gewichte und Punkte sind subjektiv; kleine Änderungen (Sensitivität) können die Rangfolge drehen.</p></div>
+</div>
+</div>
+
+<div class="cols">
+<div class="box trap" style="margin-top:0"><span class="t">Klausurfallen</span>
+<ul>
+<li>Die drei Zielkategorien heißen <b>Wachstum – Strukturveränderung – Schrumpfung</b>; nicht mit den drei Faktorgruppen verwechseln.</li>
+<li>NWA: <b>Gewicht · Punkte</b>, nicht addieren; Gewichte summieren sich auf 100.</li>
+<li>Bei Erfüllungsgraden gilt immer: höhere Zahl = bessere Erfüllung (auch bei Kosten).</li>
+</ul></div>
+<div class="box klausur" style="margin-top:0"><span class="t">So kommt es in der Klausur</span>
+<b>Musterklausur 8 (6 P.):</b> „Erklären Sie kurz anhand eines Beispiels die drei Kategorien, in welche die Ziele von Standortentscheidungen unterteilt werden können.“ → je Kategorie Erklärung + Beispiel (Tabelle oben) = 3 · 2 P. Außerdem wahrscheinlich: NWA rechnen (Übung 26), Standortfaktoren nennen (27f), Herkunftsgoodwill/Local content erklären (27a/b).</div>
+</div>
+
+<!-- ============================ KAPITEL 6 ============================ -->
+<h2>6 · Rechnungswesen <span class="badge b-open">noch nicht behandelt</span></h2>
+<p class="small">Grundlage: Skript S. 66–80, noch keine Folien/offiziellen Lösungen. <b>Musterklausur 2025 Aufgaben 3 und 4 (zusammen 10 P.)</b> stammen aus diesem Kapitel.</p>
+
+<div class="box kern"><span class="t">Kernaussagen</span>
+<ul>
+<li>Das Rechnungswesen erfasst Beschaffung, Fertigung und Absatz zahlenmäßig. Vier Aufgaben: <b>Dokumentation</b>, <b>Rechenschaftslegung/Information</b>, <b>Kontrolle</b> (Wirtschaftlichkeit, Liquidität), <b>Disposition</b> (Planungsgrundlage).</li>
+<li><b>Externes</b> Rechnungswesen (Finanzbuchhaltung, Bilanz, GuV; Aufwand/Ertrag) informiert Außenstehende; <b>internes</b> (Kosten- und Leistungsrechnung; Kosten/Leistung) steuert den Betrieb.</li>
+<li>Kostenfunktion <b>K = K<sub>fix</sub> + k<sub>v</sub> · x</b>; der Deckungsbeitrag zeigt, was ein Produkt zur Deckung der Fixkosten beiträgt.</li>
+</ul></div>
+
+<h3>Rechengrößen</h3>
+<table>
+<tr><th>Minderung</th><th>Mehrung</th><th>bezieht sich auf</th><th>Rechnung</th></tr>
+<tr><td><b>Auszahlung</b></td><td><b>Einzahlung</b></td><td>flüssige Mittel (Bar- und Buchgeld)</td><td>Finanz-/Investitionsrechnung → Liquidität</td></tr>
+<tr><td><b>Ausgabe</b></td><td><b>Einnahme</b></td><td>Geldvermögen = flüssige Mittel + Forderungen − Verbindlichkeiten</td><td>Finanzierungsrechnung</td></tr>
+<tr><td><b>Aufwand</b></td><td><b>Ertrag</b></td><td>Erfolg (gesamter Werteverzehr/-zuwachs der Periode)</td><td>GuV, Bilanz → Erfolg</td></tr>
+<tr><td><b>Kosten</b></td><td><b>Leistung</b></td><td>bewerteter <b>sachzielbezogener</b> (betrieblicher) Güterverzehr bzw. -erstellung</td><td>Kosten- und Leistungsrechnung</td></tr>
+</table>
+<p class="small">Beispiel <span class="erg">(Ergänzung)</span>: Kauf von Rohstoffen auf Ziel = Ausgabe, aber noch keine Auszahlung; Verbrauch im nächsten Jahr = Aufwand und Kosten. Spende = Aufwand, aber keine Kosten (nicht betrieblich).</p>
+
+<h3>6.1 Externes Rechnungswesen</h3>
+<div class="cols">
+<div>
+<p><b>Ablauf Buchführung:</b> Eröffnungsbilanz (= Schlussbilanz Vorjahr) → Konten eröffnen → Buchung der Geschäftsfälle nach <b>Belegen</b> auf Bestands- und Erfolgskonten → Abschluss: zeitliche Abgrenzung, <b>Inventur</b>, Bewertung, Inventar, Erfolgskonten über GuV, Bestandskonten über Schlussbilanzkonto.</p>
+<p><b>Jahresabschluss Kapitalgesellschaft:</b> aufstellen in 3–6 Monaten (Bilanz, GuV, ggf. Lagebericht) → Wirtschaftsprüfer prüft, Bestätigungsvermerk → AR prüft → festgestellt → Hauptversammlung innerhalb 8 Monaten (Gewinnverwendung) → Offenlegung (Unternehmensregister/Bundesanzeiger).</p>
+<dl class="defs">
+<dt>Inventur</dt><dd>körperliche Bestandsaufnahme aller Vermögensgegenstände und Schulden nach Art und Menge (zählen, messen, wiegen, schätzen); Anlässe: Gründung, Geschäftsjahresende, Veräußerung, Auflösung</dd>
+<dt>Inventar</dt><dd>Ergebnis der Inventur: ausführliches Bestandsverzeichnis mit Mengen und Werten: <b>Vermögen − Schulden = Reinvermögen (EK)</b></dd>
+<dt>Bilanz</dt><dd>kurz gefasste Gegenüberstellung von Vermögen (Aktiva) und Kapital (Passiva) in <b>Kontoform</b>; Grundlage ist das Inventar</dd>
+</dl>
+</div>
+<div>
+<table>
+<tr><th>Aktiva – Mittelverwendung<br><span class="small">nach Liquidität</span></th><th>Passiva – Mittelherkunft<br><span class="small">nach Fälligkeit</span></th></tr>
+<tr><td><b>A. Anlagevermögen</b> (langfristig)<br>I. Immaterielle VG (Lizenzen)<br>II. Sachanlagen (Grundstücke, Gebäude, Maschinen, BGA)<br>III. Finanzanlagen (Beteiligungen)</td>
+<td><b>A. Eigenkapital</b><br>I. Gezeichnetes Kapital<br>II. Kapitalrücklage<br>III. Gewinnrücklagen<br>IV. Gewinn-/Verlustvortrag<br>V. Jahresüberschuss/-fehlbetrag</td></tr>
+<tr><td><b>B. Umlaufvermögen</b> (kurzfristig)<br>I. Vorräte (RHB, Erzeugnisse, Waren)<br>II. Forderungen<br>III. Wertpapiere<br>IV. Flüssige Mittel</td>
+<td><b>B. Rückstellungen</b><br><b>C. Verbindlichkeiten</b> (Fremdkapital: langfristig, z. B. Bankdarlehen; kurzfristig, z. B. Lieferantenverbindlichkeiten)</td></tr>
+<tr><td>C. Rechnungsabgrenzung …</td><td>D. Rechnungsabgrenzung …</td></tr>
+<tr class="sum"><td>Summe Aktiva = Gesamtvermögen</td><td>Summe Passiva = Gesamtkapital (EK + FK)</td></tr>
+</table>
+<p><b>GuV:</b> Erträge (Umsatzerlöse, Bestandserhöhungen, Eigenleistungen, sonstige, Finanzerträge) − Aufwendungen (Material, Personal, Abschreibungen, Bestandsminderungen, sonstige, Zinsen, Steuern) = Gewinn/Verlust. Das GuV-Konto ist ein <b>Unterkonto des Eigenkapitals</b>: Gewinn erhöht, Verlust mindert das EK.</p>
+</div>
+</div>
+
+<div class="box bsp"><span class="t">Übung 28a – Bilanzgleichung <span class="tag t-own">eigene Lösung</span></span>
+<div class="cols">
+<div><span class="f">Gesamtvermögen = AV + UV
+               = EK + FK = Gesamtkapital</span></div>
+<table>
+<tr><th></th><th class="r">1</th><th class="r">2</th><th class="r">3</th></tr>
+<tr><td>Gesamtvermögen</td><td class="r"><b>245.000</b></td><td class="r"><b>80.000</b></td><td class="r">120.000</td></tr>
+<tr><td>AV / UV</td><td class="r">70.000 / <b>175.000</b></td><td class="r">50.000 / 30.000</td><td class="r"><b>70.000</b> / 50.000</td></tr>
+<tr><td>EK / FK</td><td class="r">95.000 / 150.000</td><td class="r"><b>25.000</b> / 55.000</td><td class="r">40.000 / <b>80.000</b></td></tr>
+</table>
+</div></div>
+
+<h3>6.2 Internes Rechnungswesen – Kosten</h3>
+<div class="cols">
+<div>
+<table>
+<tr><th>Kostenart</th><th>Merkmal</th><th>Beispiel</th></tr>
+<tr><td><b>Einzelkosten</b></td><td>einem Produkt direkt per Beleg zurechenbar</td><td>Rohstoffe, Fertigungslöhne</td></tr>
+<tr><td><b>Gemeinkosten</b></td><td>nicht direkt zurechenbar (betreffen mehrere Produkte)</td><td>Gehälter, Miete, Abschreibungen</td></tr>
+<tr><td><b>variable Kosten</b></td><td>ändern sich mit der Menge (proportional)</td><td>Material, Fertigungslöhne</td></tr>
+<tr><td><b>fixe Kosten</b></td><td>bleiben von 0 bis zur Kapazitätsgrenze gleich</td><td>Miete, Abschreibungen, Gehälter</td></tr>
+</table>
+<p><b>Kostenrechnungssystem</b> in 3 Stufen: <b>Kostenarten</b>rechnung (Welche Kosten?) → <b>Kostenstellen</b>rechnung (Wo?) → <b>Kostenträger</b>rechnung (Wofür?).</p>
+<p><b>Übung 28c (McDonald's)</b>: variabel je Hamburger: Brötchen, Fleisch, Salat, Verpackung; fix: Miete, Gehalt des Filialleiters, Abschreibung der Grills, Franchisegebühr-Grundbetrag.</p>
+</div>
+<div>
+<div class="box formel" style="margin-top:0"><span class="t">Formeln Kostenrechnung</span>
+<span class="f">K = K_fix + k_v · x
+Zweipunktverfahren (höchster/niedrigster Punkt):
+  k_v   = (K_2 − K_1) / (x_2 − x_1)
+  K_fix = K_1 − k_v · x_1
+DB-Rechnung (Periode):
+  Erlös p · x − variable Kosten k_v · x = DB
+  DB − K_fix = Betriebsergebnis
+Stück-DB  db = p − k_v
+Preisuntergrenze kurzfristig  = k_v
+                 langfristig  = k_v + K_fix / x
+Break-even-Menge x_BE = K_fix / (p − k_v)
+Make-or-buy-Übergangsmenge:
+  K_fix + k_v · x = Fremdpreis · x</span></div>
+</div>
+</div>
+
+<div class="cols">
+<div class="box bsp" style="margin-top:0"><span class="t">Musterklausur 3 – Zweipunktverfahren (4 P.)</span>
+Aug 700 St./80.000 € · Sep 900/100.000 · Okt 1.300/120.000 · Nov 1.400/150.000.
+<div class="calc">Punkte mit kleinster und größter Menge:
+  (700 | 80.000) und (1.400 | 150.000)
+k_v   = (150.000 − 80.000) / (1.400 − 700)
+      = 70.000 / 700 = <b>100 €/Stück</b>
+K_fix = 80.000 − 100 · 700 = <b>10.000 €</b>
+K(15.000) = 10.000 + 100 · 15.000 = <b>1.510.000 €</b></div>
+<span class="tag t-own">eigene Lösung</span></div>
+<div class="box bsp" style="margin-top:0"><span class="t">Musterklausur 4 – Deckungsbeitrag (6 P.)</span>
+<div class="calc">            A                 B
+p     262.500/3.500 = 75   285.000/3.000 = 95
+k_v   140.000/3.500 = 40   135.000/3.000 = 45
+db    <b>35 €</b>               <b>50 €</b>
+DB    122.500 €          150.000 €
+DB gesamt 272.500 − K_fix 275.000
+Betriebsergebnis = <b>−2.500 € (Verlust)</b></div>
+<span class="tag t-own">eigene Lösung</span></div>
+</div>
+
+<div class="cols">
+<div class="box bsp" style="margin-top:0"><span class="t">Übung 28d–g <span class="tag t-own">eigene Lösung</span></span>
+<div class="calc">d) Jan (500|49.000), Apr (800|70.000)
+   k_v = 21.000/300 = 70 €; K_fix = 14.000 €
+   K(900) = 14.000 + 63.000 = 77.000 €
+e) DB A = (10−6)·3.500 = 14.000
+   DB B = (16−12)·5.000 = 20.000
+   Ergebnis = 34.000 − 35.000 = −1.000 €
+f) PUG kurz = 60 €; lang = 60 + 115.000/7.000
+   = 76,43 €
+g) 100.000 + 20x = 30x → x = 10.000 Stück
+   20.000 &gt; 10.000 → Eigenfertigung
+   (500.000 € statt 600.000 €)</div></div>
+<div class="box bsp" style="margin-top:0"><span class="t">Übung 28 „f“ (zweite) – Break-even <span class="tag t-own">eigene Lösung</span></span>
+<div class="calc">k_v = (282.000−273.000)/(3.600−3.400) = 45 €
+K_fix = 273.000 − 3.400·45 = 120.000 €
+1. x_BE = 120.000/(77−45) = <b>3.750 Stück</b>
+   Umsatz = 3.750 · 77 = 288.750 €
+2. Mai 3.600 = 80 % → 100 % = 4.500 Stück
+   72 %: 3.240·32 − 120.000 = −16.320 €
+  100 %: 4.500·32 − 120.000 = +24.000 €
+3. (120.000+11.200)/32 = 4.100 Stück
+   Umsatz = 315.700 €</div></div>
+</div>
+
+<div class="cols">
+<div class="box trap" style="margin-top:0"><span class="t">Klausurfallen</span>
+<ul>
+<li>Zweipunktverfahren: <b>niedrigste und höchste Menge</b> nehmen (nicht die höchsten Kosten, nicht benachbarte Monate). Werte liegen oft nicht exakt auf einer Geraden.</li>
+<li>Bei Musterklausur 3 nach K(15.000) gefragt – nicht nach 1.500.</li>
+<li>DB ≠ Gewinn: erst nach Abzug der Fixkosten ergibt sich das Betriebsergebnis.</li>
+<li>Kurzfristige Preisuntergrenze = variable Stückkosten (db = 0).</li>
+<li>Aufwand ≠ Kosten, Ausgabe ≠ Auszahlung.</li>
+</ul></div>
+<div class="box klausur" style="margin-top:0"><span class="t">So kommt es in der Klausur</span>
+<b>Aufgabe 3 (4 P.)</b> Zweipunktverfahren: k<sub>v</sub>, K<sub>fix</sub>, Gesamtkosten für neue Menge. <b>Aufgabe 4 (6 P.)</b> Stück-DB von zwei Produkten aus Gesamtwerten ableiten und Betriebsergebnis. Die Folien zu Kap. 1 enthielten schon ein Zweipunkt-Beispiel (Müller GmbH: k<sub>v</sub> = 7,14 €, K<sub>fix</sub> = 50.000 €, K(20.000) = 192.857,14 €). Rechne Übung 28 komplett.</div>
+</div>
+
+<!-- ============================ KAPITEL 7 ============================ -->
+<h2>7 · Planung und Kontrolle <span class="badge b-open">noch nicht behandelt</span></h2>
+<p class="small">Grundlage: Skript S. 81–96. <b>Musterklausur 2025 Aufgabe 5 (11 P.)</b> stammt aus 7.6.</p>
+
+<div class="box kern"><span class="t">Kernaussagen</span>
+<ul>
+<li><b>Prognose</b> sagt Zukunft vorher; <b>Planung</b> legt fest, mit welchen Maßnahmen die Ziele erreicht werden. Prognosen gehen der Planung voraus. Planung und Organisation sind eng verknüpft.</li>
+<li>Planungsrichtungen: <b>top-down</b> (retrograd), <b>bottom-up</b> (progressiv), <b>Gegenstrom</b> (zirkulär).</li>
+<li>Strategische Analyse: <b>ressourcenorientiert</b> (Stärken/Schwächen, intern) vs. <b>marktorientiert</b> (Chancen/Risiken, extern).</li>
+<li>Kennzahlen steuern und kontrollieren: <b>ROI = Umsatzrentabilität · Kapitalumschlag</b> (DuPont); die <b>Balanced Scorecard</b> ergänzt vier Perspektiven.</li>
+</ul></div>
+
+<h3>7.1–7.4 Planung</h3>
+<div class="cols">
+<div>
+<p><b>Elemente eines Plans:</b> Ziele (warum?) · Prämissen (unter welchen Bedingungen?) · Problemstellungen · Maßnahmen (was?) · Ressourcen (womit?) · Termine (bis wann?) · Verantwortliche (wer?) · Ergebnisse.</p>
+<p><b>Planungsträger:</b> Top-Management (Vision, strategische Planung, Gesamtpläne) · Linienmanagement (Bereichs-/Teilpläne) · Planungsstäbe · Controlling · Planungsausschüsse/-teams · externe Experten.</p>
+<table>
+<tr><th></th><th>Top-down (retrograd)</th><th>Bottom-up (progressiv)</th><th>Gegenstrom (zirkulär)</th></tr>
+<tr><td>Ablauf</td><td>oben → unten, Rahmenplan in Teilpläne zerlegt</td><td>untere Ebenen planen, oben zusammengefasst</td><td>oben Rahmenplan, unten präzisiert, oben integriert</td></tr>
+<tr><td>Vorteil</td><td>Teilpläne mit Unternehmenszielen koordiniert</td><td>realistisch, Identifikation der Betroffenen</td><td>Akzeptanz, Motivation, realistisch</td></tr>
+<tr><td>Nachteil</td><td>evtl. unrealistisch, Demotivation</td><td>Überschneidungen, Widersprüche</td><td>hoher Koordinationsaufwand</td></tr>
+</table>
+<p><b>Funktionale Pläne:</b> Absatz-, Produktions-, Personal-, Beschaffungs-, Finanzplan. <span class="small">Übung 30f <span class="tag t-own">eigene Lösung</span>: Produktionspläne wirken v. a. auf Beschaffungs-, Personal- und Finanzpläne.</span></p>
+</div>
+<div>
+<table>
+<tr><th></th><th>strategisch</th><th>taktisch</th><th>operativ</th></tr>
+<tr><td>Horizont</td><td>&gt; 5 Jahre</td><td>1–5 Jahre</td><td>≤ 1 Jahr</td></tr>
+<tr><td>Differenzierung</td><td>ein Gesamtplan</td><td>wenige Teilpläne</td><td>viele Teilpläne</td></tr>
+<tr><td>Träger</td><td>Geschäftsführung</td><td>Geschäftsbereichsleitung</td><td>Funktionsleiter, Sachbearbeiter</td></tr>
+<tr><td>Gegenstand</td><td>Geschäftsfelder, Standorte</td><td>Funktionsbereiche (Absatz, Investition)</td><td>detaillierte Teilaktionen</td></tr>
+</table>
+<p><b>Rollierende Planung:</b> Nach Ablauf einer Teilperiode wird der Plan überarbeitet und um eine Periode verlängert (Horizont bleibt gleich lang). <b>Blockplanung:</b> Neuplanung erst am Ende der gesamten Planperiode.</p>
+<p><b>Grundsätze:</b> <b>Kontinuität</b> (systematisch, langfristig) · <b>Elastizität/Flexibilität</b> (Reserven, Alternativpläne, Planrevision) · <b>Wirtschaftlichkeit</b> (Planungsaufwand &lt; Nutzen).</p>
+</div>
+</div>
+
+<h3>7.5 Strategische Analyse</h3>
+<div class="cols">
+<div>
+<h4>Ressourcenorientiert (intern: Stärken/Schwächen)</h4>
+<ul>
+<li><b>Wertkette</b> (Porter): alle Aktivitäten (primär/sekundär) nach Einfluss auf die Gewinnspanne untersuchen → Kostensenkung oder Differenzierung. „Vollständigkeit vor Detailliertheit“; Aufwand hoch.</li>
+<li><b>Benchmarking:</b> systematischer Vergleich, um <b>Best Practices</b> zu finden. Schritte: Bereiche → Benchmarks (z. B. Liefertreue) → Partner → Vergleich → Strategien. <b>3 Arten:</b> intern (zwei eigene Werke), brancheninterne (Konkurrenten), branchenextern (andere Branchen).</li>
+<li><b>PIMS-Studie</b> (Profit Impact of Market Strategy, ~3.000 Geschäftseinheiten): Erfolg = <b>ROI</b>; 20 Faktoren erklären 70 %. Top 3: <b>Investitionsintensität</b> (negativ), <b>relativer Marktanteil</b> (positiv), <b>relative Produktqualität</b> (positiv). Kritik <span class="tag t-own">eigene Lösung</span>: Korrelation ≠ Kausalität, Vergangenheitsdaten, v. a. US-Großunternehmen, ROI als einziges Erfolgsmaß.</li>
+<li><b>7-S-Modell</b> (McKinsey): harte S = <b>Strategy, Structure, Systems</b>; weiche S = <b>Style/Culture, Staff, Skills, Shared Values</b>. Ziel: ausgeglichene Balance, Stärken/Schwächen ganzheitlich analysieren.</li>
+<li><b>Kernkompetenzen:</b> über Jahre kollektiv aufgebautes Wissen und Können, schwer zu imitieren.</li>
+</ul>
+</div>
+<div>
+<h4>Marktorientiert (extern: Chancen/Risiken)</h4>
+<ul>
+<li><b>Branchenstrukturanalyse – Five Forces</b> (Porter): Verhandlungsmacht der <b>Lieferanten</b> · Verhandlungsmacht der <b>Kunden</b> · Bedrohung durch <b>neue Wettbewerber</b> · Bedrohung durch <b>Ersatzprodukte</b> · <b>Wettbewerbsintensität</b> in der Branche. Bewertung heute und in 5 Jahren (1 = unattraktiv, 5 = attraktiv).</li>
+<li><b>Szenario-Technik:</b> alternative Zukunftsbilder (positives und negatives <b>Extremszenario</b> + <b>Trendszenario</b>, „Szenario-Trichter“). Phasen: Problemanalyse → Einflussanalyse → Zukunftsprojektion → Ergebnisbeurteilung/Maßnahmen. Vorteil: Denken in Alternativen, Frühwarnung; Nachteil: aufwendig, subjektiv.</li>
+<li>Marktwachstum-Marktanteil-Portfolio (BCG) und SWOT siehe Marketing.</li>
+</ul>
+<div class="box merk"><span class="t">Merksatz</span>Ressourcenorientiert = <b>Inside-out</b> (Was können wir?), marktorientiert = <b>Outside-in</b> (Was verlangt der Markt?).</div>
+</div>
+</div>
+
+<h3>7.6 Planung und Kontrolle mit Kennzahlen</h3>
+<div class="cols">
+<div>
+<p><b>Anforderungen an Kennzahlen</b> (Musterklausur 5b!): <b>inhaltlich aktuell · kurzfristig verfügbar · grafisch aufbereitet · ad hoc erzeugbar</b>.</p>
+<p><b>Aufgaben:</b> Zielvorgaben · Auffälligkeiten erkennen · Soll-Ist-Kontrolle · Vergleiche (Benchmarks) · Frühwarnung und Berichte.</p>
+<p><b>Arten:</b> vergangenheits-, gegenwarts-, zukunftsbezogen · <b>absolute</b> Kennzahlen (Summen, Differenzen, Mittelwerte) · <b>Verhältniszahlen</b>: Gliederungszahlen (Teil/Ganzes, z. B. EK-Quote), Beziehungszahlen (verschiedene Größen, z. B. Rentabilität), Indexzahlen (zeitliche Entwicklung, Basis = 100).</p>
+<p><b>DuPont-Kennzahlensystem:</b> an der Spitze der <b>ROI</b>; Betrachtung immer rückwirkend.</p>
+</div>
+<div>
+<div class="box formel" style="margin-top:0"><span class="t">ROI-Formeln</span>
+<span class="f">Gewinn = Umsatz − variable K − fixe K
+DB = Umsatz − variable Kosten
+Gesamtkapital = AV + UV  (= EK + FK)
+Umsatzrentabilität = Gewinn / Umsatz · 100
+Kapitalumschlag = Umsatz / Gesamtkapital
+ROI = Umsatzrentabilität · Kapitalumschlag
+    = Gewinn / Gesamtkapital · 100</span></div>
+</div>
+</div>
+
+<div class="cols">
+<div class="box bsp" style="margin-top:0"><span class="t">Musterklausur 5a (8 P.)</span>
+<div class="calc">Kosten = 800 + 500 + 600 + 800 = 2.700 T€
+Gewinn = 3.000 − 2.700         = <b>300.000 €</b>
+GK = AV 1.700 + UV 700         = 2.400 T€
+Kapitalumschlag = 3.000 / 2.400 = 1,25
+                               = <b>125,0 %</b>
+Umsatzrentabilität = 300/3.000 = <b>10,0 %</b>
+ROI = 10 % · 1,25 = 300/2.400  = <b>12,5 %</b>
+FK = GK − EK = 2.400 − 900     = <b>1.500.000 €</b></div>
+<span class="tag t-own">eigene Lösung</span></div>
+<div class="box bsp" style="margin-top:0"><span class="t">Übungen 31–33 <span class="tag t-own">eigene Lösung</span></span>
+<div class="calc">31: var. K = FM + FL = 564.850
+    DB = 585.150; fixe K = Gemeinkosten 458.601
+    Gewinn 126.549; UR 11,00 %; GK 990.000
+    KU 1,1616 (116,16 %); ROI 12,78 %
+32: DB 350.000; Gewinn 100.000; UR 12,50 %
+    GK 750.000; KU 1,0667; ROI 13,33 %
+33: Gewinn 50.000; GK 500.000
+    KU 200,00 %; UR 5,00 %; ROI 10,00 %</div>
+<p class="small">Annahme bei 31: Einzelkosten (Fertigungsmaterial, -löhne) = variabel, Gemeinkosten = fix. In 33 ist das EK für den ROI irrelevant (Ablenker).</p></div>
+</div>
+
+<h3>Balanced Scorecard (BSC)</h3>
+<div class="cols">
+<div>
+<p>Managementsystem, das <b>Strategien in konkrete Handlungen</b> umsetzt; betrachtet das Unternehmen aus <b>vier Perspektiven</b> mit Zielen, Kennzahlen, Vorgaben und Maßnahmen; Ursache-Wirkungs-Kette: Mitarbeiter → Prozesse → Kunden → Finanzen. Wichtig: Mitarbeiter einbeziehen.</p>
+<table>
+<tr><th>Perspektive</th><th>Ziele</th><th>Kennzahlen</th></tr>
+<tr><td><b>Finanzen</b> (Oberziel)</td><td>Gewinn, Wachstum, Unternehmenswert</td><td>Cashflow, Rentabilität, DB</td></tr>
+<tr><td><b>Kunden</b></td><td>Marktanteil, Zufriedenheit, Image</td><td>Marktanteil, Kundentreue, Neukunden</td></tr>
+<tr><td><b>Prozesse</b></td><td>Fehler senken, Durchlaufzeit verkürzen</td><td>Fehlerquote, Lieferzeit, Durchlaufzeit</td></tr>
+<tr><td><b>Mitarbeiter / Potenzial</b></td><td>Motivation, Qualifikation, Kreativität</td><td>Fehlzeiten, Schulungstage, Fluktuation</td></tr>
+</table>
+</div>
+<div>
+<div class="box trap" style="margin-top:0"><span class="t">Klausurfallen</span>
+<ul>
+<li>Kapitalumschlag ist ein <b>Faktor</b> (1,25); fragt die Aufgabe „in %“, schreibe 125 %.</li>
+<li>Gesamtkapital = <b>AV + UV</b> (Bilanzsumme), nicht EK.</li>
+<li>Fremdkapital = Gesamtkapital − Eigenkapital.</li>
+<li>Bei der Kostenaufzählung alle Posten addieren – Umlauf-/Anlagevermögen und EK sind <b>keine Kosten</b>.</li>
+<li>Gegenstromverfahren = Rahmen von oben, Präzisierung von unten.</li>
+</ul></div>
+<div class="box klausur"><span class="t">So kommt es in der Klausur</span>
+<b>Aufgabe 5a (8 P.)</b> Gewinn, Kapitalumschlag, Umsatzrentabilität, ROI, Fremdkapital aus Kostenposten und Bilanzwerten (1 Nachkommastelle). <b>5b (3 P.)</b> drei Anforderungen an Kennzahlen nennen. Wissensfragen: Planungsebenen (30a), Gegenstromverfahren (30b), Benchmarking-Arten (30h), Five Forces (30i), BSC-Perspektiven (34b).</div>
+</div>
+</div>
+
+<!-- ============================ KAPITEL 8 ============================ -->
+<h2>8 · Organisation <span class="badge b-open">noch nicht behandelt</span></h2>
+<p class="small">Grundlage: Skript S. 97–104.</p>
+
+<div class="box kern"><span class="t">Kernaussagen</span>
+<ul>
+<li>Drei Sichtweisen: <b>funktional</b> (das Unternehmen <i>hat</i> eine Organisation), <b>institutional</b> (es <i>ist</i> eine Organisation), <b>instrumental</b> (es <i>nutzt</i> Organisation als Führungsinstrument).</li>
+<li><b>Aufbauorganisation</b> = Struktur (Stellen, Abteilungen, Weisungswege); <b>Prozessorganisation</b> = Abläufe; dazu die <b>Projektorganisation</b> für zeitlich begrenzte Vorhaben.</li>
+<li>Aufgabenanalyse zerlegt die Gesamtaufgabe, Aufgabensynthese bündelt Teilaufgaben zu <b>Stellen</b> (kleinste organisatorische Einheit).</li>
+</ul></div>
+
+<div class="cols">
+<div>
+<h3>8.1 Aufbauorganisation</h3>
+<p><b>Aufgabenanalyse</b> nach: <b>Verrichtung</b> (Tätigkeit) · <b>Objekt</b> (Produkt, Kunde) · <b>Phase</b> (Planung, Realisierung, Kontrolle) · <b>Rang</b> (Entscheidung oder Ausführung). <b>Synthese:</b> Teilaufgaben → Stelle (mit Stelleninhaber) → Abteilung → Hauptabteilung.</p>
+<table>
+<tr><th>Stellenart</th><th>Merkmal</th></tr>
+<tr><td><b>Instanz</b></td><td>Stelle mit Leitungs- und <b>Weisungsbefugnis</b>; mehrere Instanzen = Instanzenweg</td></tr>
+<tr><td><b>Linienstelle</b></td><td>dauerhafte Teilaufgaben, mit oder ohne Weisungsbefugnis</td></tr>
+<tr><td><b>Stabsstelle</b></td><td>Leitungshilfsstelle, <b>nur beratend</b>, kein Weisungsrecht (Vorschlagsrecht)</td></tr>
+<tr><td>Ausführungsstelle</td><td>ohne Leitungsbefugnis (Verwaltung, Lager)</td></tr>
+</table>
+<p><b>Organigramm</b> zeigt: Wer ist wofür verantwortlich? Wer ist wessen Vorgesetzter? Wie laufen Kommunikationswege?</p>
+<p><b>Leitungsspanne</b> = Zahl der einer Instanz direkt unterstellten Stellen. <b>Leitungstiefe</b> = Zahl der Hierarchieebenen.</p>
+<div class="box bsp"><span class="t">Übung 36 – Siller GmbH <span class="tag t-own">eigene Lösung</span></span>
+Ebenen: Geschäftsführer → Technischer/Kaufmännischer Leiter → 4 Abteilungsleiter → 8 Stellen.
+<ul>
+<li>Leitungstiefe: <b>4 Ebenen</b> (davon 3 Leitungsebenen)</li>
+<li>Leitungsspanne Kaufmännischer Leiter: <b>2</b> (Leiter Vertrieb, Leiter Verwaltung)</li>
+<li>Ohne TL/KL hat der Geschäftsführer eine Leitungsspanne von <b>4</b>.</li>
+</ul></div>
+</div>
+<div>
+<h3>Leitungssysteme (Organisationsformen)</h3>
+<table>
+<tr><th>System</th><th>Merkmal</th><th>Vorteile / Nachteile <span class="tag t-own">eigene Lösung</span></th></tr>
+<tr><td><b>Einlinien</b></td><td>ein einziger, eindeutiger Weisungsweg (Pyramide)</td><td>+ klare Zuständigkeit, Kontrolle · − lange Dienstwege, Überlastung der Spitze</td></tr>
+<tr><td><b>Mehrlinien</b></td><td>mehrere Vorgesetzte für eine Stelle (Taylors Funktionsmeistersystem)</td><td>+ Spezialisierung, kurze Wege · − Kompetenzkonflikte, widersprüchliche Weisungen</td></tr>
+<tr><td><b>Stab-Linien</b></td><td>Einlinien + beratende Stäbe zur Entlastung der Instanzen</td><td>+ Expertenwissen, Entlastung · − Konflikte Stab/Linie, Stab ohne Verantwortung</td></tr>
+<tr><td><b>Matrix</b></td><td>zwei Dimensionen (z. B. Funktion × Projekt/Sparte) gleichzeitig</td><td>+ Flexibilität, Teamarbeit · − Kompetenzstreit, hoher Abstimmungsaufwand</td></tr>
+</table>
+<table>
+<tr><th>Aufbaustruktur (2. Ebene)</th><th>gegliedert nach</th></tr>
+<tr><td><b>Sektoral</b></td><td>Zweiteilung technisch / kaufmännisch</td></tr>
+<tr><td><b>Funktional</b></td><td>Verrichtungen (Einkauf, Produktion, Vertrieb)</td></tr>
+<tr><td><b>Divisional</b> (Sparten)</td><td>Objekten (Produkte, Regionen, Kunden); Sparten oft als Profit Center, Zentralabteilungen als Dienstleister</td></tr>
+<tr><td><b>Tensor</b></td><td>drei Dimensionen (z. B. Funktion × Produkt × Region)</td></tr>
+</table>
+<p><b>Übung 38</b> <span class="tag t-own">eigene Lösung</span> – funktional: + Spezialisierung, Größenvorteile · − Koordination, wenig Marktnähe. Divisional: + Marktnähe, Ergebnisverantwortung · − Doppelarbeit, hohe Kosten, Spartenegoismus.</p>
+<p>Hierarchische Aufbauorganisation führt zu starrer Abgrenzung, vielen Hierarchiestufen, hoher Arbeitsteilung und Trennung von Planung und Ausführung.</p>
+</div>
+</div>
+
+<div class="cols">
+<div>
+<h3>8.2 Prozessorganisation</h3>
+<p><b>Prozess</b> = Kette aufeinander aufbauender Vorgänge mit definiertem Beginn und Ende. <b>Geschäftsprozesse</b>: abgeschlossene Tätigkeitsfolgen, wiederholen sich, liefern <b>Kundennutzen</b>, intern oder unternehmensübergreifend.</p>
+<table>
+<tr><th>Prozessart</th><th>Merkmal</th></tr>
+<tr><td><b>Kern-/Leistungsprozesse</b></td><td>direkte Wertschöpfung für externe Kunden; erkennbarer Kundennutzen; sichern die Marktposition; nicht imitierbares Wissen</td></tr>
+<tr><td><b>Führungsprozesse</b></td><td>Planung, Steuerung, Kontrolle – nur indirekt wertschöpfend</td></tr>
+<tr><td><b>Unterstützungsprozesse</b></td><td>keine strategische Bedeutung, kein direkter Kundennutzen, <b>auslagerbar</b> (IT, Gebäudereinigung)</td></tr>
+</table>
+<p><b>Projektorganisation:</b> Projektvorbereitung (Problem-, Projektanalyse, Planung) → Projektgestaltung/-durchführung → Projekteinführung; Projektcontrolling begleitet.</p>
+</div>
+<div>
+<div class="box trap" style="margin-top:0"><span class="t">Klausurfallen</span>
+<ul>
+<li>Stabsstellen haben <b>kein Weisungsrecht</b>.</li>
+<li>Leitungsspanne zählt nur die <b>direkt</b> Unterstellten.</li>
+<li>Funktional = nach <b>Verrichtung</b>, divisional = nach <b>Objekt</b>.</li>
+<li>Mehrlinien ≠ Matrix: Matrix ist zweidimensional mit gleichberechtigten Achsen.</li>
+</ul></div>
+<div class="box klausur"><span class="t">So kommt es in der Klausur</span>
+2025 ohne Aufgabe. Erwartbar: Organigramm lesen (Leitungstiefe/-spanne, Übung 36), Organigramm zeichnen (Übung 35: Vorstand mit 3 Hauptabteilungen, z. B. Materialwirtschaft – Einkauf, Beschaffungslager, Materiallager; Marketing – Marktforschung, Verkauf, Werbung; Verwaltung – Personal, Rechnungswesen, Finanzen), Vor-/Nachteile Organisationsformen (37/38), Prozessarten unterscheiden.</div>
+</div>
+</div>
+
+<!-- ============================ KAPITEL 9 ============================ -->
+<h2>9 · Materialwirtschaft <span class="badge b-open">noch nicht behandelt</span></h2>
+<p class="small">Grundlage: Skript S. 105–124. <b>Musterklausur 2025 Aufgaben 6 und 7 (zusammen 16 P.)</b> stammen aus diesem Kapitel – sehr rechenlastig.</p>
+
+<div class="box kern"><span class="t">Kernaussagen</span>
+<ul>
+<li>Materialwirtschaft = alle Vorgänge zur wirtschaftlichen Bereitstellung von Material (Beschaffung, Lagerung, Verteilung, Entsorgung). <b>Formalziel</b>: langfristige Gewinnoptimierung; <b>Sachziel</b>: richtiges Material in richtiger Menge, Qualität, Zeit und Ort zu minimalen Kosten (<b>materialwirtschaftliches Optimum</b>).</li>
+<li>Zielkonflikt: <b>niedrige Kosten – hohe Qualität – hohe Lieferbereitschaft</b>.</li>
+<li>Die <b>ABC-Analyse</b> zeigt, wo sich Aufmerksamkeit lohnt (A-Güter: wenig Menge, viel Wert). Die <b>Andler-Formel</b> liefert die optimale Bestellmenge, der <b>Meldebestand</b> den Bestellzeitpunkt.</li>
+</ul></div>
+
+<div class="cols">
+<div>
+<h3>9.1–9.3 Begriffe, Ziele, Beschaffungsprinzipien</h3>
+<p><b>Beschaffung i. w. S.</b> = alle Produktionsfaktoren; <b>i. e. S.</b> = RHB-Stoffe, Halbfabrikate, Handelswaren. <b>Logistik</b> = Transport, Lagerung, Umschlag. Unterziele: Beschaffungs-, Transport-, Lager- und <b>Fehlmengenkosten</b> minimieren; Nebenziele: Sicherheit, Qualität, Liquidität, Flexibilität, Lieferantenbindung, Umwelt.</p>
+<table>
+<tr><th></th><th>Einzelbeschaffung im Bedarfsfall</th><th>Produktionssynchron (Just-in-time)</th><th>Vorratsbeschaffung</th></tr>
+<tr><td>Idee</td><td>Beschaffung erst bei konkretem Bedarf</td><td>Anlieferung direkt in die Produktion, kaum Lager</td><td>Produktion und Beschaffung entkoppelt durch Lager</td></tr>
+<tr><td>+</td><td>niedrige Lager- und Transportkosten</td><td>geringe Lagerkosten</td><td>Produktion entlastet, sicher</td></tr>
+<tr><td>−</td><td>hohe Beschaffungskosten, lange Wartezeit</td><td>enge Lieferantenbindung, hohe Preise, Störanfälligkeit</td><td>hohe Lager- und Kapitalbindungskosten</td></tr>
+<tr><td>passt für</td><td>teure, individuelle Teile, Kunden warten (Omega)</td><td>teure Teile, gut planbare Massenproduktion (Alpha)</td><td>unregelmäßiger Bedarf + kurze Lieferzeiten (Delta)</td></tr>
+</table>
+<p class="small">Letzte Zeile = Übung 39b <span class="tag t-own">eigene Lösung</span>.</p>
+</div>
+<div>
+<h3>9.3.2 ABC- und XYZ-Analyse</h3>
+<table>
+<tr><th></th><th>Mengenanteil</th><th>Wertanteil</th><th>Behandlung</th></tr>
+<tr><td><b>A</b></td><td>≈ 20 % (gering)</td><td>≈ 80 % (hoch)</td><td>genau planen, programmorientiert, JIT, Preisverhandlungen</td></tr>
+<tr><td><b>B</b></td><td>≈ 30 %</td><td>≈ 10 %</td><td>mittel</td></tr>
+<tr><td><b>C</b></td><td>≈ 50 % (hoch)</td><td>≈ 10 % (gering)</td><td>vereinfacht, verbrauchsorientiert, Bestellpunktverfahren, Lager</td></tr>
+</table>
+<p><b>Ablauf:</b> 1. Verbrauchswert = Menge · Preis je Artikel · 2. absteigend sortieren · 3. Wertanteile kumulieren · 4. Mengenanteile kumulieren · 5. in A/B/C einteilen.</p>
+<p><b>XYZ-Analyse</b> = Vorhersagegenauigkeit des Verbrauchs: <b>X</b> konstant (hoch), <b>Y</b> schwankend (mittel), <b>Z</b> unregelmäßig (niedrig). <b>AX-Güter → JIT</b> denkbar, <b>CZ-Güter → Lagerhaltung</b>.</p>
+<div class="box bsp"><span class="t">Übung 40 – ComfortMobilia <span class="tag t-own">eigene Lösung</span></span>
+<table>
+<tr><th>Rang</th><th>Teil</th><th class="r">Wert €</th><th class="r">%</th><th class="r">kum. %</th><th class="c">Kl.</th></tr>
+<tr><td>1</td><td>5005</td><td class="r">180.000</td><td class="r">48,26</td><td class="r">48,26</td><td class="c">A</td></tr>
+<tr><td>2</td><td>5008</td><td class="r">100.000</td><td class="r">26,81</td><td class="r">75,07</td><td class="c">A</td></tr>
+<tr><td>3</td><td>5002</td><td class="r">50.000</td><td class="r">13,40</td><td class="r">88,47</td><td class="c">B</td></tr>
+<tr><td>4</td><td>5001</td><td class="r">20.000</td><td class="r">5,36</td><td class="r">93,83</td><td class="c">C</td></tr>
+<tr><td>5</td><td>5007</td><td class="r">15.000</td><td class="r">4,02</td><td class="r">97,86</td><td class="c">C</td></tr>
+<tr><td>6</td><td>5004</td><td class="r">6.000</td><td class="r">1,61</td><td class="r">99,46</td><td class="c">C</td></tr>
+<tr><td>7</td><td>5006</td><td class="r">1.200</td><td class="r">0,32</td><td class="r">99,79</td><td class="c">C</td></tr>
+<tr><td>8</td><td>5003</td><td class="r">800</td><td class="r">0,21</td><td class="r">100,00</td><td class="c">C</td></tr>
+<tr class="sum"><td></td><td>Σ</td><td class="r">373.000</td><td class="r">100</td><td></td><td></td></tr>
+</table>
+<p class="small">A ≈ 75 % (Richtschnur), C = 11,5 % ≈ 10 %. Wer C streng auf ≤ 10 % begrenzt, nimmt 5001 noch zu B.</p></div>
+</div>
+</div>
+
+<h3>9.4 Materialplanung</h3>
+<div class="cols">
+<div>
+<p><b>Bedarfsplanung:</b> <b>programmorientiert</b> (aus Fertigungsprogramm und Stücklisten, für A- und B-Güter) vs. <b>verbrauchsorientiert</b> (Prognose aus Vergangenheitswerten, v. a. C-Güter).</p>
+<div class="box bsp"><span class="t">Übung 41 – Mittelwerte <span class="tag t-own">eigene Lösung</span></span>
+<div class="calc">a) (600+550+530+560+540)/5 = <b>556 Stück</b>
+b) 600·0,10 + 550·0,15 + 530·0,20
+   + 560·0,25 + 540·0,30 = <b>550,5 Stück</b></div></div>
+<table>
+<tr><th>Bestand</th><th>Bedeutung</th></tr>
+<tr><td>Lagerbestand</td><td>körperlich vorhanden (= Inventurbestand)</td></tr>
+<tr><td>Höchstbestand</td><td>Obergrenze gegen Überbestände/Kapitalbindung</td></tr>
+<tr><td><b>Sicherheitsbestand</b></td><td>„eiserner“ Puffer für Lieferprobleme, Mehrbedarf, Ausschuss</td></tr>
+<tr><td><b>Meldebestand</b></td><td>bei Erreichen wird bestellt, damit der Sicherheitsbestand nicht angegriffen wird (Bestellpunkt)</td></tr>
+<tr><td>Buchbestand</td><td>laut Rechnungswesen; kann abweichen (Schwund, Fehler)</td></tr>
+</table>
+<p><b>Bestellpunktverfahren:</b> Bestellung bei Erreichen des Meldebestands, feste Menge, für C- (teils B-)Güter mit regelmäßigem Verbrauch. <b>Bestellrhythmusverfahren:</b> feste Zeitpunkte, variable Mengen nach Verbrauch. <b>A-Güter:</b> bedarfsbedingt.</p>
+</div>
+<div>
+<div class="box formel" style="margin-top:0"><span class="t">Formeln Materialplanung</span>
+<span class="f">Meldebestand = SB + Lieferzeit
+               · Tagesverbrauch
+Bestellmenge = Höchst- − Sicherheitsbest.
+Andler:
+  x_opt = √(2 · x_B · K_f / (k · k_L))
+  x_B Jahresbedarf, K_f fixe Kosten
+  je Bestellung, k Preis/Stück,
+  k_L Zins-/Lagerkostensatz (dezimal)
+Bestellungen m_B = x_B / x_opt
+Lagerkosten   = x_opt/2 · k · k_L
+Bestellkosten = m_B · K_f
+(im Optimum gleich hoch)</span></div>
+<div class="box bsp"><span class="t">Musterklausur 6 (7 P.)</span>
+<div class="calc">Halbjahr 600+700+500+400+550+600 = 3.350
+Jahresbedarf = 2 · 3.350 = 6.700 Paletten
+x_opt = √(2·6.700·400 / (6.000·0,12))
+      = √7.444,4 = <b>86 Paletten</b>
+Bestellungen = 6.700 / 86,28 = <b>78 pro Jahr</b>
+täglicher Verbrauch = 3.350 / 130 = 25,77
+Meldebestand = 50 + 9 · 25,77 = <b>282 Paletten</b></div>
+<span class="tag t-own">eigene Lösung</span></div>
+<div class="box bsp"><span class="t">Übung 42/43 <span class="tag t-own">eigene Lösung</span></span>
+<div class="calc">42: SB = 5·20 = 100; MB = 100 + 14·20 = 380
+    Rhythmus = 400/20 = 20 Tage
+    Bestellmenge 500 → MB bleibt 380
+    Lieferzeit 7 Tage → MB = 100+140 = 240
+43a: √(2·1.000·50/(100·0,1)) = 100
+     10 Bestellungen; Lagerk. 500
+     + Bestellk. 500 = 1.000 €
+43b: x_B = 2·8.660 = 17.320
+     √(2·17.320·50/(500·0,15))
+     = 152,0; m_B = 114,0</div></div>
+</div>
+</div>
+
+<div class="cols">
+<div class="box bsp" style="margin-top:0"><span class="t">Übung 44 – Kabeltrommel (Tabelle) <span class="tag t-own">eigene Lösung</span></span>
+<table>
+<tr><th class="r">Best.</th><th class="r">Menge</th><th class="r">Ø</th><th class="r">Lagerk.</th><th class="r">Bestellk.</th><th class="r">Gesamt</th></tr>
+<tr><td class="r">10</td><td class="r">800</td><td class="r">400</td><td class="r">2.097,60</td><td class="r">500</td><td class="r">2.597,60</td></tr>
+<tr><td class="r">15</td><td class="r">533,3</td><td class="r">266,7</td><td class="r">1.398,40</td><td class="r">750</td><td class="r">2.148,40</td></tr>
+<tr class="sum"><td class="r">20</td><td class="r">400</td><td class="r">200</td><td class="r">1.048,80</td><td class="r">1.000</td><td class="r">2.048,80</td></tr>
+<tr><td class="r">25</td><td class="r">320</td><td class="r">160</td><td class="r">839,04</td><td class="r">1.250</td><td class="r">2.089,04</td></tr>
+</table>
+<p class="small">Andler: √(2·8.000·50/(43,70·0,12)) = <b>390,6 Stück</b>. Tagesbedarf 8.000/250 = 32 → SB = 64, MB = 64 + 5·32 = <b>224</b>.</p></div>
+<div class="box bsp" style="margin-top:0"><span class="t">Übung 45 – Taschenrechner <span class="tag t-own">eigene Lösung</span></span>
+<table>
+<tr><th class="r">Best.</th><th class="r">Menge</th><th class="r">Lagerk.</th><th class="r">Bestellk.</th><th class="r">Gesamt</th></tr>
+<tr><td class="r">2</td><td class="r">18.000</td><td class="r">2.160</td><td class="r">1.000</td><td class="r">3.160</td></tr>
+<tr class="sum"><td class="r">3</td><td class="r">12.000</td><td class="r">1.440</td><td class="r">1.500</td><td class="r">2.940</td></tr>
+<tr><td class="r">4</td><td class="r">9.000</td><td class="r">1.080</td><td class="r">2.000</td><td class="r">3.080</td></tr>
+</table>
+<p class="small">Andler: √(2·36.000·500/(2·0,12)) = <b>12.247 Stück</b>. <b>Prämissen:</b> konstanter, bekannter Bedarf; konstante Preise (keine Rabatte); konstante Kostensätze; keine Fehlmengen; sofortige Lieferung; unbegrenzte Lager- und Finanzkapazität. <b>Praxis-Hindernisse:</b> Mengenrabatte, Verpackungs-/Transporteinheiten, begrenztes Lager, schwankender Bedarf, Liquidität, Verderb.</p></div>
+</div>
+
+<h3>9.5–9.8 Beschaffung, Lagerung, Entsorgung, Kontrolle</h3>
+<div class="cols">
+<div>
+<p><b>Beschaffung in 4 Schritten:</b> Angebote einholen → prüfen → auswählen → bestellen (Kaufvertrag).</p>
+<table>
+<tr><th>Sourcing</th><th>Bedeutung</th></tr>
+<tr><td>Solo-Sourcing</td><td>(erzwungen) nur ein Lieferant am Markt</td></tr>
+<tr><td><b>Single-Sourcing</b></td><td>bewusst langfristig ein Lieferant je Materialart</td></tr>
+<tr><td><b>Multiple-Sourcing</b></td><td>viele Lieferanten, nutzt Preis- und Technikwettbewerb</td></tr>
+</table>
+<p><b>Übung 46</b> <span class="tag t-own">eigene Lösung</span> – Single-Sourcing: + enge Partnerschaft, Qualität, geringerer Abstimmungsaufwand, Mengenrabatte · − Abhängigkeit, Lieferausfallrisiko, kein Preiswettbewerb.</p>
+<p><b>Wareneingangsprüfung:</b> äußere Prüfung (Transportschäden) · Belegprüfung (Lieferschein vs. Bestellung) · Mengenprüfung · Qualitätsprüfung (Mängel rügen) · Zeitprüfung (Verzug).</p>
+<p><b>Lagerarten:</b> Haupt-/Nebenlager · <b>Zentral-/Dezentrallager</b> · Ein-/Mehrgeschosslager. <b>Übung 47</b> <span class="tag t-own">eigene Lösung</span>: zentral + geringere Bestände, Personal- und Flächenkosten, bessere Übersicht · − weite Transportwege, längere Lieferzeit; dezentral umgekehrt.</p>
+<p><b>Lagerplatzvergabe:</b> <b>Festplatz</b> (jedes Gut fester Platz; + übersichtlich, ohne EDV · − schlechte Raumnutzung) vs. <b>Freiplatz/chaotisch</b> (nächster freier Platz; + optimale Raumnutzung · − EDV nötig, ausfallanfällig) – Übung 48.</p>
+<p><b>Ein-/Auslagerung:</b> <b>FIFO</b> (älteste zuerst, gegen Verderb) · <b>LIFO</b> (zuletzt eingelagert zuerst, kurze Wege) · wegeoptimiert (Ein- und Auslagerung kombinieren).</p>
+<p><b>Materialentsorgung:</b> Rückstände erfassen, aufbereiten, verwerten oder abgeben (Abfallrecht).</p>
+</div>
+<div>
+<div class="box formel" style="margin-top:0"><span class="t">Lagerkennzahlen (9.8)</span>
+<span class="f">Ø Lagerbestand = (AB + EB) / 2  oder
+  (AB + 12 Monatsendbestände) / 13
+Umschlagshäufigkeit = Verbrauch / Ø Lagerbestand
+  Verbrauch = AB + Zugänge − EB
+Ø Lagerdauer = 360 / Umschlagshäufigkeit
+Lagerzinssatz = Jahreszins · Lagerdauer/360
+Lagerzinsen = Ø Lagerbestand · Preis
+              · Lagerzinssatz / 100</span></div>
+<div class="box bsp"><span class="t">Übung 50 – Optronica, Bügel FB 1155 <span class="tag t-own">eigene Lösung</span></span>
+<div class="calc">AB 14 + Monatsenden 18,21,12,36,60,63,65,
+  61,59,54,50,18 = 531 → /13 = <b>41 Tsd. Stück</b>
+Verbrauch (Σ Abgänge) = 331 Tsd.
+Umschlag = 331/41 = <b>8</b>
+Lagerdauer = 360/8 = <b>45 Tage</b>
+Lagerzinssatz = 10 · 45/360 = 1,25 %
+Lagerzinsen = 41.000 · 6 € · 1,25 % = <b>3.075 €</b>
+b) 35 Tage, Preis 5,40 €: Zinssatz 0,972 %
+   Ø Bestand = 331.000/(360/35) ≈ 32.181
+   Zinsen ≈ 32.181·5,40·0,972 % ≈ <b>1.689 €</b></div></div>
+<div class="box bsp"><span class="t">Übung 49/51 kurz <span class="tag t-own">eigene Lösung</span></span>
+<div class="calc">49: Ø = (500 + 12 Monatsenden)/13 = 787 St.
+    Verbrauch 1.200 → Umschlag 1,53
+    Lagerdauer 236 Tage (Branche 90!)
+    Lagerkosten 786,5·150·20 % = 23.596 €
+51: Ø Lagerwert 350.000 €; Einsatz 3,85 Mio.
+    Umschlag 11,0; Dauer 32,7 Tage
+    Lagerzinssatz 15·32,7/360 = 1,36 %
+    kritische Menge: 50.000 + 5,5x = 25,5x
+    → x = 2.500 m³ (darüber Eigenlager)</div></div>
+</div>
+</div>
+
+<div class="cols">
+<div class="box trap" style="margin-top:0"><span class="t">Klausurfallen</span>
+<ul>
+<li>Jahresbedarf aus Halbjahreswerten <b>verdoppeln</b> (Musterklausur 6, Übung 43b).</li>
+<li>Täglicher Verbrauch = Halbjahresabfluss / <b>Abflusstage</b> (130), nicht / 180.</li>
+<li>Andler: Zins- und Lagerkostensatz als <b>Dezimalzahl</b> (12 % = 0,12).</li>
+<li>Meldebestand <b>hängt nicht</b> von der Bestellmenge ab.</li>
+<li>ABC: nach <b>Wert</b> sortieren, nicht nach Menge oder Stückpreis. Wertanteil auf 2 Nachkommastellen.</li>
+<li>Rundung: Bestellmenge und Anzahl Bestellungen auf ganze Zahlen, wenn verlangt.</li>
+</ul></div>
+<div class="box klausur" style="margin-top:0"><span class="t">So kommt es in der Klausur</span>
+<b>Aufgabe 6 (7 P.)</b> Andler + Anzahl Bestellungen + Meldebestand mit Sicherheitsbestand. <b>Aufgabe 7 (9 P.)</b> ABC-Einordnung rechnerisch begründen und JIT-Vorschlag bewerten:
+<div class="calc">PP: 25.000 t · 1.750 € = 43,75 Mio. €
+Anteil = 43,75 / 90,0 = <b>48,61 %</b> → <b>A-Gut</b></div>
+Stellungnahme: Vorschlag sinnvoll – A-Gut mit hoher Kapitalbindung (Lagerkosten ≈ 136.000 €/Jahr bei 9 Bestellungen), gleichmäßiger Verbrauch an 360 Tagen (X-Gut, gut planbar) → AX = typischer JIT-Kandidat. <b>7b Nachteile JIT:</b> Abhängigkeit vom Lieferanten, Produktionsstillstand bei Lieferstörungen (Stau, Streik), höhere Preise/Transportkosten, mehr Verkehr und Umweltbelastung.</div>
+</div>
+
+<!-- ============================ KAPITEL 10 ============================ -->
+<h2>10 · Produktion <span class="badge b-open">noch nicht behandelt</span></h2>
+<p class="small">Grundlage: Skript S. 125–132.</p>
+
+<div class="box kern"><span class="t">Kernaussagen</span>
+<ul>
+<li>Produktion <b>i. e. S.</b> = Fertigung (RHB und Vorprodukte → Erzeugnisse); <b>i. w. S.</b> = jede Leistungserstellung, auch Dienstleistungen.</li>
+<li>Ablauf: <b>Fertigungsplanung</b> (Arbeitsvorbereitung) → <b>Fertigungssteuerung</b> → <b>Fertigungskontrolle</b>.</li>
+<li>Organisationstypen nach Raum: <b>Punkt-, Werkstatt-, Fließ-, Gruppenfertigung</b>; nach Menge: <b>Einzel-, Serien- (Sorten, Chargen), Massenfertigung</b>.</li>
+<li><b>Supply Chain Management</b> koordiniert Material-, Geld- und Informationsfluss über die gesamte Lieferkette.</li>
+</ul></div>
+
+<div class="cols">
+<div>
+<p><b>Ziele:</b> Fertigungszeiten, Kapitalbindung, Rüst- und Transportkosten minimieren; Termine einhalten; Kapazitäten optimal nutzen (Qualitäts-, Mengen-, Zeit-, Kostenziele).</p>
+<h3>10.2 Fertigungsplanung</h3>
+<ul>
+<li><b>Erzeugnisplanung:</b> Produktarten (Marketing) und Merkmale – Zeichnung, <b>Stückliste</b>, Nummerung.</li>
+<li><b>Programmplanung:</b> Fertigungsprogramm (Art, Menge, Zeit); <b>Breite</b> = Zahl der Erzeugnisarten, <b>Tiefe</b> = Zahl der Fertigungsstufen.</li>
+<li><b>Arbeitsplanung:</b> Zeit, Art, Reihenfolge der Arbeitsgänge → Arbeitsplan; Arbeitspapiere: Terminkarten, Laufkarten, Materialentnahmescheine, Lohnscheine.</li>
+<li><b>Bereitstellungsplanung:</b> Betriebsmittel und Arbeitskräfte langfristig, Werkstoffe mittelfristig.</li>
+<li><b>Prozessplanung:</b> Aufträge, Fertigungszeiten (Haupt-/Nebentätigkeit, Vorgabezeiten), Kapazitäten (verfügbar vs. erforderlich).</li>
+</ul>
+<p><b>Maßnahmen bei zu geringer Kapazität:</b> 1. Fremdvergabe (make or buy) · 2. Intensität erhöhen (Zusatzschichten) · 3. Liefertermin verschieben (Vertragsstrafe, Image) · 4. Kapazität ausweiten (Gefahr von Überkapazität).</p>
+</div>
+<div>
+<h3>10.3 Fertigungsverfahren</h3>
+<table>
+<tr><th>Typ</th><th>Prinzip</th><th>Beispiel · Eigenschaften</th></tr>
+<tr><td><b>Punktfertigung</b></td><td>Werkstück bleibt an einem Ort, Betriebsmittel kommen hin (Werkbank, Baustelle)</td><td>Luxusuhr, Autoreparatur, OP, Hausbau, Schiff</td></tr>
+<tr><td><b>Werkstattfertigung</b></td><td>gleichartige Maschinen räumlich zusammengefasst (Dreherei, Fräserei)</td><td>sehr flexibel, wenig störanfällig · hohe Transportkosten, Zwischenlager</td></tr>
+<tr><td><b>Fließfertigung</b></td><td>Anordnung nach Ablauf: <b>Fließband</b> (Zeittakt) oder <b>Reihe</b> (ohne Takt, mit Zwischenlagern)</td><td>Autos, Getränkeabfüllung · kurze Durchlaufzeit · unflexibel, störanfällig, monoton</td></tr>
+<tr><td><b>Gruppenfertigung</b></td><td>Werkstatt-Gruppen, im Gesamtablauf nach Fließprinzip</td><td>Kompromiss, teilautonome Gruppen</td></tr>
+</table>
+<table>
+<tr><th>nach Menge</th><th>Merkmal · Beispiel</th></tr>
+<tr><td><b>Einzelfertigung</b></td><td>ein einziges Erzeugnis · Yacht, Brücke, Staudamm</td></tr>
+<tr><td><b>Serienfertigung</b></td><td>begrenzte Menge gleichartiger Erzeugnisse · Klein-/Großserie, verschiedene Automodelle</td></tr>
+<tr><td>Sortenfertigung</td><td>aus gleichem Ausgangsmaterial gewollt verschiedene Sorten · Biersorten, Limonade light</td></tr>
+<tr><td>Chargenfertigung</td><td>ungewollte Unterschiede zwischen Chargen · Stahl</td></tr>
+<tr><td><b>Massenfertigung</b></td><td>unbegrenzt, lange Zeit · Zigaretten, Schrauben, Papier</td></tr>
+</table>
+</div>
+</div>
+
+<div class="cols">
+<div class="box bsp" style="margin-top:0"><span class="t">Übung 52 / 54 <span class="tag t-own">eigene Lösung</span></span>
+<b>52:</b> OP im Krankenhaus → Punkt · Luxusuhren → Punkt · Flaschenabfüllung → Fließ · Dreherei → Werkstatt · Hausbau → Punkt (Baustelle) · Automontage → Fließ · Autoreparatur → Punkt.<br>
+<b>54:</b> 1 Sorten · 2 Massen · 3 Einzel · 4 Einzel · 5 Serien · 6 Massen · 7 Einzel · 8 Serien.</div>
+<div class="box bsp" style="margin-top:0"><span class="t">Übung 53 <span class="tag t-own">eigene Lösung</span></span>
+<table>
+<tr><th></th><th>Werkst.</th><th>Reihe</th><th>Band</th><th>Gruppe</th></tr>
+<tr><td>Anpassungsfähigkeit</td><td>hoch</td><td>mittel</td><td>gering</td><td>hoch</td></tr>
+<tr><td>Transportkosten</td><td>hoch</td><td>gering</td><td>gering</td><td>mittel</td></tr>
+<tr><td>Qualifikation MA</td><td>hoch</td><td>mittel</td><td>gering</td><td>hoch</td></tr>
+<tr><td>Lohnkosten</td><td>hoch</td><td>mittel</td><td>gering</td><td>mittel</td></tr>
+<tr><td>Zwischenlager</td><td>hoch</td><td>mittel</td><td>gering</td><td>mittel</td></tr>
+<tr><td>Arbeitsvorbereitung</td><td>hoch</td><td>mittel</td><td>hoch (einmalig)</td><td>mittel</td></tr>
+</table></div>
+</div>
+
+<div class="cols">
+<div>
+<h3>10.4–10.5 Steuerung und Kontrolle</h3>
+<p><b>Fertigungssteuerung</b> (Werkstattsteuerung): Auftragsfreigabe mit Fertigungspapieren, Material bereitstellen, Reihenfolge festlegen, <b>Störungen</b> beseitigen (arbeits-, betriebsmittel-, material-, dispositionsbedingt), Rückmeldungen (Auftragsnr., Menge, Arbeitsgang, Ausschuss).</p>
+<p><b>Fertigungskontrolle:</b> Kennzahlenanalyse (Auslastung, Produktivität) · Qualitäts- · Quantitäts- · Zeit- · Kostenkontrolle (Soll- vs. Ist-Herstellkosten, Nachkalkulation) · Endkontrolle; Frühwarngröße: Produktionszahlen.</p>
+</div>
+<div>
+<h3>10.6 Supply Chain Management</h3>
+<p><b>Supply Chain</b> = unternehmensübergreifende Wertschöpfungskette mit gemeinsamen Zielen, im Extrem von der Rohstoffgewinnung bis zum Recycling. <b>SCM</b> = optimale Koordination von <b>Material-, Geld- und Informationsfluss</b> entlang der Kette; Ziel: zeit- und kostenoptimaler Gesamtprozess.</p>
+<p><b>Vorteile:</b> geringere Bestände und Transportkosten, kürzere Durchlaufzeiten, Termintreue/Kundenzufriedenheit, Transparenz, Automatisierung. <b>Probleme:</b> unterschiedliche Ziele, faire Kosten-/Gewinnaufteilung, Abhängigkeit, Vertrauen nötig, hohe Einführungskosten, Know-how-Abfluss.</p>
+<p><b>Lieferkettengesetz:</b> Menschenrechte und Umwelt entlang der Kette prüfen → mehr Verantwortung und Transparenz. <b>Sustainable SCM</b>: Ökonomie, Ökologie, Soziales; Risikoanalyse, nachhaltiges Lieferantenmanagement.</p>
+<p class="small">Beispiel <span class="tag t-own">eigene Lösung</span> (Übung 56b): Autohersteller teilt Produktionsplan in Echtzeit mit Sitzlieferanten und Spedition → Sitze kommen JIT in Montagereihenfolge, alle sehen Bestände und Störungen.</p>
+</div>
+</div>
+
+<div class="cols">
+<div class="box trap" style="margin-top:0"><span class="t">Klausurfallen</span>
+<ul>
+<li>Autoreparatur in der Werkstatt = <b>Punkt</b>fertigung (Einplatz), nicht Werkstattfertigung.</li>
+<li>Sorten = <b>gewollte</b> Unterschiede, Chargen = <b>ungewollte</b>.</li>
+<li>Reihenfertigung hat <b>keinen Takt</b>, Fließband schon.</li>
+</ul></div>
+<div class="box klausur" style="margin-top:0"><span class="t">So kommt es in der Klausur</span>
+2025 ohne Aufgabe. Erwartbar: Ankreuztabelle Organisationstypen (Übung 52, „trifft nichts zu → durchgehender Strich“), Fertigungstypen zuordnen (54), Vor-/Nachteile (53), SCM definieren mit Beispiel (56).</div>
+</div>
+
+<!-- ============================ A FORMELSAMMLUNG ============================ -->
+<h2>A · Formelsammlung</h2>
+<table class="zebra">
+<tr><th style="width:44mm">Größe</th><th>Formel</th><th style="width:22mm">Kap.</th></tr>
+<tr><td>Umsatz</td><td class="mono">Menge · Preis</td><td>1.5</td></tr>
+<tr><td>Gewinn</td><td class="mono">Ertrag − Aufwand = Umsatz − K_fix − k_v · x</td><td>1.5 / 6</td></tr>
+<tr><td>Produktivität</td><td class="mono">Output / Input (Mengen); Arbeitsprod. = Menge / Arbeitsstunden</td><td>1.5</td></tr>
+<tr><td>Wirtschaftlichkeit</td><td class="mono">Ertrag / Aufwand = Leistung / Kosten</td><td>1.5</td></tr>
+<tr><td>EK-Rentabilität</td><td class="mono">Gewinn · 100 / EK</td><td>1.5</td></tr>
+<tr><td>GK-Rentabilität</td><td class="mono">(Gewinn + FK-Zinsen) · 100 / GK</td><td>1.5</td></tr>
+<tr><td>Umsatzrentabilität</td><td class="mono">Gewinn · 100 / Umsatz</td><td>1.5 / 7.6</td></tr>
+<tr><td>Kapitalumschlag</td><td class="mono">Umsatz / Gesamtkapital</td><td>7.6</td></tr>
+<tr><td>ROI</td><td class="mono">Umsatzrentabilität · Kapitalumschlag = Gewinn · 100 / GK</td><td>7.6</td></tr>
+<tr><td>Bilanzgleichung</td><td class="mono">AV + UV = Gesamtvermögen = Gesamtkapital = EK + FK</td><td>6.1</td></tr>
+<tr><td>KG-Zinsen</td><td class="mono">Kapital · p · Tage / (100 · 360)</td><td>3.3.3</td></tr>
+<tr><td>UG-Rücklage</td><td class="mono">25 % · (Jahresüberschuss − Verlustvortrag)</td><td>3.4.1</td></tr>
+<tr><td>Kostenfunktion</td><td class="mono">K = K_fix + k_v · x</td><td>6.2</td></tr>
+<tr><td>Zweipunktverfahren</td><td class="mono">k_v = ΔK / Δx (min/max-Menge); K_fix = K_1 − k_v · x_1</td><td>6.2</td></tr>
+<tr><td>Deckungsbeitrag</td><td class="mono">db = p − k_v; DB = db · x; Ergebnis = DB − K_fix</td><td>6.2.3</td></tr>
+<tr><td>Preisuntergrenzen</td><td class="mono">kurzfristig k_v; langfristig k_v + K_fix / x</td><td>6.2.4</td></tr>
+<tr><td>Break-even</td><td class="mono">x_BE = K_fix / (p − k_v)</td><td>6.2.4</td></tr>
+<tr><td>Make-or-buy</td><td class="mono">Übergangsmenge: K_fix + k_v · x = Fremdpreis · x</td><td>6.2.4</td></tr>
+<tr><td>Nutzwert</td><td class="mono">Σ Gewicht · Erfüllungsgrad</td><td>5.5</td></tr>
+<tr><td>Gleitender Mittelwert</td><td class="mono">(T_1 + … + T_n) / n; gewogen: Σ T_i · G_i / Σ G_i</td><td>9.4.1</td></tr>
+<tr><td>Meldebestand</td><td class="mono">Sicherheitsbestand + Lieferzeit · Tagesverbrauch</td><td>9.4.2</td></tr>
+<tr><td>Optimale Bestellmenge</td><td class="mono">√(2 · Jahresbedarf · fixe Bestellkosten / (Preis · Lagerkostensatz))</td><td>9.4.3</td></tr>
+<tr><td>Anzahl Bestellungen</td><td class="mono">Jahresbedarf / x_opt</td><td>9.4.3</td></tr>
+<tr><td>Ø Lagerbestand</td><td class="mono">(AB + EB) / 2 oder (AB + 12 Monatsendbestände) / 13</td><td>9.8</td></tr>
+<tr><td>Umschlagshäufigkeit</td><td class="mono">Verbrauch / Ø Lagerbestand</td><td>9.8</td></tr>
+<tr><td>Ø Lagerdauer</td><td class="mono">360 / Umschlagshäufigkeit</td><td>9.8</td></tr>
+<tr><td>Lagerzinssatz / Lagerzinsen</td><td class="mono">Jahreszins · Lagerdauer / 360; Ø Bestand · Preis · Lagerzinssatz / 100</td><td>9.8</td></tr>
+</table>
+
+<!-- ============================ B MUSTERKLAUSUR ============================ -->
+<h2>B · Musterklausur 2025 – Lösungen <span class="badge b-done">eigene Lösungen</span></h2>
+<p class="small">Zur Musterklausur gibt es keine offizielle Lösung. Alle Rechnungen sind nachgerechnet; die Begriffe folgen dem Skript und den offiziellen Übungslösungen.</p>
+
+<div class="cols">
+<div>
+<div class="ue"><b>1a (6 P.) Werkstoffe für Tische</b><br>Rohstoff (Hauptbestandteil): Holz, Recyclingkunststoff · Hilfsstoff (Nebenbestandteil): Schrauben, Leim, Lack · Betriebsstoff (geht nicht ins Produkt ein): Strom, Schmieröl für Maschinen. <span class="small">Alternativ Vorprodukt: Tischbeine/Beschläge zugekauft.</span></div>
+<div class="ue"><b>1b (6 P.)</b><br>Umsatz 36 Mio., Kosten 32 Mio., Gewinn 4 Mio. → Wirtschaftlichkeit <b>1,125</b> · Arbeitsproduktivität <b>1,5 Stück/h</b> · EK-Rentabilität <b>20,0 %</b>.</div>
+<div class="ue"><b>1c (4 P.)</b><br>Wohnhaus: Gebrauch + Konsum · Strom Industrie: Verbrauch + Investition · Klimaanlage Bank: Gebrauch + Investition · Katzenfutter Haushalt: Verbrauch + Konsum (übrige Felder Strich).</div>
+<div class="ue"><b>2a (6 P.) KG</b><br>TV C 120.000 €, Rest 330.000 € im Verhältnis 30 : 60 : 10 → A <b>99.000 €</b> · B <b>198.000 €</b> · C 33.000 + 120.000 = <b>153.000 €</b>.</div>
+<div class="ue"><b>2b (4 P.) Zwangsthesaurierung</b><br>Die UG (haftungsbeschränkt) darf mit 1 € bis 24.999 € Stammkapital gegründet werden. Zum Schutz der Gläubiger muss sie jedes Jahr <b>25 % ihres um einen Verlustvortrag geminderten Jahresüberschusses</b> in eine <b>gesetzliche Rücklage</b> einstellen. Diese darf nur für eine Kapitalerhöhung aus Gesellschaftsmitteln oder zum Verlustausgleich verwendet werden. Die Pflicht endet, wenn das Stammkapital <b>25.000 €</b> erreicht; dann ist die Umfirmierung zur GmbH möglich.</div>
+<div class="ue"><b>2c (3 P.) Organe der AG</b><br>Vorstand = Leitungsorgan (führt und vertritt) · Aufsichtsrat = Überwachungsorgan (bestellt, überwacht, beruft Vorstand ab) · Hauptversammlung = Beschlussorgan (Gewinnverwendung, Entlastung, Wahl AR, Satzungsänderung).</div>
+</div>
+<div>
+<div class="ue"><b>3 (4 P.) Zweipunktverfahren</b><br>k<sub>v</sub> = 70.000 / 700 = <b>100 €</b> · K<sub>fix</sub> = <b>10.000 €</b> · K(15.000) = <b>1.510.000 €</b>.</div>
+<div class="ue"><b>4 (6 P.) Deckungsbeitrag</b><br>db A = 75 − 40 = <b>35 €</b> · db B = 95 − 45 = <b>50 €</b> · DB gesamt 122.500 + 150.000 = 272.500 € − 275.000 € = <b>−2.500 € Betriebsverlust</b>.</div>
+<div class="ue"><b>5a (8 P.)</b><br>Gewinn <b>300.000 €</b> · Kapitalumschlag <b>125,0 %</b> · Umsatzrentabilität <b>10,0 %</b> · ROI <b>12,5 %</b> · Fremdkapital <b>1.500.000 €</b>.</div>
+<div class="ue"><b>5b (3 P.)</b><br>Kennzahlen sollen inhaltlich <b>aktuell</b>, <b>kurzfristig verfügbar</b>, <b>grafisch aufbereitet</b> und <b>ad hoc erzeugbar</b> sein.</div>
+<div class="ue"><b>6a (4 P.)</b><br>Jahresbedarf 6.700 → x<sub>opt</sub> = <b>86 Paletten</b>, <b>78 Bestellungen</b> pro Jahr.</div>
+<div class="ue"><b>6b (3 P.)</b><br>Tagesverbrauch 3.350 / 130 = 25,77 → Meldebestand = 50 + 9 · 25,77 = <b>282 Paletten</b>.</div>
+<div class="ue"><b>7a (6 P.)</b><br>Wertanteil PP = 25.000 · 1.750 / 90 Mio. = <b>48,61 %</b> → <b>A-Gut</b>. Stellungnahme: JIT sinnvoll, weil (1) hoher Wertanteil → hohe Kapitalbindung und Lagerkosten (rund 136.000 €/Jahr) und (2) gleichmäßiger, gut planbarer Verbrauch an 360 Tagen (X-Gut).</div>
+<div class="ue"><b>7b (3 P.)</b><br>Abhängigkeit vom Lieferanten / Produktionsstillstand bei Lieferstörungen · höhere Preise und Transportkosten, mehr Verkehr und Umweltbelastung.</div>
+<div class="ue"><b>8 (6 P.)</b><br><b>Wachstumsziele</b> (neues Werk für zusätzliche Kapazität) · <b>Strukturveränderungsziele</b> (Verlagerung näher an den Kunden wegen JIT oder niedrigerer Lohnkosten) · <b>Schrumpfungsziele</b> (Stilllegung eines Werks bei Überkapazität).</div>
+</div>
+</div>
+
+<!-- ============================ C ÜBUNGEN ============================ -->
+<h2>C · Alle Übungen 1–56 mit Kurzlösungen</h2>
+<p class="small"><span class="tag t-off">offiziell</span> Übung 1–5 aus der Lösungsdatei „Lösung zu den ABWL-Übungen 2026“, Übung 6–25 aus den Kapitelfolien 1–4 (haben Vorrang). <span class="tag t-own">eigene Lösung</span> Übung 26–56: Zu Kap. 5–10 gibt es noch keine Folien; die Skizzen werden geprüft, sobald die Lösungen erscheinen.</p>
+
+<h3>Kapitel 1 <span class="tag t-off">offiziell</span></h3>
+<div class="ue"><b>Ü1</b> Werkstoffe Nudelhersteller: Kartons für die Verpackung → <b>Rohstoff</b> · Klebstoff → Hilfsstoff · Schmieröl → Betriebsstoff · Kantinen-Nudeln → (Betriebsstoff), kein Werkstoff i. e. S.</div>
+<div class="ue"><b>Ü2</b> Entscheidungsprozess „Maschine kaufen“: <b>Anregung</b> (Problem erkennen, z. B. Kapazität fehlt) → <b>Suche</b> (Informationen, Alternativen, Angebote) → <b>Auswahl</b> (bewerten, bestes Angebot) → <b>Vollzug</b> (kaufen) → <b>Kontrolle</b> (Ausfälle, Qualität).</div>
+<div class="ue"><b>Ü3</b> Regelkreis Fehlzeiten: Regelstrecke Abteilung · Störgröße autoritärer Führungsstil · Führungsgröße ≤ 3 % · Regelgröße 15 % · Regler Controller · Stellgröße Vorgesetzten anders einsetzen.</div>
+<div class="ue"><b>Ü4</b> a) Bohrmaschine Haushalt G+K · Stahlblech V+I · Bürogebäude G+I · Strom Haushalt V+K · Arbeit Sachbearbeiter V+I · Aktien G+I · Haushaltshilfe V+K. b) selbst genutzter Computer = Eigenleistung · bedrucktes Papier in Druckerei = unfertiges Erzeugnis · Papier beim Hersteller = fertiges Erzeugnis · Papier beim Händler = Ware · Montageautomat = Eigenleistung · Buch in Druckerei = fertiges Erzeugnis · Buch beim Buchhändler = Ware. c) Produktionsgüter: Firmenwagen; Konsumgüter: Kaffee; Dienstleistungen: Friseur; Rechte: Patent, Lizenz.</div>
+<div class="ue"><b>Ü5</b> Maximalprinzip: b, e, f · Minimalprinzip: a, c, d.</div>
+<div class="ue"><b>Ü6</b> a) Arbeitsproduktivität 7,5 → 9,0 · Wirtschaftlichkeit 1,15 → 1,035 · EK-Rentabilität 26,67 % → 7,13 %. b) Kosten 4.893.000 €, Gewinn 277.000 €, Arbeitsprod. 0,338 Stück/h, Wirtschaftlichkeit 1,057, Rentabilität 42,62 % (auf Ø Kapital 650.000 €); teurere Bauteile: Produktivität gleich, Wirtschaftlichkeit sinkt. c) 900 Essen je Mitarbeiter; Wirtschaftlichkeit 1.188.000 / 540.000 = 2,2.</div>
+
+<h3>Kapitel 2 <span class="tag t-off">offiziell</span></h3>
+<div class="ue"><b>Ü7</b> Mission vs. Vision – siehe Tabelle Kap. 2.5 (Wirkungsversprechen/heute/unverzichtbar vs. Zukunftsbild/Zeitpunkt/bedingt verzichtbar).</div>
+<div class="ue"><b>Ü8</b> Umweltschutz vs. Gewinn: kurzfristig Konflikt, langfristig Harmonie · vs. Arbeitsplätze: grundsätzlich komplementär · vs. Image: immer komplementär.</div>
+<div class="ue"><b>Ü9</b> Shareholder: Anteilseigner / Wertsteigerung / andere Gruppen vernachlässigt · Stakeholder: alle Gruppen / gleichrangige Befriedigung / Abgrenzung und Ausbalancieren.</div>
+<div class="ue"><b>Ü10</b> Unternehmer vs. Manager: Vollhaftung vs. Haftung im Rahmen der Verantwortung · Selbstverwirklichung vs. Machtausübung · unbegrenzt vs. bis zur besseren Position · Fehler als Lernchance vs. Fehler vermeiden.</div>
+<div class="ue"><b>Ü11</b> Pro: Demokratisierung, Machtkontrolle, Humanisierung, Motivation, weniger Fluktuation, sozialer Frieden · Kontra: Mitbestimmung ohne Risiko, schwerfällige Entscheidungen, fehlende Sachkenntnis, Bürokratie, Kosten, Kapitalflucht.</div>
+
+<h3>Kapitel 3 <span class="tag t-off">offiziell</span></h3>
+<div class="ue"><b>Ü12</b> Kaufmann vs. Nicht-Kaufmann: Firma übertragbar vs. keine Firma · volle Buchführung vs. vereinfachte Aufzeichnungen · alle Rechtsformen vs. nur GbR · Bürgschaft mündlich vs. schriftlich · Prokura möglich vs. nicht · Rügepflicht unverzüglich vs. „innerhalb 6 Monaten“.</div>
+<div class="ue"><b>Ü13</b> <span class="tag t-fol">Folie</span> Einzelunternehmer: + schnelle Entscheidungen, kein Führungsstreit, keine Gewinnteilung · − keine Risikoteilung, begrenzte Kapitalbeschaffung, einseitige Politik, Arbeitsüberlastung.</div>
+<div class="ue"><b>Ü14</b> Bauer/Müller: 60.000/40.000 · 66.666,67/33.333,33 · je 50.000 · Verlust −60.000/−40.000 → Kapitalkonten 140.000/60.000.</div>
+<div class="ue"><b>Ü15</b> KG vs. OHG: leichtere Kapitalbeschaffung · Haftungsbeschränkung der Kommanditisten · kaum Einfluss der Kommanditisten auf die Führung · keine Mitarbeitspflicht.</div>
+<div class="ue"><b>Ü16</b> AB-KG: A 100.000 · B 93.750 · C 56.250 €.</div>
+<div class="ue"><b>Ü17</b> 1) Haftung beschränkt und mittelbar, Einlage kann im Insolvenzfall verloren gehen, Einlage leisten. 2.1) Kommanditist ist von Geschäftsführung (und Vertretung) ausgeschlossen. 2.2) Widerspruchsrecht bei außergewöhnlichen Geschäften – berechtigt. 2.3) Kündigung nur mit 6 Monaten Frist zum GJ-Ende. 3) Becker 174.770,83 · Kroner 101.000 · Stehler 69.000 €.</div>
+<div class="ue"><b>Ü18</b> 1) Stammkapital = in der Satzung festgelegtes Gesamtkapital (gezeichnetes Kapital); Stammeinlage = Einlage des einzelnen Gesellschafters darauf. 2) je ¼: 7.500 / 12.750 / 17.250 € (Σ 37.500 ≥ 12.500). 3) Einsicht nicht verweigerbar (§ 51a GmbHG). 4) 450.000 / 765.000 / 1.035.000 €. 5) 1 € = 1 Stimme → <b>Schneider</b> wird GF (81.000 &gt; 69.000).</div>
+<div class="ue"><b>Ü19</b> Zwei Gesellschaften → zwei Buchhaltungen, zwei Jahresabschlüsse, zwei Steuererklärungen.</div>
+<div class="ue"><b>Ü20</b> a) + große Kapitalbeträge über die Börse, einfache Übertragung · − komplizierte Gründung, hohe Kosten, Publizität, Konflikte über Gewinnverwendung. b) Amtszeit GmbH-GF unbegrenzt vs. Vorstand max. 5 Jahre · Kontrolle durch Gesellschafterversammlung (ggf. AR) vs. Aufsichtsrat.</div>
+<div class="ue"><b>Ü21</b> a) Gesamthandsvermögen: gehört allen Gesellschaftern gemeinsam, nicht der Gesellschaft; bei Personengesellschaften. b) OHG, KG, GmbH &amp; Co. KG · GmbH, AG, KGaA. c) Personenhandelsgesellschaft, Handelsgewerbe, ≥ 2 Personen, kein Mindestkapital, Leitung Komplementäre, Haftung voll bzw. bis Einlage, Einkommensteuer. d) Firma, Gründungskapital, Drittgeschäftsführung, Haftung, Steuern, Mitbestimmung, Publizität, Kosten, Kapitalbeschaffung, Vererbung. e) Haftungsbeschränkung; Kommanditist kann nicht leiten. f) verselbstständigte Vermögensmasse mit eigener Rechtspersönlichkeit für einen dauerhaften Zweck. g) Geschäftsführung = innen, Vertretung = außen. h) HV, Vorstand, AR.</div>
+<div class="ue"><b>Ü22</b> a) Vergleich KG/GmbH/AG (Istkaufmann vs. Formkaufmann; formfreier vs. notarieller Vertrag; Entstehung mit Geschäftsbeginn bzw. HR-Eintrag; kein Mindestkapital / 25.000 / 50.000 €; Drittgeschäftsführung nicht möglich / möglich / möglich; Haftung Voll-/Teilhaftung vs. Teilhaftung mit Einlage). b) Tabelle Kap. 3 (eng/lose, wenige/viele, fortgesetzt/nicht, Gesamthand/Trennungsprinzip).</div>
+
+<h3>Kapitel 4 <span class="tag t-off">offiziell</span></h3>
+<div class="ue"><b>Ü23</b> a) FG: spart Vertriebsinvestitionen, Expansion mit wenig Risiko, Kontrolle · FN: Erfahrung/Name/Idee nutzen, Erfolg eines bekannten Produkts, geringeres Risiko. b) Holding + Steuervorteile, Umgehung von Beteiligungsgrenzen, Kapitalanlagevorteile, leichte Integration · − „Blindheit“ der Töchter, Verwaltungsaufwand. c) Gewinn, Macht, Forschung, Beschaffungsvorteile, Produktion, Vertrieb, EK-Basis, gemeinsame EDV, Kreditwürdigkeit. d) Gewinne auf Kosten anderer, Wettbewerbsbeschränkung, Überkapazitäten, weniger Konsumfreiheit, Macht, Massenentlassungen. e) Kooperation (Vertrag, Selbstständigkeit bleibt weitgehend; Kartell) vs. Konzentration (einheitliche Leitung; Konzern). f) horizontal Möbelfabrik/Möbelfabrik · vertikal Möbelfabrik/Möbelhandel · anorganisch Autofabrik/Möbelfabrik. g) Marktbeobachtung, Negativtest, Missbrauchsaufsicht, Fusionskontrolle. h) rechtlich selbstständig, wirtschaftlich unselbstständig; Voraussetzung einheitliche Leitung. i) Gründe Filialnetz, Gewinn, Marktmacht · Vorteile Mitarbeiter, Kundenstamm, geringere Anlaufkosten, weniger Werbung · <b>über 50 %</b> · Verbraucher: Gefahr Marktbeherrschung, Chance günstigere Preise.</div>
+<div class="ue"><b>Ü24</b> 1) gesamtwirtschaftliche Vorteile oder überragendes Allgemeininteresse. 2) marktwirtschaftliche Ordnung nicht gefährdet (§ 42 GWB). 3) widerspricht sozialer Marktwirtschaft, aber nötig für Wettbewerbsfähigkeit in Europa.</div>
+<div class="ue"><b>Ü25</b> a) Aufnahme vs. Neugründung. b) Fusion durch Neugründung. c) Kartell = zwischenbetriebliche Verbindung zur Einschränkung des Wettbewerbs. d) Preis-, Mengen-, Konditionen-/Rabatt-, Submissions-, Gebietskartelle.</div>
+
+<h3>Kapitel 5 <span class="tag t-own">eigene Lösung</span></h3>
+<div class="ue"><b>Ü26</b> NWA: Deutschland 555 · <b>USA 660</b> · Tschechien 630 → USA.</div>
+<div class="ue"><b>Ü27</b> a) Herkunftsgoodwill: Image durch Herkunft („Made in Germany“, Schweizer Uhren). b) Local content: Pflichtanteil inländischer Wertschöpfung. c) Vertrieb, Kundendienst. d) Produktion im Zielland/Freihandelszone aufbauen (Zölle umgehen), Montagewerke vor Ort. e) Wachstums-, Strukturveränderungs-, Schrumpfungsziele. f) politische Situation, Steuerpolitik, Förderpolitik, Rechtslage, Verwaltung. g) global: Skaleneffekte/Erfahrungskurve, einheitliche Qualität · lokal: Zölle umgehen, Währungsrisiko, kürzere Transporte, Kundennähe. h) Zulieferinfrastruktur (JIT), qualifizierte Arbeitskräfte, Verkehrsinfrastruktur, Energie.</div>
+
+<h3>Kapitel 6 <span class="tag t-own">eigene Lösung</span></h3>
+<div class="ue"><b>Ü28</b> a) 1: GV 245.000, UV 175.000 · 2: GV 80.000, EK 25.000 · 3: AV 70.000, FK 80.000. b) AV dient langfristig (Gebäude, Maschinen), UV kurzfristig und ständig wechselnd (Vorräte, Forderungen, Kasse). c) variabel: Brötchen, Fleisch, Verpackung · fix: Miete, Filialleitergehalt. d) k<sub>v</sub> 70 €, K<sub>fix</sub> 14.000 €, K(900) 77.000 €. e) DB A 14.000, B 20.000, Ergebnis −1.000 €. f) PUG 60 € / 76,43 €. g) Übergangsmenge 10.000 &lt; 20.000 → Eigenfertigung. f2) BEP 3.750 Stück / 288.750 €; 72 %: −16.320 €, 100 %: +24.000 €; 11.200 € Gewinn bei 4.100 Stück = 315.700 € Umsatz.</div>
+
+<h3>Kapitel 7 <span class="tag t-own">eigene Lösung</span></h3>
+<div class="ue"><b>Ü29</b> a) PIMS-Kritik: Korrelation statt Kausalität, Vergangenheitsdaten, überwiegend US-Großunternehmen, nur ROI als Erfolg, Daten selbst berichtet. b) 7-S: ganzheitliche Analyse harter und weicher Faktoren, Balance herstellen, Veränderungen begleiten. c) + strukturiert, berücksichtigt Kultur · − qualitativ, schwer messbar, keine konkreten Handlungsanweisungen. d) Szenario + Denken in Alternativen, Frühwarnung, Flexibilität · − aufwendig, subjektiv, Wahrscheinlichkeiten unsicher.</div>
+<div class="ue"><b>Ü30</b> a) strategisch, taktisch, operativ. b) Rahmen von oben, Präzisierung von unten, Integration. c) schwer imitierbare, über Jahre aufgebaute Fähigkeiten. d) intern Stärken/Schwächen vs. extern Chancen/Risiken. e) top-down, bottom-up, Gegenstrom. f) Beschaffungs-, Personal-, Finanzplan. g) Best Practices finden und übernehmen. h) intern, brancheninterne, branchenextern. i) Lieferanten-, Kundenmacht, neue Wettbewerber, Ersatzprodukte, Rivalität.</div>
+<div class="ue"><b>Ü31</b> var. K 564.850 · DB 585.150 · fixe K 458.601 · Gewinn 126.549 · UR 11,00 % · GK 990.000 · KU 116,16 % · ROI 12,78 %.</div>
+<div class="ue"><b>Ü32</b> DB 350.000 · Gewinn 100.000 · UR 12,50 % · GK 750.000 · KU 1,07 · ROI 13,33 %.</div>
+<div class="ue"><b>Ü33</b> KU 200,00 % · UR 5,00 % · ROI 10,00 %.</div>
+<div class="ue"><b>Ü34</b> a) + Strategie wird messbar, ausgewogene Sicht, Ursache-Wirkung, Kommunikation · − aufwendig, Kennzahlenflut, schwer messbare weiche Ziele. b) Autohersteller: Finanzen (EBIT-Marge), Kunden (Zufriedenheit, Marktanteil E-Autos), Prozesse (Fertigungszeit je Auto, Fehlerquote), Mitarbeiter (Schulungstage E-Mobilität). c) BSC Siller AG z. B. Finanzen: Gewinn +10 % (Maßnahme neue Produkte) · Kunden: Zufriedenheitsindex, Wiederkaufrate · Prozesse: Fehler vor Release, Behebungszeit · Innovation: Schulungstage, Zahl neuer Produkte aus dem Forschungsnetzwerk.</div>
+
+<h3>Kapitel 8 <span class="tag t-own">eigene Lösung</span></h3>
+<div class="ue"><b>Ü35</b> Vorstand → 3 Hauptabteilungen: Materialwirtschaft (Einkauf, Beschaffungslager, Materiallager) · Absatz/Marketing (Marktforschung, Verkauf, Werbung) · Verwaltung (Personalwesen, Rechnungswesen, Finanzwesen).</div>
+<div class="ue"><b>Ü36</b> Leitungstiefe 4 Ebenen · Leitungsspanne KL = 2 · nach Abbau: GF = 4.</div>
+<div class="ue"><b>Ü37</b> Einlinien klar/lange Wege · Mehrlinien Spezialisierung/Kompetenzkonflikte · Stab-Linien Entlastung/Konflikte Stab–Linie · Matrix flexibel/Abstimmungsaufwand.</div>
+<div class="ue"><b>Ü38</b> funktional + Spezialisierung − Koordinationsprobleme · divisional + Marktnähe − Doppelarbeit, Kosten.</div>
+
+<h3>Kapitel 9 <span class="tag t-own">eigene Lösung</span></h3>
+<div class="ue"><b>Ü39</b> a) JIT: Teile kommen genau dann, wenn sie gebraucht werden (Sitze in Montagereihenfolge beim Autohersteller); Probleme: Lieferstörungen, Stau, Streik, Abhängigkeit, Verkehr. b) Delta → Vorrat · Omega → Einzelbeschaffung im Bedarfsfall · Alpha → JIT.</div>
+<div class="ue"><b>Ü40</b> A: 5005, 5008 (75,07 %) · B: 5002 · C: 5001, 5007, 5004, 5006, 5003.</div>
+<div class="ue"><b>Ü41</b> a) 556 · b) 550,5 Stück.</div>
+<div class="ue"><b>Ü42</b> SB 100 · MB 380 · Rhythmus 20 Tage · Bestellmenge 500: MB unverändert · Lieferzeit 7 Tage: MB 240 · Bestellpunkt: feste Menge bei Meldebestand; Rhythmus: feste Termine, variable Menge.</div>
+<div class="ue"><b>Ü43</b> a) 100 Stück, 10 Bestellungen, 1.000 € · b) 152,0 Stück, 114,0 Bestellungen.</div>
+<div class="ue"><b>Ü44</b> Tabelle: Minimum bei 20 Bestellungen à 400 Stück (2.048,80 €) · Andler 390,6 · SB 64, MB 224.</div>
+<div class="ue"><b>Ü45</b> Tabelle: Minimum bei 3 Bestellungen à 12.000 Stück (2.940 €) · Andler 12.247 · Prämissen und Hindernisse siehe Kap. 9.</div>
+<div class="ue"><b>Ü46</b> Single-Sourcing + Partnerschaft, Qualität, Rabatte · − Abhängigkeit, Ausfallrisiko, kein Preiswettbewerb.</div>
+<div class="ue"><b>Ü47/48</b> zentral vs. dezentral; Festplatz vs. Freiplatz – siehe Kap. 9.6.</div>
+<div class="ue"><b>Ü49</b> Ø Bestand 787 St. · Umschlag 1,53 · Lagerdauer 236 Tage · Lagerkosten 23.596 € + Bestellkosten 2 · 130 = 260 € → 23.856 € (mit Einstandswert 180.000 € = 203.856 €) · Bewertung: Bestand und Lagerdauer weit über Branche (300 / 90 Tage) → Bestände abbauen.</div>
+<div class="ue"><b>Ü50</b> Ø 41 Tsd. · Umschlag 8 · 45 Tage · Lagerzinsen 3.075 € · neu ≈ 1.689 € (häufigere, kleinere Lieferungen; Preisverhandlung, Mengenrabatt, anderer Lieferant) · JIT: + weniger Kapitalbindung, Lagerkosten · − Abhängigkeit, Störanfälligkeit.</div>
+<div class="ue"><b>Ü51</b> Ø Lagerbestand 350.000 € · Umschlag 11,0 · Lagerdauer 32,7 Tage · Lagerzinssatz 1,36 % · schlechter als Branche (13,1 / 27,5 Tage) · Vorschläge: JIT, Bestellmengen senken, Sortiment straffen · kritische Menge 2.500 m³ · Fremdlager bei schwankendem/kleinem Volumen, keine Fixkosten, Know-how des Dienstleisters.</div>
+
+<h3>Kapitel 10 <span class="tag t-own">eigene Lösung</span></h3>
+<div class="ue"><b>Ü52</b> Punkt: OP, Uhren, Hausbau, Autoreparatur · Werkstatt: Dreherei · Fließ: Flaschenabfüllung, Automontage.</div>
+<div class="ue"><b>Ü53</b> Tabelle in Kap. 10.3.</div>
+<div class="ue"><b>Ü54</b> 1 Sorten · 2 Massen · 3 Einzel · 4 Einzel · 5 Serien · 6 Massen · 7 Einzel · 8 Serien.</div>
+<div class="ue"><b>Ü55</b> a) Durchlaufterminierung (Start-/Endtermine), Kapazitätsabgleich (Bedarf vs. Angebot), Reihenfolgeplanung. b/c) Punkt: Einzelstücke, große/unbewegliche Objekte (Haus, Schiff) · Werkstatt: kleine Mengen, viele Varianten (Sondermaschinenbau) · Fließ: große Mengen standardisierter Produkte (Autos, Getränke).</div>
+<div class="ue"><b>Ü56</b> SCM = Koordination von Material-, Geld- und Informationsfluss über die gesamte Lieferkette; Beispiel Autohersteller–Sitzlieferant–Spedition (Kap. 10.6).</div>
+
+<p class="small" style="margin-top:4mm">Quellen: Skript „Einführung in die Betriebswirtschaftslehre 2026“, Kapitelfolien 1–4 (M. Geiger), Lösung zu den ABWL-Übungen 2026, Klausur 2025, eigene Vorlesungsnotizen. Lösungen ohne „offiziell“ sind eigene Skizzen.</p>
+
+</main>
+</body>
+</html>
