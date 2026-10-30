@@ -37,6 +37,13 @@ Dokumente. Die Zuordnung der Themen zu Terminen ist deshalb **geschätzt**:
 | Fotoprotokoll 8.10.2026 (58 Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190616) | 13.10.2026 | Termin 2 |
 | Fotoprotokoll 12.10.2026 (43 Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190617) | 13.10.2026 | Termin 3 |
 
+## Vorbereitung 02.11.
+
+| Datei | Inhalt |
+|---|---|
+| [Pitch „Rent your Child“](vorbereitung/pitch_rent_your_child.md) | Portfolio-Präsentation (Thema „Geschäftsidee pitchen“): Kernbotschaft, Zielgruppe, Storyline, Sprechskript 3 und 5 Min., Folien, kritische Fragen, Stakeholder, Checkliste |
+| [Konfliktgespräch](vorbereitung/konfliktgespraech_vorbereitung.md) | Fall „Kollege reißt die Projekt-Timeline“ (plus „kommt immer zu spät“): quadratische Vorklärung, 5 Phasen, Rollenspiel, Spickzettel |
+
 ## Eigene Notizen
 
 <!-- Hier kannst du selbst Korrekturen eintragen, z. B. „Termin 3 fiel aus“ oder „Heute nur Übung“.
