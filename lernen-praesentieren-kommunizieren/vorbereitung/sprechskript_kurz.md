@@ -21,7 +21,12 @@ Und nehmen wir Tim und Jonas. Sie fragen sich: Passen Kinder überhaupt zu uns? 
 
 **Folie 4 · Wendepunkt**
 
-Was wäre, wenn sich beide finden? Lena braucht eine Pause. Tim und Jonas brauchen Erfahrung. Und Lenas Kinder Mia und Ben wollen einfach Abenteuer. **Rent your Child verbindet alle drei.** **[→]**
+Was wäre, wenn sich beide finden?
+
+*(Lena erscheint)* Lena braucht eine Pause.
+*(Tim & Jonas erscheinen)* Tim und Jonas brauchen Erfahrung.
+*(die Kinder erscheinen)* Und Lenas Kinder, Mia und Ben, wollen einfach Abenteuer.
+*(Bogen und Herz erscheinen – kurz warten)* **Rent your Child verbindet alle drei.** **[→]**
 
 **Folie 5 · Lösung**
 
