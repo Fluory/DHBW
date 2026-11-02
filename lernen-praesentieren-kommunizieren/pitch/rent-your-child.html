@@ -991,7 +991,7 @@ body.pitch .hero-sticker{bottom:70px}
     const cin = { autoAlpha: 1, y: 0, duration: .5 }, cout = { autoAlpha: 0, y: -18, duration: .4 };
     gsap.set(caps, { autoAlpha: 0, y: 18 });
     R(gsap.timeline({ defaults: { ease: 'power2.out' },
-      scrollTrigger: { trigger: sTurn, start: 'top top', end: '+=170%', pin: true, scrub: 1, anticipatePin: 1 } })
+      scrollTrigger: { trigger: sTurn, start: 'top top', end: '+=320%', pin: true, scrub: 1.5, anticipatePin: 1 } })
       .fromTo('#stLena', { x: -140, autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: 1 })
       .to(caps[0], cin, '<.3')
       .fromTo('#stDuo', { x: 140, autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: 1 })
@@ -1096,7 +1096,7 @@ body.pitch .hero-sticker{bottom:70px}
       reg.forEach(r => {
         if (r.slide !== next) return;
         if (r.mode === 'replay') r.anim.restart();
-        else if (r.mode === 'scrub') r.anim.timeScale(r.anim.duration() / 2.6).restart();
+        else if (r.mode === 'scrub') r.anim.timeScale(r.anim.duration() / (next.id === 's-turn' ? 9 : 2.6)).restart();
       });
     } else vis(next, true);
     fit(next);
