@@ -1,4 +1,4 @@
-# Sprechskript (2,5–3 Min.) · „Rent your Child“ · 9 Folien
+# Sprechskript (2,5–3 Min.) · „Rent your Child“ · 10 Folien
 
 Passend zum Pitch-Modus (Taste **P**, → blättern). **[→]** = weiterklicken.
 
@@ -30,22 +30,28 @@ Was wäre, wenn sich beide finden?
 
 **Folie 5 · Lösung**
 
-Das funktioniert in drei Schritten. Zuerst prüfen wir jeden Mieter, mit Ausweis, erweitertem Führungszeugnis und persönlichem Interview. Dann kommt das erste Treffen: zwei Stunden, tagsüber, und die Eltern sind dabei. Danach entscheidet das Kind, ob es weitergeht – ein Nein ist ein Nein. Erst dann folgen ein Nachmittag, ein ganzer Tag und irgendwann ein Wochenende, mit Live-Check-ins und Notfall-Knopf. **[→]**
+Das funktioniert in drei Schritten. Zuerst prüfen wir jeden Mieter, mit Ausweis, erweitertem Führungszeugnis und persönlichem Interview. Dann kommt das erste Treffen: zwei Stunden, tagsüber, und die Eltern sind dabei. Danach entscheidet das Kind, ob es weitergeht – ein Nein ist ein Nein. Erst dann folgen ein Nachmittag, ein ganzer Tag und irgendwann ein Wochenende. **[→]**
 
-**Folie 6 · Geschäftsmodell**
+**Folie 6 · Vertrauen live (Handy-Demo)**
+
+Niemand bekommt am ersten Tag das Wochenende. Jede Stufe müssen Eltern, Kind und Coach freigeben.
+*(auf das Handy zeigen, die Nachrichten laufen ein)* Und so sieht das live aus: Tim und Jonas sind mit Mia und Ben im Zoo. Lena bekommt jede Nachricht aufs Handy – „Abgeholt“, „Zoo“, „Mittagessen“. Und ihre Antwort: „Ich sitze gerade im Kino.“
+Wenn etwas ist, reicht ein Tipp auf den Notfall-Knopf. **[→]**
+
+**Folie 7 · Geschäftsmodell**
 
 Unser Geld verdienen wir so: Die Mieter zahlen die Buchung, und wir behalten 18 Prozent. Dazu kommen ein Abo für Familien und Provisionen von unseren Versicherungspartnern. Für die Eltern ist die Vermittlung kostenlos. **[→]**
 
-**Folie 7 · Markt**
+**Folie 8 · Markt**
 
 Der Markt ist groß: In Deutschland gibt es rund acht Millionen Familien mit minderjährigen Kindern. Unser Ziel nach drei Jahren sind 24.000 aktive Familien – etwa ein Prozent unseres Kernmarkts.
 Und die Ecke, in der wir stehen, ist leer: Babysitter-Plattformen verkaufen Stunden. Wir verkaufen Vertrauen und echtes Familienleben. **[→]**
 
-**Folie 8 · Ask**
+**Folie 9 · Ask**
 
 Starten wollen wir mit einem Pilot in Heilbronn. Dafür brauchen wir **500.000 Euro für zehn Prozent**. Fast die Hälfte davon fließt in Sicherheit, und das mit Absicht. **[→]**
 
-**Folie 9 · Happy End**
+**Folie 10 · Happy End**
 
 Und das Ende der Geschichte? Lena bekommt ihr Wochenende zurück. Tim und Jonas wissen endlich, was sie wollen. Und Mia und Ben haben zwei neue Lieblingsmenschen.
 
