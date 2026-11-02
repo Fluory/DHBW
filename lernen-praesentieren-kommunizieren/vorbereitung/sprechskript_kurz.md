@@ -32,11 +32,10 @@ Was wäre, wenn sich beide finden?
 
 Das funktioniert in drei Schritten. Zuerst prüfen wir jeden Mieter, mit Ausweis, erweitertem Führungszeugnis und persönlichem Interview. Dann kommt das erste Treffen: zwei Stunden, tagsüber, und die Eltern sind dabei. Danach entscheidet das Kind, ob es weitergeht – ein Nein ist ein Nein. Erst dann folgen ein Nachmittag, ein ganzer Tag und irgendwann ein Wochenende. **[→]**
 
-**Folie 6 · Vertrauen live (Handy-Demo)**
+**Folie 6 · Live-Demo**
 
-Niemand bekommt am ersten Tag das Wochenende. Jede Stufe müssen Eltern, Kind und Coach freigeben.
-*(auf das Handy zeigen, die Nachrichten laufen ein)* Und so sieht das live aus: Tim und Jonas sind mit Mia und Ben im Zoo. Lena bekommt jede Nachricht aufs Handy – „Abgeholt“, „Zoo“, „Mittagessen“. Und ihre Antwort: „Ich sitze gerade im Kino.“
-Wenn etwas ist, reicht ein Tipp auf den Notfall-Knopf. **[→]**
+So sieht ein Samstag live aus. *(Nachrichten laufen ein)* Tim und Jonas sind mit Mia und Ben im Zoo, und Lena bekommt jede Nachricht aufs Handy: abgeholt, Zoo, Mittagessen. Ihre Antwort: „Ich sitze gerade im Kino.“
+Und wenn etwas ist, reicht ein Tipp auf den Notfall-Knopf. **[→]**
 
 **Folie 7 · Geschäftsmodell**
 

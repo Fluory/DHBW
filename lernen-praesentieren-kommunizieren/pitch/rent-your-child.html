@@ -191,6 +191,9 @@ h2 .hl,.hl{color:var(--coral)}
 /* ---------- 7 Safety live ---------- */
 .live{background:var(--bg)}
 .live-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.live-solo{grid-template-columns:1fr;gap:28px;justify-items:center;text-align:center}
+.live-solo .live-head h2{margin-top:10px}
+.live-solo .phone{transform:none;text-align:left}
 .ladder{margin-top:34px;position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .ladder-line{position:absolute;left:12%;right:12%;top:27px;height:6px;border-radius:3px;background:var(--line)}
 .ladder-line b{position:absolute;inset:0;border-radius:3px;background:linear-gradient(90deg,var(--sun),var(--coral));transform-origin:0 50%}
@@ -678,30 +681,12 @@ body.pitch .hero-sticker{bottom:70px}
 </section>
 
 <!-- 7 SAFETY LIVE -->
-<section class="slide live" id="s-live" data-title="Sicherheit live">
+<section class="slide live" id="s-live" data-title="Live-Demo">
   <div class="fit"><div class="wrap">
-    <div class="live-grid">
-      <div>
-        <span class="eyebrow" data-reveal>Kapitel 06 · Vertrauen, Schritt für Schritt</span>
-        <h2 data-reveal="1">Niemand bekommt am ersten Tag <span class="hl">das Wochenende.</span></h2>
-        <p class="lead" data-reveal="2">Unsere Vertrauensleiter: Jede Stufe muss von Eltern, Kind und Coach freigegeben werden. Fällt eine Bewertung schlecht aus, geht es zurück auf Los.</p>
-        <div class="ladder" id="ladder">
-          <div class="ladder-line"><b id="ladderFill"></b></div>
-          <div class="rung"><span class="n">1</span><h4>Spielplatz-Date</h4><p>2 Std., tagsüber, Eltern dabei</p></div>
-          <div class="rung"><span class="n">2</span><h4>Nachmittag</h4><p>bei der Familie zuhause</p></div>
-          <div class="rung"><span class="n">3</span><h4>Ein ganzer Tag</h4><p>mit stündlichen Check-ins</p></div>
-          <div class="rung"><span class="n">4</span><h4>Wochenende</h4><p>nur mit Coach-Freigabe</p></div>
-        </div>
-        <div class="badges" data-reveal>
-          <span class="badge"><svg><use href="#i-check"/></svg>Identität geprüft</span>
-          <span class="badge"><svg><use href="#i-check"/></svg>Erw. Führungszeugnis</span>
-          <span class="badge"><svg><use href="#i-check"/></svg>Persönliches Interview</span>
-          <span class="badge"><svg><use href="#i-check"/></svg>Kind-Veto</span>
-          <span class="badge"><svg><use href="#i-check"/></svg>Eltern 24/7 live</span>
-          <span class="badge"><svg><use href="#i-check"/></svg>Versichert</span>
-          <span class="badge"><svg><use href="#i-check"/></svg>Coach-begleitet</span>
-          <span class="badge"><svg><use href="#i-check"/></svg>Erste Hilfe am Kind</span>
-        </div>
+    <div class="live-grid live-solo">
+      <div class="live-head">
+        <span class="eyebrow" data-reveal>Kapitel 06 · Live-Demo</span>
+        <h2 data-reveal="1">So sieht ein Samstag <span class="hl">live</span> aus.</h2>
       </div>
       <div class="phone" data-reveal="1" aria-label="Beispiel-App-Ansicht: Live-Check-in">
         <div class="screen">
@@ -1078,10 +1063,6 @@ body.pitch .hero-sticker{bottom:70px}
     // 7 Safety live – trust ladder + chat
     const sLive = S('s-live');
     reveals(sLive);
-    const vertical = matchMedia('(max-width: 899px)').matches;
-    R(gsap.timeline({ scrollTrigger: { trigger: '#ladder', start: 'top 80%', end: 'bottom 45%', scrub: 1 } })
-      .fromTo('#ladderFill', vertical ? { scaleY: 0, scaleX: 1 } : { scaleX: 0 }, vertical ? { scaleY: 1, ease: 'none', duration: 1 } : { scaleX: 1, ease: 'none', duration: 1 })
-      .from('#ladder .rung', { y: 24, autoAlpha: 0, stagger: .25, duration: .3 }, 0), 'scrub', sLive);
     R(gsap.timeline({ scrollTrigger: { trigger: '.phone', start: 'top 75%', toggleActions: 'play none none none' } })
       .from('#msgs .msg', { y: 20, autoAlpha: 0, scale: .96, stagger: .45, duration: .45, ease: 'back.out(1.6)' })
       .from('.sos', { scale: .8, autoAlpha: 0, duration: .5, ease: 'back.out(2)' }, '-=.1'), 'replay', sLive);
