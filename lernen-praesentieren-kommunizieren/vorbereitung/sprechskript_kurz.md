@@ -30,17 +30,16 @@ Was wäre, wenn sich beide finden?
 
 **Folie 5 · Lösung**
 
-Das funktioniert in drei Schritten. Zuerst prüfen wir jeden Mieter und suchen passende Familien aus. Dann kommt das erste Treffen: zwei Stunden, tagsüber, und die Eltern sind dabei. Danach entscheidet das Kind, ob es weitergeht. Erst dann folgen ein Nachmittag, ein ganzer Tag und irgendwann ein Wochenende. **[→]**
+Das funktioniert in drei Schritten. Zuerst prüfen wir jeden Mieter, mit Ausweis, erweitertem Führungszeugnis und persönlichem Interview. Dann kommt das erste Treffen: zwei Stunden, tagsüber, und die Eltern sind dabei. Danach entscheidet das Kind, ob es weitergeht – ein Nein ist ein Nein. Erst dann folgen ein Nachmittag, ein ganzer Tag und irgendwann ein Wochenende, mit Live-Check-ins und Notfall-Knopf. **[→]**
 
-**Folie 6 · Sicherheit**
+**Folie 6 · Geschäftsmodell**
 
-Ich weiß, was Sie jetzt denken: „Kinder vermieten? Ernsthaft?“
+Unser Geld verdienen wir so: Die Mieter zahlen die Buchung, und wir behalten 18 Prozent. Dazu kommen ein Abo für Familien und Provisionen von unseren Versicherungspartnern. Für die Eltern ist die Vermittlung kostenlos. **[→]**
 
-Genau deshalb gilt bei uns: **Sicherheit ist kein Feature. Sie ist das Produkt.** Jeder Mieter braucht ein erweitertes Führungszeugnis und ein persönliches Interview. Das Kind hat immer ein Veto. Die Eltern sind rund um die Uhr live dabei, es gibt einen Notfall-Knopf, und jede Buchung ist versichert. Niemand bekommt also am ersten Tag das Wochenende. **[→]**
+**Folie 7 · Markt**
 
-**Folie 7 · Geschäftsmodell**
-
-Unser Geld verdienen wir so: Die Mieter zahlen die Buchung, und wir behalten 18 Prozent. Dazu kommen ein Abo für Familien und Provisionen von unseren Versicherungspartnern. Für die Eltern ist die Vermittlung kostenlos. Babysitter-Plattformen verkaufen Stunden. Wir verkaufen Vertrauen. **[→]**
+Der Markt ist groß: In Deutschland gibt es rund acht Millionen Familien mit minderjährigen Kindern. Unser Ziel nach drei Jahren sind gut 20.000 aktive Familien – etwa ein Prozent unseres Kernmarkts.
+Und die Ecke, in der wir stehen, ist leer: Babysitter-Plattformen verkaufen Stunden. Wir verkaufen Vertrauen und echtes Familienleben. **[→]**
 
 **Folie 8 · Ask**
 
