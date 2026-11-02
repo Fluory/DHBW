@@ -19,6 +19,7 @@ Dokumente. Die Zuordnung der Themen zu Terminen ist deshalb **geschätzt**:
 | 1 | 06.10.2026 | Feedback, eduScrum, Kommunikationsmodelle, Lernmethoden | Folien „Fotoprotokoll 6.10.2026“ | [01](vorlesungen/01_2026-10-06.md) |
 | 2 | 08.10.2026 | Modell-Sprints, Denkpräferenzen, Kulturdimensionen, Stakeholder, Präsentation, Storytelling | Folien „Fotoprotokoll 8.10.2026“ | [02](vorlesungen/02_2026-10-08.md) |
 | 3 | 12.10.2026 | Wahrnehmung, Souveränität (Feuerlöscher), Moderation, Konfliktmanagement | Folien „Fotoprotokoll 12102026“ | [03](vorlesungen/03_2026-10-12.md) |
+| 4 | 02.11.2026 | Präsentieren (Portfolio-Pitches), Konfliktgespräche (Rollenspiele), wissenschaftliche Arbeiten präsentieren | vermutet (Fotoprotokoll 12.10. Folie 43 + Skript Teil 2 Kap. 2, 4.8, 5; Skript Teil 1 Kap. 2.2.2) | [04](vorlesungen/04_2026-11-02.md) |
 
 ## Materialien in Moodle
 
