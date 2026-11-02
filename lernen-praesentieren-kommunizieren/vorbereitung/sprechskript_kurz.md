@@ -32,13 +32,10 @@ Passend zum Pitch-Modus (Taste **P**, → blättern). ≈ 360 Wörter. *Kursiv* 
 **10 · Roadmap** *(weiterklicken)*
 „Wir starten mit einem Pilot in Heilbronn mit 50 Familien.“
 
-**11 · Team**
-„Und unsere Head of Safety hat ein Vetorecht – genau wie die Kinder.“
-
-**12 · Ask** *(Mitte, langsam)*
+**11 · Ask** *(Mitte, langsam)*
 „Wir möchten **500.000 Euro für zehn Prozent**. Fast die Hälfte geht in Sicherheit – mit Absicht.“
 
-**13 · Happy End**
+**12 · Happy End**
 „Lena bekommt ihr Wochenende zurück. Tim und Jonas wissen, was sie wollen. Mia und Ben haben zwei neue Lieblingsmenschen. *(Pause)* **Einmal Eltern sein – aber nur bis Sonntag. Rent your Child.** Danke.“
 
 *Stehen bleiben, lächeln, dann: „Ich freue mich auf Ihre Fragen.“*

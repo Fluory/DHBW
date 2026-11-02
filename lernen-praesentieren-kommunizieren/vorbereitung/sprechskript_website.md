@@ -1,6 +1,6 @@
 # Sprechskript zur Pitch-Website „Rent your Child“
 
-Passend zu den 13 Folien im **Pitch-Modus** (Taste **P**, blättern mit →). Dauer: **ca. 4 Minuten** (≈ 520 Wörter).
+Passend zu den 12 Folien im **Pitch-Modus** (Taste **P**, blättern mit →). Dauer: **ca. 4 Minuten** (≈ 520 Wörter).
 Für 3 Minuten: die Folien 7, 9 und 10 nur mit einem Satz kommentieren (markiert mit ✂).
 *Kursiv* = Regieanweisung. **Fett** = betonen.
 
@@ -76,18 +76,13 @@ Für 3 Minuten: die Folien 7, 9 und 10 nur mit einem Satz kommentieren (markiert
 > „Start ist ein Pilot in Heilbronn mit 50 handverlesenen Familien und zwei Coaches. Danach Baden-Württemberg,
 > zehn Großstädte – und irgendwann vielleicht ‚Rent your Grandma‘. *(lächeln)* Das prüfen wir noch.“
 
-**Folie 11 · Team**
-
-> „Wir haben noch nicht alle Antworten. Aber das richtige Team: [Namen kurz nennen, je ein Halbsatz zur Rolle].
-> Und ganz wichtig: Unsere Head of Safety hat ein Vetorecht – genau wie die Kinder.“
-
-**Folie 12 · The Ask** *(Bühnenmitte, langsamer werden)*
+**Folie 11 · The Ask** *(Bühnenmitte, langsamer werden)*
 
 > „Was wir von Ihnen möchten: **500.000 Euro für zehn Prozent.**
 > Fast die Hälfte davon fließt in Sicherheit und Verifizierung – mit Absicht.
 > Damit bringen wir den Pilot in Heilbronn zum Laufen und machen unser Sicherheitskonzept zum Standard.“
 
-**Folie 13 · Happy End**
+**Folie 12 · Happy End**
 
 > „Zurück zu Lena: Sie bekommt ihr Wochenende zurück – mit gutem Gefühl.
 > Tim und Jonas wissen jetzt, was sie wollen.
