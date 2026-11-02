@@ -1,41 +1,47 @@
-# Sprechskript kurz (2,5–3 Min.) · „Rent your Child“
+# Sprechskript (2,5–3 Min.) · „Rent your Child“ · 8 Folien
 
-Passend zum Pitch-Modus (Taste **P**, → blättern). ≈ 360 Wörter. *Kursiv* = Regie, **fett** = betonen.
+Passend zum Pitch-Modus (Taste **P**, → blättern). **[→]** = weiterklicken.
 
-**1 · Hook** *(Powerpose, 2 Sek. Stille)*
-„Einmal Eltern sein – aber nur bis Sonntag? *(Pause)* Ich bin [Name], ich studiere Wirtschaftsinformatik – und das ist **Rent your Child**.“
+---
 
-**2 · Problem**
-„Eltern lieben ihre Kinder – aber sie lieben auch Schlaf. Und viele andere wollen *vielleicht* Kinder: eine Entscheidung mit 18 Jahren Mindestlaufzeit, ohne Testphase. **Was die einen zu viel haben, fehlt den anderen.**“
+**Folie 1 · Hook**
 
-**3 · Helden**
-„Lena, Pflegekraft, zwei Kinder, Oma 500 Kilometer weit weg. Und Tim und Jonas, die wissen wollen: Passen Kinder zu uns?“
+Einmal Eltern sein – aber nur bis Sonntag?
 
-**4 · Wendepunkt**
-„Lena braucht eine Pause. Tim und Jonas brauchen Erfahrung. Mia und Ben wollen Abenteuer. **Rent your Child verbindet alle drei.**“
+Ich bin [Name], ich studiere Wirtschaftsinformatik, und das ist **Rent your Child**. **[→]**
 
-**5 · Lösung**
-„Drei Schritte: Wir prüfen und matchen. Beim ersten Treffen – zwei Stunden, tagsüber – sind die Eltern dabei, danach entscheidet das Kind. Dann erst Nachmittag, Tag, Wochenende.“
+**Folie 2 · Problem**
 
-**6 · Sicherheit** *(Schritt nach vorn, ruhiger)*
-„Ich weiß, was Sie denken: ‚Kinder vermieten? Ernsthaft?‘ *(Pause)* Deshalb: **Sicherheit ist kein Feature. Sie ist das Produkt.** Führungszeugnis und Interview für jeden Mieter. Das Kind hat ein Veto. Eltern sind rund um die Uhr live dabei, es gibt einen Notfall-Knopf, alles ist versichert.“
+Eltern lieben ihre Kinder. Aber sie lieben auch Schlaf. Gleichzeitig gibt es viele Menschen, die *vielleicht* Kinder wollen. Sie stehen vor einer Entscheidung mit 18 Jahren Mindestlaufzeit, und das ganz ohne Testphase. Was die einen zu viel haben, fehlt den anderen. **[→]**
 
-**7 · Vertrauensleiter** *(nur zeigen)*
-„Niemand bekommt am ersten Tag das Wochenende – und Lena sitzt im Kino und weiß trotzdem immer, wo ihre Kinder sind.“
+**Folie 3 · Helden**
 
-**8 · Geschäftsmodell**
-„Mieter zahlen die Buchung, wir behalten 18 Prozent. Dazu ein Abo für Familien und Provisionen unserer Versicherungspartner. **Eltern zahlen für die Vermittlung nichts.**“
+Nehmen wir Lena. Sie ist Pflegekraft, hat zwei Kinder, und die Oma wohnt 500 Kilometer weit weg. Lena braucht eine Pause.
+Und nehmen wir Tim und Jonas. Sie fragen sich: Passen Kinder überhaupt zu uns? Sie brauchen Erfahrung.
+Rent your Child bringt beide zusammen. **[→]**
 
-**9 · Markt** *(weiterklicken)*
-„Babysitter-Plattformen verkaufen Stunden – **wir verkaufen Vertrauen.**“
+**Folie 4 · Lösung**
 
-**10 · Roadmap** *(weiterklicken)*
-„Wir starten mit einem Pilot in Heilbronn mit 50 Familien.“
+Das funktioniert in drei Schritten. Zuerst prüfen wir jeden Mieter und suchen passende Familien aus. Dann kommt das erste Treffen: zwei Stunden, tagsüber, und die Eltern sind dabei. Danach entscheidet das Kind, ob es weitergeht. Erst dann folgen ein Nachmittag, ein ganzer Tag und irgendwann ein Wochenende. **[→]**
 
-**11 · Ask** *(Mitte, langsam)*
-„Wir möchten **500.000 Euro für zehn Prozent**. Fast die Hälfte geht in Sicherheit – mit Absicht.“
+**Folie 5 · Sicherheit**
 
-**12 · Happy End**
-„Lena bekommt ihr Wochenende zurück. Tim und Jonas wissen, was sie wollen. Mia und Ben haben zwei neue Lieblingsmenschen. *(Pause)* **Einmal Eltern sein – aber nur bis Sonntag. Rent your Child.** Danke.“
+Ich weiß, was Sie jetzt denken: „Kinder vermieten? Ernsthaft?“
 
-*Stehen bleiben, lächeln, dann: „Ich freue mich auf Ihre Fragen.“*
+Genau deshalb gilt bei uns: **Sicherheit ist kein Feature. Sie ist das Produkt.** Jeder Mieter braucht ein erweitertes Führungszeugnis und ein persönliches Interview. Das Kind hat immer ein Veto. Die Eltern sind rund um die Uhr live dabei, es gibt einen Notfall-Knopf, und jede Buchung ist versichert. Niemand bekommt also am ersten Tag das Wochenende. **[→]**
+
+**Folie 6 · Geschäftsmodell**
+
+Unser Geld verdienen wir so: Die Mieter zahlen die Buchung, und wir behalten 18 Prozent. Dazu kommen ein Abo für Familien und Provisionen von unseren Versicherungspartnern. Für die Eltern ist die Vermittlung kostenlos. Babysitter-Plattformen verkaufen Stunden. Wir verkaufen Vertrauen. **[→]**
+
+**Folie 7 · Ask**
+
+Starten wollen wir mit einem Pilot in Heilbronn. Dafür brauchen wir **500.000 Euro für zehn Prozent**. Fast die Hälfte davon fließt in Sicherheit, und das mit Absicht. **[→]**
+
+**Folie 8 · Happy End**
+
+Und das Ende der Geschichte? Lena bekommt ihr Wochenende zurück. Tim und Jonas wissen endlich, was sie wollen. Und Lenas Kinder Mia und Ben haben zwei neue Lieblingsmenschen.
+
+Einmal Eltern sein – aber nur bis Sonntag. **Rent your Child.**
+
+Danke. Ich freue mich auf Ihre Fragen.
