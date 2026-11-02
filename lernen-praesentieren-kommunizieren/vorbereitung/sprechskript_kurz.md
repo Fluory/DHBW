@@ -38,7 +38,7 @@ Unser Geld verdienen wir so: Die Mieter zahlen die Buchung, und wir behalten 18 
 
 **Folie 7 · Markt**
 
-Der Markt ist groß: In Deutschland gibt es rund acht Millionen Familien mit minderjährigen Kindern. Unser Ziel nach drei Jahren sind gut 20.000 aktive Familien – etwa ein Prozent unseres Kernmarkts.
+Der Markt ist groß: In Deutschland gibt es rund acht Millionen Familien mit minderjährigen Kindern. Unser Ziel nach drei Jahren sind 24.000 aktive Familien – etwa ein Prozent unseres Kernmarkts.
 Und die Ecke, in der wir stehen, ist leer: Babysitter-Plattformen verkaufen Stunden. Wir verkaufen Vertrauen und echtes Familienleben. **[→]**
 
 **Folie 8 · Ask**
