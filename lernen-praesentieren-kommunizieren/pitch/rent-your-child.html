@@ -155,7 +155,18 @@ h2 .hl,.hl{color:var(--coral)}
 .how .fit{position:relative}
 .blob-bg{position:absolute;right:-6vw;top:-6vh;width:min(46vw,620px);z-index:0;opacity:.85;pointer-events:none}
 .how .wrap,.steps-track{position:relative;z-index:1}
-.how-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:38px}
+.how-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:28px}
+.how-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:44px;align-items:center}
+.steps-col{display:grid;gap:14px}
+.steps-col .step{width:auto;padding:20px 24px;gap:6px;grid-template-columns:auto 1fr;column-gap:20px}
+.steps-col .step .step-top{grid-row:span 2;flex-direction:column;align-items:center;gap:8px}
+.steps-col .step .num{font-size:2.6rem}
+.steps-col .step .ic{width:46px;height:46px;border-radius:14px}
+.steps-col .step .ic svg{width:24px;height:24px}
+.steps-col .step h3{font-size:1.3rem;align-self:end}
+.steps-col .step p{font-size:.95rem;line-height:1.45}
+.how-grid .phone{transform:rotate(2deg)}
+@media (max-width:899px){.how-grid{grid-template-columns:1fr}.how-grid .phone{transform:none}}
 .step-ind{display:flex;gap:8px;align-items:center;font-weight:700;font-size:.9rem;color:var(--ink2)}
 .step-ind i{width:34px;height:6px;border-radius:3px;background:var(--line);overflow:hidden;position:relative}
 .step-ind i b{position:absolute;inset:0;background:var(--coral);transform-origin:0 50%;transform:scaleX(1)}
@@ -654,65 +665,51 @@ body.pitch .hero-sticker{bottom:70px}
           <span class="eyebrow" data-reveal>Kapitel 05 · Die Lösung</span>
           <h2 data-reveal="1">So funktioniert’s –<br>in <span class="hl">drei Schritten.</span></h2>
         </div>
-        <div class="step-ind" aria-hidden="true"><span>Schritt</span><i><b class="si"></b></i><i><b class="si"></b></i><i><b class="si"></b></i></div>
       </div>
-    </div>
-    <div class="steps-track">
-      <article class="card step">
-        <div class="step-top"><span class="num">01</span><span class="ic" style="background:#FFE1D6"><svg viewBox="0 0 24 24" fill="none" stroke="#E2523D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="4"/><path d="M2 21c0-4 3.6-7 8-7 1.3 0 2.5.3 3.6.8"/><path d="M16 18l2 2 4-4"/></svg></span></div>
-        <h3>Prüfen &amp; Matchen</h3>
-        <p>Familien legen ein Profil an – Interessen, Routinen, Allergien, No-Gos. Mieter durchlaufen unsere Verifizierung. Danach matchen wir nach Werten, Alltag und Entfernung.</p>
-        <ul><li>Identität geprüft</li><li>Führungszeugnis</li><li>Interview</li></ul>
-      </article>
-      <article class="card step">
-        <div class="step-top"><span class="num">02</span><span class="ic" style="background:#DCEBFA"><svg viewBox="0 0 24 24" fill="none" stroke="#2a6fb5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span></div>
-        <h3>Kennenlernen</h3>
-        <p>Das erste Treffen: maximal zwei Stunden, tagsüber, auf dem Spielplatz oder bei der Familie zuhause – Eltern immer dabei. Danach entscheidet das Kind: Daumen hoch oder Veto.</p>
-        <ul><li>Nur tagsüber</li><li>Öffentlich / bei der Familie</li><li>Kind-Veto</li></ul>
-      </article>
-      <article class="card step">
-        <div class="step-top"><span class="num">03</span><span class="ic" style="background:#FFF0CC"><svg viewBox="0 0 24 24" fill="none" stroke="#B9830A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg></span></div>
-        <h3>Familienzeit</h3>
-        <p>Erst ein Nachmittag, dann ein Tag, irgendwann ein Wochenende – mit Live-Check-ins, Notfall-Knopf und Coach im Hintergrund. Danach: ehrliches Feedback und die große Frage „Und – Kinder, ja oder nein?“</p>
-        <ul><li>Live-Check-ins</li><li>Notfall-Knopf</li><li>Coach-Nachgespräch</li></ul>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- 7 SAFETY LIVE -->
-<section class="slide live" id="s-live" data-title="Live-Demo">
-  <div class="fit"><div class="wrap">
-    <div class="live-grid live-solo">
-      <div class="live-head">
-        <span class="eyebrow" data-reveal>Kapitel 06 · Live-Demo</span>
-        <h2 data-reveal="1">So sieht ein Samstag <span class="hl">live</span> aus.</h2>
-      </div>
-      <div class="phone" data-reveal="1" aria-label="Beispiel-App-Ansicht: Live-Check-in">
-        <div class="screen">
-          <div class="screen-head"><small><i></i> Live-Check-in</small><b>Mia &amp; Ben mit Tim &amp; Jonas</b></div>
-          <div class="msgs" id="msgs">
-            <p class="msg sys">Stufe 3 · freigegeben von Lena, Mia, Ben &amp; Coach Sarah</p>
-            <p class="msg"><time>09:58 · Tim</time>Abgeholt! Kindersitze geprüft, Ben hat den Gurt selbst zugemacht.</p>
-            <p class="msg"><time>11:40 · Jonas</time>Zoo: Mia hat einen Pinguin adoptiert. (Nur emotional.)</p>
-            <p class="msg"><time>13:15 · Tim</time>Mittagessen: Nudeln. Allergieliste beachtet.</p>
-            <p class="msg me"><time>13:17 · Lena</time>Ihr seid großartig. Ich sitze gerade im Kino!</p>
-            <p class="msg"><time>14:30 · Jonas</time>Ben macht Mittagsschlaf. Tim auch.</p>
+      <div class="how-grid">
+        <div class="steps-col">
+        <article class="card step">
+          <div class="step-top"><span class="num">01</span><span class="ic" style="background:#FFE1D6"><svg viewBox="0 0 24 24" fill="none" stroke="#E2523D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="4"/><path d="M2 21c0-4 3.6-7 8-7 1.3 0 2.5.3 3.6.8"/><path d="M16 18l2 2 4-4"/></svg></span></div>
+          <h3>Prüfen &amp; Matchen</h3>
+          <p>Familien legen ein Profil an – Interessen, Routinen, Allergien, No-Gos. Mieter durchlaufen unsere Verifizierung. Danach matchen wir nach Werten, Alltag und Entfernung.</p>
+        </article>
+        <article class="card step">
+          <div class="step-top"><span class="num">02</span><span class="ic" style="background:#DCEBFA"><svg viewBox="0 0 24 24" fill="none" stroke="#2a6fb5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span></div>
+          <h3>Kennenlernen</h3>
+          <p>Das erste Treffen: maximal zwei Stunden, tagsüber, auf dem Spielplatz oder bei der Familie zuhause – Eltern immer dabei. Danach entscheidet das Kind: Daumen hoch oder Veto.</p>
+        </article>
+        <article class="card step">
+          <div class="step-top"><span class="num">03</span><span class="ic" style="background:#FFF0CC"><svg viewBox="0 0 24 24" fill="none" stroke="#B9830A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg></span></div>
+          <h3>Familienzeit</h3>
+          <p>Erst ein Nachmittag, dann ein Tag, irgendwann ein Wochenende – mit Live-Check-ins, Notfall-Knopf und Coach im Hintergrund. Danach: ehrliches Feedback und die große Frage „Und – Kinder, ja oder nein?“</p>
+        </article>
+        </div>
+        <div class="phone" data-reveal="1" aria-label="Beispiel-App-Ansicht: Live-Check-in">
+          <div class="screen">
+            <div class="screen-head"><small><i></i> Live-Check-in</small><b>Mia &amp; Ben mit Tim &amp; Jonas</b></div>
+            <div class="msgs" id="msgs">
+              <p class="msg sys">Stufe 3 · freigegeben von Lena, Mia, Ben &amp; Coach Sarah</p>
+              <p class="msg"><time>09:58 · Tim</time>Abgeholt! Kindersitze geprüft, Ben hat den Gurt selbst zugemacht.</p>
+              <p class="msg"><time>11:40 · Jonas</time>Zoo: Mia hat einen Pinguin adoptiert. (Nur emotional.)</p>
+              <p class="msg"><time>13:15 · Tim</time>Mittagessen: Nudeln. Allergieliste beachtet.</p>
+              <p class="msg me"><time>13:17 · Lena</time>Ihr seid großartig. Ich sitze gerade im Kino!</p>
+              <p class="msg"><time>14:30 · Jonas</time>Ben macht Mittagsschlaf. Tim auch.</p>
+            </div>
+            <button class="sos" type="button" data-toast="Demo: Im echten Produkt verbindet der Notfall-Knopf sofort mit Eltern, Coach und Rettungsdienst.">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></svg> Notfall-Knopf
+            </button>
+            <p class="coach-line">Coach Sarah ist erreichbar · Standort geteilt</p>
           </div>
-          <button class="sos" type="button" data-toast="Demo: Im echten Produkt verbindet der Notfall-Knopf sofort mit Eltern, Coach und Rettungsdienst.">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></svg> Notfall-Knopf
-          </button>
-          <p class="coach-line">Coach Sarah ist erreichbar · Standort geteilt</p>
         </div>
       </div>
     </div>
-  </div></div>
+  </div>
 </section>
 
 <!-- 8 BUSINESS MODEL -->
 <section class="slide biz" id="s-biz" data-title="Geschäftsmodell">
   <div class="fit"><div class="wrap">
-    <span class="eyebrow" data-reveal>Kapitel 07 · Geschäftsmodell</span>
+    <span class="eyebrow" data-reveal>Kapitel 06 · Geschäftsmodell</span>
     <h2 data-reveal="1">Wie wir Geld verdienen – <span class="hl">ohne an Sicherheit zu sparen.</span></h2>
     <p class="lead" data-reveal="2">Drei Erlösquellen, ein Prinzip: Wir verdienen nur, wenn Familien uns vertrauen und wiederkommen.</p>
     <div class="rev" style="margin-top:36px">
@@ -748,7 +745,7 @@ body.pitch .hero-sticker{bottom:70px}
 <!-- 9 MARKET & COMPETITION -->
 <section class="slide market" id="s-market" data-title="Markt & Wettbewerb">
   <div class="fit"><div class="wrap">
-    <span class="eyebrow" data-reveal>Kapitel 08 · Markt &amp; Wettbewerb</span>
+    <span class="eyebrow" data-reveal>Kapitel 07 · Markt &amp; Wettbewerb</span>
     <h2 data-reveal="1">Ein großer Markt – und <span class="hl">eine leere Ecke.</span></h2>
     <div class="mk-grid" style="margin-top:36px">
       <article class="card mk-card" data-reveal="1">
@@ -796,7 +793,7 @@ body.pitch .hero-sticker{bottom:70px}
   <div class="fit"><div class="wrap">
     <div class="ask-grid">
       <div>
-        <span class="eyebrow" data-reveal>Kapitel 09 · The Ask</span>
+        <span class="eyebrow" data-reveal>Kapitel 08 · The Ask</span>
         <div class="ask-num" data-reveal="1"><span data-count="500000" data-suf=" €">500.000 €</span></div>
         <p class="ask-sub" data-reveal="2">Seed für <span>10 %</span> – 5&nbsp;Mio.&nbsp;€ Post&#8209;Money.</p>
         <p class="lead" data-reveal="3">Damit bringen wir den Pilot in Heilbronn zum Laufen, bauen die App und machen unser Sicherheitskonzept zum Branchenstandard.</p>
@@ -832,7 +829,7 @@ body.pitch .hero-sticker{bottom:70px}
 <section class="slide cta" id="s-cta" data-title="Abschluss">
   <div class="hearts" aria-hidden="true"></div>
   <div class="fit"><div class="wrap">
-    <span class="eyebrow" data-reveal>Kapitel 10 · Happy End</span>
+    <span class="eyebrow" data-reveal>Kapitel 09 · Happy End</span>
     <div class="three">
       <div class="card" data-reveal="1"><b>Lena</b><span>bekommt ihr Wochenende zurück – und ein gutes Gefühl dabei.</span></div>
       <div class="card" data-reveal="2"><b>Tim &amp; Jonas</b><span>bekommen eine ehrliche Antwort. (Spoiler: Sie melden sich für Stufe 4 an.)</span></div>
@@ -859,7 +856,7 @@ body.pitch .hero-sticker{bottom:70px}
 <div class="pitch-ui" id="pitchUi" aria-label="Pitch-Steuerung">
   <span class="hint">← → blättern · Esc beendet</span>
   <button type="button" id="pPrev" aria-label="Vorherige Folie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
-  <span class="count" id="pcount">1 / 10</span>
+  <span class="count" id="pcount">1 / 9</span>
   <button type="button" id="pNext" aria-label="Nächste Folie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
   <button type="button" id="pExit" aria-label="Pitch-Modus beenden"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
 </div>
@@ -1026,7 +1023,7 @@ body.pitch .hero-sticker{bottom:70px}
       .to(caps[2], cout, '<').to(caps[3], cin, '<.2')
       .to({}, { duration: .6 }), 'scrub', sTurn);
 
-    // 5 How it works – horizontal pinned track (desktop), morphing blob
+    // 5 How it works – steps + embedded phone demo, morphing blob
     const sHow = S('s-how');
     reveals($('.how-head', sHow));
     const B = [
@@ -1034,38 +1031,14 @@ body.pitch .hero-sticker{bottom:70px}
       'M100,8 C160,14 192,42 186,100 C180,160 150,192 100,186 C50,180 12,152 16,100 C20,44 46,4 100,8 Z',
       'M112,24 C168,8 196,72 176,116 C156,166 120,196 78,176 C34,156 4,118 26,78 C46,40 70,36 112,24 Z'
     ];
-    const tag = 'how';
-    mm.add('(min-width: 900px)', () => {
-      const track = $('.steps-track', sHow);
-      const dist = () => Math.max(0, track.scrollWidth - root.clientWidth);
-      const si = $$('.si', sHow);
-      gsap.set(si, { scaleX: 0 });
-      const tl = gsap.timeline({ scrollTrigger: { trigger: sHow, start: 'top top', end: () => '+=' + (dist() + innerHeight * .6), pin: true, scrub: 1, invalidateOnRefresh: true, anticipatePin: 1 } })
-        .to(track, { x: () => -dist(), ease: 'none', duration: 2 }, 0)
-        .to(si[0], { scaleX: 1, duration: .3 }, 0)
-        .to('#blob', { attr: { d: B[1] }, fill: '#DCEBFA', duration: 1, ease: 'none' }, 0)
-        .to(si[1], { scaleX: 1, duration: .4 }, .6)
-        .to('#blob', { attr: { d: B[2] }, fill: '#FFEBC2', duration: 1, ease: 'none' }, 1)
-        .to(si[2], { scaleX: 1, duration: .4 }, 1.5)
-        .fromTo($$('.step', sHow), { y: 50, rotate: 2 }, { y: 0, rotate: 0, stagger: .35, duration: .6, ease: 'power2.out' }, 0);
-      R(tl, 'scrub', sHow, tag);
-      return () => { for (let k = reg.length - 1; k >= 0; k--) if (reg[k].tag === tag) reg.splice(k, 1); };
-    });
-    mm.add('(max-width: 899px)', () => {
-      $$('.step', sHow).forEach(el => R(gsap.from(el, { y: 40, autoAlpha: 0, duration: .8, ease: 'power3.out',
-        scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' } }), 'reveal', sHow, tag + 'm'));
-      R(gsap.timeline({ scrollTrigger: { trigger: sHow, start: 'top 60%', end: 'bottom 40%', scrub: 1 } })
-        .to('#blob', { attr: { d: B[1] }, fill: '#DCEBFA', ease: 'none' })
-        .to('#blob', { attr: { d: B[2] }, fill: '#FFEBC2', ease: 'none' }), 'scrub', sHow, tag + 'm');
-      return () => { for (let k = reg.length - 1; k >= 0; k--) if (reg[k].tag === tag + 'm') reg.splice(k, 1); };
-    });
-
-    // 7 Safety live – trust ladder + chat
-    const sLive = S('s-live');
-    reveals(sLive);
-    R(gsap.timeline({ scrollTrigger: { trigger: '.phone', start: 'top 75%', toggleActions: 'play none none none' } })
-      .from('#msgs .msg', { y: 20, autoAlpha: 0, scale: .96, stagger: .45, duration: .45, ease: 'back.out(1.6)' })
-      .from('.sos', { scale: .8, autoAlpha: 0, duration: .5, ease: 'back.out(2)' }, '-=.1'), 'replay', sLive);
+    R(gsap.timeline({ scrollTrigger: { trigger: sHow, start: 'top 75%', toggleActions: 'play none none none' } })
+      .from($$('.step', sHow), { x: -40, autoAlpha: 0, stagger: .35, duration: .7, ease: 'power3.out' })
+      .from('.how-grid .phone', { y: 60, autoAlpha: 0, rotate: 6, duration: .9, ease: 'power3.out' }, '-=.4')
+      .from('#msgs .msg', { y: 20, autoAlpha: 0, scale: .96, stagger: .55, duration: .45, ease: 'back.out(1.6)' })
+      .from('.sos', { scale: .8, autoAlpha: 0, duration: .5, ease: 'back.out(2)' }, '-=.1'), 'replay', sHow);
+    R(gsap.timeline({ scrollTrigger: { trigger: sHow, start: 'top 60%', end: 'bottom 40%', scrub: 1 } })
+      .to('#blob', { attr: { d: B[1] }, fill: '#DCEBFA', ease: 'none' })
+      .to('#blob', { attr: { d: B[2] }, fill: '#FFEBC2', ease: 'none' }), 'scrub', sHow);
 
     // 8 Business
     const sBiz = S('s-biz'); reveals(sBiz); counters(sBiz);

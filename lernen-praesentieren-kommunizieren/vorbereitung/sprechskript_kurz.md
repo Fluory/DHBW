@@ -1,4 +1,4 @@
-# Sprechskript (2,5–3 Min.) · „Rent your Child“ · 10 Folien
+# Sprechskript (2,5–3 Min.) · „Rent your Child“ · 9 Folien
 
 Passend zum Pitch-Modus (Taste **P**, → blättern). **[→]** = weiterklicken.
 
@@ -28,29 +28,26 @@ Was wäre, wenn sich beide finden?
 *(die Kinder erscheinen)* Und Lenas Kinder, Mia und Ben, wollen einfach Abenteuer.
 *(Bogen und Herz erscheinen – kurz warten)* **Rent your Child verbindet alle drei.** **[→]**
 
-**Folie 5 · Lösung**
+**Folie 5 · Lösung (mit Handy-Demo)**
 
-Das funktioniert in drei Schritten. Zuerst prüfen wir jeden Mieter, mit Ausweis, erweitertem Führungszeugnis und persönlichem Interview. Dann kommt das erste Treffen: zwei Stunden, tagsüber, und die Eltern sind dabei. Danach entscheidet das Kind, ob es weitergeht – ein Nein ist ein Nein. Erst dann folgen ein Nachmittag, ein ganzer Tag und irgendwann ein Wochenende. **[→]**
+Das funktioniert in drei Schritten. Zuerst prüfen wir jeden Mieter, mit Ausweis, erweitertem Führungszeugnis und persönlichem Interview. Dann kommt das erste Treffen: zwei Stunden, tagsüber, und die Eltern sind dabei. Danach entscheidet das Kind, ob es weitergeht – ein Nein ist ein Nein. Erst dann folgen ein Nachmittag, ein ganzer Tag und irgendwann ein Wochenende.
 
-**Folie 6 · Live-Demo**
+*(auf das Handy zeigen, die Nachrichten laufen ein)* Und so sieht das live aus: Tim und Jonas sind mit Mia und Ben im Zoo, und Lena bekommt jede Nachricht aufs Handy. Ihre Antwort: „Ich sitze gerade im Kino.“ Und wenn etwas ist, reicht ein Tipp auf den Notfall-Knopf. **[→]**
 
-So sieht ein Samstag live aus. *(Nachrichten laufen ein)* Tim und Jonas sind mit Mia und Ben im Zoo, und Lena bekommt jede Nachricht aufs Handy: abgeholt, Zoo, Mittagessen. Ihre Antwort: „Ich sitze gerade im Kino.“
-Und wenn etwas ist, reicht ein Tipp auf den Notfall-Knopf. **[→]**
-
-**Folie 7 · Geschäftsmodell**
+**Folie 6 · Geschäftsmodell**
 
 Unser Geld verdienen wir so: Die Mieter zahlen die Buchung, und wir behalten 18 Prozent. Dazu kommen ein Abo für Familien und Provisionen von unseren Versicherungspartnern. Für die Eltern ist die Vermittlung kostenlos. **[→]**
 
-**Folie 8 · Markt**
+**Folie 7 · Markt**
 
 Der Markt ist groß: In Deutschland gibt es rund acht Millionen Familien mit minderjährigen Kindern. Unser Ziel nach drei Jahren sind 24.000 aktive Familien – etwa ein Prozent unseres Kernmarkts.
 Und die Ecke, in der wir stehen, ist leer: Babysitter-Plattformen verkaufen Stunden. Wir verkaufen Vertrauen und echtes Familienleben. **[→]**
 
-**Folie 9 · Ask**
+**Folie 8 · Ask**
 
 Starten wollen wir mit einem Pilot in Heilbronn. Dafür brauchen wir **500.000 Euro für zehn Prozent**. Fast die Hälfte davon fließt in Sicherheit, und das mit Absicht. **[→]**
 
-**Folie 10 · Happy End**
+**Folie 9 · Happy End**
 
 Und das Ende der Geschichte? Lena bekommt ihr Wochenende zurück. Tim und Jonas wissen endlich, was sie wollen. Und Mia und Ben haben zwei neue Lieblingsmenschen.
 
