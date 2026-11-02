@@ -30,18 +30,17 @@ Was wäre, wenn sich beide finden?
 
 **Folie 5 · Lösung (mit Handy-Demo)**
 
-Das funktioniert in drei Schritten. Zuerst prüfen wir jeden Mieter, mit Ausweis, erweitertem Führungszeugnis und persönlichem Interview. Dann kommt das erste Treffen: zwei Stunden, tagsüber, und die Eltern sind dabei. Danach entscheidet das Kind, ob es weitergeht – ein Nein ist ein Nein. Erst dann folgen ein Nachmittag, ein ganzer Tag und irgendwann ein Wochenende.
+Das funktioniert in drei Schritten. Zuerst prüfen wir jeden Mieter: Ausweis, Führungszeugnis, Interview. Beim ersten Treffen – zwei Stunden, tagsüber – sind die Eltern dabei. Danach entscheidet das Kind, ob es weitergeht – ein Nein ist ein Nein. Erst dann folgen Nachmittag, Tag und Wochenende.
 
-*(auf das Handy zeigen, die Nachrichten laufen ein)* Und so sieht das live aus: Tim und Jonas sind mit Mia und Ben im Zoo, und Lena bekommt jede Nachricht aufs Handy. Ihre Antwort: „Ich sitze gerade im Kino.“ Und wenn etwas ist, reicht ein Tipp auf den Notfall-Knopf. **[→]**
+*(auf das Handy zeigen, die Nachrichten laufen ein)* So sieht das live aus: Tim und Jonas sind mit den Kindern im Zoo, Lena bekommt jede Nachricht – und antwortet aus dem Kino. Im Notfall reicht ein Tipp. **[→]**
 
 **Folie 6 · Geschäftsmodell**
 
-Unser Geld verdienen wir so: Die Mieter zahlen die Buchung, und wir behalten 18 Prozent. Dazu kommen ein Abo für Familien und Provisionen von unseren Versicherungspartnern. Für die Eltern ist die Vermittlung kostenlos. **[→]**
+Unser Geld verdienen wir so: Der Mieter zahlt je nach Stufe – von 25 Euro für ein Spielplatz-Date bis 250 Euro für ein Wochenende, im Schnitt 120 Euro. Davon behalten wir 18 Prozent, der Rest deckt Coach, Versicherung und den Tag mit den Kindern. Dazu kommen ein Abo für Familien und Provisionen unserer Versicherungspartner. Und die Eltern? Zahlen nichts und bekommen nichts – sie bekommen Zeit. **[→]**
 
 **Folie 7 · Markt**
 
-Der Markt ist groß: In Deutschland gibt es rund acht Millionen Familien mit minderjährigen Kindern. Unser Ziel nach drei Jahren sind 24.000 aktive Familien – etwa ein Prozent unseres Kernmarkts.
-Und die Ecke, in der wir stehen, ist leer: Babysitter-Plattformen verkaufen Stunden. Wir verkaufen Vertrauen und echtes Familienleben. **[→]**
+In Deutschland gibt es rund acht Millionen Familien mit minderjährigen Kindern – unser Ziel nach drei Jahren: 24.000 davon. Und unsere Ecke ist leer: Babysitter-Plattformen verkaufen Stunden. Wir verkaufen Vertrauen. **[→]**
 
 **Folie 8 · Ask**
 
@@ -49,7 +48,7 @@ Starten wollen wir mit einem Pilot in Heilbronn. Dafür brauchen wir **500.000 E
 
 **Folie 9 · Happy End**
 
-Und das Ende der Geschichte? Lena bekommt ihr Wochenende zurück. Tim und Jonas wissen endlich, was sie wollen. Und Mia und Ben haben zwei neue Lieblingsmenschen.
+Lena bekommt ihr Wochenende zurück. Tim und Jonas wissen endlich, was sie wollen. Und Mia und Ben haben zwei neue Lieblingsmenschen.
 
 Einmal Eltern sein – aber nur bis Sonntag. **Rent your Child.**
 
