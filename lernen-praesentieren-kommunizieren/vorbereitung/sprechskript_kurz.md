@@ -36,7 +36,7 @@ Das funktioniert in drei Schritten. Zuerst prüfen wir jeden Mieter: Ausweis, F�
 
 **Folie 6 · Geschäftsmodell**
 
-Unser Geld verdienen wir so: Der Mieter zahlt je nach Stufe – von 25 Euro für ein Spielplatz-Date bis 250 Euro für ein Wochenende, im Schnitt 120 Euro. Davon behalten wir 18 Prozent, der Rest deckt Coach, Versicherung und den Tag mit den Kindern. Dazu kommen ein Abo für Familien und Provisionen unserer Versicherungspartner. Und die Eltern? Zahlen nichts und bekommen nichts – sie bekommen Zeit. **[→]**
+Unser Geld verdienen wir so: Der Mieter zahlt je nach Stufe – von 25 Euro für ein Spielplatz-Date bis 250 Euro für ein Wochenende, im Schnitt 120 Euro. Davon behalten wir 18 Prozent, der Rest deckt Coach, Versicherung und den Tag mit den Kindern. Dazu kommen ein Abo für Familien und Provisionen unserer Versicherungspartner. Für die Eltern ist die Vermittlung kostenlos. **[→]**
 
 **Folie 7 · Markt**
 
