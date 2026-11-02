@@ -16,7 +16,7 @@ Eltern lieben ihre Kinder. Aber sie lieben auch Schlaf. Gleichzeitig gibt es vie
 
 **Folie 3 · Helden**
 
-Nehmen wir Lena. Sie ist Pflegekraft, hat zwei Kinder, und die Oma wohnt 500 Kilometer weit weg. Lena braucht eine Pause.
+Nehmen wir Lena. Sie ist Pflegekraft, hat zwei Kinder, und die Oma wohnt 500 Kilometer weit weg.
 Und nehmen wir Tim und Jonas. Sie fragen sich: Passen Kinder überhaupt zu uns? **[→]**
 
 **Folie 4 · Wendepunkt**
