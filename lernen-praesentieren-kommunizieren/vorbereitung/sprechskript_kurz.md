@@ -1,4 +1,4 @@
-# Sprechskript (2,5–3 Min.) · „Rent your Child“ · 8 Folien
+# Sprechskript (2,5–3 Min.) · „Rent your Child“ · 9 Folien
 
 Passend zum Pitch-Modus (Taste **P**, → blättern). **[→]** = weiterklicken.
 
@@ -17,30 +17,33 @@ Eltern lieben ihre Kinder. Aber sie lieben auch Schlaf. Gleichzeitig gibt es vie
 **Folie 3 · Helden**
 
 Nehmen wir Lena. Sie ist Pflegekraft, hat zwei Kinder, und die Oma wohnt 500 Kilometer weit weg. Lena braucht eine Pause.
-Und nehmen wir Tim und Jonas. Sie fragen sich: Passen Kinder überhaupt zu uns? Sie brauchen Erfahrung.
-Rent your Child bringt beide zusammen. **[→]**
+Und nehmen wir Tim und Jonas. Sie fragen sich: Passen Kinder überhaupt zu uns? **[→]**
 
-**Folie 4 · Lösung**
+**Folie 4 · Wendepunkt**
+
+Was wäre, wenn sich beide finden? Lena braucht eine Pause. Tim und Jonas brauchen Erfahrung. Und Lenas Kinder Mia und Ben wollen einfach Abenteuer. **Rent your Child verbindet alle drei.** **[→]**
+
+**Folie 5 · Lösung**
 
 Das funktioniert in drei Schritten. Zuerst prüfen wir jeden Mieter und suchen passende Familien aus. Dann kommt das erste Treffen: zwei Stunden, tagsüber, und die Eltern sind dabei. Danach entscheidet das Kind, ob es weitergeht. Erst dann folgen ein Nachmittag, ein ganzer Tag und irgendwann ein Wochenende. **[→]**
 
-**Folie 5 · Sicherheit**
+**Folie 6 · Sicherheit**
 
 Ich weiß, was Sie jetzt denken: „Kinder vermieten? Ernsthaft?“
 
 Genau deshalb gilt bei uns: **Sicherheit ist kein Feature. Sie ist das Produkt.** Jeder Mieter braucht ein erweitertes Führungszeugnis und ein persönliches Interview. Das Kind hat immer ein Veto. Die Eltern sind rund um die Uhr live dabei, es gibt einen Notfall-Knopf, und jede Buchung ist versichert. Niemand bekommt also am ersten Tag das Wochenende. **[→]**
 
-**Folie 6 · Geschäftsmodell**
+**Folie 7 · Geschäftsmodell**
 
 Unser Geld verdienen wir so: Die Mieter zahlen die Buchung, und wir behalten 18 Prozent. Dazu kommen ein Abo für Familien und Provisionen von unseren Versicherungspartnern. Für die Eltern ist die Vermittlung kostenlos. Babysitter-Plattformen verkaufen Stunden. Wir verkaufen Vertrauen. **[→]**
 
-**Folie 7 · Ask**
+**Folie 8 · Ask**
 
 Starten wollen wir mit einem Pilot in Heilbronn. Dafür brauchen wir **500.000 Euro für zehn Prozent**. Fast die Hälfte davon fließt in Sicherheit, und das mit Absicht. **[→]**
 
-**Folie 8 · Happy End**
+**Folie 9 · Happy End**
 
-Und das Ende der Geschichte? Lena bekommt ihr Wochenende zurück. Tim und Jonas wissen endlich, was sie wollen. Und Lenas Kinder Mia und Ben haben zwei neue Lieblingsmenschen.
+Und das Ende der Geschichte? Lena bekommt ihr Wochenende zurück. Tim und Jonas wissen endlich, was sie wollen. Und Mia und Ben haben zwei neue Lieblingsmenschen.
 
 Einmal Eltern sein – aber nur bis Sonntag. **Rent your Child.**
 
