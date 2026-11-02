@@ -1,55 +1,23 @@
-# Sprechskript (2,5–3 Min.) · „Rent your Child“ · 9 Folien
+# Sprechskript (max. 2:30) · „Rent your Child“ · 9 Folien
 
-Passend zum Pitch-Modus (Taste **P**, → blättern). **[→]** = weiterklicken.
+Passend zum Pitch-Modus (Taste **P**, → blättern). Jeder Absatz = eine Folie, **[→]** = weiterklicken.
 
 ---
 
-**Folie 1 · Hook**
+Einmal Eltern sein – aber nur bis Sonntag? Ich bin [Name], ich studiere Wirtschaftsinformatik, und das ist **Rent your Child**. **[→]**
 
-Einmal Eltern sein – aber nur bis Sonntag?
+Eltern lieben ihre Kinder – aber auch Schlaf. Und viele andere wollen *vielleicht* Kinder: eine Entscheidung für 18 Jahre, ohne Testphase. **[→]**
 
-Ich bin [Name], ich studiere Wirtschaftsinformatik, und das ist **Rent your Child**. **[→]**
+Lena ist Pflegekraft, hat zwei Kinder, die Oma wohnt 500 Kilometer weit weg. Tim und Jonas fragen sich: Passen Kinder zu uns? **[→]**
 
-**Folie 2 · Problem**
+Lena braucht eine Pause. Tim und Jonas brauchen Erfahrung. Mia und Ben wollen Abenteuer. *(kurz warten, bis das Herz erscheint)* **Rent your Child verbindet alle drei.** **[→]**
 
-Eltern lieben ihre Kinder. Aber sie lieben auch Schlaf. Gleichzeitig gibt es viele Menschen, die *vielleicht* Kinder wollen. Sie stehen vor einer Entscheidung mit 18 Jahren Mindestlaufzeit, und das ganz ohne Testphase. Was die einen zu viel haben, fehlt den anderen. **[→]**
+Rent your Child ist eine **App fürs Smartphone**. Wir prüfen jeden Mieter mit Ausweis, Führungszeugnis und Interview. Beim ersten Treffen sind die Eltern dabei, danach entscheidet das Kind. Erst dann folgen Nachmittag, Tag und Wochenende. *(auf das Handy zeigen)* In der App sieht Lena jede Nachricht live – und im Notfall reicht ein Tipp. **[→]**
 
-**Folie 3 · Helden**
+Der Mieter zahlt je nach Stufe zwischen 25 und 250 Euro, im Schnitt 120. Davon behalten wir 18 Prozent. Dazu kommen ein Abo für Familien und Provisionen von Versicherungen. Für Eltern ist die App kostenlos. **[→]**
 
-Nehmen wir Lena. Sie ist Pflegekraft, hat zwei Kinder, und die Oma wohnt 500 Kilometer weit weg.
-Und nehmen wir Tim und Jonas. Sie fragen sich: Passen Kinder überhaupt zu uns? **[→]**
+Acht Millionen Familien in Deutschland, unser Ziel: 24.000 in drei Jahren. Babysitter-Plattformen verkaufen Stunden – wir verkaufen Vertrauen. **[→]**
 
-**Folie 4 · Wendepunkt**
+Wir starten mit einem Pilot in Heilbronn und brauchen dafür **500.000 Euro für zehn Prozent** – fast die Hälfte geht in Sicherheit. **[→]**
 
-Was wäre, wenn sich beide finden?
-
-*(Lena erscheint)* Lena braucht eine Pause.
-*(Tim & Jonas erscheinen)* Tim und Jonas brauchen Erfahrung.
-*(die Kinder erscheinen)* Und Lenas Kinder, Mia und Ben, wollen einfach Abenteuer.
-*(Bogen und Herz erscheinen – kurz warten)* **Rent your Child verbindet alle drei.** **[→]**
-
-**Folie 5 · Lösung (mit Handy-Demo)**
-
-Das funktioniert in drei Schritten. Zuerst prüfen wir jeden Mieter: Ausweis, Führungszeugnis, Interview. Beim ersten Treffen – zwei Stunden, tagsüber – sind die Eltern dabei. Danach entscheidet das Kind, ob es weitergeht – ein Nein ist ein Nein. Erst dann folgen Nachmittag, Tag und Wochenende.
-
-*(auf das Handy zeigen, die Nachrichten laufen ein)* So sieht das live aus: Tim und Jonas sind mit den Kindern im Zoo, Lena bekommt jede Nachricht – und antwortet aus dem Kino. Im Notfall reicht ein Tipp. **[→]**
-
-**Folie 6 · Geschäftsmodell**
-
-Unser Geld verdienen wir so: Der Mieter zahlt je nach Stufe – von 25 Euro für ein Spielplatz-Date bis 250 Euro für ein Wochenende, im Schnitt 120 Euro. Davon behalten wir 18 Prozent, der Rest deckt Coach, Versicherung und den Tag mit den Kindern. Dazu kommen ein Abo für Familien und Provisionen unserer Versicherungspartner. Für die Eltern ist die Vermittlung kostenlos. **[→]**
-
-**Folie 7 · Markt**
-
-In Deutschland gibt es rund acht Millionen Familien mit minderjährigen Kindern – unser Ziel nach drei Jahren: 24.000 davon. Und unsere Ecke ist leer: Babysitter-Plattformen verkaufen Stunden. Wir verkaufen Vertrauen. **[→]**
-
-**Folie 8 · Ask**
-
-Starten wollen wir mit einem Pilot in Heilbronn. Dafür brauchen wir **500.000 Euro für zehn Prozent**. Fast die Hälfte davon fließt in Sicherheit, und das mit Absicht. **[→]**
-
-**Folie 9 · Happy End**
-
-Lena bekommt ihr Wochenende zurück. Tim und Jonas wissen endlich, was sie wollen. Und Mia und Ben haben zwei neue Lieblingsmenschen.
-
-Einmal Eltern sein – aber nur bis Sonntag. **Rent your Child.**
-
-Danke. Ich freue mich auf Ihre Fragen.
+Lena bekommt ihr Wochenende zurück, Tim und Jonas ihre Antwort, Mia und Ben zwei neue Lieblingsmenschen. Einmal Eltern sein – aber nur bis Sonntag. **Rent your Child.** Danke!
