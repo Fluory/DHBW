@@ -12,6 +12,7 @@ Moodle: [Kurs 18616](https://moodle.heilbronn.dhbw.de/course/view.php?id=18616) 
 | 2 | 22.10.2026 | Betrieb und Unternehmung: Typologie, Makroumfeld, normativer Rahmen, Ziele, Mitbestimmung | Folien „2. Betrieb und Unternehmung“ + Skript Kap. 2 | [02](vorlesungen/02_2026-10-22.md) |
 | 3 | 26.10.2026 | Rechtsformen I: Firma, Kaufmann, Handelsregister, Einzelunternehmung, GbR, OHG, KG, stille Gesellschaft (Übungen 12–17; Aufteilung auf 26./27.10. vermutet) | Folien „3. Rechtsformen der Unternehmung“ + Skript Kap. 3 | [03](vorlesungen/03_2026-10-26.md) |
 | 4 | 27.10.2026 | Rechtsformen II: Kapitalgesellschaften (GmbH, UG, GmbH & Co. KG, AG, KGaA, SE), eG, Stiftung (Übungen 18–22) + Kap. 4 Konzentration und Kooperation (Kartelle, Franchise, Joint Venture, Konzern, Holding, Fusion; Übungen 23–25) | Folien „3. Rechtsformen der Unternehmung“ (3.4–3.5) + „4. Konzentration und Kooperation“ + Skript Kap. 3.4–4 | [04](vorlesungen/04_2026-10-27.md) |
+| 5 | 03.11.2026 | Kap. 5 Standortentscheidungen: Ziele, Standortplanung/-struktur, Standortfaktoren, Methoden, Nutzwertanalyse (Übungen 26–27, Musterklausur A8); falls Zeit Beginn Kap. 6 Rechnungswesen | vermutet (Agenda-Folie Kap. 3 + Skript Kap. 5, S. 61–65) | [05](vorlesungen/05_2026-11-03.md) |
 
 ## Materialien in Moodle
 
