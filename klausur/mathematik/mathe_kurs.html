@@ -1,0 +1,1040 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mathematik I – Kurs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#22252e;--muted:#5b6070;--line:#dfe2ea;--blue:#4f5fa8;--blue-bg:#eef0f8;--warm:#b4652a;--warm-bg:#fbf1e9;--paper:#ffffff;}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Inter","Source Sans 3",system-ui,"DejaVu Sans",sans-serif;font-size:17px;line-height:1.6;font-feature-settings:"tnum" 0}
+main{max-width:70ch;margin:0 auto;padding:32px 16px 80px}
+h1,h2,h3,h4{line-height:1.25;color:var(--ink)}
+h1{font-size:2rem;margin:.2em 0 .3em;color:var(--blue)}
+h2{font-size:1.55rem;margin:2.4em 0 .6em;color:var(--blue);padding-bottom:.25em;border-bottom:2px solid var(--blue-bg)}
+h2 .nr{display:inline-block;min-width:1.7em;color:var(--warm)}
+h3{font-size:1.12rem;margin:1.8em 0 .5em;color:var(--blue)}
+h3 .step{color:var(--warm);font-weight:700;margin-right:.35em}
+h4{font-size:1rem;margin:1.3em 0 .4em}
+p{margin:.55em 0}
+ul,ol{padding-left:1.4em;margin:.5em 0}
+li{margin:.25em 0}
+a{color:var(--blue)}
+sub,sup{font-size:.72em;line-height:0}
+.ol{text-decoration:overline}
+.muted{color:var(--muted)}
+.small{font-size:.9em}
+.f{white-space:nowrap}
+.formula{display:block;margin:.7em 0;padding:.45em .9em;background:#f6f7fa;border-radius:6px;font-size:1.05em}
+.box{margin:1em 0;padding:.7em 1em;border-radius:6px;border-left:5px solid}
+.box > :first-child{margin-top:0}.box > :last-child{margin-bottom:0}
+.box .t{display:block;font-weight:700;margin-bottom:.15em}
+.merke{background:var(--blue-bg);border-color:var(--blue)}
+.merke .t{color:var(--blue)}
+.achtung{background:var(--warm-bg);border-color:var(--warm)}
+.achtung .t{color:var(--warm)}
+.bild{background:#fafafa;border-color:#b9bdc9;font-style:normal}
+table{border-collapse:collapse;margin:.8em 0;font-size:.95em;width:auto;max-width:100%}
+th,td{border:1px solid var(--line);padding:.35em .65em;text-align:left;vertical-align:top}
+th{background:var(--blue-bg);font-weight:600}
+td.c,th.c{text-align:center}
+.tablewrap{overflow-x:auto}
+.check{list-style:none;padding-left:0}
+.check li{padding-left:1.6em;position:relative}
+.check li::before{content:"☐";position:absolute;left:0;color:var(--blue)}
+.task{margin:1.1em 0;padding:.7em 1em;border:1px solid var(--line);border-radius:6px;break-inside:avoid}
+.task .head{display:flex;flex-wrap:wrap;gap:.5em;align-items:baseline;justify-content:space-between;margin-bottom:.3em}
+.task .head b{color:var(--blue)}
+.lvl{font-size:.8em;font-weight:600;padding:.1em .5em;border-radius:999px;border:1px solid}
+.lvl.l1{color:var(--blue);border-color:var(--blue)}
+.lvl.l2{color:#6b5a9c;border-color:#6b5a9c}
+.lvl.l3{color:var(--warm);border-color:var(--warm)}
+.pts{font-weight:700;color:var(--warm)}
+.sol{margin:1em 0 1.4em;padding:.2em 0 .2em 1em;border-left:3px solid var(--line)}
+.sol h4{margin-top:.4em;color:var(--blue)}
+.ok{color:var(--blue);font-weight:700}
+.toc{list-style:none;padding-left:0}
+.toc li{display:flex;gap:.6em;padding:.3em 0;border-bottom:1px dotted var(--line)}
+.toc .n{color:var(--warm);font-weight:700;min-width:2.2em}
+.cover{padding-top:1em}
+.cover .sub{font-size:1.15rem;color:var(--muted);margin-top:0}
+.lesson-meta{color:var(--muted);font-size:.92em;margin-top:-.3em}
+.spick{font-size:.84em;line-height:1.38}
+.spick h2{margin-top:0}
+.spick h4{margin:.55em 0 .15em;color:var(--blue);font-size:1em}
+.spick p,.spick li{margin:.12em 0}
+.spick ul{margin:.1em 0;padding-left:1.1em}
+.spick .cols{column-count:2;column-gap:1.6em}
+.spick .cols > div{break-inside:avoid;margin-bottom:.35em}
+.spick .formula{padding:.2em .5em;margin:.25em 0;font-size:1em}
+hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+@media (max-width:560px){body{font-size:16px}h1{font-size:1.6rem}h2{font-size:1.3rem}.spick .cols{column-count:1}}
+@page{size:A4;margin:18mm 18mm 20mm 18mm}
+@media print{
+ body{font-size:11pt;line-height:1.5}
+ main{max-width:none;padding:0}
+ h2{margin-top:0}
+ .page{break-before:page}
+ .cover{break-before:auto}
+ h2,h3,h4{break-after:avoid}
+ .box,table,.formula,.sol h4{break-inside:avoid}
+ a{color:inherit;text-decoration:none}
+ .spick{font-size:9.8pt;line-height:1.42}
+ .tablewrap{overflow:visible}
+}
+</style>
+</head>
+<body>
+<main>
+<!-- ===================== DECKBLATT / BENUTZUNG ===================== -->
+<section class="cover">
+<p class="muted small">DHBW · Wirtschaftsinformatik · 1. Semester · Stand 04.11.2026</p>
+<h1>Mathematik I – Kurs in 8 Lektionen</h1>
+<p class="sub">Folgen, Reihen, Finanzmathe und Funktionen – langsam erklärt, mit Prüfungsaufgaben und Lösungen</p>
+
+<h3>So benutzt du dieses Dokument</h3>
+<p>Dieser Kurs deckt ab, was in Mathematik I (Analysis) bis zum 04.11. drankam. Du musst kein Mathe-Talent sein. Du brauchst nur Zeit, einen Stift und einen Taschenrechner.</p>
+<p>Jede Lektion ist gleich aufgebaut. So weißt du immer, wo du bist:</p>
+<div class="tablewrap"><table>
+<tr><th>Teil</th><th>Was du dort findest</th></tr>
+<tr><td>1 Worum geht's?</td><td>ein Bild aus dem Alltag, 2–3 Sätze</td></tr>
+<tr><td>2 Das musst du können</td><td>eine kurze Checkliste</td></tr>
+<tr><td>3 So geht's</td><td>die Methode in nummerierten Schritten</td></tr>
+<tr><td>4 Vorgerechnetes Beispiel</td><td>eine Aufgabe, komplett mit Zahlen gelöst</td></tr>
+<tr><td>5 Typische Fehler</td><td>wo die meisten Punkte verloren gehen</td></tr>
+<tr><td>6 Prüfungsaufgaben</td><td>2–3 Aufgaben mit Punkten, von leicht bis Prüfungsniveau</td></tr>
+</table></div>
+<p>Am Ende kommen eine <b>Probeklausur</b> (60 Minuten, 60 Punkte), alle <b>Lösungen</b> Schritt für Schritt und ein <b>Spickzettel</b> auf einer Seite.</p>
+
+<div class="merke"><span class="t">Merke: So lernst du am besten</span>
+<ol>
+<li>Lies eine Lektion ganz durch. Rechne das Beispiel auf Papier mit.</li>
+<li>Löse die Prüfungsaufgaben <b>ohne</b> nachzuschauen. Auch wenn es schwerfällt.</li>
+<li>Erst dann vergleichst du mit den Lösungen hinten. Markiere, was falsch war.</li>
+<li>Nach zwei Tagen rechnest du die falschen Aufgaben noch einmal.</li>
+</ol></div>
+
+<p class="small">Die Stufen bei den Aufgaben: <span class="lvl l1">leicht</span> = Grundlage, <span class="lvl l2">mittel</span> = typische Klausuraufgabe, <span class="lvl l3">Prüfungsniveau</span> = so schwer wie die härteren Klausurteile.</p>
+<p class="small muted">Schreibweise: Brüche stehen in einer Zeile, z. B. (x² − 4)/(x − 2). Das heißt „Zähler x² − 4 geteilt durch Nenner x − 2“. Eine Periode wird überstrichen: 0,<span class="ol">3</span> = 0,333…</p>
+</section>
+
+<section class="page">
+<h2>Inhalt</h2>
+<ul class="toc">
+<li><span class="n">1</span><a href="#l1">Folgen: arithmetisch, geometrisch, Monotonie, Beschränktheit</a></li>
+<li><span class="n">2</span><a href="#l2">Grenzwerte von Folgen</a></li>
+<li><span class="n">3</span><a href="#l3">Reihen: Partialsummen, geometrische Reihe, Periodenzahlen, Teleskopsumme</a></li>
+<li><span class="n">4</span><a href="#l4">Konvergenzkriterien für Reihen</a></li>
+<li><span class="n">5</span><a href="#l5">Finanzmathe: Zinseszins und Sparplan</a></li>
+<li><span class="n">6</span><a href="#l6">Funktionen: injektiv, surjektiv, bijektiv, Umkehrfunktion</a></li>
+<li><span class="n">7</span><a href="#l7">Monotonie und Beschränktheit von Funktionen</a></li>
+<li><span class="n">8</span><a href="#l8">Grenzwerte von Funktionen</a></li>
+<li><span class="n">P</span><a href="#probe">Probeklausur (60 Minuten, 60 Punkte)</a></li>
+<li><span class="n">L</span><a href="#loesungen">Lösungen zu allen Aufgaben</a></li>
+<li><span class="n">S</span><a href="#spick">Spickzettel: alle Formeln und Rezepte</a></li>
+</ul>
+
+<h3>Woher der Stoff kommt</h3>
+<p>Grundlage sind die Folien „Analysis – Folgen“ vom 19.10. und die Mitschrift vom 04.11. (Folien 48, 55, 62, 73, 75 und Tafel). „Folie 62“ usw. meint diese Folien. Die Beispiele und Aufgaben passen zur Lernseite <i>mathe_lernseite.html</i>.</p>
+
+<h3>Zeichen, die oft vorkommen</h3>
+<div class="tablewrap"><table>
+<tr><th>Zeichen</th><th>gelesen</th><th>Beispiel</th></tr>
+<tr><td>a<sub>n</sub></td><td>„a n“: das n-te Glied</td><td>a<sub>3</sub> ist das 3. Glied</td></tr>
+<tr><td>Σ</td><td>„Summe“</td><td>Σ<sub>k=1</sub><sup>3</sup> k = 1 + 2 + 3 = 6</td></tr>
+<tr><td>→</td><td>„geht gegen“</td><td>1/n → 0</td></tr>
+<tr><td>∞</td><td>„unendlich“</td><td>n → ∞: n wird immer größer</td></tr>
+<tr><td>⇒</td><td>„daraus folgt“</td><td>x = 2 ⇒ x² = 4</td></tr>
+<tr><td>ℕ, ℝ</td><td>natürliche Zahlen 1, 2, 3 …; reelle Zahlen</td><td>n ∈ ℕ</td></tr>
+<tr><td>[2, ∞)</td><td>alle x mit x ≥ 2</td><td>eckige Klammer: Rand gehört dazu</td></tr>
+<tr><td>(−1, 1)</td><td>alle x mit −1 &lt; x &lt; 1</td><td>runde Klammer: Rand gehört nicht dazu</td></tr>
+</table></div>
+</section>
+
+<!-- ===================== LEKTION 1 ===================== -->
+<section class="page" id="l1">
+<h2><span class="nr">1</span>Folgen</h2>
+<p class="lesson-meta">arithmetisch und geometrisch · Monotonie · Beschränktheit · Vorlesung 19.10.</p>
+
+<h3><span class="step">1</span>Worum geht's?</h3>
+<p>Eine Folge ist eine nummerierte Liste von Zahlen: a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>, … Denk an deinen Kontostand am Ende jedes Monats. Die Nummer n ist der Monat, a<sub>n</sub> der Kontostand. Wir fragen: Welche Regel steckt dahinter? Steigt die Liste? Bleibt sie in einem Bereich?</p>
+
+<h3><span class="step">2</span>Das musst du können</h3>
+<ul class="check">
+<li>Glieder ausrechnen: n = 1, 2, 3 … einsetzen</li>
+<li>erkennen: arithmetisch (immer + d) oder geometrisch (immer · q)</li>
+<li>Formel a<sub>n</sub> aufstellen und ein bestimmtes Glied (z. B. a<sub>20</sub>) berechnen</li>
+<li>Monotonie mit der Differenz a<sub>n+1</sub> − a<sub>n</sub> nachweisen</li>
+<li>Beschränktheit angeben: Boden und Decke</li>
+</ul>
+<div class="tablewrap"><table>
+<tr><th></th><th>arithmetisch</th><th>geometrisch</th></tr>
+<tr><td>Erkennungstest</td><td>Differenz a<sub>n+1</sub> − a<sub>n</sub> ist immer gleich (= d)</td><td>Quotient a<sub>n+1</sub> / a<sub>n</sub> ist immer gleich (= q)</td></tr>
+<tr><td>Formel</td><td>a<sub>n</sub> = a<sub>1</sub> + (n − 1) · d</td><td>a<sub>n</sub> = a<sub>1</sub> · q<sup>n−1</sup></td></tr>
+<tr><td>Beispiel</td><td>3, 7, 11, 15 … (d = 4)</td><td>2, 6, 18, 54 … (q = 3)</td></tr>
+</table></div>
+<div class="tablewrap"><table>
+<tr><th>Begriff</th><th>Bedeutung</th></tr>
+<tr><td>streng monoton wachsend</td><td>a<sub>n</sub> &lt; a<sub>n+1</sub> für alle n (jedes Glied größer als das davor)</td></tr>
+<tr><td>monoton wachsend</td><td>a<sub>n</sub> ≤ a<sub>n+1</sub> (gleich bleiben ist erlaubt)</td></tr>
+<tr><td>(streng) monoton fallend</td><td>a<sub>n</sub> &gt; a<sub>n+1</sub> bzw. a<sub>n</sub> ≥ a<sub>n+1</sub></td></tr>
+<tr><td>nach unten / oben beschränkt</td><td>es gibt einen Boden k ≤ a<sub>n</sub> bzw. eine Decke a<sub>n</sub> ≤ K</td></tr>
+<tr><td>beschränkt</td><td>Boden und Decke: Die Folge bleibt in einem Streifen</td></tr>
+</table></div>
+
+<h3><span class="step">3</span>So geht's</h3>
+<ol>
+<li><b>Glieder hinschreiben.</b> Setze n = 1 bis 5 ein. Dann siehst du schon viel.</li>
+<li><b>Typ prüfen.</b> Rechne zwei Differenzen und zwei Quotienten. Gleiche Differenz ⇒ arithmetisch. Gleicher Quotient ⇒ geometrisch.</li>
+<li><b>Formel aufstellen.</b> Arithmetisch: a<sub>n</sub> = a<sub>1</sub> + (n − 1) · d. Geometrisch: a<sub>n</sub> = a<sub>1</sub> · q<sup>n−1</sup>. Probe mit n = 1.</li>
+<li><b>Monotonie:</b> Berechne a<sub>n+1</sub> − a<sub>n</sub>. Bringe alles auf einen Nenner. Ist das Ergebnis immer &gt; 0, ist die Folge streng wachsend. Immer &lt; 0: streng fallend. Wechselt das Vorzeichen: nicht monoton.</li>
+<li><b>Beschränktheit:</b> Bei einer wachsenden Folge ist a<sub>1</sub> der Boden. Die Decke findest du oft durch Umschreiben, z. B. (n − 1)/n = 1 − 1/n &lt; 1.</li>
+</ol>
+<div class="merke"><span class="t">Merke</span>Für a<sub>n+1</sub> ersetzt du <b>jedes</b> n durch (n + 1). Mit Klammern! Aus (n − 1)/n wird ((n + 1) − 1)/(n + 1) = n/(n + 1).</div>
+
+<h3><span class="step">4</span>Vorgerechnetes Beispiel</h3>
+<p><b>Aufgabe:</b> Untersuche a<sub>n</sub> = (n − 1)/n. Ist die Folge arithmetisch oder geometrisch? Ist sie monoton? Ist sie beschränkt?</p>
+<p><b>Schritt 1 – Glieder:</b></p>
+<div class="tablewrap"><table>
+<tr><th>n</th><td class="c">1</td><td class="c">2</td><td class="c">3</td><td class="c">4</td><td class="c">5</td></tr>
+<tr><th>a<sub>n</sub></th><td class="c">0</td><td class="c">1/2</td><td class="c">2/3</td><td class="c">3/4</td><td class="c">4/5</td></tr>
+</table></div>
+<p><b>Schritt 2 – Typ:</b> Differenzen: 1/2 − 0 = 1/2, aber 2/3 − 1/2 = 1/6. Nicht gleich ⇒ <b>nicht arithmetisch</b>. Quotient: a<sub>2</sub>/a<sub>1</sub> = (1/2)/0 geht nicht (Teilen durch 0). Außerdem kann eine geometrische Folge mit a<sub>1</sub> = 0 nur aus Nullen bestehen ⇒ <b>nicht geometrisch</b>.</p>
+<p><b>Schritt 3 – Monotonie:</b> a<sub>n+1</sub> = n/(n + 1).</p>
+<span class="formula">a<sub>n+1</sub> − a<sub>n</sub> = n/(n + 1) − (n − 1)/n = [n · n − (n − 1)(n + 1)] / (n(n + 1)) = [n² − (n² − 1)] / (n(n + 1)) = 1/(n(n + 1))</span>
+<p>Zähler 1 &gt; 0, Nenner n(n + 1) &gt; 0. Also ist die Differenz immer &gt; 0 ⇒ <b>streng monoton wachsend</b>. Probe: a<sub>2</sub> − a<sub>1</sub> = 1/2 = 1/(1 · 2) ✓.</p>
+<p><b>Schritt 4 – Beschränktheit:</b> Umschreiben: (n − 1)/n = n/n − 1/n = 1 − 1/n. Es wird immer etwas Positives von 1 abgezogen, also a<sub>n</sub> &lt; 1 (Decke). Die Folge wächst, also ist a<sub>1</sub> = 0 der Boden.</p>
+<span class="formula">0 ≤ a<sub>n</sub> &lt; 1 ⇒ beschränkt</span>
+<p class="small muted">Ausblick (Lektion 2): Weil 1/n → 0, geht a<sub>n</sub> → 1. Die Folge kommt der Decke beliebig nahe, erreicht sie aber nie.</p>
+
+<h3><span class="step">5</span>Typische Fehler</h3>
+<div class="achtung"><span class="t">Achtung</span>
+<ul>
+<li>In a<sub>n</sub> = a<sub>1</sub> + (n − 1) · d steht <b>n − 1</b>, nicht n. Das 20. Glied hat erst 19 Schritte hinter sich.</li>
+<li>Negativer Quotient: 4, −2, 1 … ist geometrisch mit q = −1/2. Das Minus gehört zu q.</li>
+<li>Monotonie nur an 2–3 Zahlen „sehen“ ist kein Nachweis. In der Klausur willst du die Differenz allgemein.</li>
+<li>„Monoton wachsend“ heißt nicht automatisch „unbeschränkt“. 1 − 1/n wächst und bleibt unter 1.</li>
+</ul></div>
+
+<h3><span class="step">6</span>Prüfungsaufgaben</h3>
+<div class="task" id="a1-1"><div class="head"><b>Aufgabe 1.1</b><span><span class="lvl l1">leicht</span> → <span class="lvl l3">Prüfungsniveau</span> <span class="pts">12 P</span></span></div>
+<p>a) <span class="pts">(3 P)</span> Ist die Folge 4, −2, 1, −1/2, 1/4, … arithmetisch oder geometrisch? Gib das Bildungsgesetz a<sub>n</sub> an.</p>
+<p>b) <span class="pts">(3 P)</span> Eine arithmetische Folge hat a<sub>1</sub> = 7 und a<sub>5</sub> = 19. Bestimme d und a<sub>20</sub>.</p>
+<p>c) <span class="pts">(6 P)</span> Untersuche b<sub>n</sub> = (2n + 1)/(n + 1) auf Monotonie und Beschränktheit. Tipp: Zeige zuerst b<sub>n</sub> = 2 − 1/(n + 1).</p>
+<p class="small muted">Lösung: <a href="#s1-1">Lösungen, Aufgabe 1.1</a></p></div>
+<div class="task" id="a1-2"><div class="head"><b>Aufgabe 1.2</b><span><span class="lvl l3">Prüfungsniveau</span> <span class="pts">8 P</span></span></div>
+<p>Gegeben ist c<sub>n</sub> = n/2<sup>n</sup>.</p>
+<p>a) <span class="pts">(2 P)</span> Berechne c<sub>1</sub> bis c<sub>5</sub>.</p>
+<p>b) <span class="pts">(4 P)</span> Zeige mit der Differenz c<sub>n+1</sub> − c<sub>n</sub>: Die Folge ist monoton fallend. Ist sie <i>streng</i> monoton fallend?</p>
+<p>c) <span class="pts">(2 P)</span> Gib einen Boden und eine Decke an.</p>
+<p class="small muted">Lösung: <a href="#s1-2">Lösungen, Aufgabe 1.2</a></p></div>
+</section>
+
+<!-- ===================== LEKTION 2 ===================== -->
+<section class="page" id="l2">
+<h2><span class="nr">2</span>Grenzwerte von Folgen</h2>
+<p class="lesson-meta">Nullfolgen · Rechenregeln · höchste Potenz · Divergenz · Vorlesung 19.10.</p>
+
+<h3><span class="step">1</span>Worum geht's?</h3>
+<p>Du läufst immer die Hälfte der Strecke bis zur Wand. Du kommst der Wand beliebig nahe. Die Wand ist der <b>Grenzwert</b>. Bei einer Folge fragen wir: Welcher Zahl kommen die Glieder für n → ∞ beliebig nahe – oder gibt es so eine Zahl gar nicht?</p>
+
+<h3><span class="step">2</span>Das musst du können</h3>
+<div class="tablewrap"><table>
+<tr><th>Baustein</th><th>Grenzwert</th><th>Zahlenprobe</th></tr>
+<tr><td>1/n, 1/n², 5/n</td><td>0 (Nullfolge)</td><td>1/1000 = 0,001</td></tr>
+<tr><td>q<sup>n</sup> mit |q| &lt; 1, z. B. (1/2)<sup>n</sup>, 0,9<sup>n</sup></td><td>0 (Nullfolge)</td><td>0,5<sup>10</sup> ≈ 0,001</td></tr>
+<tr><td>q<sup>n</sup> mit q &gt; 1, z. B. 2<sup>n</sup></td><td>+∞</td><td>2<sup>10</sup> = 1024</td></tr>
+<tr><td>n, n², √n</td><td>+∞</td><td></td></tr>
+<tr><td>(−1)<sup>n</sup></td><td>existiert nicht (springt −1, 1, −1 …)</td><td></td></tr>
+</table></div>
+<p><b>Rechenregeln:</b> Wenn a<sub>n</sub> → a und b<sub>n</sub> → b, dann gilt: c · a<sub>n</sub> → c · a, a<sub>n</sub> ± b<sub>n</sub> → a ± b, a<sub>n</sub> · b<sub>n</sub> → a · b, a<sub>n</sub>/b<sub>n</sub> → a/b (falls b ≠ 0). Du darfst also Stück für Stück rechnen.</p>
+<div class="tablewrap"><table>
+<tr><th>Wort</th><th>Bedeutung</th><th>Beispiel</th></tr>
+<tr><td>konvergent</td><td>hat einen Grenzwert (eine Zahl)</td><td>1 − 1/n → 1</td></tr>
+<tr><td>bestimmt divergent</td><td>geht nach +∞ oder −∞</td><td>n² → +∞</td></tr>
+<tr><td>unbestimmt divergent</td><td>springt hin und her, kein Ziel</td><td>(−1)<sup>n</sup>, (−1)<sup>n</sup> · n</td></tr>
+</table></div>
+
+<h3><span class="step">3</span>So geht's – das Höchste-Potenz-Rezept</h3>
+<ol>
+<li><b>Zusammenfassen.</b> Erst im Zähler und Nenner gleiche Potenzen zusammenfassen.</li>
+<li><b>Höchste Potenz des Nenners</b> suchen, z. B. n².</li>
+<li><b>Zähler und Nenner durch diese Potenz teilen.</b> Jeder Summand einzeln: 3n²/n² = 3, 2n/n² = 2/n.</li>
+<li><b>Nullfolgen streichen:</b> 2/n → 0, 5/n² → 0.</li>
+<li><b>Ablesen.</b> Was übrig bleibt, ist der Grenzwert.</li>
+</ol>
+<div class="merke"><span class="t">Merke: Abkürzung über die Grade</span>
+<table>
+<tr><th>Fall</th><th>Grenzwert</th><th>Beispiel</th></tr>
+<tr><td>Grad oben = Grad unten</td><td>Vorzahl oben / Vorzahl unten</td><td>(2n² − 3)/(n² + n + 1) → 2</td></tr>
+<tr><td>Grad oben &lt; Grad unten</td><td>0</td><td>(−5n + 1)/(4n² − 7) → 0</td></tr>
+<tr><td>Grad oben &gt; Grad unten</td><td>+∞ oder −∞ (Vorzeichen prüfen)</td><td>(n³ − 2)/(5n² + n) → +∞</td></tr>
+</table></div>
+
+<h3><span class="step">4</span>Vorgerechnetes Beispiel</h3>
+<p><b>Aufgabe:</b> Bestimme den Grenzwert von a<sub>n</sub> = (3n² − 2n + 5)/(6n² + 1).</p>
+<ol>
+<li>Höchste Potenz im Nenner: n².</li>
+<li>Durch n² teilen: a<sub>n</sub> = (3 − 2/n + 5/n²)/(6 + 1/n²).</li>
+<li>Nullfolgen: 2/n → 0, 5/n² → 0, 1/n² → 0.</li>
+<li>Übrig: 3/6 = <b>1/2</b>.</li>
+</ol>
+<p><b>Zahlenprobe</b> mit n = 1000: (3 000 000 − 2000 + 5)/(6 000 001) = 2 998 005 / 6 000 001 ≈ 0,4997 ✓ (nahe 0,5).</p>
+<p><b>Noch zwei kurze Beispiele:</b></p>
+<ul>
+<li>b<sub>n</sub> = 3 + (1/2)<sup>n</sup>: (1/2)<sup>n</sup> → 0 ⇒ b<sub>n</sub> → 3.</li>
+<li>c<sub>n</sub> = (−1)<sup>n</sup>: Glieder −1, 1, −1, 1 … Die Folge ist beschränkt (zwischen −1 und 1), hat aber kein Ziel ⇒ <b>unbestimmt divergent</b>.</li>
+</ul>
+
+<h3><span class="step">5</span>Typische Fehler</h3>
+<div class="achtung"><span class="t">Achtung</span>
+<ul>
+<li>Nicht zusammengefasst: In (8k³ − 1 − 4k² − 7)/(6k³ + 2k − 1) gehören −1 und −7 zusammen zu −8. Der Grenzwert ist trotzdem 8/6 = 4/3. Aber erst ordnen, dann ablesen.</li>
+<li>„Beschränkt ⇒ konvergent“ ist falsch. (−1)<sup>n</sup> ist beschränkt und divergent. Erst beschränkt <b>und</b> monoton ⇒ konvergent.</li>
+<li>„∞ − ∞ = 0“ ist falsch. Bei n² − n klammerst du aus: n(n − 1) → +∞.</li>
+<li>Bei Grad oben &gt; Grad unten das Vorzeichen vergessen: (1 − 2n³)/(n + 4) → −∞, nicht +∞.</li>
+</ul></div>
+
+<h3><span class="step">6</span>Prüfungsaufgaben</h3>
+<div class="task" id="a2-1"><div class="head"><b>Aufgabe 2.1</b><span><span class="lvl l1">leicht</span> <span class="pts">6 P</span></span></div>
+<p>Bestimme den Grenzwert: a) 5/n + 3 &nbsp; b) 7 · (1/2)<sup>n</sup> + 2 &nbsp; c) (−1)<sup>n</sup>/n</p>
+<p class="small muted">Lösung: <a href="#s2-1">Lösungen, Aufgabe 2.1</a></p></div>
+<div class="task" id="a2-2"><div class="head"><b>Aufgabe 2.2</b><span><span class="lvl l2">mittel</span> <span class="pts">8 P</span></span></div>
+<p>Bestimme den Grenzwert (auch ±∞ ist erlaubt):<br>
+a) (4n² + 3)/(3n² − n) &nbsp; b) (−5n + 1)/(4n² − 7) &nbsp; c) (n³ − 2)/(5n² + n) &nbsp; d) (1 − 2n³)/(n + 4)</p>
+<p class="small muted">Lösung: <a href="#s2-2">Lösungen, Aufgabe 2.2</a></p></div>
+<div class="task" id="a2-3"><div class="head"><b>Aufgabe 2.3</b><span><span class="lvl l3">Prüfungsniveau</span> <span class="pts">6 P</span></span></div>
+<p>Konvergent, bestimmt divergent oder unbestimmt divergent? Begründe kurz.<br>
+a) 2 + (−1)<sup>n</sup>/n &nbsp; b) (−1)<sup>n</sup> · (n + 1)/n &nbsp; c) (−1)<sup>n</sup> · n²</p>
+<p class="small muted">Lösung: <a href="#s2-3">Lösungen, Aufgabe 2.3</a></p></div>
+</section>
+
+<!-- ===================== LEKTION 3 ===================== -->
+<section class="page" id="l3">
+<h2><span class="nr">3</span>Reihen</h2>
+<p class="lesson-meta">Partialsummen · geometrische Reihe · Periodenzahlen · Teleskopsumme · Vorlesung 04.11. (Folie 48, 55, Tafel)</p>
+
+<h3><span class="step">1</span>Worum geht's?</h3>
+<p>Du isst einen halben Kuchen. Dann die Hälfte vom Rest, dann wieder die Hälfte vom Rest … Das ist 1/2 + 1/4 + 1/8 + … Unendlich viele Stücke, aber zusammen nie mehr als <b>ein</b> Kuchen. Eine Reihe ist genau das: Man addiert die Glieder einer Folge immer weiter auf.</p>
+
+<h3><span class="step">2</span>Das musst du können</h3>
+<ul class="check">
+<li>Partialsummen s<sub>1</sub>, s<sub>2</sub>, s<sub>3</sub> … ausrechnen</li>
+<li>geometrische Reihe erkennen: k steht im Exponenten, Form q<sup>k</sup></li>
+<li>Wert berechnen: erstes Glied / (1 − q), nur wenn |q| &lt; 1</li>
+<li>Startindex beachten (k = 0 oder k = 1?)</li>
+<li>Periodenzahlen in Brüche umwandeln</li>
+<li>Teleskopsumme ausrechnen</li>
+</ul>
+<div class="tablewrap"><table>
+<tr><th>Begriff</th><th>Bedeutung</th></tr>
+<tr><td>Partialsumme s<sub>n</sub></td><td>s<sub>n</sub> = a<sub>1</sub> + a<sub>2</sub> + … + a<sub>n</sub> (die ersten n Glieder addiert)</td></tr>
+<tr><td>Reihe Σ<sub>k=1</sub><sup>∞</sup> a<sub>k</sub></td><td>die Folge der Partialsummen s<sub>1</sub>, s<sub>2</sub>, s<sub>3</sub> …</td></tr>
+<tr><td>Wert der Reihe</td><td>Grenzwert der Partialsummen (falls es ihn gibt)</td></tr>
+<tr><td>endliche geometrische Summe</td><td>Σ<sub>k=0</sub><sup>n</sup> q<sup>k</sup> = (1 − q<sup>n+1</sup>)/(1 − q), für q ≠ 1</td></tr>
+<tr><td>unendliche geometrische Reihe</td><td>Σ<sub>k=0</sub><sup>∞</sup> q<sup>k</sup> = 1/(1 − q), nur für |q| &lt; 1</td></tr>
+</table></div>
+
+<h3><span class="step">3</span>So geht's</h3>
+<p><b>A) Geometrische Reihe</b></p>
+<ol>
+<li>Bringe den Summanden in die Form c · q<sup>k</sup>. Fasse zusammen: (−1)<sup>k</sup> · (1/5)<sup>k</sup> = (−1/5)<sup>k</sup>.</li>
+<li>Prüfe |q| &lt; 1. Wenn nicht: Die Reihe divergiert. Fertig.</li>
+<li><b>Erstes Glied</b> bestimmen: Setze den Startindex ein (k = 0 oder k = 1 oder …).</li>
+<li>Wert = erstes Glied / (1 − q).</li>
+</ol>
+<p><b>B) Periodenzahl in Bruch</b></p>
+<ol>
+<li>Schreibe die Periode als Summe: 0,<span class="ol">3</span> = 3/10 + 3/100 + 3/1000 + …</li>
+<li>q hängt von der Periodenlänge ab: Länge 1 ⇒ q = 1/10, Länge 2 ⇒ q = 1/100.</li>
+<li>Wert = erstes Glied / (1 − q). Kürzen.</li>
+<li>Steht vor der Periode noch etwas (4,31<span class="ol">2</span>), rechnest du diesen Teil extra und addierst.</li>
+</ol>
+<p><b>C) Teleskopsumme</b></p>
+<ol>
+<li>Zerlege den Summanden in „etwas mit k minus dasselbe mit k + 1“, z. B. 1/(k(k + 1)) = 1/k − 1/(k + 1).</li>
+<li>Schreibe s<sub>n</sub> aus. Die Mitte hebt sich weg.</li>
+<li>s<sub>n</sub> = erstes Stück − letztes Stück. Dann n → ∞.</li>
+</ol>
+
+<h3><span class="step">4</span>Vorgerechnete Beispiele</h3>
+<p><b>Beispiel A (Folie 48, R-2c):</b> Σ<sub>k=0</sub><sup>∞</sup> (−1)<sup>k</sup> · (1/5)<sup>k</sup></p>
+<ul>
+<li>Zusammenfassen: (−1)<sup>k</sup>(1/5)<sup>k</sup> = (−1/5)<sup>k</sup>, also q = −1/5. |q| = 0,2 &lt; 1 ⇒ konvergent.</li>
+<li>Start k = 0 ⇒ erstes Glied (−1/5)<sup>0</sup> = 1.</li>
+<li>Wert = 1/(1 − (−1/5)) = 1/(6/5) = <b>5/6</b> ≈ 0,833.</li>
+<li>Probe mit Partialsummen: 1; 0,8; 0,84; 0,832; 0,8336 … → 0,833 ✓</li>
+</ul>
+<p><b>Vergleich Startindex:</b> Σ<sub>k=1</sub><sup>∞</sup> (1/2)<sup>k</sup>: erstes Glied ist 1/2 (nicht 1!). Wert = (1/2)/(1 − 1/2) = <b>1</b>. Das ist der Kuchen. Ab k = 0 wäre es 1/(1 − 1/2) = 2.</p>
+
+<p><b>Beispiel B (Tafel): Periodenzahlen</b></p>
+<div class="tablewrap"><table>
+<tr><th>Zahl</th><th>als Summe</th><th>erstes Glied, q</th><th>Bruch</th></tr>
+<tr><td>0,<span class="ol">3</span></td><td>3/10 + 3/100 + …</td><td>3/10, q = 1/10</td><td>(3/10)/(9/10) = <b>1/3</b></td></tr>
+<tr><td>0,<span class="ol">12</span></td><td>12/100 + 12/10 000 + …</td><td>12/100, q = 1/100</td><td>(12/100)/(99/100) = 12/99 = <b>4/33</b></td></tr>
+<tr><td>4,31<span class="ol">2</span></td><td>4,31 + 0,002 + 0,0002 + …</td><td>2/1000, q = 1/10</td><td>431/100 + 2/900 = <b>3881/900</b></td></tr>
+</table></div>
+<p>Rechnung zu 4,31<span class="ol">2</span>: Die Periode ist nur die 2. Der Rest (2/1000)/(9/10) = 2/900. Dann 431/100 = 3879/900, also 3879/900 + 2/900 = 3881/900. Probe: 3881 : 900 = 4,31222… ✓</p>
+
+<p><b>Beispiel C (Folie 55, R-5): Teleskopsumme</b> Σ<sub>k=1</sub><sup>∞</sup> 1/(k(k + 1))</p>
+<ul>
+<li>Tipp prüfen: 1/k − 1/(k + 1) = ((k + 1) − k)/(k(k + 1)) = 1/(k(k + 1)) ✓</li>
+<li>s<sub>n</sub> = (1 − 1/2) + (1/2 − 1/3) + (1/3 − 1/4) + … + (1/n − 1/(n + 1))</li>
+<li>Alles in der Mitte hebt sich weg: s<sub>n</sub> = 1 − 1/(n + 1).</li>
+<li>Probe n = 3: 1/2 + 1/6 + 1/12 = 6/12 + 2/12 + 1/12 = 9/12 = 3/4 = 1 − 1/4 ✓</li>
+<li>n → ∞: 1/(n + 1) → 0 ⇒ Wert = <b>1</b>.</li>
+</ul>
+
+<h3><span class="step">5</span>Typische Fehler</h3>
+<div class="achtung"><span class="t">Achtung</span>
+<ul>
+<li><b>Startindex übersehen.</b> 1/(1 − q) gilt nur, wenn das erste Glied 1 ist. Sonst: erstes Glied / (1 − q).</li>
+<li><b>|q| ≥ 1 trotzdem eingesetzt.</b> 1 + 2 + 4 + … ist nicht 1/(1 − 2) = −1. Die Reihe divergiert.</li>
+<li><b>Summanden und Partialsummen verwechselt.</b> Bei 1/2 + 1/4 + … gehen die Summanden gegen 0, die Summe aber gegen 1.</li>
+<li><b>Periodenlänge falsch.</b> Bei 0,<span class="ol">12</span> ist q = 1/100, nicht 1/10.</li>
+</ul></div>
+
+<h3><span class="step">6</span>Prüfungsaufgaben</h3>
+<div class="task" id="a3-1"><div class="head"><b>Aufgabe 3.1</b><span><span class="lvl l1">leicht</span> <span class="pts">5 P</span></span></div>
+<p>Berechne s<sub>1</sub> bis s<sub>4</sub> von Σ<sub>k=1</sub><sup>∞</sup> (1/3)<sup>k</sup> als Brüche. Bestimme dann den Wert der Reihe.</p>
+<p class="small muted">Lösung: <a href="#s3-1">Lösungen, Aufgabe 3.1</a></p></div>
+<div class="task" id="a3-2"><div class="head"><b>Aufgabe 3.2</b><span><span class="lvl l2">mittel</span> <span class="pts">7 P</span></span></div>
+<p>Berechne den Wert: a) Σ<sub>k=0</sub><sup>∞</sup> 3 · (−1/2)<sup>k</sup> &nbsp; b) Σ<sub>k=2</sub><sup>∞</sup> (1/2)<sup>k</sup> &nbsp; c) Σ<sub>k=1</sub><sup>∞</sup> (2 · (1/2)<sup>k</sup> + (1/4)<sup>k</sup>)</p>
+<p class="small muted">Lösung: <a href="#s3-2">Lösungen, Aufgabe 3.2</a></p></div>
+<div class="task" id="a3-3"><div class="head"><b>Aufgabe 3.3</b><span><span class="lvl l3">Prüfungsniveau</span> <span class="pts">8 P</span></span></div>
+<p>a) <span class="pts">(3 P)</span> Schreibe 0,<span class="ol">45</span> als gekürzten Bruch. Benutze die geometrische Reihe.</p>
+<p>b) <span class="pts">(5 P)</span> Berechne Σ<sub>k=2</sub><sup>∞</sup> 1/(k(k + 1)). Achtung: Die Summe startet bei k = 2.</p>
+<p class="small muted">Lösung: <a href="#s3-3">Lösungen, Aufgabe 3.3</a></p></div>
+</section>
+
+<!-- ===================== LEKTION 4 ===================== -->
+<section class="page" id="l4">
+<h2><span class="nr">4</span>Konvergenzkriterien für Reihen</h2>
+<p class="lesson-meta">Divergenzkriterium · Σ 1/k<sup>p</sup> · Potenzabstand · Quotientenkriterium · Vorlesung 04.11. (R-2, R-4)</p>
+
+<h3><span class="step">1</span>Worum geht's?</h3>
+<p>Oft kann man den Wert einer Reihe gar nicht ausrechnen. Man will nur wissen: Kommt eine endliche Zahl heraus – ja oder nein? Ein Kriterium ist wie ein Schnelltest beim Arzt: Er sagt „krank“ oder „gesund“, aber nicht, wie hoch das Fieber ist.</p>
+
+<h3><span class="step">2</span>Das musst du können</h3>
+<div class="tablewrap"><table>
+<tr><th>Kriterium</th><th>wann benutzen</th><th>Regel</th></tr>
+<tr><td>Divergenzkriterium</td><td>immer zuerst</td><td>Summanden gehen <b>nicht</b> gegen 0 ⇒ divergent</td></tr>
+<tr><td>geometrische Reihe</td><td>q<sup>k</sup></td><td>konvergent genau dann, wenn |q| &lt; 1</td></tr>
+<tr><td>Σ 1/k<sup>p</sup> („Riemann“)</td><td>k unten, fester Exponent</td><td>konvergent genau dann, wenn p &gt; 1</td></tr>
+<tr><td>Potenzabstand-Regel</td><td>Bruch aus Potenzen von k</td><td>Abstand = Grad Nenner − Grad Zähler; konvergent genau dann, wenn Abstand &gt; 1</td></tr>
+<tr><td>Quotientenkriterium</td><td>k!, x<sup>k</sup>, 2<sup>k</sup> …</td><td>L = lim |a<sub>k+1</sub>/a<sub>k</sub>|: L &lt; 1 konvergent, L &gt; 1 divergent, L = 1 keine Aussage</td></tr>
+</table></div>
+<div class="merke"><span class="t">Merke: Die zwei wichtigsten Beispiele</span>
+Σ 1/k = 1 + 1/2 + 1/3 + … <b>divergiert</b> (harmonische Reihe, p = 1), obwohl 1/k → 0.<br>
+Σ 1/k² <b>konvergiert</b> (p = 2 &gt; 1), Wert π²/6 ≈ 1,645.</div>
+
+<h3><span class="step">3</span>So geht's – der Entscheidungsweg</h3>
+<ol>
+<li><b>Gehen die Summanden gegen 0?</b> Nein ⇒ divergent, fertig. Ja ⇒ weiter (noch keine Aussage!).</li>
+<li><b>Steht k im Exponenten einer festen Zahl (q<sup>k</sup>)?</b> ⇒ geometrische Reihe, |q| &lt; 1 prüfen.</li>
+<li><b>Ist es 1/k<sup>p</sup> oder ein Bruch aus Potenzen von k?</b> ⇒ p bzw. Potenzabstand &gt; 1 ⇒ konvergent; ≤ 1 ⇒ divergent.</li>
+<li><b>Kommen k! oder x<sup>k</sup> vor?</b> ⇒ Quotientenkriterium: a<sub>k+1</sub>/a<sub>k</sub> aufschreiben, kürzen, Grenzwert L.</li>
+</ol>
+<div class="merke"><span class="t">Merke: Fakultät kürzen</span>(k + 1)! = (k + 1) · k!. Also k!/(k + 1)! = 1/(k + 1). Beispiel: 4! = 24, 5! = 120 = 5 · 24.</div>
+
+<h3><span class="step">4</span>Vorgerechnetes Material aus der Vorlesung</h3>
+<p><b>R-2 (Folie 48): Welche Reihe ist geometrisch?</b></p>
+<div class="tablewrap"><table>
+<tr><th></th><th>Reihe</th><th>geometrisch?</th><th>Ergebnis</th></tr>
+<tr><td>a</td><td>Σ<sub>k=1</sub><sup>∞</sup> k<sup>−2</sup> = Σ 1/k²</td><td>nein: k steht unten, Exponent fest</td><td>konvergent (p = 2 &gt; 1), Wert π²/6</td></tr>
+<tr><td>b</td><td>Σ<sub>k=1</sub><sup>∞</sup> (1/2)<sup>k</sup></td><td>ja, q = 1/2, erstes Glied 1/2</td><td>(1/2)/(1 − 1/2) = 1</td></tr>
+<tr><td>c</td><td>Σ<sub>k=0</sub><sup>∞</sup> (−1)<sup>k</sup>(1/5)<sup>k</sup></td><td>ja, q = −1/5, erstes Glied 1</td><td>1/(1 + 1/5) = 5/6</td></tr>
+</table></div>
+<p><b>R-4: Welche Reihen konvergieren?</b> (Ein Grenzwert muss nicht angegeben werden.)</p>
+<p><b>a) Σ<sub>k=1</sub><sup>∞</sup> 1/(2k<sup>5</sup>)</b> = 1/2 · Σ 1/k<sup>5</sup>. Form 1/k<sup>p</sup> mit p = 5 &gt; 1 ⇒ <b>konvergent</b>. Der Faktor 1/2 ändert daran nichts.</p>
+<p><b>b) Σ<sub>k=1</sub><sup>∞</sup> k³ x<sup>k</sup>/k!</b> (x ist eine feste Zahl). Quotientenkriterium:</p>
+<span class="formula">a<sub>k+1</sub>/a<sub>k</sub> = [(k + 1)³ x<sup>k+1</sup>/(k + 1)!] · [k!/(k³ x<sup>k</sup>)] = ((k + 1)/k)³ · x · 1/(k + 1)</span>
+<p>Für k → ∞: ((k + 1)/k)³ → 1 und 1/(k + 1) → 0. Also L = |x| · 1 · 0 = 0 &lt; 1 ⇒ <b>konvergent für jedes x</b>. Bei großem x werden die Glieder erst riesig, dann gewinnt k!. Für Konvergenz zählt nur das Ende.</p>
+<p><b>Potenzabstand an drei Beispielen:</b></p>
+<div class="tablewrap"><table>
+<tr><th>Reihe</th><th>Grad unten − Grad oben</th><th>Ergebnis</th></tr>
+<tr><td>Σ 3k²/(k² + 1)</td><td>2 − 2 = 0</td><td>Summanden → 3 ≠ 0 ⇒ divergent</td></tr>
+<tr><td>Σ k/(k² + 5)</td><td>2 − 1 = 1</td><td>wie 1/k ⇒ divergent</td></tr>
+<tr><td>Σ (k + 1)/(k³ + 2)</td><td>3 − 1 = 2</td><td>wie 1/k² ⇒ konvergent</td></tr>
+</table></div>
+
+<h3><span class="step">5</span>Typische Fehler</h3>
+<div class="achtung"><span class="t">Achtung</span>
+<ul>
+<li>„Summanden → 0, also konvergent“ ist <b>falsch</b>. Gegenbeispiel: Σ 1/k. Das Divergenzkriterium kann nur „divergent“ sagen, nie „konvergent“.</li>
+<li>Folge und Reihe verwechselt: Die <b>Folge</b> k/(k² + 5) geht gegen 0. Die <b>Reihe</b> Σ k/(k² + 5) divergiert trotzdem.</li>
+<li>Beim Quotientenkriterium aus L = 1 etwas folgern. L = 1 heißt: anderes Kriterium nehmen.</li>
+<li>Potenzabstand bei k! oder 2<sup>k</sup> benutzen. Die Regel gilt nur für Brüche aus Potenzen von k.</li>
+</ul></div>
+
+<h3><span class="step">6</span>Prüfungsaufgaben</h3>
+<div class="task" id="a4-1"><div class="head"><b>Aufgabe 4.1</b><span><span class="lvl l1">leicht</span> <span class="pts">4 P</span></span></div>
+<p>Zeige mit dem Divergenzkriterium, dass die Reihe divergiert: a) Σ<sub>k=1</sub><sup>∞</sup> k/(k + 1) &nbsp; b) Σ<sub>k=1</sub><sup>∞</sup> (2k + 1)/(5k − 3)</p>
+<p class="small muted">Lösung: <a href="#s4-1">Lösungen, Aufgabe 4.1</a></p></div>
+<div class="task" id="a4-2"><div class="head"><b>Aufgabe 4.2</b><span><span class="lvl l2">mittel</span> <span class="pts">6 P</span></span></div>
+<p>Konvergent oder divergent? Nenne jeweils das Kriterium.<br>
+a) Σ<sub>k=1</sub><sup>∞</sup> 1/√k &nbsp; b) Σ<sub>k=1</sub><sup>∞</sup> (k² + 4)/(k⁴ + 1) &nbsp; c) Σ<sub>k=1</sub><sup>∞</sup> 5k/(k² + 2)</p>
+<p class="small muted">Lösung: <a href="#s4-2">Lösungen, Aufgabe 4.2</a></p></div>
+<div class="task" id="a4-3"><div class="head"><b>Aufgabe 4.3</b><span><span class="lvl l3">Prüfungsniveau</span> <span class="pts">9 P</span></span></div>
+<p>Untersuche mit dem Quotientenkriterium: a) Σ<sub>k=1</sub><sup>∞</sup> k/2<sup>k</sup> &nbsp; b) Σ<sub>k=1</sub><sup>∞</sup> 2<sup>k</sup>/k! &nbsp; c) Σ<sub>k=1</sub><sup>∞</sup> k!/3<sup>k</sup></p>
+<p>d) <span class="pts">(Zusatz, ohne Punkte)</span> Warum hilft das Quotientenkriterium bei Σ 1/k² nicht?</p>
+<p class="small muted">Lösung: <a href="#s4-3">Lösungen, Aufgabe 4.3</a></p></div>
+</section>
+
+<!-- ===================== LEKTION 5 ===================== -->
+<section class="page" id="l5">
+<h2><span class="nr">5</span>Finanzmathe: Zinseszins und Sparplan</h2>
+<p class="lesson-meta">geometrische Folge und endliche geometrische Reihe in der Praxis · Vorlesung 04.11. (Tafel + Folie)</p>
+
+<h3><span class="step">1</span>Worum geht's?</h3>
+<p>Du legst Geld auf ein Konto. Jedes Jahr kommen Zinsen dazu – auch auf die Zinsen vom Vorjahr. Das ist eine <b>geometrische Folge</b>. Zahlst du jedes Jahr etwas ein, addierst du viele solche Beträge. Das ist eine <b>endliche geometrische Reihe</b>.</p>
+
+<h3><span class="step">2</span>Das musst du können</h3>
+<div class="tablewrap"><table>
+<tr><th>Zeichen</th><th>Bedeutung</th><th>Beispiel</th></tr>
+<tr><td>r</td><td>Betrag (einmalig oder pro Jahr)</td><td>100 €</td></tr>
+<tr><td>i</td><td>Zinssatz <b>als Dezimalzahl</b></td><td>5 % = 0,05</td></tr>
+<tr><td>q = 1 + i</td><td>Zinsfaktor</td><td>1,05</td></tr>
+<tr><td>n</td><td>Anzahl Jahre bzw. Einzahlungen</td><td>3</td></tr>
+</table></div>
+<div class="tablewrap"><table>
+<tr><th>Situation</th><th>Formel</th></tr>
+<tr><td>einmal r einzahlen, n Jahre liegen lassen (Zinseszins)</td><td>K<sub>n</sub> = (1 + i)<sup>n</sup> · r</td></tr>
+<tr><td>jedes Jahresende r einzahlen, n-mal (Sparplan)</td><td>E<sub>n</sub> = r · ((1 + i)<sup>n</sup> − 1)/i</td></tr>
+</table></div>
+
+<h3><span class="step">3</span>So geht's – die Herleitung</h3>
+<p><b>Zinseszins:</b> Ein Jahr Zinsen heißt: r + i · r = (1 + i) · r. Jedes weitere Jahr wird wieder mit (1 + i) multipliziert:</p>
+<span class="formula">Jahr 1: (1 + i) · r &nbsp;→&nbsp; Jahr 2: (1 + i)² · r &nbsp;→ … →&nbsp; Jahr n: (1 + i)<sup>n</sup> · r</span>
+<p><b>Sparplan:</b> Du zahlst n-mal r ein, jeweils am Jahresende. E<sub>n</sub> ist der Kontostand direkt nach der letzten Einzahlung. Jede Einzahlung wird einzeln verzinst:</p>
+<ol>
+<li>Die letzte Einzahlung liegt 0 Jahre: r.</li>
+<li>Die vorletzte liegt 1 Jahr: r(1 + i).</li>
+<li>… die erste liegt n − 1 Jahre: r(1 + i)<sup>n−1</sup>.</li>
+<li>Alles addieren und r ausklammern:
+<span class="formula">E<sub>n</sub> = r + r(1 + i) + … + r(1 + i)<sup>n−1</sup> = r · Σ<sub>k=0</sub><sup>n−1</sup> (1 + i)<sup>k</sup></span></li>
+<li>Das ist eine endliche geometrische Reihe mit <b>q = 1 + i</b>. Summenformel: Σ<sub>k=0</sub><sup>n−1</sup> q<sup>k</sup> = (q<sup>n</sup> − 1)/(q − 1).</li>
+<li>Einsetzen: q − 1 = (1 + i) − 1 = i. Also:
+<span class="formula"><b>E<sub>n</sub> = r · ((1 + i)<sup>n</sup> − 1)/i</b></span></li>
+</ol>
+
+<h3><span class="step">4</span>Vorgerechnetes Beispiel</h3>
+<p><b>Aufgabe:</b> Du zahlst 3 Jahre lang am Jahresende je 100 € ein. Zinssatz 5 %. Wie viel ist nach der 3. Einzahlung auf dem Konto?</p>
+<ol>
+<li>Werte: r = 100, i = 0,05, n = 3.</li>
+<li>(1 + i)<sup>n</sup> = 1,05³ = 1,157625.</li>
+<li>(1,157625 − 1)/0,05 = 0,157625/0,05 = 3,1525.</li>
+<li>E<sub>3</sub> = 100 · 3,1525 = <b>315,25 €</b>.</li>
+</ol>
+<p><b>Probe einzeln:</b></p>
+<div class="tablewrap"><table>
+<tr><th>Einzahlung</th><th>liegt</th><th>wird zu</th></tr>
+<tr><td>1. (Ende Jahr 1)</td><td>2 Jahre</td><td>100 · 1,05² = 110,25 €</td></tr>
+<tr><td>2. (Ende Jahr 2)</td><td>1 Jahr</td><td>100 · 1,05 = 105,00 €</td></tr>
+<tr><td>3. (Ende Jahr 3)</td><td>0 Jahre</td><td>100,00 €</td></tr>
+<tr><th>Summe</th><th></th><th>315,25 € ✓</th></tr>
+</table></div>
+<p>Zum Vergleich Zinseszins: 1000 € zu 5 % für 10 Jahre ⇒ 1000 · 1,05<sup>10</sup> ≈ 1628,89 €.</p>
+
+<h3><span class="step">5</span>Typische Fehler</h3>
+<div class="achtung"><span class="t">Achtung</span>
+<ul>
+<li>i als Prozentzahl eingesetzt (5 statt 0,05). Dann kommen viel zu große Zahlen heraus.</li>
+<li>Die unendliche Formel erstes Glied/(1 − q) benutzt. Hier ist q = 1 + i <b>größer als 1</b>. Nur die endliche Formel gilt.</li>
+<li>Exponent um 1 verrutscht: Bei n Einzahlungen ist der höchste Exponent n − 1, aber in der Formel steht (1 + i)<sup>n</sup>.</li>
+<li>Gerundet zu früh: 1,05³ erst ganz ausrechnen, erst am Ende auf Cent runden.</li>
+</ul></div>
+
+<h3><span class="step">6</span>Prüfungsaufgaben</h3>
+<div class="task" id="a5-1"><div class="head"><b>Aufgabe 5.1</b><span><span class="lvl l1">leicht</span> <span class="pts">3 P</span></span></div>
+<p>Du legst 2000 € für 5 Jahre zu 3 % an (Zinseszins). Wie viel hast du am Ende? Wie viel davon sind Zinsen?</p>
+<p class="small muted">Lösung: <a href="#s5-1">Lösungen, Aufgabe 5.1</a></p></div>
+<div class="task" id="a5-2"><div class="head"><b>Aufgabe 5.2</b><span><span class="lvl l2">mittel</span> <span class="pts">5 P</span></span></div>
+<p>Ein Sparplan: 10 Jahre lang am Jahresende je 200 € bei 4 %. Berechne E<sub>10</sub>. Wie viel hast du selbst eingezahlt, wie viel sind Zinsen?</p>
+<p class="small muted">Lösung: <a href="#s5-2">Lösungen, Aufgabe 5.2</a></p></div>
+<div class="task" id="a5-3"><div class="head"><b>Aufgabe 5.3</b><span><span class="lvl l3">Prüfungsniveau</span> <span class="pts">8 P</span></span></div>
+<p>a) <span class="pts">(4 P)</span> Schreibe E<sub>4</sub> für einen Sparplan als Summe von vier Einzelbeträgen. Leite daraus mit der Summenformel E<sub>4</sub> = r · ((1 + i)⁴ − 1)/i her.</p>
+<p>b) <span class="pts">(4 P)</span> Du willst nach 5 Einzahlungen bei 2 % genau 10 000 € haben. Wie groß muss die jährliche Rate r sein?</p>
+<p class="small muted">Lösung: <a href="#s5-3">Lösungen, Aufgabe 5.3</a></p></div>
+</section>
+
+<!-- ===================== LEKTION 6 ===================== -->
+<section class="page" id="l6">
+<h2><span class="nr">6</span>Funktionen</h2>
+<p class="lesson-meta">Definitions- und Zielmenge · injektiv, surjektiv, bijektiv · Umkehrfunktion · Vorlesung 04.11. (Folie 62)</p>
+
+<h3><span class="step">1</span>Worum geht's?</h3>
+<p>Eine Funktion ist eine Maschine: Du wirfst eine Zahl x hinein, es kommt genau eine Zahl f(x) heraus. Manchmal will man die Maschine rückwärts laufen lassen: Aus dem Ergebnis soll wieder die Startzahl werden. Das geht nur, wenn die Maschine „sauber“ ist. Genau das prüfen injektiv, surjektiv und bijektiv.</p>
+
+<h3><span class="step">2</span>Das musst du können</h3>
+<div class="tablewrap"><table>
+<tr><th>Begriff</th><th>Bedeutung</th><th>bei f: ℝ → ℝ, x ↦ x² + 1</th></tr>
+<tr><td>Definitionsmenge D</td><td>was du einsetzen darfst (links vom Pfeil)</td><td>ℝ</td></tr>
+<tr><td>Zielmenge Z</td><td>wo Ergebnisse landen dürfen (rechts vom Pfeil), wird festgelegt</td><td>ℝ</td></tr>
+<tr><td>Wertebereich</td><td>was wirklich herauskommt, musst du ausrechnen</td><td>[1, ∞), weil x² ≥ 0</td></tr>
+</table></div>
+<div class="box bild"><span class="t">Bild: Sitzplätze im Hörsaal</span>Die x sind die Studierenden, die y sind die Stühle. Die Funktion sagt, wer wo sitzt. Jede Person sitzt auf genau einem Stuhl.</div>
+<div class="tablewrap"><table>
+<tr><th>Begriff</th><th>im Hörsaal</th><th>Test mit waagrechten Linien</th></tr>
+<tr><td><b>injektiv</b></td><td>kein Stuhl doppelt besetzt</td><td>jede Linie trifft den Graphen <b>höchstens</b> einmal</td></tr>
+<tr><td><b>surjektiv</b></td><td>kein Stuhl bleibt leer</td><td>jede Linie (Höhe aus Z) trifft <b>mindestens</b> einmal</td></tr>
+<tr><td><b>bijektiv</b></td><td>jeder Stuhl genau einmal besetzt</td><td>jede Linie trifft <b>genau</b> einmal</td></tr>
+</table></div>
+<p><b>Dieselbe Vorschrift x², vier verschiedene Mengen:</b></p>
+<div class="tablewrap"><table>
+<tr><th>f: D → Z</th><th>injektiv?</th><th>surjektiv?</th><th>Ergebnis</th></tr>
+<tr><td>ℝ → ℝ</td><td>nein: f(−2) = f(2) = 4</td><td>nein: −4 kommt nie heraus</td><td>weder noch</td></tr>
+<tr><td>ℝ → [0, ∞)</td><td>nein</td><td>ja</td><td>surjektiv</td></tr>
+<tr><td>[0, ∞) → ℝ</td><td>ja</td><td>nein</td><td>injektiv</td></tr>
+<tr><td>[0, ∞) → [0, ∞)</td><td>ja</td><td>ja</td><td><b>bijektiv</b>, f<sup>−1</sup>(x) = √x</td></tr>
+</table></div>
+
+<h3><span class="step">3</span>So geht's – Rezept Umkehrfunktion</h3>
+<ol>
+<li><b>Injektiv?</b> Waagrechte Linien prüfen. Wenn nein: D einschränken (bei Parabeln: ab dem Scheitel).</li>
+<li><b>Wertebereich</b> bestimmen und als Zielmenge nehmen. Jetzt ist f bijektiv.</li>
+<li><b>y = f(x)</b> hinschreiben und <b>nach x auflösen</b>.</li>
+<li><b>Vorzeichen wählen</b>, wenn eine Wurzel auftaucht. Es muss zu D passen.</li>
+<li><b>x und y tauschen:</b> f<sup>−1</sup>(x) = …</li>
+<li><b>Probe:</b> Zahl in f einsetzen, Ergebnis in f<sup>−1</sup>. Die Startzahl muss herauskommen.</li>
+</ol>
+<div class="merke"><span class="t">Merke</span>Der Wertebereich von f ist die Definitionsmenge von f<sup>−1</sup>. Und f<sup>−1</sup> heißt <b>nicht</b> 1/f.</div>
+
+<h3><span class="step">4</span>Vorgerechnetes Beispiel (Folie 62)</h3>
+<p><b>Aufgabe:</b> Bestimme die Umkehrfunktion von f: [2, ∞) → ℝ, x ↦ x² − 4x + 1.</p>
+<p><b>Schritt 1 – Quadratische Ergänzung:</b> Halbe Vorzahl von x: 4/2 = 2, und 2² = 4. Addiere 4 und ziehe es wieder ab:</p>
+<span class="formula">x² − 4x + 1 = x² − 4x + 4 − 4 + 1 = (x − 2)² − 3</span>
+<p>Scheitel bei x = 2 mit f(2) = −3. Rechts vom Scheitel steigt die Parabel ⇒ auf [2, ∞) injektiv. (Auf ganz ℝ nicht: f(0) = 1 = f(4).)</p>
+<div class="tablewrap"><table>
+<tr><th>x</th><td class="c">0</td><td class="c">1</td><td class="c">2</td><td class="c">3</td><td class="c">4</td><td class="c">5</td><td class="c">6</td></tr>
+<tr><th>f(x)</th><td class="c">1</td><td class="c">−2</td><td class="c"><b>−3</b></td><td class="c">−2</td><td class="c">1</td><td class="c">6</td><td class="c">13</td></tr>
+</table></div>
+<p><b>Schritt 2 – Wertebereich:</b> (x − 2)² ≥ 0 ⇒ f(x) ≥ −3. Wertebereich = [−3, ∞). Sauber also: f: [2, ∞) → [−3, ∞) ist bijektiv.</p>
+<p><b>Schritt 3 und 4 – Auflösen:</b></p>
+<span class="formula">y = (x − 2)² − 3 &nbsp;| + 3<br>y + 3 = (x − 2)² &nbsp;| Wurzel, nur „+“, weil x ≥ 2<br>x − 2 = √(y + 3) &nbsp;| + 2<br>x = 2 + √(y + 3)</span>
+<p><b>Schritt 5 – Tauschen:</b> <b>f<sup>−1</sup>(x) = 2 + √(x + 3)</b>, mit f<sup>−1</sup>: [−3, ∞) → [2, ∞).</p>
+<p><b>Schritt 6 – Probe:</b> f(5) = 6, f<sup>−1</sup>(6) = 2 + √9 = 5 ✓. f(6) = 13, f<sup>−1</sup>(13) = 2 + √16 = 6 ✓.</p>
+
+<h3><span class="step">5</span>Typische Fehler</h3>
+<div class="achtung"><span class="t">Achtung</span>
+<ul>
+<li>Die Mengen ignoriert. „Ist x² injektiv?“ hat ohne D und Z keine Antwort.</li>
+<li>Bei der Wurzel das falsche Vorzeichen. 2 − √(x + 3) gehört zum linken Ast. f<sup>−1</sup>(6) wäre dann −1, und das liegt nicht in [2, ∞).</li>
+<li>Zielmenge ℝ stehen lassen. Mit Z = ℝ ist f auf [2, ∞) nicht surjektiv (−5 kommt nie heraus). Bijektiv erst mit Z = [−3, ∞).</li>
+<li>Die Probe vergessen. Sie kostet 20 Sekunden und findet fast jeden Fehler.</li>
+</ul></div>
+
+<h3><span class="step">6</span>Prüfungsaufgaben</h3>
+<div class="task" id="a6-1"><div class="head"><b>Aufgabe 6.1</b><span><span class="lvl l1">leicht</span> <span class="pts">5 P</span></span></div>
+<p>a) <span class="pts">(2 P)</span> Gib die größtmögliche Definitionsmenge an: f(x) = 1/(x − 2) und g(x) = √(x − 1).</p>
+<p>b) <span class="pts">(3 P)</span> Bestimme die Umkehrfunktion von h: ℝ → ℝ, h(x) = 3x − 6. Mache die Probe mit x = 4.</p>
+<p class="small muted">Lösung: <a href="#s6-1">Lösungen, Aufgabe 6.1</a></p></div>
+<div class="task" id="a6-2"><div class="head"><b>Aufgabe 6.2</b><span><span class="lvl l2">mittel</span> <span class="pts">6 P</span></span></div>
+<p>Injektiv, surjektiv, bijektiv oder nichts davon? Begründe mit einem Zahlenbeispiel.<br>
+a) f: ℝ → ℝ, f(x) = 2x + 1 &nbsp; b) g: ℝ → [1, ∞), g(x) = x² + 1 &nbsp; c) h: [0, ∞) → ℝ, h(x) = x² + 1</p>
+<p class="small muted">Lösung: <a href="#s6-2">Lösungen, Aufgabe 6.2</a></p></div>
+<div class="task" id="a6-3"><div class="head"><b>Aufgabe 6.3</b><span><span class="lvl l3">Prüfungsniveau</span> <span class="pts">8 P</span></span></div>
+<p>Gegeben ist f(x) = x² + 2x − 3 auf D = [−1, ∞).</p>
+<p>a) <span class="pts">(2 P)</span> Schreibe f mit quadratischer Ergänzung als (x + …)² + …</p>
+<p>b) <span class="pts">(2 P)</span> Begründe, warum f auf D injektiv ist, auf ganz ℝ aber nicht. Bestimme den Wertebereich.</p>
+<p>c) <span class="pts">(4 P)</span> Bestimme f<sup>−1</sup> mit Definitionsmenge. Mache eine Probe.</p>
+<p class="small muted">Lösung: <a href="#s6-3">Lösungen, Aufgabe 6.3</a></p></div>
+</section>
+
+<!-- ===================== LEKTION 7 ===================== -->
+<section class="page" id="l7">
+<h2><span class="nr">7</span>Monotonie und Beschränktheit von Funktionen</h2>
+<p class="lesson-meta">Methode x<sub>1</sub> &lt; x<sub>2</sub> · Differenz · Vorzeichen · Ränder · Vorlesung 04.11. (Folie 73)</p>
+
+<h3><span class="step">1</span>Worum geht's?</h3>
+<p>Stell dir eine Wanderung vor: Geht der Weg immer bergauf? Und gibt es eine Höhe, über die du nie kommst? Das sind Monotonie und Beschränktheit. Du kennst beides schon von Folgen (Lektion 1). Neu ist: Bei Funktionen gibt es kein „nächstes x“. Darum vergleichst du zwei beliebige Stellen x<sub>1</sub> &lt; x<sub>2</sub>.</p>
+
+<h3><span class="step">2</span>Das musst du können</h3>
+<div class="tablewrap"><table>
+<tr><th>Begriff</th><th>Bedeutung</th><th>Beispiel</th></tr>
+<tr><td>streng monoton wachsend</td><td>x<sub>1</sub> &lt; x<sub>2</sub> ⇒ f(x<sub>1</sub>) &lt; f(x<sub>2</sub>)</td><td>2x + 1: f(1) = 3 &lt; f(2) = 5</td></tr>
+<tr><td>streng monoton fallend</td><td>x<sub>1</sub> &lt; x<sub>2</sub> ⇒ f(x<sub>1</sub>) &gt; f(x<sub>2</sub>)</td><td>1/x auf (0, ∞): f(1) = 1 &gt; f(2) = 0,5</td></tr>
+<tr><td>nach oben beschränkt</td><td>es gibt S mit f(x) ≤ S für alle x (Decke)</td><td>x/(x + 1) ≤ 1 auf [0, ∞)</td></tr>
+<tr><td>nach unten beschränkt</td><td>es gibt s mit f(x) ≥ s für alle x (Boden)</td><td>x² ≥ 0</td></tr>
+</table></div>
+
+<h3><span class="step">3</span>So geht's</h3>
+<ol>
+<li><b>Zahlen einsetzen.</b> Drei, vier Werte ausrechnen. Dann weißt du, was herauskommen soll.</li>
+<li><b>Umschreiben</b>, wenn es geht (z. B. Polynomdivision). Das macht die Differenz einfacher.</li>
+<li><b>Zwei Stellen nehmen:</b> x<sub>1</sub> &lt; x<sub>2</sub> aus D.</li>
+<li><b>Differenz bilden:</b> f(x<sub>2</sub>) − f(x<sub>1</sub>). Auf einen Nenner bringen, (x<sub>2</sub> − x<sub>1</sub>) ausklammern.</li>
+<li><b>Vorzeichen jedes Faktors prüfen.</b> x<sub>2</sub> − x<sub>1</sub> &gt; 0 ist immer so. Alle Faktoren &gt; 0 ⇒ streng wachsend.</li>
+<li><b>Ränder von D prüfen</b> für die Beschränktheit: Was passiert am linken Rand, am rechten Rand, bei ∞?</li>
+</ol>
+<div class="merke"><span class="t">Merke: Nützliche Ausklammer-Formeln</span>x<sub>2</sub>² − x<sub>1</sub>² = (x<sub>2</sub> − x<sub>1</sub>)(x<sub>2</sub> + x<sub>1</sub>) &nbsp;·&nbsp; 1/a − 1/b = (b − a)/(ab)</div>
+
+<h3><span class="step">4</span>Vorgerechnetes Beispiel (Folie 73, Nr. 1)</h3>
+<p><b>Aufgabe:</b> Untersuche f: (1, ∞) → ℝ, f(x) = x²/(x + 1) auf Monotonie und Beschränktheit.</p>
+<p><b>Schritt 1 – Zahlen:</b> f(1,01) ≈ 0,51 · f(2) = 4/3 ≈ 1,33 · f(10) = 100/11 ≈ 9,09. Sieht wachsend aus.</p>
+<p><b>Schritt 2 – Umschreiben</b> (Polynomdivision): x²/(x + 1) = x − 1 + 1/(x + 1). Probe x = 2: 2 − 1 + 1/3 = 4/3 ✓.</p>
+<p><b>Schritt 3 und 4 – Differenz</b> für 1 &lt; x<sub>1</sub> &lt; x<sub>2</sub>:</p>
+<span class="formula">f(x<sub>2</sub>) − f(x<sub>1</sub>) = (x<sub>2</sub> − x<sub>1</sub>) + 1/(x<sub>2</sub> + 1) − 1/(x<sub>1</sub> + 1)<br>
+= (x<sub>2</sub> − x<sub>1</sub>) − (x<sub>2</sub> − x<sub>1</sub>)/((x<sub>1</sub> + 1)(x<sub>2</sub> + 1))<br>
+= (x<sub>2</sub> − x<sub>1</sub>) · (1 − 1/((x<sub>1</sub> + 1)(x<sub>2</sub> + 1)))</span>
+<p><b>Schritt 5 – Vorzeichen:</b> x<sub>2</sub> − x<sub>1</sub> &gt; 0. Weil x<sub>1</sub>, x<sub>2</sub> &gt; 1, ist (x<sub>1</sub> + 1)(x<sub>2</sub> + 1) &gt; 2 · 2 = 4. Also ist 1/(…) &lt; 1/4 und die zweite Klammer &gt; 3/4 &gt; 0. Beide Faktoren positiv ⇒ <b>streng monoton wachsend</b>.</p>
+<p><b>Schritt 6 – Ränder:</b></p>
+<ul>
+<li>Linker Rand x → 1: f → 1/2. Die 1 gehört nicht zu D, und f wächst. Also f(x) &gt; 1/2 ⇒ <b>nach unten beschränkt</b>.</li>
+<li>Rechts x → ∞: f(x) = x − 1 + 1/(x + 1) &gt; x − 1 → ∞ ⇒ <b>nach oben unbeschränkt</b>.</li>
+</ul>
+
+<h3><span class="step">5</span>Typische Fehler</h3>
+<div class="achtung"><span class="t">Achtung</span>
+<ul>
+<li>Nur Zahlen eingesetzt und „also wachsend“ geschrieben. Zahlen sind eine Probe, kein Beweis.</li>
+<li>Die Definitionsmenge vergessen. Die Abschätzung (x<sub>1</sub> + 1)(x<sub>2</sub> + 1) &gt; 4 gilt nur, weil x &gt; 1.</li>
+<li>Rand nicht geprüft. Ein offener Rand wie bei (1, ∞) wird nicht erreicht: f(x) &gt; 1/2, nicht ≥.</li>
+<li>Beim Bruch-Subtrahieren das Vorzeichen gedreht: 1/(x<sub>2</sub> + 1) − 1/(x<sub>1</sub> + 1) = (x<sub>1</sub> − x<sub>2</sub>)/(…), also negativ.</li>
+</ul></div>
+
+<h3><span class="step">6</span>Prüfungsaufgaben</h3>
+<div class="task" id="a7-1"><div class="head"><b>Aufgabe 7.1</b><span><span class="lvl l1">leicht</span> <span class="pts">4 P</span></span></div>
+<p>Zeige mit x<sub>1</sub> &lt; x<sub>2</sub>: f(x) = 3 − 2x ist auf ℝ streng monoton fallend. Ist f beschränkt?</p>
+<p class="small muted">Lösung: <a href="#s7-1">Lösungen, Aufgabe 7.1</a></p></div>
+<div class="task" id="a7-2"><div class="head"><b>Aufgabe 7.2</b><span><span class="lvl l2">mittel</span> <span class="pts">6 P</span></span></div>
+<p>Untersuche f: [0, ∞) → ℝ, f(x) = x/(x + 1) auf Monotonie und Beschränktheit. Tipp: x/(x + 1) = 1 − 1/(x + 1).</p>
+<p class="small muted">Lösung: <a href="#s7-2">Lösungen, Aufgabe 7.2</a></p></div>
+<div class="task" id="a7-3"><div class="head"><b>Aufgabe 7.3</b><span><span class="lvl l3">Prüfungsniveau</span> <span class="pts">8 P</span></span></div>
+<p>(Folie 73, Nr. 2) Untersuche g: (−1, 1) → ℝ, g(x) = x/(1 − x²) auf Monotonie und Beschränktheit.</p>
+<p class="small muted">Lösung: <a href="#s7-3">Lösungen, Aufgabe 7.3</a></p></div>
+</section>
+
+<!-- ===================== LEKTION 8 ===================== -->
+<section class="page" id="l8">
+<h2><span class="nr">8</span>Grenzwerte von Funktionen</h2>
+<p class="lesson-meta">einsetzen · kürzen · höchste Potenz · sin(x)/x · links/rechts · Vorlesung 04.11. (Folie 75)</p>
+
+<h3><span class="step">1</span>Worum geht's?</h3>
+<p>Du fährst auf ein Ortsschild zu. Uns interessiert nicht das Schild selbst, sondern was du siehst, kurz <b>bevor</b> du ankommst. lim<sub>x→a</sub> f(x) fragt: Welchem Wert kommt f(x) nahe, wenn x nahe an a rückt? Was genau <b>bei</b> a passiert, ist egal – f darf dort sogar undefiniert sein.</p>
+
+<h3><span class="step">2</span>Das musst du können</h3>
+<ul class="check">
+<li>einsetzen und das Ergebnis richtig deuten (Zahl, Zahl/0, 0/0)</li>
+<li>faktorisieren: x² − 4 = (x − 2)(x + 2), x² − 3x + 2 = (x − 1)(x − 2)</li>
+<li>bei x → ∞ durch die höchste Potenz teilen (wie bei Folgen)</li>
+<li>Standard-Grenzwert: lim<sub>x→0</sub> sin(x)/x = 1 (Bogenmaß!)</li>
+<li>einseitige Grenzwerte x → 0<sup>+</sup> (von rechts) und x → 0<sup>−</sup> (von links)</li>
+</ul>
+
+<h3><span class="step">3</span>So geht's – die Taktik</h3>
+<ol>
+<li><b>Einsetzen.</b> Kommt eine normale Zahl heraus ⇒ <b>fertig</b>.</li>
+<li><b>Zahl/0</b> (z. B. 1/0) ⇒ es geht nach ±∞. Prüfe die <b>Richtung</b>: von links und von rechts das Vorzeichen.</li>
+<li><b>0/0 oder ∞/∞</b> ⇒ <b>umformen</b>:
+ <ul>
+ <li>x → Zahl: faktorisieren und kürzen.</li>
+ <li>x → ∞: Zähler und Nenner durch die höchste Potenz teilen.</li>
+ <li>Sinus dabei: sin(x)/x → 1 benutzen.</li>
+ </ul></li>
+<li><b>Schwingt</b> die Funktion (sin(1/x), sin x für x → ∞) oder ist links ≠ rechts ⇒ Grenzwert <b>existiert nicht</b>.</li>
+<li><b>Notfall:</b> Zahlen ganz nah dran einsetzen (z. B. x = 1,99 und 2,01). Das zeigt dir die Richtung.</li>
+</ol>
+
+<h3><span class="step">4</span>Vorgerechnete Beispiele (Folie 75 a–f)</h3>
+<div class="tablewrap"><table>
+<tr><th></th><th>Grenzwert</th><th>Einsetzen ergibt</th><th>Weg</th><th>Ergebnis</th></tr>
+<tr><td>a</td><td>lim<sub>x→2</sub> (x² − 4)/(x − 2)</td><td>0/0</td><td>(x − 2)(x + 2)/(x − 2) = x + 2</td><td><b>4</b></td></tr>
+<tr><td>b</td><td>lim<sub>x→0</sub> sin(x)/x</td><td>0/0</td><td>Standard-Grenzwert; sin(0,1)/0,1 ≈ 0,998</td><td><b>1</b></td></tr>
+<tr><td>c</td><td>lim<sub>x→∞</sub> (2x² + 3x − 1)/(x² + 5)</td><td>∞/∞</td><td>durch x²: (2 + 3/x − 1/x²)/(1 + 5/x²)</td><td><b>2</b></td></tr>
+<tr><td>d</td><td>lim<sub>x→0<sup>+</sup></sub> 1/x</td><td>1/0</td><td>x klein und positiv: 1/0,01 = 100</td><td><b>+∞</b></td></tr>
+<tr><td>e</td><td>lim<sub>x→0<sup>−</sup></sub> 1/x</td><td>1/0</td><td>x klein und negativ: 1/(−0,01) = −100</td><td><b>−∞</b></td></tr>
+<tr><td>f</td><td>lim<sub>x→0</sub> sin(1/x)</td><td>sin(∞)</td><td>1/x → ∞, Sinus schwingt zwischen −1 und 1</td><td><b>existiert nicht</b></td></tr>
+</table></div>
+<p><b>a) ganz ausführlich:</b> Einsetzen: (4 − 4)/(2 − 2) = 0/0. Das ist kein Ergebnis, sondern ein Signal: umformen! Dritte binomische Formel: x² − 4 = (x − 2)(x + 2). Für x ≠ 2 darfst du (x − 2) kürzen. Übrig bleibt x + 2. Jetzt einsetzen: 2 + 2 = <b>4</b>. Zahlenprobe: x = 2,01 ⇒ (4,0401 − 4)/0,01 = 4,01 ✓.</p>
+<p><b>d) und e) zusammen:</b> Von rechts +∞, von links −∞. Links ≠ rechts ⇒ lim<sub>x→0</sub> 1/x (ohne Richtung) <b>existiert nicht</b>.</p>
+<p><b>f) genauer:</b> x = 2/π ⇒ sin(π/2) = 1. x = 2/(3π) ⇒ sin(3π/2) = −1. Solche x gibt es beliebig nah an 0. Die Werte springen immer zwischen −1 und 1 ⇒ kein Grenzwert.</p>
+
+<h3><span class="step">5</span>Typische Fehler</h3>
+<div class="achtung"><span class="t">Achtung</span>
+<ul>
+<li>„0/0 = 0“ oder „0/0 = 1“ geschrieben. 0/0 heißt nur: umformen.</li>
+<li>Gekürzt, ohne zu faktorisieren: Aus (x² − 4)/(x − 2) kann man nicht „x“ kürzen. Nur ganze Faktoren!</li>
+<li>Bei Zahl/0 einfach „∞“ geschrieben, ohne die Richtung zu prüfen.</li>
+<li>Taschenrechner im Grad-Modus bei sin(x)/x. Es muss Bogenmaß (RAD) sein.</li>
+</ul></div>
+
+<h3><span class="step">6</span>Prüfungsaufgaben</h3>
+<div class="task" id="a8-1"><div class="head"><b>Aufgabe 8.1</b><span><span class="lvl l1">leicht</span> <span class="pts">3 P</span></span></div>
+<p>a) lim<sub>x→3</sub> (x² + 1) &nbsp; b) lim<sub>x→2</sub> (x² − 4)/(x + 2) &nbsp; c) lim<sub>x→∞</sub> 5/x</p>
+<p class="small muted">Lösung: <a href="#s8-1">Lösungen, Aufgabe 8.1</a></p></div>
+<div class="task" id="a8-2"><div class="head"><b>Aufgabe 8.2</b><span><span class="lvl l2">mittel</span> <span class="pts">8 P</span></span></div>
+<p>a) lim<sub>x→3</sub> (x² − 9)/(x − 3) &nbsp; b) lim<sub>x→1</sub> (x² − 3x + 2)/(x − 1)<br>
+c) lim<sub>x→∞</sub> (3x³ − x)/(6x³ + 2x²) &nbsp; d) lim<sub>x→∞</sub> (x + 1)/(x² + 1)</p>
+<p class="small muted">Lösung: <a href="#s8-2">Lösungen, Aufgabe 8.2</a></p></div>
+<div class="task" id="a8-3"><div class="head"><b>Aufgabe 8.3</b><span><span class="lvl l3">Prüfungsniveau</span> <span class="pts">8 P</span></span></div>
+<p>a) <span class="pts">(3 P)</span> lim<sub>x→0</sub> sin(3x)/x. Tipp: Erweitere mit 3.</p>
+<p>b) <span class="pts">(3 P)</span> Bestimme lim<sub>x→1<sup>+</sup></sub> 1/(x − 1) und lim<sub>x→1<sup>−</sup></sub> 1/(x − 1). Existiert lim<sub>x→1</sub> 1/(x − 1)?</p>
+<p>c) <span class="pts">(2 P)</span> Existiert lim<sub>x→∞</sub> sin(x)? Begründe.</p>
+<p class="small muted">Lösung: <a href="#s8-3">Lösungen, Aufgabe 8.3</a></p></div>
+</section>
+
+<!-- ===================== PROBEKLAUSUR ===================== -->
+<section class="page" id="probe">
+<h2><span class="nr">P</span>Probeklausur</h2>
+<p class="lesson-meta">Bearbeitungszeit ca. 60 Minuten · 60 Punkte · Hilfsmittel: Taschenrechner</p>
+<div class="merke"><span class="t">So gehst du vor</span>Stell dir einen Wecker auf 60 Minuten. Lies erst alle Aufgaben. Fang mit der an, die dir am leichtesten fällt. Pro Punkt hast du etwa eine Minute. Die Lösungen stehen ganz hinten bei den Lösungen.</div>
+
+<div class="task"><div class="head"><b>Aufgabe P1 – Folgen</b><span class="pts">6 P</span></div>
+<p>a) <span class="pts">(3 P)</span> 2, 6, 18, 54, … Bestimme Typ, a<sub>n</sub> und a<sub>7</sub>.</p>
+<p>b) <span class="pts">(3 P)</span> 10, 7, 4, 1, … Bestimme Typ, a<sub>n</sub> und a<sub>15</sub>.</p></div>
+
+<div class="task"><div class="head"><b>Aufgabe P2 – Monotonie und Beschränktheit einer Folge</b><span class="pts">8 P</span></div>
+<p>Gegeben ist a<sub>n</sub> = (3n − 1)/(n + 1).</p>
+<p>a) <span class="pts">(2 P)</span> Zeige a<sub>n</sub> = 3 − 4/(n + 1).</p>
+<p>b) <span class="pts">(3 P)</span> Zeige, dass (a<sub>n</sub>) streng monoton wachsend ist.</p>
+<p>c) <span class="pts">(3 P)</span> Gib Boden und Decke an. Begründe, warum die Folge konvergiert, und nenne den Grenzwert.</p></div>
+
+<div class="task"><div class="head"><b>Aufgabe P3 – Grenzwerte von Folgen</b><span class="pts">6 P</span></div>
+<p>a) (5n² − n)/(2n² + 3) &nbsp; b) (n + 7)/(n² − 2) &nbsp; c) (2 − n³)/(n² + 1)</p></div>
+
+<div class="task"><div class="head"><b>Aufgabe P4 – Reihen</b><span class="pts">8 P</span></div>
+<p>a) <span class="pts">(3 P)</span> Σ<sub>k=1</sub><sup>∞</sup> 5 · (1/5)<sup>k</sup> &nbsp; b) <span class="pts">(2 P)</span> Σ<sub>k=0</sub><sup>∞</sup> (−1/3)<sup>k</sup> &nbsp; c) <span class="pts">(3 P)</span> Schreibe 0,<span class="ol">72</span> als gekürzten Bruch.</p></div>
+
+<div class="task"><div class="head"><b>Aufgabe P5 – Konvergenz</b><span class="pts">8 P</span></div>
+<p>Konvergent oder divergent? Nenne das Kriterium (je 2 P).<br>
+a) Σ (k² + 1)/(2k²) &nbsp; b) Σ k/(k³ + 1) &nbsp; c) Σ 2k/(k² + 4) &nbsp; d) Σ 3<sup>k</sup>/k!</p></div>
+
+<div class="task"><div class="head"><b>Aufgabe P6 – Finanzmathe</b><span class="pts">8 P</span></div>
+<p>Anna zahlt 4 Jahre lang am Jahresende je 150 € ein (Zinssatz 3 %). Ben zahlt einmal 600 € ein und lässt sie 4 Jahre liegen (3 %).</p>
+<p>a) <span class="pts">(4 P)</span> Wie viel hat Anna direkt nach der 4. Einzahlung?</p>
+<p>b) <span class="pts">(2 P)</span> Wie viel hat Ben nach 4 Jahren?</p>
+<p>c) <span class="pts">(2 P)</span> Beide haben 600 € eingezahlt. Warum hat Ben mehr?</p></div>
+
+<div class="task"><div class="head"><b>Aufgabe P7 – Funktion und Umkehrfunktion</b><span class="pts">8 P</span></div>
+<p>Gegeben ist f(x) = x² − 6x + 5.</p>
+<p>a) <span class="pts">(1 P)</span> Zeige mit einem Zahlenbeispiel: f ist auf ℝ nicht injektiv.</p>
+<p>b) <span class="pts">(3 P)</span> Zeige mit x<sub>1</sub> &lt; x<sub>2</sub>: f ist auf [3, ∞) streng monoton wachsend.</p>
+<p>c) <span class="pts">(4 P)</span> Bestimme den Wertebereich von f auf [3, ∞) und die Umkehrfunktion f<sup>−1</sup> mit Probe.</p></div>
+
+<div class="task"><div class="head"><b>Aufgabe P8 – Grenzwerte von Funktionen</b><span class="pts">8 P</span></div>
+<p>a) lim<sub>x→4</sub> (x² − 16)/(x − 4) &nbsp; b) lim<sub>x→∞</sub> (4x² + 1)/(2x² − x)<br>
+c) lim<sub>x→0</sub> sin(x)/(2x) &nbsp; d) lim<sub>x→0<sup>−</sup></sub> 2/x</p></div>
+
+<p class="small muted">Punkte: 6 + 8 + 6 + 8 + 8 + 8 + 8 + 8 = 60. Bewertung zur Orientierung: ab 30 P bestanden, ab 48 P sehr gut.</p>
+</section>
+
+<!-- ===================== LÖSUNGEN ===================== -->
+<section class="page" id="loesungen">
+<h2><span class="nr">L</span>Lösungen</h2>
+<p>Erst selbst rechnen, dann hier vergleichen. Die Punkte zeigen dir, wofür es in der Klausur Punkte gibt.</p>
+
+<h3>Lektion 1 – Folgen</h3>
+<div class="sol" id="s1-1"><h4>Aufgabe 1.1</h4>
+<p><b>a)</b> Quotienten: −2/4 = −1/2, 1/(−2) = −1/2, (−1/2)/1 = −1/2. Immer gleich ⇒ <b>geometrisch</b> mit q = −1/2 <span class="pts">(1 P)</span>. Differenzen −6, 3 sind verschieden ⇒ nicht arithmetisch. a<sub>1</sub> = 4 ⇒ <b>a<sub>n</sub> = 4 · (−1/2)<sup>n−1</sup></b> <span class="pts">(2 P)</span>. Probe n = 3: 4 · 1/4 = 1 ✓.</p>
+<p><b>b)</b> a<sub>5</sub> = a<sub>1</sub> + 4d ⇒ 19 = 7 + 4d ⇒ 4d = 12 ⇒ <b>d = 3</b> <span class="pts">(1,5 P)</span>. a<sub>20</sub> = 7 + 19 · 3 = 7 + 57 = <b>64</b> <span class="pts">(1,5 P)</span>.</p>
+<p><b>c)</b> Umschreiben: 2 − 1/(n + 1) = (2(n + 1) − 1)/(n + 1) = (2n + 1)/(n + 1) ✓ <span class="pts">(1 P)</span>.<br>
+Monotonie: b<sub>n+1</sub> − b<sub>n</sub> = [2 − 1/(n + 2)] − [2 − 1/(n + 1)] = 1/(n + 1) − 1/(n + 2) = 1/((n + 1)(n + 2)) &gt; 0 ⇒ <b>streng monoton wachsend</b> <span class="pts">(3 P)</span>.<br>
+Beschränktheit: Wachsend, also ist b<sub>1</sub> = 3/2 = 1,5 der Boden. Es wird immer etwas Positives von 2 abgezogen, also b<sub>n</sub> &lt; 2. Zusammen <b>1,5 ≤ b<sub>n</sub> &lt; 2</b> ⇒ beschränkt <span class="pts">(2 P)</span>. Zahlen: 1,5; 1,67; 1,75; 1,8 …</p></div>
+
+<div class="sol" id="s1-2"><h4>Aufgabe 1.2</h4>
+<p><b>a)</b> c<sub>1</sub> = 1/2, c<sub>2</sub> = 2/4 = 1/2, c<sub>3</sub> = 3/8, c<sub>4</sub> = 4/16 = 1/4, c<sub>5</sub> = 5/32 <span class="pts">(2 P)</span>.</p>
+<p><b>b)</b> c<sub>n+1</sub> − c<sub>n</sub> = (n + 1)/2<sup>n+1</sup> − n/2<sup>n</sup> = (n + 1)/2<sup>n+1</sup> − 2n/2<sup>n+1</sup> = (1 − n)/2<sup>n+1</sup> <span class="pts">(2 P)</span>.<br>
+Für n = 1 ist das 0, für n ≥ 2 negativ. Also immer ≤ 0 ⇒ <b>monoton fallend</b> <span class="pts">(1 P)</span>. <b>Nicht streng</b>, weil c<sub>1</sub> = c<sub>2</sub> = 1/2 (erst ab n = 2 streng fallend) <span class="pts">(1 P)</span>.</p>
+<p><b>c)</b> Fallend, also ist c<sub>1</sub> = 1/2 die Decke. Alle Glieder sind positiv, also ist 0 ein Boden: <b>0 &lt; c<sub>n</sub> ≤ 1/2</b> <span class="pts">(2 P)</span>.</p></div>
+
+<h3>Lektion 2 – Grenzwerte von Folgen</h3>
+<div class="sol" id="s2-1"><h4>Aufgabe 2.1</h4>
+<p>a) 5/n → 0 ⇒ <b>3</b>. &nbsp; b) (1/2)<sup>n</sup> → 0, also 7 · 0 + 2 = <b>2</b>. &nbsp; c) Zähler springt zwischen −1 und 1, Nenner → ∞. |(−1)<sup>n</sup>/n| = 1/n → 0 ⇒ <b>0</b>. (je 2 P)</p></div>
+<div class="sol" id="s2-2"><h4>Aufgabe 2.2</h4>
+<p>a) Grad 2 = Grad 2. Durch n²: (4 + 3/n²)/(3 − 1/n) → <b>4/3</b>.</p>
+<p>b) Grad oben 1 &lt; Grad unten 2. Durch n²: (−5/n + 1/n²)/(4 − 7/n²) → 0/4 = <b>0</b>.</p>
+<p>c) Grad oben 3 &gt; Grad unten 2. Durch n²: (n − 2/n²)/(5 + 1/n) ≈ n/5 → <b>+∞</b>.</p>
+<p>d) Grad oben 3 &gt; Grad unten 1. Durch n: (1/n − 2n²)/(1 + 4/n) ≈ −2n² → <b>−∞</b> (Vorzahl −2 ist negativ). (je 2 P)</p></div>
+<div class="sol" id="s2-3"><h4>Aufgabe 2.3</h4>
+<p>a) (−1)<sup>n</sup>/n → 0 (siehe 2.1c), also 2 + 0 = 2 ⇒ <b>konvergent, Grenzwert 2</b>. Zahlen: 1; 2,5; 1,67; 2,25 … pendeln sich bei 2 ein.</p>
+<p>b) (n + 1)/n = 1 + 1/n → 1. Mit (−1)<sup>n</sup> springen die Glieder zwischen fast −1 und fast +1: −2; 1,5; −1,33; 1,25 … ⇒ <b>unbestimmt divergent</b> (zwei Ziele, keins).</p>
+<p>c) Beträge n² → ∞, aber das Vorzeichen wechselt: −1, 4, −9, 16 … Weder +∞ noch −∞ ⇒ <b>unbestimmt divergent</b>. (je 2 P)</p></div>
+
+<h3>Lektion 3 – Reihen</h3>
+<div class="sol" id="s3-1"><h4>Aufgabe 3.1</h4>
+<p>s<sub>1</sub> = 1/3 · s<sub>2</sub> = 1/3 + 1/9 = 4/9 · s<sub>3</sub> = 4/9 + 1/27 = 13/27 · s<sub>4</sub> = 13/27 + 1/81 = 40/81 ≈ 0,494 <span class="pts">(3 P)</span>.</p>
+<p>Geometrisch mit q = 1/3, Start k = 1 ⇒ erstes Glied 1/3. Wert = (1/3)/(1 − 1/3) = (1/3)/(2/3) = <b>1/2</b> <span class="pts">(2 P)</span>. Passt: 0,333; 0,444; 0,481; 0,494 → 0,5.</p></div>
+<div class="sol" id="s3-2"><h4>Aufgabe 3.2</h4>
+<p>a) q = −1/2, |q| &lt; 1, Start k = 0 ⇒ erstes Glied 3. Wert = 3/(1 + 1/2) = 3/(3/2) = <b>2</b> <span class="pts">(2 P)</span>.</p>
+<p>b) Start k = 2 ⇒ erstes Glied (1/2)² = 1/4. Wert = (1/4)/(1/2) = <b>1/2</b> <span class="pts">(2 P)</span>. Probe: Die Reihe ab k = 1 ist 1, minus das Glied 1/2 ergibt 1/2 ✓.</p>
+<p>c) Aufteilen (beide Teile konvergieren): 2 · Σ<sub>k=1</sub><sup>∞</sup> (1/2)<sup>k</sup> + Σ<sub>k=1</sub><sup>∞</sup> (1/4)<sup>k</sup> = 2 · 1 + (1/4)/(3/4) = 2 + 1/3 = <b>7/3</b> <span class="pts">(3 P)</span>.</p></div>
+<div class="sol" id="s3-3"><h4>Aufgabe 3.3</h4>
+<p><b>a)</b> 0,<span class="ol">45</span> = 45/100 + 45/10 000 + … Periodenlänge 2 ⇒ q = 1/100, erstes Glied 45/100 <span class="pts">(1 P)</span>. Wert = (45/100)/(99/100) = 45/99 <span class="pts">(1 P)</span>. Kürzen durch 9: <b>5/11</b> <span class="pts">(1 P)</span>. Probe: 5 : 11 = 0,4545… ✓</p>
+<p><b>b)</b> Zerlegen: 1/(k(k + 1)) = 1/k − 1/(k + 1) <span class="pts">(1 P)</span>. Ab k = 2:<br>
+s<sub>n</sub> = (1/2 − 1/3) + (1/3 − 1/4) + … + (1/n − 1/(n + 1)) = 1/2 − 1/(n + 1) <span class="pts">(2 P)</span>.<br>
+n → ∞: 1/(n + 1) → 0 ⇒ Wert = <b>1/2</b> <span class="pts">(1 P)</span>.<br>
+Kontrolle: Ab k = 1 ist der Wert 1. Das erste Glied 1/(1 · 2) = 1/2 fehlt jetzt: 1 − 1/2 = 1/2 ✓ <span class="pts">(1 P)</span>.</p></div>
+
+<h3>Lektion 4 – Konvergenzkriterien</h3>
+<div class="sol" id="s4-1"><h4>Aufgabe 4.1</h4>
+<p>a) k/(k + 1) = 1/(1 + 1/k) → 1 ≠ 0 ⇒ <b>divergent</b> <span class="pts">(2 P)</span>. Man addiert immer fast 1.</p>
+<p>b) Durch k: (2 + 1/k)/(5 − 3/k) → 2/5 ≠ 0 ⇒ <b>divergent</b> <span class="pts">(2 P)</span>.</p></div>
+<div class="sol" id="s4-2"><h4>Aufgabe 4.2</h4>
+<p>a) 1/√k = 1/k<sup>1/2</sup>, also p = 1/2 ≤ 1 ⇒ <b>divergent</b> (Σ 1/k<sup>p</sup>) <span class="pts">(2 P)</span>. Achtung: Die Summanden gehen gegen 0, das reicht nicht.</p>
+<p>b) Abstand = 4 − 2 = 2 &gt; 1 ⇒ verhält sich wie 1/k² ⇒ <b>konvergent</b> (Potenzabstand / Vergleich mit Σ 1/k²) <span class="pts">(2 P)</span>.</p>
+<p>c) Abstand = 2 − 1 = 1 ⇒ verhält sich wie 5/k ⇒ <b>divergent</b> (wie harmonische Reihe) <span class="pts">(2 P)</span>.</p></div>
+<div class="sol" id="s4-3"><h4>Aufgabe 4.3</h4>
+<p><b>a)</b> a<sub>k+1</sub>/a<sub>k</sub> = [(k + 1)/2<sup>k+1</sup>] · [2<sup>k</sup>/k] = (k + 1)/(2k) = (1 + 1/k)/2 → 1/2. L = 1/2 &lt; 1 ⇒ <b>konvergent</b> <span class="pts">(3 P)</span>.</p>
+<p><b>b)</b> a<sub>k+1</sub>/a<sub>k</sub> = [2<sup>k+1</sup>/(k + 1)!] · [k!/2<sup>k</sup>] = 2/(k + 1) → 0. L = 0 &lt; 1 ⇒ <b>konvergent</b> <span class="pts">(3 P)</span>.</p>
+<p><b>c)</b> a<sub>k+1</sub>/a<sub>k</sub> = [(k + 1)!/3<sup>k+1</sup>] · [3<sup>k</sup>/k!] = (k + 1)/3 → ∞. L &gt; 1 ⇒ <b>divergent</b> <span class="pts">(3 P)</span>. (Auch klar: Die Summanden gehen nicht gegen 0.)</p>
+<p><b>d)</b> a<sub>k+1</sub>/a<sub>k</sub> = k²/(k + 1)² = (k/(k + 1))² → 1. L = 1 ⇒ keine Aussage. Man braucht das Kriterium Σ 1/k<sup>p</sup> (p = 2 &gt; 1 ⇒ konvergent).</p></div>
+
+<h3>Lektion 5 – Finanzmathe</h3>
+<div class="sol" id="s5-1"><h4>Aufgabe 5.1</h4>
+<p>K<sub>5</sub> = 2000 · 1,03<sup>5</sup> = 2000 · 1,1592740743 = <b>2318,55 €</b> <span class="pts">(2 P)</span>. Zinsen: 2318,55 − 2000 = <b>318,55 €</b> <span class="pts">(1 P)</span>.</p></div>
+<div class="sol" id="s5-2"><h4>Aufgabe 5.2</h4>
+<p>r = 200, i = 0,04, n = 10. 1,04<sup>10</sup> = 1,4802442849 <span class="pts">(1 P)</span>.<br>
+E<sub>10</sub> = 200 · (1,4802442849 − 1)/0,04 = 200 · 12,0061071 = <b>2401,22 €</b> <span class="pts">(2 P)</span>.<br>
+Selbst eingezahlt: 10 · 200 = 2000 € <span class="pts">(1 P)</span>. Zinsen: 2401,22 − 2000 = <b>401,22 €</b> <span class="pts">(1 P)</span>.</p></div>
+<div class="sol" id="s5-3"><h4>Aufgabe 5.3</h4>
+<p><b>a)</b> Die 4. (letzte) Einzahlung liegt 0 Jahre, die 3. ein Jahr, die 2. zwei Jahre, die 1. drei Jahre <span class="pts">(1 P)</span>:</p>
+<span class="formula">E<sub>4</sub> = r + r(1 + i) + r(1 + i)² + r(1 + i)³ = r · Σ<sub>k=0</sub><sup>3</sup> q<sup>k</sup> mit q = 1 + i</span>
+<p>Summenformel Σ<sub>k=0</sub><sup>3</sup> q<sup>k</sup> = (q⁴ − 1)/(q − 1) <span class="pts">(1 P)</span>. Mit q − 1 = i: <b>E<sub>4</sub> = r · ((1 + i)⁴ − 1)/i</b> <span class="pts">(2 P)</span>.</p>
+<p><b>b)</b> Formel nach r umstellen: r = E<sub>n</sub> · i/((1 + i)<sup>n</sup> − 1) <span class="pts">(2 P)</span>.<br>
+1,02<sup>5</sup> = 1,1040808032. r = 10 000 · 0,02/0,1040808032 = 200/0,1040808032 ≈ <b>1921,58 €</b> pro Jahr <span class="pts">(2 P)</span>.<br>
+Probe: 1921,58 · 0,1040808/0,02 ≈ 9999,98 ≈ 10 000 ✓ (Rundung auf Cent)</p></div>
+
+<h3>Lektion 6 – Funktionen</h3>
+<div class="sol" id="s6-1"><h4>Aufgabe 6.1</h4>
+<p><b>a)</b> f: Nenner darf nicht 0 sein, x − 2 ≠ 0 ⇒ <b>D = ℝ \ {2}</b> <span class="pts">(1 P)</span>. g: Unter der Wurzel nichts Negatives, x − 1 ≥ 0 ⇒ <b>D = [1, ∞)</b> <span class="pts">(1 P)</span>.</p>
+<p><b>b)</b> y = 3x − 6 ⇒ y + 6 = 3x ⇒ x = (y + 6)/3. Tauschen: <b>h<sup>−1</sup>(x) = (x + 6)/3</b> <span class="pts">(2 P)</span>. Probe: h(4) = 12 − 6 = 6, h<sup>−1</sup>(6) = 12/3 = 4 ✓ <span class="pts">(1 P)</span>.</p></div>
+<div class="sol" id="s6-2"><h4>Aufgabe 6.2</h4>
+<p><b>a)</b> Verschiedene x geben verschiedene Werte: f(1) = 3, f(2) = 5 ⇒ injektiv. Zu jedem y gibt es x = (y − 1)/2, z. B. y = 8 ⇒ x = 3,5 ⇒ surjektiv. Also <b>bijektiv</b> <span class="pts">(2 P)</span>.</p>
+<p><b>b)</b> g(−1) = g(1) = 2 ⇒ nicht injektiv. Jedes y ≥ 1 wird getroffen (x = √(y − 1)), z. B. y = 5 bei x = 2 ⇒ surjektiv. Also <b>surjektiv, nicht injektiv</b> <span class="pts">(2 P)</span>.</p>
+<p><b>c)</b> Auf [0, ∞) steigt x² + 1 ⇒ injektiv. Aber y = 0 kommt nie heraus (x² + 1 ≥ 1) ⇒ nicht surjektiv. Also <b>injektiv, nicht surjektiv</b> <span class="pts">(2 P)</span>.</p></div>
+<div class="sol" id="s6-3"><h4>Aufgabe 6.3</h4>
+<p><b>a)</b> Halbe Vorzahl: 2/2 = 1, 1² = 1. x² + 2x − 3 = x² + 2x + 1 − 1 − 3 = <b>(x + 1)² − 4</b> <span class="pts">(2 P)</span>. Probe x = 2: 4 + 4 − 3 = 5 und 9 − 4 = 5 ✓.</p>
+<p><b>b)</b> Scheitel bei x = −1, f(−1) = −4. Ab dem Scheitel steigt die Parabel ⇒ auf [−1, ∞) injektiv. Auf ℝ nicht: f(−3) = 9 − 6 − 3 = 0 = f(1) <span class="pts">(1 P)</span>. Wertebereich: (x + 1)² ≥ 0 ⇒ f(x) ≥ −4 ⇒ <b>[−4, ∞)</b> <span class="pts">(1 P)</span>.</p>
+<p><b>c)</b> y = (x + 1)² − 4 ⇒ y + 4 = (x + 1)² ⇒ x + 1 = +√(y + 4) (nur +, weil x ≥ −1) ⇒ x = −1 + √(y + 4) <span class="pts">(2 P)</span>.<br>
+<b>f<sup>−1</sup>(x) = −1 + √(x + 4)</b>, f<sup>−1</sup>: [−4, ∞) → [−1, ∞) <span class="pts">(1 P)</span>.<br>
+Probe: f(2) = 5, f<sup>−1</sup>(5) = −1 + √9 = 2 ✓ <span class="pts">(1 P)</span>.</p></div>
+
+<h3>Lektion 7 – Monotonie und Beschränktheit von Funktionen</h3>
+<div class="sol" id="s7-1"><h4>Aufgabe 7.1</h4>
+<p>Für x<sub>1</sub> &lt; x<sub>2</sub>: f(x<sub>2</sub>) − f(x<sub>1</sub>) = (3 − 2x<sub>2</sub>) − (3 − 2x<sub>1</sub>) = −2(x<sub>2</sub> − x<sub>1</sub>) <span class="pts">(2 P)</span>. Da x<sub>2</sub> − x<sub>1</sub> &gt; 0, ist das &lt; 0 ⇒ <b>streng monoton fallend</b> <span class="pts">(1 P)</span>.<br>
+Für x → ∞ geht f → −∞, für x → −∞ geht f → +∞ ⇒ <b>weder nach oben noch nach unten beschränkt</b> <span class="pts">(1 P)</span>.</p></div>
+<div class="sol" id="s7-2"><h4>Aufgabe 7.2</h4>
+<p>Zahlen: f(0) = 0, f(1) = 0,5, f(3) = 0,75, f(9) = 0,9. Umschreiben: x/(x + 1) = (x + 1 − 1)/(x + 1) = 1 − 1/(x + 1) <span class="pts">(1 P)</span>.</p>
+<p>Für 0 ≤ x<sub>1</sub> &lt; x<sub>2</sub>: f(x<sub>2</sub>) − f(x<sub>1</sub>) = 1/(x<sub>1</sub> + 1) − 1/(x<sub>2</sub> + 1) = (x<sub>2</sub> − x<sub>1</sub>)/((x<sub>1</sub> + 1)(x<sub>2</sub> + 1)) <span class="pts">(2 P)</span>. Zähler &gt; 0, Nenner &gt; 0 ⇒ <b>streng monoton wachsend</b> <span class="pts">(1 P)</span>.</p>
+<p>Ränder: f(0) = 0 ist der kleinste Wert (Boden). Es wird immer etwas Positives von 1 abgezogen ⇒ f(x) &lt; 1; für x → ∞ geht f → 1 <span class="pts">(1 P)</span>. Also <b>0 ≤ f(x) &lt; 1, beschränkt</b> <span class="pts">(1 P)</span>.</p></div>
+<div class="sol" id="s7-3"><h4>Aufgabe 7.3</h4>
+<p>Zahlen: g(0) = 0, g(0,5) = 0,5/0,75 ≈ 0,67, g(0,9) ≈ 4,74, g(0,99) ≈ 49,7; g(−0,5) ≈ −0,67.</p>
+<p>Für −1 &lt; x<sub>1</sub> &lt; x<sub>2</sub> &lt; 1, auf einen Nenner <span class="pts">(2 P)</span>:</p>
+<span class="formula">g(x<sub>2</sub>) − g(x<sub>1</sub>) = [x<sub>2</sub>(1 − x<sub>1</sub>²) − x<sub>1</sub>(1 − x<sub>2</sub>²)] / ((1 − x<sub>1</sub>²)(1 − x<sub>2</sub>²))</span>
+<p>Zähler ausmultiplizieren: x<sub>2</sub> − x<sub>2</sub>x<sub>1</sub>² − x<sub>1</sub> + x<sub>1</sub>x<sub>2</sub>² = (x<sub>2</sub> − x<sub>1</sub>) + x<sub>1</sub>x<sub>2</sub>(x<sub>2</sub> − x<sub>1</sub>) = (x<sub>2</sub> − x<sub>1</sub>)(1 + x<sub>1</sub>x<sub>2</sub>) <span class="pts">(2 P)</span>.</p>
+<span class="formula">g(x<sub>2</sub>) − g(x<sub>1</sub>) = (x<sub>2</sub> − x<sub>1</sub>)(1 + x<sub>1</sub>x<sub>2</sub>) / ((1 − x<sub>1</sub>²)(1 − x<sub>2</sub>²))</span>
+<p>Vorzeichen: x<sub>2</sub> − x<sub>1</sub> &gt; 0. Weil |x<sub>1</sub>|, |x<sub>2</sub>| &lt; 1, ist |x<sub>1</sub>x<sub>2</sub>| &lt; 1, also 1 + x<sub>1</sub>x<sub>2</sub> &gt; 0. Und 1 − x² &gt; 0 für |x| &lt; 1. Alles positiv ⇒ <b>streng monoton wachsend</b> <span class="pts">(2 P)</span>.</p>
+<p>Ränder: x → 1 von links: Zähler → 1, Nenner → 0 (positiv) ⇒ g → +∞. x → −1 von rechts: Zähler → −1, Nenner → 0 (positiv) ⇒ g → −∞. Also <b>weder nach oben noch nach unten beschränkt</b> <span class="pts">(2 P)</span>.</p></div>
+
+<h3>Lektion 8 – Grenzwerte von Funktionen</h3>
+<div class="sol" id="s8-1"><h4>Aufgabe 8.1</h4>
+<p>a) Einsetzen: 9 + 1 = <b>10</b>. &nbsp; b) Einsetzen: (4 − 4)/(2 + 2) = 0/4 = <b>0</b>. Kein 0/0, also fertig. &nbsp; c) 5/x → <b>0</b>. (je 1 P)</p></div>
+<div class="sol" id="s8-2"><h4>Aufgabe 8.2</h4>
+<p>a) 0/0. (x² − 9) = (x − 3)(x + 3). Kürzen: x + 3 → <b>6</b> <span class="pts">(2 P)</span>.</p>
+<p>b) Einsetzen: (1 − 3 + 2)/0 = 0/0. Faktorisieren: x² − 3x + 2 = (x − 1)(x − 2) (Probe: Nullstellen 1 und 2). Kürzen: x − 2 → 1 − 2 = <b>−1</b> <span class="pts">(2 P)</span>.</p>
+<p>c) ∞/∞. Durch x³: (3 − 1/x²)/(6 + 2/x) → 3/6 = <b>1/2</b> <span class="pts">(2 P)</span>.</p>
+<p>d) Grad oben 1 &lt; Grad unten 2. Durch x²: (1/x + 1/x²)/(1 + 1/x²) → <b>0</b> <span class="pts">(2 P)</span>.</p></div>
+<div class="sol" id="s8-3"><h4>Aufgabe 8.3</h4>
+<p><b>a)</b> sin(3x)/x = 3 · sin(3x)/(3x). Mit u = 3x gilt u → 0, also sin(u)/u → 1. Ergebnis 3 · 1 = <b>3</b> <span class="pts">(3 P)</span>. Zahlenprobe x = 0,001: sin(0,003)/0,001 ≈ 2,99999 ✓.</p>
+<p><b>b)</b> Einsetzen: 1/0 ⇒ Richtung prüfen. x = 1,01: 1/0,01 = 100 ⇒ von rechts <b>+∞</b>. x = 0,99: 1/(−0,01) = −100 ⇒ von links <b>−∞</b> <span class="pts">(2 P)</span>. Links ≠ rechts ⇒ lim<sub>x→1</sub> 1/(x − 1) <b>existiert nicht</b> <span class="pts">(1 P)</span>.</p>
+<p><b>c)</b> <b>Nein.</b> sin(x) schwingt für x → ∞ immer zwischen −1 und 1: sin(π/2 + 2πk) = 1 und sin(3π/2 + 2πk) = −1 für beliebig große k. Es gibt keinen Wert, dem sich sin(x) nähert <span class="pts">(2 P)</span>.</p></div>
+
+<h3>Probeklausur</h3>
+<div class="sol"><h4>P1 (6 P)</h4>
+<p>a) Quotient 6/2 = 18/6 = 3 ⇒ <b>geometrisch</b>, q = 3. a<sub>n</sub> = 2 · 3<sup>n−1</sup>. a<sub>7</sub> = 2 · 3<sup>6</sup> = 2 · 729 = <b>1458</b>.</p>
+<p>b) Differenz 7 − 10 = 4 − 7 = −3 ⇒ <b>arithmetisch</b>, d = −3. a<sub>n</sub> = 10 + (n − 1)(−3) = 13 − 3n. a<sub>15</sub> = 13 − 45 = <b>−32</b>.</p></div>
+<div class="sol"><h4>P2 (8 P)</h4>
+<p>a) 3 − 4/(n + 1) = (3(n + 1) − 4)/(n + 1) = (3n − 1)/(n + 1) ✓ <span class="pts">(2 P)</span></p>
+<p>b) a<sub>n+1</sub> − a<sub>n</sub> = [3 − 4/(n + 2)] − [3 − 4/(n + 1)] = 4/(n + 1) − 4/(n + 2) = 4/((n + 1)(n + 2)) &gt; 0 ⇒ <b>streng monoton wachsend</b> <span class="pts">(3 P)</span>.</p>
+<p>c) Boden a<sub>1</sub> = 2/2 = 1 (wachsend). Decke 3, weil immer etwas Positives von 3 abgezogen wird: <b>1 ≤ a<sub>n</sub> &lt; 3</b>. Monoton und beschränkt ⇒ konvergent (Monotonie-Kriterium). 4/(n + 1) → 0 ⇒ Grenzwert <b>3</b> <span class="pts">(3 P)</span>.</p></div>
+<div class="sol"><h4>P3 (6 P)</h4>
+<p>a) gleicher Grad ⇒ <b>5/2</b>. &nbsp; b) Grad oben &lt; Grad unten ⇒ <b>0</b>. &nbsp; c) Grad oben 3 &gt; 2, Vorzahl −1 ⇒ (2/n² − n)/(1 + 1/n²) → <b>−∞</b>. (je 2 P)</p></div>
+<div class="sol"><h4>P4 (8 P)</h4>
+<p>a) q = 1/5, Start k = 1 ⇒ erstes Glied 5 · 1/5 = 1. Wert = 1/(1 − 1/5) = 1/(4/5) = <b>5/4</b> <span class="pts">(3 P)</span>.</p>
+<p>b) q = −1/3, erstes Glied 1. Wert = 1/(1 + 1/3) = <b>3/4</b> <span class="pts">(2 P)</span>.</p>
+<p>c) 0,<span class="ol">72</span> = 72/100 + 72/10 000 + … = (72/100)/(99/100) = 72/99 = <b>8/11</b> <span class="pts">(3 P)</span>. Probe 8 : 11 = 0,7272… ✓</p></div>
+<div class="sol"><h4>P5 (8 P)</h4>
+<p>a) Summanden → 1/2 ≠ 0 ⇒ <b>divergent</b> (Divergenzkriterium).</p>
+<p>b) Abstand 3 − 1 = 2 &gt; 1 ⇒ <b>konvergent</b> (Potenzabstand, wie 1/k²).</p>
+<p>c) Abstand 2 − 1 = 1 ⇒ wie 2/k ⇒ <b>divergent</b> (wie harmonische Reihe).</p>
+<p>d) Quotientenkriterium: a<sub>k+1</sub>/a<sub>k</sub> = 3/(k + 1) → 0 &lt; 1 ⇒ <b>konvergent</b>. (je 2 P)</p></div>
+<div class="sol"><h4>P6 (8 P)</h4>
+<p>a) 1,03⁴ = 1,12550881. E<sub>4</sub> = 150 · (1,12550881 − 1)/0,03 = 150 · 4,183627 = <b>627,54 €</b> <span class="pts">(4 P)</span>. Probe einzeln: 163,91 + 159,14 + 154,50 + 150,00 = 627,55 – der Cent Unterschied kommt vom Runden der einzelnen Beträge.</p>
+<p>b) K<sub>4</sub> = 600 · 1,03⁴ = <b>675,31 €</b> <span class="pts">(2 P)</span>.</p>
+<p>c) Bens 600 € liegen alle 4 Jahre. Annas Raten liegen nur 3, 2, 1 und 0 Jahre. Länger verzinst ⇒ mehr Zinseszins <span class="pts">(2 P)</span>.</p></div>
+<div class="sol"><h4>P7 (8 P)</h4>
+<p>a) f(1) = 1 − 6 + 5 = 0 und f(5) = 25 − 30 + 5 = 0. Zwei x, gleicher Wert ⇒ nicht injektiv <span class="pts">(1 P)</span>.</p>
+<p>b) Für 3 ≤ x<sub>1</sub> &lt; x<sub>2</sub>: f(x<sub>2</sub>) − f(x<sub>1</sub>) = (x<sub>2</sub>² − x<sub>1</sub>²) − 6(x<sub>2</sub> − x<sub>1</sub>) = (x<sub>2</sub> − x<sub>1</sub>)(x<sub>2</sub> + x<sub>1</sub> − 6). Erster Faktor &gt; 0. Weil x<sub>1</sub> ≥ 3 und x<sub>2</sub> &gt; 3, ist x<sub>1</sub> + x<sub>2</sub> &gt; 6, also zweiter Faktor &gt; 0 ⇒ <b>streng wachsend</b> <span class="pts">(3 P)</span>.</p>
+<p>c) Quadratische Ergänzung: x² − 6x + 5 = (x − 3)² − 9 + 5 = (x − 3)² − 4. Wertebereich <b>[−4, ∞)</b> <span class="pts">(1 P)</span>. y + 4 = (x − 3)² ⇒ x = 3 + √(y + 4) (plus, weil x ≥ 3) ⇒ <b>f<sup>−1</sup>(x) = 3 + √(x + 4)</b>, f<sup>−1</sup>: [−4, ∞) → [3, ∞) <span class="pts">(2 P)</span>. Probe: f(5) = 0, f<sup>−1</sup>(0) = 3 + 2 = 5 ✓ <span class="pts">(1 P)</span>.</p></div>
+<div class="sol"><h4>P8 (8 P)</h4>
+<p>a) 0/0. (x − 4)(x + 4)/(x − 4) = x + 4 → <b>8</b>. &nbsp; b) Durch x²: (4 + 1/x²)/(2 − 1/x) → <b>2</b>.</p>
+<p>c) sin(x)/(2x) = 1/2 · sin(x)/x → <b>1/2</b>. &nbsp; d) x klein und negativ: 2/(−0,01) = −200 ⇒ <b>−∞</b>. (je 2 P)</p></div>
+</section>
+
+<!-- ===================== SPICKZETTEL ===================== -->
+<section class="page spick" id="spick">
+<h2><span class="nr">S</span>Spickzettel</h2>
+<div class="cols">
+<div><h4>Folgen (L1)</h4>
+<p>arithmetisch: a<sub>n+1</sub> − a<sub>n</sub> = d konstant · a<sub>n</sub> = a<sub>1</sub> + (n − 1)d · S<sub>n</sub> = n/2 · (a<sub>1</sub> + a<sub>n</sub>)</p>
+<p>geometrisch: a<sub>n+1</sub>/a<sub>n</sub> = q konstant · a<sub>n</sub> = a<sub>1</sub> · q<sup>n−1</sup></p>
+<p>Monotonie: a<sub>n+1</sub> − a<sub>n</sub> &gt; 0 ⇒ streng wachsend, &lt; 0 ⇒ streng fallend</p>
+<p>Beschränkt: Boden ≤ a<sub>n</sub> ≤ Decke. Trick: (n − 1)/n = 1 − 1/n</p></div>
+
+<div><h4>Grenzwerte von Folgen (L2)</h4>
+<p>Nullfolgen: 1/n, 1/n², q<sup>n</sup> mit |q| &lt; 1</p>
+<p>Rezept: durch höchste Potenz des Nenners teilen. Grad gleich ⇒ Vorzahlen-Quotient · oben kleiner ⇒ 0 · oben größer ⇒ ±∞</p>
+<p>(−1)<sup>n</sup>: beschränkt, aber divergent. Monoton + beschränkt ⇒ konvergent.</p></div>
+
+<div><h4>Reihen (L3)</h4>
+<p>s<sub>n</sub> = a<sub>1</sub> + … + a<sub>n</sub>; Wert = lim s<sub>n</sub></p>
+<span class="formula">Σ<sub>k=0</sub><sup>n</sup> q<sup>k</sup> = (1 − q<sup>n+1</sup>)/(1 − q)</span>
+<span class="formula">Σ q<sup>k</sup> = <b>erstes Glied/(1 − q)</b>, nur |q| &lt; 1</span>
+<p>Periode Länge 1 ⇒ q = 1/10, Länge 2 ⇒ q = 1/100. 0,<span class="ol">3</span> = 1/3 · 0,<span class="ol">12</span> = 4/33 · 4,31<span class="ol">2</span> = 3881/900</p>
+<p>Teleskop: 1/(k(k + 1)) = 1/k − 1/(k + 1) ⇒ s<sub>n</sub> = 1 − 1/(n + 1) → 1</p></div>
+
+<div><h4>Konvergenzkriterien (L4)</h4>
+<ul>
+<li>Summanden ↛ 0 ⇒ divergent (→ 0: noch nichts gesagt)</li>
+<li>q<sup>k</sup>: konvergent ⇔ |q| &lt; 1</li>
+<li>Σ 1/k<sup>p</sup>: konvergent ⇔ p &gt; 1 (Σ 1/k divergiert!)</li>
+<li>Potenzabstand (Grad unten − Grad oben) &gt; 1 ⇒ konvergent, ≤ 1 ⇒ divergent</li>
+<li>Quotient: L = lim |a<sub>k+1</sub>/a<sub>k</sub>|; L &lt; 1 konv., L &gt; 1 div., L = 1 keine Aussage</li>
+<li>(k + 1)! = (k + 1) · k!</li>
+</ul></div>
+
+<div><h4>Finanzmathe (L5)</h4>
+<p>i als Dezimalzahl (5 % = 0,05), q = 1 + i</p>
+<span class="formula">Zinseszins: K<sub>n</sub> = (1 + i)<sup>n</sup> · r</span>
+<span class="formula">Sparplan: E<sub>n</sub> = r · ((1 + i)<sup>n</sup> − 1)/i</span>
+<p>Beispiel: r = 100, i = 0,05, n = 3 ⇒ 315,25 €. Nie die unendliche Formel (q &gt; 1)!</p></div>
+
+<div><h4>Funktionen (L6)</h4>
+<p>injektiv: höchstens einmal getroffen · surjektiv: mindestens einmal · bijektiv: genau einmal (waagrechte Linien)</p>
+<p>Umkehrfunktion: 1. injektiv? sonst D einschränken (ab Scheitel) 2. Wertebereich = Zielmenge 3. y = f(x) nach x auflösen 4. Vorzeichen passend zu D 5. x ↔ y 6. Probe</p>
+<p>Folie 62: x² − 4x + 1 = (x − 2)² − 3 auf [2, ∞) ⇒ f<sup>−1</sup>(x) = 2 + √(x + 3), D(f<sup>−1</sup>) = [−3, ∞)</p></div>
+
+<div><h4>Monotonie von Funktionen (L7)</h4>
+<p>1. Zahlen einsetzen 2. x<sub>1</sub> &lt; x<sub>2</sub> 3. f(x<sub>2</sub>) − f(x<sub>1</sub>) auf einen Nenner, (x<sub>2</sub> − x<sub>1</sub>) ausklammern 4. Vorzeichen jedes Faktors 5. Ränder von D prüfen</p>
+<p>Folie 73: x²/(x + 1) auf x &gt; 1: wachsend, f &gt; 1/2, oben unbeschränkt · x/(1 − x²) auf (−1, 1): wachsend, unbeschränkt</p></div>
+
+<div><h4>Grenzwerte von Funktionen (L8)</h4>
+<ol>
+<li>einsetzen → Zahl ⇒ fertig</li>
+<li>Zahl/0 ⇒ ±∞, Richtung links/rechts prüfen</li>
+<li>0/0 oder ∞/∞ ⇒ umformen: faktorisieren + kürzen · durch höchste Potenz · sin(x)/x → 1</li>
+<li>schwingt oder links ≠ rechts ⇒ existiert nicht</li>
+<li>Notfall: Zahlen nah dran einsetzen</li>
+</ol>
+<p>Folie 75: a) 4 · b) 1 · c) 2 · d) +∞ · e) −∞ · f) existiert nicht</p></div>
+</div>
+</section>
+
+</main>
+</body>
+</html>
