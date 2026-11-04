@@ -12,7 +12,7 @@ Moodle: [Kurs 18616](https://moodle.heilbronn.dhbw.de/course/view.php?id=18616) 
 | 2 | 22.10.2026 | Betrieb und Unternehmung: Typologie, Makroumfeld, normativer Rahmen, Ziele, Mitbestimmung | Folien „2. Betrieb und Unternehmung“ + Skript Kap. 2 | [02](vorlesungen/02_2026-10-22.md) |
 | 3 | 26.10.2026 | Rechtsformen I: Firma, Kaufmann, Handelsregister, Einzelunternehmung, GbR, OHG, KG, stille Gesellschaft (Übungen 12–17; Aufteilung auf 26./27.10. vermutet) | Folien „3. Rechtsformen der Unternehmung“ + Skript Kap. 3 | [03](vorlesungen/03_2026-10-26.md) |
 | 4 | 27.10.2026 | Rechtsformen II: Kapitalgesellschaften (GmbH, UG, GmbH & Co. KG, AG, KGaA, SE), eG, Stiftung (Übungen 18–22) + Kap. 4 Konzentration und Kooperation (Kartelle, Franchise, Joint Venture, Konzern, Holding, Fusion; Übungen 23–25) | Folien „3. Rechtsformen der Unternehmung“ (3.4–3.5) + „4. Konzentration und Kooperation“ + Skript Kap. 3.4–4 | [04](vorlesungen/04_2026-10-27.md) |
-| 5 | 03.11.2026 | Kap. 5 Standortentscheidungen: Ziele, Standortplanung/-struktur, Standortfaktoren, Methoden, Nutzwertanalyse (Übungen 26–27, Musterklausur A8); falls Zeit Beginn Kap. 6 Rechnungswesen | vermutet (Agenda-Folie Kap. 3 + Skript Kap. 5, S. 61–65) | [05](vorlesungen/05_2026-11-03.md) |
+| 5 | 03.11.2026 | Kap. 5 Standortentscheidungen komplett (Ziele, Standortplanung/-struktur, Standortfaktoren, Nutzwertanalyse, Standort Deutschland; Übungen 26–27, Musterklausur A8) + Beginn Kap. 6 Rechnungswesen (Umfang offen; Folien mit Lösungen bis Übung 28g) | Folien „5. Standortentscheidungen“ + „6. Rechnungswesen“ + Skript Kap. 5–6 + Musterlösung BWL 2025 | [05](vorlesungen/05_2026-11-03.md) |
 
 ## Materialien in Moodle
 
@@ -25,6 +25,9 @@ Moodle: [Kurs 18616](https://moodle.heilbronn.dhbw.de/course/view.php?id=18616) 
 | Folien „2. Betrieb und Unternehmung“ | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191297) | 23.10.2026 | Termin 2 |
 | Folien „3. Rechtsformen der Unternehmung“ | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191590) | 28.10.2026 | Termin 3 + 4 (Kap. 3, Lösungen Übung 12–22) |
 | Folien „4. Konzentration und Kooperation“ | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191611) | 28.10.2026 | Termin 4 (Kap. 4, Lösungen Übung 23–25) |
+| Musterlösung BWL 2025 (offizielle Lösung zur Musterklausur) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191972) | 04.11.2026 | Klausurvorbereitung (Musterklausur A1–A8), Termin 5 (A8) |
+| Folien „5. Standortentscheidungen“ | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191970) | 04.11.2026 | Termin 5 (Kap. 5, Lösungen Übung 26–27) |
+| Folien „6. Rechnungswesen“ | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191991) | 04.11.2026 | Termin 5 (+ Termin 6 vermutet; Kap. 6, Lösungen Übung 28a–g) |
 
 ## Eigene Notizen
 
