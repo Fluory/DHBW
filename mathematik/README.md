@@ -9,6 +9,7 @@ Termine laut Folien: 19.10., 04.11. (ganztags), 20.11. (ganztags), 02.12. (ganzt
 | Nr | Datum | Thema | Grundlage | Notiz |
 |---|---|---|---|---|
 | 1 | 19.10.2026 | Organisatorisches; Folgen: Bildungsgesetze, Monotonie, Beschränktheit, Konvergenz, Grenzwertregeln, arithmetische/geometrische Folgen | Folien „Analysis – Folgen“ | [01](vorlesungen/01_2026-10-19.md) |
+| 2 | 04.11.2026 | Besprechung F-1–F-6; Reihen (Partialsummen, geometrische/harmonische Reihe, Konvergenzkriterien); evtl. Einstieg Funktionen/Stetigkeit | vermutet (Inhaltsfolie „Folgen und Reihen“, Deck endet mit Folgen) | [02](vorlesungen/02_2026-11-04.md) |
 
 ## Materialien in Moodle
 
