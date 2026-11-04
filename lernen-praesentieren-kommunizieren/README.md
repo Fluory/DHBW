@@ -1,6 +1,6 @@
 # Effektives Lernen, Präsentieren und Kommunizieren
 
-Moodle: [Kurs 18612](https://moodle.heilbronn.dhbw.de/course/view.php?id=18612) · Kalender-Titel: „Lernen, Präsentation, Kommunikation“ · Dozentin: Anke Menzler · Prüfung: schriftliche Portfolio-Leistung (Abgabe 28.12.2026, vermutlich)
+Moodle: [Kurs 18612](https://moodle.heilbronn.dhbw.de/course/view.php?id=18612) · Kalender-Titel: „Lernen, Präsentation, Kommunikation“ · Dozentin: Anke Menzler · Prüfung: schriftliche Portfolio-Leistung (Abgabe 28.12.2026, vermutlich; Aufgabenstellung, Umfang und Bewertung auch nach Termin 4 nicht im Material)
 
 4 ganztägige Termine: 06.10., 08.10., 12.10., 02.11. Es gibt keine Folien pro Termin, sondern drei
 Dokumente. Die Zuordnung der Themen zu Terminen ist deshalb **geschätzt**:
@@ -10,7 +10,7 @@ Dokumente. Die Zuordnung der Themen zu Terminen ist deshalb **geschätzt**:
 | 1 (06.10.) | Feedback, eduScrum, Kommunikationsmodelle, Lernverzerrungen, drei Lernübungen | **Fotoprotokoll 6.10.** (bestätigt) |
 | 2 (08.10.) | Modell-Sprints, Denkpräferenzen, Kulturdimensionen, Stakeholder, Präsentation, Storytelling | **Fotoprotokoll 8.10.** (bestätigt) |
 | 3 (12.10.) | Wahrnehmung, Souveränität, Moderation, Konfliktmanagement | **Fotoprotokoll 12.10.** (bestätigt) |
-| 4 (02.11.) | Präsentieren (Portfolio-Themen), Konfliktgespräche durchführen, wissenschaftliche Arbeiten präsentieren | Fotoprotokoll 12.10., Folie 43 |
+| 4 (02.11.) | Präsentieren (Business vs. Wissenschaft, drei Präsentationsarten), Pitch vorbereiten; Konfliktgespräche laut Agenda, aber nicht im Protokoll | **Fotoprotokoll 02.11.** (bestätigt) |
 
 ## Fortschritt
 
@@ -19,7 +19,7 @@ Dokumente. Die Zuordnung der Themen zu Terminen ist deshalb **geschätzt**:
 | 1 | 06.10.2026 | Feedback, eduScrum, Kommunikationsmodelle, Lernmethoden | Folien „Fotoprotokoll 6.10.2026“ | [01](vorlesungen/01_2026-10-06.md) |
 | 2 | 08.10.2026 | Modell-Sprints, Denkpräferenzen, Kulturdimensionen, Stakeholder, Präsentation, Storytelling | Folien „Fotoprotokoll 8.10.2026“ | [02](vorlesungen/02_2026-10-08.md) |
 | 3 | 12.10.2026 | Wahrnehmung, Souveränität (Feuerlöscher), Moderation, Konfliktmanagement | Folien „Fotoprotokoll 12102026“ | [03](vorlesungen/03_2026-10-12.md) |
-| 4 | 02.11.2026 | Präsentieren (Portfolio-Pitches), Konfliktgespräche (Rollenspiele), wissenschaftliche Arbeiten präsentieren | vermutet (Fotoprotokoll 12.10. Folie 43 + Skript Teil 2 Kap. 2, 4.8, 5; Skript Teil 1 Kap. 2.2.2) | [04](vorlesungen/04_2026-11-02.md) |
+| 4 | 02.11.2026 | Präsentieren: Business vs. Wissenschaft, drei Präsentationsarten, Pitch vorbereiten (Konfliktgespräche nicht im Protokoll) | Folien „Fotoprotokoll 02112026“ | [04](vorlesungen/04_2026-11-02.md) |
 
 ## Materialien in Moodle
 
@@ -37,6 +37,7 @@ Dokumente. Die Zuordnung der Themen zu Terminen ist deshalb **geschätzt**:
 | High Low Context Cultures (Weblink) | [Link](https://moodle.heilbronn.dhbw.de/mod/url/view.php?id=190371) | 09.10.2026 | Termin 2 (Quellen Kulturdimensionen) |
 | Fotoprotokoll 8.10.2026 (58 Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190616) | 13.10.2026 | Termin 2 |
 | Fotoprotokoll 12.10.2026 (43 Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190617) | 13.10.2026 | Termin 3 |
+| Fotoprotokoll 02112026 (17 Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191992) | 04.11.2026 | Termin 4 |
 
 ## Vorbereitung 02.11.
 
