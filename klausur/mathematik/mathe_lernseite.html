@@ -1055,6 +1055,13 @@ figcaption{font-size:14px;color:var(--muted);margin:2px 0 14px}
   <div class="box warn"><p><b>Achtung, zwei verschiedene Folgen:</b> Die Folge der <b>Summanden</b> a<sub>k</sub> (½; ¼; ⅛ … → <b>0</b>) und die Folge der <b>Partialsummen</b> s<sub>n</sub> (0,5; 0,75; 0,875 … → <b>1</b>). Der Wert der Reihe ist der Grenzwert der Partialsummen. „Die Glieder gehen gegen 0, also ist die Reihe 0“ ist falsch.</p></div>
   <p><b>Wozu dann Kriterien? (Rückfrage am 04.11.)</b> Bei den meisten Reihen kann man den Wert gar nicht ausrechnen. Für Σ 1/k<sup>5</sup> gibt es keine einfache Formel. Ein <b>Konvergenzkriterium</b> beantwortet nur die Ja/Nein-Frage „Gibt es einen endlichen Grenzwert?“, ohne ihn zu berechnen. Darum steht bei R-4: „Ein Grenzwert braucht nicht angegeben zu werden.“ Ausrechnen kann man den Wert nur in Sonderfällen, vor allem bei der geometrischen Reihe.</p>
 
+  <h4>Rechenregeln für konvergente Reihen (Folie „Rechenregeln“)</h4>
+  <p>Wenn Σ a<sub>k</sub> und Σ b<sub>k</sub> beide <b>konvergieren</b>, darfst du rechnen wie gewohnt:</p>
+  <div class="fm l"><span class="sm"><span class="t">∞</span><span class="s">Σ</span><span class="b">k=0</span></span> c · a<sub>k</sub> = c · <span class="sm"><span class="t">∞</span><span class="s">Σ</span><span class="b">k=0</span></span> a<sub>k</sub> &emsp; <span class="c">Konstante vor die Summe ziehen</span><br><span class="sm"><span class="t">∞</span><span class="s">Σ</span><span class="b">k=0</span></span> (a<sub>k</sub> ± b<sub>k</sub>) = <span class="sm"><span class="t">∞</span><span class="s">Σ</span><span class="b">k=0</span></span> a<sub>k</sub> ± <span class="sm"><span class="t">∞</span><span class="s">Σ</span><span class="b">k=0</span></span> b<sub>k</sub> &emsp; <span class="c">auseinanderziehen</span></div>
+  <p><b>Folienbeispiel:</b> <span class="sm"><span class="t">∞</span><span class="s">Σ</span><span class="b">k=1</span></span> <span class="f"><span>6</span><span>k<sup>2</sup></span></span> = 6 · <span class="sm"><span class="t">∞</span><span class="s">Σ</span><span class="b">k=1</span></span> <span class="f"><span>1</span><span>k<sup>2</sup></span></span> = 6 · <span class="f"><span>π<sup>2</sup></span><span>6</span></span> = <b>π<sup>2</sup></b> ≈ 9,87. Den Wert <span class="f"><span>π<sup>2</sup></span><span>6</span></span> für Σ <span class="f"><span>1</span><span>k<sup>2</sup></span></span> musst du nicht herleiten, nur kennen.</p>
+  <p><b>Zweites Beispiel:</b> <span class="sm"><span class="t">∞</span><span class="s">Σ</span><span class="b">k=0</span></span> (<span class="f"><span>1</span><span>2<sup>k</sup></span></span> + <span class="f"><span>1</span><span>3<sup>k</sup></span></span>) = <span class="f"><span>1</span><span>1 − ½</span></span> + <span class="f"><span>1</span><span>1 − ⅓</span></span> = 2 + 1,5 = <b>3,5</b>.</p>
+  <div class="box warn"><p><b>Achtung, nur bei konvergenten Reihen!</b> Die Folie zeigt, was sonst passiert: Angenommen 1 + 2 + 4 + 8 + … = x. Dann ist x = 1 + 2 · (1 + 2 + 4 + …) = 1 + 2x, also x = <b>−1</b>?! Lauter positive Zahlen ergeben −1, das ist Unsinn. Der Fehler: Die Reihe divergiert, x ist gar keine Zahl, und mit „∞“ darf man nicht so rechnen.</p></div>
+
   <h3 id="s2-3"><span class="kicker">2.3</span> Die endliche geometrische Reihe <span class="tag R">R</span></h3>
   <p>Eine <b>geometrische Reihe</b> addiert die Glieder einer geometrischen Folge: erstes Glied v<sub>0</sub>, und jedes weitere ist das vorige mal q. Für <b>endlich viele</b> Glieder (k = 0 bis n) gibt es eine fertige Formel; so stand sie an der Tafel:</p>
   <div class="fm">v<sub>0</sub> + v<sub>0</sub>q + v<sub>0</sub>q<sup>2</sup> + … + v<sub>0</sub>q<sup>n</sup> = <span class="sm"><span class="t">n</span><span class="s">Σ</span><span class="b">k=0</span></span> v<sub>0</sub> q<sup>k</sup> = v<sub>0</sub> · <span class="f"><span>1 − q<sup>n+1</sup></span><span>1 − q</span></span> &emsp; <span class="c">(q ≠ 1)</span></div>
@@ -1496,6 +1503,12 @@ figcaption{font-size:14px;color:var(--muted);margin:2px 0 14px}
   <div class="fm l">Barwert = <span class="f"><span>100</span><span>1,05</span></span> + <span class="f"><span>100</span><span>1,05<sup>2</sup></span></span> + <span class="f"><span>100</span><span>1,05<sup>3</sup></span></span> + … = <span class="sm"><span class="t">∞</span><span class="s">Σ</span><span class="b">k=1</span></span> 100 · (<span class="f"><span>1</span><span>1,05</span></span>)<sup>k</sup><br>q = <span class="f"><span>1</span><span>1,05</span></span> ≈ 0,952 &lt; 1 ✓, erstes Glied v<sub>0</sub> = <span class="f"><span>100</span><span>1,05</span></span><br><span class="f"><span>v<sub>0</sub></span><span>1 − q</span></span> = <span class="f"><span><span class="f"><span>100</span><span>1,05</span></span></span><span>1 − <span class="f"><span>1</span><span>1,05</span></span></span></span> = <span class="f"><span><span class="f"><span>100</span><span>1,05</span></span></span><span><span class="f"><span>0,05</span><span>1,05</span></span></span></span> = <span class="f"><span>100</span><span>0,05</span></span> = <b>2000 €</b></div>
   <p>Allgemein: <b>Barwert der ewigen Rente = <span class="f"><span>r</span><span>i</span></span></b>. Logisch: Wer 2000 € zu 5 % anlegt, bekommt jedes Jahr genau 100 € Zinsen, ohne das Kapital anzufassen. Hier ist q = <span class="f"><span>1</span><span>1 + i</span></span> <b>kleiner</b> als 1, darum darf man die unendliche Formel benutzen, beim Sparplan (q = 1 + i) nicht.</p>
 
+  <h4>Die beiden Beispiele von den Folien</h4>
+  <ul>
+    <li><b>Sparplan (Folie):</b> r = 100 € pro Monat, i = 0,25 % pro <b>Monat</b>, n = 60 Monate (5 Jahre): E<sub>60</sub> = 100 · <span class="f"><span>1,0025<sup>60</sup> − 1</span><span>0,0025</span></span> ≈ 100 · 64,65 ≈ <b>6.464,67 €</b> (die Folie rundet auf 6.460 €). Eingezahlt hast du 60 · 100 = 6.000 €, die rund 465 € sind Zinsen. <b>Achtung:</b> Zins und Laufzeit müssen zur selben Periode passen, hier beides in Monaten.</li>
+    <li><b>Ewige Rente (Folie):</b> r = 1.000 € pro Jahr, i = 4 %: B<sub>∞</sub> = <span class="f"><span>1.000</span><span>0,04</span></span> = <b>25.000 €</b>. Probe: 25.000 € zu 4 % bringen jedes Jahr genau 1.000 € Zinsen.</li>
+  </ul>
+
   <h3 id="ue-k3"><span class="kicker">3.6</span> Aufgaben zur Finanzmathematik</h3>
 <div class="task" id="a-Z1" data-stufe="1"><div class="tn"><span class="lv lv1">Stufe 1 · leicht</span> Aufgabe Z1 · Zinseszins · <span class="src">eigene Aufgabe, wie Tafel 04.11.</span></div><div class="tq"><p>Du legst 1000 € zu 5 % Zinsen pro Jahr an. a) Wie viel ist es nach 1, 2 und 3 Jahren? b) Nach 10 Jahren?</p></div><details><summary>Lösung Schritt für Schritt</summary><div><p>Formel (1 + i)<sup>n</sup> · r mit i = 0,05, r = 1000.</p>
 <p><b>a)</b> 1000 · 1,05 = <b>1050,00 €</b> · 1000 · 1,05<sup>2</sup> = 1000 · 1,1025 = <b>1102,50 €</b> · 1000 · 1,157625 = <b>1157,63 €</b>.</p>
@@ -1670,6 +1683,15 @@ figcaption{font-size:14px;color:var(--muted);margin:2px 0 14px}
     <li><b>Keine Funktion</b> wäre eine Vorschrift, die einem x zwei Ergebnisse gibt („x ↦ ±<span class="rt">√<span>x</span></span>“) oder einem erlaubten x gar keins (<span class="f"><span>1</span><span>x</span></span> bei x = 0, darum D = ℝ \ {0}).</li>
   </ul>
 
+  <h4>Der Graph und der Senkrecht-Test (Folien „Graph einer Funktion“)</h4>
+  <p>Der <b>Graph</b> ist die Menge aller Punkte (x, f(x)), also das Bild, das du im Koordinatensystem zeichnest: waagrecht die x-Werte, senkrecht die Funktionswerte.</p>
+  <div class="box key"><p><b>Senkrecht-Test (Vertikaltest):</b> Bei einer Funktion trifft jede <b>senkrechte</b> Linie den Graphen <b>höchstens einmal</b>, denn zu jedem x gibt es genau ein f(x). Ein Kreis ist deshalb kein Funktionsgraph: Die Linie x = 0 trifft ihn oben und unten. Nicht verwechseln mit dem <b>waagrechten</b> Test in 5.2, der prüft injektiv.</p></div>
+  <h4>Abschnittsweise definierte Funktion (Folienbeispiel)</h4>
+  <p>Eine Funktion darf in verschiedenen Bereichen verschiedene Formeln haben:</p>
+  <div class="fm l">f(x) = x<sup>2</sup> für 0 ≤ x &lt; 1 · f(x) = 2 für x = 1 · f(x) = x − 1 für 1 &lt; x ≤ 2</div>
+  <p>So liest du sie: Erst schauen, <b>in welchem Bereich</b> x liegt, dann die passende Formel nehmen. f(0,5) = 0,25 (erste Zeile), f(1) = 2 (zweite Zeile), f(1,5) = 0,5 (dritte Zeile). Bei x = 1 kommt der Graph links auf 1 zu, rechts auf 0, und der Punkt liegt bei 2: Hier ist f <b>nicht stetig</b> (siehe <a href="#s5-15">5.15</a>).</p>
+  <p><b>Wozu Funktionen?</b> Sie beschreiben Zusammenhänge zwischen Größen. Laut Folie z. B. in der Ökonomie: Die verkaufte Menge bestimmt Umsatz und Gewinn, die produzierte Menge bestimmt die Kosten.</p>
+
   <h3 id="s5-2"><span class="kicker">5.2</span> injektiv, surjektiv, bijektiv <span class="tag D">D</span><span class="tag K">K</span></h3>
   <p><b>Bild mit Sitzplätzen:</b> Die Studierenden sind die x (Definitionsmenge), die Stühle im Hörsaal sind die y (Zielmenge). Die Funktion sagt, wer auf welchem Stuhl sitzt. Jede Person sitzt auf genau einem Stuhl (sonst wäre es keine Funktion). Jetzt fragt man nach den <b>Stühlen</b>:</p>
   <div class="scroll"><table>
@@ -1708,6 +1730,15 @@ figcaption{font-size:14px;color:var(--muted);margin:2px 0 14px}
     <li><b>Probe:</b> eine Zahl in f einsetzen, das Ergebnis in f<sup>−1</sup>: Es muss die Startzahl herauskommen.</li>
   </ol>
   <p><b>Kleines Beispiel:</b> f(x) = 2x + 1. y = 2x + 1 ⇒ y − 1 = 2x ⇒ x = <span class="f"><span>y − 1</span><span>2</span></span> ⇒ f<sup>−1</sup>(x) = <span class="f"><span>x − 1</span><span>2</span></span>. Probe: f(3) = 7, f<sup>−1</sup>(7) = <span class="f"><span>6</span><span>2</span></span> = 3 ✓.</p>
+
+  <h4>Was die Folie zur Umkehrfunktion zusätzlich sagt</h4>
+  <ul>
+    <li><b>Definition:</b> g = f<sup>−1</sup> macht f rückgängig: g(f(x)) = x und f(g(y)) = y. Beispiel f(x) = 2x + 1, g(y) = <span class="f"><span>y − 1</span><span>2</span></span>: f(3) = 7 und g(7) = 3 ✓</li>
+    <li><b>Existenz:</b> f muss <b>injektiv</b> sein. Ist f zusätzlich surjektiv (also bijektiv), ist f<sup>−1</sup> auf der ganzen Zielmenge definiert.</li>
+    <li><b>Abkürzung:</b> Jede <b>streng monotone</b> Funktion ist injektiv und hat deshalb eine Umkehrfunktion.</li>
+    <li><b>Bild:</b> Der Graph von f<sup>−1</sup> ist der an der Winkelhalbierenden <b>y = x gespiegelte</b> Graph von f. Aus dem Punkt (3, 7) wird (7, 3).</li>
+  </ul>
+  <div class="box warn"><p><b>Achtung:</b> f<sup>−1</sup>(x) ist <b>nicht</b> <span class="f"><span>1</span><span>f(x)</span></span>. Bei f(x) = 2x + 1 ist f<sup>−1</sup>(7) = 3, aber <span class="f"><span>1</span><span>f(7)</span></span> = <span class="f"><span>1</span><span>15</span></span>.</p></div>
 
   <h3 id="s5-5"><span class="kicker">5.5</span> Beispiel von Folie 62: x² − 4x + 1 umkehren <span class="tag R">R</span><span class="tag K">K</span></h3>
   <div class="box q"><div class="qq">Bestimmen Sie die Umkehrfunktion für f: [2, ∞) → ℝ, x ↦ x<sup>2</sup> − 4x + 1.</div></div>
@@ -1792,6 +1823,19 @@ figcaption{font-size:14px;color:var(--muted);margin:2px 0 14px}
   </ol>
   <p class="src">Mit Ableitungen (f′ &gt; 0 ⇒ wachsend) geht Monotonie später schneller. Die kommen vermutlich erst am 02.12.</p>
 
+  <h4>Die genauen Definitionen von den Folien</h4>
+  <div class="scroll"><table class="tt">
+    <thead><tr><th>Begriff</th><th>Bedingung (für alle x &lt; y aus D)</th></tr></thead>
+    <tbody>
+      <tr><td>monoton wachsend</td><td>f(x) ≤ f(y) (gleich bleiben erlaubt)</td></tr>
+      <tr><td>streng monoton wachsend</td><td>f(x) &lt; f(y)</td></tr>
+      <tr><td>monoton fallend</td><td>f(x) ≥ f(y)</td></tr>
+      <tr><td>streng monoton fallend</td><td>f(x) &gt; f(y)</td></tr>
+    </tbody>
+  </table></div>
+  <p><b>Beschränkt</b> heißt: Es gibt eine Zahl C mit |f(x)| ≤ C für alle x aus D. Nach oben beschränkt: f(x) ≤ C, nach unten: f(x) ≥ C.</p>
+  <div class="box warn"><p><b>Achtung:</b> Beschränktheit hängt auch vom <b>Definitionsbereich</b> ab. <span class="f"><span>1</span><span>x</span></span> ist auf [1, 5] beschränkt (Werte zwischen 0,2 und 1), auf (0, 1) aber nicht (läuft nach +∞). Und: <b>streng</b> monoton ⇒ injektiv, nur „monoton“ reicht nicht (konstante Funktion).</p></div>
+
   <h3 id="s5-7"><span class="kicker">5.7</span> Folie 73, Nr. 1: f(x) = x²/(x + 1) für x &gt; 1 <span class="tag R">R</span></h3>
   <div class="box q"><div class="qq">Überprüfen Sie f: ℝ<sub>&gt;1</sub> → ℝ, x ↦ <span class="f"><span>x<sup>2</sup></span><span>x + 1</span></span> auf Beschränktheit und Monotonie.</div></div>
   <h4>Schritt 1: Zahlen einsetzen</h4>
@@ -1856,6 +1900,8 @@ figcaption{font-size:14px;color:var(--muted);margin:2px 0 14px}
     </tbody>
   </table></div>
   <p class="src">Bei Folgen hießen dieselben drei Fälle konvergent, bestimmt divergent und unbestimmt divergent (<a href="#s1-7">1.7</a>).</p>
+
+  <div class="box"><p><b>Wie die Folie es genau definiert:</b> <span class="lm"><span>lim</span><span class="b">x→x̂</span></span> f(x) = y heißt: Für <b>jede</b> Folge x<sub>n</sub> → x̂ (mit x<sub>n</sub> aus D) gilt f(x<sub>n</sub>) → y. Das ist die Brücke zu Kapitel 1: Du schickst eine Folge von x-Werten auf x̂ zu und schaust, wohin die Folge der Funktionswerte läuft. Die Zahlentabellen oben sind genau das, z. B. x<sub>n</sub> = 2 + <span class="f"><span>1</span><span>n</span></span> = 3; 2,5; 2,33; …</p></div>
 
   <h3 id="s5-10"><span class="kicker">5.10</span> Die Taktik: So geht man jeden Grenzwert an <span class="tag R">R</span><span class="tag K">K</span></h3>
   <p>Fast jede Aufgabe läuft nach demselben Plan. Erst einsetzen, dann je nach Ergebnis weitermachen:</p>
@@ -1978,6 +2024,13 @@ figcaption{font-size:14px;color:var(--muted);margin:2px 0 14px}
     </tbody>
   </table></div>
   <div class="box warn"><p><b>Achtung, kleine Wörter:</b> offen oder geschlossen, monoton oder <b>streng</b> monoton, „und“. Genau dort sitzen die Fallen.</p></div>
+
+  <h4>Was die Stetigkeits-Folie noch sagt</h4>
+  <ul>
+    <li><b>Andere Schreibweise:</b> <span class="lm"><span>lim</span><span class="b">x→x̂</span></span> f(x) = f(<span class="lm"><span>lim</span><span class="b">x→x̂</span></span> x), also: Grenzwert und f dürfen die Reihenfolge tauschen.</li>
+    <li><b>Anschaulich:</b> Kleine Änderung bei x ⇒ nur kleine Änderung bei f(x). Der Zusammenhang ist robust gegen kleine Störungen.</li>
+    <li><b>Nur im Definitionsbereich prüfbar:</b> <span class="f"><span>1</span><span>x − 2</span></span> ist auf ihrem Definitionsbereich ℝ \ {2} stetig. Die Polstelle x = 2 liegt außerhalb.</li>
+  </ul>
 
   <h3 id="s5-16"><span class="kicker">5.16</span> ln und e ohne Taschenrechner (FU-1, Folie 80) <span class="tag R">R</span></h3>
   <div class="scroll"><table class="tt">
