@@ -188,8 +188,8 @@ function scanChapters(root: string, dirName: string, issues: ContentIssue[]): Ch
     }
     const prefix = Number(name[1]);
     const slug = name[2];
-    if (slug === "quellen") {
-      issues.push({ file, message: "Der Kapitel-Slug „quellen“ ist für das Quellen-Dossier reserviert." });
+    if (slug === "quellen" || slug === "zusammenfassung" || slug === "alles") {
+      issues.push({ file, message: `Der Kapitel-Slug „${slug}“ ist für eine Fach-Unterseite reserviert.` });
       continue;
     }
 

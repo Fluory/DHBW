@@ -5,6 +5,7 @@ import { ReaderLayout } from "@/components/reader/ReaderLayout";
 import { KlausurBadge } from "@/components/site/Badges";
 import { chapterParams, getChapter } from "@/lib/content/loader";
 import { processMarkdown } from "@/lib/markdown/pipeline";
+import { withSummary } from "@/lib/markdown/summary";
 
 export const dynamicParams = false;
 
@@ -34,7 +35,7 @@ export default async function ChapterPage({ params }: { params: Promise<Params> 
   const context = getChapter(fach, kapitel);
   if (!context) notFound();
   const { subject, chapter, prev, next } = context;
-  const content = processMarkdown(chapter.body, { sourcePath: chapter.file });
+  const content = processMarkdown(withSummary(chapter.body), { sourcePath: chapter.file });
   const base = `/${subject.slug}`;
 
   return (

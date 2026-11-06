@@ -32,7 +32,15 @@ export function slugifyHeading(text: string, slugger = new GithubSlugger()): str
  * rehype-Plugin: vergibt IDs an h2–h4 und sammelt h2/h3 für das Inhaltsverzeichnis.
  * Die Fußnoten-Überschrift von remark-rehype wird als „Anmerkungen“ aufgenommen.
  */
-export function rehypeHeadings(options: { collect: Heading[] }) {
+export function rehypeHeadings(options: {
+  collect: Heading[];
+  /** Verschiebt h2–h4 um so viele Ebenen nach unten (für zusammengesetzte Seiten). */
+  offset?: number;
+  /** Präfix für alle IDs, damit mehrere Texte auf einer Seite keine IDs teilen. */
+  idPrefix?: string;
+}) {
+  const offset = options.offset ?? 0;
+  const prefix = options.idPrefix ?? "";
   return (tree: Root) => {
     const slugger = new GithubSlugger();
     slugger.slug(FOOTNOTE_LABEL_ID);
@@ -43,11 +51,11 @@ export function rehypeHeadings(options: { collect: Heading[] }) {
         return;
       }
       const text = headingText(node);
-      const id = slugifyHeading(text, slugger);
+      const id = `${prefix}${slugifyHeading(text, slugger)}`;
+      const depth = Number(node.tagName[1]) + offset;
       node.properties = { ...node.properties, id };
-      if (node.tagName === "h2" || node.tagName === "h3") {
-        options.collect.push({ id, text, depth: node.tagName === "h2" ? 2 : 3 });
-      }
+      node.tagName = `h${Math.min(depth, 6)}`;
+      if (depth === 2 || depth === 3) options.collect.push({ id, text, depth });
     });
   };
 }

@@ -77,6 +77,25 @@ export default async function SubjectPage({ params }: { params: Promise<Params> 
         </div>
       </dl>
 
+      {subject.chapters.length > 0 ? (
+        <section aria-label="Gesamtansichten" className="section">
+          <ul className="chapter-list">
+            <li>
+              <Link href={`/${subject.slug}/zusammenfassung`} className="sources-link">
+                <span className="chapter-title">Zusammenfassung des Fachs</span>
+                <span className="chapter-summary">Das Wichtigste und die typischen Fehler aus allen Kapiteln auf einer Seite.</span>
+              </Link>
+            </li>
+            <li>
+              <Link href={`/${subject.slug}/alles`} className="sources-link">
+                <span className="chapter-title">Alle Kapitel am Stück lesen</span>
+                <span className="chapter-summary">Das ganze Fach zum Durchscrollen, ohne Übungen und Lösungen.</span>
+              </Link>
+            </li>
+          </ul>
+        </section>
+      ) : null}
+
       {intro ? (
         <section aria-labelledby="zu-diesem-fach" className="section">
           <h2 id="zu-diesem-fach" className="section-title">

@@ -20,6 +20,10 @@ export interface ProcessedMarkdown {
 export interface ProcessOptions {
   /** Pfad der Quelldatei relativ zum Content-Root, für das Umschreiben relativer Links. */
   sourcePath?: string;
+  /** Überschriften um so viele Ebenen nach unten schieben (Standard 0). */
+  headingOffset?: number;
+  /** Präfix für Überschriften- und Fußnoten-IDs, wenn mehrere Texte auf einer Seite stehen. */
+  idPrefix?: string;
 }
 
 /** Markdown → hast mit Alerts, Überschriften-IDs, Fußnoten und umgeschriebenen Links. */
@@ -31,13 +35,14 @@ export function processMarkdown(markdown: string, options: ProcessOptions = {}):
     .use(remarkAlerts)
     .use(remarkRehype, {
       allowDangerousHtml: false,
+      ...(options.idPrefix ? { clobberPrefix: `${options.idPrefix}fn-` } : {}),
       footnoteLabel: "Anmerkungen",
       footnoteLabelTagName: "h2",
       footnoteLabelProperties: { className: ["footnotes-title"] },
       footnoteBackLabel: (referenceIndex: number, rereferenceIndex: number) =>
         `Zurück zu Verweis ${referenceIndex + 1}${rereferenceIndex > 1 ? `-${rereferenceIndex}` : ""}`,
     })
-    .use(rehypeHeadings, { collect: headings })
+    .use(rehypeHeadings, { collect: headings, offset: options.headingOffset, idPrefix: options.idPrefix })
     .use(rehypeContentLinks, { sourcePath: options.sourcePath });
 
   const mdast = processor.parse(markdown);
