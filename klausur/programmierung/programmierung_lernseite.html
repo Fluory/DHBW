@@ -47,11 +47,12 @@ a{color:var(--accent);text-underline-offset:3px;text-decoration-color:var(--line
   margin:0 calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding:0 max(16px,env(safe-area-inset-right,0px)) 0 max(16px,env(safe-area-inset-left,0px))}
 .tabs-in{max-width:880px;margin:0 auto;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
 .tabs-in::-webkit-scrollbar{display:none}
-/* neun Reiter: etwas kompakter, breitere Leiste, mittig, damit Übungen und Quellen am Desktop sichtbar bleiben */
+/* zehn Reiter: etwas kompakter, breitere Leiste, mittig, damit Übungen und Quellen am Desktop sichtbar bleiben */
 .tabs-in{max-width:1180px;gap:2px}
 .tabs-in .tab:first-child{margin-left:auto}.tabs-in .tab:last-child{margin-right:auto}
 .tabs-in .tab{padding:14px 7px 12px;font-size:14px;gap:6px}
 .tabs-in .tab .pct{font-size:10.5px;padding:1px 6px}
+@media (max-width:1340px){.tabs-in .tab{padding:14px 4px 12px;font-size:13px;gap:4px;letter-spacing:-.01em}.tabs-in .tab .pct{font-size:10px;padding:1px 4px}}
 .tab{flex:0 0 auto;display:flex;align-items:center;gap:8px;padding:14px 12px 12px;text-decoration:none;color:var(--muted);
   font-family:var(--display);font-weight:500;font-size:15px;border-bottom:2px solid transparent;white-space:nowrap}
 .tab:hover{color:var(--ink)}
@@ -169,7 +170,7 @@ footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
 <header class="head"><div class="head-in">
   <div class="eyebrow">Grundlagen der Programmierung · Lernseite</div>
   <h1>Python bis OOP</h1>
-  <div class="meta"><span>Klausur <b>Fr 11.12.2026</b>, 120 Min.</span><span>Stoff <b>VL1–VL6</b> (VL6 läuft noch, Rest am 03.11.)</span><span>Dr. Markus Rosenfelder · DHBW Heilbronn, WI 1. Semester</span></div>
+  <div class="meta"><span>Klausur <b>Fr 11.12.2026</b>, 120 Min.</span><span>Stoff <b>VL1–VL7</b> (VL7 Projekt ab 06.11.)</span><span>Dr. Markus Rosenfelder · DHBW Heilbronn, WI 1. Semester</span></div>
 </div></header>
 <nav class="tabs" aria-label="Bereiche"><div class="tabs-in" role="tablist">
   <a class="tab" role="tab" href="#uebersicht" data-tab="uebersicht">Übersicht <span class="pct" data-tabpct="all">0 %</span></a>
@@ -179,6 +180,7 @@ footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
   <a class="tab" role="tab" href="#vl4" data-tab="vl4">VL4 Funktionen <span class="pct" data-tabpct="4">0 %</span></a>
   <a class="tab" role="tab" href="#vl5" data-tab="vl5">VL5 Klassen <span class="pct" data-tabpct="5">0 %</span></a>
   <a class="tab" role="tab" href="#vl6" data-tab="vl6">VL6 Vererbung <span class="pct" data-tabpct="6">0 %</span></a>
+  <a class="tab" role="tab" href="#vl7" data-tab="vl7">VL7 Kaffeeshop <span class="pct" data-tabpct="7">0 %</span></a>
   <a class="tab" role="tab" href="#uebungen" data-tab="uebungen">Übungen</a>
   <a class="tab" role="tab" href="#quellen" data-tab="quellen">Quellen</a>
 </div></nav>
@@ -187,12 +189,12 @@ footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
 <!-- ============ ÜBERSICHT ============ -->
 <section class="panel" role="tabpanel" id="uebersicht">
   <div class="panel-head"><h2>Was bisher dran war</h2><span class="kicker">ÜBERSICHT</span></div>
-  <p>Diese Seite deckt die ersten sechs Vorlesungen ab: VL1 bis VL5 vollständig und VL6, die am 27.10. begonnen hat. Jede Vorlesung hat einen eigenen Reiter mit Erklärungen, echten Codebeispielen, typischen Fehlern und Aufgaben. Im Reiter „Übungen“ stehen alle Aufgaben noch einmal gesammelt.</p>
-  <div class="box key"><p><b>Wie weit die Vorlesung ist</b> (Stand 30.10.)</p>
+  <p>Diese Seite deckt VL1 bis VL6 vollständig ab und dazu VL7, das Projekt „Kaffeeshop“, das am 06.11. beginnt. Wenn dir Schleifen schwerfallen, fang mit dem Abschnitt <a href="#s0-for">„for-Schleifen ganz langsam“</a> weiter unten an. Jede Vorlesung hat einen eigenen Reiter mit Erklärungen, echten Codebeispielen, typischen Fehlern und Aufgaben. Im Reiter „Übungen“ stehen alle Aufgaben noch einmal gesammelt.</p>
+  <div class="box key"><p><b>Wie weit die Vorlesung ist</b> (Stand 06.11.)</p>
     <ul>
-      <li><b>VL1 bis VL4:</b> behandelt.</li>
-      <li><b>VL5:</b> am 23.10. bis einschließlich Übung 3 (F. 1–41). Der Rest ab F. 42 (Properties, Hat-ein, Module, <code>@dataclass</code>, Übung 4 und 5) war für den <b>27.10.</b> geplant; damit ist VL5 komplett.</li>
-      <li><b>VL6:</b> am <b>27.10. begonnen</b> (geplant etwa bis Übung 2: Vererbung, <code>super()</code>, Überschreiben). Der Rest folgt am <b>03.11.</b> Der VL6-Reiter enthält schon die ganze Vorlesung.</li>
+      <li><b>VL1 bis VL5:</b> behandelt.</li>
+      <li><b>VL6:</b> am 27.10. nur angekündigt; am <b>03.11.</b> von vorn mit Vererbung, <code>super()</code>, Überschreiben und Übung 1 und 2. Der Rest (Polymorphie, <code>object</code>/<code>__repr__</code>, abstrakte Klassen, Fähigkeiten, Übung 3 bis 5) ist für den Vormittag des <b>06.11.</b> geplant.</li>
+      <li><b>VL7 Projekt Kaffeeshop:</b> beginnt laut Plan am Nachmittag des <b>06.11.</b> mit Stufe 1; Stufe 2 und 3 eher am nächsten Termin. Der VL7-Reiter enthält schon alle drei Stufen.</li>
     </ul>
   </div>
   <div class="progress" aria-live="polite"><span>Bisheriger Stoff sicher:</span><span class="bar"><i id="bar-all"></i></span><span id="txt-all">0 %</span></div>
@@ -208,6 +210,169 @@ footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
   </table></div>
   <p>Ohne Musterklausur sind die Folien, die Selbsttest-Quizze und die offiziellen Musterlösungen die besten Hinweise auf den Prüfungsstoff. Auf den Folien und in den Quizzen kommen immer wieder dieselben Aufgabenformen vor: „Was gibt das Programm aus?“, „Welchen Wert hat die Variable nach jeder Zeile?“, „Finde und behebe den Fehler“ und „Schreibe eine Funktion oder Klasse nach dieser Beschreibung“. Genau diese Formen übst du hier. Der Dozent sagt außerdem, dass Fehlermeldungen selbst lesen zu können die wichtigste Fähigkeit beim Programmieren ist (VL1 F. 60). Weil der Code im Kurs von Hand im Texteditor entsteht, solltest du ihn auch ohne IDE fehlerfrei hinschreiben können.</p>
 
+  <h3 id="s0-for"><span class="kicker">Extra</span> for-Schleifen ganz langsam <span class="tag E">E</span></h3>
+  <p>Fast jedes Programm ab VL3 hat eine <code>for</code>-Schleife: die Personalkosten in VL6, <code>finden()</code> und <code>suchen()</code> im Kaffeeshop. Wenn Schleifen sich für dich abstrakt anfühlen, fang hier an. Es gibt nur einen Trick: <b>Du gehst die Schleife Runde für Runde durch und schreibst nach jeder Runde auf, welchen Wert jede Variable hat.</b> Das ist eine <b>Rundentabelle</b>. Sie hilft bei jeder „Was gibt das Programm aus?“-Aufgabe in der Klausur.</p>
+  <div class="box key"><p><b>Bild im Kopf: die Kassiererin.</b> Auf dem Band liegen drei Waren. Die Kassiererin nimmt <b>eine</b> Ware in die Hand, scannt sie, legt sie weg und nimmt die nächste. Das ist eine Runde. Wenn das Band leer ist, sagt sie die Summe. Bei <code>for ware in einkauf:</code> ist <code>ware</code> die Hand: In jeder Runde liegt eine andere Ware darin.</p></div>
+
+  <h4>Schritt 1: range() zählt für dich</h4>
+<pre><code>for i in range(3):
+    print("Runde", i)
+print("fertig")</code></pre>
+<pre class="out">Runde 0
+Runde 1
+Runde 2
+fertig</pre>
+  <p><code>range(3)</code> liefert die Zahlen <b>0, 1, 2</b>: Es beginnt bei 0, und die 3 selbst ist <b>nicht</b> dabei. Drei Zahlen, also drei Runden. Alles, was <b>eingerückt</b> unter der <code>for</code>-Zeile steht, läuft in jeder Runde. <code>print("fertig")</code> ist nicht eingerückt und läuft deshalb nur einmal, nach der letzten Runde.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Runde</th><th><code>i</code></th><th>Ausgabe</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>0</td><td><code>Runde 0</code></td></tr>
+      <tr><td>2</td><td>1</td><td><code>Runde 1</code></td></tr>
+      <tr><td>3</td><td>2</td><td><code>Runde 2</code></td></tr>
+      <tr><td>nach der Schleife</td><td>2 (bleibt)</td><td><code>fertig</code></td></tr>
+    </tbody>
+  </table></div>
+  <p>Mit zwei Zahlen gibst du den Start an: <code>range(1, 4)</code> liefert 1, 2, 3. Merksatz: <b>Start ist dabei, Stopp nicht.</b></p>
+<pre><code>for i in range(1, 4):
+    print(i, "mal 10 ist", i * 10)</code></pre>
+<pre class="out">1 mal 10 ist 10
+2 mal 10 ist 20
+3 mal 10 ist 30</pre>
+  <div class="scroll"><table>
+    <thead><tr><th>Runde</th><th><code>i</code></th><th><code>i * 10</code></th><th>Ausgabe</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>1</td><td>10</td><td><code>1 mal 10 ist 10</code></td></tr>
+      <tr><td>2</td><td>2</td><td>20</td><td><code>2 mal 10 ist 20</code></td></tr>
+      <tr><td>3</td><td>3</td><td>30</td><td><code>3 mal 10 ist 30</code></td></tr>
+    </tbody>
+  </table></div>
+
+  <h4>Schritt 2: eine Liste durchgehen</h4>
+  <p>Statt Zahlen kann die Schleife direkt die Elemente einer Liste nehmen. Das ist der häufigste Fall in OOP-Aufgaben: <code>for produkt in self.produkte:</code>, <code>for person in team:</code>.</p>
+<pre><code>einkauf = ["Kaffee", "Tee", "Kakao"]
+for ware in einkauf:
+    print("Ich kaufe", ware)</code></pre>
+<pre class="out">Ich kaufe Kaffee
+Ich kaufe Tee
+Ich kaufe Kakao</pre>
+  <div class="scroll"><table>
+    <thead><tr><th>Runde</th><th><code>ware</code></th><th>Ausgabe</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><code>"Kaffee"</code> (Element 0)</td><td><code>Ich kaufe Kaffee</code></td></tr>
+      <tr><td>2</td><td><code>"Tee"</code> (Element 1)</td><td><code>Ich kaufe Tee</code></td></tr>
+      <tr><td>3</td><td><code>"Kakao"</code> (Element 2)</td><td><code>Ich kaufe Kakao</code></td></tr>
+    </tbody>
+  </table></div>
+  <p>Den Namen <code>ware</code> hast du selbst gewählt. Python setzt ihn in jeder Runde auf das nächste Element. Du musst nichts hochzählen und keinen Index verwalten.</p>
+
+  <h4>Schritt 3: aufsummieren</h4>
+  <p>Das Muster aus <code>personalkosten()</code> und <code>gesamtsumme()</code>. Drei Teile, und jeder steht an seiner festen Stelle:</p>
+  <ol>
+    <li><b>Vor</b> der Schleife: Startwert, <code>summe = 0</code>. (Die Kassiererin stellt die Kasse auf null.)</li>
+    <li><b>In</b> der Schleife: einen Wert dazuzählen, <code>summe = summe + preis</code>. (Eine Ware scannen.)</li>
+    <li><b>Nach</b> der Schleife: das Ergebnis benutzen, <code>print</code> oder <code>return</code>. (Die Summe ansagen.)</li>
+  </ol>
+<pre><code>preise = [3, 5, 2]
+summe = 0
+for preis in preise:
+    summe = summe + preis
+    print("nach", preis, "ist summe", summe)
+print("Gesamt:", summe)</code></pre>
+<pre class="out">nach 3 ist summe 3
+nach 5 ist summe 8
+nach 2 ist summe 10
+Gesamt: 10</pre>
+  <div class="scroll"><table>
+    <thead><tr><th>Runde</th><th><code>preis</code></th><th><code>summe</code> vorher</th><th>Rechnung</th><th><code>summe</code> nachher</th><th>Ausgabe</th></tr></thead>
+    <tbody>
+      <tr><td>Start</td><td>–</td><td>–</td><td><code>summe = 0</code></td><td>0</td><td>–</td></tr>
+      <tr><td>1</td><td>3</td><td>0</td><td>0 + 3</td><td>3</td><td><code>nach 3 ist summe 3</code></td></tr>
+      <tr><td>2</td><td>5</td><td>3</td><td>3 + 5</td><td>8</td><td><code>nach 5 ist summe 8</code></td></tr>
+      <tr><td>3</td><td>2</td><td>8</td><td>8 + 2</td><td>10</td><td><code>nach 2 ist summe 10</code></td></tr>
+      <tr><td>danach</td><td>–</td><td>–</td><td>–</td><td>10</td><td><code>Gesamt: 10</code></td></tr>
+    </tbody>
+  </table></div>
+  <p>Wichtig ist die Spalte „<code>summe</code> vorher“: Der Wert vom Ende einer Runde ist der Wert am Anfang der nächsten. <code>summe += preis</code> ist dieselbe Rechnung in kurz.</p>
+  <div class="box warn"><p><b>Achtung: Startwert in der Schleife.</b> Steht <code>summe = 0</code> eingerückt <b>in</b> der Schleife, wird die Kasse in jeder Runde wieder auf null gestellt. Am Ende steht nur der letzte Preis da:</p>
+<pre><code>preise = [3, 5, 2]
+for preis in preise:
+    summe = 0  # FEHLER: steht in der Schleife
+    summe = summe + preis
+print("Gesamt:", summe)</code></pre>
+<pre class="out">Gesamt: 2</pre>
+  <p>Runde 1: <code>summe</code> 0 → 3. Runde 2: wieder 0 → 5. Runde 3: wieder 0 → 2. Genauso falsch ist ein <code>return summe</code> <b>in</b> der Schleife: Dann ist nach Runde 1 Schluss. Beides siehst du sofort an der Einrückung.</p></div>
+
+  <h4>Schritt 4: zählen statt summieren</h4>
+  <p>Gleiches Muster, aber nur zählen, wenn eine Bedingung stimmt. So arbeitet <code>alle_aufladen()</code> aus VL6.</p>
+<pre><code>zahlen = [4, 7, 1, 9]
+anzahl = 0
+for zahl in zahlen:
+    if zahl &gt; 5:
+        anzahl += 1
+print(anzahl)</code></pre>
+<pre class="out">2</pre>
+  <div class="scroll"><table>
+    <thead><tr><th>Runde</th><th><code>zahl</code></th><th><code>zahl &gt; 5</code>?</th><th><code>anzahl</code> danach</th></tr></thead>
+    <tbody>
+      <tr><td>Start</td><td>–</td><td>–</td><td>0</td></tr>
+      <tr><td>1</td><td>4</td><td>nein</td><td>0</td></tr>
+      <tr><td>2</td><td>7</td><td>ja → <code>+= 1</code></td><td>1</td></tr>
+      <tr><td>3</td><td>1</td><td>nein</td><td>1</td></tr>
+      <tr><td>4</td><td>9</td><td>ja → <code>+= 1</code></td><td>2</td></tr>
+    </tbody>
+  </table></div>
+  <p>Ausführlicher stehen <code>for</code>, <code>range()</code>, <code>break</code> und <code>continue</code> in <a href="#s3-6">VL3, Abschnitt 3.6</a>.</p>
+
+  <h4>Fünf Mini-Aufgaben</h4>
+  <p>Lege für jede Aufgabe zuerst eine Rundentabelle an, dann erst die Lösung aufklappen.</p>
+  <div class="task"><div class="tn">0.1 · Ausgabe vorhersagen</div>
+<pre><code>for i in range(4):
+    print(i)</code></pre>
+    <details><summary>Lösung</summary><div><pre class="out">0
+1
+2
+3</pre><p><code>range(4)</code> = 0, 1, 2, 3: vier Runden, die 4 ist nicht dabei.</p></div></details></div>
+  <div class="task"><div class="tn">0.2 · Ausgabe vorhersagen: mit Schrittweite</div>
+<pre><code>for i in range(2, 7, 2):
+    print(i)</code></pre>
+    <details><summary>Lösung</summary><div><pre class="out">2
+4
+6</pre><p>Start 2, immer + 2. Die nächste Zahl wäre 8, aber schon 7 ist nicht mehr dabei (Stopp nicht dabei).</p></div></details></div>
+  <div class="task"><div class="tn">0.3 · Rundentabelle ausfüllen</div>
+<pre><code>woerter = ["a", "bb", "ccc"]
+laenge = 0
+for wort in woerter:
+    laenge += len(wort)
+print(laenge)</code></pre>
+    <details><summary>Lösung</summary><div>
+      <div class="scroll"><table>
+        <thead><tr><th>Runde</th><th><code>wort</code></th><th><code>len(wort)</code></th><th><code>laenge</code> danach</th></tr></thead>
+        <tbody><tr><td>Start</td><td>–</td><td>–</td><td>0</td></tr><tr><td>1</td><td><code>"a"</code></td><td>1</td><td>1</td></tr><tr><td>2</td><td><code>"bb"</code></td><td>2</td><td>3</td></tr><tr><td>3</td><td><code>"ccc"</code></td><td>3</td><td>6</td></tr></tbody>
+      </table></div>
+<pre class="out">6</pre></div></details></div>
+  <div class="task"><div class="tn">0.4 · Was ist eingerückt?</div>
+<pre><code>for x in [1, 2]:
+    print("Hallo")
+print("Tschüss")</code></pre>
+    <p>Wie oft erscheint „Hallo“, wie oft „Tschüss“?</p>
+    <details><summary>Lösung</summary><div><pre class="out">Hallo
+Hallo
+Tschüss</pre><p>Die Liste hat zwei Elemente, also zwei Runden mit „Hallo“. <code>x</code> wird gar nicht benutzt, das ist egal. „Tschüss“ ist nicht eingerückt und kommt einmal am Ende.</p></div></details></div>
+  <div class="task"><div class="tn">0.5 · Funktion schreiben: alles multiplizieren</div>
+    <p>Schreibe <code>produkt_aller(zahlen: list[int]) -&gt; int</code>, die alle Zahlen miteinander multipliziert. <code>produkt_aller([2, 3, 4])</code> soll <code>24</code> liefern. Welcher Startwert ist richtig, und was liefert die leere Liste?</p>
+    <details><summary>Lösung</summary><div><pre><code>def produkt_aller(zahlen: list[int]) -&gt; int:
+    ergebnis = 1  # bei Produkt mit 1 starten
+    for zahl in zahlen:
+        ergebnis = ergebnis * zahl
+    return ergebnis
+
+
+print(produkt_aller([2, 3, 4]))
+print(produkt_aller([]))</code></pre>
+<pre class="out">24
+1</pre>
+      <p>Startwert <b>1</b>, nicht 0: Mit 0 wäre jedes Produkt 0. Rundentabelle: Start 1 → Runde 1: 1 · 2 = 2 → Runde 2: 2 · 3 = 6 → Runde 3: 6 · 4 = 24. Bei der leeren Liste läuft keine einzige Runde, also bleibt der Startwert 1 stehen.</p></div></details></div>
+
   <h3>Die Vorlesungen</h3>
   <div class="blocks">
     <a class="blk" href="#vl1"><div class="blk-top"><span class="blk-nr">VL1</span><span class="blk-pt">Mo 05.10.</span></div><div class="blk-title">Einführung</div><div class="blk-txt">Algorithmen, Datenstrukturen, Interpreter und Compiler, Python, uv, ruff, ty, erstes Programm</div><span class="status done">behandelt</span></a>
@@ -215,11 +380,11 @@ footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
     <a class="blk" href="#vl3"><div class="blk-top"><span class="blk-nr">VL3</span><span class="blk-pt">Di 13.10.</span></div><div class="blk-title">Kontrollstrukturen und Listen</div><div class="blk-txt">if/elif/else, match, logische Operatoren, while, for, range, break/continue, Listen, Tupel</div><span class="status done">behandelt</span></a>
     <a class="blk" href="#vl4"><div class="blk-top"><span class="blk-nr">VL4</span><span class="blk-pt">Fr 16.10.</span></div><div class="blk-title">Funktionen und Rekursion</div><div class="blk-txt">def, return, main(), Gültigkeit, Übergabe, Standardwerte, *args, Rekursion, assert, pytest</div><span class="status done">behandelt</span></a>
     <a class="blk" href="#vl5"><div class="blk-top"><span class="blk-nr">VL5</span><span class="blk-pt">Fr 23.10. + Di 27.10.</span></div><div class="blk-title">OOP I: Klassen und Objekte</div><div class="blk-txt">Klasse, Objekt, __init__, self, Methoden, __str__/__repr__, == und is, Klassenattribute, Properties, Hat-ein, Module, @dataclass</div><span class="status done">behandelt · Rest laut Plan 27.10.</span></a>
-    <a class="blk" href="#vl6"><div class="blk-top"><span class="blk-nr">VL6</span><span class="blk-pt">Di 27.10. + Di 03.11.</span></div><div class="blk-title">OOP II: Vererbung und Polymorphie</div><div class="blk-txt">Vererbung, super(), Überschreiben, @override, MRO, Polymorphie, abstrakte Klassen, Fähigkeiten</div><span class="status wip">begonnen · Rest am 03.11.</span></a>
-    <div class="blk"><div class="blk-top"><span class="blk-nr">VL7</span><span class="blk-pt">offen</span></div><div class="blk-title">Projekt Kaffeeshop</div><div class="blk-txt">Anwendung des OOP-Stoffs in einem größeren Programm</div><span class="status open">kommt noch</span></div>
+    <a class="blk" href="#vl6"><div class="blk-top"><span class="blk-nr">VL6</span><span class="blk-pt">Di 03.11. + Fr 06.11.</span></div><div class="blk-title">OOP II: Vererbung und Polymorphie</div><div class="blk-txt">Vererbung, super(), Überschreiben, @override, MRO, Polymorphie, abstrakte Klassen, Fähigkeiten</div><span class="status done">03.11. + 06.11. (Rest geplant)</span></a>
+    <a class="blk" href="#vl7"><div class="blk-top"><span class="blk-nr">VL7</span><span class="blk-pt">ab Fr 06.11.</span></div><div class="blk-title">Projekt Kaffeeshop</div><div class="blk-txt">Lager, Warenkorb, Bestellung (Stufe 1); Produktarten, Zahlungsarten (Stufe 2); Zusatzaufgaben (Stufe 3)</div><span class="status wip">beginnt 06.11.</span></a>
     <div class="blk"><div class="blk-top"><span class="blk-nr">VL8</span><span class="blk-pt">offen</span></div><div class="blk-title">Standardbibliothek</div><div class="blk-txt">mitgelieferte Module von Python</div><span class="status open">kommt noch</span></div>
   </div>
-  <p class="src">Die restlichen Termine laut VL1 F. 5: Di 03.11., Fr 06.11., Fr 13.11., Di 17.11., Fr 27.11. Am 03.11. geht es mit VL6 weiter; welche Vorlesung danach an welchem Tag läuft, steht noch nicht fest. VL7 („Projekt Kaffeeshop“) setzt die ganze VL6 voraus. Laut VL1 F. 6 endet der Kurs mit Klausurvorbereitung und Wiederholung.</p>
+  <p class="src">Die restlichen Termine laut VL1 F. 5: Di 03.11., Fr 06.11., Fr 13.11., Di 17.11., Fr 27.11. Am 06.11. endet VL6, danach beginnt VL7 („Projekt Kaffeeshop“), das die ganze VL6 voraussetzt. Wie viele Termine das Projekt dauert, steht noch nicht fest. Laut VL1 F. 6 endet der Kurs mit Klausurvorbereitung und Wiederholung.</p>
 
   <h3>So liest du die Reiter</h3>
   <p>Jeder Vorlesungsreiter beginnt mit einer Liste seiner Unterkapitel. Die Nummer links springt zum passenden Abschnitt. Die Marken zeigen, woher ein Thema stammt. Im Feld „Kann ich“ trägst du ein, wie sicher du bist; daraus berechnen sich die Prozentwerte in den Reitern. „Kann ich“ zählt voll, „unsicher“ halb.</p>
@@ -1337,6 +1502,7 @@ Weiter? (j/n) Ihre Wahl: j</pre>
 
   <h3 id="s3-6"><span class="kicker">3.6</span> Schleifen mit for und range() <span class="tag F">F</span><span class="tag Q">Q</span><span class="tag L">L</span></h3>
   <h4>3.6.1 Für jedes Element</h4>
+  <div class="box key"><p><b>Schleifen fallen dir schwer?</b> Im Abschnitt <a href="#s0-for">„for-Schleifen ganz langsam“</a> in der Übersicht geht es Schritt für Schritt mit Rundentabellen und fünf Mini-Aufgaben.</p></div>
   <p>Die <code>for</code>-Schleife geht eine Folge von Werten durch und führt den Block für jeden Wert einmal aus. Es gibt keinen Startwert, keine Bedingung und kein <code>i++</code> wie in Java (F. 69). Zahlenfolgen liefert <code>range(start, stop, schritt)</code>: <b><code>start</code> ist dabei, <code>stop</code> nicht</b>. Ohne <code>start</code> beginnt die Folge bei 0, mit negativer Schrittweite zählt sie rückwärts (F. 70).</p>
 <pre class="repl">&gt;&gt;&gt; list(range(5))
 [0, 1, 2, 3, 4]
@@ -3884,9 +4050,9 @@ Summe: 36.45 Euro</pre><p>Drei Hat-ein-Beziehungen: Warenkorb → Kunde, Warenko
 
 <!-- ============ VL6 ============ -->
 <section class="panel" role="tabpanel" id="vl6">
-  <div class="panel-head"><h2>VL6 OOP II: Vererbung und Polymorphie</h2><span class="kicker">DI 27.10. + DI 03.11. · 60 FOLIEN · BEGONNEN</span></div>
+  <div class="panel-head"><h2>VL6 OOP II: Vererbung und Polymorphie</h2><span class="kicker">DI 03.11. + FR 06.11. · 60 FOLIEN</span></div>
   <p>VL6 baut direkt auf VL5 auf. Das <code>Konto</code> von dort wird zur <b>Oberklasse</b>, und neue Klassen wie <code>Sparkonto</code> und <code>Girokonto</code> übernehmen alles davon und ergänzen nur, was bei ihnen anders ist. Danach geht es um die anderen drei Grundprinzipien aus 5.4.1: Vererbung, Polymorphie und Abstraktion. Durchgehende Beispiele sind Konten, Zahlungsarten im Onlineshop und Dokumente; in den Übungen Mitarbeiter und eine Geräteverwaltung.</p>
-  <div class="box key"><p><b>Stand der Vorlesung:</b> VL6 wurde am 27.10. begonnen, der Rest folgt am 03.11. Wie weit der 27.10. genau kam, steht noch nicht fest (geplant war etwa bis Übung 2). Diese Seite deckt schon die ganze VL6 ab, damit du vorarbeiten kannst. VL7 („Projekt Kaffeeshop“) setzt die komplette VL6 voraus.</p></div>
+  <div class="box key"><p><b>Stand der Vorlesung:</b> Am 03.11. begann VL6 von vorn mit Vererbung, <code>super()</code> und Überschreiben (6.1, 6.2, Übung 1 und 2). Am Vormittag des 06.11. folgt laut Plan der Rest ab F. 30: Polymorphie, <code>object</code>, <code>__repr__</code>, abstrakte Klassen und Fähigkeiten mit Übung 3 bis 5. Danach beginnt <a href="#vl7">VL7, das Projekt „Kaffeeshop“</a>, das die komplette VL6 voraussetzt. Für jede Schleife in diesem Reiter steht eine <b>Rundentabelle</b> dabei.</p></div>
   <div class="progress"><span>VL6:</span><span class="bar"><i data-bar="6"></i></span><span data-txt="6">0 %</span></div>
 
   <div class="scroll"><table class="check" data-kap="6">
@@ -4300,6 +4466,16 @@ for zahlung in zahlungen:
 <pre class="out">10.00 Euro von Karte ...1234 abgebucht
 Rechnung über 10.00 Euro, zahlbar in 14 Tagen
 10.00 Euro bezahlt</pre>
+  <p><b>Rundentabelle:</b> In jeder Runde liegt ein anderes Objekt in <code>zahlung</code>. Die Zeile im Schleifenrumpf ist immer dieselbe, aber Python sucht <code>bezahlen</code> jedes Mal in der Klasse des aktuellen Objekts.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Runde</th><th><code>zahlung</code> zeigt auf</th><th>Python sucht <code>bezahlen</code> …</th><th>Ausgabe</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><code>Kreditkarte</code>-Objekt</td><td>in <code>Kreditkarte</code>: gefunden</td><td><code>10.00 Euro von Karte ...1234 abgebucht</code></td></tr>
+      <tr><td>2</td><td><code>Rechnungskauf</code>-Objekt</td><td>in <code>Rechnungskauf</code>: gefunden</td><td><code>Rechnung über 10.00 Euro, zahlbar in 14 Tagen</code></td></tr>
+      <tr><td>3</td><td><code>Zahlungsart</code>-Objekt</td><td>in <code>Zahlungsart</code>: gefunden</td><td><code>10.00 Euro bezahlt</code></td></tr>
+    </tbody>
+  </table></div>
+  <p>Bild im Kopf: Eine Lehrerin sagt „Stellt euch vor!“ zu jedem Kind in der Reihe. Der Satz ist immer gleich, aber jedes Kind sagt etwas anderes. So ruft die Schleife immer <code>bezahlen()</code> auf, und jedes Objekt antwortet auf seine Weise.</p>
 
   <h4>6.3.2 Typangabe und Objekt: Wer entscheidet was?</h4>
   <p>In <code>kasse(zahlungsart: Zahlungsart, …)</code> stecken zwei verschiedene Dinge (F. 35):</p>
@@ -4569,6 +4745,13 @@ Rechnung Dokument Druckbar Versendbar ABC object </pre>
     <li><b>Rechnung, Versendbar?</b> Auch das: <code>True</code>, also <code>versenden()</code>.</li>
     <li><b>Lieferschein, Druckbar?</b> <code>True</code>. <b>Versendbar?</b> <code>False</code>, <code>versenden()</code> wird übersprungen.</li>
   </ol>
+  <div class="scroll"><table>
+    <thead><tr><th>Runde</th><th><code>dokument</code></th><th><code>Druckbar</code>?</th><th><code>Versendbar</code>?</th><th>Ausgabe</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Rechnung R-1001</td><td>ja</td><td>ja</td><td><code>Rechnung R-1001 wird gedruckt</code>, <code>Rechnung R-1001 geht an einkauf@kunde.de</code></td></tr>
+      <tr><td>2</td><td>Lieferschein L-2001</td><td>ja</td><td>nein</td><td><code>Lieferschein L-2001 wird gedruckt</code></td></tr>
+    </tbody>
+  </table></div>
   <p>Nach der Prüfung weiß ty, dass <code>drucken()</code> bzw. <code>versenden()</code> vorhanden ist. Ohne die Prüfung gäbe es beim Lieferschein einen <code>AttributeError</code>:</p>
 <pre><code>class Dokument:
     def __init__(self, nummer: str) -&gt; None:
@@ -4997,7 +5180,21 @@ Max arbeitet.
 Eva leitet ein Team mit 3 Personen.
 Personalkosten: 28850 Euro
 Mia arbeitet 16 Stunden pro Woche mit.
-Personalkosten: 31250 Euro</pre><p>Nachgerechnet: 4200 + 4400 + (5800 + 900) + 3600 + 3400 + (6100 + 450) = 28850, mit den Werkstudenten + 1300 + 1100 = 31250. <b><code>personalkosten()</code> muss nicht geändert werden</b>: Sie ruft nur <code>monatskosten()</code> auf, und jedes Objekt liefert seine eigene Antwort. Das ist Polymorphie. Zusatz von der Folie: Ein <code>Freelancer</code>, der nicht von <code>Mitarbeiter</code> erbt, aber <code>arbeiten()</code> und <code>monatskosten()</code> hat, läuft beim Ausführen (Duck Typing); ty meldet beim Hinzufügen <code>invalid-argument-type</code>.</p></div></details></div>
+Personalkosten: 31250 Euro</pre>
+<p><b>Rundentabelle für <code>personalkosten(team)</code></b> (erster Aufruf, sechs Personen):</p>
+<div class="scroll"><table>
+  <thead><tr><th>Runde</th><th><code>person</code></th><th><code>person.monatskosten()</code></th><th><code>summe</code> danach</th></tr></thead>
+  <tbody>
+    <tr><td>Start</td><td>–</td><td>–</td><td>0</td></tr>
+    <tr><td>1</td><td>Lena (Entwickler)</td><td>4200 (geerbt aus <code>Mitarbeiter</code>)</td><td>4200</td></tr>
+    <tr><td>2</td><td>Ali (Entwickler)</td><td>4400</td><td>8600</td></tr>
+    <tr><td>3</td><td>Tom (Manager, Team 6)</td><td>5800 + 150 · 6 = 6700 (überschrieben)</td><td>15300</td></tr>
+    <tr><td>4</td><td>Sara (Mitarbeiter)</td><td>3600</td><td>18900</td></tr>
+    <tr><td>5</td><td>Max (Mitarbeiter)</td><td>3400</td><td>22300</td></tr>
+    <tr><td>6</td><td>Eva (Manager, Team 3)</td><td>6100 + 150 · 3 = 6550</td><td>28850</td></tr>
+  </tbody>
+</table></div>
+<p>Nachgerechnet: 4200 + 4400 + (5800 + 900) + 3600 + 3400 + (6100 + 450) = 28850, mit den Werkstudenten + 1300 + 1100 = 31250. <b><code>personalkosten()</code> muss nicht geändert werden</b>: Sie ruft nur <code>monatskosten()</code> auf, und jedes Objekt liefert seine eigene Antwort. Das ist Polymorphie. Zusatz von der Folie: Ein <code>Freelancer</code>, der nicht von <code>Mitarbeiter</code> erbt, aber <code>arbeiten()</code> und <code>monatskosten()</code> hat, läuft beim Ausführen (Duck Typing); ty meldet beim Hinzufügen <code>invalid-argument-type</code>.</p></div></details></div>
   <div class="task"><div class="tn">6.11 · Fehler finden: Die Kasse kennt keine Nummer (6.3.2) · Quiz Q</div>
     <p>Mit den Klassen aus <code>zahlungsarten.py</code> (6.3.1): Der erste Aufruf klappt, der zweite bricht ab. Warum, was meldet ty schon vorher, und wie reparierst du <code>kasse()</code>?</p>
 <pre><code>from decimal import Decimal
@@ -5114,7 +5311,17 @@ Samsung Galaxy S24 wird eingeschaltet.
 Router(hersteller='AVM', modell='FRITZ!Box 7590', baujahr=2021) - 12 Geräte verbunden
 AVM FRITZ!Box 7590 wird eingeschaltet.
 Galaxy S24: Screenshot gespeichert.
-FRITZ!Box 7590: Firmware wird aktualisiert.</pre><p><code>print(geraet, …)</code> nutzt das <code>__repr__</code>, weil es kein eigenes <code>__str__</code> gibt; dank <code>type(self).__name__</code> steht dort jeweils der richtige Klassenname. (5) <code>Geraet("HP", "EliteBook", 2022)</code>: ty meldet <code>Cannot instantiate abstract class `Geraet`</code>, Python <code>TypeError: Can't instantiate abstract class Geraet without an implementation for abstract method 'status'</code>. Zusatz: Die eigenen Methoden kennt nur die Unterklasse. Über eine <code>list[Geraet]</code> brauchst du deshalb <code>isinstance()</code>.</p></div></details></div>
+FRITZ!Box 7590: Firmware wird aktualisiert.</pre>
+<p><b>Rundentabelle der ersten Schleife</b> (<code>print(geraet, "-", geraet.status())</code>, dann <code>einschalten()</code>):</p>
+<div class="scroll"><table>
+  <thead><tr><th>Runde</th><th><code>geraet</code></th><th><code>__repr__</code> zeigt</th><th><code>status()</code> aus</th><th>Ausgabe <code>einschalten()</code></th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Laptop</td><td><code>Laptop(…)</code> dank <code>type(self).__name__</code></td><td><code>Laptop</code>: <code>Akku 80 %</code></td><td><code>Lenovo ThinkPad T14 wird eingeschaltet.</code></td></tr>
+    <tr><td>2</td><td>Smartphone</td><td><code>Smartphone(…)</code></td><td><code>Smartphone</code>: <code>Akku 35 %</code></td><td><code>Samsung Galaxy S24 wird eingeschaltet.</code></td></tr>
+    <tr><td>3</td><td>Router</td><td><code>Router(…)</code></td><td><code>Router</code>: <code>12 Geräte verbunden</code></td><td><code>AVM FRITZ!Box 7590 wird eingeschaltet.</code></td></tr>
+  </tbody>
+</table></div>
+<p>In der Zusatz-Schleife ist <code>isinstance(geraet, Smartphone)</code> nur in Runde 2 wahr und <code>isinstance(geraet, Router)</code> nur in Runde 3; deshalb kommen genau zwei Zusatzzeilen.</p><p><code>print(geraet, …)</code> nutzt das <code>__repr__</code>, weil es kein eigenes <code>__str__</code> gibt; dank <code>type(self).__name__</code> steht dort jeweils der richtige Klassenname. (5) <code>Geraet("HP", "EliteBook", 2022)</code>: ty meldet <code>Cannot instantiate abstract class `Geraet`</code>, Python <code>TypeError: Can't instantiate abstract class Geraet without an implementation for abstract method 'status'</code>. Zusatz: Die eigenen Methoden kennt nur die Unterklasse. Über eine <code>list[Geraet]</code> brauchst du deshalb <code>isinstance()</code>.</p></div></details></div>
   <div class="task"><div class="tn">6.14 · Übung 5: Geräteverwaltung, Teil 2 (6.5) · Folie 58, Lösung L</div>
     <p>(1) Fähigkeiten <code>Aufladbar</code> mit <code>aufladen(self) -&gt; None</code> und <code>Netzwerkfaehig</code> mit <code>verbinden(self, netzwerk: str) -&gt; None</code>. (2) Laptop und Smartphone sind aufladbar und netzwerkfähig, der Router nur netzwerkfähig. <code>aufladen()</code> setzt den Akku auf 100 %, <code>verbinden()</code> gibt z. B. <code>Lenovo ThinkPad T14 ist mit DHBW-Gast verbunden.</code> aus. (3) Ein <code>Monitor</code> ohne diese Fähigkeiten. (4) Schleife durch das Inventar: Jedes aufladbare Gerät laden, jedes netzwerkfähige mit <code>"DHBW-Gast"</code> verbinden, danach alle Geräte mit Status ausgeben. Zusatz: <code>alle_aufladen(inventar: list[Geraet]) -&gt; int</code> lädt alle aufladbaren Geräte und gibt zurück, wie viele es waren.</p>
     <details><summary>Lösung</summary><div><pre><code>from abc import ABC, abstractmethod
@@ -5237,11 +5444,1149 @@ Lenovo ThinkPad T14: Akku 100 %
 Samsung Galaxy S24: Akku 100 %
 AVM FRITZ!Box 7590: 12 Geräte verbunden
 Dell P2723D: angeschlossen
-2 Geräte aufgeladen</pre><p>Jede Klasse hat <b>eine</b> Kategorie (<code>Geraet</code>) und beliebig viele Fähigkeiten. Der Monitor erbt <code>__init__</code> unverändert aus <code>Geraet</code>. In der Schleife fragt <code>isinstance</code> nach der Fähigkeit, nicht nach der genauen Klasse. Kommt später ein Tablet dazu, das aufladbar ist, laufen Schleife und <code>alle_aufladen</code> ohne Änderung.</p></div></details></div>
+2 Geräte aufgeladen</pre>
+<p><b>Rundentabelle der ersten Schleife</b> und von <code>alle_aufladen(inventar)</code>:</p>
+<div class="scroll"><table>
+  <thead><tr><th>Runde</th><th><code>geraet</code></th><th><code>Aufladbar</code>?</th><th><code>Netzwerkfaehig</code>?</th><th>Ausgabe</th><th><code>anzahl</code> in <code>alle_aufladen</code></th></tr></thead>
+  <tbody>
+    <tr><td>Start</td><td>–</td><td>–</td><td>–</td><td>–</td><td>0</td></tr>
+    <tr><td>1</td><td>Lenovo ThinkPad T14</td><td>ja → Akku 100</td><td>ja</td><td><code>… ist mit DHBW-Gast verbunden.</code></td><td>1</td></tr>
+    <tr><td>2</td><td>Samsung Galaxy S24</td><td>ja → Akku 100 (vorher 35)</td><td>ja</td><td><code>… ist mit DHBW-Gast verbunden.</code></td><td>2</td></tr>
+    <tr><td>3</td><td>AVM FRITZ!Box 7590</td><td>nein</td><td>ja</td><td><code>… stellt das Netzwerk DHBW-Gast bereit.</code></td><td>2</td></tr>
+    <tr><td>4</td><td>Dell P2723D (Monitor)</td><td>nein</td><td>nein</td><td>nichts</td><td>2</td></tr>
+  </tbody>
+</table></div>
+<p>Jede Klasse hat <b>eine</b> Kategorie (<code>Geraet</code>) und beliebig viele Fähigkeiten. Der Monitor erbt <code>__init__</code> unverändert aus <code>Geraet</code>. In der Schleife fragt <code>isinstance</code> nach der Fähigkeit, nicht nach der genauen Klasse. Kommt später ein Tablet dazu, das aufladbar ist, laufen Schleife und <code>alle_aufladen</code> ohne Änderung.</p></div></details></div>
   <div class="task"><div class="tn">6.15 · In eigenen Worten (6.3, 6.4, 6.5) · Quiz Q</div>
     <p>(a) Was ist Polymorphie? Erkläre es am Beispiel <code>kasse()</code>. (b) Was ist der Unterschied zwischen einer abstrakten Klasse als Kategorie und einer Fähigkeit? (c) Warum benutzt man für „ist ein …?“ <code>isinstance</code> und nicht <code>type</code>?</p>
     <details><summary>Lösung</summary><div><p>(a) Derselbe Methodenaufruf führt je nach Klasse des Objekts zu unterschiedlichem Verhalten. <code>kasse()</code> ruft immer nur <code>zahlungsart.bezahlen(betrag)</code> auf; bei einer Kreditkarte wird abgebucht, beim Rechnungskauf eine Rechnung erstellt. Neue Zahlungsarten kommen ohne Änderung an <code>kasse()</code> dazu. (b) Eine Kategorie beschreibt „ist ein …“, darf Attribute, einen Konstruktor und konkrete Methoden haben, und jede Klasse hat nur eine. Eine Fähigkeit beschreibt „kann …“, hat nur abstrakte Methoden, keine Attribute und keinen Konstruktor, und eine Klasse darf beliebig viele haben. Von beiden entstehen keine Objekte. (c) <code>isinstance</code> zählt auch Unterklassen mit: Ein Girokonto ist ein Konto. <code>type(x) is Konto</code> wäre für ein Girokonto <code>False</code>.</p></div></details></div>
-<div class="nextprev"><span><a href="#vl5">← VL5 Klassen</a></span><a href="#uebungen">Weiter: Übungen →</a></div>
+<div class="nextprev"><span><a href="#vl5">← VL5 Klassen</a></span><a href="#vl7">Weiter: VL7 Kaffeeshop →</a></div>
+</section>
+
+<!-- ============ VL7 ============ -->
+<section class="panel" role="tabpanel" id="vl7">
+  <div class="panel-head"><h2>VL7 Projekt Kaffeeshop</h2><span class="kicker">AB FR 06.11. · 23 FOLIEN · PROJEKT IN STUFEN</span></div>
+  <p>VL7 bringt keinen neuen Stoff, sondern ein Projekt: Ihr schreibt zu zweit einen kleinen Onlineshop für Kaffee und Zubehör, der in der Kommandozeile läuft. Kunden sehen das Sortiment, suchen, legen Produkte in den Warenkorb und bestellen. Dabei kommt alles zusammen, was du bisher gelernt hast: Klassen, Properties und <code>@dataclass</code> (VL5), Listen, Schleifen und <code>match</code> (VL3), Funktionen und Module (VL4, VL5), Vererbung, abstrakte Klassen und Polymorphie (VL6) (F. 3).</p>
+  <div class="box key"><p><b>Stand und Herkunft:</b> Laut Plan beginnt das Projekt am <b>06.11.</b> nach dem Rest von VL6; Stufe 2 und 3 folgen eher am nächsten Termin. Eine Musterlösung gibt es erst nach dem Projekt in Moodle (F. 22). Der Code in diesem Reiter ist deshalb eine <b>eigene Lösung</b> der Folienaufgaben. Er baut auf dem Startpaket auf, besteht alle Testfälle von F. 14 und F. 19 und wurde mit Python 3.13 ausgeführt; <code>ruff check</code> meldet nichts.</p></div>
+  <div class="progress"><span>VL7:</span><span class="bar"><i data-bar="7"></i></span><span data-txt="7">0 %</span></div>
+
+  <div class="scroll"><table class="check" data-kap="7">
+    <thead><tr><th>Nr</th><th>Unterkapitel</th><th>Quelle</th><th>Folie</th><th>Kann ich</th></tr></thead>
+    <tbody>
+      <tr><td><a href="#s7-1">7.1.1</a></td><td>Ziel, Ablauf und Arbeiten zu zweit</td><td><span class="tag F">F</span></td><td class="src">2–6</td><td data-id="7.1.1"></td></tr>
+      <tr><td><a href="#s7-1">7.1.2</a></td><td>Das Startpaket und <code>zahl_einlesen()</code></td><td><span class="tag F">F</span></td><td class="src">8</td><td data-id="7.1.2"></td></tr>
+      <tr><td><a href="#s7-1">7.1.3</a></td><td>Die Klassen in Stufe 1: lauter „hat ein“</td><td><span class="tag F">F</span></td><td class="src">7</td><td data-id="7.1.3"></td></tr>
+      <tr><td><a href="#s7-2">7.2.1</a></td><td><code>Lager</code> und <code>anzeigen()</code></td><td><span class="tag F">F</span></td><td class="src">10</td><td data-id="7.2.1"></td></tr>
+      <tr><td><a href="#s7-2">7.2.2</a></td><td><code>finden()</code>: <code>Produkt | None</code>, <code>return None</code> nach der Schleife</td><td><span class="tag F">F</span></td><td class="src">10</td><td data-id="7.2.2"></td></tr>
+      <tr><td><a href="#s7-2">7.2.3</a></td><td><code>suchen()</code>: Treffer in einer Liste sammeln</td><td><span class="tag F">F</span></td><td class="src">10</td><td data-id="7.2.3"></td></tr>
+      <tr><td><a href="#s7-2">7.2.4</a></td><td>Ein Menüpunkt als Funktion</td><td><span class="tag F">F</span></td><td class="src">11</td><td data-id="7.2.4"></td></tr>
+      <tr><td><a href="#s7-3">7.3.1</a></td><td><code>Kunde</code>, <code>Position</code> und der leere Warenkorb</td><td><span class="tag F">F</span></td><td class="src">12</td><td data-id="7.3.1"></td></tr>
+      <tr><td><a href="#s7-3">7.3.2</a></td><td><code>hinzufuegen()</code>: mitzählen, Menge erhöhen</td><td><span class="tag F">F</span></td><td class="src">12</td><td data-id="7.3.2"></td></tr>
+      <tr><td><a href="#s7-3">7.3.3</a></td><td><code>entfernen()</code>, <code>gesamtsumme()</code>, <code>ist_leer()</code>, <code>anzeigen()</code></td><td><span class="tag F">F</span></td><td class="src">12</td><td data-id="7.3.3"></td></tr>
+      <tr><td><a href="#s7-4">7.4.1</a></td><td><code>main.py</code>: Menüpunkte 3 bis 6</td><td><span class="tag F">F</span></td><td class="src">13</td><td data-id="7.4.1"></td></tr>
+      <tr><td><a href="#s7-4">7.4.2</a></td><td>Die Testfälle von Stufe 1</td><td><span class="tag F">F</span></td><td class="src">14</td><td data-id="7.4.2"></td></tr>
+      <tr><td><a href="#s7-5">7.5.1</a></td><td>Stufe 2: Produktarten mit abstraktem <code>Produkt</code></td><td><span class="tag F">F</span></td><td class="src">16</td><td data-id="7.5.1"></td></tr>
+      <tr><td><a href="#s7-5">7.5.2</a></td><td>Stufe 2: Zahlungsarten und <code>@dataclass Bestellung</code></td><td><span class="tag F">F</span></td><td class="src">17, 19</td><td data-id="7.5.2"></td></tr>
+      <tr><td><a href="#s7-5">7.5.3</a></td><td>Achtung: <code>clear()</code> oder <code>= []</code></td><td><span class="tag F">F</span></td><td class="src">18</td><td data-id="7.5.3"></td></tr>
+      <tr><td><a href="#s7-6">7.6</a></td><td>Stufe 3: Zusatzaufgaben nach Wahl</td><td><span class="tag F">F</span> <span class="tag E">E</span></td><td class="src">21</td><td data-id="7.6"></td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 id="s7-1"><span class="kicker">7.1</span> Das Projekt und das Startpaket <span class="tag F">F</span></h3>
+  <h4>7.1.1 Ziel, Ablauf und Arbeiten zu zweit</h4>
+  <p>Die Folien beginnen mit der Frage in die Runde: „Wie kamen Sie mit der Geräteverwaltung aus VL06 zurecht?“ (F. 2). Das Ziel: <b>Am Ende läuft bei jedem Team mindestens Stufe 1</b> (F. 3). Der Ablauf (F. 4):</p>
+  <ol>
+    <li>Aufgabe und Startpaket</li>
+    <li>Stufe 1: Lager, Warenkorb und Bestellung</li>
+    <li>Zwischenstand: zwei Teams zeigen ihr Programm</li>
+    <li>Stufe 2: Produktarten und Zahlungsarten</li>
+    <li>Stufe 3: Zusatzaufgaben nach Wahl</li>
+    <li>Abschluss: Vorstellung und Musterlösung</li>
+  </ol>
+  <p>Jedes Team arbeitet in seinem eigenen Tempo. <b>Arbeiten zu zweit</b> (Pair Programming, F. 5): ein Rechner, eine Person tippt, die andere liest mit und denkt mit; etwa alle 30 Minuten wechseln. <b>Beide</b> sollen jede Zeile erklären können. Bei Problemen erst gemeinsam überlegen, dann fragen. Wie bisher: Editor ohne KI, prüfen mit <code>uv run ruff check .</code> und <code>uv run ty check</code>.</p>
+  <p>So soll das fertige Programm aussehen (F. 6; hier mit der Lösung aus diesem Reiter ausgeführt, das Menü steht nur beim ersten Mal da):</p>
+<pre class="out" data-label="uv run main.py">Willkommen im Kaffeeshop!
+Ihr Name: Anna Berger
+Ihre E-Mail: anna.berger@example.com
+
+1  Sortiment anzeigen
+2  Produkt suchen
+3  In den Warenkorb legen
+4  Warenkorb anzeigen
+5  Aus dem Warenkorb entfernen
+6  Bestellen
+0  Beenden
+Ihre Wahl: 2
+Suchbegriff: kaffee
+101  Kaffee Hausmischung 1 kg: 15.46 Euro (40 auf Lager)
+201  Kaffeemühle mit Handkurbel: 34.99 Euro (6 auf Lager)
+
+Ihre Wahl: 3
+Artikelnummer: 101
+Menge: 2
+2 x Kaffee Hausmischung 1 kg liegt im Warenkorb.
+
+Ihre Wahl: 3
+Artikelnummer: 203
+Menge: 5
+Das geht nicht. Auf Lager: 3, schon im Warenkorb: 0.
+
+Ihre Wahl: 4
+Warenkorb von Anna Berger
+2 x Kaffee Hausmischung 1 kg: 30.92 Euro
+Summe: 30.92 Euro
+
+Ihre Wahl: 6
+Vielen Dank, Anna Berger! Ihre Bestellung über 30.92 Euro.
+
+Ihre Wahl: 0
+Auf Wiedersehen!</pre>
+
+  <h4>7.1.2 Das Startpaket</h4>
+  <p>Lade <code>VL07_Startpaket.zip</code> aus Moodle und entpacke es in einen neuen Ordner <code>kaffeeshop</code> in <code>prog1</code> (F. 8). Darin liegen drei Dateien:</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Datei</th><th>Inhalt</th><th>Was du tust</th></tr></thead>
+    <tbody>
+      <tr><td><code>produkt.py</code></td><td>Die Klasse <code>Produkt</code> aus VL5 Übung 4, dazu eine Artikelnummer: Properties <code>preis</code> (mit Setter), <code>bestand</code> (nur lesen), <code>bruttopreis</code> (19 % MwSt, auf Cent gerundet), <code>einlagern()</code>, <code>verkaufen()</code>, <code>__str__</code></td><td>fertig, nur benutzen</td></tr>
+      <tr><td><code>daten.py</code></td><td><code>beispielsortiment()</code> mit acht Produkten: 101–104 Lebensmittel, 201–204 Zubehör, erfundene Nettopreise</td><td>fertig</td></tr>
+      <tr><td><code>main.py</code></td><td>Das Menü mit <code>while True</code> und <code>match</code>; Punkt 1 und 0 gehen, dazu die fertige Funktion <code>zahl_einlesen()</code></td><td>ausbauen</td></tr>
+      <tr><td><code>lager.py</code>, <code>warenkorb.py</code></td><td>gibt es noch nicht</td><td>selbst schreiben</td></tr>
+    </tbody>
+  </table></div>
+  <pre><code>cd prog1/kaffeeshop
+uv run main.py
+uv run ruff check .
+uv run ty check</code></pre>
+  <p>Das Sortiment aus <code>daten.py</code> (Menüpunkt 1), wie <code>print(produkt)</code> es mit dem <code>__str__</code> aus <code>produkt.py</code> zeigt. Der Preis ist schon der Bruttopreis, z. B. 12.99 · 1.19 = 15.4581 → 15.46:</p>
+<pre class="out">101  Kaffee Hausmischung 1 kg: 15.46 Euro (40 auf Lager)
+102  Espresso Bohnen 500 g: 9.40 Euro (25 auf Lager)
+103  Grüner Tee 100 g: 4.15 Euro (120 auf Lager)
+104  Kakaopulver 250 g: 3.32 Euro (30 auf Lager)
+201  Kaffeemühle mit Handkurbel: 34.99 Euro (6 auf Lager)
+202  Filterpapier Größe 4, 100 Stück: 2.96 Euro (200 auf Lager)
+203  French Press 1 l: 24.87 Euro (3 auf Lager)
+204  Thermobecher 0,4 l: 14.98 Euro (15 auf Lager)</pre>
+  <p>Die fertige Funktion <code>zahl_einlesen()</code> aus <code>main.py</code> ist eine kleine <code>while</code>-Schleife: Sie fragt so lange, bis nur Ziffern eingegeben werden. Deshalb stürzt das Programm bei <code>abc</code> nicht mit <code>ValueError</code> ab.</p>
+<pre data-file="main.py (Startpaket)"><code>def zahl_einlesen(frage: str) -&gt; int:
+    """Fragt so lange nach, bis eine ganze Zahl ab 0 eingegeben wird."""
+    while True:
+        eingabe = input(frage)
+        if eingabe.isdigit():  # True, wenn der Text nur aus Ziffern besteht
+            return int(eingabe)
+        print("Bitte eine ganze Zahl eingeben.")</code></pre>
+  <div class="scroll"><table>
+    <thead><tr><th>Runde</th><th><code>eingabe</code></th><th><code>eingabe.isdigit()</code></th><th>was passiert</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><code>"abc"</code></td><td><code>False</code></td><td>Ausgabe <code>Bitte eine ganze Zahl eingeben.</code>, nächste Runde</td></tr>
+      <tr><td>2</td><td><code>"999"</code></td><td><code>True</code></td><td><code>return 999</code>: Schleife und Funktion enden</td></tr>
+    </tbody>
+  </table></div>
+  <p><code>while True</code> läuft „für immer“; das <code>return</code> ist hier der einzige Ausgang. Negative Zahlen wie <code>-3</code> lehnt <code>isdigit()</code> auch ab, weil das Minus keine Ziffer ist.</p>
+
+  <h4>7.1.3 Die Klassen in Stufe 1: lauter „hat ein“</h4>
+  <p>In Stufe 1 gibt es <b>keine Vererbung</b>. Alle Beziehungen sind „hat ein“ wie in VL5 Abschnitt 5.5 (F. 7):</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Klasse</th><th>hat</th><th>Methoden</th><th>Datei</th></tr></thead>
+    <tbody>
+      <tr><td><code>Lager</code></td><td>viele <code>Produkt</code> (<code>produkte</code>)</td><td><code>anzeigen()</code>, <code>finden(nummer)</code>, <code>suchen(text)</code></td><td><code>lager.py</code> (neu)</td></tr>
+      <tr><td><code>Produkt</code></td><td><code>nummer</code>, <code>name</code>, <code>preis</code>, <code>bestand</code></td><td><code>bruttopreis</code>, <code>einlagern()</code>, <code>verkaufen()</code></td><td><code>produkt.py</code> (fertig)</td></tr>
+      <tr><td><code>Warenkorb</code></td><td>einen <code>Kunde</code>, viele <code>Position</code></td><td><code>hinzufuegen()</code>, <code>entfernen()</code>, <code>gesamtsumme()</code>, <code>ist_leer()</code>, <code>anzeigen()</code></td><td><code>warenkorb.py</code> (neu)</td></tr>
+      <tr><td><code>Kunde</code></td><td><code>name</code>, <code>email</code></td><td>–</td><td><code>warenkorb.py</code></td></tr>
+      <tr><td><code>Position</code></td><td>ein <code>Produkt</code>, <code>menge</code></td><td><code>summe()</code></td><td><code>warenkorb.py</code></td></tr>
+    </tbody>
+  </table></div>
+  <p>Bild im Kopf: Das <b>Lager</b> ist ein Regal voller Produkte. Der <b>Warenkorb</b> ist dein Einkaufskorb. Darin liegen aber keine Produkte direkt, sondern <b>Zettel</b> (Positionen): „3 × French Press“. Ein Zettel <i>hat ein</i> Produkt und eine Menge. <code>Kunde</code> und <code>Position</code> kennst du aus VL5 Übung 5.</p>
+
+  <h3 id="s7-2"><span class="kicker">7.2</span> Stufe 1, Teil 1: Das Lager <span class="tag F">F</span></h3>
+  <p>Die Aufgabe (F. 10), neue Datei <code>lager.py</code>: (1) Klasse <code>Lager</code>, <code>__init__</code> bekommt <code>produkte: list[Produkt]</code>, <code>anzeigen()</code> gibt alle Produkte aus. (2) <code>finden(self, nummer: int) -&gt; Produkt | None</code> liefert das Produkt mit dieser Artikelnummer oder <code>None</code>. (3) <code>suchen(self, text: str) -&gt; list[Produkt]</code> liefert alle Produkte, deren Name den Text enthält, ohne Rücksicht auf Groß- und Kleinschreibung. (4) In <code>main()</code> ein Lager mit <code>beispielsortiment()</code> anlegen und die Menüpunkte 1 und 2 damit bauen.</p>
+<pre data-file="lager.py"><code>from produkt import Produkt
+
+
+class Lager:
+    def __init__(self, produkte: list[Produkt]) -&gt; None:
+        self.produkte = produkte
+
+    def anzeigen(self) -&gt; None:
+        for produkt in self.produkte:
+            print(produkt)
+
+    def finden(self, nummer: int) -&gt; Produkt | None:
+        for produkt in self.produkte:
+            if produkt.nummer == nummer:
+                return produkt  # gefunden: sofort raus aus der Methode
+        return None  # Schleife ganz durchgelaufen, nichts gefunden
+
+    def suchen(self, text: str) -&gt; list[Produkt]:
+        treffer: list[Produkt] = []
+        for produkt in self.produkte:
+            if text.lower() in produkt.name.lower():
+                treffer.append(produkt)
+        return treffer</code></pre>
+
+  <h4>7.2.1 Lager und anzeigen()</h4>
+  <p><code>__init__</code> merkt sich nur die Liste. <code>anzeigen()</code> ist die einfachste Schleife: In jeder Runde liegt ein anderes Produkt in <code>produkt</code>, und <code>print(produkt)</code> ruft dessen <code>__str__</code> auf. Acht Produkte, acht Runden, acht Zeilen.</p>
+
+  <h4>7.2.2 finden(): ein Produkt oder nichts</h4>
+  <p><b><code>Produkt | None</code></b> heißt: Die Methode liefert <b>entweder</b> ein Produkt <b>oder</b> <code>None</code> (VL4). Bild im Kopf: Du fragst im Laden nach Artikel 203. Die Verkäuferin geht das Regal von links nach rechts durch. Sobald sie ihn hat, gibt sie ihn dir und <b>hört auf zu suchen</b>. Erst wenn sie am Ende des Regals ist, ohne ihn zu finden, sagt sie: „Haben wir nicht.“</p>
+<pre><code>from daten import beispielsortiment
+from lager import Lager
+
+lager = Lager(beispielsortiment())
+print(lager.finden(203))
+print(lager.finden(999))</code></pre>
+<pre class="out">203  French Press 1 l: 24.87 Euro (3 auf Lager)
+None</pre>
+  <p><b>Rundentabelle für <code>finden(203)</code></b> (Reihenfolge im Sortiment: 101, 102, 103, 104, 201, 202, 203, 204):</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Runde</th><th><code>produkt.nummer</code></th><th><code>== 203</code>?</th><th>was passiert</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>101</td><td>nein</td><td>weiter</td></tr>
+      <tr><td>2</td><td>102</td><td>nein</td><td>weiter</td></tr>
+      <tr><td>3</td><td>103</td><td>nein</td><td>weiter</td></tr>
+      <tr><td>4</td><td>104</td><td>nein</td><td>weiter</td></tr>
+      <tr><td>5</td><td>201</td><td>nein</td><td>weiter</td></tr>
+      <tr><td>6</td><td>202</td><td>nein</td><td>weiter</td></tr>
+      <tr><td>7</td><td>203</td><td><b>ja</b></td><td><code>return produkt</code>: French Press, Methode endet sofort, Runde 8 gibt es nicht</td></tr>
+    </tbody>
+  </table></div>
+  <p>Bei <code>finden(999)</code> lautet die Antwort in allen acht Runden „nein“. Die Schleife läuft ganz durch, und erst <b>danach</b> kommt <code>return None</code>.</p>
+  <div class="box warn"><p><b>Achtung: <code>return None</code> in der Schleife.</b> Der häufigste Fehler bei <code>finden()</code> ist ein <code>else: return None</code> direkt unter dem <code>if</code>. Dann gibt die Verkäuferin schon nach dem ersten falschen Artikel auf:</p>
+<pre><code>from daten import beispielsortiment
+from produkt import Produkt
+
+
+def finden_kaputt(produkte: list[Produkt], nummer: int) -&gt; Produkt | None:
+    for produkt in produkte:
+        if produkt.nummer == nummer:
+            return produkt
+        else:
+            return None  # FEHLER: steht in der Schleife
+
+
+sortiment = beispielsortiment()
+print(finden_kaputt(sortiment, 101))
+print(finden_kaputt(sortiment, 203))</code></pre>
+<pre class="out">101  Kaffee Hausmischung 1 kg: 15.46 Euro (40 auf Lager)
+None</pre>
+  <p>101 wird gefunden, weil es zufällig an erster Stelle steht. Bei 203 ist Runde 1 „nein“, also <code>return None</code>, und die Suche ist vorbei. <b>Regel:</b> „Nicht gefunden“ weißt du erst, wenn du <b>alle</b> angeschaut hast. <code>return None</code> gehört deshalb <b>hinter</b> die Schleife, eine Stufe weniger eingerückt als <code>for</code>.</p></div>
+  <p>Wer <code>finden()</code> aufruft, muss <code>None</code> abfangen, bevor er <code>.name</code> oder <code>.bestand</code> benutzt: <code>if produkt is None: …</code>. Sonst meldet ty, dass <code>None</code> kein Attribut <code>name</code> hat, und Python bricht mit <code>AttributeError</code> ab.</p>
+
+  <h4>7.2.3 suchen(): Treffer in einer Liste sammeln</h4>
+  <p><code>suchen()</code> hört nicht beim ersten Treffer auf, sondern sammelt <b>alle</b>. Das Muster ist dasselbe wie beim Aufsummieren: leere Liste <b>vor</b> der Schleife, <code>append</code> <b>in</b> der Schleife, <code>return</code> <b>nach</b> der Schleife. <code>.lower()</code> macht beide Texte klein, damit „kaffee“ auch „Kaffee“ findet. <code>text in name</code> prüft, ob der Text irgendwo im Namen vorkommt.</p>
+<pre><code>from daten import beispielsortiment
+from lager import Lager
+
+lager = Lager(beispielsortiment())
+for produkt in lager.suchen("kaffee"):
+    print(produkt.name)
+print(len(lager.suchen("TEE")))
+print(lager.suchen("Zucker"))</code></pre>
+<pre class="out">Kaffee Hausmischung 1 kg
+Kaffeemühle mit Handkurbel
+1
+[]</pre>
+  <p><b>Rundentabelle für <code>suchen("kaffee")</code>:</b></p>
+  <div class="scroll"><table>
+    <thead><tr><th>Runde</th><th><code>produkt.name.lower()</code></th><th>enthält „kaffee“?</th><th><code>treffer</code> danach</th></tr></thead>
+    <tbody>
+      <tr><td>Start</td><td>–</td><td>–</td><td><code>[]</code></td></tr>
+      <tr><td>1</td><td>kaffee hausmischung 1 kg</td><td>ja</td><td>[Kaffee Hausmischung]</td></tr>
+      <tr><td>2</td><td>espresso bohnen 500 g</td><td>nein</td><td>[Kaffee Hausmischung]</td></tr>
+      <tr><td>3</td><td>grüner tee 100 g</td><td>nein</td><td>unverändert</td></tr>
+      <tr><td>4</td><td>kakaopulver 250 g</td><td>nein</td><td>unverändert</td></tr>
+      <tr><td>5</td><td>kaffeemühle mit handkurbel</td><td>ja</td><td>[Kaffee Hausmischung, Kaffeemühle]</td></tr>
+      <tr><td>6–8</td><td>filterpapier …, french press 1 l, thermobecher 0,4 l</td><td>nein</td><td>unverändert</td></tr>
+    </tbody>
+  </table></div>
+  <p>Zwei Treffer, genau wie im ersten Testfall von F. 14. Bei „Zucker“ bleibt die Liste leer: <code>[]</code>, nicht <code>None</code>. Eine leere Liste ist hier die richtige Antwort, denn die Schleife im Menü läuft dann einfach null Runden.</p>
+
+  <h4>7.2.4 Ein Menüpunkt als Funktion</h4>
+  <p>Tipp von F. 11: Schreibe <b>für jeden Menüpunkt eine eigene Funktion</b>. Sie bekommt als Parameter die Objekte, die sie braucht, hier das Lager. Die Schleife in <code>main()</code> bleibt so kurz und übersichtlich. Später kommt z. B. <code>in_den_warenkorb(lager, korb)</code> dazu.</p>
+<pre data-file="main.py (Ausschnitt)"><code>def suchen(lager: Lager) -&gt; None:
+    treffer = lager.suchen(input("Suchbegriff: "))
+    if len(treffer) == 0:
+        print("Kein Produkt gefunden.")
+    for produkt in treffer:
+        print(produkt)</code></pre>
+  <p>Kein <code>else</code> nötig: Bei null Treffern kommt die Meldung, und die <code>for</code>-Schleife läuft null Runden. Im <code>match</code> von <code>main()</code> steht dann nur noch <code>case "2": suchen(lager)</code>.</p>
+
+  <h3 id="s7-3"><span class="kicker">7.3</span> Stufe 1, Teil 2: Der Warenkorb <span class="tag F">F</span></h3>
+  <p>Die Aufgabe (F. 12), neue Datei <code>warenkorb.py</code>: (1) <code>Kunde</code> und <code>Position</code> aus VL5 Übung 5 übernehmen; <code>summe()</code> rechnet jetzt mit dem <code>bruttopreis</code>. (2) Der Warenkorb bekommt einen <code>Kunde</code> und eine leere Liste <code>positionen</code>. (3) <code>hinzufuegen(self, produkt: Produkt, menge: int) -&gt; bool</code> liefert <code>False</code>, wenn die Menge nicht auf Lager ist. <b>Was schon im Warenkorb liegt, zählt mit.</b> Liegt das Produkt schon im Korb, <b>erhöht</b> die Methode die Menge dieser Position. (4) <code>entfernen(self, nummer: int) -&gt; bool</code>, <code>gesamtsumme()</code>, <code>ist_leer()</code> und <code>anzeigen()</code> ergänzen.</p>
+<pre data-file="warenkorb.py"><code>from dataclasses import dataclass
+from decimal import Decimal
+
+from produkt import Produkt
+
+
+@dataclass
+class Kunde:
+    name: str
+    email: str
+
+
+@dataclass
+class Position:
+    produkt: Produkt
+    menge: int
+
+    def summe(self) -&gt; Decimal:
+        return self.produkt.bruttopreis * self.menge
+
+
+class Warenkorb:
+    def __init__(self, kunde: Kunde) -&gt; None:
+        self.kunde = kunde
+        self.positionen: list[Position] = []
+
+    def position_zu(self, nummer: int) -&gt; Position | None:
+        for position in self.positionen:
+            if position.produkt.nummer == nummer:
+                return position
+        return None
+
+    def menge_im_korb(self, nummer: int) -&gt; int:
+        position = self.position_zu(nummer)
+        if position is None:
+            return 0
+        return position.menge
+
+    def hinzufuegen(self, produkt: Produkt, menge: int) -&gt; bool:
+        schon_im_korb = self.menge_im_korb(produkt.nummer)
+        if schon_im_korb + menge &gt; produkt.bestand:
+            return False  # nicht genug auf Lager
+        position = self.position_zu(produkt.nummer)
+        if position is None:
+            self.positionen.append(Position(produkt, menge))  # neue Position
+        else:
+            position.menge += menge  # vorhandene Position erhöhen
+        return True
+
+    def entfernen(self, nummer: int) -&gt; bool:
+        position = self.position_zu(nummer)
+        if position is None:
+            return False
+        self.positionen.remove(position)
+        return True
+
+    def gesamtsumme(self) -&gt; Decimal:
+        summe = Decimal(0)
+        for position in self.positionen:
+            summe += position.summe()
+        return summe
+
+    def ist_leer(self) -&gt; bool:
+        return len(self.positionen) == 0
+
+    def anzeigen(self) -&gt; None:
+        print(f"Warenkorb von {self.kunde.name}")
+        for position in self.positionen:
+            print(f"{position.menge} x {position.produkt.name}: {position.summe()} Euro")
+        print(f"Summe: {self.gesamtsumme()} Euro")</code></pre>
+
+  <h4>7.3.1 Kunde, Position und der leere Warenkorb</h4>
+  <ul>
+    <li><code>Kunde</code> und <code>Position</code> sind <code>@dataclass</code>-Klassen (VL5): <code>__init__</code>, <code>__repr__</code> und <code>__eq__</code> schreibt Python selbst.</li>
+    <li><code>Position.summe()</code> = Bruttopreis · Menge, z. B. 2 · 15.46 = 30.92.</li>
+    <li>Im <code>__init__</code> des Warenkorbs entsteht <b>für jeden Korb eine eigene leere Liste</b>. Die Typangabe <code>list[Position]</code> sagt ty, was hineinkommt.</li>
+    <li><code>position_zu(nummer)</code> ist eine Hilfsmethode, gebaut wie <code>finden()</code>, nur über die Positionen: Sie liefert den Zettel zu einer Artikelnummer oder <code>None</code>. <code>menge_im_korb(nummer)</code> macht daraus eine Zahl (0, wenn es keinen Zettel gibt). Beide braucht man mehrfach: in <code>hinzufuegen()</code>, <code>entfernen()</code> und für die Meldung „schon im Warenkorb: 3“.</li>
+  </ul>
+
+  <h4>7.3.2 hinzufuegen(): mitzählen und Menge erhöhen</h4>
+  <p>Die Methode macht drei Schritte, immer in dieser Reihenfolge:</p>
+  <ol>
+    <li><b>Was liegt schon im Korb?</b> <code>schon_im_korb = self.menge_im_korb(produkt.nummer)</code></li>
+    <li><b>Reicht der Bestand für beides zusammen?</b> Wenn <code>schon_im_korb + menge &gt; produkt.bestand</code>: <code>return False</code>. Die Methode endet hier, nichts wird geändert.</li>
+    <li><b>Zettel neu oder ergänzen?</b> Gibt es noch keine Position: neue anhängen. Gibt es schon eine: deren <code>menge</code> erhöhen. Dann <code>return True</code>.</li>
+  </ol>
+  <p>Bild im Kopf: Die Verkäuferin fragt nicht nur „Wie viele willst du?“, sondern auch „Wie viele hast du schon im Korb?“. Im Regal stehen 3 French Press. Hast du schon 3 im Korb, bekommst du keine vierte, auch wenn du nur „1“ sagst.</p>
+<pre><code>from daten import beispielsortiment
+from lager import Lager
+from warenkorb import Kunde, Warenkorb
+
+lager = Lager(beispielsortiment())
+korb = Warenkorb(Kunde("Anna Berger", "anna.berger@example.com"))
+french_press = lager.finden(203)
+kaffee = lager.finden(101)
+assert french_press is not None and kaffee is not None
+
+print(korb.hinzufuegen(french_press, 5))  # nur 3 auf Lager
+print(korb.hinzufuegen(french_press, 3))
+print(korb.hinzufuegen(french_press, 1))  # 3 liegen schon im Korb
+print(korb.hinzufuegen(kaffee, 2))
+print(korb.hinzufuegen(kaffee, 1))
+print(len(korb.positionen))
+korb.anzeigen()</code></pre>
+<pre class="out">False
+True
+False
+True
+True
+2
+Warenkorb von Anna Berger
+3 x French Press 1 l: 74.61 Euro
+3 x Kaffee Hausmischung 1 kg: 46.38 Euro
+Summe: 120.99 Euro</pre>
+  <p><b>Schritt für Schritt</b> (French Press: Bestand 3; Kaffee: Bestand 40):</p>
+  <div class="scroll"><table>
+    <thead><tr><th><code>hinzufuegen(…)</code></th><th><code>schon_im_korb</code></th><th>Prüfung</th><th><code>position</code></th><th>Ergebnis</th><th>Positionen danach</th></tr></thead>
+    <tbody>
+      <tr><td><code>french_press, 5</code></td><td>0</td><td>0 + 5 &gt; 3 → ja</td><td>–</td><td><code>False</code></td><td>keine</td></tr>
+      <tr><td><code>french_press, 3</code></td><td>0</td><td>0 + 3 &gt; 3 → nein</td><td><code>None</code> → neuer Zettel</td><td><code>True</code></td><td>3 × French Press</td></tr>
+      <tr><td><code>french_press, 1</code></td><td>3</td><td>3 + 1 &gt; 3 → ja</td><td>–</td><td><code>False</code></td><td>3 × French Press</td></tr>
+      <tr><td><code>kaffee, 2</code></td><td>0</td><td>0 + 2 &gt; 40 → nein</td><td><code>None</code> → neuer Zettel</td><td><code>True</code></td><td>3 × FP, 2 × Kaffee</td></tr>
+      <tr><td><code>kaffee, 1</code></td><td>2</td><td>2 + 1 &gt; 40 → nein</td><td>Zettel Kaffee → <code>menge += 1</code></td><td><code>True</code></td><td>3 × FP, <b>3</b> × Kaffee</td></tr>
+    </tbody>
+  </table></div>
+  <p>Am Ende gibt es <b>zwei</b> Positionen, nicht drei: Der zweite Kaffee hat den vorhandenen Zettel geändert. Beachte: <code>position.menge += menge</code> ändert das Position-<b>Objekt</b>, das in der Liste liegt. Name und Listeneintrag zeigen auf dasselbe Objekt (VL5), deshalb muss nichts zurück in die Liste geschrieben werden.</p>
+  <p>Warum <code>bool</code> und kein <code>print</code>? Die Methode sagt nur, ob es geklappt hat. Die Meldung an den Kunden schreibt <code>main.py</code>. So bleibt <code>Warenkorb</code> ohne <code>input</code> und <code>print</code> testbar (Stufe 3: pytest).</p>
+  <div class="box warn"><p><b>Achtung: die zwei typischen Fehler in <code>hinzufuegen()</code></b></p>
+    <ul>
+      <li><b>Nur <code>menge &gt; produkt.bestand</code> prüfen</b> und die Menge im Korb vergessen. Dann gehen „erst 3, dann noch 1 French Press“ beide durch, und im Korb liegen 4 von 3 (Aufgabe 7.3).</li>
+      <li><b>Immer <code>append</code></b>, ohne nach einem vorhandenen Zettel zu schauen. Dann gibt es zweimal Kaffee als zwei Positionen (Aufgabe 7.4).</li>
+    </ul></div>
+
+  <h4>7.3.3 entfernen(), gesamtsumme(), ist_leer(), anzeigen()</h4>
+  <ul>
+    <li><code>entfernen(nummer)</code>: Zettel suchen; gibt es keinen, <code>False</code>. Sonst <code>self.positionen.remove(position)</code> und <code>True</code>. <code>remove</code> entfernt genau dieses Objekt aus der Liste.</li>
+    <li><code>gesamtsumme()</code>: Aufsummieren wie in „for-Schleifen ganz langsam“, nur mit <code>Decimal(0)</code> als Startwert, weil die Preise <code>Decimal</code> sind.</li>
+    <li><code>ist_leer()</code>: <code>len(self.positionen) == 0</code> ist schon ein <code>bool</code>; ein <code>if … return True else return False</code> ist nicht nötig.</li>
+    <li><code>anzeigen()</code>: Kopfzeile, eine Zeile pro Position, Summe.</li>
+  </ul>
+  <p><b>Rundentabelle für <code>gesamtsumme()</code></b> mit 3 × French Press und 3 × Kaffee (aus 7.3.2):</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Runde</th><th><code>position</code></th><th><code>position.summe()</code></th><th><code>summe</code> danach</th></tr></thead>
+    <tbody>
+      <tr><td>Start</td><td>–</td><td>–</td><td>0</td></tr>
+      <tr><td>1</td><td>3 × French Press</td><td>3 · 24.87 = 74.61</td><td>74.61</td></tr>
+      <tr><td>2</td><td>3 × Kaffee Hausmischung</td><td>3 · 15.46 = 46.38</td><td>120.99</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 id="s7-4"><span class="kicker">7.4</span> Stufe 1, Teil 3: Das Menü fertig bauen <span class="tag F">F</span></h3>
+  <p>Die Aufgabe (F. 13), Datei <code>main.py</code>: (1) Am Anfang nach Name und E-Mail fragen, einen <code>Kunde</code> und einen <code>Warenkorb</code> anlegen. (2) Punkt 3: Artikelnummer und Menge mit <code>zahl_einlesen()</code> abfragen; bei unbekannter Nummer oder zu großer Menge eine Meldung. (3) Punkt 4 und 5: Warenkorb anzeigen, Produkt über die Artikelnummer entfernen. (4) Punkt 6 Bestellen: für jede Position den Bestand mit <code>verkaufen()</code> verringern, die Summe ausgeben und den Warenkorb leeren. Ein leerer Warenkorb kann nicht bestellt werden.</p>
+<pre data-file="main.py"><code>"""Projekt Kaffeeshop, Stufe 1: das Menü des Programms."""
+
+from typing import Final
+
+from daten import beispielsortiment
+from lager import Lager
+from warenkorb import Kunde, Warenkorb
+
+MENUE: Final = """
+1  Sortiment anzeigen
+2  Produkt suchen
+3  In den Warenkorb legen
+4  Warenkorb anzeigen
+5  Aus dem Warenkorb entfernen
+6  Bestellen
+0  Beenden"""
+
+
+def zahl_einlesen(frage: str) -&gt; int:
+    """Fragt so lange nach, bis eine ganze Zahl ab 0 eingegeben wird."""
+    while True:
+        eingabe = input(frage)
+        if eingabe.isdigit():  # True, wenn der Text nur aus Ziffern besteht
+            return int(eingabe)
+        print("Bitte eine ganze Zahl eingeben.")
+
+
+def suchen(lager: Lager) -&gt; None:
+    treffer = lager.suchen(input("Suchbegriff: "))
+    if len(treffer) == 0:
+        print("Kein Produkt gefunden.")
+    for produkt in treffer:
+        print(produkt)
+
+
+def in_den_warenkorb(lager: Lager, korb: Warenkorb) -&gt; None:
+    produkt = lager.finden(zahl_einlesen("Artikelnummer: "))
+    if produkt is None:
+        print("Diese Artikelnummer gibt es nicht.")
+        return
+    menge = zahl_einlesen("Menge: ")
+    if korb.hinzufuegen(produkt, menge):
+        print(f"{menge} x {produkt.name} liegt im Warenkorb.")
+    else:
+        print(
+            f"Das geht nicht. Auf Lager: {produkt.bestand}, "
+            f"schon im Warenkorb: {korb.menge_im_korb(produkt.nummer)}."
+        )
+
+
+def entfernen(korb: Warenkorb) -&gt; None:
+    if korb.entfernen(zahl_einlesen("Artikelnummer: ")):
+        print("Entfernt.")
+    else:
+        print("Dieses Produkt liegt nicht im Warenkorb.")
+
+
+def bestellen(korb: Warenkorb) -&gt; None:
+    if korb.ist_leer():
+        print("Der Warenkorb ist leer.")
+        return
+    for position in korb.positionen:
+        position.produkt.verkaufen(position.menge)
+    print(f"Vielen Dank, {korb.kunde.name}! Ihre Bestellung über {korb.gesamtsumme()} Euro.")
+    korb.positionen = []  # neue, leere Liste
+
+
+def main() -&gt; None:
+    lager = Lager(beispielsortiment())
+    print("Willkommen im Kaffeeshop!")
+    kunde = Kunde(input("Ihr Name: "), input("Ihre E-Mail: "))
+    korb = Warenkorb(kunde)
+    while True:
+        print(MENUE)
+        match input("Ihre Wahl: "):
+            case "1":
+                lager.anzeigen()
+            case "2":
+                suchen(lager)
+            case "3":
+                in_den_warenkorb(lager, korb)
+            case "4":
+                korb.anzeigen()
+            case "5":
+                entfernen(korb)
+            case "6":
+                bestellen(korb)
+            case "0":
+                print("Auf Wiedersehen!")
+                break
+            case _:
+                print("Bitte eine Zahl aus dem Menü eingeben.")
+
+
+if __name__ == "__main__":
+    main()</code></pre>
+
+  <h4>7.4.1 Was die Menüfunktionen tun</h4>
+  <ul>
+    <li><b><code>in_den_warenkorb(lager, korb)</code></b>: Nummer einlesen und sofort an <code>finden()</code> geben. Ist das Ergebnis <code>None</code>: Meldung und <code>return</code>. Dieses frühe <code>return</code> heißt „hier ist Schluss für diesen Menüpunkt“; das Programm läuft im Menü weiter. Dann die Menge einlesen und das <code>bool</code> von <code>hinzufuegen()</code> in eine Meldung übersetzen.</li>
+    <li><b><code>entfernen(korb)</code></b>: Auch hier übersetzt die Funktion nur das <code>bool</code> in einen Satz.</li>
+    <li><b><code>bestellen(korb)</code></b>: Leerer Korb → Meldung, <code>return</code>. Sonst eine Schleife über die Positionen, in jeder Runde <code>verkaufen()</code>; danach die Summe ausgeben und mit <code>korb.positionen = []</code> eine neue leere Liste setzen. Warum <code>= []</code> und nicht <code>clear()</code>, zeigt Stufe 2 (7.5.3).</li>
+    <li><b><code>main()</code></b>: Lager, Kunde und Korb werden <b>einmal vor</b> der <code>while</code>-Schleife angelegt. Stünden sie in der Schleife, wäre der Korb nach jeder Menüwahl wieder leer, wie bei <code>summe = 0</code> in der Schleife. <code>Kunde(input(…), input(…))</code> fragt erst den Namen, dann die E-Mail ab, weil Python die Argumente von links nach rechts auswertet.</li>
+  </ul>
+  <p><b>Rundentabelle für <code>bestellen()</code></b> mit 2 × Kaffee (Bestand vorher 40):</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Schritt</th><th>was passiert</th><th>Bestand Kaffee</th><th><code>korb.positionen</code></th></tr></thead>
+    <tbody>
+      <tr><td><code>ist_leer()</code>?</td><td>nein, weiter</td><td>40</td><td>[2 × Kaffee]</td></tr>
+      <tr><td>Runde 1</td><td><code>verkaufen(2)</code> → <code>True</code></td><td>38</td><td>[2 × Kaffee]</td></tr>
+      <tr><td>nach der Schleife</td><td>Ausgabe „Vielen Dank, … 30.92 Euro.“</td><td>38</td><td>[2 × Kaffee]</td></tr>
+      <tr><td><code>= []</code></td><td>neue leere Liste</td><td>38</td><td><code>[]</code></td></tr>
+    </tbody>
+  </table></div>
+
+  <h4>7.4.2 Die Testfälle von Stufe 1</h4>
+  <p>F. 14 nennt sieben Fälle zum Testen. Alle in einem Durchlauf (Menü weggelassen):</p>
+<pre class="out" data-label="uv run main.py">Willkommen im Kaffeeshop!
+Ihr Name: Anna Berger
+Ihre E-Mail: anna.berger@example.com
+
+Ihre Wahl: 3
+Artikelnummer: abc
+Bitte eine ganze Zahl eingeben.
+Artikelnummer: 999
+Diese Artikelnummer gibt es nicht.
+
+Ihre Wahl: 3
+Artikelnummer: 203
+Menge: 3
+3 x French Press 1 l liegt im Warenkorb.
+
+Ihre Wahl: 3
+Artikelnummer: 203
+Menge: 1
+Das geht nicht. Auf Lager: 3, schon im Warenkorb: 3.
+
+Ihre Wahl: 3
+Artikelnummer: 101
+Menge: 2
+2 x Kaffee Hausmischung 1 kg liegt im Warenkorb.
+
+Ihre Wahl: 3
+Artikelnummer: 101
+Menge: 1
+1 x Kaffee Hausmischung 1 kg liegt im Warenkorb.
+
+Ihre Wahl: 4
+Warenkorb von Anna Berger
+3 x French Press 1 l: 74.61 Euro
+3 x Kaffee Hausmischung 1 kg: 46.38 Euro
+Summe: 120.99 Euro
+
+Ihre Wahl: 5
+Artikelnummer: 101
+Entfernt.
+
+Ihre Wahl: 4
+Warenkorb von Anna Berger
+3 x French Press 1 l: 74.61 Euro
+Summe: 74.61 Euro
+
+Ihre Wahl: 6
+Vielen Dank, Anna Berger! Ihre Bestellung über 74.61 Euro.
+
+Ihre Wahl: 6
+Der Warenkorb ist leer.
+
+Ihre Wahl: 1
+101  Kaffee Hausmischung 1 kg: 15.46 Euro (40 auf Lager)
+102  Espresso Bohnen 500 g: 9.40 Euro (25 auf Lager)
+103  Grüner Tee 100 g: 4.15 Euro (120 auf Lager)
+104  Kakaopulver 250 g: 3.32 Euro (30 auf Lager)
+201  Kaffeemühle mit Handkurbel: 34.99 Euro (6 auf Lager)
+202  Filterpapier Größe 4, 100 Stück: 2.96 Euro (200 auf Lager)
+203  French Press 1 l: 24.87 Euro (0 auf Lager)
+204  Thermobecher 0,4 l: 14.98 Euro (15 auf Lager)
+
+Ihre Wahl: 0
+Auf Wiedersehen!</pre>
+  <div class="scroll"><table>
+    <thead><tr><th>Testfall (F. 14)</th><th>Ergebnis</th></tr></thead>
+    <tbody>
+      <tr><td>Suche nach <code>kaffee</code> findet zwei Produkte</td><td>ja, 101 und 201 (7.2.3 und erster Durchlauf in 7.1.1)</td></tr>
+      <tr><td>5 French Press (203): abgelehnt, nur 3 auf Lager</td><td>„Das geht nicht. Auf Lager: 3, schon im Warenkorb: 0.“ (7.1.1)</td></tr>
+      <tr><td>Erst 3, dann noch 1 French Press: das zweite Mal abgelehnt</td><td>„… schon im Warenkorb: 3.“</td></tr>
+      <tr><td>Zweimal Kaffee (101) ergibt eine Position</td><td>„3 x Kaffee Hausmischung 1 kg“ in <b>einer</b> Zeile</td></tr>
+      <tr><td>Nummer 999 oder Eingabe <code>abc</code>: Meldung, kein Absturz</td><td>„Bitte eine ganze Zahl eingeben.“ und „Diese Artikelnummer gibt es nicht.“</td></tr>
+      <tr><td>Nach dem Bestellen: Korb leer, Bestand kleiner</td><td>Zweites Bestellen: „Der Warenkorb ist leer.“; French Press im Sortiment: 0 auf Lager</td></tr>
+      <tr><td><code>ruff check .</code> und <code>ty check</code> melden nichts</td><td>ruff: „All checks passed!“ (ty war nicht installiert; mypy im strengen Modus meldet nichts)</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 id="s7-5"><span class="kicker">7.5</span> Stufe 2: Produktarten und Zahlungsarten <span class="tag F">F</span></h3>
+  <p>In Stufe 2 kommt VL6 dazu: abstrakte Klassen, Überschreiben und Polymorphie. Laut Plan eher am nächsten Termin.</p>
+  <h4>7.5.1 Produktarten: Produkt wird abstrakt</h4>
+  <p>Bisher rechnet jedes Produkt mit 19 % Mehrwertsteuer. Für die meisten Lebensmittel gilt in Deutschland aber der ermäßigte Satz von 7 %, auch für Kaffee und Tee (F. 16). Die Aufgabe: (1) <code>Produkt</code> wird eine abstrakte Klasse mit der abstrakten Methode <code>mwst_satz(self) -&gt; Decimal</code>; <code>bruttopreis</code> rechnet mit <code>self.mwst_satz()</code> statt mit <code>MWST_SATZ</code>. (2) Unterklassen <code>Lebensmittel</code> (7 %) und <code>Zubehoer</code> (19 %). (3) In <code>daten.py</code> sind 101 bis 104 Lebensmittel, 201 bis 204 Zubehör.</p>
+  <p>Was sich in <code>produkt.py</code> ändert (der Rest bleibt wie im Startpaket):</p>
+<pre data-file="produkt.py (Stufe 2, Ausschnitte)"><code>from abc import ABC, abstractmethod
+from decimal import Decimal
+from typing import override
+
+
+class Produkt(ABC):
+    ...
+
+    @abstractmethod
+    def mwst_satz(self) -&gt; Decimal:
+        """Jede Produktart nennt ihren Steuersatz selbst."""
+
+    @property
+    def bruttopreis(self) -&gt; Decimal:
+        """Preis mit Mehrwertsteuer, gerundet auf Cent. Diesen Preis sieht der Kunde."""
+        return (self._preis * (1 + self.mwst_satz())).quantize(Decimal("0.01"))
+    ...
+
+
+class Lebensmittel(Produkt):
+    @override
+    def mwst_satz(self) -&gt; Decimal:
+        return Decimal("0.07")
+
+
+class Zubehoer(Produkt):
+    @override
+    def mwst_satz(self) -&gt; Decimal:
+        return Decimal("0.19")</code></pre>
+<pre data-file="daten.py (Stufe 2, Ausschnitt)"><code>from produkt import Lebensmittel, Produkt, Zubehoer
+
+
+def beispielsortiment() -&gt; list[Produkt]:
+    return [
+        Lebensmittel(101, "Kaffee Hausmischung 1 kg", Decimal("12.99"), 40),
+        Lebensmittel(102, "Espresso Bohnen 500 g", Decimal("7.90"), 25),
+        Lebensmittel(103, "Grüner Tee 100 g", Decimal("3.49"), 120),
+        Lebensmittel(104, "Kakaopulver 250 g", Decimal("2.79"), 30),
+        Zubehoer(201, "Kaffeemühle mit Handkurbel", Decimal("29.40"), 6),
+        Zubehoer(202, "Filterpapier Größe 4, 100 Stück", Decimal("2.49"), 200),
+        Zubehoer(203, "French Press 1 l", Decimal("20.90"), 3),
+        Zubehoer(204, "Thermobecher 0,4 l", Decimal("12.59"), 15),
+    ]</code></pre>
+<pre><code>from daten import beispielsortiment
+from lager import Lager
+
+lager = Lager(beispielsortiment())
+print(lager.finden(101))
+print(lager.finden(203))</code></pre>
+<pre class="out">101  Kaffee Hausmischung 1 kg: 13.90 Euro (40 auf Lager)
+203  French Press 1 l: 24.87 Euro (3 auf Lager)</pre>
+  <p>Genau die Kontrollwerte von F. 16: Die Kaffee Hausmischung kostet jetzt 13.90 Euro (12.99 · 1.07 = 13.8993 → 13.90) statt 15.46, die French Press bleibt bei 24.87. Das ist <b>Polymorphie</b>: <code>bruttopreis</code> steht nur einmal in <code>Produkt</code> und ruft <code>self.mwst_satz()</code> auf. Welches <code>mwst_satz()</code> läuft, entscheidet das Objekt, wie bei <code>beleg()</code> in 6.4.3. <code>Lager</code>, <code>Warenkorb</code> und <code>main.py</code> ändern sich dafür <b>gar nicht</b>; die Typangabe <code>list[Produkt]</code> passt weiter, weil ein Lebensmittel <i>ein</i> Produkt ist.</p>
+  <p>Ein „Produkt an sich“ kann man jetzt nicht mehr anlegen:</p>
+<pre class="out">TypeError: Can't instantiate abstract class Produkt without an implementation for abstract method 'mwst_satz'</pre>
+
+  <h4>7.5.2 Zahlungsarten und Bestellungen</h4>
+  <p>Die Aufgabe (F. 17): (1) <code>zahlungsarten.py</code> mit der abstrakten Klasse <code>Zahlungsart</code> und <code>bezahlen(self, betrag: Decimal) -&gt; str</code>, dazu <code>Kreditkarte</code>, <code>Lastschrift</code> und <code>Rechnungskauf</code>; die Beispiele aus VL6 helfen. (2) <code>bestellung.py</code>: <code>@dataclass Bestellung</code> mit <code>nummer</code>, <code>kunde</code>, <code>positionen</code> und <code>zahlungsart</code>; <code>summe()</code> rechnet die Summe aus, <code>ausgeben()</code> zeigt jede Position mit Steuersatz, die Summe und den Text von <code>bezahlen()</code>. (3) Beim Bestellen nach der Zahlungsart fragen, eine <code>Bestellung</code> anlegen und an eine Liste <code>bestellungen</code> in <code>main()</code> hängen. (4) Neuer Menüpunkt 7 „Meine Bestellungen“.</p>
+<pre data-file="zahlungsarten.py"><code>from abc import ABC, abstractmethod
+from decimal import Decimal
+from typing import override
+
+
+class Zahlungsart(ABC):
+    @abstractmethod
+    def bezahlen(self, betrag: Decimal) -&gt; str: ...
+
+
+class Kreditkarte(Zahlungsart):
+    def __init__(self, nummer: str) -&gt; None:
+        self.nummer = nummer
+
+    @override
+    def bezahlen(self, betrag: Decimal) -&gt; str:
+        return f"{betrag} Euro von Karte ...{self.nummer[-4:]} abgebucht"
+
+
+class Lastschrift(Zahlungsart):
+    def __init__(self, iban: str) -&gt; None:
+        self.iban = iban
+
+    @override
+    def bezahlen(self, betrag: Decimal) -&gt; str:
+        return f"{betrag} Euro von IBAN ...{self.iban[-4:]} eingezogen"
+
+
+class Rechnungskauf(Zahlungsart):
+    @override
+    def bezahlen(self, betrag: Decimal) -&gt; str:
+        return f"Rechnung über {betrag} Euro, zahlbar in 14 Tagen"</code></pre>
+<pre data-file="bestellung.py"><code>from dataclasses import dataclass
+from decimal import Decimal
+
+from warenkorb import Kunde, Position
+from zahlungsarten import Zahlungsart
+
+
+@dataclass
+class Bestellung:
+    nummer: int
+    kunde: Kunde
+    positionen: list[Position]
+    zahlungsart: Zahlungsart
+
+    def summe(self) -&gt; Decimal:
+        summe = Decimal(0)
+        for position in self.positionen:
+            summe += position.summe()
+        return summe
+
+    def ausgeben(self) -&gt; None:
+        print(f"Bestellung {self.nummer} von {self.kunde.name}")
+        for position in self.positionen:
+            prozent = int(position.produkt.mwst_satz() * 100)
+            print(
+                f"   {position.menge} x {position.produkt.name} "
+                f"({prozent} % MwSt): {position.summe()} Euro"
+            )
+        print(f"   Summe: {self.summe()} Euro")
+        print(f"   {self.zahlungsart.bezahlen(self.summe())}")</code></pre>
+  <p><code>int(position.produkt.mwst_satz() * 100)</code> macht aus <code>Decimal("0.07")</code> die Zahl 7 für „7 % MwSt“. Die letzte Zeile ist wieder Polymorphie: <code>ausgeben()</code> weiß nicht, welche Zahlungsart es ist, und ruft einfach <code>bezahlen()</code> auf.</p>
+  <p>In <code>main.py</code> kommen zwei Funktionen dazu, <code>bestellen()</code> wird ausgebaut, und in <code>main()</code> steht vor der Schleife <code>bestellungen: list[Bestellung] = []</code>, im <code>match</code> <code>case "7": meine_bestellungen(bestellungen)</code>:</p>
+<pre data-file="main.py (Stufe 2, Ausschnitt)"><code>def zahlungsart_waehlen() -&gt; Zahlungsart:
+    while True:
+        match input("Zahlung mit (1) Kreditkarte, (2) Lastschrift, (3) Rechnung: "):
+            case "1":
+                return Kreditkarte(input("Kartennummer: "))
+            case "2":
+                return Lastschrift(input("IBAN: "))
+            case "3":
+                return Rechnungskauf()
+            case _:
+                print("Bitte 1, 2 oder 3 eingeben.")
+
+
+def bestellen(korb: Warenkorb, bestellungen: list[Bestellung]) -&gt; None:
+    if korb.ist_leer():
+        print("Der Warenkorb ist leer.")
+        return
+    zahlungsart = zahlungsart_waehlen()
+    for position in korb.positionen:
+        position.produkt.verkaufen(position.menge)
+    bestellung = Bestellung(len(bestellungen) + 1, korb.kunde, korb.positionen, zahlungsart)
+    bestellungen.append(bestellung)
+    bestellung.ausgeben()
+    korb.positionen = []  # neue Liste; die alte gehört jetzt der Bestellung
+
+
+def meine_bestellungen(bestellungen: list[Bestellung]) -&gt; None:
+    if len(bestellungen) == 0:
+        print("Noch keine Bestellungen.")
+    for bestellung in bestellungen:
+        bestellung.ausgeben()</code></pre>
+  <p><code>zahlungsart_waehlen()</code> funktioniert wie <code>zahl_einlesen()</code>: <code>while True</code>, und nur ein gültiges <code>return</code> führt hinaus. Der Rückgabetyp ist die abstrakte Oberklasse <code>Zahlungsart</code>; welches Objekt es wirklich ist, entscheidet erst die Eingabe. Der Durchlauf von F. 19, dazu eine zweite Bestellung und Menüpunkt 7:</p>
+<pre class="out" data-label="uv run main.py">Ihre Wahl: 3
+Artikelnummer: 101
+Menge: 3
+3 x Kaffee Hausmischung 1 kg liegt im Warenkorb.
+
+Ihre Wahl: 3
+Artikelnummer: 203
+Menge: 1
+1 x French Press 1 l liegt im Warenkorb.
+
+Ihre Wahl: 6
+Zahlung mit (1) Kreditkarte, (2) Lastschrift, (3) Rechnung: 1
+Kartennummer: 1234567812345678
+Bestellung 1 von Anna Berger
+   3 x Kaffee Hausmischung 1 kg (7 % MwSt): 41.70 Euro
+   1 x French Press 1 l (19 % MwSt): 24.87 Euro
+   Summe: 66.57 Euro
+   66.57 Euro von Karte ...5678 abgebucht
+
+Ihre Wahl: 3
+Artikelnummer: 102
+Menge: 2
+2 x Espresso Bohnen 500 g liegt im Warenkorb.
+
+Ihre Wahl: 6
+Zahlung mit (1) Kreditkarte, (2) Lastschrift, (3) Rechnung: 3
+Bestellung 2 von Anna Berger
+   2 x Espresso Bohnen 500 g (7 % MwSt): 16.90 Euro
+   Summe: 16.90 Euro
+   Rechnung über 16.90 Euro, zahlbar in 14 Tagen
+
+Ihre Wahl: 4
+Warenkorb von Anna Berger
+Summe: 0 Euro
+
+Ihre Wahl: 7
+Bestellung 1 von Anna Berger
+   3 x Kaffee Hausmischung 1 kg (7 % MwSt): 41.70 Euro
+   1 x French Press 1 l (19 % MwSt): 24.87 Euro
+   Summe: 66.57 Euro
+   66.57 Euro von Karte ...5678 abgebucht
+Bestellung 2 von Anna Berger
+   2 x Espresso Bohnen 500 g (7 % MwSt): 16.90 Euro
+   Summe: 16.90 Euro
+   Rechnung über 16.90 Euro, zahlbar in 14 Tagen
+
+Ihre Wahl: 0
+Auf Wiedersehen!</pre>
+  <p>Beide Bestellungen behalten ihre Positionen, obwohl der Warenkorb leer ist. Das ist der Testfall von F. 19. <code>Summe: 0 Euro</code> beim leeren Korb kommt von <code>Decimal(0)</code>, das ohne Nachkommastellen ausgegeben wird.</p>
+
+  <h4>7.5.3 Achtung beim Leeren des Warenkorbs</h4>
+  <div class="box warn"><p><b>Achtung: <code>clear()</code> leert auch die Bestellung</b> (F. 18). <code>Bestellung(1, korb.kunde, korb.positionen, …)</code> kopiert die Liste <b>nicht</b>. <code>korb.positionen</code> und <code>bestellung.positionen</code> sind danach <b>zwei Namen für dieselbe Liste</b> (VL5: Namen zeigen auf Objekte).</p>
+<pre><code>from bestellung import Bestellung
+from daten import beispielsortiment
+from warenkorb import Kunde, Warenkorb
+from zahlungsarten import Rechnungskauf
+
+kaffee = beispielsortiment()[0]
+
+korb = Warenkorb(Kunde("Anna Berger", "anna.berger@example.com"))
+korb.hinzufuegen(kaffee, 2)
+bestellung = Bestellung(1, korb.kunde, korb.positionen, Rechnungskauf())
+print(korb.positionen is bestellung.positionen)
+korb.positionen.clear()  # FALSCH: leert auch bestellung.positionen
+print(len(bestellung.positionen))
+
+korb.hinzufuegen(kaffee, 2)
+bestellung = Bestellung(2, korb.kunde, korb.positionen, Rechnungskauf())
+korb.positionen = []  # RICHTIG: der Korb bekommt eine neue Liste
+print(len(bestellung.positionen), len(korb.positionen))</code></pre>
+<pre class="out">True
+0
+1 0</pre>
+  <p>Bild im Kopf: Korb und Bestellung schauen auf <b>denselben Zettelblock</b>. <code>clear()</code> reißt alle Zettel ab, und beide sehen einen leeren Block. <code>korb.positionen = []</code> gibt dem Korb dagegen einen <b>neuen</b>, leeren Block; der alte gehört jetzt nur noch der Bestellung. Deshalb steht in <code>bestellen()</code> schon in Stufe 1 <code>= []</code>.</p></div>
+
+  <h3 id="s7-6"><span class="kicker">7.6</span> Stufe 3: Zusatzaufgaben nach Wahl <span class="tag F">F</span><span class="tag E">E</span></h3>
+  <p>Wer fertig ist, sucht sich etwas aus (F. 21; alle Beträge sind Beispielwerte). Die Folie gibt nur die Aufgaben vor; die Skizzen hier sind eigene Lösungen mit dem Sortiment aus Stufe 2.</p>
+  <ul>
+    <li><b>Versandkosten:</b> 4.90 Euro, ab 50 Euro Warenwert versandfrei. Die Bestellung zeigt Warenwert, Versand und Summe.</li>
+    <li><b>Rabattcode mit <code>match</code>:</b> <code>DHBW10</code> gibt 10 % auf den Warenwert, <code>WILLKOMMEN5</code> gibt 5 Euro ab 25 Euro Warenwert.</li>
+    <li><b>Mitarbeiterbereich (Menüpunkt 9):</b> alle Produkte mit weniger als 5 Stück anzeigen und eines davon mit <code>einlagern()</code> nachbestellen.</li>
+    <li><b>Sortiment nach Preis (Menüpunkt 8)</b>, selbst sortiert, ohne <code>sorted()</code>. Tipp der Folie: das günstigste Produkt nach vorn tauschen, dann das zweitgünstigste und so weiter.</li>
+    <li><b>Tests mit pytest</b> (VL4): z. B. für den Bruttopreis je Produktart und für <code>hinzufuegen()</code> mit zu großer Menge.</li>
+  </ul>
+  <h4>Versandkosten und Rabattcode</h4>
+<pre><code>from decimal import Decimal
+from typing import Final
+
+VERSAND: Final = Decimal("4.90")
+VERSANDFREI_AB: Final = Decimal("50.00")
+
+
+def versandkosten(warenwert: Decimal) -&gt; Decimal:
+    if warenwert &gt;= VERSANDFREI_AB:
+        return Decimal("0.00")
+    return VERSAND
+
+
+def rabatt(code: str, warenwert: Decimal) -&gt; Decimal:
+    match code:
+        case "DHBW10":
+            return (warenwert * Decimal("0.10")).quantize(Decimal("0.01"))
+        case "WILLKOMMEN5" if warenwert &gt;= Decimal("25.00"):
+            return Decimal("5.00")
+        case _:
+            return Decimal("0.00")
+
+
+for wert in [Decimal("30.92"), Decimal("66.57")]:
+    print(f"Warenwert {wert}: Versand {versandkosten(wert)}")
+print(rabatt("DHBW10", Decimal("66.57")))
+print(rabatt("WILLKOMMEN5", Decimal("30.92")))
+print(rabatt("WILLKOMMEN5", Decimal("16.90")))
+print(rabatt("GRATIS", Decimal("66.57")))</code></pre>
+<pre class="out">Warenwert 30.92: Versand 4.90
+Warenwert 66.57: Versand 0.00
+6.66
+5.00
+0.00
+0.00</pre>
+  <p><code>case "WILLKOMMEN5" if …</code> ist ein <code>case</code> mit Bedingung (Guard): Er passt nur, wenn der Code stimmt <b>und</b> die Bedingung wahr ist. Sonst geht es zum nächsten <code>case</code>; <code>case _</code> fängt alles andere ab. 10 % von 66.57 sind 6.657, gerundet 6.66.</p>
+  <h4>Mitarbeiterbereich</h4>
+<pre><code>from daten import beispielsortiment
+from lager import Lager
+
+lager = Lager(beispielsortiment())
+for produkt in lager.produkte:
+    if produkt.bestand &lt; 5:
+        print(produkt)
+french_press = lager.finden(203)
+if french_press is not None:
+    french_press.einlagern(10)
+    print(french_press)</code></pre>
+<pre class="out">203  French Press 1 l: 24.87 Euro (3 auf Lager)
+203  French Press 1 l: 24.87 Euro (13 auf Lager)</pre>
+  <p>Nur die French Press hat weniger als 5 Stück. Die Schleife ist das <code>suchen()</code>-Muster, nur mit <code>produkt.bestand &lt; 5</code> als Bedingung.</p>
+  <h4>Selbst sortieren: das Günstigste nach vorn</h4>
+  <p>Das ist die anspruchsvollste Zusatzaufgabe, weil zwei Schleifen ineinander stecken. Bild im Kopf: Du räumst ein Regal von links nach rechts ein. Für <b>Platz 0</b> schaust du alle Produkte an und holst das günstigste nach vorn. Für <b>Platz 1</b> schaust du nur noch die restlichen an, und so weiter. Die innere Schleife sucht, die äußere zählt die Plätze.</p>
+<pre><code>from daten import beispielsortiment
+from produkt import Produkt
+
+
+def nach_preis_sortieren(produkte: list[Produkt]) -&gt; None:
+    for i in range(len(produkte)):  # Platz i bekommt das günstigste der restlichen
+        guenstigstes = i
+        for j in range(i + 1, len(produkte)):
+            if produkte[j].bruttopreis &lt; produkte[guenstigstes].bruttopreis:
+                guenstigstes = j
+        produkte[i], produkte[guenstigstes] = produkte[guenstigstes], produkte[i]
+
+
+sortiment = beispielsortiment()
+nach_preis_sortieren(sortiment)
+for produkt in sortiment:
+    print(produkt)</code></pre>
+<pre class="out">202  Filterpapier Größe 4, 100 Stück: 2.96 Euro (200 auf Lager)
+104  Kakaopulver 250 g: 2.99 Euro (30 auf Lager)
+103  Grüner Tee 100 g: 3.73 Euro (120 auf Lager)
+102  Espresso Bohnen 500 g: 8.45 Euro (25 auf Lager)
+101  Kaffee Hausmischung 1 kg: 13.90 Euro (40 auf Lager)
+204  Thermobecher 0,4 l: 14.98 Euro (15 auf Lager)
+203  French Press 1 l: 24.87 Euro (3 auf Lager)
+201  Kaffeemühle mit Handkurbel: 34.99 Euro (6 auf Lager)</pre>
+  <p><code>produkte[i], produkte[guenstigstes] = produkte[guenstigstes], produkte[i]</code> tauscht zwei Listenplätze in einer Zeile (Tupel, VL3). <b>Rundentabelle der äußeren Schleife</b> (Bruttopreise; vorher 13.90, 8.45, 3.73, 2.99, 34.99, 2.96, 24.87, 14.98):</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Runde</th><th><code>i</code></th><th>günstigstes ab Platz <code>i</code></th><th>Tausch</th><th>Preise danach</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>0</td><td>Platz 5 (2.96)</td><td>0 ↔ 5</td><td><b>2.96</b>, 8.45, 3.73, 2.99, 34.99, 13.90, 24.87, 14.98</td></tr>
+      <tr><td>2</td><td>1</td><td>Platz 3 (2.99)</td><td>1 ↔ 3</td><td>2.96, <b>2.99</b>, 3.73, 8.45, 34.99, 13.90, 24.87, 14.98</td></tr>
+      <tr><td>3</td><td>2</td><td>Platz 2 (3.73)</td><td>mit sich selbst</td><td>unverändert</td></tr>
+      <tr><td>4</td><td>3</td><td>Platz 3 (8.45)</td><td>mit sich selbst</td><td>unverändert</td></tr>
+      <tr><td>5</td><td>4</td><td>Platz 5 (13.90)</td><td>4 ↔ 5</td><td>2.96, 2.99, 3.73, 8.45, <b>13.90</b>, 34.99, 24.87, 14.98</td></tr>
+      <tr><td>6</td><td>5</td><td>Platz 7 (14.98)</td><td>5 ↔ 7</td><td>2.96, 2.99, 3.73, 8.45, 13.90, <b>14.98</b>, 24.87, 34.99</td></tr>
+      <tr><td>7–8</td><td>6, 7</td><td>steht schon richtig</td><td>mit sich selbst</td><td>fertig sortiert</td></tr>
+    </tbody>
+  </table></div>
+  <p>Die Funktion ändert die Liste selbst und gibt nichts zurück (<code>-&gt; None</code>), wie <code>list.sort()</code>. In der Klausur wird so etwas eher als „Was steht nach Runde 2 in der Liste?“ gefragt als zum Selbstschreiben.</p>
+
+  <h3 id="s7-ue"><span class="kicker">Aufgaben</span> Aufgaben zu VL7</h3>
+  <p>Alle Aufgaben benutzen das Sortiment aus dem Startpaket (Stufe 1, 19 % MwSt), außer 7.8. Lege bei jeder Schleife eine Rundentabelle an.</p>
+  <div class="task"><div class="tn">7.1 · Ausgabe vorhersagen: finden und suchen (7.2.2, 7.2.3) · Folie 10</div>
+    <p>Was gibt das Programm aus? Die Dateien <code>daten.py</code> und <code>lager.py</code> sind wie in 7.2.</p>
+<pre><code>from daten import beispielsortiment
+from lager import Lager
+
+lager = Lager(beispielsortiment())
+espresso = lager.finden(102)
+if espresso is not None:
+    print(espresso.name)
+print(lager.finden(105))
+print(len(lager.suchen("BOHNEN")))</code></pre>
+    <details><summary>Lösung</summary><div><pre class="out">Espresso Bohnen 500 g
+None
+1</pre>
+      <p>(1) <code>finden(102)</code> trifft in Runde 2 und liefert das Espresso-Produkt; das <code>if</code> ist nötig, weil das Ergebnis auch <code>None</code> sein könnte. (2) 105 gibt es nicht: alle 8 Runden „nein“, danach <code>return None</code>. (3) <code>"BOHNEN".lower()</code> ist <code>"bohnen"</code>, das steckt nur in „espresso bohnen 500 g“: ein Treffer.</p></div></details></div>
+  <div class="task"><div class="tn">7.2 · Fehler finden: Artikel 203 wird nicht gefunden (7.2.2)</div>
+    <p>Diese Fassung von <code>finden()</code> findet 101, aber nicht 203. Erkläre mit einer Rundentabelle, warum, und korrigiere sie.</p>
+<pre><code>from daten import beispielsortiment
+from produkt import Produkt
+
+
+def finden_kaputt(produkte: list[Produkt], nummer: int) -&gt; Produkt | None:
+    for produkt in produkte:
+        if produkt.nummer == nummer:
+            return produkt
+        else:
+            return None  # FEHLER: steht in der Schleife
+
+
+sortiment = beispielsortiment()
+print(finden_kaputt(sortiment, 101))
+print(finden_kaputt(sortiment, 203))</code></pre>
+<pre class="out">101  Kaffee Hausmischung 1 kg: 15.46 Euro (40 auf Lager)
+None</pre>
+    <details><summary>Lösung</summary><div>
+      <div class="scroll"><table>
+        <thead><tr><th>Aufruf</th><th>Runde 1: <code>produkt.nummer</code></th><th><code>== nummer</code>?</th><th>was passiert</th></tr></thead>
+        <tbody><tr><td><code>finden_kaputt(…, 101)</code></td><td>101</td><td>ja</td><td><code>return produkt</code></td></tr><tr><td><code>finden_kaputt(…, 203)</code></td><td>101</td><td>nein</td><td><code>else: return None</code>, Runde 2 gibt es nicht mehr</td></tr></tbody>
+      </table></div>
+      <p>Jedes <code>return</code> beendet die ganze Funktion, auch mitten in der Schleife. Korrektur: <code>else</code> streichen und <code>return None</code> <b>nach</b> der Schleife schreiben, auf Höhe von <code>for</code>:</p>
+<pre><code>    def finden(self, nummer: int) -&gt; Produkt | None:
+        for produkt in self.produkte:
+            if produkt.nummer == nummer:
+                return produkt  # gefunden: sofort raus aus der Methode
+        return None  # Schleife ganz durchgelaufen, nichts gefunden</code></pre></div></details></div>
+  <div class="task"><div class="tn">7.3 · Fehler finden: vier von drei French Press (7.3.2) · Folie 14</div>
+    <p>Hier überschreibt eine Unterklasse <code>hinzufuegen()</code> mit einer falschen Fassung (sonst wie in 7.3). Welcher Testfall von F. 14 schlägt fehl? Korrigiere die Prüfung.</p>
+<pre><code>from daten import beispielsortiment
+from produkt import Produkt
+from warenkorb import Kunde, Position, Warenkorb
+
+
+class KorbOhneMitzaehlen(Warenkorb):
+    def hinzufuegen(self, produkt: Produkt, menge: int) -&gt; bool:
+        if menge &gt; produkt.bestand:  # FEHLER: Korb-Menge fehlt
+            return False
+        position = self.position_zu(produkt.nummer)
+        if position is None:
+            self.positionen.append(Position(produkt, menge))
+        else:
+            position.menge += menge
+        return True
+
+
+french_press = beispielsortiment()[6]
+korb = KorbOhneMitzaehlen(Kunde("Anna Berger", "anna.berger@example.com"))
+print(korb.hinzufuegen(french_press, 3))
+print(korb.hinzufuegen(french_press, 1))
+korb.anzeigen()</code></pre>
+    <details><summary>Lösung</summary><div><pre class="out">True
+True
+Warenkorb von Anna Berger
+4 x French Press 1 l: 99.48 Euro
+Summe: 99.48 Euro</pre>
+      <p>Beide Aufrufe liefern <code>True</code>: Der zweite prüft nur 1 &gt; 3, also „nein“, und erhöht die Position auf 4. Es fehlt die Menge, die schon im Korb liegt. Der Testfall „Erst 3 und dann noch 1 French Press: Das zweite Mal wird abgelehnt“ schlägt fehl. Richtig:</p>
+<pre><code>        schon_im_korb = self.menge_im_korb(produkt.nummer)
+        if schon_im_korb + menge &gt; produkt.bestand:
+            return False  # nicht genug auf Lager</code></pre>
+      <p>Dann ist die Prüfung im zweiten Aufruf 3 + 1 &gt; 3, also „ja“, und die Methode liefert <code>False</code>.</p></div></details></div>
+  <div class="task"><div class="tn">7.4 · Fehler finden: zweimal Kaffee, zwei Zeilen (7.3.2) · Folie 14</div>
+<pre><code>from daten import beispielsortiment
+from produkt import Produkt
+from warenkorb import Kunde, Position, Warenkorb
+
+
+class KorbDoppelt(Warenkorb):
+    def hinzufuegen(self, produkt: Produkt, menge: int) -&gt; bool:
+        if self.menge_im_korb(produkt.nummer) + menge &gt; produkt.bestand:
+            return False
+        self.positionen.append(Position(produkt, menge))  # FEHLER
+        return True
+
+
+kaffee = beispielsortiment()[0]
+korb = KorbDoppelt(Kunde("Anna Berger", "anna.berger@example.com"))
+korb.hinzufuegen(kaffee, 2)
+korb.hinzufuegen(kaffee, 1)
+print(len(korb.positionen))
+korb.anzeigen()</code></pre>
+<pre class="out">2
+Warenkorb von Anna Berger
+2 x Kaffee Hausmischung 1 kg: 30.92 Euro
+1 x Kaffee Hausmischung 1 kg: 15.46 Euro
+Summe: 46.38 Euro</pre>
+    <p>Laut F. 14 soll „zweimal Kaffee hinzufügen“ <b>eine</b> Position ergeben. Was fehlt?</p>
+    <details><summary>Lösung</summary><div><p>Die Methode hängt immer einen neuen Zettel an, ohne nachzusehen, ob es schon einen gibt. Vorher den vorhandenen Zettel suchen und dessen Menge erhöhen:</p>
+<pre><code>        position = self.position_zu(produkt.nummer)
+        if position is None:
+            self.positionen.append(Position(produkt, menge))  # neue Position
+        else:
+            position.menge += menge  # vorhandene Position erhöhen
+        return True</code></pre>
+      <p>Dann gibt es eine Position „3 x Kaffee Hausmischung 1 kg: 46.38 Euro“. Die Summe ist in beiden Fassungen 46.38; der Fehler fällt also nur auf, wenn man auf die Anzahl der Positionen schaut.</p></div></details></div>
+  <div class="task"><div class="tn">7.5 · Rundentabelle: gesamtsumme() (7.3.3)</div>
+    <p>Fülle für <code>korb.gesamtsumme()</code> eine Rundentabelle aus (Runde | <code>position</code> | <code>position.summe()</code> | <code>summe</code> danach). Bruttopreise: Kaffee 15.46, French Press 24.87, Kakaopulver 3.32.</p>
+<pre><code>from daten import beispielsortiment
+from warenkorb import Kunde, Warenkorb
+
+sortiment = beispielsortiment()
+korb = Warenkorb(Kunde("Ben Weber", "ben@example.com"))
+korb.hinzufuegen(sortiment[0], 2)  # 101 Kaffee Hausmischung
+korb.hinzufuegen(sortiment[6], 1)  # 203 French Press
+korb.hinzufuegen(sortiment[3], 4)  # 104 Kakaopulver
+print(korb.gesamtsumme())</code></pre>
+    <details><summary>Lösung</summary><div>
+      <div class="scroll"><table>
+        <thead><tr><th>Runde</th><th><code>position</code></th><th><code>position.summe()</code></th><th><code>summe</code> danach</th></tr></thead>
+        <tbody><tr><td>Start</td><td>–</td><td>–</td><td>0</td></tr><tr><td>1</td><td>2 × Kaffee</td><td>2 · 15.46 = 30.92</td><td>30.92</td></tr><tr><td>2</td><td>1 × French Press</td><td>24.87</td><td>55.79</td></tr><tr><td>3</td><td>4 × Kakaopulver</td><td>4 · 3.32 = 13.28</td><td>69.07</td></tr></tbody>
+      </table></div>
+<pre class="out">69.07</pre></div></details></div>
+  <div class="task"><div class="tn">7.6 · Methode schreiben: anzahl_artikel() (7.3)</div>
+    <p>Ergänze im Warenkorb eine Methode <code>anzahl_artikel(self) -&gt; int</code>, die zählt, wie viele Stück insgesamt im Korb liegen (Summe aller Mengen). Teste mit 2 × Kaffee, 1 × French Press und noch 1 × Kaffee. Wie viele Positionen, wie viele Artikel?</p>
+    <details><summary>Lösung</summary><div><pre><code>from daten import beispielsortiment
+from warenkorb import Kunde, Warenkorb
+
+
+class Warenkorb2(Warenkorb):
+    def anzahl_artikel(self) -&gt; int:
+        anzahl = 0
+        for position in self.positionen:
+            anzahl += position.menge
+        return anzahl
+
+
+sortiment = beispielsortiment()
+korb = Warenkorb2(Kunde("Anna Berger", "anna.berger@example.com"))
+print(korb.anzahl_artikel())
+korb.hinzufuegen(sortiment[0], 2)  # Kaffee
+korb.hinzufuegen(sortiment[6], 1)  # French Press
+korb.hinzufuegen(sortiment[0], 1)  # noch ein Kaffee
+print(len(korb.positionen), korb.anzahl_artikel())</code></pre>
+<pre class="out">0
+2 4</pre>
+      <p>Leerer Korb: keine Runde, Startwert 0 bleibt. Danach gibt es zwei Positionen (3 × Kaffee, 1 × French Press), weil der zweite Kaffee die vorhandene Position erhöht. Rundentabelle: Start 0 → Runde 1: 0 + 3 = 3 → Runde 2: 3 + 1 = 4. Hier ist die Methode der Kürze halber in einer Unterklasse ergänzt; im Projekt schreibst du sie direkt in <code>Warenkorb</code>.</p></div></details></div>
+  <div class="task"><div class="tn">7.7 · Methode schreiben: wenig_bestand() für den Mitarbeiterbereich (7.2.3, 7.6) · Folie 21</div>
+    <p>Schreibe im Lager <code>wenig_bestand(self, grenze: int) -&gt; list[Produkt]</code>, die alle Produkte mit einem Bestand <b>kleiner</b> als <code>grenze</code> liefert. Was liefern <code>wenig_bestand(20)</code> und <code>wenig_bestand(1)</code>?</p>
+    <details><summary>Lösung</summary><div><pre><code>from daten import beispielsortiment
+from lager import Lager
+from produkt import Produkt
+
+
+class Lager2(Lager):
+    def wenig_bestand(self, grenze: int) -&gt; list[Produkt]:
+        knapp: list[Produkt] = []
+        for produkt in self.produkte:
+            if produkt.bestand &lt; grenze:
+                knapp.append(produkt)
+        return knapp
+
+
+lager = Lager2(beispielsortiment())
+for produkt in lager.wenig_bestand(20):
+    print(produkt)
+print(lager.wenig_bestand(1))</code></pre>
+<pre class="out">201  Kaffeemühle mit Handkurbel: 34.99 Euro (6 auf Lager)
+203  French Press 1 l: 24.87 Euro (3 auf Lager)
+204  Thermobecher 0,4 l: 14.98 Euro (15 auf Lager)
+[]</pre>
+      <p>Das Muster von <code>suchen()</code>: leere Liste vor der Schleife, <code>append</code> in der Schleife, <code>return</code> danach. Bestände: 40, 25, 120, 30, <b>6</b>, 200, <b>3</b>, <b>15</b>; kleiner als 20 sind drei. Kein Bestand ist kleiner als 1, also leere Liste <code>[]</code>.</p></div></details></div>
+  <div class="task"><div class="tn">7.8 · Ausgabe vorhersagen: Produktarten in Stufe 2 (7.5.1) · Folie 16</div>
+    <p>Mit <code>produkt.py</code> und <code>daten.py</code> aus Stufe 2 (Lebensmittel 7 %, Zubehör 19 %). Nettopreise: Espresso 7.90, Filterpapier 2.49. Was gibt das Programm aus?</p>
+<pre><code>from daten import beispielsortiment
+from produkt import Lebensmittel
+
+for produkt in beispielsortiment():
+    if produkt.nummer in (102, 202):
+        print(produkt.name, produkt.bruttopreis, isinstance(produkt, Lebensmittel))</code></pre>
+    <details><summary>Lösung</summary><div><pre class="out">Espresso Bohnen 500 g 8.45 True
+Filterpapier Größe 4, 100 Stück 2.96 False</pre>
+      <p>Acht Runden, aber nur in zwei ist die Bedingung wahr. Espresso (102) ist ein <code>Lebensmittel</code>: 7.90 · 1.07 = 8.453 → 8.45. Filterpapier (202) ist <code>Zubehoer</code>: 2.49 · 1.19 = 2.9631 → 2.96, und <code>isinstance(…, Lebensmittel)</code> ist <code>False</code>. Beide rufen dasselbe <code>bruttopreis</code> aus <code>Produkt</code> auf; nur <code>mwst_satz()</code> ist verschieden (Polymorphie).</p></div></details></div>
+
+<div class="nextprev"><span><a href="#vl6">← VL6 Vererbung</a></span><a href="#uebungen">Weiter: Übungen →</a></div>
 </section>
 
 
@@ -5249,6 +6594,7 @@ Dell P2723D: angeschlossen
 <section class="panel" role="tabpanel" id="uebungen">
   <div class="panel-head"><h2>Übungsaufgaben</h2><span class="kicker">ALLE AUFGABEN · LÖSUNGEN EINGEKLAPPT</span></div>
   <p>Hier stehen alle Aufgaben aus den Vorlesungsreitern noch einmal, nach Vorlesung geordnet. Erst selbst lösen, am besten auf Papier oder im Texteditor wie in der Klausur, dann die Lösung aufklappen. Aufgaben mit „Folie“ stammen von den Übungsfolien, mit „Quiz“ aus den Selbsttest-Quizzen, mit „Lösung L“ gibt es eine offizielle Musterlösung. Alle Lösungen wurden mit Python 3.14 ausgeführt.</p>
+  <p><b>Zum Aufwärmen:</b> Fünf Mini-Aufgaben zu <code>for</code>-Schleifen mit Rundentabellen stehen in der Übersicht unter <a href="#s0-for">„for-Schleifen ganz langsam“</a>.</p>
   <h3><span class="kicker">Ü1</span> VL1 Einführung</h3>
   <div class="task"><div class="tn">1.1 · Algorithmus aufschreiben (1.1) · Folie 25, Lösung L</div>
     <p>Beschreibe in nummerierten Schritten, wie eine eingehende Lieferantenrechnung geprüft wird, bevor sie bezahlt wird. Bestellung und Lieferschein liegen vor. Welcher Schritt fängt den Fall „Rechnung über 50 Stück, geliefert wurden 40“ ab?</p>
@@ -6305,7 +7651,21 @@ Max arbeitet.
 Eva leitet ein Team mit 3 Personen.
 Personalkosten: 28850 Euro
 Mia arbeitet 16 Stunden pro Woche mit.
-Personalkosten: 31250 Euro</pre><p>Nachgerechnet: 4200 + 4400 + (5800 + 900) + 3600 + 3400 + (6100 + 450) = 28850, mit den Werkstudenten + 1300 + 1100 = 31250. <b><code>personalkosten()</code> muss nicht geändert werden</b>: Sie ruft nur <code>monatskosten()</code> auf, und jedes Objekt liefert seine eigene Antwort. Das ist Polymorphie. Zusatz von der Folie: Ein <code>Freelancer</code>, der nicht von <code>Mitarbeiter</code> erbt, aber <code>arbeiten()</code> und <code>monatskosten()</code> hat, läuft beim Ausführen (Duck Typing); ty meldet beim Hinzufügen <code>invalid-argument-type</code>.</p></div></details></div>
+Personalkosten: 31250 Euro</pre>
+<p><b>Rundentabelle für <code>personalkosten(team)</code></b> (erster Aufruf, sechs Personen):</p>
+<div class="scroll"><table>
+  <thead><tr><th>Runde</th><th><code>person</code></th><th><code>person.monatskosten()</code></th><th><code>summe</code> danach</th></tr></thead>
+  <tbody>
+    <tr><td>Start</td><td>–</td><td>–</td><td>0</td></tr>
+    <tr><td>1</td><td>Lena (Entwickler)</td><td>4200 (geerbt aus <code>Mitarbeiter</code>)</td><td>4200</td></tr>
+    <tr><td>2</td><td>Ali (Entwickler)</td><td>4400</td><td>8600</td></tr>
+    <tr><td>3</td><td>Tom (Manager, Team 6)</td><td>5800 + 150 · 6 = 6700 (überschrieben)</td><td>15300</td></tr>
+    <tr><td>4</td><td>Sara (Mitarbeiter)</td><td>3600</td><td>18900</td></tr>
+    <tr><td>5</td><td>Max (Mitarbeiter)</td><td>3400</td><td>22300</td></tr>
+    <tr><td>6</td><td>Eva (Manager, Team 3)</td><td>6100 + 150 · 3 = 6550</td><td>28850</td></tr>
+  </tbody>
+</table></div>
+<p>Nachgerechnet: 4200 + 4400 + (5800 + 900) + 3600 + 3400 + (6100 + 450) = 28850, mit den Werkstudenten + 1300 + 1100 = 31250. <b><code>personalkosten()</code> muss nicht geändert werden</b>: Sie ruft nur <code>monatskosten()</code> auf, und jedes Objekt liefert seine eigene Antwort. Das ist Polymorphie. Zusatz von der Folie: Ein <code>Freelancer</code>, der nicht von <code>Mitarbeiter</code> erbt, aber <code>arbeiten()</code> und <code>monatskosten()</code> hat, läuft beim Ausführen (Duck Typing); ty meldet beim Hinzufügen <code>invalid-argument-type</code>.</p></div></details></div>
   <div class="task"><div class="tn">6.11 · Fehler finden: Die Kasse kennt keine Nummer (6.3.2) · Quiz Q</div>
     <p>Mit den Klassen aus <code>zahlungsarten.py</code> (6.3.1): Der erste Aufruf klappt, der zweite bricht ab. Warum, was meldet ty schon vorher, und wie reparierst du <code>kasse()</code>?</p>
 <pre><code>from decimal import Decimal
@@ -6422,7 +7782,17 @@ Samsung Galaxy S24 wird eingeschaltet.
 Router(hersteller='AVM', modell='FRITZ!Box 7590', baujahr=2021) - 12 Geräte verbunden
 AVM FRITZ!Box 7590 wird eingeschaltet.
 Galaxy S24: Screenshot gespeichert.
-FRITZ!Box 7590: Firmware wird aktualisiert.</pre><p><code>print(geraet, …)</code> nutzt das <code>__repr__</code>, weil es kein eigenes <code>__str__</code> gibt; dank <code>type(self).__name__</code> steht dort jeweils der richtige Klassenname. (5) <code>Geraet("HP", "EliteBook", 2022)</code>: ty meldet <code>Cannot instantiate abstract class `Geraet`</code>, Python <code>TypeError: Can't instantiate abstract class Geraet without an implementation for abstract method 'status'</code>. Zusatz: Die eigenen Methoden kennt nur die Unterklasse. Über eine <code>list[Geraet]</code> brauchst du deshalb <code>isinstance()</code>.</p></div></details></div>
+FRITZ!Box 7590: Firmware wird aktualisiert.</pre>
+<p><b>Rundentabelle der ersten Schleife</b> (<code>print(geraet, "-", geraet.status())</code>, dann <code>einschalten()</code>):</p>
+<div class="scroll"><table>
+  <thead><tr><th>Runde</th><th><code>geraet</code></th><th><code>__repr__</code> zeigt</th><th><code>status()</code> aus</th><th>Ausgabe <code>einschalten()</code></th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Laptop</td><td><code>Laptop(…)</code> dank <code>type(self).__name__</code></td><td><code>Laptop</code>: <code>Akku 80 %</code></td><td><code>Lenovo ThinkPad T14 wird eingeschaltet.</code></td></tr>
+    <tr><td>2</td><td>Smartphone</td><td><code>Smartphone(…)</code></td><td><code>Smartphone</code>: <code>Akku 35 %</code></td><td><code>Samsung Galaxy S24 wird eingeschaltet.</code></td></tr>
+    <tr><td>3</td><td>Router</td><td><code>Router(…)</code></td><td><code>Router</code>: <code>12 Geräte verbunden</code></td><td><code>AVM FRITZ!Box 7590 wird eingeschaltet.</code></td></tr>
+  </tbody>
+</table></div>
+<p>In der Zusatz-Schleife ist <code>isinstance(geraet, Smartphone)</code> nur in Runde 2 wahr und <code>isinstance(geraet, Router)</code> nur in Runde 3; deshalb kommen genau zwei Zusatzzeilen.</p><p><code>print(geraet, …)</code> nutzt das <code>__repr__</code>, weil es kein eigenes <code>__str__</code> gibt; dank <code>type(self).__name__</code> steht dort jeweils der richtige Klassenname. (5) <code>Geraet("HP", "EliteBook", 2022)</code>: ty meldet <code>Cannot instantiate abstract class `Geraet`</code>, Python <code>TypeError: Can't instantiate abstract class Geraet without an implementation for abstract method 'status'</code>. Zusatz: Die eigenen Methoden kennt nur die Unterklasse. Über eine <code>list[Geraet]</code> brauchst du deshalb <code>isinstance()</code>.</p></div></details></div>
   <div class="task"><div class="tn">6.14 · Übung 5: Geräteverwaltung, Teil 2 (6.5) · Folie 58, Lösung L</div>
     <p>(1) Fähigkeiten <code>Aufladbar</code> mit <code>aufladen(self) -&gt; None</code> und <code>Netzwerkfaehig</code> mit <code>verbinden(self, netzwerk: str) -&gt; None</code>. (2) Laptop und Smartphone sind aufladbar und netzwerkfähig, der Router nur netzwerkfähig. <code>aufladen()</code> setzt den Akku auf 100 %, <code>verbinden()</code> gibt z. B. <code>Lenovo ThinkPad T14 ist mit DHBW-Gast verbunden.</code> aus. (3) Ein <code>Monitor</code> ohne diese Fähigkeiten. (4) Schleife durch das Inventar: Jedes aufladbare Gerät laden, jedes netzwerkfähige mit <code>"DHBW-Gast"</code> verbinden, danach alle Geräte mit Status ausgeben. Zusatz: <code>alle_aufladen(inventar: list[Geraet]) -&gt; int</code> lädt alle aufladbaren Geräte und gibt zurück, wie viele es waren.</p>
     <details><summary>Lösung</summary><div><pre><code>from abc import ABC, abstractmethod
@@ -6545,11 +7915,215 @@ Lenovo ThinkPad T14: Akku 100 %
 Samsung Galaxy S24: Akku 100 %
 AVM FRITZ!Box 7590: 12 Geräte verbunden
 Dell P2723D: angeschlossen
-2 Geräte aufgeladen</pre><p>Jede Klasse hat <b>eine</b> Kategorie (<code>Geraet</code>) und beliebig viele Fähigkeiten. Der Monitor erbt <code>__init__</code> unverändert aus <code>Geraet</code>. In der Schleife fragt <code>isinstance</code> nach der Fähigkeit, nicht nach der genauen Klasse. Kommt später ein Tablet dazu, das aufladbar ist, laufen Schleife und <code>alle_aufladen</code> ohne Änderung.</p></div></details></div>
+2 Geräte aufgeladen</pre>
+<p><b>Rundentabelle der ersten Schleife</b> und von <code>alle_aufladen(inventar)</code>:</p>
+<div class="scroll"><table>
+  <thead><tr><th>Runde</th><th><code>geraet</code></th><th><code>Aufladbar</code>?</th><th><code>Netzwerkfaehig</code>?</th><th>Ausgabe</th><th><code>anzahl</code> in <code>alle_aufladen</code></th></tr></thead>
+  <tbody>
+    <tr><td>Start</td><td>–</td><td>–</td><td>–</td><td>–</td><td>0</td></tr>
+    <tr><td>1</td><td>Lenovo ThinkPad T14</td><td>ja → Akku 100</td><td>ja</td><td><code>… ist mit DHBW-Gast verbunden.</code></td><td>1</td></tr>
+    <tr><td>2</td><td>Samsung Galaxy S24</td><td>ja → Akku 100 (vorher 35)</td><td>ja</td><td><code>… ist mit DHBW-Gast verbunden.</code></td><td>2</td></tr>
+    <tr><td>3</td><td>AVM FRITZ!Box 7590</td><td>nein</td><td>ja</td><td><code>… stellt das Netzwerk DHBW-Gast bereit.</code></td><td>2</td></tr>
+    <tr><td>4</td><td>Dell P2723D (Monitor)</td><td>nein</td><td>nein</td><td>nichts</td><td>2</td></tr>
+  </tbody>
+</table></div>
+<p>Jede Klasse hat <b>eine</b> Kategorie (<code>Geraet</code>) und beliebig viele Fähigkeiten. Der Monitor erbt <code>__init__</code> unverändert aus <code>Geraet</code>. In der Schleife fragt <code>isinstance</code> nach der Fähigkeit, nicht nach der genauen Klasse. Kommt später ein Tablet dazu, das aufladbar ist, laufen Schleife und <code>alle_aufladen</code> ohne Änderung.</p></div></details></div>
   <div class="task"><div class="tn">6.15 · In eigenen Worten (6.3, 6.4, 6.5) · Quiz Q</div>
     <p>(a) Was ist Polymorphie? Erkläre es am Beispiel <code>kasse()</code>. (b) Was ist der Unterschied zwischen einer abstrakten Klasse als Kategorie und einer Fähigkeit? (c) Warum benutzt man für „ist ein …?“ <code>isinstance</code> und nicht <code>type</code>?</p>
     <details><summary>Lösung</summary><div><p>(a) Derselbe Methodenaufruf führt je nach Klasse des Objekts zu unterschiedlichem Verhalten. <code>kasse()</code> ruft immer nur <code>zahlungsart.bezahlen(betrag)</code> auf; bei einer Kreditkarte wird abgebucht, beim Rechnungskauf eine Rechnung erstellt. Neue Zahlungsarten kommen ohne Änderung an <code>kasse()</code> dazu. (b) Eine Kategorie beschreibt „ist ein …“, darf Attribute, einen Konstruktor und konkrete Methoden haben, und jede Klasse hat nur eine. Eine Fähigkeit beschreibt „kann …“, hat nur abstrakte Methoden, keine Attribute und keinen Konstruktor, und eine Klasse darf beliebig viele haben. Von beiden entstehen keine Objekte. (c) <code>isinstance</code> zählt auch Unterklassen mit: Ein Girokonto ist ein Konto. <code>type(x) is Konto</code> wäre für ein Girokonto <code>False</code>.</p></div></details></div>
-<div class="nextprev"><span><a href="#vl6">← VL6 Vererbung</a></span><a href="#quellen">Quellen →</a></div>
+  <h3><span class="kicker">Ü7</span> VL7 Projekt Kaffeeshop</h3>
+  <p>Die Aufgaben zum Kaffeeshop aus dem VL7-Reiter. Den ganzen Code von Stufe 1 und 2 findest du dort in 7.2 bis 7.5.</p>
+  <div class="task"><div class="tn">7.1 · Ausgabe vorhersagen: finden und suchen (7.2.2, 7.2.3) · Folie 10</div>
+    <p>Was gibt das Programm aus? Die Dateien <code>daten.py</code> und <code>lager.py</code> sind wie in 7.2.</p>
+<pre><code>from daten import beispielsortiment
+from lager import Lager
+
+lager = Lager(beispielsortiment())
+espresso = lager.finden(102)
+if espresso is not None:
+    print(espresso.name)
+print(lager.finden(105))
+print(len(lager.suchen("BOHNEN")))</code></pre>
+    <details><summary>Lösung</summary><div><pre class="out">Espresso Bohnen 500 g
+None
+1</pre>
+      <p>(1) <code>finden(102)</code> trifft in Runde 2 und liefert das Espresso-Produkt; das <code>if</code> ist nötig, weil das Ergebnis auch <code>None</code> sein könnte. (2) 105 gibt es nicht: alle 8 Runden „nein“, danach <code>return None</code>. (3) <code>"BOHNEN".lower()</code> ist <code>"bohnen"</code>, das steckt nur in „espresso bohnen 500 g“: ein Treffer.</p></div></details></div>
+  <div class="task"><div class="tn">7.2 · Fehler finden: Artikel 203 wird nicht gefunden (7.2.2)</div>
+    <p>Diese Fassung von <code>finden()</code> findet 101, aber nicht 203. Erkläre mit einer Rundentabelle, warum, und korrigiere sie.</p>
+<pre><code>from daten import beispielsortiment
+from produkt import Produkt
+
+
+def finden_kaputt(produkte: list[Produkt], nummer: int) -&gt; Produkt | None:
+    for produkt in produkte:
+        if produkt.nummer == nummer:
+            return produkt
+        else:
+            return None  # FEHLER: steht in der Schleife
+
+
+sortiment = beispielsortiment()
+print(finden_kaputt(sortiment, 101))
+print(finden_kaputt(sortiment, 203))</code></pre>
+<pre class="out">101  Kaffee Hausmischung 1 kg: 15.46 Euro (40 auf Lager)
+None</pre>
+    <details><summary>Lösung</summary><div>
+      <div class="scroll"><table>
+        <thead><tr><th>Aufruf</th><th>Runde 1: <code>produkt.nummer</code></th><th><code>== nummer</code>?</th><th>was passiert</th></tr></thead>
+        <tbody><tr><td><code>finden_kaputt(…, 101)</code></td><td>101</td><td>ja</td><td><code>return produkt</code></td></tr><tr><td><code>finden_kaputt(…, 203)</code></td><td>101</td><td>nein</td><td><code>else: return None</code>, Runde 2 gibt es nicht mehr</td></tr></tbody>
+      </table></div>
+      <p>Jedes <code>return</code> beendet die ganze Funktion, auch mitten in der Schleife. Korrektur: <code>else</code> streichen und <code>return None</code> <b>nach</b> der Schleife schreiben, auf Höhe von <code>for</code>:</p>
+<pre><code>    def finden(self, nummer: int) -&gt; Produkt | None:
+        for produkt in self.produkte:
+            if produkt.nummer == nummer:
+                return produkt  # gefunden: sofort raus aus der Methode
+        return None  # Schleife ganz durchgelaufen, nichts gefunden</code></pre></div></details></div>
+  <div class="task"><div class="tn">7.3 · Fehler finden: vier von drei French Press (7.3.2) · Folie 14</div>
+    <p>Hier überschreibt eine Unterklasse <code>hinzufuegen()</code> mit einer falschen Fassung (sonst wie in 7.3). Welcher Testfall von F. 14 schlägt fehl? Korrigiere die Prüfung.</p>
+<pre><code>from daten import beispielsortiment
+from produkt import Produkt
+from warenkorb import Kunde, Position, Warenkorb
+
+
+class KorbOhneMitzaehlen(Warenkorb):
+    def hinzufuegen(self, produkt: Produkt, menge: int) -&gt; bool:
+        if menge &gt; produkt.bestand:  # FEHLER: Korb-Menge fehlt
+            return False
+        position = self.position_zu(produkt.nummer)
+        if position is None:
+            self.positionen.append(Position(produkt, menge))
+        else:
+            position.menge += menge
+        return True
+
+
+french_press = beispielsortiment()[6]
+korb = KorbOhneMitzaehlen(Kunde("Anna Berger", "anna.berger@example.com"))
+print(korb.hinzufuegen(french_press, 3))
+print(korb.hinzufuegen(french_press, 1))
+korb.anzeigen()</code></pre>
+    <details><summary>Lösung</summary><div><pre class="out">True
+True
+Warenkorb von Anna Berger
+4 x French Press 1 l: 99.48 Euro
+Summe: 99.48 Euro</pre>
+      <p>Beide Aufrufe liefern <code>True</code>: Der zweite prüft nur 1 &gt; 3, also „nein“, und erhöht die Position auf 4. Es fehlt die Menge, die schon im Korb liegt. Der Testfall „Erst 3 und dann noch 1 French Press: Das zweite Mal wird abgelehnt“ schlägt fehl. Richtig:</p>
+<pre><code>        schon_im_korb = self.menge_im_korb(produkt.nummer)
+        if schon_im_korb + menge &gt; produkt.bestand:
+            return False  # nicht genug auf Lager</code></pre>
+      <p>Dann ist die Prüfung im zweiten Aufruf 3 + 1 &gt; 3, also „ja“, und die Methode liefert <code>False</code>.</p></div></details></div>
+  <div class="task"><div class="tn">7.4 · Fehler finden: zweimal Kaffee, zwei Zeilen (7.3.2) · Folie 14</div>
+<pre><code>from daten import beispielsortiment
+from produkt import Produkt
+from warenkorb import Kunde, Position, Warenkorb
+
+
+class KorbDoppelt(Warenkorb):
+    def hinzufuegen(self, produkt: Produkt, menge: int) -&gt; bool:
+        if self.menge_im_korb(produkt.nummer) + menge &gt; produkt.bestand:
+            return False
+        self.positionen.append(Position(produkt, menge))  # FEHLER
+        return True
+
+
+kaffee = beispielsortiment()[0]
+korb = KorbDoppelt(Kunde("Anna Berger", "anna.berger@example.com"))
+korb.hinzufuegen(kaffee, 2)
+korb.hinzufuegen(kaffee, 1)
+print(len(korb.positionen))
+korb.anzeigen()</code></pre>
+<pre class="out">2
+Warenkorb von Anna Berger
+2 x Kaffee Hausmischung 1 kg: 30.92 Euro
+1 x Kaffee Hausmischung 1 kg: 15.46 Euro
+Summe: 46.38 Euro</pre>
+    <p>Laut F. 14 soll „zweimal Kaffee hinzufügen“ <b>eine</b> Position ergeben. Was fehlt?</p>
+    <details><summary>Lösung</summary><div><p>Die Methode hängt immer einen neuen Zettel an, ohne nachzusehen, ob es schon einen gibt. Vorher den vorhandenen Zettel suchen und dessen Menge erhöhen:</p>
+<pre><code>        position = self.position_zu(produkt.nummer)
+        if position is None:
+            self.positionen.append(Position(produkt, menge))  # neue Position
+        else:
+            position.menge += menge  # vorhandene Position erhöhen
+        return True</code></pre>
+      <p>Dann gibt es eine Position „3 x Kaffee Hausmischung 1 kg: 46.38 Euro“. Die Summe ist in beiden Fassungen 46.38; der Fehler fällt also nur auf, wenn man auf die Anzahl der Positionen schaut.</p></div></details></div>
+  <div class="task"><div class="tn">7.5 · Rundentabelle: gesamtsumme() (7.3.3)</div>
+    <p>Fülle für <code>korb.gesamtsumme()</code> eine Rundentabelle aus (Runde | <code>position</code> | <code>position.summe()</code> | <code>summe</code> danach). Bruttopreise: Kaffee 15.46, French Press 24.87, Kakaopulver 3.32.</p>
+<pre><code>from daten import beispielsortiment
+from warenkorb import Kunde, Warenkorb
+
+sortiment = beispielsortiment()
+korb = Warenkorb(Kunde("Ben Weber", "ben@example.com"))
+korb.hinzufuegen(sortiment[0], 2)  # 101 Kaffee Hausmischung
+korb.hinzufuegen(sortiment[6], 1)  # 203 French Press
+korb.hinzufuegen(sortiment[3], 4)  # 104 Kakaopulver
+print(korb.gesamtsumme())</code></pre>
+    <details><summary>Lösung</summary><div>
+      <div class="scroll"><table>
+        <thead><tr><th>Runde</th><th><code>position</code></th><th><code>position.summe()</code></th><th><code>summe</code> danach</th></tr></thead>
+        <tbody><tr><td>Start</td><td>–</td><td>–</td><td>0</td></tr><tr><td>1</td><td>2 × Kaffee</td><td>2 · 15.46 = 30.92</td><td>30.92</td></tr><tr><td>2</td><td>1 × French Press</td><td>24.87</td><td>55.79</td></tr><tr><td>3</td><td>4 × Kakaopulver</td><td>4 · 3.32 = 13.28</td><td>69.07</td></tr></tbody>
+      </table></div>
+<pre class="out">69.07</pre></div></details></div>
+  <div class="task"><div class="tn">7.6 · Methode schreiben: anzahl_artikel() (7.3)</div>
+    <p>Ergänze im Warenkorb eine Methode <code>anzahl_artikel(self) -&gt; int</code>, die zählt, wie viele Stück insgesamt im Korb liegen (Summe aller Mengen). Teste mit 2 × Kaffee, 1 × French Press und noch 1 × Kaffee. Wie viele Positionen, wie viele Artikel?</p>
+    <details><summary>Lösung</summary><div><pre><code>from daten import beispielsortiment
+from warenkorb import Kunde, Warenkorb
+
+
+class Warenkorb2(Warenkorb):
+    def anzahl_artikel(self) -&gt; int:
+        anzahl = 0
+        for position in self.positionen:
+            anzahl += position.menge
+        return anzahl
+
+
+sortiment = beispielsortiment()
+korb = Warenkorb2(Kunde("Anna Berger", "anna.berger@example.com"))
+print(korb.anzahl_artikel())
+korb.hinzufuegen(sortiment[0], 2)  # Kaffee
+korb.hinzufuegen(sortiment[6], 1)  # French Press
+korb.hinzufuegen(sortiment[0], 1)  # noch ein Kaffee
+print(len(korb.positionen), korb.anzahl_artikel())</code></pre>
+<pre class="out">0
+2 4</pre>
+      <p>Leerer Korb: keine Runde, Startwert 0 bleibt. Danach gibt es zwei Positionen (3 × Kaffee, 1 × French Press), weil der zweite Kaffee die vorhandene Position erhöht. Rundentabelle: Start 0 → Runde 1: 0 + 3 = 3 → Runde 2: 3 + 1 = 4. Hier ist die Methode der Kürze halber in einer Unterklasse ergänzt; im Projekt schreibst du sie direkt in <code>Warenkorb</code>.</p></div></details></div>
+  <div class="task"><div class="tn">7.7 · Methode schreiben: wenig_bestand() für den Mitarbeiterbereich (7.2.3, 7.6) · Folie 21</div>
+    <p>Schreibe im Lager <code>wenig_bestand(self, grenze: int) -&gt; list[Produkt]</code>, die alle Produkte mit einem Bestand <b>kleiner</b> als <code>grenze</code> liefert. Was liefern <code>wenig_bestand(20)</code> und <code>wenig_bestand(1)</code>?</p>
+    <details><summary>Lösung</summary><div><pre><code>from daten import beispielsortiment
+from lager import Lager
+from produkt import Produkt
+
+
+class Lager2(Lager):
+    def wenig_bestand(self, grenze: int) -&gt; list[Produkt]:
+        knapp: list[Produkt] = []
+        for produkt in self.produkte:
+            if produkt.bestand &lt; grenze:
+                knapp.append(produkt)
+        return knapp
+
+
+lager = Lager2(beispielsortiment())
+for produkt in lager.wenig_bestand(20):
+    print(produkt)
+print(lager.wenig_bestand(1))</code></pre>
+<pre class="out">201  Kaffeemühle mit Handkurbel: 34.99 Euro (6 auf Lager)
+203  French Press 1 l: 24.87 Euro (3 auf Lager)
+204  Thermobecher 0,4 l: 14.98 Euro (15 auf Lager)
+[]</pre>
+      <p>Das Muster von <code>suchen()</code>: leere Liste vor der Schleife, <code>append</code> in der Schleife, <code>return</code> danach. Bestände: 40, 25, 120, 30, <b>6</b>, 200, <b>3</b>, <b>15</b>; kleiner als 20 sind drei. Kein Bestand ist kleiner als 1, also leere Liste <code>[]</code>.</p></div></details></div>
+  <div class="task"><div class="tn">7.8 · Ausgabe vorhersagen: Produktarten in Stufe 2 (7.5.1) · Folie 16</div>
+    <p>Mit <code>produkt.py</code> und <code>daten.py</code> aus Stufe 2 (Lebensmittel 7 %, Zubehör 19 %). Nettopreise: Espresso 7.90, Filterpapier 2.49. Was gibt das Programm aus?</p>
+<pre><code>from daten import beispielsortiment
+from produkt import Lebensmittel
+
+for produkt in beispielsortiment():
+    if produkt.nummer in (102, 202):
+        print(produkt.name, produkt.bruttopreis, isinstance(produkt, Lebensmittel))</code></pre>
+    <details><summary>Lösung</summary><div><pre class="out">Espresso Bohnen 500 g 8.45 True
+Filterpapier Größe 4, 100 Stück 2.96 False</pre>
+      <p>Acht Runden, aber nur in zwei ist die Bedingung wahr. Espresso (102) ist ein <code>Lebensmittel</code>: 7.90 · 1.07 = 8.453 → 8.45. Filterpapier (202) ist <code>Zubehoer</code>: 2.49 · 1.19 = 2.9631 → 2.96, und <code>isinstance(…, Lebensmittel)</code> ist <code>False</code>. Beide rufen dasselbe <code>bruttopreis</code> aus <code>Produkt</code> auf; nur <code>mwst_satz()</code> ist verschieden (Polymorphie).</p></div></details></div>
+<div class="nextprev"><span><a href="#vl7">← VL7 Kaffeeshop</a></span><a href="#quellen">Quellen →</a></div>
 </section>
 
 <!-- ============ QUELLEN ============ -->
@@ -6563,7 +8137,8 @@ Dell P2723D: angeschlossen
     <li><b>VL3</b> „Kontrollstrukturen“, 111 Folien (<a href="https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=189989">Moodle</a>)</li>
     <li><b>VL4</b> „Funktionen und Rekursion“, 87 Folien (<a href="https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190871">Moodle</a>)</li>
     <li><b>VL5</b> „Objektorientierte Programmierung I“, 64 Folien, komplett (<a href="https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190874">Moodle</a>)</li>
-    <li><b>VL6</b> „Objektorientierte Programmierung II“, 60 Folien, komplett; in der Vorlesung am 27.10. begonnen (<a href="https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191323">Moodle</a>)</li>
+    <li><b>VL6</b> „Objektorientierte Programmierung II“, 60 Folien, komplett; in der Vorlesung am 03.11. und 06.11. (<a href="https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191323">Moodle</a>)</li>
+    <li><b>VL7</b> „Projekt: Ein kleiner Kaffeeshop“ (Datei <code>vl07_projekt_onlineshop</code>), 23 Folien, Stufe 1 bis 3 (<a href="https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191374">Moodle</a>)</li>
   </ul>
   <h3>Selbsttest-Quizze <span class="tag Q">Q</span></h3>
   <ul>
@@ -6582,6 +8157,10 @@ Dell P2723D: angeschlossen
     <li><b>VL05_Loesungen</b>: <code>uebung1.py</code> bis <code>uebung5.py</code> (Produkt, Methoden, Klassenattribute, Kapselung mit Properties, Warenkorb) (<a href="https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190876">Moodle</a>)</li>
     <li><b>VL06_Loesungen</b>: <code>uebung1.py</code> bis <code>uebung5.py</code> (Mitarbeiter und Unterklassen, Überschreiben, Personalkosten, Geräteverwaltung Teil 1 und 2) (<a href="https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191325">Moodle</a>)</li>
   </ul>
+  <h3>Startpaket</h3>
+  <ul>
+    <li><b>VL07_Startpaket</b>: <code>produkt.py</code>, <code>daten.py</code>, <code>main.py</code> mit <code>zahl_einlesen()</code> (<a href="https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191372">Moodle</a>). Eine Musterlösung zum Kaffeeshop gibt es laut F. 22 erst nach dem Projekt; der Code im VL7-Reiter ist eine eigene Lösung der Folienaufgaben.</li>
+  </ul>
   <h3>Ergänzungen <span class="tag E">E</span></h3>
   <p>Nicht von den Folien und deshalb nicht klausursicher sind alle Abschnitte „Gut zu wissen (Ergänzung)“:</p>
   <ul>
@@ -6591,14 +8170,16 @@ Dell P2723D: angeschlossen
     <li><b>VL4:</b> Tracebacks über mehrere Funktionen, print-Debugging, <code>functools.cache</code> (nur in der Musterlösung), List Comprehension (nur in der Musterlösung), Kommazahlen testen, <code>float | None</code>.</li>
     <li><b>VL5:</b> <code>__eq__</code> als Ausblick auf <code>@dataclass</code>, <code>vars()</code>, Methoden rufen Methoden auf, leere Attribute in <code>__init__</code>.</li>
     <li><b>VL6:</b> drei Vererbungsebenen mit <code>super()</code>, <code>@final</code> als Code, <code>typing.Protocol</code> als Code (auf F. 57 nur erwähnt), <code>bool</code> als Unterklasse von <code>int</code>.</li>
+    <li><b>VL7:</b> die Lösungsskizzen zu Stufe 1 bis 3 (eigene Lösungen, z. B. die Hilfsmethoden <code>position_zu()</code> und <code>menge_im_korb()</code>, <code>zahlungsart_waehlen()</code>, der <code>case</code> mit Bedingung beim Rabattcode), die Aufgaben 7.1 bis 7.8.</li>
+    <li><b>Übersicht:</b> der Abschnitt „for-Schleifen ganz langsam“ mit seinen Mini-Aufgaben und alle Rundentabellen auf der Seite.</li>
   </ul>
-  <p>Ebenfalls eigene Zutaten sind die eingerückte Aufrufstapel-Ausgabe in 4.6.2, die Bilder im Kopf (etwa Türsteher und Tresor in 5.4.4, Treppenhaus in 6.2.3), zusätzliche kleine Beispiele zum Ausprobieren (z. B. <code>Festgeld</code> in 6.2.5, Fehlerbeispiele mit <code>vars()</code>) und die Aufgaben ohne Quellenangabe. Alle Codebeispiele und Lösungen wurden mit Python 3.14.6 ausgeführt, die pytest-Ausgaben mit pytest 9.1 unter Python 3.13. Bei Fehlermeldungen ist der Ordnerpfad zu <code>.../prog1/</code> gekürzt. ty war beim Erstellen nicht installiert; die zitierten ty-Meldungen stammen von den Folien und aus den Musterlösungen.</p>
+  <p>Ebenfalls eigene Zutaten sind die eingerückte Aufrufstapel-Ausgabe in 4.6.2, die Bilder im Kopf (etwa Türsteher und Tresor in 5.4.4, Treppenhaus in 6.2.3), zusätzliche kleine Beispiele zum Ausprobieren (z. B. <code>Festgeld</code> in 6.2.5, Fehlerbeispiele mit <code>vars()</code>) und die Aufgaben ohne Quellenangabe. Alle Codebeispiele und Lösungen wurden mit Python 3.14.6 ausgeführt (die neuen Teile vom 06.11., also VL7 und „for-Schleifen ganz langsam“, mit Python 3.13; der VL7-Code ist außerdem mit <code>ruff check</code> und mypy im strengen Modus geprüft), die pytest-Ausgaben mit pytest 9.1 unter Python 3.13. Bei Fehlermeldungen ist der Ordnerpfad zu <code>.../prog1/</code> gekürzt. ty war beim Erstellen nicht installiert; die zitierten ty-Meldungen stammen von den Folien und aus den Musterlösungen.</p>
   <h3>Abgleich</h3>
-  <p>Inhalte und Folienfehler wurden mit den eigenen Vorlesungsnotizen zu VL1–VL6 (Termine 23.10. und 27.10.) und der bestehenden Zusammenfassung „Zusammenfassung Programmierung“ abgeglichen. Der Stand der Vorlesung (VL5 am 23.10. bis Übung 3, Rest laut Plan am 27.10.; VL6 am 27.10. begonnen, Rest am 03.11.) stammt aus diesen Notizen.</p>
+  <p>Inhalte und Folienfehler wurden mit den eigenen Vorlesungsnotizen zu VL1–VL7 (bis zu den Terminen 03.11. und 06.11.) und der bestehenden Zusammenfassung „Zusammenfassung Programmierung“ abgeglichen. Der Stand der Vorlesung (VL5 bis 27.10.; VL6 am 03.11. von vorn begonnen, Rest am 06.11. geplant; VL7 ab 06.11.) stammt aus diesen Notizen.</p>
   <p>Außerdem wurde die Seite mit der Stoffliste im offiziellen <b>VL05_KI_Lernpartner_Prompt</b> (<a href="https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191612">Moodle</a>) abgeglichen: Jedes dort für VL01–VL05 genannte Thema kommt auf der Seite vor. Ergänzt wurden dafür ein Beispiel für verschachtelte Bedingungen (3.2.1) und die Begriffe truthy/falsy (3.3.3); alles andere stand schon da (z. B. imperativ vs. applikativ in 4.5, <code>sys.argv</code> in 4.1.3).</p>
 </section>
 
-<footer>Stand 30.10.2026 · Deine Einträge bei „Kann ich“ speichert nur dein eigener Browser.</footer>
+<footer>Stand 06.11.2026 · Deine Einträge bei „Kann ich“ speichert nur dein eigener Browser.</footer>
 </div>
 
 <script>
@@ -6632,7 +8213,7 @@ Dell P2723D: angeschlossen
   });
   function score(sel){var n=0,p=0;document.querySelectorAll(sel+' select.st').forEach(function(s){n++;p+=s.value==='ok'?1:s.value==='mid'?0.5:0});return n?Math.round(p/n*100):0}
   function update(){
-    ['1','2','3','4','5','6'].forEach(function(k){var v=score('table[data-kap="'+k+'"]');
+    ['1','2','3','4','5','6','7'].forEach(function(k){var v=score('table[data-kap="'+k+'"]');
       var b=document.querySelector('[data-bar="'+k+'"]'),t=document.querySelector('[data-txt="'+k+'"]');
       if(b)b.style.width=v+'%'; if(t)t.textContent=v+' %';});
     var a=score('table.check'); document.getElementById('bar-all').style.width=a+'%'; document.getElementById('txt-all').textContent=a+' %';
