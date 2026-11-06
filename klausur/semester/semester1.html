@@ -1,0 +1,348 @@
+<title>Semester 1 Übersicht</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: ein ruhiger Bericht in einer Spalte; Mono-Labels als Gliederung, Serif nur für Überschriften, ein Zeitstrahl als einzige Grafik */
+:root{
+  --bg:#0e1013; --surface:#15181d; --ink:#eceae4; --muted:#9a988f; --line:#2a2d33;
+  --accent:#ff9f5a; --accent-soft:rgba(255,159,90,.12); --cool:#9db4ff; --cool-soft:rgba(157,180,255,.12);
+  --display:"Instrument Serif","Iowan Old Style",Georgia,serif;
+  --body:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"Geist Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){
+  --bg:#ffffff; --surface:#f5f6f8; --ink:#1e2127; --muted:#5e636d; --line:#e2e4e9;
+  --accent:#b4652a; --accent-soft:rgba(180,101,42,.10); --cool:#4f5fa8; --cool-soft:rgba(79,95,168,.10); color-scheme:light}}
+:root[data-theme="light"]{
+  --bg:#ffffff; --surface:#f5f6f8; --ink:#1e2127; --muted:#5e636d; --line:#e2e4e9;
+  --accent:#b4652a; --accent-soft:rgba(180,101,42,.10); --cool:#4f5fa8; --cool-soft:rgba(79,95,168,.10); color-scheme:light}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--body);margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:var(--ink);text-decoration-color:var(--line);text-underline-offset:3px}
+a:hover{text-decoration-color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.lbl{font:500 .72rem/1.3 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;gap:20px;padding-block:12px}
+.brand{font:500 .82rem var(--mono);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;white-space:nowrap}
+.brand b{color:var(--accent);font-weight:500}
+nav.links{display:flex;gap:18px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+nav.links::-webkit-scrollbar{display:none}
+nav.links a{font-size:.88rem;color:var(--muted);text-decoration:none;white-space:nowrap}
+nav.links a:hover{color:var(--ink)}
+.theme{background:none;border:1px solid var(--line);color:var(--muted);border-radius:999px;font:500 .75rem var(--mono);padding:6px 10px;cursor:pointer;white-space:nowrap}
+.theme:hover{color:var(--ink)}
+
+.hero{padding-block:72px 40px}
+.hero h1{font:400 clamp(2.6rem,7vw,4.6rem)/1.02 var(--display);margin:18px 0 18px;letter-spacing:-.01em;text-wrap:balance}
+.hero h1 i{color:var(--muted)}
+.hero p.lead{max-width:60ch;color:var(--muted);font-size:1.08rem;margin:0}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:40px}
+.stat{background:var(--bg);padding:18px 18px 16px;min-width:0}
+.stat b{display:block;font:400 2.2rem/1.1 var(--display);margin:6px 0 2px}
+.stat span{font-size:.85rem;color:var(--muted)}
+
+section.sec{padding-block:56px;border-top:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px;margin-bottom:28px}
+.sec-head h2{font:400 clamp(1.8rem,4vw,2.5rem)/1.1 var(--display);margin:0;text-wrap:balance}
+.sec-head p{margin:8px 0 0;color:var(--muted);max-width:62ch}
+
+/* Stand */
+.rows{display:grid;gap:0;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:70px minmax(0,1.6fr) minmax(0,1.2fr) 110px 96px;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.row .k{font:500 .78rem var(--mono);color:var(--muted);letter-spacing:.05em}
+.row .n{font-weight:500;min-width:0}
+.bar{height:6px;border-radius:999px;background:var(--surface);overflow:hidden;position:relative}
+.bar i{position:absolute;inset:0 auto 0 0;background:var(--cool);border-radius:999px}
+.row .t{font:400 .8rem var(--mono);color:var(--muted);text-align:right}
+.chip{display:inline-block;font:500 .72rem var(--mono);letter-spacing:.04em;padding:3px 9px;border-radius:999px;white-space:nowrap;justify-self:start}
+.chip.done{background:var(--cool-soft);color:var(--cool)}
+.chip.run{background:var(--accent-soft);color:var(--accent)}
+.chip.wait{border:1px solid var(--line);color:var(--muted)}
+
+/* Fächer */
+.subjects{display:grid;gap:0;border-top:1px solid var(--line)}
+details.subj{border-bottom:1px solid var(--line)}
+details.subj summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:70px minmax(0,1fr) auto 24px;gap:16px;align-items:baseline;padding:20px 0}
+details.subj summary::-webkit-details-marker{display:none}
+details.subj summary h3{font:400 1.6rem/1.2 var(--display);margin:0;min-width:0}
+details.subj summary .plus{font:400 1.2rem var(--mono);color:var(--muted);transition:transform .2s;text-align:right}
+details.subj[open] summary .plus{transform:rotate(45deg)}
+.body{display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px;padding:0 0 32px}
+.meta{display:grid;gap:14px;align-content:start}
+.meta div{display:grid;gap:3px}
+.meta span:last-child{font-size:.92rem}
+.content{min-width:0;display:grid;gap:22px}
+.content .kern{font:400 1.35rem/1.35 var(--display);margin:0;max-width:52ch;text-wrap:balance}
+.tl{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:0}
+.tl li{display:grid;grid-template-columns:62px minmax(0,1fr);gap:14px;padding:8px 0;border-bottom:1px dashed var(--line)}
+.tl li:last-child{border-bottom:0}
+.tl .d{font:400 .82rem var(--mono);color:var(--muted);padding-top:2px}
+.tl.next .d{color:var(--accent)}
+.note{background:var(--surface);border-radius:10px;padding:14px 16px;font-size:.95rem}
+.note .lbl{display:block;margin-bottom:4px}
+.lnk{display:flex;flex-wrap:wrap;gap:8px}
+.lnk a{font-size:.9rem;border:1px solid var(--line);border-radius:999px;padding:6px 12px;text-decoration:none}
+.lnk a:hover{border-color:var(--accent)}
+
+/* Zeitstrahl */
+.chartbox{overflow-x:auto;border:1px solid var(--line);border-radius:12px;padding:16px 16px 10px;background:var(--bg)}
+.chartbox svg{display:block;min-width:760px;width:100%;height:auto}
+.legend{display:flex;flex-wrap:wrap;gap:18px;margin-top:12px;font-size:.85rem;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.legend svg{flex:none}
+
+/* Klausuren */
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+th,td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 .72rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+td.r{text-align:right}
+tr.next td{background:var(--accent-soft)}
+
+/* Material + Quellen */
+.mat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:1px solid var(--line)}
+.mat a{display:grid;grid-template-columns:70px minmax(0,1fr) auto;gap:14px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--line);text-decoration:none}
+.mat a:nth-child(odd){padding-right:20px}
+.mat a:nth-child(even){padding-left:20px;border-left:1px solid var(--line)}
+.mat a:hover b{color:var(--accent)}
+.mat b{font-weight:500}
+.mat .arr{font-family:var(--mono);color:var(--muted)}
+.src{display:grid;gap:14px;max-width:68ch;color:var(--muted);font-size:.95rem}
+.src ul{margin:0;padding-left:18px}
+footer{border-top:1px solid var(--line);padding-block:28px 48px;color:var(--muted);font-size:.85rem}
+
+@media (max-width:760px){
+  .hero{padding-block:44px 28px}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sec-head,.body{grid-template-columns:minmax(0,1fr);gap:10px}
+  .row{grid-template-columns:56px minmax(0,1fr) auto;row-gap:8px}
+  .row .barcell{grid-column:2 / 4}
+  .row .t{display:none}
+  details.subj summary{grid-template-columns:56px minmax(0,1fr) 20px}
+  details.subj summary .chip{display:none}
+  .meta{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mat{grid-template-columns:minmax(0,1fr)}
+  .mat a:nth-child(n){padding-left:0;padding-right:0;border-left:0}
+  nav.links{display:none}
+  .theme{margin-left:auto}
+}
+</style>
+
+<header class="top"><div class="wrap">
+  <a class="brand" href="#start">Semester <b>1</b> · DHBW</a>
+  <nav class="links" aria-label="Abschnitte">
+    <a href="#stand">Stand</a><a href="#faecher">Fächer</a><a href="#zeitplan">Zeitplan</a><a href="#klausuren">Klausuren</a><a href="#material">Material</a><a href="#quellen">Quellen</a>
+  </nav>
+  <button class="theme" id="theme-btn" type="button">Hell / Dunkel</button>
+</div></header>
+
+<main id="start">
+<div class="wrap">
+  <section class="hero">
+    <div class="lbl">Wirtschaftsinformatik · Data Science · DHBW Heilbronn · Okt bis Dez 2026</div>
+    <h1>Das erste Semester.<br><i>Acht Fächer auf einen Blick.</i></h1>
+    <p class="lead">Was in jedem Fach drankam, was noch kommt, wann welche Klausur ist und wo die Lernunterlagen liegen. Zusammengestellt aus Vorlesungsnotizen, Moodle und dem Stundenplan.</p>
+    <div class="stats" id="stats"></div>
+  </section>
+</div>
+
+<section class="sec" id="stand"><div class="wrap">
+  <div class="sec-head"><div class="lbl" id="stand-lbl">01 · Stand</div><div><h2>Wie weit jedes Fach ist</h2><p>Gezählt sind Vorlesungstage laut Stundenplan. Ein Tag mit Vor- und Nachmittag zählt einmal.</p></div></div>
+  <div class="rows" id="rows"></div>
+</div></section>
+
+<section class="sec" id="faecher"><div class="wrap">
+  <div class="sec-head"><div class="lbl">02 · Fächer</div><div><h2>Inhalte pro Fach</h2><p>Tippe ein Fach an, um Termine, Themen und Unterlagen zu sehen.</p></div></div>
+  <div class="subjects" id="subjects"></div>
+</div></section>
+
+<section class="sec" id="zeitplan"><div class="wrap">
+  <div class="sec-head"><div class="lbl">03 · Zeitplan</div><div><h2>Das Semester als Zeitstrahl</h2><p>Jede Zeile ein Fach. Punkte sind Vorlesungstage, die Raute ist die Klausur.</p></div></div>
+  <div class="chartbox"><svg id="chart" role="img" aria-label="Zeitstrahl aller Vorlesungen und Klausuren von Oktober bis Dezember 2026"></svg></div>
+  <div class="legend" aria-hidden="true">
+    <span><svg width="12" height="12"><circle cx="6" cy="6" r="4.5" fill="var(--cool)"></circle></svg>Vorlesung gewesen</span>
+    <span><svg width="12" height="12"><circle cx="6" cy="6" r="4" fill="var(--bg)" stroke="var(--cool)" stroke-width="1.5"></circle></svg>Vorlesung kommt</span>
+    <span><svg width="14" height="14"><rect x="3" y="3" width="8" height="8" transform="rotate(45 7 7)" fill="var(--accent)"></rect></svg>Klausur oder Abgabe</span>
+    <span><svg width="14" height="12"><line x1="7" y1="0" x2="7" y2="12" stroke="var(--ink)" stroke-width="1.5" stroke-dasharray="2 2"></line></svg>Heute</span>
+  </div>
+</div></section>
+
+<section class="sec" id="klausuren"><div class="wrap">
+  <div class="sec-head"><div class="lbl">04 · Klausuren</div><div><h2>Prüfungen im Dezember</h2><p>Sechs Klausuren in zwölf Tagen, danach das Portfolio. Die nächste ist markiert.</p></div></div>
+  <div class="tbl"><table id="exams"><thead><tr><th>Datum</th><th>Fach</th><th>Form</th><th class="r">Noch</th></tr></thead><tbody></tbody></table></div>
+</div></section>
+
+<section class="sec" id="material"><div class="wrap">
+  <div class="sec-head"><div class="lbl">05 · Material</div><div><h2>Lernunterlagen</h2><p>Pro Fach eine Lernseite mit Erklärungen und Übungen. Dazu der Karteikasten zum Abfragen.</p></div></div>
+  <div class="mat" id="mat"></div>
+</div></section>
+
+<section class="sec" id="quellen"><div class="wrap">
+  <div class="sec-head"><div class="lbl">06 · Quellen</div><div><h2>Woher die Angaben stammen</h2></div></div>
+  <div class="src">
+    <p>Termine und Klausurdaten kommen aus dem Stundenplan des Kurses. Die Themen stammen aus den Vorlesungsnotizen, die nach jedem Termin mit den Folien in Moodle abgeglichen werden. Was noch nicht mit Folien belegt ist, steht als „vermutet“ oder unter „Kommt noch“.</p>
+    <ul id="moodle"></ul>
+    <p class="lbl" id="gen"></p>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap">Persönliche Lernübersicht, keine offizielle Seite der DHBW.</div></footer>
+
+<script>
+const SUBJ = [{"id": "grundlagen-it", "kurz": "GIT", "name": "Grundlagen der IT", "doz": "Gisbert Loff", "moodle": 18618, "pruefung": "Klausur, 48 Min", "klausur": "2026-12-07", "stand": "fertig", "kern": "Wie ein Computer Zahlen, Logik und Daten verarbeitet: vom Bit über Logikgatter bis zur Datenbank.", "themen": [["07.10.", "Information, Digitalisierung, IT-Infrastruktur und Cloud, Treiber des Fortschritts (Moore)"], ["09.10.", "Zahlensysteme, Zweierkomplement, Logikgatter, Datenstrukturen, Bäume, Suchen und Sortieren"], ["14.10.", "Programmiersprachen, Fehlerquellen, Compiler, Linker, Debugger, Rekursion"], ["16.10.", "Rechnerarchitektur: Von Neumann, Harvard, CPU, Cache, Bus, Speicherhierarchie, RAID"], ["19.10.", "Datenbanken: DBMS, ER-Modell, relationales Modell, SQL, OLTP/OLAP"], ["21.10.", "Klausurvorbereitung: Schwerpunkte, Punkteverteilung, MC-Regeln"]], "kommt": [], "schwer": "Rechnen: Zahlensysteme umwandeln, Zweierkomplement, Boolesche Ausdrücke vereinfachen.", "links": [["Lernseite", "https://claude.ai/artifact/3tiqe3o9EDHk9ViDJ5f4Jf"]]}, {"id": "wirtschaftsinformatik", "kurz": "WI", "name": "Einführung in die Wirtschaftsinformatik", "doz": "Dr. Matthias Hauser", "moodle": 18619, "pruefung": "Klausur, 48 Min", "klausur": "2026-12-09", "stand": "fertig", "kern": "Wie Unternehmen Informationssysteme planen, modellieren und einsetzen: Prozesse, Daten, ERP, Data Science.", "themen": [["28.10.", "Grundlagen der WI, betriebliche Informationssysteme (ERP, CRM, SCM), Geschäftsprozesse mit EPK, Datenmodellierung mit ER und Relationen"], ["29.10.", "Fall Sonnenschein AG: Business Model Canvas, Aufbau- und Ablauforganisation, Anforderungen, Informationsmanagement"], ["30.10.", "Data Science in der Praxis: Recap Machine Learning, GenAI und Agenten, Einführung in Dataiku"]], "kommt": [], "schwer": "EPK und ER-Modelle selbst zeichnen; die offiziellen Klausurhinweise als Checkliste.", "links": [["Lernseite", "https://claude.ai/artifact/8fM9j8ZGQCW8LLHsng2EGo"]]}, {"id": "programmierung", "kurz": "PROG", "name": "Grundlagen der Programmierung", "doz": "Dr. Markus Rosenfelder", "moodle": 18617, "pruefung": "Klausur, 120 Min", "klausur": "2026-12-11", "stand": "laeuft", "kern": "Python von null: Variablen, Schleifen, Funktionen und objektorientiertes Programmieren bis zum eigenen Projekt.", "themen": [["05.10.", "Einführung und Organisatorisches"], ["09.10.", "Variablen, Datentypen, Operatoren"], ["13.10.", "Kontrollstrukturen und Listen"], ["16.10.", "Funktionen, Rekursion, Testen mit pytest"], ["23.10.", "Wiederholung; OOP I: Klassen, Objekte, Methoden"], ["27.10.", "OOP I: Properties, Hat-ein-Beziehung, Module, @dataclass"], ["03.11.", "OOP II: Vererbung, super(), Überschreiben"], ["06.11.", "OOP II: Polymorphie, abstrakte Klassen, Fähigkeiten; Projekt Kaffeeshop (vermutet)"]], "kommt": ["Projekt Kaffeeshop, Stufen 2–3", "Weitere OOP-Themen und Standardbibliothek laut Agenda", "Klausurvorbereitung"], "schwer": "for-Schleifen: jede Schleife mit einer Rundentabelle nachverfolgen.", "links": [["Lernseite", "https://claude.ai/artifact/V99JgocAmPZqLpNjAyCiiP"]]}, {"id": "recht", "kurz": "RECHT", "name": "Vertrags- und Schuldrecht", "doz": "RAin Silke Hennig", "moodle": 18614, "pruefung": "Klausur, 60 Min", "klausur": "2026-12-14", "stand": "laeuft", "kern": "Wann ein Vertrag zustande kommt, wann er unwirksam ist und was passiert, wenn jemand nicht oder schlecht leistet.", "themen": [["13.10.", "Einführung, Personen, Willenserklärung, Vertrag"], ["15.10.", "Nichtigkeit, Anfechtung, Geschäftsfähigkeit"], ["26.10.", "Vertreter ohne Vertretungsmacht, Fristen, Verjährung, Einstieg Schuldrecht"]], "kommt": ["Schuldverhältnis und Erlöschen", "Leistungsstörungen", "Schadensersatz, Gläubiger- und Schuldnerwechsel, AGB"], "schwer": "Fälle im Gutachtenstil lösen: Anspruch, Voraussetzungen, Ergebnis.", "links": [["Lernseite", "https://claude.ai/artifact/LJNfrjV9LrWEhp9mpMPrBF"]]}, {"id": "bwl", "kurz": "BWL", "name": "Einführung in die BWL", "doz": "Michaela Geiger", "moodle": 18616, "pruefung": "Klausur, 72 Min (zusammen mit Marketing 120 Min)", "klausur": "2026-12-16", "stand": "laeuft", "kern": "Wie ein Unternehmen aufgebaut ist und rechnet: Rechtsformen, Standort, Rechnungswesen, Kennzahlen, Materialwirtschaft.", "themen": [["15.10.", "BWL als Wissenschaft, Produktionsfaktoren, Güter, ökonomisches Prinzip, Kennzahlen"], ["22.10.", "Betrieb und Unternehmung: Umfeld, Ziele, Mitbestimmung"], ["26.10.", "Rechtsformen I: Kaufmann, Handelsregister, Einzelunternehmen, OHG, KG"], ["27.10.", "Rechtsformen II: GmbH, UG, AG, GmbH & Co. KG; Kooperation und Konzentration"], ["03.11.", "Standortentscheidungen, Nutzwertanalyse; Rechnungswesen: Bilanz, GuV, Kosten"], ["05.11.", "Break-even, Planung und Kontrolle: Kennzahlen, ROI, Balanced Scorecard"]], "kommt": ["Kap. 8 Organisation (laut Dozentin nicht klausurrelevant)", "Kap. 9 Materialwirtschaft: ABC-Analyse, optimale Bestellmenge, Lagerkennzahlen", "Kap. 10 Produktion (laut Dozentin nicht klausurrelevant)"], "schwer": "Rechnungen: Deckungsbeitrag, Break-even, Zweipunktverfahren, ROI, Bestellmenge.", "links": [["Lernseite", "https://claude.ai/artifact/VgQbsUCk9G8YUggDEXdKda"]]}, {"id": "marketing", "kurz": "MKT", "name": "Marketing", "doz": "Michaela Geiger", "moodle": 18615, "pruefung": "Teil der BWL-Klausur, 48 Min", "klausur": "2026-12-16", "stand": "offen", "kern": "Wie Unternehmen Märkte analysieren und Produkt, Preis, Vertrieb und Kommunikation gestalten.", "themen": [], "kommt": ["Grundlagen und strategische Analysen (SWOT, BCG-Matrix)", "Planung: Ziele, Ansoff, Segmentierung, Positionierung", "Marktforschung", "Produkt-, Preis-, Distributions- und Kommunikationspolitik", "Marketing-Mix und Erfolgskontrolle"], "schwer": "Die Musterklausur hat 7 Aufgaben mit 48 Punkten, darunter Tausenderkontaktpreis und BCG-Matrix.", "links": [["Lernseite (aus dem Skript)", "https://claude.ai/artifact/WX6BQrQVeKYCm3yYVTrxfW"]]}, {"id": "mathematik", "kurz": "MATHE", "name": "Mathematik I", "doz": "Dr. Pascal Wortel, Prof. Dr. Markus Niedergesäss", "moodle": 18613, "pruefung": "Klausur, 120 Min", "klausur": "2026-12-18", "stand": "laeuft", "kern": "Analysis: Folgen, Reihen und Funktionen, danach Ableiten und Integrieren.", "themen": [["19.10.", "Folgen: Bildungsgesetz, Monotonie, Beschränktheit, Konvergenz, arithmetisch und geometrisch"], ["04.11.", "Reihen, geometrische Reihe, Sparplan; Funktionen: Umkehrfunktion, Verkettung, Grenzwerte, Stetigkeit"]], "kommt": ["Differentialrechnung", "Integralrechnung"], "schwer": "Rezepte lernen (Grenzwert-Taktik, Konvergenzkriterien) und viele Aufgaben rechnen.", "links": [["Lernseite", "https://claude.ai/artifact/EuFPJF3hRsDqAQm9SJTaS2"]]}, {"id": "lernen-praesentieren-kommunizieren", "kurz": "LPK", "name": "Lernen, Präsentieren und Kommunizieren", "doz": "Anke Menzler", "moodle": 18612, "pruefung": "Schriftliches Portfolio, Abgabe 28.12.", "klausur": "2026-12-28", "stand": "fertig", "kern": "Lernmethoden, Feedback, Kommunikationsmodelle, Moderation, Konflikte und überzeugendes Präsentieren.", "themen": [["06.10.", "Feedback, eduScrum, Kommunikationsmodelle, Lernmethoden"], ["08.10.", "Denkpräferenzen, Kulturdimensionen, Stakeholder, Storytelling"], ["12.10.", "Wahrnehmung, Souveränität, Moderation, Konfliktmanagement"], ["02.11.", "Präsentieren: Business vs. Wissenschaft, Pitch einer Geschäftsidee"]], "kommt": [], "schwer": "Aufgabe, Umfang und Format des Portfolios sind noch nicht bekannt.", "links": [["Pitch-Website", "https://claude.ai/artifact/GabwEMakxViciWZqcRkoWu"]]}];
+const LECT = {"programmierung": ["2026-10-05", "2026-10-09", "2026-10-13", "2026-10-16", "2026-10-23", "2026-10-27", "2026-11-03", "2026-11-06", "2026-11-13", "2026-11-17", "2026-11-27"], "lernen-praesentieren-kommunizieren": ["2026-10-06", "2026-10-08", "2026-10-12", "2026-11-02"], "grundlagen-it": ["2026-10-07", "2026-10-09", "2026-10-14", "2026-10-16", "2026-10-19", "2026-10-21"], "recht": ["2026-10-13", "2026-10-15", "2026-10-26", "2026-11-09", "2026-11-12", "2026-11-18", "2026-11-23"], "bwl": ["2026-10-15", "2026-10-22", "2026-10-26", "2026-10-27", "2026-11-03", "2026-11-05", "2026-11-10", "2026-11-12", "2026-11-17"], "mathematik": ["2026-10-19", "2026-11-04", "2026-11-09", "2026-11-16", "2026-11-20", "2026-11-23", "2026-11-24", "2026-11-30", "2026-12-01", "2026-12-02"], "wirtschaftsinformatik": ["2026-10-28", "2026-10-29", "2026-10-30"], "marketing": ["2026-11-18", "2026-11-19", "2026-11-24", "2026-11-26", "2026-11-30", "2026-12-01"]};
+const EVENTS = [["2026-10-01", "Erstsemesterbegrüßung", "sonstiges"], ["2026-10-01", "Willkommen im Kurs", "sonstiges"], ["2026-10-02", "Erstsemesterexkursion: Führung im IPAI Living Room", "sonstiges"], ["2026-10-02", "Freiwilliges gemeinsames Mittagessen", "sonstiges"], ["2026-10-14", "LIV-Führung", "sonstiges"], ["2026-10-20", "Business Knigge für Erstsemester", "sonstiges"], ["2026-10-20", "Business Knigge für Erstsemester", "sonstiges"], ["2026-10-28", "Studium Generale mit Olaf Koch", "sonstiges"], ["2026-11-11", "Studientag", "sonstiges"], ["2026-11-25", "Studientag", "sonstiges"], ["2026-12-03", "Prüfungsvorbereitung", "sonstiges"], ["2026-12-04", "Prüfungsvorbereitung", "sonstiges"], ["2026-12-07", "Klausur Grundlagen IT I (48 Min)", "klausur"], ["2026-12-09", "Klausur Einführung WI (48 Min)", "klausur"], ["2026-12-11", "Klausur Grundlagen Programmierung (120 Min)", "klausur"], ["2026-12-14", "Klausur Vertrags- und Schuldrecht (60 Min)", "klausur"], ["2026-12-16", "Klausur Grundlagen der BWL (120 Min)", "klausur"], ["2026-12-18", "Klausur Mathematik I (120 Min)", "klausur"], ["2026-12-28", "Abgabe schriftliche Portfolioprüfungsleistungen", "sonstiges"]];
+const GENERATED = "06.11.2026";
+
+const root = document.documentElement;
+try{ const t = localStorage.getItem("sem1-theme"); if (t) root.setAttribute("data-theme", t); }catch(e){}
+document.getElementById("theme-btn").onclick = () => {
+  const cur = root.getAttribute("data-theme") || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+  const next = cur === "light" ? "dark" : "light";
+  root.setAttribute("data-theme", next);
+  try{ localStorage.setItem("sem1-theme", next); }catch(e){}
+  drawChart();
+};
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const D = iso => new Date(iso + "T00:00:00");
+const today = (() => { const t = new Date(); t.setHours(0,0,0,0); return t; })();
+const fmt = iso => { const [y,m,d] = iso.split("-"); return d + "." + m + "."; };
+const WD = ["So","Mo","Di","Mi","Do","Fr","Sa"];
+const days = iso => Math.round((D(iso) - today) / 864e5);
+const done = id => (LECT[id] || []).filter(x => D(x) <= today).length;
+const total = id => (LECT[id] || []).length;
+function status(s){
+  const n = done(s.id), t = total(s.id);
+  if (t && n >= t) return ["done","abgeschlossen"];
+  if (n === 0) return ["wait","ab " + fmt(LECT[s.id][0])];
+  return ["run","läuft"];
+}
+
+/* Kennzahlen */
+(function(){
+  const allT = SUBJ.reduce((a,s) => a + total(s.id), 0);
+  const allD = SUBJ.reduce((a,s) => a + done(s.id), 0);
+  const exams = [...new Set(SUBJ.filter(s => s.id !== "lernen-praesentieren-kommunizieren" && s.id !== "marketing").map(s => s.klausur))].sort();
+  const nextE = exams.find(x => days(x) >= 0);
+  $("stats").innerHTML = [
+    ["Fächer", SUBJ.length, "6 Klausuren und 1 Portfolio"],
+    ["Vorlesungstage", allD + " / " + allT, "bis heute gehalten"],
+    ["Klausuren", exams.length, "vom 07.12. bis 18.12., Marketing zählt zur BWL"],
+    ["Nächste Klausur", nextE ? days(nextE) + " Tage" : "keine", nextE ? SUBJ.find(s => s.klausur === nextE).name + ", " + fmt(nextE) : ""]
+  ].map(([l,b,s]) => '<div class="stat"><div class="lbl">'+l+'</div><b class="num">'+b+'</b><span>'+esc(s)+'</span></div>').join("");
+  $("stand-lbl").textContent = "01 · Stand " + today.toLocaleDateString("de-DE");
+})();
+
+/* Stand */
+$("rows").innerHTML = SUBJ.map(s => {
+  const n = done(s.id), t = total(s.id), [c, txt] = status(s);
+  return '<div class="row"><span class="k">'+s.kurz+'</span><span class="n">'+esc(s.name)+'</span>'+
+    '<span class="barcell"><span class="bar" role="img" aria-label="'+n+' von '+t+' Terminen"><i style="width:'+(t? n/t*100 : 0)+'%"></i></span></span>'+
+    '<span class="t num">'+n+' / '+t+' Termine</span><span class="chip '+c+'">'+txt+'</span></div>';
+}).join("");
+
+/* Fächer */
+$("subjects").innerHTML = SUBJ.map(s => {
+  const [c, txt] = status(s);
+  const upcoming = (LECT[s.id] || []).filter(x => D(x) > today);
+  const meta = [
+    ["Dozent", s.doz], ["Prüfung", s.pruefung], ["Prüfungstermin", fmt(s.klausur) + "2026"],
+    ["Termine", done(s.id) + " von " + total(s.id) + " gehalten" + (upcoming.length ? ", nächster " + WD[D(upcoming[0]).getDay()] + " " + fmt(upcoming[0]) : "")]
+  ].map(([l,v]) => '<div><span class="lbl">'+l+'</span><span>'+esc(v)+'</span></div>').join("") +
+    '<div><span class="lbl">Moodle</span><span><a href="https://moodle.heilbronn.dhbw.de/course/view.php?id='+s.moodle+'" target="_blank" rel="noopener">Kurs '+s.moodle+'</a></span></div>';
+  const bisher = s.themen.length
+    ? '<div><div class="lbl">Bisher</div><ul class="tl">'+s.themen.map(([d,t]) => '<li><span class="d">'+d+'</span><span>'+esc(t)+'</span></li>').join("")+'</ul></div>'
+    : '<div><div class="lbl">Bisher</div><p style="margin:8px 0 0;color:var(--muted)">Noch keine Vorlesung. Der erste Termin ist am '+fmt(LECT[s.id][0])+'</p></div>';
+  const kommt = s.kommt.length ? '<div><div class="lbl">Kommt noch</div><ul class="tl next">'+s.kommt.map(t => '<li><span class="d">→</span><span>'+esc(t)+'</span></li>').join("")+'</ul></div>' : '';
+  return '<details class="subj" id="f-'+s.id+'"><summary><span class="lbl">'+s.kurz+'</span><h3>'+esc(s.name)+'</h3><span class="chip '+c+'">'+txt+'</span><span class="plus" aria-hidden="true">+</span></summary>'+
+    '<div class="body"><div class="meta">'+meta+'</div><div class="content"><p class="kern">'+esc(s.kern)+'</p>'+bisher+kommt+
+    '<div class="note"><span class="lbl">Worauf es ankommt</span>'+esc(s.schwer)+'</div>'+
+    '<div class="lnk">'+s.links.map(([l,u]) => '<a href="'+u+'" target="_blank" rel="noopener">'+esc(l)+' ↗</a>').join("")+'</div></div></div></details>';
+}).join("");
+
+/* Zeitstrahl */
+function drawChart(){
+  const svg = $("chart"), css = getComputedStyle(root);
+  const col = n => css.getPropertyValue(n).trim();
+  const start = D("2026-10-05"), end = D("2026-12-31");
+  const L = 64, R = 16, T = 30, rowH = 30, W = 1000;
+  const rows = SUBJ.map(s => s);
+  const H = T + rows.length * rowH + rowH + 26;
+  const x = d => L + (d - start) / (end - start) * (W - L - R);
+  let g = '';
+  // Wochenraster und Monate
+  for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 7)){
+    const xx = x(d);
+    g += '<line x1="'+xx+'" y1="'+(T-6)+'" x2="'+xx+'" y2="'+(H-26)+'" stroke="'+col("--line")+'" stroke-width="1"></line>';
+    g += '<text x="'+(xx+3)+'" y="'+(H-10)+'" font-family="Geist Mono, monospace" font-size="10" fill="'+col("--muted")+'">'+String(d.getDate()).padStart(2,"0")+'.'+String(d.getMonth()+1).padStart(2,"0")+'.</text>';
+  }
+  [["Oktober","2026-10-05"],["November","2026-11-01"],["Dezember","2026-12-01"]].forEach(([m,iso]) => {
+    g += '<text x="'+(x(D(iso))+3)+'" y="14" font-family="Geist, sans-serif" font-size="12" font-weight="500" fill="'+col("--ink")+'">'+m+'</text>';
+  });
+  rows.forEach((s,i) => {
+    const y = T + i*rowH + rowH/2;
+    g += '<text x="0" y="'+(y+4)+'" font-family="Geist Mono, monospace" font-size="11" fill="'+col("--muted")+'">'+s.kurz+'</text>';
+    g += '<line x1="'+L+'" y1="'+y+'" x2="'+(W-R)+'" y2="'+y+'" stroke="'+col("--line")+'" stroke-width="1" stroke-dasharray="1 3"></line>';
+    (LECT[s.id] || []).forEach(iso => {
+      const past = D(iso) <= today, cx = x(D(iso));
+      g += past ? '<circle cx="'+cx+'" cy="'+y+'" r="4.5" fill="'+col("--cool")+'"><title>'+esc(s.name)+', '+fmt(iso)+'</title></circle>'
+                : '<circle cx="'+cx+'" cy="'+y+'" r="4" fill="'+col("--bg")+'" stroke="'+col("--cool")+'" stroke-width="1.5"><title>'+esc(s.name)+', '+fmt(iso)+'</title></circle>';
+    });
+    const ex = x(D(s.klausur));
+    g += '<rect x="'+(ex-4.5)+'" y="'+(y-4.5)+'" width="9" height="9" transform="rotate(45 '+ex+' '+y+')" fill="'+col("--accent")+'"><title>'+esc(s.pruefung)+', '+fmt(s.klausur)+'</title></rect>';
+  });
+  // Sonstige Termine
+  const yo = T + rows.length*rowH + rowH/2;
+  g += '<text x="0" y="'+(yo+4)+'" font-family="Geist Mono, monospace" font-size="11" fill="'+col("--muted")+'">SONST.</text>';
+  EVENTS.filter(e => /Studientag|Prüfungsvorbereitung/.test(e[1]) && D(e[0]) >= start).forEach(e => {
+    const xx = x(D(e[0]));
+    g += '<rect x="'+(xx-3)+'" y="'+(yo-8)+'" width="6" height="16" rx="2" fill="'+col("--muted")+'" opacity=".55"><title>'+esc(e[1])+', '+fmt(e[0])+'</title></rect>';
+  });
+  // Heute
+  if (today >= start && today <= end){
+    const tx = x(today);
+    g += '<line x1="'+tx+'" y1="'+(T-8)+'" x2="'+tx+'" y2="'+(H-26)+'" stroke="'+col("--ink")+'" stroke-width="1.5" stroke-dasharray="3 3"></line>';
+    g += '<text x="'+(tx+5)+'" y="'+(T-1)+'" font-family="Geist Mono, monospace" font-size="10" fill="'+col("--ink")+'">heute</text>';
+  }
+  svg.setAttribute("viewBox", "0 0 "+W+" "+H);
+  svg.innerHTML = g;
+}
+drawChart();
+matchMedia("(prefers-color-scheme: light)").addEventListener("change", drawChart);
+
+/* Klausuren */
+(function(){
+  const list = [
+    ["2026-12-07","grundlagen-it","Klausur, 48 Min"],["2026-12-09","wirtschaftsinformatik","Klausur, 48 Min"],
+    ["2026-12-11","programmierung","Klausur, 120 Min"],["2026-12-14","recht","Klausur, 60 Min"],
+    ["2026-12-16","bwl","Klausur BWL + Marketing, 120 Min (72 + 48 Punkte)"],["2026-12-18","mathematik","Klausur, 120 Min"],
+    ["2026-12-28","lernen-praesentieren-kommunizieren","Schriftliches Portfolio, Abgabe"]];
+  const nextIdx = list.findIndex(([d]) => days(d) >= 0);
+  $("exams").querySelector("tbody").innerHTML = list.map(([d,id,f],i) => {
+    const s = SUBJ.find(x => x.id === id), n = days(d);
+    return '<tr'+(i===nextIdx?' class="next"':'')+'><td class="num">'+WD[D(d).getDay()]+' '+fmt(d)+'</td><td><a href="#f-'+id+'">'+esc(id==="bwl"?"BWL und Marketing":s.name)+'</a></td><td>'+esc(f)+'</td><td class="r num">'+(n>=0? n+' Tage' : 'vorbei')+'</td></tr>';
+  }).join("");
+})();
+
+/* Material */
+$("mat").innerHTML = SUBJ.flatMap(s => s.links.map(([l,u]) => [s.kurz, s.name + (l.startsWith("Lernseite") ? "" : " · " + l), u, l]))
+  .concat([["ALLE","Karteikasten, Quiz, Feynman und Lernplan","https://claude.ai/artifact/3fCDjRiZh29j2EYfFtya7W"]])
+  .map(([k,n,u]) => '<a href="'+u+'" target="_blank" rel="noopener"><span class="lbl">'+k+'</span><b>'+esc(n)+'</b><span class="arr">↗</span></a>').join("");
+
+$("moodle").innerHTML = SUBJ.map(s => '<li>'+esc(s.name)+': <a href="https://moodle.heilbronn.dhbw.de/course/view.php?id='+s.moodle+'" target="_blank" rel="noopener">Moodle-Kurs '+s.moodle+'</a></li>').join("");
+$("gen").textContent = "Inhalte zuletzt aktualisiert am " + GENERATED;
+
+if (location.hash.startsWith("#f-")){ const d = document.querySelector(location.hash); if (d) d.open = true; }
+document.querySelectorAll('a[href^="#f-"]').forEach(a => a.addEventListener("click", () => { const d = document.querySelector(a.getAttribute("href")); if (d) d.open = true; }));
+</script>
