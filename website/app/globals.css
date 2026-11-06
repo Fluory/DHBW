@@ -917,29 +917,17 @@ tbody tr:last-child td {
   font-size: 0.85em;
 }
 
-/* Callouts (GitHub-Alerts) */
+/* Callouts (GitHub-Alerts): bewusst neutral, ohne Farbrand und ohne Farbfläche */
 
 .callout {
-  --tone: var(--accent);
-  padding: 1em 1.2em;
-  border: 1px solid color-mix(in srgb, var(--tone) 22%, var(--line));
-  border-left: 3px solid var(--tone);
+  padding: 0.9em 1.15em;
+  border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: color-mix(in srgb, var(--tone) var(--tint-strength), var(--bg));
+  background: transparent;
 }
 
-.callout-warning {
-  --tone: var(--signal);
-}
-
-.callout-caution {
-  --tone: var(--muted);
-}
-
-.callout-tip {
-  --tone: var(--muted);
+.callout-important {
   background: var(--surface);
-  border-left-color: var(--ink);
 }
 
 .callout-kicker {
@@ -948,22 +936,9 @@ tbody tr:last-child td {
 }
 
 .callout-title {
-  margin: 0 0 0.45em !important;
+  margin: 0 0 0.4em !important;
   font-weight: 600;
   color: var(--ink);
-}
-
-.callout-important .callout-title,
-.callout-note .callout-title {
-  color: var(--accent-ink);
-}
-
-.callout-warning .callout-title {
-  color: var(--signal-ink);
-}
-
-.callout-caution .callout-title {
-  color: var(--muted);
 }
 
 .callout-body > :last-child {
