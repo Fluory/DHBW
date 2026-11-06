@@ -917,17 +917,12 @@ tbody tr:last-child td {
   font-size: 0.85em;
 }
 
-/* Callouts (GitHub-Alerts): bewusst neutral, ohne Farbrand und ohne Farbfläche */
+/* Callouts (GitHub-Alerts): normaler Text mit fetter Überschrift, ohne Kasten */
 
 .callout {
-  padding: 0.9em 1.15em;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: transparent;
-}
-
-.callout-important {
-  background: var(--surface);
+  padding: 0;
+  border: 0;
+  background: none;
 }
 
 .callout-kicker {
@@ -936,7 +931,7 @@ tbody tr:last-child td {
 }
 
 .callout-title {
-  margin: 0 0 0.4em !important;
+  margin: 0 0 0.2em !important;
   font-weight: 600;
   color: var(--ink);
 }
@@ -946,7 +941,7 @@ tbody tr:last-child td {
 }
 
 .callout-body pre {
-  background: var(--bg);
+  background: var(--surface);
 }
 
 .callout-caution .callout-body {
