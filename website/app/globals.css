@@ -947,3 +947,40 @@ tbody tr:last-child td {
 .callout-caution .callout-body {
   color: var(--muted);
 }
+
+/* Anmeldung */
+
+.login-page {
+  max-width: 28rem;
+}
+
+.login-form {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.login-form input[type="password"] {
+  font: inherit;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.login-form input[type="password"]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.login-form .button {
+  justify-self: start;
+  cursor: pointer;
+  margin-top: 0.4rem;
+}
+
+.login-error {
+  margin: 0;
+  color: var(--signal-ink);
+}

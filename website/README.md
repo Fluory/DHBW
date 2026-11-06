@@ -31,7 +31,7 @@ pnpm verify                                 # lint + typecheck + test + build
 
 ## Deployment
 
-Vercel: Projekt aus dem Repo `fluory/dhbw` anlegen, **Root Directory `website`**, Framework Next.js, Build-Befehl `pnpm build`. Alle Seiten sind statisch; es gibt keine Umgebungsvariablen, die gesetzt werden müssen.
+Vercel: Projekt aus dem Repo `fluory/dhbw` anlegen, **Root Directory `website`**, Framework Next.js, Build-Befehl `pnpm build`. Alle Seiten sind statisch. Zu setzen ist `SITE_PASSWORD` (gemeinsames Passwort für den Login; ohne die Variable ist die Seite gesperrt, siehe `.env.example`).
 
 ## Struktur
 
