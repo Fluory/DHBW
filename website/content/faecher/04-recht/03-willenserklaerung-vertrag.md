@@ -13,6 +13,10 @@ Ein Alltagsbeispiel: Du kündigst deinen Handyvertrag per Brief. Wirksam ist die
 
 **Was ist das?** Nicht jede Zusage bindet rechtlich. Versprichst du einem Freund, ihn zur Party mitzunehmen, ist das eine **Gefälligkeit**. Sie ist unentgeltlich und begründet keine rechtliche Pflicht. Ein **Rechtsgeschäft** dagegen begründet, ändert oder beendet ein Rechtsverhältnis: Kauf einer Kinokarte, Mieterhöhung, Kündigung.
 
+**In einem Satz:** Eine Willenserklärung ist alles, womit du nach außen zeigst: „Ich will, dass das jetzt rechtlich gilt.“
+
+**Stell dir vor:** Du sagst zu deiner Mitbewohnerin „Ich helfe dir Samstag beim Umzug“. Das ist nett, aber keiner von euch denkt an einen Vertrag: Gefälligkeit. Du schreibst dem Vermieter „Hiermit kündige ich mein Zimmer zum 31.12.“: Du willst eine rechtliche Folge (das Mietverhältnis endet). Das ist eine Willenserklärung.
+
 Ein Rechtsgeschäft besteht aus einer oder mehreren **Willenserklärungen (WE)**. Eine WE ist eine Willensäußerung, die auf einen rechtlichen Erfolg gerichtet ist (Skript S. 7).
 
 - **ausdrücklich:** mit Worten, mündlich oder schriftlich;
@@ -39,6 +43,20 @@ Das Skript trennt außerdem das **Verpflichtungsgeschäft** (Kaufvertrag: begrü
 
 **Was ist das?** Eine empfangsbedürftige WE wird erst wirksam, wenn sie **abgegeben** wurde und **zugeht** (§ 130 I 1 BGB).
 
+**So steht es im Gesetz (§ 130 I 1, gekürzt):** Eine Willenserklärung, die einem Abwesenden gegenüber abzugeben ist, wird in dem Zeitpunkt wirksam, in welchem sie ihm zugeht.
+
+**Auf Deutsch heißt das:** Wenn du jemandem etwas erklärst, der nicht vor dir steht, gilt es erst ab dem Moment, in dem es bei ihm ankommt. Als Wenn-dann: **Wenn** die Erklärung abgeschickt ist **und** beim Empfänger angekommen ist, **dann** ist sie wirksam.
+
+**Stell dir vor:** Eine Nachricht im Messenger. Du tippst sie, aber schickst sie nicht ab: noch keine Abgabe. Du drückst auf „Senden“: abgegeben. Sie liegt auf dem Handy des Empfängers (zugestellt): zugegangen, denn er **könnte** sie jetzt lesen. Ob er sie wirklich liest, ist egal. Das ist nur ein Bild: Für Briefe und E-Mails gelten die genauen Regeln in der Tabelle unten.
+
+| Schritt | Brief | Rechtlich |
+|---|---|---|
+| Brief geschrieben, liegt auf dem Schreibtisch | noch nichts | nicht abgegeben |
+| Brief in den Postbriefkasten geworfen | unterwegs | abgegeben |
+| Brief im Briefkasten des Empfängers, zur normalen Leerungszeit | angekommen | zugegangen, ab jetzt wirksam |
+| Empfänger liest ihn | gelesen | spielt keine Rolle mehr |
+
+
 - **Abgabe:** Der Erklärende hat die WE mit Wissen und Willen so auf den Weg gebracht, dass sie ohne sein weiteres Zutun unter normalen Umständen den Empfänger erreicht (S. 8). Brief: in den Postbriefkasten werfen. E-Mail: bewusst auf „Senden“ drücken. Der Brief im eigenen Postausgangskorb ist noch nicht abgegeben.
 - **Zugang:** Die WE ist so in den Machtbereich des Empfängers gelangt, dass er unter normalen Umständen von ihr Kenntnis nehmen kann. Nicht die Kenntnisnahme ist entscheidend, sondern die Möglichkeit dazu (S. 9).
 
@@ -60,6 +78,8 @@ Das Skript trennt außerdem das **Verpflichtungsgeschäft** (Kaufvertrag: begrü
 > Ein Geschäftsbriefkasten wird nach Feierabend nicht mehr geleert. Ein Brief, der um 23 Uhr eingeworfen wird, geht erst am nächsten Morgen zu. Außerdem schreibt das Skript (S. 10), der Widerruf müsse „zur Kenntnis genommen“ werden. Das Gesetz sagt „zugeht“. Schreib in der Klausur „zugeht“.
 
 ## Boten und Zugangshindernisse
+
+**Stell dir vor:** Du schickst deinem Vermieter eine Kündigung. In der WG des Vermieters nimmt seine erwachsene Mitbewohnerin den Brief an. Sie ist wie ein **zweiter Briefkasten** des Vermieters: Der Brief ist angekommen (Empfangsbotin). Gibst du den Brief dagegen dem fünfjährigen Nachbarskind mit, damit es ihn rüberbringt, ist das Kind wie **dein verlängerter Arm**: Solange es den Brief in der Hand hat, ist er noch bei dir (Erklärungsbote). Verliert das Kind ihn, ist das dein Problem.
 
 **Was ist das?** Oft steht zwischen Erklärendem und Empfänger eine dritte Person. Die Frage ist dann: Wer trägt das Risiko, wenn diese Person die Erklärung verliert oder zu spät weitergibt?
 
@@ -105,6 +125,19 @@ Das Skript trennt außerdem das **Verpflichtungsgeschäft** (Kaufvertrag: begrü
 ## Angebot und Annahme nach §§ 145 ff.
 
 **Was ist das?** Ein Vertrag kommt durch zwei übereinstimmende, wirksame Willenserklärungen zustande: **Angebot** (im Gesetz „Antrag“) und **Annahme** (S. 13).
+
+**Stell dir vor:** Ein Gespräch über ein gebrauchtes Fahrrad.
+
+| Wer | sagt | rechtlich |
+|---|---|---|
+| Jonas | „Ich verkaufe dir mein Rad für 80 €.“ | Angebot |
+| Mia | „Für 60 € nehme ich es.“ | keine Annahme: geändert, also Ablehnung + neues Angebot (§ 150 II) |
+| Jonas | „Okay, 60 €.“ | Annahme von Mias Angebot |
+| | | Vertrag über 60 € |
+
+Ein Vertrag entsteht erst, wenn einer ein **reines Ja** zu dem sagt, was der andere zuletzt angeboten hat.
+
+**§ 150 II, auf Deutsch:** Wer auf ein Angebot mit „Ja, aber …“ antwortet, sagt rechtlich „Nein, aber ich biete dir Folgendes an“.
 
 Prüfungsschema Vertragsschluss:
 
@@ -166,6 +199,8 @@ Fristen für die Annahme: unter Anwesenden und am Telefon nur sofort (§ 147 I).
 
 *Eigene Lösungsskizze.*
 
+Zeitstrahl zuerst: Montag Brief abgegeben → Dienstag 8 Uhr Widerruf zugegangen → Dienstag 11 Uhr Kündigung zugegangen.
+
 1. Die Kündigung ist eine empfangsbedürftige WE. Sie wird mit Zugang wirksam (§ 130 I 1 BGB).
 2. Sie wird aber nicht wirksam, wenn dem Empfänger vorher oder gleichzeitig ein Widerruf zugeht (§ 130 I 2 BGB).
 3. Hier ist der Widerruf um 8 Uhr am Telefon zugegangen, die Kündigung erst um 11 Uhr.
@@ -215,6 +250,8 @@ Ausnahme laut offizieller Lösung: Kommt der Vermieter doch noch vor 24 Uhr ins 
 Ergänzung, nicht Teil der offiziellen Lösung: Das ist ein offener Einigungsmangel nach § 154 I 1 BGB.
 
 ### Übung 6
+
+Vorab die drei Fragen: Wer will was von wem woraus? Die GmbH will 15 € von K aus § 433 II BGB. Dann folgt das Rezept.
 
 *Offizielle Lösung (sinngemäß; dort als „Fall 4“ nummeriert), im Gutachtenstil.*
 

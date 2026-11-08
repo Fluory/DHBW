@@ -13,6 +13,19 @@ Ein Alltagsbeispiel: Ein Kaffeeautomat hat einen Knopf „Cappuccino“. Du drü
 
 ### Was ist das?
 
+**In einem Satz:** Eine Funktion ist ein Stück Code mit Namen, das du immer wieder benutzen kannst, indem du den Namen mit Klammern hinschreibst.
+
+**Stell dir vor:** Ein Automat mit einem Einwurfschlitz und einem Ausgabefach. Du wirfst zwei Zahlen ein (die **Argumente**), drinnen wird nach einem festen Rezept gerechnet (der **Rumpf**), und unten fällt das Ergebnis ins Ausgabefach (das **`return`**). Was du mit dem Ergebnis machst, entscheidest du draußen: anzeigen, speichern, weiterrechnen.
+
+| Automat | Code |
+|---|---|
+| Aufschrift „Addierer“ | Funktionsname `addiere` |
+| Beschriftung der Schlitze „Zahl a“, „Zahl b“ | Parameter `a`, `b` |
+| was du wirklich einwirfst: 5 und 7 | Argumente `5`, `7` |
+| das Rezept innen | eingerückter Rumpf |
+| Ausgabefach | `return ergebnis` |
+| Knopf drücken | Aufruf `addiere(5, 7)` |
+
 ```python
 def addiere(a: int, b: int) -> int:
     ergebnis = a + b
@@ -35,7 +48,16 @@ print(addiere(5, 7))
 | `:` und Einrückung | Funktionsrumpf |
 | `return` | beendet die Funktion und gibt das Ergebnis zurück |
 
-`def` legt die Funktion nur an. Der Rumpf läuft erst beim **Aufruf** mit Klammern. **Parameter** sind die Platzhalter in der Definition (`a`, `b`). **Argumente** sind die Werte beim Aufruf (`5`, `7`) (F. 11). Typannotationen ignoriert Python beim Ausführen. Erst ty meldet einen unpassenden Aufruf (F. 12).
+So läuft `print(addiere(5, 7))` ab, Schritt für Schritt:
+
+1. Python sieht `addiere(5, 7)` und springt in die Funktion.
+2. Der Parameter `a` bekommt den Wert 5, `b` bekommt 7.
+3. `ergebnis = a + b` rechnet 5 + 7 = 12.
+4. `return ergebnis` legt die 12 ins Ausgabefach und verlässt die Funktion.
+5. An der Stelle des Aufrufs steht jetzt 12. Aus `print(addiere(5, 7))` wird `print(12)`.
+6. `print` zeigt 12 an.
+
+`def` legt die Funktion nur an. Das ist wie ein Rezept ins Kochbuch schreiben: Davon wird noch nichts gekocht. Der Rumpf läuft erst beim **Aufruf** mit Klammern. **Parameter** sind die Platzhalter in der Definition (`a`, `b`). **Argumente** sind die Werte beim Aufruf (`5`, `7`) (F. 11). Typannotationen ignoriert Python beim Ausführen. Erst ty meldet einen unpassenden Aufruf (F. 12).
 
 Der Einstiegspunkt eines Programms ist eine Funktion `main()` (F. 8):
 
@@ -71,6 +93,49 @@ Hallo Bob!
 ## Rückgabewerte
 
 ### Was ist das?
+
+**In einem Satz:** `return` legt das Ergebnis ins Ausgabefach, damit der Code draußen damit weiterarbeiten kann.
+
+### print oder return?
+
+Das ist der häufigste Anfängerfehler. **Stell dir vor:** Du fragst einen Kollegen nach dem Bruttopreis. `print` heißt: Er ruft die Zahl laut in den Raum. Du hast sie gehört, aber nicht aufgeschrieben. `return` heißt: Er gibt dir einen Zettel mit der Zahl in die Hand. Damit kannst du weiterrechnen.
+
+```python
+def brutto_print(netto: float) -> None:
+    print(netto * 1.19)
+
+
+def brutto_return(netto: float) -> float:
+    return netto * 1.19
+
+
+a = brutto_print(100)
+b = brutto_return(100)
+print("a ist", a)
+print("b ist", b)
+print("b doppelt:", b * 2)
+```
+
+```text
+119.0
+a ist None
+b ist 119.0
+b doppelt: 238.0
+```
+
+Was passiert ist:
+
+1. `brutto_print(100)` zeigt sofort `119.0` an. Das ist die erste Ausgabezeile. Ins Ausgabefach legt die Funktion nichts, also bekommt `a` den Wert `None`.
+2. `brutto_return(100)` zeigt nichts an. Es legt 119.0 ins Ausgabefach, und `b` bekommt 119.0.
+3. Mit `b` kannst du weiterrechnen. Mit `a * 2` gäbe es einen `TypeError`, weil `None` keine Zahl ist.
+
+| | `print(x)` | `return x` |
+|---|---|---|
+| zeigt etwas auf dem Bildschirm? | ja | nein |
+| kann der Aufrufer mit dem Wert weiterrechnen? | nein (er bekommt `None`) | ja |
+| beendet die Funktion? | nein | ja, sofort |
+
+### Mehrere Werte und fehlendes return
 
 `return` beendet die Funktion sofort und liefert einen Wert. „Mehrere Rückgabewerte“ sind in Wahrheit ein Tupel, das der Aufrufer wieder auspackt (F. 21). Jede Funktion ohne `return` liefert `None` (F. 22).
 
@@ -137,6 +202,8 @@ Beim Aufruf legt Python einen neuen **Rahmen** (Stack Frame) auf den **Aufrufsta
 ## Gültigkeitsbereiche und Parameterübergabe
 
 ### Was ist das?
+
+**Stell dir vor:** Jeder Aufruf bekommt einen eigenen Schmierzettel. Darauf rechnet die Funktion. Nach dem `return` wird der Zettel weggeworfen. Was darauf stand, kann draußen niemand mehr lesen. Beim nächsten Aufruf gibt es einen neuen, leeren Zettel.
 
 Variablen, die in einer Funktion entstehen, sind **lokal**: Sie leben nur während des Aufrufs (F. 26). `if` und `for` bilden keinen eigenen Gültigkeitsbereich, Funktionen schon. Einen Namen sucht Python in der Reihenfolge LEGB: Local, Enclosing, Global, Built-in (F. 27). Eine globale Variable zu lesen geht. Eine Zuweisung in der Funktion macht den Namen aber lokal:
 
@@ -303,7 +370,11 @@ print(summe_bis(7))
 
 ### Was ist das?
 
-Rekursion heißt: Eine Funktion ruft sich selbst auf, um ein kleineres Teilproblem derselben Art zu lösen (F. 62). Jede rekursive Funktion hat zwei Pflichtteile (F. 63):
+**In einem Satz:** Eine rekursive Funktion löst eine Aufgabe, indem sie eine etwas kleinere Version derselben Aufgabe an sich selbst weitergibt.
+
+**Stell dir vor:** Du stehst in einer langen Schlange und willst wissen, an welcher Stelle du bist. Du fragst die Person vor dir: „An welcher Stelle bist du?“ Die fragt wieder die Person vor ihr, und so weiter. Die erste Person in der Schlange sieht niemanden vor sich und sagt: „Ich bin 1.“ (das ist der **Basisfall**). Jetzt läuft die Antwort zurück: Jede Person zählt 1 dazu und sagt es nach hinten weiter. Bei dir kommt die richtige Zahl an.
+
+Auf der Folie: Rekursion heißt, eine Funktion ruft sich selbst auf, um ein kleineres Teilproblem derselben Art zu lösen (F. 62). Jede rekursive Funktion hat zwei Pflichtteile (F. 63):
 
 - **Abbruchbedingung** (Basisfall): Wann hört sie auf?
 - **Rekursiver Aufruf** mit einem einfacheren Argument, das sich der Abbruchbedingung nähert.
@@ -464,7 +535,14 @@ Gute Tests prüfen auch Randfälle, etwa die leere Liste oder den Exponenten 0 (
 
 ### Übung 1
 
-1, 2, 3, je in einer Zeile. `return` verlässt die ganze Funktion. Deshalb kommt auch „Schleife beendet.“ nicht.
+| i | i == 4? | was passiert |
+|---|---|---|
+| 1 | nein | 1 ausgeben |
+| 2 | nein | 2 ausgeben |
+| 3 | nein | 3 ausgeben |
+| 4 | ja | `return`: die ganze Funktion ist sofort zu Ende |
+
+Also 1, 2, 3, je in einer Zeile. `return` verlässt die ganze Funktion. Deshalb kommt auch „Schleife beendet.“ nicht.
 
 ```python
 def main() -> None:
@@ -510,6 +588,12 @@ TypeError: addiere() missing 1 required positional argument: 'c'
 
 ### Übung 3
 
+1. Welche Fälle gibt es? Nur `breite` (Quadrat), `breite` und `hoehe` (Rechteck), dazu `dreieck=True` (Dreieck).
+2. `hoehe` bekommt den Standardwert `None`. So erkennt die Funktion „keine Höhe angegeben“.
+3. Zuerst prüfen: Ist `hoehe is None`? Dann Quadrat, breite · breite.
+4. Sonst: Ist `dreieck` wahr? Dann ½ · breite · hoehe.
+5. Sonst: Rechteck, breite · hoehe.
+
 ```python
 def flaeche(breite: float, hoehe: float | None = None, dreieck: bool = False) -> float:
     """Fläche von Quadrat, Rechteck oder Dreieck."""
@@ -535,7 +619,7 @@ In Java bräuchte man dafür mehrere Überladungen.
 
 ### Übung 4
 
-1. `fakultaet_a` hat den falschen Basisfall. Mit `return 0` wird am Ende alles mit 0 multipliziert: Ergebnis 0.
+1. `fakultaet_a` hat den falschen Basisfall. Mit `return 0` wird am Ende alles mit 0 multipliziert: 5 · 4 · 3 · 2 · 1 · 0 = 0.
 2. `fakultaet_b(0)` liefert 1, das ist zufällig richtig.
 3. `fakultaet_b(5)` addiert statt zu multiplizieren: 5 + 4 + 3 + 2 + 1 + 1 = 16.
 4. Der Test `fakultaet(0) == 1` besteht bei `fakultaet_b` trotzdem.
@@ -563,6 +647,22 @@ print(fakultaet_a(5), fakultaet_b(0), fakultaet_b(5))
 ### Übung 5
 
 Jede Funktion hat einen Basisfall (leerer Text, Exponent 0) und einen Aufruf mit kleinerem Problem (`text[1:]`, `exponent - 1`). Bei negativem Exponenten gilt basis⁻ⁿ = 1/basisⁿ.
+
+`zaehle_zeichen("banana", "a")` Aufruf für Aufruf. `text[1:]` ist der Text ohne den ersten Buchstaben.
+
+| Aufruf mit text | erster Buchstabe a? | treffer | liefert |
+|---|---|---|---|
+| "banana" | b, nein | 0 | 0 + 3 = 3 |
+| "anana" | a, ja | 1 | 1 + 2 = 3 |
+| "nana" | n, nein | 0 | 0 + 2 = 2 |
+| "ana" | a, ja | 1 | 1 + 1 = 2 |
+| "na" | n, nein | 0 | 0 + 1 = 1 |
+| "a" | a, ja | 1 | 1 + 0 = 1 |
+| "" | Basisfall | – | 0 |
+
+Die Spalte „liefert“ liest du von unten nach oben: Erst wenn der leere Text 0 zurückgibt, können die anderen Aufrufe fertig rechnen.
+
+`potenz(2, -2)`: Exponent negativ, also 1 / potenz(2, 2). potenz(2, 2) = 2 · potenz(2, 1) = 2 · 2 · potenz(2, 0) = 2 · 2 · 1.0 = 4.0. Ergebnis 1 / 4.0 = 0.25.
 
 ```python
 def zaehle_zeichen(text: str, zeichen: str) -> int:

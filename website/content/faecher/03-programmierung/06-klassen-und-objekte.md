@@ -13,7 +13,19 @@ Ein Alltagsbeispiel: Ein Bankkonto hat einen Inhaber und einen Kontostand (Daten
 
 ### Was ist das?
 
-Ein Objekt (VL5 F. 6)
+**In einem Satz:** Eine Klasse beschreibt, was ein Ding hat und kann. Ein Objekt ist ein einzelnes, echtes Ding, das nach dieser Beschreibung gebaut wurde.
+
+**Stell dir vor:** Eine Keksform in Sternform ist die **Klasse**. Mit ihr stichst du beliebig viele Kekse aus. Jeder Keks ist ein **Objekt**. Alle haben dieselbe Form, aber jeder hat seinen eigenen Zuckerguss: Der eine ist rot, der andere blau. Isst du den roten Keks, ist der blaue noch da. Die Form selbst kannst du nicht essen. Sie ist nur die Vorlage.
+
+| Keksbäckerei | Code |
+|---|---|
+| Keksform „Stern“ | `class Konto:` |
+| einen Keks ausstechen | `Konto("Anna", 100)` |
+| der einzelne Keks | das Objekt, auf das `anna` zeigt |
+| seine Farbe, sein Belag | Attribute: `anna.inhaber`, `anna.kontostand` |
+| was man mit jedem Keks machen kann | Methoden: `einzahlen()`, `abheben()` |
+
+Formal auf der Folie: Ein Objekt (VL5 F. 6)
 
 - hat **Attribute**: Daten, die seinen Zustand beschreiben, etwa `inhaber` und `kontostand`;
 - hat **Methoden**: Funktionen, die sein Verhalten beschreiben, etwa `einzahlen()`;
@@ -40,6 +52,15 @@ Anna 100
 Ben 300
 ```
 
+Nach diesen Zeilen gibt es zwei getrennte Objekte. Jedes hat seine eigenen Werte:
+
+| Objekt | inhaber | kontostand |
+|---|---|---|
+| anna | "Anna" | 100 |
+| ben | "Ben" | 300 (vorher 250, dann geändert) |
+
+`ben.kontostand = 300` ändert nur Bens Keks. Annas Konto bleibt bei 100.
+
 - `class Konto:` beginnt die Klasse. Klassennamen schreibt man in PascalCase (F. 10).
 - `Konto("Anna", 100)` erzeugt ein Objekt. Man ruft die Klasse wie eine Funktion auf. Ein `new` wie in Java gibt es nicht.
 - Attribute erreichst du mit dem Punkt: `anna.kontostand`.
@@ -64,6 +85,15 @@ Ben 300
 ## Methoden und self
 
 ### Was ist das?
+
+**In einem Satz:** `self` heißt „dieses Objekt hier“, also genau das Objekt, das links vom Punkt steht.
+
+**Stell dir vor:** In der Bauanleitung für Konten steht: „Zähle den Betrag zu **meinem** Kontostand dazu.“ Wessen Kontostand ist „meiner“? Das hängt davon ab, wer die Anleitung gerade ausführt. Ruft Anna sie auf, ist es Annas Kontostand. Ruft Ben sie auf, Bens. `self` ist dieses Wort „mein“.
+
+| Aufruf | wofür steht `self`? | was `self.kontostand += betrag` ändert |
+|---|---|---|
+| `anna.einzahlen(50)` | für anna | Annas Kontostand |
+| `ben.einzahlen(20)` | für ben | Bens Kontostand |
 
 Eine Methode ist eine Funktion in der Klasse. Ihr erster Parameter ist `self`. Über `self.` liest und ändert sie die Attribute ihres Objekts (F. 22).
 
@@ -395,15 +425,28 @@ Attribute: `inhaber`, `preis`, `abteilung`. Methoden: `einzahlen()`, `verkaufen(
 
 ### Übung 2
 
-(b). Python übergibt das Objekt vor dem Punkt als erstes Argument. In der Methode heißt es `self`.
+(b). Lies `anna.einzahlen(50)` so: „Nimm die Methode `einzahlen` aus der Klasse von `anna`, also aus `Konto`, und setz für `self` das Objekt `anna` ein.“ Ausgeschrieben ist das `Konto.einzahlen(anna, 50)`. (a) fehlt `self`, (c) findet keine Funktion `einzahlen` außerhalb der Klasse, (d) übergibt `anna` doppelt. Python übergibt das Objekt vor dem Punkt als erstes Argument. In der Methode heißt es `self`.
 
 ### Übung 3
 
-100 → 150 → 150 (abgelehnt, die Methode gibt eine Meldung aus und liefert `False`) → 120 → 140.
+| Zeile | was passiert | anna.kontostand danach |
+|---|---|---|
+| `anna = Konto("Anna", 100)` | `__init__` setzt den Startwert | 100 |
+| `anna.einzahlen(50)` | 100 + 50 | 150 |
+| `anna.abheben(500)` | 500 > 150? ja: Meldung, `return False`, nichts abgezogen | 150 |
+| `anna.abheben(30)` | 30 > 150? nein: 150 − 30, `return True` | 120 |
+| `anna.einzahlen(20)` | 120 + 20 | 140 |
 
 ### Übung 4
 
-`self.anzahl += 1` liest zuerst das Klassenattribut (0), addiert 1 und schreibt das Ergebnis als **neues Instanzattribut** in das Objekt. Der Zähler in der Klasse bleibt 0.
+`self.anzahl += 1` ist ausgeschrieben `self.anzahl = self.anzahl + 1`. Für `kaffee` passiert:
+
+1. Rechte Seite: `self.anzahl` lesen. Der Keks `kaffee` hat noch kein eigenes `anzahl`. Python schaut deshalb in der Form nach, also in der Klasse: 0.
+2. 0 + 1 = 1.
+3. Linke Seite: `self.anzahl = 1` schreibt auf **diesen Keks**, nicht in die Form. `kaffee` hat jetzt ein eigenes `anzahl` mit dem Wert 1.
+4. Bei `tee` dasselbe: wieder 0 aus der Klasse lesen, 1 in `tee` schreiben.
+
+Der Zähler in der Klasse wurde nie beschrieben und bleibt 0.
 
 ```python
 class Produkt:

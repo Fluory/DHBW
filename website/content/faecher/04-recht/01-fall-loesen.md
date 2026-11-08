@@ -11,7 +11,9 @@ Ein Alltagsbeispiel: Deine Mitbewohnerin hat sich 20 € von dir geliehen und za
 
 ## Die Grundfrage: Wer will was von wem woraus?
 
-**Was ist das?** Fast jeder Zivilrechtsfall dreht sich um einen Anspruch. § 194 I BGB definiert ihn als das Recht, von einem anderen ein Tun oder Unterlassen zu verlangen. Bevor du schreibst, beantwortest du vier Fragen.
+**Was ist das?** Fast jeder Zivilrechtsfall dreht sich um einen Anspruch. § 194 I BGB definiert ihn als das Recht, von einem anderen ein Tun oder Unterlassen zu verlangen.
+
+Auf Deutsch heißt das: Ein Anspruch ist ein „Du musst mir …“, das vom Gesetz gedeckt ist. „Du musst mir 20 € zahlen“ (Tun). „Du musst aufhören, nachts in der WG Schlagzeug zu spielen“ (Unterlassen). Bevor du schreibst, beantwortest du vier Fragen.
 
 | Frage | Bedeutung | Beispiel |
 |---|---|---|
@@ -21,6 +23,23 @@ Ein Alltagsbeispiel: Deine Mitbewohnerin hat sich 20 € von dir geliehen und za
 | woraus? | Anspruchsgrundlage | § 535 II BGB |
 
 Das Skript nennt sechs Schritte: Sachverhalt klären (gern mit Skizze), Fallfrage klären, Anspruchsgrundlage suchen, subsumieren, Gegenrechte prüfen, Ergebnis feststellen.
+
+### Tatbestand und Rechtsfolge: jeder Paragraf ist ein Wenn-dann-Satz
+
+**In einem Satz:** Fast jede Norm sagt „**Wenn** das und das vorliegt, **dann** passiert das“.
+
+Der Wenn-Teil heißt **Tatbestand**. Er besteht aus einzelnen Bausteinen, den **Tatbestandsmerkmalen**. Der Dann-Teil heißt **Rechtsfolge**. Die Rechtsfolge tritt nur ein, wenn **alle** Merkmale erfüllt sind.
+
+**Stell dir vor:** Ein Getränkeautomat. **Wenn** du 2 € eingeworfen **und** die Taste „Wasser“ gedrückt hast, **dann** fällt eine Flasche Wasser heraus. Fehlt eins von beidem, kommt nichts.
+
+| | § 433 II BGB |
+|---|---|
+| So steht es im Gesetz | „Der Käufer ist verpflichtet, dem Verkäufer den vereinbarten Kaufpreis zu zahlen und die gekaufte Sache abzunehmen.“ |
+| Wenn (Tatbestand) | Zwischen zwei Personen besteht ein Kaufvertrag. |
+| Dann (Rechtsfolge) | Der Käufer muss den Preis zahlen und die Sache abnehmen. |
+| Auf Deutsch heißt das | Wer etwas kauft, muss bezahlen. Der Verkäufer kann das Geld verlangen. |
+
+Das Wenn steht nicht immer vorn. Bei § 433 II steckt es im Wort „Käufer“: Käufer ist nur, wer einen Kaufvertrag geschlossen hat. Deine Aufgabe in der Klausur ist immer dieselbe: das Wenn herausschälen, in Merkmale zerlegen und jedes Merkmal am Sachverhalt prüfen.
 
 Eine **Anspruchsgrundlage** ist eine Norm, deren Rechtsfolge lautet: „Der eine kann verlangen …“ oder „… ist verpflichtet“. § 433 II BGB ist eine. § 130 BGB ist keine. Er sagt nur, wann eine Erklärung wirksam wird. Solche Hilfsnormen prüfst du innerhalb einer Anspruchsgrundlage.
 
@@ -52,6 +71,30 @@ Reihenfolge laut Skript (S. 50): erst vertragliche, dann gesetzliche Anspruchsgr
 3. **Subsumtion:** Sachverhalt unter die Definition halten. „Hier hat V den Apparat ins Schaufenster gestellt …“
 4. **Ergebnis** (Indikativ): „Also liegt kein Kaufvertrag vor. K hat keinen Anspruch aus § 433 I 1 BGB.“
 
+### Das Rezept zum Ausfüllen
+
+**Stell dir vor:** Der Gutachtenstil ist wie ein Lückentext, den du in jeder Klausur wieder benutzt. Du musst dir nur die vier festen Satzanfänge merken und die Lücken füllen.
+
+| Schritt | fester Satzanfang | was in die Lücke kommt |
+|---|---|---|
+| 1. Obersatz | „**A könnte gegen B einen Anspruch auf** … **aus § …** haben.“ | wer, von wem, was, welcher Paragraf |
+| 2. Voraussetzung | „**Dazu müsste** … vorliegen.“ und „… **ist/liegt vor, wenn** …“ | das Tatbestandsmerkmal und seine Definition |
+| 3. Subsumtion | „**Hier** hat …“ | die passenden Fakten aus dem Sachverhalt, mit der Definition verglichen |
+| 4. Ergebnis | „**Also/Somit** …“ | ja oder nein zum Merkmal, am Ende zum ganzen Anspruch |
+
+So sieht das Rezept ausgefüllt aus, an einem Fall aus dem Studentenleben:
+
+> [!NOTE]
+> **Beispiel: Das gebrauchte Handy**
+> Lea verkauft ihr altes Handy an ihren Kommilitonen Tim. Beide einigen sich per Chat auf 120 €. Tim holt das Handy ab, zahlt aber nicht. Kann Lea die 120 € verlangen?
+>
+> 1. **Obersatz:** Lea könnte gegen Tim einen Anspruch auf Zahlung von 120 € aus § 433 II BGB haben.
+> 2. **Voraussetzung:** Dazu müsste zwischen Lea und Tim ein wirksamer Kaufvertrag bestehen. Ein Vertrag kommt durch zwei übereinstimmende Willenserklärungen zustande, Angebot und Annahme.
+> 3. **Subsumtion:** Hier hat Lea angeboten, das Handy für 120 € zu verkaufen. Tim hat im Chat zugestimmt. Beide Erklärungen passen inhaltlich zusammen: dasselbe Handy, derselbe Preis.
+> 4. **Ergebnis:** Also besteht ein Kaufvertrag. Lea hat gegen Tim einen Anspruch auf Zahlung von 120 € aus § 433 II BGB.
+>
+> Dass Lea und Tim volljährig sind, stellst du ohne Gutachten fest, weil es unproblematisch ist (siehe Achtung unten).
+
 > [!NOTE]
 > **Beispiel: Das Mineralwasser**
 > Obersatz: Das Wasser könnte abgelaufen sein. Definition: Abgelaufen ist es, wenn das Mindesthaltbarkeitsdatum überschritten ist. Subsumtion: Auf der Flasche steht 03.2026, heute ist November 2026. Ergebnis: Also ist es abgelaufen. Genau so baust du jede Prüfung auf.
@@ -66,7 +109,9 @@ Reihenfolge laut Skript (S. 50): erst vertragliche, dann gesetzliche Anspruchsgr
 
 ## Anspruchsaufbau: entstanden, untergegangen, durchsetzbar
 
-**Was ist das?** Jeden Anspruch prüfst du in drei Stufen. Ein Vergleich: Ein Gutschein muss gültig ausgestellt sein. Er darf nicht schon eingelöst sein. Und der Laden darf ihn nicht ablehnen dürfen, etwa weil er abgelaufen ist.
+**Was ist das?** Jeden Anspruch prüfst du in drei Stufen.
+
+**In einem Satz:** Ein Anspruch muss erst entstanden sein, darf dann nicht wieder weggefallen sein, und der Schuldner darf sich nicht wehren können. Ein Vergleich: Ein Gutschein muss gültig ausgestellt sein. Er darf nicht schon eingelöst sein. Und der Laden darf ihn nicht ablehnen dürfen, etwa weil er abgelaufen ist.
 
 | Stufe | Frage | Beispiele |
 |---|---|---|
@@ -79,6 +124,8 @@ Sind alle drei Stufen erfüllt, besteht der Anspruch und ist durchsetzbar.
 > [!IMPORTANT]
 > **Das Wichtigste**
 > Eine **Einwendung** (Geschäftsunfähigkeit, Erfüllung) wirkt automatisch. Das Gericht beachtet sie von selbst. Eine **Einrede** (Verjährung) gibt dem Schuldner nur ein Recht, die Leistung zu verweigern. Sie wirkt nur, wenn er sich darauf beruft.
+>
+> Bild dazu: Eine Einwendung ist eine Schranke, die von selbst unten ist. Eine Einrede ist ein Schild „Hier darf ich Nein sagen“. Es hilft nur, wenn der Schuldner es auch hochhält.
 
 > [!WARNING]
 > **Achtung**
@@ -163,11 +210,20 @@ b) Gutachtenstil. Die Frage steht im Konjunktiv („könnte“), dann folgt die 
 
 ### Übung 2
 
-„V könnte gegen M einen Anspruch auf Zahlung der Miete für Oktober in Höhe von 450 € aus § 535 II BGB haben.“
+Fülle die Lücken des Obersatz-Rezepts „A könnte gegen B einen Anspruch auf … aus § … haben“:
+
+- A (wer will?) = V.
+- B (von wem?) = M.
+- auf … (was?) = Zahlung der Oktobermiete von 450 €.
+- aus § … (woraus?) = Mietvertrag, die Zahlungspflicht des Mieters steht in § 535 II BGB.
+
+Ausgefüllt: „V könnte gegen M einen Anspruch auf Zahlung der Miete für Oktober in Höhe von 450 € aus § 535 II BGB haben.“
 
 Wer: V. Was: 450 €. Von wem: M. Woraus: § 535 II BGB.
 
 ### Übung 3
+
+Frage dich bei jedem Punkt: Ist der Anspruch nie entstanden, ist er weggefallen, oder darf der Schuldner nur „nein“ sagen?
 
 1. Verjährung ist eine **Einrede** (§ 214 I BGB: Der Schuldner ist „berechtigt, die Leistung zu verweigern“). Sie wirkt nur, wenn er sich darauf beruft.
 2. Erfüllung (§ 362) ist eine rechtsvernichtende Einwendung.

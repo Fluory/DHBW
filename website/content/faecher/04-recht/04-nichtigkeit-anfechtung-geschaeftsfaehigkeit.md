@@ -11,6 +11,10 @@ Ein Alltagsbeispiel: Du willst online eine Ferienwohnung für Juni buchen, klick
 
 ## Nichtigkeit: von Anfang an unwirksam
 
+**In einem Satz:** Nichtig heißt: Der Vertrag zählt nicht, und zwar von der ersten Sekunde an.
+
+**Stell dir vor:** Zwei Konzertkarten. Die eine ist gefälscht: Sie war nie gültig, egal was du tust. Das ist **nichtig**. Die andere ist echt, aber auf ihr steht „Rückgabe möglich“. Sie gilt, bis du sie aktiv zurückgibst. Dann wird so getan, als hättest du sie nie gehabt. Das ist **anfechtbar**.
+
 **Was ist das?** Ein nichtiges Rechtsgeschäft wird so behandelt, als hätte es nie existiert. Niemand muss etwas tun oder anfechten. Die Nichtigkeitsgründe aus dem Skript (S. 15):
 
 | Grund | § | Beispiel |
@@ -33,6 +37,8 @@ Ein Alltagsbeispiel: Du willst online eine Ferienwohnung für Juni buchen, klick
 
 ## Anfechtung: Prüfungsschema und Irrtümer
 
+**In einem Satz:** Anfechten heißt: Du sagst „Ich habe mich geirrt, dieser Vertrag soll nicht gelten“, und das Gesetz erlaubt dir das in bestimmten Fällen.
+
 **Was ist das?** Ein anfechtbares Geschäft ist zunächst voll wirksam. Der Berechtigte kann es durch eine einseitige Erklärung vernichten, und zwar rückwirkend (§ 142 I, „ex tunc“).
 
 Prüfungsschema Anfechtung:
@@ -49,9 +55,18 @@ Prüfungsschema Anfechtung:
 | Eigenschaftsirrtum, § 119 II | Irrtum über eine verkehrswesentliche Eigenschaft einer Person oder Sache | Echtheit eines Bildes, Kreditwürdigkeit |
 | Übermittlungsirrtum, § 120 | Der Bote übermittelt falsch | „20 Kisten“ statt „2 Kisten“ |
 
+**Stell dir vor:** Vier Fälle aus dem Studentenleben, je einer pro Irrtum.
+
+- **Inhaltsirrtum:** Du bestellst im Biergarten „eine Halbe“ und denkst, das sei ein halbes Hähnchen. Gemeint ist dort ein halber Liter Bier. Du hast gesagt, was du sagen wolltest, aber nicht gewusst, was es bedeutet.
+- **Erklärungsirrtum:** Du willst bei eBay 15 € bieten und tippst 150 €. Du hast dich vertippt: Die Hand macht etwas anderes als der Kopf.
+- **Eigenschaftsirrtum:** Du kaufst eine „Lederjacke“ vom Flohmarkt und denkst, sie sei aus echtem Leder. Sie ist aus Kunstleder. Du irrst dich über eine wichtige Eigenschaft der Sache.
+- **Motivirrtum (keine Anfechtung):** Du kaufst ein Bahnticket für eine Party, die dann ausfällt. Am Ticket selbst hast du dich nicht geirrt, nur an deinem Grund. Pech.
+
+**§ 119 I, auf Deutsch:** **Wenn** du dich beim Erklären über die Bedeutung geirrt hast (Inhalt) oder etwas anderes erklärt hast, als du wolltest (Erklärung), **und** du das bei klarem Kopf nicht erklärt hättest, **dann** darfst du anfechten.
+
 **Arglistige Täuschung (§ 123 I Alt. 1):** Ein Verhalten, das einen Irrtum erregt oder aufrechterhält. Auch Verschweigen genügt, wenn eine Aufklärungspflicht besteht. Der Irrtum muss ursächlich sein. Arglist heißt Vorsatz.
 
-**Vertrauensschaden (§ 122 I):** Wer wegen eines eigenen Irrtums anficht, muss den anderen so stellen, als hätte er nie von dem Geschäft gehört. Dazu gehören Porto und ein abgesagtes anderes Geschäft. Obergrenze ist das Erfüllungsinteresse.
+**Vertrauensschaden (§ 122 I):** Wer wegen eines eigenen Irrtums anficht, muss den anderen so stellen, als hätte er nie von dem Geschäft gehört. Auf Deutsch: Dein Irrtum, deine Kosten. Du darfst dich lösen, aber du zahlst, was der andere ausgegeben oder verpasst hat, weil er dir geglaubt hat. Dazu gehören Porto und ein abgesagtes anderes Geschäft. Obergrenze ist das Erfüllungsinteresse.
 
 > [!IMPORTANT]
 > **Das Wichtigste**
@@ -62,6 +77,10 @@ Prüfungsschema Anfechtung:
 > Der **Motivirrtum** berechtigt nicht zur Anfechtung. Du kaufst einen Ring für deine Freundin, sie trennt sich am nächsten Tag: Der Kauf bleibt. Auch der Preis selbst ist keine Eigenschaft nach § 119 II, nur die Faktoren, die ihn bestimmen (Echtheit, Alter, Material).
 
 ## Geschäftsfähigkeit: drei Altersstufen
+
+**In einem Satz:** Geschäftsfähig ist, wer selbst gültige Verträge schließen kann.
+
+**Stell dir vor:** Das Gesetz schützt Kinder und Jugendliche vor teuren Fehlern, wie ein Geländer an einer Treppe. Bis 6 Jahre ist das Geländer eine geschlossene Tür: Nichts geht. Von 7 bis 17 ist es ein Geländer mit Durchgängen: Manches geht allein, vieles nur mit den Eltern. Ab 18 ist das Geländer weg.
 
 **Was ist das?** Geschäftsfähigkeit ist die Fähigkeit, durch eigene Willenserklärungen Rechte und Pflichten zu begründen (S. 19).
 
@@ -78,6 +97,16 @@ Für 7- bis 17-Jährige gehst du immer dieselben Fragen durch (Schaubild „Syst
 3. **§ 110 (Taschengeld)?** Die Leistung ist vollständig bewirkt, mit Mitteln, die dem Minderjährigen zu diesem Zweck oder zur freien Verfügung überlassen wurden. Dann von Anfang an wirksam. Nur prüfen, wenn der Sachverhalt Anhaltspunkte bietet.
 4. **Sonst schwebend unwirksam (§ 108 I).**
 5. **Genehmigung der Eltern (§§ 108 I, 184 I)?** Nachträgliche Zustimmung macht den Vertrag rückwirkend wirksam. Verweigern sie, ist er endgültig unwirksam.
+
+Die fünf Fragen als Wenn-dann, mit dem Paragrafen auf Deutsch:
+
+| Frage | Auf Deutsch heißt das | Beispiel mit Lukas (16) |
+|---|---|---|
+| § 107: lediglich rechtlich vorteilhaft? | Bekommt er nur etwas und muss nichts geben, gilt es sofort. | Die Tante schenkt ihm ein Fahrrad: wirksam. |
+| Einwilligung? | Haben die Eltern vorher Ja gesagt, gilt es. | Eltern: „Kauf dir das Handy“: wirksam. |
+| § 110 Taschengeld? | Hat er alles sofort mit Geld bezahlt, das er dafür oder zur freien Verfügung bekommen hat, gilt es. | Comic für 8 € vom Taschengeld, bar bezahlt: wirksam. |
+| § 108 I schwebend unwirksam | Sonst hängt der Vertrag in der Luft, bis die Eltern entscheiden. | Spielkonsole für 400 €, ohne Eltern gefragt: schwebt. |
+| Genehmigung? | Sagen die Eltern danach Ja, gilt er von Anfang an. Sagen sie Nein, ist er endgültig unwirksam. | Eltern sagen am Abend Ja: wirksam. |
 
 **§ 108 II:** Fordert der Vertragspartner die Eltern zur Erklärung auf, kann die Genehmigung nur noch ihm gegenüber erklärt werden. Eine vorher gegenüber dem Kind erklärte Genehmigung oder Verweigerung wird unwirksam. Schweigen die Eltern zwei Wochen, gilt die Genehmigung als verweigert.
 
@@ -129,9 +158,11 @@ Für 7- bis 17-Jährige gehst du immer dieselben Fragen durch (Schaubild „Syst
 
 *Eigene Lösungsskizze.*
 
-a) Erklärungsirrtum, § 119 I Alt. 2 (versprochen).
+Frag dich bei jedem Fall der Reihe nach: (1) Wollte die Person genau diese Worte sagen? Nein → Erklärungsirrtum. (2) Ja, aber sie kannte die Bedeutung nicht? → Inhaltsirrtum. (3) Worte und Bedeutung stimmen, aber eine wichtige Eigenschaft der Sache war anders? → Eigenschaftsirrtum. (4) Nur der Grund für den Kauf ist weggefallen? → Motivirrtum.
+
+a) Erklärungsirrtum, § 119 I Alt. 2 (versprochen). A wollte „50“ sagen, Frage (1) ist Nein.
 b) Eigenschaftsirrtum, § 119 II. Alter und Echtheit sind verkehrswesentlich.
-c) Motivirrtum. Keine Anfechtung möglich.
+c) Motivirrtum. Keine Anfechtung möglich. Am Geschenkpapier selbst stimmt alles.
 d) Inhaltsirrtum, § 119 I Alt. 1. D will „Kölsch“ sagen, irrt aber über die Bedeutung des Worts.
 
 ### Übung 2

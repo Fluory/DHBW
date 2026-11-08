@@ -11,12 +11,26 @@ Ein Alltagsbeispiel: Du kaufst am Kiosk eine Zeitung und zahlst bar. In drei Sek
 
 ## Schuldverhältnis, Trennungs- und Abstraktionsprinzip
 
-**Was ist das?** Kraft des Schuldverhältnisses ist der Gläubiger berechtigt, vom Schuldner eine Leistung zu fordern (§ 241 I). Bei einem gegenseitigen Vertrag ist jede Seite beides. Beim Kauf schuldet der Verkäufer die Sache und ist Gläubiger des Kaufpreises.
+**In einem Satz:** Ein Schuldverhältnis ist ein rechtliches Band zwischen zwei Personen, bei dem einer vom anderen etwas verlangen darf.
+
+**So steht es im Gesetz (§ 241 I 1):** Kraft des Schuldverhältnisses ist der Gläubiger berechtigt, von dem Schuldner eine Leistung zu fordern.
+
+**Auf Deutsch heißt das:** Der **Gläubiger** ist der, der etwas bekommt (glaubt: „das steht mir zu“). Der **Schuldner** ist der, der etwas tun muss (er „schuldet“ es). Kraft des Schuldverhältnisses ist der Gläubiger berechtigt, vom Schuldner eine Leistung zu fordern (§ 241 I). Bei einem gegenseitigen Vertrag ist jede Seite beides. Beim Kauf schuldet der Verkäufer die Sache und ist Gläubiger des Kaufpreises.
 
 Ein Schuldverhältnis entsteht
 
 - **durch Rechtsgeschäft**, meist durch Vertrag (§ 311 I);
 - **kraft Gesetzes**: unerlaubte Handlung (§ 823), ungerechtfertigte Bereicherung (§ 812), Verschulden bei Vertragsverhandlungen (§ 311 II).
+
+**Stell dir vor:** Du kaufst dein neues Handy im Laden. Das deutsche Recht zerlegt diesen einen Moment in drei Schritte:
+
+| Schritt | was passiert | rechtlich | Bild |
+|---|---|---|---|
+| 1 | „Ich nehme das Handy für 300 €.“ „Gut.“ | Kaufvertrag, § 433: nur Versprechen | Ihr schreibt einen Zettel: „Ich gebe dir das Handy, du gibst mir 300 €.“ |
+| 2 | Der Verkäufer gibt dir das Handy, ihr seid euch einig, dass es jetzt dir gehört | Übereignung des Handys, § 929 | Das Handy wechselt den Besitzer. |
+| 3 | Du gibst ihm 300 € in bar | Übereignung des Geldes, § 929 | Das Geld wechselt den Besitzer. |
+
+Der Zettel aus Schritt 1 macht dich noch nicht zum Eigentümer. Erst Schritt 2 tut das. Das ist das **Trennungsprinzip**. Und wenn der Zettel sich später als ungültig herausstellt, bleibt Schritt 2 trotzdem passiert. Das ist das **Abstraktionsprinzip**. Dann musst du das Handy über § 812 zurückgeben, weil du es „ohne Grund“ hast.
 
 **Trennungsprinzip:** Das Verpflichtungsgeschäft (Kaufvertrag) begründet nur die Pflicht. Das Verfügungsgeschäft (Übereignung, § 929) überträgt das Recht. Es sind getrennte Geschäfte (S. 33).
 
@@ -34,11 +48,15 @@ Ein Schuldverhältnis entsteht
 
 ## Stückschuld, Gattungsschuld und Leistungsort
 
+**Stell dir vor:** Du kaufst auf eBay das gebrauchte iPhone eines bestimmten Verkäufers mit dem Kratzer hinten links. Genau **dieses** Handy ist geschuldet: Stückschuld. Fällt es ihm ins Klo, gibt es kein anderes „dieses“ Handy. Kaufst du dagegen im Onlineshop „1 × iPhone, 128 GB, schwarz, neu“, ist dir egal, welches Exemplar aus dem Lager kommt: Gattungsschuld. Fällt eins runter, schickt der Shop ein anderes.
+
 **Was ist das?** Bei der **Stückschuld** ist ein bestimmter Gegenstand geschuldet: der gebrauchte Golf mit Kennzeichen HN-AB 123. Bei der **Gattungsschuld** ist die Sache nur nach Merkmalen bestimmt: 5 Zentner Kartoffeln. Der Schuldner wählt aus und muss mittlere Art und Güte liefern (§ 243 I).
 
 **Konkretisierung (§ 243 II):** Hat der Schuldner „das seinerseits Erforderliche“ getan, beschränkt sich die Schuld auf genau diese Sache. Aus der Gattungsschuld wird eine Stückschuld. Was erforderlich ist, hängt vom Leistungsort ab.
 
 Der **Leistungsort** richtet sich nach Vereinbarung, sonst nach den Umständen, sonst gilt der Wohnsitz des Schuldners (§ 269). Der Regelfall ist also die Holschuld.
+
+Bild: **Holschuld** = Pizza abholen (du gehst hin). **Bringschuld** = Pizza-Lieferdienst (der Laden kommt zu dir). **Schickschuld** = Paket per Post (der Verkäufer bringt es zur Post, den Rest erledigt der Paketdienst).
 
 | Art | Was der Schuldner für die Konkretisierung tun muss |
 |---|---|
@@ -87,7 +105,7 @@ Rechte des Verbrauchers in Kurzform: Bereitstellung ist Hauptpflicht (§ 327b). 
 
 **Erfüllung (§ 362 I):** Die Schuld erlischt, wenn die geschuldete Leistung bewirkt ist. Es zählt der Erfolg: Das Geld muss beim Gläubiger ankommen. An einen Dritten wird nur wirksam geleistet, wenn der Gläubiger zugestimmt hat (§§ 362 II, 185).
 
-**Aufrechnung (§§ 387–389):** verrechnen statt hin und her zahlen. Prüfungsschema:
+**Aufrechnung (§§ 387–389):** verrechnen statt hin und her zahlen. Bild: In der WG schuldest du Mia 30 € für den Einkauf, Mia schuldet dir 20 € für die Pizza. Statt 30 € hin und 20 € zurück sagst du: „Ich rechne auf.“ Danach schuldest du ihr nur noch 10 €. Prüfungsschema:
 
 1. **Gegenseitigkeit:** Jeder ist Gläubiger und Schuldner des anderen.
 2. **Gleichartigkeit:** praktisch Geld gegen Geld.
@@ -149,8 +167,10 @@ c) Nein. Es ist eine Ware mit digitalen Elementen. Es gilt insgesamt Kaufrecht (
 
 *Eigene Lösungsskizze.*
 
-a) Gattungsschuld.
-b) Stückschuld.
+Testfrage: Wäre dem Käufer jedes Exemplar mit diesen Merkmalen recht?
+
+a) Ja, jedes Paket Papier mit A4 und 80 g passt: Gattungsschuld.
+b) Nein, genau dieser eine Laptop: Stückschuld.
 c) Gattungsschuld, genauer eine beschränkte Gattungsschuld (nur aus dem Lager). Geschuldet ist mittlere Art und Güte (§ 243 I).
 
 ### Übung 3

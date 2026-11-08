@@ -73,6 +73,8 @@ class Lager:
 
 `Produkt | None` heißt: Die Methode liefert ein Produkt oder `None`.
 
+**Stell dir vor:** Du suchst im Regal die Packung mit der Nummer 203. Du nimmst eine Packung nach der anderen in die Hand und schaust auf die Nummer. Passt sie, hörst du sofort auf und gibst die Packung heraus (`return produkt`). „Gibt es nicht“ darfst du erst sagen, wenn du **alle** Packungen angeschaut hast (`return None` nach der Schleife). Beim Suchen nach „kaffee“ legst du dagegen jede passende Packung in einen Korb und gibst am Ende den ganzen Korb heraus, auch wenn er leer ist.
+
 ```python
 from daten import beispielsortiment
 from lager import Lager
@@ -470,11 +472,20 @@ print(len(treffer), [p.name for p in treffer])
 
 ### Übung 2
 
+Aufruf mit 101:
+
+| Runde | produkt.nummer | == 101? | was passiert |
+|---|---|---|---|
+| 1 | 101 | ja | `return produkt`, gefunden |
+
+Aufruf mit 203:
+
 | Runde | produkt.nummer | == 203? | was passiert |
 |---|---|---|---|
 | 1 | 101 | nein | `else`: `return None`, Suche vorbei |
+| 2–8 | – | – | werden nie erreicht |
 
-101 wird gefunden, weil es zufällig an erster Stelle steht. Bei 203 ist schon Runde 1 „nein“, also `return None`.
+101 wird gefunden, weil es zufällig an erster Stelle steht. Bei 203 ist schon Runde 1 „nein“, und das `else` beendet die Methode, bevor das zweite Produkt überhaupt angeschaut wird. Das ist so, als würdest du nach der ersten falschen Packung sagen: „Gibt es nicht.“
 
 ```python
 from daten import beispielsortiment
@@ -554,6 +565,17 @@ print(bestellung2_positionen, korb_positionen)
 1. Runde 1 (Platz 0): Das günstigste von allen ist 2.99 auf Platz 3. Tausch 0 ↔ 3: `[2.99, 8.45, 3.73, 13.9]`.
 2. Runde 2 (Platz 1): Das günstigste ab Platz 1 ist 3.73 auf Platz 2. Tausch 1 ↔ 2: `[2.99, 3.73, 8.45, 13.9]` (Python schreibt 13.90 als 13.9).
 3. Runde 3 und 4: Alles steht schon richtig.
+
+Die innere Schleife in Runde 1 genau (i = 0, sie merkt sich die Position des bisher günstigsten Preises):
+
+| j | preise[j] | kleiner als preise[guenstigstes]? | guenstigstes danach |
+|---|---|---|---|
+| Start | – | – | 0 (13.9) |
+| 1 | 8.45 | 8.45 < 13.9? ja | 1 |
+| 2 | 3.73 | 3.73 < 8.45? ja | 2 |
+| 3 | 2.99 | 2.99 < 3.73? ja | 3 |
+
+Danach tauscht die Zeile `preise[i], preise[guenstigstes] = …` Platz 0 und Platz 3.
 
 ```python
 def sortieren(preise: list[float]) -> None:

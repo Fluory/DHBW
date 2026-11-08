@@ -7,11 +7,23 @@ klausur: "relevant"
 
 Fast jedes Programm ab VL3 enthält eine `for`-Schleife: die Personalkosten in VL6, `finden()` und `suchen()` im Kaffeeshop. Wenn sich Schleifen für dich abstrakt anfühlen, fang hier an. Du brauchst nur `print()` und Variablen. Beides kommt ausführlich in Kapitel 3, hier reicht: `summe = 0` gibt dem Namen `summe` den Wert 0.
 
+**In einem Satz:** Eine `for`-Schleife sagt dem Computer: „Mach dasselbe noch einmal, und zwar für jedes Ding in dieser Reihe, eins nach dem anderen.“
+
 Es gibt nur einen Trick. Du gehst die Schleife Runde für Runde durch und schreibst nach jeder Runde auf, welchen Wert jede Variable hat. Das ist eine **Rundentabelle**. Sie hilft bei jeder Klausuraufgabe der Art „Was gibt das Programm aus?“.
 
 > [!NOTE]
 > **Beispiel: Die Kassiererin**
 > Auf dem Band liegen drei Waren. Die Kassiererin nimmt eine Ware in die Hand, scannt sie, legt sie weg und nimmt die nächste. Das ist eine Runde. Ist das Band leer, sagt sie die Summe. Bei `for ware in einkauf:` ist `ware` die Hand: In jeder Runde liegt eine andere Ware darin.
+>
+> Übersetzt in Code-Teile:
+>
+> | Im Supermarkt | Im Code |
+> |---|---|
+> | das Band mit allen Waren | die Liste `einkauf` |
+> | die Hand, in der gerade eine Ware liegt | die Schleifenvariable `ware` |
+> | „scannen“, was sie mit jeder Ware tut | die eingerückten Zeilen |
+> | das Display der Kasse, das mitzählt | eine Variable wie `summe` |
+> | Band leer, Summe ansagen | die erste Zeile nach der Schleife, nicht eingerückt |
 
 Dieses Kapitel ist eine Ergänzung zur Vorlesung. Die Inhalte (`for`, `range()`) stehen auf den Folien von VL3 (F. 69–77). Die Rundentabellen und die Aufgaben sind eigene Übungen.
 
@@ -32,7 +44,7 @@ Runde 2
 fertig
 ```
 
-`range(3)` liefert die Zahlen 0, 1, 2. Es beginnt bei 0, und die 3 selbst ist nicht dabei. Drei Zahlen, also drei Runden. Alles, was eingerückt unter der `for`-Zeile steht, läuft in jeder Runde. `print("fertig")` ist nicht eingerückt. Es läuft nur einmal, nach der letzten Runde.
+Lies die erste Zeile so: „Für jedes `i` aus der Reihe 0, 1, 2 mach Folgendes.“ `range(3)` liefert die Zahlen 0, 1, 2. Es beginnt bei 0, und die 3 selbst ist nicht dabei. Drei Zahlen, also drei Runden. Alles, was eingerückt unter der `for`-Zeile steht, läuft in jeder Runde. `print("fertig")` ist nicht eingerückt. Es läuft nur einmal, nach der letzten Runde.
 
 | Runde | i | Ausgabe |
 |---|---|---|
@@ -265,7 +277,16 @@ Durchgerechnet für `for i in range(2, 9, 3): print(i * i)`: Start 2, Schritt 3,
 
 ### Übung 1
 
-`range(4)` liefert 0, 1, 2, 3: vier Runden, die 4 ist nicht dabei.
+1. Was liefert `range(4)`? Start fehlt, also ab 0. Stopp 4 ist nicht dabei. Also 0, 1, 2, 3.
+2. Vier Zahlen, also vier Runden.
+3. In jeder Runde wird `i` ausgegeben.
+
+| Runde | i | Ausgabe |
+|---|---|---|
+| 1 | 0 | 0 |
+| 2 | 1 | 1 |
+| 3 | 2 | 2 |
+| 4 | 3 | 3 |
 
 ```python
 for i in range(4):
@@ -283,6 +304,12 @@ for i in range(4):
 
 Die Liste hat zwei Elemente, also zwei Runden mit „Hallo“. `x` wird nicht benutzt, das ist egal. „Tschüss“ ist nicht eingerückt und kommt einmal am Ende.
 
+| Runde | x | Ausgabe |
+|---|---|---|
+| 1 | 1 | Hallo |
+| 2 | 2 | Hallo |
+| nach der Schleife | 2 (bleibt) | Tschüss |
+
 ```python
 for x in [1, 2]:
     print("Hallo")
@@ -297,7 +324,15 @@ Tschüss
 
 ### Übung 3
 
-Start 2, dann immer + 2: 2, 4, 6. Die nächste Zahl wäre 8. Schon die 7 ist nicht mehr dabei, weil Stopp nie dazugehört.
+1. Start ist 2, Schrittweite 2, Stopp 7.
+2. Zahlen aufschreiben: 2, dann 2 + 2 = 4, dann 4 + 2 = 6.
+3. Die nächste wäre 6 + 2 = 8. 8 ist nicht kleiner als 7, also Schluss.
+
+| Runde | i | Ausgabe |
+|---|---|---|
+| 1 | 2 | 2 |
+| 2 | 4 | 4 |
+| 3 | 6 | 6 |
 
 ```python
 for i in range(2, 7, 2):
@@ -354,4 +389,12 @@ print(produkt_aller([]))
 1
 ```
 
-Rundentabelle: Start 1 → Runde 1: 1 · 2 = 2 → Runde 2: 2 · 3 = 6 → Runde 3: 6 · 4 = 24. Bei der leeren Liste läuft keine einzige Runde. Der Startwert 1 bleibt stehen.
+| Runde | zahl | ergebnis vorher | Rechnung | ergebnis nachher |
+|---|---|---|---|---|
+| Start | – | – | ergebnis = 1 | 1 |
+| 1 | 2 | 1 | 1 · 2 | 2 |
+| 2 | 3 | 2 | 2 · 3 | 6 |
+| 3 | 4 | 6 | 6 · 4 | 24 |
+| danach | – | – | return | 24 |
+
+Bei der leeren Liste läuft keine einzige Runde. Der Startwert 1 bleibt stehen und wird zurückgegeben.

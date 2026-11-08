@@ -15,6 +15,19 @@ Es gibt drei Grundformen (VL3 F. 7): **Sequenz** (Zeilen nacheinander), **Selekt
 
 ### Was ist das?
 
+**In einem Satz:** Mit `if` sagst du: „Nur wenn das hier stimmt, mach Folgendes.“
+
+**Stell dir vor:** Du stehst morgens vor dem Kleiderschrank und schaust aufs Thermometer. Unter 0 Grad: dicke Jacke. Sonst unter 20 Grad: Pulli. Sonst unter 30 Grad: T-Shirt. Sonst: kurze Hose. Du gehst die Fragen von oben nach unten durch und hörst bei der ersten auf, die passt. Genau so arbeitet `if`–`elif`–`else`.
+
+So prüft Python das Beispiel unten bei `temperatur = 22`:
+
+| Schritt | Zeile | Frage | Antwort | was passiert |
+|---|---|---|---|---|
+| 1 | `if temperatur < 0:` | 22 < 0? | nein | weiter zur nächsten Frage |
+| 2 | `elif temperatur < 20:` | 22 < 20? | nein | weiter zur nächsten Frage |
+| 3 | `elif temperatur < 30:` | 22 < 30? | ja | „Angenehm.“ ausgeben, **fertig** |
+| – | `else:` | – | wird nicht mehr angeschaut | – |
+
 ```python
 temperatur = 22
 if temperatur < 0:
@@ -155,6 +168,10 @@ for jahr in [1900, 2000, 2024, 2026]:
 
 ### Was ist das?
 
+**In einem Satz:** `while` heißt „solange“: Wiederhole den Block, solange die Bedingung noch stimmt.
+
+**Stell dir vor:** Du füllst eine Gießkanne am Wasserhahn. Du schaust nicht vorher nach, wie viele Sekunden das dauert. Du schaust immer wieder hin: Noch nicht voll? Weiter laufen lassen. Voll? Hahn zu. Bei `for` weißt du vorher, wie viele Runden es gibt (so viele Waren auf dem Band). Bei `while` weißt du es nicht, du prüfst vor jeder Runde neu.
+
 `while` wiederholt den Block, solange die Bedingung `True` ist. Ist sie von Anfang an `False`, läuft der Block kein einziges Mal (F. 57). Nimm `while`, wenn du vorher nicht weißt, wie oft wiederholt wird.
 
 ```python
@@ -169,6 +186,19 @@ print(f"Nach {jahre} Jahren: {kontostand:.2f} Euro")
 ```text
 Nach 15 Jahren: 2078.93 Euro
 ```
+
+Die Rundentabelle (gekürzt, Kontostand gerundet). Vor jeder Runde fragt Python: Ist `kontostand < 2000`?
+
+| Runde | Frage vorher | kontostand danach | jahre danach |
+|---|---|---|---|
+| Start | – | 1000.00 | 0 |
+| 1 | 1000.00 < 2000? ja | 1050.00 | 1 |
+| 2 | 1050.00 < 2000? ja | 1102.50 | 2 |
+| 3 | 1102.50 < 2000? ja | 1157.62 | 3 |
+| … | … | … | … |
+| 14 | 1885.65 < 2000? ja | 1979.93 | 14 |
+| 15 | 1979.93 < 2000? ja | 2078.93 | 15 |
+| Ende | 2078.93 < 2000? **nein** | Schleife endet | 15 |
 
 Python hat kein `do`–`while`. Für „mindestens einmal“ nimmt man `while True:` mit einem `break` am Ende (F. 65). Typischer Einsatz ist die Eingabeprüfung: so lange fragen, bis die Eingabe passt (F. 66).
 
@@ -198,7 +228,20 @@ print(f"Fakultät von {n} ist: {ergebnis}")
 Fakultät von 7 ist: 5040
 ```
 
+| Runde | i | Rechnung | ergebnis danach |
+|---|---|---|---|
+| Start | – | ergebnis = 1 | 1 |
+| 1 | 1 | 1 · 1 | 1 |
+| 2 | 2 | 1 · 2 | 2 |
+| 3 | 3 | 2 · 3 | 6 |
+| 4 | 4 | 6 · 4 | 24 |
+| 5 | 5 | 24 · 5 | 120 |
+| 6 | 6 | 120 · 6 | 720 |
+| 7 | 7 | 720 · 7 | 5040 |
+
 `break` verlässt die Schleife sofort. `continue` überspringt nur den Rest der aktuellen Runde (F. 79–80).
+
+**Stell dir vor:** Die Kassiererin scannt Ware für Ware. Bei `break` ruft jemand „Kasse schließt!“, und sie hört sofort ganz auf, auch wenn noch Waren auf dem Band liegen. Bei `continue` liegt ein Pfandbon auf dem Band. Den legt sie zur Seite, ohne ihn zu scannen, und nimmt die nächste Ware. Die Schleife läuft weiter.
 
 ```python
 for i in range(1, 11):
@@ -221,6 +264,18 @@ continue-Schleife: 4
 continue-Schleife: 5
 ```
 
+| Schleife | i | Bedingung | was passiert |
+|---|---|---|---|
+| break | 1 | 1 == 4? nein | Ausgabe „break-Schleife: 1“ |
+| break | 2 | 2 == 4? nein | Ausgabe „break-Schleife: 2“ |
+| break | 3 | 3 == 4? nein | Ausgabe „break-Schleife: 3“ |
+| break | 4 | 4 == 4? ja | `break`: Schleife sofort zu Ende, 5 bis 10 kommen nie dran |
+| continue | 1 | 1 == 3? nein | Ausgabe „continue-Schleife: 1“ |
+| continue | 2 | 2 == 3? nein | Ausgabe „continue-Schleife: 2“ |
+| continue | 3 | 3 == 3? ja | `continue`: `print` überspringen, gleich weiter mit i = 4 |
+| continue | 4 | 4 == 3? nein | Ausgabe „continue-Schleife: 4“ |
+| continue | 5 | 5 == 3? nein | Ausgabe „continue-Schleife: 5“ |
+
 > [!IMPORTANT]
 > **Das Wichtigste**
 > `break`, wenn das Ergebnis feststeht (gefunden). `continue`, wenn bestimmte Werte übersprungen werden sollen (F. 84).
@@ -233,7 +288,18 @@ continue-Schleife: 5
 
 ### Was ist das?
 
-Eine Liste speichert viele Werte geordnet unter einem Namen (F. 88). Der Index beginnt bei 0. Bei 5 Elementen sind 0 bis 4 gültig, negative Indizes zählen von hinten (F. 89). `append()` hängt hinten an.
+**In einem Satz:** Eine Liste ist ein Name für viele Werte in einer festen Reihenfolge.
+
+**Stell dir vor:** Ein Schubladenschrank mit dem Etikett `noten`. Die Schubladen sind durchnummeriert, aber die oberste hat die Nummer **0**, nicht 1. Mit `noten[2]` ziehst du Schublade Nummer 2 auf, das ist die dritte von oben.
+
+| Schublade (Index) | 0 | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|---|
+| Inhalt | 15 | 13 | 8 | 10 | 17 |
+| von hinten gezählt | -5 | -4 | -3 | -2 | -1 |
+
+`noten[2]` ist 8. `noten[-1]` ist die unterste Schublade, 17. `noten[5]` gibt es nicht: Fünf Schubladen haben die Nummern 0 bis 4.
+
+Auf der Folie: Eine Liste speichert viele Werte geordnet unter einem Namen (F. 88). Der Index beginnt bei 0. Bei 5 Elementen sind 0 bis 4 gültig, negative Indizes zählen von hinten (F. 89). `append()` hängt hinten an.
 
 ```python
 noten = [15, 13, 8, 10, 17]
@@ -272,7 +338,7 @@ Di: 21.0 °C
 Mi: 19.2 °C
 ```
 
-Eine Liste kann Listen enthalten, etwa für Tabellen. Der erste Index wählt die Zeile, der zweite die Spalte (F. 100). Die Falle: `* 3` kopiert nicht die Zeile, sondern nur den Verweis (F. 102–106).
+Eine Liste kann Listen enthalten, etwa für Tabellen. Der erste Index wählt die Zeile, der zweite die Spalte (F. 100). Die Falle: `* 3` kopiert nicht die Zeile, sondern nur den Verweis (F. 102–106). Stell dir drei Zettel vor, auf denen dieselbe Schrankadresse steht. Es gibt nur **einen** Schrank. Legst du über Zettel 1 etwas hinein, siehst du es auch über Zettel 2 und 3.
 
 ```python
 falsch = [[0] * 4] * 3
@@ -375,11 +441,24 @@ print(hoechster)
 
 ### Übung 1
 
-`15 < 0` ist falsch, `15 < 20` ist wahr. Also kommt `Kühl.`. Die übrigen Zweige werden nicht mehr geprüft.
+1. `15 < 0`? Nein, weiter.
+2. `15 < 20`? Ja. Also wird `Kühl.` ausgegeben.
+3. Fertig. `elif temperatur < 30` und `else` werden nicht mehr geprüft, obwohl 15 < 30 auch stimmen würde.
 
 ### Übung 2
 
-Die `while`-Schleife springt um 2: 1, 3, 5. Danach ist `i` gleich 7 und die Bedingung falsch. `continue` überspringt nur die Runde mit `i == 2`.
+Die `while`-Schleife springt um 2: 1, 3, 5. Danach ist `i` gleich 7 und die Bedingung falsch. `continue` überspringt nur die Runde mit `i == 2`. `end=" "` sorgt dafür, dass nach jeder Zahl ein Leerzeichen statt eines Zeilenumbruchs kommt. Das leere `print()` beendet die Zeile.
+
+| Schleife | i | Frage | was passiert |
+|---|---|---|---|
+| while | 1 | 1 <= 5? ja | „1 “ ausgeben, i = 3 |
+| while | 3 | 3 <= 5? ja | „3 “ ausgeben, i = 5 |
+| while | 5 | 5 <= 5? ja | „5 “ ausgeben, i = 7 |
+| while | 7 | 7 <= 5? nein | Schleife endet |
+| for | 1 | 1 == 2? nein | „i = 1“ |
+| for | 2 | 2 == 2? ja | `continue`, nichts ausgeben |
+| for | 3 | 3 == 2? nein | „i = 3“ |
+| for | 4 | 4 == 2? nein | „i = 4“ (range(1, 5) endet vor 5) |
 
 ```python
 i = 1
@@ -402,7 +481,10 @@ i = 4
 
 ### Übung 3
 
-`* 2` kopiert nur den Verweis auf die innere Liste. Es ist zweimal dieselbe Zeile.
+1. `[0] * 2` baut **eine** innere Liste `[0, 0]`.
+2. `[...] * 2` legt zwei Verweise auf genau diese eine innere Liste in die äußere Liste. Zwei Zettel, ein Schrank.
+3. `falsch[0][0] = 1` ändert in dieser einen inneren Liste die erste Stelle.
+4. Weil `falsch[1]` auf dieselbe Liste zeigt, sieht man die 1 in beiden Zeilen.
 
 ```python
 falsch = [[0] * 2] * 2
@@ -462,7 +544,13 @@ Transporter, 24 h: 50.00 Euro
 Unbekannter Fahrzeugtyp: Bus
 ```
 
-Transporter 6 h: 6 · 3,50 = 21,00 → · 0,8 = 16,80 → + 1,50 = 18,30 €.
+Transporter 6 h, Schritt für Schritt:
+
+1. `match` findet den Fall `"Transporter"`.
+2. Stundenpreis: 6 · 3,50 = 21,00 €.
+3. Rabatt? 6 >= 5, ja. 20 % weniger heißt mal 0,8: 21,00 · 0,8 = 16,80 €.
+4. Grundgebühr dazu: 16,80 + 1,50 = 18,30 €.
+5. Mehr als 50 €? Nein, also bleibt es bei 18,30 €.
 
 ### Übung 5
 

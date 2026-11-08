@@ -25,6 +25,10 @@ Ein **Docstring** `"""…"""` steht direkt unter einer `def`- oder `class`-Zeile
 
 ### Was ist das?
 
+**In einem Satz:** Der Datentyp sagt, was für eine Sorte Wert du vor dir hast: ganze Zahl, Kommazahl, Text, Ja/Nein oder „nichts“.
+
+**Stell dir vor:** In der Küche gibt es Eier (zählt man ganz: 3 Stück), Mehl (wiegt man: 250,5 g), Etiketten (Text: „Zucker“) und Lichtschalter (an oder aus). Mit Eiern kannst du zählen, mit einem Etikett nicht rechnen. Genauso erlaubt Python je nach Typ andere Operationen.
+
 Ein Datentyp beschreibt, welche Art von Wert vorliegt. Er legt fest, welche Operationen erlaubt sind: Zahlen kann man teilen, Texte nicht (F. 13). In Python ist jeder Wert ein Objekt (F. 15).
 
 | Typ | Beispiele | Wichtig | Java |
@@ -75,7 +79,20 @@ Im Kurs nutzen wir die dritte Zeile.
 
 ### Was ist das?
 
-Eine Variable ist in Python ein **Name, der auf einen Wert zeigt**, wie ein Namensschild. Sie entsteht bei der ersten Zuweisung. Eine Deklaration wie `int zahl;` gibt es nicht (F. 31). Das `=` heißt „zeigt ab jetzt auf“, nicht „ist gleich“. Bei `zahl = zahl + 1` rechnet Python zuerst die rechte Seite aus (F. 32).
+**In einem Satz:** Eine Variable ist ein Name, unter dem du dir einen Wert merkst, damit du ihn später wieder benutzen kannst.
+
+**Stell dir vor:** Du klebst einen Notizzettel mit der Aufschrift `zahl` an eine Kiste, in der eine 10 liegt. Wenn du später „zahl“ sagst, schaut Python in die Kiste mit diesem Zettel und holt die 10 heraus. Bei `zahl = zahl + 1` passiert in genau dieser Reihenfolge:
+
+1. Rechte Seite zuerst: In die Kiste `zahl` schauen. Da liegt 10.
+2. 10 + 1 rechnen. Ergebnis 11.
+3. Den Zettel `zahl` jetzt an die 11 kleben. Die 10 ist damit vergessen.
+
+| Zeile | was Python tut | zahl danach |
+|---|---|---|
+| `zahl = 10` | Zettel `zahl` an die 10 kleben | 10 |
+| `zahl = zahl + 1` | 10 holen, 10 + 1 = 11, Zettel an die 11 kleben | 11 |
+
+Genauer gesagt ist eine Variable in Python ein **Name, der auf einen Wert zeigt**, wie ein Namensschild. Sie entsteht bei der ersten Zuweisung. Eine Deklaration wie `int zahl;` gibt es nicht (F. 31). Das `=` heißt „zeigt ab jetzt auf“, nicht „ist gleich“. Bei `zahl = zahl + 1` rechnet Python zuerst die rechte Seite aus (F. 32).
 
 Mit `name: typ = wert` schreibst du den erwarteten Typ dazu, etwa `alter: int = 25` (F. 33). Python ignoriert die Angabe beim Ausführen. Erst `uv run ty check` prüft sie.
 
@@ -153,7 +170,17 @@ print(7 % 3, 8 % 3, 9 % 3, 13 % 2 == 0)
 ```
 
 - `/` liefert immer ein `float`, auch bei `6 / 3`.
-- `//` ist die ganzzahlige Division und rundet **ab**, zur kleineren Zahl hin. Deshalb ist `-7 // 2` gleich `-4`. Java liefert hier −3 (F. 53).
+**Stell dir vor:** 7 Stück Pizza für 2 Personen. Mit `/` teilst du genau: 3,5 Stück pro Person. Mit `//` gibt es nur ganze Stücke: 3 pro Person. Mit `%` fragst du, was übrig bleibt: 1 Stück.
+
+| Ausdruck | Frage dazu | Ergebnis |
+|---|---|---|
+| `7 / 2` | Wie viel bekommt jede Person genau? | 3.5 |
+| `7 // 2` | Wie viele **ganze** Stücke bekommt jede Person? | 3 |
+| `7 % 2` | Wie viele Stücke bleiben übrig? | 1 |
+
+Probe: 3 · 2 + 1 = 7. Ganzer Teil mal Teiler plus Rest ergibt wieder die Ausgangszahl.
+
+- `//` ist die ganzzahlige Division und rundet **ab**, zur kleineren Zahl hin. Deshalb ist `-7 // 2` gleich `-4`. Denk an einen Zahlenstrahl: −7 / 2 = −3,5. „Abrunden“ heißt nach links gehen, und links von −3,5 liegt die −4, nicht die −3. Java liefert hier −3 (F. 53).
 - `%` liefert den Rest: 7 = 2 · 3 + 1, also `7 % 3` = 1. Eine Zahl ist gerade, wenn `n % 2 == 0` (F. 54).
 - Punkt vor Strich, `**` bindet am stärksten, Klammern legen die Reihenfolge fest (F. 64).
 
@@ -205,7 +232,7 @@ True PYTHON
 
 Positionen zählen ab 0, negative von hinten. Ein Ausschnitt `[1:3]` enthält Position 1 und 2, aber nicht 3 (F. 70). Strings sind unveränderlich (F. 23).
 
-`+` verbindet nur Strings mit Strings. Ein **f-String** `f"…"` setzt Werte jeden Typs in geschweiften Klammern ein. In den Klammern darf gerechnet werden, und `:.2f` formatiert mit zwei Nachkommastellen (F. 71).
+`+` verbindet nur Strings mit Strings. Ein **f-String** `f"…"` setzt Werte jeden Typs in geschweiften Klammern ein. Stell ihn dir als Lückentext vor: `f"{name} ist {alter} Jahre alt"` ist der Satz „___ ist ___ Jahre alt“, und Python füllt die Lücken mit dem, was gerade in den Kisten `name` und `alter` liegt. In den Klammern darf gerechnet werden, und `:.2f` formatiert mit zwei Nachkommastellen (F. 71).
 
 ```python
 name = "Ada"
@@ -375,7 +402,16 @@ ZeroDivisionError: division by zero
 
 ### Übung 1
 
-`3.5` · `3` · `-4` (abrunden zur kleineren Zahl) · `1` · `2.0` (`/` gibt immer `float`) · `14` (Punkt vor Strich).
+Je Ausdruck: Erst schauen, welcher Operator dasteht, dann rechnen.
+
+- `7 / 2`: genaue Division, immer `float` → `3.5`.
+- `7 // 2`: wie viele ganze Zweier passen in 7? Drei (2 · 3 = 6) → `3`.
+- `-7 // 2`: −3,5 abrunden, also nach links auf dem Zahlenstrahl → `-4`.
+- `7 % 3`: 7 = 3 · 2 + 1, der Rest ist → `1`.
+- `6 / 3`: geht glatt auf, aber `/` liefert trotzdem `float` → `2.0`.
+- `2 + 3 * 4`: Punkt vor Strich, erst 3 · 4 = 12, dann 2 + 12 → `14`.
+
+Kurz: `3.5` · `3` · `-4` (abrunden zur kleineren Zahl) · `1` · `2.0` (`/` gibt immer `float`) · `14` (Punkt vor Strich).
 
 ```python
 print(7 / 2, 7 // 2, -7 // 2, 7 % 3, 6 / 3, 2 + 3 * 4)
@@ -431,6 +467,11 @@ print(round(19.99 * 100), int(Decimal("19.99") * 100))
 ```
 
 ### Übung 5
+
+1. `a` und `b` sind Texte. `a + b` klebt sie aneinander: `"12"` + `"3"` = `"123"`.
+2. Umwandeln: `ai = int(a)` ergibt die Zahl 12, `bi = int(b)` die Zahl 3.
+3. Rechnen: 12 + 3 = 15, 12 − 3 = 9, 12 · 3 = 36, 12 / 3 = 4.0.
+4. Alles in einen f-String setzen. Die Lücken `{…}` dürfen Rechnungen enthalten.
 
 ```python
 a = "12"

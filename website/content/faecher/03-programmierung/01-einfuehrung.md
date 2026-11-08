@@ -13,7 +13,11 @@ Ein Alltagsbeispiel: Ein Kochrezept ist ein Algorithmus. Es beschreibt Schritt f
 
 ### Was ist das?
 
-Ein Algorithmus ist eine Schrittfolge, die ein Problem systematisch löst (VL1 F. 10). Er hängt nicht von einer bestimmten Programmiersprache ab. Jeder Schritt muss so genau sein, dass eine Person oder ein Computer ihn ohne Rückfrage ausführen kann.
+**In einem Satz:** Ein Algorithmus ist eine Anleitung, die so genau ist, dass jemand sie stur abarbeiten kann, ohne nachzufragen.
+
+**Stell dir vor:** Du schreibst deiner Mitbewohnerin auf, wie sie Nudeln kocht. „Koch die Nudeln“ hilft ihr nicht. „1. Topf mit 1 Liter Wasser füllen. 2. Herd auf Stufe 9. 3. Warten, bis das Wasser blubbert. 4. 250 g Nudeln rein. 5. 10 Minuten warten. 6. Abgießen.“ Das kann sie abarbeiten, auch wenn sie nie gekocht hat. Ein Computer ist wie eine Mitbewohnerin, die nichts selbst denkt: Er braucht genau so eine Liste.
+
+Auf der Folie steht es formaler: Ein Algorithmus ist eine Schrittfolge, die ein Problem systematisch löst (VL1 F. 10). Er hängt nicht von einer bestimmten Programmiersprache ab. Jeder Schritt muss so genau sein, dass eine Person oder ein Computer ihn ohne Rückfrage ausführen kann.
 
 Vier Anforderungen gehören dazu:
 
@@ -29,6 +33,12 @@ Drei Eigenschaften klingen ähnlich und werden oft verwechselt (F. 11):
 | terminierend | endet bei jeder erlaubten Eingabe nach endlich vielen Schritten | Er hört auf. |
 | determiniert | gleiche Eingabe und gleiche Startbedingungen liefern immer dasselbe Ergebnis | Es geht um das **Ergebnis**. |
 | deterministisch | zu jedem Zeitpunkt ist der nächste Schritt eindeutig festgelegt | Es geht um den **Weg**. |
+
+**Stell dir vor:** Du fährst mit dem Navi von der Wohnung zur Hochschule.
+
+- **Terminierend:** Das Navi sagt irgendwann „Sie haben Ihr Ziel erreicht“. Es schickt dich nicht endlos im Kreis.
+- **Determiniert:** Egal welche Strecke, du kommst immer an derselben Hochschule an. Gleiche Eingabe (Start und Ziel), gleiches **Ergebnis**.
+- **Deterministisch:** An jeder Kreuzung steht fest, ob es links oder rechts geht. Gleiche Eingabe, gleicher **Weg**. Ein Navi, das bei Stau mal so und mal so fährt, ist nicht deterministisch, kommt aber trotzdem an. Es ist also determiniert.
 
 Ein deterministischer Algorithmus ist immer auch determiniert: Wenn jeder Schritt feststeht, kommt bei gleicher Eingabe dasselbe heraus. Umgekehrt gilt das nicht. Ein Algorithmus kann auf verschiedenen Wegen zum selben Ergebnis kommen.
 
@@ -56,7 +66,11 @@ Ein deterministischer Algorithmus ist immer auch determiniert: Wenn jeder Schrit
 
 ### Was ist das?
 
-Eine Datenstruktur legt fest, wie Daten organisiert und gespeichert werden, damit man schnell auf sie zugreifen und sie ändern kann (F. 17). Alle Programme bestehen aus Algorithmen und Datenstrukturen (F. 21).
+**In einem Satz:** Eine Datenstruktur ist die Art, wie du Sachen ablegst, damit du sie schnell wiederfindest.
+
+**Stell dir vor:** Deine Unterlagen kannst du auf einen Stapel legen, in einen Ordner mit Unterordnern sortieren oder nummeriert in eine Schublade stecken. Jede Art ist für etwas anderes gut. Beim Stapel kommst du nur an das oberste Blatt. Im Ordner findest du Themen schnell. Genau diese Wahl triffst du im Programm auch.
+
+Formal: Eine Datenstruktur legt fest, wie Daten organisiert und gespeichert werden, damit man schnell auf sie zugreifen und sie ändern kann (F. 17). Alle Programme bestehen aus Algorithmen und Datenstrukturen (F. 21).
 
 | Struktur | Idee | Eigenschaft | Beispiel |
 |---|---|---|---|
@@ -97,6 +111,14 @@ Python ist **multiparadigmatisch**: Es vereint mehrere Ansätze.
 ## Vom Quellcode zum Programm
 
 ### Was ist das?
+
+**In einem Satz:** Dein Code ist Text, und irgendwer muss diesen Text in Befehle übersetzen, die der Prozessor versteht.
+
+**Stell dir vor:** Du hast ein englisches Buch und willst es auf Deutsch.
+
+- **Interpreter** = Dolmetscherin, die neben dir sitzt und Satz für Satz übersetzt, während du zuhörst. Du kannst sofort anfangen, aber jeder Satz kostet ein bisschen Wartezeit.
+- **Compiler** = Übersetzer, der das ganze Buch vorher übersetzt und drucken lässt. Danach liest du schnell. Bei jeder Änderung muss er aber neu übersetzen, und die deutsche Ausgabe hilft niemandem, der nur Französisch kann (nur eine Zielplattform).
+- **Zwischencode** = Das Buch wird in eine einfache Zwischensprache übersetzt, die überall auf der Welt ein Vorleser (die virtuelle Maschine) vorlesen kann. So arbeitet Python.
 
 Es gibt drei Wege, Quellcode auszuführen (F. 37–42):
 
@@ -167,6 +189,8 @@ So läuft der Start ab (F. 71–75):
 1. uv findet das Projekt und wählt Python 3.14.
 2. CPython prüft zuerst die **Syntax der ganzen Datei**.
 3. Erst dann wird die Datei in Bytecode übersetzt und ausgeführt.
+
+**Stell dir vor:** Du gibst einen Aufsatz ab. Die Lehrerin liest ihn erst einmal nur auf Satzbau durch (fehlt ein Punkt, eine Klammer?). Findet sie einen Grammatikfehler, gibt sie den ganzen Aufsatz zurück, ohne ein Wort vorzulesen. Das ist der **Syntaxfehler**. Ist die Grammatik in Ordnung, liest sie ihn laut vor, Satz für Satz. Stolpert sie in Satz 2 über ein Wort, das es nicht gibt, hört sie dort auf. Satz 1 hat sie aber schon vorgelesen. Das ist der **Laufzeitfehler**.
 
 Daraus folgt ein wichtiger Unterschied. Ein Tippfehler im Namen ist ein **Laufzeitfehler**. Die erste Zeile läuft noch:
 
@@ -297,9 +321,22 @@ Hallo DHBW
 
 ### Übung 5
 
-(a) Zeile 1 wird ausgegeben. Dann bricht das Programm mit `NameError: name 'Print' is not defined` ab. Die Syntax ist in Ordnung, der Fehler fällt erst beim Ausführen von Zeile 2 auf.
+(a) Schritt für Schritt:
 
-(b) Es wird gar nichts ausgegeben. Python meldet sofort `SyntaxError: '(' was never closed`. Grund: CPython prüft vor dem Start die Syntax der ganzen Datei. Die echten Ausgaben stehen im Abschnitt „Was bei `uv run hallo.py` passiert“.
+1. Syntaxprüfung der ganzen Datei: `Print(...)` ist grammatisch ein ganz normaler Funktionsaufruf. Kein Fehler.
+2. Zeile 1 läuft: Die Ausgabe erscheint.
+3. Zeile 2 läuft: Python sucht eine Funktion namens `Print` (großes P) und findet keine. Abbruch mit `NameError: name 'Print' is not defined`.
+4. Zeile 3 wird nie erreicht.
+
+Ergebnis: genau eine Ausgabezeile, dann die Fehlermeldung.
+
+(b) Schritt für Schritt:
+
+1. Syntaxprüfung der ganzen Datei: In Zeile 2 wird eine Klammer geöffnet, aber nie geschlossen. Das ist ein Grammatikfehler.
+2. Python bricht sofort ab mit `SyntaxError: '(' was never closed`.
+3. Keine Zeile wird ausgeführt, auch nicht die fehlerfreie Zeile 1.
+
+Ergebnis: keine Ausgabe, nur die Fehlermeldung. Grund: CPython prüft vor dem Start die Syntax der ganzen Datei. Die echten Ausgaben stehen im Abschnitt „Was bei `uv run hallo.py` passiert“.
 
 ### Übung 6
 

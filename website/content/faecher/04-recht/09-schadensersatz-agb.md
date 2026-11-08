@@ -11,13 +11,26 @@ Ein Alltagsbeispiel: Du schließt einen Vertrag mit einem Fitnessstudio. In den 
 
 ## Umfang des Schadensersatzes, §§ 249–254
 
+**In einem Satz:** Schadensersatz soll dich so stellen, als wäre das Schlimme nie passiert.
+
+**Stell dir vor:** Zwei Bilder deines Kontos nebeneinander. Bild 1: So sieht es jetzt aus, nachdem dein Mitbewohner deinen Laptop vom Tisch gestoßen hat. Bild 2: So sähe es aus, wenn er nie dagegen gestoßen wäre. Der Unterschied zwischen beiden Bildern ist dein Schaden.
+
+| | ohne den Stoß | nach dem Stoß |
+|---|---|---|
+| Laptop | heil | Display kaputt |
+| Reparatur | 0 € | 250 € |
+| Leihgerät für die Hausarbeit, eine Woche | 0 € | 30 € |
+| Unterschied | | 250 € + 30 € = 280 € Schaden |
+
 **Was ist das?** Ergänzung zur Methode: Gerechnet wird mit der Differenzhypothese. Man vergleicht das Vermögen jetzt mit dem Vermögen, das ohne das schädigende Ereignis bestünde.
+
+**§ 249 I, auf Deutsch:** Wer zum Schadensersatz verpflichtet ist, muss den Zustand herstellen, der ohne das schädigende Ereignis bestehen würde. Also: alles so, als wäre es nicht passiert.
 
 - **Naturalrestitution (§ 249 I):** Der Zustand ohne das Ereignis ist herzustellen. Wer dein Fenster einschlägt, muss es reparieren lassen.
 - **Geldersatz (§ 249 II 1):** Bei Personen- und Sachschäden kann der Geschädigte stattdessen den nötigen Geldbetrag verlangen. Das ist in der Praxis der Normalfall.
 - **Folgeschäden und entgangener Gewinn** werden ebenfalls ersetzt (§ 252).
 - **Immaterielle Schäden** (Schmerzen, Ärger) nur, wo das Gesetz es vorsieht (§ 253 I). Vor allem Schmerzensgeld bei Verletzung von Körper, Gesundheit, Freiheit oder sexueller Selbstbestimmung (§ 253 II).
-- **Mitverschulden (§ 254):** Hat der Geschädigte mitgewirkt, trägt er einen Teil selbst.
+- **Mitverschulden (§ 254):** Hat der Geschädigte mitgewirkt, trägt er einen Teil selbst. Auf Deutsch: Wer selbst mit schuld ist, bekommt weniger. Hattest du den Laptop an die Tischkante gestellt, wo jeder vorbeiläuft, trägst du einen Teil selbst.
 
 So rechnest du einen Schadensersatz mit Mitverschulden:
 
@@ -35,6 +48,10 @@ So rechnest du einen Schadensersatz mit Mitverschulden:
 > Das Skript nennt als Beispiel für immateriellen Schaden „§ 651 f BGB“ (entgangene Urlaubsfreude). Das Reiserecht ist seit 1.7.2018 neu nummeriert. Die Regel steht heute in § 651n II.
 
 ## Gläubiger- und Schuldnerwechsel
+
+**In einem Satz:** Ein Anspruch auf Geld ist etwas wert, und deshalb kann man ihn an jemand anderen weitergeben.
+
+**Stell dir vor:** Dein Kommilitone schuldet dir 50 €. Du schuldest deiner Schwester 50 €. Du sagst zu ihr: „Hol dir die 50 € direkt bei ihm, die Forderung gehört jetzt dir.“ Das ist eine **Abtretung**. Dein Kommilitone muss nicht zustimmen. Für ihn ändert sich nur, wem er zahlt. Andersherum geht das nicht so einfach: Du kannst nicht allein bestimmen, dass ab jetzt ein anderer deine Schulden zahlt. Deine Schwester muss zustimmen, denn vielleicht ist der Neue pleite (**Schuldübernahme**).
 
 **Was ist das?** Eine Forderung ist ein Vermögenswert. Man kann sie verkaufen oder verschenken.
 
@@ -55,6 +72,10 @@ So rechnest du einen Schadensersatz mit Mitverschulden:
 > Schuldübernahme und Schuldbeitritt nicht verwechseln. Bei der Übernahme wird der alte Schuldner frei. Beim Beitritt haftet er weiter.
 
 ## AGB: Begriff und Einbeziehung
+
+**In einem Satz:** AGB sind vorgefertigte Vertragsregeln, die eine Seite für alle ihre Kunden benutzt.
+
+**Stell dir vor:** Du schließt einen Handyvertrag. Den Vertrag selbst verhandelst du (Tarif, Preis). Dazu kommen 20 Seiten Kleingedrucktes, die für alle Kunden gleich sind. Daran kannst du nichts ändern, du kannst nur Ja sagen oder gehen. Weil du keine Wahl hast, schaut das Gesetz bei diesem Kleingedruckten besonders streng hin.
 
 **Was ist das?** Allgemeine Geschäftsbedingungen sind das Kleingedruckte. Der Kunde kann sie nicht verhandeln. Deshalb kontrolliert das Gesetz sie streng (§§ 305–310).
 
@@ -134,7 +155,7 @@ Prüfungsschema AGB:
 
 *Eigene Lösungsskizze.*
 
-1. Die mündliche Zusage ist eine Individualabrede.
+1. Die mündliche Zusage ist eine Individualabrede, also eine Abmachung genau für dich und nicht für alle Kunden.
 2. Individualabreden haben Vorrang vor AGB (§ 305b).
 3. Ergebnis: Du kannst innerhalb von 14 Tagen umtauschen.
 
@@ -170,6 +191,8 @@ Prüfungsschema AGB:
 ### Übung 5
 
 *Eigene Lösungsskizze, im Gutachtenstil.*
+
+Vorab: Zerleg die Klausel in ihre vier Teile und prüf jeden Teil einzeln. Eine Klausel kann teilweise wirksam und teilweise unwirksam sein, wenn sich die Teile sprachlich trennen lassen.
 
 1. **Obersatz:** Die Klauseln könnten nach § 309 BGB unwirksam sein. Es handelt sich um AGB gegenüber einem Verbraucher. Wir unterstellen, dass sie wirksam einbezogen sind.
 2. **Laufzeit 24 Monate:** Die Grenze von 2 Jahren ist eingehalten (§ 309 Nr. 9 a). Wirksam.

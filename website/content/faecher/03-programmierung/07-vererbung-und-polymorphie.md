@@ -39,7 +39,18 @@ class Konto:
 
 ### Was ist das?
 
-Bei der Vererbung übernimmt eine Klasse die Attribute und Methoden einer anderen (VL6 F. 6). Die allgemeinere Klasse heißt **Oberklasse** (Basisklasse), die speziellere **Unterklasse**. Die Unterklasse kann Neues ergänzen und Geerbtes ändern.
+**In einem Satz:** Vererbung heißt: Eine neue Klasse bekommt alles, was eine bestehende Klasse hat und kann, und ergänzt nur das, was bei ihr neu ist.
+
+**Stell dir vor:** Eine Bäckerei hat ein Grundrezept „Hefeteig“. Für Zimtschnecken schreibt sie kein neues Rezept von vorn, sondern: „Wie Hefeteig. Zusätzlich: Zimt und Zucker drauf, aufrollen.“ Zimtschnecken **sind** Hefegebäck. Alles, was für Hefeteig gilt (gehen lassen, backen), gilt auch für sie. Genauso: „Sparkonto: wie Konto, zusätzlich ein Zinssatz.“
+
+| Bäckerei | Code |
+|---|---|
+| Grundrezept Hefeteig | Oberklasse `Konto` |
+| Zimtschnecke „wie Hefeteig, plus …“ | `class Sparkonto(Konto):` |
+| Zimt und Zucker, nur bei Zimtschnecken | neues Attribut `zinssatz`, neue Methode `zinsen_gutschreiben` |
+| gehen lassen und backen wie beim Grundrezept | geerbte Methoden `einzahlen`, `abheben`, `__str__` |
+
+Formal: Bei der Vererbung übernimmt eine Klasse die Attribute und Methoden einer anderen (VL6 F. 6). Die allgemeinere Klasse heißt **Oberklasse** (Basisklasse), die speziellere **Unterklasse**. Die Unterklasse kann Neues ergänzen und Geerbtes ändern.
 
 Der Test: Vererbung passt nur, wenn man „**ist ein**“ sagen kann. Ein Sparkonto ist ein Konto. Für „**hat ein**“ ist Vererbung das falsche Werkzeug: Ein Konto hat einen Kunden. Dafür nimmst du ein Attribut (F. 7).
 
@@ -76,7 +87,16 @@ Konto von Anna: 1530 Euro
 1. Python legt ein leeres Sparkonto-Objekt an und ruft `Sparkonto.__init__` auf.
 2. `super().__init__(inhaber, kontostand)` ruft das `__init__` von Konto auf, mit demselben `self`. Es legt `inhaber` und `kontostand` an.
 3. Zurück in `Sparkonto.__init__` kommt `zinssatz` dazu.
-4. Ergebnis: ein Objekt mit allen drei Attributen. Merk dir `super()` als „die Oberklasse von mir“.
+4. Ergebnis: ein Objekt mit allen drei Attributen. Merk dir `super().__init__(…)` als Satz: „**Mach erst, was die Elternklasse beim Anlegen macht.** Danach mache ich meinen eigenen Teil.“ Wie im Rezept: „Erst den Hefeteig nach Grundrezept, dann Zimt drauf.“
+
+Danach rechnet `anna` weiter:
+
+| Zeile | welche Methode läuft? | kontostand danach |
+|---|---|---|
+| `Sparkonto("Anna", 1000, 2)` | `Sparkonto.__init__`, darin `Konto.__init__` | 1000 |
+| `anna.einzahlen(500)` | `einzahlen` aus Konto (geerbt) | 1500 |
+| `anna.zinsen_gutschreiben()` | aus Sparkonto: 1500 · 2 // 100 = 30, dann `einzahlen(30)` | 1530 |
+| `print(anna)` | `__str__` aus Konto (geerbt) | 1530 |
 
 `isinstance(objekt, Klasse)` prüft, ob ein Objekt zu einer Klasse **oder einer ihrer Unterklassen** gehört (Java: `instanceof`). `type()` nennt nur die genaue Klasse (F. 15).
 
@@ -131,6 +151,8 @@ AttributeError: 'Sparkonto' object has no attribute 'kontostand'
 ## Methoden überschreiben
 
 ### Was ist das?
+
+**In einem Satz:** Überschreiben heißt: Die Unterklasse sagt „Diese eine Sache mache ich anders als meine Elternklasse.“
 
 Ein Girokonto darf bis zum Dispo ins Minus. `abheben()` aus Konto passt deshalb nicht. Die Unterklasse schreibt eine Methode mit **gleichem Namen und gleichen Parametern**. Sie ersetzt für Girokonten die Version der Oberklasse. Das heißt **Überschreiben** (F. 19). Mit `super().methode()` kann die Unterklasse die Version der Oberklasse mitbenutzen (F. 20).
 
@@ -198,7 +220,18 @@ Schritt für Schritt: Bei 100 Euro sind 400 erlaubt, weil 400 nicht größer als
 
 ### Was ist das?
 
-**Polymorphie** (Vielgestaltigkeit) heißt: Derselbe Methodenaufruf führt zu unterschiedlichem Verhalten, je nachdem, zu welcher Klasse das Objekt gehört (F. 32). Der Kassencode muss die Zahlungsarten nicht unterscheiden. Er ruft immer `bezahlen()` auf.
+**In einem Satz:** Polymorphie heißt: Du gibst überall denselben Befehl, und jedes Objekt führt ihn auf seine eigene Art aus.
+
+**Stell dir vor:** Eine Universalfernbedienung hat eine Taste „Ein/Aus“. Drückst du sie, während sie auf den Fernseher zeigt, geht der Fernseher an. Zeigt sie auf die Musikanlage, geht die Musikanlage an. Die Taste ist dieselbe. Was passiert, entscheidet das Gerät. Du musst dafür nicht wissen, wie der Fernseher innen funktioniert.
+
+| Fernbedienung | Code |
+|---|---|
+| Taste „Ein/Aus“ | Methodenaufruf `zahlung.bezahlen(…)` |
+| das Gerät, auf das sie zeigt | das Objekt, auf das `zahlung` gerade zeigt |
+| jedes Gerät reagiert anders | jede Klasse hat ihr eigenes `bezahlen()` |
+| neues Gerät kaufen, Fernbedienung bleibt gleich | neue Klasse `Lastschrift`, Kassencode bleibt gleich |
+
+Auf der Folie: **Polymorphie** (Vielgestaltigkeit) heißt: Derselbe Methodenaufruf führt zu unterschiedlichem Verhalten, je nachdem, zu welcher Klasse das Objekt gehört (F. 32). Der Kassencode muss die Zahlungsarten nicht unterscheiden. Er ruft immer `bezahlen()` auf.
 
 ```python
 from decimal import Decimal
@@ -261,6 +294,8 @@ Die **Typangabe** `Zahlungsart` legt fest, was ty erlaubt: nur das, was jede Zah
 Jede Klasse erbt von **object**, auch wenn das nicht dasteht (F. 43). Von `object` stammen die schlichten Standardfassungen von `__str__`, `__repr__` und `__eq__`. Als du in Kapitel 6 `__str__` geschrieben hast, hast du schon eine Methode von `object` überschrieben.
 
 Für `__repr__` verwenden die Folien das Format `Klassenname(attribut=wert, …)`. `type(self).__name__` liefert den Namen der tatsächlichen Klasse, so passt die Ausgabe auch für Unterklassen (F. 44).
+
+**Stell dir vor:** Im Café bestellst du kein „Getränk“. Du bestellst einen Kaffee, einen Tee oder eine Cola. „Getränk“ ist nur der Oberbegriff, den es nicht für sich allein im Glas gibt. Aber du weißt: Jedes Getränk kann man trinken. Eine abstrakte Klasse ist so ein Oberbegriff mit einer Pflichtliste: Jede echte Unterart muss diese Methoden mitbringen.
 
 Eine „Zahlungsart an sich“ gibt es nicht, nur Kreditkarte, Rechnung und so weiter. Zahlungsart ist eine **Abstraktion**. Eine **abstrakte Klasse** erbt von `ABC` aus dem Modul `abc`. Von ihr kann man keine Objekte erzeugen (F. 45–46). Eine Methode mit `@abstractmethod` ist ein Pflichtfeld: Jede Unterklasse muss sie umsetzen (F. 47).
 
@@ -433,6 +468,8 @@ Lieferschein L-2001 wird gedruckt
 
 ### Übung 1
 
+So gehst du vor: Bilde für jedes Paar beide Sätze und prüf, welcher stimmt. „A ist ein B“ → Vererbung. „A hat ein B“ → Attribut.
+
 (a) Ein Werkstudent ist ein Mitarbeiter: Vererbung. (b) Eine Bestellung hat Positionen: Attribut (Liste). (c) Ein Laptop ist ein Gerät: Vererbung. (d) Ein Konto hat einen Kunden: Attribut.
 
 ### Übung 2
@@ -440,6 +477,13 @@ Lieferschein L-2001 wird gedruckt
 Überladen: mehrere Methoden mit gleichem Namen, aber verschiedenen Parametern in derselben Klasse. Gibt es in Python nicht, die zweite `def` ersetzt die erste. Überschreiben: Die Unterklasse ersetzt eine geerbte Methode mit gleichem Namen und gleichen Parametern. Gibt es in Python.
 
 ### Übung 3
+
+Schritt für Schritt bei `Festgeld("Anna", 5000, 12)`:
+
+1. `Festgeld.__init__` läuft mit inhaber = "Anna", kontostand = 5000, laufzeit = 12.
+2. `super().__init__("Anna", 5000)` setzt `self.inhaber = "Anna"` und `self.kontostand = 5000`.
+3. Zurück in `Festgeld.__init__`: `self.kontostand = laufzeit` überschreibt dasselbe Attribut mit 12.
+4. `print(f)` nutzt das geerbte `__str__` und zeigt den aktuellen Kontostand: 12.
 
 Ober- und Unterklasse schreiben in **dasselbe** Attribut des Objekts. In Java entstünden zwei getrennte Felder, in Python gibt es nur ein `kontostand`. Die 5000 Euro sind weg.
 

@@ -51,7 +51,11 @@ Außerdem unterscheidet das Skript: **Materielles Recht** sagt, wer welchen Ansp
 
 ## Rechtsfähigkeit und Handlungsfähigkeit
 
-**Was ist das?** **Rechtsfähigkeit** ist die Fähigkeit, Träger von Rechten und Pflichten zu sein. Beim Menschen beginnt sie mit der Vollendung der Geburt (§ 1 BGB). **Handlungsfähigkeit** heißt dagegen, selbst rechtlich wirksam zu handeln. Sie hat zwei Teile:
+**In einem Satz:** Rechtsfähig heißt „kann etwas haben“, handlungsfähig heißt „kann selbst etwas tun“.
+
+**Stell dir vor:** Ein Konto bei der Bank. Rechtsfähig zu sein heißt, dass ein Konto **auf deinen Namen** laufen kann. Geschäftsfähig zu sein heißt, dass du **selbst** Überweisungen unterschreiben darfst. Ein Baby kann ein Sparbuch haben, aber die Eltern müssen für es unterschreiben.
+
+**Was ist das?** **Rechtsfähigkeit** ist die Fähigkeit, Träger von Rechten und Pflichten zu sein. Beim Menschen beginnt sie mit der Vollendung der Geburt (§ 1 BGB). Auf Deutsch heißt das: Sobald ein Kind vollständig geboren ist, kann es Eigentümer sein, erben und Schulden haben. **Handlungsfähigkeit** heißt dagegen, selbst rechtlich wirksam zu handeln. Sie hat zwei Teile:
 
 - **Geschäftsfähigkeit:** selbst wirksam Verträge schließen. Unter 7 Jahren gar nicht, von 7 bis 17 beschränkt, ab 18 voll (Kapitel 4).
 - **Deliktsfähigkeit:** für Schäden verantwortlich sein, die man anderen zufügt. Unter 7 nie (§ 828 I), im Straßenverkehr nicht vor 10 (§ 828 II), danach bis 17 nur mit der nötigen Einsicht (§ 828 III). Die Altersgrenzen sind eine Ergänzung aus dem Gesetz.
@@ -78,6 +82,17 @@ Ergänzung, nicht im Skript: OHG und KG sind rechtsfähige Personengesellschafte
 - **Verbraucher (§ 13 BGB):** jede natürliche Person, die ein Rechtsgeschäft zu Zwecken abschließt, die überwiegend weder ihrer gewerblichen noch ihrer selbständigen beruflichen Tätigkeit zuzurechnen sind.
 - **Unternehmer (§ 14 BGB):** eine natürliche oder juristische Person oder rechtsfähige Personengesellschaft, die in Ausübung ihrer gewerblichen oder selbständigen beruflichen Tätigkeit handelt.
 
+Auf Deutsch heißt das als Wenn-dann:
+
+- **Wenn** ein Mensch etwas für sich privat kauft oder verkauft (Freizeit, Studium, Wohnung), **dann** ist er bei diesem Geschäft Verbraucher.
+- **Wenn** jemand (Mensch oder Firma) im Rahmen seines Gewerbes oder seiner selbständigen Arbeit handelt, **dann** ist er bei diesem Geschäft Unternehmer.
+
+Wichtig: Arbeitnehmer sind beim Einkauf Verbraucher. Wer im Nebenjob angestellt ist und sich dafür Arbeitsschuhe kauft, handelt nicht „selbständig“. § 13 nennt nur gewerbliche und **selbständige** berufliche Zwecke.
+
+> [!NOTE]
+> **Beispiel: eBay**
+> Du verkaufst dein altes Fahrrad auf eBay Kleinanzeigen: Du bist Verbraucher. Ein Fahrradhändler verkauft dort gebrauchte Räder aus seinem Laden: Er ist Unternehmer. Dieselbe Plattform, dasselbe Produkt, aber ein anderer Zweck.
+
 > [!NOTE]
 > **Beispiel: Die Bäckermeisterin**
 > Sie kauft privat ein Sofa: Verbraucherin. Sie kauft einen Backofen für ihre Bäckerei: Unternehmerin. Es kommt nicht auf die Person an, sondern auf den Zweck des einzelnen Geschäfts.
@@ -92,11 +107,13 @@ Ergänzung, nicht im Skript: OHG und KG sind rechtsfähige Personengesellschafte
 
 ## Gegenstände und Sachen
 
+**In einem Satz:** Eine Sache ist alles, was man anfassen kann.
+
 **Was ist das?** Gegenstände sind alles, worüber man Rechte haben kann. Körperliche Gegenstände heißen **Sachen** (§ 90 BGB). Unkörperlich sind Rechte (eine Forderung, ein Patent) und geistige Werke.
 
 | Begriff | Bedeutung | Beispiel |
 |---|---|---|
-| vertretbar, § 91 | nach Zahl, Maß oder Gewicht bestimmt, austauschbar | Geld, 10 kg Mehl, ein neues Handy aus der Serie |
+| vertretbar, § 91 | nach Zahl, Maß oder Gewicht bestimmt, austauschbar. Test: Wäre es dir egal, wenn du ein anderes Exemplar derselben Sorte bekommst? | Geld, 10 kg Mehl, ein neues Handy aus der Serie |
 | nicht vertretbar | individuell | dein gebrauchtes Fahrrad, ein Gemälde |
 | verbrauchbar, § 92 | Gebrauch besteht im Verbrauch oder Weiterverkauf | Lebensmittel, Benzin, Geld |
 | beweglich | alles, was kein Grundstück ist | Auto, Laptop |
@@ -154,7 +171,11 @@ c) Privatrecht. Es geht um eine Leihe nach §§ 598 ff. BGB.
 
 ### Übung 3
 
-Nein. Verbraucher kann nach § 13 BGB nur eine natürliche Person sein. Die GmbH ist eine juristische Person. Sie handelt als Unternehmer (§ 14 BGB).
+1. Was verlangt § 13? Eine **natürliche** Person, also einen Menschen.
+2. Was ist eine GmbH? Eine juristische Person, kein Mensch.
+3. Erstes Merkmal fehlt, also kommt es auf den Zweck gar nicht mehr an.
+
+Ergebnis: Nein. Verbraucher kann nach § 13 BGB nur eine natürliche Person sein. Die GmbH ist eine juristische Person. Sie handelt als Unternehmer (§ 14 BGB).
 
 ### Übung 4
 
@@ -164,6 +185,8 @@ Nein. Verbraucher kann nach § 13 BGB nur eine natürliche Person sein. Die GmbH
 4. Also ist S Verbraucherin.
 
 ### Übung 5
+
+Test bei jedem Punkt: Wäre dir ein anderes Exemplar derselben Sorte genauso recht?
 
 a) Vertretbar, nach Maß bestimmt.
 b) Nicht vertretbar, ein individuelles Gebrauchtfahrzeug.

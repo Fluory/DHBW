@@ -11,6 +11,10 @@ Ein Alltagsbeispiel: Du bestellst ein Taxi für 6 Uhr zum Flughafen, dein Flug g
 
 ## Überblick und § 280 als Zentralnorm
 
+**In einem Satz:** Eine Leistungsstörung ist jeder Fall, in dem der Vertrag nicht so erfüllt wird, wie versprochen: gar nicht, zu spät, schlecht, oder der Empfänger nimmt nicht an.
+
+**Stell dir vor:** Du bestellst bei einem Online-Händler eine Konsole. Vier Dinge können schiefgehen: Das Lager brennt ab, und es gibt diese Konsole nirgends mehr (**gar nicht**). Sie kommt drei Wochen zu spät (**zu spät**). Sie kommt mit kaputtem Controller (**schlecht**). Oder der Paketbote klingelt, und du machst einfach nicht auf (**Gläubiger nimmt nicht an**).
+
 **Was ist das?** Leistungsstörungen beruhen auf einer objektiven Pflichtverletzung des Schuldners. Ausnahme: der Gläubigerverzug (S. 38).
 
 | Störung | Kern-§§ | Beispiel aus dem Skript |
@@ -20,6 +24,10 @@ Ein Alltagsbeispiel: Du bestellst ein Taxi für 6 Uhr zum Flughafen, dein Flug g
 | schlecht: Schlechtleistung | §§ 280, 281, 323 | Ware mangelhaft |
 | Rücksicht verletzt | §§ 241 II, 280 I | Handwerker beschädigt Dach |
 | Gläubiger nimmt nicht an | §§ 293 ff. | Käufer verweigert Abnahme |
+
+**So steht es im Gesetz (§ 280 I):** Verletzt der Schuldner eine Pflicht aus dem Schuldverhältnis, so kann der Gläubiger Ersatz des hierdurch entstehenden Schadens verlangen. Dies gilt nicht, wenn der Schuldner die Pflichtverletzung nicht zu vertreten hat.
+
+**Auf Deutsch heißt das als Wenn-dann:** **Wenn** (1) zwischen euch ein Schuldverhältnis besteht, (2) der andere eine Pflicht daraus verletzt, (3) er daran schuld ist, und (4) dir dadurch ein Schaden entsteht, **dann** muss er dir den Schaden ersetzen. Satz 2 dreht die Beweislast um: Nicht du musst seine Schuld beweisen, sondern er muss beweisen, dass er nichts dafür kann.
 
 Fast alle Schadensersatzansprüche laufen über § 280 I: Schuldverhältnis, Pflichtverletzung, Vertretenmüssen (wird vermutet, § 280 I 2), Schaden. Je nach Schaden kommen Voraussetzungen dazu:
 
@@ -43,6 +51,10 @@ Fast alle Schadensersatzansprüche laufen über § 280 I: Schuldverhältnis, Pfl
 > Erst klären, welcher Schaden ersetzt werden soll. Davon hängt ab, welche Zusatzvoraussetzungen du prüfst. Mehrkosten für einen Ersatzkauf sind Schadensersatz statt der Leistung, nicht neben der Leistung.
 
 ## Unmöglichkeit, § 275
+
+**In einem Satz:** Was niemand mehr leisten kann, muss auch niemand mehr leisten.
+
+**Auf Deutsch heißt das (§ 275 I und § 326 I 1):** Brennt das verkaufte Unikat ab, muss der Verkäufer es nicht mehr liefern, denn das geht nicht. Dafür muss der Käufer auch nicht mehr zahlen. Beide sind frei. Schadensersatz gibt es nur, wenn der Verkäufer an dem Brand schuld ist.
 
 **Was ist das?** Ist die Leistung unmöglich, ist der Anspruch auf sie ausgeschlossen (§ 275 I).
 
@@ -73,6 +85,12 @@ Rechtsfolgen (S. 39–40):
 
 ## Schuldnerverzug, § 286
 
+**In einem Satz:** Verzug heißt: Der Schuldner ist zu spät dran, obwohl er dran war und erinnert wurde.
+
+**Stell dir vor:** Dein WG-Mitbewohner schuldet dir 40 € für den Strom. Ihr habt keinen Termin ausgemacht. Du schreibst ihm: „Bitte zahl mir die 40 € jetzt.“ Das ist die **Mahnung**. Zahlt er danach nicht, ist er im Verzug. Hättet ihr gleich „bis 15.11.“ ausgemacht, bräuchtest du keine Mahnung: Der Kalender erinnert ihn für dich (§ 286 II Nr. 1).
+
+**Auf Deutsch heißt § 286 I:** **Wenn** die Zahlung fällig ist **und** du den Schuldner danach gemahnt hast **und** er trotzdem nicht leistet, **dann** ist er im Verzug und muss dir den Schaden durch die Verspätung ersetzen.
+
 **Was ist das?** Schuldnerverzug ist die schuldhafte Nichtleistung trotz Fälligkeit und Mahnung (S. 40).
 
 Prüfungsschema:
@@ -100,6 +118,8 @@ Rechtsfolgen (S. 42): Verzögerungsschaden (§§ 280 I, II, 286). Verzugszinsen 
 
 ## Gläubigerverzug, §§ 293 ff.
 
+**Stell dir vor:** Der Pizzabote steht pünktlich mit deiner Pizza vor der Tür und klingelt. Du hast keine Lust und machst nicht auf. Der Bote kann nichts dafür. Ab jetzt trägst du das Risiko: Fällt ihm die Pizza auf dem Rückweg zufällig runter, musst du trotzdem zahlen.
+
 **Was ist das?** Hier liegt das Problem beim Gläubiger: Der Schuldner will leisten, der Gläubiger nimmt nicht an (§ 293). Das ist keine Pflichtverletzung. Ein Verschulden des Gläubigers ist nicht nötig.
 
 1. Leistung möglich.
@@ -122,7 +142,7 @@ Rechtsfolgen: Der Schuldner haftet nur noch für Vorsatz und grobe Fahrlässigke
 
 - **Schlechtleistung und Nebenpflichtverletzung:** Die Leistung ist mangelhaft, oder der Schuldner verletzt Rücksichtspflichten (§ 241 II). Folge: Schadensersatz neben der Leistung (§ 280 I), statt der Leistung nach Fristsetzung (§ 281), Rücktritt (§ 323). Für Kauf, Werkvertrag und Miete gibt es Sonderregeln im Schuldrecht BT.
 - **Wegfall der Geschäftsgrundlage (§ 313):** Die Grundlage des Vertrags hat sich nach Vertragsschluss schwerwiegend verändert (I), oder wesentliche gemeinsame Vorstellungen waren falsch (II). Die Parteien hätten so nicht abgeschlossen. Das Festhalten ist unzumutbar. Folge: zuerst Anpassung, sonst Rücktritt oder Kündigung (§ 313 III).
-- **Verschulden bei Vertragsverhandlungen (c.i.c.):** Schon vor dem Vertrag entstehen Rücksichtspflichten.
+- **Verschulden bei Vertragsverhandlungen (c.i.c.):** Schon vor dem Vertrag entstehen Rücksichtspflichten. Bild: Wer einen Laden aufmacht und Kunden hereinbittet, muss dafür sorgen, dass sie dort nicht auf einer Bananenschale ausrutschen, auch wenn sie am Ende nichts kaufen.
 
 Prüfungsschema c.i.c. (§§ 280 I, 311 II, 241 II):
 
@@ -172,10 +192,12 @@ Prüfungsschema c.i.c. (§§ 280 I, 311 II, 241 II):
 
 *Eigene Lösungsskizze.*
 
-a) Nein. Die Zeit ist nach dem Kalender bestimmt (§ 286 II Nr. 1).
-b) Nein. Die Zeit ist ab einem Ereignis nach dem Kalender berechenbar (§ 286 II Nr. 2).
-c) Ja, oder Verzug 30 Tage nach Rechnung (§ 286 III).
-d) Nein. Ernsthafte und endgültige Verweigerung (§ 286 II Nr. 3).
+Testfrage für jeden Fall: Kann der Schuldner allein mit einem Kalender ausrechnen, an welchem Tag er spätestens zahlen muss? Dann ist keine Mahnung nötig.
+
+a) Nein. Die Zeit ist nach dem Kalender bestimmt (§ 286 II Nr. 1). Der 30.11.2026 steht im Kalender.
+b) Nein. Die Zeit ist ab einem Ereignis nach dem Kalender berechenbar (§ 286 II Nr. 2). Lieferung plus 10 Tage kann man auszählen.
+c) Ja, oder Verzug 30 Tage nach Rechnung (§ 286 III). „Sofort“ ist kein Tag im Kalender.
+d) Nein. Ernsthafte und endgültige Verweigerung (§ 286 II Nr. 3). Eine Mahnung wäre sinnlos.
 
 ### Übung 2
 
@@ -220,10 +242,10 @@ d) Nein. Ernsthafte und endgültige Verweigerung (§ 286 II Nr. 3).
 2. **Fälliger Anspruch:** Werklohn aus § 631 I. Er wird mit der Abnahme fällig (§ 641 I). B war am 01.06. zufrieden. Damit hat er abgenommen.
 3. **Mahnung:** Es gibt keine. „Zahlbar sofort“ ist keine Mahnung und kein Kalenderdatum. § 286 II Nr. 1 und 2 greifen nicht.
 4. **§ 286 III:** Bei Entgeltforderungen tritt Verzug spätestens 30 Tage nach Fälligkeit und Zugang der Rechnung ein. B ist als Restaurantbetreiber Unternehmer. Ein Hinweis in der Rechnung war nicht nötig.
-5. **Fristberechnung:** Zugang 06.06. Der Tag zählt nicht (§ 187 I). Tag 1 ist der 07.06., Tag 30 ist der 06.07. Verzug ab dem 07.07.
+5. **Fristberechnung:** Zugang 06.06. Der Tag zählt nicht (§ 187 I). Tag 1 ist der 07.06. Der Juni hat 30 Tage: 07.06. bis 30.06. sind 24 Tage, dazu 01.07. bis 06.07. sind 6 Tage, zusammen 30. Tag 30 ist also der 06.07. Verzug ab dem 07.07. (mit Python nachgerechnet).
 6. **Vertretenmüssen:** wird vermutet (§ 286 IV). Entlastungsgründe sind nicht ersichtlich.
 7. **Höhe:** Kein Verbraucher beteiligt, Entgeltforderung: 9 Prozentpunkte über dem Basiszinssatz (§ 288 II), dazu 40 € Pauschale (§ 288 V). Höhere Überziehungszinsen sind als weiterer Schaden ersatzfähig (§ 288 IV), aber nur für die Verzugszeit.
-8. **Ergebnis:** Also kann S Verzugszinsen für 07.07. bis 25.07. verlangen (19 Tage). Für 06.06. bis 06.07. gibt es keinen Ersatz.
+8. **Ergebnis:** Also kann S Verzugszinsen für 07.07. bis 25.07. verlangen (19 Tage: 25 − 7 + 1, beide Tage mitgezählt). Für 06.06. bis 06.07. gibt es keinen Ersatz.
 
 ### Übung 5
 

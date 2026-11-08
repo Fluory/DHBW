@@ -11,6 +11,10 @@ Ein Alltagsbeispiel: Deine Mitbewohnerin kauft im Baumarkt „für dich und in d
 
 ## Das Dreieck und die Voraussetzungen nach § 164
 
+**In einem Satz:** Ein Stellvertreter schließt einen Vertrag, der nicht für ihn selbst gilt, sondern für jemand anderen.
+
+**Stell dir vor:** Du bist krank und kannst nicht zur Mensa. Du sagst deinem Kommilitonen: „Kauf mir in der Cafeteria irgendein Sandwich, bis 5 €, auf meine Rechnung.“ Er entscheidet selbst, welches Sandwich. Aber das Sandwich ist deins, und die Rechnung auch. Er war nur der Arm, mit dem du eingekauft hast.
+
 **Was ist das?** Bei der Stellvertretung gibt es drei Personen: den **Vertretenen** (wird Vertragspartner), den **Vertreter** (handelt) und den **Geschäftspartner**. Der Vertrag entsteht direkt zwischen Vertretenem und Partner. Der Vertreter wird nicht Vertragspartei.
 
 Die Vertretungsmacht kann drei Quellen haben:
@@ -28,6 +32,10 @@ Prüfungsschema Stellvertretung (Skript S. 27):
 
 Rechtsfolge: Die Wirkungen treten beim Vertretenen ein (§ 164 I).
 
+**So steht es im Gesetz (§ 164 I 1):** Eine Willenserklärung, die jemand innerhalb der ihm zustehenden Vertretungsmacht im Namen des Vertretenen abgibt, wirkt unmittelbar für und gegen den Vertretenen.
+
+**Auf Deutsch heißt das als Wenn-dann:** **Wenn** jemand (1) selbst etwas erklärt, (2) dabei klarmacht „Das ist für X“, und (3) dafür die Erlaubnis hat, **dann** ist X Vertragspartner, so als hätte X es selbst gesagt.
+
 > [!IMPORTANT]
 > **Das Wichtigste**
 > Eigene WE, im fremden Namen, mit Vertretungsmacht. Der Vertreter muss nur beschränkt geschäftsfähig sein (§ 165). Ein 16-Jähriger kann wirksam für seine Chefin einkaufen.
@@ -37,6 +45,8 @@ Rechtsfolge: Die Wirkungen treten beim Vertretenen ein (§ 164 I).
 > Fehlt die Offenkundigkeit, liegt ein Eigengeschäft des Handelnden vor. Sein Irrtum, er wolle doch für einen anderen handeln, berechtigt ihn nicht zur Anfechtung (§ 164 II).
 
 ## Vertreter oder Bote, Willensmängel
+
+**Stell dir vor:** Der Bote ist ein Briefumschlag mit Beinen. Er trägt eine fertige Nachricht zum Ziel und darf nichts daran ändern. Der Vertreter ist ein Unterhändler: Er bekommt einen Rahmen und entscheidet darin selbst.
 
 **Was ist das?** Der **Vertreter** gibt eine eigene Erklärung ab und hat einen Entscheidungsspielraum („Kauf ein gutes Fahrrad bis 500 €“). Der **Bote** überbringt nur eine fremde, fertige Erklärung („Sag dem Händler: Ich nehme das rote Rad für 480 €“). Es kommt darauf an, wie er nach außen auftritt. Ein Bote braucht gar keine Geschäftsfähigkeit.
 
@@ -65,7 +75,7 @@ Grundsätzlich wird der Dritte nicht geschützt, wenn er an eine Vollmacht glaub
 
 > [!IMPORTANT]
 > **Das Wichtigste**
-> Vollmacht = Können (außen). Auftrag = Dürfen (innen). Verstößt der Vertreter nur gegen eine interne Anweisung, ist der Vertrag trotzdem wirksam. Er haftet dann intern dem Vertretenen.
+> Vollmacht = Können (außen). Auftrag = Dürfen (innen). Bild: Die Vollmacht ist der Schlüssel zur Tür. Der Auftrag ist die Abmachung, wofür du die Tür aufmachen darfst. Wer den Schlüssel hat, kommt rein, auch wenn er die Abmachung bricht. Verstößt der Vertreter nur gegen eine interne Anweisung, ist der Vertrag trotzdem wirksam. Er haftet dann intern dem Vertretenen.
 
 > [!WARNING]
 > **Achtung**
@@ -74,6 +84,8 @@ Grundsätzlich wird der Dritte nicht geschützt, wenn er an eine Vollmacht glaub
 ## Insichgeschäft und Vertreter ohne Vertretungsmacht
 
 **Was ist das?** **Insichgeschäft (§ 181):** Ein Vertreter darf grundsätzlich nicht mit sich selbst (Selbstkontrahieren) oder als Vertreter beider Seiten (Mehrvertretung) einen Vertrag schließen. Erlaubt ist es laut Skript, wenn es gestattet ist, wenn es ausschließlich der Erfüllung einer Verbindlichkeit dient, oder wenn es für den Vertretenen lediglich rechtlich vorteilhaft ist. Der dritte Fall ist von der Rechtsprechung entwickelt.
+
+**Stell dir vor:** Dein WG-Mitbewohner bestellt „im Namen der WG“, also auch in deinem Namen, einen neuen Kühlschrank für 600 €, ohne zu fragen. Du hast ihm nichts erlaubt. Dann gilt der Kauf für dich erstmal nicht. Du kannst aber sagen: „Gute Idee, ich bin einverstanden.“ Dann gilt er. Sagst du Nein, muss der Mitbewohner selbst für den Schaden des Händlers geradestehen.
 
 **Vertreter ohne Vertretungsmacht (§§ 177–180):**
 
@@ -123,8 +135,10 @@ Grundsätzlich wird der Dritte nicht geschützt, wenn er an eine Vollmacht glaub
 
 *Eigene Lösungsskizze.*
 
-a) Vertreter. Er hat einen eigenen Entscheidungsspielraum und gibt eine eigene WE ab.
-b) Bote. Er überbringt nur eine fertige fremde WE.
+Testfrage: Muss die Person noch selbst etwas entscheiden?
+
+a) Ja, sie wählt die Jacke und den Preis bis 100 €. Also Vertreter. Er hat einen eigenen Entscheidungsspielraum und gibt eine eigene WE ab.
+b) Nein, Anzug und Preis stehen fest. Also Bote. Er überbringt nur eine fertige fremde WE.
 
 ### Übung 2
 

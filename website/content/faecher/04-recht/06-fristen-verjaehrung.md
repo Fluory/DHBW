@@ -11,6 +11,10 @@ Ein Alltagsbeispiel: Ein Händler schreibt den Eltern eines 16-Jährigen, sie so
 
 ## Fristen berechnen, §§ 186–193
 
+**In einem Satz:** Eine Frist ist ein Zeitraum, bis zu dessen Ende du etwas erledigt haben musst.
+
+**Stell dir vor:** Du leihst dir in der Bibliothek ein Buch „für zwei Wochen“, und zwar am Donnerstagnachmittag. Der Donnerstag ist schon halb vorbei. Es wäre unfair, ihn als vollen Tag mitzuzählen. Deshalb fängt das Zählen erst am Freitag an, und die Frist endet am Donnerstag zwei Wochen später um Mitternacht. Genau so rechnet das BGB.
+
 **Was ist das?** Eine **Frist** ist ein abgegrenzter, bestimmter oder bestimmbarer Zeitraum. Ein **Termin** ist ein bestimmter Zeitpunkt, an dem etwas geschehen soll oder eine Frist beginnt oder endet (S. 28). Die §§ 186 ff. gelten für Fristen in Gesetzen, Verträgen und Urteilen.
 
 So rechnest du eine Frist in vier Schritten:
@@ -27,6 +31,17 @@ So rechnest du eine Frist in vier Schritten:
 > 2. Zwei Wochen enden am gleichnamigen Wochentag (§ 188 II): Donnerstag, 29.10.2026.
 > 3. Der 29.10.2026 ist ein Werktag. § 193 spielt keine Rolle.
 > 4. Ergebnis: Die Eltern haben bis Donnerstag, 29.10.2026, 24 Uhr Zeit.
+>
+> Als Kalender (Wochentage mit Python geprüft):
+>
+> | Datum | Tag | gezählt? |
+> |---|---|---|
+> | Do 15.10. | Zugang | nein, Ereignistag (§ 187 I) |
+> | Fr 16.10. | Tag 1 | ja |
+> | … | Tag 2 bis 13 | ja |
+> | Do 29.10. | Tag 14 | ja, letzter Tag, endet um 24 Uhr |
+
+**§ 187 I, auf Deutsch:** Wenn die Frist mit etwas startet, das mitten am Tag passiert, zählt dieser Tag nicht mit. **§ 188 II, auf Deutsch:** Eine Frist in Wochen endet am selben Wochentag, an dem das Ereignis war. Eine Frist in Monaten endet am selben Datum. **§ 193, auf Deutsch:** Wenn du bis zu einem Samstag, Sonntag oder Feiertag etwas erklären oder leisten müsstest, hast du bis zum nächsten Werktag Zeit.
 
 | Ereignis | Frist | Ende | Regel |
 |---|---|---|---|
@@ -44,6 +59,10 @@ So rechnest du eine Frist in vier Schritten:
 > „Zwei Wochen ab Zugang am Montag“ heißt nicht „bis Sonntag“. Die Frist endet am Montag zwei Wochen später um 24 Uhr. Und wer am 26.10. Geburtstag hat, ist an diesem Tag ab 0 Uhr volljährig, nicht erst abends.
 
 ## Verjährung, §§ 194 ff.
+
+**In einem Satz:** Verjährt heißt: Der Schuldner darf nach langer Zeit sagen „Ich zahle nicht mehr“, obwohl die Schuld noch da ist.
+
+**Stell dir vor:** Du hast deinem Mitbewohner vor Jahren 50 € geliehen. Die Schuld verschwindet nicht von selbst. Aber nach Ablauf der Verjährung hat er ein Schild „verjährt“ in der Hand. Hält er es hoch, musst du aufgeben. Zahlt er trotzdem, ist das in Ordnung, und er kann das Geld nicht zurückverlangen (§ 214 II).
 
 **Was ist das?** Der verjährte Anspruch erlischt nicht. Er besteht weiter. Der Schuldner ist aber berechtigt, die Leistung zu verweigern (§ 214 I). Verjährung ist eine Einrede (S. 28).
 
@@ -79,6 +98,8 @@ So rechnest du die regelmäßige Verjährung:
 ## Hemmung und Neubeginn
 
 **Was ist das?** Das Gesetz kann die Verjährungsuhr anhalten oder neu starten. Das Skript nennt diese Regeln nur kurz. Die Details sind Ergänzung aus dem Gesetz.
+
+**Stell dir eine Stoppuhr vor:** Hemmung ist die Pause-Taste. Die schon abgelaufene Zeit bleibt stehen, nach der Pause läuft die Uhr von dort weiter. Neubeginn ist die Reset-Taste: Die Uhr springt auf null, die drei Jahre beginnen von vorn.
 
 - **Hemmung (§ 209):** Die Uhr wird angehalten. Die Zeit der Hemmung zählt nicht. Beispiele: Die Parteien verhandeln (§ 203; Verjährung frühestens drei Monate nach Ende der Verhandlungen), Klage oder Mahnbescheid (§ 204).
 - **Neubeginn (§ 212):** Die Uhr wird auf null gestellt. Beispiel: Der Schuldner erkennt den Anspruch an, etwa durch eine Abschlagszahlung (§ 212 I Nr. 1).
@@ -128,6 +149,12 @@ So rechnest du die regelmäßige Verjährung:
 ### Übung 1
 
 *Eigene Lösung.*
+
+| Datum | gezählt? |
+|---|---|
+| Fr 30.10.2026 (Zugang) | nein, Ereignistag |
+| Sa 31.10.2026 | Tag 1 |
+| Fr 13.11.2026 | Tag 14, letzter Tag |
 
 1. Ereignisfrist: Der Zugang am 30.10. zählt nicht (§ 187 I).
 2. Zwei Wochen enden am gleichnamigen Wochentag (§ 188 II): Freitag, 13.11.2026.
@@ -182,5 +209,5 @@ So rechnest du die regelmäßige Verjährung:
 
 *Eigene Lösung.*
 
-a) Hemmung (§ 203). Die drei Monate zählen nicht mit. Die Verjährung tritt frühestens drei Monate nach Ende der Verhandlungen ein.
-b) Neubeginn (§ 212 I Nr. 1). Die Abschlagszahlung ist ein Anerkenntnis. Die Frist beginnt neu.
+a) Hemmung (§ 203), also Pause-Taste. Die drei Monate zählen nicht mit. Die Verjährung tritt frühestens drei Monate nach Ende der Verhandlungen ein.
+b) Neubeginn (§ 212 I Nr. 1), also Reset-Taste. Wer eine Rate zahlt, zeigt: „Ich weiß, dass ich das schulde.“ Das ist ein Anerkenntnis. Die Frist beginnt neu.
