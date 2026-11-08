@@ -14,9 +14,32 @@ In der Musterklausur 2025 brachte das Kapitel 13 von 72 Punkten. Gerechnet wird 
 >
 > Laut Liste „Könnte drankommen“ fallen alle Rechtsformen außer Einzelunternehmen, OHG, KG, UG, GmbH, AG und GmbH & Co. KG weg. Das sind: GbR, stille Gesellschaft, KGaA, SE, eingetragene Genossenschaft (eG) und Stiftung. Sie stehen deshalb hier nicht.
 
+## Vorweg: Wer haftet mit was?
+
+**In einem Satz:** Haftung heißt: Wer muss zahlen, wenn der Betrieb seine Schulden nicht mehr selbst bezahlen kann?
+
+**Stell dir vor:** Die Bäckerei schuldet dem Mehllieferanten 50.000 €. In der Firmenkasse und im Laden stecken aber nur noch 20.000 €. Es fehlen 30.000 €. Die Rechtsform entscheidet, wer diese Lücke stopft: die Menschen mit ihrem privaten Geld (Konto, Auto, Haus) oder niemand, sodass der Lieferant das Geld verliert.
+
+**Mit Zahlen: die Lücke von 30.000 € (eigene Zahlen)**
+
+| Rechtsform | Wer zahlt die fehlenden 30.000 €? |
+|---|---|
+| e. K. (Anna allein) | Anna aus ihrem Privatvermögen, zum Beispiel mit ihrem Sparkonto oder Auto. |
+| OHG (Anna und Ben) | Der Lieferant darf die ganzen 30.000 € von Anna **oder** von Ben verlangen. Wer zahlt, holt sich danach intern den Anteil vom anderen zurück. |
+| KG (Anna Komplementärin, Ben Kommanditist mit 10.000 €, voll eingezahlt) | Anna privat. Bens 10.000 € stecken schon in der Firma. Mehr muss er nicht zahlen. |
+| GmbH, UG, AG | Niemand privat. Die Gesellschaft gibt ihre 20.000 €, der Rest ist für den Lieferanten verloren. Die Gesellschafter verlieren „nur“ ihre Einlage. |
+| GmbH & Co. KG | Die Komplementär-GmbH mit ihrem eigenen Vermögen. Kein Mensch zahlt privat. |
+
+Merke: Je weniger die Menschen privat haften, desto mehr Regeln gibt es zum Schutz der Gläubiger, zum Beispiel ein Mindestkapital.
+
+> [!WARNING]
+> **Achtung**
+>
+> Typischer Fehler: „beschränkte Haftung“ so verstehen, als würde niemand haften. Die GmbH haftet voll, aber nur mit ihrem eigenen Vermögen. Beschränkt ist das Risiko der Gesellschafter.
+
 ## Firmengrundsätze
 
-**Was ist das?** Die Firma ist nur der Name, unter dem ein Kaufmann seine Geschäfte macht (§ 17 HGB). Sie besteht aus dem Firmenkern und dem Rechtsformzusatz, zum Beispiel „Bäckerei Sonne GmbH“. Für den Namen gelten fünf Grundsätze.
+**In einem Satz:** Die Firma ist der Name, unter dem ein Kaufmann seine Geschäfte macht (§ 17 HGB), also das Ladenschild, nicht der Laden. Sie besteht aus dem Firmenkern und dem Rechtsformzusatz, zum Beispiel „Bäckerei Sonne GmbH“. Für den Namen gelten fünf Grundsätze.
 
 | Grundsatz | Inhalt |
 |---|---|
@@ -89,7 +112,11 @@ In der Musterklausur 2025 brachte das Kapitel 13 von 72 Punkten. Gerechnet wird 
 
 ## OHG: Offene Handelsgesellschaft
 
-**Was ist das?** Mindestens zwei Gesellschafter betreiben gemeinsam ein Handelsgewerbe. Es gibt kein Mindestkapital. Jeder darf die Geschäfte führen und die Gesellschaft vertreten. Jeder haftet voll, und zwar:
+**In einem Satz:** In der OHG führen mindestens zwei Menschen gemeinsam ein Geschäft, und jeder steht mit allem, was er hat, für alle Schulden ein.
+
+**Stell dir vor:** Zwei Freunde teilen sich einen Handyvertrag, der auf beide läuft. Zahlt einer nicht, darf der Anbieter die ganze Rechnung vom anderen verlangen. Die beiden klären danach untereinander, wer wem was schuldet.
+
+Es gibt kein Mindestkapital. Jeder darf die Geschäfte führen und die Gesellschaft vertreten. Jeder haftet voll, und zwar:
 
 - **unbeschränkt:** mit Geschäfts- und Privatvermögen,
 - **unmittelbar:** der Gläubiger kann direkt zu jedem Gesellschafter gehen,
@@ -107,7 +134,10 @@ In der Musterklausur 2025 brachte das Kapitel 13 von 72 Punkten. Gerechnet wird 
 3. Ist auch das nicht vereinbart: nach Köpfen, alle gleich viel.
 4. Ein Verlust wird genauso verteilt und vom Kapitalkonto abgezogen.
 
-**Durchgerechnet (eigene Zahlen):** Die OHG macht 30.000 € Gewinn. Im Vertrag steht nichts. Die Beiträge sind gleich viel wert. Also nach Köpfen: Anna 15.000 €, Ben 15.000 €.
+**Durchgerechnet (eigene Zahlen):** Die OHG macht 30.000 € Gewinn. Im Vertrag steht nichts.
+
+- Fall A: Anna hat Einrichtung im Wert von 60.000 € eingebracht, Ben 30.000 € bar. Verhältnis 60.000 : 30.000 = 2 : 1. Das sind 3 Teile zu je 30.000 / 3 = 10.000 €. Anna bekommt 2 · 10.000 = 20.000 €, Ben 10.000 €.
+- Fall B: Es ist auch kein Beteiligungsverhältnis vereinbart. Dann nach Köpfen: Anna 15.000 €, Ben 15.000 €.
 
 > [!IMPORTANT]
 > **Das Wichtigste**
@@ -122,7 +152,12 @@ In der Musterklausur 2025 brachte das Kapitel 13 von 72 Punkten. Gerechnet wird 
 
 ## KG: Kommanditgesellschaft
 
-**Was ist das?** Die KG hat zwei Sorten Gesellschafter. Der **Komplementär** ist Vollhafter. Er führt das Geschäft und haftet wie in der OHG. Der **Kommanditist** ist Teilhafter. Er gibt Geld, haftet nur bis zu seiner eingetragenen Haftsumme und darf nicht führen.
+**In einem Satz:** In der KG gibt es einen Chef, der voll haftet, und Geldgeber, die nur ihren eingesetzten Betrag riskieren.
+
+**Stell dir vor:** Anna steht jeden Tag in der Bäckerei und entscheidet alles. Ihre Tante gibt 10.000 € dazu, will aber nicht mitarbeiten und nicht mehr als diese 10.000 € riskieren. Anna ist Komplementärin, die Tante Kommanditistin.
+
+- Der **Komplementär** ist Vollhafter. Er führt das Geschäft und haftet wie in der OHG.
+- Der **Kommanditist** ist Teilhafter. Er gibt Geld, haftet nur bis zu seiner eingetragenen Haftsumme und darf nicht führen.
 
 | | Komplementär (Vollhafter) | Kommanditist (Teilhafter) |
 |---|---|---|
@@ -131,9 +166,15 @@ In der Musterklausur 2025 brachte das Kapitel 13 von 72 Punkten. Gerechnet wird 
 | Tätigkeitsvergütung | ja, wenn vereinbart | nein |
 
 > [!NOTE]
-> **Beispiel: Der Limonadenstand (eigene Zahlen)**
+> **Beispiel: Die Bäckerei als KG (eigene Zahlen)**
 >
-> Lea führt den Stand und haftet voll. Max und Paul geben nur Geld. Der Stand macht 900 € Gewinn. Lea bekommt vorab 300 € für ihre Arbeit. Es bleiben 600 €. Die Einlagen stehen 1 : 2 : 3 (Lea, Max, Paul). Das sind 6 Teile zu je 100 €. Lea bekommt 100 + 300 = 400 €, Max 200 €, Paul 300 €. Probe: 400 + 200 + 300 = 900 €.
+> Anna führt die Bäckerei und haftet voll. Ben und Clara geben nur Geld. Die KG macht 90.000 € Gewinn.
+>
+> 1. Anna bekommt vorab 30.000 € für ihre Arbeit (Tätigkeitsvergütung).
+> 2. Es bleiben 90.000 − 30.000 = 60.000 €.
+> 3. Die Einlagen stehen 1 : 2 : 3 (Anna, Ben, Clara). Das sind 1 + 2 + 3 = 6 Teile. Ein Teil = 60.000 / 6 = 10.000 €.
+> 4. Anna 1 · 10.000 + 30.000 = 40.000 €. Ben 2 · 10.000 = 20.000 €. Clara 3 · 10.000 = 30.000 €.
+> 5. Probe: 40.000 + 20.000 + 30.000 = 90.000 €.
 
 ### Rechenweg: Gewinnverteilung der KG
 
@@ -168,7 +209,11 @@ In der Musterklausur 2025 brachte das Kapitel 13 von 72 Punkten. Gerechnet wird 
 
 ## GmbH und UG (haftungsbeschränkt)
 
-**Was ist das?** Die GmbH ist eine Kapitalgesellschaft und eine juristische Person. Die Gesellschaft selbst hat Vermögen, schließt Verträge und haftet, aber nur mit ihrem Gesellschaftsvermögen. Die Gesellschafter riskieren nur ihre Einlage. Ein Gründer genügt.
+**In einem Satz:** Die GmbH ist ein eigenes „Rechts-Wesen“, das selbst Schulden hat und selbst zahlt, sodass die Gesellschafter nur ihre Einlage riskieren.
+
+**Stell dir vor:** Du gründest eine GmbH und zahlst 25.000 € ein. Ab jetzt gibt es zwei getrennte Geldbörsen: deine private und die der GmbH. Gläubiger der GmbH dürfen nur in die Geldbörse der GmbH greifen.
+
+Fachlich: Die GmbH ist eine Kapitalgesellschaft und eine **juristische Person**, also eine Organisation, die vor dem Gesetz wie eine Person behandelt wird. Sie hat Vermögen, schließt Verträge und haftet, aber nur mit ihrem Gesellschaftsvermögen. Ein Gründer genügt.
 
 | Begriff | Bedeutung |
 |---|---|
@@ -350,7 +395,7 @@ Offizielle Musterlösung, ergänzt um Verlustvortrag und Zweck:
 Offizielle Lösung:
 
 1. 60 : 40 → Bauer 60.000 €, Müller 40.000 €.
-2. 2 : 1 → Bauer 2/3 = 66.666,67 €, Müller 1/3 = 33.333,33 €.
+2. 2 : 1 → 3 Teile, ein Teil = 100.000 / 3 = 33.333,33 €. Bauer 2 Teile = 66.666,67 €, Müller 1 Teil = 33.333,33 €.
 3. Nichts vereinbart → nach Köpfen → je 50.000 €.
 4. Verlust: Bauer −60.000 €, Müller −40.000 €. Kapitalkonten: Bauer 200.000 − 60.000 = 140.000 €, Müller 100.000 − 40.000 = 60.000 €.
 
@@ -359,8 +404,8 @@ Offizielle Lösung:
 Offizielle Lösung:
 
 1. a) Je 25 %: Bertrand 30.000 · 0,25 = 7.500 €, Schneider 51.000 · 0,25 = 12.750 €, Wehrle 69.000 · 0,25 = 17.250 €. Summe 37.500 €. Das ist mehr als 12.500 €, also reicht es.
-2. b) Nach Anteilen: 30.000 / 150.000 = 20 %, 51.000 / 150.000 = 34 %, 69.000 / 150.000 = 46 %. Bertrand 450.000 €, Schneider 765.000 €, Wehrle 1.035.000 €.
-3. c) 1 € = 1 Stimme. Bertrand + Schneider = 81.000 Stimmen, Wehrle 69.000 Stimmen. Schneider wird Geschäftsführer.
+2. b) Nach Anteilen: 30.000 / 150.000 = 20 %, 51.000 / 150.000 = 34 %, 69.000 / 150.000 = 46 %. Bertrand 0,20 · 2.250.000 = 450.000 €, Schneider 0,34 · 2.250.000 = 765.000 €, Wehrle 0,46 · 2.250.000 = 1.035.000 €. Probe: 450.000 + 765.000 + 1.035.000 = 2.250.000 €.
+3. c) 1 € = 1 Stimme. Bertrand + Schneider = 30.000 + 51.000 = 81.000 Stimmen, Wehrle 69.000 Stimmen. 81.000 sind mehr als die Hälfte von 150.000 (75.000). Schneider wird Geschäftsführer.
 
 ### Übung 5
 
@@ -374,7 +419,7 @@ Ergebnisse laut offizieller Musterlösung:
 
 ### Übung 6
 
-1. Zinsen: Anna 200.000 · 5 · 360 / (100 · 360) = 10.000 €. Ben 100.000 · 5 % = 5.000 €.
+1. Zinsen: Anna 200.000 · 5 · 360 / (100 · 360) = 10.000 €. Ben 100.000 · 5 · 360 / (100 · 360) = 5.000 €. Für ein ganzes Jahr kürzt sich 360 / 360 weg, es bleibt einfach Kapital · 5 %.
 2. Tätigkeitsvergütung Anna = 12 · 2.000 = 24.000 €.
 3. Restgewinn = 120.000 − 10.000 − 5.000 − 24.000 = 81.000 €.
 4. Verhältnis 2 : 1 → 3 Teile zu je 27.000 €. Anna 54.000 €, Ben 27.000 €.

@@ -11,7 +11,11 @@ In der Musterklausur 2025 gab es 7 Punkte: 3 für die Vorteile eines Onlineshops
 
 ## Direkter und indirekter Absatz
 
-**Was ist das?** Beim **direkten Absatz** verkauft der Hersteller ohne Zwischenhändler an den Kunden: eigener Laden, eigener Onlineshop, Automat oder Online-Marktplatz. Beim **indirekten Absatz** ist der Handel dazwischen: Hersteller → (Großhandel) → Einzelhandel → Kunde.
+**In einem Satz:** Direkt heißt, der Hersteller verkauft selbst, indirekt heißt, ein Händler sitzt dazwischen.
+
+**Stell dir vor:** Du kaufst Turnschuhe. Im Onlineshop der Marke selbst kaufst du direkt beim Hersteller. In einem Sportgeschäft, das viele Marken führt, kaufst du indirekt: Der Laden hat die Schuhe vorher beim Hersteller eingekauft und behält einen Teil deines Geldes (die **Handelsspanne**).
+
+Beim **direkten Absatz** verkauft der Hersteller also ohne Zwischenhändler an den Kunden: eigener Laden, eigener Onlineshop, Automat oder Online-Marktplatz. Beim **indirekten Absatz** ist der Handel dazwischen: Hersteller → (Großhandel) → Einzelhandel → Kunde.
 
 Das Skript nennt sechs Kriterien für die Wahl des Absatzwegs: Lieferzeit, Marktabdeckung, Handelsspanne, Lagerung, Abhängigkeit, Kundenkontakt.
 
@@ -42,7 +46,9 @@ E-Commerce heißt Verkauf über das Internet: B2B an Unternehmen, B2C an Konsume
 
 ## Absatzorgane
 
-**Was ist das?** Wer verkauft für den Hersteller? Es gibt eigene und selbstständige Absatzorgane.
+**In einem Satz:** Absatzorgane sind die Leute oder Firmen, die für den Hersteller verkaufen, entweder als eigene Angestellte oder als selbstständige Partner.
+
+„In fremdem Namen auf fremde Rechnung“ heißt: Der Vertrag kommt zwischen Hersteller und Kunde zustande (fremder Name), und Gewinn oder Verlust aus dem Geschäft hat der Hersteller (fremde Rechnung). Der Vermittler bekommt nur seine Provision.
 
 Eigene Absatzorgane: **Reisende** (fest angestellt im Außendienst, Fixum plus Provision), Verkaufsniederlassungen, Telefonvertrieb, Factory-Outlet-Center und E-Commerce.
 
@@ -73,12 +79,22 @@ Eigene Absatzorgane: **Reisende** (fest angestellt im Außendienst, Fixum plus P
 
 ## Kritischer Umsatz: Reisender oder Handelsvertreter?
 
-**Was ist das?** Der Reisende kostet ein festes Gehalt plus eine kleine Provision. Der Handelsvertreter kostet nur eine höhere Provision. Bei kleinem Umsatz ist der Vertreter billiger, bei großem der Reisende. Die Grenze heißt **kritischer Umsatz**.
+**In einem Satz:** Der kritische Umsatz ist der Umsatz, bei dem ein angestellter Verkäufer und ein selbstständiger Vertreter genau gleich viel kosten.
+
+**Stell dir vor:** Ein Handytarif mit Grundgebühr und billigen Minuten gegen einen Tarif ohne Grundgebühr mit teuren Minuten. Wer wenig telefoniert, fährt ohne Grundgebühr besser. Wer viel telefoniert, mit Grundgebühr. Der Reisende ist der Tarif mit Grundgebühr (festes Gehalt plus kleine Provision). Der Handelsvertreter ist der Tarif ohne Grundgebühr (nur eine höhere Provision). Die Grenze heißt **kritischer Umsatz**.
 
 > [!NOTE]
 > **Beispiel: Die Bäckerei (eigene Zahlen)**
 >
-> Die Bäckerei will Hotels und Kantinen beliefern. Ein angestellter Verkäufer kostet 2.500 € im Monat plus 3.000 € Spesen im Jahr plus 2 % Provision. Ein Handelsvertreter nimmt 6 %. Fixkosten des Reisenden = 2.500 · 12 + 3.000 = 33.000 €. Kritischer Umsatz = 33.000 / (0,06 − 0,02) = 825.000 € im Jahr.
+> Die Bäckerei will Hotels und Kantinen beliefern. Ein angestellter Verkäufer kostet 2.500 € im Monat plus 3.000 € Spesen im Jahr plus 2 % Provision. Ein Handelsvertreter nimmt 6 %. Fixkosten des Reisenden = 2.500 · 12 + 3.000 = 33.000 €. Kritischer Umsatz = 33.000 / (0,06 − 0,02) = 33.000 / 0,04 = 825.000 € im Jahr.
+>
+> | Jahresumsatz | Reisender: 33.000 + 2 % | Vertreter: 6 % | günstiger |
+> |---|---|---|---|
+> | 400.000 € | 41.000 € | 24.000 € | Vertreter |
+> | 825.000 € | 49.500 € | 49.500 € | gleich |
+> | 1.200.000 € | 57.000 € | 72.000 € | Reisender |
+>
+> Jeder Euro Umsatz kostet beim Vertreter 4 Cent mehr Provision (6 % − 2 %). Ab 825.000 € haben diese 4 Cent das feste Gehalt aufgewogen.
 
 ### Rechenweg: kritischer Umsatz
 
@@ -104,6 +120,7 @@ Eigene Absatzorgane: **Reisende** (fest angestellt im Außendienst, Fixum plus P
 > [!WARNING]
 > **Achtung**
 >
+> - Typischer Fehler: durch die Provision des Vertreters teilen (33.000 / 0,06) statt durch den Unterschied der Provisionen (33.000 / 0,04).
 > - Alle festen Kosten auf das Jahr rechnen: Gehalt mal 12, plus 13. Gehalt, wenn genannt, Spesen mal 12.
 > - Prozent als Dezimalzahl einsetzen.
 > - Neben den Kosten zählt mehr: Für einen unbekannten Markt ist ein Vertreter mit Ortskenntnis oft besser.
@@ -180,7 +197,7 @@ Eigene Lösungsskizze:
 
 Eigene Lösungsskizze:
 
-1. a) Business 385.000 € · Reise 178.500 € · Damen 460.000 € · Outdoor 70.000 € · Jugendlinie 52.500 €. Summe 1.146.000 €.
+1. a) Business 350.000 · 1,10 = 385.000 € · Reise 170.000 · 1,05 = 178.500 € · Damen 400.000 · 1,15 = 460.000 € · Outdoor 80.000 · 0,875 = 70.000 € (−12,5 % heißt mal 1 − 0,125) · Jugendlinie 52.500 €. Summe 1.146.000 €.
 2. b) Vertreter: 0,07 · 1.146.000 = 80.220 €.
 3. Reisender: 3.000 · 12 + 0,02 · 1.146.000 = 36.000 + 22.920 = 58.920 €.
 4. Minimal sind 58.920 € mit dem Reisenden.

@@ -11,7 +11,11 @@ In der Musterklausur 2025 gab es 10 Punkte: 6 für den Zusatznutzen und 4 für d
 
 ## Grundnutzen und Zusatznutzen
 
-**Was ist das?** Der **Grundnutzen** ist das, wofür ein Produkt da ist. Alles darüber hinaus ist **Zusatznutzen**. Es gibt drei Arten.
+**In einem Satz:** Der **Grundnutzen** ist das, wofür ein Produkt da ist, und **Zusatznutzen** ist alles, wofür Leute darüber hinaus mehr bezahlen.
+
+**Stell dir vor:** Eine Trinkflasche. Grundnutzen: Wasser mitnehmen. Das kann auch eine leere Plastikflasche. Hält sie das Wasser 24 Stunden kalt, ist das funktionaler Zusatznutzen (mehr Technik). Gefällt dir die Farbe, ist das emotionaler Zusatznutzen (Freude). Ist es eine angesagte Marke, die die anderen in der Vorlesung sehen, ist das sozialer Zusatznutzen (Anerkennung).
+
+Es gibt also drei Arten von Zusatznutzen.
 
 | Nutzen | Bedeutung | Auto (Skript) | Uhr |
 |---|---|---|---|
@@ -47,7 +51,7 @@ In der Musterklausur 2025 gab es 10 Punkte: 6 für den Zusatznutzen und 4 für d
 | Variation | Produkt wird verbessert, das alte verschwindet | neues Handymodell ersetzt das alte |
 | Eliminierung | Produkt wird vom Markt genommen | eine Chipssorte wird eingestellt |
 
-**Programmbreite** = wie viele Produktarten. **Programmtiefe** = wie viele Sorten je Art. Die Produktgestaltung umfasst im engeren Sinn Qualität, Ausstattung, Design und Verpackung, im weiteren Sinn Kundendienst, Garantie und Marke. Die Verpackung hat sechs Aspekte: Schutz, Verwendung, Logistik, Kommunikation, Kosten, Ökologie.
+**Programmbreite** = wie viele Produktarten. **Programmtiefe** = wie viele Sorten je Art. Bäckerei: Brot, Brötchen und Kuchen sind 3 Produktarten (Breite 3). Brot gibt es in 8 Sorten (Tiefe beim Brot 8). Die Produktgestaltung umfasst im engeren Sinn Qualität, Ausstattung, Design und Verpackung, im weiteren Sinn Kundendienst, Garantie und Marke. Die Verpackung hat sechs Aspekte: Schutz, Verwendung, Logistik, Kommunikation, Kosten, Ökologie.
 
 > [!NOTE]
 > **Beispiel: Die Bäckerei**
@@ -66,7 +70,11 @@ In der Musterklausur 2025 gab es 10 Punkte: 6 für den Zusatznutzen und 4 für d
 
 ## Marken und Markensteuerrad
 
-**Was ist das?** Eine Marke ist ein Vorstellungsbild im Kopf. Sie hilft, ein Produkt wiederzuerkennen und von anderen zu unterscheiden. Das Skript nennt Hersteller-, Handels- oder Eigenmarke, Submarke, Billig-, Premium- und Traditionsmarke.
+**In einem Satz:** Eine Marke ist das Bild, das du im Kopf hast, wenn du einen Namen oder ein Logo siehst.
+
+**Stell dir vor:** Du siehst im Supermarkt zwei Nuss-Nougat-Cremes. Bei Nutella weißt du sofort, wie sie schmeckt und was sie ungefähr kostet. Bei der unbekannten Creme weißt du nichts. Dieses Vorwissen im Kopf ist die Marke.
+
+Fachlich: Eine Marke ist ein Vorstellungsbild im Kopf. Sie hilft, ein Produkt wiederzuerkennen und von anderen zu unterscheiden. Das Skript nennt Hersteller-, Handels- oder Eigenmarke, Submarke, Billig-, Premium- und Traditionsmarke.
 
 | Markentyp | Bedeutung | Beispiel |
 |---|---|---|
@@ -74,7 +82,7 @@ In der Musterklausur 2025 gab es 10 Punkte: 6 für den Zusatznutzen und 4 für d
 | Familienmarke | mehrere Produkte unter einem gemeinsamen Namen | Nivea: Creme, Nivea Men, Nivea Sun |
 | Dachmarke | alle Produkte des Unternehmens unter einem Namen | Miele: Waschmaschine, Staubsauger, Herd |
 
-Das **Markensteuerrad** nach Esch beschreibt die Markenidentität, also wie das Unternehmen seine Marke sieht. In der Mitte steht die Markenkompetenz, darum herum vier Teile. Die Leitfragen stammen aus der Grafik im Skript (S. 45).
+Das **Markensteuerrad** nach Esch beschreibt die Markenidentität, also wie das Unternehmen seine Marke sieht. Stell es dir wie einen Steckbrief für eine Person vor: Wer bin ich (Kern)? Was kann ich für dich tun (Nutzen)? Wie bin ich drauf (Tonalität)? Was habe ich (Attribute)? Wie sehe ich aus (Bild)? In der Mitte steht die Markenkompetenz, darum herum vier Teile. Die Leitfragen stammen aus der Grafik im Skript (S. 45).
 
 | Teil | Leitfrage | Inhalt |
 |---|---|---|
@@ -103,7 +111,7 @@ Das **Markensteuerrad** nach Esch beschreibt die Markenidentität, also wie das 
 
 ## Sortimentspolitik
 
-**Was ist das?** Das Sortiment ist alles, was ein Händler anbietet.
+**In einem Satz:** Das Sortiment ist alles, was ein Händler anbietet, sortiert danach, wie nah es am Hauptgeschäft liegt.
 
 - **Kernsortiment:** Hauptgeschäft, immer da, größter Umsatz.
 - **Randsortiment:** ergänzt den Kern, oft nur kurz.

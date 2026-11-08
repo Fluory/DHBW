@@ -11,7 +11,11 @@ Das Kapitel besteht aus Grundbegriffen. Du musst nichts rechnen, aber Begriffe s
 
 ## Vom Bedürfnis zur Nachfrage
 
-**Was ist das?** Drei Wörter klingen ähnlich und bauen aufeinander auf.
+**In einem Satz:** Aus einem Gefühl („ich will etwas“) wird erst mit Geld ein Kaufwunsch und erst an der Kasse ein Kauf.
+
+**Stell dir vor:** Du stehst nach der Vorlesung am Bahnhof und hast Hunger (Bedürfnis). Du hast 4 € dabei und denkst an eine Brezel (Bedarf). Du gehst zum Bäcker und kaufst sie (Nachfrage). Hättest du kein Geld dabei, bliebe es beim Bedürfnis.
+
+Drei Wörter klingen also ähnlich und bauen aufeinander auf.
 
 | Begriff | Bedeutung | Beispiel |
 |---|---|---|
@@ -46,11 +50,17 @@ Maslow sagt: Menschen handeln wegen unerfüllter Bedürfnisse. Zuerst muss die u
 
 ## Was ist Marketing?
 
-**Was ist das?** Laut Skript ist Marketing die Planung, Organisation, Durchführung und Kontrolle aller Tätigkeiten im Unternehmen, damit das Angebot genau zu den Kundenwünschen passt. So erreicht das Unternehmen seine Absatzziele.
+**In einem Satz:** Marketing heißt: Ein Unternehmen denkt vom Kunden her und nicht von der eigenen Fabrik her.
+
+**So steht es auf der Folie:** Marketing ist die Planung, Organisation, Durchführung und Kontrolle aller Tätigkeiten im Unternehmen, damit das Angebot genau zu den Kundenwünschen passt. So erreicht das Unternehmen seine Absatzziele.
+
+**Auf Deutsch heißt das:** Erst herausfinden, was die Kunden wollen. Dann genau das anbieten. Dann prüfen, ob es geklappt hat. Marketing ist also viel mehr als Werbung.
 
 **Kundenorientierung** heißt: Das Unternehmen kennt die Erwartungen seiner Kunden und macht ein Angebot, das sie besser zufriedenstellt als die Konkurrenz. Das ist ein Wettbewerbsvorteil. Marketing ist heute ein duales Führungskonzept: eine Abteilung und zugleich eine Denkweise für das ganze Unternehmen.
 
 ### Verkäufermarkt und Käufermarkt
+
+**Stell dir vor:** Eine neue Spielekonsole kommt heraus, und es gibt viel zu wenige Geräte. Die Leute stehen nachts vor dem Laden, der Händler muss keine Werbung machen und gibt keinen Rabatt. Das ist ein **Verkäufermarkt**: Der Verkäufer hat die Macht. Ein Jahr später stapeln sich die Konsolen, und jeder Händler lockt mit Rabatten und Gratisspielen. Das ist ein **Käufermarkt**: Der Käufer hat die Macht.
 
 | | Verkäufermarkt | Käufermarkt |
 |---|---|---|
@@ -96,7 +106,7 @@ Dazu kommen vier Grundhaltungen, wie ein Unternehmen auf den Markt schaut:
 | Verkaufsorientierung | aggressiv werben und überreden | überredete Kunden sind oft unzufrieden und kaufen nicht wieder |
 | Marketingorientierung | die Kundenwünsche sind der Startpunkt | – (das ist das Ziel) |
 
-Gutes Marketing schaut auf Kunden und Konkurrenz und sucht mindestens einen einzigartigen Vorteil, den **USP** (unique selling proposition). Je nach Anspruchsgruppe spricht man von Absatzmarketing (Kunden, Handel), internem Marketing (Mitarbeiter), Beschaffungsmarketing (Lieferanten), Wettbewerbsmarketing (Konkurrenten) und Public Marketing (Öffentlichkeit).
+Gutes Marketing schaut auf Kunden und Konkurrenz und sucht mindestens einen einzigartigen Vorteil, den **USP** (unique selling proposition). Auf Deutsch: der eine Grund, warum man genau bei dir kauft und nicht beim Nachbarn. Bekanntes Beispiel: Ritter Sport wirbt seit Jahrzehnten mit der quadratischen Tafel („Quadratisch. Praktisch. Gut.“). Je nach Anspruchsgruppe spricht man von Absatzmarketing (Kunden, Handel), internem Marketing (Mitarbeiter), Beschaffungsmarketing (Lieferanten), Wettbewerbsmarketing (Konkurrenten) und Public Marketing (Öffentlichkeit).
 
 > [!NOTE]
 > **Beispiel: Die Bäckerei**

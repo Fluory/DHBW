@@ -14,7 +14,9 @@ Eine Bäckerei mit fünf Filialen braucht eine klare Ordnung: Wer ist der Chef d
 
 ## Organisation (Skript-Kapitel 8)
 
-**Was ist das?** Die **Aufbauorganisation** legt die Struktur fest: Stellen, Abteilungen, Weisungswege. Die **Prozessorganisation** legt die Abläufe fest. Die Stelle ist die kleinste organisatorische Einheit.
+**In einem Satz:** Die **Aufbauorganisation** ist das Organigramm (wer gehört wohin, wer ist wessen Chef), die **Prozessorganisation** ist der Ablaufplan (was passiert in welcher Reihenfolge).
+
+**Stell dir vor:** Bei einem Gruppenprojekt legt ihr fest, wer die Gruppe leitet und wer für welchen Teil zuständig ist (Aufbau). Dann legt ihr fest, in welcher Reihenfolge recherchiert, geschrieben und korrigiert wird (Prozess). Die Stelle ist die kleinste organisatorische Einheit, hier: eine Person mit ihrer Aufgabe.
 
 | Begriff | Bedeutung |
 |---|---|

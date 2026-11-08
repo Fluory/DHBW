@@ -11,7 +11,9 @@ Gerechnet wird hier nichts. 2025 kam das Kapitel in der Musterklausur nicht vor,
 
 ## Ebenen der Zusammenarbeit
 
-**Was ist das?** Zuerst fragt man: Auf welcher Stufe stehen die Unternehmen? Die Stufen sind zum Beispiel Herstellung → Großhandel → Einzelhandel.
+**In einem Satz:** Man fragt zuerst, ob die Partner dasselbe tun, nacheinander arbeiten oder gar nichts miteinander zu tun haben.
+
+**Stell dir vor:** Der Weg eines Brotes: Bauer → Mühle → Bäckerei → Kunde. Das sind Stufen hintereinander, wie bei einem Staffellauf. Tun sich zwei Läufer derselben Etappe zusammen (zwei Bäckereien), ist das **horizontal**, also nebeneinander. Tun sich Läufer aufeinanderfolgender Etappen zusammen (Mühle + Bäckerei), ist das **vertikal**, also untereinander. Ein Läufer aus einem ganz anderen Rennen (Fahrradladen) ist **anorganisch**.
 
 | Richtung | Wer arbeitet zusammen? | Ziel | Beispiel aus dem Skript |
 |---|---|---|---|
@@ -36,7 +38,11 @@ Gerechnet wird hier nichts. 2025 kam das Kapitel in der Musterklausur nicht vor,
 
 ## Formen von Unternehmenszusammenschlüssen
 
-**Was ist das?** Zusammenschlüsse sind unterschiedlich eng. Je enger, desto mehr Selbstständigkeit verliert ein Unternehmen. Es gibt zwei große Gruppen:
+**In einem Satz:** Zusammenschlüsse sind unterschiedlich eng, und je enger sie sind, desto weniger darf jedes Unternehmen allein entscheiden.
+
+**Stell dir vor:** Eine Fahrgemeinschaft zur Hochschule. Jeder behält sein eigenes Auto, ihr sprecht nur ab, wer wann fährt. Das ist wie eine **Kooperation**. Verkauft ihr eure Autos und kauft eins zusammen, bei dem eine Person bestimmt, wohin es geht, ist das wie eine **Konzentration**.
+
+Es gibt also zwei große Gruppen:
 
 - **Kooperation:** Zusammenarbeit per Vertrag. Die Selbstständigkeit bleibt weitgehend erhalten.
 - **Konzentration:** einheitliche Leitung. Die wirtschaftliche Selbstständigkeit geht verloren.
@@ -77,7 +83,9 @@ Die wichtigsten Formen kurz:
 
 ## Franchiseunternehmen
 
-**Was ist das?** Der Franchisegeber hat ein erprobtes Geschäftskonzept. Er überlässt dem Franchisenehmer Marke, Wissen, Ausstattung und Werbung. Der Franchisenehmer gründet mit eigenem Geld. Er bleibt rechtlich und wirtschaftlich selbstständig. Er zahlt eine Einstiegsgebühr und laufende Beiträge und lässt sich kontrollieren. Beispiele: McDonald's, Fressnapf, Subway.
+**In einem Satz:** Beim Franchising „mietet“ ein selbstständiger Unternehmer ein fertiges Geschäftskonzept samt bekannter Marke.
+
+Der Franchisegeber hat ein erprobtes Geschäftskonzept. Er überlässt dem Franchisenehmer Marke, Wissen, Ausstattung und Werbung. Der Franchisenehmer gründet mit eigenem Geld. Er bleibt rechtlich und wirtschaftlich selbstständig. Er zahlt eine Einstiegsgebühr und laufende Beiträge und lässt sich kontrollieren. Beispiele: McDonald's, Fressnapf, Subway.
 
 | Vorteile für … | laut offizieller Lösung zu Skript-Übung 23a |
 |---|---|

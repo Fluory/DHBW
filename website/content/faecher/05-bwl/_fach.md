@@ -17,7 +17,7 @@ description: "Wie ein Betrieb aufgebaut ist, welche Rechtsform er hat und wie er
 
 Die BWL fragt, wie ein Betrieb wirtschaftlich arbeitet. Du lernst, woraus ein Betrieb seine Produkte macht, welche Ziele er hat und welche Rechtsform zu ihm passt. Danach kommen die Zahlen: Bilanz, Kosten, Deckungsbeitrag, Kennzahlen wie der ROI und die Planung von Material und Lager.
 
-Die meisten Beispiele auf diesen Seiten spielen in einer kleinen Bäckerei oder an einem Limonadenstand. So siehst du jede Formel zuerst an kleinen, runden Zahlen. Danach folgen die Aufgaben aus Skript und Musterklausur.
+Die meisten Beispiele auf diesen Seiten spielen in einer kleinen Bäckerei. So siehst du jede Formel zuerst an kleinen, runden Zahlen. Danach folgen die Aufgaben aus Skript und Musterklausur.
 
 ### Die Klausur
 

@@ -11,13 +11,17 @@ In der Musterklausur 2025 kam Preispolitik nicht vor. Das Skript hat aber viele 
 
 ## Wege zum Preis und Target Costing
 
-**Was ist das?** Es gibt drei Wege, einen Preis zu bestimmen:
+**In einem Satz:** Einen Preis findest du von deinen Kosten aus, vom Preis der Konkurrenz aus oder davon, was Kunden zu zahlen bereit sind.
+
+**Stell dir vor:** Du verkaufst dein altes Fahrrad. Du kannst sagen: „Ich habe 300 € bezahlt, also will ich 150 €“ (kostenorientiert). Du kannst auf Kleinanzeigen schauen, was ähnliche Räder kosten (wettbewerbsorientiert). Oder du startest mit 200 € und gehst runter, bis jemand anruft (nachfrageorientiert).
+
+Es gibt also drei Wege, einen Preis zu bestimmen:
 
 - **kostenorientiert:** aus den eigenen Kosten, als Vollkosten- oder Teilkostenrechnung.
 - **wettbewerbsorientiert:** nach der Konkurrenz, vor allem nach dem Leitpreis.
 - **nachfrageorientiert:** mit Preistests herausfinden, wie viel man bei welchem Preis verkauft.
 
-**Target Costing** rechnet rückwärts vom Markt aus, weil bis zu 80 % der Herstellkosten schon in der Entwicklung festgelegt werden. Erzielbarer Preis (Target Price) − geplanter Gewinn (Target Profit) = vom Markt erlaubte Kosten (Allowable Costs). Diese vergleicht man mit den geschätzten Kosten des Produktkonzepts (Drifting Costs). Daraus ergeben sich die Zielkosten. Die **Lebenszykluskostenrechnung** betrachtet alle Kosten und Erlöse über das ganze Leben eines Produkts.
+**Target Costing** rechnet rückwärts vom Markt aus: „Was darf es kosten?“ statt „Was kostet es?“. Der Grund: Bis zu 80 % der Herstellkosten werden schon in der Entwicklung festgelegt. Erzielbarer Preis (Target Price) − geplanter Gewinn (Target Profit) = vom Markt erlaubte Kosten (Allowable Costs). Diese vergleicht man mit den geschätzten Kosten des Produktkonzepts (Drifting Costs). Daraus ergeben sich die Zielkosten. Die **Lebenszykluskostenrechnung** betrachtet alle Kosten und Erlöse über das ganze Leben eines Produkts.
 
 > [!NOTE]
 > **Beispiel: Die Bäckerei (eigene Zahlen)**
@@ -36,7 +40,9 @@ In der Musterklausur 2025 kam Preispolitik nicht vor. Das Skript hat aber viele 
 
 ## Zuschlagskalkulation (Vollkosten)
 
-**Was ist das?** **Einzelkosten** lassen sich dem Produkt direkt zuordnen: Fertigungsmaterial und Fertigungslöhne. **Gemeinkosten** fallen für alle Produkte zusammen an, zum Beispiel Miete und Verwaltung. Sie kommen als Zuschlag in Prozent dazu.
+**In einem Satz:** Die Zuschlagskalkulation baut den Preis Schicht für Schicht auf: erst die direkten Kosten, dann prozentuale Aufschläge für alles andere, dann der Gewinn, dann Puffer für Skonto und Rabatt.
+
+**Stell dir vor:** Für eine Torte weißt du genau, wie viel Mehl, Butter und Arbeitszeit drinstecken (**Einzelkosten**: Fertigungsmaterial und Fertigungslöhne). Die Miete, den Strom und die Buchhaltung kannst du keiner einzelnen Torte zuordnen (**Gemeinkosten**). Darum schlägst du dafür einen festen Prozentsatz auf, zum Beispiel „auf jeden Euro Material kommen noch 10 Cent für das Lager“.
 
 ### Rechenweg: vom Material zum Listenpreis
 
@@ -50,11 +56,11 @@ In der Musterklausur 2025 kam Preispolitik nicht vor. Das Skript hat aber viele 
 
 **Durchgerechnet (eigene Zahlen): eine Hochzeitstorte.** Material 20 €, Materialgemeinkosten 10 %, Löhne 15 €, Fertigungsgemeinkosten 60 %, Verwaltung 10 %, Vertrieb 5 %, Gewinn 20 %, Skonto 2 %, Rabatt 10 %.
 
-1. Materialkosten = 20 + 2 = 22,00 €.
-2. Fertigungskosten = 15 + 9 = 24,00 €.
+1. Materialkosten = 20 + 2 = 22,00 €. (Materialgemeinkosten: 10 % von 20 = 2 €.)
+2. Fertigungskosten = 15 + 9 = 24,00 €. (Fertigungsgemeinkosten: 60 % von 15 = 9 €.)
 3. Herstellkosten = 22 + 24 = 46,00 €.
-4. Selbstkosten = 46 + 4,60 + 2,30 = 52,90 €.
-5. Barverkaufspreis = 52,90 + 10,58 = 63,48 €.
+4. Selbstkosten = 46 + 4,60 + 2,30 = 52,90 €. (Verwaltung: 10 % von 46 = 4,60 €. Vertrieb: 5 % von 46 = 2,30 €.)
+5. Barverkaufspreis = 52,90 + 10,58 = 63,48 €. (Gewinn: 20 % von 52,90 = 10,58 €.)
 6. Zielverkaufspreis = 63,48 / 0,98 = 64,78 €. Das Skonto ist 1,30 €.
 7. Listenverkaufspreis = 64,78 / 0,90 = 71,98 €. Der Rabatt ist 7,20 €.
 
@@ -66,11 +72,20 @@ In der Musterklausur 2025 kam Preispolitik nicht vor. Das Skript hat aber viele 
 > [!WARNING]
 > **Achtung**
 >
-> Skonto und Rabatt rechnest du „im Hundert“. Du teilst durch (100 − Satz) %, statt einfach den Satz draufzuschlagen. 3 % Skonto heißt: Barverkaufspreis / 0,97.
+> Typischer Fehler: Skonto und Rabatt einfach draufschlagen. Du rechnest sie „im Hundert“: Du teilst durch (100 − Satz) %. 3 % Skonto heißt: Barverkaufspreis / 0,97.
+>
+> Warum? Der Kunde zieht das Skonto später vom **höheren** Preis ab. Beispiel: Du willst 98 € bekommen, Skonto 2 %.
+>
+> | | Preis auf der Rechnung | Kunde zieht 2 % ab | du bekommst |
+> |---|---|---|---|
+> | falsch: 98 + 2 % | 99,96 € | 2,00 € | 97,96 € (zu wenig) |
+> | richtig: 98 / 0,98 | 100,00 € | 2,00 € | 98,00 € |
 
 ## Deckungsbeitrag, Break-even und Preisuntergrenzen
 
-**Was ist das?** Der Preis aus der Vollkostenrechnung ist am Markt oft zu hoch. Trotzdem kann sich ein Produkt lohnen. Der **Deckungsbeitrag** zeigt, wie viel ein Produkt zur Deckung der Fixkosten beiträgt.
+**In einem Satz:** Der Deckungsbeitrag ist das, was jedes verkaufte Stück nach Abzug seiner eigenen Kosten zur Miete beiträgt (ausführlich mit der Bäckerei im BWL-Kapitel „Rechnungswesen“).
+
+Der Preis aus der Vollkostenrechnung ist am Markt oft zu hoch. Trotzdem kann sich ein Produkt lohnen, solange es mehr einbringt, als es selbst an Material kostet.
 
 - Stückdeckungsbeitrag db = Preis − variable Stückkosten.
 - Gesamtdeckungsbeitrag DB = db · Menge = Erlöse − variable Gesamtkosten.
@@ -83,6 +98,12 @@ Die Produktion lohnt sich, wenn der Deckungsbeitrag positiv ist und freie Kapazi
 > **Beispiel: Der Dönerladen (eigene Zahlen)**
 >
 > Ein Döner kostet 7 €. Fleisch, Brot und Salat kosten 3 €. db = 7 − 3 = 4 €. Die Miete ist 2.000 € im Monat. Break-even = 2.000 / 4 = 500 Döner. Ab dem 501. Döner macht der Laden Gewinn.
+>
+> | Döner im Monat | DB (Döner · 4 €) | minus Miete | Ergebnis |
+> |---|---|---|---|
+> | 300 | 1.200 € | 2.000 € | −800 € |
+> | 500 | 2.000 € | 2.000 € | 0 € |
+> | 700 | 2.800 € | 2.000 € | +800 € |
 
 ### Rechenweg: Break-even und Gewinn
 
@@ -107,21 +128,24 @@ Die Produktion lohnt sich, wenn der Deckungsbeitrag positiv ist und freie Kapazi
 > [!WARNING]
 > **Achtung**
 >
-> Beim Deckungsbeitrag nur die variablen Kosten abziehen, nicht die Fixkosten.
+> - Beim Deckungsbeitrag nur die variablen Kosten abziehen, nicht die Fixkosten.
+> - Typischer Fehler: Break-even = Fixkosten / Preis. Richtig ist Fixkosten / db. Beim Dönerladen wären 2.000 / 7 ≈ 286 Döner viel zu wenig, denn von jedem Döner gehen 3 € für die Zutaten weg.
 
 ## Preisstrategien und Preisdifferenzierung
 
-**Was ist das?** Bei der Preispositionierung wählt man Hochpreis, Mittelpreis oder Niedrigpreis. Für neue Produkte gibt es zwei Strategien:
+**In einem Satz:** Bei neuen Produkten entscheidest du, ob du teuer startest und dann senkst oder billig startest, um schnell viele Kunden zu bekommen.
 
-- **Skimming:** teuer starten, später schrittweise senken. Ziel: schnelle Erträge.
-- **Penetration:** billig starten, damit sich das Produkt schnell verbreitet. Anfangs deckt der Preis eventuell nicht einmal die Kosten. Ziel: langfristig großer Marktanteil.
+Bei der Preispositionierung wählt man Hochpreis, Mittelpreis oder Niedrigpreis. Für neue Produkte gibt es zwei Strategien:
+
+- **Skimming** (englisch „abschöpfen“, wie den Rahm von der Milch): teuer starten, später schrittweise senken. Ziel: schnelle Erträge. Alltagsbeispiel: Neue Smartphone-Modelle und Spielekonsolen sind zum Start am teuersten und werden mit der Zeit billiger. Wer unbedingt zuerst dabei sein will, zahlt mehr.
+- **Penetration** (englisch „durchdringen“): billig starten, damit sich das Produkt schnell verbreitet. Anfangs deckt der Preis eventuell nicht einmal die Kosten. Ziel: langfristig großer Marktanteil. Alltagsbeispiel: ein Abo, das in den ersten Monaten fast nichts kostet.
 
 **Preisdifferenzierung** heißt: Dasselbe oder ein ähnliches Produkt kostet unterschiedlich viel.
 
 | Art | nach … | Beispiel |
 |---|---|---|
 | räumlich | Region, Land | Lebensmittel in München teurer |
-| persönlich | Kundengruppe | Studententarif, Seniorenticket |
+| persönlich | Kundengruppe | Studententarif (etwa das Student-Abo bei Spotify), Seniorenticket |
 | zeitlich | Tages- oder Jahreszeit | Kino am Dienstag billiger |
 | sachlich | Leistung | Bahn 1. und 2. Klasse |
 | mengenmäßig | Kaufmenge | Mengenrabatt |
@@ -189,7 +213,7 @@ Eigene Lösungsskizze:
 
 1. db Tablet = 350 − 180 = 170 €. db Smartphone = 250 − 165 = 85 €.
 2. DB Tablet = 170 · 1.000 = 170.000 €. DB Smartphone = 85 · 1.250 = 106.250 €.
-3. Gesamtdeckungsbeitrag = 276.250 €.
+3. Gesamtdeckungsbeitrag = 170.000 + 106.250 = 276.250 €.
 
 ### Übung 2
 
@@ -208,17 +232,17 @@ Eigene Lösungsskizze, abgeleitet aus dem Skript (S. 53):
 
 Eigene Lösungsskizze:
 
-1. db je Stück: A 0,75 € · B 0,80 € · C 0,50 € · D 0,40 €.
-2. DB je Qualität: A 52.500 € · B 40.000 € · C 60.000 € · D 26.000 €.
-3. Summe DB = 178.500 €.
+1. db je Stück: A 2,00 − 1,25 = 0,75 € · B 2,50 − 1,70 = 0,80 € · C 3,00 − 2,50 = 0,50 € · D 3,50 − 3,10 = 0,40 €.
+2. DB je Qualität: A 0,75 · 70.000 = 52.500 € · B 0,80 · 50.000 = 40.000 € · C 0,50 · 120.000 = 60.000 € · D 0,40 · 65.000 = 26.000 €.
+3. Summe DB = 52.500 + 40.000 + 60.000 + 26.000 = 178.500 €.
 4. Betriebsergebnis = 178.500 − 150.000 = 28.500 € Gewinn.
 
 ### Übung 5
 
 Eigene Lösungsskizze:
 
-1. Materialkosten = 100 + 10 = 110,00 €.
-2. Fertigungskosten = 50 + 40 = 90,00 €.
+1. Materialkosten = 100 + 10 (10 % von 100) = 110,00 €.
+2. Fertigungskosten = 50 + 40 (80 % von 50) = 90,00 €.
 3. Herstellkosten = 110 + 90 = 200,00 €.
 4. Selbstkosten = 200 + 16 (8 %) + 12 (6 %) = 228,00 €.
 5. Barverkaufspreis = 228 + 27,36 (12 %) = 255,36 €.

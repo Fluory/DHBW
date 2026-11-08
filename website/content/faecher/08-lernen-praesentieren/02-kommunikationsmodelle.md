@@ -11,7 +11,9 @@ Ein Alltagsbeispiel: Beifahrer sagt „Die Ampel ist grün.“ Gemeint ist eine 
 
 ## Das Vier-Ohren-Modell (Schulz von Thun)
 
-**Was ist das?** Jede Nachricht hat vier Seiten. Sie werden gleichzeitig gesendet und gleichzeitig empfangen. Man nennt das Modell auch Kommunikationsquadrat.
+**In einem Satz:** Jeder Satz sagt gleichzeitig etwas über die Sache, über dich, über eure Beziehung und darüber, was du willst.
+
+Jede Nachricht hat also vier Seiten. Sie werden gleichzeitig gesendet und gleichzeitig empfangen. Man nennt das Modell auch Kommunikationsquadrat.
 
 | Seite | Frage | Ampel-Beispiel |
 |---|---|---|
@@ -32,7 +34,11 @@ Der Beziehungshinweis steckt oft nur in Tonfall und Mimik. Missverständnisse en
 
 ## Die Transaktionsanalyse
 
-**Was ist das?** Jede Person spricht in einem Moment aus einem von drei Ich-Zuständen.
+**In einem Satz:** Die Transaktionsanalyse sagt: Man spricht immer aus einer „Rolle“ heraus, wie ein Elternteil, wie ein Erwachsener oder wie ein Kind, und Gespräche kippen, wenn die Rollen nicht zusammenpassen.
+
+**Stell dir vor:** In der Lerngruppe sagt jemand: „Ihr müsst euch wirklich mal besser vorbereiten.“ Das klingt wie ein Elternteil, das schimpft. Die typische Antwort ist trotzig wie ein Kind: „Du bist doch auch nicht besser.“ Schon streitet ihr über den Ton statt über die Vorbereitung.
+
+Jede Person spricht in einem Moment aus einem von drei Ich-Zuständen.
 
 - **Eltern-Ich:** belehrend, bewertend oder fürsorglich („Das macht man so nicht.“).
 - **Erwachsenen-Ich:** sachlich, prüfend („Was ist der Stand?“).
@@ -54,7 +60,11 @@ Laut dem Flipchart des Teams vom 06.10.: Tücken sind Schubladendenken und Missv
 
 ## Das Eisbergmodell
 
-**Was ist das?** Nur der kleinste Teil der Kommunikation ist sichtbar: Worte, Gestik, Mimik. Unter der Oberfläche liegen Einstellungen, Erfahrungen, Werte, Kultur, Ziele und Bedürfnisse. Dieser unsichtbare Teil steuert oft, wie ein Gespräch läuft.
+**In einem Satz:** Wie bei einem Eisberg siehst du im Gespräch nur die Spitze, der größere Teil liegt unsichtbar darunter.
+
+**Stell dir vor:** Eure Gruppe streitet zwanzig Minuten über die Schriftart der Folien. Eigentlich geht es um etwas anderes: Eine Person hat das Design gemacht und fühlt sich übergangen, weil die anderen es ohne Rückfrage geändert haben. Die Schriftart ist die Spitze, das Gefühl, nicht ernst genommen zu werden, liegt unter Wasser.
+
+Nur der kleinste Teil der Kommunikation ist sichtbar: Worte, Gestik, Mimik. Unter der Oberfläche liegen Einstellungen, Erfahrungen, Werte, Kultur, Ziele und Bedürfnisse. Dieser unsichtbare Teil steuert oft, wie ein Gespräch läuft.
 
 Ergänzung **Embodied Communication** (Skript): Einstellung und Körpersprache wirken wechselseitig. Eine offene Haltung kann also auch die innere Einstellung verändern.
 
@@ -75,7 +85,7 @@ Ergänzung **Embodied Communication** (Skript): Einstellung und Körpersprache w
 
 ## Aktiv zuhören
 
-**Was ist das?** Aktives Zuhören heißt: Du willst den anderen verstehen und zeigst ihm das. Am 08.10. gab es dazu eine Übung zu zweit (20 Minuten mit Feedback). A erzählt von einem wichtigen Erlebnis. B hört zu, stellt Fragen und versucht, das Relevante herauszufinden. Danach Feedback und Rollentausch.
+**In einem Satz:** Aktives Zuhören heißt: Du willst den anderen verstehen und zeigst ihm das, statt schon deine Antwort vorzubereiten. Am 08.10. gab es dazu eine Übung zu zweit (20 Minuten mit Feedback). A erzählt von einem wichtigen Erlebnis. B hört zu, stellt Fragen und versucht, das Relevante herauszufinden. Danach Feedback und Rollentausch.
 
 Werkzeuge (aus der eigenen Vorbereitung auf das Konfliktgespräch, nach Skript Teil 1):
 

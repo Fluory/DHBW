@@ -62,18 +62,35 @@ Hier wird viel gerechnet: ABC-Analyse, Meldebestand, optimale Bestellmenge und L
 
 ## ABC-Analyse
 
-**Was ist das?** Ein Betrieb hat viele Materialien. Die ABC-Analyse zeigt, wo sich genaue Planung lohnt. Meist machen wenige Teile den Großteil des Werts aus. Diese A-Güter plant man genau. Die vielen billigen C-Güter behandelt man einfach.
+**In einem Satz:** Die ABC-Analyse sortiert das Material nach seinem Wert, damit du weißt, wo sich Aufpassen lohnt.
+
+**Stell dir vor:** Dein Wocheneinkauf. Auf dem Kassenzettel stehen 25 Posten. Käse, Fleisch und Kaffee machen aber schon den größten Teil der Summe aus. Bei diesen wenigen teuren Dingen lohnt sich der Preisvergleich. Bei Salz und Zahnstochern lohnt er sich nicht, die kaufst du einfach mit. Genauso: Wenige teure Dinge (A) machen den Großteil des Werts aus, viele billige Dinge (C) fast nichts.
+
+**Mit Zahlen: der Monatseinkauf der Bäckerei (eigene Zahlen)**
+
+| Artikel | Wert im Monat | Anteil | kumuliert | Klasse |
+|---|---|---|---|---|
+| Mehl | 900 € | 45,0 % | 45,0 % | A |
+| Butter | 500 € | 25,0 % | 70,0 % | A |
+| Schokolade | 200 € | 10,0 % | 80,0 % | A |
+| Eier | 150 € | 7,5 % | 87,5 % | B |
+| Zucker | 100 € | 5,0 % | 92,5 % | B |
+| Hefe | 60 € | 3,0 % | 95,5 % | C |
+| Sesam | 40 € | 2,0 % | 97,5 % | C |
+| Salz | 20 € | 1,0 % | 98,5 % | C |
+| Backpapier | 20 € | 1,0 % | 99,5 % | C |
+| Zahnstocher | 10 € | 0,5 % | 100,0 % | C |
+| **Summe** | **2.000 €** | **100 %** | | |
+
+3 von 10 Artikeln (30 %) machen 80 % des Werts aus. 5 von 10 Artikeln (50 %) machen nur 7,5 % aus. „Kumuliert“ heißt: von oben aufaddiert. 45 + 25 = 70, 70 + 10 = 80 und so weiter.
+
+Die A-Güter plant man genau. Die vielen billigen C-Güter behandelt man einfach.
 
 | Klasse | Mengenanteil | Wertanteil | Behandlung |
 |---|---|---|---|
 | A | etwa 20 % (gering) | etwa 80 % (hoch) | genau planen, programmorientiert, Just-in-time, Preisverhandlungen |
 | B | etwa 30 % | etwa 10 % | mittel |
 | C | etwa 50 % (hoch) | etwa 10 % (gering) | vereinfacht, verbrauchsorientiert, Bestellpunktverfahren, Lager |
-
-> [!NOTE]
-> **Beispiel: Die Bäckerei**
->
-> Mehl, Butter und Schokolade machen fast den ganzen Einkaufswert aus: A-Güter. Salz, Backpapier und Zahnstocher sind viele Posten, aber zusammen fast nichts wert: C-Güter.
 
 ### Rechenweg: ABC-Analyse
 
@@ -108,7 +125,7 @@ Als Ergänzung gibt es die **XYZ-Analyse**: Wie gut lässt sich der Verbrauch vo
 > [!WARNING]
 > **Achtung**
 >
-> - Nach dem Wert sortieren, nicht nach der Menge und nicht nach dem Stückpreis.
+> - Typischer Fehler: nach der Menge oder nach dem Stückpreis sortieren. Sortiert wird nach dem Verbrauchswert (Menge · Preis). Ein teures Teil, das man nur einmal im Jahr braucht, kann trotzdem ein C-Gut sein.
 > - Den Verbrauchswert ausdrücklich hinschreiben. Das bringt Punkte.
 
 ## Materialbedarfsplanung
@@ -145,7 +162,11 @@ Als Ergänzung gibt es die **XYZ-Analyse**: Wie gut lässt sich der Verbrauch vo
 
 ## Materialbestandsplanung: Arten von Beständen und Meldebestand
 
-**Was ist das?** Im Lager gibt es verschiedene „Marken“ für den Bestand. Die wichtigste Frage: Wann muss ich nachbestellen? Antwort: wenn der Meldebestand erreicht ist. Dann reicht der Rest genau, bis die Lieferung da ist, und der Sicherheitsbestand bleibt unberührt.
+**In einem Satz:** Der Meldebestand ist die Füllhöhe im Lager, bei der du nachbestellen musst.
+
+**Stell dir vor:** Die Tankanzeige im Auto. Du tankst nicht erst, wenn der Tank leer ist. Du fährst los, sobald noch genug drin ist, um zur Tankstelle zu kommen, plus eine kleine Reserve für einen Stau. Die Strecke bis zur Tankstelle ist die Lieferzeit. Die Reserve ist der Sicherheitsbestand.
+
+Im Lager gibt es verschiedene „Marken“ für den Bestand. Die wichtigste ist der Meldebestand: Ist er erreicht, reicht der Rest genau, bis die Lieferung da ist, und der Sicherheitsbestand bleibt unberührt.
 
 | Bestand | Bedeutung |
 |---|---|
@@ -158,7 +179,14 @@ Als Ergänzung gibt es die **XYZ-Analyse**: Wie gut lässt sich der Verbrauch vo
 > [!NOTE]
 > **Beispiel: Die Bäckerei (eigene Zahlen)**
 >
-> Die Bäckerei braucht 30 kg Mehl am Tag. Der Lieferant braucht 3 Tage. Als Reserve sollen immer 60 kg da sein. Meldebestand = 60 + 3 · 30 = 150 kg. Zeigt die Waage 150 kg, wird bestellt.
+> Die Bäckerei braucht 30 kg Mehl am Tag. Der Lieferant braucht 3 Tage. Als Reserve sollen immer 60 kg da sein. Meldebestand = 60 + 3 · 30 = 60 + 90 = 150 kg. Zeigt die Waage 150 kg, wird bestellt.
+>
+> | Tag | Mehl im Lager | was passiert |
+> |---|---|---|
+> | 0 | 150 kg | Meldebestand erreicht, Bestellung geht raus |
+> | 1 | 120 kg | 30 kg verbraucht |
+> | 2 | 90 kg | 30 kg verbraucht |
+> | 3 | 60 kg | Lieferung kommt, die Reserve ist noch unberührt |
 
 ### Rechenweg: Meldebestand
 
@@ -191,16 +219,39 @@ Zwei Bestellverfahren:
 
 ## Materialbeschaffungsplanung: optimale Bestellmenge
 
-**Was ist das?** Wie viel soll man auf einmal bestellen? Zwei Kosten ziehen in entgegengesetzte Richtungen. Viele kleine Bestellungen verursachen hohe Bestellkosten, denn jede Bestellung kostet Versand und Verwaltung. Wenige große Bestellungen verursachen hohe Lagerkosten, denn viel Ware liegt herum und bindet Geld. Die Andler-Formel findet die Menge, bei der die Summe am kleinsten ist. Dort sind Lager- und Bestellkosten gleich hoch.
+**In einem Satz:** Die optimale Bestellmenge ist die Menge pro Bestellung, bei der Bestellkosten und Lagerkosten zusammen am kleinsten sind.
 
-xopt = √(2 · xB · Kf / (k · kL))
+**Stell dir vor:** Du kaufst Mineralwasser. Fährst du jeden Tag einzeln zum Laden, kostet dich das viel Zeit und Sprit (Bestellkosten). Kaufst du einmal für das ganze Jahr, ist der Keller voll und das Geld steckt im Wasser statt auf dem Konto (Lagerkosten). Irgendwo dazwischen ist der beste Kompromiss. Das ist ein Zielkonflikt: Was die eine Kostenart senkt, erhöht die andere.
 
-Dabei ist xB der Jahresbedarf, Kf die fixen Kosten je Bestellung, k der Preis je Stück und kL der Zins- und Lagerkostensatz als Dezimalzahl.
+**Mit Zahlen: Zucker in der Bäckerei (eigene Zahlen)**
 
-> [!NOTE]
-> **Beispiel: Die Bäckerei (eigene Zahlen)**
->
-> Die Bäckerei braucht 3.600 kg Zucker im Jahr. Jede Bestellung kostet 20 €. 1 kg kostet 1 €. Der Lagerkostensatz ist 10 %. xopt = √(2 · 3.600 · 20 / (1 · 0,10)) = √1.440.000 = 1.200 kg. Das sind 3.600 / 1.200 = 3 Bestellungen im Jahr. Probe: Lagerkosten = 1.200 / 2 · 1 · 0,10 = 60 €. Bestellkosten = 3 · 20 = 60 €. Beide gleich.
+Die Bäckerei braucht 3.600 kg Zucker im Jahr. Jede Bestellung kostet 20 € (Versand, Verwaltung). 1 kg kostet 1 €. Der Lagerkostensatz ist 10 %: Jeder Euro, der im Lager liegt, kostet im Jahr 10 Cent (Zinsen, Platz, Versicherung).
+
+| Menge je Bestellung | Bestellungen im Jahr | Bestellkosten | Ø Lagerbestand | Lagerkosten | Summe |
+|---|---|---|---|---|---|
+| 300 kg | 12 | 240 € | 150 kg | 15 € | 255 € |
+| 600 kg | 6 | 120 € | 300 kg | 30 € | 150 € |
+| 900 kg | 4 | 80 € | 450 kg | 45 € | 125 € |
+| **1.200 kg** | **3** | **60 €** | **600 kg** | **60 €** | **120 €** |
+| 1.800 kg | 2 | 40 € | 900 kg | 90 € | 130 € |
+| 3.600 kg | 1 | 20 € | 1.800 kg | 180 € | 200 € |
+
+Liest du die Tabelle von oben nach unten, fallen die Bestellkosten und die Lagerkosten steigen. Die Summe ist bei 1.200 kg am kleinsten. Genau dort sind beide Kostenarten gleich hoch (60 € und 60 €).
+
+Warum ist der durchschnittliche Lagerbestand die halbe Bestellmenge? Nach jeder Lieferung ist das Lager voll (1.200 kg), kurz vor der nächsten fast leer (0 kg). Im Mittel liegt also die Hälfte da: 1.200 / 2 = 600 kg.
+
+**Die Formel (Andler):** xopt = √(2 · xB · Kf / (k · kL))
+
+- xopt ist die optimale Bestellmenge, das gesuchte Ergebnis.
+- √ heißt „Wurzel aus“: die Zahl, die mit sich selbst malgenommen den Wert unter der Wurzel ergibt.
+- xB ist der Jahresbedarf (3.600 kg).
+- Kf sind die fixen Kosten je Bestellung (20 €).
+- k ist der Preis je Stück (1 € je kg).
+- kL ist der Zins- und Lagerkostensatz als Dezimalzahl (10 % = 0,10).
+
+**Auf Deutsch heißt das:** Zwei mal Jahresbedarf mal Bestellkosten, geteilt durch Preis mal Lagerkostensatz, und daraus die Wurzel.
+
+Für den Zucker: xopt = √(2 · 3.600 · 20 / (1 · 0,10)) = √(144.000 / 0,10) = √1.440.000 = 1.200 kg. Das passt zur Tabelle.
 
 ### Rechenweg: optimale Bestellmenge (Andler)
 
@@ -226,6 +277,7 @@ Dabei ist xB der Jahresbedarf, Kf die fixen Kosten je Bestellung, k der Preis je
 > [!WARNING]
 > **Achtung**
 >
+> - Typischer Fehler: die Wurzel vergessen oder nur über den Zähler ziehen. Erst den ganzen Bruch ausrechnen, dann die Wurzel.
 > - Halbjahreswerte verdoppeln.
 > - Prozent als Dezimalzahl einsetzen.
 > - Bestellmenge und Zahl der Bestellungen auf ganze Zahlen runden, wenn verlangt.
@@ -257,7 +309,9 @@ Dabei ist xB der Jahresbedarf, Kf die fixen Kosten je Bestellung, k der Preis je
 
 ## Lagerkennzahlen
 
-**Was ist das?** Lagerkennzahlen zeigen, ob ein Lager zu voll ist. Je öfter sich das Lager im Jahr umschlägt, also leert und wieder füllt, desto kürzer liegt die Ware und desto weniger Geld ist gebunden.
+**In einem Satz:** Lagerkennzahlen zeigen, wie lange Ware im Lager liegt und wie viel Geld dort festsitzt.
+
+**Stell dir vor:** Ein Brotkorb, der jeden Tag leer gegessen und neu gefüllt wird, schlägt sich im Jahr 360-mal um. Ein Gewürzregal, das man einmal im Jahr auffüllt, schlägt sich nur einmal um. Je öfter sich das Lager im Jahr leert und wieder füllt, desto kürzer liegt die Ware und desto weniger Geld ist gebunden.
 
 > [!NOTE]
 > **Beispiel: Die Bäckerei (eigene Zahlen)**
@@ -358,7 +412,8 @@ Eigene Lösung:
 Ergebnis laut offizieller Musterlösung.
 
 1. Tagesverbrauch = 3.350 / 130 = 25,77 Paletten. Durch die Abflusstage teilen, nicht durch 180.
-2. Meldebestand = 50 + 9 · 25,77 = 281,9 ≈ 282 Paletten.
+2. Verbrauch während der Lieferzeit = 9 · 25,77 = 231,9 Paletten.
+3. Meldebestand = 50 + 231,9 = 281,9 ≈ 282 Paletten.
 
 ### Übung 4
 
@@ -366,7 +421,7 @@ Ergebnisse laut offizieller Musterlösung.
 
 1. Halbjahr = 600 + 700 + 500 + 400 + 550 + 600 = 3.350 Paletten. Jahresbedarf = 2 · 3.350 = 6.700 Paletten.
 2. kL = 0,12.
-3. xopt = √(2 · 6.700 · 400 / (6.000 · 0,12)) = √(5.360.000 / 720) = √7.444,4 = 86,3 ≈ 86 Paletten.
+3. Zähler: 2 · 6.700 · 400 = 5.360.000. Nenner: 6.000 · 0,12 = 720. xopt = √(5.360.000 / 720) = √7.444,4 = 86,3 ≈ 86 Paletten.
 4. Bestellungen = 6.700 / 86,3 = 77,6 ≈ 78 im Jahr.
 
 ### Übung 5

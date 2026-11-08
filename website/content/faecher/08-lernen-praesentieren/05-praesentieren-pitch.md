@@ -11,7 +11,11 @@ Ein Alltagsbeispiel: Du stellst im Praxisbetrieb dein Projekt vor. Du zeigst zeh
 
 ## Die eine Frage, Aufbau und vier Regeln
 
-**Was ist das?** Vor jeder Präsentation steht eine Frage (Fotoprotokoll 02.11.): **Was soll euer Publikum danach tun, wissen oder entscheiden?** Wer das nicht in einem Satz sagen kann, hat noch keine Präsentation, sondern nur Folien.
+**In einem Satz:** Eine Präsentation planst du vom Ende her: Erst steht fest, was das Publikum danach tun soll, dann baust du die Folien.
+
+**Stell dir vor:** Du steigst ins Auto und schaltest das Navi ein. Ohne Ziel kann es dir keinen Weg zeigen. Genauso kannst du ohne Ziel nicht entscheiden, welche Folie rein muss und welche raus kann.
+
+Vor jeder Präsentation steht also eine Frage (Fotoprotokoll 02.11.): **Was soll euer Publikum danach tun, wissen oder entscheiden?** Wer das nicht in einem Satz sagen kann, hat noch keine Präsentation, sondern nur Folien.
 
 Präsentationen haben drei Zwecke: informieren, überzeugen, motivieren. Der **Aufbau**:
 
@@ -25,7 +29,7 @@ Präsentationen haben drei Zwecke: informieren, überzeugen, motivieren. Der **A
 
 1. Mit einer Frage, einer überraschenden Zahl oder einer kurzen Szene einsteigen. Nicht mit „Ich stelle Ihnen heute vor …“.
 2. Höchstens drei Kernargumente. Ein viertes merkt sich niemand.
-3. Zahlen übersetzen: „30 %“ wird zu „fast jeder dritte Euro“.
+3. Zahlen übersetzen: „30 %“ wird zu „fast jeder dritte Euro“. So rechnest du: 30 % = 30 / 100 ≈ 1 / 3,3. Das liegt nah bei einem Drittel, also „fast jeder dritte“.
 4. Stark enden: Die letzte Folie zeigt die Kernaussage oder einen Call to Action, nicht „Danke! Fragen?“.
 
 Dazu: **Folientitel als Aussage** (Action Title). Statt „Ergebnisse“ lieber „Kosten sinken um 30 %“.
@@ -44,7 +48,11 @@ Dazu: **Folientitel als Aussage** (Action Title). Statt „Ergebnisse“ lieber 
 
 ## Storytelling
 
-**Was ist das?** Menschen merken sich Geschichten besser als Aufzählungen. Eine Geschichte hat vier Bestandteile (Fotoprotokoll 08.10.):
+**In einem Satz:** Storytelling heißt, eine Idee an einer Person zu zeigen, die ein Ziel hat und sich auf dem Weg dorthin verändern muss.
+
+**Stell dir vor:** Zwei Einstiege in ein Referat über Lernmethoden. Erstens: „Es gibt drei Lernmethoden.“ Zweitens: „Mia hat für Mathe alles dreimal gelesen und ist trotzdem durchgefallen. Im zweiten Versuch hat sie nur Aufgaben ohne Lösung gerechnet und bestanden.“ Den zweiten Einstieg merkt sich der Raum, weil eine Figur (Mia), ein Ziel (bestehen) und eine Veränderung (andere Methode) drin sind.
+
+Eine Geschichte hat vier Bestandteile (Fotoprotokoll 08.10.):
 
 1. einen **Protagonisten**,
 2. mit einem klaren **Ziel**,
@@ -65,7 +73,9 @@ Grundmuster ist die **Heldenreise**. Dazu kommen Mythen, die viele ansprechen: D
 
 ## Drei Präsentationsarten: Business und Wissenschaft
 
-**Was ist das?** Dieselbe Praxisarbeit wird im Unternehmen anders präsentiert als an der Hochschule. Im Unternehmen fragt man: „Was bringt das der Firma?“ An der Hochschule: „Wie sauber ist das hergeleitet?“ Die Arbeit ist gleich, der relevante Teil ist anders.
+**In einem Satz:** Im Unternehmen willst du eine Entscheidung erreichen, an der Hochschule willst du zeigen, dass dein Ergebnis sauber begründet ist.
+
+Dieselbe Praxisarbeit wird also im Unternehmen anders präsentiert als an der Hochschule. Im Unternehmen fragt man: „Was bringt das der Firma?“ An der Hochschule: „Wie sauber ist das hergeleitet?“ Die Arbeit ist gleich, der relevante Teil ist anders.
 
 | Art | Aufbau | Relevant | häufiger Fehler |
 |---|---|---|---|
@@ -104,7 +114,9 @@ In beiden Welten gilt: Zielgruppe kennen, roter Faden, eine Kernaussage, saubere
 
 ## Der Pitch
 
-**Was ist das?** Ein Pitch ist eine kurze, zugespitzte Präsentation einer Idee vor Entscheidern. Die Leitfragen (Fotoprotokoll 08.10. und 02.11.):
+**In einem Satz:** Ein Pitch ist eine kurze, zugespitzte Präsentation einer Idee vor Entscheidern, die mit einer klaren Bitte endet.
+
+**Stell dir vor:** Du stehst mit der Studiengangsleiterin im Aufzug und hast eine Minute, bis sie aussteigt. Du willst einen Raum für eure Lerngruppe. In dieser Minute musst du sagen, wer du bist, welches Problem ihr habt, was eure Idee ist und worum du sie konkret bittest. Mehr ist ein Pitch nicht, nur besser vorbereitet. Die Leitfragen (Fotoprotokoll 08.10. und 02.11.):
 
 1. Sag, wer du bist und was du machst.
 2. Welches Problem löst ihr mit welcher Idee?

@@ -16,7 +16,9 @@ In der Musterklausur 2025 brachte dieses Kapitel 11 Punkte. Gerechnet wird der R
 
 ## Kennzahlen: Anforderungen, Aufgaben, Arten
 
-**Was ist das?** Kennzahlen fassen viele Daten zu einer Zahl zusammen. Mit dieser Zahl kann man steuern und kontrollieren. Damit Kennzahlen nützen, müssen sie bestimmte Anforderungen erfüllen.
+**In einem Satz:** Eine Kennzahl fasst viele Daten zu einer einzigen Zahl zusammen, an der man ablesen kann, ob alles läuft.
+
+**Stell dir vor:** Das Armaturenbrett im Auto. Du siehst nicht jedes Teil im Motor, sondern nur Tacho, Tankanzeige und Warnlampen. Eine Tankanzeige von gestern hilft dir nicht, und eine, die erst nach zehn Minuten etwas anzeigt, auch nicht. Genau darum geht es bei den Anforderungen.
 
 Anforderungen an Kennzahlen (Musterklausur 2025, A5b):
 
@@ -29,10 +31,10 @@ Anforderungen an Kennzahlen (Musterklausur 2025, A5b):
 |---|---|
 | Aufgaben | Ziele vorgeben, Auffälligkeiten erkennen, Soll-Ist-Kontrolle, Vergleiche (Benchmarks), Frühwarnung und Berichte |
 | nach der Zeit | vergangenheits-, gegenwarts- oder zukunftsbezogen |
-| absolute Kennzahlen | Summen, Differenzen, Mittelwerte |
-| Gliederungszahl | Teil / Ganzes, zum Beispiel Eigenkapitalquote = EK / Gesamtkapital |
-| Beziehungszahl | zwei verschiedene Größen, zum Beispiel Umsatz je Mitarbeiter, Rentabilität |
-| Indexzahl | Entwicklung gegenüber einem Basisjahr = 100 |
+| absolute Kennzahlen | Summen, Differenzen, Mittelwerte. Bäckerei: 72.000 € Umsatz im Jahr |
+| Gliederungszahl | Teil / Ganzes, zum Beispiel Eigenkapitalquote = EK / Gesamtkapital. Bäckerei: 40.000 / 100.000 = 40 % |
+| Beziehungszahl | zwei verschiedene Größen, zum Beispiel Umsatz je Mitarbeiter, Rentabilität. Bäckerei mit 2 Mitarbeitern: 72.000 / 2 = 36.000 € je Mitarbeiter |
+| Indexzahl | Entwicklung gegenüber einem Basisjahr = 100. Bäckerei: Umsatz 72.000 € = 100, im nächsten Jahr 79.200 € = 110, also 10 % mehr |
 
 > [!NOTE]
 > **Beispiel: Die Bäckerei**
@@ -52,14 +54,38 @@ Anforderungen an Kennzahlen (Musterklausur 2025, A5b):
 
 ## ROI, Umsatzrentabilität und Kapitalumschlag
 
-**Was ist das?** Der ROI (Return on Investment) sagt: Wie viel Gewinn bringt jeder investierte Euro? Er hat zwei Teile. Die **Umsatzrentabilität** sagt, wie viel Gewinn vom Umsatz bleibt. Der **Kapitalumschlag** sagt, wie oft sich das Kapital im Jahr im Umsatz „umschlägt“.
+**In einem Satz:** Der ROI (Return on Investment) sagt, wie viel Cent Gewinn jeder investierte Euro im Jahr bringt.
 
-ROI = Umsatzrentabilität · Kapitalumschlag = Gewinn / Gesamtkapital · 100
+**Stell dir vor:** Die Bäckerin hat 100.000 € im Betrieb stecken (Ofen, Einrichtung, Mehl, Kasse). Am Jahresende bleiben 12.000 € Gewinn. 12.000 / 100.000 = 0,12. Jeder Euro hat also 12 Cent Gewinn gebracht. Das ist ein ROI von 12 %.
+
+Mehr ROI bekommt man auf zwei Wegen:
+
+- **Umsatzrentabilität:** Von jedem Euro Umsatz bleibt mehr Gewinn übrig (höhere Marge).
+- **Kapitalumschlag:** Mit jedem investierten Euro wird mehr Umsatz gemacht. Das Kapital „schlägt“ öfter im Jahr in Umsatz „um“.
+
+**Mit Zahlen: zwei Läden, gleicher ROI (eigene Zahlen)**
+
+| | Juwelier | Kiosk |
+|---|---|---|
+| Umsatzrentabilität | 20 % (viel Gewinn je Ring) | 2 % (wenig Gewinn je Kaugummi) |
+| Kapitalumschlag | 0,5 (teure Ware liegt lange) | 5 (Ware ist schnell verkauft) |
+| ROI | 20 % · 0,5 = 10 % | 2 % · 5 = 10 % |
+
+**Die Formel:** ROI = Umsatzrentabilität · Kapitalumschlag = Gewinn / Gesamtkapital · 100.
+
+**So steht es auf der Folie:** ROI = (Gewinn / Umsatz) · (Umsatz / Gesamtkapital).
+
+**Auf Deutsch heißt das:** Der erste Bruch ist die Umsatzrentabilität, der zweite der Kapitalumschlag. Multiplizierst du beide, kürzt sich der Umsatz weg, und es bleibt Gewinn / Gesamtkapital. Darum ist die Probe immer möglich.
 
 > [!NOTE]
-> **Beispiel: Der Limonadenstand (eigene Zahlen)**
+> **Beispiel: Die Bäckerei (eigene Zahlen)**
 >
-> Du steckst 100 € in den Stand (Gesamtkapital). Du verkaufst für 200 € und hast 20 € Gewinn. Umsatzrentabilität = 20 / 200 · 100 = 10 %. Kapitalumschlag = 200 / 100 = 2. ROI = 10 % · 2 = 20 %. Probe: 20 / 100 · 100 = 20 %.
+> Gesamtkapital 100.000 €, Umsatz 80.000 €, Gewinn 12.000 €.
+>
+> 1. Umsatzrentabilität = 12.000 / 80.000 · 100 = 15 %. Von jedem Euro Umsatz bleiben 15 Cent.
+> 2. Kapitalumschlag = 80.000 / 100.000 = 0,8. Jeder investierte Euro bringt 80 Cent Umsatz.
+> 3. ROI = 15 % · 0,8 = 12 %.
+> 4. Probe: 12.000 / 100.000 · 100 = 12 %.
 
 ### Rechenweg: ROI
 
@@ -85,13 +111,23 @@ ROI = Umsatzrentabilität · Kapitalumschlag = Gewinn / Gesamtkapital · 100
 > [!WARNING]
 > **Achtung**
 >
-> - Gesamtkapital = AV + UV, nicht das Eigenkapital. Steht ein Eigenkapital in der Aufgabe, ist es oft ein Ablenker (Skript-Übung 33). Ausnahme: Du sollst das Fremdkapital ausrechnen, dann gilt FK = Gesamtkapital − EK.
+> - Typischer Fehler: Gesamtkapital = AV + UV, nicht das Eigenkapital. Steht ein Eigenkapital in der Aufgabe, ist es oft ein Ablenker (Skript-Übung 33). Ausnahme: Du sollst das Fremdkapital ausrechnen, dann gilt FK = Gesamtkapital − EK.
 > - Kapitalumschlag ist ein Faktor (zum Beispiel 1,25). Fragt die Aufgabe „in %“, schreibe 125 %.
 > - Halte die verlangten Nachkommastellen ein. In der Musterklausur war es eine.
 
 ## Balanced Scorecard (BSC)
 
-**Was ist das?** Die Balanced Scorecard ist ein Managementsystem. Sie setzt die Strategie in konkrete Handlungen um. „Balanced“ heißt ausgewogen: Sie schaut nicht nur auf das Geld, sondern aus vier Perspektiven auf das Unternehmen. Für jede Perspektive legt man Ziele, Kennzahlen, Vorgaben und Maßnahmen fest.
+**In einem Satz:** Die Balanced Scorecard ist ein Zeugnis für das Unternehmen mit vier Fächern statt nur einem.
+
+**Stell dir vor:** Ein Zeugnis nur mit der Mathenote sagt wenig über einen Schüler. Genauso sagt der Gewinn allein wenig darüber, ob ein Betrieb auch nächstes Jahr gut dasteht. Sind die Kunden zufrieden? Laufen die Abläufe? Lernen die Mitarbeiter dazu?
+
+Die Balanced Scorecard ist ein Managementsystem. Sie setzt die Strategie in konkrete Handlungen um. „Balanced“ heißt ausgewogen: Sie schaut aus vier Perspektiven auf das Unternehmen. Für jede Perspektive legt man Ziele, Kennzahlen, Vorgaben und Maßnahmen fest.
+
+**Mit Zahlen: eine Zeile der Bäckerei-Scorecard (eigene Zahlen)**
+
+| Perspektive | Ziel | Kennzahl | Vorgabe | Maßnahme |
+|---|---|---|---|---|
+| Kunden | weniger Wartezeit | Minuten in der Schlange am Samstag | höchstens 5 Minuten | zweite Kasse am Samstag |
 
 | Perspektive | Ziele | Kennzahlen |
 |---|---|---|

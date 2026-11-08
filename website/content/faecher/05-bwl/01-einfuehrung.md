@@ -11,7 +11,11 @@ Das Kapitel besteht vor allem aus Begriffen. Nur der letzte Abschnitt ist Rechne
 
 ## Produktionsfaktoren und Werkstoffe nach Gutenberg
 
-**Was ist das?** Erich Gutenberg fragt: Was braucht ein Betrieb, um etwas herzustellen? Seine Antwort sind die Produktionsfaktoren. Sein Ansatz heißt produktivitätsorientiert oder faktortheoretisch. Der Betrieb kombiniert die Faktoren so, dass möglichst viel herauskommt. Das Grundziel ist Gewinnmaximierung.
+**In einem Satz:** Produktionsfaktoren sind die Zutaten, die ein Betrieb zusammenbringen muss, damit ein Produkt entsteht.
+
+**Stell dir vor:** Ein Kuchenrezept. Du brauchst jemanden, der rührt (Arbeit), eine Schüssel und einen Ofen (Betriebsmittel), Mehl und Eier (Werkstoffe) und jemanden, der entscheidet, welcher Kuchen heute gebacken wird und wer was macht (Management). Fehlt eine Zutat, gibt es keinen Kuchen.
+
+Diese Sicht stammt von Erich Gutenberg. Sein Ansatz heißt produktivitätsorientiert oder faktortheoretisch: Der Betrieb kombiniert die Faktoren so, dass möglichst viel herauskommt. Das Grundziel ist Gewinnmaximierung.
 
 Es gibt zwei Gruppen:
 
@@ -49,7 +53,9 @@ Werkstoffe teilt man weiter ein:
 
 ## Modelle der BWL
 
-**Was ist das?** Ein Modell ist ein vereinfachtes Bild der Wirklichkeit. Die BWL kennt vier Modelltypen. Jeder beantwortet eine andere Frage.
+**In einem Satz:** Ein Modell ist ein vereinfachtes Bild der Wirklichkeit, so wie ein Stadtplan eine Stadt vereinfacht.
+
+Die BWL kennt vier Modelltypen. Jeder beantwortet eine andere Frage.
 
 | Modell | Frage | Beispiel aus dem Skript |
 |---|---|---|
@@ -59,9 +65,12 @@ Werkstoffe teilt man weiter ein:
 | Entscheidungsmodell | Was soll geschehen? | Entscheidungsbaum, Entscheidungsmatrix |
 
 > [!NOTE]
-> **Beispiel: Der Limonadenstand**
+> **Beispiel: Die Bäckerei**
 >
-> Die Strichliste vom Samstag beschreibt. „Bei Hitze verkaufen wir mehr“ erklärt. „Morgen wird es heiß, also verkaufen wir 80 Becher“ sagt voraus. „Kaufen wir 80 oder 100 Becher ein?“ entscheidet.
+> - „Am Samstag haben wir 120 Brote verkauft“ beschreibt (Beschreibungsmodell).
+> - „Bei Regen kommen weniger Kunden, darum verkaufen wir weniger“ erklärt (Erklärungsmodell).
+> - „Morgen regnet es, also verkaufen wir etwa 90 Brote“ sagt voraus (Prognosemodell).
+> - „Backen wir 90 oder 120 Brote?“ entscheidet (Entscheidungsmodell).
 
 > [!IMPORTANT]
 > **Das Wichtigste**
@@ -103,7 +112,11 @@ Werkstoffe teilt man weiter ein:
 
 ## Das ökonomische Prinzip
 
-**Was ist das?** Güter sind knapp, Bedürfnisse unbegrenzt. Also muss man sparsam wirtschaften. Das ökonomische Prinzip gibt es in drei Formen. Bei jeder Form ist genau eine Größe fest.
+**In einem Satz:** Das ökonomische Prinzip heißt: Mach das Beste aus dem, was knapp ist.
+
+**Stell dir vor:** Du gehst mit genau 20 € in den Supermarkt und willst damit so viel wie möglich für eine Party kaufen. Das Geld ist fest, das Ergebnis soll groß werden. Oder umgekehrt: Du brauchst genau 10 Flaschen Wasser und suchst den billigsten Laden. Das Ergebnis ist fest, der Einsatz soll klein werden.
+
+Das ökonomische Prinzip gibt es in drei Formen. Bei jeder Form ist genau eine Größe fest.
 
 | Prinzip | Was ist fest? | Was wird optimiert? | Beispiel aus dem Skript |
 |---|---|---|---|
@@ -112,9 +125,9 @@ Werkstoffe teilt man weiter ein:
 | Optimumprinzip | nichts | bestes Verhältnis von Einsatz und Ergebnis | Gewinn = Ertrag − Aufwand maximieren |
 
 > [!NOTE]
-> **Beispiel: Der Limonadenstand**
+> **Beispiel: Die Bäckerei**
 >
-> Du hast 20 € für Zitronen und willst so viel Limonade wie möglich machen: Maximalprinzip. Du willst genau 50 Becher und dafür so wenig Geld wie möglich ausgeben: Minimalprinzip.
+> Die Bäckerin hat 50 kg Mehl und will daraus so viele Brote wie möglich backen: Maximalprinzip (Einsatz fest). Sie braucht genau 100 Brote für eine Bestellung und will dafür so wenig Mehl wie möglich verbrauchen: Minimalprinzip (Ergebnis fest).
 
 > [!IMPORTANT]
 > **Das Wichtigste**
@@ -128,7 +141,7 @@ Werkstoffe teilt man weiter ein:
 
 ## PPP: Profit, People, Planet
 
-**Was ist das?** Ein Betrieb soll nicht nur auf Geld schauen. Die Folien zeigen ein Dreieck aus drei Prinzipien.
+**In einem Satz:** Ein Betrieb soll nicht nur auf Geld schauen, sondern auch auf Menschen und Umwelt. Die Folien zeigen dafür ein Dreieck aus drei Prinzipien.
 
 | P | Prinzip | Bedeutung |
 |---|---|---|
@@ -153,7 +166,15 @@ Werkstoffe teilt man weiter ein:
 
 ## Kennzahlen: Produktivität, Wirtschaftlichkeit, Rentabilität
 
-**Was ist das?** Kennzahlen sagen, wie gut ein Betrieb arbeitet. Die drei wichtigsten unterscheiden sich darin, was man vergleicht.
+**In einem Satz:** Kennzahlen teilen eine Zahl durch eine andere, damit man sieht, wie gut ein Betrieb arbeitet.
+
+**Stell dir vor:** Drei verschiedene Fragen an die Bäckerei.
+
+- **Produktivität:** Wie viele Brötchen schafft sie pro Stunde? Hier zählst du nur Mengen, kein Geld. Wie bei „Seiten pro Stunde“, wenn du lernst.
+- **Wirtschaftlichkeit:** Wie viele Euro kommen für jeden ausgegebenen Euro zurück? Euro geteilt durch Euro.
+- **Rentabilität:** Wie viel Cent Gewinn bringt jeder Euro, den die Eigentümerin hineingesteckt hat? Wie die Zinsen auf einem Sparkonto, nur als Gewinn des Betriebs.
+
+Die drei Kennzahlen unterscheiden sich also darin, was man vergleicht.
 
 | Kennzahl | Formel | vergleicht | Ergebnis |
 |---|---|---|---|
@@ -166,7 +187,15 @@ Werkstoffe teilt man weiter ein:
 > [!NOTE]
 > **Beispiel: Die Bäckerei (eigene Zahlen)**
 >
-> Die Bäckerei backt 400 Brötchen in 8 Arbeitsstunden. Produktivität = 400 / 8 = 50 Brötchen je Stunde. Sie verkauft für 200 € und hat 160 € Aufwand. Wirtschaftlichkeit = 200 / 160 = 1,25. Der Gewinn ist 40 €, das Eigenkapital 400 €. Eigenkapitalrentabilität = 40 · 100 / 400 = 10 %. Umsatzrentabilität = 40 · 100 / 200 = 20 %.
+> Die Bäckerei backt 400 Brötchen in 8 Arbeitsstunden. Sie verkauft sie für 200 € und hat 160 € Aufwand. Die Eigentümerin hat 400 € Eigenkapital im Betrieb.
+>
+> 1. Produktivität = 400 Brötchen / 8 Stunden = 50 Brötchen je Stunde.
+> 2. Wirtschaftlichkeit = 200 € / 160 € = 1,25. Für jeden ausgegebenen Euro kommen 1,25 € zurück.
+> 3. Gewinn = 200 − 160 = 40 €.
+> 4. Eigenkapitalrentabilität = 40 · 100 / 400 = 10 %. Jeder Euro Eigenkapital bringt 10 Cent Gewinn.
+> 5. Umsatzrentabilität = 40 · 100 / 200 = 20 %. Von jedem Euro Umsatz bleiben 20 Cent Gewinn.
+
+**Auf Deutsch heißt das:** „· 100“ in den Rentabilitätsformeln macht aus dem Bruch eine Prozentzahl. 40 / 400 = 0,10, mal 100 = 10 %.
 
 ### Rechenweg: Kennzahlen aus Stückdaten
 
@@ -197,6 +226,7 @@ Werden die Bauteile 10 % teurer, bleibt die Produktivität gleich, denn sie zäh
 > [!WARNING]
 > **Achtung**
 >
+> - Typischer Fehler: Produktivität mit Euro-Beträgen rechnen. Produktivität ist Menge durch Menge (Stück, Stunden, Mitarbeiter). Sobald Euro im Bruch stehen, ist es Wirtschaftlichkeit oder Rentabilität.
 > - Wirtschaftlichkeit ist ein Faktor (zum Beispiel 1,125), keine Prozentzahl.
 > - Sind keine Stunden gegeben, bildest du die Arbeitsproduktivität mit Arbeitstagen · Mitarbeitern (Skript-Übung 6a).
 > - Bei der Gesamtkapitalrentabilität die Fremdkapitalzinsen zum Gewinn addieren.
@@ -285,8 +315,8 @@ Alle übrigen Felder bekommen einen Strich.
 Offizielle Lösung.
 
 1. Produktivität = Menge / Menge = 10.800 Essen / 12 Mitarbeiter = 900 Essen je Mitarbeiter.
-2. Wirtschaftlichkeit = Wert / Wert = 1.188.000 / 540.000 = 2,2.
-3. 2,2 ist größer als 1. Das Restaurant arbeitet wirtschaftlich.
+2. Wirtschaftlichkeit = Wert / Wert = 1.188.000 / 540.000 = 2,2. Hier ist der Personalaufwand der einzige gegebene Aufwand, also steht er im Nenner.
+3. 2,2 ist größer als 1. Das Restaurant arbeitet wirtschaftlich: Für jeden Euro Personalaufwand kommen 2,20 € Umsatz herein.
 
 ### Übung 5
 
@@ -303,7 +333,7 @@ Ergebnisse laut offizieller Musterlösung.
 
 Offizielle Lösung.
 
-1. Arbeitsproduktivität (keine Stunden gegeben, also Tage · Mitarbeiter): Jahr 1: 23.625 / (225 · 14) = 7,5 Teile je Arbeitstag. Jahr 2: 33.120 / (230 · 16) = 9,0.
+1. Arbeitsproduktivität (keine Stunden gegeben, also Tage · Mitarbeiter): Jahr 1: 225 · 14 = 3.150 Arbeitstage, 23.625 / 3.150 = 7,5 Teile je Arbeitstag. Jahr 2: 230 · 16 = 3.680 Arbeitstage, 33.120 / 3.680 = 9,0 Teile je Arbeitstag.
 2. Wirtschaftlichkeit: Jahr 1: 945.000 / 825.000 = 1,145, die offizielle Lösung rundet auf 1,15. Jahr 2: 1.159.200 / 1.120.000 = 1,035.
 3. Eigenkapitalrentabilität: Jahr 1: 120.000 · 100 / 450.000 = 26,67 %. Jahr 2: 39.200 · 100 / 550.000 = 7,13 %.
 4. Beurteilung: Die Produktivität steigt (bessere Abläufe, Normteile, Qualifikation). Die Wirtschaftlichkeit sinkt, weil der Erlös je Stück von 40 € (945.000 / 23.625) auf 35 € (1.159.200 / 33.120) fällt. Die Rentabilität sinkt: weniger Gewinn bei mehr Eigenkapital.

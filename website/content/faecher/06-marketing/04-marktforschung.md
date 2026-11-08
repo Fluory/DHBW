@@ -11,7 +11,11 @@ Das Kapitel ist kurz und kam in der Musterklausur 2025 nicht vor. Gerechnet wird
 
 ## Was ist Marktforschung?
 
-**Was ist das?** Marktforschung ist die systematische Gewinnung, Aufbereitung und Deutung von Informationen über Absatz- und Beschaffungsmärkte. Sie soll Marketingentscheidungen begründen.
+**In einem Satz:** Marktforschung heißt: nachschauen statt raten.
+
+**So steht es auf der Folie:** Marktforschung ist die systematische Gewinnung, Aufbereitung und Deutung von Informationen über Absatz- und Beschaffungsmärkte.
+
+**Auf Deutsch heißt das:** Planvoll Informationen über Kunden und Lieferanten sammeln (Gewinnung), ordnen (Aufbereitung) und daraus Schlüsse ziehen (Deutung), damit Marketingentscheidungen begründet sind.
 
 | Bereich | Bedeutung | Bild dazu |
 |---|---|---|
@@ -38,7 +42,11 @@ Erforscht werden zum Beispiel Marktgrößen, Käufer und ihre Motive, Konkurrenz
 
 ## Sekundär- und Primärforschung
 
-**Was ist das?** Bei der **Sekundärforschung** nutzt man Daten, die es schon gibt. Intern: eigene Umsatzzahlen, Kundendatei. Extern: Statistiken, Studien, Fachzeitschriften. Bei der **Primärforschung** erhebt man Daten neu, nur für die eigene Frage.
+**In einem Satz:** Sekundärforschung nutzt Daten, die schon jemand gesammelt hat, Primärforschung sammelt neue Daten selbst.
+
+**Stell dir vor:** Du schreibst eine Hausarbeit über das Kaufverhalten von Studierenden. Liest du dazu eine Studie in der Bibliothek, ist das Sekundärforschung: Daten aus zweiter Hand. Machst du selbst eine Umfrage in deinem Jahrgang, ist das Primärforschung: Daten aus erster Hand, genau für deine Frage.
+
+Bei der **Sekundärforschung** nutzt man Daten, die es schon gibt. Intern: eigene Umsatzzahlen, Kundendatei. Extern: Statistiken, Studien, Fachzeitschriften. Bei der **Primärforschung** erhebt man Daten neu, nur für die eigene Frage.
 
 | Methode der Primärforschung | Formen laut Skript | Beispiel |
 |---|---|---|
@@ -70,7 +78,17 @@ Erforscht werden zum Beispiel Marktgrößen, Käufer und ihre Motive, Konkurrenz
 - **Offene Frage:** Der Befragte antwortet frei. „Was fällt dir zu unserer Bäckerei ein?“ Eine Sonderform ist die Satzergänzung.
 - **Geschlossene Frage:** Die Antworten sind vorgegeben, etwa Ja / Nein oder eine Skala von „sehr zufrieden“ bis „sehr unzufrieden“.
 
-Wen befragt man? Bei der **Vollerhebung** alle Elemente der Grundgesamtheit, bei der **Teilerhebung** nur eine Stichprobe. Die Stichprobe kann zufällig gezogen werden (einfach, geschichtet, als Klumpen) oder bewusst (Quotenauswahl, Konzentrationsauswahl).
+Wen befragt man? Bei der **Vollerhebung** alle Elemente der Grundgesamtheit, bei der **Teilerhebung** nur eine Stichprobe. Die **Grundgesamtheit** ist die ganze Gruppe, über die du etwas wissen willst.
+
+**Stell dir vor:** Du kochst Suppe. Um zu wissen, ob sie salzig genug ist, isst du nicht den ganzen Topf (Vollerhebung). Ein Löffel reicht (Stichprobe), aber nur, wenn du vorher gut umgerührt hast. Sonst schmeckst du nur die Salzschicht oben.
+
+Die Stichprobe kann zufällig gezogen werden (einfach, geschichtet, als Klumpen) oder bewusst (Quotenauswahl, Konzentrationsauswahl).
+
+**Mit Zahlen (eigene Zahlen):** An einer Hochschule studieren 2.000 Personen, 60 % BWL und 40 % Informatik. Du willst 200 befragen, also 10 %.
+
+- Einfache Zufallsauswahl: 200 Namen aus allen 2.000 auslosen.
+- Geschichtet: getrennt nach Studiengang losen, damit das Verhältnis stimmt: 60 % von 200 = 120 aus BWL, 40 % von 200 = 80 aus Informatik.
+- Quotenauswahl: Die Interviewer suchen sich selbst Leute, müssen aber die Quote 120 : 80 einhalten.
 
 > [!NOTE]
 > **Beispiel: Die Bäckerei**

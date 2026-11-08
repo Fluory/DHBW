@@ -26,7 +26,7 @@ Texte und Aufgaben sind in eigenen Worten wiedergegeben, nicht wörtlich aus Moo
 | „Offizielle Lösung“ | Skript-Übung 1 bis 34 mit Lösung von den Kapitelfolien oder aus der Lösungsdatei. |
 | „Lösung aus dem Skript“ | Die Antwort steht direkt im Skripttext. |
 | „Eigene Lösung“ | Keine offizielle Lösung vorhanden. Das betrifft vor allem Kapitel 9 (Materialwirtschaft) sowie Kapitel 8 und 10. |
-| „eigene Zahlen“, „eigene Aufgabe“ | Beispiele mit Bäckerei und Limonadenstand zum Verstehen. Nicht aus dem Skript. |
+| „eigene Zahlen“, „eigene Aufgabe“ | Beispiele mit einer Bäckerei zum Verstehen. Nicht aus dem Skript. |
 
 Alle Zahlen in den Beispielen, Übungen und Lösungen wurden mit Python nachgerechnet.
 

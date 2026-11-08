@@ -11,7 +11,11 @@ Ein Alltagsbeispiel: In einem internationalen Projektteam sagt eine Kollegin aus
 
 ## Denkpräferenzen nach Herrmann
 
-**Was ist das?** Neurodiversität bedeutet: Menschen denken und nehmen unterschiedlich wahr. Das ist kein Defizit. Ned Herrmann beschreibt vier Denkpräferenzen. Jeder Mensch hat alle vier, aber unterschiedlich stark. Im Kurs wurden sie als zusätzlicher Aspekt im Stakeholdermanagement behandelt.
+**In einem Satz:** Jeder Mensch hat eine Lieblingsart, Informationen aufzunehmen, und eine Präsentation erreicht alle nur, wenn sie mehrere Arten bedient.
+
+**Stell dir vor:** Eure Vierergruppe plant ein Referat. Die Erste fragt: „Haben wir Quellen für die Zahlen?“ (analytisch). Der Zweite fragt: „Wer macht was bis wann?“ (strukturiert). Die Dritte fragt: „Wie holen wir das Publikum am Anfang ab?“ (sozial). Der Vierte sagt: „Lasst uns mit einer provokanten These starten!“ (konzeptionell). Keiner hat unrecht. Jeder schaut aus einer anderen Ecke.
+
+Neurodiversität bedeutet: Menschen denken und nehmen unterschiedlich wahr. Das ist kein Defizit. Ned Herrmann beschreibt vier Denkpräferenzen. Jeder Mensch hat alle vier, aber unterschiedlich stark. Im Kurs wurden sie als zusätzlicher Aspekt im Stakeholdermanagement behandelt.
 
 | Präferenz | Was diese Menschen brauchen | Wie du sie erreichst |
 |---|---|---|
@@ -30,7 +34,11 @@ Ein Alltagsbeispiel: In einem internationalen Projektteam sagt eine Kollegin aus
 
 ## Kultur und Werte: die Kulturzwiebel
 
-**Was ist das?** Kultur lässt sich nach Hofstede als Zwiebel darstellen. Von außen nach innen:
+**In einem Satz:** Kultur hat Schichten wie eine Zwiebel: außen das, was man sieht, innen die Werte, die man nicht sieht.
+
+**Stell dir vor:** Deine Hochschule als kleine Kultur. Außen: alle duzen sich in der Lerngruppe, man trägt das Lanyard mit dem Studierendenausweis (Symbole). Dann: die Absolventin, die jetzt bei einer bekannten Firma arbeitet und von der alle erzählen (Heldin). Dann: Am Ende der Vorlesung klopfen alle auf den Tisch (Ritual). Ganz innen: „Wir helfen uns gegenseitig vor Klausuren“ (Wert). Das Klopfen sieht jeder Gast sofort, den Wert erst nach Wochen.
+
+Kultur lässt sich nach Hofstede als Zwiebel darstellen. Von außen nach innen:
 
 1. **Symbole:** Sprache, Gesten, Kleidung.
 2. **Helden:** Vorbilder.
@@ -49,7 +57,11 @@ Die äußeren drei Schichten zeigen sich in Handlungen und sind sichtbar. Die We
 
 ## Kulturdimensionen nach Hofstede und High/Low Context
 
-**Was ist das?** Eine Kulturdimension beschreibt ein Spektrum zwischen zwei Polen. Jeder Pol steht für andere Werte. Kein Pol ist richtig oder falsch. Hofstedes Modell beruht auf einer großen Befragung von IBM-Mitarbeitenden weltweit. Jedes Land bekommt pro Dimension einen Wert.
+**In einem Satz:** Eine Kulturdimension ist eine Skala, auf der Länder zeigen, was ihnen im Zusammenleben eher wichtig ist.
+
+**Stell dir vor:** Ein Schieberegler. Bei Machtdistanz steht am einen Ende: „Den Dozenten unterbricht man nicht, man fragt nach der Vorlesung per Mail.“ Am anderen Ende: „Man ruft mitten in der Vorlesung ‚Das verstehe ich nicht‘ und diskutiert.“ Jedes Land steht irgendwo auf diesem Regler, nicht nur an einem Ende.
+
+Eine Kulturdimension beschreibt also ein Spektrum zwischen zwei Polen. Jeder Pol steht für andere Werte. Kein Pol ist richtig oder falsch. Hofstedes Modell beruht auf einer großen Befragung von IBM-Mitarbeitenden weltweit. Jedes Land bekommt pro Dimension einen Wert.
 
 | Dimension | Pol A ↔ Pol B | Frage im Arbeitsalltag |
 |---|---|---|
@@ -74,7 +86,9 @@ Im Team-Sprint hat jede Gruppe eine Dimension erarbeitet: Definition, Länderver
 
 ## Stakeholdermanagement
 
-**Was ist das?** Stakeholdermanagement heißt: alle Beteiligten identifizieren, ihre Bedürfnisse und Erwartungen verstehen und angemessen berücksichtigen. Es schafft Beteiligung und Akzeptanz, senkt Risiken früh und hilft, Unterstützer zu finden.
+**In einem Satz:** Stakeholdermanagement heißt: Vorher überlegen, wen dein Vorhaben betrifft, und diese Leute rechtzeitig einbinden.
+
+Ausführlich: Stakeholdermanagement heißt, alle Beteiligten zu identifizieren, ihre Bedürfnisse und Erwartungen verstehen und angemessen berücksichtigen. Es schafft Beteiligung und Akzeptanz, senkt Risiken früh und hilft, Unterstützer zu finden.
 
 Stakeholder werden eingeordnet als
 

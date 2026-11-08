@@ -11,11 +11,13 @@ In der Musterklausur 2025 gab es 10 Punkte: 6 für Push und Pull, 4 für den Tau
 
 ## Werbung: Grundsätze, Werbeplan, AIDA
 
-**Was ist das?** Werbung soll vier Grundsätze erfüllen: Wirksamkeit, Wahrheit (nicht täuschen), Klarheit und Wirtschaftlichkeit. Ihre Funktionen sind Bekanntmachung, Information, Suggestion (Gefühle durch Farbe und Musik), Image und Erinnerung.
+**In einem Satz:** Werbung soll auffallen, ehrlich und klar sein und mehr bringen, als sie kostet.
+
+Werbung soll vier Grundsätze erfüllen: Wirksamkeit, Wahrheit (nicht täuschen), Klarheit und Wirtschaftlichkeit. Ihre Funktionen sind Bekanntmachung, Information, Suggestion (Gefühle durch Farbe und Musik), Image und Erinnerung.
 
 Ein **Werbeplan** beantwortet neun Fragen: Was bewerben? Wen ansprechen? Was erreichen? Wie vorgehen (Strategie)? Welche Aussage? Welche Medien? Wann? Wo? Mit wie viel Geld?
 
-Das **AIDA-Modell** beschreibt, wie Werbung wirkt:
+Das **AIDA-Modell** beschreibt, wie Werbung wirkt. Stell dir vor, du scrollst durch Instagram: Ein Video mit lauter Musik lässt dich stoppen (Attention). Du liest, worum es geht (Interest). Du denkst „das will ich haben“ (Desire). Du tippst auf „Jetzt kaufen“ (Action). Fehlt eine Stufe, kaufst du nicht.
 
 | Stufe | Bedeutung | Beispiel Bäckerei |
 |---|---|---|
@@ -44,9 +46,16 @@ Eine zweite Formel aus dem Skript ist PPPP: Picture (Bild), Promise (Versprechen
 |---|---|
 | Mediawerbung (TV, Radio, Zeitschrift, Plakat, Kino), Direktwerbung, Verkaufsförderung, Öffentlichkeitsarbeit (PR) | Sponsoring, Product Placement, Eventmarketing, virales Marketing, Guerilla-Marketing, Online-Marketing |
 
-Der **Tausenderkontaktpreis (TKP)** sagt: Was kostet es, 1.000 Personen der Zielgruppe zu erreichen? So kann man Werbeträger fair vergleichen.
+**In einem Satz:** Der **Tausenderkontaktpreis (TKP)** sagt, was es kostet, 1.000 passende Personen zu erreichen.
 
-TKP = Kosten des Werbeauftritts / (Nutzer · Anteil der Zielgruppe) · 1.000
+**Stell dir vor:** Im Supermarkt vergleichst du nicht den Preis der Packung, sondern den Preis pro Kilo, weil die Packungen verschieden groß sind. Der TKP ist der „Preis pro Kilo“ der Werbung. Ein teures Plakat kann günstiger sein als eine billige Anzeige, wenn es viel mehr passende Menschen erreicht.
+
+**Die Formel:** TKP = Kosten des Werbeauftritts / (Nutzer · Anteil der Zielgruppe) · 1.000
+
+- Kosten: was der Auftritt kostet, zum Beispiel 1.500 € für die Anzeige.
+- Nutzer: wie viele Menschen das Medium insgesamt sehen oder hören.
+- Anteil der Zielgruppe: wie viele davon für dich passen, als Dezimalzahl (30 % = 0,3).
+- · 1.000: weil der Preis für 1.000 Personen gilt, nicht für eine.
 
 ### Rechenweg: TKP vergleichen
 
@@ -70,7 +79,7 @@ TKP = Kosten des Werbeauftritts / (Nutzer · Anteil der Zielgruppe) · 1.000
 > [!WARNING]
 > **Achtung**
 >
-> - Immer zuerst Nutzer mal Zielgruppenanteil rechnen.
+> - Typischer Fehler: den TKP mit allen Nutzern rechnen. Immer zuerst Nutzer mal Zielgruppenanteil rechnen. In Übung 3 käme sonst das Tagblatt heraus (5.000 / 600.000 · 1.000 = 8,33 € gegen 5.800 / 600.000 · 1.000 = 9,67 €). Richtig ist aber der Wochenanzeiger, weil er viel mehr Zielpersonen erreicht.
 > - Im Skript gehören Verkaufsförderung und PR zu „Above-the-Line“.
 
 ## Messen, Verkaufsförderung, Sponsoring
@@ -78,6 +87,8 @@ TKP = Kosten des Werbeauftritts / (Nutzer · Anteil der Zielgruppe) · 1.000
 **Was ist das?** **Messen** richten sich vor allem an Fachbesucher und sind im B2B-Bereich wichtig. Ziele: Geschäftsabschlüsse, Kontakte, Markttransparenz, Trends erkennen, neue Zielgruppen, Image. Vorteil: persönlicher Kontakt und direkter Vergleich mit der Konkurrenz. Nachteil: hohe Kosten, Erfolg schwer messbar, viel Organisation.
 
 **Verkaufsförderung** (Sales Promotion) sind zeitlich begrenzte Aktionen mit zusätzlichen Kaufanreizen. Im Schnitt fließen etwa 25 % des Kommunikationsbudgets hinein.
+
+**Stell dir vor (Push und Pull):** Ein neuer Schokoriegel. Bei **Push** überzeugt der Hersteller zuerst den Supermarkt mit Rabatt und einem auffälligen Aufsteller an der Kasse. Der Supermarkt „drückt“ den Riegel dann zum Kunden. Bei **Pull** läuft zuerst Werbung im Fernsehen und auf TikTok. Kunden fragen im Supermarkt danach, und der Supermarkt „zieht“ den Riegel ins Regal, weil er sonst Kunden verliert.
 
 | | Push-Strategie | Pull-Strategie |
 |---|---|---|

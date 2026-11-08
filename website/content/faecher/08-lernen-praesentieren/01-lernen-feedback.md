@@ -11,7 +11,11 @@ Ein Alltagsbeispiel: Du liest die Musterlösung einer Matheaufgabe und denkst �
 
 ## Verzerrungen beim Lernen
 
-**Was ist das?** Das Gehirn arbeitet nach dem Sparprinzip. Es hält Vertrautes schnell für verstanden. Im Kurs wurden drei typische Verzerrungen behandelt.
+**In einem Satz:** Dein Gehirn verwechselt „kommt mir bekannt vor“ mit „kann ich“.
+
+**Stell dir vor:** Du triffst in der Mensa jemanden aus dem Ersti-Wochenende. Das Gesicht erkennst du sofort. Den Namen kannst du trotzdem nicht sagen. Wiedererkennen ist viel leichter als selbst abrufen. In der Klausur musst du aber abrufen: Niemand zeigt dir die Lösung, damit du sie „wiedererkennst“.
+
+Das Gehirn arbeitet nach dem Sparprinzip. Es hält Vertrautes schnell für verstanden. Im Kurs wurden drei typische Verzerrungen behandelt.
 
 | Verzerrung | Was passiert | Gegenmittel |
 |---|---|---|
@@ -36,7 +40,9 @@ Dazu eine Methode für Mitschriften: Notizen schreiben → Fragen dazu formulier
 
 ## Selbstorganisation: drei Übungen
 
-**Was ist das?** Am 06.10. gab es drei kurze Übungen zur eigenen Organisation.
+**In einem Satz:** Selbstorganisation heißt, offene Aufgaben aus dem Kopf aufs Papier zu holen, sie zu sortieren und feste Auslöser für das Lernen zu schaffen.
+
+**Stell dir vor:** Sonntagabend. Im Kopf schwirren die Programmierabgabe, die Wäsche, eine Geburtstagsnachricht und „irgendwann mal Recht wiederholen“. Solange alles nur im Kopf ist, fühlt sich alles gleich dringend an, und du fängst nichts richtig an. Die drei Übungen vom 06.10. helfen genau hier.
 
 1. **Kopf frei** (nach Allen, *Getting Things Done*): 4 Minuten alles aufschreiben, was im Kopf herumgeht. Jede Zeile bekommt „nächster Schritt“, „Termin“ oder wird gestrichen. Dann die eine Sache für die nächsten 24 Stunden markieren. Grund: Offene Punkte belegen das Arbeitsgedächtnis.
 2. **Eisenhower-Matrix:** dringend = es gibt eine Frist oder jemand wartet. Wichtig = es bringt dich deinem Studienziel näher.
@@ -62,7 +68,9 @@ Dazu eine Methode für Mitschriften: Notizen schreiben → Fragen dazu formulier
 
 ## Feedback geben und nehmen
 
-**Was ist das?** Feedback ist die Beschreibung deiner eigenen, subjektiven Wahrnehmung. Es ist nicht die Wahrheit. Es hilft, blinde Flecken zu erkennen, Zusammenarbeit zu verbessern und die eigene Wirkung kennenzulernen.
+**In einem Satz:** Feedback heißt: Du beschreibst, was du gesehen hast und was es bei dir ausgelöst hat, ohne ein Urteil über die Person zu fällen.
+
+Feedback ist die Beschreibung deiner eigenen, subjektiven Wahrnehmung. Es ist nicht die Wahrheit. Es hilft, blinde Flecken zu erkennen, Zusammenarbeit zu verbessern und die eigene Wirkung kennenzulernen.
 
 **Feedback geben** nach dem WWW-Schema:
 
@@ -88,7 +96,11 @@ Dazu: Ich-Botschaften statt Du- oder Man-Sätzen. Zeitnah und konkret. Erst Posi
 
 ## eduScrum: Lernen in Sprints
 
-**Was ist das?** Die Termine liefen im eduScrum-Format. Das ist Scrum, angepasst für Lerngruppen. Agile Vorgehensmodelle arbeiten in kurzen Schleifen mit häufigen Teilergebnissen und regelmäßiger Anpassung. Klassische Modelle wie das Wasserfallmodell planen alles vorab und arbeiten nacheinander ab.
+**In einem Satz:** eduScrum heißt, in kurzen Runden zu arbeiten, nach jeder Runde ein Zwischenergebnis zu zeigen und dann die Arbeitsweise zu verbessern.
+
+**Stell dir vor:** Eure Gruppe hat vier Wochen für eine Hausarbeit. Variante 1: Jeder schreibt still seinen Teil, in der letzten Nacht fügt ihr alles zusammen und merkt, dass zwei Teile dasselbe erklären und einer fehlt. Variante 2: Jeden Freitag zeigt ihr euch den Stand, besprecht in zehn Minuten, was hakt, und verteilt neu. Variante 1 ist wie das Wasserfallmodell, Variante 2 ist agil.
+
+Die Termine liefen im eduScrum-Format. Das ist Scrum, angepasst für Lerngruppen. Agile Vorgehensmodelle arbeiten in kurzen Schleifen mit häufigen Teilergebnissen und regelmäßiger Anpassung. Klassische Modelle wie das Wasserfallmodell planen alles vorab und arbeiten nacheinander ab.
 
 | Element | Bedeutung im Kurs |
 |---|---|

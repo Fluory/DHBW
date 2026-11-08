@@ -11,7 +11,11 @@ Gerechnet wird hier nichts. Lerne jeden Begriff mit einem Beispiel. 2025 kam das
 
 ## Das Makroumfeld
 
-**Was ist das?** Das Makroumfeld sind alle Einflüsse von außen, die ein Betrieb nicht selbst steuern kann. Das Unternehmen bekommt Input von Beschaffungs-, Arbeits- und Finanzmärkten. Es liefert Output an Absatzmärkte. Rundherum wirkt das Makroumfeld.
+**In einem Satz:** Das Makroumfeld sind alle Einflüsse von außen, die ein Betrieb nicht selbst steuern kann.
+
+**Stell dir vor:** Das Wetter für einen Radfahrer. Er kann den Regen nicht abstellen, aber er kann eine Regenjacke einpacken. Genauso kann die Bäckerei die Inflation nicht ändern, aber ihre Preise anpassen.
+
+Das Unternehmen bekommt Input von Beschaffungs-, Arbeits- und Finanzmärkten. Es liefert Output an Absatzmärkte. Rundherum wirkt das Makroumfeld.
 
 | Faktor | Beispiele |
 |---|---|
@@ -39,7 +43,11 @@ Gerechnet wird hier nichts. Lerne jeden Begriff mit einem Beispiel. 2025 kam das
 
 ## Corporate Identity
 
-**Was ist das?** Corporate Identity (CI) beantwortet die Frage „Wer sind wir?“. Das Unternehmen soll überall gleich und ohne Widersprüche auftreten. Daraus entsteht das Image, also das Bild, das andere vom Unternehmen haben.
+**In einem Satz:** Corporate Identity (CI) ist die „Persönlichkeit“ eines Unternehmens: wie es aussieht, wie es spricht und wie es sich verhält.
+
+**Stell dir vor:** Eine Person, die du gut kennst. Du erkennst sie an der Kleidung (Design), an ihrer Art zu reden (Communication) und daran, wie sie mit anderen umgeht (Behaviour). Passt das alles zusammen, wirkt sie glaubwürdig. Das Bild, das du dir von ihr machst, ist ihr Image.
+
+CI beantwortet also die Frage „Wer sind wir?“. Das Unternehmen soll überall gleich und ohne Widersprüche auftreten. Daraus entsteht das Image, also das Bild, das andere vom Unternehmen haben.
 
 | Bestandteil | Was gehört dazu? |
 |---|---|
@@ -64,7 +72,11 @@ Gerechnet wird hier nichts. Lerne jeden Begriff mit einem Beispiel. 2025 kam das
 
 ## Ziele: strategisch, taktisch, operativ
 
-**Was ist das?** Ziele unterscheidet man nach ihrem Zeithorizont. Ein gutes Ziel ist außerdem operational. Es sagt Inhalt (was?), Ausmaß (wie viel?), Zeitbezug (wann?) und Geltungsbereich (wo?).
+**In einem Satz:** Ziele unterscheidet man danach, wie weit sie in die Zukunft reichen.
+
+**Stell dir vor:** Dein Studium. „In drei Jahren habe ich den Bachelor“ ist das große Ziel. „Dieses Semester bestehe ich alle Klausuren“ ist ein Zwischenschritt. „Heute Abend rechne ich zwei Übungen“ ist das, was du jetzt tust. Genauso hat ein Betrieb lange, mittlere und kurze Ziele.
+
+Ein gutes Ziel ist außerdem **operational**, also so genau, dass man es überprüfen kann. Es sagt Inhalt (was?), Ausmaß (wie viel?), Zeitbezug (wann?) und Geltungsbereich (wo?).
 
 | Ebene | Zeithorizont | Leitfrage |
 |---|---|---|
@@ -90,7 +102,9 @@ Gerechnet wird hier nichts. Lerne jeden Begriff mit einem Beispiel. 2025 kam das
 
 ## Zielbeziehungen
 
-**Was ist das?** Ein Betrieb hat viele Ziele gleichzeitig. Sie können sich gegenseitig helfen, stören oder egal sein.
+**In einem Satz:** Ein Betrieb hat viele Ziele gleichzeitig, und die können sich gegenseitig helfen, stören oder egal sein.
+
+**Stell dir vor:** Du hast zwei Ziele: gute Noten und viel Freizeit. Mehr Lernzeit hilft der Note (komplementär zu „gute Noten“), nimmt aber Freizeit weg (konkurrierend zu „viel Freizeit“). Welche Farbe dein Mäppchen hat, ist für beide Ziele egal (indifferent).
 
 | Beziehung | Bedeutung | Beispiel aus dem Skript |
 |---|---|---|
@@ -115,7 +129,10 @@ Gerechnet wird hier nichts. Lerne jeden Begriff mit einem Beispiel. 2025 kam das
 
 ## Stakeholder und Shareholder
 
-**Was ist das?** Shareholder sind die Anteilseigner, also die Eigentümer. Stakeholder sind alle Anspruchsgruppen, die etwas vom Unternehmen wollen: Mitarbeiter, Kunden, Lieferanten, Banken, Staat, Öffentlichkeit und auch die Eigentümer.
+**In einem Satz:** Shareholder besitzen Anteile am Unternehmen, Stakeholder sind alle, die irgendetwas vom Unternehmen wollen.
+
+- „Share“ heißt Anteil: **Shareholder** sind die Anteilseigner, also die Eigentümer.
+- „Stake“ heißt Einsatz oder Interesse: **Stakeholder** sind alle Anspruchsgruppen: Mitarbeiter, Kunden, Lieferanten, Banken, Staat, Öffentlichkeit und auch die Eigentümer.
 
 | | Shareholder-Value-Ansatz | Stakeholder-Value-Ansatz |
 |---|---|---|
@@ -124,9 +141,9 @@ Gerechnet wird hier nichts. Lerne jeden Begriff mit einem Beispiel. 2025 kam das
 | Problem | andere Gruppen werden vernachlässigt | Auswahl, Abgrenzung und Ausbalancieren der Gruppen |
 
 > [!NOTE]
-> **Beispiel: Der Limonadenstand**
+> **Beispiel: Die Bäckerei**
 >
-> Deine Eltern haben das Startgeld gegeben: Sie sind die Shareholder. Stakeholder sind außerdem die Nachbarn (Lärm), die Kunden (Geschmack) und der Supermarkt (Zitronen).
+> Die Bäckerin und ihr stiller Teilhaber haben das Geld gegeben: Sie sind die Shareholder. Stakeholder sind außerdem die Verkäuferinnen (fairer Lohn), die Kunden (frisches Brot), die Mühle (pünktliche Zahlung), die Bank (Kredit zurück) und die Nachbarn (kein Lärm um 4 Uhr morgens).
 
 > [!IMPORTANT]
 > **Das Wichtigste**

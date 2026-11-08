@@ -11,7 +11,11 @@ Das Kapitel fasst die Kapitel 5 bis 8 zusammen. In der Musterklausur 2025 sollte
 
 ## Die 4P
 
-**Was ist das?** Der Marketing-Mix ist die Gesamtheit aller Marketingmaßnahmen, die wirklich eingesetzt werden. Die vier Bereiche heißen auf Englisch Product, Price, Place, Promotion.
+**In einem Satz:** Der Marketing-Mix ist die Kombination aus Produkt, Preis, Vertriebsweg und Werbung, mit der ein Unternehmen tatsächlich auftritt.
+
+**Stell dir vor:** Eine Band mit vier Mitgliedern. Jeder kann gut spielen, aber nur wenn alle denselben Song spielen, klingt es gut. Genauso müssen Produkt, Preis, Vertrieb und Werbung dieselbe Botschaft senden.
+
+Die vier Bereiche heißen auf Englisch Product, Price, Place, Promotion.
 
 | P | Bereich | Instrumente laut Skript (S. 70) | Kapitel |
 |---|---|---|---|
@@ -37,7 +41,9 @@ Das Kapitel fasst die Kapitel 5 bis 8 zusammen. In der Musterklausur 2025 sollte
 
 ## Abstimmung, Budget und das Beispiel Nespresso
 
-**Was ist das?** Die Instrumente müssen zusammenpassen. Das Skript nennt drei Stufen:
+**In einem Satz:** Die vier P müssen zusammenpassen, und weil das Geld begrenzt ist, entscheidet man auch, welches P wie viel bekommt.
+
+Das Skript nennt dafür drei Stufen:
 
 1. **Grobabstimmung** (inter-instrumental): Wie viel Gewicht bekommt jedes P?
 2. **Feinabstimmung** (intra-instrumental): Abstimmung innerhalb eines P.

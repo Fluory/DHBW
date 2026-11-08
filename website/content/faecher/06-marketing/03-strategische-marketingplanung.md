@@ -11,7 +11,9 @@ In der Musterklausur 2025 kam aus diesem Kapitel die Positionierung nach Kotler 
 
 ## Marketingziele
 
-**Was ist das?** Marketingziele teilt man in zwei Gruppen.
+**In einem Satz:** Manche Marketingziele zählt man in der Kasse (Euro, Stück), andere spielen sich im Kopf der Kunden ab (kennen sie uns, mögen sie uns?).
+
+Marketingziele teilt man darum in zwei Gruppen.
 
 | Gruppe | Beispiele | messbar durch |
 |---|---|---|
@@ -45,7 +47,16 @@ Bekanntheit misst man so:
 
 ## Ansoff-Matrix: Wachstumsstrategien
 
-**Was ist das?** Die Ansoff-Matrix stellt zwei Fragen: Altes oder neues Produkt? Alter oder neuer Markt? Vorher muss klar sein, welcher Markt gemeint ist (Marktabgrenzung).
+**In einem Satz:** Die Ansoff-Matrix zeigt vier Wege zu mehr Umsatz, je nachdem, ob du Produkt und Kunden behältst oder wechselst.
+
+**Stell dir vor:** Du verkaufst selbstgebackene Muffins in deiner Lerngruppe.
+
+- Mehr Muffins an dieselbe Lerngruppe, etwa mit „3 für 2“: altes Produkt, alter Markt → **Marktdurchdringung**.
+- Muffins jetzt auch im Nachbarkurs: altes Produkt, neuer Markt → **Marktentwicklung**.
+- Brownies für deine Lerngruppe: neues Produkt, alter Markt → **Produktentwicklung**.
+- Nachhilfe für Schüler: neues Produkt, neuer Markt → **Diversifikation**.
+
+Die Matrix stellt also zwei Fragen: Altes oder neues Produkt? Alter oder neuer Markt? Vorher muss klar sein, welcher Markt gemeint ist (Marktabgrenzung).
 
 | | Markt bisher | Markt neu |
 |---|---|---|
@@ -77,7 +88,11 @@ Diversifikation gibt es in drei Arten:
 
 ## Marktsegmentierung und Zielgruppen
 
-**Was ist das?** Bei der **Massenmarktstrategie** gibt es ein Produkt für alle. Das klappt, wenn die Nachfrage viel größer ist als das Angebot, und bringt niedrige Stückkosten. Bei der **Marktsegmentierung** zerlegt man den gemischten Gesamtmarkt in Teilmärkte mit gleichartigen Kunden und bearbeitet jeden gezielt. Ein Segment muss groß genug sein und lange genug bestehen.
+**In einem Satz:** Segmentieren heißt, die Kunden in Gruppen mit ähnlichen Wünschen aufzuteilen und jede Gruppe gezielt anzusprechen.
+
+**Stell dir vor:** Ein Schuhladen. Früher gab es ein Modell in drei Größen für alle. Heute gibt es Laufschuhe für Sportler, Sneaker für Jugendliche und Lederschuhe fürs Büro. Jede Gruppe will etwas anderes und wird anders beworben.
+
+Bei der **Massenmarktstrategie** gibt es ein Produkt für alle. Das klappt, wenn die Nachfrage viel größer ist als das Angebot, und bringt niedrige Stückkosten. Bei der **Marktsegmentierung** zerlegt man den gemischten Gesamtmarkt in Teilmärkte mit gleichartigen Kunden und bearbeitet jeden gezielt. Ein Segment muss groß genug sein und lange genug bestehen.
 
 | Strategie | Uhrenhersteller (Skript) |
 |---|---|
@@ -111,7 +126,11 @@ Das Skript nennt Zielgruppen-Kürzel wie DINKs (Doppelverdiener ohne Kinder) und
 
 ## Positionierung und USP
 
-**Was ist das?** Es gibt sehr viele ähnliche Produkte. Damit der Kunde dich bemerkt, brauchst du einen einzigartigen Verkaufsvorteil, den USP. So wird dein Produkt im Kopf des Kunden „positioniert“. Skript-Beispiele: Media Markt = Niedrigpreis, Geox = Schuh, der „atmet“.
+**In einem Satz:** Positionierung heißt: Dein Produkt bekommt einen festen Platz im Kopf der Kunden, mit genau einer Eigenschaft.
+
+**Stell dir vor:** Im Kopf jedes Kunden gibt es Schubladen. Bei „sicheres Auto“ denken viele zuerst an Volvo, weil die Marke seit Jahrzehnten genau damit wirbt. Wer seine Schublade besetzt hat, wird gekauft, wenn genau diese Eigenschaft gesucht ist.
+
+Es gibt sehr viele ähnliche Produkte. Damit der Kunde dich bemerkt, brauchst du einen einzigartigen Verkaufsvorteil, den USP. So wird dein Produkt im Kopf des Kunden „positioniert“. Skript-Beispiele: Media Markt = Niedrigpreis, Geox = Schuh, der „atmet“.
 
 Man zeichnet oft einen Eigenschaftsraum mit zwei Achsen, zum Beispiel Preis und Qualität. Eine leere Stelle ist eine Positionierungslücke, aber nur dann gut, wenn es dafür Nachfrage gibt.
 
@@ -135,7 +154,7 @@ Anforderungen nach Kotler:
 > [!WARNING]
 > **Achtung**
 >
-> Kotler verlangt nur eine Eigenschaft, keine „Mehrfachpositionierung“.
+> Typischer Fehler: „Wir sind günstig, hochwertig, schnell und nachhaltig.“ Kotler verlangt nur eine Eigenschaft, keine „Mehrfachpositionierung“. Wer alles verspricht, landet in keiner Schublade.
 
 ## Übungen
 

@@ -11,7 +11,9 @@ Ein Alltagsbeispiel: Eine Kommilitonin rollt in der Gruppenarbeit mit den Augen.
 
 ## Wahrnehmung und Souveränität
 
-**Was ist das?** Zwischen dem, was wir sehen, und unserer Reaktion liegen vier Schritte. Sie laufen oft unbewusst ab (Unconscious Bias).
+**In einem Satz:** Bevor du reagierst, trennst du, was du wirklich gesehen hast, von dem, was du dir dazu denkst.
+
+Zwischen dem, was wir sehen, und unserer Reaktion liegen vier Schritte. Sie laufen oft unbewusst ab (Unconscious Bias).
 
 1. **Wahrnehmen:** schaut auf den Boden, rollt die Augen.
 2. **Vermuten:** ist gereizt, ist unaufmerksam.
@@ -42,7 +44,11 @@ Für schwierige Situationen (Angriff, Blackout, Störung) gibt es **„Feuerlös
 
 ## Moderation von Meetings
 
-**Was ist das?** Eine Moderatorin führt durch den Prozess, nicht durch den Inhalt. Oft hat sie eine **Doppelrolle**: Sie ist zugleich Expertin, Führungskraft oder Entscheiderin. Diese Rollen klärst du und trennst sie sichtbar.
+**In einem Satz:** Die Moderatorin sorgt dafür, dass ein Meeting zu einem Ergebnis kommt, sie bestimmt aber nicht, welches.
+
+**Stell dir vor:** Eine Schiedsrichterin beim Fußball. Sie schießt keine Tore, sie sorgt dafür, dass das Spiel nach Regeln läuft, alle drankommen und nach 90 Minuten Schluss ist. Würde sie selbst mitspielen, würde ihr niemand mehr trauen. Genau das ist die Gefahr der Doppelrolle.
+
+Eine Moderatorin führt also durch den Prozess, nicht durch den Inhalt. Oft hat sie eine **Doppelrolle**: Sie ist zugleich Expertin, Führungskraft oder Entscheiderin. Diese Rollen klärst du und trennst sie sichtbar.
 
 **Vorbereitung** in acht Schritten:
 
@@ -77,7 +83,11 @@ Den Ablauf planst du als Tabelle mit den Spalten Top, Funktion, Fragen, Methode,
 
 ## Konflikte verstehen
 
-**Was ist das?** Ein Konflikt liegt vor, wenn eine Partei ihr Denken, Fühlen oder Handeln als unvereinbar mit dem einer anderen erlebt und sich dadurch eingeschränkt sieht. Konflikte können auch nützen: Sie bringen Klarheit, neue Lösungen und Innovation.
+**In einem Satz:** Ein Konflikt ist da, sobald jemand das Gefühl hat, dass das, was der andere will oder tut, ihn selbst ausbremst.
+
+**So steht es auf der Folie:** Ein Konflikt liegt vor, wenn eine Partei ihr Denken, Fühlen oder Handeln als unvereinbar mit dem einer anderen erlebt und sich dadurch eingeschränkt sieht.
+
+**Auf Deutsch heißt das:** Es reicht, dass **eine** Seite es so erlebt. Der andere muss den Konflikt noch gar nicht bemerkt haben. Konflikte können auch nützen: Sie bringen Klarheit, neue Lösungen und Innovation.
 
 | Konfliktart | Ursache | Was tun |
 |---|---|---|
@@ -95,6 +105,16 @@ Den Ablauf planst du als Tabelle mit den Spalten Top, Funktion, Fragen, Methode,
 - **Kompromiss:** beides mittel;
 - **Win-win:** beides hoch.
 
+**Mit einem Beispiel:** Ihr gebt eine Gruppenarbeit ab. Du willst am Freitag abgeben, weil du am Wochenende arbeitest. Deine Partnerin will am Montag abgeben, weil sie noch korrigieren möchte.
+
+| Strategie | So sähe es aus |
+|---|---|
+| vermeiden | Keiner spricht es an. Am Donnerstag gibt es Streit. |
+| nachgeben | Du sagst „Okay, Montag“ und arbeitest am Wochenende doch noch mit. |
+| durchsetzen | Du lädst die Datei am Freitag einfach hoch. |
+| Kompromiss | Abgabe am Sonntag. Beide sind nur halb zufrieden. |
+| Win-win | Ihr fragt nach dem eigentlichen Interesse: Du willst ein freies Wochenende, sie will Zeit zum Korrigieren. Lösung: Du schreibst deinen Teil bis Donnerstag fertig, sie korrigiert am Wochenende allein, Abgabe Montag. |
+
 > [!IMPORTANT]
 > **Das Wichtigste**
 > Erst die Konfliktart bestimmen, dann die Strategie wählen. Ein Strukturkonflikt lässt sich nicht im Zweiergespräch lösen, sondern nur mit dem Umfeld.
@@ -105,7 +125,9 @@ Den Ablauf planst du als Tabelle mit den Spalten Top, Funktion, Fragen, Methode,
 
 ## Das Konfliktgespräch vorbereiten und führen
 
-**Was ist das?** Zur Vorbereitung dient die **quadratische Vorklärung**. Sie überträgt das Vier-Ohren-Modell auf das Gespräch. Du beantwortest jede Frage für dich und vermutest die Antwort des anderen.
+**In einem Satz:** Ein Konfliktgespräch bereitest du vor wie eine Klausur: Du sortierst vorher Fakten, Gefühle, Ziel und Beziehung, damit du im Gespräch nicht improvisieren musst.
+
+Zur Vorbereitung dient die **quadratische Vorklärung**. Sie überträgt das Vier-Ohren-Modell auf das Gespräch. Du beantwortest jede Frage für dich und vermutest die Antwort des anderen.
 
 | Feld | Fragen |
 |---|---|

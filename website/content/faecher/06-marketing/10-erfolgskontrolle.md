@@ -11,7 +11,11 @@ Das Kapitel ist kurz und kam in der Musterklausur 2025 nicht vor. Viele Formeln 
 
 ## Soll-Ist-Vergleich und absolute Kennzahlen
 
-**Was ist das?** Soll-Kennzahlen sind Planwerte, Ist-Kennzahlen die tatsächlichen Werte. Der Vergleich heißt **Abweichungsanalyse**. Absolute Kennzahlen werden in Euro angegeben.
+**In einem Satz:** Beim Soll-Ist-Vergleich legst du den Plan neben das Ergebnis und fragst, warum es abweicht.
+
+**Stell dir vor:** Du planst 50 € Ausgaben pro Woche (Soll). Am Sonntag schaust du in die Banking-App: Es waren 68 € (Ist). Die Abweichung ist 18 €. Jetzt suchst du den Grund: zweimal Lieferdienst. Genau das macht die **Abweichungsanalyse** mit Marketingzahlen.
+
+Soll-Kennzahlen sind Planwerte, Ist-Kennzahlen die tatsächlichen Werte. Absolute Kennzahlen werden in Euro angegeben.
 
 | Kennzahl | Formel |
 |---|---|
@@ -24,7 +28,10 @@ Das Kapitel ist kurz und kam in der Musterklausur 2025 nicht vor. Viele Formeln 
 > [!NOTE]
 > **Beispiel: Die Bäckerei (eigene Zahlen)**
 >
-> Werbekosten 200 €, werbebedingter Mehrumsatz 500 €. Werbegewinn = 500 − 200 = 300 €.
+> Werbekosten 200 €, werbebedingter Mehrumsatz 500 €.
+>
+> - Werbegewinn = 500 − 200 = 300 € (absolut, in €).
+> - Werberendite = 500 / 200 · 100 = 250 % (relativ, siehe unten). Auf Deutsch: Jeder Werbe-Euro hat 2,50 € Mehrumsatz gebracht.
 
 > [!IMPORTANT]
 > **Das Wichtigste**
@@ -38,7 +45,9 @@ Das Kapitel ist kurz und kam in der Musterklausur 2025 nicht vor. Viele Formeln 
 
 ## Relative Kennzahlen
 
-**Was ist das?** Relative Kennzahlen setzen zwei Größen ins Verhältnis, meist in Prozent.
+**In einem Satz:** Relative Kennzahlen teilen eine Zahl durch eine andere, damit man große und kleine Unternehmen oder Jahre vergleichen kann.
+
+Beispiel: 30 Reklamationen klingen viel. Bei 3.000 Aufträgen sind es aber nur 30 / 3.000 · 100 = 1 %. Erst die Quote sagt, ob es gut oder schlecht ist.
 
 | Kennzahl | Formel (· 100) | Bereich |
 |---|---|---|

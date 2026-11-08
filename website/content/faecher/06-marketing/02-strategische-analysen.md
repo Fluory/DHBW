@@ -11,7 +11,14 @@ Das ist das wichtigste Rechenkapitel. Aufgabe 1 der Musterklausur (12 Punkte) ko
 
 ## SWOT-Analyse
 
-**Was ist das?** SWOT stellt zwei Dinge gegenüber. Innen: Stärken (Strengths) und Schwächen (Weaknesses). Das Unternehmen kann sie ändern. Außen: Chancen (Opportunities) und Risiken (Threats). Das Unternehmen kann sie nicht ändern. Man geht in drei Schritten vor: interne Analyse, externe Analyse, Strategien ableiten.
+**In einem Satz:** Die SWOT-Analyse legt nebeneinander, was ein Unternehmen gut und schlecht kann und was draußen an Gutem und Schlechtem auf es zukommt.
+
+**Stell dir vor:** Du planst deine Klausurphase. Stärke: Du kannst gut rechnen. Schwäche: Du schiebst Auswendiglernen auf. Chance: Die Hochschule bietet ein Tutorium an. Risiko: Dein Nebenjob will im Dezember mehr Stunden. Stärken und Schwächen liegen bei dir (innen), Chancen und Risiken kommen von außen.
+
+- Innen: Stärken (Strengths) und Schwächen (Weaknesses). Das Unternehmen kann sie ändern.
+- Außen: Chancen (Opportunities) und Risiken (Threats). Das Unternehmen kann sie nicht ändern.
+
+Man geht in drei Schritten vor: interne Analyse, externe Analyse, Strategien ableiten. Für die Strategien kreuzt man innen und außen:
 
 | | Chancen (O) | Risiken (T) |
 |---|---|---|
@@ -35,7 +42,9 @@ Das ist das wichtigste Rechenkapitel. Aufgabe 1 der Musterklausur (12 Punkte) ko
 
 ## Marktgrößen
 
-**Was ist das?** Vier Begriffe beschreiben, wie groß ein Markt ist und welcher Teil dir gehört.
+**In einem Satz:** Vier Begriffe beschreiben, wie groß ein Markt sein könnte, wie groß er wirklich ist und welches Stück davon dir gehört.
+
+**Stell dir vor:** Ein Kuchen. Das **Marktpotenzial** ist der ganze Kuchen, den man backen könnte, wenn jeder mögliche Kunde kauft. Das **Marktvolumen** ist das Stück, das tatsächlich gegessen wird. Der **Marktanteil** ist dein Stück vom gegessenen Kuchen. Der **Marktausschöpfungsgrad** sagt, wie viel vom ganzen möglichen Kuchen schon gegessen wird.
 
 | Begriff | Einfach gesagt | Formel |
 |---|---|---|
@@ -49,7 +58,12 @@ Umgestellt: Marktvolumen = eigener Umsatz · 100 / Marktanteil. Marktpotenzial =
 > [!NOTE]
 > **Beispiel: Pizza in einer Stadt (eigene Zahlen)**
 >
-> Pro Woche könnten 10.000 Pizzen verkauft werden (Potenzial). Verkauft werden 8.000 (Volumen). Deine Pizzeria verkauft 800. Marktanteil = 800 · 100 / 8.000 = 10 %. Marktausschöpfungsgrad = 8.000 · 100 / 10.000 = 80 %.
+> Pro Woche könnten 10.000 Pizzen verkauft werden (Potenzial). Verkauft werden 8.000 (Volumen). Deine Pizzeria verkauft 800.
+>
+> 1. Marktanteil = 800 · 100 / 8.000 = 80.000 / 8.000 = 10 %. Jede zehnte verkaufte Pizza ist deine.
+> 2. Marktausschöpfungsgrad = 8.000 · 100 / 10.000 = 80 %. 2.000 Pizzen pro Woche könnten noch verkauft werden.
+
+**Auf Deutsch heißt das:** „· 100“ macht aus einem Bruch eine Prozentzahl. 800 / 8.000 = 0,1, mal 100 = 10 %. Beim Umstellen gilt dasselbe rückwärts: Kennst du deinen Umsatz (800) und deinen Anteil (10 %), ist der ganze Markt 800 · 100 / 10 = 8.000.
 
 ### Rechenweg: Marktgrößen
 
@@ -73,11 +87,13 @@ Umgestellt: Marktvolumen = eigener Umsatz · 100 / Marktanteil. Marktpotenzial =
 > [!WARNING]
 > **Achtung**
 >
-> Den Marktanteil rechnest du immer mit dem Marktvolumen, nie mit dem Marktpotenzial.
+> Typischer Fehler: Den Marktanteil mit dem Marktpotenzial rechnen. Er wird immer mit dem Marktvolumen gerechnet, also mit dem, was wirklich verkauft wurde. Im Pizza-Beispiel käme sonst 800 · 100 / 10.000 = 8 % statt 10 % heraus.
 
 ## Produktlebenszyklus
 
-**Was ist das?** Jedes Produkt „lebt“: Es kommt auf den Markt, wächst, wird alt und verschwindet. Man zeichnet den Umsatz über die Zeit.
+**In einem Satz:** Jedes Produkt „lebt“: Es kommt auf den Markt, wächst, wird alt und verschwindet.
+
+**Stell dir vor:** Ein Song in den Charts. Erst kennt ihn kaum jemand (Einführung), dann hört ihn plötzlich jeder (Wachstum), dann läuft er überall, aber es kommen kaum neue Hörer dazu (Reife, Sättigung), irgendwann skippt man ihn (Degeneration). Bei Produkten zeichnet man statt der Streams den Umsatz über die Zeit. Ein Beispiel aus dem Alltag: DVDs und DVD-Player werden kaum noch gekauft, seit es Streaming gibt.
 
 | Phase | Was passiert? | Marketingziel |
 |---|---|---|
@@ -104,7 +120,11 @@ Umgestellt: Marktvolumen = eigener Umsatz · 100 / Marktanteil. Marktpotenzial =
 
 ## BCG-Matrix und relativer Marktanteil
 
-**Was ist das?** Die Boston Consulting Group ordnet alle strategischen Geschäftseinheiten (SGE) in ein Kreuz ein. Eine SGE ist ein Produkt oder eine Produktgruppe mit eigenem Markt. Die senkrechte Achse ist das Marktwachstum, die waagerechte der relative Marktanteil.
+**In einem Satz:** Die BCG-Matrix sortiert alle Produkte eines Unternehmens danach, ob ihr Markt wächst und ob das Unternehmen dort stark ist.
+
+**Stell dir vor:** Die Namen sind Bilder. Eine **Cash Cow** ist eine Kuh, die man melkt: Sie bringt jeden Tag Geld, ohne dass man viel investieren muss. Ein **Star** glänzt, braucht aber noch Geld, um oben zu bleiben. Ein **Question Mark** ist ein Fragezeichen: Wird daraus etwas oder nicht? Ein **Poor Dog** ist ein armer Hund: kleiner Markt, schwache Position.
+
+Die Boston Consulting Group ordnet alle strategischen Geschäftseinheiten (SGE) in ein Kreuz ein. Eine SGE ist ein Produkt oder eine Produktgruppe mit eigenem Markt. Die senkrechte Achse ist das Marktwachstum, die waagerechte der relative Marktanteil.
 
 | | niedriger relativer Marktanteil | hoher relativer Marktanteil |
 |---|---|---|
@@ -121,7 +141,15 @@ Laut Skript wandert eine SGE durch die Felder: Question Mark (Einführung) → S
 > [!NOTE]
 > **Beispiel: Die Bäckerei (eigene Zahlen)**
 >
-> Die Bäckerei hat bei Brötchen 20 % Marktanteil, der stärkste Konkurrent 40 %. Relativer Marktanteil = 20 / 40 = 0,5. Der Brötchenmarkt wächst von 200.000 € auf 220.000 €: (220.000 − 200.000) / 200.000 · 100 = 10 %.
+> Die Bäckerei hat bei Brötchen 20 % Marktanteil, der stärkste Konkurrent 40 %. Relativer Marktanteil = 20 / 40 = 0,5. Der Brötchenmarkt wächst von 200.000 € auf 220.000 €: (220.000 − 200.000) / 200.000 · 100 = 20.000 / 200.000 · 100 = 10 %.
+
+**Mit Zahlen: was der relative Marktanteil bedeutet (eigene Zahlen)**
+
+| dein Marktanteil | stärkster Konkurrent | relativer Marktanteil | auf Deutsch |
+|---|---|---|---|
+| 20 % | 40 % | 20 / 40 = 0,5 | Du bist halb so groß wie der Stärkste. |
+| 30 % | 30 % | 30 / 30 = 1,0 | Ihr seid gleich groß. |
+| 50 % | 25 % | 50 / 25 = 2,0 | Du bist doppelt so groß wie der Nächstgrößte. |
 
 > [!IMPORTANT]
 > **Das Wichtigste**
@@ -199,6 +227,7 @@ Eigene Lösungsskizze:
 
 Eigene Lösungsskizze. Formel: (neu − alt) / alt · 100.
 
+- So rechnest du den ersten Wert: (11,7 − 11,5) / 11,5 · 100 = 0,2 / 11,5 · 100 = 1,74 %.
 - business: +1,74 % → +0,85 % → 0,00 %. Das Wachstum wird kleiner und steht still → Sättigung.
 - female: +12,45 % → +8,78 % → +5,26 %. Wächst noch, aber langsamer → Reife.
 - outdoor: −9,68 % → −14,29 % → −33,33 %. Fällt immer schneller → Degeneration.

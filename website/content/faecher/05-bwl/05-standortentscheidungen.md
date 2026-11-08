@@ -11,7 +11,9 @@ In der Musterklausur 2025 gab es 6 Punkte für die Ziele von Standortentscheidun
 
 ## Ziele von Standortentscheidungen
 
-**Was ist das?** Der Standort ist der Ort, an dem ein Unternehmen seine Produktionsfaktoren einsetzt. Ziele von Standortentscheidungen teilt man in drei Kategorien.
+**In einem Satz:** Der Standort ist der Ort, an dem ein Unternehmen arbeitet, und bei Standortentscheidungen geht es um mehr, anders oder weniger Orte.
+
+Fachlich ist der Standort der Ort, an dem ein Unternehmen seine Produktionsfaktoren einsetzt. Ziele von Standortentscheidungen teilt man in drei Kategorien.
 
 | Kategorie | Inhalt | Beispiele (laut Folie, gleich der Musterlösung) |
 |---|---|---|
@@ -37,7 +39,9 @@ In der Musterklausur 2025 gab es 6 Punkte für die Ziele von Standortentscheidun
 
 ## Standortfaktoren
 
-**Was ist das?** Standortfaktoren sind alles, was einen Ort für ein Unternehmen gut oder schlecht macht. Man teilt sie in drei Gruppen.
+**In einem Satz:** Standortfaktoren sind alles, was einen Ort für ein Unternehmen gut oder schlecht macht.
+
+**Stell dir vor:** Deine Wohnungssuche fürs Studium. Was kostet die Miete? Wie weit ist es zur Hochschule? Gibt es einen Supermarkt in der Nähe? Ist die Gegend sicher? Ein Unternehmen stellt dieselben Fragen, nur mit anderen Kriterien. Man teilt sie in drei Gruppen.
 
 | unternehmensbezogen | produktionsbezogen | absatzbezogen |
 |---|---|---|
@@ -75,7 +79,14 @@ Zwei Begriffe mit offiziellen Folienbeispielen:
 >
 > Die Nutzwertanalyse steht im Skript (5.5) und auf den Folien mit einer offiziell gelösten Übung, aber nicht auf der Liste „Könnte drankommen“. Lerne sie als Ergänzung, wenn Kapitel 6, 7 und 9 sitzen.
 
-**Was ist das?** Die Nutzwertanalyse vergleicht mehrere Standorte mit vielen Kriterien gleichzeitig. Jedes Kriterium bekommt ein Gewicht. Jeder Standort bekommt Punkte. Gewicht mal Punkte ergibt den Teilnutzen. Der Standort mit der höchsten Summe gewinnt.
+**In einem Satz:** Die Nutzwertanalyse vergleicht mehrere Möglichkeiten mit vielen Kriterien und macht daraus eine einzige Punktzahl.
+
+**Stell dir vor:** Du vergleichst zwei Handys. Der Akku ist dir sehr wichtig, die Kamera mittel, die Farbe kaum. Du gibst jedem Kriterium ein Gewicht und jedem Handy Noten. Ein Handy mit super Farbe, aber schwachem Akku gewinnt so nicht, weil der Akku mehr zählt.
+
+- Jedes Kriterium bekommt ein **Gewicht** (wie wichtig?).
+- Jeder Standort bekommt **Punkte** je Kriterium (wie gut erfüllt?).
+- **Teilnutzen** = Gewicht · Punkte.
+- **Nutzwert** = Summe aller Teilnutzen. Der Standort mit der höchsten Summe gewinnt.
 
 ### Rechenweg: Nutzwertanalyse
 
@@ -94,7 +105,7 @@ Zwei Begriffe mit offiziellen Folienbeispielen:
 | Parkplätze | 20 | 6 → 120 | 8 → 160 |
 | **Nutzwert** | 100 | **640** | **680** |
 
-Ort B hat den höheren Nutzwert und gewinnt knapp.
+So rechnest du Ort A: 50 · 8 = 400, 30 · 4 = 120, 20 · 6 = 120, zusammen 400 + 120 + 120 = 640. Ort B: 50 · 5 = 250, 30 · 9 = 270, 20 · 8 = 160, zusammen 680. Ort B hat den höheren Nutzwert und gewinnt knapp, obwohl Ort A bei der wichtigsten Sache (Laufkundschaft) besser ist.
 
 **Durchgerechnet: Skript-Übung 26 (offizielle Lösung).** Ein Maschinenbauer vergleicht Deutschland (D), USA und Tschechien (CZ).
 
