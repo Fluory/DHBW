@@ -11,7 +11,9 @@ Nach dem Ablauf (EPK, Kapitel 3) geht es jetzt um die Daten. Laut Lernzielen sol
 
 ## Redundanz und Anomalien
 
-**Was ist das?** Wenn Daten mehrfach gespeichert sind (Redundanz), entstehen Anomalien:
+**In einem Satz:** Eine Anomalie ist ein Fehler, der nur deshalb passiert, weil dieselbe Angabe an mehreren Stellen steht.
+
+**Was ist das?** Wenn Daten mehrfach gespeichert sind (Redundanz), entstehen Anomalien (auf Deutsch: „Unregelmäßigkeiten“):
 
 | Anomalie | Beispiel |
 |---|---|
@@ -35,7 +37,11 @@ Der Datenbankentwurf läuft in drei Stufen (nach Scheer): erst das Was, dann das
 
 ## Das ER-Modell nach Chen
 
-**Was ist das?** Das Entity-Relationship-Modell (Chen, 1976) beschreibt, welche Dinge es gibt und wie sie zusammenhängen.
+**In einem Satz:** Ein ER-Modell zeigt, welche Dinge eine Firma speichern will, was sie über jedes weiß und wie die Dinge zusammenhängen.
+
+**Stell dir vor:** Karteikarten an einer Pinnwand. Für jede Kundin gibt es eine Karte, für jede Reise eine Karte. Alle Kundenkarten sehen gleich aus (Felder Name, Adresse): Das ist der **Entity-Typ** Kunde, die einzelne Karte ein **Entity**, jedes Feld ein **Attribut**. Bucht eine Kundin eine Reise, spannst du einen Faden zwischen den beiden Karten: Das ist die **Relationship**. Die Nummer oben rechts auf jeder Karte, die es nur einmal gibt, ist das **Schlüsselattribut**.
+
+**Was ist das?** Das Entity-Relationship-Modell (Chen, 1976) beschreibt, welche Dinge es gibt und wie sie zusammenhängen. „Entity“ heißt „Ding, Gegenstand“, „Relationship“ heißt „Beziehung“.
 
 | Begriff | Bedeutung | Symbol |
 |---|---|---|
@@ -50,6 +56,8 @@ Der Datenbankentwurf läuft in drei Stufen (nach Scheer): erst das Was, dann das
 
 ## Kardinalitäten
 
+**In einem Satz:** Die Kardinalität sagt, wie viele Fäden an einer Karte hängen dürfen.
+
 **Was ist das?**
 
 | Typ | Beispiel |
@@ -63,6 +71,12 @@ So bestimmst du die Kardinalität:
 1. „Wie viele B hat ein A?“
 2. „Wie viele A hat ein B?“
 3. Das n steht auf der Seite, von der es viele gibt.
+
+**Mit Beispiel:** Mitarbeiter und Kunde.
+
+1. „Wie viele Kunden betreut ein Mitarbeiter?“ Mehrere, also steht beim Kunden ein n.
+2. „Von wie vielen Mitarbeitern wird ein Kunde betreut?“ Von genau einem, also steht beim Mitarbeiter eine 1.
+3. Ergebnis: Mitarbeiter **1 : n** Kunde.
 
 Ein Attribut, das weder allein zum einen noch allein zum anderen Entity-Typ passt, gehört an die **Raute**. Beispiel: Das Buchungsdatum gehört zur konkreten Buchung, also zur Kombination Kunde–Reise.
 
@@ -116,6 +130,16 @@ Schritt für Schritt:
 
 **Merksatz:** Der Fremdschlüssel steht immer dort, wo er nur einen Wert hat. Bei n:m gibt es diese Seite nicht, deshalb entsteht eine eigene Relation.
 
+**Mit Zahlen:** Mitarbeiter 7 betreut die Kunden 101, 102 und 103.
+
+| Kunden-Nr. | Name | M-Nr.↑ |
+|---|---|---|
+| 101 | Meier GmbH | 7 |
+| 102 | Schulz KG | 7 |
+| 103 | Huber AG | 7 |
+
+Jeder Kunde hat genau eine M-Nr., das passt in eine Zelle. Würdest du es umgekehrt machen, müsste beim Mitarbeiter in einer Zelle „101, 102, 103“ stehen. Das ist nicht erlaubt, denn jeder Wert muss atomar (einzeln) sein. Bei n:m hätten *beide* Seiten so eine Liste, deshalb gibt es die eigene Tabelle mit einer Zeile pro Paar, zum Beispiel (101, Reise 5), (101, Reise 8), (102, Reise 5).
+
 > [!IMPORTANT]
 > **Das Wichtigste**
 > 1:n → Fremdschlüssel auf der n-Seite. n:m → eigene Relation mit zusammengesetztem Primärschlüssel.
@@ -126,7 +150,7 @@ Schritt für Schritt:
 
 ## Das Datenbanksystem
 
-**Was ist das?** Die **Datenbank (DB)** ist der gespeicherte Datenbestand. Das **DBMS** ist die Software, die die DB verwaltet (zum Beispiel PostgreSQL, MySQL, Oracle). **Datenbanksystem (DBS) = DB + DBMS.**
+**Was ist das?** Wie in einer Bibliothek: Die Bücher sind die Datenbank, die Bibliothekarin, die ausleiht, einsortiert und aufpasst, ist das DBMS. Die **Datenbank (DB)** ist der gespeicherte Datenbestand. Das **DBMS** ist die Software, die die DB verwaltet (zum Beispiel PostgreSQL, MySQL, Oracle). **Datenbanksystem (DBS) = DB + DBMS.**
 
 Funktionen eines DBMS:
 
@@ -174,7 +198,7 @@ Funktionen eines DBMS:
 
 ### Übung 1
 
-**C, Löschanomalie.** Beim Löschen eines Datensatzes gehen ungewollt andere Informationen verloren.
+**C, Löschanomalie.** Beim Löschen eines Datensatzes gehen ungewollt andere Informationen verloren. Hier wollte man nur den Auftrag löschen, die Kundin war aber nur in dieser Auftragszeile gespeichert.
 
 ### Übung 2
 
@@ -184,7 +208,7 @@ Funktionen eines DBMS:
 
 1. Entity-Typen werden Relationen: Lehrer, Klasse, Schüler.
 2. 1:n Klasse–Schüler: Fremdschlüssel Klasse auf die n-Seite (Schüler).
-3. n:m Lehrer–Klasse: eigene Relation lehrt mit Fach und Wochenstunden.
+3. n:m Lehrer–Klasse: eigene Relation lehrt. Ihr Primärschlüssel besteht aus den beiden Primärschlüsseln PersonalNr und Klasse. Die Attribute der Raute, Fach und Wochenstunden, wandern mit.
 
 - Lehrer(**PersonalNr**, Name, Teilzeit)
 - Klasse(**Klasse**, Elternsprecher, Klassenlehrer)

@@ -11,13 +11,21 @@ In Kapitel 4 waren die Bits Zahlen, hier sind sie Wahrheitswerte: 1 heißt wahr,
 
 ## Die Grundoperatoren
 
-**Was ist das?** Die boolesche Algebra (nach George Boole) kennt nur zwei Werte: 0 und 1. Es gibt drei Grundoperatoren:
+**In einem Satz:** Boolesche Algebra ist Rechnen mit „ja“ und „nein“ statt mit Zahlen.
+
+**Was ist das?** Die boolesche Algebra (nach George Boole) kennt nur zwei Werte: 0 (falsch, aus) und 1 (wahr, an). Ein **Operator** verknüpft solche Werte, so wie + zwei Zahlen verknüpft. Es gibt drei Grundoperatoren:
 
 | Operator | Schreibweisen | Bedeutung |
 |---|---|---|
 | AND (UND) | A ∧ B, A · B | nur wahr, wenn alle Eingänge wahr sind |
 | OR (ODER) | A ∨ B, A + B | nur falsch, wenn alle Eingänge falsch sind |
 | NOT (NICHT) | ¬A | dreht den Wert um |
+
+**Stell dir vor:**
+
+- **AND** ist ein Bankschließfach mit zwei Schlüsseln. Es geht nur auf, wenn du *und* die Bank aufschließt.
+- **OR** ist eine Haustür mit Klingel vorne und hinten. Es klingelt, wenn vorne *oder* hinten jemand drückt (oder beide).
+- **NOT** ist ein Lichtschalter, der genau das Gegenteil macht.
 
 Ein **Transistor** ist ein elektronischer Schalter. Zwei Schalter hintereinander (in Serie) ergeben ein AND: Strom fließt nur, wenn beide geschlossen sind. Zwei Schalter nebeneinander (parallel) ergeben ein OR: Einer reicht. Für die Klausur reicht es, auf der Ebene der Gatter zu denken.
 
@@ -80,6 +88,8 @@ Klausurrelevant sind die Symbole nach der europäischen Norm **IEC 60617-12**: r
 
 **De Morgan in einem Satz:** Ziehst du die Negation über die Klammer, wird aus UND ein ODER (und umgekehrt), und jede Variable wird negiert.
 
+**Stell dir vor:** „Es stimmt nicht, dass ich Kaffee *und* Kuchen bekomme“ heißt: Mir fehlt der Kaffee *oder* der Kuchen (oder beides). Also ¬(K ∧ U) = ¬K ∨ ¬U. Und „Es stimmt nicht, dass es regnet *oder* schneit“ heißt: Es regnet nicht *und* es schneit nicht. Also ¬(R ∨ S) = ¬R ∧ ¬S.
+
 **Durchgerechnetes Beispiel:** ¬(¬A ∨ B)
 
 1. Negation in die Klammer ziehen, ∨ wird zu ∧: ¬¬A ∧ ¬B.
@@ -124,7 +134,9 @@ Text → Wahrheitstabelle → Ausdruck (DNF) → vereinfachter Ausdruck → Scha
 
 ### Schritt 2: Wahrheitstabelle → Ausdruck (DNF)
 
-Das Verfahren mit der Spalte „Teilausdruck“ heißt **disjunktive Normalform (DNF)**.
+**In einem Satz:** Die DNF schreibt jede Zeile mit Ergebnis 1 als eigene Bedingung auf und verbindet alle mit „oder“.
+
+Das Verfahren mit der Spalte „Teilausdruck“ heißt **disjunktive Normalform (DNF)**. Auf Deutsch: „disjunktiv“ heißt „mit ODER verbunden“, „Normalform“ heißt „feste Schreibweise nach Rezept“. Jeder UND-Term beschreibt genau eine Zeile, wie ein Steckbrief: „S ist an, T ist aus, F ist an“.
 
 1. Nur die Zeilen mit Ausgang 1 nehmen.
 2. Für jede 1-Zeile einen UND-Term bauen: Eine 1 wird zur Variablen, eine 0 zur negierten Variablen. Zeile 1 0 1 wird zu S ∧ ¬T ∧ F.
@@ -137,6 +149,8 @@ Die DNF funktioniert immer, weil sie die Tabelle Zeile für Zeile nachbaut. Die 
 ### Schritt 3: Vereinfachen
 
 Die **Kernregel**: Kommt eine Variable in zwei sonst gleichen UND-Termen einmal normal und einmal negiert vor, fällt sie weg.
+
+**Stell dir vor:** „Ich gehe raus, wenn die Sonne scheint und es warm ist. Ich gehe auch raus, wenn die Sonne scheint und es nicht warm ist.“ Dann ist die Temperatur offenbar egal: Ich gehe raus, wenn die Sonne scheint. Genau das macht die Kernregel.
 
 ```text
 (A ∧ B) ∨ (A ∧ ¬B)
@@ -208,7 +222,9 @@ S ──────────┘
 
 ## NAND-Substitution
 
-**Was ist das?** Allein aus NAND-Gattern kann man jede logische Verknüpfung bauen. Das vereinfacht die Chip-Produktion.
+**In einem Satz:** Mit einer einzigen Sorte Baustein, dem NAND, kannst du alle anderen Gatter nachbauen.
+
+**Was ist das?** Wie mit nur einer Sorte Legostein, aus der du trotzdem jedes Modell baust: Allein aus NAND-Gattern kann man jede logische Verknüpfung bauen. Das vereinfacht die Chip-Produktion.
 
 - **NOT A** = NAND(A, A): beide Eingänge zusammenschalten.
 - **A AND B** = zwei NANDs hintereinander. Das erste liefert ¬(A ∧ B), das zweite dreht es zurück.
@@ -223,6 +239,8 @@ S ──────────┘
 > Für AND reicht ein NAND nicht. Du brauchst ein zweites NAND als NOT dahinter.
 
 ## Rechnen mit Gattern: der Halbaddierer
+
+**In einem Satz:** Ein Halbaddierer ist die kleinste Schaltung, die zwei einzelne Bits addiert.
 
 **Was ist das?** Die Additionsregeln aus Kapitel 4 sind selbst eine Wahrheitstabelle:
 
@@ -291,7 +309,7 @@ Die Summenspalte ist genau XOR, die Übertragsspalte genau AND. Ein **Halbaddier
 | 1 | 1 | 0 |
 
 1. 1-Zeilen: 01 und 10.
-2. Teilausdrücke: ¬A ∧ B und A ∧ ¬B.
+2. Teilausdrücke: Zeile 01 heißt „A aus, B an“ → ¬A ∧ B. Zeile 10 heißt „A an, B aus“ → A ∧ ¬B.
 3. DNF: L = (¬A ∧ B) ∨ (A ∧ ¬B).
 
 Das ist **XOR** („ungleich“).
@@ -308,6 +326,8 @@ Das ist **XOR** („ungleich“).
 | 1 | 0 | 1 | 1 | 0 | 0 |
 | 1 | 1 | 0 | 1 | 0 | 0 |
 | 1 | 1 | 1 | 1 | 0 | 0 |
+
+So rechnest du jede Zeile: Erst A ∨ B, dann umdrehen, dann mit C verunden. Beispiel Zeile 001: A ∨ B = 0 ∨ 0 = 0, umgedreht 1, und 1 ∧ C = 1 ∧ 1 = 1.
 
 Y = 1 in **genau einer Zeile**: A = 0, B = 0, C = 1.
 
@@ -346,11 +366,11 @@ b ──┘             └──┴──[&]o── y = a ∧ b
 | 1 | 1 | 0 | 1 |
 | 1 | 1 | 1 | 1 |
 
-1. DNF: Y = (¬A ∧ B ∧ C) ∨ (A ∧ ¬B ∧ C) ∨ (A ∧ B ∧ ¬C) ∨ (A ∧ B ∧ C).
+1. 1-Zeilen: 011, 101, 110, 111 (überall mindestens zwei Einsen). DNF: Y = (¬A ∧ B ∧ C) ∨ (A ∧ ¬B ∧ C) ∨ (A ∧ B ∧ ¬C) ∨ (A ∧ B ∧ C).
 2. A ∧ B ∧ C passt zu allen drei anderen. Du benutzt ihn dreimal.
-3. (A ∧ B ∧ C) ∨ (A ∧ B ∧ ¬C) = A ∧ B.
-4. (A ∧ B ∧ C) ∨ (A ∧ ¬B ∧ C) = A ∧ C.
-5. (A ∧ B ∧ C) ∨ (¬A ∧ B ∧ C) = B ∧ C.
+3. (A ∧ B ∧ C) ∨ (A ∧ B ∧ ¬C) = A ∧ B ∧ (C ∨ ¬C) = A ∧ B.
+4. (A ∧ B ∧ C) ∨ (A ∧ ¬B ∧ C) = A ∧ C ∧ (B ∨ ¬B) = A ∧ C.
+5. (A ∧ B ∧ C) ∨ (¬A ∧ B ∧ C) = B ∧ C ∧ (A ∨ ¬A) = B ∧ C.
 6. Ergebnis: **Y = (A ∧ B) ∨ (A ∧ C) ∨ (B ∧ C)**, also „irgendein Paar stimmt zu“.
 
 Mit Python über alle 8 Zeilen geprüft: DNF und vereinfachter Ausdruck sind gleich.
@@ -358,7 +378,7 @@ Mit Python über alle 8 Zeilen geprüft: DNF und vereinfachter Ausdruck sind gle
 ### Übung 6
 
 1. DNF: (¬A ∧ ¬B ∧ C) ∨ (¬A ∧ B ∧ C) ∨ (A ∧ ¬B ∧ C) ∨ (A ∧ B ∧ C).
-2. 001 und 011 zusammenfassen: ¬A ∧ C (B fällt weg).
-3. 101 und 111 zusammenfassen: A ∧ C (B fällt weg).
+2. 001 und 011 zusammenfassen: (¬A ∧ ¬B ∧ C) ∨ (¬A ∧ B ∧ C) = ¬A ∧ C ∧ (¬B ∨ B) = ¬A ∧ C (B fällt weg).
+3. 101 und 111 zusammenfassen: (A ∧ ¬B ∧ C) ∨ (A ∧ B ∧ C) = A ∧ C ∧ (¬B ∨ B) = A ∧ C (B fällt weg).
 4. (¬A ∧ C) ∨ (A ∧ C) = C (A fällt weg).
 5. Ergebnis: **Y = C**. In allen 1-Zeilen ist C = 1, A und B sind egal.

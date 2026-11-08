@@ -13,16 +13,16 @@ Klausurrelevant sind: Informationsbedarf, der Aufbau eines BI-Systems mit Data W
 
 **Was ist das?** Der Informationsbedarf ist Art, Menge und Qualität der Informationen, die eine Person für ihre Aufgabe in einer bestimmten Zeit braucht. Vier Begriffe musst du trennen:
 
-| Begriff | Bedeutung |
-|---|---|
-| objektiver Bedarf | was die Aufgabe wirklich erfordert |
-| subjektiver Bedarf | was die Person für nötig hält |
-| Nachfrage | was sie tatsächlich anfragt |
-| Angebot | was verfügbar ist |
+| Begriff | Bedeutung | Beispiel Arztbesuch |
+|---|---|---|
+| objektiver Bedarf | was die Aufgabe wirklich erfordert | Die Ärztin braucht dein Blutbild. |
+| subjektiver Bedarf | was die Person für nötig hält | Sie glaubt, Blutdruck reicht. |
+| Nachfrage | was sie tatsächlich anfragt | Sie misst nur den Blutdruck. |
+| Angebot | was verfügbar ist | In der Akte liegen Röntgenbilder von vor zehn Jahren. |
 
 Ziel ist, dass sich diese vier Mengen möglichst stark überschneiden.
 
-**Pull:** Der Nutzer holt die Information selbst (Suche, Abfrage). **Push:** Das System liefert sie von sich aus (Bericht jeden Montag, Warnmeldung).
+**Pull** („ziehen“): Der Nutzer holt die Information selbst (Suche, Abfrage), wie wenn du die Wetter-App öffnest. **Push** („schieben“): Das System liefert sie von sich aus (Bericht jeden Montag, Warnmeldung), wie die Unwetterwarnung, die von selbst aufs Handy kommt.
 
 > [!IMPORTANT]
 > **Das Wichtigste**
@@ -33,6 +33,10 @@ Ziel ist, dass sich diese vier Mengen möglichst stark überschneiden.
 > „Der objektive Informationsbedarf ist das, was eine Managerin bei der IT anfragt“ ist falsch. Das ist die Nachfrage.
 
 ## Business Intelligence und Data Warehouse
+
+**In einem Satz:** Ein Data Warehouse ist ein zentrales Archiv, in dem die Daten aller Systeme sauber aufbereitet für Auswertungen liegen.
+
+**Stell dir vor:** Jede Filiale schreibt ihre Verkäufe in ihr eigenes Kassenbuch, jede ein bisschen anders. Einmal pro Nacht holt jemand alle Kassenbücher ab (**E**xtract), schreibt sie einheitlich ab (**T**ransform) und legt sie ins große Archiv der Zentrale (**L**oad). Dort kann die Chefin auch nach Jahren noch nachschauen. Ein **Data Mart** ist ein Regal im Archiv nur für eine Abteilung.
 
 **Was ist das?** Business Intelligence (BI) umfasst Konzepte, Prozesse und Werkzeuge, um Unternehmens- und Wettbewerbsdaten in Wissen für Entscheidungen umzuwandeln.
 
@@ -73,7 +77,7 @@ Aufbereitet wird im T von ETL, in vier Schritten:
 
 ## Vier Analysestufen
 
-**Was ist das?** Nach Gartner gibt es vier Stufen. Mit jeder steigen Nutzen und Anspruch.
+**Was ist das?** Nach Gartner gibt es vier Stufen. Mit jeder steigen Nutzen und Anspruch. Wie beim Arzt: Fieber messen (was?), Ursache finden (warum?), Verlauf vorhersagen (was wird?), Medikament verschreiben (was tun?). Die Fachwörter übersetzt: deskriptiv = beschreibend, diagnostisch = Ursache findend, prädiktiv = vorhersagend, präskriptiv = empfehlend („vorschreibend“).
 
 | Stufe | Frage | Beispiel Sonnenschein AG |
 |---|---|---|
@@ -96,7 +100,7 @@ BI beantwortet vor allem die Stufen 1 und 2, Data Science die Stufen 3 und 4 (la
 
 **Was ist das?** Data Science ist ein interdisziplinäres Fachgebiet (Informatik, Statistik, Fachwissen). Mit wissenschaftlichem Vorgehen werden relevante Informationen aus großen Datenbeständen gewonnen und für Entscheidungen nutzbar gemacht.
 
-Die Begriffe sind ineinander verschachtelt: **Künstliche Intelligenz** ⊃ **Machine Learning** ⊃ **Deep Learning** ⊃ **Generative KI**. Ein **Expertensystem** ist KI mit festen Regeln, die Menschen vorgeben. **Machine Learning** lernt die Regeln aus Daten. Data Science ist die Disziplin mit dem ganzen Prozess, ML ist eines ihrer Werkzeuge.
+Die Begriffe sind ineinander verschachtelt: **Künstliche Intelligenz** ⊃ **Machine Learning** ⊃ **Deep Learning** ⊃ **Generative KI**. Das Zeichen ⊃ liest du „enthält“: wie Europa ⊃ Deutschland ⊃ Baden-Württemberg. Jede generative KI ist also auch Machine Learning, aber nicht umgekehrt. Ein **Expertensystem** ist KI mit festen Regeln, die Menschen vorgeben (wie ein Kochbuch). **Machine Learning** lernt die Regeln aus Daten (wie jemand, der so lange Kuchen probiert, bis er selbst herausfindet, was einen guten ausmacht). Data Science ist die Disziplin mit dem ganzen Prozess, ML ist eines ihrer Werkzeuge.
 
 **CRISP-DM** ist das Vorgehensmodell für Data-Science-Projekte, mit sechs Phasen:
 
@@ -121,6 +125,16 @@ Die Phasen haben Rücksprünge, es ist kein Wasserfall.
 
 **Was ist das?** Machine Learning lässt Systeme aus Erfahrung lernen, ohne dass man jede Regel programmiert. Im Datensatz ist jede Zeile eine Beobachtung, jede Spalte ein Merkmal (Feature). Die **Zielspalte** (Target) ist das, was vorhergesagt werden soll.
 
+**Mit Beispiel:** eine kleine Tabelle mit alten Buchungen.
+
+| Reiseziel | Tage bis Abreise | Preis | storniert? ← Zielspalte |
+|---|---|---|---|
+| Kreta | 120 | 900 € | ja |
+| Mallorca | 30 | 600 € | nein |
+| Kreta | 200 | 1 100 € | ja |
+
+Die Zielspalte ist bekannt (ja/nein, also eine Kategorie): Das Modell soll für eine neue Buchung „storniert ja oder nein?“ vorhersagen. Das ist Klassifikation. Stünde in der Zielspalte eine Zahl (etwa „Anzahl Mitreisende“), wäre es Regression. Gäbe es gar keine Zielspalte und du suchst nur ähnliche Zeilen, wäre es Clustering.
+
 So wählst du die Methode:
 
 1. **Frage 1:** Gibt es eine Zielspalte mit bekannten Antworten?
@@ -133,7 +147,7 @@ So wählst du die Methode:
 
 **Clustering-Beispiel aus der Vorlesung:** 46 Kunden, x = Anzahl Buchungen, y = Umsatz pro Buchung. Es entstehen drei Gruppen: wenige teure Reisen, Vielbucher, Gelegenheitskunden. Ähnlich innerhalb, verschieden zwischen den Gruppen. Die Bedeutung der Gruppen gibt der Mensch.
 
-**Train/Test (Anhang):** Man teilt alte Daten, zum Beispiel 80 % zum Lernen und 20 % zum Testen. Das Modell sieht die Testantworten nicht. So erkennt man, ob es nur auswendig gelernt hat (Overfitting).
+**Train/Test (Anhang):** Wie beim Lernen für die Klausur: Du übst mit alten Aufgaben, aber ob du es verstanden hast, zeigt erst eine Aufgabe, die du noch nicht kennst. Man teilt alte Daten, zum Beispiel 80 % zum Lernen und 20 % zum Testen. Das Modell sieht die Testantworten nicht. So erkennt man, ob es nur auswendig gelernt hat (Overfitting).
 
 > [!IMPORTANT]
 > **Das Wichtigste**
@@ -187,14 +201,14 @@ So wählst du die Methode:
 
 ### Übung 3
 
-1. **Harmonisierung:** unterschiedliche Bezeichnungen für dasselbe.
-2. **Bereinigung:** falsche bzw. fehlende Werte.
+1. **Harmonisierung:** unterschiedliche Bezeichnungen für dasselbe Land werden zu einer.
+2. **Bereinigung:** „01.01.1900“ ist offensichtlich ein Platzhalter, leer heißt fehlend. Beides ist ein Fehler.
 3. **Verdichtung:** zusammenfassen.
 4. **Anreicherung:** Kennzahl berechnen.
 
 ### Übung 4
 
-**Falsch.** Das Ziel ist eine Zahl, also Regression.
+**Falsch.** Prüffrage aus dem Methodenschema: Was steht in der Zielspalte? Eine Anzahl Buchungen, also eine Zahl. Damit ist es Regression. Klassifikation wäre es nur bei einer Kategorie wie „viel / wenig“.
 
 ### Übung 5
 

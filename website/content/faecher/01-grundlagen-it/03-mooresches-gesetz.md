@@ -46,7 +46,15 @@ Warum hängt die Transistorzahl mit dem Preis zusammen? Die Fläche ist der wich
 
 ## Mit Verdopplungen rechnen
 
-**Was ist das?** Diese Rechnung ist eine Ergänzung zur Veranschaulichung. Wenn sich etwas alle T Jahre verdoppelt, wächst es in t Jahren um den Faktor 2 hoch (t / T).
+**In einem Satz:** Verdoppeln heißt, du nimmst nicht jedes Mal etwas dazu, sondern jedes Mal mal 2.
+
+**Stell dir vor:** Du faltest ein Blatt Papier. Nach einmal Falten liegen 2 Lagen aufeinander, nach zweimal 4, nach dreimal 8. Jede Faltung verdoppelt.
+
+| Verdopplungen | 0 | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|---|
+| Faktor | 1 | 2 | 4 | 8 | 16 | 32 |
+
+**Die Formel:** Diese Rechnung ist eine Ergänzung zur Veranschaulichung. Wenn sich etwas alle T Jahre verdoppelt, wächst es in t Jahren um den Faktor 2 hoch (t / T). Dabei ist t der ganze Zeitraum (zum Beispiel 10 Jahre), T die Zeit für eine Verdopplung (zum Beispiel 2 Jahre) und t / T die Anzahl der Verdopplungen.
 
 So gehst du vor:
 
@@ -120,7 +128,9 @@ So gehst du vor:
 
 ### Das Gesetz von Metcalfe
 
-Mit n Teilnehmern gibt es n · (n − 1) mögliche Verbindungen. So rechnest du:
+**Stell dir vor:** Ein Telefon allein ist nutzlos. Mit zwei Telefonen kann A B anrufen und B A. Mit drei Telefonen kann jeder jeden der beiden anderen anrufen. Jeder neue Teilnehmer bringt Verbindungen zu *allen* bisherigen mit.
+
+Mit n Teilnehmern gibt es n · (n − 1) mögliche Verbindungen. Auf Deutsch: Jeder der n Teilnehmer kann die n − 1 anderen erreichen. Die Formel zählt „A ruft B an“ und „B ruft A an“ getrennt. So rechnest du:
 
 1. Teilnehmerzahl n bestimmen.
 2. n mit (n − 1) multiplizieren.
@@ -194,6 +204,8 @@ Gordon Moore stellte 1965 fest, dass sich die Anzahl der Transistoren (Komponent
 1. Verdopplungen: 12 / 2 = 6.
 2. Faktor: 2⁶ = 64.
 3. Ergebnis: 1 Milliarde × 64 = **64 Milliarden** Transistoren.
+
+Zum Nachzählen: 1 → 2 → 4 → 8 → 16 → 32 → 64 Milliarden nach 2, 4, 6, 8, 10, 12 Jahren.
 
 ### Übung 4
 

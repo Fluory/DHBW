@@ -30,11 +30,13 @@ Aufgabe 11 der Klausur (4–6 Punkte) verlangt „Eigenschaften, Analyse SQL, Sy
 
 **Was ist das?**
 
+**Stell dir vor:** Eine Bibliothek. Die Bücher im Regal sind die **Datenbank**. Die Bibliothekarin, die Bücher einsortiert, ausgibt und aufpasst, wer was darf, ist das **DBMS**. Der Katalog, in dem steht, welche Regale es gibt und was in welches Regal gehört, ist das **Data Dictionary**.
+
 - Eine **Datenbank (DB)** ist eine Sammlung logisch zusammenhängender Daten für einen bestimmten Zweck.
 - Ein **Datenbankmanagementsystem (DBMS)** ist die Software, mit der man eine Datenbank erstellt und pflegt.
 - **Datenbanksystem = DB + DBMS** (+ Anwendungen).
 
-Das DBMS verwaltet zwei Arten von Daten: die **Nutzdaten** (Kunden, Lieferanten …) und die **Metadaten** im **Data Dictionary**, dem Datenbankkatalog. Dort steht, welche Tabellen es gibt, welche Spalten und Datentypen sie haben und welche Einschränkungen gelten. Benutzer greifen über SQL, Eingabemasken oder Schnittstellen wie ODBC zu.
+Das DBMS verwaltet zwei Arten von Daten: die **Nutzdaten** (Kunden, Lieferanten …) und die **Metadaten** im **Data Dictionary**, dem Datenbankkatalog. Dort steht, welche Tabellen es gibt, welche Spalten und Datentypen sie haben und welche Einschränkungen gelten. Benutzer greifen über SQL, Eingabemasken oder Schnittstellen wie ODBC zu. **Metadaten** heißt auf Deutsch „Daten über Daten“: nicht „Erika wohnt in Musterstadt“, sondern „die Spalte Wohnort ist Text, höchstens 40 Zeichen“.
 
 **Vorteile eines DBMS:** Redundanzkontrolle (Daten nur einmal, verschiedene Sichten über Views), Zugriffsbeschränkungen, dauerhafte Speicherung, Mehrbenutzerzugriff, Integritätsbedingungen (zum Beispiel nur gültige Noten), Wiederherstellung nach Fehlern.
 
@@ -50,7 +52,11 @@ Das DBMS verwaltet zwei Arten von Daten: die **Nutzdaten** (Kunden, Lieferanten 
 
 ## Das Entity-Relationship-Modell
 
-**Was ist das?** Das ER-Modell (Peter Chen, 1976) beschreibt die Daten aus Sicht der Benutzer, unabhängig von der späteren Software. Man nennt das die **konzeptuelle** Ebene. Darunter liegen die **logische** Ebene (Tabellen) und die **physische** Ebene (Dateien, Indizes).
+**In einem Satz:** Ein ER-Modell ist eine Skizze, welche Dinge es gibt, was man über sie weiß und wie sie zusammenhängen.
+
+**Stell dir vor:** Karteikarten an einer Pinnwand. Jede Kartensorte (Leser, Buch) ist ein **Entitätstyp**, jede einzelne Karte eine **Entität**, die Felder auf der Karte (Name, Titel) sind **Attribute**. Wollfäden zwischen den Karten („leiht aus“) sind die **Beziehungen**.
+
+**Was ist das?** Das ER-Modell (Peter Chen, 1976; ER = Entity-Relationship, also „Ding-Beziehung“) beschreibt die Daten aus Sicht der Benutzer, unabhängig von der späteren Software. Man nennt das die **konzeptuelle** Ebene. Darunter liegen die **logische** Ebene (Tabellen) und die **physische** Ebene (Dateien, Indizes).
 
 | Begriff | Bedeutung | Beispiel | Symbol (Chen) |
 |---|---|---|---|
@@ -101,6 +107,10 @@ Das Rückgabedatum gehört weder zum Buch noch zum Leser, sondern zur einzelnen 
 > Nur aus einer Richtung zu fragen, ist der häufigste Fehler. Kommt auf beide Fragen „viele“ heraus, ist es m:n.
 
 ## Das relationale Modell
+
+**In einem Satz:** Im relationalen Modell ist alles eine Tabelle, und Tabellen verweisen über Nummern aufeinander.
+
+**Stell dir vor:** Deine Krankenkasse kennt dich über die Versichertennummer (**Primärschlüssel**: eindeutig, nur einmal vergeben). Auf jeder Arztrechnung steht diese Nummer, damit klar ist, zu wem sie gehört (**Fremdschlüssel**: ein Verweis auf den Primärschlüssel in einer anderen Tabelle). Die Rechnung muss deine Adresse nicht noch einmal enthalten.
 
 **Was ist das?** Das relationale Modell (Edgar F. Codd, 1970) stellt die Datenbank als Sammlung von **Relationen**, also Tabellen, dar.
 
@@ -165,7 +175,7 @@ Für die SQL-Abfragen nutzt die Vorlesung die Beispieldaten „Firma“ (Auszug)
 
 ## SQL: Daten anlegen und ändern
 
-**Was ist das?** SQL (Structured Query Language) ist seit 1987 ISO-Standard. SQL ist **deklarativ**: Du beschreibst, was du haben willst, nicht wie es gesucht wird.
+**Was ist das?** SQL (Structured Query Language) ist seit 1987 ISO-Standard. SQL ist **deklarativ**: Du beschreibst, was du haben willst, nicht wie es gesucht wird. Wie im Restaurant: Du bestellst „eine Pizza Margherita“ und erklärst nicht, wie man Teig knetet.
 
 ```sql
 CREATE TABLE Firma (
@@ -190,6 +200,10 @@ DELETE FROM Student WHERE MatrNr = 87654321;
 > Ohne WHERE wirken UPDATE und DELETE auf **alle** Zeilen. Texte stehen in einfachen geraden Hochkommas '…'. Standard-SQL schreibt DELETE FROM, nicht nur DELETE.
 
 ## SQL-Abfragen analysieren
+
+**In einem Satz:** Eine SQL-Abfrage ist dasselbe wie in Excel eine Tabelle filtern und nur bestimmte Spalten zeigen.
+
+**Stell dir vor:** Du öffnest die Excel-Liste der Angestellten (FROM), setzt einen Filter „Abteilung = 5“ (WHERE) und blendest alle Spalten außer Name und Gehalt aus (SELECT). GROUP BY ist eine Pivot-Tabelle: „Zeig mir pro Abteilung die Summe“.
 
 **Was ist das?** Jede Abfrage hat diese Grundform:
 
@@ -240,7 +254,7 @@ GROUP BY ABT;
 | 4 | 3 | 31000 |
 | 5 | 4 | 33250 |
 
-**Join:** Stehen die gesuchten Spalten in verschiedenen Tabellen, schreibst du alle Tabellen ins FROM und im WHERE, welcher Fremdschlüssel zu welchem Primärschlüssel passt.
+**Join:** Das ist der SVERWEIS aus Excel: In der einen Tabelle steht eine Nummer, und du schlägst in der anderen Tabelle nach, was zu dieser Nummer gehört. Stehen die gesuchten Spalten in verschiedenen Tabellen, schreibst du alle Tabellen ins FROM und im WHERE, welcher Fremdschlüssel zu welchem Primärschlüssel passt.
 
 **Durchgerechnetes Beispiel 3 (Folie):** Für jedes Projekt in Stafford die Projektnummer, die Nummer der Abteilung und den Nachnamen ihres Leiters.
 
@@ -290,6 +304,8 @@ Ergebnis: 1 | 1, 4 | 2, 5 | 3.
 Alle SQL-Ergebnisse in diesem Kapitel sind mit SQLite auf den Firmentabellen nachgeprüft.
 
 ## OLTP und OLAP
+
+**Stell dir vor:** Die Kasse im Supermarkt bucht jeden Einkauf einzeln und sofort (OLTP). Die Filialleitung schaut sich am Monatsende an, welche Produkte sich wie verkauft haben (OLAP). Das eine ist Tagesgeschäft, das andere Auswertung.
 
 **Was ist das?** Datenbanken dienen zwei verschiedenen Zwecken. Über **ETL** (Extract, Transform, Load) wandern die Daten vom einen ins andere System.
 
@@ -360,10 +376,10 @@ Das Data Dictionary ist der Datenbankkatalog mit den Metadaten: welche Tabellen,
 a) Bei OR reicht eine Bedingung.
 
 1. Abteilung 5: Smith, Wong, Narayan, English.
-2. Gehalt über 40000: Wallace (43000), Borg (55000).
-3. Ergebnis: **Smith, Wong, Wallace, Narayan, English, Borg**.
+2. Gehalt über 40000: Wallace (43000), Borg (55000). Wong hat genau 40000 und ist nicht „über“, kommt aber schon über Abteilung 5 hinein.
+3. Ergebnis in Tabellenreihenfolge: **Smith, Wong, Wallace, Narayan, English, Borg**.
 
-b) Pro Abteilung das höchste Gehalt:
+b) Erst Gruppen bilden wie im Beispiel 2: Abteilung 1 (55000), Abteilung 4 (25000, 43000, 25000), Abteilung 5 (30000, 40000, 38000, 25000). Dann pro Gruppe das höchste Gehalt:
 
 | ABT | MAX(GEHALT) |
 |---|---|
@@ -373,9 +389,11 @@ b) Pro Abteilung das höchste Gehalt:
 
 ### Übung 4
 
-1. FROM und WHERE: Projekte in Houston sind 3 (ABTNR 5) und 20 (ABTNR 1).
-2. Join: ABTNR 5 = Research, ABTNR 1 = Headquarters.
-3. Ergebnis: **3 | Research** und **20 | Headquarters**.
+1. FROM: Tabellen PROJEKT und ABTEILUNG.
+2. WHERE, Teil PSTANDORT = 'Houston': In PROJEKT stehen in Houston die Projekte 3 (ABTNR 5) und 20 (ABTNR 1).
+3. WHERE, Teil ABTNR = ABTNUMMER (Join): In ABTEILUNG nachschlagen. ABTNUMMER 5 heißt Research, ABTNUMMER 1 heißt Headquarters.
+4. SELECT: nur PNUMMER und ANAME ausgeben.
+5. Ergebnis: **3 | Research** und **20 | Headquarters**.
 
 ### Übung 5
 
@@ -388,7 +406,7 @@ WHERE ABT = ABTNUMMER
 
 1. Ausgabe: NNAME.
 2. Die Spalte ANAME steht in ABTEILUNG, NNAME in ANGESTELLTER. Also Join über ABT = ABTNUMMER.
-3. Zeilenbedingung: ANAME = 'Research'.
+3. Zeilenbedingung: ANAME = 'Research'. Research hat ABTNUMMER 5, also bleiben die Angestellten mit ABT = 5.
 
 Ergebnis: **Smith, Wong, Narayan, English**.
 

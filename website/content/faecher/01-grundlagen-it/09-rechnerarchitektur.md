@@ -11,10 +11,12 @@ Das ist der größte Einzelblock der Klausur: 8 Punkte für „Skizzen, Eigensch
 
 ## Die Von-Neumann-Architektur
 
+**In einem Satz:** Beim Von-Neumann-Rechner liegen Programm und Daten im selben Speicher und reisen über dieselbe Leitung.
+
 **Was ist das?** John von Neumann beschrieb 1946 einen Universalrechner, der nicht an ein festes Programm gebunden ist. Der Kern der Idee:
 
 - Daten **und** Programme werden binär kodiert und liegen im **gleichen Speicher**.
-- Programmcode und Daten werden über den **gleichen Bus** transportiert.
+- Programmcode und Daten werden über den **gleichen Bus** transportiert. Ein **Bus** ist ein Bündel von Leitungen, über das die Bauteile Daten austauschen, wie eine gemeinsame Straße zwischen Häusern.
 
 Daraus folgt: Programme können wie Daten geladen, geändert und gespeichert werden. Deshalb ist der Rechner universell programmierbar (Stored-Program-Prinzip). Befehle werden der Reihe nach abgearbeitet. Steuerung und Rechnen sind getrennt.
 
@@ -69,7 +71,7 @@ Was unbedingt in die Skizze gehört:
 
 ### Register
 
-Register sind sehr schnelle, kleine Speicher direkt in der CPU. Sie gehören nicht zum Hauptspeicher.
+Register sind sehr schnelle, kleine Speicher direkt in der CPU, wie Notizzettel neben dem Koch, im Gegensatz zum Vorratsraum (Hauptspeicher). Sie gehören nicht zum Hauptspeicher.
 
 - **Akkumulator** (im Rechenwerk): hält Operanden und Ergebnisse.
 - **Befehlszähler** (Program Counter, im Steuerwerk): enthält die **Adresse** des nächsten Befehls.
@@ -87,6 +89,17 @@ Register sind sehr schnelle, kleine Speicher direkt in der CPU. Sie gehören nic
 ## Der Von-Neumann-Zyklus
 
 **Was ist das?** Der Rechner arbeitet jeden Befehl in fünf Phasen ab. Danach beginnt der Zyklus von vorne.
+
+**Stell dir vor:** Ein Koch arbeitet ein Rezept ab. Sein Finger liegt auf der aktuellen Zeile (Befehlszähler).
+
+| Phase | Koch | Rechner |
+|---|---|---|
+| FETCH („holen“) | liest die Zeile „2 Eier dazugeben“ | lädt den Befehl ins Befehlsregister |
+| DECODE („entschlüsseln“) | versteht: Ich muss etwas dazugeben | Steuerwerk erkennt, was zu tun ist |
+| FETCH OPERANDS („Werte holen“) | holt 2 Eier aus dem Kühlschrank | holt die Werte aus dem Speicher |
+| EXECUTE („ausführen“) | gibt sie in die Schüssel | ALU rechnet |
+| UPDATE INSTRUCTION POINTER („Zeiger weiterstellen“) | Finger eine Zeile weiter | Befehlszähler auf den nächsten Befehl |
+
 
 1. **FETCH:** den Befehl aus dem Speicher in das Befehlsregister laden.
 2. **DECODE:** Das Steuerwerk entschlüsselt den Befehl in Schaltanweisungen für das Rechenwerk.
@@ -106,7 +119,9 @@ Register sind sehr schnelle, kleine Speicher direkt in der CPU. Sie gehören nic
 
 ## Die Harvard-Architektur
 
-**Was ist das?** Die Harvard-Architektur wurde entwickelt, um den Engpass der Von-Neumann-Architektur zu umgehen. Ihre Merkmale:
+**In einem Satz:** Harvard gibt Programm und Daten je einen eigenen Speicher und eine eigene Leitung.
+
+**Was ist das?** Das ist die Küche mit zwei Türen aus der Einleitung. Die Harvard-Architektur wurde entwickelt, um den Engpass der Von-Neumann-Architektur zu umgehen. Ihre Merkmale:
 
 - **Getrennte Speicher** für Befehle und Daten, mit eigenen Adressen.
 - **Getrennte Busse** für Befehle und Daten.
@@ -141,7 +156,7 @@ Register sind sehr schnelle, kleine Speicher direkt in der CPU. Sie gehören nic
 
 **Was ist das?** Die Folie nennt für Von Neumann zwei Nachteile und einen Vorteil:
 
-- **Nachteil 1, Von-Neumann-Flaschenhals:** Code und Daten laufen nacheinander über den gemeinsamen Bus. Eine Anweisung braucht mindestens zwei Takte: einen für den Befehl, einen für die Daten. Der Engpass ist der Bus, nicht das Rechenwerk.
+- **Nachteil 1, Von-Neumann-Flaschenhals:** Wie bei einer Flasche ist der Hals die enge Stelle, egal wie groß der Bauch ist. Code und Daten laufen nacheinander über den gemeinsamen Bus. Eine Anweisung braucht mindestens zwei Takte: einen für den Befehl, einen für die Daten. Der Engpass ist der Bus, nicht das Rechenwerk.
 - **Nachteil 2, Sicherheit:** Weil Code und Daten im selben Speicher liegen, kann man Code einschleusen, der als Daten getarnt ist (zum Beispiel über einen Buffer Overflow).
 - **Vorteil:** einfacher zu bauen und billiger als Harvard.
 
@@ -184,7 +199,7 @@ Welche Prozessoren nutzen was?
 
 Moderne CPUs werden schneller durch größere, mehrstufige Caches (L1 bis L3), Sprungvorhersage, spekulative Ausführung und mehrere Kerne (Multicore).
 
-Das Mainboard verbindet alles über drei Busse:
+Das Mainboard verbindet alles über drei Busse. Stell dir einen Paketdienst vor: Der Steuerbus sagt „abholen oder liefern?“, der Adressbus ist die Hausnummer, der Datenbus ist das Paket selbst.
 
 | Bus | Was läuft darüber? |
 |---|---|

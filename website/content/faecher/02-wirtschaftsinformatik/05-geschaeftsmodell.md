@@ -31,7 +31,11 @@ Daraus folgen die Anforderungen: Welche Aufgaben unterstützt das System? Wer ar
 
 ## Was ist ein Geschäftsmodell?
 
-**Was ist das?** Ein Geschäftsmodell beschreibt das Grundprinzip, nach dem ein Unternehmen Werte schafft, vermittelt und erfasst. Es hat vier Kernelemente (nach Shafer et al.):
+**In einem Satz:** Ein Geschäftsmodell erklärt, für wen eine Firma was tut und wie sie damit Geld verdient.
+
+**Stell dir vor:** Eine Eisdiele. Kunden: Familien und Spaziergänger. Wertversprechen: Erfrischung, selbst gemachtes Eis. Wertschöpfung: Eis herstellen mit Milch vom Bauern nebenan (Partner). Erlösmodell: 1,80 € pro Kugel, abzüglich Miete, Zutaten und Personal.
+
+**Was ist das?** Ein Geschäftsmodell beschreibt das Grundprinzip, nach dem ein Unternehmen Werte schafft, vermittelt und erfasst. Auf Deutsch: Wert **schaffen** (etwas herstellen, das Kunden nützt), **vermitteln** (es zum Kunden bringen) und **erfassen** (dafür Geld bekommen). Es hat vier Kernelemente (nach Shafer et al.):
 
 | Kernelement | Frage | Felder im Canvas |
 |---|---|---|
@@ -50,7 +54,9 @@ Daraus folgen die Anforderungen: Welche Aufgaben unterstützt das System? Wer ar
 
 ## Der Business Model Canvas
 
-**Was ist das?** Der Canvas (Osterwalder und Pigneur) beschreibt ein Geschäftsmodell auf einer Seite in neun Feldern. Er ist einfach, gut für Teamarbeit und stellt Kunden und Wertversprechen in den Mittelpunkt. Er ist ein erster Schritt, kein vollständiger Businessplan.
+**In einem Satz:** Der Canvas ist ein Blatt mit neun Kästchen, in das du ein Geschäftsmodell als Stichpunkte einträgst.
+
+**Was ist das?** „Canvas“ heißt „Leinwand“. Der Canvas (Osterwalder und Pigneur) beschreibt ein Geschäftsmodell auf einer Seite in neun Feldern. Die rechte Hälfte handelt von den Kunden (wer, was, wie, wofür zahlen sie), die linke Hälfte von der Firma selbst (was tun, was brauchen, mit wem, was kostet es). Er ist einfach, gut für Teamarbeit und stellt Kunden und Wertversprechen in den Mittelpunkt. Er ist ein erster Schritt, kein vollständiger Businessplan.
 
 | Feld | Leitfrage |
 |---|---|
@@ -87,7 +93,7 @@ So füllst du einen Canvas:
 | Schlüsselpartner | Plattenfirmen und Künstler, Podcast-Produzenten, Cloud-Anbieter |
 | Kostenstruktur | Lizenzzahlungen (größter Posten), IT, Entwicklung, Marketing |
 
-**Freemium:** Der Zugang ist gratis, um viele Nutzer anzuziehen. Später sollen sie eine zahlende Version kaufen. Das funktioniert, weil ein weiterer Nutzer bei digitalen Diensten fast keine variablen Kosten verursacht.
+**Freemium** (aus „free“ = gratis und „Premium“): Der Zugang ist gratis, um viele Nutzer anzuziehen. Später sollen sie eine zahlende Version kaufen. Das funktioniert, weil ein weiterer Nutzer bei digitalen Diensten fast keine variablen Kosten verursacht.
 
 > [!IMPORTANT]
 > **Das Wichtigste**
@@ -100,6 +106,8 @@ So füllst du einen Canvas:
 ## Aufbau- und Ablauforganisation
 
 **Was ist das?**
+
+**Stell dir vor:** In einer Fußballmannschaft legt die Aufstellung fest, wer welche Position hat und wer Kapitän ist. Das ist die **Aufbauorganisation**. Die Spielzüge, also wer den Ball wann an wen passt, sind die **Ablauforganisation**.
 
 - Die **Aufbauorganisation** ist das hierarchische Gerüst eines Unternehmens: Stellen, Abteilungen und **Weisungsbeziehungen** (wer ist wem unterstellt). Man zeigt sie im Organigramm. Sie ist die Voraussetzung für die Ablauforganisation.
 - Die **Ablauforganisation** gestaltet die oft abteilungsübergreifenden Prozesse zur Leistungserstellung: Was geschieht wann, wo und durch wen?

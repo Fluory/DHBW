@@ -17,6 +17,10 @@ Bis Mitte der 1990er-Jahre hieß es: „IT unterstützt“ (EDV-Abteilung, Routi
 
 ## Drei Stufen bis zur digitalen Transformation
 
+**In einem Satz:** Digitale Transformation heißt, dass sich durch IT nicht nur die Arbeit, sondern das ganze Geschäft ändert.
+
+**Stell dir vor:** Eine Videothek. Stufe 1: Die Liste der Filme hängt als PDF auf der Website. Stufe 2: Man reserviert online, und das System merkt sich das ohne Zettel. Stufe 3: Es gibt keine Kassetten mehr, sondern ein Streaming-Abo. Erst hier verdient das Unternehmen auf eine neue Art Geld.
+
 **Was ist das?** Nach Verhoef et al. gibt es drei Stufen. Je höher die Stufe, desto tiefer die Veränderung.
 
 | Stufe | Was ändert sich? | Beispiel Sonnenschein AG |
@@ -60,9 +64,11 @@ So ordnest du ein Beispiel ein:
 
 ## Internet der Dinge und Industrie 4.0
 
-**Was ist das?** Das **Internet der Dinge (IoT)** vernetzt physische Gegenstände mit Internettechnik. Smarte Gegenstände lassen sich identifizieren, adressieren und orten, verarbeiten Informationen, haben Sensoren und können etwas bewirken. **Beispiel:** ein Armband im Freizeitpark als Eintrittskarte, Zimmerschlüssel und Zahlungsmittel.
+**In einem Satz:** Beim Internet der Dinge sind Alltagsgegenstände selbst mit dem Internet verbunden und tauschen Daten aus.
 
-**Industrie 4.0** wendet das IoT auf die Fertigung an. Produkte, Maschinen und Informationssysteme steuern die Produktion gemeinsam (Smart Factory). Ziel: **Losgröße 1 zu Kosten der Massenfertigung**, also Einzelstücke so günstig wie Massenware.
+**Was ist das?** Das **Internet der Dinge (IoT, Internet of Things)** vernetzt physische Gegenstände mit Internettechnik. Smarte Gegenstände lassen sich identifizieren, adressieren und orten, verarbeiten Informationen, haben Sensoren und können etwas bewirken. **Beispiel:** ein Armband im Freizeitpark als Eintrittskarte, Zimmerschlüssel und Zahlungsmittel.
+
+**Industrie 4.0** wendet das IoT auf die Fertigung an. Produkte, Maschinen und Informationssysteme steuern die Produktion gemeinsam (Smart Factory). Ziel: **Losgröße 1 zu Kosten der Massenfertigung**, also Einzelstücke so günstig wie Massenware. Die **Losgröße** ist die Zahl gleicher Stücke, die am Stück gefertigt werden. Losgröße 1 heißt: jedes Stück ist anders, zum Beispiel ein Müsli, das du online selbst zusammenstellst.
 
 ## Smarte Produkte und digitale Geschäftsmodelle
 
@@ -76,7 +82,7 @@ So ordnest du ein Beispiel ein:
 | Plattform | Anbieter und Kunden zusammenbringen, an jedem Geschäft mitverdienen | Suche, Bezahlung, Bewertung laufen digital | Etsy, Airbnb, Booking.com |
 | Produkt als Service | Nutzung oder Ergebnis verkaufen statt Besitz | vernetzte Produkte messen ihre Nutzung | Licht als Service, Druckluft je Kubikmeter |
 
-Plattformen leben von **Netzwerkeffekten**: Mehr Käufer machen die Plattform für Verkäufer attraktiver und umgekehrt.
+Plattformen leben von **Netzwerkeffekten**: Mehr Käufer machen die Plattform für Verkäufer attraktiver und umgekehrt. Wie ein Wochenmarkt: Wo viele Stände sind, kommen viele Besucher, und wo viele Besucher sind, wollen mehr Händler einen Stand.
 
 > [!IMPORTANT]
 > **Das Wichtigste**
@@ -88,7 +94,11 @@ Plattformen leben von **Netzwerkeffekten**: Mehr Käufer machen die Plattform f�
 
 ## Große Sprachmodelle
 
-**Was ist das?** Ein großes Sprachmodell (LLM) entsteht in zwei Schritten und wird dann genutzt:
+**In einem Satz:** Ein Sprachmodell ist eine sehr gute Wortergänzung, die das jeweils wahrscheinlichste nächste Wortstück vorhersagt.
+
+**Stell dir vor:** Die Wortvorschläge auf deiner Handytastatur. Tippst du „Ich komme heute etwas“, schlägt sie „später“ vor. Ein LLM macht dasselbe, nur hat es viel mehr Text gelesen und schaut auf viel mehr Zusammenhang. Deshalb klingt die Antwort flüssig, aber es prüft nicht, ob sie stimmt.
+
+**Was ist das?** Ein großes Sprachmodell (LLM, Large Language Model) entsteht in zwei Schritten und wird dann genutzt:
 
 1. **Vortraining:** Es liest riesige Textmengen und lernt, das nächste **Token** vorherzusagen. So bekommt es Sprachgefühl und Allgemeinwissen, Stand: Ende des Trainings.
 2. **Feinabstimmung:** Mit Beispielen und Bewertungen durch Menschen lernt es, Anweisungen zu befolgen. Aus dem Textvervollständiger wird ein Assistent.
@@ -105,6 +115,8 @@ Begriffe: **Token** = Textbaustein, meist ein Wort oder Wortteil. **Prompt** = A
 > Auch nach der Feinabstimmung gibt es keine Garantie, dass Antworten stimmen.
 
 ## Chatbot, RAG und Agent
+
+**Stell dir vor:** Drei Leute an einer Hotelrezeption. Der **Chatbot** ist eine Aushilfe, die nur aus dem Gedächtnis antwortet. **RAG** (Retrieval-Augmented Generation, auf Deutsch etwa „Antworten mit vorherigem Nachschlagen“) ist eine Aushilfe, die erst im Hotelordner nachschlägt und dann antwortet. Der **Agent** ist eine Mitarbeiterin, die auch selbst am Computer ein Zimmer umbucht.
 
 **Was ist das?** Drei Ausbaustufen:
 
@@ -148,7 +160,7 @@ Ein Agent besteht aus drei Bausteinen: **Sprachmodell** (versteht, plant, formul
 
 ## SWOT-Analyse
 
-**Was ist das?** Die Geschäftsleitung der Sonnenschein AG lässt eine SWOT-Analyse zur digitalen Transformation erstellen.
+**Was ist das?** Die Geschäftsleitung der Sonnenschein AG lässt eine SWOT-Analyse zur digitalen Transformation erstellen. Übertragen auf dich vor der Klausur: Stärke „Ich kann gut rechnen“ und Schwäche „Ich vergesse Definitionen“ liegen bei dir (intern). Chance „Es gibt eine Probeklausur“ und Risiko „Die Klausur ist nur 48 Minuten lang“ kommen von außen (extern).
 
 | | hilfreich | hinderlich |
 |---|---|---|
@@ -201,7 +213,7 @@ Von der SWOT zur Empfehlung kommt man mit der **TOWS-Matrix**: Man kombiniert je
 
 ### Übung 1
 
-**Falsch.** Das ist Stufe 1, Informationen digitalisieren. Nur das Medium ändert sich. Transformation ändert das Geschäftsmodell.
+**Falsch.** Prüffragen von oben: Ändert sich nur, wie die Information vorliegt (Papier → PDF)? Ja. Also Stufe 1, Informationen digitalisieren. Nur das Medium ändert sich. Transformation ändert das Geschäftsmodell.
 
 ### Übung 2
 

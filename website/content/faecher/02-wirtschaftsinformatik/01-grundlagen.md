@@ -11,7 +11,9 @@ Dieser erste Block klärt die Grundbegriffe, auf denen das ganze Fach aufbaut. K
 
 ## Was die Wirtschaftsinformatik macht
 
-**Was ist das?** Nach der Definition von Mertens beschäftigt sich die Wirtschaftsinformatik mit der **Konzeption, Entwicklung, Nutzung und Wartung von Informationssystemen** sowie mit dem **Management des Produktionsfaktors Information** für betriebliche Aufgaben in Wirtschaft und Verwaltung.
+**In einem Satz:** Die Wirtschaftsinformatik sorgt dafür, dass Menschen und Software in einem Unternehmen gut zusammenarbeiten.
+
+**Was ist das?** Nach der Definition von Mertens beschäftigt sich die Wirtschaftsinformatik mit der **Konzeption, Entwicklung, Nutzung und Wartung von Informationssystemen** sowie mit dem **Management des Produktionsfaktors Information** für betriebliche Aufgaben in Wirtschaft und Verwaltung. Auf Deutsch: Informationen werden behandelt wie Maschinen oder Rohstoffe, also wie etwas, das ein Unternehmen zum Arbeiten braucht und deshalb planen und pflegen muss.
 
 Beim Leuchtenhändler sieht das so aus:
 
@@ -57,6 +59,8 @@ Ob Daten für jemanden eine Information sind, hängt von seinem Wissen und Zweck
 
 **Was ist das?**
 
+**Stell dir vor:** Ein Fußballverein ist ein System: Spieler, Trainer, Platz und Regeln hängen zusammen. Willst du nur das Spiel verstehen, gehören die elf Spieler dazu. Willst du die Finanzen verstehen, gehören auch Sponsoren und Fans dazu. Die Grenze ziehst du je nach Frage.
+
 - Ein **System** ist eine Menge verknüpfter Elemente, die sich von ihrer Umwelt abgrenzt. Offene Systeme tauschen Input und Output mit der Umwelt aus: Der Leuchtenhändler bekommt Bestellungen und Ware und gibt Lieferungen und Rechnungen ab. **Wo die Systemgrenze liegt, hängt vom Zweck der Betrachtung ab.**
 - Ein **Modell** ist eine vereinfachte Abbildung eines Systems für einen bestimmten Zweck. Unwichtiges wird bewusst weggelassen. **Beispiel:** Auf dem U-Bahn-Plan stimmen die Entfernungen nicht, aber zum Umsteigen ist er perfekt.
 
@@ -73,6 +77,10 @@ Die Qualität eines Modells ist seine Eignung für den Zweck. In der Wirtschafts
 ## Informationssystem und Anwendungssystem
 
 **Was ist das?**
+
+**In einem Satz:** Das Anwendungssystem ist die Software samt Rechner, das Informationssystem ist die Software samt den Menschen, die damit arbeiten.
+
+**Stell dir vor:** Ein Auto allein ist das Anwendungssystem. Auto plus Fahrerin, die weiß, wohin sie will, ist das Informationssystem. Ohne Fahrerin fährt das beste Auto nirgendwohin.
 
 - Ein **Informationssystem (IS)** besteht aus menschlichen **und** maschinellen Elementen. Es versorgt seine Nutzer mit den richtigen Informationen zur richtigen Zeit.
 - Ein **Anwendungssystem (AS)** ist nur der technische Teil: Anwendungssoftware, Basissoftware und Hardware.
@@ -100,7 +108,7 @@ Die Qualität eines Modells ist seine Eignung für den Zweck. In der Wirtschafts
 
 ## Das IS als sozio-technisches System
 
-**Was ist das?** Ein IS hat vier Komponenten:
+**Was ist das?** Bleib beim Auto: Damit eine Fahrt klappt, braucht es eine geübte Fahrerin (Mensch), ein Ziel (Aufgabe), ein funktionierendes Auto (Technik) und Verkehrsregeln (Organisation). Fehlt eins, kommt niemand an. Ein IS hat genau diese vier Komponenten:
 
 1. **Mensch:** gestaltet und nutzt das System.
 2. **Aufgabe:** der betriebliche Zweck, zum Beispiel Aufträge abwickeln.
@@ -123,7 +131,7 @@ Die Qualität eines Modells ist seine Eignung für den Zweck. In der Wirtschafts
 
 **Was ist das?** Die Wirtschaftsinformatik ist eine Realwissenschaft, genauer eine Wirtschaftswissenschaft neben BWL und VWL. Sie gilt als „hybride“ Disziplin, weil sie Ansätze vor allem aus BWL und Informatik verbindet.
 
-Es gibt zwei Forschungsrichtungen (Paradigmen), die sich ergänzen:
+Es gibt zwei Forschungsrichtungen (Paradigmen, auf Deutsch: Grundhaltungen beim Forschen), die sich ergänzen. Vergleich: Eine Ärztin untersucht, *warum* Menschen krank werden (verhaltensorientiert: erklären). Ein Ingenieur baut ein neues Hörgerät und prüft, ob es hilft (gestaltungsorientiert: entwerfen).
 
 | | verhaltensorientiert | gestaltungsorientiert |
 |---|---|---|
@@ -192,7 +200,7 @@ Das **Langfristziel** nach Mertens ist die „sinnhafte Vollautomation“: Was e
 
 ### Übung 4
 
-**Verhaltensorientiert.** Die Studie will erklären, wie und warum Menschen ein IS nutzen. Einen Prototyp bauen und testen wäre gestaltungsorientiert.
+**Verhaltensorientiert.** Die Studie baut nichts, sie beobachtet und fragt. Sie will erklären, wie und warum Menschen ein IS nutzen. Einen Prototyp bauen und testen wäre gestaltungsorientiert.
 
 ### Übung 5
 

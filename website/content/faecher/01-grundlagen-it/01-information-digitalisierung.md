@@ -27,7 +27,14 @@ Dieselben Daten können je nach Kontext ganz verschiedene Informationen sein:
 | 7 | Temperatur in °F in den USA | Es ist 7 Grad. | sehr kalt (etwa −14 °C) | Wintersachen |
 | 42 | Kontostand in Euro | Ich habe 42 €. | Kinokarte kostet 14 €. | Ich gehe ins Kino. |
 
-Die Informatik schaut auf drei Aspekte von Information. Der **syntaktische** Aspekt ist die Form (welcher Datentyp?). Der **semantische** Aspekt ist die Bedeutung (was heißt die Zahl?). Der **pragmatische** Aspekt fragt: Was mache ich jetzt damit? Jede Verarbeitung folgt dem **EVA-Prinzip**: Eingabe → Verarbeitung → Ausgabe.
+Die Informatik schaut auf drei Aspekte von Information. Am Beispiel einer roten Ampel:
+
+| Aspekt | Fachwort heißt auf Deutsch | Ampel-Beispiel |
+|---|---|---|
+| **syntaktisch** | Form: Wie sieht das Zeichen aus, welcher Datentyp? | Das obere Licht leuchtet rot. |
+| **semantisch** | Bedeutung: Was heißt das Zeichen? | „Halt.“ |
+| **pragmatisch** | Nutzen: Was mache ich jetzt damit? | Ich bremse. |
+ Jede Verarbeitung folgt dem **EVA-Prinzip**: Eingabe → Verarbeitung → Ausgabe.
 
 Rechner stellen alles binär dar: 0 heißt keine Spannung, 1 heißt Spannung. Eine Stelle heißt **Bit**, 8 Bit sind ein **Byte**.
 
@@ -43,7 +50,7 @@ Rechner stellen alles binär dar: 0 heißt keine Spannung, 1 heißt Spannung. Ei
 
 **Was ist das?** Claude E. Shannon hat 1948 untersucht, wie man Information sicher über einen Kanal schickt. Sein Modell ist eine Kette: Quelle → Sender → Kanal → Empfänger → Ziel. Auf den Kanal wirken Störungen.
 
-Wichtig ist der Begriff **Redundanz**: Das ist der Teil einer Nachricht, der eigentlich überflüssig ist. Man kann damit in zwei Richtungen arbeiten:
+Wichtig ist der Begriff **Redundanz**: Das ist der Teil einer Nachricht, der eigentlich überflüssig ist. Am Telefon buchstabierst du „M wie Martha“: Das „wie Martha“ ist überflüssig, hilft aber, wenn die Leitung rauscht. Man kann mit Redundanz in zwei Richtungen arbeiten:
 
 | Ziel | Redundanz … | Beispiel |
 |---|---|---|
@@ -67,8 +74,10 @@ Bei RLE (Lauflängenkodierung) schreibst du für jede Folge gleicher Zeichen: An
 | Sichtweise | Kernaussage | Stichwort |
 |---|---|---|
 | betriebswirtschaftlich | Daten und Algorithmen werden für neue oder bessere Prozesse, Produkte und Geschäftsmodelle genutzt. Analoge Arbeit wird ganz oder teilweise durch ein digitales Modell ersetzt. | Querschnittstechnologie in fast allen Branchen |
-| gesellschaftlich | Lebens- und Arbeitswelten werden auf eine digitale Ebene übertragen, oft verbunden mit großen wirtschaftlichen Umbrüchen. | „Disruption“ |
+| gesellschaftlich | Lebens- und Arbeitswelten werden auf eine digitale Ebene übertragen, oft verbunden mit großen wirtschaftlichen Umbrüchen. | „Disruption“ (ein Markt wird umgekrempelt, wie Streaming die Videothek verdrängt hat) |
 | technisch | Begriff aus der Elektrotechnik: analoge Signale werden in zeit- und wertediskrete, meist binäre Signale umgewandelt. So kann man sie elektronisch übertragen, speichern und verarbeiten. | zeit- und wertediskret |
+
+**Stell dir vor:** Ein Thermometer mit Quecksilbersäule zeigt jeden beliebigen Wert, ständig (analog). Eine Wetterstation schreibt dagegen jede volle Stunde einen Wert auf, gerundet auf ganze Grad (digital). „Diskret“ heißt also „in einzelnen, abzählbaren Schritten“, wie Treppenstufen statt einer Rampe.
 
 **Beispiel zu „zeit- und wertediskret“:** Ein Mikrofon liefert eine Spannung, die sich ständig ändert. Beim Digitalisieren misst du nur in festen Abständen, zum Beispiel 44 100-mal pro Sekunde (zeitdiskret). Jeden Messwert rundest du auf eine von endlich vielen Stufen, zum Beispiel 65 536 Stufen bei 16 Bit (wertediskret). Danach ist jeder Messwert eine Zahl, die der Rechner binär speichern kann.
 
@@ -82,7 +91,7 @@ Bei RLE (Lauflängenkodierung) schreibst du für jede Folge gleicher Zeichen: An
 
 ## Phasen der Digitalisierung im Unternehmen
 
-**Was ist das?** Aus betrieblicher Sicht läuft die Digitalisierung in Phasen ab (nach Österle, Fleisch und Alt 2000). Von Phase zu Phase wird der digitale Bereich größer.
+**Was ist das?** Aus betrieblicher Sicht läuft die Digitalisierung in Phasen ab (nach Österle, Fleisch und Alt 2000). Von Phase zu Phase wird der digitale Bereich größer: erst ein Arbeitsschritt, dann eine Abteilung, dann die ganze Firma, dann ein Partner, dann alle. „1:1“ heißt: eine Firma ist mit genau einem Partner verbunden. „m:n“ heißt: viele Firmen sind mit vielen Partnern verbunden, wie auf einem Marktplatz.
 
 | Phase | Was wird digitalisiert? | Beispiel |
 |---|---|---|
@@ -112,7 +121,7 @@ Den Nutzen beschreibt die Vorlesung in drei aufeinander aufbauenden Stufen:
 
 **Beispiel Onlineshop:** Er schreibt Rechnungen automatisch (Automatisierung). Er wertet Verkaufsdaten aus, um das Sortiment zu planen (Informatisierung). Er bietet Produkte an, die erst nach der Bestellung gefertigt werden (Transformation).
 
-Die Folien nennen außerdem ökonomische Folgen der Digitalisierung: Eine digitale Kopie kostet fast nichts. Plattformen vermitteln, ohne eigene Güter zu besitzen (Uber, Airbnb). Im Onlinehandel lohnt sich ein riesiges Sortiment (Long Tail). Freemium-Modelle bieten eine Gratisversion an und verkaufen ein Abo. Die Eintrittsbarrieren sinken, weil ein Onlineshop billiger ist als eine Filiale.
+Die Folien nennen außerdem ökonomische Folgen der Digitalisierung: Eine digitale Kopie kostet fast nichts. Plattformen vermitteln, ohne eigene Güter zu besitzen (Uber, Airbnb). Im Onlinehandel lohnt sich ein riesiges Sortiment (Long Tail, „langer Schwanz“: viele Nischenartikel, die einzeln selten, zusammen aber oft verkauft werden). Freemium-Modelle bieten eine Gratisversion an und verkaufen ein Abo. Die Eintrittsbarrieren sinken, weil ein Onlineshop billiger ist als eine Filiale.
 
 > [!IMPORTANT]
 > **Das Wichtigste**

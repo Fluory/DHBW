@@ -60,11 +60,15 @@ Planen, Beschaffen und Einführen sind ein **Projekt**: einmalig, befristet, mit
 | 6 System testen | System getestet |
 | 7 System einführen | System abgenommen |
 
+**Stell dir vor:** Du willst eine Küche einbauen lassen. Dein Zettel „Ich will einen Herd mit 4 Platten, Platz für einen großen Kühlschrank, helle Fronten“ ist das **Lastenheft**. Das Angebot des Küchenstudios „Wir bauen Modell X mit Herd Y, Montage in 2 Tagen“ ist das **Pflichtenheft**.
+
 Das **Lastenheft** enthält alle Anforderungen des Auftraggebers (das Was) und ist die Grundlage der Lieferantenauswahl. Das **Pflichtenheft** (Ergänzung) schreibt der Lieferant: wie und womit er die Anforderungen umsetzt. Merkhilfe: Lasten trägt der Kunde, Pflichten übernimmt der Lieferant.
 
 ## Beschaffen: Standard oder Individual, Cloud oder eigener Betrieb
 
-**Was ist das?**
+**In einem Satz:** Standardsoftware ist Kleidung von der Stange, Individualsoftware ist ein Maßanzug.
+
+**Stell dir vor:** Die Hose von der Stange ist günstig und sofort da, passt aber nur ungefähr; kürzen lassen ist das **Customizing** (auf Deutsch: „Anpassen an den Kunden“). Der Maßanzug passt perfekt, kostet aber viel und dauert Wochen. **On-Premise** („im eigenen Haus“) ist wie ein eigenes Auto, **Cloud** wie Carsharing: Du zahlst pro Nutzung, um Wartung kümmert sich der Anbieter.
 
 | | Standardsoftware | Individualsoftware |
 |---|---|---|
@@ -83,7 +87,7 @@ Dazwischen liegen **Low-Code-Plattformen**, mit denen Fachabteilungen aus Bauste
 
 Bei CRM ist die Cloud heute der Normalfall.
 
-Die **Lieferantenauswahl** läuft in drei Stufen: 1. Marktrecherche und Vorauswahl (von über 100 auf 3–5, Kriterium **Best Fit**) → 2. Präsentation und Referenzkunden (auf 1–2, **Best Practice**) → 3. Feinspezifikation und Vertrag (auf 1, **TCO/ROI**). TCO sind die Gesamtkosten über die ganze Nutzungsdauer, ROI setzt den Nutzen ins Verhältnis zur Investition.
+Die **Lieferantenauswahl** läuft in drei Stufen: 1. Marktrecherche und Vorauswahl (von über 100 auf 3–5, Kriterium **Best Fit**) → 2. Präsentation und Referenzkunden (auf 1–2, **Best Practice**) → 3. Feinspezifikation und Vertrag (auf 1, **TCO/ROI**). TCO (Total Cost of Ownership) sind die Gesamtkosten über die ganze Nutzungsdauer: beim Drucker nicht nur der Kaufpreis, sondern auch alle Patronen über fünf Jahre. ROI (Return on Investment) setzt den Nutzen ins Verhältnis zur Investition. Ausgedachtes Beispiel: Das CRM kostet 100 000 € und bringt in drei Jahren 130 000 € Mehrgewinn, dann ist der ROI (130 000 − 100 000) / 100 000 = 30 %. Best Fit heißt „passt am besten zu unseren Anforderungen“, Best Practice „hat sich bei anderen Kunden bewährt“.
 
 > [!IMPORTANT]
 > **Das Wichtigste**
@@ -97,7 +101,7 @@ Die **Lieferantenauswahl** läuft in drei Stufen: 1. Marktrecherche und Vorauswa
 
 **Was ist das?** Ein **Projekt** nach DIN 69901 ist ein Vorhaben, das durch die Einmaligkeit seiner Bedingungen gekennzeichnet ist: Ziel, Zeit, Geld, Personal und andere Begrenzungen. Eine Routine, die sich wiederholt, ist eine Daueraufgabe.
 
-Projektziele formuliert man **SMART**:
+Projektziele formuliert man **SMART**. Vergleich: „Ich will fitter werden“ ist kein SMART-Ziel. „Ich laufe am 1. Juni 5 km in unter 30 Minuten“ schon: Man kann am Stichtag eindeutig sagen, ob es geklappt hat.
 
 | Buchstabe | Bedeutung |
 |---|---|
@@ -128,7 +132,7 @@ Die **Projektmanagement-Phasen** nach DIN 69901: Initialisieren → Definieren �
 
 ## Klassisch, agil oder hybrid?
 
-**Was ist das?**
+**Stell dir vor:** Klassisch ist ein Hausbau nach fertigem Bauplan: erst alles planen, dann bauen, am Ende einziehen. Agil ist ein Garten, den du Beet für Beet anlegst: Nach jedem Beet schaust du, was gut wächst, und planst das nächste neu. Wasserfall heißt so, weil jede Phase wie Wasser nur nach unten in die nächste fließt, zurück geht es nicht.
 
 | | klassisch (zum Beispiel Wasserfall) | agil (zum Beispiel Scrum) |
 |---|---|---|
@@ -137,7 +141,7 @@ Die **Projektmanagement-Phasen** nach DIN 69901: Initialisieren → Definieren �
 | Ergebnis | Gesamtsystem am Ende | nutzbares Teilergebnis nach jedem Abschnitt |
 | Kunde | am Anfang und bei der Abnahme | durchgehend eingebunden |
 
-**Scrum:** Alle Anforderungen stehen priorisiert im Product Backlog. Im Sprint Planning wird ein Teil ausgewählt. Der Sprint dauert höchstens einen Monat, mit einem täglichen Daily Scrum von 15 Minuten. Am Ende steht ein nutzbares Inkrement, dann Review und Retrospektive. Rollen:
+**Scrum:** Alle Anforderungen stehen priorisiert im Product Backlog. Im Sprint Planning wird ein Teil ausgewählt. Der Sprint dauert höchstens einen Monat, mit einem täglichen Daily Scrum von 15 Minuten. Am Ende steht ein nutzbares Inkrement (auf Deutsch: „Zuwachs“, ein fertiges Stück Software), dann Review (Ergebnis zeigen) und Retrospektive (Rückblick: Was machen wir beim nächsten Mal besser?). **Backlog** heißt „Rückstand, Stapel unerledigter Aufgaben“, **Sprint** ist ein kurzer, fester Arbeitsabschnitt. Rollen:
 
 - **Product Owner:** vertritt Kunden und Markt, pflegt und priorisiert das Backlog.
 - **Scrum Master:** sorgt dafür, dass Scrum funktioniert, räumt Hindernisse weg.
@@ -157,7 +161,9 @@ Welches Vorgehen passt, zeigt die **Stacey-Matrix**: Sind Anforderungen klar und
 
 **Was ist das?** Das CRM betreibt die IT-Tochter, die Mitarbeitenden wenden sich an ihren Helpdesk. Support läuft in drei Stufen: **1st Level** (Erstkontakt, Ticket) → **2nd Level** (erfahreneres Personal) → **3rd Level** (Spezialteams). Was nicht gelöst wird, wird weitergeleitet.
 
-Die Mitarbeitenden beschweren sich: A Anfragen werden verzögert beantwortet · B Systeme fallen aus · C bekannte Fehler werden nicht behoben · D neue Funktionswünsche werden nicht umgesetzt · E die Preise der IT sind unklar. Bessere Technik löst das nicht. Es muss geregelt werden, und zwar in einem **Service Level Agreement (SLA)**: einer Vereinbarung, welche Leistung die IT in welcher Qualität erbringt.
+Die Mitarbeitenden beschweren sich: A Anfragen werden verzögert beantwortet · B Systeme fallen aus · C bekannte Fehler werden nicht behoben · D neue Funktionswünsche werden nicht umgesetzt · E die Preise der IT sind unklar. Bessere Technik löst das nicht. Es muss geregelt werden, und zwar in einem **Service Level Agreement (SLA)**: einer Vereinbarung, welche Leistung die IT in welcher Qualität erbringt. Wie beim Handyvertrag: Dort steht, wie viel Datenvolumen du bekommst und was passiert, wenn das Netz ausfällt.
+
+**Mit Zahlen:** 99,5 % Verfügbarkeit klingt nach „immer“. Ein Monat mit 30 Tagen hat 720 Stunden. 0,5 % davon sind 3,6 Stunden, so lange darf das CRM im Monat ausfallen.
 
 | SLA-Baustein (Beispielwerte) | löst |
 |---|---|
@@ -187,8 +193,8 @@ Beschwerde D regelt kein SLA. Ein neuer Wunsch ist ein neues Projekt.
 |---|---|---|
 | individuell | hat eine Person | die Expertin kennt die Schnittstelle |
 | kollektiv | hat eine Gruppe | der Helpdesk kennt den Ablauf in drei Stufen |
-| explizit | lässt sich aufschreiben | Schnittstellenbeschreibung, Handbuch |
-| implizit | lässt sich nicht vollständig aufschreiben | ihr Gespür, wo ein Fehler meist steckt |
+| explizit | lässt sich aufschreiben | Schnittstellenbeschreibung, Handbuch, ein Kuchenrezept |
+| implizit | lässt sich nicht vollständig aufschreiben | ihr Gespür, wo ein Fehler meist steckt; Fahrradfahren |
 
 **Wissensmanagement** ist der bewusste, systematische Umgang mit der Ressource Wissen: identifizieren, erwerben, entwickeln, verteilen, nutzen, bewahren. **Kodifizieren** heißt aufschreiben. Dabei gehen Erfahrung und Kontext teilweise verloren. Beispiel: eine Wissensdatenbank im Ticketsystem, mit der der 1st Level mehr selbst löst.
 
@@ -236,7 +242,7 @@ Beschwerde D regelt kein SLA. Ein neuer Wunsch ist ein neues Projekt.
 
 ### Übung 1
 
-**C.** Der Umzug in die Cloud ist einmalig, mit Ziel und Begrenzung. A, B und D sind Routine, also Daueraufgaben.
+**C.** Prüffrage: Passiert es immer wieder (Daueraufgabe) oder einmal mit Anfang und Ende (Projekt)? Der Umzug in die Cloud ist einmalig, mit Ziel und Begrenzung. A, B und D sind Routine, also Daueraufgaben.
 
 ### Übung 2
 
@@ -252,8 +258,9 @@ Ein möglicher Vorschlag: „Bis 31.12.2027 steigt die Kundenzufriedenheit in de
 
 1. Spezifisch: welche Zufriedenheit, in welcher Umfrage.
 2. Messbar: Wert auf einer Skala von 1 bis 5.
-3. Akzeptiert und realistisch: eine machbare Steigerung.
-4. Terminiert: festes Datum.
+3. Akzeptiert: Kundenservice und Marketing tragen das Ziel mit, weil es ihre eigene Umfrage ist.
+4. Realistisch: eine Steigerung um 0,6 Punkte ist machbar, nicht von 3,6 auf 5,0.
+5. Terminiert: festes Datum.
 
 ### Übung 5
 

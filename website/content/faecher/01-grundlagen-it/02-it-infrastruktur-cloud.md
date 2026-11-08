@@ -53,6 +53,10 @@ Die Klausur fragt in Aufgabe 2 (4 Punkte): „Welche Komponenten können Sie in 
 
 ## Client-Server-Computing
 
+**In einem Satz:** Der Client fragt, der Server antwortet.
+
+**Stell dir vor:** Ein Restaurant. Du als Gast (Client) bestellst. Die Küche (Server) kocht für alle Gäste und hat die Vorräte. Im 2-Tier-Fall rufst du direkt in die Küche. Im N-Tier-Fall nimmt ein Kellner (Webserver) die Bestellung an, der Koch (Anwendungsserver) bereitet zu, und das Lager (Datenbankserver) liefert die Zutaten.
+
 **Was ist das?** Die Rollen sind klar verteilt:
 
 - Der **Client** ist die Eingabestelle des Benutzers, zum Beispiel dein Laptop.
@@ -60,7 +64,7 @@ Die Klausur fragt in Aufgabe 2 (4 Punkte): „Welche Komponenten können Sie in 
 
 So kann ein Unternehmen die Arbeit auf viele günstige Maschinen verteilen.
 
-Im einfachsten Fall spricht der Client direkt mit einem Server. Das heißt **2-Tier** (zwei Schichten). Die meisten Unternehmen nutzen aber **N-Tier** (mehrschichtig): Die Arbeit wird auf mehrere Server-Ebenen verteilt. Das Internet ist dabei nur der Zugang zum Webserver.
+Im einfachsten Fall spricht der Client direkt mit einem Server. Das heißt **2-Tier** („Tier“ ist englisch für Schicht oder Ebene). Die meisten Unternehmen nutzen aber **N-Tier** (mehrschichtig): Die Arbeit wird auf mehrere Server-Ebenen verteilt. Das Internet ist dabei nur der Zugang zum Webserver.
 
 ```text
 2-Tier:   Client  <-->  Server (Daten + Logik)
@@ -78,7 +82,11 @@ N-Tier:   Client  <-- Internet -->  Webserver  <-->  Anwendungsserver  <-->  Dat
 
 ## Cloud Computing
 
-**Was ist das?** Lösungen, die früher im eigenen Unternehmen liefen, werden von externen Anbietern über das Internet bezogen. Programme und Daten liegen nicht mehr auf eigenen Rechnern. Man zahlt meist ein Abo, der Zugang läuft oft über den Browser. Die Anbieter stellen flexible, skalierbare virtuelle Rechner bereit.
+**In einem Satz:** Cloud heißt, Rechner und Programme zu mieten, statt sie selbst zu kaufen und zu betreiben.
+
+**Stell dir vor:** Du baust kein eigenes Kraftwerk, sondern holst Strom aus der Steckdose und zahlst, was du verbrauchst. Genauso holt sich eine Firma Rechenleistung aus der Cloud.
+
+**Was ist das?** Lösungen, die früher im eigenen Unternehmen liefen, werden von externen Anbietern über das Internet bezogen. Programme und Daten liegen nicht mehr auf eigenen Rechnern. Man zahlt meist ein Abo, der Zugang läuft oft über den Browser. Die Anbieter stellen flexible, skalierbare virtuelle Rechner bereit. Auf Deutsch: **virtuell** heißt, der Rechner existiert nur als Software auf einem großen echten Rechner. **Skalierbar** heißt, du kannst per Klick mehr oder weniger davon mieten.
 
 **Beispiel aus der Vorlesung:** Die New York Times mietete viele Rechner bei Amazon und wandelte damit rund 11 Millionen Artikel in 24 Stunden in PDF um. Eigene Rechner dafür zu kaufen, hätte sich nicht gelohnt.
 
@@ -87,6 +95,8 @@ Ein großer Schub kam von Amazon: Das Unternehmen brauchte viel Rechenleistung f
 ### IaaS, PaaS, SaaS
 
 Die Folien nennen die drei Servicemodelle nur mit Namen. Die Erklärung hier ist eine Ergänzung. Die Frage ist immer: Wie viel betreibt der Anbieter, und wie viel machst du selbst?
+
+**Stell dir vor:** Du willst Pizza essen. **IaaS** ist eine gemietete Küche: Ofen und Strom sind da, Teig und Belag machst du selbst. **PaaS** ist eine Fertigteig-Station: Ofen und Teig sind da, du belegst nur noch. **SaaS** ist die Pizzeria: Du bestellst und isst.
 
 | Modell | Was mietest du? | Was machst du selbst? | Beispiel |
 |---|---|---|---|

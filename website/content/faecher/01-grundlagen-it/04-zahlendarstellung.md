@@ -11,7 +11,11 @@ Ein Computer kennt nur zwei Zustände: Spannung oder keine Spannung, also 1 oder
 
 ## Stellenwertsysteme
 
-**Was ist das?** Bei einem Stellenwertsystem hängt der Wert einer Ziffer von ihrer Position ab. Jede Stelle hat den Wert **Basis hoch Position**, gezählt von rechts ab 0. Aus dem Alltag kennst du das Dezimalsystem: 235 = 2 · 10² + 3 · 10¹ + 5 · 10⁰.
+**In einem Satz:** Wie viel eine Ziffer wert ist, hängt davon ab, an welcher Stelle sie steht.
+
+**Stell dir vor:** Du bezahlst 235 € nur mit 100er-, 10er- und 1er-Scheinen. Du brauchst 2 Hunderter, 3 Zehner und 5 Einer. Die Ziffern 2, 3, 5 sagen nur, *wie viele* Scheine von jeder Sorte. Im Binärsystem gibt es statt 1, 10, 100 die Scheinsorten 1, 2, 4, 8, 16 …, und von jeder Sorte darfst du höchstens einen nehmen (Ziffer 0 oder 1).
+
+**Die Regel:** Jede Stelle hat den Wert **Basis hoch Position**, gezählt von rechts ab 0. Die **Basis** ist die Zahl, mit der jede Stelle weiter links mehr wert wird (im Dezimalsystem 10, binär 2). Aus dem Alltag kennst du das Dezimalsystem: 235 = 2 · 10² + 3 · 10¹ + 5 · 10⁰. Vorgelesen: „2 mal hundert plus 3 mal zehn plus 5 mal eins“.
 
 | System | Basis | Ziffern | 235 dezimal ist … |
 |---|---|---|---|
@@ -20,7 +24,7 @@ Ein Computer kennt nur zwei Zustände: Spannung oder keine Spannung, also 1 oder
 | Dezimal | 10 | 0–9 | 235 |
 | Hexadezimal | 16 | 0–9, A=10, B=11, C=12, D=13, E=14, F=15 | EB |
 
-Acht Bit sind ein Byte. Jede der acht Stellen hat einen festen Wert:
+Ein **Bit** ist eine einzelne Stelle, die 0 oder 1 sein kann. Acht Bit sind ein Byte. Jede der acht Stellen hat einen festen Wert:
 
 ```text
 Stellenwert: 128  64  32  16   8   4   2   1
@@ -144,6 +148,20 @@ Im Rechner hat jede Zahl eine feste Bitbreite. 127 + 127 = 254 zeigt: Das Ergebn
 
 Standard ist das **Zweierkomplement**.
 
+**In einem Satz:** Beim Zweierkomplement ist eine negative Zahl das Bitmuster, das du bekommst, wenn du von 0 aus rückwärts zählst.
+
+**Stell dir vor:** Ein Kilometerzähler mit drei Stellen steht auf 000. Drehst du ihn einen Kilometer zurück, zeigt er 999. Zwei zurück: 998. Also steht 999 für −1 und 998 für −2. Genau so macht es der Rechner mit 8 Bit:
+
+| Zahl | 8-Bit-Muster | Überlegung |
+|---|---|---|
+| +1 | 0000 0001 | |
+| 0 | 0000 0000 | Start |
+| −1 | 1111 1111 | einen Schritt zurück, „Zähler läuft rückwärts über“ |
+| −2 | 1111 1110 | noch einen Schritt zurück |
+| −128 | 1000 0000 | weiter geht es nicht |
+
+Deshalb gilt: −1 + 1 = 1111 1111 + 0000 0001 = (1) 0000 0000 = 0. Der Zähler springt wieder auf null, die herausfallende 1 links ignoriert er. Das Rezept „umdrehen + 1“ unten ist nur der schnelle Weg, dieses Rückwärtszählen auszurechnen.
+
 ### Zweierkomplement bilden
 
 1. Bitbreite festlegen, zum Beispiel 8 Bit.
@@ -175,7 +193,9 @@ Zuerst schaust du aufs erste Bit: 0 heißt positiv, 1 heißt negativ. Dann hast 
 
 ## Subtrahieren über das Zweierkomplement
 
-**Was ist das?** Der Rechner braucht keine eigene Subtrahierschaltung. Aus a − b wird a + (−b).
+**In einem Satz:** Statt abzuziehen, addiert der Rechner die negative Zahl.
+
+**Was ist das?** Das kennst du vom Konto: 42 € Guthaben und eine Abbuchung von 17 € ist dasselbe wie 42 € + (−17 €). Der Rechner braucht deshalb keine eigene Subtrahierschaltung. Aus a − b wird a + (−b).
 
 1. a binär in 8 Bit schreiben.
 2. Von b (der Zahl **hinter** dem Minus) das Zweierkomplement bilden.
@@ -209,7 +229,9 @@ Zuerst schaust du aufs erste Bit: 0 heißt positiv, 1 heißt negativ. Dann hast 
 
 ## Überlauf
 
-**Was ist das?** Ein Überlauf passiert, wenn das Ergebnis nicht in den Wertebereich des Datentyps passt. Es wird dann falsch angezeigt, wie beim Kilometerzähler.
+**In einem Satz:** Ein Überlauf heißt, das richtige Ergebnis ist zu groß (oder zu klein) für die vorhandenen Bits.
+
+**Was ist das?** Der **Wertebereich** ist die Spanne von der kleinsten bis zur größten Zahl, die mit den Bits darstellbar ist. Passt das Ergebnis nicht hinein, wird es falsch angezeigt, wie beim Kilometerzähler, der nach 999 999 wieder bei 000 000 steht.
 
 ```text
 8 Bit ohne Vorzeichen (0 … 255)       8 Bit Zweierkomplement (−128 … 127)
@@ -239,7 +261,14 @@ Eine Faustregel (Ergänzung, nicht von den Folien): Ein Überlauf liegt genau da
 
 ## Kommazahlen
 
-**Was ist das?** Nach dem Komma haben die Stellen die Werte ½, ¼, ⅛ und so weiter.
+**Was ist das?** Die Stellenwert-Tabelle geht nach dem Komma einfach weiter: Jede Stelle ist halb so viel wert wie die links daneben. Nach dem Komma haben die Stellen also die Werte ½, ¼, ⅛ und so weiter (dezimal: Zehntel, Hundertstel, Tausendstel).
+
+```text
+Stellenwert:  4   2   1 ,  ½    ¼    ⅛
+Bits:         1   0   0 ,  0    1    1   = 4 + 0,25 + 0,125 = 4,375
+```
+
+**Warum mal 2?** Malnehmen mit 2 schiebt das Komma im Binärsystem um eine Stelle nach rechts. Die Ziffer, die dabei vor das Komma rutscht, ist das nächste Bit.
 
 1. Den Teil vor dem Komma wie gewohnt umrechnen.
 2. Den Teil nach dem Komma mit 2 multiplizieren.
@@ -256,7 +285,7 @@ Eine Faustregel (Ergänzung, nicht von den Folien): Ein Überlauf liegt genau da
 
 Manche Dezimalbrüche sind binär periodisch: 0,4 = 0,0110 0110 0110 … Sie lassen sich nicht exakt speichern.
 
-Eine **Gleitkommazahl** besteht aus Mantisse m, Basis b und Exponent e: Z = m · b hoch e, zum Beispiel 2022 = 2,022 · 10³. Nach dem Standard IEEE 754 hat eine 32-Bit-Zahl 1 Bit Vorzeichen, 8 Bit Exponent und 23 Bit Mantisse. Weil viele Dezimalbrüche binär periodisch sind, wird statt 18,4 in Wahrheit 18,3999996… gespeichert.
+Eine **Gleitkommazahl** ist die wissenschaftliche Schreibweise, die du vom Taschenrechner kennst („2,022E3“). Sie besteht aus Mantisse m, Basis b und Exponent e: Z = m · b hoch e, zum Beispiel 2022 = 2,022 · 10³. Auf Deutsch: Die **Mantisse** sind die eigentlichen Ziffern (2,022), der **Exponent** sagt, um wie viele Stellen das Komma verschoben wird (3 Stellen nach rechts). Nach dem Standard IEEE 754 hat eine 32-Bit-Zahl 1 Bit Vorzeichen, 8 Bit Exponent und 23 Bit Mantisse. Weil viele Dezimalbrüche binär periodisch sind, wird statt 18,4 in Wahrheit 18,3999996… gespeichert.
 
 > [!IMPORTANT]
 > **Das Wichtigste**
@@ -314,9 +343,10 @@ Eine **Gleitkommazahl** besteht aus Mantisse m, Basis b und Exponent e: Z = m ·
 
 ### Übung 2
 
-1. E7E5₁₆ = 14 · 4096 + 7 · 256 + 14 · 16 + 5 = 57 344 + 1 792 + 224 + 5 = 59 365.
-2. Die Binärzahl in Vierergruppen: 1110 | 0111 | 1110 | 0110 = E7E6₁₆ = 59 366.
-3. Vergleich: 59 364 < 59 365 < 59 366.
+1. Stellenwerte von E7E5₁₆ von rechts: 1, 16, 256, 4096. E = 14, 7 = 7, E = 14, 5 = 5.
+2. E7E5₁₆ = 14 · 4096 + 7 · 256 + 14 · 16 + 5 · 1 = 57 344 + 1 792 + 224 + 5 = 59 365.
+3. Die Binärzahl in Vierergruppen: 1110 | 0111 | 1110 | 0110 = 14 | 7 | 14 | 6 = E7E6₁₆. Das ist E7E5₁₆ + 1 = 59 366.
+4. Vergleich: 59 364 < 59 365 < 59 366.
 
 Die **Binärzahl ist am größten**, 59364₁₀ am kleinsten. Tipp: Binär direkt in Hex gruppieren, dann musst du nur die letzte Ziffer vergleichen.
 
@@ -331,23 +361,30 @@ Die **Binärzahl ist am größten**, 59364₁₀ am kleinsten. Tipp: Binär dire
 
 1. 30 = 0001 1110.
 2. −45: 45 = 0010 1101 → umdrehen 1101 0010 → +1 = 1101 0011.
-3. Addieren: 0001 1110 + 1101 0011 = 1111 0001.
-4. Erstes Bit 1, also negativ.
+3. Spaltenweise von rechts addieren. In Spalte 2 bis 5 (von rechts gezählt) entsteht je ein Übertrag:
+
+```text
+  0001 1110   (30)
++ 1101 0011   (−45)
+= 1111 0001
+```
+
+4. Kein Übertrag fällt links heraus. Erstes Bit 1, also negativ.
 5. −128 + 64 + 32 + 16 + 1 = **−15** ✓
 
 ### Übung 5
 
 Beides ist ein **Überlauf**. Der Bereich im 8-Bit-Zweierkomplement ist −128 bis +127.
 
-- 90 + 60 = 150 ergibt 1001 0110. Gelesen wird das als −106.
-- 127 + 1 = 128 ergibt 1000 0000. Gelesen wird das als −128.
+- 90 + 60: 0101 1010 + 0011 1100 = 1001 0110. Erstes Bit 1, gelesen als −128 + 16 + 4 + 2 = −106. Richtig wäre 150, das ist größer als 127.
+- 127 + 1: 0111 1111 + 0000 0001 = 1000 0000. Gelesen als −128. Richtig wäre 128, auch das ist größer als 127.
 
 In beiden Fällen ergibt plus + plus scheinbar minus.
 
 ### Übung 6
 
-1. 4 = 100₂.
-2. 0,375 · 2 = 0,75 → 0.
-3. 0,75 · 2 = 1,5 → 1.
-4. 0,5 · 2 = 1,0 → 1, fertig.
-5. Ergebnis: **100,011₂**.
+1. Vor dem Komma: 4 = 100₂.
+2. 0,375 · 2 = 0,75 → Bit 0, weiter mit 0,75.
+3. 0,75 · 2 = 1,5 → Bit 1, weiter mit 0,5 (die 1 vor dem Komma wird abgezogen).
+4. 0,5 · 2 = 1,0 → Bit 1, Rest 0, fertig.
+5. Bits von oben nach unten lesen: **100,011₂**. Probe: 4 + ¼ + ⅛ = 4,375 ✓

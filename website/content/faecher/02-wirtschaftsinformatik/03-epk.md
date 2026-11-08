@@ -11,7 +11,9 @@ Das ist der praktischste Block des ersten Tages. Laut Lernzielen sollst du eine 
 
 ## Was ist ein Geschäftsprozess?
 
-**Was ist das?** Ein Geschäftsprozess ist eine sachlogisch-zeitliche Abfolge von Tätigkeiten. Seine Merkmale:
+**In einem Satz:** Ein Geschäftsprozess ist ein Ablauf, der in einer Firma immer wieder gleich passiert, vom Auslöser bis zum Ergebnis.
+
+**Was ist das?** Ein Geschäftsprozess ist eine sachlogisch-zeitliche Abfolge von Tätigkeiten. Auf Deutsch: Die Schritte stehen in einer Reihenfolge, die sich aus der Sache ergibt (erst Ware prüfen, dann versenden, nicht umgekehrt). Seine Merkmale:
 
 - Er wird durch ein oder mehrere **Ereignisse ausgelöst** und endet mit einem **definierten Ergebnis**.
 - Er geht über Grenzen: mehrere Abteilungen, auch Kunden, Lieferanten, Dokumente und IS.
@@ -38,6 +40,10 @@ Ein **Prozessmodell** ist dynamisch: Was passiert wann, wer ist beteiligt? Ein *
 
 ## Die Elemente der EPK
 
+**In einem Satz:** Eine EPK ist ein Rezept als Bild, in dem sich „was ist jetzt der Fall“ und „was tue ich jetzt“ immer abwechseln.
+
+**Stell dir vor:** Nudeln kochen. ⟨ Hunger da ⟩ → ( Wasser aufsetzen ) → ⟨ Wasser kocht ⟩ → ( Nudeln hineingeben ) → ⟨ Nudeln gar ⟩. Die Sechsecke sagen, was gerade der Fall ist, die Rechtecke, was du tust. Und an einer Stelle wird es ein Wenn-dann: ( Vorrat prüfen ) → *entweder* ⟨ Soße da ⟩ *oder* ⟨ keine Soße da ⟩ → ( Soße kochen ). Das ist ein XOR.
+
 **Was ist das?** Die EPK (ereignisgesteuerte Prozesskette) zeigt einen Prozess als Wechsel von Ereignissen und Funktionen.
 
 | Element | Symbol | Bedeutung | Benennung |
@@ -51,9 +57,9 @@ Die **Konnektoren**:
 
 | Konnektor | Bedeutung | Beispiel |
 |---|---|---|
-| XOR (exklusives Oder) | genau ein Weg | „Ware vorrätig“ oder „Ware nicht vorrätig“ |
-| ∨ (OR, inklusives Oder) | mindestens ein Weg, auch mehrere | Versand per Post und/oder per E-Mail |
-| ∧ (AND) | alle Wege, parallel | Rechnung erstellen **und** Kundin benachrichtigen |
+| XOR (exklusives Oder) | genau ein Weg | „Ware vorrätig“ oder „Ware nicht vorrätig“ (wie eine Weiche: links oder rechts) |
+| ∨ (OR, inklusives Oder) | mindestens ein Weg, auch mehrere | Versand per Post und/oder per E-Mail (wie Pizza-Belag: einer oder mehrere) |
+| ∧ (AND) | alle Wege, parallel | Rechnung erstellen **und** Kundin benachrichtigen (wie zwei Köche, die gleichzeitig arbeiten) |
 
 Die **erweiterte EPK (eEPK)** hängt an Funktionen zusätzliche Informationen: Organisationseinheit (zum Beispiel Vertrieb), Rolle, Informationsobjekt, Dokument, Anwendungssystem (zum Beispiel ERP-System). Diese Zuordnungen sind Linien **ohne** Pfeil, denn sie sind kein Kontrollfluss. Ein **Prozesswegweiser** verweist auf einen Teilprozess mit eigener EPK.
 
@@ -106,7 +112,7 @@ Auf der Folie folgt auf „Fertigung beauftragen“ direkt „Leuchten gefertigt
 1. **Start und Ende sind Ereignisse:** ein Startereignis, mindestens ein Endereignis.
 2. **Ereignis und Funktion wechseln sich ab**, auch über Konnektoren hinweg.
 3. **Je eine Kante rein, eine raus** bei Ereignissen und Funktionen. Verzweigen und Zusammenführen nur über Konnektoren.
-4. **Nur Funktionen entscheiden:** Nach einem Ereignis kommt kein XOR- und kein OR-Split. AND ist erlaubt.
+4. **Nur Funktionen entscheiden:** Nach einem Ereignis kommt kein XOR- und kein OR-Split. AND ist erlaubt. Denn ein Ereignis ist nur ein Zustand: „Post ist da“ entscheidet nichts. Erst wer den Brief öffnet und liest (Funktion), kann entscheiden, wie es weitergeht.
 5. **Zusammenführen wie aufgeteilt:** XOR-Split → XOR-Join, AND-Split → AND-Join, OR → OR.
 6. **Richtig benennen:** Ereignis als Zustand („Auftrag erfasst“), Funktion als Tätigkeit („Auftrag erfassen“).
 
@@ -128,7 +134,7 @@ So prüfst du eine gegebene EPK:
 | Tätigkeit als Ereignis | Ereignis „Garantie prüfen“ | Ereignis „Garantie gültig“ | 6 |
 | Start fehlt | Modell beginnt mit einer Funktion | Startereignis ergänzen | 1 |
 
-Warum XOR-Split mit AND-Join nicht geht: Nach dem XOR kommt nur ein Weg an. Der AND-Join wartet aber auf alle Wege, also für immer. Der Prozess endet nie (Deadlock).
+Warum XOR-Split mit AND-Join nicht geht: Nach dem XOR kommt nur ein Weg an. Der AND-Join wartet aber auf alle Wege, also für immer. Der Prozess endet nie (Deadlock, auf Deutsch „Verklemmung“). Stell dir vor, du verabredest dich mit „Anna oder Ben“, wartest dann aber am Treffpunkt, bis Anna *und* Ben da sind. Es kommt nur einer, du wartest ewig.
 
 > [!IMPORTANT]
 > **Das Wichtigste**
@@ -172,11 +178,11 @@ Warum XOR-Split mit AND-Join nicht geht: Nach dem XOR kommt nur ein Weg an. Der 
 
 ### Übung 1
 
-**Falsch.** Nach einem Ereignis gibt es keinen XOR- oder OR-Split, denn nur Funktionen entscheiden (Regel 4). Ein Join nach Ereignissen ist dagegen erlaubt.
+**Falsch.** Nach einem Ereignis gibt es keinen XOR- oder OR-Split, denn nur Funktionen entscheiden (Regel 4). Ein Zustand wie „Auftrag eingegangen“ kann nicht wählen, erst eine Tätigkeit wie „Auftrag prüfen“ liefert das Ergebnis, nach dem verzweigt wird. Ein Join nach Ereignissen ist dagegen erlaubt.
 
 ### Übung 2
 
-**B.** Ereignisse sind Zustände (Partizip: „erstellt“). A ist eine Funktion, D eine Organisationseinheit.
+**B.** Ereignisse sind Zustände (Partizip: „erstellt“). A ist eine Funktion, C ist eine Tätigkeit samt Zuständigkeit (kein Zustand), D eine Organisationseinheit.
 
 ### Übung 3
 

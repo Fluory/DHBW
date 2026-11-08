@@ -11,7 +11,11 @@ In der Klausur gibt es 6 Punkte für die „Eigenschaften der verschiedenen Verf
 
 ## O-Notation
 
-**Was ist das?** Die O-Notation beschreibt, wie der Aufwand eines Algorithmus wächst, wenn die Datenmenge n wächst. Es geht nicht um Millisekunden, sondern um das Wachstum. Konstante Faktoren lässt man weg.
+**In einem Satz:** Die O-Notation sagt, wie viel mehr Arbeit es wird, wenn du mehr Daten hast.
+
+**Stell dir vor:** Du räumst nach einer Party auf. Gläser einsammeln ist O(n): doppelt so viele Gäste, doppelt so viele Gläser. Das Licht ausmachen ist O(1): Ein Schalter, egal wie viele Gäste da waren. Wenn sich jeder Gast von jedem anderen verabschiedet, ist das O(n²): doppelt so viele Gäste, viermal so viele Abschiede.
+
+**Was ist das?** Die O-Notation beschreibt, wie der Aufwand eines Algorithmus wächst, wenn die Datenmenge n wächst. Es geht nicht um Millisekunden, sondern um das Wachstum. Konstante Faktoren lässt man weg: Ob du pro Glas 2 oder 3 Sekunden brauchst, ändert nichts daran, dass es mit der Gästezahl wächst. Vorgelesen heißt O(n) „O von n“. **log n** (Logarithmus) beantwortet die Frage: Wie oft kann ich n halbieren, bis 1 übrig ist? Für n = 1 000 sind das etwa 10-mal.
 
 | Klasse | Name | Beispiel | n = 1 000 | n = 1 000 000 |
 |---|---|---|---|---|
@@ -48,10 +52,12 @@ In der Klausur gibt es 6 Punkte für die „Eigenschaften der verschiedenen Verf
 
 ## Binäre Suche
 
-**Was ist das?** Die binäre Suche setzt voraus, dass die Daten **sortiert** sind und man per Index direkt auf jedes Element zugreifen kann (Array). Sie prüft das mittlere Element und verwirft dann die Hälfte, in der der Wert nicht sein kann.
+**In einem Satz:** Die binäre Suche schaut immer in die Mitte und wirft die Hälfte weg, in der der Wert nicht sein kann.
+
+**Was ist das?** Das ist das Telefonbuch-Prinzip vom Anfang. Die binäre Suche setzt voraus, dass die Daten **sortiert** sind und man per Index direkt auf jedes Element zugreifen kann (Array). Sie prüft das mittlere Element und verwirft dann die Hälfte, in der der Wert nicht sein kann.
 
 1. Bereich festlegen: lo = erster Index, hi = letzter Index.
-2. Mitte berechnen: m = (lo + hi) / 2, abgerundet.
+2. Mitte berechnen: m = (lo + hi) / 2, abgerundet. (lo und hi sind die Indizes vom linken und rechten Rand des Bereichs, englisch low und high.)
 3. Vergleichen: Ist a[m] der gesuchte Wert, bist du fertig.
 4. Ist der gesuchte Wert größer, weiter mit lo = m + 1. Ist er kleiner, weiter mit hi = m − 1.
 5. Wiederholen. Ist lo > hi, ist der Wert nicht vorhanden.
@@ -89,6 +95,8 @@ Die lineare Suche bräuchte bei 1 000 000 Elementen bis zu 1 000 000 Vergleiche.
 
 ## Bubble Sort
 
+**Stell dir vor:** Eine Schulklasse soll sich nach Größe in eine Reihe stellen. Die Lehrerin geht die Reihe entlang und vertauscht immer zwei Nebeneinanderstehende, wenn der Linke größer ist. Nach dem ersten Gang steht das größte Kind ganz rechts.
+
 **Was ist das?** Bubble Sort vergleicht immer zwei Nachbarn und tauscht sie, wenn sie falsch herum stehen. So läuft es von vorne nach hinten. Nach dem ersten Durchlauf steht das **größte** Element am Ende, es ist wie eine Blase nach oben gestiegen.
 
 1. Von vorne beginnen und je zwei Nachbarn vergleichen.
@@ -121,6 +129,8 @@ Durchlauf 3:  kein Tausch mehr → sortiert
 > „Nach dem ersten Durchlauf steht das kleinste Element vorne“ ist falsch. Das größte steht hinten. Das kleinste wandert pro Durchlauf nur eine Stelle nach vorne.
 
 ## Merge Sort
+
+**Stell dir vor:** Zwei Leute haben je einen bereits sortierten Stapel Klausuren. Um daraus einen sortierten Stapel zu machen, vergleichst du immer nur die beiden obersten Blätter und legst das kleinere ab. Das ist „mergen“ (englisch: zusammenführen). Merge Sort zerlegt einen unsortierten Stapel so lange, bis nur noch Einzelblätter da sind, und führt sie dann so wieder zusammen.
 
 **Was ist das?** Merge Sort arbeitet nach **Teile und Herrsche** (Kapitel 6):
 
@@ -227,8 +237,8 @@ Quicksort und Selection Sort werden auf den Folien nur genannt. Ihre Beschreibun
 
 | Schritt | Bereich | Mitte | Wert | Entscheidung |
 |---|---|---|---|---|
-| 1 | 0–14 | 7 | 34 | 58 > 34 → rechts |
-| 2 | 8–14 | 11 | 58 | gefunden |
+| 1 | 0–14 | (0 + 14) / 2 = 7 | 34 | 58 > 34 → rechts, lo = 8 |
+| 2 | 8–14 | (8 + 14) / 2 = 11 | 58 | gefunden |
 
 Gefunden nach **2 Schritten**.
 
@@ -238,8 +248,8 @@ Gefunden nach **2 Schritten**.
 |---|---|---|---|---|
 | 1 | 0–14 | 7 | 34 | 50 > 34 → rechts |
 | 2 | 8–14 | 11 | 58 | 50 < 58 → links |
-| 3 | 8–10 | 9 | 47 | 50 > 47 → rechts |
-| 4 | 10–10 | 10 | 52 | 50 < 52 → links |
+| 3 | 8–10 | (8 + 10) / 2 = 9 | 47 | 50 > 47 → rechts, lo = 10 |
+| 4 | 10–10 | 10 | 52 | 50 < 52 → links, hi = 9 |
 | – | lo = 10 > hi = 9 | | | Bereich leer |
 
 Nach **4 Vergleichen** ist der Bereich leer: 50 ist nicht vorhanden.
@@ -259,7 +269,9 @@ Nach **4 Vergleichen** ist der Bereich leer: 50 ist nicht vorhanden.
 | 3 | [1, 3, 5, 7, 9] |
 | 4 | kein Tausch mehr → fertig |
 
-Durchlauf 1 im Detail: 7↔3, 7 < 9 ok, 9↔1, 9↔5.
+Durchlauf 1 im Detail: 7↔3 → [3, 7, 9, 1, 5], 7 < 9 ok, 9↔1 → [3, 7, 1, 9, 5], 9↔5 → [3, 7, 1, 5, 9].
+Durchlauf 2: 3 < 7 ok, 7↔1 → [3, 1, 7, 5, 9], 7↔5 → [3, 1, 5, 7, 9].
+Durchlauf 3: 3↔1 → [1, 3, 5, 7, 9], danach nur noch ok.
 
 ### Übung 5
 

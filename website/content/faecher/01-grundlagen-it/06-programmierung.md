@@ -45,7 +45,7 @@ STA RES    ; Ergebnis an der Adresse RES speichern
 BRK        ; Programmende
 ```
 
-Das Prinzip: Wert in ein Register laden, dort rechnen, Ergebnis zurückschreiben. Weil Assembler bei großen Programmen unübersichtlich wird, entstanden **Hochsprachen** wie Python, Java oder C++. Sie brauchen ein Übersetzungsprogramm: einen Compiler oder einen Interpreter.
+Ein **Register** ist ein winziger Merkzettel direkt im Prozessor, auf dem er gerade rechnet (mehr in Kapitel 9). Das Prinzip: Wert in ein Register laden, dort rechnen, Ergebnis zurückschreiben. Weil Assembler bei großen Programmen unübersichtlich wird, entstanden **Hochsprachen** wie Python, Java oder C++. Sie brauchen ein Übersetzungsprogramm: einen Compiler oder einen Interpreter.
 
 > [!IMPORTANT]
 > **Das Wichtigste**
@@ -58,6 +58,8 @@ Das Prinzip: Wert in ein Register laden, dort rechnen, Ergebnis zurückschreiben
 ## Syntax, Semantik und die Typfalle
 
 **Was ist das?** Jede Sprache hat Regeln für die **Syntax** (richtige Schreibweise) und die **Semantik** (richtige Bedeutung).
+
+**Stell dir vor:** „Ich esse gern Apfel ein.“ ist falsch gebaut, das ist ein Syntaxfehler. „Der Kühlschrank isst einen Apfel.“ ist grammatisch richtig, ergibt aber keinen Sinn, das ist ein Semantikfehler.
 
 - Ein **Syntaxfehler** ist zum Beispiel eine fehlende Klammer. Der Compiler bemerkt ihn und übersetzt das Programm nicht.
 - Ein **Semantikfehler** ist richtig geschrieben, bedeutet aber etwas Falsches. Das Programm läuft und liefert ein falsches Ergebnis, ohne Fehlermeldung.
@@ -81,7 +83,7 @@ double res2 = (double) z1 / z2;  // 3.333…
 
 ## Variablen und Datentypen
 
-**Was ist das?** Eine Variable ist ein Speicherplatz mit einem Namen und, in Java, einem Typ. Drei Schritte musst du unterscheiden:
+**Was ist das?** Eine Variable ist wie eine beschriftete Schachtel: Auf dem Etikett steht der Name, darin liegt der aktuelle Wert, und der Typ sagt, was hineinpasst (nur ganze Zahlen, nur Text …). Genauer: Eine Variable ist ein Speicherplatz mit einem Namen und, in Java, einem Typ. Drei Schritte musst du unterscheiden:
 
 ```java
 int zaehler;          // Deklaration: Typ Name;
@@ -113,6 +115,8 @@ Elementare Datentypen in Java:
 
 **Was ist das?**
 
+**Stell dir vor:** Ein **Compiler** ist wie ein Übersetzer, der ein ganzes Buch vorab ins Deutsche überträgt. Danach kannst du es lesen, so oft du willst, ohne Übersetzer. Ein **Interpreter** ist wie ein Dolmetscher bei einer Rede: Er übersetzt Satz für Satz, während gesprochen wird, und muss jedes Mal wieder dabei sein.
+
 **Compilieren** übersetzt das ganze Programm vorab in Maschinenbefehle für eine bestimmte Hardware. **Interpretieren** übersetzt erst zur Laufzeit, Befehl für Befehl, und führt direkt aus. Als Zwischenschritt kann man in maschinenunabhängigen Bytecode übersetzen (Java, Python).
 
 | | Compiler | Interpreter |
@@ -136,7 +140,7 @@ Große Programme bestehen aus vielen Modulen. Der **Linker** verbindet die einze
 | Nachteil | große Datei | fehlt eine Funktion, bricht das Programm ab |
 | Beispiel | – | DLLs, Shared Libraries |
 
-Der **Lader** bringt das Programm in den Arbeitsspeicher. Weil es an beliebiger Stelle landen kann, addiert er zu allen Adressen den Startwert (Offset). Wird ein Programm an 0x4000 geladen, wird aus einem Sprung nach 0x0120 ein Sprung nach 0x4120.
+Der **Lader** bringt das Programm in den Arbeitsspeicher. Weil es an beliebiger Stelle landen kann, addiert er zu allen Adressen den Startwert (Offset). Wie bei einer Wegbeschreibung „dritte Tür im Flur“: Zieht die Firma ins Gebäude ab Zimmer 400, wird daraus Zimmer 403. Wird ein Programm an 0x4000 geladen, wird aus einem Sprung nach 0x0120 ein Sprung nach 0x4120.
 
 Ein **Debugger** lässt ein Programm Schritt für Schritt laufen und zeigt dabei Speicher, Register und Variablen. Eine **IDE** (zum Beispiel Eclipse) vereint Editor, Compiler und Debugger.
 
@@ -149,6 +153,10 @@ Ein **Debugger** lässt ein Programm Schritt für Schritt laufen und zeigt dabei
 > Linker und Lader nicht verwechseln. Der Linker baut das Programm aus Teilen zusammen, der Lader lädt es in den Arbeitsspeicher.
 
 ## Rekursion: Teile und Herrsche
+
+**In einem Satz:** Rekursion heißt, eine Aufgabe zu lösen, indem man dieselbe Aufgabe in klein löst.
+
+**Stell dir vor:** Du stehst in einer Schlange und willst wissen, an welcher Stelle du bist. Du fragst deinen Vordermann. Der fragt seinen Vordermann, und so weiter. Die erste Person sagt „Ich bin Platz 1“ (Abbruchbedingung). Jeder addiert auf dem Rückweg 1 und gibt die Antwort nach hinten weiter.
 
 **Was ist das?** **Teile und Herrsche** ist ein Prinzip: Eine Aufgabe wird in gleichartige, kleinere Teilaufgaben zerlegt. **Rekursion** ist die Technik dazu: Eine Funktion ruft sich selbst mit kleinerer Eingabe auf. Jede Rekursion braucht eine **Abbruchbedingung**.
 
@@ -241,6 +249,6 @@ Ein Algorithmus ist eine Handlungsvorschrift, die ein Problem in endlicher Zeit 
 
 ### Übung 6
 
-1. fakrek(5) = 5 · fakrek(4) = 5 · 4 · 3 · 2 · 1 = **120**.
+1. fakrek(5) = 5 · fakrek(4), fakrek(4) = 4 · fakrek(3), fakrek(3) = 3 · fakrek(2), fakrek(2) = 2 · fakrek(1), fakrek(1) = 1. Rückweg: 2 · 1 = 2, 3 · 2 = 6, 4 · 6 = 24, 5 · 24 = **120**.
 2. Aufrufe mit n = 5, 4, 3, 2, 1: **5 Aufrufe**. Bei n = 1 greift die Abbruchbedingung.
 3. Ohne Abbruchbedingung ruft sich die Funktion endlos auf (0, −1, −2 …), bis der Aufrufstapel überläuft.

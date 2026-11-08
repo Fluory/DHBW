@@ -34,6 +34,8 @@ Dieses Kapitel ist bewusst kürzer. Klickwege in Dataiku musst du nicht lernen.
 
 **Was ist das?** Ein **Entscheidungsbaum** teilt die Daten Schritt für Schritt an Fragen wie „Lernstunden < 5?“. Die Blätter enthalten die Vorhersage. Er ist leicht zu erklären.
 
+**Stell dir vor:** Beim Backen stellst du vorher die Ofentemperatur ein (Hyperparameter). Wie der Kuchen am Ende innen aussieht, ergibt sich beim Backen (Parameter).
+
 | | Modellparameter | Hyperparameter |
 |---|---|---|
 | wann | nach dem Training, aus den Daten gelernt | vor dem Training festgelegt |
@@ -59,6 +61,8 @@ Dieses Kapitel ist bewusst kürzer. Klickwege in Dataiku musst du nicht lernen.
 | wirklich storniert | 8 (True Positive, TP) | 2 (False Negative, FN) |
 | wirklich nicht storniert | 12 (False Positive, FP) | 178 (True Negative, TN) |
 
+**Stell dir vor:** Ein Rauchmelder. **Precision** fragt: Wenn er piept, brennt es dann wirklich? **Recall** fragt: Wenn es brennt, piept er dann auch? Ein Melder, der bei jedem Toast piept, hat hohen Recall, aber schlechte Precision. Die Kürzel übersetzt: True/False = die Vorhersage war richtig/falsch, Positive/Negative = vorhergesagt wurde „storniert“/„nicht storniert“.
+
 So berechnest du die drei Kennzahlen:
 
 1. **Accuracy** = richtige Vorhersagen / alle = (TP + TN) / alle = (8 + 178) / 200 = 186 / 200 = **93 %**.
@@ -76,6 +80,8 @@ Bei seltenen Ereignissen ist Accuracy irreführend. **Data Leakage:** Ein Merkma
 > 95 % Accuracy klingt gut, kann aber nutzlos sein, wenn nur 5 % der Fälle positiv sind.
 
 ## k-Means-Clustering
+
+**Stell dir vor:** Eine Stadt will k = 3 Eisdielen so aufstellen, dass jeder es nicht weit hat. Erst stellst du sie irgendwo hin. Jeder Einwohner geht zur nächsten. Dann rückst du jede Eisdiele in die Mitte ihrer Kundschaft. Jetzt ist für manche eine andere Eisdiele näher, sie wechseln. Das wiederholst du, bis keiner mehr wechselt.
 
 **Was ist das?** k-Means teilt Daten ohne Zielspalte in k Gruppen:
 
@@ -164,8 +170,10 @@ Die beiden Aufgaben des Tages waren eine **Kundensegmentierung** der Sonnenschei
 ### Übung 4
 
 1. Accuracy = (TP + TN) / alle = (15 + 950) / 1 000 = **96,5 %**.
-2. Precision = TP / (TP + FP) = 15 / 45 ≈ **33 %**.
-3. Recall = TP / (TP + FN) = 15 / 20 = **75 %**.
+2. Precision = TP / (TP + FP) = 15 / (15 + 30) = 15 / 45 ≈ **33 %**.
+3. Recall = TP / (TP + FN) = 15 / (15 + 5) = 15 / 20 = **75 %**.
+
+Probe: TP + FN + FP + TN = 15 + 5 + 30 + 950 = 1 000 ✓
 
 Die hohe Accuracy täuscht, weil Betrug selten ist. Das Modell findet drei Viertel der Betrugsfälle, aber zwei von drei Alarmen sind Fehlalarme.
 

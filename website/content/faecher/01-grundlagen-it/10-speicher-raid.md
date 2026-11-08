@@ -30,9 +30,13 @@ Aufgabe 10 der Klausur (4 Punkte) fragt „allgemeine Fragen, Hierarchie, RAID�
 
 ## Cache und Lokalität
 
+**In einem Satz:** Der Cache ist ein kleiner, schneller Ablageplatz für das, was die CPU gleich wieder braucht.
+
+**Stell dir vor:** Du lernst für die Klausur. Die Bücher, die du heute brauchst, legst du auf den Schreibtisch (Cache). Der Rest steht im Keller (Hauptspeicher). Holst du ein Buch aus dem Keller, nimmst du die zwei daneben gleich mit, weil du sie wahrscheinlich auch brauchst. Fehlt dir doch eins, musst du in den Keller laufen: Das ist ein Cache-Miss.
+
 **Was ist das?** Die CPU wird immer schneller, der Hauptspeicher kommt nicht hinterher. Den ganzen Speicher auf die CPU zu bauen, wäre viel zu teuer. Der Kompromiss ist ein kleiner, schneller Cache.
 
-Dass ein so kleiner Speicher hilft, liegt an der **Lokalität**: Programme greifen in kurzer Zeit nur auf einen kleinen Teil des Speichers zu. Der nächste Befehl liegt sehr wahrscheinlich direkt neben dem letzten. Deshalb lädt man beim Zugriff auf ein Wort gleich die Nachbarn mit in den Cache.
+Dass ein so kleiner Speicher hilft, liegt an der **Lokalität** (auf Deutsch: „Nähe“): Programme greifen in kurzer Zeit nur auf einen kleinen Teil des Speichers zu. Der nächste Befehl liegt sehr wahrscheinlich direkt neben dem letzten. Deshalb lädt man beim Zugriff auf ein Wort gleich die Nachbarn mit in den Cache.
 
 Zwei Beispiele aus der Vorlesung:
 
@@ -52,6 +56,15 @@ Liegt ein benötigter Bereich doch nicht im Cache, muss er aus dem Hauptspeicher
 ## Arbeitsspeicher und Adressleitungen
 
 **Was ist das?** Der Arbeitsspeicher besteht aus vielen Zellen mit je 8 Bit (einem Byte). Jede Zelle hat eine Nummer, ihre Adresse. Die Zahl der Leitungen im Adressbus bestimmt, wie viele Zellen man ansprechen kann. Mit n Leitungen gibt es 2ⁿ Adressen, genau wie in Kapitel 4.
+
+**Stell dir vor:** Jede Leitung ist ein Schalter, an oder aus. Jede Stellung aller Schalter zusammen ist eine Hausnummer.
+
+| Leitungen | mögliche Adressen |
+|---|---|
+| 1 | 2 (0, 1) |
+| 2 | 4 (00, 01, 10, 11) |
+| 3 | 8 |
+| 10 | 1 024 = 1 KB |
 
 Du brauchst: 2¹⁰ = 1 KB, 2²⁰ = 1 MB, 2³⁰ = 1 GB, 2⁴⁰ = 1 TB. Die Folien rechnen mit dem Faktor 1 024.
 
@@ -123,7 +136,11 @@ Kurz zu den Massenspeichern: Eine **Festplatte** hat magnetisch beschichtete Sch
 
 ## RAID
 
-**Was ist das?** RAID (Redundant Array of Independent Disks) fasst mehrere Festplatten zu einem logischen Laufwerk zusammen. Für den Rechner sieht es aus wie eine große Platte. Ziel ist mehr Geschwindigkeit, mehr Ausfallsicherheit oder beides. Zwei Grundtechniken:
+**In einem Satz:** RAID verteilt Daten so auf mehrere Platten, dass es schneller geht oder ein Ausfall nichts kaputt macht.
+
+**Stell dir vor:** Bei einem Umzug tragen zwei Leute die Kisten abwechselnd: doppelt so schnell, aber stolpert einer, ist seine Hälfte kaputt (RAID 0). Oder du kopierst deine Mitschrift für eine Freundin: Verliert eine von euch das Heft, hat die andere noch alles (RAID 1). Oder du notierst zu jeder Zeile eine Prüfsumme, mit der du einen fehlenden Wert zurückrechnen kannst (RAID 5).
+
+**Was ist das?** RAID (Redundant Array of Independent Disks, auf Deutsch etwa „Verbund unabhängiger Platten mit Reserve“) fasst mehrere Festplatten zu einem logischen Laufwerk zusammen. Für den Rechner sieht es aus wie eine große Platte. Ziel ist mehr Geschwindigkeit, mehr Ausfallsicherheit oder beides. Zwei Grundtechniken:
 
 - **Striping:** Daten werden in Stücke zerlegt und reihum auf die Platten verteilt. Beim Lesen arbeiten alle Platten parallel.
 - **Mirroring:** Daten werden auf eine zweite Platte gespiegelt, also verdoppelt.
@@ -160,7 +177,7 @@ Mindestplatten und Ausfälle für RAID 5 und 6 stehen in der Rückschau. Die Wer
 
 ### Wie hilft die Parität?
 
-Diese Erklärung ist eine Ergänzung. Der Paritätsblock einer Zeile ist das bitweise **XOR** aller Datenblöcke (Kapitel 5). Fällt ein Block aus, bekommst du ihn zurück, indem du alle übrigen Blöcke und die Parität wieder XOR-verknüpfst.
+Diese Erklärung ist eine Ergänzung. Die Idee mit normalen Zahlen: Du hast 3, 5 und 4 gespeichert und dazu die Summe 12. Fällt die 5 weg, rechnest du 12 − 3 − 4 = 5 zurück. RAID macht dasselbe, nur mit XOR statt Plus. Der Paritätsblock einer Zeile ist das bitweise **XOR** aller Datenblöcke (Kapitel 5). Fällt ein Block aus, bekommst du ihn zurück, indem du alle übrigen Blöcke und die Parität wieder XOR-verknüpfst.
 
 1. Parität berechnen: alle Datenblöcke spaltenweise XOR-verknüpfen.
 2. Bei einem Ausfall: die übrigen Blöcke und die Parität XOR-verknüpfen.
@@ -233,7 +250,7 @@ XOR ist 1, wenn die Anzahl der Einsen in einer Spalte ungerade ist, wie beim Par
 
 ### Übung 2
 
-- a) 24 = 4 + 20, also 2⁴ · 2²⁰ = 16 · 1 MB = **16 MB**.
+- a) 24 = 4 + 20, also 2²⁴ = 2⁴ · 2²⁰ = 16 · 1 MB = **16 MB**.
 - b) 16 GB = 2⁴ · 2³⁰ = 2³⁴, also **34 Leitungen**.
 
 ### Übung 3
@@ -246,8 +263,17 @@ XOR ist 1, wenn die Anzahl der Einsen in einer Spalte ungerade ist, wie beim Par
 
 ### Übung 4
 
-1. Parität: 1100 XOR 1010 = 0110. Dann 0110 XOR 0111 = **0001**.
-2. Block 2 wiederherstellen: 1100 XOR 0111 = 1011. Dann 1011 XOR 0001 = **1010** ✓
+1. Parität, spaltenweise (XOR = 1, wenn die Bits verschieden sind):
+
+```text
+  1100
+⊕ 1010
+= 0110
+⊕ 0111
+= 0001   ← Paritätsblock
+```
+
+2. Block 2 wiederherstellen: die übrigen Blöcke und die Parität XOR-verknüpfen: 1100 XOR 0111 = 1011. Dann 1011 XOR 0001 = **1010** ✓ (das ist wieder der ursprüngliche Block 2).
 
 ### Übung 5
 

@@ -27,6 +27,10 @@ Das ist einer der größten Blöcke der Klausur: 6–8 Punkte für „Bedeutung,
 
 ## Array
 
+**In einem Satz:** Ein Array ist eine Reihe nummerierter Fächer mit fester Anzahl.
+
+**Stell dir vor:** Eine Wand mit Schließfächern im Schwimmbad, Fach 0 bis Fach 9. Willst du an Fach 7, gehst du direkt hin, ohne die anderen zu öffnen. Mehr Fächer bekommst du aber nur, wenn jemand eine neue, größere Wand baut.
+
 **Was ist das?** Ein Array speichert seine Elemente unter einem fortlaufenden **Index**, der bei 0 beginnt. Jedes Element ist über den Index direkt erreichbar. Die **Länge ist fest** und wird beim Anlegen bestimmt.
 
 ```text
@@ -49,7 +53,11 @@ Index:  0       1      2      3     …  9
 
 ## Verkettete Listen
 
-**Was ist das?** Eine **einfach verkettete Liste** hat keinen Index. Bekannt ist nur das erste Element, der **Kopf**. Jedes Element speichert seine Daten und einen Zeiger (**next**) auf das nächste Element. Das letzte zeigt auf nichts (null).
+**In einem Satz:** Eine verkettete Liste ist eine Kette von Elementen, in der jedes nur weiß, wo das nächste liegt.
+
+**Stell dir vor:** Eine Schnitzeljagd. Am Start (Kopf) liegt ein Zettel mit einer Aufgabe und dem Hinweis „weiter unter der Bank“. Dort liegt der nächste Zettel mit dem nächsten Hinweis. Zum fünften Zettel kommst du nur, wenn du den vier Hinweisen davor folgst. Dafür kannst du ganz leicht einen neuen Zettel einschieben: Du änderst nur einen Hinweis.
+
+**Was ist das?** Eine **einfach verkettete Liste** hat keinen Index. Bekannt ist nur das erste Element, der **Kopf**. Jedes Element speichert seine Daten und einen **Zeiger** (**next**) auf das nächste Element. Ein Zeiger ist nichts anderes als die Adresse, unter der das nächste Element im Speicher liegt, also der Hinweis auf dem Zettel. Das letzte zeigt auf nichts (null).
 
 ```text
 Kopf → [A | next] → [B | next] → [C | next] → null
@@ -101,6 +109,8 @@ Die sortierte Liste steht in der Klausurliste, auf den Folien aber nicht. Die Er
 
 ## Stack (Stapel)
 
+**In einem Satz:** Beim Stack kommt immer das zuletzt Hingelegte zuerst wieder heraus.
+
 **Was ist das?** Ein Stack ist eine Liste, bei der du nur an das **oberste** Element herankommst, wie beim Tellerstapel. Das Prinzip heißt **LIFO**: Last In, First Out.
 
 | Operation | Wirkung |
@@ -116,6 +126,8 @@ Ein Stack lässt sich als Array mit einem Index auf das oberste Element bauen od
 
 ## Queue (Warteschlange)
 
+**In einem Satz:** Bei der Queue kommt immer das am längsten Wartende zuerst heraus.
+
 **Was ist das?** Eine Queue funktioniert wie die Schlange an der Kasse: Wer zuerst kommt, ist zuerst dran. Das Prinzip heißt **FIFO**: First In, First Out.
 
 | Operation | Wirkung |
@@ -124,7 +136,7 @@ Ein Stack lässt sich als Array mit einem Index auf das oberste Element bauen od
 | get() (auch dequeue) | vorderstes Element entnehmen |
 | Fehlerfall | get() auf einer leeren Queue |
 
-Eine Queue lässt sich als **Ringpuffer** in einem Array bauen: Zwei Indizes zeigen auf Anfang und Ende. Erreicht ein Index das Ende des Arrays, beginnt er wieder vorne.
+Eine Queue lässt sich als **Ringpuffer** in einem Array bauen. Stell dir ein Sushi-Laufband im Kreis vor: Zwei Indizes zeigen auf Anfang und Ende. Erreicht ein Index das Ende des Arrays, beginnt er wieder vorne.
 
 ### Stack und Queue durchspielen
 
@@ -184,6 +196,10 @@ Ebene 2:     D   E     F
 > Ebenen zählen ab 0, nicht ab 1. Ein Baum mit Wurzel und einer Ebene darunter hat die Höhe 1.
 
 ## Geordneter Binärbaum
+
+**In einem Satz:** Ein geordneter Binärbaum sortiert jede Zahl durch Fragen „kleiner oder größer?“ an ihren Platz.
+
+**Stell dir vor:** Das Spiel „Ich denke mir eine Zahl zwischen 1 und 100“. Du fragst „Ist sie kleiner als 50?“, und mit jeder Antwort fällt die Hälfte weg. Der Binärbaum speichert genau diese Fragen: Jeder Knoten ist eine Frage, links geht es weiter bei „kleiner“, rechts bei „größer“.
 
 **Was ist das?** In einem **Binärbaum** hat jeder Knoten höchstens zwei Kinder, ein linkes und ein rechtes. **Geordnet** heißt: Im linken Teilbaum stehen nur kleinere Werte, im rechten nur größere. So verbindet der Baum schnelles Suchen (wie ein Array) mit leichtem Einfügen (wie eine Liste).
 
@@ -261,7 +277,7 @@ Warum ist das wichtig? Der Aufwand einer Suche hängt von der Länge des Wegs ab
 
 ## Vergleich der Datenstrukturen
 
-Die O-Angaben sind eine Ergänzung (O-Notation in Kapitel 8).
+Die O-Angaben sind eine Ergänzung (O-Notation in Kapitel 8). Auf Deutsch: O(1) heißt „ein Schritt, egal wie viele Daten“, O(n) heißt „im schlimmsten Fall einmal alles ansehen“, O(log n) heißt „bei jedem Schritt fällt die Hälfte weg“.
 
 | Struktur | Prinzip | Operationen | Zugriff | Vorteil / Nachteil |
 |---|---|---|---|---|
@@ -338,7 +354,7 @@ Ausgaben: **4, 8, 2**. Am Ende steht **[5]** in der Queue.
 
 ### Übung 3
 
-1. 11 einfügen: 3 < 11, 9 < 11, 14 > 11. Du siehst **3 Elemente** an und hängst 11 zwischen 9 und 14 ein.
+1. 11 einfügen: 3 < 11 weiter, 9 < 11 weiter, 14 > 11 stopp. Du siehst **3 Elemente** an und hängst 11 zwischen 9 und 14 ein: zuerst 11.next = 14, dann 9.next = 11.
 2. 1 einfügen: 3 > 1. Du siehst **1 Element** an. Die 1 wird der neue Kopf.
 3. Ergebnis: **1 → 3 → 9 → 11 → 14 → 20**.
 
@@ -375,7 +391,7 @@ Der Baum ist **nicht voll**, weil 30 nur ein Kind (25) hat. Damit ist er auch **
 
 20 hat zwei Kinder (10 und 30).
 
-- **Variante „größter im linken Teilbaum“:** Der linke Teilbaum von 20 ist nur die 10. 10 ersetzt 20. Ergebnis: 40(10(–, 30(25)), 60(50, 70)).
+- **Variante „größter im linken Teilbaum“:** einmal links zu 10, dann ganz nach rechts. 10 hat kein rechtes Kind, also ist 10 schon der größte Wert. 10 ersetzt 20, an der alten Stelle fällt das Blatt 10 weg. 30 mit 25 bleibt rechts. Ergebnis (Schreibweise: Knoten(linkes Kind, rechtes Kind), – = leer): 40(10(–, 30(25)), 60(50, 70)).
 - **Variante „kleinster im rechten Teilbaum“:** einmal rechts zu 30, dann ganz nach links zu 25. 25 ersetzt 20, und an der alten Stelle fällt das Blatt 25 weg. Ergebnis: 40(25(10, 30), 60(50, 70)).
 
 Die zweite Variante ergibt sogar einen vollständigen Baum.

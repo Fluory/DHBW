@@ -11,7 +11,7 @@ Der Block liefert zwei Kriterien für diese Ordnung, die wichtigsten Systemtypen
 
 ## Schritt 1: Reichweite
 
-**Was ist das?** Die erste Frage lautet: Wie weit reicht das System über das eigene Unternehmen hinaus?
+**Was ist das?** Die erste Frage lautet: Wie weit reicht das System über das eigene Unternehmen hinaus? Wie bei einer Wohnung: Was nur die Familie nutzt (Küche), was du mit dem Nachbarn teilst (Gartentor), was jeder Besucher nutzt (Klingel). B2B heißt „Business to Business“, also Firma zu Firma. B2C heißt „Business to Consumer“, also Firma zu Endkunde.
 
 | Reichweite | Was es tut | Beispiel |
 |---|---|---|
@@ -31,7 +31,7 @@ B2B und B2C zusammen heißen **überbetrieblich**. Sie werden mit der Digitalisi
 
 ## Schritt 2: Anwendungszweck
 
-**Was ist das?** Die zweite Frage lautet: Wofür wird das System genutzt?
+**Was ist das?** Die zweite Frage lautet: Wofür wird das System genutzt? Auf Deutsch übersetzt: **Record** heißt „Aufzeichnung“ (wie ein Kassenbuch: was ist passiert?), **Insight** heißt „Einblick“ (wie ein Monatsbericht: was lernen wir daraus?), **Engagement** heißt „Einbindung“ (wie ein Gespräch: wir reden miteinander).
 
 | Zweck | auch genannt | Beispiel Leuchtenhändler |
 |---|---|---|
@@ -72,7 +72,9 @@ Die Einordnung ist selten eindeutig. Ein CRM erfasst Verkaufschancen (Transaktio
 
 ## ERP, SCM und CRM
 
-**Was ist das?**
+**In einem Satz:** Ein ERP ist ein gemeinsames Ordnersystem für die ganze Firma statt vieler einzelner Excel-Listen.
+
+**Stell dir vor:** Ohne ERP führt der Vertrieb eine Kundenliste, das Lager eine Bestandsliste und die Buchhaltung eine Rechnungsliste. Jede Abteilung tippt dieselbe Bestellung neu ab. Mit ERP gibt es einen gemeinsamen Schrank: Jede Abteilung hat ihre eigene Schublade (Modul), aber alle greifen auf dieselben Akten zu (gemeinsame Datenbasis).
 
 | System | Kern | Einordnung | Beispiele |
 |---|---|---|---|
@@ -84,7 +86,7 @@ Weitere Typen: E-Business (Shopify), BI (Power BI), Dokumentenmanagement (DMS) u
 
 Beim CRM unterscheidet man **operatives** CRM (Kontakte, Verkaufschancen, Service) und **analytisches** CRM (Kundendaten auswerten).
 
-Der **Bullwhip-Effekt** (Peitscheneffekt): Kleine Nachfrageschwankungen beim Endkunden schaukeln sich entlang der Lieferkette zu immer größeren Bestellschwankungen auf. Geteilte Absatz- und Bestandsdaten im SCM dämpfen ihn.
+Der **Bullwhip-Effekt** (Peitscheneffekt): Bei einer Peitsche wird aus einer kleinen Handbewegung am Ende ein großer Ausschlag. Ausgedachtes Zahlenbeispiel: Kunden kaufen 10 % mehr. Der Händler bestellt zur Sicherheit 20 % mehr, der Großhändler 40 % mehr, der Hersteller produziert 80 % mehr. Kleine Nachfrageschwankungen beim Endkunden schaukeln sich entlang der Lieferkette zu immer größeren Bestellschwankungen auf. Geteilte Absatz- und Bestandsdaten im SCM dämpfen ihn.
 
 **Beispiel ERP:** Beim Leuchtenhändler geht ein Auftrag über 40 Stehleuchten ein.
 
@@ -106,6 +108,10 @@ Alles läuft auf einer Datenbasis, ohne neue Eingabe.
 
 ## Integration
 
+**In einem Satz:** Integration heißt, dass eine Angabe einmal eingetippt wird und dann überall dort ankommt, wo sie gebraucht wird.
+
+**Stell dir vor:** **Horizontal** ist ein Staffellauf: Der Auftrag wird wie ein Stab von Abteilung zu Abteilung weitergereicht, ohne dass ihn jemand neu schreibt. **Vertikal** ist eine Zusammenfassung für die Chefin: Aus hunderten Einzelaufträgen wird eine Zahl pro Monat.
+
 **Was ist das?** Integration heißt, Daten, Vorgänge und Aufgaben sinnvoll zu verzahnen. Ziel: **Daten nur einmal erfassen und überall nutzen.**
 
 - **Horizontale Integration:** Ein Auftrag läuft ohne Neuerfassung durch alle Fachbereiche entlang des Prozesses: Vertrieb → Produktion → Lager/Versand → Buchhaltung.
@@ -119,7 +125,7 @@ Auftrag      Fertigung      Lieferschein      Rechnung
             horizontal (entlang des Prozesses)
 ```
 
-Ohne Integration entsteht ein **Medienbruch**: Der Auftrag kommt per E-Mail, wird in Excel abgetippt und in der Produktion noch einmal eingegeben. Folgen: doppelte Arbeit, Tippfehler, Verzögerung.
+Ohne Integration entsteht ein **Medienbruch** (die Information wechselt das „Medium“, zum Beispiel von E-Mail zu Excel, und muss dabei von Hand übertragen werden): Der Auftrag kommt per E-Mail, wird in Excel abgetippt und in der Produktion noch einmal eingegeben. Folgen: doppelte Arbeit, Tippfehler, Verzögerung.
 
 > [!IMPORTANT]
 > **Das Wichtigste**
@@ -177,7 +183,7 @@ Offizielle Lösung: **Enterprise Resource Planning.** Nur diese Option ankreuzen
 
 ### Übung 4
 
-**B, Dispositionssystem.** Es ersetzt eine operative Entscheidung (wann bestellen). Ein Administrationssystem rationalisiert Massendaten wie die Lohnabrechnung.
+**B, Dispositionssystem.** „Disponieren“ heißt „einteilen, entscheiden“. Das System ersetzt eine operative Entscheidung (wann bestellen). Ein Administrationssystem rationalisiert Massendaten wie die Lohnabrechnung.
 
 ### Übung 5
 
