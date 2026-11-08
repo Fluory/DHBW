@@ -83,6 +83,20 @@ klausur: "relevant"           # relevant | teilweise | nicht-relevant
 4. `## Übungen`: 3–6 Aufgaben (leicht bis Prüfungsniveau), jede als `> [!TIP]` mit Label `**Übung N · leicht|mittel|Prüfungsniveau**` und Quellenangabe (z. B. „Skript, Übung 26“, „Musterklausur 2025, A5“, „eigene Aufgabe“).
 5. `## Lösungen`: zu jeder Übung `### Übung N` mit Lösung Schritt für Schritt.
 
+## Greifbar erklären (gilt für jedes neue Konzept)
+
+Die Folien der Vorlesung sind oft formal und schwer verständlich. Die Website übersetzt sie. Jedes Konzept wird in dieser Reihenfolge erklärt, erst die Anschauung, dann die Formel:
+
+1. **In einem Satz:** was es ist, in Alltagssprache, ohne Fachwort.
+2. **Stell dir vor:** ein konkretes Bild aus dem Alltag (Treppe, Konto, Pizza, Wasserhahn, Sitzplätze, Warteschlange …), das wirklich zur Mathematik passt.
+3. **Mit Zahlen:** eine kleine Tabelle oder Rechnung, an der man das Verhalten sieht, bevor es allgemein formuliert wird.
+4. **Die Formel:** erst jetzt, und jedes Symbol wird in Worten erklärt („q ist der Faktor, mit dem jedes Mal malgenommen wird“).
+5. **So steht es auf der Folie:** die formale Schreibweise der Vorlesung und darunter „Auf Deutsch heißt das: …“. Symbole werden vorgelesen (Σ = „Summe von … bis …“, lim = „wohin läuft es, wenn …“, ∈ = „liegt in“).
+6. **So rechnest du:** nummerierte Schritte mit vollständigem Beispiel.
+7. **Typischer Fehler** als `> [!WARNING]`.
+
+Dazu: Jeder Gedankenschritt steht einzeln da, nichts wird „offensichtlich“ übersprungen. Fachwörter werden beim ersten Auftreten erklärt. Lieber ein Beispiel mehr als ein Satz Theorie mehr.
+
 ## Stil
 
 - Deutsch, Du-Form, kurze Sätze, aktiv. Erst einfach, dann genau.
