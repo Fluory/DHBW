@@ -17,7 +17,7 @@ Terminal, `uv`, Python 3.14, `ruff`, `ty` – bewusst ohne IDE und ohne KI-Assis
 | 5 | 23.10.2026 | Wiederholung, Selbsttest-Quizze; OOP I bis Übung 3 (Klassen, Objekte, Methoden, self, Klassenattribute) – Properties, dataclass und OOP II folgen | Folien „vl05_oop_1“ (bis Folie 41) + Rückmeldung | [05](vorlesungen/05_2026-10-23.md) |
 | 6 | 27.10.2026 | Rest OOP I: Kapselung/Properties (Ü4), Hat-ein, Module, @dataclass (Ü5) – korrigiert 06.11.: VL06 begann erst an Termin 7 | Folien „vl05_oop_1“ ab Folie 42 + Rückmeldung 03.11. | [06](vorlesungen/06_2026-10-27.md) |
 | 7 | 03.11.2026 | Start OOP II: Vererbung, super(), Überschreiben, @override (VL06 Ü1–2) | Folien „vl06_oop_2“ Folie 1–29 + Rückmeldung („bei VL06 am Anfang, Übung 1“, dann Übung 2) | [07](vorlesungen/07_2026-11-03.md) |
-| 8 | 06.11.2026 | (vorbereitet) Rest OOP II: Polymorphie, Typangabe vs. Objekt, Duck Typing, object/__repr__, ABC/@abstractmethod, Fähigkeiten (Ü3–5); vermutlich nachmittags Start VL07 Projekt „Kaffeeshop“ (Aufgabe, Startpaket, Stufe 1) | Folien „vl06_oop_2“ ab Folie 30 + „vl07_projekt_onlineshop“ Folie 1–13 (Sicherheit mittel) | [08](vorlesungen/08_2026-11-06.md) |
+| 8 | 06.11.2026 | (vorbereitet) Rest OOP II: Polymorphie, Typangabe vs. Objekt, Duck Typing, object/__repr__, ABC/@abstractmethod, Fähigkeiten (Ü3–5); vermutlich nachmittags Start VL07 Projekt „Kaffeeshop“ (Aufgabe, Startpaket, Stufe 1) | Folien „vl06_oop_2“ ab Folie 30 + „vl07_projekt_onlineshop“ Folie 1–13 (Sicherheit mittel); Nachtrag 09.11.: Wiederholungsmaterial „Fitnessstudio“ VL01–VL06 in der Notiz | [08](vorlesungen/08_2026-11-06.md) |
 
 ## Materialien in Moodle
 
@@ -54,6 +54,8 @@ Terminal, `uv`, Python 3.14, `ruff`, `ty` – bewusst ohne IDE und ohne KI-Assis
 | Vorlesung 8 – Lösungen als Python-Dateien | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191389) | 26.10.2026 | vermutlich Termin 9/10 (nach VL07; nicht im Detail ausgewertet) |
 | Vorlesung 8 – Selbsttest-Quiz (HTML) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191390) | 26.10.2026 | vermutlich Termin 9/10 (nach VL07; nicht im Detail ausgewertet) |
 | Vorlesung 5 – Prompt für KI-Lernpartner (Text, Stoff VL01–VL05) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191612) | 28.10.2026 | Klausurvorbereitung (Abfrage VL01–VL05) |
+| Wiederholung VL01 bis VL06 – Fitnessstudio (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192161) | 09.11.2026 | Klausurvorbereitung VL01–VL06; zusammengefasst in Notiz 08 (ob am 06.11. gezeigt, unklar) |
+| Wiederholung VL01 bis VL06 – Fitnessstudio (Beispielcode als Python-Dateien, ZIP) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192162) | 09.11.2026 | Klausurvorbereitung VL01–VL06; `fitnessstudio.py` ausgeführt, siehe Notiz 08 |
 
 ## Eigene Notizen
 
