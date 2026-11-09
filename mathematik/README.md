@@ -1,8 +1,10 @@
 # Mathematik I
 
-Moodle: [Kurs 18613](https://moodle.heilbronn.dhbw.de/course/view.php?id=18613) · Kalender-Titel: „Mathematik I“ · Dozenten: Dr. Pascal Wortel, Prof. Dr. Markus Niedergesäss · Veranstaltung: „Mathematik I – Analysis“
+Moodle: [Kurs 18613](https://moodle.heilbronn.dhbw.de/course/view.php?id=18613) · Kalender-Titel: „Mathematik I“ · Dozenten: Dr. Pascal Wortel, Prof. Dr. Markus Niedergesäss (Analysis), Dr. Till Heller (laut Kalender, zweiter Teil) · Veranstaltung: „Mathematik I – Analysis“ + zweiter Teil (vermutlich Logik/Mengen/Lineare Algebra)
 
 Termine laut Folien: 19.10., 04.11. (ganztags), 20.11. (ganztags), 02.12. (ganztags). Inhalt: Folgen und Reihen, reellwertige und stetige Funktionen, Differentiation, Integration.
+
+Termine laut Kalender: Dr. Wortel 19.10., 04.11., 20.11., 02.12. · Dr. Heller 09.11., 16.11. (ganztags), 23.11., 24.11., 30.11., 01.12. · Klausur 18.12.2026.
 
 ## Fortschritt
 
@@ -10,6 +12,7 @@ Termine laut Folien: 19.10., 04.11. (ganztags), 20.11. (ganztags), 02.12. (ganzt
 |---|---|---|---|---|
 | 1 | 19.10.2026 | Organisatorisches; Folgen: Bildungsgesetze, Monotonie, Beschränktheit, Konvergenz, Grenzwertregeln, arithmetische/geometrische Folgen | Folien „Analysis – Folgen“ | [01](vorlesungen/01_2026-10-19.md) |
 | 2 | 04.11.2026 | Reihen: Teilsummen, notwendiges Kriterium, Rechenregeln, geometrische Reihe, Periodenzahlen, Sparplan/ewige Rente; Funktionen: Definition, Bild, Umkehrfunktion, Graph, Kombinationen, Verkettung, Beschränktheit, Monotonie, Grenzwerte, Stetigkeit, Unstetigkeiten; Aufgaben R-1–R-5, FU-1–FU-8 | Folien „Analysis – Reihen + Funktionen“ | [02](vorlesungen/02_2026-11-04.md) |
+| 3 | 09.11.2026 | (vermutet) Mengen, Aussagenlogik, Quantoren, Ausblick Lineare Algebra (Gauß) – neuer Teil bei Dr. Heller | vermutet (Modulhandbuch), Sicherheit niedrig–mittel | [03](vorlesungen/03_2026-11-09.md) |
 
 ## Materialien in Moodle
 
