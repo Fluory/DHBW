@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Programmierung kurz</title>
+<style>
+@page { size: A4; margin: 14mm; }
+:root {
+  --ink: #1b1b1b; --muted: #555; --line: #c9c9c9; --code: #f1f1f1; --out: #e8eef6;
+  --blue: #1f5fa8; --red: #b3261e; --green: #2e7d32; --orange: #b86a00; --violet: #6a3fa0;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #fff; color: var(--ink); }
+body { font-family: "Liberation Sans", Arial, sans-serif; font-size: 10pt; line-height: 1.33;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+h1 { font-size: 19pt; margin: 0 0 3mm; padding-bottom: 1.5mm; border-bottom: 2.5px solid var(--blue); color: var(--blue); break-before: page; }
+h1.first { break-before: auto; }
+h1 .vl { display: inline-block; font-size: 10pt; background: var(--blue); color: #fff; padding: 1px 7px; border-radius: 3px; vertical-align: middle; margin-right: 6px; }
+h2 { font-size: 12.5pt; margin: 4mm 0 1.2mm; color: #123d6e; break-after: avoid; }
+h3 { font-size: 11pt; margin: 3.5mm 0 1mm; break-after: avoid; }
+p { margin: 0.8mm 0 1.6mm; }
+ul, ol { margin: 1mm 0 2mm; padding-left: 6mm; }
+li { margin: 0.3mm 0; }
+code { font-family: "DejaVu Sans Mono", "Liberation Mono", monospace; font-size: 8.9pt; background: var(--code); padding: 0 3px; border-radius: 2px; }
+pre { margin: 0; }
+pre.code { font-family: "DejaVu Sans Mono", "Liberation Mono", monospace; font-size: 7.9pt; line-height: 1.22; background: var(--code);
+  border-left: 3px solid #9a9a9a; padding: 1.4mm 2.5mm; white-space: pre-wrap; margin: 1.2mm 0 1.6mm; orphans: 4; widows: 4; }
+pre.code.java { border-left-color: var(--orange); }
+pre.code.java::before { content: "Java"; display: block; font-family: "Liberation Sans", Arial, sans-serif; font-size: 7.5pt; color: var(--orange); font-weight: bold; }
+.ex { margin: 1.2mm 0 1.8mm; }
+.ex pre.code { margin: 0; }
+pre.out { font-family: "DejaVu Sans Mono", "Liberation Mono", monospace; font-size: 7.9pt; line-height: 1.22; background: var(--out);
+  border-left: 3px solid var(--blue); padding: 0.8mm 2.5mm 1.2mm; white-space: pre-wrap; break-inside: avoid; break-before: avoid; }
+pre.out::before { content: "Ausgabe"; display: block; font-family: "Liberation Sans", Arial, sans-serif; font-size: 7.5pt; color: var(--blue); font-weight: bold; }
+table { border-collapse: collapse; width: 100%; margin: 1.2mm 0 2.4mm; font-size: 8.8pt; line-height: 1.26; }
+tr { break-inside: avoid; }
+th, td { border: 1px solid var(--line); padding: 0.7mm 1.6mm; vertical-align: top; text-align: left; }
+th { background: #e4ebf4; }
+td code, th code { font-size: 8.4pt; }
+.box { border: 1px solid var(--line); border-left: 5px solid var(--blue); border-radius: 3px; padding: 1.6mm 3mm; margin: 2mm 0 2.4mm; background: #fafbfd; }
+.slide, .info { break-inside: avoid; }
+
+.box > .t { font-weight: bold; margin-bottom: 1mm; display: block; break-after: avoid; }
+.box ul { margin: 0.5mm 0; }
+.trap { border-left-color: var(--red); background: #fdf6f5; }
+.trap > .t { color: var(--red); }
+.must { border-left-color: var(--green); background: #f5faf5; }
+.must > .t { color: var(--green); }
+.must ul { list-style: none; padding-left: 1mm; }
+.must li::before { content: "☐ "; color: var(--green); }
+.slide { border-left-color: var(--orange); background: #fff8ee; }
+.slide > .t { color: var(--orange); }
+.info { border-left-color: var(--violet); background: #f8f5fc; }
+.info > .t { color: var(--violet); }
+.erg { color: var(--violet); font-style: italic; font-size: 9pt; }
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5mm; align-items: start; }
+.cols > * { min-width: 0; }
+.cols > .box { margin: 1.5mm 0 0; }
+.cols:has(> .ex:first-child + div:not(.ex)) { grid-template-columns: 1.6fr 1fr; }
+.cols:has(> .ex:first-child + figure) { grid-template-columns: 1.1fr 1fr; }
+figure { margin: 2mm 0 3mm; break-inside: avoid; text-align: center; }
+figure svg { max-width: 100%; height: auto; }
+figcaption { font-size: 8.8pt; color: var(--muted); margin-top: 1mm; }
+.small { font-size: 9pt; color: var(--muted); }
+.kpi td:first-child { width: 33%; font-weight: bold; }
+.prio td:first-child { width: 7mm; text-align: center; font-weight: bold; color: var(--blue); }
+.title { border: 2px solid var(--blue); border-radius: 4px; padding: 3mm 4mm; margin-bottom: 3mm; }
+.title .big { font-size: 20pt; font-weight: bold; color: var(--blue); }
+.tag { display: inline-block; font-size: 8pt; border: 1px solid var(--line); border-radius: 3px; padding: 0 4px; margin-right: 3px; }
+svg text { font-family: "Liberation Sans", Arial, sans-serif; }
+svg .mono { font-family: "DejaVu Sans Mono", monospace; }
+.newpage { break-before: page; }
+.toc { columns: 2; column-gap: 7mm; font-size: 9pt; line-height: 1.32; }
+.toc .e { display: flex; gap: 2mm; break-inside: avoid; }
+.toc .e .n { flex: 1; overflow: hidden; white-space: nowrap; }
+.toc .e .n::after { content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."; color: #aaa; }
+.toc .e .p { min-width: 5mm; text-align: right; }
+.toc .h1e { font-weight: bold; color: var(--blue); margin-top: 1.6mm; }
+.toc .h2e { padding-left: 4mm; }
+.toc .neu { color: var(--green); font-weight: bold; font-size: 7.5pt; }
+.toc a { color: inherit; text-decoration: none; }
+.tight pre.code, .tight pre.out { font-size: 7.1pt; }
+.sheet { columns: 2; column-gap: 4mm; font-size: 7.2pt; line-height: 1.2; }
+.sheet h4 { font-size: 8pt; margin: 1.2mm 0 0.5mm; color: #123d6e; break-after: avoid; }
+.sheet h4:first-child { margin-top: 0; }
+.sheet pre.code { font-size: 6.5pt; line-height: 1.15; padding: 0.8mm 1.4mm; margin: 0 0 0.8mm; break-inside: avoid; }
+.sheet table.mini { font-size: 6.8pt; margin: 0; break-inside: avoid; }
+.sheet table.mini td { padding: 0.3mm 1mm; }
+.sheet table.mini td code { font-size: 6.4pt; }
+
+h1 { font-size: 15pt; margin: 0 0 2mm; break-before: auto; }
+h1.np { break-before: page; }
+h2 { font-size: 11.5pt; margin: 3mm 0 1mm; padding-top: 1mm; border-top: 1px solid #dde3ec; }
+h2 .nr { display: inline-block; min-width: 6mm; color: #fff; background: var(--blue); border-radius: 3px; text-align: center; font-size: 9pt; margin-right: 2mm; }
+.pic { margin: 0.5mm 0 1.2mm; }
+.pic b:first-child { color: var(--violet); }
+.box { padding: 1.2mm 2.5mm; margin: 1.2mm 0 1.6mm; }
+.box ul { padding-left: 4.5mm; }
+.cols { gap: 3mm; }
+.cols > .box { margin-top: 1.2mm; }
+pre.code, pre.out { font-size: 7.8pt; }
+.blk { break-inside: avoid; }
+.quiz { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2mm; }
+.quiz pre.code { font-size: 7.3pt; margin: 0; }
+.quiz .q b { font-size: 8.5pt; color: var(--blue); }
+.stair { font-family: "DejaVu Sans Mono", monospace; font-size: 7.8pt; line-height: 1.3; background: #f8f5fc; border-left: 3px solid var(--violet); padding: 1.2mm 2.5mm; margin: 1.2mm 0; white-space: pre; }
+table.err td:first-child { width: 30%; }
+.sheet { font-size: 7.4pt; }
+.sheet pre.code { font-size: 6.8pt; }
+</style>
+</head>
+<body>
+<div class="title">
+  <div class="big">Grundlagen der Programmierung (Python) – kurz</div>
+  <div>Die Kurzfassung: nur das Wichtigste zu jedem Thema · Klausur <b>Fr 11.12.2026, 120 Minuten</b></div>
+  <div class="small">Auszug aus der langen Zusammenfassung (46 Seiten). Wenn dir ein Thema hier zu knapp ist, schlag es dort nach. Jede Ausgabe in den blauen Kästen kommt aus einem echten Lauf mit Python 3.13.</div>
+</div>
+
+<h1 class="first">So lernst du damit</h1>
+<div class="cols">
+<div>
+<ol>
+<li><b>Ein Block am Stück.</b> Lies zuerst den Satz mit dem Bild. Dann deckst du die blaue Ausgabe ab und sagst sie vorher. Erst danach schaust du hin.</li>
+<li><b>Schleifen immer mit Rundentabelle.</b> Eine Zeile pro Runde, eine Spalte pro Variable. Klingt langsam, aber so passieren keine Fehler, auch nicht in der Klausur.</li>
+<li><b>Die roten Kästen sind die Punkte-Fallen.</b> In „Was gibt das aus?“-Aufgaben steckt fast immer genau so eine Falle.</li>
+</ol>
+</div>
+<div>
+<ol start="4">
+<li><b>Selbst tippen.</b> Schreib jedes Beispiel einmal von Hand ab (ohne IDE, wie im Kurs) und lass es mit <code>uv run datei.py</code> laufen. Ändere dann eine Zahl und rate die neue Ausgabe.</li>
+<li><b>Fehlermeldungen lesen.</b> Die letzte Zeile sagt, was falsch ist, die Zeile darüber, wo. Die Tabelle auf Seite 8 übersetzt sie.</li>
+<li><b>Am Ende nur noch der Spickzettel.</b> Wenn du jede Zeile darauf erklären kannst, bist du gut vorbereitet.</li>
+</ol>
+</div>
+</div>
+
+<div class="box info blk"><span class="t">Mini-Quiz zum Start: Was gibt das aus? (Lösungen auf der letzten Seite)</span>
+<div class="quiz">
+<div class="q"><b>1</b><pre class="code">print(7 // 2, 7 % 2)</pre></div>
+<div class="q"><b>2</b><pre class="code">s = 0
+for i in range(1, 4):
+    s = s + i
+print(s)</pre></div>
+<div class="q"><b>3</b><pre class="code">a = [1, 2]
+b = a
+b.append(3)
+print(a)</pre></div>
+<div class="q"><b>4</b><pre class="code">def f(x):
+    print(x * 2)
+
+y = f(3)
+print(y)</pre></div>
+<div class="q"><b>5</b><pre class="code">x = 15
+if x &gt; 5:
+    print("A")
+elif x &gt; 10:
+    print("B")
+else:
+    print("C")</pre></div>
+</div>
+<p class="small" style="margin:1mm 0 0">Mach das Quiz jetzt einmal und am Ende noch einmal. Siehst du den Unterschied, hast du etwas gelernt.</p>
+</div>
+
+<!-- ========================================================= 1 -->
+<section class="blk">
+<h2><span class="nr">1</span>Variablen und Datentypen</h2>
+<p class="pic"><b>Bild:</b> Eine Variable ist ein <b>Namensschild</b>, das du an einen Wert klebst. Der Typ sagt, was für ein Wert es ist: ganze Zahl (<code>int</code>), Kommazahl (<code>float</code>), Text (<code>str</code>) oder ja/nein (<code>bool</code>).</p>
+<div class="cols">
+<div class="ex"><pre class="code">alter = 19              # int
+preis = 2.5             # float
+name = "Kaffee"         # str
+offen = True            # bool
+print(type(alter), type(preis))
+print(7 / 2, 7 // 2, 7 % 2)
+print(int("42") + 1, str(42) + "1")
+print(f"{name} kostet {preis:.2f} Euro")</pre><pre class="out">&lt;class 'int'&gt; &lt;class 'float'&gt;
+3.5 3 1
+43 421
+Kaffee kostet 2.50 Euro</pre></div>
+<div>
+<table>
+<tr><th>Operator</th><th>heißt</th><th>Beispiel</th></tr>
+<tr><td><code>/</code></td><td>teilen, immer float</td><td><code>7 / 2</code> → 3.5</td></tr>
+<tr><td><code>//</code></td><td>ganzzahlig teilen (abrunden)</td><td><code>7 // 2</code> → 3</td></tr>
+<tr><td><code>%</code></td><td>Rest beim Teilen</td><td><code>7 % 2</code> → 1</td></tr>
+</table>
+<p class="small">Bild für <code>//</code> und <code>%</code>: 7 Kekse auf 2 Kinder. Jedes bekommt 3 (<code>//</code>), 1 bleibt übrig (<code>%</code>). <code>x % 2 == 0</code> heißt „x ist gerade“.</p>
+<div class="box trap"><span class="t">Fallen</span>
+<ul>
+<li><code>"Alter: " + 19</code> → <code>TypeError</code>. Text und Zahl erst angleichen: <code>str(19)</code> oder f-String.</li>
+<li><code>input()</code> liefert immer <code>str</code>: <code>int(input())</code>, sonst rechnest du mit Text (<code>"4" + "2"</code> → <code>"42"</code>).</li>
+</ul></div>
+</div>
+</div>
+</section>
+
+<!-- ========================================================= 2 -->
+<section class="blk">
+<h2><span class="nr">2</span>Verzweigung: <code>if</code> / <code>elif</code> / <code>else</code></h2>
+<p class="pic"><b>Bild:</b> Eine <b>Weiche</b> am Gleis: Python prüft die Bedingungen von oben nach unten und fährt in den <b>ersten</b> Zweig, der wahr ist. Alle anderen werden übersprungen.</p>
+<div class="cols">
+<div class="ex"><pre class="code">punkte = 72
+if punkte &gt;= 90:
+    print("sehr gut")
+elif punkte &gt;= 50:
+    print("bestanden")
+else:
+    print("nicht bestanden")</pre><pre class="out">bestanden</pre></div>
+<div class="box trap"><span class="t">Fallen</span>
+<ul>
+<li><b>Reihenfolge:</b> Stünde <code>punkte &gt;= 50</code> oben, käme bei 95 Punkten auch „bestanden“ heraus. Die strengste Bedingung gehört nach oben.</li>
+<li>Doppelpunkt am Zeilenende vergessen → <code>SyntaxError</code>. Block nicht eingerückt → <code>IndentationError</code>.</li>
+<li><code>=</code> weist zu, <code>==</code> vergleicht.</li>
+</ul></div>
+</div>
+</section>
+
+<!-- ========================================================= 3 -->
+<section class="blk">
+<h2><span class="nr">3</span><code>for</code>-Schleife mit <code>range</code> und mit Liste</h2>
+<p class="pic"><b>Bild:</b> Die <b>Kassiererin</b>: Sie nimmt eine Ware vom Band (eine Runde), scannt sie und nimmt die nächste. Ist das Band leer, sagt sie die Summe an. Die Schleifenvariable ist ihre Hand, in jeder Runde liegt etwas anderes darin.</p>
+<div class="cols">
+<div>
+<div class="ex"><pre class="code">summe = 0
+for zahl in range(1, 4):
+    summe = summe + zahl
+    print("Runde:", zahl, "summe:", summe)
+print("fertig:", summe)</pre><pre class="out">Runde: 1 summe: 1
+Runde: 2 summe: 3
+Runde: 3 summe: 6
+fertig: 6</pre></div>
+<div class="ex"><pre class="code">einkauf = ["Kaffee", "Tee", "Kakao"]
+for ware in einkauf:
+    print("Ich kaufe", ware)</pre><pre class="out">Ich kaufe Kaffee
+Ich kaufe Tee
+Ich kaufe Kakao</pre></div>
+</div>
+<div>
+<p style="margin-top:1.2mm"><b>Rundentabelle</b> zum Beispiel links oben (<code>range(1, 4)</code> liefert 1, 2, 3):</p>
+<table>
+<tr><th>Runde</th><th><code>zahl</code></th><th><code>summe</code> vorher</th><th><code>summe</code> nachher</th></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>0 + 1 = 1</td></tr>
+<tr><td>2</td><td>2</td><td>1</td><td>1 + 2 = 3</td></tr>
+<tr><td>3</td><td>3</td><td>3</td><td>3 + 3 = 6</td></tr>
+<tr><td colspan="4">nach der Schleife (nicht eingerückt): einmal <code>fertig: 6</code></td></tr>
+</table>
+<div class="box trap"><span class="t">Fallen</span>
+<ul>
+<li><code>range(1, 4)</code> → 1, 2, 3. <b>Die Stoppzahl ist nie dabei.</b> „1 bis 5“ heißt <code>range(1, 6)</code>.</li>
+<li><code>summe = 0</code> <b>in</b> der Schleife setzt jede Runde zurück. Startwert immer <b>vor</b> die Schleife.</li>
+<li>Eingerückt = läuft jede Runde. Nicht eingerückt = läuft einmal danach.</li>
+</ul></div>
+</div>
+</div>
+</section>
+
+<!-- ========================================================= 4 -->
+<section class="blk">
+<h2><span class="nr">4</span><code>while</code>-Schleife</h2>
+<p class="pic"><b>Bild:</b> Ein <b>Kaffeeautomat</b>: Solange dein Guthaben reicht, kaufst du noch einen. Du weißt vorher nicht, wie viele Runden es werden. Vor jeder Runde wird die Bedingung neu geprüft.</p>
+<div class="cols">
+<div class="ex"><pre class="code">guthaben = 10
+while guthaben &gt;= 4:
+    guthaben = guthaben - 4
+    print("Kaffee gekauft, Rest:", guthaben)
+print("Zu wenig Geld")</pre><pre class="out">Kaffee gekauft, Rest: 6
+Kaffee gekauft, Rest: 2
+Zu wenig Geld</pre></div>
+<div>
+<table>
+<tr><th>Prüfung</th><th><code>guthaben &gt;= 4</code>?</th><th>danach</th></tr>
+<tr><td>1</td><td>10 → ja</td><td>6</td></tr>
+<tr><td>2</td><td>6 → ja</td><td>2</td></tr>
+<tr><td>3</td><td>2 → nein</td><td>Schleife endet</td></tr>
+</table>
+<div class="box trap"><span class="t">Fallen</span>
+<ul>
+<li>Die Bedingung ändert sich nie (z. B. <code>guthaben - 4</code> ohne Zuweisung) → <b>Endlosschleife</b>.</li>
+<li><code>for</code>, wenn du weißt, wie oft (Liste, <code>range</code>). <code>while</code>, wenn es „bis etwas passiert“ heißt. <code>break</code> verlässt die Schleife sofort.</li>
+</ul></div>
+</div>
+</div>
+</section>
+
+<!-- ========================================================= 5 -->
+<section class="blk">
+<h2><span class="nr">5</span>Listen</h2>
+<p class="pic"><b>Bild:</b> Eine Liste ist eine <b>Reihe nummerierter Schließfächer</b>. Die Nummerierung beginnt bei <b>0</b>, das letzte Fach erreichst du mit <code>-1</code>.</p>
+<div class="cols">
+<div class="ex"><pre class="code">l = ["a", "b", "c"]
+l.append("d")
+print(l[0], l[-1], len(l))
+print(l[1:3])
+gitter = [[0] * 3] * 2      # FALLE
+gitter[0][0] = 9
+print(gitter)
+gut = [[0] * 3 for _ in range(2)]
+gut[0][0] = 9
+print(gut)</pre><pre class="out">a d 4
+['b', 'c']
+[[9, 0, 0], [9, 0, 0]]
+[[9, 0, 0], [0, 0, 0]]</pre></div>
+<div>
+<ul>
+<li><code>l[0]</code> erstes, <code>l[-1]</code> letztes Element</li>
+<li><code>l.append(x)</code> hängt hinten an, <code>len(l)</code> zählt</li>
+<li>Slicing <code>l[1:3]</code>: von Platz 1 bis <b>vor</b> Platz 3 (wie bei <code>range</code>)</li>
+</ul>
+<div class="box trap"><span class="t">Fallen</span>
+<ul>
+<li><code>l[len(l)]</code> → <code>IndexError</code>. Der größte Index ist <code>len(l) - 1</code>.</li>
+<li><b>Alias-Falle:</b> <code>[[0] * 3] * 2</code> enthält zweimal <b>dieselbe</b> innere Liste. Ändern einer Zeile ändert beide. Genauso bei <code>b = a</code>: zwei Namensschilder, eine Liste. Kopie: <code>a.copy()</code>.</li>
+</ul></div>
+</div>
+</div>
+</section>
+
+<!-- ========================================================= 6 -->
+<section class="blk">
+<h2><span class="nr">6</span>Funktionen</h2>
+<p class="pic"><b>Bild:</b> Eine Funktion ist eine <b>Kaffeemaschine</b>: Du gibst etwas hinein (Parameter), sie arbeitet, und mit <code>return</code> kommt ein Ergebnis in deine Tasse. <code>print</code> dagegen zeigt nur etwas auf dem Display, in der Tasse landet nichts (<code>None</code>).</p>
+<div class="cols">
+<div>
+<div class="ex"><pre class="code">def brutto(netto: float, satz: float = 0.19) -&gt; float:
+    return netto * (1 + satz)
+
+def zeige(x: int) -&gt; None:
+    print(x * 2)
+
+print(brutto(100))
+print(brutto(100, 0.07))
+ergebnis = zeige(5)
+print(ergebnis)</pre><pre class="out">119.0
+107.0
+10
+None</pre></div>
+<div class="ex"><pre class="code">def rechne() -&gt; None:
+    zwischen = 5     # lokal: lebt nur in der Funktion
+    print(zwischen)
+
+rechne()
+print(zwischen)</pre><pre class="out">5
+NameError: name 'zwischen' is not defined</pre></div>
+</div>
+<div>
+<ul>
+<li><b>Parameter</b> = Platzhalter in <code>def</code>, <b>Argument</b> = konkreter Wert beim Aufruf.</li>
+<li><b>Standardwert</b> <code>satz=0.19</code>: Wenn du nichts angibst, gilt 0.19. Parameter mit Standardwert stehen <b>hinten</b>.</li>
+<li><b>Gültigkeit:</b> Variablen aus der Funktion sind lokal. Sie verschwinden nach dem Aufruf (unten: <code>NameError</code>).</li>
+<li><code>return</code> beendet die <b>ganze</b> Funktion sofort, auch mitten in einer Schleife.</li>
+</ul>
+<div class="box trap"><span class="t">Fallen</span>
+<ul>
+<li><b><code>print</code> ≠ <code>return</code>:</b> <code>zeige(5)</code> druckt 10, liefert aber <code>None</code>. Wer damit weiterrechnet, bekommt <code>TypeError … 'NoneType'</code>.</li>
+<li><code>def</code> allein tut nichts. Der Rumpf läuft erst beim Aufruf <code>name(...)</code>.</li>
+</ul></div>
+</div>
+</div>
+</section>
+
+<!-- ========================================================= 7 -->
+<section class="blk">
+<h2><span class="nr">7</span>Rekursion</h2>
+<p class="pic"><b>Bild:</b> <b>Matroschka-Puppen</b>: Jede Puppe öffnet die nächstkleinere, bis die kleinste (der <b>Basisfall</b>) nicht mehr aufgeht. Dann wird von innen nach außen wieder zugemacht. Eine rekursive Funktion ruft sich selbst mit einem kleineren Problem auf.</p>
+<div class="cols">
+<div>
+<div class="ex"><pre class="code">def fakultaet(n: int) -&gt; int:
+    if n &lt;= 1:                    # Basisfall
+        return 1
+    return n * fakultaet(n - 1)   # kleineres Problem
+
+print(fakultaet(3))
+print(fakultaet(5))</pre><pre class="out">6
+120</pre></div>
+<div class="box trap"><span class="t">Fallen</span>
+<ul>
+<li>Basisfall fehlt oder wird nie erreicht (z. B. <code>fakultaet(n)</code> statt <code>n - 1</code>) → <code>RecursionError</code>.</li>
+<li>Basisfall <b>zuerst</b> prüfen, erst dann rekursiv aufrufen.</li>
+</ul></div>
+</div>
+<div>
+<p style="margin-top:1.2mm"><b>Aufruf-Treppe</b> für <code>fakultaet(3)</code>:</p>
+<div class="stair">fakultaet(3) = 3 * fakultaet(2)        ↓ wartet
+   fakultaet(2) = 2 * fakultaet(1)     ↓ wartet
+      fakultaet(1) = 1                 Basisfall!
+   fakultaet(2) = 2 * 1 = 2            ↑ rechnet
+fakultaet(3) = 3 * 2 = 6               ↑ Ergebnis 6</div>
+<p class="small">Hinunter: jeder Aufruf wartet auf den nächsten (jeder hat sein eigenes <code>n</code>). Hinauf: erst jetzt wird multipliziert.</p>
+</div>
+</div>
+</section>
+
+<!-- ========================================================= 8 -->
+<section class="blk">
+<h2><span class="nr">8</span>Klassen und Objekte</h2>
+<p class="pic"><b>Bild:</b> Eine Klasse ist die <b>Ausstechform</b>, die Objekte sind die <b>Plätzchen</b>. Jedes Plätzchen hat eigene Werte (Attribute) und kann etwas tun (Methoden). <code>self</code> heißt „dieses eine Plätzchen hier“.</p>
+<div class="cols">
+<div class="ex"><pre class="code">class Konto:
+    anzahl = 0                       # Klassenattribut
+
+    def __init__(self, inhaber: str, stand: int = 0) -&gt; None:
+        self.inhaber = inhaber       # Objektattribut
+        self._stand = stand
+        Konto.anzahl += 1
+
+    @property
+    def stand(self) -&gt; int:          # lesen ohne ()
+        return self._stand
+
+    def einzahlen(self, betrag: int) -&gt; None:
+        self._stand += betrag
+
+a = Konto("Anna")
+b = Konto("Ben", 50)
+a.einzahlen(30)
+print(a.inhaber, a.stand, b.stand, Konto.anzahl)
+a.stand = 1000</pre><pre class="out">Anna 30 50 2
+AttributeError: property 'stand' of 'Konto' object has no setter</pre></div>
+<div>
+<ul>
+<li><code>__init__</code> läuft automatisch bei <code>Konto("Anna")</code> und füllt das neue Objekt.</li>
+<li><code>self.inhaber</code> gehört dem Objekt, <code>anzahl</code> (ohne <code>self</code>, direkt in der Klasse) teilen sich alle. Ändern über <code>Konto.anzahl</code>.</li>
+<li><b>Property</b>: <code>a.stand</code> sieht aus wie ein Attribut, ruft aber eine Methode auf. Ohne Setter ist es nur lesbar (letzte Zeile: <code>AttributeError</code>).</li>
+</ul>
+<div class="ex"><pre class="code">from dataclasses import dataclass
+
+@dataclass
+class Kunde:
+    name: str
+    email: str
+
+k = Kunde("Anna", "a@x.de")
+print(k)
+print(k == Kunde("Anna", "a@x.de"))</pre><pre class="out">Kunde(name='Anna', email='a@x.de')
+True</pre></div>
+<p class="small"><code>@dataclass</code> schreibt <code>__init__</code>, eine lesbare Ausgabe und <code>==</code> für dich.</p>
+<div class="box trap"><span class="t">Fallen</span>
+<ul>
+<li><code>self</code> als ersten Parameter vergessen → <code>TypeError</code> beim Aufruf.</li>
+<li><code>__str__</code> muss <code>return</code>en, nicht <code>print</code>en.</li>
+</ul></div>
+</div>
+</div>
+</section>
+
+<!-- ========================================================= 9 -->
+<section class="blk">
+<h2><span class="nr">9</span>Vererbung</h2>
+<p class="pic"><b>Bild:</b> Ein Sparkonto <b>ist ein</b> Konto, nur mit Zins dazu. Die Unterklasse erbt alles von der Oberklasse und darf Einzelnes <b>überschreiben</b>, so wie ein Kind die Rezepte der Eltern übernimmt und eines davon nachwürzt.</p>
+<div class="cols">
+<div class="ex"><pre class="code">from typing import override
+
+class Konto:
+    def __init__(self, inhaber: str) -&gt; None:
+        self.inhaber = inhaber
+
+    def __str__(self) -&gt; str:
+        return f"Konto von {self.inhaber}"
+
+class Sparkonto(Konto):                  # Sparkonto IST EIN Konto
+    def __init__(self, inhaber: str, zins: int) -&gt; None:
+        super().__init__(inhaber)        # Oberklasse zuerst!
+        self.zins = zins
+
+    @override
+    def __str__(self) -&gt; str:            # ueberschreiben + ergaenzen
+        return f"{super().__str__()} ({self.zins} %)"
+
+s = Sparkonto("Anna", 2)
+print(s)
+print(isinstance(s, Konto), isinstance(Konto("Ben"), Sparkonto))</pre><pre class="out">Konto von Anna (2 %)
+True False</pre></div>
+<div>
+<ul>
+<li><code>class Sparkonto(Konto)</code>: in Klammern steht die Oberklasse.</li>
+<li><code>super().__init__(inhaber)</code> lässt zuerst die Oberklasse ihre Attribute anlegen.</li>
+<li><b>Überschreiben:</b> gleiche Methode, gleicher Name, in der Unterklasse. <code>super().__str__()</code> holt die alte Version dazu. <code>@override</code> (aus <code>typing</code>) markiert das, <code>ty</code> meldet dann Tippfehler im Namen.</li>
+<li><code>isinstance(s, Konto)</code> → <code>True</code>: ein Sparkonto zählt auch als Konto. Umgekehrt nicht.</li>
+</ul>
+<div class="box trap"><span class="t">Fallen</span>
+<ul>
+<li><code>super().__init__(...)</code> vergessen → <code>AttributeError: … has no attribute 'inhaber'</code>.</li>
+<li><code>super.__init__</code> ohne Klammern hinter <code>super</code> → <code>TypeError</code>.</li>
+</ul></div>
+</div>
+</div>
+</section>
+
+<!-- ========================================================= 10 -->
+<section class="blk">
+<h2><span class="nr">10</span>Polymorphie und abstrakte Klassen</h2>
+<p class="pic"><b>Bild:</b> An der Kasse sagst du immer nur „Bezahlen bitte“. Ob dann Karte oder Rechnung läuft, entscheidet das Objekt, nicht du. Das ist <b>Polymorphie</b>. Die abstrakte Klasse ist das <b>Formular mit Pflichtfeld</b>: Jede Zahlungsart muss <code>bezahlen</code> ausfüllen, das leere Formular selbst kann man nicht benutzen.</p>
+<div class="cols">
+<div class="ex"><pre class="code">from abc import ABC, abstractmethod
+
+class Zahlungsart(ABC):
+    @abstractmethod
+    def bezahlen(self, betrag: float) -&gt; str: ...
+
+class Kreditkarte(Zahlungsart):
+    def bezahlen(self, betrag: float) -&gt; str:
+        return f"{betrag} Euro per Karte"
+
+class Rechnung(Zahlungsart):
+    def bezahlen(self, betrag: float) -&gt; str:
+        return f"{betrag} Euro auf Rechnung"
+
+for art in [Kreditkarte(), Rechnung()]:   # gleicher Aufruf,
+    print(art.bezahlen(9.5))               # anderes Verhalten
+Zahlungsart()</pre><pre class="out">9.5 Euro per Karte
+9.5 Euro auf Rechnung
+TypeError: Can't instantiate abstract class Zahlungsart without an implementation for abstract method 'bezahlen'</pre></div>
+<div>
+<ul>
+<li>Abstrakt braucht <b>zwei Zutaten</b>: erben von <code>ABC</code> und <code>@abstractmethod</code> über der Pflichtmethode. Import: <code>from abc import ABC, abstractmethod</code>.</li>
+<li>Die Schleife ruft überall dasselbe <code>art.bezahlen(...)</code> auf. Welche Version läuft, hängt vom Objekt ab.</li>
+<li>Neue Zahlungsart = neue Unterklasse. Der Code mit der Schleife bleibt gleich.</li>
+</ul>
+<div class="box trap"><span class="t">Fallen</span>
+<ul>
+<li>Abstrakte Klasse erzeugen oder Pflichtmethode in der Unterklasse vergessen → <code>TypeError: Can't instantiate abstract class …</code></li>
+<li><code>@abstractmethod</code> ohne <code>(ABC)</code> → kein Fehler, nichts wird geprüft.</li>
+</ul></div>
+</div>
+</div>
+</section>
+
+<!-- ========================================================= 11 -->
+<section class="blk">
+<h2><span class="nr">11</span>Projekt Kaffeeshop in 5 Zeilen</h2>
+<p class="pic"><b>Bild:</b> Das Lager ist ein Regal voller Produkte. Im Warenkorb liegen keine Produkte, sondern <b>Zettel</b> („3 × French Press“). Das sind die Positionen.</p>
+<table>
+<tr><th style="width:22%">Baustein</th><th>in einem Satz</th></tr>
+<tr><td><b>Lager</b></td><td>hat eine Liste von Produkten (<i>hat ein</i>, keine Vererbung).</td></tr>
+<tr><td><b>Warenkorb</b></td><td>hat eine Liste von Positionen, am Anfang leer: <code>self.positionen = []</code>.</td></tr>
+<tr><td><b>Position</b></td><td>ein Zettel aus Produkt und Menge (<code>@dataclass</code>).</td></tr>
+<tr><td><b><code>finden(nummer)</code></b></td><td>Schleife über die Produkte. Treffer → sofort <code>return produkt</code>. Erst <b>nach</b> der Schleife <code>return None</code>.</td></tr>
+<tr><td><b><code>hinzufuegen(p, menge)</code></b></td><td>Menge im Korb + neue Menge &gt; Bestand → <code>False</code>. Liegt das Produkt schon im Korb, wird die Menge auf dem Zettel erhöht, sonst kommt ein neuer Zettel dazu → <code>True</code>.</td></tr>
+</table>
+</section>
+<section class="blk">
+<div class="cols tight">
+<div class="ex"><pre class="code">from dataclasses import dataclass
+
+@dataclass
+class Produkt:
+    nummer: int
+    name: str
+    bestand: int
+
+@dataclass
+class Position:                      # ein Zettel: Produkt + Menge
+    produkt: Produkt
+    menge: int
+
+class Lager:
+    def __init__(self, produkte: list[Produkt]) -&gt; None:
+        self.produkte = produkte
+
+    def finden(self, nummer: int) -&gt; Produkt | None:
+        for produkt in self.produkte:
+            if produkt.nummer == nummer:
+                return produkt       # gefunden: sofort raus
+        return None                  # erst NACH der Schleife
+
+class Warenkorb:
+    def __init__(self) -&gt; None:
+        self.positionen: list[Position] = []
+
+    def hinzufuegen(self, produkt: Produkt, menge: int) -&gt; bool:
+        for pos in self.positionen:
+            if pos.produkt.nummer == produkt.nummer:
+                if pos.menge + menge &gt; produkt.bestand:
+                    return False
+                pos.menge += menge   # vorhandenen Zettel erhoehen
+                return True
+        if menge &gt; produkt.bestand:
+            return False
+        self.positionen.append(Position(produkt, menge))
+        return True
+
+lager = Lager([Produkt(101, "Kaffee", 40), Produkt(203, "French Press", 3)])
+korb = Warenkorb()
+fp = lager.finden(203)
+print(fp)
+print(lager.finden(999))
+if fp is not None:
+    print(korb.hinzufuegen(fp, 3), korb.hinzufuegen(fp, 1))
+print(len(korb.positionen), korb.positionen[0].menge)</pre><pre class="out">Produkt(nummer=203, name='French Press', bestand=3)
+None
+True False
+1 3</pre></div>
+<div>
+<p style="margin-top:1.2mm"><b>Was passiert unten?</b> <code>finden(203)</code> trifft in Runde 2. <code>finden(999)</code> trifft nie, also <code>None</code>. 3 French Press passen genau (3 ≤ 3), die vierte nicht mehr (3 + 1 &gt; 3). Ergebnis: <b>eine</b> Position mit Menge 3.</p>
+<div class="box trap"><span class="t">Fallen</span>
+<ul>
+<li><code>else: return None</code> direkt unter dem <code>if</code> in <code>finden()</code> → die Suche endet nach Runde 1, 203 wird nie gefunden.</li>
+<li>Ergebnis von <code>finden()</code> nicht auf <code>None</code> prüfen → <code>AttributeError: 'NoneType' object has no attribute …</code></li>
+<li>Bei der Bestandsprüfung die Menge im Korb vergessen → 4 von 3 im Korb.</li>
+<li>Immer <code>append</code>, statt die Menge zu erhöhen → dasselbe Produkt steht zweimal im Korb.</li>
+<li>Methoden liefern <code>True</code>/<code>False</code> mit <code>return</code>. Die Meldungen für den Nutzer druckt <code>main.py</code>.</li>
+</ul></div>
+</div>
+</div>
+</section>
+
+<!-- ========================================================= 12 -->
+<section class="blk">
+<h2><span class="nr">12</span>Typische Fehlermeldungen</h2>
+<p class="pic"><b>Bild:</b> Ein Traceback ist ein <b>Unfallbericht</b>. Lies ihn von unten: Die letzte Zeile sagt, <b>was</b> passiert ist, die Zeile darüber, <b>wo</b>.</p>
+<table class="err">
+<tr><th>Fehler</th><th>Ursache (typisch)</th></tr>
+<tr><td><code>SyntaxError</code></td><td><code>:</code> oder Klammer fehlt, <code>x++</code>, <code>=</code> statt <code>==</code> im <code>if</code></td></tr>
+<tr><td><code>IndentationError</code></td><td>Block nach <code>:</code> nicht (oder falsch) eingerückt</td></tr>
+<tr><td><code>NameError</code></td><td>Name nie zugewiesen, Tippfehler, Groß/klein, lokale Variable außerhalb der Funktion, Import vergessen</td></tr>
+<tr><td><code>TypeError</code></td><td><code>"Alter: " + 19</code>, Argument fehlt, <code>self</code> vergessen, abstrakte Klasse erzeugt, mit <code>None</code> gerechnet</td></tr>
+<tr><td><code>ValueError</code></td><td><code>int("zwei")</code>: richtiger Typ, aber unpassender Inhalt</td></tr>
+<tr><td><code>IndexError</code></td><td>Index zu groß, z. B. <code>l[len(l)]</code></td></tr>
+<tr><td><code>ZeroDivisionError</code></td><td>durch 0 geteilt</td></tr>
+<tr><td><code>AttributeError</code></td><td>Attribut gibt es nicht: Tippfehler, <code>super().__init__</code> vergessen, <code>None.name</code>, Property ohne Setter beschrieben</td></tr>
+<tr><td><code>RecursionError</code></td><td>Basisfall fehlt oder wird nie erreicht</td></tr>
+<tr><td><b>kein Fehler, falsches Ergebnis</b></td><td>Logikfehler: Startwert in der Schleife, <code>range</code> eine Runde zu kurz, <code>print</code> statt <code>return</code>, falsche Reihenfolge bei <code>elif</code></td></tr>
+</table>
+</section>
+
+<!-- ========================================================= Spickzettel -->
+<h1 class="np" id="spick">Spickzettel auf einer Seite</h1>
+<div class="sheet">
+<h4>Typen und Operatoren</h4>
+<pre class="code">int 7 · float 3.5 · str "a" · bool True · None
+7 / 2 → 3.5     7 // 2 → 3     7 % 2 → 1
+2 ** 3 → 8      "ab" * 2 → "abab"
+int("42") → 42  str(3) → "3"   float("2.5") → 2.5
+x += 1   # x++ gibt es nicht
+=  zuweisen    ==  vergleichen
+f"{name} kostet {preis:.2f} Euro"</pre>
+<h4>Verzweigung</h4>
+<pre class="code">if x &gt; 10:        # strengste Bedingung oben
+    ...
+elif x &gt; 5:       # erster wahrer Zweig gewinnt
+    ...
+else:
+    ...</pre>
+<h4>Schleifen</h4>
+<pre class="code">range(3) → 0 1 2      range(1, 4) → 1 2 3
+range(0, 10, 3) → 0 3 6 9   (Stopp nie dabei)
+summe = 0             # Startwert VOR die Schleife
+for ware in einkauf:  # jedes Element einmal
+    summe += ware
+while guthaben &gt;= 4:  # Bedingung muss sich ändern
+    guthaben -= 4
+break     # Schleife verlassen
+continue  # nächste Runde
+return    # ganze Funktion verlassen</pre>
+<h4>Schleifenmuster</h4>
+<table class="mini">
+<tr><td><b>finden</b></td><td>Treffer → <code>return x</code>, nach der Schleife <code>return None</code></td></tr>
+<tr><td><b>sammeln</b></td><td><code>treffer = []</code> → <code>append</code> → <code>return treffer</code></td></tr>
+<tr><td><b>summieren</b></td><td><code>summe = 0</code> → <code>summe += …</code> → <code>return summe</code></td></tr>
+<tr><td><b>zählen</b></td><td><code>anzahl = 0</code> → <code>anzahl += 1</code> → <code>return anzahl</code></td></tr>
+</table>
+<h4>Listen</h4>
+<pre class="code">l = ["a", "b", "c"]
+l[0] → "a"   l[-1] → "c"   l[1:3] → ["b", "c"]
+l.append("d")   len(l) → 4   "a" in l → True
+b = l          # derselbe Inhalt, 2 Namen!
+c = l.copy()   # echte Kopie
+[[0] * 3] * 2  # FALLE: 2 x dieselbe Zeile
+[[0] * 3 for _ in range(2)]   # richtig</pre>
+<h4>Funktionen und Rekursion</h4>
+<pre class="code">def brutto(netto: float, satz: float = 0.19) -&gt; float:
+    return netto * (1 + satz)
+brutto(100) → 119.0   brutto(100, 0.07) → 107.0
+# ohne return → None   (print ≠ return)
+def fakultaet(n: int) -&gt; int:
+    if n &lt;= 1:                  # Basisfall zuerst
+        return 1
+    return n * fakultaet(n - 1)</pre>
+<h4>Klassen</h4>
+<pre class="code">class Konto:
+    anzahl = 0                    # Klassenattribut
+    def __init__(self, inhaber: str) -&gt; None:
+        self.inhaber = inhaber    # Objektattribut
+        self._stand = 0
+        Konto.anzahl += 1
+    @property
+    def stand(self) -&gt; int:       # k.stand (ohne Klammern)
+        return self._stand
+    def __str__(self) -&gt; str:     # return, nicht print
+        return f"Konto von {self.inhaber}"
+
+@dataclass                        # __init__, Ausgabe, == gratis
+class Kunde:
+    name: str
+    email: str</pre>
+<h4>Vererbung, Abstraktion</h4>
+<pre class="code">from abc import ABC, abstractmethod
+from dataclasses import dataclass
+from typing import override
+
+class Sparkonto(Konto):           # ist ein Konto
+    def __init__(self, inhaber: str, zins: int) -&gt; None:
+        super().__init__(inhaber) # Pflicht!
+        self.zins = zins
+    @override
+    def __str__(self) -&gt; str:
+        return super().__str__() + " mit Zins"
+
+class Zahlungsart(ABC):           # ABC + abstractmethod
+    @abstractmethod
+    def bezahlen(self, betrag: float) -&gt; str: ...
+
+isinstance(Sparkonto("A", 2), Konto) → True</pre>
+<h4>Fehler in einem Satz</h4>
+<table class="mini">
+<tr><td><code>SyntaxError</code></td><td><code>:</code> oder Klammer fehlt</td></tr>
+<tr><td><code>IndentationError</code></td><td>Block nicht eingerückt</td></tr>
+<tr><td><code>NameError</code></td><td>Name unbekannt, Import fehlt</td></tr>
+<tr><td><code>TypeError</code></td><td>falscher Typ, Argument fehlt, abstrakt erzeugt, <code>None + 1</code></td></tr>
+<tr><td><code>ValueError</code></td><td><code>int("zwei")</code></td></tr>
+<tr><td><code>IndexError</code></td><td>Index zu groß</td></tr>
+<tr><td><code>AttributeError</code></td><td>Attribut fehlt, <code>super().__init__</code> vergessen, <code>None.name</code></td></tr>
+<tr><td><code>RecursionError</code></td><td>Basisfall nie erreicht</td></tr>
+</table>
+</div>
+
+<!-- ========================================================= Lösungen -->
+<h2>Lösungen zum Mini-Quiz von Seite 1</h2>
+<table>
+<tr><th style="width:5%">Nr.</th><th style="width:20%">Ausgabe</th><th>Warum</th></tr>
+<tr><td>1</td><td><pre class="out">3 1</pre></td><td>7 Kekse auf 2 Kinder: jedes bekommt 3 (<code>//</code>), 1 bleibt übrig (<code>%</code>).</td></tr>
+<tr><td>2</td><td><pre class="out">6</pre></td><td><code>range(1, 4)</code> ist 1, 2, 3 (ohne 4). Rundentabelle: <code>s</code> = 1, 3, 6.</td></tr>
+<tr><td>3</td><td><pre class="out">[1, 2, 3]</pre></td><td><code>b = a</code> kopiert nicht. Zwei Namensschilder, eine Liste.</td></tr>
+<tr><td>4</td><td><pre class="out">6
+None</pre></td><td><code>f</code> druckt 6, hat aber kein <code>return</code>, also ist <code>y</code> gleich <code>None</code>.</td></tr>
+<tr><td>5</td><td><pre class="out">A</pre></td><td>15 &gt; 5 ist schon wahr, der erste wahre Zweig gewinnt. <code>B</code> kommt nie dran, obwohl 15 &gt; 10 auch stimmt.</td></tr>
+</table>
+
+</body>
+</html>
