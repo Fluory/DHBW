@@ -1,0 +1,1399 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wirtschaftsinformatik – Klausurzusammenfassung</title>
+<style>
+:root{
+  --ink:#000; --mute:#444; --line:#000; --soft:#e9e9e9; --soft2:#f5f5f5; --mid:#bdbdbd;
+}
+@page{ size:A4; margin:14mm 14mm 16mm 14mm; }
+*{box-sizing:border-box}
+html,body{background:#fff;color:var(--ink)}
+body{font:10.1pt/1.3 "Bitstream Charter","DejaVu Serif",serif;margin:0;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact}
+@media screen{ body{max-width:182mm;margin:10mm auto;padding:0 16px} }
+h1,h2,h3,h4,.sans{font-family:"Inter","DejaVu Sans",sans-serif}
+h1{font-size:19pt;margin:0 0 2mm;letter-spacing:-.2px}
+h2{font-size:15pt;margin:0 0 3mm;padding:2mm 3mm;border:1.6pt solid #000;background:var(--soft);break-before:page;break-after:avoid}
+h2 .pts{float:right;font-size:10pt;font-weight:700;border:1pt solid #000;background:#fff;padding:0 2mm;margin-top:2pt}
+h3{font-size:11.6pt;margin:3.4mm 0 1.4mm;border-bottom:1pt solid #000;padding-bottom:.6mm;break-after:avoid}
+h4{font-size:10.5pt;margin:3mm 0 1mm;break-after:avoid}
+p{margin:0 0 2mm}
+ul,ol{margin:0 0 2mm;padding-left:5.5mm}
+li{margin:0 0 .6mm}
+code,.mono,pre{font-family:"DejaVu Sans Mono","Liberation Mono",monospace;font-size:8.9pt}
+pre{background:var(--soft2);border:.6pt solid #888;padding:2mm 3mm;margin:0 0 2.4mm;white-space:pre;line-height:1.3;break-inside:avoid;overflow:hidden}
+table{border-collapse:collapse;width:100%;margin:0 0 2mm;font-size:9pt;line-height:1.22;break-inside:avoid}
+th,td{border:.6pt solid #000;padding:.7mm 1.4mm;vertical-align:top;text-align:left}
+th{background:var(--soft);font-family:"Inter","DejaVu Sans",sans-serif;font-weight:600;font-size:8.9pt}
+td.c,th.c{text-align:center}
+td.m{font-family:"DejaVu Sans Mono",monospace;font-size:8.8pt}
+.box{border:1.2pt solid #000;padding:2.2mm 3mm;margin:2.6mm 0;break-inside:avoid}
+.box>.t{font-family:"Inter","DejaVu Sans",sans-serif;font-weight:700;font-size:9.6pt;margin-bottom:1mm;text-transform:uppercase;letter-spacing:.4px}
+.box>p:last-child,.box>ul:last-child{margin-bottom:0}
+.trap{border:1.8pt dashed #000}
+.trap>.t::before{content:"⚠ "}
+.must{background:var(--soft2);border:1.8pt solid #000}
+.must ul{list-style:none;padding-left:1mm;columns:2;column-gap:6mm}
+.must li{padding-left:5mm;text-indent:-5mm;break-inside:avoid}
+.must li::before{content:"☐ ";font-family:"DejaVu Sans",sans-serif}
+.def{border-left:3pt solid #000;padding:1mm 3mm;margin:2mm 0;background:var(--soft2);break-inside:avoid}
+.satz{border:1pt solid #000;padding:1.6mm 3mm;margin:0 0 2.4mm;font-size:10.2pt;break-inside:avoid}
+.satz b:first-child{font-family:"Inter","DejaVu Sans",sans-serif}
+.err{border:1pt solid #000;border-left:5pt double #000;padding:1.6mm 3mm;margin:2.4mm 0;font-size:9.5pt;break-inside:avoid}
+.err>b:first-child{font-family:"Inter","DejaVu Sans",sans-serif}
+.erg{font-style:italic;color:#333}
+.tag{font-family:"Inter","DejaVu Sans",sans-serif;font-size:7.6pt;border:.6pt solid #000;padding:0 1.2mm;border-radius:2mm;white-space:nowrap;vertical-align:1pt;font-weight:400}
+.small{font-size:9pt}
+.cols{display:flex;gap:5mm;align-items:flex-start}
+.cols>*{flex:1;min-width:0}
+figure{margin:2mm 0 3mm;text-align:center;break-inside:avoid}
+figure svg{max-width:100%;height:auto}
+figcaption{font-size:8.6pt;color:#333;margin-top:1mm;font-family:"Inter","DejaVu Sans",sans-serif}
+svg text{font-family:"Inter","DejaVu Sans",sans-serif}
+.nobreak{break-inside:avoid}
+.cover-meta{display:grid;grid-template-columns:auto 1fr;gap:1.2mm 6mm;margin:2mm 0 4mm;font-size:10.5pt}
+.cover-meta b{font-family:"Inter","DejaVu Sans",sans-serif}
+.legend{font-size:8.8pt;border:.6pt solid #000;padding:1.4mm 2.4mm;margin:2mm 0}
+.prio td:first-child{font-weight:700;font-family:"Inter","DejaVu Sans",sans-serif;white-space:nowrap}
+sub,sup{font-size:70%;line-height:0}
+/* Titelseite */
+.cover{height:262mm;display:flex;flex-direction:column}
+.cover .kicker{font-family:"Inter","DejaVu Sans",sans-serif;font-size:9.5pt;letter-spacing:1.2px;text-transform:uppercase;margin-top:14mm}
+.cover h1{font-size:27pt;line-height:1.12;margin:3mm 0 2mm;border-top:2pt solid #000;padding-top:4mm}
+.cover .sub{font-family:"Inter","DejaVu Sans",sans-serif;font-size:13pt;margin-bottom:8mm}
+.toc{margin-top:auto;border-top:1.2pt solid #000;padding-top:2mm}
+.toc .t{font-family:"Inter","DejaVu Sans",sans-serif;font-weight:700;font-size:10pt;text-transform:uppercase;letter-spacing:.4px;margin-bottom:1.5mm}
+.toc ol{list-style:none;padding:0;margin:0;font-size:10pt}
+.toc li{display:flex;align-items:baseline;margin:0 0 1.1mm}
+.toc li .n{width:8mm;font-family:"Inter","DejaVu Sans",sans-serif;font-weight:700}
+.toc li .d{flex:1;border-bottom:.6pt dotted #000;margin:0 2mm;transform:translateY(-1mm)}
+.toc li .p{font-family:"Inter","DejaVu Sans",sans-serif;min-width:6mm;text-align:right}
+.toc li .x{font-size:8.5pt;font-style:italic;color:#333;margin-left:2mm}
+/* Klausurfragen */
+.qa{border:1.2pt solid #000;margin:2.6mm 0}
+.qa>.t{break-after:avoid}
+.qa .q{break-after:avoid;break-inside:avoid}
+.qa .a{break-inside:avoid}
+.qa>.t{font-family:"Inter","DejaVu Sans",sans-serif;font-weight:700;font-size:9.6pt;text-transform:uppercase;letter-spacing:.4px;padding:1.2mm 3mm;background:var(--soft);border-bottom:1pt solid #000}
+.qa .q{padding:1.4mm 3mm 0;font-weight:700;font-size:9.8pt}
+.qa .q .tag{font-weight:400}
+.qa .a{padding:.4mm 3mm 1.6mm 7mm;font-size:9.6pt;border-bottom:.6pt solid #999}
+.qa .a:last-child{border-bottom:0}
+.qa .a::before{content:"→ ";margin-left:-4mm;font-family:"DejaVu Sans",sans-serif}
+/* Glossar */
+.gloss{columns:2;column-gap:6mm;font-size:8.6pt;line-height:1.2}
+.gloss p{margin:0 0 .45mm;break-inside:avoid}
+.gloss p b{font-family:"Inter","DejaVu Sans",sans-serif}
+.gloss .L{font-family:"Inter","DejaVu Sans",sans-serif;font-weight:700;font-size:9.4pt;border-bottom:.8pt solid #000;margin:.9mm 0 .4mm;break-after:avoid}
+/* Spickzettel */
+.spick{columns:3;column-gap:3.5mm;font-size:8.4pt;line-height:1.24}
+.spick .blk{break-inside:avoid;border:.8pt solid #000;padding:1mm 1.6mm;margin:0 0 2mm}
+.spick .blk>b:first-child{display:block;font-family:"Inter","DejaVu Sans",sans-serif;font-size:8.6pt;background:var(--soft);margin:-1mm -1.6mm .8mm;padding:.5mm 1.6mm;border-bottom:.6pt solid #000}
+.spick ul{padding-left:3mm;margin:0}
+.spick li{margin:0 0 .3mm}
+.spick p{margin:0 0 .6mm}
+h2.spickh{font-size:13pt;padding:1.2mm 3mm;margin-bottom:2mm}
+</style>
+</head>
+<body>
+
+<!-- ===================== Titelseite ===================== -->
+<section class="cover">
+  <div class="kicker">DHBW Heilbronn · 1. Semester · Klausurzusammenfassung</div>
+  <h1>Einführung in die<br>Wirtschaftsinformatik</h1>
+  <div class="sub">Alles für die 48-Minuten-Klausur – greifbar erklärt, mit Tabellen, Fallen und Musterantworten</div>
+
+  <div class="cover-meta">
+    <b>Fach</b><span>Einführung in die Wirtschaftsinformatik (Blockvorlesung 28.–30.10.2026)</span>
+    <b>Dozent</b><span>Dr. Matthias Hauser</span>
+    <b>Klausur</b><span>Mittwoch, 09.12.2026 · <b>48 Minuten</b> · 48 Punkte (rund 1 Punkt pro Minute)</span>
+    <b>Stoff</b><span>„Finale Decks für die Klausur“: Tag 1 Block 1–4 und Tag 2 Block 1–4 (hier Kapitel 1–8). Kapitel 9 (Tag 3) ist vermutlich nicht klausurrelevant.</span>
+    <b>Lehrbuch</b><span>Bächle, Daurer, Kolb: Einführung in die Wirtschaftsinformatik, 5. Aufl. 2021</span>
+    <b>Stand</b><span>10.11.2026</span>
+  </div>
+
+  <div class="legend"><b class="sans">So liest du diese Zusammenfassung.</b> Jedes Kapitel beginnt mit „In einem Satz“, dann folgen die Definitionen, Tabellen und Beispiele aus den Folien. Foliennummern: <span class="mono">T1B3 F. 18</span> = Tag 1, Block 3, Folie 18. Kästen: <b>Rahmen links</b> = Definition, <b>gestrichelt</b> = Achtung/Klausurfalle, <b>grau mit Kopfzeile</b> = typische Klausurfragen mit kurzer Musterantwort, <b>grau hinterlegt</b> = Checkliste „Das musst du können“. <span class="tag">Exkurs</span> = steht im Anhang der Folien, Gewicht unklar. <span class="erg">(Ergänzung)</span> = nicht auf den Folien, nur zum Verständnis.</div>
+
+  <div class="toc">
+    <div class="t">Inhalt</div>
+    <ol><li><span class="n"></span><span>Was in der Klausur drankommt</span><span class="d"></span><span class="p">2</span></li>
+<li><span class="n">1</span><span>Grundlagen der Wirtschaftsinformatik</span><span class="d"></span><span class="p">3</span></li>
+<li><span class="n">2</span><span>Arten betrieblicher Informationssysteme, ERP</span><span class="d"></span><span class="p">5</span></li>
+<li><span class="n">3</span><span>Geschäftsprozesse und EPK</span><span class="d"></span><span class="p">7</span></li>
+<li><span class="n">4</span><span>ER-Modell und Relationen</span><span class="d"></span><span class="p">10</span></li>
+<li><span class="n">5</span><span>Geschäftsmodell, Organisation, Anforderungen</span><span class="d"></span><span class="p">13</span></li>
+<li><span class="n">6</span><span>Informationsmanagement</span><span class="d"></span><span class="p">16</span></li>
+<li><span class="n">7</span><span>Business Intelligence und Data Science</span><span class="d"></span><span class="p">20</span></li>
+<li><span class="n">8</span><span>Digitale Transformation, GenAI und Agenten</span><span class="d"></span><span class="p">23</span></li>
+<li><span class="n">9</span><span>Data Science in der Praxis: Dataiku</span><span class="x">vermutlich nicht klausurrelevant</span><span class="d"></span><span class="p">26</span></li>
+<li><span class="n"></span><span>Glossar A–Z</span><span class="d"></span><span class="p">27</span></li>
+<li><span class="n"></span><span>Spickzettel</span><span class="d"></span><span class="p">28</span></li></ol>
+  </div>
+</section>
+
+<!-- ===================== Seite 2: Klausur ===================== -->
+<h2 id="k0">Was in der Klausur drankommt</h2>
+<p class="small" style="margin-bottom:1.4mm">Offizielle Klausurhinweise (Moodle „2026 – WI – Tag 3 – Klausurenhinweise“ und „Finale Decks für die Klausur“, seit 02.11.2026). Hake ab, was du sicher kannst.</p>
+
+<table class="small">
+<tr><th>Aufgabentyp</th><th class="c">Punkte (ca.)</th><th>Was erwartet wird</th></tr>
+<tr><td><b>Multiple Choice</b></td><td class="c"><b>10–15</b></td><td>alle richtigen Optionen ankreuzen, immer mindestens eine richtig</td></tr>
+<tr><td><b>Offene Fragen</b></td><td class="c"><b>20–25</b></td><td>Nennen, kurz erläutern, erläutern, skizzieren – <b>größter Block</b></td></tr>
+<tr><td><b>Transferaufgaben</b></td><td class="c"><b>10–15</b></td><td>ein Konzept (z. B. den Canvas) auf ein neues Beispiel anwenden</td></tr>
+<tr><td colspan="3">Summe <b>48 Punkte in 48 Minuten</b>. Eine Gewichtung je Kapitel und eine Kapitelliste nennen die Hinweise <b>nicht</b>. Stoff = die acht Foliensätze von Tag 1 und Tag 2 (Kapitel 1–8). Hilfsmittel: Bleistift, Radierer, Lineal, weitere Stifte, Klausurpapier – <b>sonst nichts</b>.</td></tr>
+</table>
+
+<div class="cols">
+<div>
+<table class="small">
+<tr><th>Operator</th><th>Was du schreibst</th></tr>
+<tr><td><b>Nennen</b></td><td>stichpunktartige Aufzählung, keine Erklärung</td></tr>
+<tr><td><b>Kurz erläutern</b></td><td>1–2 (ggf. stichpunktartige) Sätze</td></tr>
+<tr><td><b>Erläutern</b></td><td>mehrere, i. d. R. <b>deutlich mehr als 2</b> vollständige Sätze</td></tr>
+<tr><td><b>Skizzieren</b></td><td>grafisch darstellen (EPK, ER-Modell, Canvas)</td></tr>
+</table>
+</div>
+<div>
+<div class="box trap" style="margin:0;padding:1.6mm 2.6mm">
+<div class="t">Multiple Choice – Regeln</div>
+<ul class="small" style="margin:0">
+<li>Je Option richtig (nicht) angekreuzt <b>+½</b>, falsch (nicht) angekreuzt <b>−½</b>. Negative Summe → 0; nichts angekreuzt → 0.</li>
+<li>Auch <b>nicht angekreuzte</b> Optionen zählen – nur die ganze Aufgabe lässt sich auslassen.</li>
+<li><b>Antworten mit Bleistift werden nicht gewertet</b> – mit Kuli ankreuzen.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<h3>Die offiziellen Beispielaufgaben – als Checkliste</h3>
+<table class="small">
+<tr><th style="width:5mm"></th><th>Beispielaufgabe</th><th class="c" style="width:12mm">Punkte</th><th>Antwort / Hinweis</th><th class="c" style="width:10mm">Kap.</th></tr>
+<tr><td class="c">☐</td><td>MC: Wofür steht im Kontext der IS die Abkürzung ERP?</td><td class="c">2</td><td><b>Enterprise Resource Planning</b> (offiziell)</td><td class="c">2</td></tr>
+<tr><td class="c">☐</td><td>MC: Was ist die Aufgabe betrieblicher IS? (Manipulation von Informationen · effiziente Bereitstellung von Daten · Unterstützung betrieblicher Aufgaben · Darstellung der Hierarchiestufen)</td><td class="c">2</td><td>keine Lösung angegeben; plausibel „Unterstützung betrieblicher Aufgaben“ (eigene Einschätzung)</td><td class="c">1, 2</td></tr>
+<tr><td class="c">☐</td><td>Nennen: die 3 Elemente, die Einfluss auf die Anforderungen an ein IS nehmen</td><td class="c">1–2</td><td><b>Geschäftsmodell, Unternehmensaufbau, Prozesse</b> (offiziell)</td><td class="c">5</td></tr>
+<tr><td class="c">☐</td><td>Kurz erläutern: Aufbauorganisation und Ablauforganisation</td><td class="c">ca. 2</td><td>hierarchisches Gerüst, Beziehungen zwischen Abteilungen/Bereichen · (ggf. abteilungsübergreifende) Prozesse zur Leistungserstellung (offiziell)</td><td class="c">5</td></tr>
+<tr><td class="c">☐</td><td>Transfer: Geschäftsmodell z. B. von Pokémon Go mit dem Canvas – Wertversprechen, Schlüsselpartner, Kundensegmente, Einnahmequellen, <b>je 2 Einträge</b></td><td class="c">4–6</td><td>keine offizielle Lösung; Vorschlag in Kapitel 5; üben mit dem Etsy-Canvas</td><td class="c">5</td></tr>
+</table>
+
+<div class="cols">
+<div>
+<h3>Was du sicher können musst</h3>
+<div class="box must" style="margin-top:1mm;padding:1.4mm 2.4mm">
+<ul class="small" style="font-size:8.4pt;columns:1">
+<li>Begriffspaare trennen: Daten/Information/Wissen, IS/AS, horizontal/vertikal, Aufbau/Ablauf, Standard/Individual, Projekt/Daueraufgabe, objektiver Bedarf/Nachfrage, Regression/Klassifikation/Clustering, Digitalisierung/Transformation, Chatbot/RAG/Agent</li>
+<li>die <b>6 EPK-Regeln</b>, Fehler finden, kleine EPK zeichnen</li>
+<li>ER-Modell zeichnen, Kardinalitäten in <b>beide</b> Richtungen, in Relationen überführen</li>
+<li>Canvas: 9 Felder, an neuem Beispiel füllen (Transfer)</li>
+<li>Fall Sonnenschein AG erzählen: Newsletter → CRM → Lebenszyklus → BI → Transformation</li>
+<li>Listen mit fester Zahl: 4 sozio-technische Komponenten · 3 Anwendungszwecke · 9 Canvas-Felder · 3 IM-Ebenen · 5 PM-Phasen · SMART · 3 Support-Level · 4 Transformationsschritte · 4 Analysestufen · 6 CRISP-DM-Phasen · 3 Stufen · 4 Kräfte · 3 Muster · 3 GenAI-Ausbaustufen</li>
+</ul>
+</div>
+</div>
+<div>
+<h3>Empfohlene Lernreihenfolge</h3>
+<table class="prio small">
+<tr><th>Schritt</th><th>Inhalt und Grund</th></tr>
+<tr><td>1 Fundament</td><td>Kap. 1–2: IS/AS, Klassifikation, ERP, Integration – Basis für alles, viele „Stimmt das?“-Fragen</td></tr>
+<tr><td>2 Modellieren</td><td>Kap. 3–4: EPK und ER/Relationen – muss man zeichnen und üben</td></tr>
+<tr><td>3 Transfer</td><td>Kap. 5: Canvas, Aufbau/Ablauf – drei der fünf offiziellen Beispielaufgaben</td></tr>
+<tr><td>4 Begriffe</td><td>Kap. 6–8: viele Paare und feste Listen – schnelle MC-Punkte</td></tr>
+<tr><td>5 bei Zeit</td><td>Kap. 9: vermutlich nicht klausurrelevant</td></tr>
+</table>
+<p class="small"><b class="sans">In der Klausur:</b> 1 Punkt ≈ 1 Minute. MC zügig, jede Option einzeln prüfen; offene Fragen nach Operator; Transfer mit konkreten Einträgen statt Floskeln.</p>
+</div>
+</div>
+
+<!-- ===================================================== -->
+<h2 id="k1">1 · Grundlagen der Wirtschaftsinformatik <span class="pts">T1B1</span></h2>
+
+<div class="satz"><b>In einem Satz:</b> Die Wirtschaftsinformatik sorgt dafür, dass Menschen und Software in einem Unternehmen gut zusammenarbeiten. Klausurrelevant sind vor allem die Begriffspaare Daten/Information, System/Modell, Informations-/Anwendungssystem und die beiden Paradigmen.</div>
+
+<h3>Gegenstand der WI (Definition nach Mertens)</h3>
+<div class="def"><b>Definition (T1B1 F. 15):</b> Die Wirtschaftsinformatik beschäftigt sich mit der <b>Konzeption, Entwicklung, Nutzung und Wartung von Informationssystemen</b> sowie dem <b>Management des Produktionsfaktors „Information“</b> für betriebliche Aufgaben in Wirtschaft und Verwaltung.</div>
+<div class="cols">
+<div>
+<table>
+<tr><th>Teil der Definition</th><th>Beim Leuchtenhändler (Fall Tag 1)</th></tr>
+<tr><td>Konzeption</td><td>Welches System braucht der Shop?</td></tr>
+<tr><td>Entwicklung</td><td>Shop und Lagersystem anbinden</td></tr>
+<tr><td>Nutzung</td><td>Beschäftigte bearbeiten Aufträge</td></tr>
+<tr><td>Wartung</td><td>Updates einspielen, Fehler beheben</td></tr>
+<tr><td>Information managen</td><td>Bestände, Kunden- und Verkaufsdaten</td></tr>
+</table>
+</div>
+<div>
+<p class="small"><b>Auf Deutsch:</b> Information wird behandelt wie Maschinen oder Rohstoffe – etwas, das ein Unternehmen zum Arbeiten braucht und deshalb planen und pflegen muss.</p>
+<p class="small"><b>Zwei durchgehende Fälle:</b> Tag 1 der <b>Leuchtenhändler</b> (ca. 80 Beschäftigte, Onlineshop, Lager und Montage, Artikel „Stehleuchte 4711“), Tag 2 der Reiseveranstalter <b>Sonnenschein AG</b> aus dem Lehrbuch.</p>
+</div>
+</div>
+
+<h3>Daten, Information, Wissen (Pyramide nach Ackoff)</h3>
+<table>
+<tr><th>Stufe</th><th>Bedeutung</th><th>Beispiel (T1B1 F. 18)</th></tr>
+<tr><td><b>Daten</b></td><td>Zeichen ohne Kontext</td><td>„4711 · 23“</td></tr>
+<tr><td><b>Information</b></td><td>Daten mit Kontext und Bedeutung</td><td>„Lagerbestand Leuchte 4711: 23 Stück“</td></tr>
+<tr><td><b>Wissen</b></td><td>vernetzte Information und Erfahrung, die Handeln ermöglicht</td><td>„Unter 30 Stück und 2 Wochen Lieferzeit: heute nachbestellen“</td></tr>
+</table>
+<p><b>Beispiel Kontextabhängigkeit:</b> Die Wettervorhersage für den Sommer in Kanada ist für die meisten Menschen in Europa nur Daten. Für eine Getreidehändlerin ist sie Information (Wetter → Ernte → Preise), ebenso für jemanden, der dort Urlaub plant.</p>
+<div class="box trap"><div class="t">Achtung</div>
+<ul>
+<li>Ob Daten Information sind, hängt von <b>Wissen und Zweck der Person</b> ab. „Dieselbe Zahl kann für eine Person Information sein und für eine andere nur Daten“ ist <b>richtig</b> (T1B2 F. 2).</li>
+<li>„Unter 30 Stück: nachbestellen“ ist <b>Wissen</b>, nicht Information – der Satz sagt, was zu tun ist.</li>
+</ul></div>
+
+<h3>System und Modell</h3>
+<div class="cols">
+<div>
+<div class="def"><b>System:</b> Menge verknüpfter Elemente, die sich von ihrer Umwelt abgrenzt. <b>Offene</b> Systeme tauschen Input/Output mit der Umwelt aus (Leuchtenhändler: rein Bestellungen und Ware, raus Lieferungen und Rechnungen). Interessiert das Innere nicht: <b>Black Box</b>. Die <b>Systemgrenze hängt vom Zweck</b> der Betrachtung ab.</div>
+</div>
+<div>
+<div class="def"><b>Modell:</b> zweckorientierte, <b>vereinfachte</b> Abbildung eines Systems. Unwichtiges wird bewusst weggelassen – wie beim U-Bahn-Plan: Entfernungen stimmen nicht, zum Umsteigen ist er perfekt. Qualität = <b>Eignung für den Zweck</b>. In der WI: Prozessmodell (EPK) und Datenmodell (ER).</div>
+</div>
+</div>
+
+<h3>Informationssystem (IS) und Anwendungssystem (AS)</h3>
+<div class="satz"><b>In einem Satz:</b> Das Anwendungssystem ist die Software samt Rechner, das Informationssystem ist die Software samt den Menschen, die damit arbeiten. <b>Stell dir vor:</b> Ein Auto allein ist das AS. Auto plus Fahrerin, die weiß, wohin sie will, ist das IS.</div>
+<table>
+<tr><th></th><th>Anwendungssystem (AS)</th><th>Informationssystem (IS)</th></tr>
+<tr><td>Definition (T1B1 F. 26)</td><td>nur der <b>technische Teil</b>: Anwendungssoftware, Basissoftware und Hardware</td><td>künstliches, konkretes System aus <b>menschlichen und maschinellen</b> Elementen, das Nutzer mit den richtigen Informationen zur richtigen Zeit versorgt</td></tr>
+<tr><td>Beispiel</td><td>Shop-Software, Warenwirtschaft, SAP S/4HANA</td><td>diese Systeme <b>plus</b> die Menschen, die damit Aufträge bearbeiten</td></tr>
+</table>
+
+<h3>IS als sozio-technisches System (Bächle Kap. 1.2, nach Emery/Trist)</h3>
+<table>
+<tr><th>Komponente</th><th>Bedeutung</th><th>Mögliche Ursache, wenn neue Software „fehlerfrei läuft“, aber Bestellungen zu spät rausgehen</th></tr>
+<tr><td><b>Mensch</b></td><td>gestaltet und nutzt das System</td><td>nicht geschult, Widerstand, Workarounds mit alten Excel-Listen</td></tr>
+<tr><td><b>Aufgabe</b></td><td>betrieblicher Zweck, z. B. Aufträge abwickeln</td><td>Kommissionierung/Freigabe neu definiert, Sonderfälle ungeklärt</td></tr>
+<tr><td><b>Technik</b></td><td>das Anwendungssystem</td><td>falsche Stammdaten migriert, Schnittstelle fachlich falsch eingestellt</td></tr>
+<tr><td><b>Organisation</b></td><td>Abläufe, Rollen und Regeln (darin eingebettet)</td><td>Abläufe nicht angepasst, Rollen und Rechte falsch verteilt</td></tr>
+</table>
+<p><b>Sozio-technisch</b> heißt: Soziales und technisches Teilsystem beeinflussen sich wechselseitig. Neue Software verändert Abläufe, und Abläufe bestimmen, wie Software genutzt wird. Merksatz der Zusammenfassung (F. 40): <b>Software allein reicht nicht.</b></p>
+
+<div class="box trap"><div class="t">Achtung – „Stimmt das?“-Klassiker</div>
+<ul>
+<li>„SAP S/4HANA ist ein Informationssystem“ → <b>falsch</b>, es ist ein Anwendungssystem.</li>
+<li>„Ein IS besteht aus Hardware und Software“ → <b>falsch</b>, das IS umfasst zusätzlich den Menschen (sozio-technisch auch Aufgabe und Organisation).</li>
+<li>„Wenn die Software fehlerfrei läuft, funktioniert auch das IS“ → <b>falsch</b>, auch Mensch, Aufgabe und Organisation müssen passen.</li>
+</ul></div>
+
+<h3>WI als Wissenschaft: zwei Paradigmen</h3>
+<p>Nach Vahs/Schäfer-Kunz ist die WI eine <b>Realwissenschaft</b> (Gesellschafts- bzw. Wirtschaftswissenschaft, neben BWL und VWL). Sie ist eine <b>hybride Disziplin</b>: Sie übernimmt Lösungsansätze vor allem aus BWL und Informatik, zunehmend auch aus Verhaltens- und Ingenieurwissenschaften.</p>
+<table>
+<tr><th></th><th>verhaltensorientiert (behavioral science)</th><th>gestaltungsorientiert (design science)</th></tr>
+<tr><td>Ziel</td><td><b>beobachten und erklären</b>: Wie und warum nutzen Menschen IS?</td><td><b>entwerfen und bewerten</b>: Welche Lösung verbessert die Praxis?</td></tr>
+<tr><td>Ergebnis</td><td>Theorien, Erklärungsmodelle</td><td>Methoden, Modelle, Prototypen, Software</td></tr>
+<tr><td>Beispiel</td><td>Warum akzeptieren Beschäftigte ein neues System? (UTAUT)</td><td>kassenlose Selbstbedienung im Modehandel entwickeln und testen</td></tr>
+</table>
+
+<h3>Langfristziel und Berufsbild</h3>
+<ul>
+<li><b>Langfristziel nach Mertens: „sinnhafte Vollautomation“</b> – was ein System mindestens so gut kann wie ein Mensch, übernimmt das System. Nicht: alles automatisieren, egal wie gut.</li>
+<li><b>Berufsbild: Brückenfunktion</b> – Wirtschaftsinformatiker „übersetzen zwischen Fachbereich und IT“ (Prozesse analysieren, IS einführen, schulen, Projekte leiten).</li>
+</ul>
+
+<div class="qa"><div class="t">Typische Klausurfragen</div>
+<div class="q">Single Choice: Welche Tätigkeit gehört nicht zur Definition nach Mertens? (Konzeption/Entwicklung · Nutzung/Wartung · Management des Produktionsfaktors Information · Herstellung von Computerhardware)</div>
+<div class="a"><b>Herstellung von Computerhardware</b> – das ist Elektrotechnik.</div>
+<div class="q">Nennen: die vier Komponenten eines IS als sozio-technisches System.</div>
+<div class="a">Mensch, Aufgabe, Technik, Organisation.</div>
+<div class="q">Kurz erläutern: Unterschied Informationssystem und Anwendungssystem.</div>
+<div class="a">Das AS ist nur der technische Teil (Anwendungs-, Basissoftware, Hardware). Das IS umfasst zusätzlich die Menschen, die damit arbeiten (menschliche und maschinelle Elemente).</div>
+</div>
+
+<!-- ===================================================== -->
+<h2 id="k2">2 · Arten betrieblicher Informationssysteme <span class="pts">T1B2</span></h2>
+
+<div class="satz"><b>In einem Satz:</b> Man ordnet die vielen Systeme eines Unternehmens mit zwei einfachen Fragen: Wie weit reicht das System über die eigene Firma hinaus (Reichweite)? Und wofür wird es genutzt (Anwendungszweck)? Merksatz der Folie: „Ein Schema ist ein Werkzeug für eine bestimmte Frage, keine Wahrheit.“</div>
+
+<p class="small">Mögliche Kriterien (nach Alpar et al.): Reichweite, Anwendungszweck, Verwendungsort, Technologie – in der Vorlesung zählen <b>nur die ersten beiden</b> (T1B2 F. 7).</p>
+
+<div class="cols">
+<div>
+<h3>Schritt 1: Reichweite</h3>
+<table>
+<tr><th>Reichweite</th><th>Was es tut</th><th>Beispiel</th></tr>
+<tr><td><b>innerbetrieblich</b></td><td>unterstützt und integriert Prozesse im eigenen Unternehmen</td><td>Lohnabrechnung, Lagerverwaltung</td></tr>
+<tr><td><b>zwischenbetrieblich (B2B)</b></td><td>integriert Prozesse mit Lieferanten und Partnern</td><td>EDI-Austausch von Bestellungen/Rechnungen, Lieferantenportal</td></tr>
+<tr><td><b>endkundenorientiert (B2C)</b></td><td>macht Endkunden zu Nutzern der eigenen Systeme</td><td>Onlineshop, Kundenportal, App</td></tr>
+</table>
+<p class="small">B2B + B2C zusammen = <b>überbetrieblich</b>; wird mit der Digitalisierung wichtiger.</p>
+</div>
+<div>
+<h3>Schritt 2: Anwendungszweck</h3>
+<table>
+<tr><th>Zweck</th><th>auch genannt</th><th>Beispiel Leuchtenhändler</th></tr>
+<tr><td><b>Transaktion</b></td><td>Systems of <b>Record</b>, operative Systeme</td><td>Auftrag über 40 Stehleuchten wird gebucht, Bestand sinkt</td></tr>
+<tr><td><b>Entscheidungs­unterstützung</b></td><td>Systems of <b>Insight</b>, Management-Unterstützungssysteme (MUS)</td><td>„Welche Leuchtenserie verliert seit dem Sommer Umsatz?“</td></tr>
+<tr><td><b>Interaktion und Zusammenarbeit</b></td><td>Systems of <b>Engagement</b>, Querschnittssysteme</td><td>Kundin fragt im Shop-Chat; Lagerteam stimmt sich in Teams ab</td></tr>
+</table>
+</div>
+</div>
+<p><b>Unternehmensebenen (F. 10):</b> Transaktionssysteme vor allem auf der <b>operativen</b> Ebene; Entscheidungsunterstützung beim <b>mittleren und oberen</b> Management; Interaktionssysteme <b>quer über alle Ebenen</b>, intern und nach außen.</p>
+<p class="small"><span class="tag">Exkurs</span> <b>Administrationssysteme</b> rationalisieren Massendaten (Lohnabrechnung), <b>Dispositionssysteme</b> unterstützen/ersetzen operative Entscheidungen (automatische Bestellung bei Meldebestand).</p>
+
+<h3>Systemlandschaft und Grenzfälle (Gruppenarbeit F. 16)</h3>
+<table>
+<tr><th></th><th>Transaktion</th><th>Entscheidung</th><th>Interaktion</th></tr>
+<tr><td><b>intern</b></td><td>ERP/Warenwirtschaft, Lohnabrechnung</td><td>BI-Dashboard Absatz, Excel-Planung (?)</td><td>Microsoft Teams, Wiki (Intranet)</td></tr>
+<tr><td><b>überbetrieblich</b></td><td>Lieferantenportal, Versandsoftware des Paketdienstes</td><td>Verkaufsberichte vom Marktplatz</td><td>Onlineshop, CRM mit Newsletter (?)</td></tr>
+</table>
+<div class="box trap"><div class="t">Achtung</div>
+<p>„Jedes IS lässt sich eindeutig genau einer Klasse zuordnen“ ist <b>falsch</b> (T1B3 F. 2). CRM ist Transaktion <b>und</b> Interaktion; Excel ist je nach Nutzung Liste, Planung oder Auswertung. In der Klausur zählt die <b>nachvollziehbare Begründung</b>, nicht das Kästchen.</p></div>
+
+<h3>ERP, SCM, CRM und weitere Systemtypen</h3>
+<div class="satz"><b>In einem Satz:</b> Ein ERP ist ein gemeinsames Ordnersystem für die ganze Firma statt vieler Excel-Listen. <b>Stell dir vor:</b> Jede Abteilung hat ihre eigene Schublade (Modul), aber alle greifen auf dieselben Akten zu (gemeinsame Datenbasis).</div>
+<table>
+<tr><th style="width:27mm">System</th><th>Kern</th><th style="width:28mm">Einordnung</th><th style="width:27mm">Beispiele</th></tr>
+<tr><td><b>ERP</b> – Enterprise Resource Planning</td><td>„modular aufgebautes, <b>integriertes</b> betriebliches IS, mit dem alle <b>operativen</b> Tätigkeiten erfasst und abgebildet werden“. Module je Fachbereich, <b>gemeinsame Datenbasis</b>, Standardsoftware + Customizing. „Rückgrat“ der Informationsverarbeitung.</td><td>Transaktion, intern</td><td>SAP S/4HANA, JTL ERP</td></tr>
+<tr><td><b>SCM</b> – Supply Chain Management</td><td>aktive Gestaltung aller Prozesse, um Kunden wirtschaftlich zu versorgen; Lieferkette bis zum Endkunden, gemeinsame Bedarfsplanung, Bullwhip-Effekt dämpfen</td><td>Transaktion, B2B</td><td>SAP IBP, Oracle SCM Cloud</td></tr>
+<tr><td><b>CRM</b> – Customer Relationship Management</td><td>systematischer Aufbau und Pflege dauerhafter, profitabler Kundenbeziehungen; <b>zuerst ein betriebswirtschaftliches Konzept</b>, das IS unterstützen. <b>Operatives</b> CRM (Kontakte, Verkaufschancen, Service), <b>analytisches</b> CRM (Auswertungen)</td><td>Transaktion + Interaktion, B2B/B2C</td><td>Salesforce, HubSpot</td></tr>
+<tr><td>E-Business</td><td>über das Internet ver- und einkaufen</td><td>Interaktion, B2C/B2B</td><td>Shopify, Shopware, SAP Ariba</td></tr>
+<tr><td colspan="4">Weitere: <b>BI</b> (Entscheidung, intern: Power BI) · <b>DMS/CMS</b> (Dokumente/Webinhalte: DocuWare, TYPO3) · <b>Groupware</b> (Interaktion, intern: Teams, Slack)</td></tr>
+</table>
+<div class="cols">
+<div>
+<p><b>ERP-Ablauf, Auftrag über 40 Stehleuchten:</b> Auftrag im Vertriebsmodul anlegen (Kunden-, Artikelstamm, Preise) → Verfügbarkeit prüfen, Bestand reservieren → ggf. Fertigungs- oder Bestellvorschlag → Lieferschein, Warenausgang (Bestand sinkt) → Rechnung und Buchung in der Finanzbuchhaltung. <b>Alles auf einer Datenbasis ohne Neuerfassung.</b></p>
+</div>
+<div>
+<p><b>Bullwhip-Effekt (Peitscheneffekt):</b> Kleine Nachfrageschwankungen beim Endkunden schaukeln sich entlang der Lieferkette zu immer größeren Bestellschwankungen auf. Geteilte Absatz- und Bestandsdaten im <b>SCM</b> dämpfen ihn.</p>
+</div>
+</div>
+
+<h3>Integration: horizontal, vertikal, Medienbruch</h3>
+<div class="def"><b>Integration</b> ist die Fähigkeit, Daten, Vorgänge und Aufgaben sachlogisch zu verzahnen. Ziel: <b>Daten nur einmal erfassen und überall nutzen</b> (T1B2 F. 22).</div>
+<table>
+<tr><th></th><th>horizontal</th><th>vertikal</th></tr>
+<tr><td>Richtung</td><td><b>entlang des Prozesses</b>, quer durch die Abteilungen</td><td><b>hoch durch die Ebenen</b></td></tr>
+<tr><td>Was passiert</td><td>ein Auftrag läuft ohne Neuerfassung durch Vertrieb → Produktion → Lager/Versand → Buchhaltung</td><td>operative Daten werden für Planung und Kontrolle verdichtet, z. B. Umsatz je Leuchtenserie und Monat fürs Management</td></tr>
+</table>
+<p><b>Medienbruch</b> (ohne Integration): Der Auftrag kommt per E-Mail, wird in Excel abgetippt und in der Produktion neu eingegeben. Folgen: doppelte Erfassung, Tippfehler, Verzögerung.</p>
+<div class="box trap"><div class="t">Achtung</div>
+<p>„Vertikale Integration heißt: Ein Auftrag läuft ohne Neuerfassung durch Vertrieb, Lager und Buchhaltung“ ist <b>falsch</b> (T1B3 F. 2) – das ist <b>horizontale</b> Integration.</p></div>
+
+<div class="qa"><div class="t">Typische Klausurfragen</div>
+<div class="q">MC (offizielle Beispielaufgabe, 2 P.): Wofür steht ERP? (Entity Relationship Program · Enterprise Resource Planning · Ecological Resource Planning · Equal Relationship Program)</div>
+<div class="a">Nur <b>Enterprise Resource Planning</b> ankreuzen – die drei anderen bewusst nicht (jede Option zählt ±½).</div>
+<div class="q">Single Choice: Ein System löst automatisch eine Bestellung aus, sobald der Meldebestand unterschritten ist. Welcher Systemtyp?</div>
+<div class="a"><b>Dispositionssystem</b> (unterstützt/ersetzt operative Entscheidungen). Administrationssysteme rationalisieren Massendaten wie die Lohnabrechnung.</div>
+<div class="q">Ordne ein und begründe (Reichweite, Zweck): SAP S/4HANA, Salesforce, Power BI, Lieferantenportal, Teams.</div>
+<div class="a">SAP: intern, Transaktion (ERP) · Salesforce: überbetrieblich, Transaktion + Interaktion (CRM) · Power BI: intern, Entscheidung · Lieferantenportal: B2B, Transaktion · Teams: intern, Interaktion. Andere Antworten sind mit Begründung vertretbar.</div>
+</div>
+
+<!-- ===================================================== -->
+<h2 id="k3">3 · Geschäftsprozesse und EPK <span class="pts">T1B3 · Modellieren</span></h2>
+
+<div class="satz"><b>In einem Satz:</b> Ein Geschäftsprozess ist ein Ablauf, der in einer Firma immer wieder gleich passiert, vom Auslöser bis zum Ergebnis – und eine EPK ist ein Rezept als Bild, in dem sich „was ist jetzt der Fall“ (Ereignis) und „was tue ich jetzt“ (Funktion) immer abwechseln. Laut Lernzielen: EPK <b>lesen und Fehler finden</b>; eine kleine EPK selbst zeichnen solltest du auch üben.</div>
+
+<h3>Geschäftsprozess: Definition und Merkmale</h3>
+<div class="def"><b>Geschäftsprozess</b> (Lehmann 2008, Bächle Kap. 4.3): eine <b>sachlogisch-zeitliche Abfolge von Tätigkeiten</b> (Synonyme: Aktivitäten, Vorgänge). Auf Deutsch: Die Reihenfolge ergibt sich aus der Sache – erst Ware prüfen, dann versenden.</div>
+<ul>
+<li><b>Auslöser und Ergebnis:</b> durch ein oder mehrere Ereignisse ausgelöst, endet mit einem definierten Ergebnis.</li>
+<li><b>Über Grenzen hinweg:</b> mehrere Abteilungen, auch Kunden, Lieferanten, Dokumente und IS.</li>
+<li><b>Vier Ablaufformen:</b> nacheinander, parallel, alternativ, wiederholt.</li>
+<li><b>Routine:</b> wiederkehrend, weitgehend standardisierbar – deshalb gut durch IS zu unterstützen.</li>
+</ul>
+<table>
+<tr><th>Prozessart</th><th>Merkmal</th><th>Kfz-Betrieb (Gadatsch, F. 8)</th><th>Leuchtenhändler</th></tr>
+<tr><td><b>Kernprozess</b></td><td>direkt wertschöpfend, vom Kunden zum Kunden</td><td>Autokauf: Anfrage → Probefahrt → Angebot → Auslieferung → Faktura</td><td>Auftragsabwicklung, Reklamation</td></tr>
+<tr><td><b>Managementprozess</b></td><td>steuert das Unternehmen</td><td>Strategieentwicklung, Controlling, Produktplanung, Personalsteuerung</td><td>Sortimentsplanung</td></tr>
+<tr><td><b>Unterstützungsprozess</b></td><td>ermöglicht die Kernprozesse</td><td>Marketing, Rechnungswesen, Kundenbewirtung, IT, Verwaltung</td><td>Lohnabrechnung</td></tr>
+</table>
+<p><b>Prozessmodell vs. Datenmodell:</b> Ein Prozessmodell ist <b>dynamisch</b> (was passiert wann, wer ist beteiligt? → EPK). Ein Datenmodell ist <b>statisch</b> (welche Daten, wie hängen sie zusammen? → ER). <b>Vorgehen (F. 10):</b> Ist-Modell (wie läuft es wirklich?) → Soll-Modell (Schwachstellen beseitigen) → Umsetzung im IS (ERP-Customizing, Workflow). <b>Nutzen:</b> Transparenz, Schwachstellen sichtbar (Medienbrüche, Doppelarbeit, Wartezeiten), Standardisierung, Ordnungsrahmen für Systemeinführungen.</p>
+
+<h3>EPK-Elemente und Konnektoren</h3>
+<div class="cols">
+<div>
+<table>
+<tr><th>Element</th><th>Symbol</th><th>Benennung</th></tr>
+<tr><td><b>Ereignis</b>: ein Zustand ist eingetreten</td><td>Sechseck</td><td>Zustand/Partizip: „Auftrag eingegangen“</td></tr>
+<tr><td><b>Funktion</b>: Tätigkeit, die den Zustand ändert</td><td>abgerundetes Rechteck</td><td>Substantiv + Verb: „Auftrag prüfen“</td></tr>
+<tr><td><b>Konnektor</b>: verzweigt/führt zusammen</td><td>Kreis mit XOR, ∨, ∧</td><td>–</td></tr>
+<tr><td><b>Kontrollfluss</b>: Reihenfolge</td><td>Pfeil</td><td>–</td></tr>
+</table>
+<table>
+<tr><th>Konnektor</th><th>Bedeutung</th><th>Beispiel</th></tr>
+<tr><td><b>XOR</b></td><td>genau <b>ein</b> Pfad (wie eine Weiche)</td><td>„Ware vorrätig“ / „nicht vorrätig“</td></tr>
+<tr><td><b>∨ OR</b></td><td><b>mindestens einer</b>, auch mehrere (wie Pizza-Belag)</td><td>Versand per Post und/oder E-Mail</td></tr>
+<tr><td><b>∧ AND</b></td><td><b>alle</b> Pfade parallel (zwei Köche gleichzeitig)</td><td>Rechnung erstellen <b>und</b> Kundin benachrichtigen</td></tr>
+</table>
+<p class="small"><b>Stell dir vor:</b> Nudeln kochen: ⟨Hunger da⟩ → (Wasser aufsetzen) → ⟨Wasser kocht⟩ → (Nudeln hineingeben) → ⟨Nudeln gar⟩. (Vorrat prüfen) → XOR → ⟨Soße da⟩ / ⟨keine Soße da⟩.</p>
+<p class="small"><b>Erweiterte EPK (eEPK, F. 14):</b> an Funktionen hängen Organisationseinheit (Vertrieb), Rolle (Auftragssachbearbeiter), Informationsobjekt (Auftrag), Dokument (Bestell-E-Mail), Anwendungssystem (ERP) – als <b>Linien ohne Pfeil</b>, weil kein Kontrollfluss. Der <b>Prozesswegweiser</b> verweist auf einen Teilprozess mit eigener EPK.</p>
+</div>
+<div style="flex:0 0 90mm">
+<figure style="margin-top:0">
+<svg viewBox="0 0 440 540" width="440" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker></defs>
+<g font-size="12.5" text-anchor="middle">
+<polygon points="70.0,20 80.0,5.0 270.0,5.0 280.0,20 270.0,35.0 80.0,35.0" fill="#e9e9e9" stroke="#000"/>
+<text x="175" y="24">Kundenauftrag eingegangen</text>
+<line x1="175" y1="35" x2="175" y2="53" stroke="#000" marker-end="url(#ar)"/>
+<rect x="90.0" y="55.0" width="170" height="30" rx="8" fill="#fff" stroke="#000" stroke-width="1.4"/>
+<text x="175" y="74">Verfügbarkeit prüfen</text>
+<line x1="260" y1="66" x2="272" y2="62" stroke="#000" stroke-dasharray="3 2"/>
+<rect x="272" y="51" width="65.2" height="22" fill="#fff" stroke="#000" stroke-dasharray="1 0"/>
+<text x="304.6" y="66" font-size="11.5">Vertrieb</text>
+<line x1="260" y1="78" x2="272" y2="92" stroke="#000" stroke-dasharray="3 2"/>
+<rect x="272" y="81" width="79.0" height="22" fill="#fff" stroke="#000" stroke-dasharray="1 0"/>
+<text x="311.5" y="96" font-size="11.5">ERP-System</text>
+<line x1="175" y1="85" x2="175" y2="105" stroke="#000" marker-end="url(#ar)"/>
+<circle cx="175" cy="119" r="13" fill="#fff" stroke="#000"/>
+<text x="175" y="122.5" font-size="8.5" font-weight="700">XOR</text>
+<polyline points="162,119 85,119 85,150" fill="none" stroke="#000" marker-end="url(#ar)"/>
+<polyline points="188,119 265,119 265,150" fill="none" stroke="#000" marker-end="url(#ar)"/>
+<polygon points="10.0,166 20.0,151.0 150.0,151.0 160.0,166 150.0,181.0 20.0,181.0" fill="#e9e9e9" stroke="#000"/>
+<text x="85" y="170">Ware vorrätig</text>
+<polygon points="180.0,166 190.0,151.0 340.0,151.0 350.0,166 340.0,181.0 190.0,181.0" fill="#e9e9e9" stroke="#000"/>
+<text x="265" y="170">Ware nicht vorrätig</text>
+<line x1="265" y1="181" x2="265" y2="203" stroke="#000" marker-end="url(#ar)"/>
+<rect x="180.0" y="205.0" width="170" height="30" rx="8" fill="#fff" stroke="#000" stroke-width="1.4"/>
+<text x="265" y="224">Fertigung beauftragen</text>
+<line x1="350" y1="220" x2="360" y2="220" stroke="#000" stroke-dasharray="3 2"/>
+<rect x="360" y="209" width="79.0" height="22" fill="#fff" stroke="#000" stroke-dasharray="1 0"/>
+<text x="399.5" y="224" font-size="11.5">Produktion</text>
+<line x1="265" y1="235" x2="265" y2="255" stroke="#000" marker-end="url(#ar)"/>
+<polygon points="180.0,272 190.0,257.0 340.0,257.0 350.0,272 340.0,287.0 190.0,287.0" fill="#e9e9e9" stroke="#000"/>
+<text x="265" y="276">Leuchten gefertigt</text>
+<polyline points="265,287 265,318 188,318" fill="none" stroke="#000" marker-end="url(#ar)"/>
+<polyline points="85,181 85,318 162,318" fill="none" stroke="#000" marker-end="url(#ar)"/>
+<circle cx="175" cy="318" r="13" fill="#fff" stroke="#000"/>
+<text x="175" y="321.5" font-size="8.5" font-weight="700">XOR</text>
+<line x1="175" y1="331" x2="175" y2="350" stroke="#000" marker-end="url(#ar)"/>
+<rect x="90.0" y="352.0" width="170" height="30" rx="8" fill="#fff" stroke="#000" stroke-width="1.4"/>
+<text x="175" y="371">Ware versenden</text>
+<line x1="260" y1="367" x2="272" y2="367" stroke="#000" stroke-dasharray="3 2"/>
+<rect x="272" y="356" width="44.5" height="22" fill="#fff" stroke="#000" stroke-dasharray="1 0"/>
+<text x="294.25" y="371" font-size="11.5">Lager</text>
+<line x1="175" y1="382" x2="175" y2="400" stroke="#000" marker-end="url(#ar)"/>
+<polygon points="90.0,417 100.0,402.0 250.0,402.0 260.0,417 250.0,432.0 100.0,432.0" fill="#e9e9e9" stroke="#000"/>
+<text x="175" y="421">Ware versandt</text>
+<line x1="175" y1="432" x2="175" y2="450" stroke="#000" marker-end="url(#ar)"/>
+<rect x="90.0" y="452.0" width="170" height="30" rx="8" fill="#fff" stroke="#000" stroke-width="1.4"/>
+<text x="175" y="471">Rechnung erstellen</text>
+<line x1="260" y1="467" x2="272" y2="467" stroke="#000" stroke-dasharray="3 2"/>
+<rect x="272" y="456" width="85.9" height="22" fill="#fff" stroke="#000" stroke-dasharray="1 0"/>
+<text x="314.95" y="471" font-size="11.5">Buchhaltung</text>
+<line x1="175" y1="482" x2="175" y2="500" stroke="#000" marker-end="url(#ar)"/>
+<polygon points="90.0,517 100.0,502.0 250.0,502.0 260.0,517 250.0,532.0 100.0,532.0" fill="#e9e9e9" stroke="#000"/>
+<text x="175" y="521">Rechnung erstellt</text>
+</g></svg>
+<figcaption>Abb. 3.1 – Kundenauftrag beim Leuchtenhändler (nach T1B3 F. 15). Gestrichelt: eEPK-Zuordnungen ohne Pfeil.</figcaption>
+</figure>
+</div>
+</div>
+<p><b>So liest du sie:</b> Geht ein Kundenauftrag ein, prüft der Vertrieb im ERP-System die Verfügbarkeit. Ist die Ware vorrätig, geht es direkt weiter; sonst beauftragt die Produktion die Fertigung. Beide Wege laufen im <b>XOR-Join</b> zusammen, dann versendet das Lager, und die Buchhaltung erstellt die Rechnung.</p>
+
+<h3>Die sechs Modellierungsregeln (T1B3 F. 18) – auswendig!</h3>
+<table>
+<tr><th class="c" style="width:8mm">Nr.</th><th>Regel</th><th>Warum / Merkhilfe</th></tr>
+<tr><td class="c"><b>1</b></td><td><b>Start und Ende sind Ereignisse.</b> Ein Startereignis, mindestens ein Endereignis.</td><td>Ein Prozess wird durch ein Ereignis ausgelöst und endet mit einem Ergebnis.</td></tr>
+<tr><td class="c"><b>2</b></td><td><b>Ereignis und Funktion wechseln sich ab</b>, auch über Konnektoren hinweg.</td><td>Nie Funktion → Funktion oder Ereignis → Ereignis.</td></tr>
+<tr><td class="c"><b>3</b></td><td><b>Je eine Kante rein, eine raus</b> bei Ereignissen und Funktionen. Verzweigen und Zusammenführen nur über Konnektoren.</td><td>Zwei Pfeile in eine Funktion → davor ein Join.</td></tr>
+<tr><td class="c"><b>4</b></td><td><b>Nur Funktionen entscheiden:</b> nach einem Ereignis kein XOR- und kein OR-<b>Split</b>. AND ist erlaubt.</td><td>„Post ist da“ entscheidet nichts; erst wer den Brief liest (Funktion), kann entscheiden.</td></tr>
+<tr><td class="c"><b>5</b></td><td><b>Zusammenführen wie aufgeteilt:</b> XOR → XOR, AND → AND, OR → OR.</td><td>Sonst Deadlock oder Mehrfachausführung.</td></tr>
+<tr><td class="c"><b>6</b></td><td><b>Richtig benennen:</b> Ereignis als Zustand („Auftrag erfasst“), Funktion als Tätigkeit („Auftrag erfassen“).</td><td>Partizip vs. Substantiv + Verb.</td></tr>
+</table>
+
+<h3>Typische Modellierungsfehler (F. 24) und Prüfreihenfolge</h3>
+<table>
+<tr><th>Typischer Fehler</th><th>Falsch</th><th>Richtig</th><th class="c">Regel</th></tr>
+<tr><td>Ereignis entscheidet</td><td>„Reklamation eingegangen“ → XOR</td><td>(Garantie prüfen) → XOR</td><td class="c">4</td></tr>
+<tr><td>Funktion folgt auf Funktion</td><td>(anfordern) → (versenden)</td><td>(anfordern) → ⟨Leuchte eingetroffen⟩ → (versenden)</td><td class="c">2</td></tr>
+<tr><td>Falscher Join</td><td>XOR-Split … AND-Join</td><td>XOR-Split … XOR-Join</td><td class="c">5</td></tr>
+<tr><td>Tätigkeit als Ereignis</td><td>Ereignis „Garantie prüfen“</td><td>Ereignis „Garantie gültig“</td><td class="c">6</td></tr>
+<tr><td>Start oder Ende fehlt</td><td>Modell beginnt mit einer Funktion</td><td>Startereignis; Endereignis je Ergebnis</td><td class="c">1</td></tr>
+</table>
+<p><b>Prüfreihenfolge für jede Fehlersuche:</b> (1) Anfang und Ende ansehen → (2) von oben nach unten: wechseln Ereignis und Funktion? → (3) bei jedem Element Kanten zählen → (4) bei jedem Split: was steht davor? → (5) jeden Split seinem Join zuordnen → (6) alle Beschriftungen lesen → (7) <b>stimmt der Ablauf auch fachlich?</b></p>
+<div class="box trap"><div class="t">Achtung</div>
+<ul>
+<li><b>XOR-Split + AND-Join = Deadlock:</b> Nach dem XOR kommt nur ein Weg an, der AND-Join wartet aber auf alle – für immer. Wie „Anna oder Ben“ verabreden, aber warten, bis beide da sind.</li>
+<li>Regel 4 gilt nur für <b>Splits</b>. Ein <b>XOR-Join direkt nach Ereignissen ist erlaubt</b> (die Beispiel-EPK macht genau das). Ein <b>AND-Split</b> darf direkt auf ein Ereignis folgen.</li>
+<li>„Wenn beide Wege möglich sind“ → OR, nicht XOR. Zwei Kanten aus einer Funktion ohne Konnektor verletzen Regel 3.</li>
+<li>Ein Modell kann alle Regeln einhalten und trotzdem <b>fachlich falsch</b> sein (z. B. OR bei „verfügbar/nicht verfügbar“ – nie beides).</li>
+</ul></div>
+
+<h3>Offizielle Fehlersuche: Flugauftrag (T1B3 F. 19, Lösung F. 20)</h3>
+<p class="small"><b>Modell in Worten:</b> „Kunde erteilt Flugauftrag“ → (Auftrag erfassen) → ⟨Auftrag erfasst⟩ → (Verfügbarkeit prüfen) → <b>OR</b> → ⟨Flug nicht verfügbar⟩ / ⟨Flug verfügbar⟩. Nach „nicht verfügbar“: (Alternative vorschlagen) → XOR → ⟨Kunde nicht einverstanden⟩ → (Auftrag stornieren) bzw. ⟨Kunde einverstanden⟩. „Kunde einverstanden“ und „Flug verfügbar“ führen <b>beide direkt</b> in (Reise buchen und bestätigen). „Auftrag stornieren“ und „Reise buchen …“ laufen in einen <b>AND-Join</b> → ⟨Bearbeitung beendet⟩.</p>
+<table>
+<tr><th>Fehler</th><th>Art</th><th>Korrektur</th></tr>
+<tr><td>OR nach „Verfügbarkeit prüfen“</td><td>fachlicher Fehler</td><td>XOR (verfügbar oder nicht, nie beides)</td></tr>
+<tr><td>zwei Eingänge bei „Reise buchen und bestätigen“</td><td>Regel 3</td><td>davor XOR-Join</td></tr>
+<tr><td>AND-Join führt XOR-Pfade zusammen</td><td>Regel 5</td><td>XOR-Join (sonst wartet das AND ewig)</td></tr>
+<tr><td>Startereignis als Tätigkeit „Kunde erteilt Flugauftrag“</td><td>Regel 6</td><td>„Flugauftrag eingegangen“</td></tr>
+<tr><td>ein Ende für zwei Ergebnisse</td><td>Schwäche</td><td>zwei Endereignisse „Auftrag storniert“ und „Reise gebucht“</td></tr>
+</table>
+
+<h3>Offizielle Modellierungsübung: Reklamation (F. 22–23, optional)</h3>
+<p class="small"><b>Text:</b> Geht eine Reklamation ein, prüft der Kundenservice im CRM-System anhand der Rechnung die Garantie. Abgelaufen → Reparatur anbieten. Gültig → Leuchte zurückfordern; ist sie eingetroffen, versendet das Lager eine Ersatzleuchte und <b>gleichzeitig</b> informiert der Einkauf den Hersteller. <b>Prüfpunkte der Musterlösung:</b> Start und Ende sind Ereignisse · Ereignis/Funktion wechseln · <b>XOR nach der Funktion „Garantie prüfen“</b> · <b>AND-Split nach dem Ereignis „Leuchte eingetroffen“</b> (erlaubt) · AND-Join vor dem Endereignis „Reklamation abgeschlossen“. Auch richtig: zusätzliche Funktion „Reklamation erfassen“ am Anfang oder ein gemeinsames Endereignis über einen XOR-Join.</p>
+
+<div class="qa"><div class="t">Typische Klausurfragen</div>
+<div class="q">Stimmt das? „Auf das Ereignis ‚Kundenauftrag eingegangen‘ darf direkt ein XOR-Konnektor folgen.“</div>
+<div class="a"><b>Falsch</b> (als Verzweigung): Nur Funktionen entscheiden (Regel 4). Erst eine Funktion wie „Auftrag prüfen“, dann XOR. Ein Join dagegen wäre erlaubt.</div>
+<div class="q">Single Choice: Rechnung per Post, per E-Mail oder auf beiden Wegen – welcher Konnektor nach „Versandart festlegen“?</div>
+<div class="a"><b>OR (∨)</b>: mindestens ein Pfad, auch beide. XOR schließt „beide“ aus; zwei Kanten ohne Konnektor verletzen Regel 3.</div>
+<div class="q">Aussage 1: „Ein AND-Split darf direkt auf ein Ereignis folgen.“ Aussage 2: „Ein XOR-Split wird mit einem AND-Join zusammengeführt, wenn danach parallel weitergearbeitet wird.“</div>
+<div class="a"><b>Nur Aussage 1</b> ist richtig. XOR-Split wird immer mit XOR zusammengeführt (Regel 5), sonst Deadlock.</div>
+</div>
+
+<!-- ===================================================== -->
+<h2 id="k4">4 · ER-Modell und Relationen <span class="pts">T1B4 · Modellieren</span></h2>
+
+<div class="satz"><b>In einem Satz:</b> Ein ER-Modell zeigt, welche Dinge eine Firma speichern will, was sie über jedes weiß und wie die Dinge zusammenhängen – und das Relationenmodell macht daraus Tabellen mit Primär- und Fremdschlüsseln. Laut Lernzielen sollst du <b>beides selbst können</b>.</div>
+
+<h3>Warum Datenmodelle? Redundanz und Anomalien</h3>
+<p>Stehen alle Aufträge in <b>einer</b> Liste (Auftrags-Nr., Datum, Kunde, Ort, Artikel-Nr., Artikel, Menge), wiederholt sich vieles: Meier GmbH aus Heilbronn steht mehrfach drin. Diese <b>Redundanz</b> führt zu Anomalien (T1B4 F. 7, Bächle 5.4.2). <b>In einem Satz:</b> Eine Anomalie ist ein Fehler, der nur deshalb passiert, weil dieselbe Angabe an mehreren Stellen steht.</p>
+<table>
+<tr><th style="width:32mm">Anomalie</th><th>Beispiel</th></tr>
+<tr><td><b>Einfügeanomalie</b></td><td>Eine neue Leuchte ist im Sortiment, wurde aber noch nie bestellt – wo trägt man sie ein?</td></tr>
+<tr><td><b>Änderungsanomalie</b></td><td>Meier GmbH zieht um: drei Zeilen ändern. Eine vergessen → widersprüchliche Daten.</td></tr>
+<tr><td><b>Löschanomalie</b></td><td>Auftrag A-1002 wird storniert, damit verschwindet die Schulz KG ganz aus den Daten.</td></tr>
+</table>
+
+<h3>Datenbankentwurf in drei Stufen (nach Scheer): erst das Was, dann das Wie</h3>
+<table>
+<tr><th>Stufe</th><th>Frage</th><th>Ergebnis</th></tr>
+<tr><td><b>1 konzeptionell</b></td><td>Welche Informationen speichern? (unabhängig von der Technik)</td><td>ER-Modell</td></tr>
+<tr><td><b>2 logisch</b></td><td>Welche Tabellen?</td><td>Relationenmodell mit Primär- und Fremdschlüsseln</td></tr>
+<tr><td><b>3 physisch</b></td><td>in die Sprache des Datenbanksystems überführen</td><td>SQL, physische Datenbank</td></tr>
+</table>
+<p class="small"><b>Achtung:</b> Das Relationenmodell gehört zur <b>logischen</b> Stufe, nicht zur konzeptionellen.</p>
+
+<h3>Das ER-Modell nach Chen (1976)</h3>
+<p class="small"><b>Stell dir vor:</b> Karteikarten an einer Pinnwand. Alle Kundenkarten sehen gleich aus (Felder Name, Adresse) – das ist der <b>Entity-Typ</b> Kunde, die einzelne Karte ein <b>Entity</b>, jedes Feld ein <b>Attribut</b>. Bucht eine Kundin eine Reise, spannst du einen Faden: die <b>Relationship</b>. Die einmalige Nummer oben rechts ist das <b>Schlüsselattribut</b>.</p>
+<table>
+<tr><th>Begriff</th><th>Bedeutung</th><th>Symbol</th></tr>
+<tr><td><b>Entity</b> / <b>Entity-Typ</b></td><td>konkretes Objekt (Kundin Lisa Maier) / alle Entitys gleichen Typs (Kunde)</td><td>Rechteck (Entity-Typ)</td></tr>
+<tr><td><b>Attribut</b></td><td>Eigenschaft eines Entity-Typs; Attributwerte beschreiben ein einzelnes Objekt</td><td>Ellipse</td></tr>
+<tr><td><b>Schlüsselattribut</b></td><td>identifiziert jedes Entity eindeutig (später Primärschlüssel)</td><td>Ellipse, unterstrichen</td></tr>
+<tr><td><b>Relationship</b> (Beziehungstyp)</td><td>Beziehung zwischen zwei oder mehr Entity-Typen; kann eigene Attribute haben</td><td>Raute</td></tr>
+<tr><td><b>Kardinalität</b></td><td>wie viele Beziehungen auftreten (1, n, m)</td><td>Zahl/Buchstabe an der Linie</td></tr>
+</table>
+<p><b>Faustregel:</b> Entity-Typen sind Substantive, Relationships Verben. Leserichtung in beide Richtungen: „Mitarbeiter betreut Kunde“ und „Kunde wird betreut von Mitarbeiter“.</p>
+<figure>
+<svg viewBox="0 0 680 185" width="640" xmlns="http://www.w3.org/2000/svg">
+<g font-size="11" text-anchor="middle">
+<rect x="10" y="78" width="100" height="34" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<text x="60.0" y="99" font-weight="700">Mitarbeiter</text>
+<rect x="265" y="78" width="90" height="34" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<text x="310.0" y="99" font-weight="700">Kunde</text>
+<rect x="530" y="78" width="90" height="34" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<text x="575.0" y="99" font-weight="700">Reise</text>
+<polygon points="141.0,95 185,72.0 229.0,95 185,118.0" fill="#e9e9e9" stroke="#000" stroke-width="1.3"/>
+<text x="185" y="99">betreut</text>
+<polygon points="401.0,95 445,72.0 489.0,95 445,118.0" fill="#e9e9e9" stroke="#000" stroke-width="1.3"/>
+<text x="445" y="99">bucht</text>
+<line x1="110" y1="95" x2="141" y2="95" stroke="#000"/>
+<line x1="229" y1="95" x2="265" y2="95" stroke="#000"/>
+<line x1="355" y1="95" x2="401" y2="95" stroke="#000"/>
+<line x1="489" y1="95" x2="530" y2="95" stroke="#000"/>
+<text x="122" y="89" font-weight="700" font-size="12">1</text>
+<text x="250" y="89" font-weight="700" font-size="12">n</text>
+<text x="373" y="89" font-weight="700" font-size="12">n</text>
+<text x="512" y="89" font-weight="700" font-size="12">m</text>
+<line x1="45" y1="78" x2="40" y2="30" stroke="#000"/>
+<ellipse cx="40" cy="30" rx="22.5" ry="12" fill="#fff" stroke="#000"/>
+<text x="40" y="33.5" font-size="10" text-decoration="underline">M-Nr.</text>
+<line x1="80" y1="78" x2="100" y2="30" stroke="#000"/>
+<ellipse cx="100" cy="30" rx="32.4" ry="12" fill="#fff" stroke="#000"/>
+<text x="100" y="33.5" font-size="10">Position</text>
+<line x1="60" y1="112" x2="60" y2="160" stroke="#000"/>
+<ellipse cx="60" cy="160" rx="35.7" ry="12" fill="#fff" stroke="#000"/>
+<text x="60" y="163.5" font-size="10">M-Adresse</text>
+<line x1="290" y1="78" x2="280" y2="30" stroke="#000"/>
+<ellipse cx="280" cy="30" rx="39.0" ry="12" fill="#fff" stroke="#000"/>
+<text x="280" y="33.5" font-size="10" text-decoration="underline">Kunden-Nr.</text>
+<line x1="330" y1="78" x2="355" y2="30" stroke="#000"/>
+<ellipse cx="355" cy="30" rx="25.799999999999997" ry="12" fill="#fff" stroke="#000"/>
+<text x="355" y="33.5" font-size="10">K-Name</text>
+<line x1="310" y1="112" x2="310" y2="160" stroke="#000"/>
+<ellipse cx="310" cy="160" rx="35.7" ry="12" fill="#fff" stroke="#000"/>
+<text x="310" y="163.5" font-size="10">K-Adresse</text>
+<line x1="445" y1="118" x2="445" y2="165" stroke="#000"/>
+<ellipse cx="445" cy="165" rx="48.9" ry="12" fill="#fff" stroke="#000"/>
+<text x="445" y="168.5" font-size="10">Buchungsdatum</text>
+<line x1="555" y1="78" x2="548" y2="30" stroke="#000"/>
+<ellipse cx="548" cy="30" rx="35.7" ry="12" fill="#fff" stroke="#000"/>
+<text x="548" y="33.5" font-size="10" text-decoration="underline">Reise-Nr.</text>
+<line x1="600" y1="78" x2="625" y2="30" stroke="#000"/>
+<ellipse cx="625" cy="30" rx="35.7" ry="12" fill="#fff" stroke="#000"/>
+<text x="625" y="33.5" font-size="10">Reiseziel</text>
+<line x1="565" y1="112" x2="560" y2="160" stroke="#000"/>
+<ellipse cx="560" cy="160" rx="39.0" ry="12" fill="#fff" stroke="#000"/>
+<text x="560" y="163.5" font-size="10">Reisedatum</text>
+<line x1="605" y1="112" x2="640" y2="160" stroke="#000"/>
+<ellipse cx="640" cy="160" rx="22.5" ry="12" fill="#fff" stroke="#000"/>
+<text x="640" y="163.5" font-size="10">Preis</text>
+</g></svg>
+<figcaption>Abb. 4.1 – ER-Modell der Sonnenschein AG, vereinfacht (nach T1B4 F. 11–14). Unterstrichen = Schlüsselattribut. Im vollständigen Modell bietet zusätzlich ein Reiseveranstalter (1) Reisen (n) an.</figcaption>
+</figure>
+
+<h3>Kardinalitäten</h3>
+<div class="cols">
+<div>
+<table>
+<tr><th class="c">Typ</th><th>Beispiel (F. 13)</th></tr>
+<tr><td class="c"><b>1:1</b></td><td>Einem Mitarbeiter ist genau ein PC zugeordnet und umgekehrt.</td></tr>
+<tr><td class="c"><b>1:n</b></td><td>Ein Mitarbeiter betreut mehrere Kunden; ein Kunde wird von genau einem Mitarbeiter betreut.</td></tr>
+<tr><td class="c"><b>n:m</b></td><td>Ein Kunde bucht mehrere Reisen; eine Reise wird von mehreren Kunden gebucht.</td></tr>
+</table>
+</div>
+<div>
+<p><b>So bestimmst du sie – immer in beide Richtungen:</b></p>
+<ol class="small">
+<li>„Wie viele Kunden betreut <b>ein</b> Mitarbeiter?“ Mehrere → beim Kunden steht <b>n</b>.</li>
+<li>„Von wie vielen Mitarbeitern wird <b>ein</b> Kunde betreut?“ Genau einem → beim Mitarbeiter steht <b>1</b>.</li>
+<li>Ergebnis: Mitarbeiter <b>1 : n</b> Kunde. Das n steht auf der Seite, von der es viele gibt.</li>
+</ol>
+</div>
+</div>
+<p>Ein Attribut, das weder allein zum einen noch allein zum anderen Entity-Typ passt, gehört an die <b>Raute</b>: Das <b>Buchungsdatum</b> gehört zur konkreten Buchung, also zur Kombination Kunde–Reise.</p>
+
+<h3>Das Relationenmodell (Codd 1970) und die Transformationsregeln</h3>
+<div class="cols">
+<div style="flex:0 0 62mm">
+<table>
+<tr><th>ER-Modell</th><th>Relationenmodell</th></tr>
+<tr><td>Entity-Typ</td><td>Relation (Tabelle)</td></tr>
+<tr><td>Attribut</td><td>Spalte</td></tr>
+<tr><td>Entity</td><td>Tupel (Zeile)</td></tr>
+<tr><td>Schlüsselattribut</td><td>Primärschlüssel</td></tr>
+</table>
+</div>
+<div>
+<p>Eine <b>Relation</b> ist eine Menge von Tupeln und wird als Tabelle dargestellt. Kurzschreibweise hier: <u>unterstrichen</u> = Primärschlüssel, ↑ = Fremdschlüssel. Beispiel: Kunde(<u>Kunden-Nr.</u>, K-Name, K-Adresse).</p>
+</div>
+</div>
+<table>
+<tr><th class="c" style="width:14mm">Kardinalität</th><th>Regel (T1B4 F. 18)</th><th>Beispiel</th></tr>
+<tr><td class="c"><b>1:n</b></td><td>Die Relation auf der <b>n-Seite</b> bekommt den Primärschlüssel der 1-Seite als <b>Fremdschlüssel</b>. Keine eigene Relation.</td><td>Kunde(<u>Kunden-Nr.</u>, K-Name, K-Adresse, M-Nr.↑)</td></tr>
+<tr><td class="c"><b>1:1</b></td><td>Fremdschlüssel in <b>einer</b> der beiden Relationen.</td><td>PC(<u>PC-Nr.</u>, Modell, Mitarbeiter-Nr.↑)</td></tr>
+<tr><td class="c"><b>n:m</b></td><td><b>Eigene Relation.</b> Die Primärschlüssel beider Seiten werden Fremdschlüssel und bilden <b>zusammen den Primärschlüssel</b>; Attribute der Beziehung wandern mit.</td><td>bucht(<u>Kunden-Nr.↑, Reise-Nr.↑</u>, Buchungsdatum)</td></tr>
+</table>
+<p><b>Schritt für Schritt:</b> (1) Jeder Entity-Typ wird eine Relation, Schlüsselattribut → Primärschlüssel. (2) Jede 1:n: Fremdschlüssel auf die n-Seite. (3) Jede 1:1: Fremdschlüssel auf eine Seite. (4) Jede n:m: neue Relation mit beiden Schlüsseln und den Attributen der Raute.</p>
+<div class="cols">
+<div>
+<p><b>Mit Zahlen:</b> Mitarbeiter 7 betreut die Kunden 101, 102, 103.</p>
+<table style="width:auto">
+<tr><th>Kunden-Nr.</th><th>Name</th><th>M-Nr.↑</th></tr>
+<tr><td>101</td><td>Meier GmbH</td><td class="c">7</td></tr>
+<tr><td>102</td><td>Schulz KG</td><td class="c">7</td></tr>
+<tr><td>103</td><td>Huber AG</td><td class="c">7</td></tr>
+</table>
+</div>
+<div>
+<p class="small">Jeder Kunde hat genau <b>eine</b> M-Nr. – das passt in eine Zelle. Umgekehrt müsste beim Mitarbeiter „101, 102, 103“ in einer Zelle stehen; das ist nicht erlaubt, jeder Wert muss <b>atomar</b> sein. Bei n:m hätten <b>beide</b> Seiten so eine Liste – deshalb die eigene Tabelle mit einer Zeile pro Paar, z. B. (101, Reise 5), (101, Reise 8), (102, Reise 5).</p>
+<div class="def small"><b>Merksatz:</b> Der Fremdschlüssel steht immer dort, wo er nur <b>einen</b> Wert hat. Bei n:m gibt es diese Seite nicht, deshalb entsteht eine eigene Relation.</div>
+</div>
+</div>
+<div class="box trap"><div class="t">Achtung – typische Fehler</div>
+<ul>
+<li>„Eine n:m-Beziehung wird im Relationenmodell über einen Fremdschlüssel abgebildet“ → <b>falsch</b> (T2B1 F. 2). Ein einzelner Fremdschlüssel reicht nur bei 1:n und 1:1.</li>
+<li>Bei 1:n kommt der Fremdschlüssel <b>nie auf die 1-Seite</b> (sonst stünde dort eine Liste).</li>
+<li><b>Nur in eine Richtung gefragt:</b> „Ein Auftrag enthält mehrere Artikel“ allein ist noch kein 1:n – ein Artikel steht auch in vielen Aufträgen: <b>n:m</b>.</li>
+<li><b>Entity statt Entity-Typ:</b> „Meier GmbH“ ist ein Entity, modelliert wird der Entity-Typ Kunde.</li>
+<li><b>Attribut am falschen Ort:</b> Menge, Buchungsdatum, Sonderrabatt gehören an die Beziehung, nicht an einen Entity-Typ.</li>
+<li><b>Fehlender oder falscher Schlüssel:</b> Sind Name/Adresse laut Text nicht eindeutig, Schlüssel ergänzen (Kunden-Nr.). Keine nicht-eindeutige Bezeichnung als Schlüssel nehmen.</li>
+</ul></div>
+
+<h3>Offizielle Aufgabe Leuchtenhändler (T1B4 F. 15, Lösung F. 16/21)</h3>
+<p class="small"><b>Text:</b> Ein Kunde (Kunden-Nr., Name, Adresse) erteilt Aufträge (Auftrags-Nr., Datum). Ein Auftrag enthält mehrere Artikel (Artikel-Nr., Bezeichnung, Preis) in einer bestimmten Menge; ein Artikel kommt in vielen Aufträgen vor. Zu jedem Auftrag gibt es genau eine Rechnung (Rechnungs-Nr., Rechnungsdatum).</p>
+<table>
+<tr><th>Relation</th><th>Begründung</th></tr>
+<tr><td>Kunde(<u>Kunden-Nr.</u>, K-Name, K-Adresse)</td><td>Entity-Typ</td></tr>
+<tr><td>Auftrag(<u>Auftrags-Nr.</u>, Datum, Kunden-Nr.↑)</td><td>Kunde 1:n Auftrag → Fremdschlüssel auf der n-Seite</td></tr>
+<tr><td>Artikel(<u>Artikel-Nr.</u>, Bezeichnung, Preis)</td><td>Entity-Typ</td></tr>
+<tr><td>enthält(<u>Auftrags-Nr.↑, Artikel-Nr.↑</u>, Menge)</td><td>n:m → eigene Relation, Menge wandert mit</td></tr>
+<tr><td>Rechnung(<u>Rechnungs-Nr.</u>, Rechnungsdatum, Auftrags-Nr.↑)</td><td>1:1 → Fremdschlüssel in einer der beiden Relationen</td></tr>
+</table>
+
+<h3>Offizielle Zusatzaufgabe Gerätehersteller (Moodle, Musterlösung)</h3>
+<p class="small"><b>Kern des Textes:</b> Bauteil (eindeutige Bauteilnummer, Bezeichnung nicht eindeutig, Einkaufspreis, Vorrat) · Gerät (eindeutige Bezeichnung, Lagerbestand, Verkaufspreis) · ein Gerät besteht aus mehreren Bauteilen, jedes Bauteil in <b>genau einem</b> Gerät · Kunde (Name, Adresse – <b>nicht eindeutig</b>) · Kunde ↔ Gerät n:m · für bestimmte Paare ein <b>Sonderrabatt</b> in %.</p>
+<div class="cols">
+<div>
+<table>
+<tr><th>Relationenmodell (Musterlösung)</th></tr>
+<tr><td>Kunde(<u>Kunden-Nr.</u>, K-Name, K-Adresse) – Schlüssel <b>ergänzt</b></td></tr>
+<tr><td>Gerät(<u>G-Bezeichnung</u>, Lagerbestand, Verkaufspreis)</td></tr>
+<tr><td>Bauteil(<u>Bauteil-Nr.</u>, B-Bezeichnung, Einkaufspreis, Vorrat, G-Bezeichnung↑) – 1:n, FK auf der n-Seite</td></tr>
+<tr><td>bezieht(<u>Kunden-Nr.↑, G-Bezeichnung↑</u>, Sonderrabatt) – n:m, Rabatt an der Beziehung</td></tr>
+</table>
+</div>
+<div>
+<p class="small"><b>Zusatzfrage:</b> Darf ein Bauteil in mehreren Geräten stecken und soll die Stückzahl gespeichert werden, wird „besteht aus“ <b>n:m mit Attribut Anzahl</b>: Der FK in Bauteil fällt weg, neu ist besteht aus(<u>G-Bezeichnung↑, Bauteil-Nr.↑</u>, Anzahl) – in der Praxis eine Stückliste.</p>
+
+</div>
+</div>
+
+<h3>Physischer Entwurf: DB, DBMS, DBS</h3>
+<p><b>Datenbank (DB)</b> = der gespeicherte Datenbestand nach dem Datenmodell. <b>DBMS</b> = die Software, die die DB verwaltet und alle Zugriffe ausführt (PostgreSQL, MySQL, Oracle). <b>Datenbanksystem (DBS) = DB + DBMS</b>.</p>
+<table>
+<tr><th>DBMS-Funktion</th><th>Inhalt</th></tr>
+<tr><td>Speichern und Abfragen</td><td>anlegen, ändern, löschen, lesen, z. B. mit SQL</td></tr>
+<tr><td>Sicherheit und Integrität</td><td>Zugriffsrechte, Datenschutz, widerspruchsfreie Daten – kein Auftrag mit unbekannter Kundennummer (<b>referentielle Integrität</b>)</td></tr>
+<tr><td>Mehrbenutzerbetrieb</td><td>viele gleichzeitig, ohne sich zu stören</td></tr>
+<tr><td>Effizienz</td><td>schneller Zugriff, kurze Antwortzeiten, sparsamer Speicher</td></tr>
+</table>
+
+<div class="qa"><div class="t">Typische Klausurfragen</div>
+<div class="q">Stimmt das? „Eine n:m-Beziehung wird im Relationenmodell über einen Fremdschlüssel abgebildet.“</div>
+<div class="a"><b>Falsch.</b> n:m braucht eine eigene Relation, deren Primärschlüssel aus beiden Fremdschlüsseln besteht.</div>
+<div class="q">Überführe in Relationen: Lehrer (PersonalNr, Name, Teilzeit) lehrt Klasse (Klasse, Elternsprecher, Klassenlehrer) mit Fach und Wochenstunden (n:m); Schüler (SchuelerNr, Name, Geburtsdatum) gehört zu genau einer Klasse (1:n).</div>
+<div class="a">Lehrer(<u>PersonalNr</u>, Name, Teilzeit) · Klasse(<u>Klasse</u>, Elternsprecher, Klassenlehrer) · Schüler(<u>SchuelerNr</u>, Name, Geburtsdatum, Klasse↑) · lehrt(<u>PersonalNr↑, Klasse↑</u>, Fach, Wochenstunden). Unterrichtet ein Lehrer dieselbe Klasse in zwei Fächern, muss Fach mit in den Primärschlüssel.</div>
+</div>
+
+<!-- ===================================================== -->
+<h2 id="k5">5 · Geschäftsmodell, Organisation, Anforderungen <span class="pts">T2B1 · Transfer</span></h2>
+
+<div class="satz"><b>In einem Satz:</b> Ein Geschäftsmodell erklärt, für wen eine Firma was tut und wie sie damit Geld verdient – und zusammen mit Organisation und Prozessen bestimmt es, welche Anforderungen ein IS erfüllen muss. Merksatz: <b>„Erst das Unternehmen verstehen, dann das System beurteilen.“</b> Aus diesem Block stammen zwei offizielle Beispielaufgaben und die Transferaufgabe.</div>
+
+<h3>Wovon hängen die Anforderungen an ein IS ab? (T2B1 F. 5)</h3>
+<div class="def"><b>Drei Elemente</b> (offizielle Beispielaufgabe „Nennen“): <b>Geschäftsmodell</b> · <b>Unternehmensaufbau</b> (Organisation) · <b>(Geschäfts-)Prozesse</b>.</div>
+<p><b>Fall Sonnenschein AG (F. 6):</b> Reiseveranstalter, <b>prozessorientiert</b> (alle Abläufe als Geschäftsprozesse festgelegt), <b>überbetrieblich</b> (Hotels und Fluggesellschaften eingebunden, Partner über das globale Distributionssystem GDS Amadeus), Kundenkontakt per E-Mail, Telefon und Internet; IT-Betrieb und Helpdesk liegen bei einer IT-Tochter. Was verkauft ein Veranstalter, dem weder Hotel noch Flugzeug gehört? Das <b>Bündel</b>: Pauschalreise aus einer Hand – Auswahl, Kombination und Organisation von Flug, Hotel, Transfer, dazu Sicherheit und Verantwortung.</p>
+<div class="box trap"><div class="t">Achtung</div><p>„Die Anforderungen an ein IS ergeben sich vor allem aus der verfügbaren Technik“ ist <b>falsch</b> (T2B2 F. 2). Sie ergeben sich aus Geschäftsmodell, Organisation und Geschäftsprozessen.</p></div>
+
+<h3>Was ist ein Geschäftsmodell? (Vier Kernelemente nach Shafer et al. 2005)</h3>
+<div class="def"><b>Definition (F. 8):</b> Ein Geschäftsmodell beschreibt das Grundprinzip, nach dem eine Organisation <b>Werte schafft, vermittelt und erfasst</b>.</div>
+<table>
+<tr><th>Kernelement</th><th>Frage</th><th>Felder im Canvas</th></tr>
+<tr><td><b>Kunden</b></td><td>Für wen schaffen wir Wert?</td><td>Kundensegmente, Kanäle, Kundenbeziehungen</td></tr>
+<tr><td><b>Wertversprechen</b></td><td>Welchen Nutzen haben die Kunden?</td><td>Wertversprechen</td></tr>
+<tr><td><b>Wertschöpfung</b></td><td>Was tun wir selbst, was übernehmen Partner?</td><td>Schlüsselaktivitäten, -ressourcen, -partner</td></tr>
+<tr><td><b>Erlösmodell</b></td><td>Womit verdienen wir Geld, was kostet es?</td><td>Einnahmequellen, Kostenstruktur</td></tr>
+</table>
+<p class="small"><b>Stell dir vor:</b> Eine Eisdiele. Kunden: Familien und Spaziergänger. Wertversprechen: Erfrischung, selbst gemachtes Eis. Wertschöpfung: Eis herstellen mit Milch vom Bauern nebenan (Partner). Erlösmodell: Preis pro Kugel minus Miete, Zutaten, Personal. <b>Wozu?</b> Geschäftsmodelle verstehen und vergleichen, neue entwickeln (Kapitel 8), Anforderungen an IS ableiten.</p>
+
+<h3>Der Business Model Canvas (Osterwalder/Pigneur 2011)</h3>
+<p>Das bekannteste von vielen Frameworks: einfach, intuitiv, durch die Visualisierung gut für Teamarbeit, Fokus auf Kunden und Wertversprechen – ein erster Schritt, aber ein guter Einstieg (F. 9). <b>Neun Felder</b> in der typischen Anordnung (links Wertschöpfung, Mitte Wertversprechen, rechts Kunde, unten Geld):</p>
+<table class="small">
+<tr><td rowspan="2" style="width:20%"><b>Schlüsselpartner</b><br>Wichtigste Partner und Lieferanten? Welche Ressourcen/Aktivitäten kommen von ihnen?</td><td style="width:20%"><b>Schlüsselaktivitäten</b><br>Welche Aktivitäten erfordert das Wertversprechen?</td><td rowspan="2" style="width:20%"><b>Wertversprechen</b><br>Welchen Wert liefern wir, welches Problem lösen wir, welche Bedürfnisse befriedigen wir?</td><td style="width:20%"><b>Kundenbeziehungen</b><br>Welche Art Beziehung erwarten die Kunden, was kostet sie?</td><td rowspan="2" style="width:20%"><b>Kundensegmente</b><br>Für wen schaffen wir Mehrwert? Wichtigste Kunden?</td></tr>
+<tr><td><b>Schlüsselressourcen</b><br>Welche Ressourcen erfordert das Wertversprechen?</td><td><b>Kanäle</b><br>Über welche Kanäle erreichen wir die Kunden?</td></tr>
+<tr><td colspan="2"><b>Kostenstruktur</b> – wichtigste Kosten, teuerste Schlüsselressourcen?</td><td colspan="3"><b>Einnahmequellen</b> – wofür sind Kunden wirklich bereit zu zahlen?</td></tr>
+</table>
+<p><b>So füllst du einen Canvas:</b> mit den <b>Kundensegmenten</b> beginnen (mehrere Gruppen?) → für jedes Segment das <b>Wertversprechen</b> → Kanäle und Kundenbeziehungen → Aktivitäten, Ressourcen, Partner → Einnahmen und Kosten. Einträge <b>konkret</b>, keine Floskeln.</p>
+<div class="cols">
+<div>
+<table class="small">
+<tr><th colspan="2">Beispiel Spotify (F. 11)</th></tr>
+<tr><td>Partner</td><td>Plattenfirmen und Künstler (Lizenzen), Podcast-Produzenten, Cloud-Anbieter</td></tr>
+<tr><td>Aktivitäten</td><td>Lizenzen verhandeln, App betreiben, Empfehlungen aus Hördaten</td></tr>
+<tr><td>Ressourcen</td><td>Musikkatalog, Hördaten und Algorithmen, Marke</td></tr>
+<tr><td>Wertversprechen</td><td>Hörer: jede Musik jederzeit, passende Playlists, Premium ohne Werbung und offline · Werbekunden: Zielgruppe gezielt erreichen</td></tr>
+<tr><td>Beziehungen</td><td>Self-Service, Playlists binden</td></tr>
+<tr><td>Kanäle</td><td>App (Smartphone, PC, Lautsprecher, Auto), Website</td></tr>
+<tr><td>Segmente</td><td>Gratis-Hörer, Premium-Abonnenten, Werbekunden</td></tr>
+<tr><td>Kosten</td><td>Lizenzzahlungen (größter Posten), IT, Entwicklung, Marketing</td></tr>
+<tr><td>Einnahmen</td><td>Premium-Abos (größter Teil), Werbung; Freemium</td></tr>
+</table>
+</div>
+<div>
+<table class="small">
+<tr><th colspan="2">Beispiel Etsy, Stand 2014 (offizielle „mögliche Lösung“ F. 15)</th></tr>
+<tr><td>Partner</td><td>Zahlungsdienstleister (Kreditkarte, PayPal) · Versanddienstleister · soziale Netzwerke</td></tr>
+<tr><td>Aktivitäten</td><td>Plattform betreiben und weiterentwickeln · Community pflegen, Regeln durchsetzen</td></tr>
+<tr><td>Ressourcen</td><td>Plattform und Daten · Marke und Community · 580 Beschäftigte</td></tr>
+<tr><td>Wertversprechen</td><td>Verkäufer: eigener Shop, Zugang zu Millionen Käufern, geringe Einstiegskosten · Käufer: einzigartige handgemachte und Vintage-Artikel direkt vom Hersteller</td></tr>
+<tr><td>Beziehungen</td><td>Community, Foren, Bewertungen · Self-Service</td></tr>
+<tr><td>Kanäle</td><td>Website und App, Callcenter, soziale Funktionen</td></tr>
+<tr><td>Segmente</td><td>Verkäufer (Kreative, Kleinstunternehmen) · Käufer (Individuelles statt Massenware) – <b>zweiseitiger Markt</b></td></tr>
+<tr><td>Kosten</td><td>Personal, IT-Betrieb · Marketing, Community, Zahlungsabwicklung</td></tr>
+<tr><td>Einnahmen</td><td>0,20 US$ je eingestelltem Artikel · 3,5 % Provision je Verkauf (2025 laut T2B4: 6,5 %)</td></tr>
+</table>
+</div>
+</div>
+<div class="box trap"><div class="t">Achtung</div>
+<ul>
+<li>„Der Canvas beschreibt vor allem, welche IT-Systeme ein Unternehmen einsetzt“ → <b>falsch</b> (T2B2 F. 2). Er beschreibt, wie ein Unternehmen Wert schafft und Geld verdient.</li>
+<li>Bei Etsy sind die <b>Verkäufer Kundensegment</b>, nicht Schlüsselpartner; das <b>Callcenter</b> steht bei Kanäle.</li>
+<li>Transfer: genau die verlangten Felder, genau die verlangte Anzahl Einträge („je 2“).</li>
+</ul></div>
+
+<h3>Aufbau- und Ablauforganisation</h3>
+<table>
+<tr><th></th><th>Aufbauorganisation · <i>Wo?</i></th><th>Ablauforganisation · <i>Wie?</i></th></tr>
+<tr><td>Offizielle Antwort</td><td><b>hierarchisches Gerüst</b> eines Unternehmens; stellt die Beziehungen zwischen Abteilungen, Bereichen usw. dar</td><td>entwickelt die (ggf. <b>abteilungsübergreifenden</b>) <b>Prozesse zur Leistungserstellung</b></td></tr>
+<tr><td>Inhalt</td><td>Stellen, Abteilungen, <b>Weisungsbeziehungen</b>; Darstellung im <b>Organigramm</b>; Voraussetzung für die Ablauforganisation</td><td>was geschieht wann, wo und durch wen; z. B. Vertrieb „Reise buchen“ → Buchhaltung „Rechnung erstellen“ → Kundenservice „Feedback erfassen“ → Marketing „Newsletter versenden“</td></tr>
+<tr><td>Stell dir vor</td><td>Aufstellung einer Fußballmannschaft: wer welche Position hat, wer Kapitän ist</td><td>die Spielzüge: wer den Ball wann an wen passt</td></tr>
+</table>
+<p><b>Kernaussage (F. 16):</b> An jeder Übergabe zwischen Abteilungen müssen Daten mitwandern. Integrierte IS sorgen dafür, sonst entstehen <b>Medienbrüche</b>.</p>
+<div class="box trap"><div class="t">Achtung</div><p>„Die Ablauforganisation legt fest, wer wem unterstellt ist“ → <b>falsch</b>. Weisungsbeziehungen sind <b>Aufbau</b>organisation.</p></div>
+
+<h3>Prozesse als Grundlage: das Newsletter-Problem → CRM</h3>
+<p>Geschäftsprozesse ermöglichen Standardisierung, Optimierung, Transparenz und sind der Ordnungsrahmen für neue Software (F. 18). <b>Ist-Zustand (F. 20):</b> EPK „Zeit für Newsletter“ → Marketingmitarbeiter stellt Inhalte zusammen → Leiter Marketing prüft → XOR Freigabe/Überarbeitung → Newsletter versenden (E-Mail-System). Das Kundenfeedback wird nach jeder Reise gespeichert, fließt aber <b>nicht</b> in den Newsletter ein; alle bekommen denselben Newsletter. Folge: Viele buchen nur einmal und wechseln im Folgejahr den Anbieter.</p>
+<table>
+<tr><th>Element</th><th>Analyse (offizielle Lösung T2B1 F. 23–26)</th></tr>
+<tr><td>Geschäftsmodell</td><td>Erlös je gebuchter Pauschalreise; Einmalbucher müssen jedes Jahr teuer neu gewonnen werden. Schwaches Canvas-Feld: <b>Kundenbeziehung</b>.</td></tr>
+<tr><td>Unternehmensaufbau</td><td>Information entsteht im <b>Kundenservice</b> (Feedback-Datenbank), entschieden wird im <b>Marketing</b> – ohne integriertes System erreicht das Feedback den Newsletter nie.</td></tr>
+<tr><td>Prozess</td><td>Lücke bei „Inhalte zusammenstellen“: nutzt weder Feedback noch Buchungen. Soll: „Inhalte je Kundengruppe zusammenstellen“ mit CRM und Kundendaten.</td></tr>
+<tr><td>Anforderungen („Das System soll …“)</td><td>… Feedback und Buchungen je Kunde zusammenführen · … Kundengruppen nach Interessen bilden · … Newsletter-Inhalte je Kundengruppe auswählen und versenden · … Einwilligungen verwalten.</td></tr>
+</table>
+<p><b>Ergebnis: Die Sonnenschein AG braucht ein CRM.</b> CRM deckt alle drei Anwendungszwecke ab: <b>kollaborativ</b> (Interaktion: E-Mail, Newsletter, Telefon, Website), <b>operativ</b> (Transaktion: zentrale Kundendaten in Marketing, Vertrieb, Service), <b>analytisch</b> (Entscheidung: Kundengruppen finden).</p>
+<p class="small"><span class="tag">Exkurs</span> „Geschäftsmodell“ wurde mit dem ersten Internet-Hype populär und war nach der Dotcom-Blase „verbrannt“; seit ca. 2010 wieder wichtig, weil Digitalisierung Innovationen ermöglicht, die weder Produkt- noch Prozessinnovationen sind – z. B. <b>Freemium</b> (Zugang gratis, später zahlende Version; funktioniert, weil digitale Services vernachlässigbare variable Kosten haben). IST-Analyse bottom-up per Experteninterview mit strukturiertem Fragebogen, Prozessdefinitionsblatt. Grundsätze integrierter Datenhaltung: bei Entstehung digital erfassen, eindeutig und beständig identifizieren, redundanzfrei speichern, einheitlich interpretieren. <span class="erg">(Funktionale/nicht-funktionale Anforderungen, User Stories, MoSCoW stehen nicht auf den Folien.)</span></p>
+
+<div class="qa"><div class="t">Typische Klausurfragen</div>
+<div class="q">Nennen (offiziell, 1–2 P.): die 3 Elemente, die Einfluss auf die Anforderungen an ein IS nehmen.</div>
+<div class="a">Geschäftsmodell, Unternehmensaufbau, Prozesse.</div>
+<div class="q">Kurz erläutern (offiziell, ca. 2 P.): Aufbauorganisation und Ablauforganisation.</div>
+<div class="a">Aufbauorganisation: hierarchisches Gerüst des Unternehmens, stellt die Beziehungen zwischen Abteilungen, Bereichen usw. dar. Ablauforganisation: entwickelt die (ggf. abteilungsübergreifenden) Prozesse zur Leistungserstellung.</div>
+<div class="q">Transfer (offiziell, 4–6 P.): Pokémon Go mit dem Canvas – Wertversprechen, Schlüsselpartner, Kundensegmente, Einnahmequellen, je 2 Einträge.</div>
+<div class="a">Keine offizielle Lösung. Vorschlag (Folien: standortbasiertes Spiel mit GPS und Augmented Reality, Free-to-play, über 1 Mrd. Downloads): <b>Wertversprechen</b> kostenloses Spiel draußen in der echten Umgebung · Sammeln und Spielen mit anderen. <b>Kundensegmente</b> Gratisspieler · zahlende Spieler, die Spielwährung kaufen. <b>Schlüsselpartner</b> Rechteinhaber der Pokémon-Marke · App-Stores als Vertriebsweg. <b>Einnahmequellen</b> Verkauf von Spielwährung in der App · Zusatzgegenstände für Vielspieler. (Partner und zweite Einnahme sind eigene Annahmen; andere begründete Einträge zählen ebenso.)</div>
+</div>
+
+<!-- ===================================================== -->
+<h2 id="k6">6 · Informationsmanagement <span class="pts">T2B2</span></h2>
+
+<div class="satz"><b>In einem Satz:</b> Informationsmanagement begleitet ein IS durch sein ganzes Leben: planen, beschaffen, einführen, betreiben – am Beispiel des CRM der Sonnenschein AG. <b>Stell dir vor:</b> Deine WG will eine Einkaufs-App. Erst klärt ihr, ob ihr sie braucht und wer entscheidet; dann sucht ihr eine fertige oder baut selbst; dann richtet ihr sie ein und erklärt sie allen; danach muss sich jemand kümmern, wenn sie abstürzt. Der umfangreichste Block – viele Begriffspaare für Aussage-1/2-Fragen.</div>
+
+<h3>Lebenszyklus (T2B2 F. 5)</h3>
+<table>
+<tr><th>Phase</th><th>Leitfrage</th><th>Art</th></tr>
+<tr><td><b>1 Planen</b></td><td>Wer entscheidet? Informationsmanagement, Ebenen</td><td rowspan="3"><b>Projekt</b>: einmalig, befristet, eigenes Budget und Team</td></tr>
+<tr><td><b>2 Beschaffen</b></td><td>Welches System, von wem? Standard/Individual, Cloud/On-Premise, Lieferant</td></tr>
+<tr><td><b>3 Einführen</b></td><td>als Projekt, klassisch oder agil</td></tr>
+<tr><td><b>4 Betreiben</b></td><td>Helpdesk, SLA, ITIL, Wissensmanagement</td><td><b>Daueraufgabe</b> (Routine)</td></tr>
+</table>
+<p class="small">Ein neuer Funktionswunsch ist ein <b>neues Projekt</b> – der Zyklus beginnt von vorn.</p>
+
+<h3>Planen: Informationsmanagement und seine drei Ebenen</h3>
+<div class="def"><b>Informationsmanagement (F. 7)</b> ist der Teil der Unternehmensführung, der die Potenziale der IKT erkennt und in Lösungen umsetzt; es <b>plant, steuert und kontrolliert</b> Informationen, Informationssysteme und IKT. Am CRM: Informationen (welche Daten braucht wer?), IS (das CRM und seine Schnittstellen), IKT (Server, Netz, Cloud-Betrieb).</div>
+<p><b>Wer entscheidet?</b> Je nach Tragweite: strategisch, unternehmensweit, teuer → Unternehmensleitung mit <b>CIO</b> bzw. IT-Leitung, oft im <b>IT-Lenkungsausschuss</b>; kleinere Anwendungen → IT-Abteilung mit Fachbereich. Das CRM betrifft Vertrieb, Marketing, Service und kostet sechsstellig: die Geschäftsleitung entscheidet, die IT-Tochter berät.</p>
+<table>
+<tr><th>Ebene (Heinrich et al. 2014)</th><th>Ziel</th><th>Aufgaben</th></tr>
+<tr><td><b>strategisch</b></td><td>Informationsinfrastruktur als Ganzes planen</td><td>Situationsanalyse, Zielplanung, Strategieentwicklung, Technologiemanagement, Controlling, Revision</td></tr>
+<tr><td><b>administrativ</b></td><td>produktiv nutzbare Systeme bereitstellen</td><td>Lebenszyklus-, <b>Projektmanagement</b>, Verträge, Wissens-, Geschäftsprozess-, Datenmanagement, Personal, Sicherheit, Notfälle</td></tr>
+<tr><td><b>operativ</b></td><td>Nutzung im Tagesgeschäft</td><td>Produktionsmanagement (Betrieb), Problemmanagement, <b>Benutzerservice</b></td></tr>
+</table>
+
+<h3>Auswahl und Einführung in sieben Phasen (Bächle, F. 9)</h3>
+<div class="cols">
+<div>
+<table>
+<tr><th>Projektphase</th><th>Meilenstein</th></tr>
+<tr><td>1 Projektidee generieren</td><td>Projektidee definiert</td></tr>
+<tr><td>2 Prozesse analysieren</td><td>Prozessmodell erstellt</td></tr>
+<tr><td>3 Anforderungen definieren</td><td><b>Lastenheft genehmigt</b></td></tr>
+<tr><td>4 Systemlieferanten auswählen</td><td>Lieferant ausgewählt</td></tr>
+<tr><td>5 System anpassen, schulen</td><td>Nutzer geschult</td></tr>
+<tr><td>6 System testen</td><td>System getestet</td></tr>
+<tr><td>7 System einführen</td><td>System abgenommen</td></tr>
+</table>
+</div>
+<div>
+<p><b>Lastenheft:</b> alle Anforderungen des <b>Auftraggebers</b> (das Was), Grundlage der Lieferantenauswahl. <b>Pflichtenheft</b> <span class="erg">(Ergänzung)</span>: vom Auftragnehmer – wie und womit er umsetzt. <b>Merkhilfe:</b> Lasten trägt der Kunde, Pflichten übernimmt der Lieferant.</p>
+<p class="small"><b>Stell dir vor:</b> Dein Zettel ans Küchenstudio „Herd mit 4 Platten, Platz für großen Kühlschrank, helle Fronten“ ist das Lastenheft; das Angebot „Modell X mit Herd Y, Montage in 2 Tagen“ das Pflichtenheft.</p>
+<p class="small">Phasen 1–3 entsprechen Kapitel 5 (Geschäftsmodell, Prozesse, Anforderungen).</p>
+</div>
+</div>
+
+<h3>Beschaffen: Standard- oder Individualsoftware?</h3>
+<div class="satz"><b>In einem Satz:</b> Standardsoftware ist Kleidung von der Stange (kürzen lassen = <b>Customizing</b>), Individualsoftware ein Maßanzug.</div>
+<table>
+<tr><th></th><th>Standardsoftware</th><th>Individualsoftware</th></tr>
+<tr><td>Definition (F. 11)</td><td>für <b>viele Kunden</b> mit ähnlichen Anforderungen entwickelt; Anpassung über Einstellungen (<b>Customizing</b>)</td><td>für die <b>speziellen Anforderungen eines</b> Unternehmens entwickelt, selbst oder im Auftrag</td></tr>
+<tr><td>am CRM</td><td>fertiges CRM-Produkt, eingerichtet für die Sonnenschein AG</td><td>eigens programmiertes Kundensystem</td></tr>
+<tr><td>Vorteile</td><td>günstiger (Kosten auf viele verteilt), schnell verfügbar, erprobt, Updates/Support vom Hersteller, eingebaute Best Practices</td><td>passt genau, kann Wettbewerbsvorteil sichern, volle Kontrolle</td></tr>
+<tr><td>Nachteile</td><td>passt nur über Customizing (begrenzter Rahmen), Prozesse müssen sich ggf. anpassen, Abhängigkeit vom Anbieter (Vendor-Lock-in), kaum Differenzierung</td><td>teuer, dauert lange, Projektrisiko, Wartung selbst, abhängig von wenigen Entwicklern</td></tr>
+</table>
+<p>Dazwischen: <b>Low-Code-Plattformen</b> (OutSystems, Microsoft Power Apps), mit denen Fachabteilungen aus visuellen Bausteinen kleine Anwendungen bauen. <b>Faustregel:</b> Standard für das, was alle ähnlich machen (CRM, Lohn, Buchhaltung), individuell dort, wo man sich unterscheidet.</p>
+<div class="cols">
+<div>
+<table class="small">
+<tr><th></th><th>On-Premise</th><th>Cloud (SaaS)</th></tr>
+<tr><td>Ort</td><td>eigenes Rechenzentrum</td><td>beim Anbieter</td></tr>
+<tr><td>Kosten</td><td>Lizenz kaufen, eigene Server, Personal</td><td>laufende Gebühr, z. B. je Nutzer und Monat</td></tr>
+<tr><td>Betrieb, Updates</td><td>eigene IT</td><td>Anbieter</td></tr>
+<tr><td>Anpassung</td><td>Customizing und eigene Erweiterungen</td><td>nur in den Grenzen des Anbieters</td></tr>
+<tr><td>Daten</td><td>bleiben im Haus</td><td>beim Anbieter, Datenschutz vertraglich regeln</td></tr>
+</table>
+<p class="small">Bei CRM ist Cloud heute der Normalfall; die Leistung regelt ein SLA. On-Premise ≈ eigenes Auto, Cloud ≈ Carsharing.</p>
+</div>
+<div>
+<p><b>Lieferantenauswahl in drei Stufen (F. 14):</b></p>
+<table class="small">
+<tr><th>Stufe</th><th>Eingrenzung</th><th>Kriterium</th></tr>
+<tr><td>1 Marktrecherche, Vorauswahl</td><td>&gt; 100 → 3–5</td><td><b>Best Fit</b> (passt zu unseren Anforderungen)</td></tr>
+<tr><td>2 Präsentation, Referenzkunden</td><td>→ 1–2</td><td><b>Best Practice</b> (bei anderen bewährt)</td></tr>
+<tr><td>3 Feinspezifikation, Vertrag</td><td>→ 1</td><td><b>TCO/ROI</b></td></tr>
+</table>
+<p class="small"><b>TCO</b> = Gesamtkosten über die ganze Nutzungsdauer, nicht nur die Lizenz (Drucker: auch alle Patronen über fünf Jahre). <b>ROI</b> = Nutzen im Verhältnis zur Investition. <span class="erg">(Ausgedachtes Beispiel: 100 000 € Kosten, 130 000 € Mehrgewinn → ROI 30 %.)</span></p>
+</div>
+</div>
+<div class="box trap"><div class="t">Achtung</div><p><b>Open Source</b> ist eine <b>Lizenzform</b>, kein Betriebsmodell: Quellcode offen, keine Lizenzgebühr – betreiben kann man es selbst oder in der Cloud.</p></div>
+
+<h3>Einführen: Projekt, SMART, PM-Phasen</h3>
+<div class="def"><b>Projekt nach DIN 69901:</b> „Vorhaben, das im Wesentlichen durch <b>Einmaligkeit der Bedingungen</b> in ihrer Gesamtheit gekennzeichnet ist, wie z. B. Zielvorgabe, zeitliche, finanzielle, personelle oder andere Begrenzungen.“ <b>Projektmanagement</b> = „Gesamtheit von Führungsaufgaben, -organisation, -techniken und -mitteln für die Initialisierung, Definition, Planung, Steuerung und den Abschluss von Projekten“. Gegenstück: <b>Daueraufgabe</b> (wiederholte Routine).</div>
+<div class="cols">
+<div style="flex:0 0 66mm">
+<table>
+<tr><th class="c">SMART</th><th>Bedeutung</th></tr>
+<tr><td class="c"><b>S</b></td><td>spezifisch: konkret</td></tr>
+<tr><td class="c"><b>M</b></td><td>messbar: mit Kennzahl prüfbar</td></tr>
+<tr><td class="c"><b>A</b></td><td>akzeptiert: erreichbar, mitgetragen</td></tr>
+<tr><td class="c"><b>R</b></td><td>realistisch: machbar, relevant</td></tr>
+<tr><td class="c"><b>T</b></td><td>terminiert: fester Zeitpunkt</td></tr>
+</table>
+</div>
+<div>
+<p class="small"><b>Beispiel (F. 18):</b> Unternehmensziel „Wiederbuchungsquote in zwei Jahren von 30 % auf 40 %“ → Projekt „CRM einführen“ mit Zielen „in neun Monaten produktiv, höchstens 150.000 €, alle Kundendaten aus Buchungssystem und Onlineshop im CRM“. Vergleich: „Ich will fitter werden“ ist nicht SMART, „Ich laufe am 1. Juni 5 km in unter 30 Minuten“ schon.</p>
+<p class="small"><b>PM-Phasen nach DIN 69901 (F. 19):</b> <b>Initialisieren</b> (Zuständigkeiten, grobes Ziel, Projektauftrag) → <b>Definieren</b> (Ziele, Aufwand, Machbarkeit) → <b>Planen</b> (Arbeitspakete, Termine, Kosten, Ressourcen, Risiken) → <b>Steuern</b> (Soll-Ist-Vergleich, gegensteuern) → <b>Abschließen</b> (Abnahme, Abschlussbericht, Nachkalkulation, Erfahrungssicherung). Der PM-Kreislauf läuft in jeder Projektphase erneut.</p>
+</div>
+</div>
+
+<h3>Klassisch, agil oder hybrid?</h3>
+<table>
+<tr><th></th><th>klassisch (z. B. Wasserfall)</th><th>agil (z. B. Scrum)</th></tr>
+<tr><td>Planung</td><td>vorab für das ganze Projekt, Phasen nacheinander</td><td>rollierend in kurzen Iterationen</td></tr>
+<tr><td>Anforderungen</td><td>früh im Lastenheft festgelegt</td><td>entstehen laufend, Backlog wird neu priorisiert</td></tr>
+<tr><td>Ergebnis</td><td>Gesamtsystem am Ende</td><td>nutzbares Teilergebnis nach jeder Iteration</td></tr>
+<tr><td>Kunde</td><td>am Anfang und bei der Abnahme</td><td>durchgehend eingebunden</td></tr>
+<tr><td>Änderungen</td><td>Änderungsantrag, aufwendig</td><td>erwartet, fließen in den nächsten Sprint</td></tr>
+</table>
+<p class="small"><b>Stell dir vor:</b> Klassisch = Hausbau nach fertigem Bauplan; agil = Garten, Beet für Beet angelegt. <b>Agiles Manifest (2001):</b> Individuen und Interaktionen mehr als Prozesse und Werkzeuge · funktionierende Software mehr als umfassende Dokumentation · Zusammenarbeit mit dem Kunden mehr als Vertragsverhandlung · Reagieren auf Veränderung mehr als Befolgen eines Plans.</p>
+<p><b>Scrum (F. 21):</b> Product Backlog (alle Anforderungen, priorisiert) → Sprint Planning → Sprint Backlog → Sprint (<b>höchstens ein Monat</b>) mit Daily Scrum (15 Min.) → Inkrement (nutzbares Ergebnis) → Sprint Review und Retrospektive, Feedback ins Backlog. <b>Rollen (Scrum Guide 2020):</b> <b>Product Owner</b> (vertritt Kunden und Markt, pflegt und priorisiert das Backlog), <b>Scrum Master</b> (sorgt dafür, dass Scrum funktioniert, räumt Hindernisse weg), <b>Developers</b> (setzen um, organisieren sich selbst).</p>
+<p><b>Stacey-Matrix (F. 22, nach Kuster et al. 2019)</b> – Achsen Anforderungen (klar → unklar) und Technologie (bekannt → unbekannt): <b>einfach/kompliziert → klassisch</b> · <b>komplex → agil</b> (Scrum) · <b>chaotisch → erst ausprobieren</b> (Prototypen) · <b>hybrid</b> = klassischer Rahmen mit agilen Teilprojekten. Beispiele: Lohnabrechnung auf neue Standardsoftware → klassisch; Onlineshop mit persönlichen Reiseempfehlungen → agil; CRM einführen und anbinden → hybrid.</p>
+<div class="box trap"><div class="t">Achtung</div>
+<ul>
+<li>Der <b>Scrum Master</b> verteilt keine Aufgaben und kontrolliert nicht – die Developers organisieren sich selbst. In Scrum wird nicht der ganze Plan vorab festgelegt.</li>
+<li>Den Helpdesk zu betreiben ist <b>kein Projekt</b>, sondern Daueraufgabe. Projektmanagement gehört zur <b>administrativen</b>, der Benutzerservice zur <b>operativen</b> Ebene.</li>
+</ul></div>
+<p class="small"><span class="tag">Exkurs</span> <b>Akzeptanz</b> = Bereitschaft und Absicht, ein IS regelmäßig zur Aufgabenbearbeitung einzusetzen. <b>TAM</b> (Davis 1989): erklärt sie aus wahrgenommener Nützlichkeit und wahrgenommener Benutzungsfreundlichkeit; <b>UTAUT</b> (Venkatesh et al. 2003) ist eine Weiterentwicklung. Vorgehensmodelle: Wasserfall, V-Modell (XT), RUP, Spiralmodell; agil Scrum, Feature Driven Development. Einbindung der IT in vier Phasen: Teil einer Fachabteilung → zentrale Abteilung (Stab/Hauptabteilung) → Projektorganisation mit Lenkungsausschüssen → heute Querschnittsfunktion mit CIO auf C-Level.</p>
+
+<h3>Betreiben: Helpdesk, SLA, ITIL</h3>
+<p><b>Support in drei Stufen (F. 26):</b> <b>1st Level</b> (Erstkontakt, Ticket, IT-Grundausbildung) → <b>2nd Level</b> (erfahreneres Personal, schult den 1st Level) → <b>3rd Level</b> (Spezialteams für Anwendungen, Server, Netzwerk). Was nicht gelöst wird, wird weitergeleitet.</p>
+<p class="small"><b>Beschwerden der Mitarbeitenden:</b> A Anfragen nicht/verzögert beantwortet · B Anwendungssysteme fallen aus · C offensichtliche Fehler werden nicht behoben · D neue Funktionswünsche nicht umgesetzt · E Preise der IT intransparent. Bessere Technik löst das nicht – es muss <b>geregelt</b> werden.</p>
+<table>
+<tr><th>SLA-Baustein (F. 27, Beispielwerte)</th><th class="c">löst</th></tr>
+<tr><td>Vertragspartner IT-Tochter – Sonnenschein AG; Leistung: Betrieb des CRM, Helpdesk [Mo–Fr 7–19 Uhr]</td><td class="c">–</td></tr>
+<tr><td>Verfügbarkeit: CRM [99,5 %] im Monat</td><td class="c">B</td></tr>
+<tr><td>Kennzahlen: Antwort auf Anfragen [≤ 4 Std.]</td><td class="c">A</td></tr>
+<tr><td>Fehlerbehebung: bekannte Fehler in [5 Arbeitstagen]</td><td class="c">C</td></tr>
+<tr><td>Eskalation: wer wann informiert wird</td><td class="c">A, B</td></tr>
+<tr><td>Preis, Folgen: [€ je Ticket], Vertragsstrafe</td><td class="c">E</td></tr>
+</table>
+<div class="box trap"><div class="t">Achtung</div><p><b>Beschwerde D</b> regelt kein SLA: Ein neuer Funktionswunsch ist ein <b>neues Projekt</b>. „Was nicht vereinbart ist, kann der Fachbereich auch nicht einfordern.“</p></div>
+<p><b>ITIL</b> (IT Infrastructure Library): Sammlung bewährter Vorgehensweisen (Best Practices) für IT-Service-Management, De-facto-Standard. Beschreibt, <b>was</b> eine IT-Organisation tun sollte (Störungen bearbeiten, Änderungen steuern, Service Levels vereinbaren), aber nicht genau <b>wie</b>. SLAs sind ein Baustein davon.</p>
+
+<h3>Wissen und Wissensmanagement</h3>
+<p><b>Aufhänger (F. 28):</b> Nur die 3rd-Level-Expertin weiß, wie die Schnittstelle CRM ↔ Buchungssystem funktioniert. Was, wenn sie geht? <b>Wissen (CEN 2004)</b> = Kombination aus Daten und Informationen, ergänzt um Expertenmeinung, Fähigkeiten und Erfahrung.</p>
+<table>
+<tr><th>Wissensart</th><th>Bedeutung</th><th>Beispiel</th></tr>
+<tr><td><b>individuell</b></td><td>hat eine einzelne Person</td><td>die Expertin kennt die Schnittstelle</td></tr>
+<tr><td><b>kollektiv</b></td><td>steht einer Gruppe oder dem Unternehmen zur Verfügung</td><td>der Helpdesk kennt den Ablauf in drei Stufen</td></tr>
+<tr><td><b>explizit</b></td><td>lässt sich aufschreiben, speichern, weitergeben</td><td>Schnittstellenbeschreibung, Handbuch</td></tr>
+<tr><td><b>implizit</b></td><td>nicht vollständig aufschreibbar, „klebriges“ Wissen</td><td>ihr Gespür, wo ein Fehler meist steckt</td></tr>
+</table>
+<p><b>Wissensmanagement (F. 29)</b> = bewusster, systematischer und verantwortungsvoller Umgang mit der Ressource Wissen. Aufgaben: <b>identifizieren, erwerben, entwickeln, verteilen, nutzen, bewahren</b>. <b>Kodifizieren</b> = aufschreiben: zugänglich und leicht weiterzugeben, aber Erfahrung und Kontext gehen teilweise verloren. Am Helpdesk: Wissensdatenbank im Ticketsystem, mit der der 1st Level selbst hilft; im Projektabschluss: Erfahrungssicherung.</p>
+
+<div class="qa"><div class="t">Typische Klausurfragen</div>
+<div class="q">Single Choice: Welche Tätigkeit ist nach DIN 69901 ein Projekt? (Helpdesk beantwortet Tickets · monatliche Gehaltsabrechnung · die Server ziehen in die Cloud um · dienstags Sicherheitsupdates einspielen)</div>
+<div class="a"><b>Cloud-Umzug der Server</b> – einmalig, mit Ziel und Begrenzung. Die anderen sind Daueraufgaben.</div>
+<div class="q">Nennen Sie je zwei Vor- und Nachteile von Standardsoftware und empfehlen Sie der Sonnenschein AG eine Lösung fürs CRM.</div>
+<div class="a">+ günstiger, schnell verfügbar (auch: erprobt, Support) · − Anpassung nur per Customizing im begrenzten Rahmen, Vendor-Lock-in. Empfehlung: Standard-CRM (CRM macht jeder ähnlich), angepasst per Customizing.</div>
+<div class="q">Kurz erläutern: Lastenheft vs. Pflichtenheft.</div>
+<div class="a">Lastenheft: Anforderungen des Auftraggebers (das Was), Basis der Lieferantenauswahl. Pflichtenheft: Antwort des Auftragnehmers, wie und womit er sie umsetzt.</div>
+<div class="q">Nennen: die drei Ebenen des Informationsmanagements mit je einer Aufgabe.</div>
+<div class="a">Strategisch (Strategieentwicklung), administrativ (Projektmanagement), operativ (Benutzerservice/Betrieb).</div>
+</div>
+
+<!-- ===================================================== -->
+<h2 id="k7">7 · Business Intelligence und Data Science <span class="pts">T2B3</span></h2>
+
+<div class="satz"><b>In einem Satz:</b> Aus den Daten des CRM werden Berichte (Business Intelligence: „Was ist passiert, warum?“) und Prognosen (Data Science: „Was wird passieren, was sollen wir tun?“). Klausurrelevant: Informationsbedarf, DWH und ETL, die vier Analysestufen, CRISP-DM und vor allem die <b>Methodenwahl</b> Regression, Klassifikation oder Clustering.</div>
+
+<h3>Informationsbedarf</h3>
+<div class="def"><b>Informationsbedarf (F. 6, nach Picot und Pastwa):</b> Art, Menge und Qualität der Informationen, die eine Person zur Erfüllung ihrer Aufgabe in einer bestimmten Zeit benötigt.</div>
+<table>
+<tr><th>Begriff</th><th>Bedeutung</th><th>Beispiel Arztbesuch (Website)</th></tr>
+<tr><td><b>objektiver Bedarf</b></td><td>was die <b>Aufgabe</b> erfordert</td><td>die Ärztin braucht dein Blutbild</td></tr>
+<tr><td><b>subjektiver Bedarf</b></td><td>was die <b>Person für nötig hält</b></td><td>sie glaubt, Blutdruck reicht</td></tr>
+<tr><td><b>Nachfrage</b></td><td>was sie <b>tatsächlich anfragt</b></td><td>sie misst nur den Blutdruck</td></tr>
+<tr><td><b>Angebot</b></td><td>was <b>verfügbar</b> ist</td><td>Röntgenbilder von vor zehn Jahren</td></tr>
+</table>
+<p>Fünf Fragen der Bedarfsanalyse: <b>Inhalt</b> (was?), <b>Häufigkeit</b> (wie oft?), <b>Form</b> (wie aufbereitet?), <b>Medium</b> (welcher Weg?), <b>Wichtigkeit</b> (wie dringend?). <b>Pull:</b> Nutzer holt die Information selbst (Suche, Abfrage). <b>Push:</b> das System liefert sie (Bericht, Warnmeldung).</p>
+<div class="box trap"><div class="t">Achtung</div><p>„Der objektive Informationsbedarf ist das, was eine Managerin bei der IT anfragt“ → <b>falsch</b> (T2B4 F. 2) – das ist die <b>Nachfrage</b>.</p></div>
+
+<h3>Managementunterstützungssysteme (MUS)</h3>
+<p class="small"><b>Entwicklung (F. 8):</b> Abfrage- und Berichtssysteme (ab 1960ern) → DSS → Expertensysteme → EIS (zusammen die klassischen MUS) → Business Intelligence (DWH, OLAP, Data Mining) → ab 2010 Treiber Big Data → Data Science und ML. Neue Systeme kommen hinzu, die alten bleiben (oft als Teil von BI).</p>
+<table class="small">
+<tr><th>Klassisches MUS</th><th>Kern</th><th>heute</th></tr>
+<tr><td>Abfrage- und Berichtssysteme</td><td>einfache Auswertung; Abfragen startet der Nutzer (Pull), Berichte erzeugt das System regelmäßig (Push)</td><td>Standardberichte, Dashboards</td></tr>
+<tr><td>DSS (Decision Support)</td><td>Handlungsalternativen mit Modellen untersuchen: modellgestützt („Was wäre, wenn Kreta 5 % billiger wird?“) oder datengestützt</td><td>Teil von BI</td></tr>
+<tr><td>Expertensysteme</td><td>menschliche Expertise in engem Bereich: Regelbasis (Wenn-dann), Faktenbasis, Regelinterpreter</td><td>Regeln oft aus Daten gelernt (ML)</td></tr>
+<tr><td>EIS (Führungsinformationssystem)</td><td>kompakte Darstellung aller wichtigen Sachverhalte fürs Top-Management, interne und externe Quellen, Balanced Scorecard</td><td>Management-Dashboards</td></tr>
+</table>
+
+<h3>Business Intelligence, Data Warehouse, ETL</h3>
+<div class="def"><b>BI (F. 11)</b> umfasst analytische Konzepte, Prozesse und Werkzeuge, um Unternehmens- und Wettbewerbsdaten in konkretes Wissen für (strategische) Entscheidungen umzuwandeln; nutzt interne und externe Quellen.</div>
+<p class="small"><b>Stell dir vor:</b> Jede Filiale schreibt ihre Verkäufe in ihr eigenes Kassenbuch, jede ein bisschen anders. Einmal pro Nacht holt jemand alle ab (<b>E</b>xtract), schreibt sie einheitlich ab (<b>T</b>ransform) und legt sie ins große Archiv der Zentrale (<b>L</b>oad). Ein <b>Data Mart</b> ist ein Regal im Archiv nur für eine Abteilung.</p>
+<div class="cols">
+<div>
+<ul>
+<li><b>Data Warehouse (DWH):</b> speichert <b>aktuelle und historische</b> Daten in <b>aggregierter</b> Form, die für Managemententscheidungen interessant sind.</li>
+<li><b>Data Marts:</b> Teilbereiche eines DWH, vor allem zur Performance-Steigerung (z. B. für den Vertrieb).</li>
+<li><b>ETL:</b> Extrahieren aus den Transaktionssystemen, Transformieren, Laden ins DWH.</li>
+<li><b>OLTP</b> = operative Systeme, die Buchungen anlegen; <b>OLAP</b> = Analyse historischer, verdichteter Daten (Umsatz je Reiseziel und Quartal mit Drill-down). Auf den Folien nur als Stichwort.</li>
+</ul>
+<p class="small"><b>DWH-Anforderungen nach Inmon (2005):</b> Themenorientierung (Vertrieb, Produktion), Vereinheitlichung (einheitliche Datumsformate), Beständigkeit (gespeicherte Daten werden nicht mehr geändert), Zeitraumbezug (Quartalsumsätze).</p>
+</div>
+<div>
+<table class="small">
+<tr><th colspan="3">Vier Transformationsschritte – nur im T wird aufbereitet (F. 12)</th></tr>
+<tr><th>Schritt</th><th>Was passiert</th><th>Beispiel</th></tr>
+<tr><td><b>Bereinigung</b></td><td>syntaktische und semantische Mängel beseitigen</td><td>einheitliches Datumsformat; fehlende Ist- durch Planwerte ersetzen</td></tr>
+<tr><td><b>Harmonisierung</b></td><td>Synonyme, Homonyme, Kodierungen vereinheitlichen</td><td>„Personal“ = „Mitarbeiter“; „Partner“ für Lieferanten und Kunden</td></tr>
+<tr><td><b>Verdichtung</b></td><td>auf Aggregationsstufen summieren</td><td>Umsatz pro Produktgruppe</td></tr>
+<tr><td><b>Anreicherung</b></td><td>Kennzahlen berechnen und speichern</td><td>Gewinn, Deckungsbeitrag</td></tr>
+</table>
+<p class="small"><span class="tag">Exkurs</span> <b>dbt</b> (data build tool) organisiert die Transformationen als SQL-Modelle, testet und dokumentiert sie: „Das DBMS führt aus. SQL beschreibt den Auftrag. dbt organisiert die Aufträge.“</p>
+</div>
+</div>
+
+<h3>Vier Analysestufen (Gartner 2012)</h3>
+<table>
+<tr><th>Stufe</th><th>Frage</th><th>Beispiel Sonnenschein AG (F. 15)</th><th>typisch</th></tr>
+<tr><td><b>1 deskriptiv</b></td><td>Was ist passiert?</td><td>Umsatz je Reiseziel im letzten Quartal</td><td rowspan="2">BI: Bericht, Dashboard, OLAP, Drill-down</td></tr>
+<tr><td><b>2 diagnostisch</b></td><td>Warum ist es passiert?</td><td>Warum sind die Buchungen für Spanien gesunken?</td></tr>
+<tr><td><b>3 prädiktiv</b></td><td>Was wird passieren?</td><td>Buchungen für Griechenland im Sommer 2027</td><td rowspan="2">Data Science: Prognosemodell, Optimierung, Empfehlung</td></tr>
+<tr><td><b>4 präskriptiv</b></td><td>Was sollen wir tun?</td><td>Welches Angebot an welchen Kunden?</td></tr>
+</table>
+<p class="small">Mit jeder Stufe steigen Nutzen und Anspruch. Die Aufteilung BI/Data Science ist laut Folie vereinfacht. „Welche Kundengruppen gibt es?“ passt in keine Stufe sauber → unüberwachtes Lernen.</p>
+
+<h3>Data Science, KI-Begriffe und CRISP-DM</h3>
+<div class="def"><b>Data Science (Bächle, F. 17):</b> interdisziplinäres Fachgebiet, in dem mit wissenschaftlichem Vorgehen, semiautomatisch und mit Analyseverfahren relevante Informationen aus überwiegend komplexen Datenbeständen extrahiert und für datengetriebene Entscheidungen nutzbar gemacht werden. Drei Merkmale: <b>interdisziplinär</b> (Informatik, Statistik, Fachwissen), <b>wissenschaftliches Vorgehen</b> (z. B. CRISP-DM), Ziel <b>Entscheidungen</b>.</div>
+<p><b>KI ⊃ Machine Learning ⊃ Deep Learning ⊃ Generative KI</b> (⊃ = „enthält“, wie Europa ⊃ Deutschland ⊃ Baden-Württemberg). Ein <b>Expertensystem</b> bekommt seine Regeln von Menschen (Kochbuch), <b>ML</b> lernt sie aus Daten. Data Science ist die Disziplin mit dem ganzen Prozess, ML eines ihrer Werkzeuge.</p>
+<table>
+<tr><th>CRISP-DM-Phase (Chapman et al. 2000)</th><th>Leitfrage</th></tr>
+<tr><td>1 Business Understanding</td><td>Welches betriebliche Problem? Fachbereich und Data Science gemeinsam.</td></tr>
+<tr><td>2 Data Understanding</td><td>Welche Daten haben wir, eignen sie sich?</td></tr>
+<tr><td>3 Data Preparation</td><td>bereinigen, umformen, auswählen (z. B. fehlende Werte)</td></tr>
+<tr><td>4 Modelling</td><td>Analyseverfahren anwenden, ein Modell entsteht</td></tr>
+<tr><td>5 Evaluation</td><td>Löst das Modell das betriebliche Problem? Sonst zurück in eine frühere Phase.</td></tr>
+<tr><td>6 Deployment</td><td>im Unternehmen einsetzen, einmalig oder fortlaufend</td></tr>
+</table>
+<p class="small">Die Phasen haben <b>Rücksprünge</b> – CRISP-DM ist kein Wasserfall.</p>
+
+<h3>Machine Learning und Methodenwahl</h3>
+<p><b>ML (F. 20)</b> ermöglicht Systemen, automatisch aus Erfahrung zu lernen und sich zu verbessern, ohne explizit programmiert zu werden. Programmieren: Regeln + Daten rein, Ergebnisse raus. ML: Daten (bei überwachtem Lernen mit bekannten Ergebnissen) in ein Lernverfahren, heraus kommt ein <b>Modell</b> = gelernte Muster. Im Datensatz: Zeile = Beobachtung, Spalte = Merkmal (<b>Feature</b>), Zielspalte (<b>Target</b>) = was vorhergesagt werden soll.</p>
+<table>
+<tr><th>Frage</th><th>Antwort → Methode</th><th>Beispiel Sonnenschein AG</th></tr>
+<tr><td rowspan="2"><b>1 Gibt es eine Zielspalte mit bekannten Antworten?</b></td><td>Nein → <b>unüberwachtes Lernen</b>, z. B. <b>Clustering</b> (Gruppen finden); auch Assoziationsanalyse, Ausreißererkennung</td><td>Welche Kundengruppen gibt es? Was wird zusammen gebucht? Auffällige Zahlungen?</td></tr>
+<tr><td>Ja → <b>überwachtes Lernen</b>, weiter mit Frage 2</td><td></td></tr>
+<tr><td rowspan="2"><b>2 Ist die Zielspalte eine Zahl oder eine Kategorie?</b></td><td>Zahl → <b>Regression</b></td><td>Wie viele Buchungen für Griechenland 2027? Zahl der Buchungen im nächsten Juli?</td></tr>
+<tr><td>Kategorie → <b>Klassifikation</b></td><td>Wird die Buchung storniert, ja oder nein?</td></tr>
+<tr><td><b>3 Gegenprobe</b></td><td>Reicht es, vorhandene Zahlen zu summieren oder aufzuschlüsseln? → <b>BI-Bericht</b>, kein Modell</td><td>Umsatz je Reiseziel letztes Quartal</td></tr>
+</table>
+<p><b>Clustering-Beispiel (F. 24):</b> 46 Kunden, x = Anzahl Buchungen, y = Umsatz pro Buchung → drei Gruppen (wenige teure Reisen, Vielbucher, Gelegenheitskunden). Prinzipien: ähnlich innerhalb, verschieden zwischen den Clustern; keine Zielspalte; <b>die Bedeutung gibt der Mensch</b>. Bächle nennt als Hauptmethoden Prognose, Klassifikation und Segmentierung.</p>
+<p class="small"><span class="tag">Exkurs</span> <b>Train/Test (F. 32):</b> 1.000 vergangene Buchungen mit bekannter Antwort „storniert?“ → 80 % Training (800), 20 % Test (200); das Modell sagt die Testfälle vorher, ohne die Antwort zu sehen, z. B. 170 von 200 richtig = 85 %. Warum trennen? Wer nur die Altklausur auswendig lernt, scheitert an neuen Fragen – Modelle auch (<b>Overfitting</b>). Vorsicht mit Prozenten: Storniert nur jede 20. Buchung, liegt ein Modell, das immer „nein“ sagt, zu 95 % richtig und nützt nichts.</p>
+<div class="box trap"><div class="t">Achtung</div>
+<ul>
+<li>Ob Regression oder Klassifikation, entscheidet der <b>Typ der Zielspalte</b>, nicht der Features. „Storniert ja/nein“ bleibt Klassifikation, auch wenn als 1/0 gespeichert.</li>
+<li>Beim Clustering gibt es <b>keine richtige Antwort</b>; bewertet wird, ob die Gruppen fachlich Sinn ergeben.</li>
+<li>Expertensystem: Regeln von Menschen; ML: Regeln aus Daten.</li>
+</ul></div>
+
+<div class="qa"><div class="t">Typische Klausurfragen</div>
+<div class="q">Single Choice: „Zahl der Buchungen im nächsten Juli vorhersagen“ – welche Methode?</div>
+<div class="a"><b>Regression</b> (Zielgröße ist eine Zahl, überwachtes Lernen).</div>
+<div class="q">Nennen und kurz erläutern: die vier Analysestufen.</div>
+<div class="a">Deskriptiv (was ist passiert?), diagnostisch (warum?), prädiktiv (was wird passieren?), präskriptiv (was sollen wir tun?).</div>
+<div class="q">Nennen: die vier Transformationsschritte im ETL-Prozess.</div>
+<div class="a">Bereinigung, Harmonisierung, Verdichtung, Anreicherung.</div>
+<div class="q">Single Choice: In welcher CRISP-DM-Phase prüft man, ob das Modell das betriebliche Problem löst?</div>
+<div class="a"><b>Evaluation</b> – sonst zurück in eine frühere Phase (Rücksprünge, kein Wasserfall).</div>
+<div class="q">Single Choice: Die Geschäftsleitung bekommt jeden Montag automatisch einen Umsatzbericht per E-Mail. Welches Prinzip? (Pull · Push · Drill-down · ETL)</div>
+<div class="a"><b>Push</b> – das System liefert, ohne dass jemand abfragt.</div>
+</div>
+
+<!-- ===================================================== -->
+<h2 id="k8">8 · Digitale Transformation, GenAI und Agenten <span class="pts">T2B4</span></h2>
+
+<div class="satz"><b>In einem Satz:</b> Digitale Transformation heißt, dass sich durch IT nicht nur die Arbeit, sondern das ganze Geschäft ändert. <b>Stell dir vor:</b> Eine Videothek. Stufe 1: Filmliste als PDF. Stufe 2: Online reservieren ohne Zettel. Stufe 3: keine Kassetten mehr, sondern ein Streaming-Abo – erst hier verdient das Unternehmen auf eine neue Art Geld. Zu diesem Block gibt es <b>keine</b> „Stimmt das?“-Folie.</div>
+
+<h3>Digitalisierung und Bedeutung der IT</h3>
+<p>Gemeinsamer Kern der Definitionen (F. 8): <b>Analoges wird digital dargestellt, übertragen und verarbeitet.</b> Heute meint der Begriff oft mehr: ganze Abläufe und Lebenswelten werden digital. Ursprünglich ein technischer Begriff aus der Elektrotechnik. <b>Bedeutung der IT (F. 9):</b> bis Mitte der 1990er <b>„IT unterstützt“</b> (EDV-Abteilung, Routine effizienter, nicht strategisch); mit dem Internet <b>„IT wird Kerngeschäft“</b> – Vertriebskanäle und Produkte werden digital. Bei der Sonnenschein AG ist der Onlineshop einer der wichtigsten Vertriebswege.</p>
+
+<h3>Drei Stufen bis zur Digitalen Transformation (Verhoef et al. 2021)</h3>
+<table>
+<tr><th>Stufe</th><th>Was ändert sich?</th><th>Beispiel Sonnenschein AG</th><th>Prüffrage</th></tr>
+<tr><td><b>1 Informationen digitalisieren</b></td><td>das Medium</td><td>Katalog als PDF</td><td>Liegt nur eine Information anders vor (Papier → Datei)?</td></tr>
+<tr><td><b>2 Prozesse digitalisieren</b></td><td>Effizienz, Tempo</td><td>Onlinebuchung landet ohne Abtippen im CRM</td><td>Läuft ein bestehender Ablauf schneller/ohne Medienbruch?</td></tr>
+<tr><td><b>3 Digitale Transformation</b></td><td>das <b>Geschäftsmodell</b></td><td>App vermittelt Ausflüge und verdient mit</td><td>Neues Wertversprechen oder neue Einnahmequelle?</td></tr>
+</table>
+<div class="def"><b>Digitale Transformation (Bächle):</b> Veränderung von Wirtschaft und Gesellschaft durch die zunehmende Digitalisierung. Auf Stufe 3 verändern Daten und IT, <b>wie ein Unternehmen Wert schafft und Geld verdient</b>.</div>
+
+<h3>Vier Kräfte der Digitalen Transformation (Bächle nach Bloching et al. 2015)</h3>
+<table>
+<tr><th>Kraft</th><th>Wirkung</th><th>Sonnenschein AG</th></tr>
+<tr><td><b>1 Digitale Daten</b></td><td>Massendaten erfassen und auswerten → bessere Vorhersagen</td><td>Buchungen der nächsten Saison vorhersagen</td></tr>
+<tr><td><b>2 Automatisierung</b></td><td>klassische Technik plus KI → autonome Systeme, schneller, weniger Fehler</td><td>ein Agent bucht Gäste bei Flugausfall um</td></tr>
+<tr><td><b>3 Vernetzung</b></td><td>ganze Wertschöpfungskette vernetzt → synchronisierte Lieferketten</td><td>Armband im Ferienclub öffnet Zimmer, bezahlt Getränke</td></tr>
+<tr><td><b>4 Digitaler Kundenzugang</b></td><td>neue Vermittler (Intermediäre) erreichen Kunden direkt</td><td>Gäste buchen über Portale am Veranstalter vorbei</td></tr>
+</table>
+
+<h3>Internet der Dinge und Industrie 4.0</h3>
+<div class="cols">
+<div>
+<p><b>Internet der Dinge (IoT, F. 13):</b> Vernetzung physischer Objekte mittels Internettechniken; im „Internet of Everything“ kommunizieren Objekte auch mit IS und Menschen. <b>Merkmale smarter Objekte</b> (Mattern/Flörkemeier 2010): Identifikation, Adressierbarkeit, Lokalisierbarkeit, eingebettete Informationsverarbeitung, Kooperationsfähigkeit, Sensorik, Effektorik. Beispiel: Disney MagicBand als Eintrittskarte, Zimmerschlüssel und Zahlungsmittel per RFID.</p>
+</div>
+<div>
+<p><b>Industrie 4.0 (F. 14):</b> Anwendung des IoT auf industrielle Wertschöpfungsprozesse; alle Beteiligten werden zu <b>cyber-physischen Systemen (CPS)</b> vernetzt. Ziele: Effizienz steigern, Fertigung flexibilisieren, innovative Produkte. In der <b>Smart Factory</b> steuern Produkte, Maschinen und IS die Fertigung gemeinsam – bis <b>Losgröße 1</b> zu Kosten der Massenfertigung. Ausblick: EU spricht von „Industrie 5.0“ (menschzentriert, nachhaltig, resilient).</p>
+</div>
+</div>
+
+<h3>Smarte Produkte und drei Muster digitaler Geschäftsmodelle</h3>
+<p>Mit vernetzten Produkten ändert sich das Denken (F. 16): Das Produkt wird per Update laufend besser, Daten werden Teil des Angebots (Fernwartung, Prognosen), Geld fließt <b>laufend</b>, solange der Kunde nutzt. <b>Smarte Produkte</b> (Porter/Heppelmann 2014) haben drei Schichten, am Beispiel Büroleuchte: <b>physische</b> Komponenten (Gehäuse, LED-Modul), <b>intelligente</b> Komponenten (Sensoren, Chip, Dimm-Software), <b>Vernetzungs</b>komponenten (Funkmodul, Protokolle, Cloud). Merksatz: „Wer die Daten hat, kann statt der Leuchte das Licht verkaufen.“ <b>TRILUX „Licht als Service“:</b> gutes Licht zur festen Monatsmiete statt Leuchte zum Kaufpreis; neues Risiko: Philips verfehlte bei der Washingtoner Metro die zugesagte Einsparung und bekam nur einen Teil des Geldes.</p>
+<table>
+<tr><th>Muster (F. 19)</th><th>Prinzip</th><th>möglich, weil …</th><th>Beispiele</th></tr>
+<tr><td><b>Freemium</b></td><td>Basis gratis, Zusatznutzen kostet</td><td>ein weiterer Nutzer kostet digital fast nichts</td><td>Spotify, Pokémon Go</td></tr>
+<tr><td><b>Plattform</b></td><td>Anbieter und Kunden zusammenbringen, an jedem Geschäft mitverdienen</td><td>Suche, Bezahlung, Bewertung laufen digital</td><td>Etsy, Airbnb, Booking.com</td></tr>
+<tr><td><b>Produkt als Service</b></td><td>Nutzung oder Ergebnis verkaufen statt Besitz</td><td>vernetzte Produkte messen ihre Nutzung</td><td>Licht als Service, Kaeser „Sigma Air Utility“ (zahlen je Druckluftmenge)</td></tr>
+</table>
+<p class="small">Plattformen leben von <b>Netzwerkeffekten</b>: mehr Käufer machen die Plattform für Verkäufer attraktiver und umgekehrt → „Winner takes it all“. In allen drei Mustern ändert die IT, <b>wofür und wie</b> bezahlt wird.</p>
+
+<h3>Große Sprachmodelle (LLM)</h3>
+<p class="small"><b>Stell dir vor:</b> die Wortvorschläge deiner Handytastatur – „Ich komme heute etwas“ → „später“. Ein LLM macht dasselbe mit viel mehr gelesenem Text und Zusammenhang; die Antwort klingt flüssig, aber es prüft nicht, ob sie stimmt.</p>
+<table>
+<tr><th>Schritt</th><th>Was passiert</th></tr>
+<tr><td><b>Vortraining</b></td><td>liest riesige Textmengen, lernt das nächste Token vorherzusagen → Sprachgefühl und Allgemeinwissen, Stand: Ende des Trainings</td></tr>
+<tr><td><b>Feinabstimmung</b></td><td>mit Beispielen und Bewertungen durch Menschen lernt es, Anweisungen zu befolgen → aus dem Textvervollständiger wird ein Assistent</td></tr>
+<tr><td><b>Nutzung</b></td><td>Prompt rein, Antwort Token für Token raus; jedes Token ist eine wahrscheinliche Fortsetzung → flüssig, aber ohne Garantie, dass sie stimmt</td></tr>
+</table>
+<p><b>Token</b> = Textbaustein, meist Wort oder Wortteil („Reise“ + „ziel“). <b>Prompt</b> = Anweisung und Kontext. <b>Halluzination</b> = plausibel klingende, aber falsche Antwort.</p>
+
+<h3>Chatbot, RAG, Agent – drei Ausbaustufen</h3>
+<p class="small"><b>Stell dir vor:</b> drei Leute an einer Hotelrezeption. Chatbot = Aushilfe, die nur aus dem Gedächtnis antwortet. RAG = Aushilfe, die erst im Hotelordner nachschlägt. Agent = Mitarbeiterin, die selbst am Computer ein Zimmer umbucht.</p>
+<table>
+<tr><th>Stufe</th><th>Was es tut</th><th>Beispielfrage</th><th>Systemtyp</th></tr>
+<tr><td><b>1 Chatbot</b></td><td>antwortet aus dem Training</td><td>„Welches Reiseziel passt im Oktober für Familien?“</td><td rowspan="2"><b>informiert</b> (Interaktion)</td></tr>
+<tr><td><b>2 mit eigenem Wissen (RAG)</b></td><td>sucht passende Stellen in eigenen Dokumenten und gibt sie dem Modell mit</td><td>„Was kostet die Stornierung meiner Pauschalreise?“</td></tr>
+<tr><td><b>3 Agent</b></td><td>plant Schritte und nutzt Werkzeuge in CRM und Buchungssystem</td><td>„Mein Rückflug wurde gestrichen. Bitte umbuchen.“</td><td><b>handelt</b> (greift in Transaktionssysteme ein)</td></tr>
+</table>
+<p><b>Agent = Sprachmodell</b> (versteht, plant, formuliert) <b>+ Anweisung/Prompt</b> (Ziel, Regeln, Grenzen) <b>+ Werkzeuge</b> (Daten abfragen, Aktionen ausführen). Er arbeitet wie ein 1st Level und gibt ab, was er nicht lösen darf. <b>Umbuchung (F. 24):</b> Nachricht lesen (CRM) → Buchung und Flugstatus abrufen → Reisebedingungen per RAG nachschlagen → Ersatzflug und Hotel vorschlagen → <b>ab 300 € Mehrkosten gibt ein Mensch frei</b> (üblich „Human in the Loop“) → umbuchen → Gast informieren, Ticket dokumentieren. „Der Agent bekommt Rechte in unseren Systemen. Die Verantwortung bleibt beim Unternehmen.“</p>
+<table class="small">
+<tr><th>Chancen</th><th>Grenzen und Risiken</th><th>Leitplanken</th></tr>
+<tr><td>Antwort rund um die Uhr in Sekunden · Routine fällt weg · einheitliche Auskünfte aus aktuellen Dokumenten · Abläufe über Systemgrenzen ohne Medienbruch</td><td>erfundene Antworten klingen überzeugend · Kundendaten verlassen ggf. das Haus (DSGVO) · Haftung bleibt beim Unternehmen · Akzeptanz · laufende Kosten, Abhängigkeit vom Anbieter</td><td>klare Rechte · Mensch entscheidet bei Tragweite · jede Aktion protokollieren · mit echten Fällen testen · Beschäftigte früh einbinden</td></tr>
+</table>
+<p class="small"><b>Fall Air Canada (2024):</b> Ein Chatbot nannte eine falsche Erstattungsregel; die Airline musste zahlen, denn sie haftet für die Auskünfte ihres Chatbots. Diskussion F. 26: Darf der Agent selbst entscheiden? A allein, B bis zu einem Betrag, C nur Vorschlag – die Folien modellieren B.</p>
+
+<h3>SWOT-Analyse (Fall Tourismus 4.0)</h3>
+<div class="cols">
+<div style="flex:0 0 80mm">
+<table>
+<tr><th></th><th>hilfreich</th><th>hinderlich</th></tr>
+<tr><td><b>intern</b> (Stand heute)</td><td><b>S</b>trengths – Stärken</td><td><b>W</b>eaknesses – Schwächen</td></tr>
+<tr><td><b>extern</b> (Umfeld)</td><td><b>O</b>pportunities – Chancen</td><td><b>T</b>hreats – Risiken</td></tr>
+</table>
+</div>
+<div>
+<p class="small">Die Geschäftsleitung der Sonnenschein AG beauftragt eine SWOT-Analyse zur Digitalen Transformation; der Block sammelt Chancen und Risiken, am Ende Empfehlung (F. 28). Auf dich übertragen: „Ich kann gut rechnen“ (Stärke) liegt bei dir, „Die Klausur ist nur 48 Minuten lang“ (Risiko) kommt von außen. Von der SWOT zur Empfehlung: <b>TOWS-Matrix</b> – je ein internes mit einem externen Feld kombinieren (Stärken + Chancen = ausbauen).</p>
+</div>
+</div>
+<div class="box trap"><div class="t">Achtung</div>
+<ul>
+<li><b>Nicht jede Digitalisierung ist Transformation.</b> Ein PDF-Katalog ändert nur das Medium (Stufe 1), automatische Übernahme von Buchungen nur den Prozess (Stufe 2).</li>
+<li>„RAG trainiert das Modell mit den Unternehmensdokumenten neu“ → <b>falsch</b>. RAG gibt nur passenden Kontext im Prompt mit; die <b>Feinabstimmung</b> trainiert weiter.</li>
+<li>Chatbot und RAG <b>informieren</b>, ein Agent <b>handelt</b>. Die Verantwortung bleibt beim Unternehmen.</li>
+</ul></div>
+
+<div class="qa"><div class="t">Typische Klausurfragen</div>
+<div class="q">Ordne ein: Die Sonnenschein AG verschickt ihren Katalog künftig als PDF. Ist das Digitale Transformation?</div>
+<div class="a"><b>Nein</b>, Stufe 1 (Informationen digitalisieren): nur das Medium ändert sich, kein neues Wertversprechen, keine neue Einnahmequelle.</div>
+<div class="q">Nennen: die vier Kräfte der Digitalen Transformation.</div>
+<div class="a">Digitale Daten, Automatisierung, Vernetzung, digitaler Kundenzugang.</div>
+<div class="q">Erläutern: Unterschied zwischen Chatbot, RAG und Agent am Beispiel eines Reiseveranstalters.</div>
+<div class="a">Ein Chatbot antwortet nur aus seinem Training (z. B. allgemeine Reisetipps). Ein RAG-System sucht zusätzlich passende Stellen in eigenen Dokumenten und gibt sie dem Modell im Prompt mit, z. B. die Stornobedingungen; das Modell wird nicht neu trainiert. Beide informieren nur. Ein Agent besteht aus Sprachmodell, Prompt und Werkzeugen, plant mehrere Schritte und handelt in CRM und Buchungssystem, z. B. Umbuchung bei Flugausfall; ab einem Betrag gibt ein Mensch frei, die Haftung bleibt beim Unternehmen.</div>
+<div class="q">Nennen: drei Muster digitaler Geschäftsmodelle mit Beispiel.</div>
+<div class="a">Freemium (Spotify), Plattform (Etsy/Airbnb), Produkt als Service (Licht als Service, Kaeser).</div>
+</div>
+
+<!-- ===================================================== -->
+<h2 id="k9">9 · Data Science in der Praxis: ML-Recap und Dataiku <span class="pts">vermutlich nicht klausurrelevant</span></h2>
+
+<div class="box trap" style="margin-top:0"><div class="t">Vermutlich nicht klausurrelevant</div><p>Die „Finalen Decks für die Klausur“ (02.11.2026) enthalten nur Tag 1 und Tag 2; Tag 3 ist nicht dabei, und die Klausurhinweise nennen keine Inhalte von Tag 3. Die Grundbegriffe (überwacht/unüberwacht, Regression/Klassifikation/Clustering, Train/Test, RAG, Agent) stehen ohnehin in Kapitel 7 und 8. <b>Dataiku-Klickwege musst du nicht lernen.</b> Restunsicherheit: ob Recap-Begriffe wie Hyperparameter, Overfitting oder der k-Means-Ablauf doch gefragt werden.</p></div>
+
+<div class="cols">
+<div>
+<h3>Recap und Bewertung</h3>
+<ul class="small">
+<li><b>Supervised</b>: Zielvariable (Target) mit bekannten Labels; <b>unsupervised</b>: kein Target, Muster suchen. Regression = stetige Zahl, Klassifikation = diskrete Klasse – es zählt der Typ des Targets.</li>
+<li><b>Train / Validierung / Test:</b> Training lernt das Modell, Validierung stimmt Hyperparameter ab, Test bewertet einmal abschließend. Dataiku teilt standardmäßig 80/20.</li>
+<li><b>Overfitting:</b> lernt Trainingsdaten samt Rauschen auswendig – sehr gute Trainings-, deutlich schlechtere Testgüte. <b>Underfitting:</b> schon im Training schlecht. k-fache Kreuzvalidierung: k Teile, k-mal trainieren, Ergebnis mitteln.</li>
+<li><b>Parameter</b> werden beim Training aus den Daten gelernt (Splits eines Baums); <b>Hyperparameter</b> werden vorher gesetzt (maximale Tiefe, k bei k-Means). Backofen: Temperatur = Hyperparameter. <b>Grid Search</b>: alle Kombinationen eines Rasters testen (z. B. 4 × 4 = 16).</li>
+<li><b>Entscheidungsbaum:</b> teilt die Daten Schritt für Schritt an Fragen („Lernstunden &lt; 5?“), Blätter enthalten die Vorhersage; leicht erklärbar.</li>
+</ul>
+<table class="small">
+<tr><th colspan="3">Konfusionsmatrix (eigenes Beispiel der Lernseite: 200 Testbuchungen)</th></tr>
+<tr><th></th><th>vorhergesagt storniert</th><th>vorhergesagt nicht storniert</th></tr>
+<tr><td>wirklich storniert</td><td>8 (TP)</td><td>2 (FN)</td></tr>
+<tr><td>wirklich nicht storniert</td><td>12 (FP)</td><td>178 (TN)</td></tr>
+</table>
+<p class="small"><b>Accuracy</b> = (8+178)/200 = 93 % · <b>Precision</b> = 8/(8+12) = 40 % (wenn der Rauchmelder piept, brennt es?) · <b>Recall</b> = 8/(8+2) = 80 % (wenn es brennt, piept er?). Bei unausgewogenen Daten ist Accuracy irreführend. <b>Data Leakage:</b> ein Feature enthält Information, die zum Vorhersagezeitpunkt noch nicht bekannt wäre.</p>
+</div>
+<div>
+<h3>k-Means und GenAI-Recap</h3>
+<ol class="small">
+<li>k festlegen (Hyperparameter), k Startzentren setzen.</li>
+<li>Jeden Punkt dem nächsten Zentrum zuordnen.</li>
+<li>Jedes Zentrum auf den Mittelwert seiner Punkte verschieben.</li>
+<li>2 und 3 wiederholen, bis sich nichts mehr ändert.</li>
+</ol>
+<p class="small">Features vorher skalieren (sonst dominiert „Umsatz in €“); Ergebnis hängt von Startzentren ab; k z. B. per Ellbogen-Methode, Silhouette, Interpretierbarkeit.</p>
+<p class="small"><b>Anpassungsstufen (Recap F. 16):</b> L1 fertige LLMs → L2 Prompt Engineering → L3 eigenes Wissen (RAG) → L4 Fine-Tuning, mehrere Modelle orchestrieren. So einfach wie möglich anfangen. <b>RAG:</b> Dokumente in Stücke zerlegen, als Vektoren in einer Knowledge Bank speichern → ähnlichste Stücke zur Frage suchen → mit der Frage in ein Prompt-Template einsetzen. <b>KI-Agent:</b> LLM-System, das Ziele selbstständig in mehreren Schritten verfolgt und externe Informationen und Werkzeuge nutzt.</p>
+<h3>Dataiku in Kürze</h3>
+<table class="small">
+<tr><th>Begriff</th><th>Bedeutung</th></tr>
+<tr><td>Flow</td><td>visuelle Pipeline aus Datasets, Recipes und Modellen</td></tr>
+<tr><td>Dataset</td><td>Zeiger auf eine Datenquelle, keine Kopie</td></tr>
+<tr><td>Recipe</td><td>Aktion auf Input-Datasets → Output: Stack, Join, Prepare, Split, Score</td></tr>
+<tr><td>Lab / AutoML</td><td>Experimentierbereich, trainiert und vergleicht mehrere Modelle</td></tr>
+<tr><td>Deploy, Score</td><td>bestes Modell in den Flow, auf ungelabelte Daten anwenden</td></tr>
+</table>
+<p class="small"><b>Aufgaben Tag 3:</b> Kundensegmentierung der Sonnenschein AG mit k-Means (Segmente mit Name, Größe, Profil, Maßnahme) · Titanic: überwachtes Lernen, binäre Klassifikation, Abgabe als CSV mit PassengerId, Survived.</p>
+</div>
+</div>
+
+<!-- ===================================================== -->
+<h2 id="k10">Glossar A–Z</h2>
+<div class="gloss">
+<div class="L">A</div>
+<p><b>Ablauforganisation</b> – entwickelt die (ggf. abteilungsübergreifenden) Prozesse zur Leistungserstellung: was wann, wo, durch wen.</p>
+<p><b>Agent (KI-Agent)</b> – Sprachmodell + Prompt + Werkzeuge; plant Schritte und handelt in Systemen, Verantwortung bleibt beim Unternehmen.</p>
+<p><b>Anomalie</b> – Einfüge-, Änderungs- oder Löschfehler, weil dieselbe Angabe redundant an mehreren Stellen steht.</p>
+<p><b>Anwendungssystem (AS)</b> – technischer Teil eines IS: Anwendungssoftware, Basissoftware, Hardware.</p>
+<p><b>Aufbauorganisation</b> – hierarchisches Gerüst: Stellen, Abteilungen, Weisungsbeziehungen; im Organigramm dargestellt.</p>
+<div class="L">B</div>
+<p><b>Bullwhip-Effekt</b> – kleine Nachfrageschwankungen beim Endkunden schaukeln sich in der Lieferkette auf; SCM dämpft ihn.</p>
+<p><b>Business Intelligence (BI)</b> – Konzepte, Prozesse, Werkzeuge, um Unternehmens- und Wettbewerbsdaten in Wissen für Entscheidungen umzuwandeln.</p>
+<p><b>Business Model Canvas</b> – Osterwalder/Pigneur: neun Felder zur Beschreibung eines Geschäftsmodells.</p>
+<div class="L">C</div>
+<p><b>Clustering</b> – unüberwachtes Lernen: ähnliche Datensätze zu Gruppen zusammenfassen, ohne Zielspalte.</p>
+<p><b>CRISP-DM</b> – Vorgehensmodell für Data Science: Business/Data Understanding, Data Preparation, Modelling, Evaluation, Deployment; mit Rücksprüngen.</p>
+<p><b>CRM</b> – Customer Relationship Management: zuerst ein BWL-Konzept für dauerhafte, profitable Kundenbeziehungen, unterstützt durch IS.</p>
+<div class="L">D</div>
+<p><b>Daten</b> – Zeichen ohne Kontext („4711 · 23“).</p>
+<p><b>Data Science</b> – interdisziplinär, wissenschaftlich, semiautomatisch Informationen aus komplexen Daten für Entscheidungen gewinnen.</p>
+<p><b>Data Warehouse (DWH)</b> – speichert aktuelle und historische Daten aggregiert für Managemententscheidungen.</p>
+<p><b>DBMS</b> – Software, die die Datenbank verwaltet und alle Zugriffe ausführt; DBS = DB + DBMS.</p>
+<p><b>Digitale Transformation</b> – Daten und IT verändern, wie ein Unternehmen Wert schafft und Geld verdient (Stufe 3).</p>
+<p><b>Digitalisierung</b> – Analoges wird digital dargestellt, übertragen und verarbeitet.</p>
+<div class="L">E</div>
+<p><b>Entity / Entity-Typ</b> – konkretes Objekt / alle gleichartigen Objekte (Rechteck im ER-Modell).</p>
+<p><b>EPK</b> – ereignisgesteuerte Prozesskette: Prozessmodell als Wechsel von Ereignissen und Funktionen.</p>
+<p><b>Ereignis</b> – eingetretener Zustand (Sechseck), benannt als Partizip: „Auftrag eingegangen“.</p>
+<p><b>ERP</b> – Enterprise Resource Planning: modulares, integriertes IS für alle operativen Tätigkeiten auf gemeinsamer Datenbasis.</p>
+<p><b>ETL</b> – Extract, Transform, Load: Daten aus Transaktionssystemen ins DWH.</p>
+<div class="L">F</div>
+<p><b>Freemium</b> – Basis gratis, Zusatznutzen kostet; möglich, weil ein weiterer digitaler Nutzer fast nichts kostet.</p>
+<p><b>Fremdschlüssel</b> – verweist auf den Primärschlüssel einer anderen Relation; bei 1:n auf der n-Seite.</p>
+<p><b>Funktion</b> – Tätigkeit, die den Zustand ändert (abgerundetes Rechteck): „Auftrag prüfen“.</p>
+<div class="L">G</div>
+<p><b>Geschäftsmodell</b> – Grundprinzip, nach dem eine Organisation Werte schafft, vermittelt und erfasst.</p>
+<p><b>Geschäftsprozess</b> – sachlogisch-zeitliche Abfolge von Tätigkeiten, vom auslösenden Ereignis bis zum Ergebnis.</p>
+<div class="L">I</div>
+<p><b>Informationsbedarf</b> – Art, Menge, Qualität der Informationen, die eine Person für ihre Aufgabe in bestimmter Zeit braucht.</p>
+<p><b>Informationsmanagement</b> – plant, steuert, kontrolliert Informationen, IS und IKT; strategisch, administrativ, operativ.</p>
+<p><b>Informationssystem (IS)</b> – System aus menschlichen und maschinellen Elementen; sozio-technisch: Mensch, Aufgabe, Technik, Organisation.</p>
+<p><b>Integration</b> – Daten, Vorgänge, Aufgaben sachlogisch verzahnen; einmal erfassen, überall nutzen (horizontal/vertikal).</p>
+<p><b>Internet der Dinge (IoT)</b> – Vernetzung physischer Objekte mittels Internettechniken.</p>
+<p><b>ITIL</b> – Best Practices für IT-Service-Management; beschreibt was, nicht wie.</p>
+<div class="L">K – L</div>
+<p><b>Kardinalität</b> – wie viele Beziehungen zwischen Entity-Typen auftreten: 1:1, 1:n, n:m.</p>
+<p><b>Klassifikation</b> – überwachtes Lernen mit Kategorie als Zielspalte (storniert ja/nein).</p>
+<p><b>Konnektor</b> – XOR (genau einer), OR (mindestens einer), AND (alle) zum Verzweigen/Zusammenführen.</p>
+<p><b>Lastenheft</b> – alle Anforderungen des Auftraggebers (das Was); Gegenstück Pflichtenheft des Lieferanten (wie, womit).</p>
+<div class="L">M</div>
+<p><b>Machine Learning</b> – Systeme lernen aus Erfahrung (Daten), ohne explizit programmiert zu werden.</p>
+<p><b>Medienbruch</b> – Daten werden zwischen Medien/Systemen neu erfasst (E-Mail → Excel → Produktion).</p>
+<div class="L">P</div>
+<p><b>Plattform</b> – Geschäftsmodell, das Anbieter und Kunden zusammenbringt und an jedem Geschäft mitverdient; Netzwerkeffekte.</p>
+<p><b>Primärschlüssel</b> – identifiziert jedes Tupel einer Relation eindeutig.</p>
+<p><b>Projekt (DIN 69901)</b> – Vorhaben mit Einmaligkeit der Bedingungen (Ziel, Zeit, Geld, Personal); Gegenstück: Daueraufgabe.</p>
+<div class="L">R</div>
+<p><b>RAG</b> – Retrieval-Augmented Generation: passende Stellen aus eigenen Dokumenten werden dem Modell im Prompt mitgegeben; kein Neutraining.</p>
+<p><b>Regression</b> – überwachtes Lernen mit Zahl als Zielspalte (Buchungen im Juli).</p>
+<p><b>Relation</b> – Menge von Tupeln, als Tabelle dargestellt; Tupel = Zeile, Attribut = Spalte.</p>
+<div class="L">S</div>
+<p><b>SCM</b> – Supply Chain Management: gestaltet die Lieferkette bis zum Endkunden, gemeinsame Bedarfsplanung.</p>
+<p><b>Scrum</b> – agiles Rahmenwerk: Product Owner, Scrum Master, Developers; Sprints von höchstens einem Monat.</p>
+<p><b>SLA</b> – Service Level Agreement: regelt Leistung, Verfügbarkeit, Antwortzeiten, Preise, Eskalation.</p>
+<p><b>SMART</b> – spezifisch, messbar, akzeptiert, realistisch, terminiert.</p>
+<p><b>Stacey-Matrix</b> – Anforderungen × Technologie → klassisch, agil, hybrid, erst ausprobieren.</p>
+<p><b>Standardsoftware</b> – für viele Kunden mit ähnlichen Anforderungen entwickelt; Gegenstück Individualsoftware.</p>
+<p><b>SWOT</b> – Stärken, Schwächen (intern), Chancen, Risiken (extern).</p>
+<p><b>System</b> – Menge verknüpfter Elemente, die sich von ihrer Umwelt abgrenzt; Grenze je nach Zweck.</p>
+<div class="L">T – W</div>
+<p><b>Wirtschaftsinformatik</b> – Konzeption, Entwicklung, Nutzung, Wartung von IS und Management der Information (Mertens).</p>
+<p><b>Wissen</b> – vernetzte Information und Erfahrung, die Handeln ermöglicht; individuell/kollektiv, explizit/implizit.</p>
+</div>
+
+<!-- ===================================================== -->
+<h2 id="k11" class="spickh">Spickzettel – eine Seite vor der Klausur</h2>
+<div class="spick">
+<div class="blk"><b>Klausur</b><p>48 Min · 48 P · MC 10–15 · offen 20–25 · Transfer 10–15. MC: je Option ±½, nichts angekreuzt = 0, <b>Kuli statt Bleistift</b>. Nennen = Stichpunkte · kurz erläutern = 1–2 Sätze · erläutern = &gt; 2 ganze Sätze.</p></div>
+<div class="blk"><b>1 Grundlagen</b><ul>
+<li>WI (Mertens): Konzeption, Entwicklung, Nutzung, Wartung von IS + Management der Information</li>
+<li>Daten (ohne Kontext) → Information (mit Kontext) → Wissen (ermöglicht Handeln); zweck-/personenabhängig</li>
+<li>Modell = vereinfacht, Qualität = Eignung für Zweck; Systemgrenze je nach Zweck</li>
+<li>AS = SW + HW · IS = AS + Mensch · sozio-technisch: Mensch, Aufgabe, Technik, Organisation</li>
+<li>verhaltens- (erklären) vs. gestaltungsorientiert (entwerfen) · „sinnhafte Vollautomation“</li></ul></div>
+<div class="blk"><b>2 IS-Arten</b><ul>
+<li>Reichweite: inner-, zwischenbetrieblich (B2B), endkundenorientiert (B2C)</li>
+<li>Zweck: Transaktion (Record) · Entscheidung (Insight) · Interaktion (Engagement)</li>
+<li>ERP = integriert, modular, gemeinsame Datenbasis, operativ · SCM = Lieferkette, Bullwhip · CRM = Konzept + IS, operativ/analytisch</li>
+<li>horizontal = entlang Prozess · vertikal = hoch zum Management · sonst Medienbruch</li>
+<li>Einordnung nie eindeutig → Begründung zählt</li></ul></div>
+<div class="blk"><b>3 EPK – 6 Regeln</b><ul>
+<li>1 Start/Ende = Ereignis</li>
+<li>2 Ereignis ↔ Funktion abwechseln</li>
+<li>3 je 1 Kante rein/raus, verzweigen nur über Konnektor</li>
+<li>4 nach Ereignis kein XOR-/OR-Split (AND ok, Join ok)</li>
+<li>5 Join = Split (XOR–XOR, AND–AND, OR–OR); XOR + AND-Join = Deadlock</li>
+<li>6 Ereignis „erfasst“, Funktion „erfassen“</li>
+<li>XOR genau 1 · OR ≥ 1 · AND alle · eEPK-Zuordnung ohne Pfeil</li>
+<li>Kern-, Management-, Unterstützungsprozess · Ist → Soll → IS</li></ul></div>
+<div class="blk"><b>4 ER → Relationen</b><ul>
+<li>Rechteck Entity-Typ · Ellipse Attribut (Schlüssel unterstrichen) · Raute Relationship</li>
+<li>Kardinalität in <b>beide</b> Richtungen fragen</li>
+<li>1:n → FK auf n-Seite · 1:1 → FK auf eine Seite · n:m → eigene Relation, PK = beide FK, Beziehungsattribute wandern mit</li>
+<li>FK steht dort, wo er nur einen Wert hat</li>
+<li>Anomalien: Einfügen, Ändern, Löschen · Entwurf: konzeptionell (ER), logisch (Relationen), physisch (SQL)</li>
+<li>DBS = DB + DBMS · referentielle Integrität</li></ul></div>
+<div class="blk"><b>5 Geschäftsmodell</b><ul>
+<li>Anforderungen ← Geschäftsmodell, Unternehmensaufbau, Prozesse</li>
+<li>Kernelemente: Kunden, Wertversprechen, Wertschöpfung, Erlösmodell</li>
+<li>Canvas 9: Partner, Aktivitäten, Ressourcen, Wertversprechen, Beziehungen, Kanäle, Segmente, Kosten, Einnahmen – bei Segmenten anfangen</li>
+<li>Aufbau = Gerüst, Weisung, Organigramm · Ablauf = Prozesse zur Leistungserstellung</li>
+<li>Newsletter-Problem → CRM (kollaborativ, operativ, analytisch)</li></ul></div>
+<div class="blk"><b>6 Informationsmanagement</b><ul>
+<li>planen → beschaffen → einführen (Projekt) → betreiben (Daueraufgabe)</li>
+<li>Ebenen: strategisch, administrativ (PM), operativ (Benutzerservice)</li>
+<li>7 Phasen, Phase 3: Lastenheft (Kunde) · Pflichtenheft (Lieferant)</li>
+<li>Standard (Customizing, günstig, Lock-in) vs. Individual (passgenau, teuer) · Open Source = Lizenz</li>
+<li>Lieferant: Best Fit → Best Practice → TCO/ROI</li>
+<li>SMART · PM: initialisieren, definieren, planen, steuern, abschließen</li>
+<li>Stacey: klar → klassisch, komplex → agil, chaotisch → ausprobieren, gemischt → hybrid</li>
+<li>Scrum: PO, Scrum Master, Developers; Sprint ≤ 1 Monat</li>
+<li>Support 1st/2nd/3rd Level · SLA (Verfügbarkeit, Antwortzeit, Preis) – neue Funktion = neues Projekt · ITIL = was, nicht wie</li>
+<li>Wissen: individuell/kollektiv, explizit/implizit</li></ul></div>
+<div class="blk"><b>7 BI und Data Science</b><ul>
+<li>objektiver/subjektiver Bedarf, Nachfrage (= Anfrage!), Angebot · Push/Pull</li>
+<li>DWH: aktuell + historisch, aggregiert · Data Mart · ETL</li>
+<li>T: Bereinigung, Harmonisierung, Verdichtung, Anreicherung</li>
+<li>deskriptiv, diagnostisch (BI) · prädiktiv, präskriptiv (DS)</li>
+<li>CRISP-DM: Business U., Data U., Preparation, Modelling, Evaluation, Deployment</li>
+<li>Zielspalte? nein → Clustering · Zahl → Regression · Kategorie → Klassifikation</li>
+<li>KI ⊃ ML ⊃ DL ⊃ GenAI · Expertensystem: Regeln von Menschen</li></ul></div>
+<div class="blk"><b>8 Digitale Transformation</b><ul>
+<li>Stufen: Information (Medium) → Prozess (Effizienz) → Transformation (Geschäftsmodell)</li>
+<li>Kräfte: Daten, Automatisierung, Vernetzung, digitaler Kundenzugang</li>
+<li>IoT · Industrie 4.0 (CPS, Smart Factory, Losgröße 1)</li>
+<li>Muster: Freemium, Plattform, Produkt als Service</li>
+<li>LLM: Vortraining, Feinabstimmung, Nutzung · Token, Prompt, Halluzination</li>
+<li>Chatbot (Training) · RAG (eigene Dokumente, kein Neutraining) · Agent (handelt: LLM + Prompt + Tools)</li>
+<li>Leitplanken: Rechte, Mensch bei Tragweite, protokollieren · Air Canada haftet</li>
+<li>SWOT: S/W intern, O/T extern</li></ul></div>
+<div class="blk"><b>Begriffspaare – nie vertauschen</b><p>IS ≠ AS · horizontal ≠ vertikal · Aufbau ≠ Ablauf · Standard ≠ Individual · Projekt ≠ Daueraufgabe · objektiver Bedarf ≠ Nachfrage · Prozessmodell (dynamisch) ≠ Datenmodell (statisch) · Lastenheft ≠ Pflichtenheft · Digitalisierung ≠ Transformation · RAG ≠ Feinabstimmung · DB ≠ DBMS</p></div>
+</div>
+</body>
+</html>
