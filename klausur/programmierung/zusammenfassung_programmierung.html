@@ -69,6 +69,24 @@ figcaption { font-size: 8.8pt; color: var(--muted); margin-top: 1mm; }
 .tag { display: inline-block; font-size: 8pt; border: 1px solid var(--line); border-radius: 3px; padding: 0 4px; margin-right: 3px; }
 svg text { font-family: "Liberation Sans", Arial, sans-serif; }
 svg .mono { font-family: "DejaVu Sans Mono", monospace; }
+.newpage { break-before: page; }
+.toc { columns: 2; column-gap: 7mm; font-size: 9pt; line-height: 1.32; }
+.toc .e { display: flex; gap: 2mm; break-inside: avoid; }
+.toc .e .n { flex: 1; overflow: hidden; white-space: nowrap; }
+.toc .e .n::after { content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."; color: #aaa; }
+.toc .e .p { min-width: 5mm; text-align: right; }
+.toc .h1e { font-weight: bold; color: var(--blue); margin-top: 1.6mm; }
+.toc .h2e { padding-left: 4mm; }
+.toc .neu { color: var(--green); font-weight: bold; font-size: 7.5pt; }
+.toc a { color: inherit; text-decoration: none; }
+.tight pre.code, .tight pre.out { font-size: 7.1pt; }
+.sheet { columns: 2; column-gap: 4mm; font-size: 7.2pt; line-height: 1.2; }
+.sheet h4 { font-size: 8pt; margin: 1.2mm 0 0.5mm; color: #123d6e; break-after: avoid; }
+.sheet h4:first-child { margin-top: 0; }
+.sheet pre.code { font-size: 6.5pt; line-height: 1.15; padding: 0.8mm 1.4mm; margin: 0 0 0.8mm; break-inside: avoid; }
+.sheet table.mini { font-size: 6.8pt; margin: 0; break-inside: avoid; }
+.sheet table.mini td { padding: 0.3mm 1mm; }
+.sheet table.mini td code { font-size: 6.4pt; }
 </style>
 </head>
 <body>
@@ -77,10 +95,10 @@ svg .mono { font-family: "DejaVu Sans Mono", monospace; }
 <div class="title">
   <div class="big">Grundlagen der Programmierung (Python)</div>
   <div>Klausurorientierte Zusammenfassung · DHBW Heilbronn, Wirtschaftsinformatik, 1. Semester · Dozent: Dr. Markus Rosenfelder</div>
-  <div class="small">Stand: 21.10.2026 · <b>Teil 1: deckt VL1 bis VL5 ab</b> und wird nach den nächsten Terminen erweitert (OOP II–III, Standardbibliothek, Klausurvorbereitung).</div>
+  <div class="small">Stand: 10.11.2026 · <b>deckt VL1 bis VL7 ab</b> (neu: Kap. 6 Vererbung und Polymorphie, Kap. 7 Projekt Kaffeeshop, „for-Schleifen ganz langsam“ in Kap. 3, „print oder return?“ in 4.9, Selbsttest und Spickzettel) und wird nach den nächsten Terminen erweitert (Standardbibliothek, Klausurvorbereitung).</div>
 </div>
 
-<h1 class="first">Klausur auf einen Blick</h1>
+<h1 class="first" id="h1">Klausur auf einen Blick</h1>
 
 <div class="cols">
 <div>
@@ -90,13 +108,14 @@ svg .mono { font-family: "DejaVu Sans Mono", monospace; }
 <tr><td>Dauer</td><td><b>120 Minuten</b></td></tr>
 <tr><td>Form</td><td>Klausur, entweder auf <b>Papier</b> oder <b>am Rechner</b> (noch offen)</td></tr>
 <tr><td>Musterklausur</td><td><b>keine</b>. Was relevant ist, zeigen die Übungen, die Mini-Aufgaben auf den Folien und die offiziellen Musterlösungen.</td></tr>
-<tr><td>Stoffstand</td><td>4 von 11 Terminen gehalten (VL1–VL4). <b>VL5 (OOP I) ist am 23.10.</b>: Kapitel 5 beruht auf den vorab veröffentlichten Folien und Musterlösungen.</td></tr>
+<tr><td>Stoffstand</td><td>8 von 11 Terminen gehalten (bis 06.11.). VL5 (OOP I) lief am 23.10. und 27.10., VL6 (OOP II) am 03.11. und laut Plan am 06.11., danach begann VL7 (Projekt Kaffeeshop). Ob am 06.11. alles wie geplant drankam, ist nicht bestätigt.</td></tr>
 <tr><td>Arbeitsweise im Kurs</td><td>Code von Hand im Texteditor, ohne IDE und ohne KI. Python 3.14, Prüfwerkzeuge <code>ruff</code> und <code>ty</code></td></tr>
 </table>
 <h3>Was noch offen ist</h3>
 <ul>
 <li>Papier oder Rechner? Uhrzeit, Raum und erlaubte Hilfsmittel sind noch nicht bekannt.</li>
-<li>Stoff der VL6–VL11: Vererbung, Polymorphismus und Abstraktion (VL6/VL7 laut VL5-Folien), Standardbibliothek und Klausurvorbereitung. <b>Dieses Dokument wird ergänzt.</b></li>
+<li>Restliche Termine bis 27.11.: Rest Kaffeeshop (Stufe 2/3), VL08 „Standardbibliothek“ (schon in Moodle) und Klausurvorbereitung. <b>Dieses Dokument wird ergänzt.</b></li>
+<li>Ob <code>typing.Protocol</code> (Ausblick in VL6) Klausurstoff ist, ist offen. Die Musterlösung zum Kaffeeshop kommt erst nach dem Projekt.</li>
 <li>Ob List Comprehensions und <code>map</code>/<code>filter</code>/<code>reduce</code> prüfungsrelevant sind, ist unklar. Bisher kommen sie nur in einer Musterlösung bzw. als Stichwort vor.</li>
 </ul>
 </div>
@@ -105,7 +124,7 @@ svg .mono { font-family: "DejaVu Sans Mono", monospace; }
 <ol>
 <li><b>„Was gibt das aus?“</b>: Mini-Aufgaben dieser Art stehen direkt auf den Folien (z. B. Modulo, Zuweisungsoperatoren, Vergleiche).</li>
 <li><b>Fehler finden und Fehlermeldungen deuten.</b> Laut Dozent ist das „die wichtigste Fähigkeit“ (VL1).</li>
-<li><b>Code nach einer Textaufgabe schreiben</b>, z. B. Staffelpreise, Gebühren, Schleifen über Listen, Funktionen, Rekursion und Klassen.</li>
+<li><b>Code nach einer Textaufgabe schreiben</b>, z. B. Staffelpreise, Gebühren, Schleifen über Listen, Funktionen, Rekursion, Klassen und Unterklassen.</li>
 <li><b>Begriffe erklären und vergleichen</b>, z. B. Compiler oder Interpreter, imperativ oder applikativ, Klasse oder Objekt.</li>
 </ol>
 <h3>Prioritäten fürs Lernen</h3>
@@ -117,7 +136,9 @@ svg .mono { font-family: "DejaVu Sans Mono", monospace; }
 <tr><td>5</td><td><b>Funktionen</b>: <code>return</code>, Standardwerte, LEGB, Übergabe (Kap. 4)</td></tr>
 <tr><td>6</td><td><b>Rekursion</b>: Abbruchbedingung, Aufrufstapel (Kap. 4)</td></tr>
 <tr><td>7</td><td><b>Klassen</b>: <code>__init__</code>, <code>self</code>, Methoden, Property, <code>@dataclass</code> (Kap. 5)</td></tr>
-<tr><td>8</td><td>Theorie VL1: Algorithmus, Übersetzung, Werkzeuge (Kap. 1)</td></tr>
+<tr><td>8</td><td><b>Vererbung und Polymorphie</b>: <code>super()</code>, Überschreiben, abstrakte Klassen, Fähigkeiten (Kap. 6)</td></tr>
+<tr><td>9</td><td><b>Kaffeeshop-Muster</b>: finden, sammeln, <code>hinzufuegen</code> mit Mengenprüfung, Menü (Kap. 7)</td></tr>
+<tr><td>10</td><td>Theorie VL1: Algorithmus, Übersetzung, Werkzeuge (Kap. 1)</td></tr>
 </table>
 </div>
 </div>
@@ -131,10 +152,77 @@ svg .mono { font-family: "DejaVu Sans Mono", monospace; }
 </ul>
 </div>
 
-<!-- ================================================================ VL1 -->
-<h1><span class="vl">VL1</span>Einführung: Algorithmen, Übersetzung, Python</h1>
+<h1 id="inhalt">Inhalt</h1>
+<div class="toc">
+<div class="e h1e"><span class="n"><a href="#h1">Klausur auf einen Blick</a></span><span class="p" data-for="h1">1</span></div>
+<div class="e h1e"><span class="n"><a href="#h2">VL1 · Einführung: Algorithmen, Übersetzung, Python</a></span><span class="p" data-for="h2">3</span></div>
+<div class="e h2e"><span class="n"><a href="#h3">1.1 Algorithmen</a></span><span class="p" data-for="h3">3</span></div>
+<div class="e h2e"><span class="n"><a href="#h4">1.2 Datenstrukturen</a></span><span class="p" data-for="h4">3</span></div>
+<div class="e h2e"><span class="n"><a href="#h5">1.3 Von der Maschinensprache zu Python</a></span><span class="p" data-for="h5">3</span></div>
+<div class="e h2e"><span class="n"><a href="#h6">1.4 Python: Eigenschaften, Syntax, Werkzeuge</a></span><span class="p" data-for="h6">4</span></div>
+<div class="e h1e"><span class="n"><a href="#h7">VL2 · Variablen, Datentypen und Operatoren</a></span><span class="p" data-for="h7">5</span></div>
+<div class="e h2e"><span class="n"><a href="#h8">2.1 Kommentare und Docstrings</a></span><span class="p" data-for="h8">5</span></div>
+<div class="e h2e"><span class="n"><a href="#h9">2.2 Typisierung und einfache Datentypen</a></span><span class="p" data-for="h9">5</span></div>
+<div class="e h2e"><span class="n"><a href="#h10">2.3 Variablen: Namen zeigen auf Werte</a></span><span class="p" data-for="h10">5</span></div>
+<div class="e h2e"><span class="n"><a href="#h11">2.4 Operatoren</a></span><span class="p" data-for="h11">6</span></div>
+<div class="e h2e"><span class="n"><a href="#h12">2.5 Strings und f-Strings</a></span><span class="p" data-for="h12">7</span></div>
+<div class="e h2e"><span class="n"><a href="#h13">2.6 Typumwandlung, Rundung und Geld</a></span><span class="p" data-for="h13">7</span></div>
+<div class="e h2e"><span class="n"><a href="#h14">2.7 Syntax vs. Semantik: vier Fehler, drei Prüfer</a></span><span class="p" data-for="h14">8</span></div>
+<div class="e h1e"><span class="n"><a href="#h15">VL3 · Kontrollstrukturen und Listen</a></span><span class="p" data-for="h15">9</span></div>
+<div class="e h2e"><span class="n"><a href="#h16">3.1 Drei Grundformen und Blöcke</a></span><span class="p" data-for="h16">9</span></div>
+<div class="e h2e"><span class="n"><a href="#for-langsam">Kasten: for-Schleifen ganz langsam</a> <span class="neu">neu</span></span><span class="p" data-for="for-langsam">9</span></div>
+<div class="e h2e"><span class="n"><a href="#h17">3.2 Bedingte Anweisungen: if, elif, else</a></span><span class="p" data-for="h17">9</span></div>
+<div class="e h2e"><span class="n"><a href="#h18">3.3 match und der bedingte Ausdruck</a></span><span class="p" data-for="h18">10</span></div>
+<div class="e h2e"><span class="n"><a href="#h19">3.4 Wahrheitswerte beliebiger Werte</a></span><span class="p" data-for="h19">10</span></div>
+<div class="e h2e"><span class="n"><a href="#h20">3.5 Logische Operatoren, Rangfolge, Kurzschluss</a></span><span class="p" data-for="h20">10</span></div>
+<div class="e h2e"><span class="n"><a href="#h21">3.6 Übungen Teil 1: Stromkosten und Parkgebühren</a></span><span class="p" data-for="h21">11</span></div>
+<div class="e h2e"><span class="n"><a href="#h22">3.7 Schleifen: while und for</a></span><span class="p" data-for="h22">11</span></div>
+<div class="e h2e"><span class="n"><a href="#h23">3.8 break, continue und typische Schleifenfehler</a></span><span class="p" data-for="h23">12</span></div>
+<div class="e h2e"><span class="n"><a href="#h24">3.9 Listen</a></span><span class="p" data-for="h24">13</span></div>
+<div class="e h2e"><span class="n"><a href="#h25">3.10 Übungen Teil 2 (Musterlösungen)</a></span><span class="p" data-for="h25">13</span></div>
+<div class="e h1e"><span class="n"><a href="#h26">VL4 · Funktionen und Rekursion</a></span><span class="p" data-for="h26">15</span></div>
+<div class="e h2e"><span class="n"><a href="#h27">4.1 Funktionen definieren und aufrufen</a></span><span class="p" data-for="h27">15</span></div>
+<div class="e h2e"><span class="n"><a href="#h28">4.2 Rückgabewerte und None</a></span><span class="p" data-for="h28">15</span></div>
+<div class="e h2e"><span class="n"><a href="#h29">4.3 Gültigkeitsbereiche (LEGB)</a></span><span class="p" data-for="h29">16</span></div>
+<div class="e h2e"><span class="n"><a href="#h30">4.4 Parameterübergabe: Namen, keine Kopien</a></span><span class="p" data-for="h30">16</span></div>
+<div class="e h2e"><span class="n"><a href="#h31">4.5 Standardwerte, Schlüsselwortargumente, *args statt Überladung</a></span><span class="p" data-for="h31">17</span></div>
+<div class="e h2e"><span class="n"><a href="#h32">4.6 Imperative vs. applikative Programmierung</a></span><span class="p" data-for="h32">18</span></div>
+<div class="e h2e"><span class="n"><a href="#h33">4.7 Rekursion</a></span><span class="p" data-for="h33">18</span></div>
+<div class="e h2e"><span class="n"><a href="#h34">4.8 Funktionen testen: assert und pytest</a></span><span class="p" data-for="h34">20</span></div>
+<div class="e h2e"><span class="n"><a href="#printreturn">4.9 print oder return?</a> <span class="neu">neu</span></span><span class="p" data-for="printreturn">21</span></div>
+<div class="e h1e"><span class="n"><a href="#h35">VL5 · Objektorientierte Programmierung I</a></span><span class="p" data-for="h35">23</span></div>
+<div class="e h2e"><span class="n"><a href="#h36">5.1 Klassen und Objekte</a></span><span class="p" data-for="h36">23</span></div>
+<div class="e h2e"><span class="n"><a href="#h37">5.2 Eine Klasse in Python: __init__ und self</a></span><span class="p" data-for="h37">23</span></div>
+<div class="e h2e"><span class="n"><a href="#h38">5.3 Methoden, self, __str__ und __repr__</a></span><span class="p" data-for="h38">24</span></div>
+<div class="e h2e"><span class="n"><a href="#h39">5.4 Namen zeigen auf Objekte, auch bei eigenen Klassen</a></span><span class="p" data-for="h39">25</span></div>
+<div class="e h2e"><span class="n"><a href="#h40">5.5 Klassenattribute</a></span><span class="p" data-for="h40">25</span></div>
+<div class="e h2e"><span class="n"><a href="#h41">5.6 Kapselung mit Properties</a></span><span class="p" data-for="h41">26</span></div>
+<div class="e h2e"><span class="n"><a href="#h42">5.7 Zusammengesetzte Klassen, Module und @dataclass</a></span><span class="p" data-for="h42">27</span></div>
+<div class="e h1e"><span class="n"><a href="#k6">VL6 · OOP II: Vererbung und Polymorphie</a> <span class="neu">neu</span></span><span class="p" data-for="k6">30</span></div>
+<div class="e h2e"><span class="n"><a href="#s61">6.1 Vererbung: „ist ein“ und super().__init__</a></span><span class="p" data-for="s61">30</span></div>
+<div class="e h2e"><span class="n"><a href="#s62">6.2 Überschreiben, super().methode(), @override und die Methodensuche</a></span><span class="p" data-for="s62">31</span></div>
+<div class="e h2e"><span class="n"><a href="#s63">6.3 Polymorphie, Typangabe und Duck Typing</a></span><span class="p" data-for="s63">32</span></div>
+<div class="e h2e"><span class="n"><a href="#s64">6.4 object und __repr__</a></span><span class="p" data-for="s64">33</span></div>
+<div class="e h2e"><span class="n"><a href="#s65">6.5 Abstrakte Klassen: ABC und @abstractmethod</a></span><span class="p" data-for="s65">33</span></div>
+<div class="e h2e"><span class="n"><a href="#s66">6.6 Fähigkeiten statt Interfaces</a></span><span class="p" data-for="s66">34</span></div>
+<div class="e h2e"><span class="n"><a href="#s67">6.7 Wiederholung VL1–VL6: Fitnessstudio</a></span><span class="p" data-for="s67">35</span></div>
+<div class="e h1e"><span class="n"><a href="#k7">VL7 · Projekt Kaffeeshop</a> <span class="neu">neu</span></span><span class="p" data-for="k7">37</span></div>
+<div class="e h2e"><span class="n"><a href="#s71">7.1 Aufgabe, Ablauf und Startpaket</a></span><span class="p" data-for="s71">37</span></div>
+<div class="e h2e"><span class="n"><a href="#s72">7.2 Stufe 1, Teil 1: Das Lager (finden und suchen)</a></span><span class="p" data-for="s72">38</span></div>
+<div class="e h2e"><span class="n"><a href="#s73">7.3 Stufe 1, Teil 2: Der Warenkorb und hinzufuegen()</a></span><span class="p" data-for="s73">38</span></div>
+<div class="e h2e"><span class="n"><a href="#s74">7.4 Stufe 1, Teil 3: Das Menü in main.py</a></span><span class="p" data-for="s74">40</span></div>
+<div class="e h2e"><span class="n"><a href="#s75">7.5 Stufe 2: Produktarten und Zahlungsarten</a></span><span class="p" data-for="s75">41</span></div>
+<div class="e h2e"><span class="n"><a href="#s76">7.6 Stufe 3: Zusatzaufgaben nach Wahl</a></span><span class="p" data-for="s76">41</span></div>
+<div class="e h1e"><span class="n"><a href="#h43">Fehlermeldungen und Selbsttest</a></span><span class="p" data-for="h43">43</span></div>
+<div class="e h2e"><span class="n"><a href="#h44">A.1 Fehlermeldungen auf einen Blick</a></span><span class="p" data-for="h44">43</span></div>
+<div class="e h2e"><span class="n"><a href="#h45">A.2 Selbsttest: Was gibt das aus?</a></span><span class="p" data-for="h45">43</span></div>
+<div class="e h1e"><span class="n"><a href="#spick">Spickzettel: Python-Syntax auf einer Seite</a> <span class="neu">neu</span></span><span class="p" data-for="spick">46</span></div>
+</div>
 
-<h2>1.1 Algorithmen</h2>
+<!-- ================================================================ VL1 -->
+<h1 id="h2"><span class="vl">VL1</span>Einführung: Algorithmen, Übersetzung, Python</h1>
+
+<h2 id="h3">1.1 Algorithmen</h2>
 <p>Ein <b>Algorithmus</b> ist eine Schrittfolge, die ein Problem systematisch löst. Er beschreibt den Lösungsweg unabhängig von der Programmiersprache. Jeder Schritt ist so genau beschrieben, dass eine Person oder ein Computer ihn ohne Rückfrage ausführen kann. An einen Algorithmus stellt man vier <b>Anforderungen</b>: <b>Endlichkeit</b> (er endet), <b>Ausführbarkeit</b>, <b>Korrektheit</b> und <b>Effizienz</b> (er geht sparsam mit Zeit und Speicher um).</p>
 
 <table>
@@ -146,7 +234,7 @@ svg .mono { font-family: "DejaVu Sans Mono", monospace; }
 
 <p><b>Folienbeispiel Nachbestellung:</b> (1) Nimm den nächsten Artikel aus der Lagerliste. (2) Ist der Bestand kleiner als der Meldebestand? Wenn nein, weiter mit 5. (3) Bestellmenge = Höchstbestand − Bestand. (4) Löse die Bestellung aus. (5) Sind noch Artikel in der Liste? Wenn ja, weiter mit 1, sonst fertig. Für die Schrauben (Bestand 12, Meldebestand 20, Höchstbestand 100) werden 100 − 12 = <b>88 Stück</b> bestellt, für die Muttern (8 / 25 / 120) <b>112 Stück</b>. Bei den Dichtringen (45 / 30) wird nichts bestellt. Gleiche Bestände ergeben immer dieselbe Bestellung (determiniert).</p>
 
-<h2>1.2 Datenstrukturen</h2>
+<h2 id="h4">1.2 Datenstrukturen</h2>
 <div class="cols" style="grid-template-columns: 1fr 2.2fr">
 <p>Datenstrukturen ordnen Daten so, dass man effizient auf sie zugreifen und sie ändern kann. In Python sind <code>list</code>, <code>tuple</code>, <code>dict</code> und <code>set</code> fest eingebaut.</p>
 <table style="margin-top:0">
@@ -160,7 +248,7 @@ svg .mono { font-family: "DejaVu Sans Mono", monospace; }
 </table>
 </div>
 
-<h2>1.3 Von der Maschinensprache zu Python</h2>
+<h2 id="h5">1.3 Von der Maschinensprache zu Python</h2>
 <p>Ein Prozessor versteht nur <b>Maschinensprache</b>, also binäre Befehle. <b>Assembler</b> schreibt dieselben Befehle symbolisch (<code>MOV</code>, <code>ADD</code>, <code>CMP</code>, <code>JE</code>) und hängt deshalb vom Prozessortyp ab. Ab den 1950er-Jahren kamen <b>höhere Programmiersprachen</b>, die von der Hardware abstrahieren. Früher teilte man die Sprachen in Generationen ein. Heute spricht man von <b>Paradigmen</b>, die nebeneinander bestehen: imperativ bzw. prozedural, objektorientiert, funktional, deklarativ bzw. logisch. Python ist <b>multiparadigmatisch</b>, du kannst darin also nach mehreren Paradigmen programmieren.</p>
 
 <figure>
@@ -202,7 +290,7 @@ svg .mono { font-family: "DejaVu Sans Mono", monospace; }
 </table>
 <p>Ein <b>JIT</b> (Just-in-Time-Compiler) übersetzt häufig genutzten Code erst zur Laufzeit in Maschinencode. Dadurch verschwimmen die Grenzen zwischen Interpreter und Compiler. Python hat seit Version 3.13 einen experimentellen JIT.</p>
 
-<h2>1.4 Python: Eigenschaften, Syntax, Werkzeuge</h2>
+<h2 id="h6">1.4 Python: Eigenschaften, Syntax, Werkzeuge</h2>
 <p>Guido van Rossum hat Python ab 1989 entwickelt und 1991 veröffentlicht, den Namen hat es von Monty Python. Python 3 erschien 2008 und ist bewusst inkompatibel zu Python 2, im Kurs wird <b>Python 3.14</b> verwendet. Python ist plattformunabhängig, hat eine automatische Speicherverwaltung und eine große Standardbibliothek („Batteries included“). Außerdem ist es <b>dynamisch, aber stark typisiert</b>: Jeder <i>Wert</i> hat einen festen Typ, Variablen haben keinen. Python wandelt nicht heimlich um, deshalb gibt <code>"5" + 1</code> einen Fehler (Kap. 2).</p>
 
 <div class="cols">
@@ -253,9 +341,9 @@ svg .mono { font-family: "DejaVu Sans Mono", monospace; }
 </div>
 
 <!-- ================================================================ VL2 -->
-<h1><span class="vl">VL2</span>Variablen, Datentypen und Operatoren</h1>
+<h1 id="h7"><span class="vl">VL2</span>Variablen, Datentypen und Operatoren</h1>
 
-<h2>2.1 Kommentare und Docstrings</h2>
+<h2 id="h8">2.1 Kommentare und Docstrings</h2>
 <p>Ein <b>Kommentar</b> beginnt mit <code>#</code> und reicht bis zum Zeilenende. Python ignoriert ihn, er ist für Menschen gedacht. Ein guter Kommentar erklärt das <b>Warum</b>, denn das Was zeigt der Code selbst. Für mehrere Zeilen schreibt man mehrere <code>#</code>-Zeilen. <code>/* … */</code> wie in Java gibt es nicht. Ein <b>Docstring</b> <code>"""…"""</code> direkt unter <code>def</code> oder <code>class</code> beschreibt eine Funktion, Klasse oder Datei. Im Kurs gilt der <b>Google-Stil</b>: zuerst ein kurzer Satz, dann <code>Args:</code> und <code>Returns:</code>.</p>
 <div class="ex"><div class="ex"><pre class="code"># Seit 2007 gilt der Regelsatz von 19 %.   (sinnvoll: erklärt das Warum)
 netto = 100
@@ -274,7 +362,7 @@ def kreisflaeche(radius: float) -&gt; float:
 
 print(brutto, kreisflaeche(2))</pre><pre class="out">119.0 12.56636</pre></div></div>
 
-<h2>2.2 Typisierung und einfache Datentypen</h2>
+<h2 id="h9">2.2 Typisierung und einfache Datentypen</h2>
 <p>Der <b>Datentyp</b> legt fest, welche Art von Daten vorliegt und welche Operationen erlaubt sind. Mit <code>type(42)</code> fragst du ihn ab, das Ergebnis ist <code>&lt;class 'int'&gt;</code>. In Python ist jeder Wert ein Objekt, „primitive“ Typen wie in Java gibt es nicht.</p>
 <p><b>Typisierung:</b> <b>statisch</b> = Prüfung beim Kompilieren (Java, C#), <b>dynamisch</b> = erst beim Ausführen (Python, JavaScript), <b>graduell</b> (im Kurs) = Python mit Typangaben, die <code>ty</code> vor dem Ausführen prüft; Python selbst ignoriert sie.</p>
 
@@ -306,7 +394,7 @@ B
 9786</pre></div></div>
 </div>
 
-<h2>2.3 Variablen: Namen zeigen auf Werte</h2>
+<h2 id="h10">2.3 Variablen: Namen zeigen auf Werte</h2>
 <p>Eine Variable ist ein <b>Name, der auf einen Wert zeigt</b>. Stell sie dir wie ein Namensschild vor, das an einem Objekt hängt, nicht wie eine Box. Der Typ gehört zum Wert, nicht zum Namen. Eine Variable entsteht bei der ersten Zuweisung, eine Deklaration wie in Java gibt es nicht. <code>=</code> bedeutet „zeigt ab jetzt auf“. Bei <code>zahl = zahl + 1</code> rechnet Python zuerst die rechte Seite aus und hängt dann das Schild um. Den alten Wert gibt Python automatisch frei, wenn kein Name mehr auf ihn zeigt.</p>
 
 <figure>
@@ -382,7 +470,7 @@ print(wert, type(wert))</pre><pre class="out">25 1920 1080 0 0 2 1
 </table>
 <p>Ein Name besteht aus Buchstaben, Ziffern und <code>_</code>. Er darf nicht mit einer Ziffer beginnen und kein Schlüsselwort sein. Umlaute vermeidet man (<code>groesse</code>), die Regeln prüft <code>ruff</code>. <b>Konstanten:</b> Ein <code>final</code> wie in Java gibt es nicht. Mit <code>from typing import Final</code> und <code>MWST_SATZ: Final = 0.19</code> meldet <code>ty</code> jede Neuzuweisung. Python selbst verhindert sie zur Laufzeit aber nicht.</p>
 
-<h2>2.4 Operatoren</h2>
+<h2 id="h11">2.4 Operatoren</h2>
 <table>
 <tr><th>Kategorie</th><th>Operatoren</th><th>Ergebnis</th></tr>
 <tr><td>arithmetisch</td><td><code>+ - * / // % **</code></td><td>Zahl</td></tr>
@@ -433,7 +521,7 @@ True</pre></div></div>
 <li><b><code>==</code> vergleicht den Inhalt</b>, auch bei Strings. Ein <code>.equals()</code> wie in Java braucht man nicht. <code>is</code> prüft, ob es <i>dasselbe Objekt</i> ist, und wird nur für <code>None</code> verwendet: <code>if x is None:</code>. Verkettet: <code>18 &lt;= alter &lt;= 65</code> heißt <code>18 &lt;= alter and alter &lt;= 65</code>.</li>
 </ul>
 
-<h2>2.5 Strings und f-Strings</h2>
+<h2 id="h12">2.5 Strings und f-Strings</h2>
 <figure>
 <svg viewBox="0 0 470 110" width="430" xmlns="http://www.w3.org/2000/svg">
 <g font-size="12">
@@ -469,7 +557,7 @@ Nächstes Jahr: 21</pre></div></div>
 </div>
 <p>In einem f-String setzt Python Werte direkt in den Text ein, in den <code>{}</code> darf auch gerechnet werden. <code>:.2f</code> formatiert auf zwei Nachkommastellen. Strings sind unveränderlich. <code>text[0] = "h"</code> gibt deshalb einen TypeError. <span class="erg">(Ergänzung)</span></p>
 
-<h2>2.6 Typumwandlung, Rundung und Geld</h2>
+<h2 id="h13">2.6 Typumwandlung, Rundung und Geld</h2>
 <p>Zum Umwandeln ruft man den Typ wie eine Funktion auf. Automatisch wandelt Python <b>nur zwischen Zahlen</b> um, und zwar in der Richtung bool → int → float (<code>5 + 2.0</code> → <code>7.0</code>, <code>True + 1</code> → <code>2</code>). Text und Zahl mischt Python nie, das gibt einen <code>TypeError</code> („stark typisiert: Python rät nicht“).</p>
 <div class="cols" style="grid-template-columns: 1.15fr 1fr">
 <table style="margin-top:0">
@@ -494,7 +582,7 @@ print(int("12") + int("3"), "12" + "3")</pre><pre class="out">1998
 15 123</pre></div></div>
 </div>
 
-<h2>2.7 Syntax vs. Semantik: vier Fehler, drei Prüfer</h2>
+<h2 id="h14">2.7 Syntax vs. Semantik: vier Fehler, drei Prüfer</h2>
 <p>Die <b>Syntax</b> ist die Grammatik, also die Form des Codes. Die <b>Semantik</b> ist seine Bedeutung, also was er bewirkt. Code kann syntaktisch korrekt und trotzdem semantisch falsch sein.</p>
 <table>
 <tr><th>Fehlerart</th><th>Beispiel</th><th>ruff check</th><th>ty check</th><th>uv run</th></tr>
@@ -541,9 +629,9 @@ ZeroDivisionError: division by zero</pre></div></div>
 </div>
 
 <!-- ================================================================ VL3 -->
-<h1><span class="vl">VL3</span>Kontrollstrukturen und Listen</h1>
+<h1 id="h15"><span class="vl">VL3</span>Kontrollstrukturen und Listen</h1>
 
-<h2>3.1 Drei Grundformen und Blöcke</h2>
+<h2 id="h16">3.1 Drei Grundformen und Blöcke</h2>
 <table>
 <tr><th>Grundform</th><th>Was passiert?</th><th>Python</th></tr>
 <tr><td><b>Sequenz</b></td><td>Die Anweisungen laufen nacheinander von oben nach unten.</td><td>jede Zeile</td></tr>
@@ -552,7 +640,46 @@ ZeroDivisionError: division by zero</pre></div></div>
 </table>
 <p>Ein <code>:</code> öffnet einen <b>Block</b>. Alle folgenden Zeilen, die 4 Leerzeichen weiter eingerückt sind, gehören dazu. Der Block endet, sobald eine Zeile wieder weniger eingerückt ist. Ein Block hat <b>keinen eigenen Gültigkeitsbereich</b>.</p>
 
-<h2>3.2 Bedingte Anweisungen: <code>if</code>, <code>elif</code>, <code>else</code></h2>
+<div class="box info" id="for-langsam"><span class="t">Vorab: for-Schleifen ganz langsam (mit Rundentabelle)</span>
+<p><b>In einem Satz:</b> Eine <code>for</code>-Schleife sagt „Mach dasselbe noch einmal, für jedes Ding in dieser Reihe, eins nach dem anderen.“ Stell dir eine Kassiererin vor: Sie nimmt eine Ware vom Band (<b>eine Runde</b>), scannt sie, legt sie weg und nimmt die nächste. Ist das Band leer, sagt sie die Summe an. Bei <code>for preis in preise:</code> ist <code>preis</code> die Hand, in der in jeder Runde eine andere Ware liegt. Der einzige Trick für „Was gibt das aus?“: Schreib nach jeder Runde auf, welchen Wert jede Variable hat. Das ist eine <b>Rundentabelle</b>. <span class="erg">(Ergänzung, Details zu <code>for</code> und <code>range</code> in 3.7)</span></p>
+<div class="cols">
+<div class="ex"><pre class="code">preise = [3, 5, 2]
+summe = 0
+for preis in preise:
+    summe = summe + preis
+    print("nach", preis, "ist summe", summe)
+print("Gesamt:", summe)</pre><pre class="out">nach 3 ist summe 3
+nach 5 ist summe 8
+nach 2 ist summe 10
+Gesamt: 10</pre></div>
+<table>
+<tr><th>Runde</th><th><code>preis</code></th><th><code>summe</code> vorher</th><th>Rechnung</th><th><code>summe</code> nachher</th></tr>
+<tr><td>Start</td><td>–</td><td>–</td><td><code>summe = 0</code></td><td>0</td></tr>
+<tr><td>1</td><td>3</td><td>0</td><td>0 + 3</td><td>3</td></tr>
+<tr><td>2</td><td>5</td><td>3</td><td>3 + 5</td><td>8</td></tr>
+<tr><td>3</td><td>2</td><td>8</td><td>8 + 2</td><td>10</td></tr>
+<tr><td>danach</td><td>–</td><td>–</td><td><code>print</code></td><td>10</td></tr>
+</table>
+</div>
+<div class="cols">
+<div>
+<p><b>Drei Teile, jeder an seiner festen Stelle:</b> (1) <b>vor</b> der Schleife der Startwert (<code>summe = 0</code>, bei einem Produkt <code>1</code>), (2) <b>in</b> der Schleife dazuzählen, (3) <b>nach</b> der Schleife das Ergebnis benutzen (<code>print</code> oder <code>return</code>). Der Wert vom Ende einer Runde ist der Wert am Anfang der nächsten. Zählen ist dasselbe Muster mit <code>anzahl += 1</code>, aber nur im <code>if</code>-Zweig.</p>
+<p><code>range(start, stop, schritt)</code>: Start ist dabei, Stopp nicht. <code>range(2, 9, 3)</code> liefert 2, 5, 8 (11 wäre zu groß). Mit <code>print(i, i * i)</code> in der Schleife und <code>print("danach:", i)</code> dahinter erscheinen <code>2 4</code>, <code>5 25</code>, <code>8 64</code> und <code>danach: 8</code>: Nach der Schleife behält <code>i</code> den letzten Wert.</p>
+</div>
+<div>
+<p><b>Falle:</b> Steht <code>summe = 0</code> <b>in</b> der Schleife, wird die Kasse in jeder Runde wieder auf null gestellt:</p>
+<div class="ex"><pre class="code">preise = [3, 5, 2]
+for preis in preise:
+    summe = 0  # FEHLER: in der Schleife
+    summe = summe + preis
+print("Gesamt:", summe)</pre><pre class="out">Gesamt: 2</pre></div>
+<p class="small">Runde 1: 0 → 3, Runde 2: wieder 0 → 5, Runde 3: wieder 0 → 2. Genauso falsch ist <code>return</code> in der Schleife (nach Runde 1 ist Schluss). Beides siehst du an der Einrückung.</p>
+</div>
+</div>
+</div>
+
+
+<h2 id="h17">3.2 Bedingte Anweisungen: <code>if</code>, <code>elif</code>, <code>else</code></h2>
 <p>Um die Bedingung stehen keine Klammern, am Ende steht ein Doppelpunkt. <code>else</code> steht auf derselben Einrückungsebene wie <code>if</code>. Bei <code>if</code>–<code>else</code> läuft <b>genau einer</b> der beiden Blöcke. Mit <code>elif</code> sparst du dir verschachtelte <code>if</code>s. Python prüft die Bedingungen <b>der Reihe nach</b> und hört beim <b>ersten Treffer</b> auf, die übrigen Zweige werden dann gar nicht mehr geprüft.</p>
 <div class="cols">
 <div class="ex"><div class="ex"><pre class="code">temperatur = 25
@@ -590,7 +717,7 @@ else:
 </div>
 <p><b>Reihenfolge zählt:</b> Bei Bereichsprüfungen sortierst du die Bedingungen von oben nach unten. Steht in der Notenaufgabe <code>punkte &gt;= 50</code> an erster Stelle, bekommt auch jemand mit 95 Punkten „ausreichend“, und zwar ohne Fehlermeldung (Logikfehler). Grenzen testest du mit einem Wert genau auf der Grenze und einem knapp darunter (90 und 89).</p>
 
-<h2>3.3 <code>match</code> und der bedingte Ausdruck</h2>
+<h2 id="h18">3.3 <code>match</code> und der bedingte Ausdruck</h2>
 <div class="cols">
 <div class="ex"><div class="ex"><pre class="code">note = "E"
 match note:
@@ -607,7 +734,7 @@ match note:
 </div>
 <p><b>Bedingter Ausdruck</b> (Kurzform von if–else, Java: <code>b ? x : y</code>): <code>status = "offen" if betrag &gt; 0 else "bezahlt"</code>. Er wählt einen von zwei Werten und sollte nicht verschachtelt werden. <code>ruff</code> schlägt ihn selbst vor, wenn ein if–else nur eine Variable setzt.</p>
 
-<h2>3.4 Wahrheitswerte beliebiger Werte</h2>
+<h2 id="h19">3.4 Wahrheitswerte beliebiger Werte</h2>
 <p>In einer Bedingung darf jeder Wert stehen. Python fragt dann: „Ist da etwas?“</p>
 <div class="cols">
 <table>
@@ -626,7 +753,7 @@ print(bool("0"), bool(-1), bool([0]), bool(""))</pre><pre class="out">Der Warenk
 True True True False</pre></div></div>
 </div>
 
-<h2>3.5 Logische Operatoren, Rangfolge, Kurzschluss</h2>
+<h2 id="h20">3.5 Logische Operatoren, Rangfolge, Kurzschluss</h2>
 <table>
 <tr><th>a</th><th>b</th><th><code>a and b</code></th><th><code>a or b</code></th><th><code>not a</code></th><th>XOR: <code>a != b</code></th></tr>
 <tr><td>True</td><td>True</td><td>True</td><td>True</td><td>False</td><td>False</td></tr>
@@ -651,7 +778,7 @@ ZeroDivisionError: float division by zero</pre></div></div>
 <p><b>Kurzschlussauswertung:</b> Python wertet von links nach rechts aus und hört auf, sobald das Ergebnis feststeht. Ist bei <code>and</code> die linke Seite <code>False</code>, wird die rechte gar nicht mehr ausgewertet. Die Absicherung (<code>anzahl &gt; 0</code>) gehört deshalb nach vorn.</p>
 <p><b>Bedingung umkehren:</b> Entweder du schreibst <code>not (…)</code> um die ganze Bedingung, oder du kehrst jede Teilbedingung um und tauschst <code>and</code> und <code>or</code>: Das Gegenteil von <code>bestellwert &gt;= 50 or ist_premium</code> ist <code>bestellwert &lt; 50 and not ist_premium</code>, das Gegenteil von <code>hat_ticket and not ist_gesperrt</code> ist <code>not hat_ticket or ist_gesperrt</code>.</p>
 
-<h2>3.6 Übungen Teil 1: Stromkosten und Parkgebühren</h2>
+<h2 id="h21">3.6 Übungen Teil 1: Stromkosten und Parkgebühren</h2>
 <div class="cols">
 <div class="ex"><div class="ex"><pre class="code">verbrauch_kwh = 180   # sonst: int(input(...))
 # Staffel: jede Stufe gilt nur für IHRE kWh
@@ -689,7 +816,7 @@ if gueltig:  # Rabatt → Grundgebühr → Deckel
 </div>
 <p class="small">Nach der offiziellen Musterlösung: Bei 180 kWh ergibt sich 25,00 + 17,60 + 12,90 − 5,00 = 50,50 €. Bei 6 Stunden Transporter ergibt sich 21,00 · 0,8 + 1,50 = 18,30 €. Weitere Übung aus der Musterlösung, das Schaltjahr: <code>jahr % 4 == 0 and (jahr % 100 != 0 or jahr % 400 == 0)</code>.</p>
 
-<h2>3.7 Schleifen: <code>while</code> und <code>for</code></h2>
+<h2 id="h22">3.7 Schleifen: <code>while</code> und <code>for</code></h2>
 <div class="cols">
 <div>
 <p><b><code>while</code></b> prüft zuerst und läuft dann. Ist die Bedingung schon am Anfang falsch, läuft die Schleife <b>kein einziges Mal</b>. Im Block muss sich etwas ändern, das die Bedingung irgendwann falsch macht, sonst entsteht eine <b>Endlosschleife</b>. Abbrechen kannst du sie im Terminal mit Strg+C. Die Bedingung ist eine <i>Laufbedingung</i>: Die Schleife läuft, <i>solange</i> sie wahr ist.</p>
@@ -774,7 +901,7 @@ print()</pre><pre class="out">0 1 1 2 3 5 8 13 21 34 </pre></div></div>
     print(i)</pre>
 </div>
 
-<h2>3.8 <code>break</code>, <code>continue</code> und typische Schleifenfehler</h2>
+<h2 id="h23">3.8 <code>break</code>, <code>continue</code> und typische Schleifenfehler</h2>
 <div class="cols">
 <div class="ex"><div class="ex"><pre class="code">for i in range(1, 11):
     if i == 5:
@@ -802,7 +929,7 @@ i = 5</pre></div></div>
 </table>
 <p class="small">Ein <code>else</code> nach einer Schleife läuft nur, wenn die Schleife <b>ohne</b> <code>break</code> endet. Das braucht man selten.</p>
 
-<h2>3.9 Listen</h2>
+<h2 id="h24">3.9 Listen</h2>
 <p>Eine Liste ist eine geordnete Sammlung unter einem Namen, auf die einzelnen Werte greifst du über den <b>Index</b> zu. Anders als ein Java-Array hat sie <b>keine feste Länge</b>. Guter Stil ist ein Typ pro Liste. Automatische Standardwerte gibt es nicht. Du legst also entweder eine leere Liste an und hängst mit <code>append</code> an oder schreibst <code>[0] * n</code>.</p>
 <div class="cols">
 <div class="ex"><div class="ex"><pre class="code">noten = [2, 1, 3, 2, 4]
@@ -880,7 +1007,7 @@ print(richtig)</pre><pre class="out">[[9, 0, 0, 0], [9, 0, 0, 0], [9, 0, 0, 0]]
 </div>
 <p><b>Tupel</b> <code>(3, 4)</code> sind wie Listen, aber <b>unveränderlich</b>: <code>punkt[0] = 5</code> gibt einen <code>TypeError</code>. Man nimmt sie für feste Zusammenstellungen wie Koordinaten oder mehrere Rückgabewerte.</p>
 
-<h2>3.10 Übungen Teil 2 (Musterlösungen)</h2>
+<h2 id="h25">3.10 Übungen Teil 2 (Musterlösungen)</h2>
 <div class="cols">
 <div class="ex"><div class="ex"><pre class="code">temperaturen = [-3.5, -1.0, -7.2, -0.5]
 maximum = temperaturen[0]  # nicht mit 0 starten!
@@ -937,9 +1064,9 @@ print()</pre><pre class="out">2 3 5 7 11 13 17 19 23 29 </pre></div></div>
 </div>
 
 <!-- ================================================================ VL4 -->
-<h1><span class="vl">VL4</span>Funktionen und Rekursion</h1>
+<h1 id="h26"><span class="vl">VL4</span>Funktionen und Rekursion</h1>
 
-<h2>4.1 Funktionen definieren und aufrufen</h2>
+<h2 id="h27">4.1 Funktionen definieren und aufrufen</h2>
 <p>Eine <b>Funktion</b> ist ein abgeschlossener Codeblock mit einem Namen, der eine bestimmte Aufgabe erfüllt. Sie bekommt Eingaben (Parameter), rechnet damit und liefert ein Ergebnis, ähnlich einer kleinen Maschine. Einige kennst du schon: <code>print()</code>, <code>len()</code>, <code>int()</code>, <code>input()</code>. Funktionen machen Programme übersichtlich, wiederverwendbar und testbar. <code>def</code> legt eine Funktion nur an, ihr Rumpf läuft erst beim <b>Aufruf</b>. Weil Python von oben nach unten liest, muss die Definition vor dem ersten Aufruf stehen.</p>
 <div class="cols">
 <div class="ex"><div class="ex"><pre class="code">def begruessung(name: str) -&gt; None:  # Definition
@@ -972,7 +1099,7 @@ Hallo 42!</pre></div></div>
 </div>
 <p><b>Kommandozeilenargumente:</b> Nach <code>import sys</code> ist <code>sys.argv</code> eine Liste von <code>str</code>. <code>sys.argv[0]</code> ist der Skriptname, die eigentlichen Argumente stehen in <code>sys.argv[1:]</code> (Java: <code>String[] args</code>).</p>
 
-<h2>4.2 Rückgabewerte und <code>None</code></h2>
+<h2 id="h28">4.2 Rückgabewerte und <code>None</code></h2>
 <div class="cols">
 <div class="ex"><div class="ex"><pre class="code">def ist_gerade(zahl: int) -&gt; bool:
     return zahl % 2 == 0
@@ -1036,7 +1163,7 @@ print()</pre><pre class="out">1 2 3 4 </pre></div></div>
 <div class="box slide"><span class="t">Folienhinweis (VL4, „break und return im Ablauf 1/2“)</span>
 Im Ausgabefeld der Folie stehen nur <code>2</code>, <code>3</code>, <code>4</code> und „Schleife beendet.“, die <code>1</code> fehlt (vermutlich abgeschnitten). Richtig ist <b>1 2 3 4</b> und dann „Schleife beendet.“, siehe die Ausgabe oben.</div>
 
-<h2>4.3 Gültigkeitsbereiche (LEGB)</h2>
+<h2 id="h29">4.3 Gültigkeitsbereiche (LEGB)</h2>
 <p>Variablen, die in einer Funktion entstehen, sind <b>lokal</b>. Sie existieren nur, solange die Funktion läuft, und außerhalb gibt es einen <code>NameError</code>. Zur Erinnerung: <code>if</code> und <code>for</code> haben keinen eigenen Gültigkeitsbereich, <b>Funktionen schon</b>. Einen Namen sucht Python in der Reihenfolge <b>LEGB</b>.</p>
 <div class="cols">
 <figure style="margin:0">
@@ -1072,7 +1199,7 @@ UnboundLocalError: cannot access local variable 'zaehler' where it is not associ
 </div>
 <p>Eine globale Variable <b>lesen</b> geht. Eine <b>Zuweisung</b> in der Funktion macht den Namen aber für die <i>ganze</i> Funktion lokal. Bei <code>zaehler += 1</code> wird dann gelesen, bevor ein Wert da ist, und es gibt einen <code>UnboundLocalError</code>. Besser ist es, den Wert als Parameter zu übergeben und das Ergebnis mit <code>return</code> zurückzugeben.</p>
 
-<h2>4.4 Parameterübergabe: Namen, keine Kopien</h2>
+<h2 id="h30">4.4 Parameterübergabe: Namen, keine Kopien</h2>
 <p>Python übergibt <b>Verweise auf Objekte</b>, man nennt das „call by object reference“. Der Parameter zeigt also auf <b>dasselbe Objekt</b> wie das Argument. Was das bewirkt, hängt davon ab, ob die Funktion das Objekt <b>verändert</b> oder den Namen nur <b>neu bindet</b>.</p>
 <div class="cols">
 <div class="ex"><div class="ex"><pre class="code">def aendere_zahl(wert: int) -&gt; None:
@@ -1134,7 +1261,7 @@ print(anhaengen(2))</pre><pre class="out">[1]
 </div>
 <p><b>Gute Funktionen:</b> Funktionen dürfen andere Funktionen aufrufen, so baust du ein Programm aus kleinen Bausteinen zusammen (<code>quadratsumme</code> nutzt z. B. <code>quadriere</code>). Faustregel: <b>eine Funktion, eine Aufgabe, und sie passt auf einen Bildschirm.</b> Dokumentiert wird mit einem Docstring im Google-Stil (Kap. 2.1), den <code>help(funktion)</code> anzeigt (Java: Javadoc).</p>
 
-<h2>4.5 Standardwerte, Schlüsselwortargumente, <code>*args</code> statt Überladung</h2>
+<h2 id="h31">4.5 Standardwerte, Schlüsselwortargumente, <code>*args</code> statt Überladung</h2>
 <p>Java löst „gleiche Aufgabe, andere Eingaben“ mit <b>Methodenüberladung</b>. <b>Python kennt keine Überladung.</b> Ein Name zeigt immer auf genau ein Objekt, ein zweites <code>def</code> mit demselben Namen <b>überschreibt</b> also das erste (<code>ruff</code>: F811). Ruft man danach die alte Variante auf, gibt es einen <code>TypeError</code>.</p>
 <div class="cols">
 <div class="ex"><div class="ex"><pre class="code">def brutto(netto: float, satz: float = 0.19) -&gt; float:
@@ -1170,7 +1297,7 @@ print(summe())</pre><pre class="out">(1, 2, 3, 4) → 10
 </table>
 <p class="small">Unterschiedliche Aufgaben bekommen besser unterschiedliche Namen: <code>flaeche_kreis()</code>, <code>flaeche_rechteck()</code>.</p>
 
-<h2>4.6 Imperative vs. applikative Programmierung</h2>
+<h2 id="h32">4.6 Imperative vs. applikative Programmierung</h2>
 <p>Ein <b>Paradigma</b> ist ein Denkmuster, das bestimmt, wie man Algorithmen formuliert und entwirft. Im Fokus stehen <b>imperative</b> und <b>applikative</b> Algorithmen. Weitere Paradigmen sind objektorientiert, logisch, genetisch, parallel, neuronal und agentenorientiert.</p>
 <table>
 <tr><th></th><th>Imperativ</th><th>Applikativ (funktional)</th></tr>
@@ -1202,7 +1329,7 @@ print(h(True, True, 2, 8))    # 8 + 16</pre><pre class="out">-4
 <div class="box slide"><span class="t">Folienfehler (VL4, „Applikative Algorithmen“)</span>
 Im Code der Folie steht <code>else 5 * x - 3</code>, das <b><code>* y</code> fehlt</b>. Richtig ist <code>5 * x - 3 * y</code>, so wie in der mathematischen Definition. Mit dem Folien-Code käme <code>h(True, False, 1, 3) == 2</code> heraus und nicht die auf der Folie angegebene −4. Die Ausgaben −4 und 24 stimmen nur mit dem korrigierten Code (siehe oben).</div>
 
-<h2>4.7 Rekursion</h2>
+<h2 id="h33">4.7 Rekursion</h2>
 <p>Bei einer <b>Rekursion</b> ruft eine Funktion <b>sich selbst</b> auf, um ein kleineres Teilproblem derselben Art zu lösen. Das geht so lange weiter, bis ein einfacher Fall erreicht ist. Jede rekursive Funktion hat zwei Pflichtteile:</p>
 <ol>
 <li>eine <b>Abbruchbedingung</b> (Basisfall): Sie legt fest, wann die Rekursion aufhört, und verhindert endlose Rekursion.</li>
@@ -1302,7 +1429,7 @@ print(fibonacci(10), potenz(2, 4), potenz(2, -2))</pre><pre class="out">55 16.0 
 </div>
 <p class="small">Die naive Fibonacci-Rekursion ist sehr langsam, weil sie dieselben Werte immer wieder neu berechnet: <code>fibonacci(n)</code> ruft sich <code>2 · fibonacci(n + 1) − 1</code>-mal auf, bei n = 25 also 242 785-mal. <code>@functools.cache</code> über der Funktion merkt sich jedes Ergebnis, dann wird jedes <code>n</code> nur einmal berechnet. Die Lösung zu <code>maximum([])</code> deckt die leere Liste nicht ab, der Aufruf endet in einem RecursionError.</p>
 
-<h2>4.8 Funktionen testen: <code>assert</code> und pytest</h2>
+<h2 id="h34">4.8 Funktionen testen: <code>assert</code> und pytest</h2>
 <div class="cols">
 <div>
 <p><code>assert bedingung</code> tut nichts, wenn die Bedingung stimmt, und löst sonst einen <code>AssertionError</code> aus. <b>pytest</b> entspricht JUnit in Java. Die Testdatei heißt <code>test_….py</code> und liegt neben dem Code. Jede Testfunktion beginnt mit <code>test_</code> und enthält ein oder mehrere <code>assert</code>. Eingerichtet wird pytest einmal pro Projekt mit <code>uv add --dev pytest</code>, ausgeführt mit <code>uv run pytest</code>. In der Ausgabe steht <code>.</code> für einen bestandenen und <code>F</code> für einen fehlgeschlagenen Test.</p>
@@ -1322,6 +1449,81 @@ def test_fakultaet_fuenf() -&gt; None:
 #   where 16 = fakultaet(5)</pre>
 </div>
 <p class="small">Teste auch Randfälle, etwa <code>maximum([3])</code>, <code>maximum([-5, -2, -9]) == -2</code> und <code>zaehle_zeichen("", "a") == 0</code>. Floats prüfst du nicht mit <code>==</code>: <code>potenz(0.1, 3)</code> ergibt <code>0.0010000000000000002</code>. <span class="erg">(Ergänzung)</span></p>
+
+<h2 id="printreturn" class="newpage">4.9 <code>print</code> oder <code>return</code>?</h2>
+<p>Die häufigste Verwechslung in Klausuren: <code>print</code> <b>zeigt</b> einen Wert auf dem Bildschirm an, <code>return</code> <b>gibt</b> ihn an den Aufrufer zurück. Mit einem angezeigten Wert kann das Programm nicht weiterrechnen, mit einem zurückgegebenen schon. Bild im Kopf: <code>print</code> ist die Anzeige an der Kasse, die der Kunde sieht. <code>return</code> ist der Kassenbon, den der Kunde in die Hand bekommt und mitnimmt. <span class="erg">(Ergänzung, aufbauend auf 4.2)</span></p>
+<table>
+<tr><th></th><th><code>print(wert)</code></th><th><code>return wert</code></th></tr>
+<tr><td>Was passiert?</td><td>Text erscheint im Terminal</td><td>Wert geht an die Stelle des Aufrufs zurück</td></tr>
+<tr><td>Funktion endet?</td><td>nein, es geht mit der nächsten Zeile weiter</td><td><b>ja, sofort</b> (auch mitten in einer Schleife)</td></tr>
+<tr><td>Was liefert der Aufruf?</td><td><code>None</code> (wenn sonst kein <code>return</code> kommt)</td><td>den Wert</td></tr>
+<tr><td>Weiterrechnen möglich?</td><td>nein: <code>None + 10</code> ist ein <code>TypeError</code></td><td>ja: <code>f(100) + 10</code></td></tr>
+<tr><td>Rückgabetyp</td><td><code>-&gt; None</code></td><td>z. B. <code>-&gt; float</code>, <code>-&gt; bool</code>, <code>-&gt; str</code></td></tr>
+<tr><td>Signalwörter in der Aufgabe</td><td>„gibt … aus“, „zeigt an“, „druckt“</td><td>„gibt … zurück“, „liefert“, „berechnet“ (für die Weiterverarbeitung)</td></tr>
+</table>
+<div class="cols">
+<div class="ex"><pre class="code">def brutto_print(netto: float) -&gt; None:
+    print(netto * 1.19)  # zeigt an, liefert None
+
+def brutto_return(netto: float) -&gt; float:
+    return netto * 1.19  # liefert den Wert
+
+a = brutto_print(100)
+b = brutto_return(100)
+print("a =", a)
+print("b =", b)
+print(brutto_return(100) + 10)</pre><pre class="out">119.0
+a = None
+b = 119.0
+129.0</pre></div>
+<div>
+<ul>
+<li><code>a = brutto_print(100)</code> zeigt <code>119.0</code> an, aber in <code>a</code> landet <code>None</code>.</li>
+<li><code>b = brutto_return(100)</code> zeigt nichts an. Erst das <code>print("b =", b)</code> zeigt den Wert.</li>
+<li>Nur mit dem zurückgegebenen Wert lässt sich weiterrechnen: <code>brutto_return(100) + 10</code> ergibt 129.0.</li>
+<li>Mit dem <code>print</code>-Ergebnis geht das nicht: <code>brutto_print(100) + 10</code> zeigt erst 119.0 an und bricht dann ab mit<br><code>TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'</code>.</li>
+</ul>
+</div>
+</div>
+<div class="cols">
+<div>
+<p><b>Doppelte Ausgabe mit <code>None</code>:</b> <code>print(f())</code> um eine Funktion, die selbst druckt, gibt zuerst deren Text aus und danach ihren Rückgabewert, also <code>None</code>.</p>
+<div class="ex"><pre class="code">def gruss(name: str) -&gt; None:
+    print("Hallo", name)
+
+print(gruss("Ben"))</pre><pre class="out">Hallo Ben
+None</pre></div>
+</div>
+<div>
+<p><b><code>__str__</code> und <code>__repr__</code> müssen <code>return</code> verwenden.</b> Mit <code>print</code> darin erscheint der Text zwar einmal, danach bricht <code>print(objekt)</code> ab:</p>
+<div class="ex"><pre class="code">class Konto:
+    def __init__(self, inhaber: str) -&gt; None:
+        self.inhaber = inhaber
+
+    def __str__(self) -&gt; str:
+        print(f"Konto von {self.inhaber}")  # FEHLER: print statt return
+
+print(Konto("Anna"))</pre><pre class="out">Konto von Anna
+TypeError: __str__ returned non-string (type NoneType)</pre></div>
+</div>
+</div>
+<div class="cols">
+<div class="box must"><span class="t">Faustregeln</span>
+<ul>
+<li>Rechnen, prüfen, suchen → <code>return</code>. Ausgeben passiert möglichst an einer Stelle, meist in <code>main()</code>.</li>
+<li>Eine Funktion mit <code>-&gt; None</code> darf drucken (z. B. <code>anzeigen()</code>), liefert aber nichts.</li>
+<li>Kaffeeshop (Kap. 7): <code>hinzufuegen()</code> liefert nur <code>True</code>/<code>False</code>, die Meldung schreibt <code>main.py</code>. So bleibt die Klasse ohne <code>input</code> und <code>print</code> testbar.</li>
+<li>Tests mit <code>assert</code>/pytest (4.8) gehen nur mit <code>return</code>.</li>
+</ul>
+</div>
+<div class="box trap"><span class="t">So erkennst du den Fehler</span>
+<ul>
+<li>In der Ausgabe steht ein unerwartetes <code>None</code> → irgendwo wird das Ergebnis einer <code>print</code>-Funktion ausgegeben.</li>
+<li><code>'NoneType'</code> in einer Fehlermeldung → ein Wert, den du für eine Zahl oder ein Objekt hältst, ist <code>None</code>. Häufige Ursachen: <code>print</code> statt <code>return</code>, ein Zweig ohne <code>return</code>, <code>finden()</code> hat nichts gefunden.</li>
+<li><code>ty</code> meldet bei <code>-&gt; float</code> ohne <code>return</code>: <code>invalid-return-type</code>.</li>
+</ul>
+</div>
+</div>
 
 <div class="box trap"><span class="t">Typische Fehler und Fallen</span>
 <ul>
@@ -1343,14 +1545,15 @@ def test_fakultaet_fuenf() -&gt; None:
 <li>Standardwerte, Schlüsselwortargumente und <code>*args</code> verwenden und Javas Überladung in Python umsetzen</li>
 <li>rekursive Funktionen mit Abbruchbedingung schreiben (Fakultät, Summe, Fibonacci, Maximum, Zeichen zählen, Potenz) und den Aufrufstapel zeichnen</li>
 <li>imperativ und applikativ vergleichen; Tests mit <code>assert</code> und pytest schreiben</li>
+<li><code>print</code> und <code>return</code> unterscheiden und vorhersagen, wo ein <code>None</code> auftaucht (4.9)</li>
 </ul>
 </div>
 
 <!-- ================================================================ VL5 -->
-<h1><span class="vl">VL5</span>Objektorientierte Programmierung I</h1>
-<div class="box info"><span class="t">Hinweis</span>VL5 findet am <b>23.10.2026</b> statt. Dieses Kapitel beruht auf den vorab veröffentlichten Folien und den Musterlösungen (VL05_Loesungen) und wird nach der Vorlesung bei Bedarf angepasst.</div>
+<h1 id="h35"><span class="vl">VL5</span>Objektorientierte Programmierung I</h1>
+<div class="box info"><span class="t">Hinweis</span>VL5 lief am <b>23.10.</b> (bis Übung 3) und am <b>27.10.</b> (Properties/Kapselung mit Übung 4, Hat-ein, Module, <code>@dataclass</code> mit Übung 5). Grundlage sind die Folien „vl05_oop_1“ und die Musterlösungen (VL05_Loesungen).</div>
 
-<h2>5.1 Klassen und Objekte</h2>
+<h2 id="h36">5.1 Klassen und Objekte</h2>
 <p>Bei der <b>objektorientierten Programmierung (OOP)</b> besteht ein Programm aus <b>Objekten</b>, die zusammenarbeiten. Ein Objekt hat <b>Attribute</b>, also Daten, die seinen Zustand beschreiben, und <b>Methoden</b>, also Funktionen, die sein Verhalten beschreiben und den Zustand ändern können. Jedes Objekt gehört zu einer <b>Klasse</b>, dem Bauplan, nach dem die Objekte gebaut werden. Aus einer Klasse kannst du beliebig viele Objekte erzeugen, ein Objekt heißt deshalb auch <b>Instanz</b> der Klasse. Jedes Objekt hat eigene Werte für die Attribute, die Methoden stehen aber nur einmal in der Klasse und gelten für alle Objekte.</p>
 <table>
 <tr><th>Begriff</th><th>Bedeutung</th><th>Beispiel</th></tr>
@@ -1394,7 +1597,7 @@ def test_fakultaet_fuenf() -&gt; None:
 <figcaption>Eine Klasse beschreibt, welche Attribute und Methoden ihre Objekte haben. Beide Konten zeigen auf dasselbe Kunden-Objekt (Hat-ein-Beziehung, Kap. 5.6).</figcaption>
 </figure>
 
-<h2>5.2 Eine Klasse in Python: <code>__init__</code> und <code>self</code></h2>
+<h2 id="h37">5.2 Eine Klasse in Python: <code>__init__</code> und <code>self</code></h2>
 <div class="cols">
 <div class="ex"><div class="ex"><pre class="code">class Konto:
     def __init__(self, inhaber: str, kontostand: int) -&gt; None:
@@ -1430,7 +1633,7 @@ Ben 300</pre></div></div>
 <li>Beträge stehen auf den Folien als <code>int</code> in ganzen Euro, damit der Code kurz bleibt. Für Cent-Beträge nimmt man <code>Decimal</code>.</li>
 </ul>
 
-<h2>5.3 Methoden, <code>self</code>, <code>__str__</code> und <code>__repr__</code></h2>
+<h2 id="h38">5.3 Methoden, <code>self</code>, <code>__str__</code> und <code>__repr__</code></h2>
 <div class="cols">
 <div class="ex"><div class="ex"><pre class="code">class Konto:
     def __init__(self, inhaber: str, kontostand: int = 0) -&gt; None:
@@ -1495,7 +1698,7 @@ Konto('Anna', 100)
 </div>
 </div>
 
-<h2>5.4 Namen zeigen auf Objekte, auch bei eigenen Klassen</h2>
+<h2 id="h39">5.4 Namen zeigen auf Objekte, auch bei eigenen Klassen</h2>
 <div class="cols">
 <div class="ex"><div class="ex"><pre class="code">class Konto:
     def __init__(self, inhaber: str, kontostand: int = 0) -&gt; None:
@@ -1551,7 +1754,7 @@ error[unresolved-attribute]: Unresolved attribute
 </div>
 </div>
 
-<h2>5.5 Klassenattribute</h2>
+<h2 id="h40">5.5 Klassenattribute</h2>
 <div class="cols">
 <div class="ex"><div class="ex"><pre class="code">class Konto:
     anzahl_konten = 0        # Klassenattribut: einmal, in der Klasse
@@ -1574,7 +1777,7 @@ print(ben.anzahl_konten, Konto.anzahl_konten, anna.anzahl_konten)</pre><pre clas
 </div>
 </div>
 
-<h2>5.6 Kapselung mit Properties</h2>
+<h2 id="h41">5.6 Kapselung mit Properties</h2>
 <table>
 <tr><th>OOP-Prinzip</th><th>Bedeutung</th><th>wann</th></tr>
 <tr><td><b>Kapselung</b></td><td>Daten und Methoden gehören zusammen. Das Objekt bestimmt selbst, wie sein Zustand geändert wird, und zeigt nach außen nur das Nötige.</td><td>VL5</td></tr>
@@ -1669,7 +1872,7 @@ Ungültig: negativer Kontostand.
 <tr><td><code>abstract</code></td><td>unvollständige Klassen</td><td><code>abc.ABC</code>, <code>@abstractmethod</code> (VL6/07)</td></tr>
 </table>
 
-<h2>5.7 Zusammengesetzte Klassen, Module und <code>@dataclass</code></h2>
+<h2 id="h42">5.7 Zusammengesetzte Klassen, Module und <code>@dataclass</code></h2>
 <p>Objekte können andere Objekte als Attribute haben. Das nennt man eine <b>Hat-ein-Beziehung</b> (has-a): Ein Konto hat einen Kunden, eine Bestellung hat einen Kunden und mehrere Positionen, eine Abteilung hat mehrere Mitarbeiter. Damit bildest du Zusammenhänge aus der realen Welt direkt ab. Jede Klasse bleibt klein und kümmert sich um ihre eigene Aufgabe, und die Objekte arbeiten zusammen, indem sie gegenseitig ihre Methoden aufrufen.</p>
 <div class="cols">
 <div class="ex"><div class="ex"><pre class="code">class Kunde:
@@ -1807,9 +2010,992 @@ Summe: 36.45 Euro</pre></div></div>
 </ul>
 </div>
 
+<!-- ================================================================ VL6 -->
+<h1 id="k6"><span class="vl">VL6</span>OOP II: Vererbung und Polymorphie</h1>
+<div class="box info"><span class="t">Stand</span>VL6 (Folien „vl06_oop_2“, 60 Folien) begann am <b>03.11.</b> mit Vererbung, <code>super()</code> und Überschreiben (F. 1–29, Übung 1 und 2). Der Rest ab F. 30 (Polymorphie, <code>object</code>, abstrakte Klassen, Fähigkeiten, Übung 3 bis 5) war laut Plan am <b>06.11.</b> dran; bestätigt ist das nicht. Seit 09.11. liegt in Moodle eine Wiederholung VL01–VL06 am Beispiel Fitnessstudio (6.7). Die Beispiele folgen den Folien und Musterlösungen, Zahlen sind nachgerechnet.</div>
+
+<h2 id="s61">6.1 Vererbung: „ist ein“ und <code>super().__init__</code></h2>
+<p>Bei der <b>Vererbung</b> übernimmt eine Klasse alle Attribute und Methoden einer anderen und ergänzt nur, was neu ist (F. 6). Die allgemeinere Klasse heißt <b>Oberklasse</b> (Basisklasse), die speziellere <b>Unterklasse</b>. Die Oberklasse steht in Klammern hinter dem Klassennamen, das entspricht <code>extends</code> in Java (F. 9). Bild im Kopf: Ein Rezept „Zimtschnecken: wie Hefeteig, zusätzlich Zimt und Zucker“. Alles, was für Hefeteig gilt, gilt auch für Zimtschnecken.</p>
+<div class="cols">
+<div class="ex"><pre class="code">class Konto:
+    def __init__(self, inhaber: str, kontostand: int = 0) -&gt; None:
+        self.inhaber = inhaber
+        self.kontostand = kontostand
+
+    def einzahlen(self, betrag: int) -&gt; None:
+        self.kontostand += betrag
+
+    def __str__(self) -&gt; str:
+        return f"Konto von {self.inhaber}: {self.kontostand} Euro"
+
+class Sparkonto(Konto):  # Sparkonto IST EIN Konto
+    def __init__(self, inhaber: str, kontostand: int, zinssatz: int) -&gt; None:
+        super().__init__(inhaber, kontostand)  # 1. Konto-Teil anlegen
+        self.zinssatz = zinssatz  # 2. das Neue
+
+    def zinsen_gutschreiben(self) -&gt; None:  # nur im Sparkonto
+        self.einzahlen(self.kontostand * self.zinssatz // 100)
+
+anna = Sparkonto("Anna", 1000, 2)
+anna.einzahlen(500)  # geerbt
+anna.zinsen_gutschreiben()  # 1500 * 2 // 100 = 30
+print(anna)  # __str__ geerbt
+print(vars(anna))
+print(isinstance(anna, Konto), type(anna) is Konto, issubclass(Sparkonto, Konto))</pre><pre class="out">Konto von Anna: 1530 Euro
+{'inhaber': 'Anna', 'kontostand': 1530, 'zinssatz': 2}
+True False True</pre></div>
+<div>
+<p><b>Was bei <code>Sparkonto("Anna", 1000, 2)</code> passiert:</b></p>
+<ol>
+<li>Python legt ein leeres Sparkonto-Objekt an und ruft <code>Sparkonto.__init__</code> auf.</li>
+<li><code>super().__init__(inhaber, kontostand)</code> ruft das <code>__init__</code> von <code>Konto</code> mit <b>demselben</b> <code>self</code> auf und legt <code>inhaber</code> und <code>kontostand</code> an.</li>
+<li>Zurück in <code>Sparkonto.__init__</code> kommt <code>zinssatz</code> dazu. Ergebnis: ein Objekt mit allen drei Attributen.</li>
+</ol>
+<p>Merksatz: „<b>Mach erst, was die Elternklasse beim Anlegen macht</b>, dann meinen Teil.“</p>
+<table>
+<tr><th>Zeile</th><th>läuft aus …</th><th>Stand</th></tr>
+<tr><td><code>einzahlen(500)</code></td><td>Konto (geerbt)</td><td>1500</td></tr>
+<tr><td><code>zinsen_…()</code></td><td>Sparkonto: 1500 · 2 // 100 = 30</td><td>1530</td></tr>
+<tr><td><code>print(anna)</code></td><td><code>__str__</code> aus Konto</td><td>1530</td></tr>
+</table>
+</div>
+</div>
+<div class="cols">
+<div>
+<p><b>Der Test: „ist ein“ → Vererbung, „hat ein“ → Attribut</b> (F. 7). Bilde für jedes Paar beide Sätze und prüf, welcher stimmt.</p>
+<table>
+<tr><th>Paar</th><th>Satz, der stimmt</th><th>also</th></tr>
+<tr><td>Sparkonto – Konto</td><td>Ein Sparkonto <b>ist ein</b> Konto.</td><td>Vererbung</td></tr>
+<tr><td>Werkstudent – Mitarbeiter</td><td>Ein Werkstudent <b>ist ein</b> Mitarbeiter.</td><td>Vererbung</td></tr>
+<tr><td>Konto – Kunde</td><td>Ein Konto <b>hat einen</b> Kunden.</td><td>Attribut</td></tr>
+<tr><td>Bestellung – Position</td><td>Eine Bestellung <b>hat</b> Positionen.</td><td>Attribut (Liste)</td></tr>
+</table>
+<p><code>isinstance(objekt, Klasse)</code> prüft die Klasse <b>und</b> alle Oberklassen (Java: <code>instanceof</code>), <code>type(objekt) is Klasse</code> nur die genaue Klasse, <code>issubclass(Unter, Ober)</code> zwei Klassen (F. 15). Siehe letzte Zeile oben: <code>True False True</code>.</p>
+</div>
+<div>
+<p><b>Falle: <code>super().__init__</code> vergessen.</b> Python ruft das <code>__init__</code> der Oberklasse <b>nicht</b> von selbst auf (anders als Java, F. 10). Das Erzeugen klappt noch, der Fehler kommt erst bei der ersten Methode, die auf <code>kontostand</code> zugreift:</p>
+<div class="ex"><pre class="code">class Sparkonto(Konto):
+    def __init__(self, inhaber: str, kontostand: int, zinssatz: int) -&gt; None:
+        self.zinssatz = zinssatz  # super().__init__ fehlt!
+
+anna = Sparkonto("Anna", 1000, 2)  # läuft noch ohne Fehler
+anna.einzahlen(500)</pre><pre class="out">AttributeError: 'Sparkonto' object has no attribute 'kontostand'</pre></div>
+<p class="small">(<code>Konto</code> wie oben.) Hat die Unterklasse <b>kein eigenes</b> <code>__init__</code>, wird das der Oberklasse einfach geerbt, dann ist nichts zu tun. <code>super.__init__(…)</code> ohne Klammern hinter <code>super</code> ist falsch (<code>TypeError: descriptor '__init__' requires a 'super' object …</code>).</p>
+</div>
+</div>
+
+<h2 id="s62">6.2 Überschreiben, <code>super().methode()</code>, <code>@override</code> und die Methodensuche</h2>
+<p><b>Überschreiben</b> heißt: Die Unterklasse schreibt eine Methode mit <b>gleichem Namen und gleichen Parametern</b> neu. Für ihre Objekte gilt dann die neue Version (F. 19). Mit <code>super().methode()</code> benutzt sie die alte Version mit, sie <b>ergänzt</b> also statt zu <b>ersetzen</b> (F. 20). Beispiel aus VL6 Übung 1 und 2:</p>
+<div class="cols">
+<div class="ex"><pre class="code">from typing import Final, override
+
+FUEHRUNGSZULAGE: Final = 150
+
+class Mitarbeiter:
+    def __init__(self, name: str, monatsgehalt: int) -&gt; None:
+        self.name = name
+        self.monatsgehalt = monatsgehalt
+
+    def arbeiten(self) -&gt; str:
+        return f"{self.name} arbeitet."
+
+    def monatskosten(self) -&gt; int:
+        return self.monatsgehalt
+
+    def __str__(self) -&gt; str:
+        return f"{self.name}: {self.monatsgehalt} Euro im Monat"
+
+class Entwickler(Mitarbeiter):
+    def __init__(self, name: str, monatsgehalt: int, sprache: str) -&gt; None:
+        super().__init__(name, monatsgehalt)
+        self.sprache = sprache
+
+    @override
+    def arbeiten(self) -&gt; str:  # ersetzen
+        return f"{self.name} schreibt Code in {self.sprache}."
+
+    @override
+    def __str__(self) -&gt; str:  # ergänzen
+        return f"{super().__str__()}, {self.sprache}"
+
+class Manager(Mitarbeiter):
+    def __init__(self, name: str, monatsgehalt: int, teamgroesse: int) -&gt; None:
+        super().__init__(name, monatsgehalt)
+        self.teamgroesse = teamgroesse
+
+    @override
+    def monatskosten(self) -&gt; int:  # ergänzen
+        return super().monatskosten() + FUEHRUNGSZULAGE * self.teamgroesse
+
+lena = Entwickler("Lena", 4200, "Python")
+tom = Manager("Tom", 5800, 6)
+print(lena)
+print(tom)
+print(lena.arbeiten(), "|", tom.arbeiten())
+print(tom.monatskosten())
+print(isinstance(tom, Mitarbeiter), isinstance(tom, Entwickler))
+print([k.__name__ for k in Manager.__mro__])</pre><pre class="out">Lena: 4200 Euro im Monat, Python
+Tom: 5800 Euro im Monat
+Lena schreibt Code in Python. | Tom arbeitet.
+6700
+True False
+['Manager', 'Mitarbeiter', 'object']</pre></div>
+<div>
+<figure style="margin-top:0">
+<svg viewBox="0 0 300 250" width="290" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="tri6" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="11" markerHeight="11" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#fff" stroke="#333"/></marker></defs>
+<g font-size="11">
+<rect x="95" y="4" width="110" height="22" fill="#f1f1f1" stroke="#333"/><text x="150" y="19" text-anchor="middle" font-weight="bold">object</text>
+<rect x="70" y="58" width="160" height="62" fill="#fff" stroke="#333"/><rect x="70" y="58" width="160" height="20" fill="#e4ebf4" stroke="#333"/>
+<text x="150" y="72" text-anchor="middle" font-weight="bold">Mitarbeiter</text>
+<text x="76" y="92" class="mono" font-size="9.5">arbeiten()</text><text x="76" y="104" class="mono" font-size="9.5">monatskosten()</text><text x="76" y="116" class="mono" font-size="9.5">__str__()</text>
+<line x1="150" y1="58" x2="150" y2="27" stroke="#333" marker-end="url(#tri6)"/>
+<rect x="5" y="160" width="130" height="50" fill="#fff" stroke="#333"/><rect x="5" y="160" width="130" height="20" fill="#e4ebf4" stroke="#333"/>
+<text x="70" y="174" text-anchor="middle" font-weight="bold">Entwickler</text>
+<text x="11" y="193" class="mono" font-size="9.5">arbeiten() ersetzt</text><text x="11" y="205" class="mono" font-size="9.5">__str__() ergänzt</text>
+<rect x="165" y="160" width="130" height="50" fill="#fff" stroke="#333"/><rect x="165" y="160" width="130" height="20" fill="#e4ebf4" stroke="#333"/>
+<text x="230" y="174" text-anchor="middle" font-weight="bold">Manager</text>
+<text x="171" y="193" class="mono" font-size="9.5">monatskosten()</text><text x="171" y="205" class="mono" font-size="9.5">  ergänzt</text>
+<line x1="70" y1="160" x2="120" y2="121" stroke="#333" marker-end="url(#tri6)"/>
+<line x1="230" y1="160" x2="180" y2="121" stroke="#333" marker-end="url(#tri6)"/>
+<text x="150" y="232" text-anchor="middle" fill="#1f5fa8">tom.arbeiten(): 1. Manager? nein</text>
+<text x="150" y="246" text-anchor="middle" fill="#1f5fa8">2. Mitarbeiter? ja → „Tom arbeitet.“</text>
+</g>
+</svg>
+<figcaption>UML: Der Pfeil mit offenem Dreieck zeigt zur Oberklasse („ist ein“).</figcaption>
+</figure>
+<p><b>Wo sucht Python eine Methode?</b> Zuerst in der Klasse des Objekts, dann in der Oberklasse und so weiter bis <code>object</code>. Die <b>erste Fundstelle gewinnt</b> (F. 21–25). Die Reihenfolge steht in <code>Klasse.__mro__</code> (Method Resolution Order). <code>tom.monatskosten()</code> findet Python schon in <code>Manager</code>: 5800 + 150 · 6 = 6700.</p>
+<p><b><code>@override</code></b> aus <code>typing</code> sagt: „Diese Methode soll eine geerbte ersetzen.“ Python ignoriert das beim Ausführen, <code>ty</code> prüft es: Bei einem Tippfehler (<code>def arbeitn</code>) meldet es <code>invalid-explicit-override</code>. Ohne <code>@override</code> entstünde still eine neue Methode (F. 26). Import vergessen: <code>NameError: name 'override' is not defined</code>.</p>
+</div>
+</div>
+<table>
+<tr><th>(F. 28)</th><th>Überladen</th><th>Überschreiben</th></tr>
+<tr><td>wo?</td><td>in derselben Klasse</td><td>in Ober- und Unterklasse</td></tr>
+<tr><td>Parameter</td><td>verschieden</td><td>gleich</td></tr>
+<tr><td>in Python</td><td>gibt es nicht, ein zweites <code>def</code> ersetzt das erste (Kap. 4.5: Standardwerte statt Überladung)</td><td>ja, welche Version läuft, entscheidet die Klasse des Objekts</td></tr>
+</table>
+
+<h2 id="s63">6.3 Polymorphie, Typangabe und Duck Typing</h2>
+<p><b>Polymorphie</b> („Vielgestaltigkeit“): <b>Derselbe Methodenaufruf</b> führt je nach Klasse des Objekts zu <b>unterschiedlichem Verhalten</b> (F. 32). Einstiegsfrage der Folie: „Sie klicken im Onlineshop auf ‚Jetzt bezahlen‘. Was muss der Shop je nach Zahlungsart tun?“ Neu ist dabei nichts: Polymorphie ist Überschreiben plus eine Funktion oder Liste, die nur die Oberklasse kennt. Bild im Kopf: eine Universalfernbedienung mit einer Taste „Ein/Aus“. Was passiert, entscheidet das Gerät, auf das sie zeigt.</p>
+<div class="cols">
+<div class="ex"><pre class="code">from decimal import Decimal
+from typing import override
+
+class Zahlungsart:
+    def bezahlen(self, betrag: Decimal) -&gt; str:
+        return f"{betrag} Euro bezahlt"
+
+class Kreditkarte(Zahlungsart):
+    def __init__(self, nummer: str) -&gt; None:
+        self.nummer = nummer
+
+    @override
+    def bezahlen(self, betrag: Decimal) -&gt; str:
+        return f"{betrag} Euro von Karte ...{self.nummer[-4:]} abgebucht"
+
+class Rechnungskauf(Zahlungsart):
+    @override
+    def bezahlen(self, betrag: Decimal) -&gt; str:
+        return f"Rechnung über {betrag} Euro, zahlbar in 14 Tagen"
+
+class Lastschrift(Zahlungsart):  # später dazugekommen
+    def __init__(self, iban: str) -&gt; None:
+        self.iban = iban
+
+    @override
+    def bezahlen(self, betrag: Decimal) -&gt; str:
+        return f"{betrag} Euro von IBAN ...{self.iban[-4:]} eingezogen"
+
+def kasse(zahlungsart: Zahlungsart, betrag: Decimal) -&gt; None:
+    print(zahlungsart.bezahlen(betrag))  # immer dieselbe Zeile
+
+kasse(Kreditkarte("4111111111111234"), Decimal("49.90"))
+kasse(Rechnungskauf(), Decimal("199.00"))
+kasse(Lastschrift("DE89370400440532013000"), Decimal("20.00"))</pre><pre class="out">49.90 Euro von Karte ...1234 abgebucht
+Rechnung über 199.00 Euro, zahlbar in 14 Tagen
+20.00 Euro von IBAN ...3000 eingezogen</pre></div>
+<div>
+<table>
+<tr><th>Aufruf</th><th><code>zahlungsart</code> zeigt auf</th><th>Python findet <code>bezahlen</code> in …</th></tr>
+<tr><td>1</td><td>Kreditkarte-Objekt</td><td><code>Kreditkarte</code></td></tr>
+<tr><td>2</td><td>Rechnungskauf-Objekt</td><td><code>Rechnungskauf</code></td></tr>
+<tr><td>3</td><td>Lastschrift-Objekt</td><td><code>Lastschrift</code></td></tr>
+</table>
+<p><b>Nutzen (F. 35):</b> Für die Lastschrift kam nur eine neue Klasse dazu, <code>kasse()</code> blieb <b>unverändert</b>.</p>
+<p><b>Typangabe oder Objekt: wer entscheidet was? (F. 34)</b></p>
+<ul>
+<li>Die <b>Typangabe</b> (<code>zahlungsart: Zahlungsart</code>) entscheidet, was <b>ty erlaubt</b>: nur, was <i>jede</i> Zahlungsart hat. <code>zahlungsart.bezahlen(…)</code> ist ok, <code>zahlungsart.nummer</code> meldet ty als <code>unresolved-attribute</code> (ein Rechnungskauf hat keine Nummer).</li>
+<li>Das <b>Objekt</b> entscheidet beim Ausführen, <b>welches</b> <code>bezahlen()</code> läuft.</li>
+<li>Braucht man die Nummer doch: vorher <code>if isinstance(zahlungsart, Kreditkarte):</code>. Im Block erlaubt ty dann <code>zahlungsart.nummer</code>. Einen Cast wie in Java braucht Python nicht.</li>
+</ul>
+</div>
+</div>
+<div class="cols">
+<div>
+<p><b>Duck Typing (F. 39/40):</b> Python prüft beim Ausführen nur, <b>ob die Methode da ist</b>, nicht, von welcher Klasse das Objekt stammt („Wenn es aussieht wie eine Ente und quakt wie eine Ente …“). Ein <code>Gutschein</code>, der <b>nicht</b> erbt, läuft deshalb. <code>ty</code> meldet aber <code>invalid-argument-type</code>, weil die Typangabe <code>Zahlungsart</code> verlangt. In der Vorlesung gilt: <b>immer erben</b>, dann prüft ty mit und jeder sieht die Absicht.</p>
+<div class="ex"><pre class="code">class Gutschein:  # erbt NICHT von Zahlungsart
+    def bezahlen(self, betrag: Decimal) -&gt; str:
+        return f"{betrag} Euro mit Gutschein bezahlt"
+
+def kasse(zahlungsart: Zahlungsart, betrag: Decimal) -&gt; None:
+    print(zahlungsart.bezahlen(betrag))
+
+kasse(Gutschein(), Decimal("15.00"))  # läuft; ty: invalid-argument-type</pre><pre class="out">15.00 Euro mit Gutschein bezahlt</pre></div>
+</div>
+<div>
+<p><b>VL6 Übung 3: Personalkosten</b> (Klassen wie in 6.2). <code>personalkosten()</code> kennt nur <code>Mitarbeiter</code>, jedes Objekt rechnet seine Kosten selbst:</p>
+<div class="ex"><pre class="code">class Werkstudent(Mitarbeiter):
+    def __init__(self, name: str, monatsgehalt: int, stunden: int) -&gt; None:
+        super().__init__(name, monatsgehalt)
+        self.stunden = stunden
+
+    @override
+    def arbeiten(self) -&gt; str:
+        return f"{self.name} arbeitet {self.stunden} Stunden pro Woche mit."
+
+def personalkosten(team: list[Mitarbeiter]) -&gt; int:
+    summe = 0  # Startwert VOR der Schleife
+    for person in team:
+        summe += person.monatskosten()  # jedes Objekt rechnet selbst
+    return summe  # NACH der Schleife
+
+team: list[Mitarbeiter] = [
+    Entwickler("Lena", 4200, "Python"), Entwickler("Ali", 4400, "Java"),
+    Manager("Tom", 5800, 6), Mitarbeiter("Sara", 3600),
+    Mitarbeiter("Max", 3400), Manager("Eva", 6100, 3),
+]
+print(personalkosten(team))
+team.append(Werkstudent("Jonas", 1300, 20))
+team.append(Werkstudent("Mia", 1100, 16))
+print(personalkosten(team), team[-2].arbeiten())</pre><pre class="out">28850
+31250 Jonas arbeitet 20 Stunden pro Woche mit.</pre></div>
+</div>
+</div>
+<table>
+<tr><th>Runde</th><th>Lena (E)</th><th>Ali (E)</th><th>Tom (M, 6)</th><th>Sara</th><th>Max</th><th>Eva (M, 3)</th><th>+ Jonas, Mia (W)</th></tr>
+<tr><td><code>monatskosten()</code></td><td>4200 (geerbt)</td><td>4400</td><td>5800 + 900 = 6700</td><td>3600</td><td>3400</td><td>6100 + 450 = 6550</td><td>1300, 1100 (geerbt)</td></tr>
+<tr><td><code>summe</code> danach</td><td>4200</td><td>8600</td><td>15300</td><td>18900</td><td>22300</td><td><b>28850</b></td><td><b>31250</b></td></tr>
+</table>
+<p class="small"><code>personalkosten()</code> muss für die Werkstudenten <b>nicht</b> geändert werden. Genau das ist der Nutzen der Polymorphie. Zusatz der Übung: Ein <code>Freelancer</code> ohne Vererbung, aber mit <code>monatskosten()</code> läuft (Duck Typing), ty meldet <code>invalid-argument-type</code>.</p>
+
+<h2 id="s64">6.4 <code>object</code> und <code>__repr__</code></h2>
+<div class="cols">
+<div>
+<p><b><code>object</code> ist die Wurzel jeder Klasse</b>, auch ohne Klammer (F. 42/43). Von dort kommen schlichte Standardversionen von <code>__str__</code>, <code>__repr__</code> und <code>__eq__</code>: <code>print</code> zeigt Klasse und Speicheradresse (die Adresse ändert sich bei jedem Lauf), <code>==</code> prüft nur, ob es <i>dasselbe</i> Objekt ist. Wer in VL5 <code>__str__</code> geschrieben hat, hat also schon eine Methode von <code>object</code> überschrieben.</p>
+<div class="ex"><pre class="code">class Leer:
+    pass
+
+print(Leer())</pre><pre class="out">&lt;__main__.Leer object at 0x7f0676aceba0&gt;</pre></div>
+<p><b><code>__repr__</code></b> ist die Beschreibung für Entwickler, im Format wie bei <code>@dataclass</code>: <code>Klasse(attribut=wert, …)</code> (F. 43/44). <code>__str__</code> ist für Menschen (Kontoauszug).</p>
+<ul>
+<li><code>type(self).__name__</code> liefert den Namen der <b>tatsächlichen</b> Klasse. So passt ein einziges <code>__repr__</code> in der Oberklasse auch für jede Unterklasse.</li>
+<li><code>!r</code> im f-String setzt Texte in Anführungszeichen (<code>'Anna'</code>), Zahlen bleiben ohne.</li>
+<li>Gibt es kein <code>__str__</code>, nimmt <code>print()</code> das <code>__repr__</code>. Listen zeigen ihre Elemente immer mit <code>__repr__</code>.</li>
+</ul>
+</div>
+<div class="ex"><pre class="code">from typing import override
+
+class Leer:
+    pass
+
+class Konto:
+    def __init__(self, inhaber: str, kontostand: int) -&gt; None:
+        self.inhaber = inhaber
+        self.kontostand = kontostand
+
+    @override
+    def __repr__(self) -&gt; str:
+        return f"{type(self).__name__}(inhaber={self.inhaber!r}, kontostand={self.kontostand})"
+
+class Sparkonto(Konto):
+    pass
+
+print(Leer.__bases__)
+print(Leer() == Leer())
+print(Konto("Anna", 1000))  # kein __str__ → print nimmt __repr__
+print(Sparkonto("Ben", 50))
+print([Konto("Cem", 7)])  # Listen zeigen immer __repr__</pre><pre class="out">(&lt;class 'object'&gt;,)
+False
+Konto(inhaber='Anna', kontostand=1000)
+Sparkonto(inhaber='Ben', kontostand=50)
+[Konto(inhaber='Cem', kontostand=7)]</pre></div>
+</div>
+
+<h2 id="s65">6.5 Abstrakte Klassen: <code>ABC</code> und <code>@abstractmethod</code></h2>
+<p>Was soll <code>Zahlungsart().bezahlen(…)</code> eigentlich tun? Nichts Sinnvolles: Eine „Zahlungsart an sich“ gibt es nicht, nur Kreditkarte, Rechnung usw. <code>Zahlungsart</code> ist eine <b>Abstraktion</b>. Eine <b>abstrakte Klasse</b> ist wie ein <b>Formular mit Pflichtfeldern</b>: Sie legt fest, <i>welche</i> Methoden jede Unterklasse haben <b>muss</b>, aber nicht <i>wie</i>. Objekte von ihr gibt es <b>nicht</b> (F. 45–47). Bild im Kopf: Im Café bestellst du kein „Getränk“, sondern Kaffee oder Tee.</p>
+<div class="cols">
+<div class="ex"><pre class="code">from abc import ABC, abstractmethod
+from decimal import Decimal
+from typing import override
+
+class Zahlungsart(ABC):  # Zutat 1: erbt von ABC
+    @abstractmethod  # Zutat 2: Pflichtmethode
+    def bezahlen(self, betrag: Decimal) -&gt; str:
+        """Jede konkrete Zahlungsart muss das umsetzen."""
+
+    def beleg(self, betrag: Decimal) -&gt; str:  # konkret, für alle gleich
+        return f"Beleg: {self.bezahlen(betrag)}"
+
+class Rechnungskauf(Zahlungsart):
+    @override
+    def bezahlen(self, betrag: Decimal) -&gt; str:
+        return f"Rechnung über {betrag} Euro, zahlbar in 14 Tagen"
+
+class PayPal(Zahlungsart):  # bezahlen vergessen!
+    def __init__(self, email: str) -&gt; None:
+        self.email = email
+
+print(Rechnungskauf().beleg(Decimal("80.00")))
+p = PayPal("anna@example.com")  # Fehler beim ERZEUGEN</pre><pre class="out">Beleg: Rechnung über 80.00 Euro, zahlbar in 14 Tagen
+TypeError: Can't instantiate abstract class PayPal without an implementation for abstract method 'bezahlen'</pre></div>
+<div>
+<ul>
+<li><b>Zwei Zutaten, beide nötig:</b> erben von <code>ABC</code> <b>und</b> <code>@abstractmethod</code>, beides aus dem Modul <code>abc</code>. Ohne <code>(ABC)</code> wirkt <code>@abstractmethod</code> nicht: <code>Geraet()</code> lässt sich dann ganz normal erzeugen.</li>
+<li>Die abstrakte Methode braucht keinen echten Rumpf: ein Docstring oder <code>...</code> genügt.</li>
+<li>Der Fehler kommt schon beim <b>Erzeugen</b> des Objekts, nicht erst beim Aufruf von <code>bezahlen</code>. <code>Zahlungsart()</code> ergibt denselben <code>TypeError</code> für <code>Zahlungsart</code>.</li>
+<li><code>ty</code> meldet das schon <b>vor dem Start</b>: <code>call-non-callable: Cannot instantiate abstract class</code>.</li>
+<li>Eine Unterklasse, die <b>nicht alle</b> abstrakten Methoden überschreibt, bleibt selbst abstrakt (<code>PayPal</code>). Eine <b>konkrete</b> Klasse setzt alle um, von ihr gibt es Objekte.</li>
+<li>Abstrakt und konkret dürfen gemischt werden: <code>beleg()</code> ruft das jeweilige <code>bezahlen()</code> auf (wieder Polymorphie).</li>
+<li>Java: <code>abstract class</code> … <code>extends</code>. Python: <code>class X(ABC):</code> + <code>@abstractmethod</code>.</li>
+</ul>
+</div>
+</div>
+<p class="small"><b>VL6 Übung 4 (Geräteverwaltung, Teil 1):</b> abstrakte Klasse <code>Geraet(ABC)</code> mit <code>hersteller</code>, <code>modell</code>, <code>baujahr</code>, konkreter Methode <code>einschalten()</code> und abstrakter Methode <code>status() -&gt; str</code>; <code>__repr__</code> nur einmal in <code>Geraet</code> mit <code>type(self).__name__</code>. Unterklassen <code>Laptop</code> und <code>Smartphone</code> (<code>akku_prozent</code>) sowie <code>Router</code> (<code>verbundene_geraete</code>). Ausgabe laut Musterlösung z. B. <code>Laptop(hersteller='Lenovo', modell='ThinkPad T14', baujahr=2023) - Akku 80 %</code> und <code>Lenovo ThinkPad T14 wird eingeschaltet.</code> <code>Geraet(…)</code> direkt: ty <code>call-non-callable</code>, Python <code>TypeError: Can't instantiate abstract class Geraet …</code>. Eigene Methoden wie <code>screenshot()</code> in einer <code>list[Geraet]</code> nur nach <code>isinstance(geraet, Smartphone)</code>.</p>
+
+<h2 id="s66">6.6 Fähigkeiten statt Interfaces</h2>
+<p>Rechnung, Lieferschein und Newsletter <i>sind</i> Dokumente: eine <b>Kategorie</b> (Oberklasse). „Kann gedruckt werden“ und „kann versendet werden“ sind <b>Fähigkeiten</b>, die quer durch die Klassen gehen (F. 50). Java erlaubt nur eine Oberklasse und nimmt dafür <code>interface</code> + <code>implements</code>. Python hat kein <code>interface</code>, erlaubt aber <b>mehrere Oberklassen</b>. Eine Fähigkeit ist eine <b>abstrakte Klasse mit nur abstrakten Methoden</b>, ohne Attribute und ohne <code>__init__</code> (F. 51/52). In der Klammer steht die <b>Kategorie zuerst</b>, dann die Fähigkeiten.</p>
+<div class="cols">
+<div class="ex"><pre class="code">from abc import ABC, abstractmethod
+from typing import override
+
+class Druckbar(ABC):  # Fähigkeit
+    @abstractmethod
+    def drucken(self) -&gt; None: ...
+
+class Versendbar(ABC):  # Fähigkeit
+    @abstractmethod
+    def versenden(self, email: str) -&gt; None: ...
+
+class Dokument:  # Kategorie
+    def __init__(self, nummer: str) -&gt; None:
+        self.nummer = nummer
+
+class Rechnung(Dokument, Druckbar, Versendbar):  # Kategorie zuerst
+    @override
+    def drucken(self) -&gt; None:
+        print(f"Rechnung {self.nummer} wird gedruckt")
+
+    @override
+    def versenden(self, email: str) -&gt; None:
+        print(f"Rechnung {self.nummer} geht an {email}")
+
+class Lieferschein(Dokument, Druckbar):  # kann nur drucken
+    @override
+    def drucken(self) -&gt; None:
+        print(f"Lieferschein {self.nummer} wird gedruckt")
+
+class Newsletter(Dokument, Versendbar):  # kann nur versenden
+    @override
+    def versenden(self, email: str) -&gt; None:
+        print(f"Newsletter {self.nummer} geht an {email}")
+
+ablage: list[Dokument] = [Rechnung("R-1001"), Lieferschein("L-2001"), Newsletter("N-11")]
+for dokument in ablage:
+    if isinstance(dokument, Druckbar):
+        dokument.drucken()
+    if isinstance(dokument, Versendbar):
+        dokument.versenden("einkauf@kunde.de")</pre><pre class="out">Rechnung R-1001 wird gedruckt
+Rechnung R-1001 geht an einkauf@kunde.de
+Lieferschein L-2001 wird gedruckt
+Newsletter N-11 geht an einkauf@kunde.de</pre></div>
+<div>
+<p><b>Rundentabelle</b> (F. 52–55):</p>
+<table>
+<tr><th>Runde</th><th><code>dokument</code></th><th>Druckbar?</th><th>Versendbar?</th></tr>
+<tr><td>1</td><td>Rechnung R-1001</td><td>ja → gedruckt</td><td>ja → geht an …</td></tr>
+<tr><td>2</td><td>Lieferschein L-2001</td><td>ja → gedruckt</td><td>nein → nichts</td></tr>
+<tr><td>3</td><td>Newsletter N-11</td><td>nein → nichts</td><td>ja → geht an …</td></tr>
+</table>
+<p>Ohne die <code>isinstance</code>-Prüfung gäbe es in Runde 2 <code>AttributeError: 'Lieferschein' object has no attribute 'versenden'</code>. Kommt eine neue Klasse <code>Mahnung</code> dazu, bleibt die Schleife unverändert.</p>
+<table>
+<tr><th>(F. 56/57)</th><th>Abstrakte Klasse (Kategorie)</th><th>Fähigkeit (Interface)</th></tr>
+<tr><td>Beziehung</td><td>„ist ein …“</td><td>„kann …“</td></tr>
+<tr><td>Methoden</td><td>konkrete und abstrakte</td><td>nur abstrakte</td></tr>
+<tr><td>Attribute, <code>__init__</code></td><td>ja</td><td>nein</td></tr>
+<tr><td>wie viele je Klasse?</td><td>eine</td><td>beliebig viele</td></tr>
+<tr><td>Java</td><td><code>abstract class</code>, <code>extends</code></td><td><code>interface</code>, <code>implements</code></td></tr>
+</table>
+<p class="small">Gemeinsam: Beide erben von <code>ABC</code>, von beiden gibt es keine Objekte. Mehrere Oberklassen nutzt die Vorlesung <b>nur</b> für Fähigkeiten. Ausblick: <code>typing.Protocol</code> erfüllt schon, wer die Methoden hat, ohne zu erben (Duck Typing, das ty prüft); ob das Klausurstoff ist, ist offen.</p>
+</div>
+</div>
+<p class="small"><b>VL6 Übung 5 (Geräteverwaltung, Teil 2):</b> Fähigkeiten <code>Aufladbar</code> (<code>aufladen()</code>) und <code>Netzwerkfaehig</code> (<code>verbinden(netzwerk)</code>). <code>class Laptop(Geraet, Aufladbar, Netzwerkfaehig)</code>, <code>Router(Geraet, Netzwerkfaehig)</code>, <code>Monitor(Geraet)</code> ohne Fähigkeit und ohne eigenes <code>__init__</code>. In der Schleife lädt <code>isinstance(geraet, Aufladbar)</code> nur Laptop und Smartphone (Akku 100 %), der Monitor bekommt weder Ladung noch Fehler. <code>alle_aufladen(inventar) -&gt; int</code> zählt mit <code>anzahl += 1</code> nur im <code>if</code>-Zweig und liefert <code>2</code>.</p>
+
+<h2 id="s67">6.7 Wiederholung VL1–VL6: Fitnessstudio</h2>
+<div class="cols">
+<div>
+<p>Seit 09.11. in Moodle (15 Folien und 7 Python-Dateien). Ein Beispiel zieht sich durch alle Vorlesungen, zu jeder gibt es eine Theorie- und eine Beispielfolie mit „Was wird ausgegeben?“. Ob sie am 06.11. gezeigt wurde, ist unklar.</p>
+<table>
+<tr><th>VL</th><th>was wiederholt wird</th></tr>
+<tr><td>1</td><td>Check-in als Algorithmus: terminierend, determiniert; unlesbare Karte nicht abgedeckt → <b>nicht vollständig</b></td></tr>
+<tr><td>2</td><td>Datentypen, Geld als <code>Decimal("19.90")</code>, <code>//</code> und <code>%</code></td></tr>
+<tr><td>3</td><td>Minuten aufsummieren; <code>if</code>/<code>elif</code>: „Stammgast“ ab 8, „Regelmäßig dabei“ ab 4 Besuchen; der erste wahre Zweig gewinnt</td></tr>
+<tr><td>4</td><td><code>monatsbeitrag(tarif, studierend=False)</code>, Schlüsselwortargument; <code>gewicht(woche)</code> rekursiv mit Basisfall</td></tr>
+<tr><td>5</td><td><code>Mitgliedschaft</code> mit Property <code>beitrag</code>, Setter lehnt negative Werte ab</td></tr>
+<tr><td>6</td><td><code>Mitgliedschaft(ABC)</code>, <code>Basic</code>, <code>Premium</code>, <code>Student(Basic)</code> mit <code>super()</code> − 5 Euro</td></tr>
+</table>
+</div>
+<div>
+<p>Eigenes Beispiel im gleichen Stil:</p>
+<div class="ex"><pre class="code">from abc import ABC, abstractmethod
+from decimal import Decimal
+
+class Tarif(ABC):
+    def __init__(self, name: str) -&gt; None:
+        self.name = name
+        self.besuche: list[int] = []  # Minuten je Besuch
+
+    @abstractmethod
+    def monatsbeitrag(self) -&gt; Decimal: ...
+
+    def einchecken(self, minuten: int) -&gt; None:
+        self.besuche.append(minuten)
+
+class Basic(Tarif):
+    def monatsbeitrag(self) -&gt; Decimal:
+        return Decimal("24.90")
+
+class Student(Basic):
+    def monatsbeitrag(self) -&gt; Decimal:
+        return super().monatsbeitrag() - Decimal("5.00")
+
+def gewicht(woche: int) -&gt; float:
+    if woche == 1:  # Basisfall
+        return 40.0
+    return gewicht(woche - 1) + 2.5
+
+mia = Student("Mia")
+for minuten in [50, 70, 40]:
+    mia.einchecken(minuten)
+print(mia.name, mia.monatsbeitrag(), len(mia.besuche), sum(mia.besuche))
+print(gewicht(3))
+print(0.1 + 0.2, Decimal("0.1") + Decimal("0.2"))
+print(130 // 60, 130 % 60)</pre><pre class="out">Mia 19.90 3 160
+45.0
+0.30000000000000004 0.3
+2 10</pre></div>
+<p class="small"><code>Student</code> holt mit <code>super().monatsbeitrag()</code> den Basic-Preis: 24.90 − 5.00 = 19.90. <code>gewicht(3)</code> = 40 + 2,5 + 2,5. <code>gewicht(0)</code> erreicht den Basisfall nie → <code>RecursionError</code>; sicherer ist <code>if woche &lt;= 1:</code>. <code>Tarif("Max")</code> → <code>TypeError</code> (abstrakt).</p>
+</div>
+</div>
+
+<div class="box trap"><span class="t">Typische Fehler und Fallen</span>
+<ul>
+<li><code>super().__init__(…)</code> im eigenen <code>__init__</code> vergessen → <code>AttributeError</code> erst später; ty meldet nichts. <code>super.__init__</code> ohne Klammern → <code>TypeError</code>.</li>
+<li>In der Unterklasse ein geerbtes Attribut versehentlich neu belegen (<code>self.kontostand = laufzeit</code>): Ober- und Unterklasse teilen sich <b>dasselbe</b> Attribut (A.2).</li>
+<li>Überladen und Überschreiben verwechseln (Klausurklassiker). <code>from typing import override</code> vergessen → <code>NameError</code>.</li>
+<li>Vererbung für „hat ein“ benutzen, mehrere Oberklassen für mehrere Kategorien statt nur für Fähigkeiten.</li>
+<li>Unterklassen-Attribut über die Oberklassen-Typangabe benutzen (<code>zahlungsart.nummer</code>) → ty <code>unresolved-attribute</code>; erst <code>isinstance</code>.</li>
+<li>„Duck Typing heißt, ty ist egal“: Das Programm läuft, ty meldet trotzdem <code>invalid-argument-type</code>.</li>
+<li>Nur eine Zutat für abstrakt (<code>@abstractmethod</code> ohne <code>(ABC)</code>) → Python verhindert das Erzeugen nicht.</li>
+<li>Den <code>TypeError</code> einer abstrakten Klasse „erst beim Aufruf“ erwarten: Er kommt beim <b>Erzeugen</b>.</li>
+<li><code>isinstance</code> vor einer Fähigkeits-Methode vergessen → <code>AttributeError</code>. <code>__repr__</code> mit festem Klassennamen statt <code>type(self).__name__</code>.</li>
+</ul>
+</div>
+<div class="box must"><span class="t">Das musst du können</span>
+<ul>
+<li>„ist ein“ von „hat ein“ unterscheiden und eine Unterklasse mit <code>super().__init__(…)</code> schreiben</li>
+<li>eine Methode überschreiben, mit <code>super().methode()</code> ergänzen und <code>@override</code> erklären; Überladen und Überschreiben abgrenzen</li>
+<li>für einen Aufruf vorhersagen, welche Methode läuft (Methodensuche, <code>__mro__</code>), und <code>isinstance</code>/<code>type</code> auswerten</li>
+<li>Polymorphie an einer Schleife oder Funktion über eine Liste der Oberklasse erklären; Typangabe vs. Objekt, Duck Typing</li>
+<li><code>__repr__</code> mit <code>type(self).__name__</code> und <code>!r</code> schreiben; sagen, was <code>object</code> liefert</li>
+<li>eine abstrakte Klasse mit <code>ABC</code> und <code>@abstractmethod</code> schreiben und sagen, wann welcher Fehler kommt</li>
+<li>Fähigkeiten als abstrakte Klassen mit mehreren Oberklassen umsetzen und mit <code>isinstance</code> prüfen</li>
+</ul>
+</div>
+
+
+<!-- ================================================================ VL7 -->
+<h1 id="k7"><span class="vl">VL7</span>Projekt Kaffeeshop</h1>
+<div class="box info"><span class="t">Stand und Herkunft</span>VL7 (Folien „vl07_projekt_onlineshop“, 23 Folien) bringt keinen neuen Stoff, sondern ein Projekt. Es beginnt laut Plan am <b>06.11.</b> mit Stufe 1; Stufe 2 und 3 folgen eher am nächsten Termin. Eine offizielle Musterlösung gibt es erst nach dem Projekt (F. 22). Der Code hier ist deshalb eine <b>eigene Lösung</b> der Folienaufgaben, <code>Produkt</code> ist eine vereinfachte Fassung der Datei aus dem Startpaket. <b>Für die Klausur</b> zählen die Muster darin: ein Element in einer Liste finden, Treffer sammeln, aufsummieren, Bestand prüfen, ein Objekt über zwei Namen verändern.</div>
+
+<h2 id="s71">7.1 Aufgabe, Ablauf und Startpaket</h2>
+<div class="cols">
+<div>
+<p>Zu zweit entsteht ein kleiner Onlineshop für Kaffee und Zubehör in der Kommandozeile: Sortiment ansehen, suchen, in den Warenkorb legen, bestellen. Dabei kommt alles zusammen: Klassen, Properties, <code>@dataclass</code> (VL5), Listen, Schleifen, <code>match</code> (VL3), Funktionen und Module (VL4/5), Vererbung, abstrakte Klassen, Polymorphie (VL6) (F. 3). <b>Ziel: Am Ende läuft bei jedem Team mindestens Stufe 1.</b></p>
+<p><b>Ablauf (F. 4):</b> Aufgabe und Startpaket → <b>Stufe 1</b> Lager, Warenkorb, Bestellung (Pflicht) → Zwischenstand (zwei Teams zeigen) → <b>Stufe 2</b> Produktarten und Zahlungsarten → <b>Stufe 3</b> Zusatz nach Wahl → Vorstellung (je ca. 5 Min.) und Musterlösung.</p>
+<p><b>Pair Programming (F. 5):</b> ein Rechner, eine Person tippt, die andere liest und denkt mit; etwa alle 30 Minuten wechseln; <b>beide</b> müssen jede Zeile erklären können. Weiter ohne KI, prüfen mit <code>uv run ruff check .</code> und <code>uv run ty check</code>.</p>
+</div>
+<div>
+<table>
+<tr><th>Datei (F. 8)</th><th>Inhalt</th><th>du</th></tr>
+<tr><td><code>produkt.py</code></td><td><code>Produkt</code> aus VL5 Übung 4 plus Artikelnummer: Properties <code>preis</code>, <code>bestand</code>, <code>bruttopreis</code> (19 %), <code>einlagern()</code>, <code>verkaufen()</code></td><td>benutzen</td></tr>
+<tr><td><code>daten.py</code></td><td><code>beispielsortiment()</code>: 8 Produkte, 101–104 Lebensmittel, 201–204 Zubehör</td><td>benutzen</td></tr>
+<tr><td><code>main.py</code></td><td>Menü mit <code>while True</code> + <code>match</code>, Punkt 1 und 0, fertige Funktion <code>zahl_einlesen()</code></td><td>ausbauen</td></tr>
+<tr><td><code>lager.py</code>, <code>warenkorb.py</code></td><td>gibt es noch nicht</td><td>schreiben</td></tr>
+</table>
+<figure style="margin:1mm 0 0">
+<svg viewBox="0 0 400 150" width="390" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="a7" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker></defs>
+<g font-size="11">
+<rect x="5" y="10" width="95" height="26" fill="#e4ebf4" stroke="#333"/><text x="52" y="27" text-anchor="middle" font-weight="bold">Lager</text>
+<rect x="150" y="10" width="95" height="26" fill="#e4ebf4" stroke="#333"/><text x="197" y="27" text-anchor="middle" font-weight="bold">Produkt</text>
+<rect x="5" y="100" width="95" height="26" fill="#e4ebf4" stroke="#333"/><text x="52" y="117" text-anchor="middle" font-weight="bold">Warenkorb</text>
+<rect x="150" y="100" width="95" height="26" fill="#e4ebf4" stroke="#333"/><text x="197" y="117" text-anchor="middle" font-weight="bold">Position</text>
+<rect x="300" y="100" width="95" height="26" fill="#e4ebf4" stroke="#333"/><text x="347" y="117" text-anchor="middle" font-weight="bold">Kunde</text>
+<line x1="100" y1="23" x2="148" y2="23" stroke="#333" marker-end="url(#a7)"/><text x="124" y="17" text-anchor="middle" font-style="italic">viele</text>
+<line x1="100" y1="113" x2="148" y2="113" stroke="#333" marker-end="url(#a7)"/><text x="124" y="107" text-anchor="middle" font-style="italic">viele</text>
+<line x1="197" y1="100" x2="197" y2="38" stroke="#333" marker-end="url(#a7)"/><text x="203" y="73" font-style="italic">ein + menge</text>
+<path d="M52 126 V142 H347 V128" fill="none" stroke="#333" marker-end="url(#a7)"/><text x="270" y="139" text-anchor="middle" font-style="italic">einen</text>
+</g>
+</svg>
+<figcaption>Stufe 1: lauter Hat-ein-Beziehungen, keine Vererbung (F. 7).</figcaption>
+</figure>
+</div>
+</div>
+<div class="cols">
+<div>
+<p><b>Die vereinfachte <code>produkt.py</code></b>, mit der alle Beispiele dieses Kapitels laufen. <code>daten.py</code> legt damit acht Produkte an, z. B. <code>Produkt(101, "Kaffee Hausmischung 1 kg", Decimal("12.99"), 40)</code> und <code>Produkt(203, "French Press 1 l", Decimal("20.90"), 3)</code>.</p>
+<p>Bild im Kopf: Das Lager ist ein Regal voller Produkte. Im Warenkorb liegen keine Produkte direkt, sondern Zettel (Positionen): „3 × French Press“. Ein Zettel hat ein Produkt und eine Menge.</p>
+<p class="small">Bruttopreis: 12.99 · 1.19 = 15.4581 → <code>quantize(Decimal("0.01"))</code> → 15.46. French Press: 20.90 · 1.19 = 24.871 → 24.87.</p>
+</div>
+<pre class="code">from decimal import Decimal
+from typing import Final
+
+MWST_SATZ: Final = Decimal("0.19")
+
+class Produkt:
+    def __init__(self, nummer: int, name: str, preis: Decimal, bestand: int) -&gt; None:
+        self.nummer = nummer
+        self.name = name
+        self._preis = preis
+        self._bestand = bestand
+
+    @property
+    def bestand(self) -&gt; int:
+        return self._bestand
+
+    @property
+    def bruttopreis(self) -&gt; Decimal:
+        return (self._preis * (1 + MWST_SATZ)).quantize(Decimal("0.01"))
+
+    def einlagern(self, menge: int) -&gt; None:
+        self._bestand += menge
+
+    def verkaufen(self, menge: int) -&gt; bool:
+        if menge &gt; self._bestand:
+            return False
+        self._bestand -= menge
+        return True
+
+    def __str__(self) -&gt; str:
+        return f"{self.nummer}  {self.name}: {self.bruttopreis} Euro ({self._bestand} auf Lager)"</pre>
+</div>
+
+<h2 id="s72">7.2 Stufe 1, Teil 1: Das Lager (finden und suchen)</h2>
+<p>Aufgabe (F. 10): <code>Lager(produkte)</code> mit <code>anzeigen()</code>; <code>finden(nummer) -&gt; Produkt | None</code> liefert das Produkt mit dieser Artikelnummer oder <code>None</code>; <code>suchen(text) -&gt; list[Produkt]</code> liefert alle Produkte, deren Name den Text enthält, ohne Rücksicht auf Groß- und Kleinschreibung. In <code>main()</code> ein <code>Lager(beispielsortiment())</code> anlegen und Menüpunkt 1 und 2 damit bauen.</p>
+<div class="cols">
+<pre class="code">from produkt import Produkt
+
+class Lager:
+    def __init__(self, produkte: list[Produkt]) -&gt; None:
+        self.produkte = produkte
+
+    def anzeigen(self) -&gt; None:
+        for produkt in self.produkte:
+            print(produkt)
+
+    def finden(self, nummer: int) -&gt; Produkt | None:
+        for produkt in self.produkte:
+            if produkt.nummer == nummer:
+                return produkt  # gefunden: sofort raus
+        return None  # erst NACH der Schleife
+
+    def suchen(self, text: str) -&gt; list[Produkt]:
+        treffer: list[Produkt] = []
+        for produkt in self.produkte:
+            if text.lower() in produkt.name.lower():
+                treffer.append(produkt)
+        return treffer</pre>
+<div class="ex"><pre class="code">from daten import beispielsortiment
+from lager import Lager
+
+lager = Lager(beispielsortiment())
+print(lager.finden(203))
+print(lager.finden(999))
+for produkt in lager.suchen("kaffee"):
+    print(produkt.name)
+print(lager.suchen("Zucker"))</pre><pre class="out">203  French Press 1 l: 24.87 Euro (3 auf Lager)
+None
+Kaffee Hausmischung 1 kg
+Kaffeemühle mit Handkurbel
+[]</pre></div>
+</div>
+<div class="cols">
+<div>
+<p><b>Rundentabelle für <code>finden(203)</code></b> (Reihenfolge 101, 102, 103, 104, 201, 202, 203, 204):</p>
+<table>
+<tr><th>Runde</th><th><code>produkt.nummer</code></th><th><code>== 203</code>?</th><th>was passiert</th></tr>
+<tr><td>1–6</td><td>101 … 202</td><td>nein</td><td>weiter</td></tr>
+<tr><td>7</td><td>203</td><td>ja</td><td><code>return produkt</code>, Methode endet sofort, Runde 8 gibt es nicht</td></tr>
+</table>
+<p>Bei <code>finden(999)</code> ist die Antwort in allen acht Runden „nein“, erst <b>nach</b> der Schleife kommt <code>return None</code>. <code>Produkt | None</code> heißt: entweder ein Produkt oder nichts. Wer <code>finden()</code> aufruft, muss <code>None</code> abfangen (<code>if produkt is None:</code>), sonst <code>AttributeError: 'NoneType' object has no attribute 'name'</code>.</p>
+</div>
+<div>
+<table>
+<tr><th>Muster</th><th>vor der Schleife</th><th>in der Schleife</th><th>nach der Schleife</th></tr>
+<tr><td><b>finden</b> (erstes)</td><td>–</td><td>Treffer → sofort <code>return</code></td><td><code>return None</code></td></tr>
+<tr><td><b>sammeln</b> (alle)</td><td><code>treffer = []</code></td><td>Treffer → <code>append</code></td><td><code>return treffer</code></td></tr>
+<tr><td><b>summieren</b></td><td><code>summe = 0</code></td><td><code>summe += …</code></td><td><code>return summe</code></td></tr>
+<tr><td><b>zählen</b></td><td><code>anzahl = 0</code></td><td>Treffer → <code>+= 1</code></td><td><code>return anzahl</code></td></tr>
+</table>
+<p><code>suchen("kaffee")</code>: <code>.lower()</code> macht beide Texte klein, <code>in</code> prüft, ob der Text im Namen steckt. Treffer: 101 und 201. Kein Treffer ergibt <code>[]</code>, nicht <code>None</code>; die Schleife im Menü läuft dann null Runden.</p>
+<p><b>Häufigster Fehler:</b> <code>else: return None</code> direkt unter dem <code>if</code>. Dann endet die Suche nach dem ersten falschen Produkt, 203 wird nie gefunden (A.2). <code>return None</code> gehört eine Stufe weniger eingerückt hinter die Schleife.</p>
+</div>
+</div>
+
+<h2 id="s73">7.3 Stufe 1, Teil 2: Der Warenkorb und <code>hinzufuegen()</code></h2>
+<p>Aufgabe (F. 12): <code>Kunde</code> und <code>Position</code> aus VL5 Übung 5 übernehmen, <code>summe()</code> rechnet jetzt mit dem <code>bruttopreis</code>. <code>Warenkorb(kunde)</code> mit leerer Liste <code>positionen</code>. <code>hinzufuegen(produkt, menge) -&gt; bool</code> liefert <code>False</code>, wenn die Menge nicht auf Lager ist; <b>was schon im Korb liegt, zählt mit</b>. Liegt das Produkt schon im Korb, wird die <b>Menge der vorhandenen Position erhöht</b> (keine zweite Position). Dazu <code>entfernen(nummer) -&gt; bool</code>, <code>gesamtsumme()</code>, <code>ist_leer()</code>, <code>anzeigen()</code>. <code>position_zu()</code> und <code>menge_im_korb()</code> sind eigene Hilfsmethoden, gebaut wie <code>finden()</code>.</p>
+<div class="cols tight">
+<pre class="code">from dataclasses import dataclass
+from decimal import Decimal
+
+from produkt import Produkt
+
+@dataclass
+class Kunde:
+    name: str
+    email: str
+
+@dataclass
+class Position:
+    produkt: Produkt
+    menge: int
+
+    def summe(self) -&gt; Decimal:
+        return self.produkt.bruttopreis * self.menge
+
+class Warenkorb:
+    def __init__(self, kunde: Kunde) -&gt; None:
+        self.kunde = kunde
+        self.positionen: list[Position] = []
+
+    def position_zu(self, nummer: int) -&gt; Position | None:
+        for position in self.positionen:
+            if position.produkt.nummer == nummer:
+                return position
+        return None
+
+    def menge_im_korb(self, nummer: int) -&gt; int:
+        position = self.position_zu(nummer)
+        if position is None:
+            return 0
+        return position.menge</pre>
+<div><p class="small" style="margin:0">… Fortsetzung der Klasse <code>Warenkorb</code>:</p>
+<pre class="code">    def hinzufuegen(self, produkt: Produkt, menge: int) -&gt; bool:
+        schon_im_korb = self.menge_im_korb(produkt.nummer)
+        if schon_im_korb + menge &gt; produkt.bestand:
+            return False  # zu wenig da
+        position = self.position_zu(produkt.nummer)
+        if position is None:  # neuer Zettel
+            neu = Position(produkt, menge)
+            self.positionen.append(neu)
+        else:  # vorhandenen erhöhen
+            position.menge += menge
+        return True
+
+    def entfernen(self, nummer: int) -&gt; bool:
+        position = self.position_zu(nummer)
+        if position is None:
+            return False
+        self.positionen.remove(position)
+        return True
+
+    def gesamtsumme(self) -&gt; Decimal:
+        summe = Decimal(0)
+        for position in self.positionen:
+            summe += position.summe()
+        return summe
+
+    def ist_leer(self) -&gt; bool:
+        return len(self.positionen) == 0
+
+    def anzeigen(self) -&gt; None:
+        print(f"Warenkorb von {self.kunde.name}")
+        for position in self.positionen:
+            print(f"{position.menge} x {position.produkt.name}: {position.summe()} Euro")
+        print(f"Summe: {self.gesamtsumme()} Euro")</pre></div>
+</div>
+<div class="ex"><pre class="code">from daten import beispielsortiment
+from lager import Lager
+from warenkorb import Kunde, Warenkorb
+
+lager = Lager(beispielsortiment())
+korb = Warenkorb(Kunde("Anna Berger", "anna.berger@example.com"))
+fp = lager.finden(203)  # French Press, Bestand 3
+kaffee = lager.finden(101)  # Bestand 40
+assert fp is not None and kaffee is not None
+print(korb.hinzufuegen(fp, 5), korb.hinzufuegen(fp, 3), korb.hinzufuegen(fp, 1))
+print(korb.hinzufuegen(kaffee, 2), korb.hinzufuegen(kaffee, 1))
+print(len(korb.positionen))
+korb.anzeigen()</pre><pre class="out">False True False
+True True
+2
+Warenkorb von Anna Berger
+3 x French Press 1 l: 74.61 Euro
+3 x Kaffee Hausmischung 1 kg: 46.38 Euro
+Summe: 120.99 Euro</pre></div>
+<div class="cols">
+<div>
+<p><b><code>hinzufuegen()</code> in drei Schritten:</b> (1) Was liegt schon im Korb? (2) Reicht der Bestand für <b>beides zusammen</b>? Wenn nicht: <code>return False</code>, nichts wird geändert. (3) Zettel neu anhängen oder vorhandene Menge erhöhen, dann <code>return True</code>.</p>
+<p>Am Ende <b>zwei</b> Positionen, nicht drei. <code>position.menge += menge</code> ändert das Objekt, das in der Liste liegt: Name und Listeneintrag zeigen auf <b>dasselbe</b> Objekt (Kap. 5.4). <code>gesamtsumme()</code>: 0 → 74.61 (3 · 24.87) → 120.99 (+ 3 · 15.46).</p>
+</div>
+<table>
+<tr><th><code>hinzufuegen(…)</code></th><th>schon im Korb</th><th>Prüfung</th><th>Ergebnis</th></tr>
+<tr><td>fp, 5</td><td>0</td><td>0 + 5 &gt; 3 → ja</td><td><code>False</code></td></tr>
+<tr><td>fp, 3</td><td>0</td><td>0 + 3 &gt; 3 → nein</td><td><code>True</code>, neue Position</td></tr>
+<tr><td>fp, 1</td><td>3</td><td>3 + 1 &gt; 3 → ja</td><td><code>False</code></td></tr>
+<tr><td>kaffee, 2</td><td>0</td><td>0 + 2 &gt; 40 → nein</td><td><code>True</code>, neue Position</td></tr>
+<tr><td>kaffee, 1</td><td>2</td><td>2 + 1 &gt; 40 → nein</td><td><code>True</code>, Menge 2 → 3</td></tr>
+</table>
+</div>
+
+<div class="box trap"><span class="t">Die zwei typischen Fehler in <code>hinzufuegen()</code></span>Nur <code>menge &gt; produkt.bestand</code> prüfen und die Menge im Korb vergessen: Dann gehen „erst 3, dann noch 1 French Press“ beide durch, im Korb liegen 4 von 3. Oder immer <code>append</code>, ohne nach einem vorhandenen Zettel zu schauen: Dann steht Kaffee zweimal als zwei Positionen im Korb. <code>hinzufuegen()</code> liefert nur <code>True</code>/<code>False</code>, die Meldung schreibt <code>main.py</code> (siehe 4.9).</div>
+
+<h2 id="s74">7.4 Stufe 1, Teil 3: Das Menü in <code>main.py</code></h2>
+<p>Aufgabe (F. 11/13): am Anfang Name und E-Mail abfragen → <code>Kunde</code> + <code>Warenkorb</code>. Menü 3 „In den Warenkorb“ (Nummer und Menge mit <code>zahl_einlesen()</code>, Meldung bei unbekannter Nummer oder zu großer Menge), 4 anzeigen, 5 entfernen, 6 bestellen (für jede Position <code>verkaufen()</code>, Summe ausgeben, Korb leeren; leerer Korb → nicht bestellbar). Tipp der Folie: <b>je Menüpunkt eine eigene Funktion</b>, dann bleibt die Schleife in <code>main()</code> kurz. Gekürzt (ohne Menütext, Punkte 2 und 5 weggelassen):</p>
+<div class="cols tight" style="grid-template-columns:1.45fr 1fr">
+<pre class="code">from daten import beispielsortiment
+from lager import Lager
+from warenkorb import Kunde, Warenkorb
+
+def zahl_einlesen(frage: str) -&gt; int:  # fertig (Startpaket)
+    while True:
+        eingabe = input(frage)
+        if eingabe.isdigit():  # nur Ziffern?
+            return int(eingabe)
+        print("Bitte eine ganze Zahl eingeben.")
+
+def in_den_warenkorb(lager: Lager, korb: Warenkorb) -&gt; None:
+    produkt = lager.finden(zahl_einlesen("Artikelnummer: "))
+    if produkt is None:
+        print("Diese Artikelnummer gibt es nicht.")
+        return  # nur dieser Menüpunkt endet
+    menge = zahl_einlesen("Menge: ")
+    if korb.hinzufuegen(produkt, menge):
+        print(f"{menge} x {produkt.name} liegt im Warenkorb.")
+    else:
+        print(f"Das geht nicht. Auf Lager: {produkt.bestand}, "
+              f"schon im Warenkorb: {korb.menge_im_korb(produkt.nummer)}.")
+
+def bestellen(korb: Warenkorb) -&gt; None:
+    if korb.ist_leer():
+        print("Der Warenkorb ist leer.")
+        return
+    for position in korb.positionen:
+        position.produkt.verkaufen(position.menge)
+    print(f"Vielen Dank, {korb.kunde.name}! "
+          f"Ihre Bestellung über {korb.gesamtsumme()} Euro.")
+    korb.positionen = []  # neue Liste (Stufe 2!)
+
+def main() -&gt; None:
+    # alles VOR der Schleife anlegen
+    lager = Lager(beispielsortiment())
+    kunde = Kunde(input("Ihr Name: "), input("Ihre E-Mail: "))
+    korb = Warenkorb(kunde)
+    while True:
+        match input("Ihre Wahl: "):
+            case "1":
+                lager.anzeigen()
+            case "3":
+                in_den_warenkorb(lager, korb)
+            case "4":
+                korb.anzeigen()
+            case "6":
+                bestellen(korb)
+            case "0":
+                print("Auf Wiedersehen!")
+                break
+            case _:
+                print("Bitte eine Zahl aus dem Menü eingeben.")
+
+if __name__ == "__main__":
+    main()</pre>
+<div>
+<p class="small" style="margin-top:0">Ablauf am Terminal (echter Lauf, die Eingaben sind mit abgedruckt):</p>
+<pre class="out">Ihr Name: Anna Berger
+Ihre E-Mail: anna@example.com
+Ihre Wahl: 3
+Artikelnummer: abc
+Bitte eine ganze Zahl eingeben.
+Artikelnummer: 999
+Diese Artikelnummer gibt es nicht.
+Ihre Wahl: 3
+Artikelnummer: 203
+Menge: 3
+3 x French Press 1 l liegt im Warenkorb.
+Ihre Wahl: 3
+Artikelnummer: 203
+Menge: 1
+Das geht nicht. Auf Lager: 3, schon im Warenkorb: 3.
+Ihre Wahl: 3
+Artikelnummer: 101
+Menge: 2
+2 x Kaffee Hausmischung 1 kg liegt im Warenkorb.
+Ihre Wahl: 4
+Warenkorb von Anna Berger
+3 x French Press 1 l: 74.61 Euro
+2 x Kaffee Hausmischung 1 kg: 30.92 Euro
+Summe: 105.53 Euro
+Ihre Wahl: 6
+Vielen Dank, Anna Berger! Ihre Bestellung über 105.53 Euro.
+Ihre Wahl: 6
+Der Warenkorb ist leer.
+Ihre Wahl: 7
+Bitte eine Zahl aus dem Menü eingeben.
+Ihre Wahl: 0
+Auf Wiedersehen!</pre>
+<table>
+<tr><th>Runde</th><th><code>eingabe</code></th><th><code>.isdigit()</code></th><th>was passiert</th></tr>
+<tr><td>1</td><td><code>"abc"</code></td><td>False</td><td>Meldung, nächste Runde</td></tr>
+<tr><td>2</td><td><code>"999"</code></td><td>True</td><td><code>return 999</code>: Schleife und Funktion enden</td></tr>
+</table>
+</div>
+</div>
+<ul>
+<li><code>zahl_einlesen()</code>: <code>while True</code> läuft „für immer“, <code>return</code> ist der einzige Ausgang. Deshalb kein <code>ValueError</code> bei <code>abc</code>. Auch <code>-3</code> lehnt <code>isdigit()</code> ab.</li>
+<li>Lager, Kunde und Korb werden <b>einmal vor</b> der <code>while</code>-Schleife angelegt. Stünde <code>korb = Warenkorb(kunde)</code> in der Schleife, wäre der Korb nach jeder Menüwahl leer, wie bei <code>summe = 0</code> in der Schleife.</li>
+<li>Ein frühes <code>return</code> in einer Menüfunktion heißt nur „Schluss für diesen Menüpunkt“, das Menü läuft weiter. <code>break</code> im <code>case "0"</code> beendet die Schleife; <code>case _</code> fängt alles andere ab.</li>
+<li><code>Kunde(input(…), input(…))</code> fragt erst den Namen, dann die E-Mail ab: Argumente werden von links nach rechts ausgewertet.</li>
+<li><b>Testfälle von F. 13/14:</b> Suche „kaffee“ → 2 Treffer · 5 × French Press → abgelehnt · erst 3, dann 1 → das zweite Mal abgelehnt · zweimal Kaffee → eine Position · 999 oder <code>abc</code> → Meldung, kein Absturz · nach dem Bestellen Korb leer, Bestand kleiner · ruff und ty melden nichts.</li>
+</ul>
+
+<h2 id="s75">7.5 Stufe 2: Produktarten und Zahlungsarten</h2>
+<div class="cols">
+<div>
+<p>Jetzt kommt VL6 dazu. Für die meisten Lebensmittel gilt in Deutschland der ermäßigte Mehrwertsteuersatz von 7 %, auch für Kaffee und Tee (F. 16). <code>Produkt</code> wird abstrakt mit der abstrakten Methode <code>mwst_satz()</code>, <code>bruttopreis</code> rechnet mit <code>self.mwst_satz()</code>. Unterklassen: <code>Lebensmittel</code> (7 %) und <code>Zubehoer</code> (19 %). Kontrollwerte der Folie: Kaffee Hausmischung <b>13.90</b> statt 15.46 (12.99 · 1.07 = 13.8993), French Press bleibt <b>24.87</b>.</p>
+<p>Das ist Polymorphie: <code>bruttopreis</code> steht nur einmal in <code>Produkt</code>, welches <code>mwst_satz()</code> läuft, entscheidet das Objekt. Lager, Warenkorb und Menü ändern sich dafür nicht, <code>list[Produkt]</code> passt weiter, weil ein Lebensmittel ein Produkt ist. Ein „Produkt an sich“ lässt sich nicht mehr anlegen (<code>TypeError</code>).</p>
+<p><b>Zahlungsarten (F. 17):</b> <code>zahlungsarten.py</code> mit abstrakter <code>Zahlungsart</code> und <code>Kreditkarte</code>, <code>Lastschrift</code>, <code>Rechnungskauf</code> wie in 6.3/6.5; <code>@dataclass Bestellung</code> mit <code>nummer</code>, <code>kunde</code>, <code>positionen</code>, <code>zahlungsart</code>; die Bestellungen kommen in eine Liste in <code>main()</code>, Menüpunkt 7 „Meine Bestellungen“ zeigt sie (F. 19).</p>
+</div>
+<div class="ex"><pre class="code">from abc import ABC, abstractmethod
+from decimal import Decimal
+from typing import override
+
+class Produkt(ABC):
+    def __init__(self, nummer: int, name: str, preis: Decimal) -&gt; None:
+        self.nummer = nummer
+        self.name = name
+        self._preis = preis
+
+    @abstractmethod
+    def mwst_satz(self) -&gt; Decimal: ...
+
+    @property
+    def bruttopreis(self) -&gt; Decimal:  # steht nur EINMAL hier
+        return (self._preis * (1 + self.mwst_satz())).quantize(Decimal("0.01"))
+
+class Lebensmittel(Produkt):
+    @override
+    def mwst_satz(self) -&gt; Decimal:
+        return Decimal("0.07")
+
+class Zubehoer(Produkt):
+    @override
+    def mwst_satz(self) -&gt; Decimal:
+        return Decimal("0.19")
+
+sortiment: list[Produkt] = [
+    Lebensmittel(101, "Kaffee Hausmischung 1 kg", Decimal("12.99")),
+    Zubehoer(203, "French Press 1 l", Decimal("20.90")),
+]
+for produkt in sortiment:
+    print(produkt.nummer, produkt.name, produkt.bruttopreis)</pre><pre class="out">101 Kaffee Hausmischung 1 kg 13.90
+203 French Press 1 l 24.87</pre></div>
+</div>
+<div class="cols">
+<div class="box trap" style="margin-top:0"><span class="t">Achtung beim Leeren des Warenkorbs (F. 18)</span><code>Bestellung(1, korb.kunde, korb.positionen, …)</code> kopiert die Liste <b>nicht</b>. Korb und Bestellung zeigen danach auf <b>dieselbe</b> Liste. <code>korb.positionen.clear()</code> leert deshalb auch die Bestellung. Richtig ist <code>korb.positionen = []</code>: Der Korb bekommt eine neue Liste, die alte gehört nur noch der Bestellung. Vereinfacht mit Strings:</div>
+<div class="ex"><pre class="code">korb_positionen = ["2 x Kaffee"]
+bestellung_positionen = korb_positionen  # keine Kopie!
+korb_positionen.clear()  # leert die EINE Liste
+print(bestellung_positionen)
+
+korb_positionen = ["1 x Tee"]
+bestellung2_positionen = korb_positionen
+korb_positionen = []  # Korb bekommt neue Liste
+print(bestellung2_positionen, korb_positionen)</pre><pre class="out">[]
+['1 x Tee'] []</pre></div>
+</div>
+
+<h2 id="s76">7.6 Stufe 3: Zusatzaufgaben nach Wahl</h2>
+<p>Wer fertig ist, sucht sich etwas aus (F. 21): <b>Versandkosten</b> (4,90 €, ab 50 € Warenwert frei), <b>Rabattcode mit <code>match</code></b> (z. B. DHBW10: 10 %, WILLKOMMEN5: 5 € ab 25 €), <b>Mitarbeiterbereich</b> (Produkte mit weniger als 5 Stück anzeigen und mit <code>einlagern()</code> nachbestellen), <b>selbst sortieren</b> nach Preis ohne <code>sorted()</code>, <b>Tests mit pytest</b>. Die Skizzen sind eigene Lösungen.</p>
+<div class="cols">
+<div class="ex"><pre class="code">from decimal import Decimal
+from typing import Final
+
+VERSAND: Final = Decimal("4.90")
+VERSANDFREI_AB: Final = Decimal("50.00")
+
+def versandkosten(warenwert: Decimal) -&gt; Decimal:
+    if warenwert &gt;= VERSANDFREI_AB:
+        return Decimal("0.00")
+    return VERSAND
+
+def rabatt(code: str, warenwert: Decimal) -&gt; Decimal:
+    match code:
+        case "DHBW10":
+            return (warenwert * Decimal("0.10")).quantize(Decimal("0.01"))
+        case "WILLKOMMEN5" if warenwert &gt;= Decimal("25.00"):  # Guard
+            return Decimal("5.00")
+        case _:
+            return Decimal("0.00")
+
+print(versandkosten(Decimal("30.92")), versandkosten(Decimal("66.57")))
+print(rabatt("DHBW10", Decimal("66.57")), rabatt("WILLKOMMEN5", Decimal("30.92")))
+print(rabatt("WILLKOMMEN5", Decimal("16.90")), rabatt("GRATIS", Decimal("66.57")))</pre><pre class="out">4.90 0.00
+6.66 5.00
+0.00 0.00</pre></div>
+<div>
+<div class="ex"><pre class="code">def sortieren(preise: list[float]) -&gt; None:
+    for i in range(len(preise)):  # Platz i
+        guenstigstes = i
+        for j in range(i + 1, len(preise)): # Rest durchsuchen
+            if preise[j] &lt; preise[guenstigstes]:
+                guenstigstes = j
+        preise[i], preise[guenstigstes] = preise[guenstigstes], preise[i]
+        print(f"nach Runde {i + 1}: {preise}")
+
+sortieren([13.90, 8.45, 3.73, 2.99])</pre><pre class="out">nach Runde 1: [2.99, 8.45, 3.73, 13.9]
+nach Runde 2: [2.99, 3.73, 8.45, 13.9]
+nach Runde 3: [2.99, 3.73, 8.45, 13.9]
+nach Runde 4: [2.99, 3.73, 8.45, 13.9]</pre></div>
+<p class="small"><code>case "WILLKOMMEN5" if …</code> ist ein <code>case</code> mit Bedingung (Guard): Er passt nur, wenn auch die Bedingung wahr ist, sonst geht es zum nächsten <code>case</code>. 10 % von 66.57 = 6.657 → 6.66. Sortieren: Die innere Schleife sucht das günstigste ab Platz <code>i</code>, die äußere zählt die Plätze; Runde 1 tauscht Platz 0 ↔ 3, Runde 2 Platz 1 ↔ 2. In der Klausur eher als „Was steht nach Runde 2 in der Liste?“.</p>
+</div>
+</div>
+
+<div class="box trap"><span class="t">Typische Fehler und Fallen</span>
+<ul>
+<li><code>else: return None</code> in der Schleife von <code>finden()</code>: Suche endet nach Runde 1.</li>
+<li>Das Ergebnis von <code>finden()</code> nicht auf <code>None</code> prüfen → <code>AttributeError: 'NoneType' object has no attribute …</code>.</li>
+<li>In <code>hinzufuegen()</code> die Menge im Korb vergessen oder immer <code>append</code> statt Menge erhöhen.</li>
+<li>Kein Treffer bei <code>suchen()</code> ist <code>[]</code>, nicht <code>None</code>.</li>
+<li>Korb oder Startwert <b>in</b> der Menü- bzw. Summenschleife anlegen: wird jede Runde neu.</li>
+<li><code>korb.positionen.clear()</code> leert auch die Liste der Bestellung (zwei Namen, eine Liste).</li>
+<li>In Methoden der Klassen <code>print</code>/<code>input</code> statt <code>return</code>: dann nicht testbar.</li>
+</ul>
+</div>
+<div class="box must"><span class="t">Das musst du können</span>
+<ul>
+<li>die Klassen aus einem Text mit „hat ein“ ableiten (Lager, Warenkorb, Position, Kunde)</li>
+<li><code>finden()</code> (Rückgabe <code>Produkt | None</code>) und <code>suchen()</code> schreiben und mit einer Rundentabelle durchspielen</li>
+<li><code>hinzufuegen()</code> mit Mengenprüfung (inkl. Korb-Menge) und Erhöhen einer vorhandenen Position schreiben</li>
+<li>ein Menü mit <code>while True</code>, <code>match</code> und einer Funktion je Menüpunkt aufbauen</li>
+<li>erklären, warum <code>= []</code> und <code>clear()</code> sich unterscheiden; Stufe 2 als Anwendung von Abstraktion und Polymorphie erklären</li>
+</ul>
+</div>
+
+
 <!-- ================================================================ ANHANG -->
-<h1><span class="vl">Anhang</span>Fehlermeldungen und Selbsttest</h1>
-<h2>A.1 Fehlermeldungen auf einen Blick</h2>
+<h1 id="h43"><span class="vl">Anhang</span>Fehlermeldungen und Selbsttest</h1>
+<h2 id="h44">A.1 Fehlermeldungen auf einen Blick</h2>
+<p class="small">Aus Platzgründen ist bei langen Meldungen nur der Kern zitiert.</p>
 <table>
 <tr><th>Fehler</th><th>Typischer Auslöser</th><th>Kapitel</th></tr>
 <tr><td><code>SyntaxError</code></td><td>fehlende Klammer oder fehlender <code>:</code>, <code>x++</code>, <code>else</code> ohne <code>if</code>, Parameter ohne Standardwert hinter einem mit Standardwert</td><td>2, 3, 4</td></tr>
@@ -1823,10 +3009,14 @@ Summe: 36.45 Euro</pre></div></div>
 <tr><td><code>RecursionError</code></td><td>Abbruchbedingung fehlt oder wird nie erreicht, Tiefe über etwa 1000</td><td>4</td></tr>
 <tr><td><code>AssertionError</code></td><td><code>assert</code> mit falscher Bedingung</td><td>4</td></tr>
 <tr><td><code>AttributeError</code></td><td>Zuweisung an eine Property ohne Setter, nicht vorhandenes Attribut lesen</td><td>5</td></tr>
-<tr><td><i>kein Fehler!</i></td><td>Logikfehler (<code>5 + 2 / 2</code>), falscher Startwert, Tippfehler bei einer Attributzuweisung, <code>int(19.99 * 100)</code></td><td>2, 3, 5</td></tr>
+<tr><td><code>AttributeError</code> (VL6/7)</td><td><code>super().__init__</code> vergessen (<code>'Sparkonto' object has no attribute 'kontostand'</code>), Fähigkeits-Methode ohne <code>isinstance</code> (<code>'Lieferschein' object has no attribute 'versenden'</code>), Ergebnis von <code>finden()</code> nicht geprüft (<code>'NoneType' object has no attribute 'name'</code>)</td><td>6, 7</td></tr>
+<tr><td><code>TypeError</code> (VL6/7)</td><td>abstrakte Klasse erzeugen oder abstrakte Methode nicht umgesetzt (<code>Can't instantiate abstract class PayPal without an implementation for abstract method 'bezahlen'</code>), <code>super.__init__</code> ohne Klammern, <code>print</code> statt <code>return</code> in <code>__str__</code> (<code>__str__ returned non-string</code>), mit <code>None</code> rechnen (<code>unsupported operand type(s) for +: 'NoneType' and 'int'</code>)</td><td>4.9, 6, 7</td></tr>
+<tr><td><code>NameError</code> (VL6)</td><td><code>from typing import override</code> bzw. <code>from abc import ABC, abstractmethod</code> vergessen</td><td>6</td></tr>
+<tr><td><i>nur ty</i></td><td><code>invalid-explicit-override</code> (Tippfehler unter <code>@override</code>), <code>unresolved-attribute</code> (<code>zahlungsart.nummer</code> ohne <code>isinstance</code>), <code>invalid-argument-type</code> (Duck Typing ohne Erben), <code>call-non-callable</code> (abstrakte Klasse erzeugen), <code>invalid-return-type</code> (Zweig ohne <code>return</code>)</td><td>4, 6</td></tr>
+<tr><td><i>kein Fehler!</i></td><td>Logikfehler (<code>5 + 2 / 2</code>), falscher Startwert, Tippfehler bei einer Attributzuweisung, <code>int(19.99 * 100)</code>; <code>summe = 0</code> oder <code>return</code> in der Schleife, <code>else: return None</code> in <code>finden()</code>, <code>@abstractmethod</code> ohne <code>(ABC)</code>, <code>korb.positionen.clear()</code> statt <code>= []</code>, Unterklasse überschreibt geerbtes Attribut</td><td>2, 3, 5, 6, 7</td></tr>
 </table>
 
-<h2>A.2 Selbsttest: Was gibt das aus?</h2>
+<h2 id="h45">A.2 Selbsttest: Was gibt das aus?</h2>
 <p>Überleg dir zuerst selbst eine Antwort und schau dann auf die Ausgabe darunter.</p>
 <div class="cols">
 <div class="ex"><div class="ex"><pre class="code">print(17 // 5, 17 % 5, -17 // 5, 2 ** 3 ** 2)
@@ -1869,7 +3059,296 @@ print(a.nr, b.nr, Zaehler.stand, b is c)</pre><pre class="out">1 9 2 True</pre><
 </div>
 <p class="small">Hinweise: <code>**</code> wird von rechts ausgewertet (<code>3 ** 2</code> zuerst) <span class="erg">(Ergänzung)</span>. <code>10 // 4.0</code> ergibt bei einem float-Operanden auch einen float <span class="erg">(Ergänzung)</span>. <code>and</code> und <code>or</code> liefern einen der Operanden zurück, nicht unbedingt <code>True</code> oder <code>False</code> <span class="erg">(Ergänzung)</span>.</p>
 
-<div class="box info"><span class="t">Wird ergänzt</span>Nach VL6–VL11 kommen dazu: Vererbung, Polymorphismus und Abstraktion (OOP II–III), Standardbibliothek, Klausurvorbereitung, ein aktualisierter Abschnitt „Klausur auf einen Blick“ (Form, Hilfsmittel) und weitere Selbsttests.</div>
+<h3>Neu: Vererbung, Polymorphie, Kaffeeshop-Muster (VL6/VL7)</h3>
+<div class="cols">
+<div class="ex"><pre class="code">class Mitarbeiter:
+    def __init__(self, name: str, gehalt: int) -&gt; None:
+        self.name = name
+        self.gehalt = gehalt
+
+    def arbeiten(self) -&gt; str:
+        return f"{self.name} arbeitet."
+
+class Entwickler(Mitarbeiter):
+    def arbeiten(self) -&gt; str:
+        return f"{self.name} schreibt Code."
+
+class Manager(Mitarbeiter):
+    def __init__(self, name: str, gehalt: int, team: int) -&gt; None:
+        super().__init__(name, gehalt)
+        self.team = team
+
+team = [Mitarbeiter("Sara", 3600), Entwickler("Lena", 4200),
+        Manager("Tom", 5800, 2)]
+for person in team:
+    print(person.arbeiten())</pre><pre class="out">Sara arbeitet.
+Lena schreibt Code.
+Tom arbeitet.</pre></div>
+<div class="ex"><pre class="code">class Konto:
+    def __init__(self, inhaber: str, kontostand: int) -&gt; None:
+        self.inhaber = inhaber
+        self.kontostand = kontostand
+
+    def __str__(self) -&gt; str:
+        return f"Konto von {self.inhaber}: {self.kontostand} Euro"
+
+class Festgeld(Konto):
+    def __init__(self, inhaber: str, kontostand: int, laufzeit: int) -&gt; None:
+        super().__init__(inhaber, kontostand)
+        self.kontostand = laufzeit
+
+f = Festgeld("Anna", 5000, 12)
+print(f, isinstance(f, Konto))</pre><pre class="out">Konto von Anna: 12 Euro True</pre></div>
+</div>
+<div class="cols">
+<div class="ex"><pre class="code">from abc import ABC, abstractmethod
+
+class Tier(ABC):
+    @abstractmethod
+    def laut(self) -&gt; str: ...
+
+    def vorstellen(self) -&gt; str:
+        return "Ich sage " + self.laut()
+
+class Hund(Tier):
+    def laut(self) -&gt; str:
+        return "Wuff"
+
+class Katze(Tier):
+    pass
+
+print(Hund().vorstellen())
+print(Katze().vorstellen())</pre><pre class="out">Ich sage Wuff
+TypeError: Can't instantiate abstract class Katze without an implementation for abstract method 'laut'</pre></div>
+<div class="ex"><pre class="code">from abc import ABC, abstractmethod
+
+class Geraet:
+    def __init__(self, name: str) -&gt; None:
+        self.name = name
+
+class Aufladbar(ABC):
+    @abstractmethod
+    def aufladen(self) -&gt; None: ...
+
+class Netzwerkfaehig(ABC):
+    @abstractmethod
+    def verbinden(self, netz: str) -&gt; None: ...
+
+class Laptop(Geraet, Aufladbar, Netzwerkfaehig):
+    def aufladen(self) -&gt; None:
+        print(self.name, "geladen")
+    def verbinden(self, netz: str) -&gt; None:
+        print(self.name, "-&gt;", netz)
+
+class Router(Geraet, Netzwerkfaehig):
+    def verbinden(self, netz: str) -&gt; None:
+        print(self.name, "-&gt;", netz)
+
+class Monitor(Geraet):
+    pass
+
+for g in [Laptop("Laptop"), Router("Router"), Monitor("Monitor")]:
+    if isinstance(g, Aufladbar):
+        g.aufladen()
+    if isinstance(g, Netzwerkfaehig):
+        g.verbinden("DHBW-Gast")</pre><pre class="out">Laptop geladen
+Laptop -&gt; DHBW-Gast
+Router -&gt; DHBW-Gast</pre></div>
+</div>
+<div class="cols">
+<div class="ex"><pre class="code">def finden(nummern: list[int], gesucht: int) -&gt; int | None:
+    for i in range(len(nummern)):
+        if nummern[i] == gesucht:
+            return i
+        else:
+            return None
+
+def summe(werte: list[int]) -&gt; int:
+    for wert in werte:
+        ergebnis = 0
+        ergebnis += wert
+    return ergebnis
+
+print(finden([101, 102, 203], 101), finden([101, 102, 203], 203))
+print(summe([4, 5, 6]))</pre><pre class="out">0 None
+6</pre></div>
+<div class="ex"><pre class="code">def doppelt(x: int) -&gt; int:
+    print(x * 2)
+    return x * 2
+
+def halb(x: int) -&gt; None:
+    print(x // 2)
+
+a = doppelt(3)
+b = halb(9)
+print(a, b, doppelt(a) + 1)</pre><pre class="out">6
+4
+12
+6 None 13</pre></div>
+</div>
+<p class="small">Lösungswege (von links oben nach rechts unten): (1) <code>Manager</code> überschreibt <code>arbeiten</code> nicht, Tom bekommt die geerbte Version. (2) Ober- und Unterklasse schreiben in <b>dasselbe</b> Attribut <code>kontostand</code>, die 5000 sind weg; richtig wäre <code>self.laufzeit</code>. (3) <code>vorstellen</code> aus <code>Tier</code>, <code>laut</code> aus <code>Hund</code>; <code>Katze</code> setzt <code>laut</code> nicht um, bleibt abstrakt, der Fehler kommt beim <b>Erzeugen</b> <code>Katze()</code>, die erste Zeile ist da schon ausgegeben. (4) Laptop: beide Fähigkeiten, Router: nur Netzwerk, Monitor: nichts und kein Fehler, also 3 Zeilen. (5) <code>else: return None</code> beendet die Suche nach Runde 1; <code>ergebnis = 0</code> in der Schleife setzt jede Runde zurück, übrig bleibt 6. (6) <code>doppelt(3)</code> druckt 6 und liefert 6; <code>halb(9)</code> druckt 4 und liefert <code>None</code>; in der letzten Zeile wird zuerst <code>doppelt(a)</code> ausgewertet (druckt 12), dann gibt <code>print</code> die Zeile <code>6 None 13</code> aus.</p>
+
+<div class="box info"><span class="t">Wird ergänzt</span>Nach den restlichen Terminen kommen dazu: Kaffeeshop Stufe 2/3 nach der Musterlösung, Standardbibliothek (VL08), Klausurvorbereitung, ein aktualisierter Abschnitt „Klausur auf einen Blick“ (Form, Hilfsmittel) und weitere Selbsttests.</div>
+
+<!-- ================================================================ SPICKZETTEL -->
+<h1 id="spick"><span class="vl">Spick</span>Spickzettel: Python-Syntax auf einer Seite</h1>
+<div class="sheet">
+<h4>Werkzeuge</h4>
+<pre class="code">uv run datei.py          uv run ruff check .
+uv run ruff format .     uv run ty check
+uv add --dev pytest      uv run pytest</pre>
+<h4>Imports, die du kennen musst</h4>
+<pre class="code">from abc import ABC, abstractmethod
+from dataclasses import dataclass
+from decimal import Decimal
+from typing import Final, override</pre>
+<h4>Typen und Operatoren (→ Ergebnis)</h4>
+<pre class="code">int 7 · float 3.5 · str "a" · bool True · None
+7 / 2 → 3.5      7 // 2 → 3     7 % 2 → 1
+-7 // 2 → -4     2 ** 3 → 8     "ab" * 2 → "abab"
+int("42") → 42   str(3) → "3"   float("2.5") → 2.5
+round(2.5) → 2   round(3.5) → 4 (zur geraden Zahl)
+0.1 + 0.2 == 0.3 → False
+Decimal("0.1") + Decimal("0.2") → 0.3   (Geld!)
+x += 1  # x++ gibt es nicht
+18 &lt;= alter &lt;= 65    not 0 → True
+0 or "x" → "x"   3 and 0 → 0
+a == b  Wert     a is None  Identität
+MWST: Final = 0.19  # Konstante</pre>
+<h4>Strings</h4>
+<pre class="code">s = "Kaffee"
+s[0] → "K"   s[-1] → "e"   s[1:3] → "af"
+len(s) → 6   s.lower() → "kaffee"
+"aff" in s → True    "12".isdigit() → True
+"a,b".split(",") → ["a", "b"]
+f"{s} kostet {3.5:.2f} Euro" → Kaffee kostet 3.50 Euro
+f"{s!r}" → 'Kaffee'   (mit Anführungszeichen)</pre>
+<h4>Verzweigung</h4>
+<pre class="code">if x &gt; 0:
+    ...
+elif x == 0:  # erster wahrer Zweig gewinnt
+    ...
+else:
+    ...
+match wahl:
+    case "1" | "2":
+        ...
+    case "3" if summe &gt; 25:  # Guard
+        ...
+    case _:  # sonst
+        ...
+text = "ja" if x else "nein"</pre>
+<h4>Schleifen</h4>
+<pre class="code">range(5) → 0 1 2 3 4     range(1, 6) → 1 … 5
+range(10, 0, -3) → 10 7 4 1   (Stopp nie dabei)
+for ware in einkauf:  # jedes Element
+for i, w in enumerate(liste): # Index + Element
+while bedingung:  # Bedingung ändern!
+break  # Schleife verlassen
+continue  # nächste Runde
+return  # ganze Funktion verlassen</pre>
+<h4>Listen und Tupel</h4>
+<pre class="code">l = [3, 1, 2]
+l.append(4) → [3, 1, 2, 4]
+l.insert(0, 9)  l.remove(1)  x = l.pop()
+len(l)  l[-1]  l[1:3]  sum(l)  min(l)  max(l)
+sorted(l) → neue Liste    l.sort() → None!
+b = a  # dieselbe Liste (2 Namen)
+c = a.copy()  # neue Liste
+a, b = b, a  # tauschen (Tupel)
+t = (1, 2)  # unveränderbar</pre>
+<h4>Funktionen</h4>
+<pre class="code">def brutto(netto: float, satz: float = 0.19) -&gt; float:
+    """Liefert den Bruttopreis."""
+    return netto * (1 + satz)
+
+brutto(100) → 119.0
+brutto(100, satz=0.07)  # Schlüsselwort
+def summe(*zahlen: int) -&gt; int: ...
+# ohne return → None   (print ≠ return)
+def fakultaet(n: int) -&gt; int:
+    if n &lt;= 1:  # Basisfall zuerst
+        return 1
+    return n * fakultaet(n - 1)
+
+def main() -&gt; None: ...
+if __name__ == "__main__":
+    main()</pre>
+<h4>Klassen (VL5)</h4>
+<pre class="code">class Konto:
+    anzahl = 0  # Klassenattribut
+
+    def __init__(self, inhaber: str, stand: int = 0) -&gt; None:
+        self.inhaber = inhaber
+        self._stand = stand  # "privat" (Konvention)
+        Konto.anzahl += 1  # über die Klasse!
+
+    @property
+    def stand(self) -&gt; int:  # lesen: k.stand
+        return self._stand
+
+    @stand.setter
+    def stand(self, wert: int) -&gt; None:
+        if wert &gt;= 0:  # Prüfregel
+            self._stand = wert
+
+    def __str__(self) -&gt; str:  # return, nicht print
+        return f"{self.inhaber}: {self._stand} Euro"
+
+@dataclass
+class Kunde:  # __init__, __repr__, == gratis
+    name: str
+    email: str</pre>
+<h4>Vererbung, Abstraktion (VL6)</h4>
+<pre class="code">class Sparkonto(Konto):  # ist ein Konto
+    def __init__(self, inhaber: str, zins: int) -&gt; None:
+        super().__init__(inhaber) # Pflicht!
+        self.zins = zins
+
+    @override
+    def __str__(self) -&gt; str:  # ergänzen
+        return f"{super().__str__()} ({self.zins} %)"
+
+    def __repr__(self) -&gt; str:
+        return f"{type(self).__name__}(inhaber={self.inhaber!r})"
+
+class Form(ABC):  # ABC + abstractmethod
+    @abstractmethod
+    def flaeche(self) -&gt; float: ...
+
+class Rechnung(Dokument, Druckbar, Versendbar): ...
+isinstance(s, Konto) → True   type(s) is Konto → False
+for f in formen:  # Polymorphie
+    gesamt += f.flaeche()</pre>
+<h4>Schleifenmuster</h4>
+<pre class="code">summe = 0  # vor der Schleife
+for p in preise:
+    summe += p  # in der Schleife
+return summe  # nach der Schleife
+
+for p in produkte:  # finden
+    if p.nummer == nummer:
+        return p
+return None  # NACH der Schleife
+
+treffer = []  # sammeln → [] statt None
+for p in produkte:
+    if text.lower() in p.name.lower():
+        treffer.append(p)</pre>
+<h4>Fehler in einem Satz</h4>
+<table class="mini">
+<tr><td><code>SyntaxError</code></td><td><code>:</code> oder Klammer fehlt</td></tr>
+<tr><td><code>IndentationError</code></td><td>Block nicht eingerückt</td></tr>
+<tr><td><code>NameError</code></td><td>Name unbekannt, Import fehlt</td></tr>
+<tr><td><code>TypeError</code></td><td>falscher Typ, Argument fehlt, abstrakt erzeugt, <code>None + 1</code></td></tr>
+<tr><td><code>ValueError</code></td><td><code>int("zwei")</code></td></tr>
+<tr><td><code>IndexError</code></td><td>Index zu groß</td></tr>
+<tr><td><code>AttributeError</code></td><td>Attribut fehlt, <code>super().__init__</code> vergessen, <code>None.name</code></td></tr>
+<tr><td><code>RecursionError</code></td><td>Basisfall nie erreicht</td></tr>
+</table>
+</div>
+<p class="small">Alle Zeilen mit „→“ wurden in Python 3.13 nachgeprüft.</p>
+
 
 </body>
 </html>
