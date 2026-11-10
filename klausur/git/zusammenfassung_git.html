@@ -61,41 +61,96 @@ svg text{font-family:"Inter","DejaVu Sans",sans-serif}
 .prio td:first-child{font-weight:700;font-family:"Inter","DejaVu Sans",sans-serif;white-space:nowrap}
 sub,sup{font-size:70%;line-height:0}
 .u{text-decoration:underline}
+/* Neu (Stand 10.11.): Bild-Kasten, Rezepte, Inhaltsverzeichnis, Spickzettel */
+.bild{border:1.2pt solid #000;border-radius:2.6mm;padding:1.8mm 3.2mm;margin:0 0 3mm;background:var(--soft2);font-size:9.8pt;line-height:1.32;break-inside:avoid}
+.bild p{margin:0 0 .8mm}.bild p:last-child{margin:0}
+.bild b.k{font-family:"Inter","DejaVu Sans",sans-serif;font-size:8.6pt;text-transform:uppercase;letter-spacing:.4px;margin-right:1.2mm}
+.recipe{border:1.4pt solid #000;border-left:5pt solid #000;padding:2mm 3mm;margin:2.6mm 0;break-inside:avoid}
+.recipe>.t{font-family:"Inter","DejaVu Sans",sans-serif;font-weight:700;font-size:9.6pt;margin-bottom:1mm;text-transform:uppercase;letter-spacing:.4px}
+.recipe>.t::before{content:"▶ "}
+.recipe ol{margin-bottom:1mm}
+.toc{width:100%;font-size:10pt;border-collapse:collapse;margin:0 0 3mm}
+.toc td{border:none;border-bottom:.5pt dotted #000;padding:.9mm 1mm;vertical-align:bottom}
+.toc td.n{width:9mm;font-family:"Inter","DejaVu Sans",sans-serif;font-weight:700}
+.toc td.p{width:12mm;text-align:right;font-family:"Inter","DejaVu Sans",sans-serif;font-weight:700}
+.toc td.s{width:22mm;text-align:right;font-family:"Inter","DejaVu Sans",sans-serif;font-size:8.6pt}
+.toc a{color:#000;text-decoration:none}
+.chk td,.chk th{padding:.45mm 1.2mm}
+.nw{white-space:nowrap}
+.chk td:first-child{font-family:"DejaVu Sans",sans-serif;text-align:center;width:5mm}
+.spick{font-size:8.6pt;line-height:1.25;columns:3;column-gap:4mm;column-rule:.5pt solid #888}
+.spick h4{font-size:9pt;margin:1.4mm 0 .5mm;padding:.3mm 1mm;background:var(--soft);border:.5pt solid #000;break-after:avoid}
+.spick h4:first-child{margin-top:0}
+.spick p,.spick ul{margin:0 0 .8mm}.spick ul{padding-left:3.5mm}.spick li{margin:0}
+.spick table{font-size:8pt;margin:0 0 1mm}.spick th,.spick td{padding:.2mm .8mm}
+.spick .calc{font-size:7.8pt;line-height:1.2}
+.spick .blk{break-inside:avoid}
 </style>
 </head>
 <body>
 
 <!-- ===================================================== -->
 <h1>Grundlagen der IT – Klausurzusammenfassung</h1>
-<div class="sans small" style="margin-bottom:3mm">DHBW Heilbronn · Wirtschaftsinformatik · 1. Semester · Dozent: Dipl.-Inform. Gisbert Loff · Stand: 21.10.2026</div>
+<div class="sans small" style="margin-bottom:3mm">DHBW Heilbronn · Wirtschaftsinformatik · 1. Semester · Dozent: Dipl.-Inform. Gisbert Loff · Stand: 10.11.2026</div>
 
 <h3 style="margin-top:1mm">Klausur auf einen Blick</h3>
 <div class="cover-meta">
-  <b>Termin</b><span>Montag, 07.12.2026</span>
+  <b>Termin</b><span>Montag, 07.12.2026 (ab heute noch knapp 4 Wochen)</span>
   <b>Dauer</b><span>48 Minuten, ca. 48–52 Punkte → <b>etwa 1 Punkt pro Minute</b></span>
   <b>Formales</b><span>Matrikelnummer auf Deckblatt und „Matelbogen“, <b>nicht den Namen</b>. Deutlich schreiben („Ich kann nur Punkte finden, wenn ich es lesen kann“). Antwortfelder im Klausurbogen nutzen.</span>
+  <b>Stoff</b><span>Folien VL01–VL05 und die Rückschauen; kein neuer Stoff im letzten Termin (21.10.). Punkteverteilung, MC-Regeln und Operatoren: nächste Seite.</span>
 </div>
+
+<h3>Inhalt</h3>
+<table class="toc">
+<tr><td class="n">0</td><td><a href="#k0">Was in der Klausur drankommt</a> – Punkte, Zeit, MC-Regeln, Operatoren, Lernreihenfolge</td><td class="s">48 Min</td><td class="p" data-k="k0">2</td></tr>
+<tr><td class="n">1</td><td><a href="#k1">Information und Digitalisierung</a></td><td class="s">3 P</td><td class="p" data-k="k1">3</td></tr>
+<tr><td class="n">2</td><td><a href="#k2">IT-Infrastruktur und Cloud-Computing</a></td><td class="s">4 P</td><td class="p" data-k="k2">5</td></tr>
+<tr><td class="n">3</td><td><a href="#k3">Mooresches Gesetz</a></td><td class="s">2 P</td><td class="p" data-k="k3">7</td></tr>
+<tr><td class="n">4</td><td><a href="#k4">Zahlendarstellung und Rechnen</a> – Rezepte: Umrechnen, Zweierkomplement, Addition/Überlauf</td><td class="s">3 P</td><td class="p" data-k="k4">8</td></tr>
+<tr><td class="n">5</td><td><a href="#k5">Wahrheitstabellen, Boolesche Ausdrücke, Logikgatter</a> – Rezepte: DNF, Vereinfachen, Gatter-Analyse</td><td class="s">4 P</td><td class="p" data-k="k5">12</td></tr>
+<tr><td class="n">6</td><td><a href="#k6">Programmierung</a></td><td class="s">2 P</td><td class="p" data-k="k6">16</td></tr>
+<tr><td class="n">7</td><td><a href="#k7">Datenstrukturen</a> – Rezept: Stack-/Queue-Traces</td><td class="s">6–8 P</td><td class="p" data-k="k7">18</td></tr>
+<tr><td class="n">8</td><td><a href="#k8">Suchen und Sortieren</a> – Rezept: Sortier-Durchläufe</td><td class="s">6 P</td><td class="p" data-k="k8">22</td></tr>
+<tr><td class="n">9</td><td><a href="#k9">Rechnerarchitektur: Von Neumann vs. Harvard</a></td><td class="s">8 P</td><td class="p" data-k="k9">25</td></tr>
+<tr><td class="n">10</td><td><a href="#k10">Speicher: Arten, Hierarchie, RAID</a></td><td class="s">4 P</td><td class="p" data-k="k10">28</td></tr>
+<tr><td class="n">11</td><td><a href="#k11">Datenbanken und SQL</a> – Rezept: SELECT, WHERE, JOIN, GROUP BY</td><td class="s">4–6 P</td><td class="p" data-k="k11">30</td></tr>
+<tr><td class="n">★</td><td><a href="#spick">Spickzettel</a> – alles Wichtige auf einer Seite für den Vorabend</td><td class="s"></td><td class="p" data-k="spick">34</td></tr>
+</table>
+
+<h3>So ist jedes Kapitel aufgebaut</h3>
+<ol class="small">
+<li><b>„In einem Satz / Stell dir vor“</b> (abgerundeter Kasten): der Kern des Kapitels in einem Satz und ein Bild aus dem Alltag, das du dir merken kannst.</li>
+<li><b>Stoff</b> mit Tabellen und Skizzen, wie auf den Folien.</li>
+<li><b>▶ Rezept</b> (Kasten mit dicker Linie links): Schritt-für-Schritt-Anleitung für jede Rechen- und Anwendungsaufgabe, jeweils mit vollständig durchgerechnetem Beispiel.</li>
+<li><b>Typische Klausurfallen</b> und <b>Das musst du können</b> zum Abhaken.</li>
+</ol>
+
+<div class="legend"><b class="sans">Legende.</b> Grundlage sind die Folien VL01–VL05; Vorrang haben die <b>Rückschauen</b> (dort steht, was tatsächlich behandelt wurde). <span class="tag">Rückschau</span> = in einer Rückschau, also sicher behandelt. <span class="tag">nur Folie</span> = im Foliensatz, aber nicht in der Rückschau. <span class="erg">(Ergänzung)</span> = steht nicht auf den Folien, nur zum Verständnis, nicht als Klausurstoff verlassen. Kästen: <b>abgerundet</b> = In einem Satz / Stell dir vor, <b>dicke Linie links</b> = Rezept, <b>gestrichelt</b> = typische Klausurfallen, <b>grau hinterlegt</b> = Checkliste „Das musst du können“, <b>Doppellinie links</b> = Folienfehler. Alle Rechenbeispiele wurden mit Python nachgerechnet, alle SQL-Ergebnisse mit SQLite.</div>
+
+<!-- ===================================================== -->
+<h2 id="k0">Was in der Klausur drankommt <span class="pts">48 Min</span></h2>
+<p class="small" style="margin-bottom:1.4mm">Offizielle <b>exemplarische Punkteverteilung</b> aus der Klausurvorbereitung (VL05 F. 8–9). Faustregel: <b>1 Punkt ≈ 1 Minute</b>. Die Spalte „Zeit“ ist dein Zeitbudget pro Aufgabe; wer länger braucht, geht weiter und kommt am Ende zurück. Kästchen abhaken, wenn das Thema sitzt.</p>
+<table class="chk small">
+<tr><th>✓</th><th class="c">Nr.</th><th>Thema (Wortlaut VL05)</th><th class="c">Punkte</th><th class="c">Zeit</th><th>Was du tun musst</th><th class="c">Kap.</th></tr>
+<tr><td>☐</td><td class="c">1</td><td>Information und Digitalisierung</td><td class="c">3</td><td class="c nw">3 Min</td><td>nennen, kurz erläutern, erläutern</td><td class="c">1</td></tr>
+<tr><td>☐</td><td class="c">2</td><td>IT-Infrastruktur und Cloud-Computing (Komponenten im Unternehmen, Struktur der IT-Landschaft)</td><td class="c">4</td><td class="c nw">4 Min</td><td>7 Komponenten, Client-Server, Cloud</td><td class="c">2</td></tr>
+<tr><td>☐</td><td class="c">3</td><td>Mooresches Gesetz</td><td class="c">2</td><td class="c nw">2 Min</td><td>MC wortgenau prüfen (Beispiel aus VL05)</td><td class="c">3</td></tr>
+<tr><td>☐</td><td class="c">4</td><td>Zahlendarstellung und Rechnen („sieht oft einfacher aus als es ist“)</td><td class="c">3</td><td class="c nw">3 Min</td><td>2/8/10/16, Zweierkomplement, Komma­zahlen</td><td class="c">4</td></tr>
+<tr><td>☐</td><td class="c">5</td><td>Wahrheitstabelle, Boolesche Ausdrücke, Logikgatter (Analyse und Synthese)</td><td class="c">4</td><td class="c nw">4 Min</td><td>Text → Tabelle → DNF → Schaltung und zurück</td><td class="c">5</td></tr>
+<tr><td>☐</td><td class="c">6</td><td>Programmierung (allgemeine Fragen)</td><td class="c">2</td><td class="c nw">2 Min</td><td>Begriffe abgrenzen, Rekursion</td><td class="c">6</td></tr>
+<tr><td>☐</td><td class="c">7</td><td><b>Datenstrukturen</b> (Bedeutung, Funktionsweise, APIs wie push/pop/enqueue/dequeue)</td><td class="c"><b>6–8</b></td><td class="c nw">6–8 Min</td><td>Operationsfolgen durchspielen, Binärbaum bauen/löschen</td><td class="c">7</td></tr>
+<tr><td>☐</td><td class="c">8</td><td><b>Suchen und Sortieren</b> (Eigenschaften der Verfahren)</td><td class="c"><b>6</b></td><td class="c nw">6 Min</td><td>Voraussetzung, Ablauf, Aufwand O(…)</td><td class="c">8</td></tr>
+<tr><td>☐</td><td class="c">9</td><td><b>Rechnerarchitektur</b>: Von-Neumann vs. Harvard (Skizzen, Eigenschaften, Pro/Contra)</td><td class="c"><b>8</b></td><td class="c nw">8 Min</td><td>beide Skizzen zeichnen, Zyklus, Pro/Contra</td><td class="c">9</td></tr>
+<tr><td>☐</td><td class="c">10</td><td>Speicher (Hierarchie, RAID)</td><td class="c">4</td><td class="c nw">4 Min</td><td>Pyramide, Cache, RAID-Level, Kapazität</td><td class="c">10</td></tr>
+<tr><td>☐</td><td class="c">11</td><td>Datenbanken (Eigenschaften, SQL analysieren und schreiben)</td><td class="c">4–6</td><td class="c nw">4–6 Min</td><td>Begriffe, ER-Modell, SQL ausführen/schreiben</td><td class="c">11</td></tr>
+<tr><th></th><th></th><th>Summe</th><th class="c nw">ca. 48–52</th><th class="c nw">48 Min</th><th colspan="2">Dickste Brocken: 9 (8 P), 7 (6–8 P), 8 (6 P) = 20–22 P, fast die Hälfte</th></tr>
+</table>
 
 <div class="cols">
 <div>
-<table>
-<tr><th>Nr.</th><th>Block (exemplarische Punkteverteilung, VL05)</th><th class="c">Punkte</th></tr>
-<tr><td>1</td><td>Information und Digitalisierung</td><td class="c">3</td></tr>
-<tr><td>2</td><td>IT-Infrastruktur und Cloud-Computing</td><td class="c">4</td></tr>
-<tr><td>3</td><td>Mooresches Gesetz</td><td class="c">2</td></tr>
-<tr><td>4</td><td>Zahlendarstellung und Rechnen</td><td class="c">3</td></tr>
-<tr><td>5</td><td>Wahrheitstabelle, Boolesche Ausdrücke, Logikgatter</td><td class="c">4</td></tr>
-<tr><td>6</td><td>Programmierung</td><td class="c">2</td></tr>
-<tr><td>7</td><td><b>Datenstrukturen</b> (Bedeutung, Funktionsweise, APIs)</td><td class="c"><b>6–8</b></td></tr>
-<tr><td>8</td><td><b>Suchen und Sortieren</b> (Eigenschaften)</td><td class="c"><b>6</b></td></tr>
-<tr><td>9</td><td><b>Rechnerarchitektur</b>: v. Neumann vs. Harvard</td><td class="c"><b>8</b></td></tr>
-<tr><td>10</td><td>Speicher (Hierarchie, RAID)</td><td class="c">4</td></tr>
-<tr><td>11</td><td>Datenbanken (Eigenschaften, SQL lesen/schreiben)</td><td class="c">4–6</td></tr>
-</table>
-</div>
-<div>
 <div class="box" style="margin-top:0">
-<div class="t">Multiple Choice – Regeln</div>
+<div class="t">Multiple Choice – Regeln (VL05 F. 4)</div>
 <ul class="small">
 <li>Alle richtigen Antworten ankreuzen. <b>Mindestens eine</b> ist immer richtig.</li>
 <li>Jede richtig angekreuzte <b>und</b> jede richtig <i>nicht</i> angekreuzte Option: <b>+½ Punkt</b>.</li>
@@ -104,29 +159,37 @@ sub,sup{font-size:70%;line-height:0}
 <li>Folge: Bei 4 Optionen bringt jede sicher beurteilte Option +½. Raten lohnt nur, wenn du mehr als die Hälfte der Optionen sicher einschätzen kannst.</li>
 </ul>
 </div>
-<table>
-<tr><th>Operator</th><th>Was wird erwartet?</th></tr>
+</div>
+<div>
+<table class="small" style="margin-top:0">
+<tr><th>Operator (VL05 F. 7)</th><th>Was wird erwartet?</th></tr>
 <tr><td><b>Nennen</b></td><td>Stichpunktartige Aufzählung der Begriffe, keine Erklärung</td></tr>
 <tr><td><b>Kurz erläutern</b></td><td>1–2 (ggf. stichpunktartige) Sätze</td></tr>
 <tr><td><b>Erläutern</b></td><td>Mehrere, i. d. R. <b>deutlich mehr als 2</b>, vollständige Sätze</td></tr>
 <tr><td><b>Skizzieren</b></td><td>Zeichnung (Diagramm, Abbildung), sauber beschriftet</td></tr>
 </table>
+<p class="small" style="margin:0">Rechnen und Logik sind laut Dozent „<b>DAS IST ÜBUNGSSACHE!!</b>“ und „AUCH ÜBUNGSSACHE!!“ – sauber schreiben, Rechenweg zeigen.</p>
 </div>
 </div>
 
-<h3>Prioritäten beim Lernen</h3>
-<table class="prio">
-<tr><th style="width:24mm">Priorität</th><th>Themen</th><th style="width:58mm">Warum</th></tr>
-<tr><td>1 – sicher üben</td><td>Von-Neumann- und Harvard-Skizze aus dem Kopf zeichnen, 5 Komponenten, 5-Phasen-Zyklus, Pro/Contra · Stack/Queue/Liste/Baum mit Operationen · Binärbaum aufbauen und löschen · Such- und Sortierverfahren mit O(…)</td><td>Zusammen <b>20–22 Punkte</b> (fast die Hälfte)</td></tr>
-<tr><td>2 – rechnen üben</td><td>Umrechnung 2/8/10/16, Zweierkomplement mit fester Bitbreite inkl. Überlauf, Wahrheitstabelle → DNF → Schaltung (IEC-Symbole), SQL lesen und schreiben</td><td>„DAS IST ÜBUNGSSACHE!!“ – laut Dozent „sieht oft einfacher aus als es ist“</td></tr>
-<tr><td>3 – Begriffe lernen</td><td>Daten/Information, Sichtweisen und Phasen der Digitalisierung, 7 Komponenten der IT-Infrastruktur, Epochen, Cloud, Moore + Interpretationen, Speicherhierarchie, RAID-Level, DBMS-Begriffe, OLTP/OLAP</td><td>Schnelle Punkte durch Nennen und MC</td></tr>
-<tr><td>4 – nur kennen</td><td>Gleitkomma (IEEE 754), Shift, Compiler-Phasen, Linker/Lader, Kodierungen, KI-Hardware</td><td>Exkurse oder nicht in den Rückschauen</td></tr>
+<h3>Empfohlene Lernreihenfolge bis zum 07.12. <span class="erg">(Empfehlung, Zeiten grob geschätzt)</span></h3>
+<table class="prio small chk">
+<tr><th class="c">#</th><th>Was – und warum</th><th>Lernzeit</th></tr>
+<tr><td class="c">1</td><td><b>Rechnerarchitektur</b> (Kap. 9): beide Skizzen aus dem Kopf, 5 Komponenten, 5-Phasen-Zyklus, Pro/Contra – <i>größter Einzelblock, Skizze ist planbar</i></td><td>2–3 h, Skizze 3× zeichnen</td></tr>
+<tr><td class="c">2</td><td><b>Datenstrukturen</b> (Kap. 7): Stack/Queue/Liste/Baum mit Operationen, Binärbaum aufbauen und löschen – <i>Traces sind reines Üben</i></td><td>2–3 h</td></tr>
+<tr><td class="c">3</td><td><b>Suchen und Sortieren</b> (Kap. 8): Verfahren mit O(…), Durchläufe – <i>1 bis 3 zusammen 20–22 P, fast die Hälfte</i></td><td>2 h</td></tr>
+<tr><td class="c">4</td><td><b>Rechnen</b> (Kap. 4, 5): 2/8/10/16, Zweierkomplement mit fester Bitbreite inkl. Überlauf, Tabelle → DNF → Schaltung (IEC) – <i>„sieht oft einfacher aus als es ist“</i></td><td>täglich 15–20 Min</td></tr>
+<tr><td class="c">5</td><td><b>SQL</b> (Kap. 11): Abfragen von Hand ausführen und schreiben – <i>Rezept ist immer gleich</i></td><td>1,5 h</td></tr>
+<tr><td class="c">6</td><td><b>Begriffe</b> (Kap. 1, 2, 3, 6, 10, 11): Daten/Information, Digitalisierung, 7 Komponenten, Epochen, Cloud, Moore, Speicherhierarchie, RAID, DBMS, OLTP/OLAP – <i>schnelle Punkte durch Nennen und MC</i></td><td>Karteikarten, 10 Min/Tag</td></tr>
+<tr><td class="c">7</td><td><b>Nur kennen:</b> Gleitkomma (IEEE 754), Shift, Compiler-Phasen, Linker/Lader, Kodierungen, KI-Hardware – <i>Exkurse, nicht in den Rückschauen</i></td><td>einmal lesen</td></tr>
+<tr><td class="c">8</td><td><b>Generalprobe:</b> eine Probeklausur in 48 Min mit Uhr; am Vorabend nur noch den Spickzettel (letzte Seite)</td><td>1 h</td></tr>
 </table>
-
-<div class="legend"><b class="sans">Legende.</b> Grundlage sind die Folien VL01–VL05; Vorrang haben die <b>Rückschauen</b> (dort steht, was tatsächlich behandelt wurde). <span class="tag">Rückschau</span> = in einer Rückschau, also sicher behandelt. <span class="tag">nur Folie</span> = im Foliensatz, aber nicht in der Rückschau. <span class="erg">(Ergänzung)</span> = steht nicht auf den Folien, nur zum Verständnis, nicht als Klausurstoff verlassen. Kästen: <b>gestrichelt</b> = typische Klausurfallen, <b>grau hinterlegt</b> = Checkliste „Das musst du können“, <b>Doppellinie links</b> = Folienfehler. Alle Rechenbeispiele wurden mit Python nachgerechnet.</div>
+<div class="box small" style="margin-top:1.6mm"><div class="t">In der Klausur: Zeit einteilen</div>
+Erst 1 Minute alle Aufgaben überfliegen. Dann die sicheren Punkte (MC, Nennen, Skizzen), danach Rechnen. Pro Aufgabe höchstens so viele Minuten wie Punkte; hängst du fest, Rechenweg stehen lassen und weiter. Die letzten 3–4 Minuten: Matrikelnummer, Bitbreiten, Vorzeichen und MC-Kreuze kontrollieren.</div>
 
 <!-- ===================================================== -->
-<h2>1 · Information und Digitalisierung <span class="pts">3 P</span></h2>
+<h2 id="k1">1 · Information und Digitalisierung <span class="pts">3 P</span></h2>
+<div class="bild"><p><b class="k">In einem Satz</b>Daten sind nur Zeichen; erst ein Kontext macht daraus eine Information, und Digitalisierung heißt, Analoges in solche Zeichen (0 und 1) zu übersetzen.</p><p><b class="k">Stell dir vor</b>Auf deinem Handy steht „7“. Sind das 7 °C, 7 °F oder 7 neue Nachrichten? Ohne Kontext weißt du es nicht. Und „digital“ ist wie eine Wetterstation, die jede volle Stunde einen gerundeten Wert notiert, statt eines Quecksilberthermometers, das ständig jeden Wert zeigt: <b>Treppenstufen statt Rampe</b> (zeit- und wertediskret).</p></div>
 
 <h3>Daten, Information, Wissen, Handlung <span class="tag">Rückschau</span></h3>
 <p><b>Daten</b> sind Rohdaten, also unverarbeitete Fakten wie Zahlen, Texte oder Symbole. Für sich allein haben sie keine Bedeutung. Erst wenn ein <b>Kontext</b> dazukommt, werden aus Daten <b>Informationen</b>: verarbeitete Daten mit Bedeutung, die Entscheidungen unterstützen. Informationen verdichten sich zu <b>Wissen</b>, und Wissen führt zu <b>Handlung</b>. Dieselben Daten können je nach Kontext eine völlig andere Information sein, wie das Folienbeispiel zeigt:</p>
@@ -183,7 +246,8 @@ sub,sup{font-size:70%;line-height:0}
 </ul></div>
 
 <!-- ===================================================== -->
-<h2>2 · IT-Infrastruktur und Cloud-Computing <span class="pts">4 P</span></h2>
+<h2 id="k2">2 · IT-Infrastruktur und Cloud-Computing <span class="pts">4 P</span></h2>
+<div class="bild"><p><b class="k">In einem Satz</b>Der Client fragt, der Server antwortet; Cloud heißt, Rechner und Programme zu mieten, statt sie selbst zu kaufen und zu betreiben.</p><p><b class="k">Stell dir vor</b>Ein <b>Restaurant</b>: Du (Client) bestellst, die Küche (Server) kocht für alle. Bei N-Tier nimmt ein Kellner (Webserver) die Bestellung an, der Koch (Anwendungsserver) kocht, das Lager (Datenbankserver) liefert. Cloud ist <b>Strom aus der Steckdose</b> statt eigenem Kraftwerk. IaaS = gemietete Küche, PaaS = Küche mit Fertigteig, SaaS = Pizzeria.</p></div>
 <p>Die Klausuraufgabe fragt laut VL05: „Welche Komponenten können Sie in einem Unternehmen vorfinden?“ und „Wie kann die IT-Landschaft strukturiert werden?“. Dafür brauchst du die sieben Komponenten, die fünf Epochen und die Client-Server- bzw. Cloud-Idee.</p>
 
 <h3>Sieben Hauptkomponenten einer modernen IT-Infrastruktur <span class="tag">Rückschau</span></h3>
@@ -281,7 +345,8 @@ sub,sup{font-size:70%;line-height:0}
 </ul></div>
 
 <!-- ===================================================== -->
-<h2>3 · Mooresches Gesetz <span class="pts">2 P</span></h2>
+<h2 id="k3">3 · Mooresches Gesetz <span class="pts">2 P</span></h2>
+<div class="bild"><p><b class="k">In einem Satz</b>Moore: Die Zahl der Transistoren pro Chip verdoppelt sich regelmäßig, und Verdoppeln heißt jedes Mal „mal 2“, nicht „plus etwas“.</p><p><b class="k">Stell dir vor</b>Du <b>faltest ein Blatt Papier</b>: 1× gefaltet 2 Lagen, 2× 4, 3× 8, nach 10 Faltungen 2<sup>10</sup> = 1024 Lagen. So schnell wächst alles, was sich regelmäßig verdoppelt.</p></div>
 <h3>Was Moore tatsächlich gesagt hat <span class="tag">Rückschau</span></h3>
 <p><b>Gordon Moore</b>, damals Direktor der Forschungslabore von Fairchild Semiconductor und später Mitgründer von <b>Intel</b>, schrieb <b>1965</b> im <i>Electronics Magazine</i>, dass sich seit dem ersten Mikrochip (1959) die <b>Anzahl der (niedrigpreisigen) Komponenten, im Allgemeinen Transistoren, auf einem Chip jährlich verdoppelt</b> habe, und sagte das für die nächsten 10 Jahre voraus. Später <b>korrigierte er die Rate auf eine Verdopplung alle zwei Jahre</b>. Diese Aussage begründet das Mooresche Gesetz. Es beschreibt eine <b>exponentielle</b> Zunahme der Verarbeitungsleistung bei gleichzeitig sinkenden Kosten.</p>
 <h3>Interpretationen – <u>keine</u> davon stammt von Moore selbst <span class="tag">Rückschau</span></h3>
@@ -323,7 +388,8 @@ sub,sup{font-size:70%;line-height:0}
 </ul></div>
 
 <!-- ===================================================== -->
-<h2>4 · Zahlendarstellung und Rechnen <span class="pts">3 P</span></h2>
+<h2 id="k4">4 · Zahlendarstellung und Rechnen <span class="pts">3 P</span></h2>
+<div class="bild"><p><b class="k">In einem Satz</b>Wie viel eine Ziffer wert ist, hängt von ihrer Stelle ab; negative Zahlen entstehen im Zweierkomplement durch Rückwärtszählen ab 0.</p><p><b class="k">Stell dir vor</b>Du bezahlst 235 € mit 100er-, 10er- und 1er-Scheinen; im Binärsystem gibt es nur die Scheine 1, 2, 4, 8, 16 …, von jedem höchstens einen. <b>Zweierkomplement = rückwärts laufender Kilometerzähler</b>: Ein dreistelliger Zähler auf 000, einen Kilometer zurück → 999 (= −1), noch einen → 998 (= −2). Mit 8 Bit: 0000 0000 − 1 = 1111 1111 = −1. Fährt der Zähler über 999 hinaus, springt er auf 000: Das ist der <b>Überlauf</b>.</p></div>
 <p>Der Dozent: „<b>DAS IST ÜBUNGSSACHE!!</b>“ und „<b>sauber schreiben</b>“. Kernaufgaben sind (1) Umwandlung zwischen den Basen 2, 8, 10, 16, (2) binäres Rechnen mit positiven und negativen ganzen Zahlen, (3) Darstellung nicht ganzzahliger Werte.</p>
 
 <h3>Stellenwertsysteme <span class="tag">Rückschau</span></h3>
@@ -392,6 +458,30 @@ von unten lesen: 1110 1011₂</div>
 <li>Was ist größer: E7E5<sub>16</sub>, 59364<sub>10</sub> oder 1110 0111 1110 0110<sub>2</sub>? → E7E5<sub>16</sub> = 59365, die Binärzahl = E7E6<sub>16</sub> = 59366. <b>Die Binärzahl ist am größten</b>, 59364 am kleinsten. (Tipp: Binär direkt in Hex gruppieren und nur die letzte Ziffer vergleichen.)</li>
 </ul>
 
+<div class="recipe"><div class="t">Rezept: Dezimal ↔ Binär ↔ Hex/Oktal (komplett durchgerechnet: 173)</div>
+<div class="cols">
+<div>
+<ol class="small">
+<li><b>Dezimal → binär:</b> Restwertmethode, durch 2 teilen, Reste von <b>unten nach oben</b> lesen.</li>
+<li><b>Binär → hex/oktal:</b> von rechts in <b>4er-</b> (hex) bzw. <b>3er-Gruppen</b> (oktal) teilen, links mit 0 auffüllen, jede Gruppe einzeln übersetzen.</li>
+<li><b>Hex/oktal → binär:</b> jede Ziffer als 4 bzw. 3 Bit hinschreiben (3F₁₆ → 0011 1111₂).</li>
+<li><b>Irgendwas → dezimal:</b> Ziffer × Stellenwert, alles addieren.</li>
+<li><b>Probe:</b> Ergebnis auf dem anderen Weg zurückrechnen.</li>
+</ol>
+<p class="small" style="margin:0">Kurzweg Dezimal → Hex: direkt durch 16 teilen (173 : 16 = 10 Rest 13 → D; 10 : 16 = 0 Rest 10 → A → <b>AD₁₆</b>).</p>
+</div>
+<div class="calc">① 173 : 2 = 86 R 1      ② 1010 1101₂
+   86 : 2 = 43 R 0         4er: 1010 | 1101
+   43 : 2 = 21 R 1              A  |  D   → AD₁₆
+   21 : 2 = 10 R 1         3er: 010 | 101 | 101
+   10 : 2 =  5 R 0              2  |  5  |  5 → 255₈
+    5 : 2 =  2 R 1
+    2 : 2 =  1 R 0      ④ Probe:
+    1 : 2 =  0 R 1        AD₁₆ = 10·16 + 13 = 173 ✓
+   ↑ von unten lesen:     255₈ = 2·64 + 5·8 + 5 = 173 ✓
+   1010 1101₂             128+32+8+4+1 = 173 ✓</div>
+</div>
+</div>
 <h3>Binäre Addition <span class="tag">Rückschau</span></h3>
 <p>Regeln: 0+0 = 0, 0+1 = 1, 1+0 = 1, <b>1+1 = 0 Übertrag 1</b> (und 1+1+1 = 1 Übertrag 1). Wie schriftliches Addieren von rechts nach links.</p>
 <div class="cols">
@@ -428,6 +518,21 @@ von unten lesen: 1110 1011₂</div>
 <tr><td>8 Bit</td><td class="m">0010 1010</td><td class="m">1110 1111</td><td class="m">1101 0110</td><td class="m">0000 0000</td><td class="m">1111 1111</td><td class="m">0111 1111</td><td class="m">1000 0000</td></tr>
 </table>
 
+<div class="recipe"><div class="t">Rezept: Bitmuster im Zweierkomplement → Dezimalzahl</div>
+<div class="cols">
+<ol class="small">
+<li><b>Erstes Bit ansehen.</b> 0 → positiv, ganz normal umrechnen, fertig.</li>
+<li>1 → negativ. <b>Weg A:</b> höchstes Bit zählt <b>−128</b> (bei 8 Bit), die übrigen Bits normal addieren.</li>
+<li><b>Weg B:</b> invertieren, +1, Betrag ablesen, Minus davor.</li>
+<li>Beide Wege müssen dasselbe liefern (Probe).</li>
+</ol>
+<div class="calc">1011 0100₂ (8 Bit), erstes Bit 1 → negativ
+Weg A: −128 + 32 + 16 + 4       = −76
+Weg B: invertieren  0100 1011  (= 75)
+       +1           0100 1100  (= 76) → −76 ✓
+Merke: 1000 0000 = −128, 1111 1111 = −1</div>
+</div>
+</div>
 <h4>Subtraktion = Addition des Zweierkomplements (Folienaufgaben, 8 Bit)</h4>
 <div class="cols">
 <div class="calc">42 − 17 = 42 + (−17)
@@ -475,6 +580,35 @@ von unten lesen: 1110 1011₂</div>
 </div>
 <p class="small"><b>Einerkomplement</b> mit End-around Carry (Folie, 4 Bit): −4 + 6 = 1011 + 0110 = (1)0001 → Übertrag 1 unten addieren: 0001 + 1 = <b>0010 = +2</b> ✓. Bei −4 + 3 = 1011 + 0011 = 1110 (−1) entsteht kein Übertrag.</p>
 
+<div class="recipe"><div class="t">Rezept: Binär addieren und Überlauf prüfen</div>
+<div class="cols">
+<div>
+<ol class="small">
+<li>Beide Zahlen auf <b>dieselbe Bitbreite</b> bringen; negative Zahlen vorher ins Zweierkomplement.</li>
+<li>Untereinander schreiben, <b>von rechts</b> Spalte für Spalte addieren; eine <b>Übertragszeile</b> darüber führen (1+1 = 0 Ü 1, 1+1+1 = 1 Ü 1).</li>
+<li>Übertrag aus dem höchsten Bit <b>streichen</b> (Zweierkomplement).</li>
+<li><b>Überlauf-Test</b>: Haben beide Summanden dasselbe Vorzeichenbit und das Ergebnis ein anderes? → Überlauf. Verschiedene Vorzeichen → nie Überlauf.</li>
+<li>Ergebnis zurückrechnen und mit der Dezimalrechnung vergleichen.</li>
+</ol>
+<p class="small" style="margin:0">Das Beispiel rechts zeigt: <b>Dasselbe Bitmuster</b> ist ohne Vorzeichen richtig (145 ≤ 255), mit Vorzeichen ein Überlauf (145 &gt; 127). Ob ein Überlauf vorliegt, hängt also vom <b>Datentyp</b> ab.</p>
+</div>
+<div class="calc">91 + 54 in 8 Bit
+Übertrag   1111 11··
+            0101 1011   (+91)
+          + 0011 0110   (+54)
+          = 1001 0001
+
+ohne Vorzeichen: 128+16+1 = 145 ✓
+Zweierkomplement: 0 + 0 → 1
+ → −128+16+1 = −111 ✗ ÜBERLAUF
+
+−20 + (−30) in 8 Bit:
+   1110 1100 + 1110 0010
+ = (1)1100 1110 → Ü streichen
+ 1 + 1 → 1: kein Überlauf
+ −128+64+8+4+2 = −50 ✓</div>
+</div>
+</div>
 <h3>Exkurs: Shift-Operator <span class="tag">nur Folie</span></h3>
 <p class="small">Verschieben um 1 Bit nach links = ×2, nach rechts = ganzzahlig ÷2 (für vorzeichenlose Ganzzahlen). Java: 23 = 0001 0111; <span class="mono">23 &lt;&lt; 1</span> = 0010 1110 = 46; <span class="mono">23 &lt;&lt; 2</span> = 0101 1100 = 92; <span class="mono">23 &gt;&gt; 1</span> = 11. Rechenwerke haben dafür Shift-Register.</p>
 
@@ -539,7 +673,8 @@ von unten lesen: 1110 1011₂</div>
 </ul></div>
 
 <!-- ===================================================== -->
-<h2>5 · Wahrheitstabellen, Boolesche Ausdrücke, Logikgatter <span class="pts">4 P</span></h2>
+<h2 id="k5">5 · Wahrheitstabellen, Boolesche Ausdrücke, Logikgatter <span class="pts">4 P</span></h2>
+<div class="bild"><p><b class="k">In einem Satz</b>Boolesche Algebra ist Rechnen mit „ja“ (1) und „nein“ (0); jede Regel aus UND, ODER, NICHT lässt sich als Tabelle, Ausdruck und Schaltung schreiben.</p><p><b class="k">Stell dir vor</b><b>AND</b> = Bankschließfach mit zwei Schlüsseln (beide nötig). <b>OR</b> = Haustür mit Klingel vorne und hinten (eine reicht). <b>NOT</b> = Schalter, der das Gegenteil macht. <b>De Morgan</b>: „Nicht (Kaffee und Kuchen)“ heißt „kein Kaffee oder kein Kuchen“.</p></div>
 <p>„<b>AUCH ÜBUNGSSACHE!!</b>“ Aufgabentypen laut VL05: Wahrheitstabelle aus textueller Beschreibung aufstellen; Booleschen Ausdruck aus Wertetabelle aufstellen; einfache Schaltung aus <b>genormten Logikbausteinen</b> aus Tabelle oder Ausdruck entwickeln (Analyse und Synthese).</p>
 
 <h3>Boolesche Algebra und Grundoperatoren <span class="tag">Rückschau</span></h3>
@@ -694,8 +829,114 @@ von unten lesen: 1110 1011₂</div>
 </div>
 </div>
 
+<h3>Boolesche Ausdrücke vereinfachen – Rechengesetze <span class="erg">(Gesetzesnamen = Ergänzung)</span></h3>
+<div class="cols">
+<table class="small" style="flex:1.15">
+<tr><th>Gesetz</th><th>UND-Form</th><th>ODER-Form</th></tr>
+<tr><td>Kommutativ</td><td>a ∧ b = b ∧ a</td><td>a ∨ b = b ∨ a</td></tr>
+<tr><td>Distributiv (ausklammern)</td><td>a ∧ (b ∨ c) = (a ∧ b) ∨ (a ∧ c)</td><td>a ∨ (b ∧ c) = (a ∨ b) ∧ (a ∨ c)</td></tr>
+<tr><td>Idempotenz</td><td>a ∧ a = a</td><td>a ∨ a = a</td></tr>
+<tr><td>Neutrales Element</td><td>a ∧ 1 = a</td><td>a ∨ 0 = a</td></tr>
+<tr><td>Extremal</td><td>a ∧ 0 = 0</td><td>a ∨ 1 = 1</td></tr>
+<tr><td>Komplement</td><td>a ∧ ¬a = 0</td><td>a ∨ ¬a = 1</td></tr>
+<tr><td>Doppelte Negation</td><td colspan="2">¬¬a = a</td></tr>
+<tr><td>De Morgan</td><td>¬(a ∧ b) = ¬a ∨ ¬b</td><td>¬(a ∨ b) = ¬a ∧ ¬b</td></tr>
+<tr><td>Absorption</td><td>a ∧ (a ∨ b) = a</td><td>a ∨ (a ∧ b) = a</td></tr>
+</table>
+<div class="small" style="flex:1">
+<p><b>Kernregel</b> (daraus abgeleitet): Zwei UND-Terme, die sich nur in <b>einer</b> Variablen unterscheiden (einmal x, einmal ¬x), verschmelzen, und x fällt weg:</p>
+<div class="calc">(A ∧ B) ∨ (A ∧ ¬B)
+= A ∧ (B ∨ ¬B)   Distributiv
+= A ∧ 1          Komplement
+= A              Neutral</div>
+<p style="margin-top:1mm"><b>Stell dir vor:</b> „Ich gehe raus, wenn die Sonne scheint und es warm ist, und auch, wenn die Sonne scheint und es nicht warm ist.“ Dann ist die Temperatur egal.</p>
+</div>
+</div>
+<div class="recipe"><div class="t">Rezept: Ausdruck mit Gesetzen vereinfachen</div>
+<div class="cols">
+<div>
+<ol class="small">
+<li><b>Negationen über Klammern</b> zuerst mit De Morgan auflösen, dann ¬¬x = x.</li>
+<li><b>Paare suchen</b>: Welche UND-Terme unterscheiden sich in genau einer Variablen? Gemeinsames ausklammern, x ∨ ¬x = 1 streichen.</li>
+<li>Ein Term darf <b>mehrfach</b> benutzt werden (x ∨ x = x).</li>
+<li>Absorption und Extremalgesetze anwenden, bis nichts mehr geht.</li>
+<li><b>Probe</b>: eine 1-Zeile und eine 0-Zeile einsetzen (oder ganze Tabelle).</li>
+</ol>
+<p class="small" style="margin:0"><b>Muster erkennen:</b> (¬A ∧ B) ∨ (A ∧ ¬B) = XOR, (¬A ∧ ¬B) ∨ (A ∧ B) = XNOR – nicht kürzbar, aber je ein Gatter.</p>
+</div>
+<div class="calc">Bsp. 1  (¬A∧B) ∨ (A∧B) ∨ (A∧¬B)     A∧B doppelt nutzen
+  (¬A∧B) ∨ (A∧B) = B ∧ (¬A∨A) = B
+  (A∧B) ∨ (A∧¬B) = A ∧ (B∨¬B) = A
+  → A ∨ B   (= OR, Probe A=0,B=0 → 0 ✓)
+
+Bsp. 2  Alarmanlage (siehe oben)
+  (S∧¬T∧F) ∨ (S∧T∧F) = S∧F
+  (S∧T∧¬F) ∨ (S∧T∧F) = S∧T
+  → (S∧F) ∨ (S∧T) = S ∧ (T ∨ F)
+
+Bsp. 3  ¬(A ∧ ¬B) ∨ B
+  = ¬A ∨ ¬¬B ∨ B   De Morgan
+  = ¬A ∨ B ∨ B     Doppelnegation
+  = ¬A ∨ B         Idempotenz
+
+Bsp. 4  ¬(A ∨ ¬B) ∨ (A ∧ B)
+  = (¬A ∧ B) ∨ (A ∧ B)  De Morgan, ¬¬B = B
+  = B ∧ (¬A ∨ A) = B    Kernregel</div>
+</div>
+</div>
+
 <h3>Analyse: Ausdruck oder Schaltung → Wahrheitstabelle</h3>
 <p>Umgekehrt gehst du so vor: Spalten für alle Eingänge (2<sup>n</sup> Zeilen), dann <b>Hilfsspalten für Zwischenergebnisse</b> (z. B. Ausgang jedes Gatters), zuletzt der Ausgang. Beispiel Y = (A ∨ B) ∧ ¬C: Hilfsspalten A ∨ B und ¬C; Y ist 1 in den Zeilen (A,B,C) = (0,1,0), (1,0,0), (1,1,0), sonst 0.</p>
+
+<div class="recipe"><div class="t">Rezept: Logikgatter-Schaltung analysieren (Schaltung → Ausdruck → Tabelle)</div>
+<div class="cols">
+<div>
+<ol class="small">
+<li>Jeden <b>Gatterausgang benennen</b> (X1, X2, …), von den Eingängen nach rechts.</li>
+<li>Für jedes Gatter den <b>Teilausdruck</b> hinschreiben (Kreis am Ausgang = Negation), am Ende zum Gesamtausdruck einsetzen.</li>
+<li>Tabelle mit 2<sup>n</sup> Zeilen (000 … 111), <b>je Gatter eine Hilfsspalte</b>, Zeile für Zeile von links nach rechts füllen.</li>
+<li>Ausgangsspalte ablesen; auf Wunsch DNF aus den 1-Zeilen bilden und vereinfachen.</li>
+</ol>
+<figure style="margin:1mm 0 0">
+<svg viewBox="0 0 330 130" width="320" xmlns="http://www.w3.org/2000/svg">
+ <g stroke="#000" stroke-width="1.4" fill="none" font-size="13">
+  <text x="2" y="24" stroke="none" fill="#000" font-weight="700">A</text><text x="2" y="58" stroke="none" fill="#000" font-weight="700">B</text><text x="2" y="108" stroke="none" fill="#000" font-weight="700">C</text>
+  <line x1="16" y1="20" x2="90" y2="20"/>
+  <line x1="16" y1="54" x2="60" y2="54"/><circle cx="60" cy="54" r="2.5" fill="#000"/>
+  <line x1="60" y1="54" x2="60" y2="40"/><line x1="60" y1="40" x2="90" y2="40"/>
+  <line x1="60" y1="54" x2="60" y2="84"/><line x1="60" y1="84" x2="90" y2="84"/>
+  <line x1="16" y1="104" x2="90" y2="104"/>
+  <rect x="90" y="10" width="36" height="40" fill="#fff"/><text x="108" y="35" stroke="none" fill="#000" text-anchor="middle">&amp;</text><circle cx="130" cy="30" r="4" fill="#fff"/>
+  <rect x="90" y="74" width="36" height="40" fill="#fff"/><text x="108" y="99" stroke="none" fill="#000" text-anchor="middle">≥1</text>
+  <line x1="134" y1="30" x2="180" y2="30"/><line x1="180" y1="30" x2="180" y2="56"/><line x1="180" y1="56" x2="210" y2="56"/>
+  <line x1="126" y1="94" x2="180" y2="94"/><line x1="180" y1="94" x2="180" y2="76"/><line x1="180" y1="76" x2="210" y2="76"/>
+  <text x="140" y="24" stroke="none" fill="#000" font-size="11">X1</text><text x="140" y="88" stroke="none" fill="#000" font-size="11">X2</text>
+  <rect x="210" y="46" width="36" height="40" fill="#fff"/><text x="228" y="71" stroke="none" fill="#000" text-anchor="middle">&amp;</text>
+  <line x1="246" y1="66" x2="280" y2="66"/><text x="286" y="70" stroke="none" fill="#000" font-weight="700">Y</text>
+ </g>
+</svg>
+<figcaption>Abb. 5.4 – Übungsschaltung: NAND, OR, AND <span class="erg">(eigenes Beispiel)</span></figcaption>
+</figure>
+</div>
+<div>
+<div class="calc">X1 = ¬(A ∧ B)    (NAND: &amp; mit Kreis)
+X2 = B ∨ C
+Y  = X1 ∧ X2 = ¬(A ∧ B) ∧ (B ∨ C)</div>
+<table class="tt" style="margin-top:1mm">
+<tr><th>A</th><th>B</th><th>C</th><th>X1</th><th>X2</th><th>Y</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td><b>1</b></td></tr>
+<tr><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td><b>1</b></td></tr>
+<tr><td>0</td><td>1</td><td>1</td><td>1</td><td>1</td><td><b>1</b></td></tr>
+<tr><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td></tr>
+<tr><td>1</td><td>0</td><td>1</td><td>1</td><td>1</td><td><b>1</b></td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+</table>
+<p class="small" style="margin-top:1mm">DNF der 1-Zeilen: (¬A∧¬B∧C) ∨ (¬A∧B∧¬C) ∨ (¬A∧B∧C) ∨ (A∧¬B∧C). Kernregel: Zeilen 001 + 101 → <b>¬B ∧ C</b>, Zeilen 010 + 011 → <b>¬A ∧ B</b>. Also <b>Y = (¬B ∧ C) ∨ (¬A ∧ B)</b> (mit Python gegen die Schaltung geprüft).</p>
+</div>
+</div>
+</div>
 
 <h3>Rechnen mit Gattern: Halbaddierer und Volladdierer <span class="tag">Rückschau</span></h3>
 <div class="cols">
@@ -735,7 +976,8 @@ von unten lesen: 1110 1011₂</div>
 </ul></div>
 
 <!-- ===================================================== -->
-<h2>6 · Programmierung <span class="pts">2 P</span></h2>
+<h2 id="k6">6 · Programmierung <span class="pts">2 P</span></h2>
+<div class="bild"><p><b class="k">In einem Satz</b>Ein Algorithmus ist ein Rezept mit endlich vielen Schritten, ein Programm das aufgeschriebene Rezept in einer Sprache, ein Prozess das Rezept, das gerade gekocht wird.</p><p><b class="k">Stell dir vor</b>Ein <b>Compiler</b> übersetzt wie ein Übersetzer ein ganzes Buch vorab; ein <b>Interpreter</b> ist ein Dolmetscher, der Satz für Satz live übersetzt. <b>Rekursion</b>: In einer Schlange fragst du deinen Vordermann nach seinem Platz, der fragt seinen … bis die Erste sagt „Platz 1“ (Abbruchbedingung); auf dem Rückweg zählt jeder 1 dazu.</p></div>
 <p>Laut VL01: „Dies ist <b>KEIN</b> Programmierkurs.“ Die Klausur stellt hier „allgemeine Fragen“ – Begriffe, Unterschiede, Rekursion.</p>
 
 <h3>Algorithmus, Programm, Prozess <span class="tag">Rückschau</span></h3>
@@ -815,7 +1057,8 @@ N! = 1 · 2 · … · N;  0! = 1! = 1.   Türme von Hanoi: n Scheiben brauchen 2
 </ul></div>
 
 <!-- ===================================================== -->
-<h2>7 · Datenstrukturen <span class="pts">6–8 P</span></h2>
+<h2 id="k7">7 · Datenstrukturen <span class="pts">6–8 P</span></h2>
+<div class="bild"><p><b class="k">In einem Satz</b>Datenstrukturen sind feste Ordnungen, nach denen ein Programm Daten im Speicher ablegt und wieder herausholt.</p><p><b class="k">Stell dir vor</b><b>Stack = Tellerstapel</b> (der zuletzt aufgelegte Teller kommt zuerst weg, LIFO). <b>Queue = Warteschlange an der Kasse</b> (wer zuerst kommt, ist zuerst dran, FIFO). <b>Array</b> = Wand mit nummerierten Schließfächern, <b>verkettete Liste</b> = Schnitzeljagd (jeder Zettel verrät nur den nächsten), <b>Binärbaum</b> = Zahlenraten „kleiner oder größer?“.</p></div>
 <p>Gefragt werden laut VL05 „<b>Bedeutung, Funktionsweise und APIs</b>“ sowie die „Anwendung der Datenstrukturen Stack, Queue, Liste, sortierte Liste, binäre Bäume“. Du musst also Operationen ausführen können („Was liegt nach push(3), push(7), pop() oben?“) und Vor-/Nachteile begründen.</p>
 
 <h3>Elementare Datentypen vs. Datenstrukturen <span class="tag">Rückschau</span></h3>
@@ -891,6 +1134,47 @@ N! = 1 · 2 · … · N;  0! = 1! = 1.   Türme von Hanoi: n Scheiben brauchen 2
 <tr><td class="m">push(9)</td><td class="m">[3, 1, 9]</td><td></td><td class="m">get()</td><td class="m">[1, 9]</td><td><b>7</b></td></tr>
 <tr><td class="m">pop(); pop()</td><td class="m">[3]</td><td><b>9, 1</b></td><td class="m">get()</td><td class="m">[9]</td><td><b>1</b></td></tr>
 </table>
+
+<div class="recipe"><div class="t">Rezept: Stack- und Queue-Traces sicher durchspielen</div>
+<ol class="small">
+<li>Tabelle mit drei Spalten anlegen: <b>Operation | Inhalt danach | Ausgabe</b>. Vorher festlegen und dazuschreiben, wo „oben“ (Stack) bzw. „vorne“ (Queue) ist.</li>
+<li><b>Stack:</b> push legt rechts (oben) an, pop nimmt rechts weg und <b>gibt es aus</b>, top gibt rechts aus, <b>ohne</b> zu entfernen.</li>
+<li><b>Queue:</b> put/enqueue hängt rechts (hinten) an, get/dequeue nimmt links (vorne) weg und gibt es aus.</li>
+<li>Jede Zeile einzeln ausführen, nie zwei Operationen im Kopf zusammenfassen. Bei pop/get auf leerer Struktur „Fehler (leer)“ notieren.</li>
+<li>Am Ende die <b>Ausgabefolge</b> und den <b>Restinhalt</b> getrennt angeben.</li>
+</ol>
+<div class="cols">
+<table class="small">
+<tr><th>Stack (oben = rechts)</th><th>Inhalt</th><th>Ausgabe</th></tr>
+<tr><td class="m">push(4)</td><td class="m">[4]</td><td></td></tr>
+<tr><td class="m">push(8)</td><td class="m">[4, 8]</td><td></td></tr>
+<tr><td class="m">pop()</td><td class="m">[4]</td><td><b>8</b></td></tr>
+<tr><td class="m">push(5)</td><td class="m">[4, 5]</td><td></td></tr>
+<tr><td class="m">push(2)</td><td class="m">[4, 5, 2]</td><td></td></tr>
+<tr><td class="m">pop()</td><td class="m">[4, 5]</td><td><b>2</b></td></tr>
+<tr><td class="m">top()</td><td class="m">[4, 5]</td><td><b>5</b> (bleibt)</td></tr>
+<tr><td class="m">push(9)</td><td class="m">[4, 5, 9]</td><td></td></tr>
+<tr><td class="m">pop(); pop()</td><td class="m">[4]</td><td><b>9, 5</b></td></tr>
+<tr><td colspan="3">Ausgabe 8, 2, 5, 9, 5 · Rest [4]</td></tr>
+</table>
+<table class="small">
+<tr><th>Queue (vorne = links)</th><th>Inhalt</th><th>Ausgabe</th></tr>
+<tr><td class="m">put(4)</td><td class="m">[4]</td><td></td></tr>
+<tr><td class="m">put(8)</td><td class="m">[4, 8]</td><td></td></tr>
+<tr><td class="m">get()</td><td class="m">[8]</td><td><b>4</b></td></tr>
+<tr><td class="m">put(5)</td><td class="m">[8, 5]</td><td></td></tr>
+<tr><td class="m">put(2)</td><td class="m">[8, 5, 2]</td><td></td></tr>
+<tr><td class="m">get()</td><td class="m">[5, 2]</td><td><b>8</b></td></tr>
+<tr><td class="m">put(9)</td><td class="m">[5, 2, 9]</td><td></td></tr>
+<tr><td class="m">get(); get()</td><td class="m">[9]</td><td><b>5, 2</b></td></tr>
+<tr><td colspan="3">Ausgabe 4, 8, 5, 2 · Rest [9]</td></tr>
+</table>
+<div class="small">
+<p><b>Typische Kombi-Aufgabe:</b> 1, 2, 3, 4 per put in eine Queue, dann alle per get herausnehmen und sofort push auf einen Stack, danach alles pop: Queue liefert 1, 2, 3, 4 (Reihenfolge bleibt), der Stack gibt <b>4, 3, 2, 1</b> aus. <b>Ein Stack kehrt die Reihenfolge um, eine Queue nicht.</b></p>
+<p><b>Klammerprüfung mit Stack</b> <span class="erg">(Ergänzung)</span>: öffnende Klammer → push; schließende → pop und vergleichen. „( [ ] { } )“: am Ende Stack leer → korrekt. „( [ ) ]“: bei „)“ liefert pop „[“ → passt nicht → <b>fehlerhaft</b>.</p>
+</div>
+</div>
+</div>
 
 <h3>Bäume – Begriffe <span class="tag">Rückschau</span></h3>
 <p>Bäume sind eine <b>zweidimensionale Erweiterung verketteter Listen</b>. Ein Baum ist eine nicht-leere Menge von <b>Knoten</b> und <b>Kanten</b> (Verbindungen zwischen zwei Knoten). Die <b>Wurzel</b> ist der Ursprung; ein <b>Pfad</b> ist eine Folge unterschiedlicher, durch Kanten verbundener Knoten.</p>
@@ -999,7 +1283,8 @@ N! = 1 · 2 · … · N;  0! = 1! = 1.   Türme von Hanoi: n Scheiben brauchen 2
 </ul></div>
 
 <!-- ===================================================== -->
-<h2>8 · Suchen und Sortieren <span class="pts">6 P</span></h2>
+<h2 id="k8">8 · Suchen und Sortieren <span class="pts">6 P</span></h2>
+<div class="bild"><p><b class="k">In einem Satz</b>Suchen und Sortieren werden schnell, wenn man bei jedem Schritt einen großen Teil der Daten ausschließen kann; die O-Notation misst, wie die Arbeit mit der Datenmenge wächst.</p><p><b class="k">Stell dir vor</b><b>Binäre Suche = Telefonbuch</b> in der Mitte aufschlagen und eine Hälfte wegwerfen. <b>Bubble Sort</b> = Lehrerin tauscht in der Reihe immer zwei Nachbarn, bis das größte Kind ganz rechts steht. <b>Merge Sort</b> = zwei sortierte Klausurstapel zusammenlegen, immer das kleinere oberste Blatt zuerst. <b>O(n²)</b> = jeder Gast verabschiedet sich von jedem.</p></div>
 <p>Gefragt werden die „<b>Eigenschaften der verschiedenen Verfahren</b>“: Voraussetzungen, Funktionsweise, Aufwand (O-Notation). Zu den meistgenutzten Algorithmen zählen laut Folie: Sortieren (Mergesort, Quicksort, naiv Bubblesort), Suchen (lineare und binäre Suche), Graphen/kürzeste Wege, Klassifikation/Machine Learning/Data Mining.</p>
 
 <h3>O-Notation – wie skaliert ein Algorithmus? <span class="tag">nur Folie</span> (Exkurs, aber bei allen Verfahren verwendet)</h3>
@@ -1051,6 +1336,41 @@ Teilen:   [38, 27, 43]            |  [3, 9, 82, 10]
 Mergen:   [27, 43] → [27, 38, 43] |  [3, 9]   [10, 82] → [3, 9, 10, 82]
 Merge:    [27, 38, 43] + [3, 9, 10, 82] → [3, 9, 10, 27, 38, 43, 82]</div>
 
+<div class="recipe"><div class="t">Rezept: Sortier-Durchläufe aufschreiben (Beispiel [29, 10, 14, 37, 13])</div>
+<div class="cols">
+<div>
+<ol class="small">
+<li><b>Bubble Sort:</b> Pro Durchlauf von links je zwei <b>Nachbarn</b> vergleichen, bei falscher Reihenfolge tauschen. Nach jedem Durchlauf ist das größte unsortierte Element hinten fest (Strich ziehen). Durchlauf ohne Tausch → fertig.</li>
+<li><b>Merge Sort:</b> halbieren bis Einzelelemente, dann paarweise mergen: immer die vordersten Elemente vergleichen, das kleinere übernehmen.</li>
+<li><b>Selection Sort</b> <span class="erg">(Erg.)</span>: im unsortierten Rest das <b>Minimum</b> suchen und mit dem ersten Element des Rests tauschen.</li>
+<li>Pro Durchlauf <b>eine Zeile</b> mit dem kompletten Array hinschreiben, Tauschpaare markieren.</li>
+</ol>
+<p class="small" style="margin:0">Zählprobe Bubble Sort: bei n = 5 höchstens 4 + 3 + 2 + 1 = <b>10 Vergleiche</b> = n·(n−1)/2 → O(n²).</p>
+</div>
+<div class="calc">Bubble Sort                         Vergl. Tausch
+D1: 29↔10 · 29↔14 · 29<37 · 37↔13
+    [10, 14, 29, 13 | 37]             4     3
+D2: 10<14 · 14<29 · 29↔13
+    [10, 14, 13 | 29, 37]             3     1
+D3: 10<14 · 14↔13
+    [10, 13 | 14, 29, 37]             2     1
+D4: 10<13, kein Tausch → fertig       1     0
+    [10, 13, 14, 29, 37]
+
+Selection Sort (Minimum nach vorne)
+S1: Min 10 ↔ 29  → [10 | 29, 14, 37, 13]
+S2: Min 13 ↔ 29  → [10, 13 | 14, 37, 29]
+S3: Min 14 bleibt → [10, 13, 14 | 37, 29]
+S4: Min 29 ↔ 37  → [10, 13, 14, 29, 37]
+
+Merge Sort
+[29, 10] [14, 37, 13] → [29][10] [14][37, 13]
+→ [10, 29]  [14] [13, 37] → [13, 14, 37]
+→ Merge [10, 29] + [13, 14, 37]
+  10 · 13 · 14 · 29 · 37 → [10, 13, 14, 29, 37]</div>
+</div>
+</div>
+
 <h4>Weitere Verfahren <span class="erg">(auf den Folien nur genannt – Erklärung = Ergänzung)</span></h4>
 <ul class="small">
 <li><b>Quicksort</b> (in der Liste der meistgenutzten Algorithmen): wählt ein Pivot-Element, teilt in „kleiner als Pivot“ und „größer als Pivot“ und sortiert beide Teile rekursiv; im Mittel O(n log n), im schlechtesten Fall O(n²).</li>
@@ -1091,7 +1411,8 @@ Merge:    [27, 38, 43] + [3, 9, 10, 82] → [3, 9, 10, 27, 38, 43, 82]</div>
 </ul></div>
 
 <!-- ===================================================== -->
-<h2>9 · Rechnerarchitektur: Von Neumann vs. Harvard <span class="pts">8 P</span></h2>
+<h2 id="k9">9 · Rechnerarchitektur: Von Neumann vs. Harvard <span class="pts">8 P</span></h2>
+<div class="bild"><p><b class="k">In einem Satz</b>Beim Von-Neumann-Rechner teilen sich Programm und Daten einen Speicher und eine Leitung, bei Harvard hat jedes seinen eigenen Speicher und Bus.</p><p><b class="k">Stell dir vor</b>Eine <b>Küche mit nur einer Tür</b>: Der Koch holt durch dieselbe Tür erst das Rezept, dann die Zutaten, nie beides gleichzeitig (Von-Neumann-Flaschenhals). Mit <b>zwei Türen</b> (Harvard) geht es schneller, der Umbau ist aber teurer. Der <b>Befehlszähler</b> ist der Finger auf der aktuellen Rezeptzeile.</p></div>
 <p>Größter Einzelblock. Laut VL05: „<b>Skizzen, Eigenschaften, Pro und Con</b>“. Übe die beiden Skizzen so oft, bis du sie in 2 Minuten sauber zeichnen kannst.</p>
 
 <h3>Von-Neumann-Architektur („Princeton-Architektur“) <span class="tag">Rückschau</span></h3>
@@ -1228,7 +1549,8 @@ Merge:    [27, 38, 43] + [3, 9, 10, 82] → [3, 9, 10, 27, 38, 43, 82]</div>
 </ul></div>
 
 <!-- ===================================================== -->
-<h2>10 · Speicher: Arten, Hierarchie, RAID <span class="pts">4 P</span></h2>
+<h2 id="k10">10 · Speicher: Arten, Hierarchie, RAID <span class="pts">4 P</span></h2>
+<div class="bild"><p><b class="k">In einem Satz</b>Speicher ist umso schneller und teurer, je näher er an der CPU sitzt; RAID verteilt Daten so auf mehrere Platten, dass es schneller geht oder ein Ausfall nichts kaputt macht.</p><p><b class="k">Stell dir vor</b><b>Cache = Schreibtisch statt Keller</b>: Die Bücher für heute liegen auf dem Tisch, der Rest im Keller (RAM). Holst du eins aus dem Keller, nimmst du die Nachbarn gleich mit (Lokalität); fehlt doch eins, läufst du runter (Cache-Miss). <b>RAID 0</b> = zwei Leute tragen abwechselnd Umzugskisten (schnell, aber stolpert einer, ist seine Hälfte weg), <b>RAID 1</b> = Mitschrift für die Freundin kopieren, <b>RAID 5</b> = Prüfsumme pro Zeile.</p></div>
 
 <h3>Speicherarten <span class="tag">Rückschau</span></h3>
 <table>
@@ -1327,7 +1649,8 @@ Merge:    [27, 38, 43] + [3, 9, 10, 82] → [3, 9, 10, 27, 38, 43, 82]</div>
 </ul></div>
 
 <!-- ===================================================== -->
-<h2>11 · Datenbanken und SQL <span class="pts">4–6 P</span></h2>
+<h2 id="k11">11 · Datenbanken und SQL <span class="pts">4–6 P</span></h2>
+<div class="bild"><p><b class="k">In einem Satz</b>Eine Datenbank speichert jede Information nur einmal in Tabellen, und eine SQL-Abfrage ist dasselbe wie in Excel eine Liste filtern und Spalten ausblenden.</p><p><b class="k">Stell dir vor</b><b>SQL = Excel-Filter</b>: Du öffnest die Liste (FROM), setzt den Filter „Abteilung = 5“ (WHERE), blendest alle Spalten außer Name und Gehalt aus (SELECT); GROUP BY ist eine Pivot-Tabelle „pro Abteilung die Summe“. Das <b>DBMS</b> ist die Bibliothekarin, das <b>Data Dictionary</b> ihr Katalog; der <b>Fremdschlüssel</b> ist wie deine Versichertennummer auf jeder Arztrechnung.</p></div>
 <p>Laut VL05: „Eigenschaften, <b>Analyse</b> SQL, <b>Synthese</b> SQL“ sowie „Modellierung einfacher Entitäten, <b>Dictionary</b>“. Du musst also ein SQL-Statement anhand vorgegebener Tabellen „ausführen“ und selbst einfache Abfragen schreiben können.</p>
 
 <h3>Vom Dateiansatz zum DBMS <span class="tag">Rückschau</span></h3>
@@ -1480,6 +1803,49 @@ WHERE  &lt;Bedingung&gt;;      -- welche Zeilen</pre>
 „Erhöhe die Gehälter der Abteilung 4 um 10 %“         → UPDATE ANGESTELLTER SET GEHALT = GEHALT * 1.1 WHERE ABT = 4;</div>
 <p class="small">Folienbeispiel GROUP BY: <span class="mono">SELECT Kunden.KNr, COUNT(Bestellungen.BestNr) AS Anzahl FROM Kunden, Bestellungen WHERE Kunden.Land='CH' AND Kunden.KNr=Bestellungen.KNr GROUP BY Kunden.KNr</span> zählt die Bestellungen je Schweizer Kunde. Hinweis der Folie: <b>Kunden ohne Bestellungen werden nicht ausgegeben</b> (die Join-Bedingung ist für sie nie erfüllt).</p>
 
+<div class="recipe"><div class="t">Rezept: SQL-Abfrage von Hand ausführen – SELECT, WHERE, JOIN, GROUP BY an einer kleinen Tabelle</div>
+<p class="small" style="margin-bottom:1.2mm">Reihenfolge beim <b>Ausführen</b> (nicht beim Schreiben!): <b>① FROM/JOIN</b> Tabellen verbinden → <b>② WHERE</b> Zeilen streichen → <b>③ GROUP BY</b> übrige Zeilen in Gruppen sortieren → <b>④ SELECT</b> Spalten bzw. ein Aggregat pro Gruppe ausgeben. Zwischenergebnis ruhig als Tabelle auf das Schmierblatt schreiben. <span class="erg">(Eigenes Beispiel, alle Ergebnisse mit SQLite geprüft.)</span></p>
+<div class="cols">
+<table class="small" style="flex:1">
+<tr><th colspan="3">KUNDE (PS KNR)</th></tr>
+<tr><th>KNR</th><th>NAME</th><th>ORT</th></tr>
+<tr><td>1</td><td>Anna</td><td>Köln</td></tr>
+<tr><td>2</td><td>Ben</td><td>Berlin</td></tr>
+<tr><td>3</td><td>Cem</td><td>Köln</td></tr>
+<tr><td>4</td><td>Dana</td><td>Ulm</td></tr>
+</table>
+<table class="small" style="flex:1">
+<tr><th colspan="3">BESTELLUNG (PS BNR, FS KNR → KUNDE)</th></tr>
+<tr><th>BNR</th><th>KNR</th><th>BETRAG</th></tr>
+<tr><td>101</td><td>1</td><td>40</td></tr>
+<tr><td>102</td><td>2</td><td>25</td></tr>
+<tr><td>103</td><td>1</td><td>15</td></tr>
+<tr><td>104</td><td>3</td><td>60</td></tr>
+<tr><td>105</td><td>2</td><td>30</td></tr>
+<tr><td>106</td><td>1</td><td>20</td></tr>
+</table>
+<table class="small" style="flex:1.5">
+<tr><th colspan="4">① Zwischenergebnis JOIN über B.KNR = K.KNR</th></tr>
+<tr><th>BNR</th><th>NAME</th><th>ORT</th><th>BETRAG</th></tr>
+<tr><td>101</td><td>Anna</td><td>Köln</td><td>40</td></tr>
+<tr><td>102</td><td>Ben</td><td>Berlin</td><td>25</td></tr>
+<tr><td>103</td><td>Anna</td><td>Köln</td><td>15</td></tr>
+<tr><td>104</td><td>Cem</td><td>Köln</td><td>60</td></tr>
+<tr><td>105</td><td>Ben</td><td>Berlin</td><td>30</td></tr>
+<tr><td>106</td><td>Anna</td><td>Köln</td><td>20</td></tr>
+<tr><td colspan="4"><i>Dana fehlt: keine Bestellung, kein Partner</i></td></tr>
+</table>
+</div>
+<table class="small">
+<tr><th style="width:45%">Abfrage</th><th>Schritte</th><th style="width:22%">Ergebnis</th></tr>
+<tr><td class="m">SELECT NAME FROM KUNDE<br>WHERE ORT = 'Köln';</td><td>① nur KUNDE · ② Zeilen mit ORT ≠ Köln streichen (Ben, Dana) · ④ nur Spalte NAME</td><td>Anna<br>Cem</td></tr>
+<tr><td class="m">SELECT B.BNR, K.NAME, B.BETRAG<br>FROM BESTELLUNG B JOIN KUNDE K<br>  ON B.KNR = K.KNR<br>WHERE B.BETRAG &gt;= 25;</td><td>① Join-Tabelle oben (6 Zeilen) · ② 103 (15) und 106 (20) streichen, 102 mit genau 25 <b>bleibt</b> (&gt;=) · ④ drei Spalten</td><td>101 | Anna | 40<br>102 | Ben | 25<br>104 | Cem | 60<br>105 | Ben | 30</td></tr>
+<tr><td class="m">SELECT K.ORT, COUNT(*), SUM(B.BETRAG)<br>FROM KUNDE K JOIN BESTELLUNG B<br>  ON K.KNR = B.KNR<br>GROUP BY K.ORT;</td><td>① Join-Tabelle · ③ Gruppe Berlin {25, 30}, Gruppe Köln {40, 15, 60, 20} · ④ je Gruppe <b>eine</b> Zeile: Anzahl und Summe</td><td>Berlin | 2 | 55<br>Köln | 4 | 135</td></tr>
+<tr><td class="m">SELECT KNR, COUNT(*) FROM BESTELLUNG<br>WHERE BETRAG &gt; 20<br>GROUP BY KNR;</td><td>② <b>vor</b> dem Gruppieren 103 (15) und 106 (20) streichen · ③ KNR 1 {101}, KNR 2 {102, 105}, KNR 3 {104}</td><td>1 | 1<br>2 | 2<br>3 | 1</td></tr>
+</table>
+<p class="small" style="margin:0"><b>Komma-Schreibweise der Folien</b> = JOIN … ON: <span class="mono">FROM BESTELLUNG B, KUNDE K WHERE B.KNR = K.KNR AND B.BETRAG &gt;= 25</span> liefert genau dasselbe. <b>Selbst schreiben</b>: Rezept oben rückwärts – Spalten (SELECT) → Tabellen + Join-Bedingung FS = PS (FROM) → Filter (WHERE) → „pro …“ (GROUP BY).</p>
+</div>
+
 <h3>OLTP und OLAP <span class="tag">Rückschau</span></h3>
 <table>
 <tr><th></th><th>OLTP – Online Transaction Processing</th><th>OLAP – Online Analytical Processing</th></tr>
@@ -1527,6 +1893,60 @@ WHERE  &lt;Bedingung&gt;;      -- welche Zeilen</pre>
 <li>Bei MC jede Option einzeln als wahr/falsch prüfen; nur ankreuzen, was du sicher als richtig erkennst.</li>
 <li>Skizzen groß, beschriftet, mit Pfeilen; Operator beachten („nennen“ = Stichpunkte, „erläutern“ = mehrere Sätze).</li>
 </ul>
+</div>
+
+<!-- ===================================================== -->
+<h2 id="spick">Spickzettel – alles auf einer Seite <span class="pts">Vorabend</span></h2>
+<div class="spick">
+<div class="blk"><h4>Klausur</h4>
+<p>07.12.2026 · 48 Min · ca. 48–52 P → <b>1 P ≈ 1 Min</b>. Matrikelnr., nicht Name. MC: mind. 1 richtig, je Option ±½, nichts angekreuzt = 0. Nennen = Stichpunkte · kurz erläutern = 1–2 Sätze · erläutern = &gt; 2 Sätze · skizzieren = beschriftete Zeichnung.</p></div>
+<div class="blk"><h4>1 Information · Digitalisierung (3 P)</h4>
+<p>Daten + <b>Kontext</b> = Information → Wissen → Handlung (7 °C DE/Kanada/°F). Sichtweisen: <b>betriebswirtschaftlich</b> (neue Prozesse, Produkte, Geschäftsmodelle), <b>gesellschaftlich</b> (Lebenswelt digital, Disruption), <b>technisch</b> (analog → zeit- und wertediskret, binär). Phasen: Funktionen → Funktionsbereiche → integrierte Prozesse → 1:1 überbetrieblich → m:n bis Endkunde. Nutzen: Automatisierung → Informatisierung → Transformation.</p></div>
+<div class="blk"><h4>2 IT-Infrastruktur · Cloud (4 P)</h4>
+<p><b>7 Komponenten:</b> Hardware, Betriebssysteme, Datenverwaltung, Netzwerke/TK, Anwendungen, Internet als Plattform, Berater/Systemintegratoren. <b>5 Epochen</b> (überlagern sich): Groß-/Minirechner 1959 → PC 1981 → Client-Server 1983 → betriebl./internetbasiert 1992 → Cloud 2000. 2-Tier vs. N-Tier (Web → Anwendung → DB). Cloud = über das Internet beziehen, Abo, Browser; IaaS · PaaS · SaaS (Salesforce). AWS seit 2002. Metcalfe n·(n−1).</p></div>
+<div class="blk"><h4>3 Moore (2 P)</h4>
+<p>1965: <b>Transistoren pro Chip</b> verdoppeln sich jährlich, später <b>alle 2 Jahre</b>. Interpretationen (nicht Moore): Leistung Mikroprozessor/Computer ×2 alle <b>18 Monate</b>, Preis halbiert sich alle 18 Monate. Fallen: verdreifacht, Speicherkapazität, Größe.</p></div>
+<div class="blk"><h4>4 Zahlen (3 P)</h4>
+<table><tr><th>2ⁿ</th><td>1</td><td>2</td><td>4</td><td>8</td><td>16</td><td>32</td><td>64</td><td>128</td><td>256</td><td>1024</td></tr></table>
+<p>Hex A=10 … F=15. Dez → b: Restwert, <b>von unten lesen</b>. Bin → hex 4er-, oktal 3er-Gruppen <b>von rechts</b>. 235 = 1110 1011₂ = 353₈ = EB₁₆.</p>
+<p><b>Zweierkomplement</b> (feste Bitbreite!): invertieren + 1. 8 Bit: −128 … +127, MSB zählt −128. −17 = 1110 1111. Einerkomplement/Vorz.-Betrag: −127 … 127, zwei Nullen. a − b = a + (−b), Übertrag vorne streichen. <b>Überlauf</b>: + + → − oder − − → +. 127 + 1 = 1000 0000 = −128.</p>
+<p>Nachkomma: ×2, Vorkommabit notieren, <b>von oben lesen</b> (0,375 = 0,011₂; 0,4 periodisch). Gleitkomma m·bᵉ; IEEE 754 32 Bit = 1 | 8 (Bias 127) | 23, Hidden Bit.</p></div>
+<div class="blk"><h4>5 Logik (4 P)</h4>
+<table><tr><th>AB</th><th>&amp;</th><th>≥1</th><th>=1</th><th>NAND</th><th>NOR</th><th>XNOR</th></tr>
+<tr><td>00</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>01</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td></tr>
+<tr><td>10</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td></tr>
+<tr><td>11</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td></tr></table>
+<p>IEC: &amp; · ≥1 · =1 · 1, Kreis = NICHT. <b>De Morgan</b> ¬(A∧B) = ¬A∨¬B, ¬(A∨B) = ¬A∧¬B. <b>DNF</b>: 2ⁿ Zeilen; jede 1-Zeile ein UND-Term (1 → A, 0 → ¬A); mit ∨ verbinden. <b>Kernregel</b> (A∧B)∨(A∧¬B) = A. Absorption A∨(A∧B) = A. NAND universell: NOT A = NAND(A,A). Halbaddierer s = XOR, c = AND.</p></div>
+<div class="blk"><h4>6 Programmierung (2 P)</h4>
+<p>Algorithmus = endlich; Programm darf endlos laufen; Prozess = laufendes Programm. Maschinensprache (prozessorabhängig) → Assembler → Hochsprache. Compiler vorab, Interpreter zur Laufzeit (Bytecode). Syntaxfehler meldet der Compiler, Semantikfehler nicht. Rekursion braucht Abbruchbedingung; int/int in Java ganzzahlig (10/3 = 3).</p></div>
+<div class="blk"><h4>7 Datenstrukturen (6–8 P)</h4>
+<p>Array: feste Länge, Index ab 0, direkter Zugriff. Liste: nur Kopf bekannt, Zeiger umhängen. Doppelt: Vorgänger + Nachfolger. <b>Stack LIFO</b> push/pop/top (Tellerstapel). <b>Queue FIFO</b> put/get = enqueue/dequeue (Kasse). Fehlerfall: leer. <b>BST</b>: links kleiner, rechts größer; Löschen: Blatt weg · 1 Kind rückt nach · 2 Kinder → größter links/kleinster rechts. Voll = keine Halbblätter; sortiert eingefügt → degeneriert.</p></div>
+<div class="blk"><h4>8 Suchen · Sortieren (6 P)</h4>
+<table><tr><th>Verfahren</th><th>Voraussetzung</th><th>O</th></tr>
+<tr><td>lineare Suche</td><td>keine</td><td>n</td></tr>
+<tr><td>binäre Suche</td><td>sortiert, Array</td><td>log n</td></tr>
+<tr><td>Bubble Sort</td><td>–</td><td>n²</td></tr>
+<tr><td>Merge Sort</td><td>– (Teile u. Herrsche)</td><td>n log n</td></tr>
+<tr><td>Quicksort (Erg.)</td><td>Pivot</td><td>Ø n log n</td></tr></table>
+<p>Bubble: Größtes nach 1. Durchlauf hinten. Merge: Sortieren passiert beim Zusammenführen. 1000 Elemente → binär ≈ 10 Vergleiche.</p></div>
+<div class="blk"><h4>9 Von Neumann vs. Harvard (8 P)</h4>
+<p><b>5 Komponenten:</b> Rechenwerk (ALU), Steuerwerk, Bus, Speicherwerk, E/A-Werk. <b>Zyklus:</b> Fetch → Decode → Fetch Operands → Execute → Update Instruction Pointer. VN: <b>ein</b> Speicher, <b>ein</b> Bus → Flaschenhals, billig, flexibel, Buffer Overflow. Harvard: <b>getrennte</b> Speicher und Busse, gleichzeitig, schneller, teurer; Mikrocontroller, DSP, KI. Befehlszähler = Adresse nächster Befehl; Befehlsregister = aktueller Befehl. Steuer-/Adress-/Datenbus.</p></div>
+<div class="blk"><h4>10 Speicher · RAID (4 P)</h4>
+<p>Register → Cache → RAM | Flash/SSD → HDD → Band: nach unten größer, langsamer, billiger; Strich = volatil | persistent. Cache wirkt durch <b>Lokalität</b>. n Adressleitungen → 2ⁿ Byte (32 → 4 GB).</p>
+<table><tr><th>RAID</th><th>Prinzip</th><th>min.</th><th>Ausfall</th><th>Nutz</th></tr>
+<tr><td>0</td><td>Striping</td><td>2</td><td>0</td><td>n·C</td></tr>
+<tr><td>1</td><td>Spiegel</td><td>2</td><td>1</td><td>n·C/2</td></tr>
+<tr><td>5</td><td>Parität</td><td>3</td><td>1</td><td>(n−1)·C</td></tr>
+<tr><td>6</td><td>2× Parität</td><td>4</td><td>2</td><td>(n−2)·C</td></tr></table>
+<p>RAID ersetzt kein Backup.</p></div>
+<div class="blk"><h4>11 Datenbanken · SQL (4–6 P)</h4>
+<p>Dateiansatz: Redundanz/Inkonsistenz, Programm-Daten-Abhängigkeit. DB + DBMS = Datenbanksystem; <b>Data Dictionary</b> = Metadaten. ER (Chen): Rechteck Entität, Raute Beziehung, Ellipse Attribut, unterstrichen Schlüssel; 1:1, 1:n (FS auf n-Seite), m:n (Hilfstabelle). Relation = Tabelle, Tupel = Zeile, Attribut = Spalte.</p>
+<div class="calc">SELECT Spalten | AGG(...)
+FROM   T1 JOIN T2 ON T1.FS = T2.PS
+WHERE  Bedingung   -- 'Text', &gt; vs &gt;=
+GROUP BY Spalte;   -- „pro …“</div>
+<p>Ausführen: FROM → WHERE → GROUP BY → SELECT. Aggregat ohne GROUP BY = 1 Zeile. UPDATE/DELETE ohne WHERE = alle Zeilen. OLTP Row Store, lesen + schreiben · OLAP Column Store, lesen, Historie.</p></div>
 </div>
 
 </body>
