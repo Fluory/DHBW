@@ -20,6 +20,37 @@ Moodle: [Kurs 18614](https://moodle.heilbronn.dhbw.de/course/view.php?id=18614) 
 | Skript Bürgerliches Recht Teil 1 – BGB AT + Schuldrecht AT (Silke Hennig, 51 S.) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190423) | 09.10.2026 | Termin 1 (BGB AT Kap. 1–4), Termin 2 (Kap. 5–7), Termin 3 (S. 23–37), Termin 4 (Schuldrecht AT 3.0–3.4, S. 38–45) |
 | Lösungen Zugang WE, Anfechtung (Lösungen zu Skript S. 11, 14–15, 18) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191512) | 27.10.2026 | Termin 1 (Zugang, Vertragsschluss), Termin 2 (Anfechtung) |
 | Lösungen Minderjährigenrecht (Lösungen zu Skript S. 22, Fälle 1–4) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192097) | 06.11.2026 | Termin 2 (Geschäftsfähigkeit, Abgleich Fälle 1–4) |
+| Auflagen für den Gesetzestext in der Klausur (PDF, 1 S.; Dateiname „Auflagen für Gesetzestexte in der Klausur“) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192285) | 10.11.2026 | Abschnitt „Klausurhinweise“ |
+
+## Klausurhinweise
+
+Quelle: Moodle-Dokument „Auflagen für den Gesetzestext in der Klausur“ (gesehen 10.11.2026). Gilt für die
+Gesetzestexte, die du in die Klausur mitnimmst.
+
+**Welche Ausgabe?** Das Dokument nennt **keine** bestimmte Gesetzessammlung, Auflage oder Ausgabe – es regelt nur, wie
+dein Exemplar bearbeitet sein darf. Welche Sammlung (z. B. BGB-Textausgabe) erlaubt ist, bitte bei der Dozentin
+nachfragen.
+
+**Erlaubt:**
+- Textstellen mit **Textmarker** markieren
+- **Unterstreichungen**
+- **Paragrafenverweise** (z. B. „§ 433“ an den Rand schreiben)
+- **Klebezettel/Reiter**, die entweder **leer** sind oder nur das **Gesetz** (z. B. „GG“, „UStG“, „BGB“) bzw. den
+  **Paragrafen/Artikel** (z. B. „Art. 5“, „§ 6b“) tragen
+
+**Verboten:**
+- Die **Überschrift der Norm** auf dem Klebezettel (also „§ 433 BGB“ ja, „§ 433 Kaufvertrag“ nein)
+- Alle anderen handschriftlichen Anmerkungen: **Stichworte, Sätze, Kommentare**
+- **Zahlen und Buchstaben**, die keine Paragrafenverweise sind
+- **Ausrufezeichen** und ähnliche Zeichen
+- **Einlagen** jeder Art, z. B. kleinkopierte Übersichten oder Schemata
+
+**Kontrolle:** Während der Klausur gibt es **Stichproben** durch die Aufsicht. Verstöße gelten als
+**Täuschungsversuch**.
+
+> [!TIP]
+> Vor der Klausur dein Exemplar einmal durchblättern: Randnotizen mit Wörtern (z. B. „Anfechtung!“) wegradieren
+> bzw. Klebezettel mit Normüberschriften ersetzen. Nur „§ …“ und Gesetzeskürzel dürfen stehen bleiben.
 
 ## Eigene Notizen
 
