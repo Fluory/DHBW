@@ -4,8 +4,8 @@
       "id": "bwl-k001",
       "topic": "Einführung",
       "front": "Produktionsfaktoren nach Gutenberg",
-      "back": "Elementarfaktoren: ausführende Arbeit, Betriebsmittel (Maschinen, Gebäude), Werkstoffe. Dispositiver Faktor: Management (Planung, Organisation, Kontrolle).",
-      "exam": false
+      "back": "Elementarfaktoren: ausführende Arbeit (Sachbearbeiter), Betriebsmittel (Maschinen, Gebäude), Werkstoffe (Holz in der Möbelfabrik). Dispositiver Faktor: Planung, Steuerung, Kontrolle durch die Unternehmensführung. Grundziel des Ansatzes: Gewinnmaximierung.",
+      "exam": true
     },
     {
       "id": "bwl-k002",
@@ -18,14 +18,14 @@
       "id": "bwl-k003",
       "topic": "Einführung",
       "front": "Entscheidungsprozess nach Heinen",
-      "back": "5 Phasen: Anregung → Suche → Auswahl → Vollzug → Kontrolle.",
-      "exam": true
+      "back": "Willensbildung (Anregung → Suche → Auswahl) und Willensdurchsetzung (Vollzug → Kontrolle); aus der Kontrolle führt eine Rückinformation zurück. Steht nicht ausdrücklich auf der Liste „Könnte drankommen“.",
+      "exam": false
     },
     {
       "id": "bwl-k004",
       "topic": "Einführung",
       "front": "Regelkreis (Ulrich): Fehlzeiten-Beispiel",
-      "back": "Führungsgröße (Soll) max. 3 % · Regelgröße (Ist) 15 % · Störgröße autoritärer Führungsstil · Regler Controller · Stellgröße: Vorgesetzten anders einsetzen.",
+      "back": "Führungsgröße (Soll) max. 3 % · Regelgröße (Ist) 15 % · Störgröße autoritärer Führungsstil · Regler Controller · Stellgröße: Vorgesetzten anders einsetzen. Steht nicht ausdrücklich auf der Liste „Könnte drankommen“.",
       "exam": false
     },
     {
@@ -52,7 +52,7 @@
     {
       "id": "bwl-k008",
       "topic": "Einführung",
-      "front": "Musterklausur 1b: p 300 €, k_v 250 €, K_fix 2 Mio., 120.000 Stück, 80.000 h, EK 20 Mio.",
+      "front": "Musterklausur 1b: p 300 €, kv 250 €, Kfix 2 Mio., 120.000 Stück, 80.000 h, EK 20 Mio.",
       "back": "Umsatz 36 Mio., Kosten 32 Mio., Gewinn 4 Mio. → Wirtschaftlichkeit 36/32 = 1,125 · Arbeitsprod. 1,5 Stück/h · EK-Rentabilität 4/20 · 100 = 20 %.",
       "exam": true
     },
@@ -61,13 +61,13 @@
       "topic": "Einführung",
       "front": "Gesamtkapitalrentabilität",
       "back": "(Gewinn + FK-Zinsen) · 100 / GK. Beispiel: (80.000 + 20.000) · 100 / 1.000.000 = 10 %. Falle: FK-Zinsen nicht vergessen.",
-      "exam": false
+      "exam": true
     },
     {
       "id": "bwl-k010",
       "topic": "Betrieb & Ziele",
       "front": "Vision vs. Mission",
-      "back": "Vision = Bild der erreichbaren Zukunft („Wo wollen wir hin?“). Mission = Zweck des heutigen Handelns („Wozu sind wir da?“), unverzichtbar.",
+      "back": "Vision = Bild einer erreichbaren Zukunft („Wo wollen wir hin?“, Microsoft: ein Computer auf jedem Schreibtisch). Mission = Zweck des heutigen Handelns („Wozu sind wir da?“).",
       "exam": false
     },
     {
@@ -81,8 +81,8 @@
       "id": "bwl-k012",
       "topic": "Betrieb & Ziele",
       "front": "Schwellen der Mitbestimmung",
-      "back": "Betriebsrat ab 5 AN · Wirtschaftsausschuss > 100 AN · Aufsichtsrat Drittelbeteiligung > 500 AN · paritätisch > 2.000 AN.",
-      "exam": true
+      "back": "Betriebsrat ab 5 AN · Wirtschaftsausschuss > 100 AN · Aufsichtsrat Drittelbeteiligung > 500 AN · paritätisch > 2.000 AN. Steht nicht auf der Liste „Könnte drankommen“.",
+      "exam": false
     },
     {
       "id": "bwl-k013",
@@ -103,7 +103,7 @@
       "topic": "Rechtsformen",
       "front": "Rechenschema KG-Gewinnverteilung",
       "back": "1. Zinsen (falls vereinbart, K · p · Tage / 36.000) 2. Tätigkeitsvergütung nur Komplementäre (monatlich × 12) 3. Rest nach Schlüssel.",
-      "exam": false
+      "exam": true
     },
     {
       "id": "bwl-k016",
@@ -117,7 +117,7 @@
       "topic": "Rechtsformen",
       "front": "Haftung des Kommanditisten",
       "back": "Nur bis zur eingetragenen Haftsumme, unmittelbar nur für den nicht eingezahlten Teil: Haftsumme 50.000 €, eingezahlt 30.000 € → noch 20.000 €. Vor HR-Eintrag haftet er voll.",
-      "exam": false
+      "exam": true
     },
     {
       "id": "bwl-k018",
@@ -131,7 +131,7 @@
       "topic": "Rechtsformen",
       "front": "GmbH-Stimmrecht (Übung 18)",
       "back": "1 € Nennbetrag = 1 Stimme. Bertrand 30.000 + Schneider 51.000 = 81.000 > Wehrle 69.000 → Schneider wird Geschäftsführer.",
-      "exam": false
+      "exam": true
     },
     {
       "id": "bwl-k020",
@@ -152,13 +152,13 @@
       "topic": "Rechtsformen",
       "front": "HR-Eintrag deklaratorisch vs. konstitutiv",
       "back": "Deklaratorisch (bestätigt nur): e. K., OHG, KG, Prokura. Konstitutiv (erzeugt): GmbH, AG, Kannkaufmann – die GmbH entsteht erst mit Eintrag.",
-      "exam": false
+      "exam": true
     },
     {
       "id": "bwl-k023",
       "topic": "Rechtsformen",
-      "front": "Mindestkapital AG / SE und Agio",
-      "back": "AG und KGaA 50.000 €, SE 120.000 €. Agio = Ausgabebetrag − Nennwert: 1 Mio. Aktien à 1 €, ausgegeben zu 3 € → 2 Mio. € Kapitalrücklage.",
+      "front": "AG: Mindestkapital, Mindesteinzahlung und Agio",
+      "back": "Grundkapital mind. 50.000 €; vor der Anmeldung 25 % der Nennwerte + volles Agio. Agio = Ausgabebetrag − Nennwert: 1 Mio. Aktien à 1 €, ausgegeben zu 3 € → 2 Mio. € in die Kapitalrücklage.",
       "exam": false
     },
     {
@@ -171,8 +171,8 @@
     {
       "id": "bwl-k025",
       "topic": "Kooperation & Konzentration",
-      "front": "Horizontal, vertikal, anorganisch",
-      "back": "Horizontal: gleiche Stufe (Schuhfabrik + Schuhfabrik) · vertikal: aufeinanderfolgende Stufen (Schuhfabrik + Schuhhandel) · anorganisch: andere Branchen (Brauerei + Verlag).",
+      "front": "Ebenen der Zusammenarbeit: horizontal, vertikal, anorganisch",
+      "back": "Horizontal: gleiche Stufe, Ziel Marktposition stärken (Schuhfabrik + Schuhfabrik) · vertikal: aufeinanderfolgende Stufen, Ziel Beschaffung/Absatz sichern (Schuhfabrik + Schuhhandel) · anorganisch: andere Branchen, Ziel Risiko streuen (Brauerei + Verlag).",
       "exam": true
     },
     {
@@ -180,14 +180,14 @@
       "topic": "Kooperation & Konzentration",
       "front": "Konzern vs. Fusion",
       "back": "Konzern: rechtlich selbstständig, wirtschaftlich unselbstständig (einheitliche Leitung, § 18 AktG). Fusion: beides verloren (Aufnahme oder Neugründung).",
-      "exam": false
+      "exam": true
     },
     {
       "id": "bwl-k027",
       "topic": "Kooperation & Konzentration",
       "front": "Kartellarten",
-      "back": "Preis-, Mengen-/Quoten-, Konditionen-/Rabatt-, Submissions-, Gebietskartell. Grundsätzlich verboten (§ 1 GWB); erlaubt z. B. Mittelstandskartell (§ 3).",
-      "exam": false
+      "back": "Preiskartell (Sonderfall Submissionskartell), Kalkulations-, Kontingentierungs- (Gebiets-, Quotenkartell), Konditionen-, Rabatt-, Rationalisierungskartell. Grundsätzlich verboten (§ 1 GWB), erlaubt z. B. als Mittelstandskartell (§ 3) oder nach § 2 (Legalausnahme).",
+      "exam": true
     },
     {
       "id": "bwl-k028",
@@ -215,49 +215,49 @@
       "topic": "Rechnungswesen",
       "front": "Auszahlung, Ausgabe, Aufwand, Kosten",
       "back": "Auszahlung: flüssige Mittel · Ausgabe: Geldvermögen (inkl. Forderungen/Verbindlichkeiten) · Aufwand: Erfolg (GuV) · Kosten: betrieblicher Werteverzehr. Spende = neutraler Aufwand, keine Kosten.",
-      "exam": false
+      "exam": true
     },
     {
       "id": "bwl-k032",
       "topic": "Rechnungswesen",
-      "front": "Bilanzgleichung",
-      "back": "AV + UV = Gesamtvermögen = Gesamtkapital = EK + FK. Aktiva nach Liquidität, Passiva nach Fälligkeit. Bsp.: AV 70.000 + UV 175.000 = 245.000 €.",
-      "exam": false
+      "front": "Bilanz: Gliederung und Bilanzgleichung",
+      "back": "Aktiva (Mittelverwendung, nach Liquidität): Anlagevermögen + Umlaufvermögen. Passiva (Mittelherkunft, nach Fälligkeit): Eigenkapital + Fremdkapital. AV + UV = Gesamtvermögen = Gesamtkapital = EK + FK; Übung 28a: AV 70.000 + UV 175.000 = 245.000 €.",
+      "exam": true
     },
     {
       "id": "bwl-k033",
       "topic": "Rechnungswesen",
       "front": "Zweipunktverfahren (Musterklausur 3): (700 | 80.000 €), (1.400 | 150.000 €)",
-      "back": "k_v = 70.000 / 700 = 100 €/Stück · K_fix = 80.000 − 100 · 700 = 10.000 € · K(15.000) = 10.000 + 1.500.000 = 1.510.000 €. Immer kleinste und größte Menge.",
+      "back": "kv = 70.000 / 700 = 100 €/Stück · Kfix = 80.000 − 100 · 700 = 10.000 € · K(15.000) = 10.000 + 1.500.000 = 1.510.000 €. Immer kleinste und größte Menge.",
       "exam": true
     },
     {
       "id": "bwl-k034",
       "topic": "Rechnungswesen",
       "front": "Deckungsbeitrag (Musterklausur 4)",
-      "back": "A: 75 − 40 = 35 € · 3.500 = 122.500 € · B: 95 − 45 = 50 € · 3.000 = 150.000 € · 272.500 − K_fix 275.000 = −2.500 € Betriebsergebnis.",
+      "back": "A: 75 − 40 = 35 € · 3.500 = 122.500 € · B: 95 − 45 = 50 € · 3.000 = 150.000 € · 272.500 − Kfix 275.000 = −2.500 € Betriebsergebnis.",
       "exam": true
     },
     {
       "id": "bwl-k035",
       "topic": "Rechnungswesen",
       "front": "Break-even-Menge",
-      "back": "x_BE = K_fix / (p − k_v). Übung 28h: 120.000 / (77 − 45) = 3.750 Stück, Umsatz 3.750 · 77 = 288.750 €.",
+      "back": "x(BE) = Kfix / (p − kv). Übung 28h: 120.000 / (77 − 45) = 3.750 Stück, Umsatz 3.750 · 77 = 288.750 €.",
       "exam": true
     },
     {
       "id": "bwl-k036",
       "topic": "Rechnungswesen",
       "front": "Preisuntergrenzen",
-      "back": "Kurzfristig = k_v; langfristig = k_v + K_fix/x. Übung 28f: 60 € bzw. 60 + 115.000/7.000 = 76,43 €.",
-      "exam": false
+      "back": "Kurzfristig = kv; langfristig = kv + Kfix/x. Übung 28f: 60 € bzw. 60 + 115.000/7.000 = 76,43 €.",
+      "exam": true
     },
     {
       "id": "bwl-k037",
       "topic": "Rechnungswesen",
       "front": "Make-or-buy (Übung 28g)",
       "back": "100.000 + 20x = 30x → kritische Menge 10.000 Stück. Bedarf 20.000 > 10.000 → Eigenfertigung (500.000 statt 600.000 €).",
-      "exam": false
+      "exam": true
     },
     {
       "id": "bwl-k038",
@@ -275,7 +275,7 @@
     },
     {
       "id": "bwl-k040",
-      "topic": "Kommt nicht dran (Kap. 7 Rest, 8, 10)",
+      "topic": "Nicht klausurrelevant",
       "front": "Top-down, Bottom-up, Gegenstrom",
       "back": "Top-down (retrograd): oben → unten, evtl. unrealistisch. Bottom-up (progressiv): unten planen, oben zusammenfassen. Gegenstrom: Rahmen von oben, Präzisierung von unten.",
       "exam": false
@@ -284,40 +284,40 @@
       "id": "bwl-k041",
       "topic": "Planung & Kontrolle",
       "front": "Balanced Scorecard: vier Perspektiven",
-      "back": "Finanzen · Kunden · Prozesse · Mitarbeiter/Potenzial. Ursache-Wirkung: Mitarbeiter → Prozesse → Kunden → Finanzen.",
-      "exam": false
+      "back": "Finanzen · Kunden · Prozesse · Mitarbeiter/Potenzial (Lernen). Ursache-Wirkung: geschulte Mitarbeiter → bessere Prozesse → zufriedene Kunden → mehr Gewinn.",
+      "exam": true
     },
     {
       "id": "bwl-k042",
-      "topic": "Kommt nicht dran (Kap. 7 Rest, 8, 10)",
+      "topic": "Nicht klausurrelevant",
       "front": "Five Forces (Porter)",
       "back": "Macht der Lieferanten · Macht der Kunden · neue Wettbewerber · Ersatzprodukte · Wettbewerbsintensität in der Branche.",
       "exam": false
     },
     {
       "id": "bwl-k043",
-      "topic": "Kommt nicht dran (Kap. 7 Rest, 8, 10)",
+      "topic": "Nicht klausurrelevant",
       "front": "Instanz vs. Stabsstelle",
       "back": "Instanz: Leitungs- und Weisungsbefugnis. Stabsstelle: Leitungshilfe, nur beratend, kein Weisungsrecht.",
       "exam": false
     },
     {
       "id": "bwl-k044",
-      "topic": "Kommt nicht dran (Kap. 7 Rest, 8, 10)",
+      "topic": "Nicht klausurrelevant",
       "front": "Leitungsspanne und Leitungstiefe",
       "back": "Spanne = Zahl der direkt unterstellten Stellen (Kaufm. Leiter mit 2 Abteilungsleitern → 2). Tiefe = Zahl der Hierarchieebenen.",
       "exam": false
     },
     {
       "id": "bwl-k045",
-      "topic": "Kommt nicht dran (Kap. 7 Rest, 8, 10)",
+      "topic": "Nicht klausurrelevant",
       "front": "Einlinien-, Mehrlinien-, Stab-Linien-, Matrixorganisation",
       "back": "Einlinien: ein Weisungsweg, klar, aber lang · Mehrlinien: mehrere Vorgesetzte (Taylor) · Stab-Linien: Stäbe entlasten · Matrix: zwei Dimensionen, Kompetenzstreit möglich.",
       "exam": false
     },
     {
       "id": "bwl-k046",
-      "topic": "Kommt nicht dran (Kap. 7 Rest, 8, 10)",
+      "topic": "Nicht klausurrelevant",
       "front": "Funktional vs. divisional",
       "back": "Funktional = nach Verrichtung (Einkauf, Produktion, Vertrieb). Divisional = nach Objekt (Produkte, Regionen), Sparten oft Profit Center.",
       "exam": false
@@ -340,7 +340,7 @@
       "id": "bwl-k049",
       "topic": "Materialwirtschaft",
       "front": "Andler + Meldebestand (Musterklausur 6)",
-      "back": "Bedarf 2 · 3.350 = 6.700; x_opt = √(2 · 6.700 · 400 / (6.000 · 0,12)) ≈ 86 · Bestellungen ≈ 78 · Meldebestand = 50 + 9 · 3.350/130 ≈ 282.",
+      "back": "Bedarf 2 · 3.350 = 6.700; x(opt) = √(2 · 6.700 · 400 / (6.000 · 0,12)) ≈ 86 · Bestellungen ≈ 78 · Meldebestand = 50 + 9 · 3.350/130 ≈ 282.",
       "exam": true
     },
     {
@@ -348,7 +348,7 @@
       "topic": "Materialwirtschaft",
       "front": "Meldebestand (Formel)",
       "back": "Sicherheitsbestand + Lieferzeit · Tagesverbrauch. Übung 42: 100 + 14 · 20 = 380 Stück. Hängt nicht von der Bestellmenge ab.",
-      "exam": false
+      "exam": true
     },
     {
       "id": "bwl-k051",
@@ -362,18 +362,18 @@
       "topic": "Materialwirtschaft",
       "front": "Lagerkennzahlen (Übung 50)",
       "back": "Umschlagshäufigkeit = Verbrauch / Ø Bestand = 331 / 41 ≈ 8 · Ø Lagerdauer = 360 / 8 = 45 Tage · Lagerzinssatz = 10 % · 45/360 = 1,25 %.",
-      "exam": false
+      "exam": true
     },
     {
       "id": "bwl-k053",
-      "topic": "Kommt nicht dran (Kap. 7 Rest, 8, 10)",
+      "topic": "Nicht klausurrelevant",
       "front": "Fertigungstypen nach Raum",
       "back": "Punkt (Werkstück bleibt: Hausbau, Autoreparatur) · Werkstatt (gleiche Maschinen zusammen: Dreherei) · Fließ (nach Ablauf: Automontage) · Gruppe (Kompromiss).",
       "exam": false
     },
     {
       "id": "bwl-k054",
-      "topic": "Kommt nicht dran (Kap. 7 Rest, 8, 10)",
+      "topic": "Nicht klausurrelevant",
       "front": "Supply Chain Management",
       "back": "Koordination von Material-, Geld- und Informationsfluss über die ganze Lieferkette. Bsp.: Autohersteller teilt Produktionsplan in Echtzeit mit Sitzlieferant und Spedition.",
       "exam": false
@@ -382,7 +382,7 @@
       "id": "bwl-k055",
       "topic": "Rechnungswesen",
       "front": "Wer interessiert sich für das **externe** Rechnungswesen, und warum?",
-      "back": "Eigenkapitalgeber (Verzinsung), Fremdkapitalgeber (Sicherheit von Kapital und Zinsen), Arbeitnehmer (sichere Jobs, Löhne), Lieferanten (Absatz, Lieferantenkredite), Kunden (sichere Beschaffung), Finanzbehörden (Steuer), Öffentlichkeit/Analysten/Presse (Güte), Gerichte (Beweismittel).",
+      "back": "EK-Geber (Verzinsung), FK-Geber (Sicherheit von Kapital und Zinsen), Arbeitnehmer (sichere Jobs, Löhne), Lieferanten (Absatz, Lieferantenkredite), Kunden (sichere Beschaffung), Finanzbehörden (Steuer), Öffentlichkeit/Presse (Güte), Gerichte (Beweismittel).",
       "exam": true
     },
     {
@@ -396,14 +396,210 @@
       "id": "bwl-k057",
       "topic": "Rechnungswesen",
       "front": "Nutzenschwelle: Was ist das, und wie rechnest du sie aus?",
-      "back": "Andere Namen: Break-even-Point, Gewinnschwelle. Die Menge, ab der kein Verlust mehr entsteht: x = Kfix / (p − kv). Übung 28h: 120.000 / 32 = **3.750 Stück**, Umsatz 3.750 · 77 = 288.750 €.",
+      "back": "Synonyme: Break-even-Point, Gewinnschwelle. Die Menge, ab der kein Verlust mehr entsteht: x(BE) = Kfix / (p − kv). Übung 28h: 120.000 / 32 = **3.750 Stück**, Umsatz 3.750 · 77 = 288.750 €.",
       "exam": true
     },
     {
       "id": "bwl-k058",
       "topic": "Klausurhinweise",
       "front": "Welche Kapitel kommen laut „Könnte drankommen“ **nicht** dran?",
-      "back": "Kap. 8 Organisation und Kap. 10 Produktion ganz. Von Kap. 7 nur Kennzahlen und Balanced Scorecard. Bei den Rechtsformen nur Einzelunternehmen, OHG, KG, UG, GmbH, AG, GmbH & Co. KG.",
+      "back": "Kap. 8 Organisation und Kap. 10 Produktion ganz; von Kap. 7 nur Kennzahlen und Balanced Scorecard. Rechtsformen nur Einzelunternehmen, OHG, KG, UG, GmbH, AG, GmbH & Co. KG (also nicht GbR, stille Gesellschaft, KGaA, SE, eG, Stiftung).",
+      "exam": true
+    },
+    {
+      "id": "bwl-k059",
+      "topic": "Einführung",
+      "front": "Vier Modelltypen der BWL",
+      "back": "Beschreibungsmodell („Was ist geschehen?“, Organigramm) · Erklärungsmodell („Warum?“, Arbeitsbedingungen → Leistung) · Prognosemodell („Was wird geschehen?“, Preisprognose per Regression) · Entscheidungsmodell („Was soll geschehen?“, Entscheidungsbaum).",
+      "exam": true
+    },
+    {
+      "id": "bwl-k060",
+      "topic": "Einführung",
+      "front": "Prinzipien „PPP“ (magisches Dreieck)",
+      "back": "Profit = ökonomisches Prinzip (Aufwand und Ertrag günstig) · People = Humanitätsprinzip (Mensch im Mittelpunkt) · Planet = Umweltschonungsprinzip (Umweltbelastung gering). Beispiel: Ein Werk spart Energie (Planet) und senkt damit Kosten (Profit).",
+      "exam": true
+    },
+    {
+      "id": "bwl-k061",
+      "topic": "Einführung",
+      "front": "Güterklassifikation: freie Güter vs. Wirtschaftsgüter",
+      "back": "Freie Güter sind nicht knapp und kosten nichts (Luft). Wirtschaftsgüter sind knapp: materiell (Sachgüter) oder immateriell (Dienstleistungen, Rechte), eingeteilt nach Input/Output, Produktions-/Konsumgut, Verbrauchs-/Gebrauchsgut, Real-/Nominalgut.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k062",
+      "topic": "Betrieb & Ziele",
+      "front": "Makroumfeld: sechs Faktorgruppen",
+      "back": "Politisch, ökonomisch, soziokulturell, technologisch, rechtlich, ökologisch, Merkhilfe PESTEL. Beispiel: Steigende Zinsen sind ein ökonomischer Faktor, den das Unternehmen nicht beeinflussen kann.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k063",
+      "topic": "Betrieb & Ziele",
+      "front": "Corporate Identity: Bestandteile",
+      "back": "Die Unternehmensidentität („Wer sind wir?“) besteht aus Corporate Design (Logo, Briefpapier), Corporate Communication (Auftreten, Sprache) und Corporate Behaviour (Umgang mit Kunden, Mitarbeitern). Widersprüche schaden: Jugendförderung propagieren, aber keine Azubis ausbilden.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k064",
+      "topic": "Betrieb & Ziele",
+      "front": "Strategische, taktische und operative Ziele",
+      "back": "Unterscheidung nach dem Zeitbezug: strategisch mehr als 5 Jahre (Skript 5–10), taktisch 1–5 Jahre, operativ bis 1 Jahr. Beispiel: „In 8 Jahren Marktführer“ (strategisch) → „Dieses Quartal 200 Neukunden“ (operativ).",
+      "exam": true
+    },
+    {
+      "id": "bwl-k065",
+      "topic": "Betrieb & Ziele",
+      "front": "Zielbeziehungen",
+      "back": "Komplementär: Z1 hilft Z2 (niedrigere Einstandspreise → mehr Gewinn) · konkurrierend: Z1 schadet Z2 (Ausbringung steigern vs. Energieverbrauch senken) · indifferent: keine Wirkung (Kundenkommunikation vs. Produktivität).",
+      "exam": true
+    },
+    {
+      "id": "bwl-k066",
+      "topic": "Betrieb & Ziele",
+      "front": "Shareholder-Value vs. Stakeholder-Value",
+      "back": "Shareholder: Das Wohl der Anteilseigner (Aktienkurs, Rendite) hat Vorrang. Stakeholder: Auch Mitarbeiter, Kunden, Lieferanten, Fremdkapitalgeber, Staat und Gesellschaft werden berücksichtigt. Welche Ziele gelten, hängt von der Machtverteilung ab.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k067",
+      "topic": "Rechtsformen",
+      "front": "Die fünf Firmengrundsätze",
+      "back": "Firmenklarheit (kennzeichnen, unterscheiden, § 18 I) · Firmenwahrheit (keine Täuschung, § 18 II: kein „Weltmarktführer“ als Ein-Mann-Betrieb) · Ausschließlichkeit (keine Verwechslung am Ort, § 30) · Beständigkeit (Fortführung, §§ 21–24) · Öffentlichkeit (Rechtsformzusatz, HR, Geschäftsbriefe).",
+      "exam": true
+    },
+    {
+      "id": "bwl-k068",
+      "topic": "Rechtsformen",
+      "front": "Formkaufmann vs. Istkaufmann",
+      "back": "Formkaufmann = Kaufmann kraft Rechtsform (GmbH, AG), Eintrag konstitutiv. Istkaufmann = Gewerbe mit kaufmännischer Organisation (§ 1 HGB, z. B. OHG), Eintrag nur deklaratorisch. Kannkaufmann (§§ 2, 3) wird erst durch Eintrag Kaufmann.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k069",
+      "topic": "Rechtsformen",
+      "front": "Einzelunternehmen: Haftung, Vor- und Nachteile",
+      "back": "Der Inhaber haftet allein und unbeschränkt, auch privat, und erhält den ganzen Gewinn. Vorteile: schnelle Entscheidungen, kein Streit. Nachteile: kein Risikoausgleich, wenig Kapital, Arbeitsüberlastung. Beispiel: „Anna Weber Elektrotechnik e. K.“",
+      "exam": true
+    },
+    {
+      "id": "bwl-k070",
+      "topic": "Rechtsformen",
+      "front": "GmbH & Co. KG",
+      "back": "Eine KG, deren Komplementär eine GmbH ist; rechtlich eine Personengesellschaft (HR Abteilung A). Gründe: Haftung der Gesellschafter faktisch beschränkt, leichtere Kapitalbeschaffung über Kommanditisten, Nachfolge gesichert („unsterbliche“ GmbH), Fremdgeschäftsführer möglich.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k071",
+      "topic": "Kooperation & Konzentration",
+      "front": "Franchising: Wer leistet was?",
+      "back": "Franchisegeber: Geschäftskonzept, Marke, Lizenzen, Know-how, überregionale Werbung. Franchisenehmer: eigenes Kapital, bleibt rechtlich und wirtschaftlich selbstständig, zahlt Einstandsgebühr + laufende Beiträge, duldet Kontrollen. Beispiel: McDonald's, Fressnapf.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k072",
+      "topic": "Standort",
+      "front": "Drei Gruppen von Standortfaktoren",
+      "back": "Unternehmensbezogen (Politik, Steuern, Recht, z. B. Local-content-Bedingungen) · produktionsbezogen (Grundstücke, Material, Arbeitskräfte, Verkehr, Energie) · absatzbezogen (lokale Nachfrage, Herkunftsgoodwill, Konkurrenz, Exportmöglichkeiten).",
+      "exam": true
+    },
+    {
+      "id": "bwl-k073",
+      "topic": "Rechnungswesen",
+      "front": "Vier Hauptaufgaben des Rechnungswesens",
+      "back": "Dokumentation (alle Geschäftsfälle per Beleg) · Rechenschaftslegung und Information (Jahresabschluss für Eigner, Finanzamt, Gläubiger) · Kontrolle (Wirtschaftlichkeit, Liquidität) · Disposition (Zahlen als Grundlage für Planung, z. B. Investitionen).",
+      "exam": true
+    },
+    {
+      "id": "bwl-k074",
+      "topic": "Rechnungswesen",
+      "front": "GuV: Wie entsteht der Gewinn?",
+      "back": "Die GuV stellt Erträge und Aufwendungen einer Periode gegenüber: Erträge − Aufwendungen = Gewinn bzw. Verlust. Siller GmbH: 1.720.000 − 1.500.000 = 220.000 € Gewinn.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k075",
+      "topic": "Rechnungswesen",
+      "front": "Erträge und Aufwendungen im Industriebetrieb",
+      "back": "Erträge: Umsatzerlöse, Bestandserhöhungen, aktivierte Eigenleistungen, sonstige betriebliche Erträge, Finanzerträge (erhaltene Zinsen). Aufwendungen: Materialaufwand, Personalaufwand, Abschreibungen, Bestandsminderungen, Zinsaufwand, Steuern.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k076",
+      "topic": "Rechnungswesen",
+      "front": "Kostencharakterisierung",
+      "back": "Nach Zurechenbarkeit: Einzelkosten (direkt, Rohstoffe) vs. Gemeinkosten (über Schlüssel, Miete). Nach Beschäftigung: variabel (Rohstoffe, Fertigungslöhne) vs. fix (Gehälter, Abschreibungen). Einzelkosten sind stets variabel, Gemeinkosten meist fix.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k077",
+      "topic": "Rechnungswesen",
+      "front": "Lineare Kostenfunktion",
+      "back": "K = Kfix + kv · x (fixe Kosten + variable Stückkosten mal Menge). Übung 28d: Kfix 14.000 €, kv 70 € → K(900) = 14.000 + 70 · 900 = 77.000 €.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k078",
+      "topic": "Materialwirtschaft",
+      "front": "Drei Beschaffungsprinzipien mit Vor- und Nachteil",
+      "back": "Einzelbeschaffung im Bedarfsfall: kaum Lagerkosten, aber teuer und Wartezeit (Blattgold für eine Sondertorte) · Vorratsbeschaffung: sicher, aber hohe Lagerkosten/Kapitalbindung (Mehl im Silo) · Just-in-time: geringe Lagerkosten, aber Abhängigkeit, hohe Preise, störanfällig (Tüten jeden Morgen).",
+      "exam": true
+    },
+    {
+      "id": "bwl-k079",
+      "topic": "Materialwirtschaft",
+      "front": "Programm- vs. verbrauchsorientierte Bedarfsplanung",
+      "back": "Programmorientiert (A-/B-Güter): exakt aus Produktionsprogramm und Stückliste, 300 Torten · 0,25 kg = 75 kg Butter. Verbrauchsorientiert (C-Güter): aus Vergangenheitswerten, gleitender Mittelwert (160 + 180 + 170 + 190) / 4 = 175 Rollen.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k080",
+      "topic": "Materialwirtschaft",
+      "front": "Arten von Beständen",
+      "back": "Lagerbestand (tatsächlich, per Inventur) · Buchbestand (laut Buchhaltung) · Sicherheitsbestand (eiserne Reserve) · Meldebestand (löst Bestellung aus) · Höchstbestand (Obergrenze = Sicherheitsbestand + Bestellmenge, Bäckerei 40 + 1.200 = 1.240 kg).",
+      "exam": true
+    },
+    {
+      "id": "bwl-k081",
+      "topic": "Materialwirtschaft",
+      "front": "Bestellpunkt- vs. Bestellrhythmusverfahren",
+      "back": "Bestellpunkt: feste Menge, bestellt wird, sobald der Meldebestand erreicht ist (Zeitpunkt wandert). Bestellrhythmus: feste Termine (jeden Montag), die Menge richtet sich nach dem Verbrauch.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k082",
+      "topic": "Materialwirtschaft",
+      "front": "Andler-Formel (optimale Bestellmenge)",
+      "back": "x(opt) = √(2 · Jahresbedarf · Kosten je Bestellung / (Preis · Lagerkostensatz)). Bäckerei Zucker: √(2 · 6.000 · 12 / (1,00 · 0,10)) = 1.200 kg, 5 Bestellungen; im Optimum Lagerkosten 60 € = Bestellkosten 60 €.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k083",
+      "topic": "Materialwirtschaft",
+      "front": "Sourcing-Varianten",
+      "back": "Solo-Sourcing: gezwungen ein Lieferant (nur eine Mühle mahlt das Urkorn) · Single-Sourcing: bewusst ein Lieferant je Material (Butter nur von einer Molkerei) · Multiple-Sourcing: viele Lieferanten, Preiswettbewerb (Zucker wöchentlich bei mehreren Händlern angefragt).",
+      "exam": true
+    },
+    {
+      "id": "bwl-k084",
+      "topic": "Materialwirtschaft",
+      "front": "Single-Sourcing: Vor- und Nachteile",
+      "back": "Vorteile: enge Partnerschaft, gleichbleibende Qualität, weniger Abstimmung, Mengenrabatte. Nachteile: Abhängigkeit, Ausfallrisiko, kein Preiswettbewerb. Multiple-Sourcing ist das Spiegelbild.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k085",
+      "topic": "Materialwirtschaft",
+      "front": "Lagerkennzahlen: die vier Formeln",
+      "back": "Umschlagshäufigkeit = Verbrauch / Ø Lagerbestand · Ø Lagerdauer = 360 / Umschlagshäufigkeit · Lagerzinssatz = Jahreszins · Ø Lagerdauer / 360. Bäckerei: 6.000 / 640 = 9,375 → 38,4 Tage → 6 % · 38,4 / 360 = 0,64 %. Hohe Umschlagshäufigkeit = gut.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k086",
+      "topic": "Planung & Kontrolle",
+      "front": "Arten von Kennzahlen",
+      "back": "Absolute Zahlen (Summen, Differenzen, Mittelwerte) und Verhältniszahlen: Gliederungszahl (Teil / Ganzes, EK-Quote), Beziehungszahl (zwei verschiedene Größen, Umsatz je Mitarbeiter), Indexzahl (Basisjahr = 100).",
       "exam": true
     }
   ],
@@ -562,12 +758,12 @@
         "107,14 €"
       ],
       "correct": 1,
-      "explain": "k_v = (150.000 − 80.000) / (1.400 − 700) = 70.000 / 700 = 100 €."
+      "explain": "kv = (150.000 − 80.000) / (1.400 − 700) = 70.000 / 700 = 100 €."
     },
     {
       "id": "bwl-q013",
       "topic": "Rechnungswesen",
-      "q": "Mit k_v = 100 € und K_fix = 10.000 €: Gesamtkosten für 15.000 Stück?",
+      "q": "Mit kv = 100 € und Kfix = 10.000 €: Gesamtkosten für 15.000 Stück?",
       "options": [
         "1.500.000 €",
         "160.000 €",
@@ -580,7 +776,7 @@
     {
       "id": "bwl-q014",
       "topic": "Rechnungswesen",
-      "q": "Produkt A: p 75 €, k_v 40 €, 3.500 Stück. Produkt B: p 95 €, k_v 45 €, 3.000 Stück. Fixkosten 275.000 €. Betriebsergebnis?",
+      "q": "Produkt A: p 75 €, kv 40 €, 3.500 Stück. Produkt B: p 95 €, kv 45 €, 3.000 Stück. Fixkosten 275.000 €. Betriebsergebnis?",
       "options": [
         "+2.500 €",
         "+272.500 €",
@@ -601,12 +797,12 @@
         "2.000 Stück"
       ],
       "correct": 3,
-      "explain": "x_BE = 12.000 / (20 − 14) = 2.000 Stück."
+      "explain": "x(BE) = 12.000 / (20 − 14) = 2.000 Stück."
     },
     {
       "id": "bwl-q016",
       "topic": "Rechnungswesen",
-      "q": "Eigenfertigung: K_fix 100.000 €, k_v 20 €. Fremdbezug: 30 € je Stück. Ab welcher Menge lohnt Eigenfertigung?",
+      "q": "Eigenfertigung: Kfix 100.000 €, kv 20 €. Fremdbezug: 30 € je Stück. Ab welcher Menge lohnt Eigenfertigung?",
       "options": [
         "Ab mehr als 10.000 Stück",
         "Ab mehr als 5.000 Stück",
@@ -627,7 +823,7 @@
         "Der Marktpreis der Konkurrenz"
       ],
       "correct": 1,
-      "explain": "Kurzfristig müssen nur die variablen Kosten gedeckt sein (db = 0); langfristig k_v + K_fix/x."
+      "explain": "Kurzfristig müssen nur die variablen Kosten gedeckt sein (db = 0); langfristig kv + Kfix/x."
     },
     {
       "id": "bwl-q018",
@@ -693,6 +889,266 @@
       ],
       "correct": 0,
       "explain": "43,75 / 90 = 48,61 % des Werts – fast die Hälfte, also eindeutig A (Musterklausur 7a)."
+    },
+    {
+      "id": "bwl-q023",
+      "topic": "Betrieb & Ziele",
+      "q": "Ein Unternehmen will die Ausbringungsmenge einer Maschine steigern und zugleich ihren Energieverbrauch senken. Welche Zielbeziehung?",
+      "options": [
+        "Komplementär",
+        "Indifferent",
+        "Konkurrierend",
+        "Identisch"
+      ],
+      "correct": 2,
+      "explain": "Mehr Ausbringung kostet mehr Energie: Wird Z1 besser erfüllt, leidet Z2."
+    },
+    {
+      "id": "bwl-q024",
+      "topic": "Betrieb & Ziele",
+      "q": "Ein Ziel soll in 1 bis 5 Jahren erreicht werden. Wie heißt es nach dem Zeitbezug?",
+      "options": [
+        "Operativ",
+        "Taktisch",
+        "Strategisch",
+        "Normativ"
+      ],
+      "correct": 1,
+      "explain": "Operativ = bis 1 Jahr, taktisch = 1–5 Jahre, strategisch = mehr als 5 Jahre."
+    },
+    {
+      "id": "bwl-q025",
+      "topic": "Betrieb & Ziele",
+      "q": "Ein Unternehmen vereinheitlicht Logo, Briefpapier und Website. Welcher Teil der Corporate Identity ist das?",
+      "options": [
+        "Corporate Behaviour",
+        "Corporate Governance",
+        "Corporate Communication",
+        "Corporate Design"
+      ],
+      "correct": 3,
+      "explain": "Das optische Erscheinungsbild ist Corporate Design; Communication betrifft Sprache und Auftreten, Behaviour das Verhalten."
+    },
+    {
+      "id": "bwl-q026",
+      "topic": "Betrieb & Ziele",
+      "q": "Die EZB erhöht die Leitzinsen. Zu welchem Bereich des Makroumfelds gehört das?",
+      "options": [
+        "Ökonomisch",
+        "Soziokulturell",
+        "Technologisch",
+        "Ökologisch"
+      ],
+      "correct": 0,
+      "explain": "Zinsen, Inflation und Konjunktur sind ökonomische Faktoren."
+    },
+    {
+      "id": "bwl-q027",
+      "topic": "Einführung",
+      "q": "Wofür steht das „People“ in den Prinzipien PPP?",
+      "options": [
+        "Ökonomisches Prinzip",
+        "Humanitätsprinzip",
+        "Umweltschonungsprinzip",
+        "Minimalprinzip"
+      ],
+      "correct": 1,
+      "explain": "Profit = ökonomisches Prinzip, People = Humanitätsprinzip, Planet = Umweltschonungsprinzip."
+    },
+    {
+      "id": "bwl-q028",
+      "topic": "Einführung",
+      "q": "Eine Marktprognose per Regression ist ein Beispiel für welches Modell?",
+      "options": [
+        "Beschreibungsmodell",
+        "Entscheidungsmodell",
+        "Erklärungsmodell",
+        "Prognosemodell"
+      ],
+      "correct": 3,
+      "explain": "Ein Prognosemodell fragt, was aus welchem Grund geschehen wird."
+    },
+    {
+      "id": "bwl-q029",
+      "topic": "Rechtsformen",
+      "q": "Ein Ein-Mann-Betrieb firmiert als „Weltmarktführer für Fenster e. K.“. Gegen welchen Grundsatz verstößt das?",
+      "options": [
+        "Firmenwahrheit",
+        "Firmenbeständigkeit",
+        "Firmenausschließlichkeit",
+        "Firmenöffentlichkeit"
+      ],
+      "correct": 0,
+      "explain": "Die Firma darf nicht über die geschäftlichen Verhältnisse täuschen (§ 18 II HGB)."
+    },
+    {
+      "id": "bwl-q030",
+      "topic": "Rechtsformen",
+      "q": "Eine GmbH wird gegründet. Welche Art Kaufmann ist sie, und wie wirkt der HR-Eintrag?",
+      "options": [
+        "Istkaufmann, deklaratorisch",
+        "Formkaufmann, deklaratorisch",
+        "Formkaufmann, konstitutiv",
+        "Kannkaufmann, konstitutiv"
+      ],
+      "correct": 2,
+      "explain": "Kapitalgesellschaften sind Kaufleute kraft Rechtsform und entstehen erst mit dem Eintrag."
+    },
+    {
+      "id": "bwl-q031",
+      "topic": "Rechtsformen",
+      "q": "Zu welcher Gruppe gehört die GmbH & Co. KG rechtlich?",
+      "options": [
+        "Kapitalgesellschaft (HR Abteilung B)",
+        "Personengesellschaft (HR Abteilung A)",
+        "Einzelunternehmen",
+        "Genossenschaft"
+      ],
+      "correct": 1,
+      "explain": "Sie ist eine KG, nur ist der Komplementär eine GmbH."
+    },
+    {
+      "id": "bwl-q032",
+      "topic": "Kooperation & Konzentration",
+      "q": "Wer bleibt beim Franchising rechtlich und wirtschaftlich selbstständig?",
+      "options": [
+        "Nur der Franchisegeber",
+        "Keiner, es ist ein Konzern",
+        "Nur die Systemzentrale",
+        "Auch der Franchisenehmer"
+      ],
+      "correct": 3,
+      "explain": "Der Franchisenehmer gründet mit eigenem Kapital und bleibt selbstständig, zahlt aber Gebühren und duldet Kontrollen."
+    },
+    {
+      "id": "bwl-q033",
+      "topic": "Standort",
+      "q": "„Herkunftsgoodwill“ gehört zu welcher Gruppe von Standortfaktoren?",
+      "options": [
+        "Absatzbezogen",
+        "Produktionsbezogen",
+        "Unternehmensbezogen",
+        "Gar keiner, das ist ein Kartell"
+      ],
+      "correct": 0,
+      "explain": "Er betrifft die lokale Nachfrage: Käufer schätzen Produkte aus der Region („Stuttgarter Hofbräu“)."
+    },
+    {
+      "id": "bwl-q034",
+      "topic": "Rechnungswesen",
+      "q": "Die jährliche Information von Eignern und Finanzamt über den Jahresabschluss ist welche Hauptaufgabe des Rechnungswesens?",
+      "options": [
+        "Dokumentation",
+        "Disposition",
+        "Rechenschaftslegung und Information",
+        "Kontrolle"
+      ],
+      "correct": 2,
+      "explain": "Dokumentation = Belege buchen; Rechenschaftslegung = gesetzlicher Jahresabschluss für Externe."
+    },
+    {
+      "id": "bwl-q035",
+      "topic": "Rechnungswesen",
+      "q": "Woran ist ein Lieferant beim externen Rechnungswesen vor allem interessiert?",
+      "options": [
+        "Sicherheit des Absatzes und seiner Lieferantenkredite",
+        "Verzinsung des Eigenkapitals",
+        "Unterlagen für die Steuerschuld",
+        "Beweismittel für Prozesse"
+      ],
+      "correct": 0,
+      "explain": "Verzinsung will der EK-Geber, Steuerunterlagen das Finanzamt, Beweismittel das Gericht."
+    },
+    {
+      "id": "bwl-q036",
+      "topic": "Rechnungswesen",
+      "q": "Wie werden Fertigungslöhne nach der Kostencharakterisierung eingeordnet?",
+      "options": [
+        "Gemeinkosten und fix",
+        "Einzelkosten und variabel",
+        "Einzelkosten und fix",
+        "Gemeinkosten und variabel"
+      ],
+      "correct": 1,
+      "explain": "Sie lassen sich dem Produkt direkt zurechnen und hängen von der Menge ab. Einzelkosten sind stets variabel."
+    },
+    {
+      "id": "bwl-q037",
+      "topic": "Rechnungswesen",
+      "q": "Fixkosten 50.000 €, Preis 25 €, variable Stückkosten 15 €. Wo liegt die Nutzenschwelle?",
+      "options": [
+        "2.000 Stück",
+        "3.333 Stück",
+        "5.000 Stück",
+        "1.250 Stück"
+      ],
+      "correct": 2,
+      "explain": "x(BE) = 50.000 / (25 − 15) = 5.000 Stück. Falle: durch den Preis teilen (2.000) statt durch den Stückdeckungsbeitrag."
+    },
+    {
+      "id": "bwl-q038",
+      "topic": "Materialwirtschaft",
+      "q": "Eine Bäckerei kauft Blattgold erst, wenn eine Sondertorte bestellt ist. Welches Beschaffungsprinzip?",
+      "options": [
+        "Vorratsbeschaffung",
+        "Just-in-time",
+        "Single-Sourcing",
+        "Einzelbeschaffung im Bedarfsfall"
+      ],
+      "correct": 3,
+      "explain": "Gekauft wird erst bei Auftrag: kein Lager, dafür Wartezeit und hohe Beschaffungskosten."
+    },
+    {
+      "id": "bwl-q039",
+      "topic": "Materialwirtschaft",
+      "q": "Nur eine einzige Mühle in der Region mahlt das benötigte Urkorn. Welche Sourcing-Variante liegt vor?",
+      "options": [
+        "Single-Sourcing",
+        "Solo-Sourcing",
+        "Multiple-Sourcing",
+        "Global Sourcing"
+      ],
+      "correct": 1,
+      "explain": "Solo = gezwungen, weil es keinen anderen Lieferanten gibt; Single = bewusst nur einer."
+    },
+    {
+      "id": "bwl-q040",
+      "topic": "Materialwirtschaft",
+      "q": "Sicherheitsbestand 40 kg, Lieferzeit 5 Tage, Tagesverbrauch 20 kg. Meldebestand?",
+      "options": [
+        "100 kg",
+        "140 kg",
+        "60 kg",
+        "200 kg"
+      ],
+      "correct": 1,
+      "explain": "Meldebestand = 40 + 5 · 20 = 140 kg."
+    },
+    {
+      "id": "bwl-q041",
+      "topic": "Materialwirtschaft",
+      "q": "Jahresverbrauch 6.000 kg, Ø Lagerbestand 640 kg. Wie lang ist die Ø Lagerdauer (360 Tage)?",
+      "options": [
+        "9,4 Tage",
+        "60 Tage",
+        "38,4 Tage",
+        "106,7 Tage"
+      ],
+      "correct": 2,
+      "explain": "Umschlagshäufigkeit = 6.000 / 640 = 9,375; Ø Lagerdauer = 360 / 9,375 = 38,4 Tage."
+    },
+    {
+      "id": "bwl-q042",
+      "topic": "Planung & Kontrolle",
+      "q": "Die Eigenkapitalquote (EK / GK) ist welche Art von Kennzahl?",
+      "options": [
+        "Beziehungszahl",
+        "Indexzahl",
+        "Absolute Kennzahl",
+        "Gliederungszahl"
+      ],
+      "correct": 3,
+      "explain": "Ein Teil (EK) wird durchs Ganze (GK) geteilt. Beziehungszahlen setzen verschiedene Größen ins Verhältnis."
     }
   ]
 }

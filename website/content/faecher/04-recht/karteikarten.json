@@ -25,7 +25,7 @@
       "id": "recht-k004",
       "topic": "Fall lösen",
       "front": "Anspruchsaufbau in drei Stufen",
-      "back": "1. entstanden? (hindernd: §§ 105, 125, 134, 138) 2. nicht untergegangen? (Erfüllung § 362, Aufrechnung § 389, Anfechtung § 142) 3. durchsetzbar? (Einreden: Verjährung § 214, §§ 273, 320).",
+      "back": "1. entstanden? (hindernd: §§ 105, 125, 134, 138) 2. nicht untergegangen? (Erfüllung § 362, Aufrechnung § 389, Anfechtung § 142) 3. durchsetzbar? (Einreden: Verjährung § 214, §§ 273, 320). Beispiel: Kaufpreis bezahlt → Anspruch nach § 362 erloschen.",
       "exam": true
     },
     {
@@ -207,14 +207,14 @@
       "id": "recht-k030",
       "topic": "Unwirksamkeit",
       "front": "§ 108 II: Vertragspartner fordert die Eltern zur Erklärung auf",
-      "back": "Genehmigung nur noch ihm gegenüber; eine vorher dem Kind gegenüber erklärte Verweigerung wird unwirksam. Schweigen 2 Wochen = verweigert (Skateboard-Fall).",
+      "back": "Die Genehmigung kann nur noch ihm gegenüber erklärt werden; eine vorher dem Kind gegenüber erklärte Verweigerung wird unwirksam, Schweigen 2 Wochen = verweigert. Skateboard-Fall: Eltern sagen am Telefon „Ja“ → Vertrag wirksam.",
       "exam": true
     },
     {
       "id": "recht-k031",
       "topic": "Vertretung",
-      "front": "Voraussetzungen der Stellvertretung (§ 164)",
-      "back": "1. eigene WE des Vertreters 2. im Namen des Vertretenen (Offenkundigkeit) 3. mit Vertretungsmacht 4. zulässig (nicht: Testament, Eheschließung). Folge: Vertrag mit dem Vertretenen.",
+      "front": "Stellvertretung (§ 164 I): die drei Voraussetzungen",
+      "back": "1. eigene WE des Vertreters (sonst Bote) 2. im fremden Namen (Offenkundigkeit, § 164 I 2) 3. mit Vertretungsmacht. Zusätzlich muss Vertretung zulässig sein (nicht bei Testament, Eheschließung). Folge: Mitbewohnerin kauft „für dich“ mit deiner Erlaubnis eine Bohrmaschine → du schuldest den Kaufpreis.",
       "exam": true
     },
     {
@@ -228,7 +228,7 @@
       "id": "recht-k033",
       "topic": "Vertretung",
       "front": "Duldungs- vs. Anscheinsvollmacht",
-      "back": "Duldung: Chef weiß, dass der Azubi für ihn bestellt, und zahlt wortlos. Anschein: Chef weiß es nicht, hätte es aber erkennen müssen. Beide Male gebunden, wenn der Dritte gutgläubig ist.",
+      "back": "Duldung: Der Vertretene weiß, dass jemand für ihn auftritt, und lässt es geschehen (Chef zahlt die Bestellungen des Azubis wortlos). Anschein: Er weiß es nicht, hätte es aber bei Sorgfalt erkennen und verhindern können. Beide Male gebunden, wenn der Dritte gutgläubig ist.",
       "exam": true
     },
     {
@@ -347,7 +347,7 @@
       "id": "recht-k050",
       "topic": "Störungen",
       "front": "Erfüllungsgehilfe (§ 278)",
-      "back": "Schuldner haftet für Verschulden seiner Gehilfen wie für eigenes, ohne Entlastung. Gehilfe des Elektromeisters beschädigt das Dach → Erich zahlt Dach und Möbel.",
+      "back": "Der Schuldner haftet für das Verschulden seiner Gehilfen wie für eigenes, ohne Entlastung. Gehilfe des Elektromeisters E beschädigt bei der Antennenmontage das Dach → E ersetzt Dach und Möbel (§§ 280 I, 241 II, 278).",
       "exam": false
     },
     {
@@ -417,7 +417,140 @@
       "id": "recht-k060",
       "topic": "Unwirksamkeit",
       "front": "DVD-Player-Fall: Max (17) bekommt 250 € für „einen DVD-Player“ und zahlt 249 €. Prüfreihenfolge laut offizieller Lösung?",
-      "back": "§ 107 a) rechtlich vorteilhaft? (–) · b) Einwilligung? (–), weil bei der Geldübergabe noch kein **konkreter** Player feststand · § 110 (+): Mittel zu diesem Zweck überlassen und voll bezahlt ⇒ Vertrag wirksam, Huber hat einen Kaufpreisanspruch.",
+      "back": "§ 107 a) rechtlich vorteilhaft (–) · b) Einwilligung (–), weil bei der Geldübergabe noch kein **konkreter** Player feststand · § 110 (+): Mittel zu diesem Zweck überlassen und voll bezahlt ⇒ Vertrag wirksam, Huber hat den Kaufpreisanspruch.",
+      "exam": true
+    },
+    {
+      "id": "recht-k061",
+      "topic": "WE & Vertrag",
+      "front": "Willenserklärung: objektiver Tatbestand",
+      "back": "Ein äußeres Verhalten, das ein objektiver Empfänger als Willen zu einer Rechtsfolge verstehen darf. Beispiel: Wer im Laden sagt „Ich nehme die Jacke“ oder sie aufs Kassenband legt, erklärt objektiv einen Kaufwillen.",
+      "exam": true
+    },
+    {
+      "id": "recht-k062",
+      "topic": "WE & Vertrag",
+      "front": "Willenserklärung: subjektiver Tatbestand (drei Elemente)",
+      "back": "Handlungswille (bewusst handeln, kein Reflex) · Erklärungsbewusstsein (wissen, dass man etwas rechtlich Erhebliches erklärt) · Geschäftswille (ein bestimmtes Geschäft wollen). Fehlt nur der Geschäftswille („Dutzend“ = 10 gedacht), liegt eine WE vor, sie ist aber anfechtbar (§ 119 I).",
+      "exam": true
+    },
+    {
+      "id": "recht-k063",
+      "topic": "Vertretung",
+      "front": "Fehlende Offenkundigkeit: Folge und Ausnahme",
+      "back": "Wer nicht erkennbar im fremden Namen handelt, schließt ein Eigengeschäft und kann nicht anfechten (§ 164 II). Ausnahme „Geschäft für den, den es angeht“: Fritz zahlt das Rad bar, dem Händler ist egal, wer Partner wird → Vertrag mit Fred.",
+      "exam": true
+    },
+    {
+      "id": "recht-k064",
+      "topic": "Vertretung",
+      "front": "Wie geschäftsfähig müssen Vertreter und Bote sein?",
+      "back": "Der Vertreter muss nur beschränkt geschäftsfähig sein (§ 165), weil die Folgen den Vertretenen treffen; der Bote braucht gar keine Geschäftsfähigkeit. Beispiel: Ein 16-jähriger Azubi kauft wirksam für seine Chefin ein.",
+      "exam": true
+    },
+    {
+      "id": "recht-k065",
+      "topic": "Vertretung",
+      "front": "Vollmacht: Können (außen) vs. Dürfen (innen)",
+      "back": "Die Vollmacht (Innen- oder Außenvollmacht, § 167 I) bestimmt, was der Vertreter nach außen kann; interne Weisungen nur, was er darf. Peter soll „bestens verkaufen“, intern „mindestens 5.000 €“, verkauft für 4.500 € → Vertrag wirksam, Peter haftet nur intern.",
+      "exam": true
+    },
+    {
+      "id": "recht-k066",
+      "topic": "Vertretung",
+      "front": "Duldungsvollmacht: Voraussetzungen und Folge",
+      "back": "Jemand tritt wiederholt ohne Vollmacht für den Vertretenen auf, dieser weiß es und schreitet nicht ein, der Dritte ist gutgläubig → der Vertretene wird behandelt, als hätte er Vollmacht erteilt. Beispiel: Angestellter A kauft monatelang bei H ein, Chef C zahlt jedes Mal → C ist gebunden.",
+      "exam": true
+    },
+    {
+      "id": "recht-k067",
+      "topic": "Vertretung",
+      "front": "§ 179 I vs. § 179 II: Haftung des Vertreters ohne Vertretungsmacht",
+      "back": "Kannte er den Mangel: nach Wahl des Partners Erfüllung oder Schadensersatz (I). Kannte er ihn nicht: nur Vertrauensschaden, höchstens bis zum Erfüllungsinteresse (II). Keine Haftung, wenn der Partner den Mangel kannte oder kennen musste oder der Vertreter minderjährig war (III).",
+      "exam": true
+    },
+    {
+      "id": "recht-k068",
+      "topic": "Vertretung",
+      "front": "§ 177 II und § 178: Was kann der Geschäftspartner tun, solange der Vertretene schweigt?",
+      "back": "Er kann den Vertretenen zur Genehmigung auffordern; Schweigen 2 Wochen = verweigert (§ 177 II). Kannte er den Mangel nicht, kann er bis zur Genehmigung widerrufen (§ 178).",
+      "exam": false
+    },
+    {
+      "id": "recht-k069",
+      "topic": "Vertretung",
+      "front": "§ 166 II: Vertreter handelt nach bestimmten Weisungen",
+      "back": "Dann zählt auch das Wissen des Vertretenen. Maier lässt Schulze gezielt einen Wagen kaufen, von dessen Unfall Maier weiß → Maier kann nicht wegen Täuschung anfechten, obwohl Schulze ahnungslos war.",
+      "exam": false
+    },
+    {
+      "id": "recht-k070",
+      "topic": "Störungen",
+      "front": "Die vier Leistungsstörungen",
+      "back": "Leistung kommt gar nicht (Unmöglichkeit), zu spät (Schuldnerverzug), schlecht (Schlechterfüllung) oder der Gläubiger nimmt nicht an (Gläubigerverzug). Nur der Gläubigerverzug ist keine Pflichtverletzung des Schuldners.",
+      "exam": true
+    },
+    {
+      "id": "recht-k071",
+      "topic": "Störungen",
+      "front": "Arten der Unmöglichkeit",
+      "back": "Objektiv (niemand kann: Auto verbrannt) oder subjektiv (nur der Schuldner nicht: Auto gestohlen), beides § 275 I; anfänglich (§ 311a) oder nachträglich (§§ 280, 283). § 275 II (grobes Missverhältnis) und III (persönlich unzumutbar) sind Einreden.",
+      "exam": true
+    },
+    {
+      "id": "recht-k072",
+      "topic": "Störungen",
+      "front": "Wann wird eine Gattungsschuld unmöglich?",
+      "back": "Erst nach Konkretisierung (§ 243 II), vorher muss aus der Gattung neu geliefert werden. Baumwoll-Fall: 15 Ballen bei Holschuld ausgesondert und bereitgestellt, dann gestohlen → Leistung unmöglich, kein Kaufpreis, ohne Verschulden kein Schadensersatz.",
+      "exam": true
+    },
+    {
+      "id": "recht-k073",
+      "topic": "Störungen",
+      "front": "Schadensersatz: neben, wegen Verzögerung, statt der Leistung",
+      "back": "Neben der Leistung: nur § 280 I (nasse Möbel). Verzögerungsschaden: §§ 280 I, II, 286 (Mietwagen, Zinsen). Statt der Leistung: §§ 280 I, III, 281 (Frist) bzw. 283 (Unmöglichkeit) oder § 311a II. Immer zuerst sagen, welcher Schaden verlangt wird.",
+      "exam": true
+    },
+    {
+      "id": "recht-k074",
+      "topic": "Störungen",
+      "front": "Rechtsfolgen des Schuldnerverzugs",
+      "back": "Verzögerungsschaden (§§ 280 I, II, 286), Verzugszinsen (§ 288: 5 Prozentpunkte über Basiszins, ohne Verbraucher bei Entgeltforderungen 9 + 40 € Pauschale), nach erfolgloser Frist Schadensersatz statt der Leistung (§ 281) oder Rücktritt (§ 323). Beispiel: „zahlbar bis 30.11.2026“ → Verzug ab Di 01.12.2026.",
+      "exam": true
+    },
+    {
+      "id": "recht-k075",
+      "topic": "Störungen",
+      "front": "Gläubigerverzug (§§ 293–295): Voraussetzungen",
+      "back": "Leistung möglich · tatsächliches Angebot wie geschuldet (§ 294) bzw. wörtliches, wenn der Gläubiger schon abgelehnt hat (§ 295) · Nichtannahme. Verschulden ist nicht nötig: Du bist zum Liefertermin nicht zu Hause → Annahmeverzug.",
+      "exam": true
+    },
+    {
+      "id": "recht-k076",
+      "topic": "Störungen",
+      "front": "Absolutes vs. relatives Fixgeschäft",
+      "back": "Absolut: Leistung nach dem Termin sinnlos → Unmöglichkeit (DJ kommt am Tag nach der Party). Relativ: Vertrag soll mit dem Termin stehen und fallen, Leistung wäre nachholbar → Rücktritt ohne Frist (§ 323 II Nr. 2).",
+      "exam": false
+    },
+    {
+      "id": "recht-k077",
+      "topic": "Störungen",
+      "front": "Preisgefahr: Wann muss der Käufer trotz Untergang zahlen?",
+      "back": "Ab Übergabe (§ 446), beim Versendungskauf ab Übergabe an den Transporteur (§ 447, aber nicht beim Verbrauchsgüterkauf, § 475 II) und im Annahmeverzug (§ 326 II). Online-Laptop geht als Verbraucherpaket verloren → du musst nicht zahlen.",
+      "exam": false
+    },
+    {
+      "id": "recht-k078",
+      "topic": "Klausurhinweise",
+      "front": "Gesetzestext in der Klausur: Was ist erlaubt?",
+      "back": "Textmarker, Unterstreichungen, Paragrafenverweise (z. B. „§ 433“ am Rand) und Klebezettel, die leer sind oder nur Gesetz oder Paragraf tragen („BGB“, „§ 433“).",
+      "exam": true
+    },
+    {
+      "id": "recht-k079",
+      "topic": "Klausurhinweise",
+      "front": "Gesetzestext in der Klausur: Was ist verboten, und was droht?",
+      "back": "Normüberschriften auf Klebezetteln („§ 433 Kaufvertrag“), Stichworte und Sätze, Zahlen und Buchstaben außer §-Verweisen, Ausrufezeichen, Einlagen wie Schemata. Die Aufsicht macht Stichproben, ein Verstoß gilt als Täuschungsversuch.",
       "exam": true
     }
   ],
@@ -785,6 +918,175 @@
       ],
       "correct": 0,
       "explain": "Der Hinweis muss bei Vertragsschluss erfolgen; danach gilt das Gesetz (§ 306 II)."
+    },
+    {
+      "id": "recht-q029",
+      "topic": "WE & Vertrag",
+      "q": "Bei einer Weinversteigerung hebt G die Hand, um einem Freund zu winken. Der Auktionator wertet das als Gebot. Welches Element der Willenserklärung fehlt G?",
+      "options": [
+        "Handlungswille",
+        "Objektiver Tatbestand",
+        "Erklärungsbewusstsein",
+        "Keines, G hat ein normales Gebot abgegeben"
+      ],
+      "correct": 2,
+      "explain": "G hebt die Hand bewusst (Handlungswille), weiß aber nicht, dass er damit etwas rechtlich Erhebliches erklärt. Objektiv sieht es wie ein Gebot aus."
+    },
+    {
+      "id": "recht-q030",
+      "topic": "WE & Vertrag",
+      "q": "K bestellt „ein Dutzend“ Gläser und meint 10 Stück. Welche Folge hat der fehlende Geschäftswille?",
+      "options": [
+        "Keine Willenserklärung",
+        "WE nichtig nach § 105",
+        "WE schwebend unwirksam",
+        "WE wirksam, aber anfechtbar nach § 119 I"
+      ],
+      "correct": 3,
+      "explain": "Handlungswille und Erklärungsbewusstsein liegen vor. Weicht nur der Geschäftswille ab, gilt die WE, K kann wegen Inhaltsirrtums anfechten."
+    },
+    {
+      "id": "recht-q031",
+      "topic": "Vertretung",
+      "q": "Was gehört **nicht** zu den Voraussetzungen der Stellvertretung nach § 164 I?",
+      "options": [
+        "Eigene Willenserklärung des Vertreters",
+        "Handeln im Namen des Vertretenen",
+        "Volle Geschäftsfähigkeit des Vertreters",
+        "Vertretungsmacht"
+      ],
+      "correct": 2,
+      "explain": "Nach § 165 genügt beschränkte Geschäftsfähigkeit, denn die Folgen treffen den Vertretenen."
+    },
+    {
+      "id": "recht-q032",
+      "topic": "Vertretung",
+      "q": "Lisa sagt zu Ben: „Sag dem Händler: Ich nehme das rote Rad für 480 €.“ Ben richtet es genau so aus. Was ist Ben?",
+      "options": [
+        "Bote",
+        "Vertreter mit Vollmacht",
+        "Vertreter ohne Vertretungsmacht",
+        "Vertragspartner des Händlers"
+      ],
+      "correct": 0,
+      "explain": "Ben überbringt eine fertige fremde Erklärung ohne Spielraum. Ein Vertreter würde selbst entscheiden („ein gutes Rad bis 500 €“)."
+    },
+    {
+      "id": "recht-q033",
+      "topic": "Vertretung",
+      "q": "Heinz bevollmächtigt Peter, seinen Pkw „bestens zu verkaufen“, und sagt ihm intern, er erwarte mindestens 5.000 €. Peter verkauft im Namen von Heinz für 4.500 €. Rechtslage?",
+      "options": [
+        "Vertrag schwebend unwirksam nach § 177",
+        "Vertrag mit Heinz wirksam, Peter haftet höchstens intern",
+        "Vertrag mit Peter selbst",
+        "Vertrag nichtig nach § 134"
+      ],
+      "correct": 1,
+      "explain": "Die Vollmacht nach außen war unbeschränkt (Können). Die 5.000 € betreffen nur das Innenverhältnis (Dürfen)."
+    },
+    {
+      "id": "recht-q034",
+      "topic": "Vertretung",
+      "q": "V kauft im Namen von B ein, weil er nicht weiß, dass B die Vollmacht widerrufen hat. B verweigert die Genehmigung. Was kann der Verkäufer von V verlangen?",
+      "options": [
+        "Nach Wahl Erfüllung oder Schadensersatz",
+        "Nichts, V war gutgläubig",
+        "Den vollen Kaufpreis von B",
+        "Nur den Vertrauensschaden, höchstens bis zum Erfüllungsinteresse"
+      ],
+      "correct": 3,
+      "explain": "V kannte den Mangel der Vertretungsmacht nicht, also haftet er nur nach § 179 II."
+    },
+    {
+      "id": "recht-q035",
+      "topic": "Vertretung",
+      "q": "Ein Angestellter bestellt monatelang ohne Vollmacht im Namen des Chefs. Der Chef weiß davon nichts, hätte es aber bei einem Blick in die Rechnungen sofort gesehen. Ist der Chef gebunden?",
+      "options": [
+        "Nein, er wusste nichts",
+        "Ja – Duldungsvollmacht",
+        "Ja – Anscheinsvollmacht",
+        "Nur, wenn er nachträglich genehmigt"
+      ],
+      "correct": 2,
+      "explain": "Er hätte das wiederholte Auftreten bei Sorgfalt erkennen und verhindern können. Bei Wissen wäre es Duldungsvollmacht."
+    },
+    {
+      "id": "recht-q036",
+      "topic": "Klausurhinweise",
+      "q": "Welcher Klebezettel ist in deinem BGB für die Klausur erlaubt?",
+      "options": [
+        "„§ 433 Kaufvertrag“",
+        "„§ 433“",
+        "„Anfechtung!“",
+        "Ein Zettel mit dem Prüfschema zu § 164"
+      ],
+      "correct": 1,
+      "explain": "Erlaubt sind leere Zettel oder nur Gesetz bzw. Paragraf. Normüberschriften, Stichworte, Ausrufezeichen und Schemata sind verboten."
+    },
+    {
+      "id": "recht-q037",
+      "topic": "Klausurhinweise",
+      "q": "Welche Randnotiz darfst du in dein Gesetz schreiben?",
+      "options": [
+        "„3 Jahre“ neben § 195",
+        "„Verzug!“ neben § 286",
+        "„§ 280“ neben § 286",
+        "Eine Mini-Tabelle zu § 286 II"
+      ],
+      "correct": 2,
+      "explain": "Nur Paragrafenverweise sind erlaubt. Zahlen ohne §-Bezug, Stichworte, Ausrufezeichen und Übersichten gelten als Täuschungsversuch."
+    },
+    {
+      "id": "recht-q038",
+      "topic": "Störungen",
+      "q": "Was ist für den Gläubigerverzug **nicht** nötig?",
+      "options": [
+        "Ein Verschulden des Gläubigers",
+        "Ein ordnungsgemäßes Angebot des Schuldners",
+        "Die Nichtannahme durch den Gläubiger",
+        "Die Leistung ist noch möglich"
+      ],
+      "correct": 0,
+      "explain": "Annahmeverzug setzt kein Verschulden voraus (Skript S. 42). Er ist auch keine Pflichtverletzung."
+    },
+    {
+      "id": "recht-q039",
+      "topic": "Störungen",
+      "q": "K kauft ein Buch, „zahlbar bis 30.11.2026“, und zahlt nicht. Ab wann ist K ohne Mahnung im Verzug?",
+      "options": [
+        "Ab Mo 30.11.2026",
+        "Ab Di 01.12.2026",
+        "Erst nach einer Mahnung",
+        "30 Tage nach Zugang der Rechnung"
+      ],
+      "correct": 1,
+      "explain": "Kalenderdatum: Mahnung entbehrlich (§ 286 II Nr. 1). Am 30.11. darf K noch zahlen, Verzug ab dem Folgetag."
+    },
+    {
+      "id": "recht-q040",
+      "topic": "Störungen",
+      "q": "Händler D soll 15 Ballen Stoff abholen. F hat sie ausgesondert und bereitgestellt; vor der Abholung werden sie von Unbekannten gestohlen. Rechtsfolge?",
+      "options": [
+        "F muss 15 neue Ballen liefern",
+        "D muss zahlen, weil der Vertrag geschlossen war",
+        "Keiner muss leisten, kein Schadensersatz",
+        "F schuldet Schadensersatz statt der Leistung"
+      ],
+      "correct": 2,
+      "explain": "Die Holschuld ist konkretisiert (§ 243 II), also unmöglich (§ 275 I); Kaufpreis entfällt (§ 326 I); Diebstahl ist Zufall, F hat nichts zu vertreten."
+    },
+    {
+      "id": "recht-q041",
+      "topic": "Störungen",
+      "q": "Das bestellte Auto kommt drei Wochen zu spät; K mietet so lange einen Wagen. Anspruchsgrundlage für die Mietwagenkosten?",
+      "options": [
+        "§ 280 I allein",
+        "§§ 280 I, II, 286",
+        "§§ 280 I, III, 283",
+        "§ 311a II"
+      ],
+      "correct": 1,
+      "explain": "Mietwagenkosten sind ein Verzögerungsschaden, dafür muss Schuldnerverzug vorliegen."
     }
   ]
 }
