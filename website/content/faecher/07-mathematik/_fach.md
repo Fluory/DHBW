@@ -3,32 +3,49 @@ number: 7
 slug: "mathematik"
 title: "Mathematik I"
 short: "MATHE"
-dozent: "Dr. Pascal Wortel, Prof. Dr. Markus Niedergesäss"
+dozent: "Dr. Pascal Wortel, Prof. Dr. Markus Niedergesäss, Dr. Till Heller"
 pruefung: "Klausur, 120 Minuten"
 pruefungsdatum: "2026-12-18"
 moodle: 18613
 stand: "laeuft"
-description: "Analysis einer Veränderlichen: Folgen, Reihen und ihre Anwendung in der Finanzmathematik, dann Funktionen, Grenzwerte und Stetigkeit. Differential- und Integralrechnung folgen noch."
+description: "Zwei Teile: Analysis (Folgen, Reihen, Finanzmathematik, Funktionen, Grenzwerte, Stetigkeit; Differential- und Integralrechnung folgen) und Logik und Algebra (bisher Aussagenlogik; Mengen, Relationen, algebraische Strukturen, boolesche Algebra und Lineare Algebra folgen)."
 ---
 
 ## Zu diesem Fach
 
 ### Worum es geht
 
+Mathematik I besteht aus **zwei Teilen** mit eigenen Dozenten und eigenen Terminen. Beide gehören zur selben Klausur am 18.12.2026.
+
+| Teil | Termine | Themen |
+|---|---|---|
+| **Analysis** | 19.10., 04.11., 20.11., 02.12. | Folgen, Reihen, Finanzmathematik, Funktionen, Grenzwerte, Stetigkeit; danach Differential- und Integralrechnung |
+| **Logik und Algebra** | 09.11., 16.11. (ganztags), 23.11., 24.11., 30.11., 01.12. | Logik → Mengen → Relationen und Abbildungen → Gruppe, Ring, Körper → Boolesche Algebra und Minimierung → Lineare Algebra (Vektoren, Matrizen, Gleichungssysteme) → Hinweise zur Klausur |
+
+#### Teil 1: Analysis
+
 Die Vorlesung heißt „Mathematik I – Analysis“. Sie beginnt mit **Folgen**: nummerierten Zahlenlisten und der Frage, wohin sie laufen. Daraus entstehen **Reihen**, unendliche Summen. Die geometrische Reihe ist die Grundlage der **Finanzmathematik** (Zinseszins, Sparplan, ewige Rente). Danach geht es um **Funktionen**: Umkehrfunktion, Monotonie, Grenzwerte und Stetigkeit.
 
 Das Material sind die Foliensätze in Moodle („Analysis – Folgen“ vom 19.10. und „Analysis – Reihen + Funktionen“ vom 04.11.) mit den Aufgaben F-1 bis F-6, R-1 bis R-5 und FU-1 bis FU-8. Offizielle Lösungen gibt es nicht; die Lösungen hier sind selbst gerechnet.
+
+#### Teil 2: Logik und Algebra
+
+Dieser Teil begann am 09.11. mit der Orga (Foliensatz „VL00 – Orga“) und dem Kapitel **Logik** (Foliensatz „VL01 – Aussagenlogik“, Abschnitte 1.1 bis 1.7). Die Themen kommen laut VL00 in dieser Reihenfolge: Logik, Mengen, Relationen und Abbildungen, algebraische Strukturen (Gruppe, Ring, Körper), Boolesche Algebra und Minimierung, Lineare Algebra. Am Ende gibt es Hinweise zur Klausur.
+
+Jede Einheit beginnt mit einer Fragerunde zur letzten Einheit. Aufgaben werden direkt in der Vorlesung gerechnet, oft kurz mit dem Nachbarn („Flüsterrunde“). Die Folien schreiben die Implikation als A → B und die Äquivalenz als A ↔ B; ⇒ und ⇔ sind für „folgt logisch“ und „gleichwertig“ reserviert. Die Wahrheitstafeln kennst du schon aus Grundlagen der IT, nur mit w und f statt 1 und 0.
 
 ### Prüfung
 
 - **Form:** Klausur, 120 Minuten (Modulhandbuch).
 - **Termin:** 18.12.2026.
 - **Noch offen:** ob eine Formelsammlung oder ein Taschenrechner erlaubt ist. Übe so, dass du die Formeln selbst hinschreiben kannst.
-- **Typische Aufgaben** (abgeleitet aus den Folienaufgaben): Grenzwerte von Folgen und Funktionen bestimmen, das passende Konvergenzkriterium wählen und begründen, den Wert einer geometrischen Reihe oder Teleskopsumme berechnen, einen Sparplan rechnen, eine Umkehrfunktion bestimmen, Monotonie und Beschränktheit nachweisen, einen Parameter für Stetigkeit bestimmen.
+- **Noch offen:** wie viel der Teil „Logik und Algebra“ in der Klausur zählt. VL00 sagt dazu nichts.
+- **Typische Aufgaben** (abgeleitet aus den Folienaufgaben): Grenzwerte von Folgen und Funktionen bestimmen, das passende Konvergenzkriterium wählen und begründen, den Wert einer geometrischen Reihe oder Teleskopsumme berechnen, einen Sparplan rechnen, eine Umkehrfunktion bestimmen, Monotonie und Beschränktheit nachweisen, einen Parameter für Stetigkeit bestimmen. Im Logik-Teil: Wahrheitstafeln aufstellen, Gleichwertigkeit prüfen, mit Gesetzen vereinfachen, DNF und KNF bestimmen, Quantoren formalisieren und verneinen, eine Induktion führen.
 
 > [!IMPORTANT]
 > **Stand des Fachs**
-> Zwei von vier Terminen sind vorbei (19.10. und 04.11.). Noch kommen der 20.11. und der 02.12., beide ganztags. Laut Folien fehlen noch **Differentialrechnung** (Ableiten) und **Integralrechnung**. Welches Thema an welchem Termin kommt, ist geschätzt. Das Modulhandbuch nennt außerdem Logik, Mengen und Lineare Algebra; ob und wo diese Themen geprüft werden, ist noch offen.
+> Analysis: Zwei von vier Terminen sind vorbei (19.10. und 04.11.). Noch kommen der 20.11. und der 02.12., beide ganztags. Laut Folien fehlen noch **Differentialrechnung** (Ableiten) und **Integralrechnung**. Welches Thema an welchem Termin kommt, ist geschätzt.
+> Logik und Algebra: Der erste von sechs Terminen war am 09.11. Ob das ganze Logik-Kapitel (VL01) an diesem Vormittag geschafft wurde oder am 16.11. weitergeht, ist nicht bekannt. Mengen, Relationen, algebraische Strukturen, boolesche Algebra und Lineare Algebra folgen.
 
 ### Was du können musst
 
@@ -48,6 +65,11 @@ Die Checkliste nach den ersten beiden Terminen:
 - [ ] Grenzwerte von Funktionen nach der Taktik bestimmen, einseitige Grenzwerte unterscheiden
 - [ ] Verkettungen bilden, Stetigkeit prüfen und einen Parameter c bestimmen
 - [ ] mit ln und e ohne Taschenrechner rechnen
+- [ ] Aussagen erkennen, Wahrheitstafeln für ¬, ∧, ∨, ⊻, →, ↔ aufstellen
+- [ ] Kontraposition und Umkehrschluss unterscheiden; Tautologie, Widerspruch, erfüllbar prüfen
+- [ ] Formeln mit den logischen Gesetzen (De Morgan, Distributivität, Absorption …) vereinfachen
+- [ ] DNF und KNF aus einer Wahrheitstafel ablesen
+- [ ] Sätze mit ∀ und ∃ formalisieren und verneinen; einen Induktionsbeweis führen
 
 ### In welcher Reihenfolge du lernst
 
@@ -55,6 +77,8 @@ Die Checkliste nach den ersten beiden Terminen:
 2. **Kapitel 2 und 3:** Folgen und Reihen. Reihen bauen direkt auf Folgen auf.
 3. **Kapitel 4:** Finanzmathematik. Die Anwendung der geometrischen Reihe.
 4. **Kapitel 5 bis 7:** Funktionen. Kapitel 6 braucht das Rezept aus Kapitel 2.
+5. **Kapitel 8:** Aussagenlogik. Unabhängig von der Analysis, kann parallel gelernt werden.
+6. **Kapitel 9:** Probeklausur zur Analysis, mit Zeitlimit.
 
 > [!TIP]
 > **Lernhinweis**
@@ -71,6 +95,8 @@ Die Checkliste nach den ersten beiden Terminen:
 | 5 | Funktionen, Umkehrfunktion und Monotonie | 04.11. | FU-2, FU-3, FU-4, FU-8 |
 | 6 | Grenzwerte von Funktionen | 04.11. | FU-5 |
 | 7 | Stetigkeit, Verkettung, ln und e | 04.11. | FU-1, FU-6, FU-7 |
+| 8 | Aussagenlogik (Logik und Algebra) | 09.11. | VL01, Aufgaben 1.1.1 bis 1.7.4 |
+| 9 | Probeklausur (nur Analysis) | – | – |
 
 ## Mathe-Symbole vorlesen
 
@@ -90,6 +116,9 @@ Die Folien sind in Symbolen geschrieben. Ein Symbol, das du nicht vorlesen kanns
 | ∃ | „es gibt (mindestens ein)“ | ∃n ∈ ℕ: n > 100, „es gibt ein n, das größer als 100 ist“ |
 | ⇒ | „daraus folgt“ oder „wenn …, dann …“ | x = 2 ⇒ x² = 4 (umgekehrt nicht: aus x² = 4 kann auch x = −2 folgen) |
 | ⇔ | „genau dann, wenn“: gilt in beide Richtungen | x + 1 = 3 ⇔ x = 2 |
+| ¬, ∧, ∨, ⊻ | „nicht“, „und“, „oder“, „entweder … oder“ (Logik-Teil, Kapitel 8) | ¬A ∨ B: „nicht A oder B“ |
+| →, ↔ | „wenn …, dann …“, „genau dann, wenn“ als Baustein **in** einer Formel (Logik-Teil) | A → B ≡ ¬A ∨ B |
+| ≡ | „ist gleichwertig zu“: zwei Formeln haben in jeder Zeile denselben Wert | ¬(A ∧ B) ≡ ¬A ∨ ¬B |
 | ≈ | „ungefähr gleich“ | π ≈ 3,14 |
 | ≠ | „ungleich“ | q ≠ 1: „q darf nicht 1 sein“ |
 | ≤, ≥ | „kleiner oder gleich“, „größer oder gleich“ | aₙ ≤ aₙ₊₁: „das nächste Glied ist mindestens so groß“ |

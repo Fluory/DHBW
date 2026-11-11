@@ -1,15 +1,17 @@
 ---
 title: "Probeklausur"
-order: 8
+order: 9
 summary: "Eine Probeklausur mit 90 Punkten für 90 Minuten zum bisherigen Stoff: Folgen, Reihen, Finanzmathematik, Funktionen, Grenzwerte, Stetigkeit, ln und e. Mit Lösungen, Punkteschema und Auswertung."
 klausur: "relevant"
 ---
 
-Diese Probeklausur prüft den Stoff der ersten beiden Termine (19.10. und 04.11.). Sie ist im Stil der Folienaufgaben F-, R- und FU- gebaut, aber alle Aufgaben sind neu. So merkst du, ob du die Verfahren wirklich kannst und nicht nur die bekannten Aufgaben wiedererkennst.
+Diese Probeklausur prüft den Analysis-Stoff der ersten beiden Termine (19.10. und 04.11.). Sie ist im Stil der Folienaufgaben F-, R- und FU- gebaut, aber alle Aufgaben sind neu. So merkst du, ob du die Verfahren wirklich kannst und nicht nur die bekannten Aufgaben wiedererkennst.
 
 > [!IMPORTANT]
 > **Das Wichtigste: Was hier fehlt**
-> Die echte Klausur am 18.12.2026 dauert 120 Minuten und enthält zusätzlich **Differential- und Integralrechnung**. Diese Themen kommen erst in den Vorlesungen am 20.11. und 02.12. Darum deckt diese Probeklausur nur etwa drei Viertel des Stoffs ab: 90 Punkte in 90 Minuten, also ein Punkt pro Minute. Aufgaben zu Ableitung und Integral werden nach den Vorlesungen ergänzt.
+> Die echte Klausur am 18.12.2026 dauert 120 Minuten und enthält zusätzlich **Differential- und Integralrechnung**. Diese Themen kommen erst in den Vorlesungen am 20.11. und 02.12. Darum deckt diese Probeklausur nur etwa drei Viertel des Analysis-Stoffs ab: 90 Punkte in 90 Minuten, also ein Punkt pro Minute. Aufgaben zu Ableitung und Integral werden nach den Vorlesungen ergänzt.
+>
+> **Noch nicht enthalten ist der zweite Teil „Logik und Algebra“**, also auch die **Aussagenlogik** aus Kapitel 8. Wie viel dieser Teil in der Klausur zählt, ist noch offen. Zum Üben der Logik nimm vorerst die Übungen in Kapitel 8.
 
 ## So benutzt du die Probeklausur
 
