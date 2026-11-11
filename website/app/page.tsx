@@ -36,7 +36,7 @@ export default function HomePage() {
         ) : (
           <ol className="subject-list">
             {subjects.map((subject) => (
-              <li key={subject.slug}>
+              <li key={subject.slug} className="subject-item">
                 <Link href={`/${subject.slug}`} className="subject-card">
                   <span className="subject-number label">
                     {String(subject.number).padStart(2, "0")} · {subject.short}
@@ -54,6 +54,12 @@ export default function HomePage() {
                     </span>
                   </span>
                 </Link>
+                {subject.deck ? (
+                  <Link href={`/${subject.slug}/lernen`} className="subject-learn">
+                    <span>Lernen: {subject.deck.cards.length} Karteikarten, {subject.deck.quiz.length} Quizfragen</span>
+                    <span aria-hidden="true">→</span>
+                  </Link>
+                ) : null}
               </li>
             ))}
           </ol>

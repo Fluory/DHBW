@@ -19,6 +19,9 @@ export function SiteHeader() {
           <Link href="/#pruefungen" className="label">
             Prüfungen
           </Link>
+          <Link href="/lernen" className="label">
+            Lernen
+          </Link>
           <ThemeToggle />
         </nav>
       </div>

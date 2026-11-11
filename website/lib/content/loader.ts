@@ -4,16 +4,19 @@ import matter from "gray-matter";
 import type { Blockquote, Html, Root } from "mdast";
 import { visit } from "unist-util-visit";
 import {
+  DECK_FILE,
   NUMBERED_FILE_PATTERN,
   SOURCES_FILE,
   SUBJECTS,
   SUBJECT_DIR_PATTERN,
   SUBJECT_FILE,
   chapterSchema,
+  deckSchema,
   formatIssues,
   prologSchema,
   sourcesSchema,
   subjectSchema,
+  type Deck,
   type Klausur,
   type SubjectFrontmatter,
 } from "@/lib/content/schema";
@@ -68,6 +71,8 @@ export interface SubjectEntry extends SubjectFrontmatter {
   intro: string;
   chapters: ChapterEntry[];
   sources: SourcesEntry | null;
+  /** Karteikarten und Quiz aus `karteikarten.json` (optional). */
+  deck: Deck | null;
   words: number;
   readingMinutes: number;
 }
@@ -167,6 +172,9 @@ function listDir(absolute: string): fs.Dirent[] {
 
 const rel = (...segments: string[]) => toPosix(path.join(...segments));
 
+/** Kapitel-Slugs, die als Fach-Unterseite vergeben sind. */
+const RESERVED_SLUGS = new Set(["quellen", "zusammenfassung", "alles", "lernen"]);
+
 function scanChapters(root: string, dirName: string, issues: ContentIssue[]): ChapterEntry[] {
   const absoluteDir = path.join(root, "faecher", dirName);
   const chapters: ChapterEntry[] = [];
@@ -188,7 +196,7 @@ function scanChapters(root: string, dirName: string, issues: ContentIssue[]): Ch
     }
     const prefix = Number(name[1]);
     const slug = name[2];
-    if (slug === "quellen" || slug === "zusammenfassung" || slug === "alles") {
+    if (RESERVED_SLUGS.has(slug)) {
       issues.push({ file, message: `Der Kapitel-Slug „${slug}“ ist für eine Fach-Unterseite reserviert.` });
       continue;
     }
@@ -236,7 +244,59 @@ function scanSources(root: string, dirName: string, issues: ContentIssue[]): Sou
   return { ...result.data, file, ...stats };
 }
 
+/**
+ * Liest `karteikarten.json` eines Fachs (optional). `seenIds` sammelt alle IDs über Fächer hinweg,
+ * weil der Lernstand im Browser nur an der ID hängt.
+ */
+export function scanDeck(
+  root: string,
+  dirName: string,
+  issues: ContentIssue[],
+  seenIds: Map<string, string> = new Map(),
+): Deck | null {
+  const absolute = path.join(root, "faecher", dirName, DECK_FILE);
+  if (!fs.existsSync(absolute)) return null;
+  const file = rel("faecher", dirName, DECK_FILE);
+  let raw: unknown;
+  try {
+    raw = JSON.parse(readFile(absolute));
+  } catch (error) {
+    const reason = error instanceof Error ? error.message.split("\n")[0] : String(error);
+    issues.push({ file, message: `Kein gültiges JSON (${reason})` });
+    return null;
+  }
+  const result = deckSchema.safeParse(raw);
+  if (!result.success) {
+    for (const issue of result.error.issues) {
+      const [list, index, ...rest] = issue.path;
+      let where = issue.path.length > 0 ? issue.path.join(".") : "(Datei)";
+      if ((list === "cards" || list === "quiz") && typeof index === "number") {
+        const entries = (raw as Record<string, unknown>)[list];
+        const entry = Array.isArray(entries) ? (entries[index] as { id?: unknown } | undefined) : undefined;
+        const id = typeof entry?.id === "string" ? ` (${entry.id})` : "";
+        where = `${list}[${index}]${id}${rest.length > 0 ? `.${rest.join(".")}` : ""}`;
+      }
+      issues.push({ file, message: `${where}: ${issue.message}` });
+    }
+    return null;
+  }
+  const deck = result.data;
+  for (const entry of [...deck.cards, ...deck.quiz]) {
+    const owner = seenIds.get(entry.id);
+    if (owner) {
+      issues.push({
+        file,
+        message: `id „${entry.id}“ ist doppelt${owner === file ? " in dieser Datei" : ` (schon in ${owner})`}.`,
+      });
+    } else {
+      seenIds.set(entry.id, file);
+    }
+  }
+  return deck;
+}
+
 function scanSubjects(root: string, issues: ContentIssue[]): SubjectEntry[] {
+  const deckIds = new Map<string, string>();
   const faecherDir = path.join(root, "faecher");
   if (!fs.existsSync(faecherDir)) return [];
   const known = new Map<string, number>(SUBJECTS.map((subject) => [subject.dir, subject.number]));
@@ -265,6 +325,7 @@ function scanSubjects(root: string, issues: ContentIssue[]): SubjectEntry[] {
     if (!fs.existsSync(absolute)) {
       issues.push({ file, message: `${SUBJECT_FILE} fehlt.` });
       scanChapters(root, entry.name, issues);
+      scanDeck(root, entry.name, issues, deckIds);
       continue;
     }
     const parsed = parseFrontmatter(readFile(absolute), file, issues);
@@ -274,6 +335,7 @@ function scanSubjects(root: string, issues: ContentIssue[]): SubjectEntry[] {
       if (parsed) checkBody(parsed.content, file, issues);
       scanChapters(root, entry.name, issues);
       scanSources(root, entry.name, issues);
+      scanDeck(root, entry.name, issues, deckIds);
       continue;
     }
     const meta = result.data;
@@ -286,6 +348,7 @@ function scanSubjects(root: string, issues: ContentIssue[]): SubjectEntry[] {
     const intro = checkBody(parsed.content, file, issues);
     const chapters = scanChapters(root, entry.name, issues);
     const sources = scanSources(root, entry.name, issues);
+    const deck = scanDeck(root, entry.name, issues, deckIds);
     subjects.push({
       ...meta,
       dir: entry.name,
@@ -293,6 +356,7 @@ function scanSubjects(root: string, issues: ContentIssue[]): SubjectEntry[] {
       intro: intro.body.trim(),
       chapters,
       sources,
+      deck,
       words: chapters.reduce((sum, chapter) => sum + chapter.words, 0),
       readingMinutes: chapters.reduce((sum, chapter) => sum + chapter.readingMinutes, 0),
     });
@@ -415,4 +479,9 @@ export function chapterParams(library: Library = loadLibrary()): Array<{ fach: s
 
 export function sourcesParams(library: Library = loadLibrary()): Array<{ fach: string }> {
   return library.subjects.filter((subject) => subject.sources).map((subject) => ({ fach: subject.slug }));
+}
+
+/** Fächer mit Karteikarten oder Quiz: `/<fach>/lernen`. */
+export function deckParams(library: Library = loadLibrary()): Array<{ fach: string }> {
+  return library.subjects.filter((subject) => subject.deck).map((subject) => ({ fach: subject.slug }));
 }

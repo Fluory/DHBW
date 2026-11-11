@@ -1,0 +1,10 @@
+{
+  "cards": [
+    { "id": "recht-k001", "topic": "Grundlagen", "front": "Frage", "back": "Antwort", "exam": true },
+    { "id": "recht-k001", "topic": "Grundlagen", "front": "Doppelte ID", "back": "Antwort", "exam": true }
+  ],
+  "quiz": [
+    { "id": "recht-q001", "topic": "Grundlagen", "q": "Frage", "options": ["A", "B", "C", "D"], "correct": 3, "explain": "Weil." },
+    { "id": "recht-q002", "topic": "Grundlagen", "q": "Frage", "options": ["A", "B", "C", "D"], "correct": 0, "explain": "Weil." }
+  ]
+}

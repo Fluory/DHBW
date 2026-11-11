@@ -77,6 +77,19 @@ export default async function SubjectPage({ params }: { params: Promise<Params> 
         </div>
       </dl>
 
+      {subject.deck ? (
+        <section aria-label="Lernen" className="section">
+          <Link href={`/${subject.slug}/lernen`} className="learn-link">
+            <span className="label kicker">Selbst abfragen</span>
+            <span className="chapter-title">Karteikarten, Quiz und Feynman-Modus</span>
+            <span className="chapter-summary">
+              {subject.deck.cards.length} Karteikarten und {subject.deck.quiz.length} Quizfragen. Merkt sich, was du noch
+              nicht wusstest.
+            </span>
+          </Link>
+        </section>
+      ) : null}
+
       {subject.chapters.length > 0 ? (
         <section aria-label="Gesamtansichten" className="section">
           <ul className="chapter-list">

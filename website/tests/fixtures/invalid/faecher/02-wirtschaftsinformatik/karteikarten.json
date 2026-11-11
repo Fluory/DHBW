@@ -1,0 +1,9 @@
+{
+  "cards": [
+    { "id": "wi-k001", "topic": "", "front": "Leeres Thema", "back": "Antwort", "exam": true },
+    { "id": "recht-q002", "topic": "Grundlagen", "front": "ID aus einem anderen Fach", "back": "Antwort", "exam": "ja" }
+  ],
+  "quiz": [
+    { "id": "wi-q001", "topic": "IS-Arten", "q": "Drei Optionen", "options": ["A", "B", "C"], "correct": 4, "explain": "Weil." }
+  ]
+}

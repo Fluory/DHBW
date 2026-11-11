@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Pager } from "@/components/reader/Pager";
 import { ReaderLayout } from "@/components/reader/ReaderLayout";
@@ -51,7 +52,23 @@ export default async function ChapterPage({ params }: { params: Promise<Params> 
         summary={chapter.summary}
         content={content}
         meta={<KlausurBadge klausur={chapter.klausur} />}
+        side={
+          subject.deck ? (
+            <Link href={`${base}/lernen`} className="side-learn">
+              <span className="label">Lernen</span>
+              <span>Karteikarten und Quiz zu {subject.short}</span>
+            </Link>
+          ) : null
+        }
         footer={
+          <>
+          {subject.deck ? (
+            <Link href={`${base}/lernen`} className="learn-link reader-learn">
+              <span className="label kicker">Selbst abfragen</span>
+              <span className="chapter-title">Karteikarten, Quiz und Feynman-Modus</span>
+              <span className="chapter-summary">Prüf dich, ob es sitzt: {subject.deck.cards.length} Karten und {subject.deck.quiz.length} Quizfragen zu {subject.title}.</span>
+            </Link>
+          ) : null}
           <Pager
             prev={
               prev
@@ -66,6 +83,7 @@ export default async function ChapterPage({ params }: { params: Promise<Params> 
                   : { href: base, kicker: "Übersicht", title: subject.title }
             }
           />
+          </>
         }
       />
     </main>

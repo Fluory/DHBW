@@ -98,3 +98,40 @@ export function formatIssues(error: z.ZodError): string[] {
     return `${where}: ${issue.message}`;
   });
 }
+
+/* ------------------------------------------------------------------------
+   Karteikarten und Quiz (`karteikarten.json`, optional je Fach)
+   ------------------------------------------------------------------------ */
+
+export const DECK_FILE = "karteikarten.json";
+
+const deckId = z.string().regex(SLUG_PATTERN, "muss kebab-case sein (z. B. git-k001)");
+
+export const cardSchema = z.strictObject({
+  id: deckId,
+  topic: text,
+  front: text,
+  back: text,
+  exam: z.boolean(),
+});
+
+export const quizSchema = z.strictObject({
+  id: deckId,
+  topic: text,
+  q: text,
+  code: text.optional(),
+  options: z.array(text).length(4, "braucht genau 4 Optionen"),
+  correct: z.number().int().min(0, "muss 0–3 sein").max(3, "muss 0–3 sein"),
+  explain: text,
+});
+
+export const deckSchema = z
+  .strictObject({
+    cards: z.array(cardSchema).default([]),
+    quiz: z.array(quizSchema).default([]),
+  })
+  .refine((deck) => deck.cards.length + deck.quiz.length > 0, "enthält weder Karten noch Quizfragen");
+
+export type Card = z.infer<typeof cardSchema>;
+export type QuizQuestion = z.infer<typeof quizSchema>;
+export type Deck = z.output<typeof deckSchema>;

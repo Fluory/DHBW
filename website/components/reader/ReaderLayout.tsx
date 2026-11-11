@@ -16,16 +16,21 @@ interface ReaderLayoutProps {
   meta?: ReactNode;
   /** Navigation am Ende (Vor/Zurück). */
   footer?: ReactNode;
+  /** Zusätzlicher Inhalt unter dem Inhaltsverzeichnis in der Seitenleiste (z. B. Link zum Lernen). */
+  side?: ReactNode;
 }
 
 /** Gemeinsamer Leser für Kapitel, Quellen und den Prolog. */
-export function ReaderLayout({ crumbs, kicker, title, summary, content, meta, footer }: ReaderLayoutProps) {
+export function ReaderLayout({ crumbs, kicker, title, summary, content, meta, footer, side }: ReaderLayoutProps) {
   return (
     <>
       <ReadingProgress targetId="lesetext" />
       <div className="reader">
         <aside className="reader-side">
-          <TocSidebar headings={content.headings} />
+          <div className="reader-side-inner">
+            <TocSidebar headings={content.headings} />
+            {side}
+          </div>
         </aside>
         <div className="reader-main">
           <header className="reader-header">

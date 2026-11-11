@@ -1,0 +1,18 @@
+{
+  "cards": [
+    { "id": "git-k001", "topic": "Zahlensysteme", "front": "Was ist **13** im Zweiersystem?", "back": "1101\n8 + 4 + 1 = 13", "exam": true },
+    { "id": "git-k002", "topic": "Logik", "front": "Wann ist `A and B` wahr?", "back": "Nur wenn beide wahr sind.", "exam": true },
+    { "id": "git-k003", "topic": "Nicht klausurrelevant", "front": "Wer war Konrad Zuse?", "back": "Erbauer der Z3 (1941).", "exam": false }
+  ],
+  "quiz": [
+    {
+      "id": "git-q001",
+      "topic": "Logik",
+      "q": "Was gibt der Code aus?",
+      "code": "print(True and False)\nprint(not False)",
+      "options": ["True True", "False True", "False False", "True False"],
+      "correct": 1,
+      "explain": "`and` braucht beide, `not False` ist `True`."
+    }
+  ]
+}
