@@ -2,84 +2,84 @@
   "cards": [
     {
       "id": "wi-k001",
-      "topic": "Grundlagen WI",
+      "topic": "Grundlagen der WI",
       "front": "Definition Wirtschaftsinformatik nach **Mertens**?",
-      "back": "Konzeption, Entwicklung, Nutzung und Wartung von **Informationssystemen** sowie Management des Produktionsfaktors **Information** für betriebliche Aufgaben.",
+      "back": "Konzeption, Entwicklung, Nutzung und Wartung von **Informationssystemen** sowie Management des Produktionsfaktors **Information** für betriebliche Aufgaben.\nFalle: Hardware herstellen gehört **nicht** dazu (Elektrotechnik).",
       "exam": true
     },
     {
       "id": "wi-k002",
-      "topic": "Grundlagen WI",
+      "topic": "Grundlagen der WI",
       "front": "Daten, Information, Wissen – Beispiel Leuchtenhändler?",
       "back": "Daten: „4711 · 23“ (ohne Kontext).\nInformation: „Lagerbestand Leuchte 4711: 23 Stück“.\nWissen: „Unter 30 Stück und 2 Wochen Lieferzeit: heute nachbestellen.“",
       "exam": true
     },
     {
       "id": "wi-k003",
-      "topic": "Grundlagen WI",
+      "topic": "Grundlagen der WI",
       "front": "Informationssystem (IS) vs. Anwendungssystem (AS)?",
       "back": "AS = nur Technik: Anwendungssoftware + Basissoftware + Hardware (z. B. SAP S/4HANA).\nIS = AS **+ Mensch**. Falle: „SAP ist ein IS“ ist falsch.",
       "exam": true
     },
     {
       "id": "wi-k004",
-      "topic": "Grundlagen WI",
+      "topic": "Grundlagen der WI",
       "front": "Die **4 Komponenten** des IS als sozio-technisches System?",
       "back": "Mensch · Aufgabe · Technik · eingebettet in die **Organisation**.\nSie beeinflussen sich gegenseitig → Software allein reicht nicht.",
       "exam": true
     },
     {
       "id": "wi-k005",
-      "topic": "Grundlagen WI",
+      "topic": "Grundlagen der WI",
       "front": "System vs. Modell?",
       "back": "System: verknüpfte Elemente mit Grenze zur Umwelt (Grenze hängt vom Zweck ab).\nModell: vereinfachte, zweckorientierte Abbildung, z. B. U-Bahn-Plan. Gut = passt zum Zweck, nicht = vollständig.",
       "exam": true
     },
     {
       "id": "wi-k006",
-      "topic": "Grundlagen WI",
+      "topic": "Grundlagen der WI",
       "front": "Verhaltens- vs. gestaltungsorientierte WI?",
       "back": "Verhaltensorientiert: beobachten, erklären (Warum akzeptieren Leute ein CRM? → UTAUT).\nGestaltungsorientiert: entwerfen, bauen, testen (Prototyp kassenloser Laden).",
-      "exam": false
+      "exam": true
     },
     {
       "id": "wi-k007",
-      "topic": "IS-Arten",
+      "topic": "Arten von IS",
       "front": "Wofür steht **ERP**? Was ist es?",
       "back": "**Enterprise Resource Planning**. Modulares, integriertes IS für alle operativen Tätigkeiten auf einer **gemeinsamen Datenbasis**. Beispiel: SAP S/4HANA.",
       "exam": true
     },
     {
       "id": "wi-k008",
-      "topic": "IS-Arten",
+      "topic": "Arten von IS",
       "front": "Klassifikation nach **Reichweite**?",
       "back": "innerbetrieblich (Lohnabrechnung) · zwischenbetrieblich B2B (Lieferantenportal, EDI) · endkundenorientiert B2C (Onlineshop).\nB2B + B2C = überbetrieblich.",
       "exam": true
     },
     {
       "id": "wi-k009",
-      "topic": "IS-Arten",
+      "topic": "Arten von IS",
       "front": "Die **3 Anwendungszwecke** (Synonyme)?",
       "back": "Transaktion = Systems of **Record** (Auftrag buchen).\nEntscheidungsunterstützung = Systems of **Insight** (BI-Dashboard).\nInteraktion/Zusammenarbeit = Systems of **Engagement** (Teams, Chat).",
       "exam": true
     },
     {
       "id": "wi-k010",
-      "topic": "IS-Arten",
+      "topic": "Arten von IS",
       "front": "CRM und SCM in einem Satz?",
       "back": "CRM: dauerhafte, profitable Kundenbeziehungen aufbauen; zuerst ein BWL-Konzept, von IS unterstützt (Salesforce).\nSCM: ganze Lieferkette gestalten, dämpft den **Bullwhip-Effekt**.",
       "exam": true
     },
     {
       "id": "wi-k011",
-      "topic": "IS-Arten",
+      "topic": "Arten von IS",
       "front": "Horizontale vs. vertikale Integration?",
       "back": "Horizontal: ein Auftrag läuft **ohne Neuerfassung** durch Vertrieb → Lager → Buchhaltung.\nVertikal: Daten werden **verdichtet** und nach oben gereicht (Umsatz je Monat fürs Management).",
       "exam": true
     },
     {
       "id": "wi-k012",
-      "topic": "IS-Arten",
+      "topic": "Arten von IS",
       "front": "Was ist ein **Medienbruch**?",
       "back": "Daten wechseln das Medium und werden neu erfasst: Auftrag per E-Mail → in Excel abgetippt → in der Produktion neu eingegeben.\nFolge: Doppelarbeit, Tippfehler, Verzögerung.",
       "exam": true
@@ -116,7 +116,7 @@
       "id": "wi-k017",
       "topic": "EPK",
       "front": "Darf nach einem **Ereignis** ein XOR folgen?",
-      "back": "Als **Split nein** – ein Ereignis kann nicht entscheiden (Regel 4). AND-Split ist erlaubt. Ein XOR-**Join** nach Ereignissen ist erlaubt.",
+      "back": "Als **Split nein**: weder XOR noch OR, denn ein Ereignis kann nicht entscheiden (Regel 4).\nErlaubt: AND-Split nach einem Ereignis und ein XOR-**Join** nach Ereignissen.",
       "exam": true
     },
     {
@@ -145,7 +145,7 @@
       "topic": "EPK",
       "front": "Was hängt die **eEPK** an Funktionen?",
       "back": "Organisationseinheit, Rolle, Informationsobjekt, Dokument, Anwendungssystem, Prozesswegweiser (Verweis auf Teilprozess).\nZuordnungen = Linien **ohne Pfeil**.",
-      "exam": false
+      "exam": true
     },
     {
       "id": "wi-k022",
@@ -205,49 +205,49 @@
     },
     {
       "id": "wi-k030",
-      "topic": "Geschäftsmodell & Organisation",
+      "topic": "Geschäftsmodell und Organisation",
       "front": "Die **3 Elemente**, die die Anforderungen an ein IS bestimmen?",
       "back": "**Geschäftsmodell** · **Unternehmensaufbau** · **Geschäftsprozesse**.\n„Erst das Unternehmen verstehen, dann das System beurteilen.“ (offizielle Beispielfrage)",
       "exam": true
     },
     {
       "id": "wi-k031",
-      "topic": "Geschäftsmodell & Organisation",
+      "topic": "Geschäftsmodell und Organisation",
       "front": "Aufbauorganisation vs. Ablauforganisation?",
       "back": "Aufbau (Wo?): hierarchisches Gerüst, Abteilungen, wer ist wem unterstellt → Organigramm.\nAblauf (Wie?): die (abteilungsübergreifenden) Prozesse zur Leistungserstellung. (offizielle Beispielfrage)",
       "exam": true
     },
     {
       "id": "wi-k032",
-      "topic": "Geschäftsmodell & Organisation",
+      "topic": "Geschäftsmodell und Organisation",
       "front": "Die **9 Felder** des Business Model Canvas?",
       "back": "Schlüsselpartner · Schlüsselaktivitäten · Schlüsselressourcen · Wertversprechen · Kundenbeziehungen · Kanäle · Kundensegmente · Kostenstruktur · Einnahmequellen.",
       "exam": true
     },
     {
       "id": "wi-k033",
-      "topic": "Geschäftsmodell & Organisation",
+      "topic": "Geschäftsmodell und Organisation",
       "front": "Canvas Spotify: Wertversprechen, Kundensegmente, Einnahmen, Partner?",
       "back": "Wert: jede Musik jederzeit, Premium ohne Werbung · Segmente: Gratis-Hörer, Premium-Abonnenten, Werbekunden · Einnahmen: Abos, Werbung · Partner: Plattenfirmen, Künstler.",
       "exam": true
     },
     {
       "id": "wi-k034",
-      "topic": "Geschäftsmodell & Organisation",
-      "front": "Transferaufgabe Canvas **Pokémon Go**: Was weißt du von der Folie?",
-      "back": "Location-based Game mit GPS und Augmented Reality, über 1 Mrd. Downloads.\nErlösmodell: Freemium bzw. Free-to-play – Spielen gratis, Einnahmen durch Kauf von Spielwährung.\nIn der Klausur: Wertversprechen, Schlüsselpartner, Kundensegmente, Einnahmequellen mit je 2 Einträgen begründen.",
+      "topic": "Geschäftsmodell und Organisation",
+      "front": "Transferaufgabe Canvas **Pokémon Go**: je 2 Einträge für Wertversprechen, Kundensegmente, Schlüsselpartner, Einnahmequellen?",
+      "back": "Wert: kostenlos draußen in der echten Umgebung spielen · mit anderen sammeln.\nSegmente: Gratisspieler · zahlende Spieler.\nPartner: Rechteinhaber der Pokémon-Marke · App-Stores.\nEinnahmen: Spielwährung in der App · Zusatzgegenstände. (Keine offizielle Lösung; Folie: GPS + AR, Free-to-play.)",
       "exam": true
     },
     {
       "id": "wi-k035",
-      "topic": "Geschäftsmodell & Organisation",
+      "topic": "Geschäftsmodell und Organisation",
       "front": "4 Kernelemente eines Geschäftsmodells (Shafer)?",
       "back": "Kunden · Wertversprechen · Wertschöpfung · Erlösmodell.\nEin Geschäftsmodell = wie eine Organisation Werte schafft, vermittelt und erfasst.",
       "exam": true
     },
     {
       "id": "wi-k036",
-      "topic": "Geschäftsmodell & Organisation",
+      "topic": "Geschäftsmodell und Organisation",
       "front": "Warum braucht die Sonnenschein AG ein CRM?",
       "back": "Viele Kunden buchen nur einmal. Feedback wird gesammelt, fließt aber nicht in den Newsletter (alle bekommen denselben).\nInfo entsteht im Kundenservice, entschieden wird im Marketing → integrierte Kundendaten nötig.",
       "exam": true
@@ -305,7 +305,7 @@
       "id": "wi-k044",
       "topic": "Informationsmanagement",
       "front": "Stacey-Matrix: wann klassisch, wann agil?",
-      "back": "Klare Anforderungen + bekannte Technik (einfach/kompliziert) → **klassisch**.\nUnklar (komplex) → **agil** (Scrum). Chaotisch → erst ausprobieren.",
+      "back": "Klare Anforderungen + bekannte Technik (einfach/kompliziert) → **klassisch** (Lohnabrechnung).\nUnklar (komplex) → **agil** (Reiseempfehlungen im Shop). Chaotisch → erst ausprobieren. Gemischt → **hybrid** (CRM einführen).",
       "exam": true
     },
     {
@@ -320,104 +320,454 @@
       "topic": "Informationsmanagement",
       "front": "Explizites vs. implizites Wissen?",
       "back": "Explizit: aufschreibbar (Handbuch, Schnittstellenbeschreibung).\nImplizit: „klebrig“, schwer aufzuschreiben (Gespür der Expertin, wo der Fehler steckt).",
-      "exam": false
+      "exam": true
     },
     {
       "id": "wi-k047",
-      "topic": "BI & Data Science",
+      "topic": "BI und Data Science",
       "front": "Objektiver Bedarf, subjektiver Bedarf, Nachfrage, Angebot?",
       "back": "Objektiv: was die **Aufgabe** erfordert · Subjektiv: was die Person für nötig hält · Nachfrage: was sie tatsächlich **anfragt** · Angebot: was verfügbar ist.\nPush: System liefert · Pull: Nutzer holt.",
       "exam": true
     },
     {
       "id": "wi-k048",
-      "topic": "BI & Data Science",
+      "topic": "BI und Data Science",
       "front": "Aufbau eines BI-Systems?",
       "back": "OLTP-Systeme + externe Daten → **ETL** (extrahieren, transformieren, laden) → **Data Warehouse** (aktuell + historisch, aggregiert) → Data Marts → Berichte.",
       "exam": true
     },
     {
       "id": "wi-k049",
-      "topic": "BI & Data Science",
+      "topic": "BI und Data Science",
       "front": "Die 4 Transformationsschritte im ETL?",
       "back": "Bereinigung (Datumsformat) · Harmonisierung („Spanien“ = „ES“) · Verdichtung (Umsatz je Produktgruppe) · Anreicherung (Deckungsbeitrag berechnen).",
       "exam": true
     },
     {
       "id": "wi-k050",
-      "topic": "BI & Data Science",
+      "topic": "BI und Data Science",
       "front": "Die **4 Analysestufen**?",
       "back": "1 deskriptiv: Was ist passiert? · 2 diagnostisch: Warum? · 3 prädiktiv: Was wird passieren? · 4 präskriptiv: Was sollen wir tun?\nBI vor allem 1–2, Data Science 3–4.",
       "exam": true
     },
     {
       "id": "wi-k051",
-      "topic": "BI & Data Science",
+      "topic": "BI und Data Science",
       "front": "Die **6 CRISP-DM**-Phasen?",
       "back": "Business Understanding → Data Understanding → Data Preparation → Modelling → Evaluation → Deployment.\nMit Rücksprüngen, kein Wasserfall.",
       "exam": true
     },
     {
       "id": "wi-k052",
-      "topic": "BI & Data Science",
+      "topic": "BI und Data Science",
       "front": "Regression, Klassifikation oder Clustering?",
       "back": "Zielspalte mit **Zahl** → Regression (Buchungen Juli 2027).\nZielspalte mit **Kategorie** → Klassifikation (storniert ja/nein).\n**Keine** Zielspalte → Clustering (Kundengruppen).",
       "exam": true
     },
     {
       "id": "wi-k053",
-      "topic": "Digitale Transformation & GenAI",
+      "topic": "Digitale Transformation und GenAI",
       "front": "Die **3 Stufen** bis zur Digitalen Transformation?",
       "back": "1 Informationen digitalisieren (Katalog als PDF) → 2 Prozesse digitalisieren (Buchung landet ohne Abtippen im CRM) → 3 Digitale Transformation: **Geschäftsmodell** ändert sich (App vermittelt Ausflüge und verdient mit).",
       "exam": true
     },
     {
       "id": "wi-k054",
-      "topic": "Digitale Transformation & GenAI",
+      "topic": "Digitale Transformation und GenAI",
       "front": "Die **4 Kräfte** der Digitalen Transformation?",
       "back": "Digitale Daten · Automatisierung · Vernetzung · Digitaler Kundenzugang (Portale buchen am Veranstalter vorbei).",
       "exam": true
     },
     {
       "id": "wi-k055",
-      "topic": "Digitale Transformation & GenAI",
+      "topic": "Digitale Transformation und GenAI",
       "front": "Die 3 Geschäftsmodellmuster mit Beispiel?",
       "back": "Freemium: Basis gratis (Spotify) · Plattform: bringt Anbieter und Kunden zusammen (Etsy, Airbnb) · Produkt als Service: Nutzung statt Besitz (Licht als Service, Druckluft je Menge).",
       "exam": true
     },
     {
       "id": "wi-k056",
-      "topic": "Digitale Transformation & GenAI",
+      "topic": "Digitale Transformation und GenAI",
       "front": "Chatbot, RAG, Agent – Unterschied?",
       "back": "Chatbot: antwortet aus dem Training.\nRAG: sucht Stellen in eigenen Dokumenten und gibt sie im Prompt mit (Modell wird **nicht** neu trainiert).\nAgent: plant und **handelt** mit Werkzeugen (bucht um).",
       "exam": true
     },
     {
       "id": "wi-k057",
-      "topic": "Digitale Transformation & GenAI",
+      "topic": "Digitale Transformation und GenAI",
       "front": "LLM: Token, Halluzination, Bausteine eines Agenten?",
       "back": "Token = Textbaustein („Reise“ + „ziel“). Halluzination = plausibel, aber falsch.\nAgent = Sprachmodell + Anweisung/Prompt + Werkzeuge. Haftung bleibt beim Unternehmen (Air Canada).",
       "exam": true
     },
     {
       "id": "wi-k058",
-      "topic": "Digitale Transformation & GenAI",
+      "topic": "Digitale Transformation und GenAI",
       "front": "IoT und Industrie 4.0?",
       "back": "IoT: physische Objekte über Internettechnik vernetzt (Disney MagicBand).\nIndustrie 4.0: IoT in der Fertigung, cyber-physische Systeme, Ziel: Losgröße 1 zu Kosten der Massenfertigung.",
-      "exam": false
+      "exam": true
     },
     {
       "id": "wi-k059",
-      "topic": "ML-Praxis (Tag 3)",
-      "front": "Train/Test-Split und Overfitting? (Tag 3, nicht klausurrelevant)",
+      "topic": "Nicht klausurrelevant",
+      "front": "Train/Test-Split und Overfitting?",
       "back": "1 000 Buchungen → 800 Training, 200 Test.\nOverfitting: im Training sehr gut, auf neuen Daten schlecht (auswendig gelernt).",
+      "exam": false
+    },
+    {
+      "id": "wi-k060",
+      "topic": "Grundlagen der WI",
+      "front": "Offizielle MC-Beispielaufgabe: Was ist die **Aufgabe betrieblicher IS**?",
+      "back": "Keine offizielle Lösung. Plausibel: **Unterstützung betrieblicher Aufgaben** (Nutzer zur richtigen Zeit mit den richtigen Informationen versorgen).\nKlar falsch: „Manipulation von Informationen“, „Darstellung der Hierarchiestufen“.",
+      "exam": true
+    },
+    {
+      "id": "wi-k061",
+      "topic": "Grundlagen der WI",
+      "front": "Langfristziel der WI nach Mertens?",
+      "back": "**Sinnhafte Vollautomation**: Was ein System mindestens so gut kann wie ein Mensch, übernimmt das System.\nFalle: nicht „alles automatisieren“.",
+      "exam": true
+    },
+    {
+      "id": "wi-k062",
+      "topic": "Grundlagen der WI",
+      "front": "Ist dieselbe Angabe für alle Menschen Information?",
+      "back": "Nein, das hängt von Person und Zweck ab. Die Sommer-Wettervorhersage für Kanada ist für die meisten nur Daten, für eine Getreidehändlerin Information (Wetter → Ernte → Preise).",
+      "exam": true
+    },
+    {
+      "id": "wi-k063",
+      "topic": "Grundlagen der WI",
+      "front": "Offenes System und Black Box?",
+      "back": "Offenes System: tauscht Input/Output mit der Umwelt (Leuchtenhändler: Bestellungen rein, Lieferungen raus).\nBlack Box: nur Input und Output interessieren, das Innere nicht.",
+      "exam": true
+    },
+    {
+      "id": "wi-k064",
+      "topic": "Arten von IS",
+      "front": "Administrations- vs. Dispositionssystem?",
+      "back": "Administration: Massendaten rationalisieren (Lohnabrechnung).\nDisposition: operative Entscheidungen unterstützen oder ersetzen (automatische Bestellung bei Meldebestand).",
+      "exam": true
+    },
+    {
+      "id": "wi-k065",
+      "topic": "Arten von IS",
+      "front": "Lässt sich jedes IS eindeutig **einer** Klasse zuordnen?",
+      "back": "Nein. CRM ist Transaktion **und** Interaktion; Excel ist je nach Nutzung Liste, Planung oder Auswertung.\nIn der Klausur zählt die Begründung.",
+      "exam": true
+    },
+    {
+      "id": "wi-k066",
+      "topic": "Arten von IS",
+      "front": "Ordne ein (Reichweite, Zweck): SAP S/4HANA, Salesforce, Power BI, Lieferantenportal, Teams",
+      "back": "SAP: intern, Transaktion · Salesforce: überbetrieblich, Transaktion + Interaktion · Power BI: intern, Entscheidung · Lieferantenportal: B2B, Transaktion · Teams: intern, Interaktion.",
+      "exam": true
+    },
+    {
+      "id": "wi-k067",
+      "topic": "Arten von IS",
+      "front": "Was ist der **Bullwhip-Effekt**?",
+      "back": "Kleine Nachfrageschwankungen beim Endkunden schaukeln sich entlang der Lieferkette zu großen Bestellschwankungen auf (Peitscheneffekt).\nSCM dämpft ihn mit geteilten Absatz- und Bestandsdaten.",
+      "exam": true
+    },
+    {
+      "id": "wi-k068",
+      "topic": "Arten von IS",
+      "front": "Welche Unternehmensebene nutzt welchen Anwendungszweck?",
+      "back": "Transaktion: vor allem operative Ebene.\nEntscheidungsunterstützung: mittleres und oberes Management.\nInteraktion: quer über **alle** Ebenen, intern und nach außen.",
+      "exam": true
+    },
+    {
+      "id": "wi-k069",
+      "topic": "EPK",
+      "front": "Kern-, Management-, Unterstützungsprozess – je ein Beispiel?",
+      "back": "Kern: direkt wertschöpfend, vom Kunden zum Kunden (Auftragsabwicklung).\nManagement: steuert (Sortimentsplanung, Controlling).\nUnterstützung: ermöglicht die Kernprozesse (Lohnabrechnung, IT).",
+      "exam": true
+    },
+    {
+      "id": "wi-k070",
+      "topic": "EPK",
+      "front": "Offizielle Fehlersuche **Flugauftrag**: welche Fehler?",
+      "back": "OR nach „Verfügbarkeit prüfen“ → XOR (fachlich) · zwei Eingänge in „Reise buchen“ → XOR-Join davor (Regel 3) · AND-Join führt XOR-Pfade zusammen → XOR-Join (Regel 5) · Start „Kunde erteilt Flugauftrag“ → „Flugauftrag eingegangen“ (Regel 6).",
+      "exam": true
+    },
+    {
+      "id": "wi-k071",
+      "topic": "EPK",
+      "front": "Prüfreihenfolge bei jeder EPK-Fehlersuche?",
+      "back": "1 Anfang und Ende · 2 wechseln Ereignis und Funktion? · 3 Kanten zählen · 4 was steht vor jedem Split? · 5 Split zu Join zuordnen · 6 Beschriftungen · 7 fachlich sinnvoll?",
+      "exam": true
+    },
+    {
+      "id": "wi-k072",
+      "topic": "EPK",
+      "front": "Kann eine EPK alle 6 Regeln einhalten und trotzdem falsch sein?",
+      "back": "Ja. OR nach „Verfügbarkeit prüfen“ hält alle Regeln ein, ist aber fachlich falsch: „verfügbar“ und „nicht verfügbar“ gelten nie beide → XOR.",
+      "exam": true
+    },
+    {
+      "id": "wi-k073",
+      "topic": "ER-Modell",
+      "front": "Entity vs. Entity-Typ?",
+      "back": "Entity = konkretes Objekt (Meier GmbH, Kundin Lisa Maier).\nEntity-Typ = alle gleichartigen Objekte (Kunde) → Rechteck. Modelliert wird der Typ.",
+      "exam": true
+    },
+    {
+      "id": "wi-k074",
+      "topic": "ER-Modell",
+      "front": "„Ein Auftrag enthält mehrere Artikel.“ Ist das 1:n?",
+      "back": "Noch nicht entschieden! Gegenfrage: Ein Artikel steht in vielen Aufträgen → **n:m**.\nRelation: enthält(Auftrags-Nr↑, Artikel-Nr↑, Menge).",
+      "exam": true
+    },
+    {
+      "id": "wi-k075",
+      "topic": "ER-Modell",
+      "front": "1:1 im Relationenmodell?",
+      "back": "Fremdschlüssel in **einer** der beiden Relationen, keine eigene Relation.\nBeispiel: Rechnung(Rechnungs-Nr, Rechnungsdatum, Auftrags-Nr↑).",
+      "exam": true
+    },
+    {
+      "id": "wi-k076",
+      "topic": "ER-Modell",
+      "front": "Name und Adresse eines Kunden sind laut Text nicht eindeutig. Was tun?",
+      "back": "Einen Schlüssel **ergänzen**, z. B. Kunden-Nr.\nNie eine nicht eindeutige Bezeichnung als Primärschlüssel nehmen.",
+      "exam": true
+    },
+    {
+      "id": "wi-k077",
+      "topic": "ER-Modell",
+      "front": "Die 4 Funktionen eines DBMS?",
+      "back": "Speichern und Abfragen (SQL) · Sicherheit und Integrität (Zugriffsrechte, referentielle Integrität) · Mehrbenutzerbetrieb · Effizienz (kurze Antwortzeiten).",
+      "exam": true
+    },
+    {
+      "id": "wi-k078",
+      "topic": "Geschäftsmodell und Organisation",
+      "front": "Canvas **Etsy**: Wer ist Kundensegment, wer Partner, woher kommt das Geld?",
+      "back": "Verkäufer **und** Käufer sind Kundensegmente (zweiseitiger Markt). Partner: Zahlungs- und Versanddienstleister.\nEinnahmen: 0,20 US$ je eingestelltem Artikel + Provision je Verkauf.",
+      "exam": true
+    },
+    {
+      "id": "wi-k079",
+      "topic": "Geschäftsmodell und Organisation",
+      "front": "In welcher Reihenfolge füllst du einen Canvas?",
+      "back": "Kundensegmente → Wertversprechen je Segment → Kanäle, Beziehungen → Aktivitäten, Ressourcen, Partner → Einnahmen, Kosten.\nEinträge konkret, keine Floskeln.",
+      "exam": true
+    },
+    {
+      "id": "wi-k080",
+      "topic": "Geschäftsmodell und Organisation",
+      "front": "Was beschreibt der Canvas **nicht**?",
+      "back": "Welche IT-Systeme ein Unternehmen nutzt. Er beschreibt, wie es Wert schafft und Geld verdient.\nAuch das Organigramm gehört nicht hinein (das ist Aufbauorganisation).",
+      "exam": true
+    },
+    {
+      "id": "wi-k081",
+      "topic": "Geschäftsmodell und Organisation",
+      "front": "Newsletter-Problem: Welche Anforderungen an das CRM?",
+      "back": "„Das System soll …“ Feedback und Buchungen je Kunde zusammenführen · Kundengruppen nach Interessen bilden · Newsletter je Gruppe versenden · Einwilligungen verwalten.\nFachlich formulieren, nicht technisch.",
+      "exam": true
+    },
+    {
+      "id": "wi-k082",
+      "topic": "Geschäftsmodell und Organisation",
+      "front": "Die 3 Arten von CRM?",
+      "back": "Kollaborativ = Interaktion (E-Mail, Newsletter, Telefon) · operativ = Transaktion (zentrale Kundendaten) · analytisch = Entscheidung (Kundengruppen finden).\nCRM deckt so alle drei Anwendungszwecke ab.",
+      "exam": true
+    },
+    {
+      "id": "wi-k083",
+      "topic": "Informationsmanagement",
+      "front": "Die **7 Phasen** der Auswahl und Einführung (Bächle)?",
+      "back": "Projektidee → Prozesse analysieren → Anforderungen definieren (Lastenheft) → Lieferanten auswählen → anpassen und schulen → testen → einführen (System abgenommen).",
+      "exam": true
+    },
+    {
+      "id": "wi-k084",
+      "topic": "Informationsmanagement",
+      "front": "Lieferantenauswahl in **3 Stufen**?",
+      "back": "Vorauswahl > 100 → 3–5 (**Best Fit**) → Präsentation, Referenzkunden → 1–2 (**Best Practice**) → Feinspezifikation, Vertrag → 1 (**TCO/ROI**).",
+      "exam": true
+    },
+    {
+      "id": "wi-k085",
+      "topic": "Informationsmanagement",
+      "front": "TCO und ROI?",
+      "back": "TCO = Gesamtkosten über die ganze Nutzungsdauer, nicht nur die Lizenz (Drucker: auch alle Patronen).\nROI = Gewinn im Verhältnis zur Investition: 100 000 € rein, 130 000 € zurück → 30 %.",
+      "exam": true
+    },
+    {
+      "id": "wi-k086",
+      "topic": "Informationsmanagement",
+      "front": "On-Premise vs. Cloud (SaaS)?",
+      "back": "On-Premise: eigenes Rechenzentrum, Lizenz kaufen, eigene IT betreibt (eigenes Auto).\nCloud: beim Anbieter, Gebühr je Nutzer und Monat, Anbieter macht Updates (Carsharing). Leistung regelt ein SLA.",
+      "exam": true
+    },
+    {
+      "id": "wi-k087",
+      "topic": "Informationsmanagement",
+      "front": "Klassisch vs. agil?",
+      "back": "Klassisch (Wasserfall): ganzer Plan vorab, Anforderungen im Lastenheft, Ergebnis am Ende.\nAgil (Scrum): rollierend in Sprints, Backlog wird neu priorisiert, nach jedem Sprint ein nutzbares Inkrement.",
+      "exam": true
+    },
+    {
+      "id": "wi-k088",
+      "topic": "Informationsmanagement",
+      "front": "Die 4 Werte des **Agilen Manifests**?",
+      "back": "Individuen > Prozesse und Werkzeuge · funktionierende Software > Dokumentation · Zusammenarbeit mit dem Kunden > Vertragsverhandlung · Reagieren auf Veränderung > Plan befolgen.",
+      "exam": true
+    },
+    {
+      "id": "wi-k089",
+      "topic": "Informationsmanagement",
+      "front": "Was ist **ITIL**?",
+      "back": "Sammlung von Best Practices für IT-Service-Management (De-facto-Standard).\nSagt, **was** eine IT tun sollte (Störungen, Änderungen, Service Levels), nicht genau **wie**. SLAs sind ein Baustein.",
+      "exam": true
+    },
+    {
+      "id": "wi-k090",
+      "topic": "Informationsmanagement",
+      "front": "Individuelles vs. kollektives Wissen? Aufgaben des Wissensmanagements?",
+      "back": "Individuell: eine Person (nur die Expertin kennt die Schnittstelle). Kollektiv: Gruppe oder Firma (Helpdesk kennt den Ablauf).\nWM: identifizieren, erwerben, entwickeln, verteilen, nutzen, bewahren.",
+      "exam": true
+    },
+    {
+      "id": "wi-k091",
+      "topic": "BI und Data Science",
+      "front": "Die 5 Fragen der Bedarfsanalyse?",
+      "back": "Inhalt (was?) · Häufigkeit (wie oft?) · Form (wie aufbereitet?) · Medium (welcher Weg?) · Wichtigkeit (wie dringend?).",
+      "exam": true
+    },
+    {
+      "id": "wi-k092",
+      "topic": "BI und Data Science",
+      "front": "Klassische MUS: DSS, Expertensystem, EIS?",
+      "back": "DSS: Alternativen mit Modellen durchspielen („Was wäre, wenn Kreta 5 % billiger wird?“).\nExpertensystem: Regeln von Menschen (Wenn-dann).\nEIS: kompakte Übersicht fürs Top-Management (Balanced Scorecard).",
+      "exam": true
+    },
+    {
+      "id": "wi-k093",
+      "topic": "BI und Data Science",
+      "front": "Anforderungen an ein Data Warehouse (Inmon)?",
+      "back": "Themenorientierung (Vertrieb) · Vereinheitlichung (gleiche Datumsformate) · Beständigkeit (Daten werden nicht mehr geändert) · Zeitraumbezug (Quartalsumsätze).",
+      "exam": true
+    },
+    {
+      "id": "wi-k094",
+      "topic": "BI und Data Science",
+      "front": "KI, ML, Deep Learning, GenAI, Data Science – wie hängen sie zusammen?",
+      "back": "KI ⊃ ML ⊃ Deep Learning ⊃ Generative KI (wie Europa ⊃ Deutschland ⊃ Baden-Württemberg).\nData Science ist die Disziplin, ML eines ihrer Werkzeuge – nicht umgekehrt.",
+      "exam": true
+    },
+    {
+      "id": "wi-k095",
+      "topic": "BI und Data Science",
+      "front": "Expertensystem vs. Machine Learning?",
+      "back": "Expertensystem: Die Regeln kommen von Menschen (wie ein Kochbuch).\nML: lernt die Regeln aus Daten, z. B. aus 1 000 alten Buchungen, welche storniert werden.",
+      "exam": true
+    },
+    {
+      "id": "wi-k096",
+      "topic": "BI und Data Science",
+      "front": "Zeile, Feature, Target im ML-Datensatz?",
+      "back": "Zeile = eine Beobachtung (eine Buchung). Spalte = Merkmal (**Feature**). Zielspalte (**Target**) = was vorhergesagt wird (storniert ja/nein).",
+      "exam": true
+    },
+    {
+      "id": "wi-k097",
+      "topic": "BI und Data Science",
+      "front": "Clustering: Was ist anders als bei Regression und Klassifikation?",
+      "back": "Keine Zielspalte, keine „richtige“ Antwort (unüberwacht). Ähnlich innerhalb, verschieden zwischen den Gruppen.\nDie Bedeutung gibt der Mensch: Vielbucher, Gelegenheitskunden.",
+      "exam": true
+    },
+    {
+      "id": "wi-k098",
+      "topic": "Digitale Transformation und GenAI",
+      "front": "Bedeutung der IT früher und heute?",
+      "back": "Bis Mitte der 1990er: „IT unterstützt“ (EDV-Abteilung, Routine, nicht strategisch).\nMit dem Internet: „IT wird Kerngeschäft“ (Onlineshop als wichtiger Vertriebsweg).",
+      "exam": true
+    },
+    {
+      "id": "wi-k099",
+      "topic": "Digitale Transformation und GenAI",
+      "front": "Smarte Produkte: die 3 Schichten am Beispiel Büroleuchte?",
+      "back": "Physisch (Gehäuse, LED) · intelligent (Sensoren, Chip, Dimm-Software) · Vernetzung (Funkmodul, Cloud).\n„Wer die Daten hat, kann statt der Leuchte das Licht verkaufen.“",
+      "exam": true
+    },
+    {
+      "id": "wi-k100",
+      "topic": "Digitale Transformation und GenAI",
+      "front": "Was ist ein **Netzwerkeffekt** bei Plattformen?",
+      "back": "Mehr Käufer machen die Plattform für Verkäufer attraktiver und umgekehrt → „Winner takes it all“ (Etsy, Airbnb, Booking.com).",
+      "exam": true
+    },
+    {
+      "id": "wi-k101",
+      "topic": "Digitale Transformation und GenAI",
+      "front": "Die 3 Schritte eines LLM?",
+      "back": "Vortraining (nächstes Token vorhersagen) → Feinabstimmung (mit Bewertungen von Menschen Anweisungen befolgen) → Nutzung (Prompt rein, Antwort Token für Token).\nAuch danach keine Garantie, dass die Antwort stimmt.",
+      "exam": true
+    },
+    {
+      "id": "wi-k102",
+      "topic": "Digitale Transformation und GenAI",
+      "front": "Leitplanken für einen KI-Agenten?",
+      "back": "Klare Rechte · Mensch entscheidet bei Tragweite (Umbuchung ab 300 € Mehrkosten: Human in the Loop) · jede Aktion protokollieren · mit echten Fällen testen. Verantwortung bleibt beim Unternehmen.",
+      "exam": true
+    },
+    {
+      "id": "wi-k103",
+      "topic": "Digitale Transformation und GenAI",
+      "front": "SWOT: Was ist intern, was extern?",
+      "back": "Intern: Stärken, Schwächen. Extern: Chancen, Risiken.\nBuchungsportale = Risiko (extern), keine Schwäche. TOWS: Stärken + Chancen kombinieren = ausbauen.",
+      "exam": true
+    },
+    {
+      "id": "wi-k104",
+      "topic": "Nicht klausurrelevant",
+      "front": "Parameter vs. Hyperparameter?",
+      "back": "Hyperparameter werden **vorher** gesetzt (maximale Tiefe des Baums, k bei k-Means), Parameter aus den Daten gelernt (die Fragen im Baum).\nBild: Ofentemperatur = Hyperparameter.",
+      "exam": false
+    },
+    {
+      "id": "wi-k105",
+      "topic": "Nicht klausurrelevant",
+      "front": "Konfusionsmatrix TP 8, FN 2, FP 12, TN 178: Accuracy, Precision, Recall?",
+      "back": "Accuracy = 186 / 200 = 93 % · Precision = 8 / 20 = 40 % · Recall = 8 / 10 = 80 %.\nBei seltenen Fällen ist Accuracy irreführend.",
+      "exam": false
+    },
+    {
+      "id": "wi-k106",
+      "topic": "Nicht klausurrelevant",
+      "front": "k-Means: Ablauf?",
+      "back": "k festlegen → k Startzentren → jeden Punkt dem nächsten Zentrum zuordnen → Zentren auf den Mittelwert verschieben → wiederholen, bis nichts mehr wechselt.\nMerkmale vorher skalieren.",
+      "exam": false
+    },
+    {
+      "id": "wi-k107",
+      "topic": "Nicht klausurrelevant",
+      "front": "Dataiku: Flow, Dataset, Recipe?",
+      "back": "Flow = visuelle Pipeline. Dataset = Zeiger auf eine Datenquelle, keine Kopie. Recipe = Aktion, die aus Datasets neue macht (Stack, Join, Prepare, Split).",
+      "exam": false
+    },
+    {
+      "id": "wi-k108",
+      "topic": "Nicht klausurrelevant",
+      "front": "Was ist **Data Leakage**?",
+      "back": "Ein Merkmal enthält Wissen, das bei der Vorhersage noch nicht bekannt wäre, z. B. ein Erstattungsbetrag, der erst nach dem Storno feststeht → Spalte entfernen.",
+      "exam": false
+    },
+    {
+      "id": "wi-k109",
+      "topic": "Nicht klausurrelevant",
+      "front": "Die 4 Anpassungsstufen von GenAI (Tag 3)?",
+      "back": "Fertiges LLM → Prompt Engineering → eigenes Wissen (RAG) → Fine-Tuning.\nSo einfach wie möglich anfangen.",
       "exam": false
     }
   ],
   "quiz": [
     {
       "id": "wi-q001",
-      "topic": "IS-Arten",
+      "topic": "Arten von IS",
       "q": "Wofür steht im Kontext der Informationssysteme die Abkürzung **ERP**?",
       "options": [
         "Entity Relationship Program",
@@ -430,7 +780,7 @@
     },
     {
       "id": "wi-q002",
-      "topic": "Grundlagen WI",
+      "topic": "Grundlagen der WI",
       "q": "Welche vier Komponenten hat ein IS als sozio-technisches System?",
       "options": [
         "Daten, Information, Wissen, Weisheit",
@@ -443,7 +793,7 @@
     },
     {
       "id": "wi-q003",
-      "topic": "Grundlagen WI",
+      "topic": "Grundlagen der WI",
       "q": "„SAP S/4HANA ist ein Informationssystem.“ Stimmt das?",
       "options": [
         "Ja, weil es Informationen verarbeitet",
@@ -456,7 +806,7 @@
     },
     {
       "id": "wi-q004",
-      "topic": "Grundlagen WI",
+      "topic": "Grundlagen der WI",
       "q": "Welches Beispiel liegt auf der Stufe **Wissen**?",
       "options": [
         "„4711 · 23“",
@@ -469,7 +819,7 @@
     },
     {
       "id": "wi-q005",
-      "topic": "IS-Arten",
+      "topic": "Arten von IS",
       "q": "Ein Auftrag läuft ohne Neuerfassung durch Vertrieb, Lager und Buchhaltung. Was ist das?",
       "options": [
         "Horizontale Integration",
@@ -482,7 +832,7 @@
     },
     {
       "id": "wi-q006",
-      "topic": "IS-Arten",
+      "topic": "Arten von IS",
       "q": "Welcher Begriff ist ein Synonym für Entscheidungsunterstützungssysteme?",
       "options": [
         "Systems of Record",
@@ -612,7 +962,7 @@
     },
     {
       "id": "wi-q016",
-      "topic": "Geschäftsmodell & Organisation",
+      "topic": "Geschäftsmodell und Organisation",
       "q": "Welche 3 Elemente nehmen Einfluss auf die Anforderungen an ein IS?",
       "options": [
         "Hardware, Software, Netzwerk",
@@ -625,7 +975,7 @@
     },
     {
       "id": "wi-q017",
-      "topic": "Geschäftsmodell & Organisation",
+      "topic": "Geschäftsmodell und Organisation",
       "q": "Was legt fest, **wer wem unterstellt** ist?",
       "options": [
         "Ablauforganisation",
@@ -638,7 +988,7 @@
     },
     {
       "id": "wi-q018",
-      "topic": "Geschäftsmodell & Organisation",
+      "topic": "Geschäftsmodell und Organisation",
       "q": "In welchem Canvas-Feld steht „Wofür sind Kunden wirklich bereit zu zahlen?“",
       "options": [
         "Wertversprechen",
@@ -703,7 +1053,7 @@
     },
     {
       "id": "wi-q023",
-      "topic": "BI & Data Science",
+      "topic": "BI und Data Science",
       "q": "„Wie viele Buchungen gibt es nächsten Juli für Kreta?“ Welche Methode?",
       "options": [
         "Klassifikation",
@@ -716,7 +1066,7 @@
     },
     {
       "id": "wi-q024",
-      "topic": "BI & Data Science",
+      "topic": "BI und Data Science",
       "q": "„Warum sind die Buchungen für Spanien gesunken?“ Welche Analysestufe?",
       "options": [
         "deskriptiv",
@@ -729,7 +1079,7 @@
     },
     {
       "id": "wi-q025",
-      "topic": "BI & Data Science",
+      "topic": "BI und Data Science",
       "q": "Eine Managerin fragt bei der IT einen Bericht an. Was ist das?",
       "options": [
         "Objektiver Informationsbedarf",
@@ -742,7 +1092,7 @@
     },
     {
       "id": "wi-q026",
-      "topic": "Digitale Transformation & GenAI",
+      "topic": "Digitale Transformation und GenAI",
       "q": "Die Sonnenschein AG stellt ihren Katalog als PDF online. Welche Stufe ist das?",
       "options": [
         "Stufe 1: Informationen digitalisieren",
@@ -755,7 +1105,7 @@
     },
     {
       "id": "wi-q027",
-      "topic": "Digitale Transformation & GenAI",
+      "topic": "Digitale Transformation und GenAI",
       "q": "Was macht **RAG**?",
       "options": [
         "Es trainiert das Sprachmodell mit den Firmendokumenten neu",
@@ -768,7 +1118,7 @@
     },
     {
       "id": "wi-q028",
-      "topic": "Digitale Transformation & GenAI",
+      "topic": "Digitale Transformation und GenAI",
       "q": "Ein Kompressorhersteller berechnet je gelieferter Menge Druckluft statt Anlagen zu verkaufen. Welches Muster?",
       "options": [
         "Freemium",
@@ -778,6 +1128,409 @@
       ],
       "correct": 3,
       "explain": "Nutzung bzw. Ergebnis statt Besitz (Kaeser „Sigma Air Utility“)."
+    },
+    {
+      "id": "wi-q029",
+      "topic": "Grundlagen der WI",
+      "q": "Welche Tätigkeit gehört **nicht** zur Definition der WI nach Mertens?",
+      "options": [
+        "Konzeption und Entwicklung von IS",
+        "Nutzung und Wartung von IS",
+        "Management des Produktionsfaktors Information",
+        "Herstellung von Computerhardware"
+      ],
+      "correct": 3,
+      "explain": "Hardware herstellen ist Elektrotechnik. A–C sind Teile der Definition."
+    },
+    {
+      "id": "wi-q030",
+      "topic": "Grundlagen der WI",
+      "q": "„Ein Modell ist umso besser, je vollständiger es ist.“ Stimmt das?",
+      "options": [
+        "Ja, ein Modell soll alles abbilden",
+        "Nein, ein gutes Modell lässt weg, was für den Zweck unwichtig ist",
+        "Ja, sonst ist es kein Modell, sondern ein System",
+        "Nein, weil Modelle immer grafisch sein müssen"
+      ],
+      "correct": 1,
+      "explain": "Qualität = Eignung für den Zweck. Der U-Bahn-Plan stimmt bei Entfernungen nicht, ist aber zum Umsteigen perfekt."
+    },
+    {
+      "id": "wi-q031",
+      "topic": "Grundlagen der WI",
+      "q": "Ein Forschungsteam untersucht, warum Beschäftigte ein neues CRM ablehnen. Welches Paradigma ist das?",
+      "options": [
+        "gestaltungsorientiert",
+        "verhaltensorientiert",
+        "präskriptiv",
+        "sozio-technisch"
+      ],
+      "correct": 1,
+      "explain": "Beobachten und erklären = verhaltensorientiert (z. B. UTAUT). Einen Prototyp bauen wäre gestaltungsorientiert."
+    },
+    {
+      "id": "wi-q032",
+      "topic": "Arten von IS",
+      "q": "Ein System bestellt automatisch nach, sobald der Meldebestand unterschritten ist. Welcher Systemtyp?",
+      "options": [
+        "Administrationssystem",
+        "Dispositionssystem",
+        "Executive Information System",
+        "System of Engagement"
+      ],
+      "correct": 1,
+      "explain": "Disposition ersetzt eine operative Entscheidung. Administration rationalisiert Massendaten wie die Lohnabrechnung."
+    },
+    {
+      "id": "wi-q033",
+      "topic": "Arten von IS",
+      "q": "Ein Onlineshop, in dem Endkunden selbst bestellen, ist nach der Reichweite …",
+      "options": [
+        "innerbetrieblich",
+        "zwischenbetrieblich (B2B)",
+        "endkundenorientiert (B2C)",
+        "vertikal integriert"
+      ],
+      "correct": 2,
+      "explain": "Der Shop macht Endkunden zu Nutzern der eigenen Systeme. B2B wäre z. B. ein Lieferantenportal."
+    },
+    {
+      "id": "wi-q034",
+      "topic": "Arten von IS",
+      "q": "Umsätze werden verdichtet und als Monatsumsatz je Leuchtenserie ans Management gereicht. Was ist das?",
+      "options": [
+        "horizontale Integration",
+        "vertikale Integration",
+        "Medienbruch",
+        "Customizing"
+      ],
+      "correct": 1,
+      "explain": "Vertikal = hoch durch die Ebenen. Horizontal = entlang des Prozesses durch die Abteilungen."
+    },
+    {
+      "id": "wi-q035",
+      "topic": "EPK",
+      "q": "Welche Aussage ist richtig?",
+      "options": [
+        "Ein AND-Split darf direkt auf ein Ereignis folgen",
+        "Ein OR-Split darf direkt auf ein Ereignis folgen",
+        "Ein XOR-Split wird mit einem AND-Join zusammengeführt",
+        "Zwei Funktionen dürfen direkt aufeinander folgen"
+      ],
+      "correct": 0,
+      "explain": "Regel 4 verbietet nach Ereignissen nur XOR- und OR-Splits. C führt zum Deadlock (Regel 5), D verletzt Regel 2."
+    },
+    {
+      "id": "wi-q036",
+      "topic": "EPK",
+      "q": "Wie werden in der eEPK Organisationseinheit und Anwendungssystem an eine Funktion angehängt?",
+      "options": [
+        "mit einem Pfeil, weil es Kontrollfluss ist",
+        "mit einer Linie ohne Pfeil",
+        "über einen XOR-Konnektor",
+        "gar nicht, nur an Ereignisse"
+      ],
+      "correct": 1,
+      "explain": "Zuordnungen sind kein Kontrollfluss, deshalb ohne Pfeil."
+    },
+    {
+      "id": "wi-q037",
+      "topic": "EPK",
+      "q": "Zu welcher Prozessart gehört die **Lohnabrechnung**?",
+      "options": [
+        "Kernprozess",
+        "Managementprozess",
+        "Unterstützungsprozess",
+        "Teilprozess der Auftragsabwicklung"
+      ],
+      "correct": 2,
+      "explain": "Sie schafft keinen direkten Kundenwert, ermöglicht aber die Kernprozesse. Kern wäre die Auftragsabwicklung."
+    },
+    {
+      "id": "wi-q038",
+      "topic": "ER-Modell",
+      "q": "Zu welcher Stufe des Datenbankentwurfs gehört das **Relationenmodell**?",
+      "options": [
+        "konzeptionell",
+        "logisch",
+        "physisch",
+        "organisatorisch"
+      ],
+      "correct": 1,
+      "explain": "Konzeptionell = ER-Modell, logisch = Relationen mit Schlüsseln, physisch = SQL im DBMS."
+    },
+    {
+      "id": "wi-q039",
+      "topic": "ER-Modell",
+      "q": "Kunde bucht Reise (n:m). Wohin gehört das Attribut **Buchungsdatum**?",
+      "options": [
+        "an den Entity-Typ Kunde",
+        "an den Entity-Typ Reise",
+        "an die Beziehung „bucht“",
+        "in eine eigene Relation Datum"
+      ],
+      "correct": 2,
+      "explain": "Das Datum gehört zur Kombination Kunde + Reise, also an die Raute. Im Relationenmodell wandert es in bucht(…)."
+    },
+    {
+      "id": "wi-q040",
+      "topic": "ER-Modell",
+      "q": "Lehrer lehrt Klasse (n:m) mit Fach und Wochenstunden. Welche Relation entsteht für „lehrt“?",
+      "options": [
+        "Lehrer(PersonalNr, Name, Klasse↑)",
+        "lehrt(PersonalNr↑, Klasse↑, Fach, Wochenstunden)",
+        "Klasse(Klasse, PersonalNr↑, Fach)",
+        "keine, n:m lässt sich nicht abbilden"
+      ],
+      "correct": 1,
+      "explain": "n:m → eigene Relation mit beiden Fremdschlüsseln als Primärschlüssel, die Beziehungsattribute wandern mit."
+    },
+    {
+      "id": "wi-q041",
+      "topic": "Geschäftsmodell und Organisation",
+      "q": "Etsy: In welches Canvas-Feld gehören die **Verkäufer**?",
+      "options": [
+        "Schlüsselpartner",
+        "Kundensegmente",
+        "Schlüsselressourcen",
+        "Kanäle"
+      ],
+      "correct": 1,
+      "explain": "Etsy ist ein zweiseitiger Markt: Verkäufer und Käufer sind beide Kunden. Partner sind z. B. Zahlungsdienstleister."
+    },
+    {
+      "id": "wi-q042",
+      "topic": "Geschäftsmodell und Organisation",
+      "q": "Was ist **kein** Kernelement eines Geschäftsmodells nach Shafer?",
+      "options": [
+        "Kunden",
+        "Wertversprechen",
+        "Organigramm",
+        "Erlösmodell"
+      ],
+      "correct": 2,
+      "explain": "Die vier Kernelemente: Kunden, Wertversprechen, Wertschöpfung, Erlösmodell. Das Organigramm gehört zur Aufbauorganisation."
+    },
+    {
+      "id": "wi-q043",
+      "topic": "Geschäftsmodell und Organisation",
+      "q": "Welche Anforderung an das neue CRM ist richtig (fachlich) formuliert?",
+      "options": [
+        "Wir brauchen einen schnelleren Server",
+        "Das System soll Kundengruppen nach Interessen bilden",
+        "Wir brauchen mehr Arbeitsspeicher",
+        "Die Datenbank soll Oracle heißen"
+      ],
+      "correct": 1,
+      "explain": "Anforderungen folgen aus Geschäftsmodell, Organisation und Prozessen, nicht aus der Technik."
+    },
+    {
+      "id": "wi-q044",
+      "topic": "Informationsmanagement",
+      "q": "Zu welcher Ebene des Informationsmanagements gehört das **Projektmanagement**?",
+      "options": [
+        "strategisch",
+        "administrativ",
+        "operativ",
+        "zu keiner, es ist eine Daueraufgabe"
+      ],
+      "correct": 1,
+      "explain": "Administrativ: Projekt- und Lebenszyklusmanagement. Operativ wäre der Benutzerservice."
+    },
+    {
+      "id": "wi-q045",
+      "topic": "Informationsmanagement",
+      "q": "Der Fachbereich wünscht eine neue Funktion im CRM. Was gilt?",
+      "options": [
+        "Das regelt das SLA",
+        "Der 1st Level setzt sie um",
+        "Das ist ein neues Projekt",
+        "Das ist Problemmanagement"
+      ],
+      "correct": 2,
+      "explain": "Ein SLA regelt Leistung und Qualität des Betriebs, keine neuen Funktionen. Der Lebenszyklus beginnt von vorn."
+    },
+    {
+      "id": "wi-q046",
+      "topic": "Informationsmanagement",
+      "q": "Anforderungen sind unklar, die Technik ist neu (komplex). Was empfiehlt die Stacey-Matrix?",
+      "options": [
+        "klassisch (Wasserfall)",
+        "agil (Scrum)",
+        "gar kein Projekt",
+        "erst das Lastenheft vollständig festlegen"
+      ],
+      "correct": 1,
+      "explain": "Komplex → agil. Klar und bekannt → klassisch, chaotisch → erst ausprobieren."
+    },
+    {
+      "id": "wi-q047",
+      "topic": "Informationsmanagement",
+      "q": "Welches Ziel ist **SMART**?",
+      "options": [
+        "Kunden zufriedener machen",
+        "Das CRM bald einführen",
+        "CRM in 9 Monaten produktiv, höchstens 150 000 €",
+        "Mehr Umsatz durch bessere IT"
+      ],
+      "correct": 2,
+      "explain": "Nur C ist messbar und terminiert. Den anderen fehlen Kennzahl, Zielwert und Termin."
+    },
+    {
+      "id": "wi-q048",
+      "topic": "Informationsmanagement",
+      "q": "Die 3rd-Level-Expertin hat ein Gespür, wo ein Fehler meist steckt. Welche Wissensart ist das?",
+      "options": [
+        "explizit",
+        "implizit",
+        "kollektiv",
+        "kodifiziert"
+      ],
+      "correct": 1,
+      "explain": "Implizit = schwer aufschreibbar, „klebrig“. Explizit wäre das Handbuch."
+    },
+    {
+      "id": "wi-q049",
+      "topic": "BI und Data Science",
+      "q": "Jeden Montag bekommt die Geschäftsleitung automatisch einen Umsatzbericht per E-Mail. Welches Prinzip?",
+      "options": [
+        "Pull",
+        "Push",
+        "Drill-down",
+        "ETL"
+      ],
+      "correct": 1,
+      "explain": "Push: Das System liefert, ohne dass jemand fragt. Pull wäre eine eigene Abfrage."
+    },
+    {
+      "id": "wi-q050",
+      "topic": "BI und Data Science",
+      "q": "„Spanien“, „ES“ und „España“ werden zu einer Schreibweise. Welcher ETL-Transformationsschritt?",
+      "options": [
+        "Bereinigung",
+        "Harmonisierung",
+        "Verdichtung",
+        "Anreicherung"
+      ],
+      "correct": 1,
+      "explain": "Harmonisierung: gleiche Dinge gleich benennen. Verdichtung summiert, Anreicherung berechnet Kennzahlen."
+    },
+    {
+      "id": "wi-q051",
+      "topic": "BI und Data Science",
+      "q": "In welcher CRISP-DM-Phase prüft man, ob das Modell das betriebliche Problem löst?",
+      "options": [
+        "Data Preparation",
+        "Modelling",
+        "Evaluation",
+        "Deployment"
+      ],
+      "correct": 2,
+      "explain": "Evaluation – sonst zurück in eine frühere Phase. CRISP-DM hat Rücksprünge."
+    },
+    {
+      "id": "wi-q052",
+      "topic": "BI und Data Science",
+      "q": "„Welche Kundengruppen gibt es?“ Welche Methode?",
+      "options": [
+        "Regression",
+        "Klassifikation",
+        "Clustering",
+        "Deskriptiver Bericht"
+      ],
+      "correct": 2,
+      "explain": "Keine Zielspalte → unüberwachtes Lernen → Clustering."
+    },
+    {
+      "id": "wi-q053",
+      "topic": "BI und Data Science",
+      "q": "„Wird diese Buchung storniert?“ – die Antwort ist als 1 (ja) oder 0 (nein) gespeichert. Welche Methode?",
+      "options": [
+        "Regression, weil 0 und 1 Zahlen sind",
+        "Klassifikation, weil die Zielspalte eine Kategorie ist",
+        "Clustering",
+        "Diagnostische Analyse"
+      ],
+      "correct": 1,
+      "explain": "Es zählt der Typ der Zielspalte: ja/nein ist eine Kategorie, auch als 1/0 gespeichert."
+    },
+    {
+      "id": "wi-q054",
+      "topic": "Digitale Transformation und GenAI",
+      "q": "Gäste buchen über Portale am Veranstalter vorbei. Welche Kraft der Digitalen Transformation?",
+      "options": [
+        "Digitale Daten",
+        "Automatisierung",
+        "Vernetzung",
+        "Digitaler Kundenzugang"
+      ],
+      "correct": 3,
+      "explain": "Neue Vermittler erreichen die Kunden direkt = digitaler Kundenzugang, nicht Vernetzung."
+    },
+    {
+      "id": "wi-q055",
+      "topic": "Digitale Transformation und GenAI",
+      "q": "Was unterscheidet einen **Agenten** von RAG?",
+      "options": [
+        "Er wird mit den Firmendokumenten neu trainiert",
+        "Er handelt mit Werkzeugen in Systemen, z. B. bucht er um",
+        "Er halluziniert nie",
+        "Er braucht kein Sprachmodell"
+      ],
+      "correct": 1,
+      "explain": "Chatbot und RAG informieren, der Agent handelt (Sprachmodell + Prompt + Werkzeuge)."
+    },
+    {
+      "id": "wi-q056",
+      "topic": "Digitale Transformation und GenAI",
+      "q": "Eine Onlinebuchung landet ohne Abtippen im CRM. Welche Stufe ist das?",
+      "options": [
+        "Stufe 1: Informationen digitalisieren",
+        "Stufe 2: Prozesse digitalisieren",
+        "Stufe 3: Digitale Transformation",
+        "Industrie 4.0"
+      ],
+      "correct": 1,
+      "explain": "Ein bestehender Ablauf wird schneller, ohne Medienbruch. Das Geschäftsmodell bleibt gleich."
+    },
+    {
+      "id": "wi-q057",
+      "topic": "Digitale Transformation und GenAI",
+      "q": "SWOT der Sonnenschein AG: „Buchungsportale nehmen uns Kunden weg“ ist …",
+      "options": [
+        "eine Stärke",
+        "eine Schwäche",
+        "eine Chance",
+        "ein Risiko"
+      ],
+      "correct": 3,
+      "explain": "Das kommt von außen und schadet → Risiko (Threat). Schwächen sind intern."
+    },
+    {
+      "id": "wi-q058",
+      "topic": "Nicht klausurrelevant",
+      "q": "Die maximale Tiefe eines Entscheidungsbaums ist …",
+      "options": [
+        "ein Modellparameter",
+        "ein Hyperparameter",
+        "ein Feature",
+        "das Target"
+      ],
+      "correct": 1,
+      "explain": "Sie wird vor dem Training festgelegt. Gelernt werden die Fragen im Baum (Parameter)."
+    },
+    {
+      "id": "wi-q059",
+      "topic": "Nicht klausurrelevant",
+      "q": "200 Testbuchungen: TP 8, FN 2, FP 12, TN 178. Wie hoch ist die **Precision**?",
+      "options": [
+        "93 %",
+        "80 %",
+        "40 %",
+        "4 %"
+      ],
+      "correct": 2,
+      "explain": "Precision = TP / (TP + FP) = 8 / 20 = 40 %. 93 % ist die Accuracy, 80 % der Recall."
     }
   ]
 }
