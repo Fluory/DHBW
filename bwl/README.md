@@ -14,7 +14,7 @@ Moodle: [Kurs 18616](https://moodle.heilbronn.dhbw.de/course/view.php?id=18616) 
 | 4 | 27.10.2026 | Rechtsformen II: Kapitalgesellschaften (GmbH, UG, GmbH & Co. KG, AG, KGaA, SE), eG, Stiftung (Übungen 18–22) + Kap. 4 Konzentration und Kooperation (Kartelle, Franchise, Joint Venture, Konzern, Holding, Fusion; Übungen 23–25) | Folien „3. Rechtsformen der Unternehmung“ (3.4–3.5) + „4. Konzentration und Kooperation“ + Skript Kap. 3.4–4 | [04](vorlesungen/04_2026-10-27.md) |
 | 5 | 03.11.2026 | Kap. 5 Standortentscheidungen komplett (Ziele, Standortplanung/-struktur, Standortfaktoren, Nutzwertanalyse, Standort Deutschland; Übungen 26–27, Musterklausur A8) + Kap. 6 Rechnungswesen bis Übung 28g (extern: Bilanz, GuV; intern: Kosten, Zweipunktverfahren, DB, Preisuntergrenzen, Make-or-buy) | Folien „5. Standortentscheidungen“ + „6. Rechnungswesen“ + Skript Kap. 5–6 + Musterlösung BWL 2025 | [05](vorlesungen/05_2026-11-03.md) |
 | 6 | 05.11.2026 | Rest Kap. 6 (Break-even, Übung 28h) + Kap. 7 Planung und Kontrolle komplett (Planungsarten/-ebenen, strategische Analyse: Wertkette, Benchmarking, PIMS, 7-S, Five Forces, Szenariotechnik; Kennzahlen/ROI, Balanced Scorecard; Übungen 29–34, Musterklausur A5) – abgeschlossen | Folien „6. Rechnungswesen“ (neue Fassung) + „7. Planung und Kontrolle“ + Skript Kap. 6–7 | [06](vorlesungen/06_2026-11-05.md) |
-| 7 | 10.11.2026 | vermutet: Kap. 8 Organisation (kurz, nicht klausurrelevant) + Kap. 9 Materialwirtschaft (Beschaffungsprinzipien, ABC/XYZ, Bedarfs-, Bestands-, Beschaffungsplanung mit Meldebestand und Andler, Sourcing, Lagerkennzahlen; Übungen 35–51 als eigene Lösungsskizzen) – wie weit Kap. 9 kommt, ist offen | vermutet (Skript Kap. 8–9, Lernseite Kap. 9) | [07](vorlesungen/07_2026-11-10.md) |
+| 7 | 10.11.2026 | Kap. 8 Organisation laut Folien (8.1–8.3, Übungen 35–38; Kap. 9 vermutlich erst am 12.11.) · ursprünglich vermutet: Kap. 8 Organisation (kurz, nicht klausurrelevant) + Kap. 9 Materialwirtschaft (Beschaffungsprinzipien, ABC/XYZ, Bedarfs-, Bestands-, Beschaffungsplanung mit Meldebestand und Andler, Sourcing, Lagerkennzahlen; Übungen 35–51 als eigene Lösungsskizzen) – wie weit Kap. 9 kommt, ist offen | vermutet (Skript Kap. 8–9, Lernseite Kap. 9) | [07](vorlesungen/07_2026-11-10.md) |
 
 ## Materialien in Moodle
 
@@ -33,6 +33,7 @@ Moodle: [Kurs 18616](https://moodle.heilbronn.dhbw.de/course/view.php?id=18616) 
 | Folien „6. Rechnungswesen“ (neue Fassung, 67 Seiten, mit Lösung Übung 28h) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192105) | 06.11.2026 | Termin 6 (Abgleich Übung 28h) |
 | Folien „7. Planung und Kontrolle“ | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192106) | 06.11.2026 | Termin 6 (Kap. 7, Lösungen Übung 29–34) |
 | „Könnte drankommen“ (Klausurhinweis der Dozentin) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192107) | 06.11.2026 | Klausurvorbereitung (Abschnitt „Klausurhinweise“) |
+| Folien „8. Organisation“ (35 S., erstellt 10.11. mittags) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192377) | 11.11.2026 | Termin 7 (Kap. 8, Übungen 35–38; laut Klausurhinweis nicht klausurrelevant) |
 
 ## Klausurhinweise
 
