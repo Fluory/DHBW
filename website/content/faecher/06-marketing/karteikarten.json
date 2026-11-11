@@ -1,0 +1,263 @@
+{
+  "cards": [
+    {
+      "id": "mkt-k001",
+      "topic": "Grundlagen",
+      "front": "Bedürfnis → Bedarf → Nachfrage",
+      "back": "Bedürfnis = Mangelgefühl + Wunsch · Bedarf = mit Kaufkraft befriedigbar · Nachfrage = am Markt wirksam.",
+      "exam": false
+    },
+    {
+      "id": "mkt-k002",
+      "topic": "Grundlagen",
+      "front": "Bedürfnispyramide nach Maslow",
+      "back": "Physiologisch → Sicherheit → sozial → Wertschätzung → Selbstverwirklichung. Dominant ist das nächste unbefriedigte Bedürfnis.",
+      "exam": false
+    },
+    {
+      "id": "mkt-k003",
+      "topic": "Grundlagen",
+      "front": "Marketing-Grundhaltungen",
+      "back": "Produktionsorientierung (verfügbar, billig) · Produktorientierung (beste Qualität) · Verkaufsorientierung (aggressiv, Nachkaufdissonanz) · Marketingorientierung (Kundennutzen, Beziehungen).",
+      "exam": false
+    },
+    {
+      "id": "mkt-k004",
+      "topic": "Analyse",
+      "front": "SWOT-Analyse und ihre vier Strategien",
+      "back": "S/W intern, O/T extern. SO: Stärken für Chancen nutzen · ST: Stärken gegen Risiken · WO: Schwächen abbauen für Chancen · WT: Bedrohung bei Schwächen abwehren.",
+      "exam": true
+    },
+    {
+      "id": "mkt-k005",
+      "topic": "Analyse",
+      "front": "Marktanteil und Marktausschöpfungsgrad (Tische: MV 150 Mio., Miller 12 Mio., MP 187,5 Mio.)",
+      "back": "Marktanteil = 12 · 100 / 150 = 8 % · MAG = Marktvolumen · 100 / Marktpotenzial = 150 / 187,5 = 80 %.",
+      "exam": true
+    },
+    {
+      "id": "mkt-k006",
+      "topic": "Analyse",
+      "front": "Relativer Marktanteil",
+      "back": "Eigener Marktanteil / Marktanteil des größten Konkurrenten, als Dezimalzahl. Miller 8 %, Konkurrent 10 % → 0,8. Stühle: 2 % / 28 % ≈ 0,07.",
+      "exam": true
+    },
+    {
+      "id": "mkt-k007",
+      "topic": "Analyse",
+      "front": "Produktlebenszyklus: Phasen",
+      "back": "Einführung (Gewinn negativ) → Wachstum (Absatz steigt schnell) → Reife/Sättigung (Gewinn hoch, Absatzspitze) → Rückgang (Kosten senken).",
+      "exam": false
+    },
+    {
+      "id": "mkt-k008",
+      "topic": "Analyse",
+      "front": "BCG-Portfolio: vier Felder",
+      "back": "Question Marks (wenig MA, starkes Wachstum: investieren oder aufgeben) · Stars (hoher MA, starkes Wachstum: ausbauen) · Cash Cows (hoher MA, stagnierend: abschöpfen) · Poor Dogs (desinvestieren).",
+      "exam": true
+    },
+    {
+      "id": "mkt-k009",
+      "topic": "Strategie",
+      "front": "Ansoff-Matrix",
+      "back": "Altes Produkt/alter Markt: Marktdurchdringung · altes Produkt/neuer Markt: Marktentwicklung · neues Produkt/alter Markt: Produktentwicklung · neu/neu: Diversifikation.",
+      "exam": true
+    },
+    {
+      "id": "mkt-k010",
+      "topic": "Strategie",
+      "front": "Diversifikation: horizontal, vertikal, lateral",
+      "back": "Horizontal: Fahrrad + Regenkleidung · vertikal: Schuhe + Rohleder · lateral (ohne Zusammenhang): Yamaha + Pianos.",
+      "exam": false
+    },
+    {
+      "id": "mkt-k011",
+      "topic": "Strategie",
+      "front": "Segmentierungskriterien",
+      "back": "Soziodemografisch (Alter, Einkommen, Wohnort) · psychografisch (Werte, Einstellungen, Motive) · verhaltensbezogen (Markentreue, Preisklasse, Einkaufsstätte).",
+      "exam": false
+    },
+    {
+      "id": "mkt-k012",
+      "topic": "Strategie",
+      "front": "USP und Positionierung nach Kotler",
+      "back": "Einzigartiger Vorteil in der Kundenwahrnehmung. Anforderungen: vor der Produktentwicklung festlegen · nur eine Eigenschaft herausstellen · nicht leicht kopierbar · langfristig.",
+      "exam": false
+    },
+    {
+      "id": "mkt-k013",
+      "topic": "Produkt",
+      "front": "Grund- und Zusatznutzen am Beispiel Uhr",
+      "back": "Grundnutzen: Uhrzeit anzeigen. Zusatznutzen funktional (wasserdicht), emotional (Design, Marke), sozial (Prestige einer Luxusmarke). Werbung betont den Zusatznutzen.",
+      "exam": true
+    },
+    {
+      "id": "mkt-k014",
+      "topic": "Preis",
+      "front": "Skimming vs. Penetration",
+      "back": "Skimming: hoch starten, dann senken (kurzfristige Erträge). Penetration: niedrig starten, schnelle Verbreitung im Massenmarkt.",
+      "exam": false
+    },
+    {
+      "id": "mkt-k015",
+      "topic": "Distribution",
+      "front": "Reisender vs. Handelsvertreter: kritischer Umsatz",
+      "back": "U = Fixkosten Reisender / (Provision HV − Provision R). Bsp.: 45.400 / (0,04 − 0,02) = 2,27 Mio. €; darunter Handelsvertreter, darüber Reisender günstiger.",
+      "exam": true
+    },
+    {
+      "id": "mkt-k016",
+      "topic": "Kommunikation",
+      "front": "Tausenderkontaktpreis (TKP)",
+      "back": "TKP = Kosten / (Nutzer · Zielgruppenanteil) · 1.000. A: 10.000 / (900.000 · 0,6) · 1.000 = 18,52 € · B: 7.000 / (500.000 · 0,7) · 1.000 = 20,00 € → A wählen.",
+      "exam": true
+    },
+    {
+      "id": "mkt-k017",
+      "topic": "Kommunikation",
+      "front": "Push- vs. Pull-Strategie",
+      "back": "Push: Hersteller → Händler (Anreize für Listung), Handel drückt Ware zum Kunden. Pull: Werbung beim Endkunden erzeugt Nachfragesog, Handel muss listen.",
+      "exam": false
+    },
+    {
+      "id": "mkt-k018",
+      "topic": "Kommunikation",
+      "front": "AIDA",
+      "back": "Attention → Interest → Desire → Action: Stufen, die Werbung beim Kunden auslösen soll.",
+      "exam": false
+    },
+    {
+      "id": "mkt-k019",
+      "topic": "Mix",
+      "front": "Marketing-Mix (4P) am Beispiel Gartenmöbel",
+      "back": "Product: wetterfestes Holz, Garantie · Price: Saisonpreise, Mengenrabatt · Place: eigener Onlineshop, Gartencenter · Promotion: Influencer, Messe.",
+      "exam": true
+    },
+    {
+      "id": "mkt-k020",
+      "topic": "Kontrolle",
+      "front": "Werbegewinn und Werberendite",
+      "back": "Werbegewinn = werbebedingter Mehrumsatz − Werbekosten · Werberendite = Mehrumsatz / Werbekosten · 100. Bsp.: 30.000 € Mehrumsatz, 10.000 € Kosten → 20.000 € bzw. 300 %.",
+      "exam": false
+    }
+  ],
+  "quiz": [
+    {
+      "id": "mkt-q001",
+      "topic": "Analyse",
+      "q": "Marktvolumen Tische 150 Mio. €, Umsatz der Miller KG 12 Mio. €. Marktanteil?",
+      "options": [
+        "12 %",
+        "8 %",
+        "0,8",
+        "80 %"
+      ],
+      "correct": 1,
+      "explain": "Marktanteil = 12 · 100 / 150 = 8 %."
+    },
+    {
+      "id": "mkt-q002",
+      "topic": "Analyse",
+      "q": "Miller hat 8 % Marktanteil, der größte Konkurrent 10 %. Relativer Marktanteil?",
+      "options": [
+        "80 %",
+        "0,8",
+        "1,25",
+        "−2 %"
+      ],
+      "correct": 1,
+      "explain": "Eigener MA / MA des größten Konkurrenten = 8 / 10 = 0,8, als Dezimalzahl."
+    },
+    {
+      "id": "mkt-q003",
+      "topic": "Analyse",
+      "q": "Ein Produkt hat einen hohen relativen Marktanteil in einem stagnierenden Markt und bringt Geldüberschüsse. BCG-Feld?",
+      "options": [
+        "Poor Dog",
+        "Star",
+        "Question Mark",
+        "Cash Cow"
+      ],
+      "correct": 3,
+      "explain": "Hoher Marktanteil + geringes Wachstum = Cash Cow: halten und abschöpfen."
+    },
+    {
+      "id": "mkt-q004",
+      "topic": "Strategie",
+      "q": "Ein Fahrradhersteller verkauft sein bisheriges Rad nun auch in Frankreich. Ansoff-Strategie?",
+      "options": [
+        "Produktentwicklung",
+        "Diversifikation",
+        "Marktdurchdringung",
+        "Marktentwicklung"
+      ],
+      "correct": 3,
+      "explain": "Altes Produkt, neuer Markt (neue Region) = Marktentwicklung."
+    },
+    {
+      "id": "mkt-q005",
+      "topic": "Strategie",
+      "q": "Yamaha baut Motorräder und Pianos. Welche Diversifikation?",
+      "options": [
+        "Vertikal",
+        "Keine, das ist Differenzierung",
+        "Lateral",
+        "Horizontal"
+      ],
+      "correct": 2,
+      "explain": "Kein sachlicher Zusammenhang zwischen den Produkten = laterale Diversifikation."
+    },
+    {
+      "id": "mkt-q006",
+      "topic": "Kommunikation",
+      "q": "Medium A: 10.000 €, 900.000 Nutzer, 60 % Zielgruppe. Medium B: 7.000 €, 500.000 Nutzer, 70 % Zielgruppe. Welches hat den niedrigeren TKP?",
+      "options": [
+        "A mit 11,11 €",
+        "B mit 20,00 €",
+        "B mit 14,00 €",
+        "A mit 18,52 €"
+      ],
+      "correct": 3,
+      "explain": "TKP A = 10.000 / 540.000 · 1.000 = 18,52 €; B = 7.000 / 350.000 · 1.000 = 20,00 €."
+    },
+    {
+      "id": "mkt-q007",
+      "topic": "Distribution",
+      "q": "Reisender: 45.400 € Fixkosten + 2 % Provision. Handelsvertreter: 4 % Provision. Erwarteter Umsatz 3 Mio. €. Was ist günstiger?",
+      "options": [
+        "Reisender (kritischer Umsatz 2,27 Mio. €)",
+        "Handelsvertreter, er hat keine Fixkosten",
+        "Handelsvertreter (kritischer Umsatz 2,27 Mio. €)",
+        "Beide gleich teuer"
+      ],
+      "correct": 0,
+      "explain": "U_krit = 45.400 / 0,02 = 2,27 Mio. €. Bei 3 Mio. €: Reisender 105.400 €, Vertreter 120.000 €."
+    },
+    {
+      "id": "mkt-q008",
+      "topic": "Kontrolle",
+      "q": "Werbebedingter Mehrumsatz 30.000 €, Werbekosten 10.000 €. Werberendite?",
+      "options": [
+        "33,3 %",
+        "300 %",
+        "200 %",
+        "20.000 €"
+      ],
+      "correct": 1,
+      "explain": "Werberendite = 30.000 / 10.000 · 100 = 300 %; der Werbegewinn wäre 20.000 €."
+    },
+    {
+      "id": "mkt-q009",
+      "topic": "Preis",
+      "q": "Ein Hersteller führt eine Spielkonsole teuer ein und senkt den Preis später schrittweise. Strategie?",
+      "options": [
+        "Mengenrabatt",
+        "Penetration",
+        "Preisbindung",
+        "Skimming"
+      ],
+      "correct": 3,
+      "explain": "Hoch starten, dann senken = Abschöpfungsstrategie (Skimming)."
+    }
+  ]
+}

@@ -1,0 +1,803 @@
+{
+  "cards": [
+    {
+      "id": "git-k001",
+      "topic": "Information",
+      "front": "Was ist der Unterschied zwischen **Daten** und **Information**?",
+      "back": "Daten = Fakten ohne Bedeutung (z. B. 7). Erst mit Kontext werden sie Information: „7 °C in Deutschland“ heißt kalt, „7 °F in den USA“ heißt sehr kalt.",
+      "exam": true
+    },
+    {
+      "id": "git-k002",
+      "topic": "Information",
+      "front": "Nenne die **drei Sichtweisen** der Digitalisierung.",
+      "back": "betriebswirtschaftlich · gesellschaftlich · technisch.\nTechnisch = analoge Signale werden **zeit- und wertediskret** (binär), z. B. 44 100 Messungen pro Sekunde.",
+      "exam": true
+    },
+    {
+      "id": "git-k003",
+      "topic": "Information",
+      "front": "Nenne die **Phasen der Digitalisierung** mit Beispiel.",
+      "back": "1 einzelne Funktion (Rechnung automatisch) → 2 Funktionsbereich (Rechnungswesen) → 3 integrierter Prozess (Auftragsbearbeitung) → 4 1:1 überbetrieblich (lieferantengeführte Bestände) → heute m:n (B2B-Marktplätze).",
+      "exam": true
+    },
+    {
+      "id": "git-k004",
+      "topic": "IT-Infrastruktur",
+      "front": "Nenne die **sieben Hauptkomponenten** einer IT-Infrastruktur.",
+      "back": "1 Hardware · 2 Betriebssysteme · 3 Datenverwaltung (DBMS) · 4 Netzwerke · 5 Anwendungssysteme (ERP) · 6 Internet als Plattform · 7 Beratung/Systemintegratoren.\nOft vergessen: 6 und 7!",
+      "exam": true
+    },
+    {
+      "id": "git-k005",
+      "topic": "IT-Infrastruktur",
+      "front": "Was ist **Client-Server**, was ist **N-Tier**?",
+      "back": "Client = Eingabestelle des Benutzers, Server = hält gemeinsame Daten und Dienste.\n2-Tier: Client ↔ Server. N-Tier: Client → Webserver → Anwendungsserver → Datenbank.",
+      "exam": true
+    },
+    {
+      "id": "git-k006",
+      "topic": "IT-Infrastruktur",
+      "front": "IaaS, PaaS, SaaS – je ein Beispiel?",
+      "back": "IaaS: virtuellen Server mieten, Linux selbst installieren (AWS).\nPaaS: nur eigenen Code hochladen (Google App Engine).\nSaaS: fertige Software im Browser (Salesforce).",
+      "exam": true
+    },
+    {
+      "id": "git-k007",
+      "topic": "Moore",
+      "front": "Was hat **Moore** 1965 wirklich gesagt?",
+      "back": "Die **Anzahl der Transistoren** pro Chip verdoppelt sich jährlich, später korrigiert: alle **2 Jahre**.\nEs geht um die Anzahl, nicht um Größe oder Leistung.",
+      "exam": true
+    },
+    {
+      "id": "git-k008",
+      "topic": "Moore",
+      "front": "Nenne die **drei Interpretationen** des Mooreschen Gesetzes.",
+      "back": "Alle **18 Monate**: 1) Leistung der Mikroprozessoren verdoppelt sich, 2) Leistung der Computer verdoppelt sich, 3) Preis der Informationsverarbeitung **halbiert** sich.",
+      "exam": true
+    },
+    {
+      "id": "git-k009",
+      "topic": "Moore",
+      "front": "Rechnen: Verdopplung alle 2 Jahre – Faktor nach 10 Jahren?",
+      "back": "10 / 2 = 5 Verdopplungen → 2⁵ = **32-fach**.\nFormel: Faktor = 2^(t/T).",
+      "exam": false
+    },
+    {
+      "id": "git-k010",
+      "topic": "Zahlen",
+      "front": "Stellenwerte für 8 Bit auswendig?",
+      "back": "128 64 32 16 8 4 2 1.\nHex: A=10, B=11, C=12, D=13, E=14, F=15. 16er-Potenzen: 1, 16, 256, 4096.",
+      "exam": true
+    },
+    {
+      "id": "git-k011",
+      "topic": "Zahlen",
+      "front": "Wie rechnest du **dezimal → binär**? (Beispiel 235)",
+      "back": "Restwertmethode: immer durch 2 teilen, Reste **von unten nach oben** lesen.\n235 → `1110 1011`₂.",
+      "exam": true
+    },
+    {
+      "id": "git-k012",
+      "topic": "Zahlen",
+      "front": "1011 0110₂ = ? (dezimal, ohne Vorzeichen)",
+      "back": "Stellenwerte über die Einsen addieren: 128 + 32 + 16 + 4 + 2 = **182**.",
+      "exam": true
+    },
+    {
+      "id": "git-k013",
+      "topic": "Zahlen",
+      "front": "Binär → Oktal/Hex: Wie gruppierst du?",
+      "back": "Immer **von rechts** gruppieren: Oktal 3 Bit, Hex 4 Bit.\n100₁₀ = 0110 0100 → 001|100|100 = **144₈** (nicht 344!), 0110|0100 = 64₁₆.",
+      "exam": true
+    },
+    {
+      "id": "git-k014",
+      "topic": "Zahlen",
+      "front": "Zweierkomplement von −25 in 8 Bit?",
+      "back": "1) 25 = `0001 1001` 2) invertieren: `1110 0110` 3) +1: `1110 0111`.\nProbe: −128 + 64 + 32 + 4 + 2 + 1 = −25 ✓",
+      "exam": true
+    },
+    {
+      "id": "git-k015",
+      "topic": "Zahlen",
+      "front": "Wie liest du `1111 0001` im Zweierkomplement?",
+      "back": "Erstes Bit 1 → negativ. −128-Probe: −128 + 64 + 32 + 16 + 1 = **−15**.\nAchtung: Nicht 241 und das Minus nicht vergessen!",
+      "exam": true
+    },
+    {
+      "id": "git-k016",
+      "topic": "Zahlen",
+      "front": "Wie rechnest du 42 − 17 in 8 Bit?",
+      "back": "a − b = a + (−b). Komplement von **17** (der Zahl hinter dem Minus): `1110 1111`.\n`0010 1010` + `1110 1111` = (1)`0001 1001` → Übertrag weg → **25**.",
+      "exam": true
+    },
+    {
+      "id": "git-k017",
+      "topic": "Zahlen",
+      "front": "Wann ist ein **Überlauf**? (8 Bit Zweierkomplement)",
+      "back": "Wenn das Ergebnis nicht in −128 … +127 passt. Faustregel: plus + plus ergibt minus (oder minus + minus ergibt plus).\n90 + 60 = 150 → `1001 0110` = −106 → Überlauf.",
+      "exam": true
+    },
+    {
+      "id": "git-k018",
+      "topic": "Zahlen",
+      "front": "Wertebereiche bei 8 Bit?",
+      "back": "Ohne Vorzeichen: 0 … 255.\nZweierkomplement: **−128 … +127** (nur eine Null).\nVorzeichen-Betrag und Einerkomplement: −127 … +127 (zwei Nullen).",
+      "exam": true
+    },
+    {
+      "id": "git-k019",
+      "topic": "Zahlen",
+      "front": "4,375₁₀ als binäre Kommazahl?",
+      "back": "4 = 100. Nachkomma immer ×2: 0,375→0,75 (0) → 1,5 (1) → 1,0 (1).\nErgebnis: **100,011₂**.",
+      "exam": true
+    },
+    {
+      "id": "git-k020",
+      "topic": "Logik",
+      "front": "AND, OR, XOR in einem Satz?",
+      "back": "AND (∧): nur 1, wenn **alle** 1 sind.\nOR (∨): nur 0, wenn **alle** 0 sind.\nXOR (⊕): 1, wenn die Eingänge **verschieden** sind.",
+      "exam": true
+    },
+    {
+      "id": "git-k021",
+      "topic": "Logik",
+      "front": "Rezept: Wahrheitstabelle → DNF",
+      "back": "1) Nur Zeilen mit Y = 1 nehmen. 2) Pro Zeile ein ∧-Term: 1 → Variable, 0 → ¬Variable. 3) Alle Terme mit ∨ verbinden.\nZeile 1 0 1 → (A ∧ ¬B ∧ C).",
+      "exam": true
+    },
+    {
+      "id": "git-k022",
+      "topic": "Logik",
+      "front": "**Kernregel** zum Vereinfachen?",
+      "back": "Zwei Terme unterscheiden sich nur in **einer** Variablen → sie fällt weg.\n(A ∧ B) ∨ (A ∧ ¬B) = A ∧ (B ∨ ¬B) = A ∧ 1 = **A**.",
+      "exam": true
+    },
+    {
+      "id": "git-k023",
+      "topic": "Logik",
+      "front": "Vereinfache: (¬A ∧ B) ∨ (A ∧ B)",
+      "back": "B ausklammern: B ∧ (¬A ∨ A) = B ∧ 1 = **B**.",
+      "exam": true
+    },
+    {
+      "id": "git-k024",
+      "topic": "Logik",
+      "front": "**Absorption**: A ∨ (A ∧ B) = ?",
+      "back": "**A**. Ist A = 1, ist alles 1. Ist A = 0, ist auch A ∧ B = 0.\nEbenso: A ∧ (A ∨ B) = A.",
+      "exam": true
+    },
+    {
+      "id": "git-k025",
+      "topic": "Logik",
+      "front": "**De Morgan**: ¬(A ∧ B) und ¬(A ∨ B)?",
+      "back": "¬(A ∧ B) = ¬A ∨ ¬B.\n¬(A ∨ B) = ¬A ∧ ¬B.\nMerke: Negation über die Klammer → ∧ wird ∨ (und umgekehrt), jede Variable wird negiert.",
+      "exam": true
+    },
+    {
+      "id": "git-k026",
+      "topic": "Logik",
+      "front": "Vereinfache: (¬A ∧ ¬B) ∨ (¬A ∧ B) ∨ (A ∧ ¬B)",
+      "back": "Term ¬A∧¬B zweimal nutzen (x ∨ x = x):\nmit ¬A∧B → ¬A; mit A∧¬B → ¬B.\nErgebnis: **¬A ∨ ¬B** (= NAND).",
+      "exam": true
+    },
+    {
+      "id": "git-k027",
+      "topic": "Logik",
+      "front": "Vereinfache die Alarmanlage: (S∧¬T∧F) ∨ (S∧T∧¬F) ∨ (S∧T∧F)",
+      "back": "S∧T∧F mit beiden kombinieren: → S∧F und S∧T.\n(S∧F) ∨ (S∧T) = **S ∧ (T ∨ F)**.",
+      "exam": true
+    },
+    {
+      "id": "git-k028",
+      "topic": "Logik",
+      "front": "Welche Muster erkennst du sofort?",
+      "back": "(¬A ∧ B) ∨ (A ∧ ¬B) = **XOR**.\n(¬A ∧ ¬B) ∨ (A ∧ B) = **XNOR** (ein Gatter statt fünf).",
+      "exam": true
+    },
+    {
+      "id": "git-k029",
+      "topic": "Logik",
+      "front": "Halbaddierer: welche Gatter?",
+      "back": "Summe s = **XOR** (1+1 → 0), Übertrag c = **AND**.\nVolladdierer = 2 Halbaddierer + 1 OR.",
+      "exam": true
+    },
+    {
+      "id": "git-k030",
+      "topic": "Programmierung",
+      "front": "Algorithmus, Programm, Prozess – Unterschied?",
+      "back": "Algorithmus: Handlungsvorschrift, endet in **endlicher Zeit** (Rezept).\nProgramm: Umsetzung in einer Sprache, darf endlos laufen (Webserver).\nProzess: **laufendes** Programm mit Daten (Browser im Taskmanager).",
+      "exam": true
+    },
+    {
+      "id": "git-k031",
+      "topic": "Programmierung",
+      "front": "Compiler vs. Interpreter?",
+      "back": "Compiler: übersetzt **vorab das ganze** Programm in Maschinencode.\nInterpreter: übersetzt **zur Laufzeit** Befehl für Befehl (ggf. über Bytecode, Java/Python).",
+      "exam": true
+    },
+    {
+      "id": "git-k032",
+      "topic": "Programmierung",
+      "front": "Was liefert fakrek(4)? Was braucht jede Rekursion?",
+      "back": "4 · 3 · 2 · 1 = **24**.\nJede Rekursion braucht eine **Abbruchbedingung**, sonst läuft der Aufrufstapel über.",
+      "exam": true
+    },
+    {
+      "id": "git-k033",
+      "topic": "Datenstrukturen",
+      "front": "Stack: Prinzip und Operationen?",
+      "back": "**LIFO** (Tellerstapel). push(x) legt oben drauf, pop() nimmt oben weg, top() liest nur.\nFehlerfall: pop/top auf leerem Stack.",
+      "exam": true
+    },
+    {
+      "id": "git-k034",
+      "topic": "Datenstrukturen",
+      "front": "Queue: Prinzip und Operationen?",
+      "back": "**FIFO** (Supermarktkasse). put(x) hinten rein, get() vorne raus.\nFehlerfall: get() auf leerer Queue.",
+      "exam": true
+    },
+    {
+      "id": "git-k035",
+      "topic": "Datenstrukturen",
+      "front": "Stack durchspielen: push(4), push(8), push(2), pop(), push(5), top(), pop(), pop()",
+      "back": "Ausgaben: 2, 5 (top, bleibt), 5, 8.\nAm Ende liegt nur noch **[4]**.",
+      "exam": true
+    },
+    {
+      "id": "git-k036",
+      "topic": "Datenstrukturen",
+      "front": "Array vs. verkettete Liste – je Vor- und Nachteil?",
+      "back": "Array: + direkter Zugriff über Index (a[5]) · − feste Länge, Einfügen nur durch Umkopieren.\nListe: + Einfügen/Löschen durch Zeiger umhängen · − Suche ab dem Kopf.",
+      "exam": true
+    },
+    {
+      "id": "git-k037",
+      "topic": "Datenstrukturen",
+      "front": "Geordneten Binärbaum aufbauen: Regel?",
+      "back": "Immer an der Wurzel starten: kleiner → links, größer → rechts, bis ein freier Platz kommt.\nProbe: von links nach rechts gelesen = sortiert.",
+      "exam": true
+    },
+    {
+      "id": "git-k038",
+      "topic": "Datenstrukturen",
+      "front": "Knoten mit zwei Kindern löschen?",
+      "back": "Ersetzen durch den **größten im linken** Teilbaum (1× links, dann ganz rechts) oder den **kleinsten im rechten** Teilbaum (1× rechts, dann ganz links).",
+      "exam": true
+    },
+    {
+      "id": "git-k039",
+      "topic": "Suchen/Sortieren",
+      "front": "Lineare vs. binäre Suche?",
+      "back": "Linear: keine Voraussetzung, **O(n)**.\nBinär: Daten müssen **sortiert** sein, Mitte prüfen, Hälfte wegwerfen, **O(log n)**.",
+      "exam": true
+    },
+    {
+      "id": "git-k040",
+      "topic": "Suchen/Sortieren",
+      "front": "Wie viele Schritte braucht die binäre Suche höchstens?",
+      "back": "Kleinstes k mit 2^(k) > n.\nn = 1 000 → 2¹⁰ = 1 024 → **10** Schritte. n = 500 → 2⁹ = 512 → 9.",
+      "exam": true
+    },
+    {
+      "id": "git-k041",
+      "topic": "Suchen/Sortieren",
+      "front": "Bubble Sort: Was steht nach dem 1. Durchlauf fest?",
+      "back": "Das **größte** Element steht **hinten**. Nachbarn vergleichen und tauschen. Aufwand **O(n²)**.\n[5,1,4,2,8] → nach Durchlauf 1: [1,4,2,5,8].",
+      "exam": true
+    },
+    {
+      "id": "git-k042",
+      "topic": "Suchen/Sortieren",
+      "front": "Merge Sort: Prinzip und Aufwand?",
+      "back": "Teile und Herrsche, rekursiv: in der Mitte teilen bis Einzelelemente, dann sortiert **zusammenführen** (Merge). Aufwand **O(n log n)**.",
+      "exam": true
+    },
+    {
+      "id": "git-k043",
+      "topic": "Suchen/Sortieren",
+      "front": "O-Notation zuordnen: O(1), O(log n), O(n), O(n log n), O(n²)",
+      "back": "O(1): Zugriff a[5] · O(log n): binäre Suche · O(n): lineare Suche · O(n log n): Merge Sort · O(n²): Bubble Sort.\nn verdoppelt → O(n²) wird 4-mal so lang.",
+      "exam": true
+    },
+    {
+      "id": "git-k044",
+      "topic": "Rechnerarchitektur",
+      "front": "Kern der **Von-Neumann**-Architektur?",
+      "back": "Programme und Daten liegen binär im **selben Speicher** und laufen über **einen gemeinsamen Bus**.\nMerke: 1 Speicher, 1 Bus.",
+      "exam": true
+    },
+    {
+      "id": "git-k045",
+      "topic": "Rechnerarchitektur",
+      "front": "Die **fünf Komponenten** des Von-Neumann-Rechners?",
+      "back": "Rechenwerk (ALU) · Steuerwerk · Speicherwerk (Programme + Daten) · Ein-/Ausgabewerk · Bussystem.\nSteuer- + Rechenwerk = CPU. Den Bus nicht vergessen!",
+      "exam": true
+    },
+    {
+      "id": "git-k046",
+      "topic": "Rechnerarchitektur",
+      "front": "Die **fünf Phasen** des Von-Neumann-Zyklus?",
+      "back": "1 FETCH · 2 DECODE · 3 FETCH OPERANDS · 4 EXECUTE · 5 UPDATE INSTRUCTION POINTER.",
+      "exam": true
+    },
+    {
+      "id": "git-k047",
+      "topic": "Rechnerarchitektur",
+      "front": "Was ist die **Harvard**-Architektur?",
+      "back": "Getrennte Speicher **und** getrennte Busse für Befehle und Daten. Befehl und Daten gleichzeitig holen → schneller, aber teurer.\nEinsatz: Mikrocontroller (Arduino), Signalverarbeitung.",
+      "exam": true
+    },
+    {
+      "id": "git-k048",
+      "topic": "Rechnerarchitektur",
+      "front": "Von Neumann: Pro und Contra?",
+      "back": "Pro: einfacher, billiger.\nContra 1: **Flaschenhals** = der gemeinsame Bus (Befehl und Daten nacheinander, min. 2 Takte).\nContra 2: Sicherheit (Buffer Overflow, Code als Daten getarnt).",
+      "exam": true
+    },
+    {
+      "id": "git-k049",
+      "topic": "Rechnerarchitektur",
+      "front": "Steuer-, Adress-, Datenbus beim Lesen?",
+      "back": "Steuerbus: Lesebefehl · Adressbus: **wo** (Adresse der Zelle) · Datenbus: **was** (die Daten zur CPU).",
+      "exam": true
+    },
+    {
+      "id": "git-k050",
+      "topic": "Speicher/RAID",
+      "front": "Speicherhierarchie von oben nach unten?",
+      "back": "Register → L1 → L2 → L3 → RAM | SSD/Flash → Festplatte → Band/Cloud.\nNach unten: langsamer, größer, billiger pro Bit. Grenze volatil/persistent: zwischen RAM und Flash.",
+      "exam": true
+    },
+    {
+      "id": "git-k051",
+      "topic": "Speicher/RAID",
+      "front": "Warum hilft ein kleiner **Cache**?",
+      "back": "Wegen der **Lokalität**: Das Nächste liegt meist direkt neben dem Letzten. Beispiele: Schleifen, Arrays.\nFehlt etwas im Cache: Cache-Miss → aus dem RAM nachladen.",
+      "exam": true
+    },
+    {
+      "id": "git-k052",
+      "topic": "Speicher/RAID",
+      "front": "Adressleitungen ↔ Speichergröße?",
+      "back": "n Leitungen → 2ⁿ Byte. 2¹⁰ = 1 KB, 2²⁰ = 1 MB, 2³⁰ = 1 GB.\n32 Leitungen → 4 GB. 16 GB = 2⁴·2³⁰ = 2³⁴ → 34 Leitungen.",
+      "exam": true
+    },
+    {
+      "id": "git-k053",
+      "topic": "Speicher/RAID",
+      "front": "RAID 0, 1, 5, 6: Prinzip, min. Platten, Ausfälle?",
+      "back": "RAID 0: Striping, 2 Platten, **0** Ausfälle.\nRAID 1: Spiegelung, 2, 1.\nRAID 5: Striping + Parität, 3, 1.\nRAID 6: doppelte Parität, 4, 2.",
+      "exam": true
+    },
+    {
+      "id": "git-k054",
+      "topic": "Speicher/RAID",
+      "front": "Nutzkapazität: 5 Platten à 4 TB?",
+      "back": "RAID 0: 5·4 = **20 TB** · RAID 5: (5−1)·4 = **16 TB** · RAID 6: (5−2)·4 = **12 TB**.",
+      "exam": true
+    },
+    {
+      "id": "git-k055",
+      "topic": "Datenbanken/SQL",
+      "front": "Probleme des **Dateiansatzes**?",
+      "back": "Redundanz/Inkonsistenz (alte Adresse im Vertrieb) · Abhängigkeit Programm–Daten · fehlender Datenaustausch · mangelnde Datensicherheit.",
+      "exam": true
+    },
+    {
+      "id": "git-k056",
+      "topic": "Datenbanken/SQL",
+      "front": "DB, DBMS, Datenbanksystem, Data Dictionary?",
+      "back": "DB = Daten. DBMS = Software, die sie verwaltet. Datenbanksystem = DB + DBMS.\nData Dictionary = Katalog der **Metadaten** (welche Tabellen, Attribute, Datentypen).",
+      "exam": true
+    },
+    {
+      "id": "git-k057",
+      "topic": "Datenbanken/SQL",
+      "front": "ER-Modell (Chen): Symbole?",
+      "back": "Rechteck = Entitätstyp · Raute = Beziehung · Ellipse = Attribut · unterstrichen = Schlüssel.\nBeispiel: Student – besucht (m:n) – Vorlesung.",
+      "exam": true
+    },
+    {
+      "id": "git-k058",
+      "topic": "Datenbanken/SQL",
+      "front": "Beziehungen in Tabellen umsetzen?",
+      "back": "1:n → Fremdschlüssel auf der **n-Seite**.\n1:1 → Fremdschlüssel auf einer Seite.\nm:n → eigene **Hilfstabelle** mit beiden Fremdschlüsseln, z. B. BESUCHT(MatrNr, VNr).",
+      "exam": true
+    },
+    {
+      "id": "git-k059",
+      "topic": "Datenbanken/SQL",
+      "front": "Reihenfolge beim Lesen einer SQL-Abfrage?",
+      "back": "1 FROM (welche Tabellen) → 2 WHERE (welche Zeilen) → 3 GROUP BY (Gruppen) → 4 SELECT (Spalten/Aggregate).\nAchtung: > und >= genau lesen!",
+      "exam": true
+    },
+    {
+      "id": "git-k060",
+      "topic": "Datenbanken/SQL",
+      "front": "`SELECT ABT, COUNT(*) FROM ANGESTELLTER GROUP BY ABT;` – was kommt raus?",
+      "back": "Eine Zeile **pro Abteilung**: 1 | 1, 4 | 3, 5 | 4.\nOhne GROUP BY gäbe COUNT(*) nur eine Zeile: 8.",
+      "exam": true
+    }
+  ],
+  "quiz": [
+    {
+      "id": "git-q001",
+      "topic": "Information",
+      "q": "Was beschreibt die **technische** Sichtweise der Digitalisierung?",
+      "options": [
+        "Neue Geschäftsmodelle durch Daten",
+        "Analoge Signale werden zeit- und wertediskret (binär) dargestellt",
+        "Arbeitswelten werden auf eine digitale Ebene übertragen",
+        "Analoge Signale werden zeitkontinuierlich gespeichert"
+      ],
+      "correct": 1,
+      "explain": "Technisch heißt digital genau diskret und binär. A ist betriebswirtschaftlich, C gesellschaftlich, D ist das Gegenteil."
+    },
+    {
+      "id": "git-q002",
+      "topic": "IT-Infrastruktur",
+      "q": "Ein Start-up mietet virtuelle Server und installiert Linux selbst. Welches Modell ist das?",
+      "options": [
+        "SaaS",
+        "PaaS",
+        "On-Premise",
+        "IaaS"
+      ],
+      "correct": 3,
+      "explain": "Bei IaaS mietest du nur Rechenleistung; Betriebssystem und Anwendungen verwaltest du selbst."
+    },
+    {
+      "id": "git-q003",
+      "topic": "Moore",
+      "q": "Welche Aussage ist eine korrekte Interpretation des Mooreschen Gesetzes?",
+      "options": [
+        "Die Speicherkapazität verdoppelt sich alle 18 Monate",
+        "Die Größe eines Transistors halbiert sich alle 2 Jahre",
+        "Der Preis der Informationsverarbeitung halbiert sich alle 18 Monate",
+        "Die Anzahl der Transistoren verdreifacht sich jährlich"
+      ],
+      "correct": 2,
+      "explain": "Interpretationen: Leistung verdoppelt bzw. Preis halbiert alle 18 Monate. Speicher, Größe und „verdreifacht“ sind die typischen Fallen."
+    },
+    {
+      "id": "git-q004",
+      "topic": "Moore",
+      "q": "Ein Chip hat heute 1 Mrd. Transistoren. Verdopplung alle 2 Jahre. Wie viele nach 8 Jahren?",
+      "options": [
+        "8 Mrd.",
+        "16 Mrd.",
+        "4 Mrd.",
+        "32 Mrd."
+      ],
+      "correct": 1,
+      "explain": "8 / 2 = 4 Verdopplungen → 2⁴ = 16-fach → 16 Mrd. (8 Mrd. wäre linear gedacht)."
+    },
+    {
+      "id": "git-q005",
+      "topic": "Zahlen",
+      "q": "2F₁₆ = ? (dezimal)",
+      "options": [
+        "35",
+        "215",
+        "47",
+        "42"
+      ],
+      "correct": 2,
+      "explain": "2·16 + F(15) = 32 + 15 = 47."
+    },
+    {
+      "id": "git-q006",
+      "topic": "Zahlen",
+      "q": "77₁₀ = ? (8 Bit binär)",
+      "options": [
+        "0100 1101",
+        "1011 0010",
+        "0101 1001",
+        "0100 1011"
+      ],
+      "correct": 0,
+      "explain": "64 + 8 + 4 + 1 = 77 → 0100 1101. Bei der Restwertmethode die Reste von unten nach oben lesen."
+    },
+    {
+      "id": "git-q007",
+      "topic": "Zahlen",
+      "q": "1101 0110₂ = ? (oktal)",
+      "options": [
+        "652₈",
+        "326₈",
+        "D6₈",
+        "214₈"
+      ],
+      "correct": 1,
+      "explain": "Von rechts in 3er-Gruppen: 11|010|110 → 3 2 6. 652 entsteht, wenn man von links gruppiert; 214 ist dezimal, D6 ist hex."
+    },
+    {
+      "id": "git-q008",
+      "topic": "Zahlen",
+      "q": "−20 im 8-Bit-Zweierkomplement?",
+      "options": [
+        "1110 1011",
+        "1001 0100",
+        "0001 0100",
+        "1110 1100"
+      ],
+      "correct": 3,
+      "explain": "20 = 0001 0100 → invertieren 1110 1011 → +1 = 1110 1100. A ist nur das Einerkomplement, B Vorzeichen-Betrag."
+    },
+    {
+      "id": "git-q009",
+      "topic": "Zahlen",
+      "q": "Welchen Wert hat `1111 1010` im 8-Bit-Zweierkomplement?",
+      "options": [
+        "−6",
+        "250",
+        "6",
+        "−5"
+      ],
+      "correct": 0,
+      "explain": "−128 + 64 + 32 + 16 + 8 + 2 = −6. 250 wäre ohne Vorzeichen; bei 6 fehlt das Minus; −5 entsteht, wenn man das +1 vergisst."
+    },
+    {
+      "id": "git-q010",
+      "topic": "Zahlen",
+      "q": "50 − 70 im 8-Bit-Zweierkomplement: Ergebnis?",
+      "options": [
+        "0001 0100 = +20",
+        "1110 1100 = 236",
+        "1110 1100 = −20",
+        "1110 1011 = −21"
+      ],
+      "correct": 2,
+      "explain": "0011 0010 + 1011 1010 (−70) = 1110 1100. Erstes Bit 1 → negativ: −128+64+32+8+4 = −20. +20 entsteht, wenn man −50 statt −70 bildet."
+    },
+    {
+      "id": "git-q011",
+      "topic": "Zahlen",
+      "q": "Welche Rechnung erzeugt im 8-Bit-Zweierkomplement einen **Überlauf**?",
+      "options": [
+        "100 + (−50)",
+        "100 + 50",
+        "−100 + (−20)",
+        "60 + 60"
+      ],
+      "correct": 1,
+      "explain": "150 > 127 passt nicht in −128 … +127. Plus + Minus läuft nie über; −120 und 120 passen."
+    },
+    {
+      "id": "git-q012",
+      "topic": "Logik",
+      "q": "Vereinfache: (A ∧ ¬B) ∨ (A ∧ B)",
+      "options": [
+        "A ∧ B",
+        "B",
+        "1",
+        "A"
+      ],
+      "correct": 3,
+      "explain": "A ausklammern: A ∧ (¬B ∨ B) = A ∧ 1 = A. B fällt weg, weil es einmal normal und einmal negiert vorkommt."
+    },
+    {
+      "id": "git-q013",
+      "topic": "Logik",
+      "q": "Forme mit De Morgan um: ¬(A ∨ ¬B)",
+      "options": [
+        "¬A ∧ B",
+        "¬A ∨ B",
+        "A ∧ ¬B",
+        "¬A ∧ ¬B"
+      ],
+      "correct": 0,
+      "explain": "∨ wird ∧, jede Variable wird negiert: ¬A ∧ ¬¬B = ¬A ∧ B. Typischer Fehler: das ∨ stehen lassen."
+    },
+    {
+      "id": "git-q014",
+      "topic": "Logik",
+      "q": "Vereinfache: (A∧B∧¬C) ∨ (A∧B∧C) ∨ (¬A∧B∧C)",
+      "options": [
+        "A ∧ B ∧ C",
+        "B ∧ (A ∨ C)",
+        "B",
+        "A ∨ (B ∧ C)"
+      ],
+      "correct": 1,
+      "explain": "A∧B∧C zweimal nutzen: mit A∧B∧¬C → A∧B, mit ¬A∧B∧C → B∧C. (A∧B) ∨ (B∧C) = B ∧ (A ∨ C)."
+    },
+    {
+      "id": "git-q015",
+      "topic": "Logik",
+      "q": "A ∨ (A ∧ B ∧ C) = ?",
+      "options": [
+        "A ∧ B ∧ C",
+        "A ∨ B ∨ C",
+        "A",
+        "1"
+      ],
+      "correct": 2,
+      "explain": "Absorption: Steckt der kurze Term A ganz im langen, fällt der lange weg."
+    },
+    {
+      "id": "git-q016",
+      "topic": "Logik",
+      "q": "Y = 1 genau bei AB = 01, 10 und 11. Welcher Ausdruck passt?",
+      "options": [
+        "A ⊕ B",
+        "A ∧ B",
+        "¬A ∨ ¬B",
+        "A ∨ B"
+      ],
+      "correct": 3,
+      "explain": "Nur bei 00 ist Y = 0 → das ist OR. XOR wäre bei 11 gleich 0."
+    },
+    {
+      "id": "git-q017",
+      "topic": "Logik",
+      "q": "Welcher DNF-Teilausdruck gehört zur Zeile A = 1, B = 0, C = 1?",
+      "options": [
+        "A ∧ ¬B ∧ C",
+        "A ∨ ¬B ∨ C",
+        "¬A ∧ B ∧ ¬C",
+        "A ∧ B ∧ C"
+      ],
+      "correct": 0,
+      "explain": "1 → Variable, 0 → negierte Variable, alles mit ∧ verbinden."
+    },
+    {
+      "id": "git-q018",
+      "topic": "Logik",
+      "q": "Y = (A ⊕ B) ∧ C. In wie vielen der 8 Zeilen ist Y = 1?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1,
+      "explain": "A ⊕ B ist in 2 von 4 Fällen 1 (01, 10), dazu muss C = 1 sein → 2 Zeilen (011, 101)."
+    },
+    {
+      "id": "git-q019",
+      "topic": "Programmierung",
+      "q": "Ein Programm zeigt jede Sekunde die Uhrzeit an und endet nie. Was ist es?",
+      "options": [
+        "Ein Algorithmus",
+        "Ein Programm, aber kein Algorithmus",
+        "Ein Compiler",
+        "Ein Syntaxfehler"
+      ],
+      "correct": 1,
+      "explain": "Ein Algorithmus muss in endlicher Zeit enden. Ein Programm darf endlos laufen."
+    },
+    {
+      "id": "git-q020",
+      "topic": "Datenstrukturen",
+      "q": "Stack: push(1), push(2), pop(), push(3), top(). Was liefert top()?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "Fehler"
+      ],
+      "correct": 2,
+      "explain": "pop() entfernt die 2, dann liegt [1, 3]. top() liest das oberste: 3 (bleibt liegen). LIFO."
+    },
+    {
+      "id": "git-q021",
+      "topic": "Datenstrukturen",
+      "q": "Binärbaum aus 50, 30, 70, 20, 40, 60. Wo landet die 40?",
+      "options": [
+        "links von 20",
+        "links von 70",
+        "rechts von 50",
+        "rechts von 30"
+      ],
+      "correct": 3,
+      "explain": "40 < 50 → links zu 30; 40 > 30 → rechts von 30."
+    },
+    {
+      "id": "git-q022",
+      "topic": "Suchen/Sortieren",
+      "q": "Wie viele Vergleiche braucht die binäre Suche bei 200 sortierten Elementen höchstens?",
+      "options": [
+        "7",
+        "8",
+        "100",
+        "200"
+      ],
+      "correct": 1,
+      "explain": "Kleinstes k mit 2ᵏ > 200: 2⁷ = 128 reicht nicht, 2⁸ = 256 → 8. 200 wäre die lineare Suche."
+    },
+    {
+      "id": "git-q023",
+      "topic": "Suchen/Sortieren",
+      "q": "Bubble Sort auf [4, 2, 5, 1, 3]. Wie sieht das Array nach dem 1. Durchlauf aus?",
+      "options": [
+        "[1, 2, 3, 4, 5]",
+        "[1, 4, 2, 5, 3]",
+        "[2, 4, 1, 3, 5]",
+        "[2, 1, 4, 3, 5]"
+      ],
+      "correct": 2,
+      "explain": "4↔2, 4<5 ok, 5↔1, 5↔3 → [2, 4, 1, 3, 5]. Das größte (5) steht hinten, nicht das kleinste vorne."
+    },
+    {
+      "id": "git-q024",
+      "topic": "Rechnerarchitektur",
+      "q": "Was ist der Von-Neumann-**Flaschenhals**?",
+      "options": [
+        "Die ALU rechnet zu langsam",
+        "Der Speicher ist zu klein",
+        "Der gemeinsame Bus: Befehl und Daten müssen nacheinander geholt werden",
+        "Es gibt zwei getrennte Speicher"
+      ],
+      "correct": 2,
+      "explain": "Der Engpass ist der gemeinsame Bus, nicht das Rechenwerk. Getrennte Speicher sind Harvard."
+    },
+    {
+      "id": "git-q025",
+      "topic": "Rechnerarchitektur",
+      "q": "Welche Phase folgt im Von-Neumann-Zyklus direkt auf DECODE?",
+      "options": [
+        "EXECUTE",
+        "FETCH OPERANDS",
+        "UPDATE INSTRUCTION POINTER",
+        "FETCH"
+      ],
+      "correct": 1,
+      "explain": "Reihenfolge: FETCH → DECODE → FETCH OPERANDS → EXECUTE → UPDATE INSTRUCTION POINTER."
+    },
+    {
+      "id": "git-q026",
+      "topic": "Speicher/RAID",
+      "q": "Wie viel Speicher adressieren 22 Adressleitungen?",
+      "options": [
+        "4 MB",
+        "22 MB",
+        "44 KB",
+        "2 MB"
+      ],
+      "correct": 0,
+      "explain": "2²² = 2² · 2²⁰ = 4 MB. Die Größe wächst exponentiell, nicht linear (n · 8 oder 2 · n ist falsch)."
+    },
+    {
+      "id": "git-q027",
+      "topic": "Speicher/RAID",
+      "q": "4 Platten à 3 TB im RAID 5. Wie groß ist die Nutzkapazität?",
+      "options": [
+        "12 TB",
+        "6 TB",
+        "9 TB",
+        "3 TB"
+      ],
+      "correct": 2,
+      "explain": "RAID 5: (n − 1) · C = 3 · 3 = 9 TB; eine Platte geht für Parität drauf. 12 TB wäre RAID 0, 6 TB RAID 1 oder RAID 6."
+    },
+    {
+      "id": "git-q028",
+      "topic": "Datenbanken/SQL",
+      "q": "Abteilung 4: Zelaya 25000, Wallace 43000, Jabbar 25000. Ergebnis von `SELECT COUNT(*) FROM ANGESTELLTER WHERE ABT = 4 AND GEHALT > 25000;`?",
+      "options": [
+        "3",
+        "2",
+        "0",
+        "1"
+      ],
+      "correct": 3,
+      "explain": "Nur Wallace verdient mehr als 25000. Bei >= wären es 3."
+    },
+    {
+      "id": "git-q029",
+      "topic": "Datenbanken/SQL",
+      "q": "Student besucht viele Vorlesungen, eine Vorlesung hat viele Studenten. Wie setzt du das in Tabellen um?",
+      "options": [
+        "Fremdschlüssel VNr in STUDENT",
+        "Fremdschlüssel MatrNr in VORLESUNG",
+        "Eigene Hilfstabelle BESUCHT(MatrNr, VNr)",
+        "Beide Tabellen zu einer zusammenlegen"
+      ],
+      "correct": 2,
+      "explain": "m:n braucht eine Verknüpfungstabelle mit beiden Fremdschlüsseln als zusammengesetztem Schlüssel."
+    }
+  ]
+}

@@ -83,6 +83,27 @@ klausur: "relevant"           # relevant | teilweise | nicht-relevant
 4. `## Übungen`: 3–6 Aufgaben (leicht bis Prüfungsniveau), jede als `> [!TIP]` mit Label `**Übung N · leicht|mittel|Prüfungsniveau**` und Quellenangabe (z. B. „Skript, Übung 26“, „Musterklausur 2025, A5“, „eigene Aufgabe“).
 5. `## Lösungen`: zu jeder Übung `### Übung N` mit Lösung Schritt für Schritt.
 
+## Karteikarten und Quiz
+
+Pro Fach optional `faecher/NN-<slug>/karteikarten.json`:
+
+```json
+{
+  "cards": [
+    { "id": "git-k001", "topic": "Zahlendarstellung", "front": "Frage oder Begriff", "back": "Antwort, 1–4 kurze Sätze oder eine Mini-Rechnung", "exam": true }
+  ],
+  "quiz": [
+    { "id": "git-q001", "topic": "Logik", "q": "Frage", "code": "optional: Python-Code, \\n für Zeilenumbrüche",
+      "options": ["A", "B", "C", "D"], "correct": 2, "explain": "1–2 Sätze, warum" }
+  ]
+}
+```
+
+- `id` ist dauerhaft (der Lernstand im Browser hängt daran): nie umnummerieren, neue Einträge bekommen die nächste freie Nummer, gelöschte Nummern werden nicht wiederverwendet. Präfixe: `git`, `wi`, `prog`, `recht`, `bwl`, `mkt`, `mathe`, `lpk`.
+- `topic` sollte einem Kapitelthema entsprechen. `exam: true` = typischer oder offizieller Klausurpunkt; Inhalte, die laut Klausurhinweis nicht drankommen, haben `exam: false` und das Topic „Nicht klausurrelevant“.
+- Texte: Inline-Markdown (`**fett**`, `*kursiv*`, `` `code` ``), Zeilenumbruch `\n`, Formeln als Unicode. Kein HTML.
+- Quiz: genau 4 Optionen, `correct` ist der Index 0–3, falsche Optionen sind typische Fehler.
+
 ## Greifbar erklären (gilt für jedes neue Konzept)
 
 Die Folien der Vorlesung sind oft formal und schwer verständlich. Die Website übersetzt sie. Jedes Konzept wird in dieser Reihenfolge erklärt, erst die Anschauung, dann die Formel:

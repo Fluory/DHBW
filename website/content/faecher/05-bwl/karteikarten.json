@@ -1,0 +1,698 @@
+{
+  "cards": [
+    {
+      "id": "bwl-k001",
+      "topic": "Einführung",
+      "front": "Produktionsfaktoren nach Gutenberg",
+      "back": "Elementarfaktoren: ausführende Arbeit, Betriebsmittel (Maschinen, Gebäude), Werkstoffe. Dispositiver Faktor: Management (Planung, Organisation, Kontrolle).",
+      "exam": false
+    },
+    {
+      "id": "bwl-k002",
+      "topic": "Einführung",
+      "front": "Drei Werkstoffarten mit Beispiel (Möbelfabrik)",
+      "back": "Rohstoff = Hauptbestandteil (Holz) · Hilfsstoff = Nebenbestandteil (Schrauben, Leim) · Betriebsstoff = geht nicht ins Produkt ein (Strom, Schmieröl).",
+      "exam": true
+    },
+    {
+      "id": "bwl-k003",
+      "topic": "Einführung",
+      "front": "Entscheidungsprozess nach Heinen",
+      "back": "5 Phasen: Anregung → Suche → Auswahl → Vollzug → Kontrolle.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k004",
+      "topic": "Einführung",
+      "front": "Regelkreis (Ulrich): Fehlzeiten-Beispiel",
+      "back": "Führungsgröße (Soll) max. 3 % · Regelgröße (Ist) 15 % · Störgröße autoritärer Führungsstil · Regler Controller · Stellgröße: Vorgesetzten anders einsetzen.",
+      "exam": false
+    },
+    {
+      "id": "bwl-k005",
+      "topic": "Einführung",
+      "front": "Ökonomisches Prinzip",
+      "back": "Maximalprinzip: Input fest, Output max. · Minimalprinzip: Output fest, Input min. · Optimumprinzip: bestes Verhältnis. „Mit minimalem Einsatz maximalen Ertrag“ ist unsinnig.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k006",
+      "topic": "Einführung",
+      "front": "Strom im Industriebetrieb vs. Katzenfutter im Haushalt",
+      "back": "Strom: Verbrauchsgut + Investitionsgut. Katzenfutter: Verbrauchsgut + Konsumgut. Entscheidend ist der Verwendungszweck; leere Felder mit Strich (Musterklausur 1c).",
+      "exam": true
+    },
+    {
+      "id": "bwl-k007",
+      "topic": "Einführung",
+      "front": "Produktivität, Wirtschaftlichkeit, Rentabilität",
+      "back": "Produktivität = Output/Input (Mengen) · Wirtschaftlichkeit = Ertrag/Aufwand (Werte, Faktor, >1 Gewinn) · Rentabilität = Gewinn · 100 / Kapital (%).",
+      "exam": true
+    },
+    {
+      "id": "bwl-k008",
+      "topic": "Einführung",
+      "front": "Musterklausur 1b: p 300 €, k_v 250 €, K_fix 2 Mio., 120.000 Stück, 80.000 h, EK 20 Mio.",
+      "back": "Umsatz 36 Mio., Kosten 32 Mio., Gewinn 4 Mio. → Wirtschaftlichkeit 36/32 = 1,125 · Arbeitsprod. 1,5 Stück/h · EK-Rentabilität 4/20 · 100 = 20 %.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k009",
+      "topic": "Einführung",
+      "front": "Gesamtkapitalrentabilität",
+      "back": "(Gewinn + FK-Zinsen) · 100 / GK. Beispiel: (80.000 + 20.000) · 100 / 1.000.000 = 10 %. Falle: FK-Zinsen nicht vergessen.",
+      "exam": false
+    },
+    {
+      "id": "bwl-k010",
+      "topic": "Betrieb & Ziele",
+      "front": "Vision vs. Mission",
+      "back": "Vision = Bild der erreichbaren Zukunft („Wo wollen wir hin?“). Mission = Zweck des heutigen Handelns („Wozu sind wir da?“), unverzichtbar.",
+      "exam": false
+    },
+    {
+      "id": "bwl-k011",
+      "topic": "Betrieb & Ziele",
+      "front": "SMART-Ziel",
+      "back": "Spezifisch, Messbar, Akzeptiert, Realistisch, Terminiert. Beispiel: „Umsatz im Online-Shop in Deutschland bis 31.12.2027 um 10 % gegenüber 2026 steigern.“",
+      "exam": false
+    },
+    {
+      "id": "bwl-k012",
+      "topic": "Betrieb & Ziele",
+      "front": "Schwellen der Mitbestimmung",
+      "back": "Betriebsrat ab 5 AN · Wirtschaftsausschuss > 100 AN · Aufsichtsrat Drittelbeteiligung > 500 AN · paritätisch > 2.000 AN.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k013",
+      "topic": "Rechtsformen",
+      "front": "Haftung bei OHG / Komplementär",
+      "back": "Unbeschränkt (auch Privatvermögen), unmittelbar (Gläubiger direkt an jeden), solidarisch (jeder für alle Schulden).",
+      "exam": true
+    },
+    {
+      "id": "bwl-k014",
+      "topic": "Rechtsformen",
+      "front": "OHG-Gewinnverteilung seit 2024 (MoPeG)",
+      "back": "Vertrag → Beteiligungsverhältnis/Wert der Beiträge → nach Köpfen. Die 4-%-Regel gilt nicht mehr. Nichts vereinbart, 100.000 € Gewinn, 2 Gesellschafter → je 50.000 €.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k015",
+      "topic": "Rechtsformen",
+      "front": "Rechenschema KG-Gewinnverteilung",
+      "back": "1. Zinsen (falls vereinbart, K · p · Tage / 36.000) 2. Tätigkeitsvergütung nur Komplementäre (monatlich × 12) 3. Rest nach Schlüssel.",
+      "exam": false
+    },
+    {
+      "id": "bwl-k016",
+      "topic": "Rechtsformen",
+      "front": "Musterklausur 2a: Gewinn 450.000 €, Komplementär C 10.000 €/Monat, Einlagen A 150 / B 300 / C 50 Tsd.",
+      "back": "TV C = 120.000 €; Rest 330.000 € im Verhältnis 30/60/10 % → A 99.000 € · B 198.000 € · C 33.000 + 120.000 = 153.000 €.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k017",
+      "topic": "Rechtsformen",
+      "front": "Haftung des Kommanditisten",
+      "back": "Nur bis zur eingetragenen Haftsumme, unmittelbar nur für den nicht eingezahlten Teil: Haftsumme 50.000 €, eingezahlt 30.000 € → noch 20.000 €. Vor HR-Eintrag haftet er voll.",
+      "exam": false
+    },
+    {
+      "id": "bwl-k018",
+      "topic": "Rechtsformen",
+      "front": "GmbH: Mindesteinzahlung",
+      "back": "Stammkapital mind. 25.000 €; vor Anmeldung 25 % je Anteil **und** insgesamt mind. 12.500 €. 25 % von 25.000 € (6.250 €) reichen nicht.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k019",
+      "topic": "Rechtsformen",
+      "front": "GmbH-Stimmrecht (Übung 18)",
+      "back": "1 € Nennbetrag = 1 Stimme. Bertrand 30.000 + Schneider 51.000 = 81.000 > Wehrle 69.000 → Schneider wird Geschäftsführer.",
+      "exam": false
+    },
+    {
+      "id": "bwl-k020",
+      "topic": "Rechtsformen",
+      "front": "UG: Zwangsthesaurierung",
+      "back": "Jährlich 25 % des Jahresüberschusses (minus Verlustvortrag) in die gesetzliche Rücklage, bis über Kapitalerhöhung aus Gesellschaftsmitteln 25.000 € erreicht sind → Umfirmierung zur GmbH. Bsp.: (8.000 − 2.000) · 25 % = 1.500 €.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k021",
+      "topic": "Rechtsformen",
+      "front": "Organe der AG",
+      "back": "Vorstand = Leitungsorgan · Aufsichtsrat = Überwachungsorgan (bestellt Vorstand) · Hauptversammlung = Beschlussfassungsorgan (wählt AR). Merksatz: HV wählt AR → AR bestellt Vorstand.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k022",
+      "topic": "Rechtsformen",
+      "front": "HR-Eintrag deklaratorisch vs. konstitutiv",
+      "back": "Deklaratorisch (bestätigt nur): e. K., OHG, KG, Prokura. Konstitutiv (erzeugt): GmbH, AG, Kannkaufmann – die GmbH entsteht erst mit Eintrag.",
+      "exam": false
+    },
+    {
+      "id": "bwl-k023",
+      "topic": "Rechtsformen",
+      "front": "Mindestkapital AG / SE und Agio",
+      "back": "AG und KGaA 50.000 €, SE 120.000 €. Agio = Ausgabebetrag − Nennwert: 1 Mio. Aktien à 1 €, ausgegeben zu 3 € → 2 Mio. € Kapitalrücklage.",
+      "exam": false
+    },
+    {
+      "id": "bwl-k024",
+      "topic": "Kooperation & Konzentration",
+      "front": "Kooperation vs. Konzentration",
+      "back": "Kooperation: Vertrag, wirtschaftliche Selbstständigkeit teilweise erhalten (Kartell, Franchise, Joint Venture). Konzentration: einheitliche Leitung (Konzern, Fusion).",
+      "exam": true
+    },
+    {
+      "id": "bwl-k025",
+      "topic": "Kooperation & Konzentration",
+      "front": "Horizontal, vertikal, anorganisch",
+      "back": "Horizontal: gleiche Stufe (Schuhfabrik + Schuhfabrik) · vertikal: aufeinanderfolgende Stufen (Schuhfabrik + Schuhhandel) · anorganisch: andere Branchen (Brauerei + Verlag).",
+      "exam": true
+    },
+    {
+      "id": "bwl-k026",
+      "topic": "Kooperation & Konzentration",
+      "front": "Konzern vs. Fusion",
+      "back": "Konzern: rechtlich selbstständig, wirtschaftlich unselbstständig (einheitliche Leitung, § 18 AktG). Fusion: beides verloren (Aufnahme oder Neugründung).",
+      "exam": false
+    },
+    {
+      "id": "bwl-k027",
+      "topic": "Kooperation & Konzentration",
+      "front": "Kartellarten",
+      "back": "Preis-, Mengen-/Quoten-, Konditionen-/Rabatt-, Submissions-, Gebietskartell. Grundsätzlich verboten (§ 1 GWB); erlaubt z. B. Mittelstandskartell (§ 3).",
+      "exam": false
+    },
+    {
+      "id": "bwl-k028",
+      "topic": "Standort",
+      "front": "Drei Zielkategorien von Standortentscheidungen",
+      "back": "Wachstum (errichten/erweitern: neue Absatzmärkte) · Strukturveränderung (verlagern/vereinigen: Arbeitskosten, Wechselkurse, Steuern) · Schrumpfung (stilllegen: Kapazität, Sortiment verkleinern).",
+      "exam": true
+    },
+    {
+      "id": "bwl-k029",
+      "topic": "Standort",
+      "front": "Nutzwertanalyse: Ablauf",
+      "back": "Kriterien festlegen → gewichten (Σ = 100) → Erfüllungsgrad je Standort (0–10, höher = besser) → Gewicht · Punkte → summieren → höchster Nutzwert gewinnt.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k030",
+      "topic": "Standort",
+      "front": "Übung 26 (Maschinenbau-Werk): Ergebnis der NWA",
+      "back": "Deutschland 555 · USA 660 · Tschechien 630 → USA hat den höchsten Nutzwert. Kritik: Gewichte und Punkte sind subjektiv.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k031",
+      "topic": "Rechnungswesen",
+      "front": "Auszahlung, Ausgabe, Aufwand, Kosten",
+      "back": "Auszahlung: flüssige Mittel · Ausgabe: Geldvermögen (inkl. Forderungen/Verbindlichkeiten) · Aufwand: Erfolg (GuV) · Kosten: betrieblicher Werteverzehr. Spende = neutraler Aufwand, keine Kosten.",
+      "exam": false
+    },
+    {
+      "id": "bwl-k032",
+      "topic": "Rechnungswesen",
+      "front": "Bilanzgleichung",
+      "back": "AV + UV = Gesamtvermögen = Gesamtkapital = EK + FK. Aktiva nach Liquidität, Passiva nach Fälligkeit. Bsp.: AV 70.000 + UV 175.000 = 245.000 €.",
+      "exam": false
+    },
+    {
+      "id": "bwl-k033",
+      "topic": "Rechnungswesen",
+      "front": "Zweipunktverfahren (Musterklausur 3): (700 | 80.000 €), (1.400 | 150.000 €)",
+      "back": "k_v = 70.000 / 700 = 100 €/Stück · K_fix = 80.000 − 100 · 700 = 10.000 € · K(15.000) = 10.000 + 1.500.000 = 1.510.000 €. Immer kleinste und größte Menge.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k034",
+      "topic": "Rechnungswesen",
+      "front": "Deckungsbeitrag (Musterklausur 4)",
+      "back": "A: 75 − 40 = 35 € · 3.500 = 122.500 € · B: 95 − 45 = 50 € · 3.000 = 150.000 € · 272.500 − K_fix 275.000 = −2.500 € Betriebsergebnis.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k035",
+      "topic": "Rechnungswesen",
+      "front": "Break-even-Menge",
+      "back": "x_BE = K_fix / (p − k_v). Übung 28h: 120.000 / (77 − 45) = 3.750 Stück, Umsatz 3.750 · 77 = 288.750 €.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k036",
+      "topic": "Rechnungswesen",
+      "front": "Preisuntergrenzen",
+      "back": "Kurzfristig = k_v; langfristig = k_v + K_fix/x. Übung 28f: 60 € bzw. 60 + 115.000/7.000 = 76,43 €.",
+      "exam": false
+    },
+    {
+      "id": "bwl-k037",
+      "topic": "Rechnungswesen",
+      "front": "Make-or-buy (Übung 28g)",
+      "back": "100.000 + 20x = 30x → kritische Menge 10.000 Stück. Bedarf 20.000 > 10.000 → Eigenfertigung (500.000 statt 600.000 €).",
+      "exam": false
+    },
+    {
+      "id": "bwl-k038",
+      "topic": "Planung & Kontrolle",
+      "front": "ROI nach DuPont (Musterklausur 5a): Umsatz 3 Mio., Kosten 2,7 Mio., AV 1,7 Mio., UV 0,7 Mio., EK 0,9 Mio.",
+      "back": "Gewinn 300.000 € · Kapitalumschlag 3/2,4 = 1,25 (125 %) · Umsatzrentabilität 10 % · ROI = 10 % · 1,25 = 12,5 % · FK = 2,4 − 0,9 = 1,5 Mio. €.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k039",
+      "topic": "Planung & Kontrolle",
+      "front": "Anforderungen an Kennzahlen (Musterklausur 5b)",
+      "back": "Inhaltlich aktuell · kurzfristig verfügbar · grafisch aufbereitet · ad hoc erzeugbar (3 nennen).",
+      "exam": true
+    },
+    {
+      "id": "bwl-k040",
+      "topic": "Kommt nicht dran (Kap. 7 Rest, 8, 10)",
+      "front": "Top-down, Bottom-up, Gegenstrom",
+      "back": "Top-down (retrograd): oben → unten, evtl. unrealistisch. Bottom-up (progressiv): unten planen, oben zusammenfassen. Gegenstrom: Rahmen von oben, Präzisierung von unten.",
+      "exam": false
+    },
+    {
+      "id": "bwl-k041",
+      "topic": "Planung & Kontrolle",
+      "front": "Balanced Scorecard: vier Perspektiven",
+      "back": "Finanzen · Kunden · Prozesse · Mitarbeiter/Potenzial. Ursache-Wirkung: Mitarbeiter → Prozesse → Kunden → Finanzen.",
+      "exam": false
+    },
+    {
+      "id": "bwl-k042",
+      "topic": "Kommt nicht dran (Kap. 7 Rest, 8, 10)",
+      "front": "Five Forces (Porter)",
+      "back": "Macht der Lieferanten · Macht der Kunden · neue Wettbewerber · Ersatzprodukte · Wettbewerbsintensität in der Branche.",
+      "exam": false
+    },
+    {
+      "id": "bwl-k043",
+      "topic": "Kommt nicht dran (Kap. 7 Rest, 8, 10)",
+      "front": "Instanz vs. Stabsstelle",
+      "back": "Instanz: Leitungs- und Weisungsbefugnis. Stabsstelle: Leitungshilfe, nur beratend, kein Weisungsrecht.",
+      "exam": false
+    },
+    {
+      "id": "bwl-k044",
+      "topic": "Kommt nicht dran (Kap. 7 Rest, 8, 10)",
+      "front": "Leitungsspanne und Leitungstiefe",
+      "back": "Spanne = Zahl der direkt unterstellten Stellen (Kaufm. Leiter mit 2 Abteilungsleitern → 2). Tiefe = Zahl der Hierarchieebenen.",
+      "exam": false
+    },
+    {
+      "id": "bwl-k045",
+      "topic": "Kommt nicht dran (Kap. 7 Rest, 8, 10)",
+      "front": "Einlinien-, Mehrlinien-, Stab-Linien-, Matrixorganisation",
+      "back": "Einlinien: ein Weisungsweg, klar, aber lang · Mehrlinien: mehrere Vorgesetzte (Taylor) · Stab-Linien: Stäbe entlasten · Matrix: zwei Dimensionen, Kompetenzstreit möglich.",
+      "exam": false
+    },
+    {
+      "id": "bwl-k046",
+      "topic": "Kommt nicht dran (Kap. 7 Rest, 8, 10)",
+      "front": "Funktional vs. divisional",
+      "back": "Funktional = nach Verrichtung (Einkauf, Produktion, Vertrieb). Divisional = nach Objekt (Produkte, Regionen), Sparten oft Profit Center.",
+      "exam": false
+    },
+    {
+      "id": "bwl-k047",
+      "topic": "Materialwirtschaft",
+      "front": "ABC-Analyse",
+      "back": "A ≈ 20 % Menge / 80 % Wert · B ≈ 30 % / 10 % · C ≈ 50 % / 10 %. Ablauf: Wert = Menge · Preis, absteigend sortieren, kumulieren, einteilen.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k048",
+      "topic": "Materialwirtschaft",
+      "front": "Musterklausur 7a: PP 25.000 t · 1.750 €, Gesamtwert 90 Mio. €",
+      "back": "43,75 Mio. € / 90 Mio. € = 48,61 % → A-Gut. Gleichmäßiger Verbrauch + hohe Lagerkosten → JIT sinnvoll.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k049",
+      "topic": "Materialwirtschaft",
+      "front": "Andler + Meldebestand (Musterklausur 6)",
+      "back": "Bedarf 2 · 3.350 = 6.700; x_opt = √(2 · 6.700 · 400 / (6.000 · 0,12)) ≈ 86 · Bestellungen ≈ 78 · Meldebestand = 50 + 9 · 3.350/130 ≈ 282.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k050",
+      "topic": "Materialwirtschaft",
+      "front": "Meldebestand (Formel)",
+      "back": "Sicherheitsbestand + Lieferzeit · Tagesverbrauch. Übung 42: 100 + 14 · 20 = 380 Stück. Hängt nicht von der Bestellmenge ab.",
+      "exam": false
+    },
+    {
+      "id": "bwl-k051",
+      "topic": "Materialwirtschaft",
+      "front": "Nachteile von Just-in-time (Musterklausur 7b)",
+      "back": "Enge Lieferantenbindung/Abhängigkeit · hohe Preise · Störanfälligkeit (Stau, Streik) · Umweltbelastung durch mehr Verkehr.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k052",
+      "topic": "Materialwirtschaft",
+      "front": "Lagerkennzahlen (Übung 50)",
+      "back": "Umschlagshäufigkeit = Verbrauch / Ø Bestand = 331 / 41 ≈ 8 · Ø Lagerdauer = 360 / 8 = 45 Tage · Lagerzinssatz = 10 % · 45/360 = 1,25 %.",
+      "exam": false
+    },
+    {
+      "id": "bwl-k053",
+      "topic": "Kommt nicht dran (Kap. 7 Rest, 8, 10)",
+      "front": "Fertigungstypen nach Raum",
+      "back": "Punkt (Werkstück bleibt: Hausbau, Autoreparatur) · Werkstatt (gleiche Maschinen zusammen: Dreherei) · Fließ (nach Ablauf: Automontage) · Gruppe (Kompromiss).",
+      "exam": false
+    },
+    {
+      "id": "bwl-k054",
+      "topic": "Kommt nicht dran (Kap. 7 Rest, 8, 10)",
+      "front": "Supply Chain Management",
+      "back": "Koordination von Material-, Geld- und Informationsfluss über die ganze Lieferkette. Bsp.: Autohersteller teilt Produktionsplan in Echtzeit mit Sitzlieferant und Spedition.",
+      "exam": false
+    },
+    {
+      "id": "bwl-k055",
+      "topic": "Rechnungswesen",
+      "front": "Wer interessiert sich für das **externe** Rechnungswesen, und warum?",
+      "back": "Eigenkapitalgeber (Verzinsung), Fremdkapitalgeber (Sicherheit von Kapital und Zinsen), Arbeitnehmer (sichere Jobs, Löhne), Lieferanten (Absatz, Lieferantenkredite), Kunden (sichere Beschaffung), Finanzbehörden (Steuer), Öffentlichkeit/Analysten/Presse (Güte), Gerichte (Beweismittel).",
+      "exam": true
+    },
+    {
+      "id": "bwl-k056",
+      "topic": "Rechnungswesen",
+      "front": "Wer nutzt das **interne** Rechnungswesen?",
+      "back": "Aufsichtsgremien, Vorstand/Geschäftsführung, Management, Arbeitnehmer. Ziel: die betriebliche Leistungserstellung steuern (Kostenrechnung, Kalkulation, Kontrollrechnungen).",
+      "exam": true
+    },
+    {
+      "id": "bwl-k057",
+      "topic": "Rechnungswesen",
+      "front": "Nutzenschwelle: Was ist das, und wie rechnest du sie aus?",
+      "back": "Andere Namen: Break-even-Point, Gewinnschwelle. Die Menge, ab der kein Verlust mehr entsteht: x = Kfix / (p − kv). Übung 28h: 120.000 / 32 = **3.750 Stück**, Umsatz 3.750 · 77 = 288.750 €.",
+      "exam": true
+    },
+    {
+      "id": "bwl-k058",
+      "topic": "Klausurhinweise",
+      "front": "Welche Kapitel kommen laut „Könnte drankommen“ **nicht** dran?",
+      "back": "Kap. 8 Organisation und Kap. 10 Produktion ganz. Von Kap. 7 nur Kennzahlen und Balanced Scorecard. Bei den Rechtsformen nur Einzelunternehmen, OHG, KG, UG, GmbH, AG, GmbH & Co. KG.",
+      "exam": true
+    }
+  ],
+  "quiz": [
+    {
+      "id": "bwl-q001",
+      "topic": "Einführung",
+      "q": "Umsatz 36 Mio. €, Kosten 32 Mio. €. Wie hoch ist die Wirtschaftlichkeit?",
+      "options": [
+        "1,125",
+        "0,889",
+        "112,5 %",
+        "4 Mio. €"
+      ],
+      "correct": 0,
+      "explain": "Wirtschaftlichkeit = Ertrag / Aufwand = 36 / 32 = 1,125; sie ist ein Faktor, keine Prozentzahl."
+    },
+    {
+      "id": "bwl-q002",
+      "topic": "Einführung",
+      "q": "Filiale A: 100.000 € Gewinn bei 500.000 € EK. Filiale B: 200.000 € Gewinn bei 2 Mio. € EK. Welche ist rentabler?",
+      "options": [
+        "A mit 20 %",
+        "B, weil der Gewinn doppelt so hoch ist",
+        "B mit 10 %",
+        "Beide gleich"
+      ],
+      "correct": 0,
+      "explain": "EK-Rentabilität A = 100/500 = 20 %, B = 200/2.000 = 10 %. Der absolute Gewinn sagt nichts über die Rentabilität."
+    },
+    {
+      "id": "bwl-q003",
+      "topic": "Einführung",
+      "q": "Gewinn 80.000 €, Fremdkapitalzinsen 20.000 €, Gesamtkapital 1 Mio. €. Gesamtkapitalrentabilität?",
+      "options": [
+        "10 %",
+        "6 %",
+        "12,5 %",
+        "8 %"
+      ],
+      "correct": 0,
+      "explain": "(80.000 + 20.000) · 100 / 1.000.000 = 10 %. Die FK-Zinsen werden zum Gewinn addiert."
+    },
+    {
+      "id": "bwl-q004",
+      "topic": "Einführung",
+      "q": "„Mit 10 Stunden Lernen die bestmögliche Note erreichen“ ist ein Beispiel für …",
+      "options": [
+        "das Optimumprinzip",
+        "das Maximalprinzip",
+        "das Humanitätsprinzip",
+        "das Minimalprinzip"
+      ],
+      "correct": 1,
+      "explain": "Der Input (10 h) ist fest, der Output wird maximiert."
+    },
+    {
+      "id": "bwl-q005",
+      "topic": "Rechtsformen",
+      "q": "KG: Gewinn 450.000 €, Komplementär C bekommt 10.000 € Tätigkeitsvergütung pro Monat, Rest nach Einlagen A 150 / B 300 / C 50 Tsd. €. Wie viel erhält C insgesamt?",
+      "options": [
+        "45.000 €",
+        "33.000 €",
+        "153.000 €",
+        "120.000 €"
+      ],
+      "correct": 2,
+      "explain": "TV 120.000 €; Rest 330.000 € · 10 % = 33.000 €; zusammen 153.000 € (Musterklausur 2a)."
+    },
+    {
+      "id": "bwl-q006",
+      "topic": "Rechtsformen",
+      "q": "OHG mit zwei Gesellschaftern, 100.000 € Gewinn, im Vertrag nichts vereinbart, keine Beiträge bewertet. Verteilung (seit 2024)?",
+      "options": [
+        "Alles an den geschäftsführenden Gesellschafter",
+        "Je 50.000 € nach Köpfen",
+        "Nach Einlagen 2 : 1",
+        "4 % auf die Einlagen, Rest nach Köpfen"
+      ],
+      "correct": 1,
+      "explain": "Seit MoPeG: Vertrag → Beteiligungsverhältnis → nach Köpfen. Die alte 4-%-Regel gilt nicht mehr."
+    },
+    {
+      "id": "bwl-q007",
+      "topic": "Rechtsformen",
+      "q": "GmbH, Stammkapital 150.000 €. Wehrle übernimmt 69.000 € bar. Wie viel muss er mindestens vor der Anmeldung einzahlen?",
+      "options": [
+        "17.250 €",
+        "6.250 €",
+        "12.500 €",
+        "69.000 €"
+      ],
+      "correct": 0,
+      "explain": "25 % je Anteil: 69.000 · 0,25 = 17.250 €; insgesamt kommen 37.500 € ≥ 12.500 € zusammen."
+    },
+    {
+      "id": "bwl-q008",
+      "topic": "Rechtsformen",
+      "q": "Eine UG hat 8.000 € Jahresüberschuss und 2.000 € Verlustvortrag. Wie viel muss in die gesetzliche Rücklage?",
+      "options": [
+        "1.500 €",
+        "2.000 €",
+        "6.000 €",
+        "500 €"
+      ],
+      "correct": 0,
+      "explain": "(8.000 − 2.000) · 25 % = 1.500 € (Zwangsthesaurierung, § 5a GmbHG)."
+    },
+    {
+      "id": "bwl-q009",
+      "topic": "Rechtsformen",
+      "q": "Kommanditist mit 50.000 € Haftsumme hat 30.000 € eingezahlt (im HR eingetragen). Wie viel haftet er Gläubigern noch unmittelbar?",
+      "options": [
+        "50.000 €",
+        "Unbeschränkt",
+        "20.000 €",
+        "0 €"
+      ],
+      "correct": 2,
+      "explain": "Unmittelbar haftet er nur für den nicht eingezahlten Teil der Haftsumme."
+    },
+    {
+      "id": "bwl-q010",
+      "topic": "Kooperation & Konzentration",
+      "q": "Eine Schuhfabrik schließt sich mit einer Schuhhandelskette zusammen. Welche Richtung?",
+      "options": [
+        "Horizontal",
+        "Anorganisch",
+        "Diagonal-lateral",
+        "Vertikal"
+      ],
+      "correct": 3,
+      "explain": "Aufeinanderfolgende Stufen derselben Branche = vertikal."
+    },
+    {
+      "id": "bwl-q011",
+      "topic": "Standort",
+      "q": "Nutzwertanalyse: Kosten (Gewicht 60) und Qualifikation (Gewicht 40). Standort A: 8 und 5 Punkte, Standort B: 6 und 9 Punkte. Welcher gewinnt?",
+      "options": [
+        "A mit 680",
+        "Unentschieden",
+        "B mit 720",
+        "A mit 13 Punkten"
+      ],
+      "correct": 2,
+      "explain": "A = 60 · 8 + 40 · 5 = 680; B = 60 · 6 + 40 · 9 = 720. Gewicht mal Punkte, nicht Punkte addieren."
+    },
+    {
+      "id": "bwl-q012",
+      "topic": "Rechnungswesen",
+      "q": "Zweipunktverfahren: August 700 Stück/80.000 €, November 1.400 Stück/150.000 €. Wie hoch sind die variablen Stückkosten?",
+      "options": [
+        "114,29 €",
+        "100 €",
+        "70 €",
+        "107,14 €"
+      ],
+      "correct": 1,
+      "explain": "k_v = (150.000 − 80.000) / (1.400 − 700) = 70.000 / 700 = 100 €."
+    },
+    {
+      "id": "bwl-q013",
+      "topic": "Rechnungswesen",
+      "q": "Mit k_v = 100 € und K_fix = 10.000 €: Gesamtkosten für 15.000 Stück?",
+      "options": [
+        "1.500.000 €",
+        "160.000 €",
+        "1.600.000 €",
+        "1.510.000 €"
+      ],
+      "correct": 3,
+      "explain": "K = 10.000 + 100 · 15.000 = 1.510.000 € (Musterklausur 3)."
+    },
+    {
+      "id": "bwl-q014",
+      "topic": "Rechnungswesen",
+      "q": "Produkt A: p 75 €, k_v 40 €, 3.500 Stück. Produkt B: p 95 €, k_v 45 €, 3.000 Stück. Fixkosten 275.000 €. Betriebsergebnis?",
+      "options": [
+        "+2.500 €",
+        "+272.500 €",
+        "−2.500 €",
+        "−275.000 €"
+      ],
+      "correct": 2,
+      "explain": "DB A 122.500 + DB B 150.000 = 272.500 €; minus 275.000 € Fixkosten = −2.500 €."
+    },
+    {
+      "id": "bwl-q015",
+      "topic": "Rechnungswesen",
+      "q": "Fixkosten 12.000 €, Preis 20 €, variable Stückkosten 14 €. Break-even-Menge?",
+      "options": [
+        "600 Stück",
+        "1.200 Stück",
+        "857 Stück",
+        "2.000 Stück"
+      ],
+      "correct": 3,
+      "explain": "x_BE = 12.000 / (20 − 14) = 2.000 Stück."
+    },
+    {
+      "id": "bwl-q016",
+      "topic": "Rechnungswesen",
+      "q": "Eigenfertigung: K_fix 100.000 €, k_v 20 €. Fremdbezug: 30 € je Stück. Ab welcher Menge lohnt Eigenfertigung?",
+      "options": [
+        "Ab mehr als 10.000 Stück",
+        "Ab mehr als 5.000 Stück",
+        "Nie, Fremdbezug ist immer billiger",
+        "Ab mehr als 3.333 Stück"
+      ],
+      "correct": 0,
+      "explain": "100.000 + 20x = 30x → x = 10.000. Darüber ist Eigenfertigung günstiger (Übung 28g)."
+    },
+    {
+      "id": "bwl-q017",
+      "topic": "Rechnungswesen",
+      "q": "Was ist die kurzfristige Preisuntergrenze?",
+      "options": [
+        "Die Selbstkosten je Stück",
+        "Die variablen Stückkosten",
+        "Die Fixkosten je Stück",
+        "Der Marktpreis der Konkurrenz"
+      ],
+      "correct": 1,
+      "explain": "Kurzfristig müssen nur die variablen Kosten gedeckt sein (db = 0); langfristig k_v + K_fix/x."
+    },
+    {
+      "id": "bwl-q018",
+      "topic": "Planung & Kontrolle",
+      "q": "Umsatz 3 Mio. €, Gewinn 300.000 €, Gesamtkapital 2,4 Mio. €. ROI?",
+      "options": [
+        "12,5 %",
+        "10 %",
+        "8 %",
+        "125 %"
+      ],
+      "correct": 0,
+      "explain": "ROI = Umsatzrentabilität 10 % · Kapitalumschlag 1,25 = 12,5 % (Musterklausur 5a)."
+    },
+    {
+      "id": "bwl-q019",
+      "topic": "Planung & Kontrolle",
+      "q": "Gewinn 50.000 €, Umsatz 1 Mio. €, Gesamtkapital 500.000 €, EK 200.000 €. ROI?",
+      "options": [
+        "25 %",
+        "5 %",
+        "10 %",
+        "200 %"
+      ],
+      "correct": 2,
+      "explain": "UR 5 % · KU 2 = 10 % = 50.000 / 500.000. Das EK ist für den ROI ein Ablenker (Übung 33)."
+    },
+    {
+      "id": "bwl-q020",
+      "topic": "Materialwirtschaft",
+      "q": "Jahresbedarf 1.000 Stück, fixe Bestellkosten 50 €, Preis 100 €, Lagerkostensatz 10 %. Optimale Bestellmenge (Andler)?",
+      "options": [
+        "1.000 Stück",
+        "32 Stück",
+        "100 Stück",
+        "10 Stück"
+      ],
+      "correct": 2,
+      "explain": "√(2 · 1.000 · 50 / (100 · 0,1)) = √10.000 = 100 Stück (Übung 43a)."
+    },
+    {
+      "id": "bwl-q021",
+      "topic": "Materialwirtschaft",
+      "q": "Sicherheitsbestand 100 Stück, Lieferzeit 14 Tage, Tagesverbrauch 20 Stück. Meldebestand?",
+      "options": [
+        "280 Stück",
+        "120 Stück",
+        "1.400 Stück",
+        "380 Stück"
+      ],
+      "correct": 3,
+      "explain": "Meldebestand = 100 + 14 · 20 = 380 Stück."
+    },
+    {
+      "id": "bwl-q022",
+      "topic": "Materialwirtschaft",
+      "q": "Ein Rohstoff hat einen Verbrauchswert von 43,75 Mio. € bei 90 Mio. € Gesamtwert. Einordnung?",
+      "options": [
+        "A-Gut (48,61 %)",
+        "B-Gut (48,61 %)",
+        "A-Gut (43,75 %)",
+        "C-Gut, weil nur 1 von 10 Positionen"
+      ],
+      "correct": 0,
+      "explain": "43,75 / 90 = 48,61 % des Werts – fast die Hälfte, also eindeutig A (Musterklausur 7a)."
+    }
+  ]
+}

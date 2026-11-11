@@ -1,0 +1,790 @@
+{
+  "cards": [
+    {
+      "id": "recht-k001",
+      "topic": "Fall lösen",
+      "front": "Die vier Fragen vor jeder Falllösung",
+      "back": "Wer will was von wem woraus? Beispiel: V will 450 € Oktobermiete von M aus **§ 535 II BGB**. Ohne „woraus“ (Anspruchsgrundlage) ist es nur ein Wunsch.",
+      "exam": true
+    },
+    {
+      "id": "recht-k002",
+      "topic": "Fall lösen",
+      "front": "Gutachtenstil: die vier Schritte",
+      "back": "1. Obersatz („K *könnte* … aus § 433 I 1 haben“) 2. Voraussetzung/Definition („Dazu *müsste* …“) 3. Subsumtion („*Hier* …“) 4. Ergebnis („*Also* …“).",
+      "exam": true
+    },
+    {
+      "id": "recht-k003",
+      "topic": "Fall lösen",
+      "front": "Gutachtenstil oder Urteilsstil: „K hat keinen Anspruch, weil kein Vertrag vorliegt.“",
+      "back": "Urteilsstil: Ergebnis zuerst, Begründung mit „weil“. In der Klausur Gutachtenstil nur bei Problemen, Eindeutiges (z. B. 20-Jähriger ist volljährig) in einem kurzen Satz.",
+      "exam": false
+    },
+    {
+      "id": "recht-k004",
+      "topic": "Fall lösen",
+      "front": "Anspruchsaufbau in drei Stufen",
+      "back": "1. entstanden? (hindernd: §§ 105, 125, 134, 138) 2. nicht untergegangen? (Erfüllung § 362, Aufrechnung § 389, Anfechtung § 142) 3. durchsetzbar? (Einreden: Verjährung § 214, §§ 273, 320).",
+      "exam": true
+    },
+    {
+      "id": "recht-k005",
+      "topic": "Fall lösen",
+      "front": "Einwendung vs. Einrede",
+      "back": "Einwendung (z. B. Erfüllung, Geschäftsunfähigkeit) wirkt automatisch, das Gericht beachtet sie von selbst. Einrede (z. B. Verjährung, § 214 I) wirkt nur, wenn der Schuldner sich darauf beruft.",
+      "exam": true
+    },
+    {
+      "id": "recht-k006",
+      "topic": "Fall lösen",
+      "front": "Musterfall Schaufensterkleid: Preisschild 500 €, Glück verlangt 1.500 €. Anspruch von Frau Müller?",
+      "back": "Nein. Schaufenster = *invitatio ad offerendum*, das Angebot macht Frau Müller. Glücks „1.500 €“ ist Ablehnung + neues Angebot (§ 150 II). Kein Vertrag, also auch nichts anzufechten.",
+      "exam": true
+    },
+    {
+      "id": "recht-k007",
+      "topic": "Grundlagen",
+      "front": "Rechtsfähigkeit (§ 1 BGB)",
+      "back": "Fähigkeit, Träger von Rechten und Pflichten zu sein. Beginnt mit Vollendung der Geburt. Ein 3 Tage altes Baby ist rechtsfähig, aber geschäftsunfähig (§ 104 Nr. 1).",
+      "exam": false
+    },
+    {
+      "id": "recht-k008",
+      "topic": "Grundlagen",
+      "front": "Verbraucher (§ 13) vs. Unternehmer (§ 14)",
+      "back": "Es zählt der Zweck des einzelnen Geschäfts. Bäckerin kauft privat ein Sofa: Verbraucherin; Backofen für die Bäckerei: Unternehmerin. Eine GmbH ist nie Verbraucher.",
+      "exam": true
+    },
+    {
+      "id": "recht-k009",
+      "topic": "WE & Vertrag",
+      "front": "Willenserklärung (Definition)",
+      "back": "Willensäußerung, die auf einen rechtlichen Erfolg gerichtet ist. Ausdrücklich („Ich kaufe“) oder konkludent (Ware aufs Kassenband). Schweigen ist grundsätzlich keine WE.",
+      "exam": true
+    },
+    {
+      "id": "recht-k010",
+      "topic": "WE & Vertrag",
+      "front": "Abgabe einer empfangsbedürftigen WE",
+      "back": "Mit Wissen und Willen so auf den Weg gebracht, dass sie ohne weiteres Zutun den Empfänger erreicht. Kündigung im eigenen Postausgangskorb: noch nicht abgegeben.",
+      "exam": false
+    },
+    {
+      "id": "recht-k011",
+      "topic": "WE & Vertrag",
+      "front": "Zugang (§ 130 I 1)",
+      "back": "Die WE ist so in den Machtbereich des Empfängers gelangt, dass er unter normalen Umständen Kenntnis nehmen kann. Entscheidend ist die **Möglichkeit**, nicht das Lesen (Brief 10 Uhr, Empfänger im Urlaub: trotzdem zugegangen).",
+      "exam": true
+    },
+    {
+      "id": "recht-k012",
+      "topic": "WE & Vertrag",
+      "front": "Brief um 23 Uhr in den Geschäftsbriefkasten – wann zugegangen?",
+      "back": "Erst am nächsten Morgen zu Geschäftsbeginn. Wer am letzten Fristtag abends einwirft, ist zu spät (Skriptfall Zugang 1).",
+      "exam": true
+    },
+    {
+      "id": "recht-k013",
+      "topic": "WE & Vertrag",
+      "front": "Empfangsbote vs. Erklärungsbote",
+      "back": "Empfangsbote (erwachsene Familie, Sekretärin): Zugang mit Übergabe, Risiko trägt der Empfänger. Erklärungsbote (4-jähriges Kind, Pförtner ohne Auftrag): Risiko trägt der Erklärende.",
+      "exam": true
+    },
+    {
+      "id": "recht-k014",
+      "topic": "WE & Vertrag",
+      "front": "Vertrag (Definition)",
+      "back": "Zwei übereinstimmende, wirksame Willenserklärungen: Angebot (Antrag) und Annahme, §§ 145 ff. Das Angebot muss so bestimmt sein, dass ein „Ja“ genügt (Ware + Preis).",
+      "exam": true
+    },
+    {
+      "id": "recht-k015",
+      "topic": "WE & Vertrag",
+      "front": "*invitatio ad offerendum*",
+      "back": "Aufforderung, selbst ein Angebot abzugeben: Schaufenster, Prospekt, Katalog, Online-Shop. Grund: Bäcker mit 20 Brezeln will nicht an 50 Leute gebunden sein. Das Angebot macht der Kunde.",
+      "exam": true
+    },
+    {
+      "id": "recht-k016",
+      "topic": "WE & Vertrag",
+      "front": "§ 150 BGB",
+      "back": "Verspätete Annahme (I) oder Annahme mit Änderungen (II) = neues Angebot. Fred bietet 120 €, Fritz antwortet „für 130 €“: Ablehnung + neues Angebot über 130 €.",
+      "exam": true
+    },
+    {
+      "id": "recht-k017",
+      "topic": "WE & Vertrag",
+      "front": "Unbestellte Ware (§ 241a)",
+      "back": "Kein Anspruch gegen den Verbraucher. „Schweigen gilt als Annahme“ ändert nichts – Schweigen ist keine WE (CD für 15 €: kein Kaufpreisanspruch).",
+      "exam": true
+    },
+    {
+      "id": "recht-k018",
+      "topic": "WE & Vertrag",
+      "front": "Formverstoß (§ 125) – Beispiel Grundstück",
+      "back": "Formverstoß macht nichtig (§ 125 S. 1). Grundstückskauf braucht notarielle Beurkundung (§ 311b I 1); Handschlag-Kauf für 80.000 € ist nichtig. Heilung durch Auflassung + Grundbucheintrag (§ 311b I 2).",
+      "exam": true
+    },
+    {
+      "id": "recht-k019",
+      "topic": "Unwirksamkeit",
+      "front": "Nichtigkeitsgründe",
+      "back": "§ 105 (Geschäftsunfähiger), § 125 (Form), § 134 (gesetzliches Verbot, z. B. Schwarzarbeit), § 138 (Sittenwidrigkeit/Wucher). Nichtig = von Anfang an unwirksam, keine Anfechtung nötig.",
+      "exam": false
+    },
+    {
+      "id": "recht-k020",
+      "topic": "Unwirksamkeit",
+      "front": "Prüfungsschema Anfechtung",
+      "back": "1. Anfechtungsgrund (§§ 119, 120, 123) 2. Anfechtungserklärung (§ 143 I) 3. Frist (§ 121 bzw. § 124) 4. Folge: nichtig von Anfang an (§ 142 I), ggf. Vertrauensschaden (§ 122).",
+      "exam": true
+    },
+    {
+      "id": "recht-k021",
+      "topic": "Unwirksamkeit",
+      "front": "Inhaltsirrtum vs. Erklärungsirrtum",
+      "back": "Inhaltsirrtum (§ 119 I Alt. 1): richtiges Wort, falsche Bedeutung („Dutzend“ = 10 gedacht). Erklärungsirrtum (§ 119 I Alt. 2): versprochen/vertippt (11.000 statt 12.000 €).",
+      "exam": true
+    },
+    {
+      "id": "recht-k022",
+      "topic": "Unwirksamkeit",
+      "front": "Eigenschaftsirrtum (§ 119 II)",
+      "back": "Irrtum über verkehrswesentliche Eigenschaft = wertbildender Faktor (Echtheit, Alter). V verkauft „Picasso-Kopie“ für 1.000 €, es ist ein Original: V kann anfechten. Der Preis selbst ist keine Eigenschaft.",
+      "exam": true
+    },
+    {
+      "id": "recht-k023",
+      "topic": "Unwirksamkeit",
+      "front": "Anfechtungsfristen",
+      "back": "§§ 119, 120: unverzüglich = ohne schuldhaftes Zögern (§ 121 I). § 123 (Täuschung/Drohung): 1 Jahr ab Entdeckung (§ 124). Entdeckt 02.11.2026 → bis 02.11.2027, 24 Uhr.",
+      "exam": true
+    },
+    {
+      "id": "recht-k024",
+      "topic": "Unwirksamkeit",
+      "front": "Vertrauensschaden (§ 122) – Fall Ferienwohnung",
+      "back": "Wer wegen eigenen Irrtums anficht, ersetzt das negative Interesse. Paul: 4 € Porto + 600 € abgesagte Miete = 604 €; Obergrenze Erfüllungsinteresse 800 € ist eingehalten.",
+      "exam": true
+    },
+    {
+      "id": "recht-k025",
+      "topic": "Unwirksamkeit",
+      "front": "Arglistige Täuschung durch Verschweigen (§ 123 I)",
+      "back": "Möglich, wenn eine Aufklärungspflicht besteht. Gebrauchtwagenhändler verschweigt reparierten Unfall (200 €): K kann anfechten, Frist 1 Jahr (§ 124).",
+      "exam": false
+    },
+    {
+      "id": "recht-k026",
+      "topic": "Unwirksamkeit",
+      "front": "Drei Altersstufen der Geschäftsfähigkeit",
+      "back": "0–6: geschäftsunfähig, WE nichtig (§§ 104, 105). 7–17: beschränkt (§ 106). Ab 18: voll (§ 2).",
+      "exam": true
+    },
+    {
+      "id": "recht-k027",
+      "topic": "Unwirksamkeit",
+      "front": "Lediglich rechtlich vorteilhaft (§ 107)",
+      "back": "Nur, wenn der Minderjährige ausschließlich etwas bekommt. Geschenktes Fahrrad: wirksam. Saxophon (Wert 2.000 €) für 800 €: rechtlich nachteilig (Zahlungspflicht), wirtschaftlicher Vorteil zählt nicht.",
+      "exam": true
+    },
+    {
+      "id": "recht-k028",
+      "topic": "Unwirksamkeit",
+      "front": "Einwilligung vs. Genehmigung",
+      "back": "Einwilligung = vorher (§ 183). Fehlt sie: schwebend unwirksam (§ 108 I). Genehmigung = nachher, rückwirkend (§ 184 I); Verweigerung → endgültig unwirksam.",
+      "exam": false
+    },
+    {
+      "id": "recht-k029",
+      "topic": "Unwirksamkeit",
+      "front": "Taschengeldparagraf (§ 110)",
+      "back": "Wirksam, wenn der Minderjährige vollständig **bewirkt** (bezahlt) mit überlassenen Mitteln. Konsole 250 €: 160 € sofort + Raten → § 110 greift nicht.",
+      "exam": true
+    },
+    {
+      "id": "recht-k030",
+      "topic": "Unwirksamkeit",
+      "front": "§ 108 II: Vertragspartner fordert die Eltern zur Erklärung auf",
+      "back": "Genehmigung nur noch ihm gegenüber; eine vorher dem Kind gegenüber erklärte Verweigerung wird unwirksam. Schweigen 2 Wochen = verweigert (Skateboard-Fall).",
+      "exam": true
+    },
+    {
+      "id": "recht-k031",
+      "topic": "Vertretung",
+      "front": "Voraussetzungen der Stellvertretung (§ 164)",
+      "back": "1. eigene WE des Vertreters 2. im Namen des Vertretenen (Offenkundigkeit) 3. mit Vertretungsmacht 4. zulässig (nicht: Testament, Eheschließung). Folge: Vertrag mit dem Vertretenen.",
+      "exam": true
+    },
+    {
+      "id": "recht-k032",
+      "topic": "Vertretung",
+      "front": "Vertreter oder Bote?",
+      "back": "Vertreter hat Entscheidungsspielraum („gute Jacke, max. 100 €“). Bote überbringt fremde WE („Anzug Nr. 7 für 299 €“). 6-Jähriger mit genauem Einkaufszettel = Bote, Vertrag wirksam.",
+      "exam": true
+    },
+    {
+      "id": "recht-k033",
+      "topic": "Vertretung",
+      "front": "Duldungs- vs. Anscheinsvollmacht",
+      "back": "Duldung: Chef weiß, dass der Azubi für ihn bestellt, und zahlt wortlos. Anschein: Chef weiß es nicht, hätte es aber erkennen müssen. Beide Male gebunden, wenn der Dritte gutgläubig ist.",
+      "exam": true
+    },
+    {
+      "id": "recht-k034",
+      "topic": "Vertretung",
+      "front": "Vertreter ohne Vertretungsmacht (§§ 177, 179)",
+      "back": "Vertrag schwebend unwirksam (§ 177 I). Verweigert der Vertretene: Vertreter haftet – kannte er den Mangel, nach Wahl Erfüllung oder Schadensersatz (§ 179 I), sonst nur Vertrauensschaden (§ 179 II).",
+      "exam": true
+    },
+    {
+      "id": "recht-k035",
+      "topic": "Fristen",
+      "front": "Fristberechnung (§§ 187 I, 188 II)",
+      "back": "Ereignistag zählt nicht; Ende am gleichnamigen Tag um 24 Uhr. Zugang Fr 30.10.2026, 2 Wochen → Fr 13.11.2026, 24 Uhr.",
+      "exam": true
+    },
+    {
+      "id": "recht-k036",
+      "topic": "Fristen",
+      "front": "Fristende am Wochenende (§ 193)",
+      "back": "Ist eine WE abzugeben oder zu leisten und fällt der letzte Tag auf Sa, So oder Feiertag, gilt der nächste Werktag: Sa 12.12.2026 → Mo 14.12.2026.",
+      "exam": false
+    },
+    {
+      "id": "recht-k037",
+      "topic": "Fristen",
+      "front": "Regelmäßige Verjährung (§§ 195, 199 I)",
+      "back": "3 Jahre, Beginn mit Schluss des Jahres der Entstehung + Kenntnis. Anspruch vom 30.10.2026 verjährt mit Ablauf des 31.12.2029.",
+      "exam": true
+    },
+    {
+      "id": "recht-k038",
+      "topic": "Fristen",
+      "front": "Was bewirkt die Verjährung?",
+      "back": "Der Anspruch besteht weiter, der Schuldner darf die Leistung verweigern (Einrede, § 214 I). Wer trotzdem zahlt, kann nicht zurückfordern (§ 214 II).",
+      "exam": false
+    },
+    {
+      "id": "recht-k039",
+      "topic": "Schuldverhältnis",
+      "front": "Trennungs- und Abstraktionsprinzip",
+      "back": "Brezel kaufen = 3 Geschäfte: Kaufvertrag (§ 433) + 2 Übereignungen (§ 929). Die Übereignung ist auch wirksam, wenn der Kaufvertrag nichtig ist; Rückgabe dann über § 812.",
+      "exam": true
+    },
+    {
+      "id": "recht-k040",
+      "topic": "Schuldverhältnis",
+      "front": "Stückschuld vs. Gattungsschuld",
+      "back": "Stück: individuell (Einzelstück-Kleid). Gattung: nach Merkmalen (5 Zentner Kartoffeln), mittlere Art und Güte (§ 243 I); geht ein Sack kaputt, muss ein anderer geliefert werden.",
+      "exam": false
+    },
+    {
+      "id": "recht-k041",
+      "topic": "Schuldverhältnis",
+      "front": "Konkretisierung (§ 243 II)",
+      "back": "Holschuld: aussondern + bereitstellen. Bringschuld: beim Gläubiger anbieten. Schickschuld: ordnungsgemäß versenden. Danach Stückschuld.",
+      "exam": true
+    },
+    {
+      "id": "recht-k042",
+      "topic": "Schuldverhältnis",
+      "front": "Aufrechnung (§§ 387–389)",
+      "back": "Gegenseitigkeit, Gleichartigkeit, Gegenforderung fällig, Hauptforderung erfüllbar, Erklärung (§ 388). A schuldet 1.000 €, B schuldet 300 € → nach Aufrechnung nur noch 700 € (§ 389).",
+      "exam": true
+    },
+    {
+      "id": "recht-k043",
+      "topic": "Schuldverhältnis",
+      "front": "Rücktritt vs. Kündigung",
+      "back": "Rücktritt (§§ 346 ff.): Rückgewähr, ex tunc. Kündigung: Dauerschuldverhältnis endet nur für die Zukunft (ex nunc). Computer 1.500 €, 200 € Wertersatz → K bekommt ca. 1.300 € zurück.",
+      "exam": false
+    },
+    {
+      "id": "recht-k044",
+      "topic": "Störungen",
+      "front": "Unmöglichkeit: Rechtsfolgen",
+      "back": "Schuldner frei (§ 275 I), Gegenleistung entfällt (§ 326 I 1). Schadensersatz statt der Leistung nur bei Vertretenmüssen (§§ 280 I, III, 283), das vermutet wird (§ 280 I 2).",
+      "exam": true
+    },
+    {
+      "id": "recht-k045",
+      "topic": "Störungen",
+      "front": "Anfängliche Unmöglichkeit: Gemälde verbrannte schon vor Vertragsschluss",
+      "back": "Vertrag trotzdem wirksam (§ 311a I). V muss nicht liefern (§ 275 I), K nicht zahlen (§ 326 I). Schadensersatz nur, wenn V es kannte oder kennen musste (§ 311a II).",
+      "exam": false
+    },
+    {
+      "id": "recht-k046",
+      "topic": "Störungen",
+      "front": "Schuldnerverzug (§ 286): Voraussetzungen",
+      "back": "Fälliger, durchsetzbarer Anspruch · Nichtleistung trotz Möglichkeit · Mahnung (oder entbehrlich, § 286 II/III) · Vertretenmüssen (vermutet, § 286 IV; Geldmangel entlastet nie).",
+      "exam": true
+    },
+    {
+      "id": "recht-k047",
+      "topic": "Störungen",
+      "front": "Wann ist keine Mahnung nötig? (§ 286 II)",
+      "back": "Nr. 1 Kalenderdatum („bis 30.11.“) · Nr. 2 ab Ereignis berechenbar („10 Tage nach Lieferung“) · Nr. 3 ernsthafte Verweigerung · Nr. 4 besondere Gründe. „Zahlbar sofort“ reicht nicht.",
+      "exam": true
+    },
+    {
+      "id": "recht-k048",
+      "topic": "Störungen",
+      "front": "30-Tage-Regel (§ 286 III) – Fliesenleger-Fall",
+      "back": "Entgeltforderung: Verzug spätestens 30 Tage nach Fälligkeit + Rechnungszugang. Zugang 06.06. → Ende 06.07. → Verzug ab 07.07. Verbraucher nur bei Hinweis in der Rechnung.",
+      "exam": false
+    },
+    {
+      "id": "recht-k049",
+      "topic": "Störungen",
+      "front": "Gläubigerverzug (§§ 293 ff.)",
+      "back": "Schuldner bietet richtig an, Gläubiger nimmt nicht an – kein Verschulden nötig. Folgen: Schuldner haftet nur für Vorsatz/grobe Fahrlässigkeit (§ 300 I), Gegenleistung bleibt (§ 326 II).",
+      "exam": true
+    },
+    {
+      "id": "recht-k050",
+      "topic": "Störungen",
+      "front": "Erfüllungsgehilfe (§ 278)",
+      "back": "Schuldner haftet für Verschulden seiner Gehilfen wie für eigenes, ohne Entlastung. Gehilfe des Elektromeisters beschädigt das Dach → Erich zahlt Dach und Möbel.",
+      "exam": false
+    },
+    {
+      "id": "recht-k051",
+      "topic": "Störungen",
+      "front": "c.i.c. (§§ 280 I, 311 II, 241 II)",
+      "back": "Schon beim Anbahnen eines Vertrags gibt es Rücksichtspflichten. Kundin rutscht im Kaufhaus auf Obstrest aus → Arztkosten ersetzt. Vorteil ggü. § 823: § 278 ohne Entlastung, Verschulden vermutet.",
+      "exam": true
+    },
+    {
+      "id": "recht-k052",
+      "topic": "SE · AGB",
+      "front": "Umfang des Schadensersatzes (§ 249)",
+      "back": "Naturalrestitution, bei Sachschaden stattdessen Geld (§ 249 II 1), auch Folgeschäden. Rad: Reparatur 180 € + 20 € Bahnfahrt = 200 €.",
+      "exam": false
+    },
+    {
+      "id": "recht-k053",
+      "topic": "SE · AGB",
+      "front": "Mitverschulden (§ 254)",
+      "back": "Der Geschädigte trägt seinen Anteil. Wasserschaden 4.000 €, Anteil Eigentümer 25 % → 4.000 € · 75 % = 3.000 €.",
+      "exam": false
+    },
+    {
+      "id": "recht-k054",
+      "topic": "SE · AGB",
+      "front": "Abtretung (§ 398)",
+      "back": "Vertrag Alt- und Neugläubiger, Schuldner muss nicht mitwirken. Er behält alle Einwendungen (§ 404); zahlt er ahnungslos an den Altgläubiger, wird er frei (§ 407).",
+      "exam": false
+    },
+    {
+      "id": "recht-k055",
+      "topic": "SE · AGB",
+      "front": "AGB-Prüfung: Reihenfolge",
+      "back": "1. AGB? (§ 305 I) 2. Einbeziehung (§ 305 II) 3. Individualabrede (§ 305b), überraschend (§ 305c I) 4. Auslegung (§ 305c II) 5. Inhaltskontrolle § 309 → § 308 → § 307 6. Folge § 306.",
+      "exam": true
+    },
+    {
+      "id": "recht-k056",
+      "topic": "SE · AGB",
+      "front": "Einbeziehung von AGB (§ 305 II)",
+      "back": "Ausdrücklicher Hinweis **bei** Vertragsschluss + zumutbare Kenntnisnahme + Einverständnis. AGB auf der Rückseite des Lieferscheins: zu spät, nicht einbezogen.",
+      "exam": true
+    },
+    {
+      "id": "recht-k057",
+      "topic": "SE · AGB",
+      "front": "Fitnessstudio-AGB (§ 309 Nr. 9, Nr. 13)",
+      "back": "Erstlaufzeit 24 Monate: wirksam. Verlängerung um 12 Monate: unwirksam. 3 Monate Kündigungsfrist: unwirksam (max. 1 Monat). „Nur per Einschreiben“: unwirksam (max. Textform).",
+      "exam": true
+    },
+    {
+      "id": "recht-k058",
+      "topic": "SE · AGB",
+      "front": "Rechtsfolge unwirksamer AGB (§ 306)",
+      "back": "Vertrag bleibt im Übrigen wirksam, an die Stelle tritt das Gesetz. Keine geltungserhaltende Reduktion: „Jede Haftung ausgeschlossen“ fällt komplett weg.",
+      "exam": false
+    },
+    {
+      "id": "recht-k059",
+      "topic": "Unwirksamkeit",
+      "front": "Saxophon-Fall (Skript S. 22): Hans (17) kauft ein Saxophon (Wert 2.000 €) für 800 €. Ergebnis laut offizieller Lösung?",
+      "back": "Annahme rechtlich **nachteilig** (Zahlungspflicht), der wirtschaftliche Vorteil zählt nicht (§ 107). Ergebnis der offiziellen Lösung: **kein wirksamer Kaufvertrag**.",
+      "exam": true
+    },
+    {
+      "id": "recht-k060",
+      "topic": "Unwirksamkeit",
+      "front": "DVD-Player-Fall: Max (17) bekommt 250 € für „einen DVD-Player“ und zahlt 249 €. Prüfreihenfolge laut offizieller Lösung?",
+      "back": "§ 107 a) rechtlich vorteilhaft? (–) · b) Einwilligung? (–), weil bei der Geldübergabe noch kein **konkreter** Player feststand · § 110 (+): Mittel zu diesem Zweck überlassen und voll bezahlt ⇒ Vertrag wirksam, Huber hat einen Kaufpreisanspruch.",
+      "exam": true
+    }
+  ],
+  "quiz": [
+    {
+      "id": "recht-q001",
+      "topic": "Fall lösen",
+      "q": "Welcher Satz ist im Gutachtenstil formuliert?",
+      "options": [
+        "„Der Anspruch besteht, denn V hat angenommen.“",
+        "„Ergebnis zuerst: K bekommt die Kamera.“",
+        "„K hat einen Anspruch, weil ein Vertrag vorliegt.“",
+        "„K könnte gegen V einen Anspruch aus § 433 I 1 BGB haben.“"
+      ],
+      "correct": 3,
+      "explain": "Der Gutachtenstil beginnt mit einem Obersatz im Konjunktiv („könnte“). „Weil“ und „denn“ zeigen den Urteilsstil."
+    },
+    {
+      "id": "recht-q002",
+      "topic": "WE & Vertrag",
+      "q": "Lea bietet Tom ihr Fahrrad schriftlich für 200 € an, „Antwort bis Freitag“. Tom schreibt am Donnerstag: „Einverstanden, aber nur für 180 €.“ Vertrag?",
+      "options": [
+        "Ja, über 200 €, weil Tom vor Freitag geantwortet hat",
+        "Ja, über 180 €",
+        "Nein – das ist eine Ablehnung mit neuem Angebot über 180 € (§ 150 II)",
+        "Ja, über 190 € als Mittelwert"
+      ],
+      "correct": 2,
+      "explain": "Eine Annahme mit Änderungen gilt als Ablehnung plus neues Angebot. Leas Angebot ist erloschen (§ 146)."
+    },
+    {
+      "id": "recht-q003",
+      "topic": "WE & Vertrag",
+      "q": "K sieht im Schaufenster eine Kamera für 399 € und sagt im Laden: „Ich kaufe sie.“ V hat sie schon an X verkauft. Vertrag zwischen K und V?",
+      "options": [
+        "Nein, weil Kaufverträge über 300 € schriftlich sein müssen",
+        "Ja, V hat mit dem Schaufenster ein bindendes Angebot gemacht",
+        "Ja, aber V kann wegen Irrtums anfechten",
+        "Nein – das Schaufenster ist nur eine invitatio ad offerendum, V hat Ks Angebot nicht angenommen"
+      ],
+      "correct": 3,
+      "explain": "Erst K gibt das Angebot ab. V nimmt es nicht an, also kein Vertrag (Skriptfall Vertrag 1)."
+    },
+    {
+      "id": "recht-q004",
+      "topic": "WE & Vertrag",
+      "q": "Müller muss bis 30.06. kündigen und wirft die Kündigung am 30.06. um 23 Uhr in den Geschäftsbriefkasten des Vermieters. Rechtzeitig?",
+      "options": [
+        "Nein, eine Kündigung muss immer per Einschreiben kommen",
+        "Ja, Einwurf vor 24 Uhr genügt immer",
+        "Nein – sie geht erst am nächsten Morgen zu Geschäftsbeginn zu",
+        "Ja, weil nur die Abgabe zählt"
+      ],
+      "correct": 2,
+      "explain": "Zugang erfordert die Möglichkeit der Kenntnisnahme unter normalen Umständen (§ 130 I 1); ein Büro leert nachts nicht den Briefkasten."
+    },
+    {
+      "id": "recht-q005",
+      "topic": "WE & Vertrag",
+      "q": "Ein Brief wird Dienstag um 10 Uhr in Ms Hausbriefkasten geworfen. M ist zwei Wochen im Urlaub. Wann ist er zugegangen?",
+      "options": [
+        "Erst nach Ms Rückkehr",
+        "Erst wenn M ihn liest",
+        "Am Dienstag",
+        "Gar nicht, M war ja abwesend"
+      ],
+      "correct": 2,
+      "explain": "Entscheidend ist die Möglichkeit der Kenntnisnahme, nicht das tatsächliche Lesen. Der Urlaub ist Ms Risiko."
+    },
+    {
+      "id": "recht-q006",
+      "topic": "WE & Vertrag",
+      "q": "Müller gibt seine Kündigung der 4-jährigen Tochter des Vermieters. Das Kind wirft sie weg. Folge?",
+      "options": [
+        "Zugegangen – das Kind ist Empfangsbote",
+        "Nicht zugegangen – das Kind ist Erklärungsbote, das Risiko trägt Müller",
+        "Die Kündigung ist nichtig nach § 105",
+        "Zugegangen, sobald das Kind sie annimmt"
+      ],
+      "correct": 1,
+      "explain": "Eine Vierjährige ist nicht zum Empfang ermächtigt; Verlust geht zulasten des Erklärenden (Skriptfall Zugang 2)."
+    },
+    {
+      "id": "recht-q007",
+      "topic": "WE & Vertrag",
+      "q": "A wirft Montag eine Kündigung ein. Dienstag 8 Uhr ruft er an und widerruft. Der Brief kommt Dienstag 11 Uhr an. Wirksam?",
+      "options": [
+        "Ja, ein Widerruf muss schriftlich sein",
+        "Nein – der Widerruf ging vorher zu (§ 130 I 2)",
+        "Ja, der Brief war schon abgegeben",
+        "Nur wenn der Empfänger zustimmt"
+      ],
+      "correct": 1,
+      "explain": "Ein Widerruf hindert die Wirksamkeit, wenn er vorher oder gleichzeitig zugeht."
+    },
+    {
+      "id": "recht-q008",
+      "topic": "WE & Vertrag",
+      "q": "Die Schnellversand GmbH schickt K unbestellt eine CD für 15 €: „Wenn Sie nicht binnen 2 Wochen zurückschicken, gilt das als Annahme.“ K legt sie beiseite. Muss K zahlen?",
+      "options": [
+        "Nur die Hälfte, 7,50 €",
+        "Ja, nach 2 Wochen gilt der Vertrag",
+        "Ja, weil ein Rückumschlag beilag",
+        "Nein – Schweigen ist keine Annahme, § 241a schließt Ansprüche aus"
+      ],
+      "correct": 3,
+      "explain": "Schweigen hat keinen Erklärungswert und kann vom Absender nicht einseitig umdefiniert werden (§ 241a)."
+    },
+    {
+      "id": "recht-q009",
+      "topic": "WE & Vertrag",
+      "q": "A verkauft B per Handschlag sein Grundstück für 80.000 €. Wirksam?",
+      "options": [
+        "Ja, aber nur bis 50.000 €",
+        "Ja, Verträge sind formfrei",
+        "Schwebend unwirksam bis zur Genehmigung",
+        "Nein – ohne notarielle Beurkundung nichtig (§§ 311b I 1, 125)"
+      ],
+      "correct": 3,
+      "explain": "Grundstückskauf braucht den Notar; Heilung nur durch Auflassung und Grundbucheintrag (§ 311b I 2)."
+    },
+    {
+      "id": "recht-q010",
+      "topic": "Unwirksamkeit",
+      "q": "Autohändler A will 12.000 € schreiben, vertippt sich auf 11.000 €. Welcher Irrtum?",
+      "options": [
+        "Inhaltsirrtum, § 119 I Alt. 1",
+        "Erklärungsirrtum, § 119 I Alt. 2",
+        "Motivirrtum, keine Anfechtung",
+        "Eigenschaftsirrtum, § 119 II"
+      ],
+      "correct": 1,
+      "explain": "Wer sich verschreibt oder vertippt, erklärt etwas, das er so gar nicht erklären wollte."
+    },
+    {
+      "id": "recht-q011",
+      "topic": "Unwirksamkeit",
+      "q": "B kauft eine „Vase aus der Ming-Dynastie“; sie stammt von 1990. Welcher Anfechtungsgrund?",
+      "options": [
+        "Keiner, das ist Motivirrtum",
+        "Eigenschaftsirrtum, § 119 II",
+        "Übermittlungsirrtum, § 120",
+        "Erklärungsirrtum, § 119 I Alt. 2"
+      ],
+      "correct": 1,
+      "explain": "Alter und Echtheit sind verkehrswesentliche, wertbildende Eigenschaften."
+    },
+    {
+      "id": "recht-q012",
+      "topic": "Unwirksamkeit",
+      "q": "C kauft Geschenkpapier für eine Feier, die dann abgesagt wird. Kann C anfechten?",
+      "options": [
+        "Ja, nach § 119 II",
+        "Nein – reiner Motivirrtum",
+        "Ja, nach § 119 I Alt. 1",
+        "Ja, innerhalb eines Jahres nach § 124"
+      ],
+      "correct": 1,
+      "explain": "Ein Irrtum nur über Beweggründe berechtigt nicht zur Anfechtung."
+    },
+    {
+      "id": "recht-q013",
+      "topic": "Unwirksamkeit",
+      "q": "Frau Maier ficht ihre Ferienwohnungsbuchung (800 €) wegen Verschreibens an. Paul hatte 4 € Porto und sagte für 600 € eine andere Familie ab. Wie viel Vertrauensschaden schuldet sie?",
+      "options": [
+        "604 €",
+        "1.404 €",
+        "4 €",
+        "800 €"
+      ],
+      "correct": 0,
+      "explain": "§ 122 I: 4 € + 600 € = 604 €; die Obergrenze (Erfüllungsinteresse 800 €) ist nicht überschritten."
+    },
+    {
+      "id": "recht-q014",
+      "topic": "Unwirksamkeit",
+      "q": "Der 15-jährige Jonas bekommt ohne Wissen der Eltern von seinem Onkel ein Mofa geschenkt. Schenkung wirksam?",
+      "options": [
+        "Ja – lediglich rechtlich vorteilhaft (§ 107)",
+        "Nur mit Genehmigung des Familiengerichts",
+        "Nein, nichtig (§ 105)",
+        "Nein, schwebend unwirksam (§ 108)"
+      ],
+      "correct": 0,
+      "explain": "Jonas bekommt nur etwas und muss nichts leisten; spätere Kosten sind nur wirtschaftliche Folgen."
+    },
+    {
+      "id": "recht-q015",
+      "topic": "Unwirksamkeit",
+      "q": "Paul (17) kauft eine Konsole für 250 €: 160 € aus Taschengeld sofort, Rest in Raten. Die Eltern sind dagegen. Rechtslage?",
+      "options": [
+        "Wirksam nach § 110",
+        "Wirksam, weil Taschengeld zur freien Verfügung ist",
+        "Wirksam in Höhe von 160 €",
+        "Endgültig unwirksam – § 110 greift nicht, weil nicht vollständig bezahlt"
+      ],
+      "correct": 3,
+      "explain": "„Bewirkt“ heißt vollständig bezahlt. Ohne Einwilligung schwebend unwirksam, die Ablehnung der Eltern macht es endgültig."
+    },
+    {
+      "id": "recht-q016",
+      "topic": "Unwirksamkeit",
+      "q": "Max (17) bekommt 250 € von den Eltern, um sich einen DVD-Player zu kaufen, und zahlt 249 € bar. Huber fragt danach die Eltern, die schweigen. Rechtslage?",
+      "options": [
+        "Schwebend unwirksam",
+        "Vertrag wirksam nach § 110",
+        "Nach 2 Wochen Schweigen gilt die Genehmigung als verweigert",
+        "Nichtig, weil Max minderjährig ist"
+      ],
+      "correct": 1,
+      "explain": "Die Einwilligung wird verneint, weil noch kein konkreter Player feststand. Aber § 110 greift: Max hat mit zweckgebunden überlassenen Mitteln voll bezahlt. Der Vertrag ist von Anfang an wirksam, § 108 II läuft ins Leere."
+    },
+    {
+      "id": "recht-q017",
+      "topic": "Vertretung",
+      "q": "Eine Mutter schickt ihren 6-jährigen Sohn mit einem genauen Einkaufszettel zum Bäcker. Vertrag?",
+      "options": [
+        "Nein, der Sohn ist geschäftsunfähig",
+        "Schwebend unwirksam bis zur Genehmigung",
+        "Ja, zwischen Mutter und Bäcker – der Sohn ist Bote",
+        "Ja, zwischen Sohn und Bäcker"
+      ],
+      "correct": 2,
+      "explain": "Ein Bote überbringt eine fremde WE und braucht keine Geschäftsfähigkeit."
+    },
+    {
+      "id": "recht-q018",
+      "topic": "Vertretung",
+      "q": "V soll für B einen Kaffeevollautomaten kaufen, kauft aber in Bs Namen ein Smartphone bei X. B verweigert. Was kann X tun?",
+      "options": [
+        "Von V nach Wahl Erfüllung oder Schadensersatz verlangen (§ 179 I)",
+        "Von B zahlen lassen, die Vollmacht reicht",
+        "Nichts, der Vertrag ist für alle nichtig",
+        "Nur von B Vertrauensschaden verlangen"
+      ],
+      "correct": 0,
+      "explain": "V handelte ohne Vertretungsmacht und kannte den Mangel; nach Verweigerung haftet er selbst."
+    },
+    {
+      "id": "recht-q019",
+      "topic": "Vertretung",
+      "q": "Ein Angestellter bestellt seit Monaten ohne Vollmacht im Namen des Chefs. Der Chef weiß es und zahlt jedes Mal. Ist der Chef gebunden?",
+      "options": [
+        "Ja – Duldungsvollmacht",
+        "Ja – Anscheinsvollmacht",
+        "Nein, es gibt keine Vollmacht",
+        "Nein, der Angestellte haftet allein nach § 179"
+      ],
+      "correct": 0,
+      "explain": "Der Chef weiß vom Auftreten und unternimmt nichts; das ist der Fall der Duldungsvollmacht."
+    },
+    {
+      "id": "recht-q020",
+      "topic": "Fristen",
+      "q": "Die Aufforderung nach § 108 II geht den Eltern am Fr 30.10.2026 zu. Wann endet die Zwei-Wochen-Frist?",
+      "options": [
+        "So 15.11.2026, 24 Uhr",
+        "Do 12.11.2026, 24 Uhr",
+        "Fr 13.11.2026, 24 Uhr",
+        "Mo 16.11.2026, 24 Uhr"
+      ],
+      "correct": 2,
+      "explain": "Der Zugangstag zählt nicht (§ 187 I); Ende am gleichnamigen Wochentag zwei Wochen später (§ 188 II)."
+    },
+    {
+      "id": "recht-q021",
+      "topic": "Fristen",
+      "q": "Ein Kaufpreisanspruch entsteht am 30.10.2026, der Verkäufer kennt den Käufer. Wann verjährt er?",
+      "options": [
+        "Am 30.10.2028",
+        "Am 30.10.2029",
+        "Am 31.12.2028",
+        "Mit Ablauf des 31.12.2029"
+      ],
+      "correct": 3,
+      "explain": "3 Jahre (§ 195), Beginn mit Schluss des Jahres 2026 (§ 199 I)."
+    },
+    {
+      "id": "recht-q022",
+      "topic": "Schuldverhältnis",
+      "q": "A schuldet B 1.000 € (fällig). B schuldet A 300 € aus einem Darlehen, fällig erst in 3 Monaten. Wer kann heute aufrechnen?",
+      "options": [
+        "Nur A",
+        "Beide",
+        "Keiner",
+        "Nur B"
+      ],
+      "correct": 3,
+      "explain": "Die Gegenforderung des Aufrechnenden muss fällig sein: As 300 € sind es nicht, Bs 1.000 € schon. B darf seine eigene Schuld vorzeitig erfüllen."
+    },
+    {
+      "id": "recht-q023",
+      "topic": "Störungen",
+      "q": "Vor der Übergabe brennt der verkaufte Gebrauchtwagen ohne Verschulden des V aus. Rechtsfolge?",
+      "options": [
+        "V muss nicht liefern, K nicht zahlen, kein Schadensersatz",
+        "V schuldet Schadensersatz nach § 283",
+        "V muss einen gleichwertigen Wagen liefern",
+        "K muss zahlen, weil der Vertrag geschlossen war"
+      ],
+      "correct": 0,
+      "explain": "Stückschuld unmöglich → § 275 I; Kaufpreis entfällt nach § 326 I; ohne Vertretenmüssen kein Schadensersatz."
+    },
+    {
+      "id": "recht-q024",
+      "topic": "Störungen",
+      "q": "Fliesenleger S schickt eine Rechnung über 2.500 €, „zahlbar sofort“, Zugang beim Restaurantbetreiber B am 06.06. Keine Mahnung. Ab wann ist B in Verzug?",
+      "options": [
+        "Ab 06.06.",
+        "Nie, ohne Mahnung kein Verzug",
+        "Ab 07.07.",
+        "Ab 07.06."
+      ],
+      "correct": 2,
+      "explain": "„Zahlbar sofort“ ist keine Mahnung; § 286 III: 30 Tage ab Zugang, Ende 06.07., Verzug ab 07.07."
+    },
+    {
+      "id": "recht-q025",
+      "topic": "Störungen",
+      "q": "Rechnung: „Zahlbar bis 30.11.2026“. Der Kunde zahlt nicht. Braucht es eine Mahnung für den Verzug?",
+      "options": [
+        "Nein – Kalenderdatum, § 286 II Nr. 1",
+        "Nein, aber erst nach 30 Tagen",
+        "Ja, aber nur bei Verbrauchern",
+        "Ja, immer"
+      ],
+      "correct": 0,
+      "explain": "Ist die Leistungszeit nach dem Kalender bestimmt, ist die Mahnung entbehrlich."
+    },
+    {
+      "id": "recht-q026",
+      "topic": "Störungen",
+      "q": "Das Taxi soll dich um 6 Uhr zum Flug um 8 Uhr bringen und kommt um 9 Uhr. Was liegt vor?",
+      "options": [
+        "Gläubigerverzug",
+        "Unmöglichkeit (absolutes Fixgeschäft)",
+        "Schuldnerverzug",
+        "Wegfall der Geschäftsgrundlage"
+      ],
+      "correct": 1,
+      "explain": "Die Fahrt zum Flug kann nicht sinnvoll nachgeholt werden; § 275 I, du musst nicht zahlen (§ 326 I)."
+    },
+    {
+      "id": "recht-q027",
+      "topic": "Störungen",
+      "q": "Bauer Paul soll Kartoffeln bringen. Hans sagt am Telefon: „Komm gar nicht, ich nehme sie nicht.“ Die bereitgestellten Kartoffeln werden gestohlen. Muss Hans zahlen?",
+      "options": [
+        "Nur die Hälfte",
+        "Nein, Paul muss neue Kartoffeln bringen",
+        "Ja – Annahmeverzug, Paul behält den Kaufpreisanspruch (§ 326 II)",
+        "Nein, § 326 I"
+      ],
+      "correct": 2,
+      "explain": "Wörtliches Angebot genügt (§ 295), Leistungsgefahr ging über (§ 300 II), Gegenleistungsgefahr nach § 326 II."
+    },
+    {
+      "id": "recht-q028",
+      "topic": "SE · AGB",
+      "q": "Ein Möbelhaus druckt seine AGB auf den Lieferschein; beim Kauf im Laden war davon keine Rede. Gelten sie?",
+      "options": [
+        "Nein – kein Hinweis bei Vertragsschluss (§ 305 II Nr. 1)",
+        "Ja, mit Annahme der Lieferung",
+        "Nur gegenüber Verbrauchern",
+        "Ja, AGB gelten immer"
+      ],
+      "correct": 0,
+      "explain": "Der Hinweis muss bei Vertragsschluss erfolgen; danach gilt das Gesetz (§ 306 II)."
+    }
+  ]
+}

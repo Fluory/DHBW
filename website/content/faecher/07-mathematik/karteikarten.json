@@ -1,0 +1,783 @@
+{
+  "cards": [
+    {
+      "id": "mathe-k001",
+      "topic": "Grundlagen",
+      "front": "Prozent als Dezimalzahl: 5 %, 2,5 %, 0,25 %",
+      "back": "5 % = 0,05 · 2,5 % = 0,025 · 0,25 % = 0,0025.\nFaktor bei 5 % Zinsen: 1 + i = 1,05.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k002",
+      "topic": "Grundlagen",
+      "front": "Was bedeutet Σₖ₌₁³ k²?",
+      "back": "Alle k von 1 bis 3 einsetzen und addieren: 1² + 2² + 3² = 1 + 4 + 9 = **14**.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k003",
+      "topic": "Grundlagen",
+      "front": "Potenzregel aᵏ · bᵏ",
+      "back": "aᵏ · bᵏ = (a·b)ᵏ.\nBeispiel: (−1)ᵏ · (⅕)ᵏ = (−⅕)ᵏ.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k004",
+      "topic": "Folgen: Begriffe",
+      "front": "Was ist eine **Folge**?",
+      "back": "Eine Funktion ℕ → ℝ, also eine geordnete Liste a₁, a₂, a₃, … aₙ heißt Glied, n heißt Index.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k005",
+      "topic": "Folgen: Begriffe",
+      "front": "explizit vs. rekursiv",
+      "back": "explizit: direkte Formel, z. B. aₙ = n² → a₃ = 9.\nrekursiv: aus dem Vorgänger, z. B. a₁ = 2, aₙ = aₙ₋₁ + 3 → 2, 5, 8, 11.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k006",
+      "topic": "Folgen: Begriffe",
+      "front": "Bildungsgesetz finden: −3, 3, −3, 3, …",
+      "back": "aₙ = (−1)ⁿ · 3 (ab n = 1). Der Faktor (−1)ⁿ macht das Vorzeichen abwechselnd (**alternierend**).",
+      "exam": true
+    },
+    {
+      "id": "mathe-k007",
+      "topic": "Folgen: Begriffe",
+      "front": "Bildungsgesetz finden: 1, ¼, 1/9, 1/16, …",
+      "back": "aₙ = 1/n².",
+      "exam": true
+    },
+    {
+      "id": "mathe-k008",
+      "topic": "Monotonie & Beschränktheit",
+      "front": "streng monoton wachsend – Definition und Test",
+      "back": "aₙ < aₙ₊₁ für alle n.\nTest: Differenz aₙ₊₁ − aₙ > 0. Beispiel aₙ = n²: (n+1)² − n² = 2n + 1 > 0.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k009",
+      "topic": "Monotonie & Beschränktheit",
+      "front": "Ist (−1)ⁿ monoton?",
+      "back": "Nein, die Glieder springen −1, 1, −1, 1 hin und her. Aber beschränkt: |aₙ| ≤ 1.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k010",
+      "topic": "Monotonie & Beschränktheit",
+      "front": "Was heißt **beschränkt**?",
+      "back": "Es gibt ein C mit |aₙ| ≤ C für alle n (die Folge bleibt in einem Streifen).\nBeispiel 1 + 1/n: 1 < aₙ ≤ 2.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k011",
+      "topic": "Monotonie & Beschränktheit",
+      "front": "Ist eine konstante Folge aₙ = 7 monoton?",
+      "back": "Ja, monoton wachsend **und** fallend (aber nicht streng). Sie ist beschränkt.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k012",
+      "topic": "Konvergenz & Grenzwerte",
+      "front": "Konvergenz in einfachen Worten",
+      "back": "aₙ → a heißt: Für jede noch so kleine Genauigkeit ε liegen ab einem Index n₀ **alle** Glieder näher als ε an a: |aₙ − a| < ε.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k013",
+      "topic": "Konvergenz & Grenzwerte",
+      "front": "Nullfolge, bestimmt divergent, unbestimmt divergent",
+      "back": "Nullfolge: Grenzwert 0 (z. B. 1/n).\nbestimmt divergent: → +∞ oder −∞ (z. B. n²).\nunbestimmt: springt ohne Ziel (z. B. (−1)ⁿ).",
+      "exam": true
+    },
+    {
+      "id": "mathe-k014",
+      "topic": "Konvergenz & Grenzwerte",
+      "front": "Monotonie-Kriterium",
+      "back": "monoton **und** beschränkt ⇒ konvergent.\nBeschränkt allein reicht nicht: (−1)ⁿ ist beschränkt, aber divergent.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k015",
+      "topic": "Konvergenz & Grenzwerte",
+      "front": "Grenzwert eines Bruchs von Polynomen (Faustregel)",
+      "back": "Durch die höchste Potenz des Nenners teilen.\nGrad gleich → Leitkoeffizienten teilen: (2n² − 3)/(n² + n + 1) → **2**.\nZählergrad kleiner → 0. Zählergrad größer → ±∞.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k016",
+      "topic": "Konvergenz & Grenzwerte",
+      "front": "Grenzwert von (8k³ − 4k² − 8)/(6k³ + 2k − 1)?",
+      "back": "Gleicher Grad 3 → 8/6 = **4/3**.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k017",
+      "topic": "Konvergenz & Grenzwerte",
+      "front": "Grund-Nullfolgen",
+      "back": "1/n → 0 und qⁿ → 0 für |q| < 1, z. B. (½)ⁿ → 0. Auch e⁻ⁿ → 0.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k018",
+      "topic": "Konvergenz & Grenzwerte",
+      "front": "Wachstums-Rangliste (wer gewinnt für große n?)",
+      "back": "ln n < √n < n < n² < eⁿ.\nBeispiel: −7n³ + 4n² + 10 → −∞, weil −7n³ dominiert.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k019",
+      "topic": "Arithm./geom. Folgen",
+      "front": "Arithmetische Folge: Formeln",
+      "back": "konstante Differenz d: aₙ = a₁ + (n − 1)·d, Sₙ = n/2 · (a₁ + aₙ).\na₁ = 3, d = 4: a₁₀ = 3 + 9·4 = 39, S₁₀ = 5 · 42 = 210.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k020",
+      "topic": "Arithm./geom. Folgen",
+      "front": "Geometrische Folge: Formeln",
+      "back": "konstanter Quotient q: aₙ = a₁ · qⁿ⁻¹, Sₙ = a₁ · (qⁿ − 1)/(q − 1).\na₁ = 2, q = 3: a₈ = 2 · 3⁷ = 4374, S₆ = 728.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k021",
+      "topic": "Reihen",
+      "front": "Was ist eine **Reihe**?",
+      "back": "Eine unendliche Summe Σ aₖ = a₀ + a₁ + a₂ + … Man schaut auf die **Teilsummen** sₙ = a₀ + … + aₙ. Haben sie einen Grenzwert s, ist die Reihe konvergent mit Summe s.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k022",
+      "topic": "Reihen",
+      "front": "Teilsummen von Σₖ₌₀ (½)ᵏ",
+      "back": "s₀ = 1, s₁ = 1,5, s₂ = 1,75, s₃ = 1,875 → Summe **2**.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k023",
+      "topic": "Reihen",
+      "front": "Geometrische Reihe: Formel",
+      "back": "Σₖ₌₀^∞ qᵏ = 1/(1 − q), nur für |q| < 1.\nAllgemein: **erstes Glied / (1 − q)**.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k024",
+      "topic": "Reihen",
+      "front": "Σₖ₌₁^∞ (½)ᵏ = ?",
+      "back": "Start bei k = 1 → erstes Glied ½. ½ / (1 − ½) = **1** (nicht 2!).",
+      "exam": true
+    },
+    {
+      "id": "mathe-k025",
+      "topic": "Reihen",
+      "front": "Σₖ₌₀^∞ (−1)ᵏ (⅕)ᵏ = ?",
+      "back": "Zusammenfassen: (−⅕)ᵏ, q = −⅕, erstes Glied 1. 1/(1 + ⅕) = **5/6**.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k026",
+      "topic": "Reihen",
+      "front": "Periodenzahl 0,3̄ als Bruch",
+      "back": "0,3 + 0,03 + … = (3/10) / (1 − 1/10) = (3/10)/(9/10) = **1/3**.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k027",
+      "topic": "Reihen",
+      "front": "Periodenzahl 0,1̄2̄ als Bruch",
+      "back": "Periodenlänge 2 → q = 1/100. (12/100)/(99/100) = 12/99 = **4/33**.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k028",
+      "topic": "Reihen",
+      "front": "Teleskopsumme Σₖ₌₁^∞ 1/(k(k+1))",
+      "back": "1/(k(k+1)) = 1/k − 1/(k+1). Die Mitte hebt sich weg: sₙ = 1 − 1/(n+1) → **1**.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k029",
+      "topic": "Reihen",
+      "front": "Σₖ₌₁^∞ 6/k² = ?",
+      "back": "Konstante vorziehen: 6 · Σ 1/k² = 6 · π²/6 = **π² ≈ 9,87**.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k030",
+      "topic": "Reihen",
+      "front": "Warnung: 1 + 2 + 4 + 8 + … = −1?",
+      "back": "Unsinn! Die Reihe divergiert, mit divergenten Reihen darf man nicht wie mit normalen Summen rechnen.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k031",
+      "topic": "Konvergenzkriterien",
+      "front": "Notwendiges Kriterium",
+      "back": "Σ aₖ konvergent ⇒ aₖ → 0.\nAlso: aₖ geht **nicht** gegen 0 ⇒ divergent. Geht aₖ gegen 0, weiß man **noch nichts**.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k032",
+      "topic": "Konvergenzkriterien",
+      "front": "Harmonische Reihe Σ 1/k",
+      "back": "**Divergent** (→ ∞), obwohl 1/k → 0. Sie wächst nur sehr langsam: s₁₀ ≈ 2,93.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k033",
+      "topic": "Konvergenzkriterien",
+      "front": "Σ 1/kᵖ – wann konvergent?",
+      "back": "Genau für p > 1. Σ 1/k² konvergiert (π²/6), Σ 1/k divergiert.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k034",
+      "topic": "Konvergenzkriterien",
+      "front": "Potenzabstand-Regel bei Brüchen",
+      "back": "Abstand = Nennergrad − Zählergrad.\n> 1 → konvergent (Σ (k+1)/(k³+2): Abstand 2).\n≤ 1 → divergent (Σ k/(k²+5): Abstand 1).",
+      "exam": true
+    },
+    {
+      "id": "mathe-k035",
+      "topic": "Konvergenzkriterien",
+      "front": "Quotientenkriterium (Ergänzung)",
+      "back": "L = lim |aₖ₊₁/aₖ|. L < 1 konvergent, L > 1 divergent, L = 1 keine Aussage. Gut bei k! oder xᵏ.\nΣ 1/k!: L = lim 1/(k+1) = 0 → konvergent.",
+      "exam": false
+    },
+    {
+      "id": "mathe-k036",
+      "topic": "Finanzmathe",
+      "front": "Zinseszins: einmalige Zahlung",
+      "back": "Kₙ = r · (1 + i)ⁿ.\n1000 € zu 5 %: nach 2 Jahren 1000 · 1,05² = **1102,50 €**.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k037",
+      "topic": "Finanzmathe",
+      "front": "Sparplan (Endwert): Formel",
+      "back": "Eₙ = r · ((1 + i)ⁿ − 1) / i. Das ist eine endliche geometrische Reihe mit q = 1 + i.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k038",
+      "topic": "Finanzmathe",
+      "front": "Sparplan: r = 100 €, i = 5 %, n = 3",
+      "back": "100 · (1,05³ − 1)/0,05 = 100 · 3,1525 = **315,25 €**.\nProbe: 110,25 + 105 + 100 = 315,25.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k039",
+      "topic": "Finanzmathe",
+      "front": "Folienbeispiel: 100 € pro Monat, 0,25 % pro Monat, 60 Monate",
+      "back": "E₆₀ = 100 · (1,0025⁶⁰ − 1)/0,0025 ≈ **6464,67 €** (Folie: ca. 6460 €). Eingezahlt 6000 €.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k040",
+      "topic": "Finanzmathe",
+      "front": "Ewige Rente (Barwert)",
+      "back": "B = r / i.\n1000 € pro Jahr bei 4 %: 1000/0,04 = **25 000 €**.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k041",
+      "topic": "Finanzmathe",
+      "front": "Warum beim Sparplan nur die endliche Formel?",
+      "back": "Beim Sparplan ist q = 1 + i > 1 → die unendliche Reihe divergiert. Bei der ewigen Rente ist q = 1/(1 + i) < 1 → unendliche Formel erlaubt.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k042",
+      "topic": "Funktionen",
+      "front": "Definitionsmenge, Wertemenge, Bild",
+      "back": "D: erlaubte x. W: Zielmenge. Bild: Werte, die wirklich herauskommen.\nx² auf ℝ: W = ℝ, Bild = [0, ∞).",
+      "exam": true
+    },
+    {
+      "id": "mathe-k043",
+      "topic": "Funktionen",
+      "front": "Größter Definitionsbereich: Rezept",
+      "back": "Nenner ≠ 0, unter der Wurzel ≥ 0.\n1/(x² − 1): D = ℝ \\ {−1, 1}.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k044",
+      "topic": "Funktionen",
+      "front": "injektiv, surjektiv, bijektiv",
+      "back": "injektiv: jeder Wert höchstens einmal getroffen. surjektiv: jeder Wert der Zielmenge mindestens einmal. bijektiv: genau einmal → Umkehrfunktion existiert.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k045",
+      "topic": "Funktionen",
+      "front": "Verkettung (f ∘ g)(x)",
+      "back": "f(g(x)): **zuerst g, dann f**. Die Reihenfolge ist wichtig.\ng(x) = 1 − x², f = sin: g(sin x) = 1 − sin²x = cos²x.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k046",
+      "topic": "Funktionen",
+      "front": "Definitionsbereich von f/g",
+      "back": "Wo f und g beide definiert sind, **ohne** die Nullstellen von g.\n√x / (x − 1): D = [0, ∞) ohne 1.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k047",
+      "topic": "Umkehrfunktion",
+      "front": "Umkehrfunktion: was ist f⁻¹?",
+      "back": "f⁻¹ macht f rückgängig: f⁻¹(f(x)) = x. Graph an y = x spiegeln. **Nicht** 1/f(x)!\nJede streng monotone Funktion hat eine Umkehrfunktion.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k048",
+      "topic": "Umkehrfunktion",
+      "front": "Folie 62: f: [2, ∞) → ℝ, f(x) = x² − 4x + 1. f⁻¹?",
+      "back": "(x − 2)² − 3 = y ⇒ x = 2 + √(y + 3).\nf⁻¹(x) = **2 + √(x + 3)**. Probe: f(5) = 6, f⁻¹(6) = 5.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k049",
+      "topic": "Grenzwerte von Funktionen",
+      "front": "Grenzwert bei 0/0: lim_{x→2} (x² − 4)/(x − 2)",
+      "back": "Faktorisieren: (x − 2)(x + 2)/(x − 2) = x + 2 → **4**.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k050",
+      "topic": "Grenzwerte von Funktionen",
+      "front": "Zahl/0: lim_{x→0⁺} 1/x und lim_{x→0⁻} 1/x",
+      "back": "Von rechts +∞, von links −∞. Links ≠ rechts ⇒ lim_{x→0} 1/x existiert nicht.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k051",
+      "topic": "Grenzwerte von Funktionen",
+      "front": "Standard-Grenzwert sin(x)/x für x → 0",
+      "back": "**1** (Bogenmaß). Probe: sin(0,1)/0,1 ≈ 0,998.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k052",
+      "topic": "Grenzwerte von Funktionen",
+      "front": "lim_{x→0} sin(1/x)",
+      "back": "Existiert **nicht**: Der Sinus schwingt immer schneller zwischen −1 und 1 (Oszillation).",
+      "exam": true
+    },
+    {
+      "id": "mathe-k053",
+      "topic": "Stetigkeit",
+      "front": "Wann ist f in x̂ stetig?",
+      "back": "Wenn lim_{x→x̂} f(x) = f(x̂). Anschaulich: Graph ohne Absetzen zeichnen.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k054",
+      "topic": "Stetigkeit",
+      "front": "c so wählen, dass f stetig ist: f(x) = (x² + 2x − 3)/(x² + x − 2), f(1) = c",
+      "back": "Kürzen: (x + 3)(x − 1)/((x + 2)(x − 1)) = (x + 3)/(x + 2). x = 1: c = **4/3**.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k055",
+      "topic": "Stetigkeit",
+      "front": "Die 3 Unstetigkeitstypen",
+      "back": "Sprungstelle (links ≠ rechts), Polstelle (|f| → ∞, z. B. 1/(x − 2) bei 2), Oszillationsstelle (sin(1/x) bei 0).",
+      "exam": true
+    },
+    {
+      "id": "mathe-k056",
+      "topic": "Stetigkeit",
+      "front": "Welche Funktionen sind stetig?",
+      "back": "Polynome überall, p/q wo q ≠ 0, exp, ln, sin, cos auf ihrem Definitionsbereich. Summen, Produkte und Verkettungen stetiger Funktionen auch.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k057",
+      "topic": "ln- und e-Regeln",
+      "front": "ln-Regeln",
+      "back": "ln(a·b) = ln a + ln b · ln(a/b) = ln a − ln b · ln(aʳ) = r · ln a.\nBeispiel: ln 8 = 3 · ln 2.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k058",
+      "topic": "ln- und e-Regeln",
+      "front": "e und ln heben sich auf",
+      "back": "e^(ln a) = a und ln(eᵃ) = a.\n√(e^(3 ln 4)) = √(4³) = √64 = **8**.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k059",
+      "topic": "ln- und e-Regeln",
+      "front": "Zusammenfassen: ln 2x + ln 2y − ln z − ln 4",
+      "back": "= ln(2x · 2y / (4z)) = **ln(xy/z)**.",
+      "exam": true
+    }
+  ],
+  "quiz": [
+    {
+      "id": "mathe-q001",
+      "topic": "Folgen: Begriffe",
+      "q": "Welches Bildungsgesetz passt zu 2, 4, 8, 16, …?",
+      "options": [
+        "aₙ = 2ⁿ",
+        "aₙ = 2n",
+        "aₙ = n²",
+        "aₙ = 2ⁿ⁻¹"
+      ],
+      "correct": 0,
+      "explain": "Jedes Glied ist das Doppelte: 2¹, 2², 2³, 2⁴. Bei 2n käme 2, 4, 6, 8 heraus."
+    },
+    {
+      "id": "mathe-q002",
+      "topic": "Folgen: Begriffe",
+      "q": "Rekursiv: d₁ = 2, dₙ = dₙ₋₁ + 3. Was ist d₄?",
+      "options": [
+        "8",
+        "11",
+        "9",
+        "14"
+      ],
+      "correct": 1,
+      "explain": "2 → 5 → 8 → 11. Arithmetische Folge mit d = 3."
+    },
+    {
+      "id": "mathe-q003",
+      "topic": "Monotonie & Beschränktheit",
+      "q": "Was gilt für bₙ = 1 + 1/n?",
+      "options": [
+        "konstant",
+        "nicht monoton, beschränkt",
+        "streng fallend, beschränkt",
+        "streng wachsend, unbeschränkt"
+      ],
+      "correct": 2,
+      "explain": "2; 1,5; 1,33; 1,25 … wird kleiner und bleibt zwischen 1 und 2."
+    },
+    {
+      "id": "mathe-q004",
+      "topic": "Konvergenz & Grenzwerte",
+      "q": "Welche Aussage ist **falsch**?",
+      "options": [
+        "Monoton + beschränkt ⇒ konvergent.",
+        "Der Grenzwert ist eindeutig.",
+        "Jede beschränkte Folge ist konvergent.",
+        "Jede konvergente Folge ist beschränkt."
+      ],
+      "correct": 2,
+      "explain": "Gegenbeispiel (−1)ⁿ: beschränkt, aber divergent. Für Konvergenz braucht es zusätzlich Monotonie."
+    },
+    {
+      "id": "mathe-q005",
+      "topic": "Konvergenz & Grenzwerte",
+      "q": "lim (2n² − 3)/(n² + n + 1) für n → ∞ = ?",
+      "options": [
+        "∞",
+        "2",
+        "−3",
+        "0"
+      ],
+      "correct": 1,
+      "explain": "Gleicher Grad → Leitkoeffizienten: 2/1 = 2."
+    },
+    {
+      "id": "mathe-q006",
+      "topic": "Konvergenz & Grenzwerte",
+      "q": "lim (−5n + 1)/(4n² − 7) für n → ∞ = ?",
+      "options": [
+        "−∞",
+        "−5/4",
+        "1/4",
+        "0"
+      ],
+      "correct": 3,
+      "explain": "Zählergrad 1 < Nennergrad 2 → der Nenner wächst schneller → 0."
+    },
+    {
+      "id": "mathe-q007",
+      "topic": "Konvergenz & Grenzwerte",
+      "q": "Was macht (−1)ⁿ · n für n → ∞?",
+      "options": [
+        "→ +∞ (bestimmt divergent)",
+        "→ 0",
+        "→ −∞",
+        "unbestimmt divergent"
+      ],
+      "correct": 3,
+      "explain": "Der Betrag wird groß, aber das Vorzeichen wechselt ständig. Kein fester Grenzwert, auch nicht ±∞."
+    },
+    {
+      "id": "mathe-q008",
+      "topic": "Arithm./geom. Folgen",
+      "q": "Arithmetische Folge a₁ = 3, d = 4. Was ist a₁₀?",
+      "options": [
+        "39",
+        "40",
+        "43",
+        "35"
+      ],
+      "correct": 0,
+      "explain": "a₁₀ = 3 + (10 − 1) · 4 = 3 + 36 = 39. Typischer Fehler: 10 · 4 statt 9 · 4."
+    },
+    {
+      "id": "mathe-q009",
+      "topic": "Arithm./geom. Folgen",
+      "q": "Geometrische Folge a₁ = 2, q = 3. Was ist a₈?",
+      "options": [
+        "13122",
+        "4374",
+        "1458",
+        "48"
+      ],
+      "correct": 1,
+      "explain": "a₈ = 2 · 3⁷ = 2 · 2187 = 4374. Exponent ist n − 1 = 7, nicht 8."
+    },
+    {
+      "id": "mathe-q010",
+      "topic": "Reihen",
+      "q": "Σₖ₌₁^∞ (½)ᵏ = ?",
+      "options": [
+        "2",
+        "½",
+        "∞",
+        "1"
+      ],
+      "correct": 3,
+      "explain": "Start bei k = 1 → erstes Glied ½. ½/(1 − ½) = 1. Die 2 wäre der Wert ab k = 0."
+    },
+    {
+      "id": "mathe-q011",
+      "topic": "Reihen",
+      "q": "Σₖ₌₀^∞ (−⅕)ᵏ = ?",
+      "options": [
+        "5/4",
+        "5/6",
+        "−5/6",
+        "1"
+      ],
+      "correct": 1,
+      "explain": "Erstes Glied 1, q = −⅕: 1/(1 − (−⅕)) = 1/(6/5) = 5/6."
+    },
+    {
+      "id": "mathe-q012",
+      "topic": "Reihen",
+      "q": "Σₖ₌₀^∞ 3 · (−½)ᵏ = ?",
+      "options": [
+        "2",
+        "−2",
+        "6",
+        "3/2"
+      ],
+      "correct": 0,
+      "explain": "Erstes Glied 3, q = −½: 3/(1 + ½) = 3/(3/2) = 2."
+    },
+    {
+      "id": "mathe-q013",
+      "topic": "Reihen",
+      "q": "Welcher Bruch ist 0,1̄2̄ = 0,121212…?",
+      "options": [
+        "1/8",
+        "12/100",
+        "4/33",
+        "6/45"
+      ],
+      "correct": 2,
+      "explain": "Periodenlänge 2 → q = 1/100: (12/100)/(99/100) = 12/99 = 4/33."
+    },
+    {
+      "id": "mathe-q014",
+      "topic": "Reihen",
+      "q": "Σₖ₌₁^∞ 1/(k(k+1)) = ?",
+      "options": [
+        "½",
+        "∞",
+        "2",
+        "1"
+      ],
+      "correct": 3,
+      "explain": "Teleskopsumme: sₙ = 1 − 1/(n+1) → 1."
+    },
+    {
+      "id": "mathe-q015",
+      "topic": "Konvergenzkriterien",
+      "q": "Die Summanden einer Reihe gehen gegen 0. Was folgt?",
+      "options": [
+        "Die Reihe konvergiert.",
+        "Die Reihe hat den Wert 0.",
+        "Die Reihe divergiert.",
+        "Noch nichts – sie kann konvergieren oder divergieren."
+      ],
+      "correct": 3,
+      "explain": "Das notwendige Kriterium kann nur „divergent“ beweisen. Beispiel Σ 1/k: Summanden → 0, trotzdem divergent."
+    },
+    {
+      "id": "mathe-q016",
+      "topic": "Konvergenzkriterien",
+      "q": "Welche Reihe ist **divergent**?",
+      "options": [
+        "Σ k/(k² + 5)",
+        "Σ 1/(2k⁵)",
+        "Σ (½)ᵏ",
+        "Σ 1/k²"
+      ],
+      "correct": 0,
+      "explain": "Potenzabstand 2 − 1 = 1 → verhält sich wie 1/k → divergent. Die anderen konvergieren."
+    },
+    {
+      "id": "mathe-q017",
+      "topic": "Konvergenzkriterien",
+      "q": "Konvergiert Σ (2k + 1)/(5k − 3)?",
+      "options": [
+        "Nur für große k",
+        "Ja, gegen 2/5",
+        "Nein, die Summanden gehen gegen 2/5 ≠ 0",
+        "Ja, Abstand 1"
+      ],
+      "correct": 2,
+      "explain": "Die Summanden gehen gegen 2/5, nicht gegen 0 → notwendiges Kriterium verletzt → divergent. 2/5 ist der Grenzwert der Glieder, nicht der Reihe."
+    },
+    {
+      "id": "mathe-q018",
+      "topic": "Finanzmathe",
+      "q": "Wie viel sind 1000 € nach 2 Jahren bei 5 % mit Zinseszins?",
+      "options": [
+        "1050,00 €",
+        "1100,00 €",
+        "1102,50 €",
+        "1105,00 €"
+      ],
+      "correct": 2,
+      "explain": "1000 · 1,05² = 1000 · 1,1025 = 1102,50 €. 1100 € wäre ohne Zinseszins."
+    },
+    {
+      "id": "mathe-q019",
+      "topic": "Finanzmathe",
+      "q": "Sparplan: jedes Jahr 100 € (Jahresende), 5 %, 3 Jahre. Endwert?",
+      "options": [
+        "315,25 €",
+        "300,00 €",
+        "331,01 €",
+        "315,00 €"
+      ],
+      "correct": 0,
+      "explain": "100 · (1,05³ − 1)/0,05 = 315,25 €. Probe: 110,25 + 105 + 100."
+    },
+    {
+      "id": "mathe-q020",
+      "topic": "Finanzmathe",
+      "q": "Eine Stiftung zahlt für immer 600 € pro Jahr, Zins 4 %. Barwert?",
+      "options": [
+        "15 000 €",
+        "2 400 €",
+        "24 000 €",
+        "624 €"
+      ],
+      "correct": 0,
+      "explain": "Ewige Rente B = r/i = 600/0,04 = 15 000 €. Probe: 4 % von 15 000 € sind 600 €."
+    },
+    {
+      "id": "mathe-q021",
+      "topic": "Finanzmathe",
+      "q": "Was ist falsch beim Einsetzen von 5 % in die Sparplanformel?",
+      "options": [
+        "q = 1 + i = 1,05",
+        "i = 0,05",
+        "i = 5",
+        "1 + i im Exponenten n"
+      ],
+      "correct": 2,
+      "explain": "Prozent immer als Dezimalzahl: 5 % = 0,05. Mit i = 5 kommt Unsinn heraus."
+    },
+    {
+      "id": "mathe-q022",
+      "topic": "Funktionen",
+      "q": "Größter Definitionsbereich von f(x) = 1/(x⁴ − 2x² + 1)?",
+      "options": [
+        "ℝ",
+        "ℝ \\ {1}",
+        "(1, ∞)",
+        "ℝ \\ {−1, 1}"
+      ],
+      "correct": 3,
+      "explain": "Nenner = (x² − 1)² = 0 bei x = 1 und x = −1. Beide raus."
+    },
+    {
+      "id": "mathe-q023",
+      "topic": "Funktionen",
+      "q": "(f ∘ g)(x) bedeutet …",
+      "options": [
+        "zuerst f, dann g",
+        "f(x) · g(x)",
+        "f(x) + g(x)",
+        "zuerst g, dann f"
+      ],
+      "correct": 3,
+      "explain": "(f ∘ g)(x) = f(g(x)): Die innere Funktion g wird zuerst ausgerechnet."
+    },
+    {
+      "id": "mathe-q024",
+      "topic": "Umkehrfunktion",
+      "q": "Hat f: ℝ → ℝ, f(x) = x² − 4x + 2 eine Umkehrfunktion?",
+      "options": [
+        "Ja, weil f stetig ist",
+        "Nein, f ist nicht injektiv (f(0) = f(4) = 2)",
+        "Ja, f⁻¹(x) = 2 + √(x + 2)",
+        "Ja, f⁻¹ = 1/f"
+      ],
+      "correct": 1,
+      "explain": "Zwei x mit gleichem Wert → nicht injektiv. Erst auf [2, ∞) eingeschränkt ginge es."
+    },
+    {
+      "id": "mathe-q025",
+      "topic": "Grenzwerte von Funktionen",
+      "q": "lim_{x→2} (x² − 4)/(x − 2) = ?",
+      "options": [
+        "existiert nicht (0/0)",
+        "4",
+        "2",
+        "0"
+      ],
+      "correct": 1,
+      "explain": "0/0 heißt umformen: (x − 2)(x + 2)/(x − 2) = x + 2 → 4."
+    },
+    {
+      "id": "mathe-q026",
+      "topic": "Grenzwerte von Funktionen",
+      "q": "lim_{x→∞} (2x² + 3x − 1)/(x² + 5) = ?",
+      "options": [
+        "2",
+        "3",
+        "∞",
+        "−1/5"
+      ],
+      "correct": 0,
+      "explain": "Durch x² teilen: (2 + 3/x − 1/x²)/(1 + 5/x²) → 2."
+    },
+    {
+      "id": "mathe-q027",
+      "topic": "Stetigkeit",
+      "q": "Für welches c ist f stetig? f(x) = (x³ − 2x² − 5x + 6)/(x³ − x) für x ≠ 1, f(1) = c",
+      "options": [
+        "c = −6",
+        "c = 0",
+        "c = −3",
+        "c = 3"
+      ],
+      "correct": 2,
+      "explain": "Kürzen: (x − 3)(x + 2)/(x(x + 1)). Bei x = 1: (−2)·3/(1·2) = −3."
+    },
+    {
+      "id": "mathe-q028",
+      "topic": "ln- und e-Regeln",
+      "q": "√(e^(3 ln 4)) = ?",
+      "options": [
+        "64",
+        "8",
+        "2",
+        "12"
+      ],
+      "correct": 1,
+      "explain": "e^(3 ln 4) = e^(ln 4³) = 64, √64 = 8. 64 ist der Wert ohne Wurzel."
+    }
+  ]
+}
