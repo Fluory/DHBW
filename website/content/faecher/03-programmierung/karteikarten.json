@@ -2,429 +2,534 @@
   "cards": [
     {
       "id": "prog-k001",
-      "topic": "VL1 Grundlagen",
+      "topic": "Einführung",
       "front": "Was ist ein **Algorithmus**? Welche 4 Anforderungen gibt es?",
       "back": "Eine Schrittfolge, die ein Problem systematisch löst, unabhängig von der Sprache.\nAnforderungen: Endlichkeit, Ausführbarkeit, Korrektheit, Effizienz.",
       "exam": true
     },
     {
       "id": "prog-k002",
-      "topic": "VL1 Grundlagen",
+      "topic": "Einführung",
       "front": "**determiniert** vs. **deterministisch**",
       "back": "determiniert: gleiche Eingabe → immer **gleiches Ergebnis**.\ndeterministisch: der **nächste Schritt** ist immer eindeutig (es geht um den Weg).",
       "exam": true
     },
     {
       "id": "prog-k003",
-      "topic": "VL1 Grundlagen",
+      "topic": "Einführung",
       "front": "Stack vs. Queue",
       "back": "Stack = LIFO (last in, first out), z. B. Zurück-Taste im Browser.\nQueue = FIFO (first in, first out), z. B. Druckaufträge.",
       "exam": true
     },
     {
       "id": "prog-k004",
-      "topic": "VL1 Grundlagen",
+      "topic": "Einführung",
       "front": "Interpreter, Compiler, Zwischencode: Wo steht Python?",
       "back": "Interpreter: Zeile für Zeile. Compiler: vorab alles in Maschinencode (C, Rust).\nPython ist eine **Zwischencode-Sprache**: erst Bytecode, dann führt die VM ihn aus.",
       "exam": true
     },
     {
       "id": "prog-k005",
-      "topic": "VL1 Grundlagen",
+      "topic": "Einführung",
       "front": "Wofür sind `uv`, `ruff` und `ty`?",
       "back": "uv: Python/Projekte/Pakete verwalten, starten (`uv run hallo.py`).\nruff: Formatierung und Stil. ty: prüft Datentypen, ohne das Programm auszuführen.",
       "exam": true
     },
     {
       "id": "prog-k006",
-      "topic": "VL2 Datentypen & Operatoren",
+      "topic": "Variablen, Datentypen und Operatoren",
       "front": "`/` vs. `//` vs. `%`",
       "back": "`7 / 2` → 3.5 (immer float)\n`7 // 2` → 3 (abrunden)\n`7 % 2` → 1 (Rest)",
       "exam": true
     },
     {
       "id": "prog-k007",
-      "topic": "VL2 Datentypen & Operatoren",
+      "topic": "Variablen, Datentypen und Operatoren",
       "front": "Was ergibt `-7 // 2`?",
       "back": "**-4**. `//` rundet ab, also zur kleineren Zahl hin (−3.5 → −4). In Java käme −3 heraus.",
       "exam": true
     },
     {
       "id": "prog-k008",
-      "topic": "VL2 Datentypen & Operatoren",
+      "topic": "Variablen, Datentypen und Operatoren",
       "front": "Rangfolge der Operatoren (kurz)",
-      "back": "Klammern → `**` → Punkt (* / // %) → Strich (+ −) → Vergleiche → not → and → or.\nBeispiel: `2 + 3 * 4` → 14.",
+      "back": "Klammern → `**` → Punkt (`*` `/` `//` `%`) → Strich (`+` `-`) → Vergleiche → `not` → `and` → `or`.\nBeispiel: `2 + 3 * 4` → 14.",
       "exam": true
     },
     {
       "id": "prog-k009",
-      "topic": "VL2 Datentypen & Operatoren",
+      "topic": "Variablen, Datentypen und Operatoren",
       "front": "Warum ist `0.1 + 0.2 == 0.3` False?",
       "back": "Floats sind ungenau: `0.1 + 0.2` ergibt 0.30000000000000004. Für Geld nimmt man `Decimal(\"19.99\")`.",
       "exam": true
     },
     {
       "id": "prog-k010",
-      "topic": "VL2 Datentypen & Operatoren",
+      "topic": "Variablen, Datentypen und Operatoren",
       "front": "String-Index und Slicing bei `text = \"Hallo\"`",
       "back": "`text[0]` → H, `text[-1]` → o, `text[1:3]` → al (Stopp-Index nicht dabei).",
       "exam": true
     },
     {
       "id": "prog-k011",
-      "topic": "VL2 Datentypen & Operatoren",
+      "topic": "Variablen, Datentypen und Operatoren",
       "front": "f-String mit 2 Nachkommastellen",
       "back": "`preis = 12.5`\n`f\"Preis: {preis:.2f} €\"` → Preis: 12.50 €",
       "exam": true
     },
     {
       "id": "prog-k012",
-      "topic": "VL2 Datentypen & Operatoren",
+      "topic": "Variablen, Datentypen und Operatoren",
       "front": "Die 4 Fehlerarten",
       "back": "Syntaxfehler (`print(\"Hi\"`), Typfehler (`\"Alter: \" + 36`), Laufzeitfehler (Division durch 0), Logikfehler (`5 + 2 / 2` → 6.0 statt 3.5, keine Meldung).",
       "exam": true
     },
     {
       "id": "prog-k013",
-      "topic": "VL3 if / match / Logik",
+      "topic": "Kontrollstrukturen und Listen",
       "front": "if / elif / else: Wie viele Zweige laufen?",
       "back": "Genau **einer**: der erste Treffer. Danach prüft Python die anderen nicht mehr.\nDarum Bereiche richtig sortieren (z. B. erst `>= 90`, dann `>= 50`).",
       "exam": true
     },
     {
       "id": "prog-k014",
-      "topic": "VL3 if / match / Logik",
+      "topic": "Kontrollstrukturen und Listen",
       "front": "`match` – was ist besonders?",
       "back": "Vergleicht einen Wert mit festen Fällen, erster Treffer gewinnt, kein break nötig.\n`case \"A\" | \"B\":` = mehrere Werte, `case _:` = Standardfall. Bereiche (`< 3`) gehen nicht.",
       "exam": true
     },
     {
       "id": "prog-k015",
-      "topic": "VL3 if / match / Logik",
+      "topic": "Kontrollstrukturen und Listen",
       "front": "Welche Werte gelten in einer Bedingung als falsch?",
       "back": "`False, None, 0, 0.0, \"\", []`.\nAlles andere ist wahr, auch `\"0\"`, `-1` und `[0]`.",
       "exam": true
     },
     {
       "id": "prog-k016",
-      "topic": "VL3 if / match / Logik",
+      "topic": "Kontrollstrukturen und Listen",
       "front": "Kurzschluss bei `and`",
       "back": "Ist die linke Seite False, wird die rechte gar nicht ausgewertet.\n`anzahl > 0 and summe / anzahl > 100` → kein ZeroDivisionError. Absicherung nach vorn!",
       "exam": true
     },
     {
       "id": "prog-k017",
-      "topic": "VL3 Schleifen & range",
+      "topic": "for-Schleifen ganz langsam",
       "front": "Welche Zahlen liefert `range(1, 6)`?",
       "back": "1 2 3 4 5. **Start ist dabei, Stopp nicht.** Für 1 bis n: `range(1, n + 1)`.",
       "exam": true
     },
     {
       "id": "prog-k018",
-      "topic": "VL3 Schleifen & range",
+      "topic": "for-Schleifen ganz langsam",
       "front": "`range(5)`, `range(2, 11, 2)`, `range(5, 0, -1)`",
       "back": "range(5) → 0 1 2 3 4\nrange(2, 11, 2) → 2 4 6 8 10\nrange(5, 0, -1) → 5 4 3 2 1",
       "exam": true
     },
     {
       "id": "prog-k019",
-      "topic": "VL3 Schleifen & range",
+      "topic": "for-Schleifen ganz langsam",
       "front": "Wie liest du eine for-Schleife Runde für Runde? (Beispiel Summe)",
       "back": "`summe = 0`\n`for i in range(1, 4): summe += i`\nRunde 1: i=1, summe=1 · Runde 2: i=2, summe=3 · Runde 3: i=3, summe=6 → **6**.",
       "exam": true
     },
     {
       "id": "prog-k020",
-      "topic": "VL3 Schleifen & range",
+      "topic": "Kontrollstrukturen und Listen",
       "front": "while vs. for",
       "back": "for: über eine Folge, Anzahl bekannt (`for x in liste`).\nwhile: solange die Bedingung wahr ist, Anzahl unbekannt (z. B. bis sich Geld verdoppelt). Zähler ändern, sonst Endlosschleife!",
       "exam": true
     },
     {
       "id": "prog-k021",
-      "topic": "VL3 Schleifen & range",
+      "topic": "Kontrollstrukturen und Listen",
       "front": "break vs. continue",
       "back": "break: Schleife **sofort verlassen**.\ncontinue: nur **diesen Durchlauf** überspringen, weiter mit dem nächsten Wert.",
       "exam": true
     },
     {
       "id": "prog-k022",
-      "topic": "VL3 Listen",
+      "topic": "Kontrollstrukturen und Listen",
       "front": "Wichtige Listen-Befehle bei `noten = [2, 1, 3]`",
       "back": "`noten.append(4)` → [2, 1, 3, 4]\n`len(noten)` → 4, `sum` → 10, `noten[-1]` → 4",
       "exam": true
     },
     {
       "id": "prog-k023",
-      "topic": "VL3 Listen",
+      "topic": "Kontrollstrukturen und Listen",
       "front": "`sorted(liste)` – ändert das die Liste?",
       "back": "Nein. `sorted` liefert eine **sortierte Kopie**, das Original bleibt gleich.",
       "exam": true
     },
     {
       "id": "prog-k024",
-      "topic": "VL3 Listen",
+      "topic": "Kontrollstrukturen und Listen",
       "front": "Die Falle `[[0] * 4] * 3`",
       "back": "`* 3` kopiert nur die **Verweise**: 3 Pfeile auf EINE Zeile.\n`m[0][0] = 9` → [[9,0,0,0], [9,0,0,0], [9,0,0,0]]. Richtig: jede Zeile in einer Schleife mit append neu bauen.",
       "exam": true
     },
     {
       "id": "prog-k025",
-      "topic": "VL3 Listen",
+      "topic": "Kontrollstrukturen und Listen",
       "front": "`b = a` bei Listen",
       "back": "Kopiert nichts! Zwei Namen, eine Liste. `b.append(4)` ändert auch `a`.",
       "exam": true
     },
     {
       "id": "prog-k026",
-      "topic": "VL4 Funktionen",
+      "topic": "Funktionen und Rekursion",
       "front": "**Parameter** vs. **Argument**",
       "back": "Parameter: Platzhalter in der Definition (`def f(name)`).\nArgument: konkreter Wert beim Aufruf (`f(\"Bob\")`).",
       "exam": true
     },
     {
       "id": "prog-k027",
-      "topic": "VL4 Funktionen",
+      "topic": "Funktionen und Rekursion",
       "front": "`print` vs. `return`",
       "back": "return gibt den Wert an den Aufrufer zurück. print zeigt ihn nur an.\nEine Funktion ohne return liefert **None**.",
       "exam": true
     },
     {
       "id": "prog-k028",
-      "topic": "VL4 Funktionen",
+      "topic": "Funktionen und Rekursion",
       "front": "break vs. return",
       "back": "break verlässt nur die Schleife, der Rest der Funktion läuft weiter.\nreturn beendet die **ganze Funktion** sofort.",
       "exam": true
     },
     {
       "id": "prog-k029",
-      "topic": "VL4 Funktionen",
+      "topic": "Funktionen und Rekursion",
       "front": "LEGB-Regel",
       "back": "Python sucht Namen von innen nach außen: Local → Enclosing → Global → Built-in. Erster Treffer gewinnt.",
       "exam": true
     },
     {
       "id": "prog-k030",
-      "topic": "VL4 Funktionen",
+      "topic": "Funktionen und Rekursion",
       "front": "Warum gibt `zaehler += 1` in einer Funktion einen Fehler?",
       "back": "Eine Zuweisung macht `zaehler` lokal. Dann wird gelesen, bevor ein Wert da ist → **UnboundLocalError**. Besser: als Parameter übergeben und mit return zurückgeben.",
       "exam": true
     },
     {
       "id": "prog-k031",
-      "topic": "VL4 Funktionen",
+      "topic": "Funktionen und Rekursion",
       "front": "Liste in einer Funktion ändern: sieht der Aufrufer das?",
       "back": "`liste[0] = 99` oder `append`: **ja** (gleiches Objekt).\n`liste = [7, 7]`: nein, nur lokale Neubindung.",
       "exam": true
     },
     {
       "id": "prog-k032",
-      "topic": "VL4 Funktionen",
+      "topic": "Funktionen und Rekursion",
       "front": "Falle: Liste als Standardwert `def f(x, liste=[])`",
       "back": "Die Liste wird einmal erzeugt und von allen Aufrufen geteilt: f(1) → [1], f(2) → [1, 2].\nRichtig: `liste=None` und im Rumpf neu anlegen.",
       "exam": true
     },
     {
       "id": "prog-k033",
-      "topic": "VL4 Funktionen",
+      "topic": "Funktionen und Rekursion",
       "front": "Gibt es Überladung in Python?",
       "back": "Nein. Ein zweites `def` mit gleichem Namen überschreibt das erste. Stattdessen Standardwerte (`satz=0.19`) oder `*args`.",
       "exam": true
     },
     {
       "id": "prog-k034",
-      "topic": "VL4 Funktionen",
+      "topic": "Funktionen und Rekursion",
       "front": "Imperativ vs. applikativ",
       "back": "Imperativ: „Wie mache ich es?“ – Anweisungen, Variablen ändern sich, Schleifen.\nApplikativ: „Was ist das Ergebnis?“ – Funktionen anwenden, Rekursion, keine Nebenwirkungen.",
       "exam": true
     },
     {
       "id": "prog-k035",
-      "topic": "VL4 Rekursion",
+      "topic": "Funktionen und Rekursion",
       "front": "Die 2 Pflichtteile einer Rekursion",
       "back": "1. Abbruchbedingung (Basisfall), z. B. `if n == 0: return 1`.\n2. Rekursiver Aufruf mit kleinerem Argument: `n * fakultaet(n - 1)`.",
       "exam": true
     },
     {
       "id": "prog-k036",
-      "topic": "VL4 Rekursion",
+      "topic": "Funktionen und Rekursion",
       "front": "Aufrufstapel bei `fakultaet(3)`",
       "back": "Abstieg: 3·f(2) → 2·f(1) → 1·f(0) → Basisfall 1.\nAufstieg: 1·1 = 1, 2·1 = 2, 3·2 = **6**.",
       "exam": true
     },
     {
       "id": "prog-k037",
-      "topic": "VL4 Rekursion",
+      "topic": "Funktionen und Rekursion",
       "front": "Was passiert bei `fakultaet(-1)` mit `if n == 0`?",
       "back": "n wird −1, −2, … und erreicht nie 0 → **RecursionError** (ca. 1000 Rahmen). Robuster: `if n <= 0`.",
       "exam": true
     },
     {
       "id": "prog-k038",
-      "topic": "VL5 Klassen & Objekte",
+      "topic": "Klassen und Objekte",
       "front": "Klasse vs. Objekt",
       "back": "Klasse = Bauplan (`class Konto:`).\nObjekt/Instanz = konkretes Exemplar (`anna = Konto(\"Anna\", 100)`).",
       "exam": true
     },
     {
       "id": "prog-k039",
-      "topic": "VL5 Klassen & Objekte",
+      "topic": "Klassen und Objekte",
       "front": "Was macht `__init__` und was ist `self`?",
-      "back": "__init__ = Konstruktor, läuft automatisch beim Erzeugen und setzt die Attribute (`self.kontostand = kontostand`).\nself = das Objekt selbst (Java: this).",
+      "back": "`__init__` ist der Konstruktor: Er läuft automatisch beim Erzeugen und setzt die Attribute, z. B. `self.kontostand = kontostand`.\n`self` ist das Objekt selbst (Java: `this`).",
       "exam": true
     },
     {
       "id": "prog-k040",
-      "topic": "VL5 Klassen & Objekte",
+      "topic": "Klassen und Objekte",
       "front": "Warum hat `einzahlen(self, betrag)` zwei Parameter, aber `anna.einzahlen(50)` nur ein Argument?",
       "back": "Python macht daraus `Konto.einzahlen(anna, 50)`. Das Objekt vor dem Punkt wird zu self.",
       "exam": true
     },
     {
       "id": "prog-k041",
-      "topic": "VL5 Klassen & Objekte",
+      "topic": "Klassen und Objekte",
       "front": "`__str__` vs. `__repr__`",
-      "back": "__str__: lesbarer Text für Menschen, nutzt `print(obj)`.\n__repr__: für Entwickler, sieht aus wie der Aufruf, z. B. `Konto('Anna', 100)`; nutzt die Liste.",
+      "back": "`__str__`: Text für Menschen, den `print(anna)` zeigt → Konto von Anna: 100 Euro.\n`__repr__`: Text für Entwickler, sieht aus wie der Aufruf → `Konto('Anna', 100)`; ihn zeigen Konsole und `print([anna])`.",
       "exam": true
     },
     {
       "id": "prog-k042",
-      "topic": "VL5 Klassen & Objekte",
+      "topic": "Klassen und Objekte",
       "front": "`konto2 = konto1` – wie viele Konten?",
       "back": "**Eins.** Nur ein zweites Namensschild. `konto1 is konto2` → True.",
       "exam": true
     },
     {
       "id": "prog-k043",
-      "topic": "VL5 Klassen & Objekte",
+      "topic": "Klassen und Objekte",
       "front": "Klassenattribut-Falle: `ben.anzahl_konten += 1`",
       "back": "Legt ein neues **Instanzattribut** nur bei ben an. Der Zähler in der Klasse bleibt gleich. Immer über den Klassennamen ändern: `Konto.anzahl_konten += 1`.",
       "exam": true
     },
     {
       "id": "prog-k044",
-      "topic": "VL5 Kapselung & @dataclass",
+      "topic": "Klassen und Objekte",
       "front": "Was ist eine **Property**?",
       "back": "Eine Methode, die man wie ein Attribut benutzt, ohne Klammern: `lena.jahresgehalt` → 50400 bei 4200 im Monat.\nOhne Setter nur lesbar: Zuweisung → AttributeError.",
       "exam": true
     },
     {
       "id": "prog-k045",
-      "topic": "VL5 Kapselung & @dataclass",
+      "topic": "Klassen und Objekte",
       "front": "`_kontostand` – ist das geschützt?",
       "back": "Nein, nur eine **Konvention** („intern“). Python prüft nichts. `__x` wird zu `_Klasse__x` (Name Mangling), schützt aber auch nicht.",
       "exam": true
     },
     {
       "id": "prog-k046",
-      "topic": "VL5 Kapselung & @dataclass",
+      "topic": "Klassen und Objekte",
       "front": "Was erzeugt `@dataclass`?",
       "back": "`__init__`, `__repr__` und `__eq__`. Dann vergleicht `==` die **Werte**. Ohne: == vergleicht nur, ob es dasselbe Objekt ist.",
       "exam": true
     },
     {
       "id": "prog-k047",
-      "topic": "VL5 Kapselung & @dataclass",
+      "topic": "Klassen und Objekte",
       "front": "Hat-ein vs. Ist-ein",
       "back": "Hat-ein (Komposition): Objekt als Attribut, z. B. Konto hat Kunde.\nIst-ein (Vererbung): Sparkonto ist ein Konto → `class Sparkonto(Konto)`.",
       "exam": true
     },
     {
       "id": "prog-k048",
-      "topic": "VL5 Kapselung & @dataclass",
+      "topic": "Klassen und Objekte",
       "front": "Die 4 OOP-Prinzipien",
       "back": "Kapselung, Vererbung, Polymorphismus, Abstraktion.",
       "exam": true
     },
     {
       "id": "prog-k049",
-      "topic": "VL6 Vererbung & super()",
+      "topic": "Vererbung und Polymorphie",
       "front": "Wozu `super().__init__(...)`?",
-      "back": "Legt den Teil der Oberklasse an (z. B. name, kontostand). Python ruft ihn **nicht** von selbst auf. Vergessen → später AttributeError, ty meldet nichts.",
+      "back": "Legt den Teil der Oberklasse an (z. B. `name`, `kontostand`). Python ruft ihn **nicht** von selbst auf.\nVergessen → erst beim Zugriff `tom.name` ein AttributeError.",
       "exam": true
     },
     {
       "id": "prog-k050",
-      "topic": "VL6 Vererbung & super()",
+      "topic": "Vererbung und Polymorphie",
       "front": "Was ist **Überschreiben**?",
       "back": "Die Unterklasse schreibt eine Methode mit gleichem Namen und gleichen Parametern neu. Mit `super().methode()` kann sie die alte Version mitbenutzen.",
       "exam": true
     },
     {
       "id": "prog-k051",
-      "topic": "VL6 Vererbung & super()",
+      "topic": "Vererbung und Polymorphie",
       "front": "Überladen vs. Überschreiben",
       "back": "Überladen (gleiche Klasse, andere Parameter): gibt es in Python **nicht**.\nÜberschreiben (Unterklasse, gleiche Parameter): gibt es.",
       "exam": true
     },
     {
       "id": "prog-k052",
-      "topic": "VL6 Vererbung & super()",
+      "topic": "Vererbung und Polymorphie",
       "front": "Methodensuche (MRO)",
       "back": "Erst in der Klasse des Objekts, dann in der Oberklasse, zuletzt in `object`. `Manager.__mro__` → Manager, Mitarbeiter, object.",
       "exam": true
     },
     {
       "id": "prog-k053",
-      "topic": "VL6 Vererbung & super()",
+      "topic": "Vererbung und Polymorphie",
       "front": "`isinstance` vs. `type(x) is`",
       "back": "Bei `anna = Sparkonto(...)`:\n`isinstance(anna, Konto)` → True (zählt Oberklassen mit)\n`type(anna) is Konto` → False (nur genaue Klasse)",
       "exam": true
     },
     {
       "id": "prog-k054",
-      "topic": "VL6 Polymorphie & Abstraktion",
+      "topic": "Vererbung und Polymorphie",
       "front": "Was ist **Polymorphie**?",
-      "back": "Dieselbe Zeile Code macht je nach Objekt etwas anderes: `zahlungsart.bezahlen(betrag)` bucht bei Kreditkarte ab, bei Rechnungskauf schreibt es eine Rechnung.",
+      "back": "Derselbe Aufruf, verschiedenes Verhalten – je nach Klasse des Objekts.\nBeispiel: `zahlung.bezahlen(betrag)` bucht bei `Kreditkarte` ab und schreibt bei `Rechnungskauf` eine Rechnung.",
       "exam": true
     },
     {
       "id": "prog-k055",
-      "topic": "VL6 Polymorphie & Abstraktion",
+      "topic": "Vererbung und Polymorphie",
       "front": "Was ist **Duck Typing**?",
-      "back": "Python prüft beim Ausführen nur, ob die Methode da ist, nicht die Klasse. ty meldet trotzdem `invalid-argument-type`, wenn die Typangabe nicht passt.",
+      "back": "Python prüft beim Ausführen nur, ob das Objekt die Methode hat, nicht seine Klasse („quakt es wie eine Ente?“).\nBeispiel: Jedes Objekt mit `bezahlen()` funktioniert in `zahlung.bezahlen(betrag)`. ty meldet trotzdem `invalid-argument-type`, wenn es nicht zur Typangabe passt.",
       "exam": true
     },
     {
       "id": "prog-k056",
-      "topic": "VL6 Polymorphie & Abstraktion",
+      "topic": "Vererbung und Polymorphie",
       "front": "Abstrakte Klasse: wie und wozu?",
-      "back": "`class Zahlungsart(ABC)` + `@abstractmethod`. Legt Pflichtmethoden fest. Objekt erzeugen → **TypeError** schon beim Erzeugen.",
+      "back": "`class Zahlungsart(ABC)` mit `@abstractmethod def bezahlen(...)` legt eine Pflichtmethode für alle Unterklassen fest.\n`Zahlungsart()` gibt sofort einen **TypeError**; erzeugen kann man nur Unterklassen, die `bezahlen` umsetzen.",
       "exam": true
     },
     {
       "id": "prog-k057",
-      "topic": "VL6 Polymorphie & Abstraktion",
+      "topic": "Vererbung und Polymorphie",
       "front": "Abstrakte Klasse vs. Fähigkeit (Interface)",
-      "back": "Abstrakte Klasse: „ist ein“, darf Attribute und __init__ haben, eine pro Klasse.\nFähigkeit: „kann …“, nur abstrakte Methoden, beliebig viele: `class Rechnung(Dokument, Druckbar, Versendbar)`.",
+      "back": "Abstrakte Klasse = Kategorie („ist ein“): darf Attribute und `__init__` haben, nur eine pro Klasse.\nFähigkeit = „kann …“: nur abstrakte Methoden, beliebig viele: `class Rechnung(Dokument, Druckbar, Versendbar)`.",
       "exam": true
     },
     {
       "id": "prog-k058",
-      "topic": "VL7 Kaffeeshop",
+      "topic": "Projekt Kaffeeshop",
       "front": "Kaffeeshop Stufe 1: Welche Klassen und Beziehungen?",
       "back": "Lager *hat viele* Produkte, Warenkorb *hat einen* Kunden und *viele* Positionen, Position *hat ein* Produkt + Menge. Nur Hat-ein, keine Vererbung.",
       "exam": true
     },
     {
       "id": "prog-k059",
-      "topic": "Fehlermeldungen",
+      "topic": "Variablen, Datentypen und Operatoren",
       "front": "IndexError, NameError, TypeError – typische Auslöser",
       "back": "IndexError: `noten[5]` bei 5 Elementen.\nNameError: Name nie zugewiesen oder Tippfehler.\nTypeError: `\"Alter: \" + 36`, Argument fehlt.",
       "exam": true
     },
     {
       "id": "prog-k060",
-      "topic": "Fehlermeldungen",
+      "topic": "Variablen, Datentypen und Operatoren",
       "front": "Welche Fehler laufen **ohne** Meldung durch?",
       "back": "Logikfehler, z. B. `5 + 2 / 2`, falscher Startwert, Tippfehler bei einer Attributzuweisung (`anna.kontostnad = 500` legt still ein neues Attribut an).",
+      "exam": true
+    },
+    {
+      "id": "prog-k061",
+      "topic": "for-Schleifen ganz langsam",
+      "front": "Wo steht `summe = 0` beim Aufsummieren – und warum?",
+      "back": "**Vor** der Schleife, sonst wird die Summe jede Runde wieder 0.\n`for x in [1, 2, 3]:` mit `summe = 0` in der Schleife ergibt 3 statt 6.",
+      "exam": true
+    },
+    {
+      "id": "prog-k062",
+      "topic": "for-Schleifen ganz langsam",
+      "front": "Zählen statt summieren: Wie zählst du die Noten ≥ 4 in `[2, 5, 4]`?",
+      "back": "`anzahl = 0` vor der Schleife, `anzahl += 1` nur im `if`.\nRunde 1: 2 → nein (0) · Runde 2: 5 → ja (1) · Runde 3: 4 → ja (**2**).",
+      "exam": true
+    },
+    {
+      "id": "prog-k063",
+      "topic": "for-Schleifen ganz langsam",
+      "front": "Wie legst du eine Rundentabelle an?",
+      "back": "Eine Spalte pro Variable, eine Zeile pro Runde, Startwerte in die erste Zeile.\nBeispiel `for i in range(2, 9, 3): print(i * i)`: i = 2, 5, 8 → Ausgabe 4, 25, 64.",
+      "exam": true
+    },
+    {
+      "id": "prog-k064",
+      "topic": "Vererbung und Polymorphie",
+      "front": "Was erbt jede Klasse von `object`?",
+      "back": "Die Standardfassungen von `__str__`, `__repr__` und `__eq__`.\nWer in `Konto` ein eigenes `__str__` schreibt, überschreibt also eine Methode von `object`.",
+      "exam": true
+    },
+    {
+      "id": "prog-k065",
+      "topic": "Vererbung und Polymorphie",
+      "front": "Wozu `type(self).__name__` in `__repr__`?",
+      "back": "Es liefert den Namen der **echten** Klasse, damit die Ausgabe auch für Unterklassen stimmt.\nGeerbtes `__repr__` bei einem Sparkonto → `Sparkonto(inhaber='Anna')` statt `Konto(…)`.",
+      "exam": true
+    },
+    {
+      "id": "prog-k066",
+      "topic": "Vererbung und Polymorphie",
+      "front": "Eine Unterklasse setzt die abstrakte Methode nicht um. Was passiert?",
+      "back": "Sie bleibt selbst abstrakt: Schon **beim Erzeugen** kommt ein TypeError, nicht erst beim Aufruf.\n`class PayPal(Zahlungsart): pass` → `PayPal()` scheitert.",
+      "exam": true
+    },
+    {
+      "id": "prog-k067",
+      "topic": "Vererbung und Polymorphie",
+      "front": "Wie prüfst du, ob ein Objekt eine Fähigkeit hat?",
+      "back": "Mit `isinstance(objekt, Faehigkeit)` und nur dann die Methode aufrufen.\n`isinstance(lieferschein, Versendbar)` → False, also kein `versenden()` (sonst AttributeError).",
+      "exam": true
+    },
+    {
+      "id": "prog-k068",
+      "topic": "Vererbung und Polymorphie",
+      "front": "Wozu `@override` (aus `typing`)?",
+      "back": "Markiert: „Diese Methode ersetzt eine der Oberklasse.“ Python ignoriert es, ty prüft es.\nTippfehler `def abhebn(…)` mit `@override` → ty meldet ihn, statt still eine neue Methode anzulegen.",
+      "exam": true
+    },
+    {
+      "id": "prog-k069",
+      "topic": "Vererbung und Polymorphie",
+      "front": "Polymorphie: Was entscheidet die Typangabe, was das Objekt?",
+      "back": "Die Typangabe (`zahlung: Zahlungsart`) legt fest, was ty erlaubt.\nDas Objekt entscheidet beim Ausführen, welches `bezahlen()` läuft (Kreditkarte, Rechnungskauf …).",
+      "exam": true
+    },
+    {
+      "id": "prog-k070",
+      "topic": "Projekt Kaffeeshop",
+      "front": "`lager.finden(nummer)`: Wo steht `return None`?",
+      "back": "**Nach** der Schleife, eine Stufe weniger eingerückt als `for`.\nEin `else: return None` unter dem `if` beendet die Suche schon beim ersten falschen Produkt.",
+      "exam": true
+    },
+    {
+      "id": "prog-k071",
+      "topic": "Projekt Kaffeeshop",
+      "front": "`finden()` vs. `suchen()` im Lager",
+      "back": "finden: **ein** Produkt oder `None`, beim ersten Treffer sofort `return`.\nsuchen: **Liste** aller Treffer (leere Liste, `append`, `return` nach der Schleife); kein Treffer → `[]`.",
+      "exam": true
+    },
+    {
+      "id": "prog-k072",
+      "topic": "Projekt Kaffeeshop",
+      "front": "Welche Prüfung macht `warenkorb.hinzufuegen(produkt, menge)`?",
+      "back": "`schon_im_korb + menge > produkt.bestand` → `return False`, sonst Position anlegen oder erhöhen.\nBeispiel: 3 French Press auf Lager, 3 im Korb, noch 1 dazu → 3 + 1 > 3 → False.",
+      "exam": true
+    },
+    {
+      "id": "prog-k073",
+      "topic": "Projekt Kaffeeshop",
+      "front": "Nach dem Bestellen: Warum `korb.positionen = []` statt `korb.positionen.clear()`?",
+      "back": "Die Bestellung zeigt auf **dieselbe** Liste wie der Korb.\n`clear()` leert deshalb auch die Bestellung; `= []` gibt nur dem Korb eine neue, leere Liste.",
+      "exam": true
+    },
+    {
+      "id": "prog-k074",
+      "topic": "Projekt Kaffeeshop",
+      "front": "Stufe 2: Wie hängt der Bruttopreis von der Produktart ab?",
+      "back": "`Produkt` ist abstrakt mit `mwst_satz()`: Lebensmittel → 0.07, Zubehoer → 0.19. `bruttopreis` steht nur einmal in `Produkt` (Polymorphie).\nKaffee: 12.99 · 1,07 → 13.90 Euro.",
+      "exam": true
+    },
+    {
+      "id": "prog-k075",
+      "topic": "Projekt Kaffeeshop",
+      "front": "Wo wird der Warenkorb in `main()` angelegt?",
+      "back": "Einmal **vor** der `while True`-Schleife.\nStünde `korb = Warenkorb(kunde)` in der Schleife, wäre der Korb nach jeder Menüwahl wieder leer (wie `summe = 0` in der Schleife).",
       "exam": true
     }
   ],
   "quiz": [
     {
       "id": "prog-q001",
-      "topic": "VL2 Datentypen & Operatoren",
+      "topic": "Variablen, Datentypen und Operatoren",
       "q": "Was gibt dieser Code aus?",
       "code": "print(7 / 2, 7 // 2, 7 % 2)",
       "options": [
@@ -438,7 +543,7 @@
     },
     {
       "id": "prog-q002",
-      "topic": "VL2 Datentypen & Operatoren",
+      "topic": "Variablen, Datentypen und Operatoren",
       "q": "Was gibt dieser Code aus?",
       "code": "text = \"Hallo\"\nprint(text[1:3], text[-1])",
       "options": [
@@ -452,7 +557,7 @@
     },
     {
       "id": "prog-q003",
-      "topic": "VL3 if / match / Logik",
+      "topic": "Kontrollstrukturen und Listen",
       "q": "Was gibt dieser Code aus?",
       "code": "temperatur = 25\nif temperatur < 0:\n    print(\"Gefriert!\")\nelif temperatur < 20:\n    print(\"Kühl.\")\nelif temperatur < 30:\n    print(\"Angenehm.\")\nelse:\n    print(\"Heiß!\")",
       "options": [
@@ -466,7 +571,7 @@
     },
     {
       "id": "prog-q004",
-      "topic": "VL3 if / match / Logik",
+      "topic": "Kontrollstrukturen und Listen",
       "q": "Was gibt dieser Code aus?",
       "code": "print(bool(\"0\"), bool(-1), bool(\"\"))",
       "options": [
@@ -480,7 +585,7 @@
     },
     {
       "id": "prog-q005",
-      "topic": "VL3 Schleifen & range",
+      "topic": "for-Schleifen ganz langsam",
       "q": "Was gibt dieser Code aus?",
       "code": "for i in range(1, 5):\n    print(i, end=\" \")",
       "options": [
@@ -494,7 +599,7 @@
     },
     {
       "id": "prog-q006",
-      "topic": "VL3 Schleifen & range",
+      "topic": "for-Schleifen ganz langsam",
       "q": "Was gibt dieser Code aus?",
       "code": "summe = 0\nfor i in range(1, 4):\n    summe += i\nprint(summe)",
       "options": [
@@ -508,7 +613,7 @@
     },
     {
       "id": "prog-q007",
-      "topic": "VL3 Schleifen & range",
+      "topic": "for-Schleifen ganz langsam",
       "q": "Was gibt dieser Code aus?",
       "code": "x = 0\nfor i in range(10, 0, -3):\n    x += i\nprint(i, x)",
       "options": [
@@ -522,7 +627,7 @@
     },
     {
       "id": "prog-q008",
-      "topic": "VL3 Schleifen & range",
+      "topic": "Kontrollstrukturen und Listen",
       "q": "Was gibt dieser Code aus?",
       "code": "for i in range(1, 6):\n    if i == 3:\n        continue\n    print(i, end=\" \")",
       "options": [
@@ -536,7 +641,7 @@
     },
     {
       "id": "prog-q009",
-      "topic": "VL3 Schleifen & range",
+      "topic": "Kontrollstrukturen und Listen",
       "q": "Was gibt dieser Code aus?",
       "code": "for i in range(1, 11):\n    if i == 5:\n        break\n    print(i, end=\" \")",
       "options": [
@@ -550,7 +655,7 @@
     },
     {
       "id": "prog-q010",
-      "topic": "VL3 Schleifen & range",
+      "topic": "for-Schleifen ganz langsam",
       "q": "Was gibt dieser Code aus?",
       "code": "zaehler = 0\nfor i in range(3):\n    for j in range(2):\n        zaehler += 1\nprint(zaehler)",
       "options": [
@@ -564,7 +669,7 @@
     },
     {
       "id": "prog-q011",
-      "topic": "VL3 Schleifen & range",
+      "topic": "for-Schleifen ganz langsam",
       "q": "Was gibt dieser Code aus?",
       "code": "a, b = 0, 1\nfor _ in range(6):\n    print(a, end=\" \")\n    a, b = b, a + b",
       "options": [
@@ -578,7 +683,7 @@
     },
     {
       "id": "prog-q012",
-      "topic": "VL3 Listen",
+      "topic": "Kontrollstrukturen und Listen",
       "q": "Was gibt dieser Code aus?",
       "code": "falsch = [[0] * 4] * 3\nfalsch[0][0] = 9\nprint(falsch[2][0])",
       "options": [
@@ -592,7 +697,7 @@
     },
     {
       "id": "prog-q013",
-      "topic": "VL3 Listen",
+      "topic": "Kontrollstrukturen und Listen",
       "q": "Was gibt dieser Code aus?",
       "code": "a = [1, 2, 3]\nb = a\nb.append(4)\nprint(a)",
       "options": [
@@ -606,7 +711,7 @@
     },
     {
       "id": "prog-q014",
-      "topic": "VL3 Listen",
+      "topic": "Kontrollstrukturen und Listen",
       "q": "Was gibt dieser Code aus?",
       "code": "zahlen = [3, 1, 2]\ns = sorted(zahlen)\nprint(zahlen, s)",
       "options": [
@@ -620,7 +725,7 @@
     },
     {
       "id": "prog-q015",
-      "topic": "VL4 Funktionen",
+      "topic": "Funktionen und Rekursion",
       "q": "Was gibt dieser Code aus?",
       "code": "def verdopple(x: int) -> None:\n    print(x * 2)\n\nergebnis = verdopple(3)\nprint(ergebnis)",
       "options": [
@@ -634,7 +739,7 @@
     },
     {
       "id": "prog-q016",
-      "topic": "VL4 Funktionen",
+      "topic": "Funktionen und Rekursion",
       "q": "Was gibt dieser Code aus?",
       "code": "def vorzeichen(x: int) -> str | None:\n    if x > 0:\n        return \"positiv\"\n\nprint(vorzeichen(5), vorzeichen(-3))",
       "options": [
@@ -648,7 +753,7 @@
     },
     {
       "id": "prog-q017",
-      "topic": "VL4 Funktionen",
+      "topic": "Funktionen und Rekursion",
       "q": "Was gibt dieser Code aus?",
       "code": "def aendere_zahl(wert: int) -> None:\n    wert = wert + 1\n\ndef aendere_liste(liste: list[int]) -> None:\n    liste[0] = 99\n    liste = [7, 7, 7]\n\nzahl = 5\nzahlen = [1, 2, 3]\naendere_zahl(zahl)\naendere_liste(zahlen)\nprint(zahl, zahlen)",
       "options": [
@@ -662,7 +767,7 @@
     },
     {
       "id": "prog-q018",
-      "topic": "VL4 Funktionen",
+      "topic": "Funktionen und Rekursion",
       "q": "Was gibt dieser Code aus?",
       "code": "def falsch(wert: int, liste: list[int] = []) -> list[int]:\n    liste.append(wert)\n    return liste\n\nprint(falsch(1))\nprint(falsch(2))",
       "options": [
@@ -676,7 +781,7 @@
     },
     {
       "id": "prog-q019",
-      "topic": "VL4 Funktionen",
+      "topic": "Funktionen und Rekursion",
       "q": "Was gibt dieser Code aus?",
       "code": "def mit_return() -> None:\n    for i in range(1, 11):\n        if i == 5:\n            return\n        print(i, end=\" \")\n    print(\"Ende\")\n\nmit_return()",
       "options": [
@@ -690,7 +795,7 @@
     },
     {
       "id": "prog-q020",
-      "topic": "VL4 Rekursion",
+      "topic": "Funktionen und Rekursion",
       "q": "Was gibt dieser Code aus?",
       "code": "def fakultaet(n: int) -> int:\n    if n == 0:\n        return 1\n    return n * fakultaet(n - 1)\n\nprint(fakultaet(4))",
       "options": [
@@ -704,7 +809,7 @@
     },
     {
       "id": "prog-q021",
-      "topic": "VL5 Klassen & Objekte",
+      "topic": "Klassen und Objekte",
       "q": "Was gibt dieser Code aus?",
       "code": "class Konto:\n    def __init__(self, inhaber: str, kontostand: int = 0) -> None:\n        self.inhaber = inhaber\n        self.kontostand = kontostand\n\n    def einzahlen(self, betrag: int) -> None:\n        self.kontostand += betrag\n\nkonto1 = Konto(\"Anna\", 100)\nkonto2 = konto1\nkonto2.einzahlen(50)\nprint(konto1.kontostand, konto1 is konto2)",
       "options": [
@@ -718,7 +823,7 @@
     },
     {
       "id": "prog-q022",
-      "topic": "VL5 Klassen & Objekte",
+      "topic": "Klassen und Objekte",
       "q": "Was gibt dieser Code aus?",
       "code": "class Konto:\n    anzahl_konten = 0\n\n    def __init__(self, inhaber: str) -> None:\n        Konto.anzahl_konten += 1\n        self.inhaber = inhaber\n\nanna = Konto(\"Anna\")\nben = Konto(\"Ben\")\nben.anzahl_konten += 1\nprint(ben.anzahl_konten, Konto.anzahl_konten, anna.anzahl_konten)",
       "options": [
@@ -728,11 +833,11 @@
         "3 3 3"
       ],
       "correct": 0,
-      "explain": "ben.anzahl_konten += 1 legt ein neues Instanzattribut nur bei ben an (3). Die Klasse und anna bleiben bei 2."
+      "explain": "`ben.anzahl_konten += 1` legt ein neues Instanzattribut nur bei ben an (3). Die Klasse und anna bleiben bei 2."
     },
     {
       "id": "prog-q023",
-      "topic": "VL5 Kapselung & @dataclass",
+      "topic": "Klassen und Objekte",
       "q": "Was gibt dieser Code aus?",
       "code": "from dataclasses import dataclass\n\n@dataclass\nclass KundeD:\n    name: str\n\nclass KundeN:\n    def __init__(self, name: str) -> None:\n        self.name = name\n\nprint(KundeD(\"Anna\") == KundeD(\"Anna\"), KundeN(\"Anna\") == KundeN(\"Anna\"))",
       "options": [
@@ -742,11 +847,11 @@
         "False False"
       ],
       "correct": 0,
-      "explain": "@dataclass erzeugt __eq__ → Werte werden verglichen (True). Die normale Klasse vergleicht nur die Identität (False)."
+      "explain": "`@dataclass` erzeugt `__eq__` → Werte werden verglichen (True). Die normale Klasse vergleicht nur die Identität (False)."
     },
     {
       "id": "prog-q024",
-      "topic": "VL5 Kapselung & @dataclass",
+      "topic": "Klassen und Objekte",
       "q": "Was gibt dieser Code aus?",
       "code": "class Mitarbeiter:\n    def __init__(self, name: str, monatsgehalt: int) -> None:\n        self.name = name\n        self.monatsgehalt = monatsgehalt\n\n    @property\n    def jahresgehalt(self) -> int:\n        return self.monatsgehalt * 12\n\nlena = Mitarbeiter(\"Lena\", 4200)\nprint(lena.jahresgehalt)\nlena.monatsgehalt = 4500\nprint(lena.jahresgehalt)",
       "options": [
@@ -760,7 +865,7 @@
     },
     {
       "id": "prog-q025",
-      "topic": "VL6 Vererbung & super()",
+      "topic": "Vererbung und Polymorphie",
       "q": "Was gibt dieser Code aus?",
       "code": "class Konto:\n    pass\n\nclass Sparkonto(Konto):\n    pass\n\nanna = Sparkonto()\nprint(isinstance(anna, Konto), type(anna) is Konto)",
       "options": [
@@ -774,7 +879,7 @@
     },
     {
       "id": "prog-q026",
-      "topic": "VL6 Vererbung & super()",
+      "topic": "Vererbung und Polymorphie",
       "q": "Was gibt dieser Code aus?",
       "code": "class Mitarbeiter:\n    def __init__(self, name: str) -> None:\n        self.name = name\n\nclass Manager(Mitarbeiter):\n    def __init__(self, name: str, team: int) -> None:\n        self.team = team\n\ntom = Manager(\"Tom\", 6)\nprint(tom.name)",
       "options": [
@@ -784,11 +889,11 @@
         "TypeError"
       ],
       "correct": 0,
-      "explain": "Ohne super().__init__(...) wird self.name nie angelegt. Der Fehler kommt erst beim Zugriff."
+      "explain": "Ohne `super().__init__(...)` wird `self.name` nie angelegt. Der Fehler kommt erst beim Zugriff."
     },
     {
       "id": "prog-q027",
-      "topic": "VL6 Polymorphie & Abstraktion",
+      "topic": "Vererbung und Polymorphie",
       "q": "Was gibt dieser Code aus?",
       "code": "class Mitarbeiter:\n    def __init__(self, name: str) -> None:\n        self.name = name\n\n    def arbeiten(self) -> str:\n        return f\"{self.name} arbeitet.\"\n\nclass Entwickler(Mitarbeiter):\n    def arbeiten(self) -> str:\n        return f\"{self.name} schreibt Code.\"\n\nclass Manager(Mitarbeiter):\n    pass\n\nfor person in [Mitarbeiter(\"Sara\"), Entwickler(\"Lena\"), Manager(\"Tom\")]:\n    print(person.arbeiten())",
       "options": [
@@ -802,7 +907,7 @@
     },
     {
       "id": "prog-q028",
-      "topic": "VL6 Polymorphie & Abstraktion",
+      "topic": "Vererbung und Polymorphie",
       "q": "Was gibt dieser Code aus?",
       "code": "class Mitarbeiter:\n    def __init__(self, gehalt: int) -> None:\n        self.gehalt = gehalt\n\n    def monatskosten(self) -> int:\n        return self.gehalt\n\nclass Manager(Mitarbeiter):\n    def __init__(self, gehalt: int, team: int) -> None:\n        super().__init__(gehalt)\n        self.team = team\n\n    def monatskosten(self) -> int:\n        return super().monatskosten() + 150 * self.team\n\nsumme = 0\nfor person in [Mitarbeiter(3600), Mitarbeiter(4200), Manager(5800, 2)]:\n    summe += person.monatskosten()\nprint(summe)",
       "options": [
@@ -816,7 +921,7 @@
     },
     {
       "id": "prog-q029",
-      "topic": "VL6 Polymorphie & Abstraktion",
+      "topic": "Vererbung und Polymorphie",
       "q": "Was gibt dieser Code aus?",
       "code": "from abc import ABC, abstractmethod\n\nclass Tier(ABC):\n    @abstractmethod\n    def laut(self) -> str: ...\n\n    def vorstellen(self) -> str:\n        return \"Ich sage \" + self.laut()\n\nclass Hund(Tier):\n    def laut(self) -> str:\n        return \"Wuff\"\n\nclass Katze(Tier):\n    pass\n\nprint(Hund().vorstellen())\nprint(Katze().vorstellen())",
       "options": [
@@ -830,7 +935,7 @@
     },
     {
       "id": "prog-q030",
-      "topic": "VL6 Vererbung & super()",
+      "topic": "Vererbung und Polymorphie",
       "q": "Welche Aussage über Python stimmt?",
       "options": [
         "Python kann Methoden überschreiben, aber nicht überladen.",
@@ -840,6 +945,145 @@
       ],
       "correct": 0,
       "explain": "Ein zweites def mit gleichem Namen ersetzt das erste (kein Überladen). Eine Unterklasse darf eine Methode neu schreiben (Überschreiben)."
+    },
+    {
+      "id": "prog-q031",
+      "topic": "for-Schleifen ganz langsam",
+      "q": "Was gibt dieser Code aus?",
+      "code": "noten = [2, 5, 1, 4, 5]\nanzahl = 0\nfor n in noten:\n    if n >= 4:\n        anzahl += 1\nprint(anzahl)",
+      "options": [
+        "2",
+        "3",
+        "5",
+        "17"
+      ],
+      "correct": 1,
+      "explain": "Gezählt wird nur, wenn n ≥ 4: Runden mit 5, 4, 5 → anzahl = 3. 5 wäre die Länge der Liste, 17 die Summe."
+    },
+    {
+      "id": "prog-q032",
+      "topic": "for-Schleifen ganz langsam",
+      "q": "Was gibt dieser Code aus?",
+      "code": "for x in [1, 2, 3]:\n    summe = 0\n    summe += x\nprint(summe)",
+      "options": [
+        "6",
+        "3",
+        "0",
+        "1"
+      ],
+      "correct": 1,
+      "explain": "`summe = 0` steht in der Schleife und wird jede Runde zurückgesetzt. In der letzten Runde: 0 + 3 = 3."
+    },
+    {
+      "id": "prog-q033",
+      "topic": "for-Schleifen ganz langsam",
+      "q": "Was gibt dieser Code aus?",
+      "code": "preise = [4, 2, 7]\nfor i in range(len(preise)):\n    preise[i] = preise[i] * 2\nprint(preise)",
+      "options": [
+        "[4, 2, 7]",
+        "[8, 4, 14]",
+        "[8, 4, 7]",
+        "26"
+      ],
+      "correct": 1,
+      "explain": "i läuft 0, 1, 2. In jeder Runde wird `preise[i]` durch das Doppelte ersetzt: 8, 4, 14."
+    },
+    {
+      "id": "prog-q034",
+      "topic": "Klassen und Objekte",
+      "q": "Was gibt dieser Code aus?",
+      "code": "class Konto:\n    def __init__(self, inhaber: str) -> None:\n        self.inhaber = inhaber\n\n    def __str__(self) -> str:\n        return f\"Konto von {self.inhaber}\"\n\n    def __repr__(self) -> str:\n        return f\"{type(self).__name__}(inhaber={self.inhaber!r})\"\n\nclass Sparkonto(Konto):\n    pass\n\ns = Sparkonto(\"Anna\")\nprint(s)\nprint([s])",
+      "options": [
+        "Konto von Anna\n[Konto von Anna]",
+        "Sparkonto(inhaber='Anna')\n[Sparkonto(inhaber='Anna')]",
+        "Konto von Anna\n[Sparkonto(inhaber='Anna')]",
+        "Konto von Anna\n[Konto(inhaber='Anna')]"
+      ],
+      "correct": 2,
+      "explain": "`print(s)` nutzt `__str__`, die Liste nutzt `__repr__`. `type(self).__name__` liefert die echte Klasse Sparkonto."
+    },
+    {
+      "id": "prog-q035",
+      "topic": "Vererbung und Polymorphie",
+      "q": "Was gibt dieser Code aus?",
+      "code": "from abc import ABC, abstractmethod\n\nclass Druckbar(ABC):\n    @abstractmethod\n    def drucken(self) -> str: ...\n\nclass Versendbar(ABC):\n    @abstractmethod\n    def versenden(self) -> str: ...\n\nclass Rechnung(Druckbar, Versendbar):\n    def drucken(self) -> str:\n        return \"R druckt\"\n\n    def versenden(self) -> str:\n        return \"R sendet\"\n\nclass Lieferschein(Druckbar):\n    def drucken(self) -> str:\n        return \"L druckt\"\n\nfor d in [Rechnung(), Lieferschein()]:\n    if isinstance(d, Versendbar):\n        print(d.versenden())",
+      "options": [
+        "R sendet",
+        "R sendet\nL sendet",
+        "AttributeError",
+        "R druckt\nR sendet"
+      ],
+      "correct": 0,
+      "explain": "Nur die Rechnung hat die Fähigkeit Versendbar. Für den Lieferschein ist `isinstance` False, `versenden()` wird gar nicht aufgerufen."
+    },
+    {
+      "id": "prog-q036",
+      "topic": "Vererbung und Polymorphie",
+      "q": "Wie viele Oberklassen darf eine Klasse laut Vorlesung haben?",
+      "options": [
+        "Genau eine, wie in Java",
+        "Eine Kategorie und beliebig viele Fähigkeiten",
+        "Beliebig viele Kategorien, aber keine Fähigkeiten",
+        "Keine, Python kennt nur `interface`"
+      ],
+      "correct": 1,
+      "explain": "Python erlaubt mehrere Oberklassen. Im Kurs: eine Kategorie („ist ein“) plus beliebig viele Fähigkeiten („kann“), z. B. `Rechnung(Dokument, Druckbar, Versendbar)`."
+    },
+    {
+      "id": "prog-q037",
+      "topic": "Vererbung und Polymorphie",
+      "q": "Was gibt dieser Code aus?",
+      "code": "from abc import ABC, abstractmethod\nfrom decimal import Decimal\n\nclass Produkt(ABC):\n    def __init__(self, preis: Decimal) -> None:\n        self.preis = preis\n\n    @abstractmethod\n    def mwst_satz(self) -> Decimal: ...\n\n    def bruttopreis(self) -> Decimal:\n        return (self.preis * (1 + self.mwst_satz())).quantize(Decimal(\"0.01\"))\n\nclass Lebensmittel(Produkt):\n    def mwst_satz(self) -> Decimal:\n        return Decimal(\"0.07\")\n\nclass Zubehoer(Produkt):\n    def mwst_satz(self) -> Decimal:\n        return Decimal(\"0.19\")\n\nkaffee = Lebensmittel(Decimal(\"12.99\"))\npresse = Zubehoer(Decimal(\"20.90\"))\nprint(kaffee.bruttopreis(), presse.bruttopreis())",
+      "options": [
+        "12.99 20.90",
+        "13.90 24.87",
+        "13.90 22.36",
+        "15.46 24.87"
+      ],
+      "correct": 1,
+      "explain": "Jedes Objekt liefert seinen eigenen `mwst_satz()`: 12.99 · 1,07 → 13.90 und 20.90 · 1,19 → 24.87."
+    },
+    {
+      "id": "prog-q038",
+      "topic": "Projekt Kaffeeshop",
+      "q": "Was gibt dieser Code aus?",
+      "code": "def finden(nummern: list[int], gesucht: int) -> int | None:\n    for nummer in nummern:\n        if nummer == gesucht:\n            return nummer\n        else:\n            return None\n    return None\n\nprint(finden([101, 102, 203], 203))",
+      "options": [
+        "203",
+        "None",
+        "101",
+        "IndexError"
+      ],
+      "correct": 1,
+      "explain": "Das `else: return None` steht im Schleifenrumpf: Schon in Runde 1 (101 ≠ 203) endet die Funktion mit None. `return None` gehört hinter die Schleife."
+    },
+    {
+      "id": "prog-q039",
+      "topic": "Projekt Kaffeeshop",
+      "q": "Was gibt dieser Code aus?",
+      "code": "bestand = 3\nim_korb = 0\nfor menge in [5, 3, 1]:\n    if im_korb + menge > bestand:\n        print(False, end=\" \")\n    else:\n        im_korb += menge\n        print(True, end=\" \")",
+      "options": [
+        "False True True",
+        "False True False",
+        "True True False",
+        "False False False"
+      ],
+      "correct": 1,
+      "explain": "Runde 1: 0 + 5 > 3 → False. Runde 2: 0 + 3 > 3 ist falsch → True, `im_korb` = 3. Runde 3: 3 + 1 > 3 → False."
+    },
+    {
+      "id": "prog-q040",
+      "topic": "Projekt Kaffeeshop",
+      "q": "Was gibt dieser Code aus?",
+      "code": "from dataclasses import dataclass\n\n@dataclass\nclass Bestellung:\n    nummer: int\n    positionen: list[str]\n\nkorb_positionen = [\"2 x Kaffee\", \"1 x Tee\"]\nb = Bestellung(1, korb_positionen)\nkorb_positionen.clear()\nprint(b.positionen)",
+      "options": [
+        "['2 x Kaffee', '1 x Tee']",
+        "[]",
+        "None",
+        "AttributeError"
+      ],
+      "correct": 1,
+      "explain": "Die Bestellung bekommt keine Kopie, sondern dieselbe Liste. `clear()` leert sie deshalb auch in der Bestellung."
     }
   ]
 }

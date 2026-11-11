@@ -23,119 +23,119 @@
     },
     {
       "id": "mathe-k004",
-      "topic": "Folgen: Begriffe",
+      "topic": "Folgen",
       "front": "Was ist eine **Folge**?",
-      "back": "Eine Funktion ℕ → ℝ, also eine geordnete Liste a₁, a₂, a₃, … aₙ heißt Glied, n heißt Index.",
+      "back": "Eine durchnummerierte Liste von Zahlen a₁, a₂, a₃, … (eine Funktion ℕ → ℝ). aₙ heißt Glied, n heißt Index.\nBeispiel aₙ = 2n: 2, 4, 6, …",
       "exam": true
     },
     {
       "id": "mathe-k005",
-      "topic": "Folgen: Begriffe",
+      "topic": "Folgen",
       "front": "explizit vs. rekursiv",
       "back": "explizit: direkte Formel, z. B. aₙ = n² → a₃ = 9.\nrekursiv: aus dem Vorgänger, z. B. a₁ = 2, aₙ = aₙ₋₁ + 3 → 2, 5, 8, 11.",
       "exam": true
     },
     {
       "id": "mathe-k006",
-      "topic": "Folgen: Begriffe",
+      "topic": "Folgen",
       "front": "Bildungsgesetz finden: −3, 3, −3, 3, …",
       "back": "aₙ = (−1)ⁿ · 3 (ab n = 1). Der Faktor (−1)ⁿ macht das Vorzeichen abwechselnd (**alternierend**).",
       "exam": true
     },
     {
       "id": "mathe-k007",
-      "topic": "Folgen: Begriffe",
+      "topic": "Folgen",
       "front": "Bildungsgesetz finden: 1, ¼, 1/9, 1/16, …",
       "back": "aₙ = 1/n².",
       "exam": true
     },
     {
       "id": "mathe-k008",
-      "topic": "Monotonie & Beschränktheit",
+      "topic": "Folgen",
       "front": "streng monoton wachsend – Definition und Test",
       "back": "aₙ < aₙ₊₁ für alle n.\nTest: Differenz aₙ₊₁ − aₙ > 0. Beispiel aₙ = n²: (n+1)² − n² = 2n + 1 > 0.",
       "exam": true
     },
     {
       "id": "mathe-k009",
-      "topic": "Monotonie & Beschränktheit",
+      "topic": "Folgen",
       "front": "Ist (−1)ⁿ monoton?",
       "back": "Nein, die Glieder springen −1, 1, −1, 1 hin und her. Aber beschränkt: |aₙ| ≤ 1.",
       "exam": true
     },
     {
       "id": "mathe-k010",
-      "topic": "Monotonie & Beschränktheit",
+      "topic": "Folgen",
       "front": "Was heißt **beschränkt**?",
       "back": "Es gibt ein C mit |aₙ| ≤ C für alle n (die Folge bleibt in einem Streifen).\nBeispiel 1 + 1/n: 1 < aₙ ≤ 2.",
       "exam": true
     },
     {
       "id": "mathe-k011",
-      "topic": "Monotonie & Beschränktheit",
+      "topic": "Folgen",
       "front": "Ist eine konstante Folge aₙ = 7 monoton?",
       "back": "Ja, monoton wachsend **und** fallend (aber nicht streng). Sie ist beschränkt.",
       "exam": true
     },
     {
       "id": "mathe-k012",
-      "topic": "Konvergenz & Grenzwerte",
+      "topic": "Folgen",
       "front": "Konvergenz in einfachen Worten",
       "back": "aₙ → a heißt: Für jede noch so kleine Genauigkeit ε liegen ab einem Index n₀ **alle** Glieder näher als ε an a: |aₙ − a| < ε.",
       "exam": true
     },
     {
       "id": "mathe-k013",
-      "topic": "Konvergenz & Grenzwerte",
+      "topic": "Folgen",
       "front": "Nullfolge, bestimmt divergent, unbestimmt divergent",
       "back": "Nullfolge: Grenzwert 0 (z. B. 1/n).\nbestimmt divergent: → +∞ oder −∞ (z. B. n²).\nunbestimmt: springt ohne Ziel (z. B. (−1)ⁿ).",
       "exam": true
     },
     {
       "id": "mathe-k014",
-      "topic": "Konvergenz & Grenzwerte",
+      "topic": "Folgen",
       "front": "Monotonie-Kriterium",
       "back": "monoton **und** beschränkt ⇒ konvergent.\nBeschränkt allein reicht nicht: (−1)ⁿ ist beschränkt, aber divergent.",
       "exam": true
     },
     {
       "id": "mathe-k015",
-      "topic": "Konvergenz & Grenzwerte",
+      "topic": "Folgen",
       "front": "Grenzwert eines Bruchs von Polynomen (Faustregel)",
       "back": "Durch die höchste Potenz des Nenners teilen.\nGrad gleich → Leitkoeffizienten teilen: (2n² − 3)/(n² + n + 1) → **2**.\nZählergrad kleiner → 0. Zählergrad größer → ±∞.",
       "exam": true
     },
     {
       "id": "mathe-k016",
-      "topic": "Konvergenz & Grenzwerte",
+      "topic": "Folgen",
       "front": "Grenzwert von (8k³ − 4k² − 8)/(6k³ + 2k − 1)?",
       "back": "Gleicher Grad 3 → 8/6 = **4/3**.",
       "exam": true
     },
     {
       "id": "mathe-k017",
-      "topic": "Konvergenz & Grenzwerte",
+      "topic": "Folgen",
       "front": "Grund-Nullfolgen",
       "back": "1/n → 0 und qⁿ → 0 für |q| < 1, z. B. (½)ⁿ → 0. Auch e⁻ⁿ → 0.",
       "exam": true
     },
     {
       "id": "mathe-k018",
-      "topic": "Konvergenz & Grenzwerte",
+      "topic": "Folgen",
       "front": "Wachstums-Rangliste (wer gewinnt für große n?)",
       "back": "ln n < √n < n < n² < eⁿ.\nBeispiel: −7n³ + 4n² + 10 → −∞, weil −7n³ dominiert.",
       "exam": true
     },
     {
       "id": "mathe-k019",
-      "topic": "Arithm./geom. Folgen",
+      "topic": "Folgen",
       "front": "Arithmetische Folge: Formeln",
       "back": "konstante Differenz d: aₙ = a₁ + (n − 1)·d, Sₙ = n/2 · (a₁ + aₙ).\na₁ = 3, d = 4: a₁₀ = 3 + 9·4 = 39, S₁₀ = 5 · 42 = 210.",
       "exam": true
     },
     {
       "id": "mathe-k020",
-      "topic": "Arithm./geom. Folgen",
+      "topic": "Folgen",
       "front": "Geometrische Folge: Formeln",
       "back": "konstanter Quotient q: aₙ = a₁ · qⁿ⁻¹, Sₙ = a₁ · (qⁿ − 1)/(q − 1).\na₁ = 2, q = 3: a₈ = 2 · 3⁷ = 4374, S₆ = 728.",
       "exam": true
@@ -150,7 +150,7 @@
     {
       "id": "mathe-k022",
       "topic": "Reihen",
-      "front": "Teilsummen von Σₖ₌₀ (½)ᵏ",
+      "front": "Teilsummen von Σ (k = 0 bis ∞) (½)ᵏ",
       "back": "s₀ = 1, s₁ = 1,5, s₂ = 1,75, s₃ = 1,875 → Summe **2**.",
       "exam": true
     },
@@ -158,20 +158,20 @@
       "id": "mathe-k023",
       "topic": "Reihen",
       "front": "Geometrische Reihe: Formel",
-      "back": "Σₖ₌₀^∞ qᵏ = 1/(1 − q), nur für |q| < 1.\nAllgemein: **erstes Glied / (1 − q)**.",
+      "back": "Σ (k = 0 bis ∞) qᵏ = 1/(1 − q), nur für |q| < 1.\nAllgemein: **erstes Glied / (1 − q)**, z. B. Σ (½)ᵏ ab k = 0 = 1/(1 − ½) = 2.",
       "exam": true
     },
     {
       "id": "mathe-k024",
       "topic": "Reihen",
-      "front": "Σₖ₌₁^∞ (½)ᵏ = ?",
+      "front": "Σ (k = 1 bis ∞) (½)ᵏ = ?",
       "back": "Start bei k = 1 → erstes Glied ½. ½ / (1 − ½) = **1** (nicht 2!).",
       "exam": true
     },
     {
       "id": "mathe-k025",
       "topic": "Reihen",
-      "front": "Σₖ₌₀^∞ (−1)ᵏ (⅕)ᵏ = ?",
+      "front": "Σ (k = 0 bis ∞) (−1)ᵏ · (⅕)ᵏ = ?",
       "back": "Zusammenfassen: (−⅕)ᵏ, q = −⅕, erstes Glied 1. 1/(1 + ⅕) = **5/6**.",
       "exam": true
     },
@@ -192,14 +192,14 @@
     {
       "id": "mathe-k028",
       "topic": "Reihen",
-      "front": "Teleskopsumme Σₖ₌₁^∞ 1/(k(k+1))",
+      "front": "Teleskopsumme Σ (k = 1 bis ∞) 1/(k(k + 1))",
       "back": "1/(k(k+1)) = 1/k − 1/(k+1). Die Mitte hebt sich weg: sₙ = 1 − 1/(n+1) → **1**.",
       "exam": true
     },
     {
       "id": "mathe-k029",
       "topic": "Reihen",
-      "front": "Σₖ₌₁^∞ 6/k² = ?",
+      "front": "Σ (k = 1 bis ∞) 6/k² = ?",
       "back": "Konstante vorziehen: 6 · Σ 1/k² = 6 · π²/6 = **π² ≈ 9,87**.",
       "exam": true
     },
@@ -212,142 +212,142 @@
     },
     {
       "id": "mathe-k031",
-      "topic": "Konvergenzkriterien",
+      "topic": "Reihen",
       "front": "Notwendiges Kriterium",
       "back": "Σ aₖ konvergent ⇒ aₖ → 0.\nAlso: aₖ geht **nicht** gegen 0 ⇒ divergent. Geht aₖ gegen 0, weiß man **noch nichts**.",
       "exam": true
     },
     {
       "id": "mathe-k032",
-      "topic": "Konvergenzkriterien",
+      "topic": "Reihen",
       "front": "Harmonische Reihe Σ 1/k",
       "back": "**Divergent** (→ ∞), obwohl 1/k → 0. Sie wächst nur sehr langsam: s₁₀ ≈ 2,93.",
       "exam": true
     },
     {
       "id": "mathe-k033",
-      "topic": "Konvergenzkriterien",
+      "topic": "Reihen",
       "front": "Σ 1/kᵖ – wann konvergent?",
       "back": "Genau für p > 1. Σ 1/k² konvergiert (π²/6), Σ 1/k divergiert.",
       "exam": true
     },
     {
       "id": "mathe-k034",
-      "topic": "Konvergenzkriterien",
+      "topic": "Reihen",
       "front": "Potenzabstand-Regel bei Brüchen",
       "back": "Abstand = Nennergrad − Zählergrad.\n> 1 → konvergent (Σ (k+1)/(k³+2): Abstand 2).\n≤ 1 → divergent (Σ k/(k²+5): Abstand 1).",
       "exam": true
     },
     {
       "id": "mathe-k035",
-      "topic": "Konvergenzkriterien",
-      "front": "Quotientenkriterium (Ergänzung)",
-      "back": "L = lim |aₖ₊₁/aₖ|. L < 1 konvergent, L > 1 divergent, L = 1 keine Aussage. Gut bei k! oder xᵏ.\nΣ 1/k!: L = lim 1/(k+1) = 0 → konvergent.",
-      "exam": false
+      "topic": "Reihen",
+      "front": "Quotientenkriterium",
+      "back": "L = lim |aₖ₊₁/aₖ|: L < 1 konvergent, L > 1 divergent, L = 1 keine Aussage. Nimm es, wenn k! oder xᵏ vorkommt.\nΣ 1/k!: L = lim 1/(k + 1) = 0 → konvergent.",
+      "exam": true
     },
     {
       "id": "mathe-k036",
-      "topic": "Finanzmathe",
+      "topic": "Finanzmathematik",
       "front": "Zinseszins: einmalige Zahlung",
       "back": "Kₙ = r · (1 + i)ⁿ.\n1000 € zu 5 %: nach 2 Jahren 1000 · 1,05² = **1102,50 €**.",
       "exam": true
     },
     {
       "id": "mathe-k037",
-      "topic": "Finanzmathe",
+      "topic": "Finanzmathematik",
       "front": "Sparplan (Endwert): Formel",
       "back": "Eₙ = r · ((1 + i)ⁿ − 1) / i. Das ist eine endliche geometrische Reihe mit q = 1 + i.",
       "exam": true
     },
     {
       "id": "mathe-k038",
-      "topic": "Finanzmathe",
+      "topic": "Finanzmathematik",
       "front": "Sparplan: r = 100 €, i = 5 %, n = 3",
       "back": "100 · (1,05³ − 1)/0,05 = 100 · 3,1525 = **315,25 €**.\nProbe: 110,25 + 105 + 100 = 315,25.",
       "exam": true
     },
     {
       "id": "mathe-k039",
-      "topic": "Finanzmathe",
+      "topic": "Finanzmathematik",
       "front": "Folienbeispiel: 100 € pro Monat, 0,25 % pro Monat, 60 Monate",
       "back": "E₆₀ = 100 · (1,0025⁶⁰ − 1)/0,0025 ≈ **6464,67 €** (Folie: ca. 6460 €). Eingezahlt 6000 €.",
       "exam": true
     },
     {
       "id": "mathe-k040",
-      "topic": "Finanzmathe",
+      "topic": "Finanzmathematik",
       "front": "Ewige Rente (Barwert)",
       "back": "B = r / i.\n1000 € pro Jahr bei 4 %: 1000/0,04 = **25 000 €**.",
       "exam": true
     },
     {
       "id": "mathe-k041",
-      "topic": "Finanzmathe",
+      "topic": "Finanzmathematik",
       "front": "Warum beim Sparplan nur die endliche Formel?",
       "back": "Beim Sparplan ist q = 1 + i > 1 → die unendliche Reihe divergiert. Bei der ewigen Rente ist q = 1/(1 + i) < 1 → unendliche Formel erlaubt.",
       "exam": true
     },
     {
       "id": "mathe-k042",
-      "topic": "Funktionen",
+      "topic": "Funktionen, Umkehrfunktion und Monotonie",
       "front": "Definitionsmenge, Wertemenge, Bild",
       "back": "D: erlaubte x. W: Zielmenge. Bild: Werte, die wirklich herauskommen.\nx² auf ℝ: W = ℝ, Bild = [0, ∞).",
       "exam": true
     },
     {
       "id": "mathe-k043",
-      "topic": "Funktionen",
+      "topic": "Funktionen, Umkehrfunktion und Monotonie",
       "front": "Größter Definitionsbereich: Rezept",
       "back": "Nenner ≠ 0, unter der Wurzel ≥ 0.\n1/(x² − 1): D = ℝ \\ {−1, 1}.",
       "exam": true
     },
     {
       "id": "mathe-k044",
-      "topic": "Funktionen",
+      "topic": "Funktionen, Umkehrfunktion und Monotonie",
       "front": "injektiv, surjektiv, bijektiv",
       "back": "injektiv: jeder Wert höchstens einmal getroffen. surjektiv: jeder Wert der Zielmenge mindestens einmal. bijektiv: genau einmal → Umkehrfunktion existiert.",
       "exam": true
     },
     {
       "id": "mathe-k045",
-      "topic": "Funktionen",
+      "topic": "Stetigkeit, Verkettung, ln und e",
       "front": "Verkettung (f ∘ g)(x)",
-      "back": "f(g(x)): **zuerst g, dann f**. Die Reihenfolge ist wichtig.\ng(x) = 1 − x², f = sin: g(sin x) = 1 − sin²x = cos²x.",
+      "back": "(f ∘ g)(x) = f(g(x)): **zuerst g (innen), dann f**. Die Reihenfolge ist wichtig.\nf(x) = x + 1, g(x) = x²: f(g(3)) = f(9) = 10, aber g(f(3)) = g(4) = 16.",
       "exam": true
     },
     {
       "id": "mathe-k046",
-      "topic": "Funktionen",
+      "topic": "Funktionen, Umkehrfunktion und Monotonie",
       "front": "Definitionsbereich von f/g",
       "back": "Wo f und g beide definiert sind, **ohne** die Nullstellen von g.\n√x / (x − 1): D = [0, ∞) ohne 1.",
       "exam": true
     },
     {
       "id": "mathe-k047",
-      "topic": "Umkehrfunktion",
+      "topic": "Funktionen, Umkehrfunktion und Monotonie",
       "front": "Umkehrfunktion: was ist f⁻¹?",
       "back": "f⁻¹ macht f rückgängig: f⁻¹(f(x)) = x. Graph an y = x spiegeln. **Nicht** 1/f(x)!\nJede streng monotone Funktion hat eine Umkehrfunktion.",
       "exam": true
     },
     {
       "id": "mathe-k048",
-      "topic": "Umkehrfunktion",
-      "front": "Folie 62: f: [2, ∞) → ℝ, f(x) = x² − 4x + 1. f⁻¹?",
+      "topic": "Funktionen, Umkehrfunktion und Monotonie",
+      "front": "Folie 62: f: [2, ∞) → ℝ, f(x) = x² − 4x + 1. Wie lautet f⁻¹?",
       "back": "(x − 2)² − 3 = y ⇒ x = 2 + √(y + 3).\nf⁻¹(x) = **2 + √(x + 3)**. Probe: f(5) = 6, f⁻¹(6) = 5.",
       "exam": true
     },
     {
       "id": "mathe-k049",
       "topic": "Grenzwerte von Funktionen",
-      "front": "Grenzwert bei 0/0: lim_{x→2} (x² − 4)/(x − 2)",
+      "front": "Grenzwert bei 0/0: lim (x → 2) (x² − 4)/(x − 2)",
       "back": "Faktorisieren: (x − 2)(x + 2)/(x − 2) = x + 2 → **4**.",
       "exam": true
     },
     {
       "id": "mathe-k050",
       "topic": "Grenzwerte von Funktionen",
-      "front": "Zahl/0: lim_{x→0⁺} 1/x und lim_{x→0⁻} 1/x",
-      "back": "Von rechts +∞, von links −∞. Links ≠ rechts ⇒ lim_{x→0} 1/x existiert nicht.",
+      "front": "Zahl/0: 1/x für x → 0 von rechts und von links",
+      "back": "Von rechts (x = 0,01 → 100) geht es nach +∞, von links (x = −0,01 → −100) nach −∞.\nLinks ≠ rechts ⇒ lim (x → 0) 1/x existiert nicht.",
       "exam": true
     },
     {
@@ -360,64 +360,309 @@
     {
       "id": "mathe-k052",
       "topic": "Grenzwerte von Funktionen",
-      "front": "lim_{x→0} sin(1/x)",
+      "front": "lim (x → 0) sin(1/x)",
       "back": "Existiert **nicht**: Der Sinus schwingt immer schneller zwischen −1 und 1 (Oszillation).",
       "exam": true
     },
     {
       "id": "mathe-k053",
-      "topic": "Stetigkeit",
+      "topic": "Stetigkeit, Verkettung, ln und e",
       "front": "Wann ist f in x̂ stetig?",
-      "back": "Wenn lim_{x→x̂} f(x) = f(x̂). Anschaulich: Graph ohne Absetzen zeichnen.",
+      "back": "Wenn lim (x → x̂) f(x) existiert und gleich f(x̂) ist. Anschaulich: Graph ohne Absetzen zeichnen.\nx² bei 2: von links und rechts → 4, und f(2) = 4 → stetig.",
       "exam": true
     },
     {
       "id": "mathe-k054",
-      "topic": "Stetigkeit",
+      "topic": "Stetigkeit, Verkettung, ln und e",
       "front": "c so wählen, dass f stetig ist: f(x) = (x² + 2x − 3)/(x² + x − 2), f(1) = c",
       "back": "Kürzen: (x + 3)(x − 1)/((x + 2)(x − 1)) = (x + 3)/(x + 2). x = 1: c = **4/3**.",
       "exam": true
     },
     {
       "id": "mathe-k055",
-      "topic": "Stetigkeit",
+      "topic": "Stetigkeit, Verkettung, ln und e",
       "front": "Die 3 Unstetigkeitstypen",
       "back": "Sprungstelle (links ≠ rechts), Polstelle (|f| → ∞, z. B. 1/(x − 2) bei 2), Oszillationsstelle (sin(1/x) bei 0).",
       "exam": true
     },
     {
       "id": "mathe-k056",
-      "topic": "Stetigkeit",
+      "topic": "Stetigkeit, Verkettung, ln und e",
       "front": "Welche Funktionen sind stetig?",
       "back": "Polynome überall, p/q wo q ≠ 0, exp, ln, sin, cos auf ihrem Definitionsbereich. Summen, Produkte und Verkettungen stetiger Funktionen auch.",
       "exam": true
     },
     {
       "id": "mathe-k057",
-      "topic": "ln- und e-Regeln",
+      "topic": "Stetigkeit, Verkettung, ln und e",
       "front": "ln-Regeln",
       "back": "ln(a·b) = ln a + ln b · ln(a/b) = ln a − ln b · ln(aʳ) = r · ln a.\nBeispiel: ln 8 = 3 · ln 2.",
       "exam": true
     },
     {
       "id": "mathe-k058",
-      "topic": "ln- und e-Regeln",
+      "topic": "Stetigkeit, Verkettung, ln und e",
       "front": "e und ln heben sich auf",
-      "back": "e^(ln a) = a und ln(eᵃ) = a.\n√(e^(3 ln 4)) = √(4³) = √64 = **8**.",
+      "back": "eˡⁿ ᵃ = a und ln(eᵃ) = a: e hoch und ln machen sich gegenseitig rückgängig.\n√(e³ ˡⁿ ⁴) = √(eˡⁿ ⁶⁴) = √64 = **8**.",
       "exam": true
     },
     {
       "id": "mathe-k059",
-      "topic": "ln- und e-Regeln",
+      "topic": "Stetigkeit, Verkettung, ln und e",
       "front": "Zusammenfassen: ln 2x + ln 2y − ln z − ln 4",
       "back": "= ln(2x · 2y / (4z)) = **ln(xy/z)**.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k060",
+      "topic": "Aussagenlogik",
+      "front": "Was ist eine **Aussage**?",
+      "back": "Ein Satz, der entweder wahr (w) oder falsch (f) ist.\n„5 ist kleiner als 3“ ist eine (falsche) Aussage; „Komm pünktlich!“ und „x + 2 = 5“ (x offen) sind keine.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k061",
+      "topic": "Aussagenlogik",
+      "front": "A ∨ B vs. A ⊻ B",
+      "back": "∨ (oder) ist auch wahr, wenn **beide** wahr sind; ⊻ (entweder-oder) nur, wenn genau eins wahr ist.\nA = w, B = w: A ∨ B = w, aber A ⊻ B = f.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k062",
+      "topic": "Aussagenlogik",
+      "front": "Wann ist A → B **falsch**?",
+      "back": "Nur bei A = w und B = f.\n„Wenn es regnet, nehme ich den Schirm“ ist nur gebrochen, wenn es regnet und kein Schirm da ist. Bei A = f ist A → B immer wahr.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k063",
+      "topic": "Aussagenlogik",
+      "front": "Was bedeutet A ↔ B?",
+      "back": "Wahr, wenn A und B **denselben** Wert haben (beide w oder beide f); das ist (A → B) ∧ (B → A).\n„n durch 4 teilbar ↔ n gerade“ ist falsch: n = 6.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k064",
+      "topic": "Aussagenlogik",
+      "front": "**Kontraposition** von A → B",
+      "back": "¬B → ¬A: Seiten tauschen **und** beide verneinen – gleichwertig zu A → B.\n„durch 4 teilbar → gerade“ = „ungerade → nicht durch 4 teilbar“.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k065",
+      "topic": "Aussagenlogik",
+      "front": "Ist ¬A → ¬B gleichwertig zu A → B?",
+      "back": "Nein, das ist der **Umkehrschluss** (Denkfehler). Bei A = f, B = w: A → B = w, aber ¬A → ¬B = f.\n„Wer lernt, besteht“ heißt nicht „wer nicht lernt, fällt durch“.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k066",
+      "topic": "Aussagenlogik",
+      "front": "A → B ohne Pfeil schreiben",
+      "back": "A → B ≡ ¬A ∨ B.\nProbe A = w, B = f: ¬A ∨ B = f ∨ f = f, genau wie A → B.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k067",
+      "topic": "Aussagenlogik",
+      "front": "Tautologie, Widerspruch, erfüllbar",
+      "back": "Tautologie: bei **allen** Belegungen wahr (A ∨ ¬A). Widerspruch: bei **keiner** (A ∧ ¬A).\nErfüllbar: bei **mindestens einer** wahr (z. B. A ∧ B bei A = B = w).",
+      "exam": true
+    },
+    {
+      "id": "mathe-k068",
+      "topic": "Aussagenlogik",
+      "front": "Wie viele Zeilen hat eine Wahrheitstafel mit n Variablen?",
+      "back": "2ⁿ, weil jede Variable w oder f sein kann.\n3 Variablen: 2³ = 8 Zeilen, 4 Variablen: 16.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k069",
+      "topic": "Aussagenlogik",
+      "front": "Vorrangregeln: Was bindet am stärksten?",
+      "back": "¬ vor ∧ vor ∨ vor → vor ↔ (wie Minus vor Mal vor Plus).\n¬A ∧ B ∨ C heißt ((¬A) ∧ B) ∨ C.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k070",
+      "topic": "Aussagenlogik",
+      "front": "De Morgan",
+      "back": "¬(A ∧ B) ≡ ¬A ∨ ¬B und ¬(A ∨ B) ≡ ¬A ∧ ¬B: Die Negation wandert in die Klammer, ∧ und ∨ tauschen.\n„Nicht (Kaffee und Kuchen)“ = „kein Kaffee oder kein Kuchen“.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k071",
+      "topic": "Aussagenlogik",
+      "front": "Vereinfache (A ∧ B) ∨ (A ∧ ¬B)",
+      "back": "A ausklammern: A ∧ (B ∨ ¬B) ≡ A ∧ w ≡ **A**.\nGesetze: Distributivität, Komplement, Neutralität.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k072",
+      "topic": "Aussagenlogik",
+      "front": "Wie viele boolesche Funktionen mit n Variablen gibt es?",
+      "back": "2 hoch (2ⁿ): Die Tafel hat 2ⁿ Zeilen, jede Zeile kann w oder f sein.\nn = 2: 2⁴ = **16**, n = 3: 2⁸ = 256.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k073",
+      "topic": "Aussagenlogik",
+      "front": "NAND und NOR",
+      "back": "NAND = ¬(A ∧ B): nur bei A = B = w falsch.\nNOR = ¬(A ∨ B): nur bei A = B = f wahr.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k074",
+      "topic": "Aussagenlogik",
+      "front": "Was ist eine **Vollkonjunktion** (Minterm)?",
+      "back": "Alle Variablen genau einmal, mit ∧ verbunden, evtl. verneint; sie ist in genau **einer** Zeile wahr.\nA ∧ ¬B ∧ C ist nur bei (w, f, w) wahr. A ∧ C ist bei 3 Variablen keine (B fehlt).",
+      "exam": true
+    },
+    {
+      "id": "mathe-k075",
+      "topic": "Aussagenlogik",
+      "front": "DNF aus der Wahrheitstafel: Rezept",
+      "back": "Nimm die Zeilen mit **w**: Variable mit w bleibt, mit f wird verneint; Vollkonjunktionen mit ∨ verbinden.\nWahr nur bei (w, f) und (f, w): (A ∧ ¬B) ∨ (¬A ∧ B).",
+      "exam": true
+    },
+    {
+      "id": "mathe-k076",
+      "topic": "Aussagenlogik",
+      "front": "KNF aus der Wahrheitstafel: Rezept",
+      "back": "Nimm die Zeilen mit **f**: Variable mit w wird verneint, mit f bleibt; Volldisjunktionen mit ∧ verbinden.\nFalsch nur bei (w, w): KNF = ¬A ∨ ¬B.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k077",
+      "topic": "Aussagenlogik",
+      "front": "∀ und ∃",
+      "back": "∀x P(x): für **alle** x gilt P. ∃x P(x): es gibt **mindestens ein** x mit P.\nAuf ℕ: ∀x „x gerade“ ist f (x = 1), ∃x „x gerade“ ist w (x = 2).",
+      "exam": true
+    },
+    {
+      "id": "mathe-k078",
+      "topic": "Aussagenlogik",
+      "front": "Quantoren verneinen",
+      "back": "¬∀x P(x) ≡ ∃x ¬P(x) und ¬∃x P(x) ≡ ∀x ¬P(x): Quantor umdrehen, innen verneinen.\nGegenteil von „alle haben ein Ticket“: „**mindestens einer** hat keins“.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k079",
+      "topic": "Aussagenlogik",
+      "front": "Darf man ∀ und ∃ vertauschen?",
+      "back": "Nein. ∀y ∃x T(x, y): jede Zahl y hat irgendeinen Teiler x. ∃x ∀y T(x, y): **ein** x teilt alle.\nD = {2, 3, 5}, M = {4, 6, 9, 10}: das erste ist w, das zweite f.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k080",
+      "topic": "Aussagenlogik",
+      "front": "„Jede Quadratzahl ist gerade“ formalisieren und verneinen",
+      "back": "∀x (Q(x) → G(x)) – mit →, nicht mit ∧. Falsch wegen x = 9.\nVerneinung: ∃x (Q(x) ∧ ¬G(x)), „es gibt eine ungerade Quadratzahl“.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k081",
+      "topic": "Aussagenlogik",
+      "front": "Vollständige Induktion: die 3 Schritte",
+      "back": "1. Anfang: A(1) nachrechnen. 2. Annahme: A(n) gilt für **ein festes** n. 3. Schluss: A(n + 1) mit der Annahme herleiten.\nWie Dominosteine: Der erste fällt, und jeder stößt den nächsten um.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k082",
+      "topic": "Aussagenlogik",
+      "front": "Induktion: 1 + 2 + … + n = n(n + 1)/2, der Schluss",
+      "back": "1 + … + n + (n + 1) = n(n + 1)/2 + (n + 1) (← Annahme) = (n + 1)(n + 2)/2 ✓.\nAnfang n = 1: 1 = 1 · 2/2 ✓.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k083",
+      "topic": "Aussagenlogik",
+      "front": "Beweismuster Kontraposition, Widerspruch, Gegenbeispiel",
+      "back": "Kontraposition: statt A → B zeigst du ¬B → ¬A. Widerspruch: Gegenteil annehmen, bis A ∧ ¬A herauskommt.\nGegenbeispiel: Ein einziges widerlegt ein „für alle“; Beispiele beweisen es nie.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k084",
+      "topic": "Aussagenlogik",
+      "front": "→ vs. ⇒",
+      "back": "→ steht **in** einer Formel. F₁ ⇒ F₂ ist eine Aussage **über** Formeln: „F₁ → F₂ ist eine Tautologie“.\nModus Ponens: A ∧ (A → B) ⇒ B.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k085",
+      "topic": "Stetigkeit, Verkettung, ln und e",
+      "front": "(g ∘ f)(3) mit f(x) = x + 1 und g(x) = x²",
+      "back": "Erst f: f(3) = 4, dann g: g(4) = **16**.\nAndersherum (f ∘ g)(3) = f(9) = 10 – die Reihenfolge zählt.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k086",
+      "topic": "Stetigkeit, Verkettung, ln und e",
+      "front": "Wann darf man g ∘ f bilden?",
+      "back": "Wenn alles, was f ausgibt, im Definitionsbereich von g liegt.\nf = sin liefert Werte in [−1, 1], g ist auf [−2, 2] definiert → passt.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k087",
+      "topic": "Stetigkeit, Verkettung, ln und e",
+      "front": "f(x) = x² + 1 für x ≤ 2, f(x) = ax − 3 für x > 2: welches a macht f stetig?",
+      "back": "Beide Seiten bei x = 2 gleich setzen: 2² + 1 = 5 = 2a − 3 → **a = 4**.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k088",
+      "topic": "Stetigkeit, Verkettung, ln und e",
+      "front": "Linker Grenzwert = rechter Grenzwert: reicht das für Stetigkeit?",
+      "back": "Nein, auch der Funktionswert muss passen.\nGegenbeispiel: f(x) = 0 für x ≠ 0, f(0) = 1: Grenzwert 0, aber f(0) = 1.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k089",
+      "topic": "Stetigkeit, Verkettung, ln und e",
+      "front": "Was bedeutet ln a = k?",
+      "back": "Dasselbe wie eᵏ = a: ln fragt „e hoch wie viel ergibt a?“.\nDarum ln 1 = 0 und ln e = 1; ln a gibt es nur für a > 0.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k090",
+      "topic": "Stetigkeit, Verkettung, ln und e",
+      "front": "Löse e²ˣ⁻¹ = 5 (e hoch 2x − 1)",
+      "back": "ln auf beiden Seiten: 2x − 1 = ln 5 → x = **(1 + ln 5)/2** ≈ 1,305.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k091",
+      "topic": "Stetigkeit, Verkettung, ln und e",
+      "front": "log₂ a mit ln ausrechnen",
+      "back": "log₂ a = ln a / ln 2.\nlog₂ 8 = ln 8 / ln 2 = 3 ln 2 / ln 2 = **3**.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k092",
+      "topic": "Grundlagen",
+      "front": "Was ist n! (Fakultät)?",
+      "back": "Alle Zahlen von 1 bis n malnehmen: 4! = 1 · 2 · 3 · 4 = 24, und 0! = 1.\nTrick: (k + 1)! = (k + 1) · k!, also 4!/5! = 1/5.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k093",
+      "topic": "Grundlagen",
+      "front": "Unbestimmte Ausdrücke mit ∞",
+      "back": "∞ − ∞, ∞/∞ und 0 · ∞ sagen allein nichts – man muss umformen.\nAlle „∞/∞“: 2n/n → 2, n²/n → ∞, n/n² → 0.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k094",
+      "topic": "Funktionen, Umkehrfunktion und Monotonie",
+      "front": "Streng monoton wachsende Funktion: Test",
+      "back": "Aus x₁ < x₂ folgt f(x₁) < f(x₂). Rechentrick: zeige f(x₂) − f(x₁) > 0.\n2x + 1: Differenz = 2(x₂ − x₁) > 0 → streng wachsend.",
       "exam": true
     }
   ],
   "quiz": [
     {
       "id": "mathe-q001",
-      "topic": "Folgen: Begriffe",
+      "topic": "Folgen",
       "q": "Welches Bildungsgesetz passt zu 2, 4, 8, 16, …?",
       "options": [
         "aₙ = 2ⁿ",
@@ -430,7 +675,7 @@
     },
     {
       "id": "mathe-q002",
-      "topic": "Folgen: Begriffe",
+      "topic": "Folgen",
       "q": "Rekursiv: d₁ = 2, dₙ = dₙ₋₁ + 3. Was ist d₄?",
       "options": [
         "8",
@@ -443,7 +688,7 @@
     },
     {
       "id": "mathe-q003",
-      "topic": "Monotonie & Beschränktheit",
+      "topic": "Folgen",
       "q": "Was gilt für bₙ = 1 + 1/n?",
       "options": [
         "konstant",
@@ -456,7 +701,7 @@
     },
     {
       "id": "mathe-q004",
-      "topic": "Konvergenz & Grenzwerte",
+      "topic": "Folgen",
       "q": "Welche Aussage ist **falsch**?",
       "options": [
         "Monoton + beschränkt ⇒ konvergent.",
@@ -469,7 +714,7 @@
     },
     {
       "id": "mathe-q005",
-      "topic": "Konvergenz & Grenzwerte",
+      "topic": "Folgen",
       "q": "lim (2n² − 3)/(n² + n + 1) für n → ∞ = ?",
       "options": [
         "∞",
@@ -482,7 +727,7 @@
     },
     {
       "id": "mathe-q006",
-      "topic": "Konvergenz & Grenzwerte",
+      "topic": "Folgen",
       "q": "lim (−5n + 1)/(4n² − 7) für n → ∞ = ?",
       "options": [
         "−∞",
@@ -495,7 +740,7 @@
     },
     {
       "id": "mathe-q007",
-      "topic": "Konvergenz & Grenzwerte",
+      "topic": "Folgen",
       "q": "Was macht (−1)ⁿ · n für n → ∞?",
       "options": [
         "→ +∞ (bestimmt divergent)",
@@ -508,7 +753,7 @@
     },
     {
       "id": "mathe-q008",
-      "topic": "Arithm./geom. Folgen",
+      "topic": "Folgen",
       "q": "Arithmetische Folge a₁ = 3, d = 4. Was ist a₁₀?",
       "options": [
         "39",
@@ -521,7 +766,7 @@
     },
     {
       "id": "mathe-q009",
-      "topic": "Arithm./geom. Folgen",
+      "topic": "Folgen",
       "q": "Geometrische Folge a₁ = 2, q = 3. Was ist a₈?",
       "options": [
         "13122",
@@ -535,7 +780,7 @@
     {
       "id": "mathe-q010",
       "topic": "Reihen",
-      "q": "Σₖ₌₁^∞ (½)ᵏ = ?",
+      "q": "Σ (k = 1 bis ∞) (½)ᵏ = ?",
       "options": [
         "2",
         "½",
@@ -548,7 +793,7 @@
     {
       "id": "mathe-q011",
       "topic": "Reihen",
-      "q": "Σₖ₌₀^∞ (−⅕)ᵏ = ?",
+      "q": "Σ (k = 0 bis ∞) (−⅕)ᵏ = ?",
       "options": [
         "5/4",
         "5/6",
@@ -561,7 +806,7 @@
     {
       "id": "mathe-q012",
       "topic": "Reihen",
-      "q": "Σₖ₌₀^∞ 3 · (−½)ᵏ = ?",
+      "q": "Σ (k = 0 bis ∞) 3 · (−½)ᵏ = ?",
       "options": [
         "2",
         "−2",
@@ -587,7 +832,7 @@
     {
       "id": "mathe-q014",
       "topic": "Reihen",
-      "q": "Σₖ₌₁^∞ 1/(k(k+1)) = ?",
+      "q": "Σ (k = 1 bis ∞) 1/(k(k + 1)) = ?",
       "options": [
         "½",
         "∞",
@@ -599,7 +844,7 @@
     },
     {
       "id": "mathe-q015",
-      "topic": "Konvergenzkriterien",
+      "topic": "Reihen",
       "q": "Die Summanden einer Reihe gehen gegen 0. Was folgt?",
       "options": [
         "Die Reihe konvergiert.",
@@ -612,7 +857,7 @@
     },
     {
       "id": "mathe-q016",
-      "topic": "Konvergenzkriterien",
+      "topic": "Reihen",
       "q": "Welche Reihe ist **divergent**?",
       "options": [
         "Σ k/(k² + 5)",
@@ -625,7 +870,7 @@
     },
     {
       "id": "mathe-q017",
-      "topic": "Konvergenzkriterien",
+      "topic": "Reihen",
       "q": "Konvergiert Σ (2k + 1)/(5k − 3)?",
       "options": [
         "Nur für große k",
@@ -638,7 +883,7 @@
     },
     {
       "id": "mathe-q018",
-      "topic": "Finanzmathe",
+      "topic": "Finanzmathematik",
       "q": "Wie viel sind 1000 € nach 2 Jahren bei 5 % mit Zinseszins?",
       "options": [
         "1050,00 €",
@@ -651,7 +896,7 @@
     },
     {
       "id": "mathe-q019",
-      "topic": "Finanzmathe",
+      "topic": "Finanzmathematik",
       "q": "Sparplan: jedes Jahr 100 € (Jahresende), 5 %, 3 Jahre. Endwert?",
       "options": [
         "315,25 €",
@@ -664,7 +909,7 @@
     },
     {
       "id": "mathe-q020",
-      "topic": "Finanzmathe",
+      "topic": "Finanzmathematik",
       "q": "Eine Stiftung zahlt für immer 600 € pro Jahr, Zins 4 %. Barwert?",
       "options": [
         "15 000 €",
@@ -677,7 +922,7 @@
     },
     {
       "id": "mathe-q021",
-      "topic": "Finanzmathe",
+      "topic": "Finanzmathematik",
       "q": "Was ist falsch beim Einsetzen von 5 % in die Sparplanformel?",
       "options": [
         "q = 1 + i = 1,05",
@@ -690,7 +935,7 @@
     },
     {
       "id": "mathe-q022",
-      "topic": "Funktionen",
+      "topic": "Funktionen, Umkehrfunktion und Monotonie",
       "q": "Größter Definitionsbereich von f(x) = 1/(x⁴ − 2x² + 1)?",
       "options": [
         "ℝ",
@@ -703,7 +948,7 @@
     },
     {
       "id": "mathe-q023",
-      "topic": "Funktionen",
+      "topic": "Stetigkeit, Verkettung, ln und e",
       "q": "(f ∘ g)(x) bedeutet …",
       "options": [
         "zuerst f, dann g",
@@ -716,7 +961,7 @@
     },
     {
       "id": "mathe-q024",
-      "topic": "Umkehrfunktion",
+      "topic": "Funktionen, Umkehrfunktion und Monotonie",
       "q": "Hat f: ℝ → ℝ, f(x) = x² − 4x + 2 eine Umkehrfunktion?",
       "options": [
         "Ja, weil f stetig ist",
@@ -730,7 +975,7 @@
     {
       "id": "mathe-q025",
       "topic": "Grenzwerte von Funktionen",
-      "q": "lim_{x→2} (x² − 4)/(x − 2) = ?",
+      "q": "lim (x → 2) (x² − 4)/(x − 2) = ?",
       "options": [
         "existiert nicht (0/0)",
         "4",
@@ -743,7 +988,7 @@
     {
       "id": "mathe-q026",
       "topic": "Grenzwerte von Funktionen",
-      "q": "lim_{x→∞} (2x² + 3x − 1)/(x² + 5) = ?",
+      "q": "lim (x → ∞) (2x² + 3x − 1)/(x² + 5) = ?",
       "options": [
         "2",
         "3",
@@ -755,7 +1000,7 @@
     },
     {
       "id": "mathe-q027",
-      "topic": "Stetigkeit",
+      "topic": "Stetigkeit, Verkettung, ln und e",
       "q": "Für welches c ist f stetig? f(x) = (x³ − 2x² − 5x + 6)/(x³ − x) für x ≠ 1, f(1) = c",
       "options": [
         "c = −6",
@@ -768,8 +1013,8 @@
     },
     {
       "id": "mathe-q028",
-      "topic": "ln- und e-Regeln",
-      "q": "√(e^(3 ln 4)) = ?",
+      "topic": "Stetigkeit, Verkettung, ln und e",
+      "q": "√(e³ ˡⁿ ⁴) = ? (also Wurzel aus e hoch 3 ln 4)",
       "options": [
         "64",
         "8",
@@ -777,7 +1022,293 @@
         "12"
       ],
       "correct": 1,
-      "explain": "e^(3 ln 4) = e^(ln 4³) = 64, √64 = 8. 64 ist der Wert ohne Wurzel."
+      "explain": "3 ln 4 = ln 4³ = ln 64, also e³ ˡⁿ ⁴ = 64 und √64 = 8. 64 ist der Wert ohne Wurzel."
+    },
+    {
+      "id": "mathe-q029",
+      "topic": "Aussagenlogik",
+      "q": "Für welche Belegung ist A → B **falsch**?",
+      "options": [
+        "A = f, B = w",
+        "A = w, B = f",
+        "A = f, B = f",
+        "A = w, B = w"
+      ],
+      "correct": 1,
+      "explain": "Die Implikation ist nur gebrochen, wenn die Voraussetzung wahr und die Folgerung falsch ist. Bei A = f ist A → B immer wahr."
+    },
+    {
+      "id": "mathe-q030",
+      "topic": "Aussagenlogik",
+      "q": "Welche Aussage ist gleichwertig zu „Wenn n durch 4 teilbar ist, ist n gerade“?",
+      "options": [
+        "Wenn n gerade ist, ist n durch 4 teilbar.",
+        "Wenn n nicht durch 4 teilbar ist, ist n ungerade.",
+        "Wenn n ungerade ist, ist n nicht durch 4 teilbar.",
+        "n ist durch 4 teilbar und gerade."
+      ],
+      "correct": 2,
+      "explain": "Kontraposition ¬B → ¬A: tauschen und beide verneinen. Option 1 ist die Umkehrung, Option 2 der Umkehrschluss (n = 6 widerlegt beide)."
+    },
+    {
+      "id": "mathe-q031",
+      "topic": "Aussagenlogik",
+      "q": "¬(∀x P(x)) ist gleichwertig zu …",
+      "options": [
+        "∀x ¬P(x)",
+        "∃x P(x)",
+        "∃x ¬P(x)",
+        "¬∃x P(x)"
+      ],
+      "correct": 2,
+      "explain": "Nicht alle erfüllen P heißt: Mindestens einer erfüllt P nicht. Quantor umdrehen, innen verneinen."
+    },
+    {
+      "id": "mathe-q032",
+      "topic": "Aussagenlogik",
+      "q": "Was ist die Verneinung von „Es gibt eine gerade Primzahl“?",
+      "options": [
+        "Es gibt eine ungerade Primzahl.",
+        "Jede Primzahl ist ungerade.",
+        "Jede Primzahl ist gerade.",
+        "Es gibt keine ungerade Primzahl."
+      ],
+      "correct": 1,
+      "explain": "¬∃x (P(x) ∧ G(x)) ≡ ∀x (P(x) → ¬G(x)): Alle Primzahlen sind ungerade. (Die Verneinung ist falsch, denn 2 ist eine gerade Primzahl.)"
+    },
+    {
+      "id": "mathe-q033",
+      "topic": "Aussagenlogik",
+      "q": "Eine Funktion ist genau bei (A, B) = (w, f) und (f, w) wahr. Welche Formel ist ihre DNF?",
+      "options": [
+        "(A ∧ ¬B) ∨ (¬A ∧ B)",
+        "(A ∨ ¬B) ∧ (¬A ∨ B)",
+        "(¬A ∧ B) ∨ (A ∧ B)",
+        "(A ∧ B) ∨ (¬A ∧ ¬B)"
+      ],
+      "correct": 0,
+      "explain": "Je w-Zeile eine Vollkonjunktion, f-Werte verneint, mit ∨ verbunden. Das ist das exklusive Oder A ⊻ B. Option 4 wäre A ↔ B."
+    },
+    {
+      "id": "mathe-q034",
+      "topic": "Aussagenlogik",
+      "q": "Welche Formel ist eine **Tautologie**?",
+      "options": [
+        "(A → B) ↔ (A ∨ B)",
+        "A ∧ ¬A",
+        "(A ∨ B) → A",
+        "(A → B) ↔ (¬A ∨ B)"
+      ],
+      "correct": 3,
+      "explain": "A → B ≡ ¬A ∨ B gilt in allen 4 Zeilen. Option 1 scheitert bei A = B = f, Option 3 bei A = f, B = w, und A ∧ ¬A ist ein Widerspruch."
+    },
+    {
+      "id": "mathe-q035",
+      "topic": "Aussagenlogik",
+      "q": "¬(A ∨ B) ≡ ?",
+      "options": [
+        "¬A ∨ ¬B",
+        "¬A ∧ ¬B",
+        "A ∧ B",
+        "¬A ∨ B"
+      ],
+      "correct": 1,
+      "explain": "De Morgan: Die Negation wandert hinein und ∨ wird zu ∧. „Weder A noch B“."
+    },
+    {
+      "id": "mathe-q036",
+      "topic": "Aussagenlogik",
+      "q": "Wie viele Zeilen hat die Wahrheitstafel von (A ∧ B) ∨ (¬C ∧ D)?",
+      "options": [
+        "4",
+        "8",
+        "16",
+        "32"
+      ],
+      "correct": 2,
+      "explain": "4 verschiedene Variablen A, B, C, D → 2⁴ = 16 Zeilen. Die Anzahl der Operatoren spielt keine Rolle."
+    },
+    {
+      "id": "mathe-q037",
+      "topic": "Aussagenlogik",
+      "q": "In wie vielen der 8 Zeilen ist (A ∨ B) ∧ ¬C wahr?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correct": 1,
+      "explain": "C muss f sein (4 Zeilen), dazu A oder B wahr: (w, w), (w, f), (f, w) → 3 Zeilen."
+    },
+    {
+      "id": "mathe-q038",
+      "topic": "Aussagenlogik",
+      "q": "Welchen Wert hat A ∨ B ∧ C bei A = w, B = w, C = f?",
+      "options": [
+        "w",
+        "f",
+        "nicht auswertbar ohne Klammern",
+        "hängt von der Leserichtung ab"
+      ],
+      "correct": 0,
+      "explain": "∧ bindet stärker als ∨: A ∨ (B ∧ C) = w ∨ f = w. Falsch gelesen als (A ∨ B) ∧ C käme f heraus."
+    },
+    {
+      "id": "mathe-q039",
+      "topic": "Aussagenlogik",
+      "q": "T(x, y) = „x teilt y“ mit x ∈ {2, 3, 5}, y ∈ {4, 6, 9, 10}. Welche Aussage ist **wahr**?",
+      "options": [
+        "∃x ∀y T(x, y)",
+        "∀y ∃x T(x, y)",
+        "∀x ∀y T(x, y)",
+        "∃y ∀x T(x, y)"
+      ],
+      "correct": 1,
+      "explain": "Jede Zahl y hat einen Teiler aus {2, 3, 5}: 4 (2), 6 (2), 9 (3), 10 (2). Aber kein x teilt alle y, und kein y wird von allen x geteilt."
+    },
+    {
+      "id": "mathe-q040",
+      "topic": "Aussagenlogik",
+      "q": "Was gehört **nicht** zu einem Beweis mit vollständiger Induktion?",
+      "options": [
+        "Induktionsanfang: A(1) nachrechnen",
+        "Annahme: A(n) gilt für ein festes n",
+        "Schluss: aus A(n) folgt A(n + 1)",
+        "A(n) für n = 1 bis 10 nachrechnen und fertig"
+      ],
+      "correct": 3,
+      "explain": "Beispiele beweisen nie ein „für alle“. Der Schluss von n auf n + 1 ist das, was alle Dominosteine umwirft."
+    },
+    {
+      "id": "mathe-q041",
+      "topic": "Aussagenlogik",
+      "q": "Eine Funktion ist nur bei A = w, B = w falsch. Welche Formel ist ihre KNF?",
+      "options": [
+        "A ∨ B",
+        "¬A ∨ ¬B",
+        "A ∧ B",
+        "¬A ∧ ¬B"
+      ],
+      "correct": 1,
+      "explain": "KNF: f-Zeile (w, w), Variablen mit w werden verneint → ¬A ∨ ¬B. Das ist NAND, ¬(A ∧ B)."
+    },
+    {
+      "id": "mathe-q042",
+      "topic": "Stetigkeit, Verkettung, ln und e",
+      "q": "f(x) = x + 1, g(x) = x². Was ist (g ∘ f)(3)?",
+      "options": [
+        "10",
+        "16",
+        "36",
+        "13"
+      ],
+      "correct": 1,
+      "explain": "g ∘ f: zuerst f, dann g. f(3) = 4, g(4) = 16. 10 wäre (f ∘ g)(3)."
+    },
+    {
+      "id": "mathe-q043",
+      "topic": "Stetigkeit, Verkettung, ln und e",
+      "q": "f(x) = x² + 1 für x ≤ 2, f(x) = ax − 3 für x > 2. Für welches a ist f stetig?",
+      "options": [
+        "a = 1",
+        "a = 4",
+        "a = 8",
+        "a = 5"
+      ],
+      "correct": 1,
+      "explain": "Links bei 2: 2² + 1 = 5. Rechts: 2a − 3. 2a − 3 = 5 → 2a = 8 → a = 4 (bei a = 8 wurde das Teilen durch 2 vergessen)."
+    },
+    {
+      "id": "mathe-q044",
+      "topic": "Stetigkeit, Verkettung, ln und e",
+      "q": "Löse e²ˣ⁻¹ = 5 (e hoch 2x − 1).",
+      "options": [
+        "x = (ln 5 − 1)/2",
+        "x = (1 + ln 5)/2",
+        "x = ln 3",
+        "x = (5 + 1)/2 = 3"
+      ],
+      "correct": 1,
+      "explain": "ln auf beiden Seiten: 2x − 1 = ln 5, also 2x = 1 + ln 5 und x = (1 + ln 5)/2 ≈ 1,305."
+    },
+    {
+      "id": "mathe-q045",
+      "topic": "Stetigkeit, Verkettung, ln und e",
+      "q": "½ · log₂(4e²) − 1/ln 2 = ?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "1/ln 2"
+      ],
+      "correct": 1,
+      "explain": "log₂(4e²) = 2 + 2 · log₂ e = 2 + 2/ln 2. Die Hälfte ist 1 + 1/ln 2, minus 1/ln 2 bleibt 1."
+    },
+    {
+      "id": "mathe-q046",
+      "topic": "Stetigkeit, Verkettung, ln und e",
+      "q": "Welcher Unstetigkeitstyp liegt bei sin(1/x) an der Stelle 0 vor?",
+      "options": [
+        "Sprungstelle",
+        "Polstelle",
+        "Oszillationsstelle",
+        "keiner, sin ist überall stetig"
+      ],
+      "correct": 2,
+      "explain": "sin(1/x) schwingt immer schneller zwischen −1 und 1 und kommt keiner Zahl nahe. Die Werte werden aber nicht riesig, also kein Pol."
+    },
+    {
+      "id": "mathe-q047",
+      "topic": "Stetigkeit, Verkettung, ln und e",
+      "q": "Ist f(x) = 1/(x − 2) auf ihrem Definitionsbereich ℝ \\ {2} stetig?",
+      "options": [
+        "Nein, bei 2 ist eine Polstelle",
+        "Ja, denn die 2 gehört nicht zum Definitionsbereich",
+        "Nur für x > 2",
+        "Nein, Brüche sind nie stetig"
+      ],
+      "correct": 1,
+      "explain": "Stetigkeit prüft man nur an Stellen aus D. Brüche sind überall stetig, wo der Nenner ≠ 0 ist."
+    },
+    {
+      "id": "mathe-q048",
+      "topic": "Stetigkeit, Verkettung, ln und e",
+      "q": "ln(x² − y²) − ln(2(x − y)) für x > y > 0 = ?",
+      "options": [
+        "ln(x + y)",
+        "ln((x + y)/2)",
+        "ln((x − y)/2)",
+        "ln(x² − y²) / ln(2(x − y))"
+      ],
+      "correct": 1,
+      "explain": "Minus wird geteilt: ln((x − y)(x + y)/(2(x − y))), (x − y) kürzen → ln((x + y)/2). Probe x = 3, y = 1: ln 8 − ln 4 = ln 2."
+    },
+    {
+      "id": "mathe-q049",
+      "topic": "Grundlagen",
+      "q": "4!/5! = ?",
+      "options": [
+        "4/5",
+        "1/5",
+        "1",
+        "24"
+      ],
+      "correct": 1,
+      "explain": "5! = 5 · 4!, also 4!/5! = 1/5. Probe: 24/120 = 1/5."
+    },
+    {
+      "id": "mathe-q050",
+      "topic": "Funktionen, Umkehrfunktion und Monotonie",
+      "q": "Ist f(x) = x² auf ganz ℝ streng monoton wachsend?",
+      "options": [
+        "Ja, x² wird immer größer",
+        "Nein: −3 < −1, aber f(−3) = 9 > f(−1) = 1",
+        "Ja, weil f(1) < f(3)",
+        "Ja, aber nur, weil f(0) = 0 ist"
+      ],
+      "correct": 1,
+      "explain": "Ein einziges Gegenpaar reicht. Erst auf [0, ∞) ist x² streng wachsend; f(1) < f(3) ist nur ein Beispiel."
     }
   ]
 }
