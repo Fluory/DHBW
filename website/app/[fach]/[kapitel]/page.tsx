@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Pager } from "@/components/reader/Pager";
 import { ReaderLayout } from "@/components/reader/ReaderLayout";
 import { KlausurBadge } from "@/components/site/Badges";
+import { cheatsheetFileName, cheatsheetPdfHref } from "@/lib/cheatsheet";
 import { chapterParams, getChapter } from "@/lib/content/loader";
 import { processMarkdown } from "@/lib/markdown/pipeline";
 import { withSummary } from "@/lib/markdown/summary";
@@ -51,14 +52,33 @@ export default async function ChapterPage({ params }: { params: Promise<Params> 
         title={chapter.title}
         summary={chapter.summary}
         content={content}
-        meta={<KlausurBadge klausur={chapter.klausur} />}
+        meta={
+          <>
+            <KlausurBadge klausur={chapter.klausur} />
+            {chapter.cheatsheet ? (
+              <a
+                className="meta-sheet"
+                href={cheatsheetPdfHref(subject.slug, chapter.slug)}
+                download={cheatsheetFileName(subject.short, chapter.order, chapter.title)}
+              >
+                Spickzettel als PDF (A4)
+              </a>
+            ) : null}
+          </>
+        }
         side={
           <>
             {chapter.cheatsheet ? (
-              <Link href={`${base}/${chapter.slug}/spickzettel`} className="side-learn">
-                <span className="label">Spickzettel</span>
-                <span>Das Kapitel auf einer A4-Seite</span>
-              </Link>
+              <div className="side-learn side-sheet">
+                <span className="label">Spickzettel · A4</span>
+                <Link href={`${base}/${chapter.slug}/spickzettel`}>Ansehen</Link>
+                <a
+                  href={cheatsheetPdfHref(subject.slug, chapter.slug)}
+                  download={cheatsheetFileName(subject.short, chapter.order, chapter.title)}
+                >
+                  PDF herunterladen
+                </a>
+              </div>
             ) : null}
             {subject.deck ? (
               <Link href={`${base}/lernen`} className="side-learn">
@@ -71,11 +91,21 @@ export default async function ChapterPage({ params }: { params: Promise<Params> 
         footer={
           <>
           {chapter.cheatsheet ? (
-            <Link href={`${base}/${chapter.slug}/spickzettel`} className="learn-link reader-learn">
-              <span className="label kicker">Spickzettel</span>
-              <span className="chapter-title">Dieses Kapitel auf einer DIN-A4-Seite</span>
-              <span className="chapter-summary">Formeln, Schemata und Fallen zum Wiederholen oder Ausdrucken.</span>
-            </Link>
+            <div className="learn-link reader-learn sheet-teaser">
+              <span className="label kicker">Spickzettel · DIN A4</span>
+              <span className="chapter-title">Alles Wichtige aus diesem Kapitel auf einer Seite</span>
+              <span className="chapter-summary">Formeln, Schemata, Rechenwege und typische Fehler zum Wiederholen oder Ausdrucken.</span>
+              <span className="sheet-teaser-actions">
+                <a
+                  className="sheet-download"
+                  href={cheatsheetPdfHref(subject.slug, chapter.slug)}
+                  download={cheatsheetFileName(subject.short, chapter.order, chapter.title)}
+                >
+                  PDF herunterladen
+                </a>
+                <Link href={`${base}/${chapter.slug}/spickzettel`}>Im Browser ansehen</Link>
+              </span>
+            </div>
           ) : null}
           {subject.deck ? (
             <Link href={`${base}/lernen`} className="learn-link reader-learn">

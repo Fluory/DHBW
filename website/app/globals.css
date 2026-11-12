@@ -1054,6 +1054,50 @@ tbody tr:last-child td {
   font-size: 0.9rem;
 }
 
+.sheet-download {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--bg) !important;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.sheet-download:hover {
+  background: var(--accent-ink);
+}
+
+.sheet-download:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.meta-sheet {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--accent-ink);
+}
+
+.sheet-teaser-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.side-sheet a {
+  width: fit-content;
+}
+
+.side-learn + .side-learn {
+  margin-top: 0.75rem;
+}
+
 .sheet-print {
   font: inherit;
   font-size: 0.85rem;
@@ -1194,6 +1238,28 @@ tbody tr:last-child td {
 
 .prose.sheet-body code {
   font-size: 0.86em;
+  padding: 0 0.2em;
+  border: 0;
+  border-radius: 3px;
+  background: var(--surface);
+}
+
+.prose.sheet-body pre code {
+  padding: 0;
+  background: none;
+}
+
+/* Überschrift bleibt mit dem ersten Block darunter in derselben Spalte. */
+.sheet-keep {
+  break-inside: avoid;
+}
+
+.sheet-foot {
+  margin: 0.8rem 0 0;
+  padding-top: 0.35rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.7rem;
+  color: var(--muted);
 }
 
 .prose.sheet-body .callout {
@@ -1213,7 +1279,7 @@ tbody tr:last-child td {
 @media print {
   @page {
     size: A4;
-    margin: 10mm 11mm;
+    margin: 9mm 10mm;
   }
 
   :root {
@@ -1249,12 +1315,17 @@ tbody tr:last-child td {
     border: 0;
     border-radius: 0;
     padding: 0;
-    font-size: 8.4pt;
-    line-height: 1.34;
+    font-size: 8.1pt;
+    line-height: 1.32;
   }
 
   .sheet-title {
     font-size: 14pt;
+  }
+
+  .sheet-foot {
+    margin-top: 0.5rem;
+    font-size: 6.5pt;
   }
 
   .sheet-body {

@@ -103,7 +103,7 @@ export default async function SubjectPage({ params }: { params: Promise<Params> 
               <li>
                 <Link href={`/${subject.slug}/spickzettel`} className="sources-link">
                   <span className="chapter-title">Spickzettel</span>
-                  <span className="chapter-summary">Zu jedem Kapitel eine DIN-A4-Seite mit dem Wichtigsten, zum Ausdrucken.</span>
+                  <span className="chapter-summary">Zu jedem Kapitel eine DIN-A4-Seite mit allem Wichtigen, zum Ansehen oder als PDF.</span>
                 </Link>
               </li>
             ) : null}

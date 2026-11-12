@@ -114,6 +114,7 @@ Pro Kapitel optional `faecher/NN-<slug>/spickzettel/NN-<kapitel-slug>.md` (gleic
 
 - Kein Frontmatter (Titel kommt vom Kapitel), kein H1, Gliederung mit `##`.
 - Muss beim Drucken auf **eine DIN-A4-Seite** passen (zweispaltig). Höchstens 650 Wörter (prüft der Build); ob es wirklich passt, prüft `node scripts/spickzettel-seiten.mjs [fach]` gegen einen laufenden Server.
+- Zu jedem Spickzettel liegt ein fertiges PDF in `public/spickzettel/<fach>/<kapitel>.pdf` (plus `<fach>.pdf` mit allen Seiten), auf der Website als „PDF herunterladen“ verlinkt. Nach jeder Änderung neu erzeugen: `pnpm build && SITE_PASSWORD=lokaltest pnpm start --port 3100`, dann `node scripts/spickzettel-seiten.mjs --pdf <fach>`. Ein Test schlägt fehl, wenn ein PDF fehlt oder veraltet ist.
 - Stichpunkte, kompakte Tabellen, Formeln mit Bedeutung der Symbole, Rechenwege als kurze Schritte mit Mini-Beispiel. Keine Alerts/Kästen. Letzter Abschnitt `## Typische Fehler`.
 - Nur, was im Kapitel steht.
 

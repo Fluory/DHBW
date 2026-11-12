@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { CheatSheet } from "@/components/reader/CheatSheet";
 import { PrintButton } from "@/components/reader/PrintButton";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { cheatsheetFileName, cheatsheetPdfHref, subjectCheatsheetPdfHref } from "@/lib/cheatsheet";
 import { cheatsheetSubjectParams, getSubject } from "@/lib/content/loader";
 import { processMarkdown } from "@/lib/markdown/pipeline";
 
@@ -52,8 +53,11 @@ export default async function CheatSheetsPage({ params }: { params: Promise<Para
           ))}
         </nav>
         <div className="sheet-actions">
+          <a className="sheet-download" href={subjectCheatsheetPdfHref(subject.slug)} download={cheatsheetFileName(subject.short, null, "alle Kapitel")}>
+            Alle als PDF herunterladen ({chapters.length} Seiten)
+          </a>
+          <PrintButton label="Drucken" />
           <Link href={base}>Zur Übersicht</Link>
-          <PrintButton label="Alle drucken oder als PDF speichern" />
         </div>
       </div>
       {chapters.map((chapter) => {
@@ -67,8 +71,13 @@ export default async function CheatSheetsPage({ params }: { params: Promise<Para
               tree={content.tree}
               level={2}
               id={`sz-${chapter.slug}`}
+              foot={`Semester 1 · ${subject.title} · Kapitel ${pad(chapter.order)} · Spickzettel`}
             />
             <p className="sheet-link">
+              <a href={cheatsheetPdfHref(subject.slug, chapter.slug)} download={cheatsheetFileName(subject.short, chapter.order, chapter.title)}>
+                Diese Seite als PDF
+              </a>
+              {" · "}
               <Link href={`${base}/${chapter.slug}`}>Zum Kapitel mit Erklärungen und Übungen</Link>
             </p>
           </div>
