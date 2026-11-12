@@ -41,6 +41,19 @@ Zahlensysteme (09. + 14.10.) → Rechnerarchitektur (16.10.) → relationale Dat
 | GIT – VL05 – Klausurvorbereitung | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191106) | 21.10.2026 | Termin 6, Klausurvorbereitung |
 | Exkurs Motivation – II | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191107) | 21.10.2026 | Termin 6 (nicht klausurrelevant) |
 
+## Prüfung (laut Veranstaltungs- und Prüfungsübersicht)
+
+Quelle: „Veranstaltungs- und Prüfungsübersicht 1. Semester“ (Kurs „WI26A2: Infos für Studierende“, Link auf eine
+Google-Tabelle, gesehen 12.11.2026) + Folien „Prüfungsrechtliche Regelungen“ (gesehen 12.11.2026).
+
+- **Prüfungsform:** Klausur, **48 Minuten** (Grundlagen der IT I, Gisbert Loff).
+- **Modul:** „Grundlegende Konzepte der IT“ (5 ECTS) = **Klausur 120 Min** insgesamt, zusammen mit **Grundlagen der
+  IT II** (72 Min, **2. Semester**).
+- **Punkte/Gewichtung:** **48 von 120 Punkten (40 %)**. Klausurdauer in Minuten = maximale Punkte (Prüfungsrecht). Bei mehreren Teilprüfungen gibt es keine Einzelnoten:
+  Die Punkte werden addiert und erst nach Abschluss des Moduls in eine Modulnote umgerechnet. Bestanden ab **50 %**
+  der Gesamtpunkte; sonst müssen **alle** Teilprüfungen des Moduls wiederholt werden.
+- **Hilfsmittel:** in der Übersicht nicht angegeben.
+
 ## Eigene Notizen
 
 <!-- Hier kannst du selbst Korrekturen eintragen, z. B. „Termin 3 fiel aus“ oder „Heute nur Übung“.

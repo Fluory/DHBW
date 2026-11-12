@@ -23,6 +23,17 @@ Termine laut Kalender: Dr. Wortel 19.10., 04.11., 20.11., 02.12. · Dr. Heller 0
 | Folien VL00 – Begrüßung und Orga „Logik und Algebra“ (PDF, Dr. Heller) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192270) | 10.11.2026 | Termin 3 (Organisatorisches) |
 | Folien VL01 – Logik (PDF, 142 Folien, in Moodle „VL01 - Aussagenlogik“) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192271) | 10.11.2026 | Termin 3 (Kapitel 1.1–1.7) |
 
+## Prüfung (laut Veranstaltungs- und Prüfungsübersicht)
+
+Quelle: „Veranstaltungs- und Prüfungsübersicht 1. Semester“ (Kurs „WI26A2: Infos für Studierende“, Link auf eine
+Google-Tabelle, gesehen 12.11.2026) + Folien „Prüfungsrechtliche Regelungen“ (gesehen 12.11.2026).
+
+- **Prüfungsform:** Klausur, **120 Minuten** (Mathematik I; als Dozenten genannt: Dr. Till Heller, Dr. Pascal Wortel).
+- **Modul:** „Mathematik I“ (5 ECTS) = Klausur 120 Min, einzige Prüfung im Modul (Mathematik II folgt als eigenes
+  Modul im 2. Semester, ebenfalls 120 Min).
+- **Punkte/Gewichtung:** **120 von 120 Punkten (100 %)** – die Klausur ist die ganze Modulnote (bestanden ab 4,0).
+- **Hilfsmittel:** in der Übersicht nicht angegeben.
+
 ## Eigene Notizen
 
 <!-- Hier kannst du selbst Korrekturen eintragen, z. B. „Termin 3 fiel aus“ oder „Heute nur Übung“.

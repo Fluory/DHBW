@@ -46,6 +46,42 @@ Dokumente. Die Zuordnung der Themen zu Terminen ist deshalb **geschätzt**:
 | [Pitch „Rent your Child“](vorbereitung/pitch_rent_your_child.md) | Portfolio-Präsentation (Thema „Geschäftsidee pitchen“): Kernbotschaft, Zielgruppe, Storyline, Sprechskript 3 und 5 Min., Folien, kritische Fragen, Stakeholder, Checkliste |
 | [Konfliktgespräch](vorbereitung/konfliktgespraech_vorbereitung.md) | Fall „Kollege reißt die Projekt-Timeline“ (plus „kommt immer zu spät“): quadratische Vorklärung, 5 Phasen, Rollenspiel, Spickzettel |
 
+## Prüfung (laut Veranstaltungs- und Prüfungsübersicht)
+
+Quellen (alle aus dem Kurs „WI26A2: Infos für Studierende“, gesehen 12.11.2026): „Veranstaltungs- und
+Prüfungsübersicht 1. Semester“ (Google-Tabelle), Folien „Prüfungsrechtliche Regelungen“ und „Portfolioprüfung
+Postervorlage“ (PowerPoint, 1 Folie).
+
+- **Prüfungsform laut Übersicht:** **Testat** (Effektives Lernen, Präsentieren und Kommunizieren, Anke Menzler).
+  Das Modul „Schlüsselqualifikationen“ (5 ECTS) schließt mit einem **unbenoteten Leistungsnachweis** ab; im
+  2. Semester kommt „Grundlagen des wissenschaftlichen Arbeitens“ (ebenfalls Testat) dazu.
+- **Dauer / Punkte / Gewichtung:** keine Minuten, keine Punkte. Unbenotet heißt: **keine Modulnote**, Bewertung nur
+  **„bestanden“ / „nicht bestanden“**. Für ECTS und Studienfortschritt zählt es trotzdem.
+- **Widerspruch zur bisherigen Annahme:** Oben steht „schriftliche Portfolio-Leistung, Abgabe 28.12.2026
+  (vermutlich)“. Die Übersicht nennt nur „Testat“. Beides passt zusammen, wenn das Testat als Portfolio erbracht
+  wird – **bei der Dozentin nachfragen**, welche Teile (Pitch, schriftliche Ausarbeitung, Poster?) und bis wann.
+- **Was das Prüfungsrecht zum Portfolio sagt** (gilt, falls das Testat als Portfolio läuft):
+  - besteht immer aus **mehreren Prüfungsteilen**, die **studienbegleitend** erbracht werden (auch während des
+    Semesters möglich, nicht nur in der Klausurphase);
+  - Anzahl und Art der Teile werden **zu Beginn des Moduls** festgelegt, jeder Teil wird mit **Punkten** bewertet,
+    das Ergebnis per **Punkteaddition**;
+  - Teile dürfen **Gruppenarbeit** sein, dann müssen die **individuellen Anteile kenntlich** gemacht werden (z. B.
+    Namen an den Abschnitten);
+  - mögliche Teile: schriftliche Ausarbeitung, Präsentation, **Posterpräsentation**, Kurzreferat, Kurztest,
+    Prüfungsgespräch, Fallanalyse, Programm- oder Gestaltungsentwurf.
+- **Postervorlage** (allgemeine Vorlage des Studiengangs, nicht ausdrücklich für LPK): **Hochformat ca. 59,4 ×
+  81,1 cm** (etwa A1), Schrift ca. 32–39 pt für Text, ca. 57 pt für Überschriften. Vorgegebene Felder: **Titel** und
+  **Autoren 1–4**, **Einleitung** (kurze Einführung, wissenschaftliche Grundlage), **Ziel/Forschungsfrage** (Ziele
+  der Untersuchung, Fragestellung), **Methoden** (Studienaufbau), **Ergebnisse** (Mittelpunkt der Arbeit,
+  Hauptaugenmerk), **Fazit** (kurze Zusammenfassung der Ergebnisse), **Ausblick**, **Literatur** [1]–[5].
+- **Fristen und Versäumnis:** Wer eine Leistung mit Abgabetermin **ohne wichtigen Grund** nicht rechtzeitig abgibt,
+  bekommt „nicht bestanden“. Bei Krankheit **unverzüglich** Fristverlängerung beim Prüfungsamt beantragen (per
+  Workflow, mit **ärztlichem Attest im Original** – eine AU-Bescheinigung allein reicht nicht) und das
+  Studiengangssekretariat per E-Mail informieren.
+- **Wiederholung (unbenotete Leistung im Theoriemodul):** 1. Wiederholung innerhalb von **4 Wochen** ab
+  Bekanntgabe, 2. Wiederholung innerhalb von **2–6 Wochen** als **mündliche Prüfung**. Endgültig nicht bestanden →
+  Exmatrikulation.
+
 ## Eigene Notizen
 
 <!-- Hier kannst du selbst Korrekturen eintragen, z. B. „Termin 3 fiel aus“ oder „Heute nur Übung“.

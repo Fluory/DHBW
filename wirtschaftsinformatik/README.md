@@ -62,6 +62,19 @@ Details und Lerntipps: [Notiz 03 → Klausurhinweise](vorlesungen/03_2026-10-30.
 | Tafelanschriebe (ZIP: 3 Fotos – Etsy-Canvas, CRM-Steckbrief, Standard- vs. Individualsoftware) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191837) | 02.11.2026 | Termin 1 (CRM), Termin 2 (Canvas, Software) |
 
 
+## Prüfung (laut Veranstaltungs- und Prüfungsübersicht)
+
+Quelle: „Veranstaltungs- und Prüfungsübersicht 1. Semester“ (Kurs „WI26A2: Infos für Studierende“, Link auf eine
+Google-Tabelle, gesehen 12.11.2026) + Folien „Prüfungsrechtliche Regelungen“ (gesehen 12.11.2026).
+
+- **Prüfungsform:** Klausur, **48 Minuten** (Einführung in die Wirtschaftsinformatik, Dr. Matthias Hauser).
+- **Modul:** „Grundlegende Methoden der Wirtschaftsinformatik“ (5 ECTS), Modulprüfung „Klausur oder Kombinierte
+  Modulprüfung (Klausur und Präsentation)“; dazu im **2. Semester** „Systemanalyse und -entwurf“ (Klausur 72 Min).
+- **Punkte/Gewichtung:** **48 von 120 Punkten (40 %)**. Klausurdauer in Minuten = maximale Punkte (Prüfungsrecht). Bei mehreren Teilprüfungen gibt es keine Einzelnoten:
+  Die Punkte werden addiert und erst nach Abschluss des Moduls in eine Modulnote umgerechnet. Bestanden ab **50 %**
+  der Gesamtpunkte; sonst müssen **alle** Teilprüfungen des Moduls wiederholt werden.
+- **Hilfsmittel:** in der Übersicht nicht angegeben (siehe „Klausurhinweise“ oben: nur Stifte, Lineal, Radierer).
+
 ## Eigene Notizen
 
 <!-- Hier kannst du selbst Korrekturen eintragen, z. B. „Termin 3 fiel aus“ oder „Heute nur Übung“.

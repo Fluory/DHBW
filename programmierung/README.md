@@ -57,6 +57,18 @@ Terminal, `uv`, Python 3.14, `ruff`, `ty` – bewusst ohne IDE und ohne KI-Assis
 | Wiederholung VL01 bis VL06 – Fitnessstudio (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192161) | 09.11.2026 | Klausurvorbereitung VL01–VL06; zusammengefasst in Notiz 08 (ob am 06.11. gezeigt, unklar) |
 | Wiederholung VL01 bis VL06 – Fitnessstudio (Beispielcode als Python-Dateien, ZIP) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192162) | 09.11.2026 | Klausurvorbereitung VL01–VL06; `fitnessstudio.py` ausgeführt, siehe Notiz 08 |
 
+## Prüfung (laut Veranstaltungs- und Prüfungsübersicht)
+
+Quelle: „Veranstaltungs- und Prüfungsübersicht 1. Semester“ (Kurs „WI26A2: Infos für Studierende“, Link auf eine
+Google-Tabelle, gesehen 12.11.2026) + Folien „Prüfungsrechtliche Regelungen“ (gesehen 12.11.2026).
+
+- **Prüfungsform:** Klausur, **120 Minuten** (Grundlagen der Programmierung, Dr. Markus Rosenfelder).
+- **Modul:** „Grundlagen der Programmierung“ (5 ECTS), Modulprüfung „Klausur oder Kombinierte Modulprüfung (Klausur
+  und Assignment)“; die Lehrveranstaltung ist die einzige im Modul.
+- **Punkte/Gewichtung:** **120 von 120 Punkten (100 %)** – die Klausur ist die ganze Modulnote (Klausurdauer in
+  Minuten = maximale Punkte; bestanden ab Note 4,0).
+- **Hilfsmittel:** in der Übersicht nicht angegeben.
+
 ## Eigene Notizen
 
 <!-- Hier kannst du selbst Korrekturen eintragen, z. B. „Termin 3 fiel aus“ oder „Heute nur Übung“.

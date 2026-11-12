@@ -14,15 +14,16 @@ Moodle: [Kurs 18616](https://moodle.heilbronn.dhbw.de/course/view.php?id=18616) 
 | 4 | 27.10.2026 | Rechtsformen II: Kapitalgesellschaften (GmbH, UG, GmbH & Co. KG, AG, KGaA, SE), eG, Stiftung (Übungen 18–22) + Kap. 4 Konzentration und Kooperation (Kartelle, Franchise, Joint Venture, Konzern, Holding, Fusion; Übungen 23–25) | Folien „3. Rechtsformen der Unternehmung“ (3.4–3.5) + „4. Konzentration und Kooperation“ + Skript Kap. 3.4–4 | [04](vorlesungen/04_2026-10-27.md) |
 | 5 | 03.11.2026 | Kap. 5 Standortentscheidungen komplett (Ziele, Standortplanung/-struktur, Standortfaktoren, Nutzwertanalyse, Standort Deutschland; Übungen 26–27, Musterklausur A8) + Kap. 6 Rechnungswesen bis Übung 28g (extern: Bilanz, GuV; intern: Kosten, Zweipunktverfahren, DB, Preisuntergrenzen, Make-or-buy) | Folien „5. Standortentscheidungen“ + „6. Rechnungswesen“ + Skript Kap. 5–6 + Musterlösung BWL 2025 | [05](vorlesungen/05_2026-11-03.md) |
 | 6 | 05.11.2026 | Rest Kap. 6 (Break-even, Übung 28h) + Kap. 7 Planung und Kontrolle komplett (Planungsarten/-ebenen, strategische Analyse: Wertkette, Benchmarking, PIMS, 7-S, Five Forces, Szenariotechnik; Kennzahlen/ROI, Balanced Scorecard; Übungen 29–34, Musterklausur A5) – abgeschlossen | Folien „6. Rechnungswesen“ (neue Fassung) + „7. Planung und Kontrolle“ + Skript Kap. 6–7 | [06](vorlesungen/06_2026-11-05.md) |
-| 7 | 10.11.2026 | Kap. 8 Organisation laut Folien (8.1–8.3, Übungen 35–38; Kap. 9 vermutlich erst am 12.11.) · ursprünglich vermutet: Kap. 8 Organisation (kurz, nicht klausurrelevant) + Kap. 9 Materialwirtschaft (Beschaffungsprinzipien, ABC/XYZ, Bedarfs-, Bestands-, Beschaffungsplanung mit Meldebestand und Andler, Sourcing, Lagerkennzahlen; Übungen 35–51 als eigene Lösungsskizzen) – wie weit Kap. 9 kommt, ist offen | vermutet (Skript Kap. 8–9, Lernseite Kap. 9) | [07](vorlesungen/07_2026-11-10.md) |
+| 7 | 10.11.2026 | Kap. 8 Organisation komplett (8.1–8.3: Aufbau-/Prozessorganisation, Leitungssysteme, Übungen 35–38; nicht klausurrelevant) – abgeschlossen; Übung 39–40 (Kap. 9.3) evtl. schon angefangen | Folien „8. Organisation“ + „Lösung bis Übung 40“ + Skript Kap. 8 | [07](vorlesungen/07_2026-11-10.md) |
+| 8 | 12.11.2026 | (vorbereitet) Kap. 9 Materialwirtschaft: Beschaffungsprinzipien, ABC/XYZ, Bedarfs-, Bestands- (Bestandsarten, Meldebestand) und Beschaffungsplanung (Andler), Sourcing, Lagerung, Lagerkennzahlen; Übungen 39–51 (39–40 offiziell, 41–51 eigene Skizzen) | Skript Kap. 9 + „Lösung bis Übung 40“; 9.4–9.8 vermutet (Sicherheit hoch für Kap. 9, mittel für den Umfang) | [08](vorlesungen/08_2026-11-12.md) |
 
 ## Materialien in Moodle
 
 | Material | Link | gesehen am | genutzt für |
 |---|---|---|---|
-| Skript + Übungen | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190112) | 06.10.2026 | Termin 1 (Kap. 1, S. 5–18), Termin 7 (Kap. 8–9, S. 97–124) |
+| Skript + Übungen | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190112) | 06.10.2026 | Termin 1 (Kap. 1, S. 5–18), Termin 7 (Kap. 8, S. 97–104), Termin 8 (Kap. 9, S. 105–124) |
 | Musterklausur | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190113) | 06.10.2026 | Termin 1 (Aufgabe 1b), Klausurvorbereitung |
-| Lösung zu den ABWL-Übungen 2026 (in Moodle jetzt „Lösung bis Übung 34“, Stand 10.11.) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190813) | 16.10.2026, aktualisiert gesehen 05.11. und 10.11.2026 | Termin 1 (Übungen 1–5), Termin 5 (Abgleich Übung 28a–g) |
+| Lösung zu den ABWL-Übungen 2026 (in Moodle jetzt „Lösung bis Übung 40“, erstellt 10.11. nach der Vorlesung) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190813) | 16.10.2026, aktualisiert gesehen 05.11., 10.11. und 12.11.2026 | Termin 1 (Übungen 1–5), Termin 5 (Abgleich Übung 28a–g), Termin 7 (Abgleich Übung 35–38), Termin 8 (Übung 39–40) |
 | Folien „1. Einführung“ | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191294) | 23.10.2026 | Termin 1 |
 | Folien „2. Betrieb und Unternehmung“ | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191297) | 23.10.2026 | Termin 2 |
 | Folien „3. Rechtsformen der Unternehmung“ | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191590) | 28.10.2026 | Termin 3 + 4 (Kap. 3, Lösungen Übung 12–22) |
@@ -59,6 +60,22 @@ mit Notiz-Verweisen: [Notiz 06](vorlesungen/06_2026-11-05.md#könnte-drankommen-
   optimaler Bestellmenge und Arten von Beständen · Sourcing-Varianten · Lagerkennzahlen
 - **Nicht auf der Liste:** Kap. 8 (Organisation), Kap. 10 (Produktion), Kap. 7.1–7.5. „Könnte“ heißt: starker
   Hinweis, keine Garantie.
+
+## Prüfung (laut Veranstaltungs- und Prüfungsübersicht)
+
+Quelle: „Veranstaltungs- und Prüfungsübersicht 1. Semester“ (Kurs „WI26A2: Infos für Studierende“, Link auf eine
+Google-Tabelle, gesehen 12.11.2026) + Folien „Prüfungsrechtliche Regelungen“ (gesehen 12.11.2026).
+
+- **Prüfungsform:** Klausur, **72 Minuten** (Einführung in die BWL).
+- **Modul:** „Grundlagen der Betriebswirtschaftslehre“ (5 ECTS) = **Klausur 120 Min** insgesamt, zusammen mit
+  **Marketing (48 Min)** – beide bei Michaela Geiger, beide im 1. Semester.
+- **Punkte/Gewichtung:** Laut Prüfungsrecht gibt es bei mehreren Teilprüfungen keine Einzelnoten, sondern Punkte
+  (**Klausurdauer in Minuten = maximale Punkte**). BWL also **72 von 120 Punkten (60 %)**, Marketing 48 (40 %).
+  Die Punkte werden addiert und in **eine Modulnote** umgerechnet. Bestanden ab **50 %** der Gesamtpunkte (60 von
+  120); wer darunter bleibt, muss **beide** Teilklausuren wiederholen. (Passt zur Musterklausur 2025 mit 72 Punkten.)
+- **Hilfsmittel:** in der Übersicht nicht angegeben.
+- **Termin:** steht nicht in der Übersicht. Klausuren liegen laut Prüfungsrecht in den letzten beiden Wochen des
+  Theoriesemesters und werden mindestens 4 Wochen vorher bekannt gegeben.
 
 ## Eigene Notizen
 
