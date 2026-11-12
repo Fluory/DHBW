@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildSummaryMarkdown, buildSummarySections, stripExercises, withSummary } from "@/lib/markdown/summary";
+import { alertContent, buildSummaryMarkdown, buildSummarySections, stripExercises, toBullets, withSummary } from "@/lib/markdown/summary";
 
 const chapter = [
   "Einstieg.",
@@ -44,13 +44,24 @@ const chapter = [
 ].join("\n");
 
 describe("Kapitel-Zusammenfassung", () => {
-  it("übernimmt Merk- und Warnkästen je Abschnitt unverändert", () => {
-    const sections = buildSummarySections(chapter);
-    expect(sections).toContain("**Erstes Thema**");
-    expect(sections).toContain("> Merksatz eins.");
-    expect(sections).toContain("> Falle eins.");
-    expect(sections).toContain("**Zweites Thema**");
-    expect(sections).toContain("> Merksatz zwei.");
+  it("übernimmt Merk- und Warnkästen je Abschnitt als Stichpunkte ohne Kasten", () => {
+    const sections = buildSummarySections(chapter) ?? "";
+    expect(sections).toContain("**Erstes Thema**\n\n- Merksatz eins.\n- *Typische Fehler:*\n  - Falle eins.");
+    expect(sections).toContain("**Zweites Thema**\n\n- Merksatz zwei.");
+    expect(sections).not.toContain(">");
+    expect(sections).not.toContain("Das Wichtigste");
+    expect(sections).not.toContain("Achtung");
+  });
+
+  it("macht Absätze zu Punkten und lässt Listen, Tabellen und Code stehen", () => {
+    expect(toBullets("Erster Satz\nüber zwei Zeilen.\n\nZweiter.")).toBe("- Erster Satz über zwei Zeilen.\n- Zweiter.");
+    expect(toBullets("Drei Dinge:\n\n- a\n- b")).toBe("- Drei Dinge:\n  - a\n  - b");
+    expect(toBullets("- Typischer Fehler: x\n- y", { stripMistakePrefix: true })).toBe("- x\n- y");
+    expect(toBullets("| a | b |\n|---|---|\n| 1 | 2 |")).toContain("| a | b |");
+  });
+
+  it("liest den Inhalt eines Kastens ohne Marker und Label", () => {
+    expect(alertContent("> [!WARNING]\n> **Achtung**\n>\n> - eins\n> - zwei")).toBe("- eins\n- zwei");
   });
 
   it("lässt Beispiele, Abschnitte ohne Kästen und den Übungsteil aus", () => {
@@ -63,7 +74,7 @@ describe("Kapitel-Zusammenfassung", () => {
   it("hängt die Zusammenfassung ans Kapitelende", () => {
     const text = withSummary(chapter);
     expect(text.startsWith("Einstieg.")).toBe(true);
-    expect(text.trimEnd().endsWith("> Merksatz zwei.")).toBe(true);
+    expect(text.trimEnd().endsWith("- Merksatz zwei.")).toBe(true);
     expect(text.indexOf("## Zusammenfassung")).toBeGreaterThan(text.indexOf("## Lösungen"));
   });
 

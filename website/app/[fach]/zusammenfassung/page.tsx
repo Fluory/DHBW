@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   if (!subject) return {};
   return {
     title: `Zusammenfassung · ${subject.title}`,
-    description: `Das Wichtigste und die typischen Fehler aus allen Kapiteln von ${subject.title} auf einer Seite.`,
+    description: `Merkpunkte und typische Fehler aus allen Kapiteln von ${subject.title} auf einer Seite.`,
     alternates: { canonical: `/${fach}/zusammenfassung` },
   };
 }
@@ -37,7 +37,7 @@ export default async function SummaryPage({ params }: { params: Promise<Params> 
     .map((chapter) => {
       const sections = buildSummarySections(chapter.body);
       const link = `[Zum Kapitel](${base}/${chapter.slug})`;
-      return `## ${pad(chapter.order)} · ${chapter.title}\n\n${chapter.summary}\n\n${sections ?? "Zu diesem Kapitel gibt es noch keine Merk- und Warnkästen."}\n\n${link}`;
+      return `## ${pad(chapter.order)} · ${chapter.title}\n\n${chapter.summary}\n\n${sections ?? "Zu diesem Kapitel gibt es noch keine Merkpunkte."}\n\n${link}`;
     })
     .join("\n\n");
   const content = processMarkdown(markdown);
@@ -48,7 +48,7 @@ export default async function SummaryPage({ params }: { params: Promise<Params> 
         crumbs={[{ href: "/", label: "Semester 1" }, { href: base, label: subject.short }, { label: "Zusammenfassung" }]}
         kicker={`${subject.title} · Zusammenfassung`}
         title={`Zusammenfassung: ${subject.title}`}
-        summary="Das Wichtigste und die typischen Fehler aus allen Kapiteln, zusammengetragen aus den Kästen „Das Wichtigste“ und „Achtung“."
+        summary="Pro Kapitel und Thema die Merkpunkte als Stichpunkte, darunter eingerückt die typischen Fehler. Für eine Seite pro Kapitel zum Ausdrucken gibt es die Spickzettel."
         content={content}
         footer={
           <Pager

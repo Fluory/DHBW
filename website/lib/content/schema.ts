@@ -39,6 +39,10 @@ export const NUMBERED_FILE_PATTERN = /^(\d{2})-([a-z0-9]+(?:-[a-z0-9]+)*)\.md$/;
 /** Dateinamen mit fester Bedeutung in einem Fach-Ordner. */
 export const SUBJECT_FILE = "_fach.md";
 export const SOURCES_FILE = "quellen.md";
+/** Unterordner mit einem Spickzettel (eine DIN-A4-Seite) je Kapitel, gleicher Dateiname wie das Kapitel. */
+export const CHEATSHEET_DIR = "spickzettel";
+/** Obergrenze, damit ein Spickzettel auf eine DIN-A4-Seite passt (Tabellen und Code brauchen zusätzlich Platz). */
+export const CHEATSHEET_MAX_WORDS = 650;
 
 const text = z.string().trim().min(1, "darf nicht leer sein");
 const slug = z.string().regex(SLUG_PATTERN, "muss kebab-case sein (a-z, 0-9, Bindestriche)");

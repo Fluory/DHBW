@@ -36,7 +36,7 @@ export default async function ChapterPage({ params }: { params: Promise<Params> 
   const context = getChapter(fach, kapitel);
   if (!context) notFound();
   const { subject, chapter, prev, next } = context;
-  const content = processMarkdown(withSummary(chapter.body), { sourcePath: chapter.file });
+  const content = processMarkdown(withSummary(chapter.body), { sourcePath: chapter.file, inlineSolutions: true });
   const base = `/${subject.slug}`;
 
   return (
@@ -53,15 +53,30 @@ export default async function ChapterPage({ params }: { params: Promise<Params> 
         content={content}
         meta={<KlausurBadge klausur={chapter.klausur} />}
         side={
-          subject.deck ? (
-            <Link href={`${base}/lernen`} className="side-learn">
-              <span className="label">Lernen</span>
-              <span>Karteikarten und Quiz zu {subject.short}</span>
-            </Link>
-          ) : null
+          <>
+            {chapter.cheatsheet ? (
+              <Link href={`${base}/${chapter.slug}/spickzettel`} className="side-learn">
+                <span className="label">Spickzettel</span>
+                <span>Das Kapitel auf einer A4-Seite</span>
+              </Link>
+            ) : null}
+            {subject.deck ? (
+              <Link href={`${base}/lernen`} className="side-learn">
+                <span className="label">Lernen</span>
+                <span>Karteikarten und Quiz zu {subject.short}</span>
+              </Link>
+            ) : null}
+          </>
         }
         footer={
           <>
+          {chapter.cheatsheet ? (
+            <Link href={`${base}/${chapter.slug}/spickzettel`} className="learn-link reader-learn">
+              <span className="label kicker">Spickzettel</span>
+              <span className="chapter-title">Dieses Kapitel auf einer DIN-A4-Seite</span>
+              <span className="chapter-summary">Formeln, Schemata und Fallen zum Wiederholen oder Ausdrucken.</span>
+            </Link>
+          ) : null}
           {subject.deck ? (
             <Link href={`${base}/lernen`} className="learn-link reader-learn">
               <span className="label kicker">Selbst abfragen</span>

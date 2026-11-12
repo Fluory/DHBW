@@ -5,6 +5,8 @@ import { describe, expect, it } from "vitest";
 import {
   ContentError,
   chapterParams,
+  cheatsheetParams,
+  cheatsheetSubjectParams,
   getChapter,
   getContentDir,
   getSubject,
@@ -45,6 +47,15 @@ describe("Loader (Fixtures)", () => {
     expect(context.prev).toBeNull();
     expect(context.next?.slug).toBe("logik");
     expect(getChapter("grundlagen-it", "gibt-es-nicht", library)).toBeUndefined();
+  });
+
+  it("hängt Spickzettel an das Kapitel mit demselben Dateinamen", () => {
+    const git = getSubject("grundlagen-it", library)!;
+    expect(git.chapters[0].cheatsheet?.file).toBe("faecher/01-grundlagen-it/spickzettel/01-zahlensysteme.md");
+    expect(git.chapters[0].cheatsheet?.body).toContain("Reste von unten");
+    expect(git.chapters[1].cheatsheet).toBeNull();
+    expect(cheatsheetParams(library)).toEqual([{ fach: "grundlagen-it", kapitel: "zahlensysteme" }]);
+    expect(cheatsheetSubjectParams(library)).toEqual([{ fach: "grundlagen-it" }]);
   });
 
   it("liest den Prolog", () => {
@@ -98,6 +109,11 @@ describe("Loader (ungültiger Content)", () => {
     has(/02-vertrag\.md: Bilder/);
     has(/02-vertrag\.md: Unbekannter Alert-Typ \[!DANGER\]/);
     has(/01-kapitel\.md: H1 im Body/);
+  });
+
+  it("meldet Fehler in Spickzetteln", () => {
+    has(/spickzettel\/02-vertrag\.md: Spickzettel haben kein Frontmatter/);
+    has(/spickzettel\/09-gibt-es-nicht\.md: Kein Kapitel mit diesem Dateinamen/);
   });
 
   it("loadLibrary wirft einen ContentError", () => {

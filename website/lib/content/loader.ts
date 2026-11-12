@@ -4,6 +4,8 @@ import matter from "gray-matter";
 import type { Blockquote, Html, Root } from "mdast";
 import { visit } from "unist-util-visit";
 import {
+  CHEATSHEET_DIR,
+  CHEATSHEET_MAX_WORDS,
   DECK_FILE,
   NUMBERED_FILE_PATTERN,
   SOURCES_FILE,
@@ -48,6 +50,11 @@ interface TextStats {
   readingMinutes: number;
 }
 
+export interface CheatSheetEntry extends TextStats {
+  /** Pfad relativ zum Content-Root. */
+  file: string;
+}
+
 export interface ChapterEntry extends TextStats {
   slug: string;
   order: number;
@@ -56,6 +63,8 @@ export interface ChapterEntry extends TextStats {
   klausur: Klausur;
   /** Pfad relativ zum Content-Root. */
   file: string;
+  /** Spickzettel aus `spickzettel/<gleicher Dateiname>.md` (optional). */
+  cheatsheet: CheatSheetEntry | null;
 }
 
 export interface SourcesEntry extends TextStats {
@@ -173,7 +182,7 @@ function listDir(absolute: string): fs.Dirent[] {
 const rel = (...segments: string[]) => toPosix(path.join(...segments));
 
 /** Kapitel-Slugs, die als Fach-Unterseite vergeben sind. */
-const RESERVED_SLUGS = new Set(["quellen", "zusammenfassung", "alles", "lernen"]);
+const RESERVED_SLUGS = new Set(["quellen", "zusammenfassung", "alles", "lernen", "spickzettel"]);
 
 function scanChapters(root: string, dirName: string, issues: ContentIssue[]): ChapterEntry[] {
   const absoluteDir = path.join(root, "faecher", dirName);
@@ -184,8 +193,9 @@ function scanChapters(root: string, dirName: string, issues: ContentIssue[]): Ch
   for (const entry of listDir(absoluteDir)) {
     const file = rel("faecher", dirName, entry.name);
     if (entry.name === SUBJECT_FILE || entry.name === SOURCES_FILE) continue;
+    if (entry.isDirectory() && entry.name === CHEATSHEET_DIR) continue;
     if (entry.isDirectory()) {
-      issues.push({ file, message: "Unterordner sind in einem Fach nicht vorgesehen." });
+      issues.push({ file, message: `Unterordner sind in einem Fach nicht vorgesehen (außer ${CHEATSHEET_DIR}/).` });
       continue;
     }
     if (!entry.name.endsWith(".md")) continue;
@@ -222,10 +232,47 @@ function scanChapters(root: string, dirName: string, issues: ContentIssue[]): Ch
 
     const stats = checkBody(parsed.content, file, issues);
     if (stats.words === 0) issues.push({ file, message: "Kapitel enthält keinen Text." });
-    chapters.push({ slug, ...meta, file, ...stats });
+    chapters.push({ slug, ...meta, file, ...stats, cheatsheet: null });
   }
 
+  attachCheatSheets(root, dirName, chapters, issues);
   return chapters.sort((a, b) => a.order - b.order);
+}
+
+/**
+ * Liest `spickzettel/NN-slug.md` und hängt sie an das Kapitel mit demselben Dateinamen.
+ * Spickzettel haben kein Frontmatter (Titel kommt vom Kapitel) und müssen auf eine A4-Seite passen.
+ */
+function attachCheatSheets(root: string, dirName: string, chapters: ChapterEntry[], issues: ContentIssue[]): void {
+  const absoluteDir = path.join(root, "faecher", dirName, CHEATSHEET_DIR);
+  if (!fs.existsSync(absoluteDir)) return;
+  const byFile = new Map(chapters.map((chapter) => [path.posix.basename(chapter.file), chapter]));
+  for (const entry of listDir(absoluteDir)) {
+    const file = rel("faecher", dirName, CHEATSHEET_DIR, entry.name);
+    if (entry.isDirectory() || !entry.name.endsWith(".md")) {
+      issues.push({ file, message: "Im Spickzettel-Ordner sind nur .md-Dateien vorgesehen." });
+      continue;
+    }
+    const chapter = byFile.get(entry.name);
+    if (!chapter) {
+      issues.push({ file, message: "Kein Kapitel mit diesem Dateinamen: Ein Spickzettel heißt wie sein Kapitel (NN-slug.md)." });
+      continue;
+    }
+    const raw = readFile(path.join(absoluteDir, entry.name));
+    if (/^---\s*\n/.test(raw)) {
+      issues.push({ file, message: "Spickzettel haben kein Frontmatter: Titel und Fach kommen vom Kapitel." });
+      continue;
+    }
+    const stats = checkBody(raw, file, issues);
+    if (stats.words === 0) issues.push({ file, message: "Spickzettel enthält keinen Text." });
+    if (stats.words > CHEATSHEET_MAX_WORDS) {
+      issues.push({
+        file,
+        message: `Spickzettel ist zu lang (${stats.words} Wörter, höchstens ${CHEATSHEET_MAX_WORDS}): Er muss auf eine DIN-A4-Seite passen.`,
+      });
+    }
+    chapter.cheatsheet = { file, ...stats };
+  }
 }
 
 function scanSources(root: string, dirName: string, issues: ContentIssue[]): SourcesEntry | null {
@@ -475,6 +522,22 @@ export function chapterParams(library: Library = loadLibrary()): Array<{ fach: s
   return library.subjects.flatMap((subject) =>
     subject.chapters.map((chapter) => ({ fach: subject.slug, kapitel: chapter.slug })),
   );
+}
+
+/** Kapitel mit Spickzettel: `/<fach>/<kapitel>/spickzettel`. */
+export function cheatsheetParams(library: Library = loadLibrary()): Array<{ fach: string; kapitel: string }> {
+  return library.subjects.flatMap((subject) =>
+    subject.chapters
+      .filter((chapter) => chapter.cheatsheet)
+      .map((chapter) => ({ fach: subject.slug, kapitel: chapter.slug })),
+  );
+}
+
+/** Fächer mit mindestens einem Spickzettel: `/<fach>/spickzettel`. */
+export function cheatsheetSubjectParams(library: Library = loadLibrary()): Array<{ fach: string }> {
+  return library.subjects
+    .filter((subject) => subject.chapters.some((chapter) => chapter.cheatsheet))
+    .map((subject) => ({ fach: subject.slug }));
 }
 
 export function sourcesParams(library: Library = loadLibrary()): Array<{ fach: string }> {

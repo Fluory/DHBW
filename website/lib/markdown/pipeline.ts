@@ -6,6 +6,7 @@ import { unified } from "unified";
 import { remarkAlerts } from "@/lib/markdown/alerts";
 import { rehypeHeadings, type Heading } from "@/lib/markdown/headings";
 import { rehypeContentLinks } from "@/lib/markdown/links";
+import { remarkInlineSolutions } from "@/lib/markdown/solutions";
 import { countWords, plainText, readingMinutes } from "@/lib/markdown/reading-time";
 
 export interface ProcessedMarkdown {
@@ -24,6 +25,8 @@ export interface ProcessOptions {
   headingOffset?: number;
   /** Präfix für Überschriften- und Fußnoten-IDs, wenn mehrere Texte auf einer Seite stehen. */
   idPrefix?: string;
+  /** Lösungen aus `## Lösungen` aufklappbar unter die jeweilige Übung holen (Kapitelseiten). */
+  inlineSolutions?: boolean;
 }
 
 /** Markdown → hast mit Alerts, Überschriften-IDs, Fußnoten und umgeschriebenen Links. */
@@ -32,6 +35,7 @@ export function processMarkdown(markdown: string, options: ProcessOptions = {}):
   const processor = unified()
     .use(remarkParse)
     .use(remarkGfm)
+    .use(options.inlineSolutions ? [remarkInlineSolutions] : [])
     .use(remarkAlerts)
     .use(remarkRehype, {
       allowDangerousHtml: false,

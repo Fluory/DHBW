@@ -17,6 +17,7 @@
   --signal-ink: #8f4c1c;
   --accent-ink: #4f5fa8;
   --code-bg: #f3f4f6;
+  --sheet-bg: #ffffff;
   --tint-strength: 7%;
 
   /* Schriften */
@@ -47,6 +48,7 @@
   --signal-ink: #ff9f5a;
   --accent-ink: #9db4ff;
   --code-bg: #15181d;
+  --sheet-bg: #15181d;
   --tint-strength: 9%;
   color-scheme: dark;
 }
@@ -952,6 +954,323 @@ tbody tr:last-child td {
 
 .callout-caution .callout-body {
   color: var(--muted);
+}
+
+/* Aufklappbare Lösung unter einer Übung: kleiner Textschalter, kein großer Knopf */
+
+.solution {
+  margin: 0.6em 0 0;
+}
+
+.solution-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  margin: 0 !important;
+  padding: 0.15em 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--accent-ink);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.solution-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.solution-toggle::before {
+  content: "▸";
+  font-size: 0.8em;
+}
+
+.solution[open] > .solution-toggle::before {
+  content: "▾";
+}
+
+.solution-toggle:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.solution-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.solution-body {
+  margin-top: 0.5em;
+  padding-left: 0.9em;
+  border-left: 2px solid var(--line);
+}
+
+.solution-body > :last-child {
+  margin-bottom: 0;
+}
+
+
+/* ------------------------------------------------------------------------
+   Spickzettel: eine DIN-A4-Seite je Kapitel
+   ------------------------------------------------------------------------ */
+
+.sheet-page {
+  width: 100%;
+  max-width: calc(210mm + 2 * var(--gutter));
+  margin: 0 auto;
+  padding: clamp(1.5rem, 4vw, 2.5rem) var(--gutter) 3rem;
+}
+
+.sheet-toolbar {
+  margin-bottom: 1.25rem;
+}
+
+.sheet-collection-title {
+  margin: 0.5rem 0 0.25rem;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  line-height: 1.15;
+}
+
+.sheet-collection-summary {
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+}
+
+.sheet-index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+}
+
+.sheet-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.25rem;
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+}
+
+.sheet-print {
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.sheet-print:hover {
+  border-color: var(--muted);
+}
+
+.sheet-print:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.sheet {
+  background: var(--sheet-bg);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: clamp(1rem, 3.5vw, 12mm);
+  font-size: 0.86rem;
+  line-height: 1.42;
+}
+
+.sheet-wrap + .sheet-wrap {
+  margin-top: 2.5rem;
+}
+
+.sheet-link {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+}
+
+.sheet-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  padding-bottom: 0.45rem;
+  margin-bottom: 0.7rem;
+  border-bottom: 2px solid var(--ink);
+}
+
+.sheet-kicker {
+  order: 2;
+  margin: 0;
+  color: var(--muted);
+}
+
+.sheet-title {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.15;
+}
+
+.sheet-body {
+  overflow-wrap: break-word;
+}
+
+@media (min-width: 52rem) {
+  .sheet-body {
+    column-count: 2;
+    column-gap: 1.6rem;
+    column-rule: 1px solid var(--line);
+  }
+}
+
+.prose.sheet-body h2,
+.prose.sheet-body h3 {
+  margin: 0.9em 0 0.3em;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+  break-after: avoid;
+}
+
+.prose.sheet-body h4 {
+  margin: 0.7em 0 0.2em;
+  font-family: var(--font-body);
+  font-size: 0.86rem;
+  font-weight: 600;
+  break-after: avoid;
+}
+
+.prose.sheet-body > :first-child {
+  margin-top: 0;
+}
+
+.prose.sheet-body p,
+.prose.sheet-body ul,
+.prose.sheet-body ol,
+.prose.sheet-body blockquote,
+.prose.sheet-body .table-scroll,
+.prose.sheet-body pre {
+  margin: 0 0 0.45em;
+}
+
+.prose.sheet-body ul,
+.prose.sheet-body ol {
+  padding-left: 1.1em;
+}
+
+.prose.sheet-body li {
+  margin: 0.1em 0;
+}
+
+.prose.sheet-body li,
+.prose.sheet-body table,
+.prose.sheet-body pre,
+.prose.sheet-body .callout {
+  break-inside: avoid;
+}
+
+.prose.sheet-body table {
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+
+.prose.sheet-body th,
+.prose.sheet-body td {
+  padding: 0.18em 0.4em;
+}
+
+.prose.sheet-body pre {
+  padding: 0.4em 0.55em;
+  font-size: 0.76rem;
+  line-height: 1.35;
+}
+
+.prose.sheet-body code {
+  font-size: 0.86em;
+}
+
+.prose.sheet-body .callout {
+  margin: 0.3em 0 0.5em;
+  padding: 0.35em 0.55em;
+  border-left: 2px solid var(--signal);
+}
+
+.prose.sheet-body .callout-title {
+  font-size: 0.8rem;
+}
+
+.prose.sheet-body .callout-kicker {
+  display: none;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm 11mm;
+  }
+
+  :root {
+    --bg: #ffffff;
+    --sheet-bg: #ffffff;
+    --surface: #f3f4f6;
+    --ink: #000000;
+    --muted: #444444;
+    --line: #cccccc;
+    --accent-ink: #2f3c7a;
+    --code-bg: #f3f4f6;
+  }
+
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+
+  .skip-link,
+  .site-header,
+  .site-footer,
+  .sheet-toolbar,
+  .sheet-link {
+    display: none !important;
+  }
+
+  .sheet-page {
+    max-width: none;
+    padding: 0;
+  }
+
+  .sheet {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    font-size: 8.4pt;
+    line-height: 1.34;
+  }
+
+  .sheet-title {
+    font-size: 14pt;
+  }
+
+  .sheet-body {
+    column-count: 2;
+    column-gap: 6mm;
+    column-rule: 0.5pt solid #cccccc;
+  }
+
+  .prose.sheet-body pre {
+    white-space: pre-wrap;
+  }
+
+  .sheet-wrap + .sheet-wrap {
+    margin-top: 0;
+    break-before: page;
+  }
 }
 
 /* Anmeldung */

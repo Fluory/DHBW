@@ -13,6 +13,8 @@ website/content/
       01-<kapitel-slug>.md       # Kapitel, Reihenfolge über Präfix + `order`
       02-<kapitel-slug>.md
       quellen.md                 # Quellen-Dossier: woraus das Fach zusammengestellt ist
+      spickzettel/
+        01-<kapitel-slug>.md     # optional: Spickzettel, gleicher Dateiname wie das Kapitel
     02-wirtschaftsinformatik/
     …
 ```
@@ -81,7 +83,9 @@ klausur: "relevant"           # relevant | teilweise | nicht-relevant
 2. Abschnitte (`##`) je Thema, jeweils: **Was ist das?** (eigene Worte, Beispiel mit Zahlen oder Code) → `> [!IMPORTANT]` Das Wichtigste → `> [!WARNING]` Achtung.
 3. Rechenverfahren als nummerierte Schritte mit vollständig durchgerechnetem Beispiel.
 4. `## Übungen`: 3–6 Aufgaben (leicht bis Prüfungsniveau), jede als `> [!TIP]` mit Label `**Übung N · leicht|mittel|Prüfungsniveau**` und Quellenangabe (z. B. „Skript, Übung 26“, „Musterklausur 2025, A5“, „eigene Aufgabe“).
-5. `## Lösungen`: zu jeder Übung `### Übung N` mit Lösung Schritt für Schritt.
+5. `## Lösungen`: zu jeder Übung `### Übung N` mit Lösung Schritt für Schritt. Die Website zeigt jede Lösung als kleinen Aufklapper „Lösung“ direkt unter ihrer Übung (Zuordnung über die Nummer). Probeklausuren: Aufgaben als `### Aufgabe N …`, Lösungen als `### Aufgabe N` oder `### Lösung Aufgabe N …` unter `## Lösungen …`; die Lösung erscheint am Ende des Aufgaben-Abschnitts.
+
+Die Zusammenfassung (am Kapitelende und unter `/<fach>/zusammenfassung`) baut die Website selbst: Der Inhalt aller `[!IMPORTANT]`-Kästen wird je Abschnitt zu Stichpunkten, die `[!WARNING]`-Kästen stehen eingerückt darunter als „Typische Fehler“.
 
 ## Karteikarten und Quiz
 
@@ -103,6 +107,15 @@ Pro Fach optional `faecher/NN-<slug>/karteikarten.json`:
 - `topic` sollte einem Kapitelthema entsprechen. `exam: true` = typischer oder offizieller Klausurpunkt; Inhalte, die laut Klausurhinweis nicht drankommen, haben `exam: false` und das Topic „Nicht klausurrelevant“.
 - Texte: Inline-Markdown (`**fett**`, `*kursiv*`, `` `code` ``), Zeilenumbruch `\n`, Formeln als Unicode. Kein HTML.
 - Quiz: genau 4 Optionen, `correct` ist der Index 0–3, falsche Optionen sind typische Fehler.
+
+## Spickzettel
+
+Pro Kapitel optional `faecher/NN-<slug>/spickzettel/NN-<kapitel-slug>.md` (gleicher Dateiname wie das Kapitel, Probeklausuren haben keinen). Seite: `/<fach>/<kapitel>/spickzettel`, alle eines Fachs unter `/<fach>/spickzettel`.
+
+- Kein Frontmatter (Titel kommt vom Kapitel), kein H1, Gliederung mit `##`.
+- Muss beim Drucken auf **eine DIN-A4-Seite** passen (zweispaltig). Höchstens 650 Wörter (prüft der Build); ob es wirklich passt, prüft `node scripts/spickzettel-seiten.mjs [fach]` gegen einen laufenden Server.
+- Stichpunkte, kompakte Tabellen, Formeln mit Bedeutung der Symbole, Rechenwege als kurze Schritte mit Mini-Beispiel. Keine Alerts/Kästen. Letzter Abschnitt `## Typische Fehler`.
+- Nur, was im Kapitel steht.
 
 ## Greifbar erklären (gilt für jedes neue Konzept)
 

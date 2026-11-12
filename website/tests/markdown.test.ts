@@ -134,3 +134,86 @@ describe("Lesezeit", () => {
     expect(processMarkdown("Eins zwei drei").words).toBe(3);
   });
 });
+
+describe("Lösungen unter den Übungen", () => {
+  const chapter = [
+    "## Thema",
+    "",
+    "Text.",
+    "",
+    "## Übungen",
+    "",
+    "> [!TIP]",
+    "> **Übung 1 · leicht**",
+    "> Rechne 1 + 1.",
+    "",
+    "> [!TIP]",
+    "> **Übung 2 · mittel**",
+    "> Rechne 2 + 2.",
+    "",
+    "## Lösungen",
+    "",
+    "### Übung 1",
+    "",
+    "Ergebnis 2.",
+    "",
+    "### Übung 2",
+    "",
+    "Ergebnis 4.",
+    "",
+    "## Zusammenfassung",
+    "",
+    "Ende.",
+  ].join("\n");
+
+  it("holt jede Lösung aufklappbar in ihre Übung und entfernt den Lösungsteil", () => {
+    const { tree, headings } = processMarkdown(chapter, { inlineSolutions: true });
+    const details = find(tree, (el) => el.tagName === "details");
+    expect(details).toHaveLength(2);
+    const asides = find(tree, (el) => el.tagName === "aside");
+    expect(find(asides[0] as unknown as Root, (el) => el.tagName === "details")).toHaveLength(1);
+    expect(JSON.stringify(asides[0])).toContain("Ergebnis 2.");
+    expect(JSON.stringify(asides[1])).toContain("Ergebnis 4.");
+    expect(find(tree, (el) => el.tagName === "summary")[0].children).toEqual([{ type: "text", value: "Lösung" }]);
+    expect(headings.map((heading) => heading.text)).toEqual(["Thema", "Übungen", "Zusammenfassung"]);
+  });
+
+  it("hängt Lösungen bei Probeklausuren an den Aufgaben-Abschnitt", () => {
+    const exam = [
+      "## Aufgaben",
+      "",
+      "### Aufgabe 1 · Logik (3 Punkte)",
+      "",
+      "Frage eins.",
+      "",
+      "### Aufgabe 2 · SQL",
+      "",
+      "Frage zwei.",
+      "",
+      "## Lösungen und Bewertung",
+      "",
+      "Punkte je Teil.",
+      "",
+      "### Lösung Aufgabe 1 (3 Punkte)",
+      "",
+      "Antwort eins.",
+      "",
+      "### Aufgabe 2",
+      "",
+      "Antwort zwei.",
+    ].join("\n");
+    const { tree, headings } = processMarkdown(exam, { inlineSolutions: true });
+    expect(find(tree, (el) => el.tagName === "details")).toHaveLength(2);
+    const order = JSON.stringify(tree);
+    expect(order.indexOf("Antwort eins.")).toBeGreaterThan(order.indexOf("Frage eins."));
+    expect(order.indexOf("Antwort eins.")).toBeLessThan(order.indexOf("Frage zwei."));
+    // Einleitung des Lösungsteils bleibt mit Überschrift stehen.
+    expect(headings.map((heading) => heading.text)).toContain("Lösungen und Bewertung");
+    expect(order).toContain("Punkte je Teil.");
+  });
+
+  it("ändert ohne Option nichts", () => {
+    const { tree } = processMarkdown(chapter);
+    expect(find(tree, (el) => el.tagName === "details")).toHaveLength(0);
+  });
+});

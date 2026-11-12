@@ -96,9 +96,17 @@ export default async function SubjectPage({ params }: { params: Promise<Params> 
             <li>
               <Link href={`/${subject.slug}/zusammenfassung`} className="sources-link">
                 <span className="chapter-title">Zusammenfassung des Fachs</span>
-                <span className="chapter-summary">Das Wichtigste und die typischen Fehler aus allen Kapiteln auf einer Seite.</span>
+                <span className="chapter-summary">Merkpunkte und typische Fehler aus allen Kapiteln als Stichpunkte auf einer Seite.</span>
               </Link>
             </li>
+            {subject.chapters.some((chapter) => chapter.cheatsheet) ? (
+              <li>
+                <Link href={`/${subject.slug}/spickzettel`} className="sources-link">
+                  <span className="chapter-title">Spickzettel</span>
+                  <span className="chapter-summary">Zu jedem Kapitel eine DIN-A4-Seite mit dem Wichtigsten, zum Ausdrucken.</span>
+                </Link>
+              </li>
+            ) : null}
             <li>
               <Link href={`/${subject.slug}/alles`} className="sources-link">
                 <span className="chapter-title">Alle Kapitel am Stück lesen</span>
