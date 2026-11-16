@@ -23,6 +23,7 @@ Termine laut Kalender: Dr. Wortel 19.10., 04.11., 20.11., 02.12. · Dr. Heller 0
 | Folien Analysis 04.11. – Reihen + Funktionen (HTML, in Moodle „04.11.2027“) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192061) | 05.11.2026 | Termin 2 |
 | Folien VL00 – Begrüßung und Orga „Logik und Algebra“ (PDF, Dr. Heller) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192270) | 10.11.2026 | Termin 3 (Organisatorisches) |
 | Folien VL01 – Logik (PDF, 142 Folien, in Moodle „VL01 - Aussagenlogik“) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192271) | 10.11.2026 | Termin 3 (Kapitel 1.1–1.7) |
+| Aufgaben Aussagenlogik (Übungsblatt, 22 Aufgaben, PDF, Abschnitt „Logik - Übungen“) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192675) | 16.11.2026 | Termin 3–4; eigene Lösungen: [uebungen/aussagenlogik_loesungen.md](uebungen/aussagenlogik_loesungen.md) |
 
 ## Prüfung (laut Veranstaltungs- und Prüfungsübersicht)
 
