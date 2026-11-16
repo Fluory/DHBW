@@ -57,6 +57,7 @@ Terminal, `uv`, Python 3.14, `ruff`, `ty` – bewusst ohne IDE und ohne KI-Assis
 | Vorlesung 5 – Prompt für KI-Lernpartner (Text, Stoff VL01–VL05) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191612) | 28.10.2026 | Klausurvorbereitung (Abfrage VL01–VL05) |
 | Wiederholung VL01 bis VL06 – Fitnessstudio (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192161) | 09.11.2026 | Klausurvorbereitung VL01–VL06; zusammengefasst in Notiz 08 (ob am 06.11. gezeigt, unklar) |
 | Wiederholung VL01 bis VL06 – Fitnessstudio (Beispielcode als Python-Dateien, ZIP) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192162) | 09.11.2026 | Klausurvorbereitung VL01–VL06; `fitnessstudio.py` ausgeführt, siehe Notiz 08 |
+| Vorlesung 7 – Projekt Kaffeeshop (Lösung komplett), Zip: Stufe 1–3 + `test_shop.py` | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192579) | 16.11.2026 | Termin 9, abgeglichen mit `kaffeeshop/README.md` |
 
 ## Prüfung (laut Veranstaltungs- und Prüfungsübersicht)
 

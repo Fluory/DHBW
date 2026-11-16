@@ -636,3 +636,27 @@ so weiter. Das ist **Selection Sort** aus GIT Kapitel 8.
 
 **Wenn es hakt:** Erst laut sagen, was die Zeile tun soll, dann den Partner fragen, dann den Dozenten. Er geht herum
 und hilft.
+
+---
+
+## 10. Abgleich mit der Musterlösung (16.11.)
+
+Seit dem 16.11. liegt die offizielle „Lösung komplett“ in Moodle (Zip mit Stufe 1–3 und `test_shop.py`).
+**Aufbau, Klassen und Methoden stimmen mit dieser Vorbereitung überein.** Die Kontrollwerte sind dieselben.
+Die Unterschiede im Detail:
+
+| Stelle | Diese Vorbereitung | Musterlösung | Was heißt das für dich? |
+|---|---|---|---|
+| Menge im Korb | `menge_im_korb(nummer)` vergleicht die **Nummer** | `menge_von(produkt)` vergleicht mit `is` das **Objekt** | Beides richtig. `is` prüft „genau dasselbe Objekt“, das passt hier, weil jedes Produkt nur einmal im Lager existiert. |
+| `hinzufuegen` | Hilfsmethode `position_finden` | Schleife direkt in `hinzufuegen`, mit `return True` mitten in der Schleife | Gleiches Verhalten. |
+| Korb leeren | `korb.positionen = []` in `main.py` | eigene Methode `Warenkorb.leeren()` mit `self.positionen = []` | Schöner, weil der Warenkorb sich selbst leert. Gleiche Idee: nicht `clear()`. |
+| Leerer Korb anzeigen | „Der Warenkorb ist leer.“ nach der Überschrift | „Ihr Warenkorb ist leer.“ ohne Überschrift | nur Text |
+| Rechnungskauf | „zahlbar in 14 Tagen“ | echtes Datum: `date.today() + timedelta(days=14)`, Ausgabe `{faellig:%d.%m.%Y}` | Neu: `datetime` und Datumsformat im f-String. |
+| Stufe 3 Versand | 4,90 € pauschal, ab 50 € frei | **4,90 € je Karton**, 6 Artikel pro Karton (`math.ceil(artikel / 6)`), ab 50 € frei | Die Musterlösung rechnet genauer. `math.ceil` rundet auf: 7 Artikel → 2 Kartons. |
+| Stufe 3 Rabatt | `case "WILLKOMMEN5" if warenwert >= 25` (Guard) | `case "WILLKOMMEN5":` mit `if` im Block | Beides richtig. |
+| Stufe 3 weitere | – | `Lager.knapp(grenze)` (Sammeln-Muster), `Lager.nach_preis()` (Sortieren mit zwei Schleifen und Tausch, auf einer **Kopie** `list(self.produkte)`), Liefertermin in Werktagen | Gute Klausurübung: `nach_preis` ist das Sortieren aus GIT Kapitel 8 in Python. |
+| Tests | – | `test_shop.py` mit pytest | Zeigt, wie man `hinzufuegen` und Bruttopreise testet (VL04). |
+
+**Lies in der Musterlösung vor allem:** `Lager.nach_preis()` (zwei verschachtelte for-Schleifen mit Tausch
+`liste[i], liste[j] = liste[j], liste[i]`) und `Bestellung.kartons()` (Aufsummieren + `math.ceil`). Beides sind
+typische Klausurmuster.
