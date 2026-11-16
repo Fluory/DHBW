@@ -153,6 +153,7 @@ input.mark-bad, select.mark-bad, textarea.mark-bad { border-color: var(--bad); }
     <span class="timer" id="timer" aria-live="off">60:00</span>
     <button type="button" id="timerBtn">Zeit starten</button>
     <button type="button" class="primary" id="checkTop">Prüfen</button>
+    <button type="button" id="hideTop" hidden>Lösungen ausblenden</button>
     <span class="score" id="scoreTop">noch nicht geprüft</span>
   </div>
 
@@ -769,9 +770,26 @@ Nemo sagt ...
     var passed = total >= 30;
     res.innerHTML = '<div class="big">' + fmt(total) + " von 60 Punkten</div>" +
       "<p>" + (passed ? "Bestanden (ab 30 Punkten)." : "Noch nicht bestanden. Ab 30 Punkten ist es geschafft.") + "</p>" +
-      '<p class="hint">Bei Aufgabe 3 (Korrekturen) und Aufgabe 5 sind jetzt Musterlösungen eingeblendet. Hak dort ab, was bei dir stimmt. Die Punkte rechnen sich sofort neu. Du kannst jederzeit weiter bearbeiten und erneut prüfen.</p>';
+      '<p class="hint">Bei Aufgabe 3 (Korrekturen) und Aufgabe 5 sind jetzt Musterlösungen eingeblendet. Hak dort ab, was bei dir stimmt. Die Punkte rechnen sich sofort neu. Mit „Lösungen ausblenden“ versteckst du alles wieder, deine Antworten bleiben stehen.</p>';
+    document.getElementById("hideTop").hidden = false;
     save();
   }
+
+  // Lösungen wieder verstecken, Antworten bleiben stehen
+  function hideSolutions() {
+    checked = false; clearMarks();
+    document.querySelectorAll(".feedback").forEach(function (f) { f.hidden = true; });
+    document.querySelectorAll(".badge").forEach(function (b) { b.hidden = true; });
+    document.querySelectorAll(".options label").forEach(function (l) { l.classList.remove("mark-ok", "mark-bad"); });
+    document.getElementById("result").hidden = true;
+    var max = { 1: 10, 2: 10, 3: 8, 4: 8, 5: 10, 6: 8, 7: 4, 8: 2 };
+    Object.keys(max).forEach(function (k) { document.getElementById("ov" + k).textContent = max[k]; });
+    document.getElementById("ovSum").textContent = "60";
+    document.getElementById("scoreTop").textContent = "noch nicht geprüft";
+    document.getElementById("hideTop").hidden = true;
+    save();
+  }
+  document.getElementById("hideTop").addEventListener("click", function () { hideSolutions(); window.scrollTo(0, 0); });
 
   document.getElementById("checkTop").addEventListener("click", function () { grade(); document.getElementById("result").scrollIntoView({ block: "start" }); });
   document.getElementById("checkBottom").addEventListener("click", function () { grade(); document.getElementById("result").scrollIntoView({ block: "start" }); });
@@ -793,6 +811,7 @@ Nemo sagt ...
     document.getElementById("ovSum").textContent = "60";
     document.getElementById("scoreTop").textContent = "noch nicht geprüft";
     stopTimer(); remaining = 3600; renderTimer(); timerBtn.textContent = "Zeit starten";
+    document.getElementById("hideTop").hidden = true;
   });
 
   // ---------- Tab-Taste in Code-Feldern ----------
