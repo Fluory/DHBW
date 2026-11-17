@@ -13,6 +13,7 @@ Moodle: [Kurs 18614](https://moodle.heilbronn.dhbw.de/course/view.php?id=18614) 
 | 3 | 26.10.2026 | Vertreter ohne Vertretungsmacht, Fristen, Verjährung, Einstieg Schuldrecht AT (Neuerungen 2022, Schuldverhältnis, Erlöschen) | vermutet (Skript S. 23–37) | [03](vorlesungen/03_2026-10-26.md) |
 | 4 | 09.11.2026 | Laut eigener Mitschrift: Stellvertretungs-Fälle 3–7 (S. 26, inkl. Duldungsvollmacht); ob danach noch Fristen/Schuldverhältnis/Leistungsstörungen kamen, offen · vorbereitet waren Leistungsstörungen (Unmöglichkeit, Verzug, Gläubigerverzug, Schlechterfüllung, Fälle 1–6) – abgeschlossen | Mitschrift + vermutet (Skript S. 25–26; Leistungsstörungen S. 38–45 noch unbestätigt) | [04](vorlesungen/04_2026-11-09.md) |
 | 5 | 12.11.2026 | (vorbereitet) Wegfall der Geschäftsgrundlage (§ 313), c.i.c. mit Kaufhaus-Fall, Schadensersatz §§ 249–254, Abtretung/Schuldübernahme, AGB §§ 305 ff., Fall- und Klausuraufbau; Ausblick Kaufrecht · falls der Kurs noch hinten ist: Fristen bis Leistungsstörungen (Notiz 03/04) | vermutet (Skript S. 45–51; Sicherheit niedrig) | [05](vorlesungen/05_2026-11-12.md) |
+| 6 | 18.11.2026 | (vorbereitet) Kaufrecht: Kaufvertrag § 433, Sachmangel § 434, Rechte des Käufers § 437 (Nacherfüllung § 439, Rücktritt, Minderung § 441, Schadensersatz), Ausschluss §§ 442, 444, Verjährung § 438, Garantie, Verbrauchsgüterkauf §§ 474 ff.; ggf. schon Verbraucherverträge (Widerruf, Fernabsatz, §§ 312 ff.) und Fälle 1–11 | Skript „Schuldrecht Besonderer Teil – Kaufrecht“ (Umfang vermutet; Sicherheit mittel) | [06](vorlesungen/06_2026-11-18.md) |
 
 ## Materialien in Moodle
 
@@ -22,6 +23,8 @@ Moodle: [Kurs 18614](https://moodle.heilbronn.dhbw.de/course/view.php?id=18614) 
 | Lösungen Zugang WE, Anfechtung (Lösungen zu Skript S. 11, 14–15, 18) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191512) | 27.10.2026 | Termin 1 (Zugang, Vertragsschluss), Termin 2 (Anfechtung) |
 | Lösungen Minderjährigenrecht (Lösungen zu Skript S. 22, Fälle 1–4) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192097) | 06.11.2026 | Termin 2 (Geschäftsfähigkeit, Abgleich Fälle 1–4) |
 | Auflagen für den Gesetzestext in der Klausur (PDF, 1 S.; Dateiname „Auflagen für Gesetzestexte in der Klausur“) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192285) | 10.11.2026 | Abschnitt „Klausurhinweise“ |
+| Lösung Stellvertretung (Lösungen zu Skript S. 25–26, Fälle 1–7; 3 S., Dateiname „2023 SilkeHennig SkriptTeil 1 Stellvertretung“) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192708) | 17.11.2026 | Abgleich Stellvertretungs-Fälle (Notiz 03 korrigiert, Vergleich in Notiz 04) |
+| Skript Schuldrecht Besonderer Teil – Kaufrecht (Silke Hennig, 15 S.; Dateiname „BGB Besonderer Teil Kaufrecht“) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192709) | 17.11.2026 | Termin 6 (Vorbereitung Kaufrecht, Fälle 1–11) |
 
 ## Klausurhinweise
 
