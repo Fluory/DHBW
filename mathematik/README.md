@@ -13,7 +13,7 @@ Termine laut Kalender: Dr. Wortel 19.10., 04.11., 20.11., 02.12. · Dr. Heller 0
 | 1 | 19.10.2026 | Organisatorisches; Folgen: Bildungsgesetze, Monotonie, Beschränktheit, Konvergenz, Grenzwertregeln, arithmetische/geometrische Folgen | Folien „Analysis – Folgen“ | [01](vorlesungen/01_2026-10-19.md) |
 | 2 | 04.11.2026 | Reihen: Teilsummen, notwendiges Kriterium, Rechenregeln, geometrische Reihe, Periodenzahlen, Sparplan/ewige Rente; Funktionen: Definition, Bild, Umkehrfunktion, Graph, Kombinationen, Verkettung, Beschränktheit, Monotonie, Grenzwerte, Stetigkeit, Unstetigkeiten; Aufgaben R-1–R-5, FU-1–FU-8 | Folien „Analysis – Reihen + Funktionen“ | [02](vorlesungen/02_2026-11-04.md) |
 | 3 | 09.11.2026 | Logik und Algebra (Dr. Heller): Orga (VL00); Kapitel 1 Logik: Aussagen, ¬/∧/∨/⊻, Wahrheitstafeln, Implikation/Äquivalenz, Kontraposition, Syntax/Semantik, Erfüllbarkeit, Tautologie, ≡ und ⇒, Vorrangregeln, logische Gesetze, boolesche Funktionen, DNF/KNF, Prädikate/Quantoren, Beweismuster, Induktion; Aufgaben 1.1.1–1.7.4 (wie weit am 09.11. gekommen: offen) | Folien „VL00 - Orga“ + „VL01 - Aussagenlogik“ | [03](vorlesungen/03_2026-11-09.md) |
-| 4 | 16.11.2026 | (vorbereitet) Logik und Algebra, ganztags: Rest Kapitel 1 (Normalformen, Prädikatenlogik, Beweise, Induktion), dann Kapitel 2 Mengen (∪, ∩, \, Komplement, Potenzmenge, A × B), evtl. Start Relationen und Abbildungen | vermutet: Themenplan VL00 + Umfang VL01; noch keine Folien zu Kapitel 2 (Sicherheit niedrig bis mittel) | [04](vorlesungen/04_2026-11-16.md) |
+| 4 | 16.11.2026 | (vorbereitet) Logik und Algebra, ganztags: Rest Kapitel 1 (Normalformen, Prädikatenlogik, Beweise, Induktion), dann Kapitel 2: 2.1 Mengen und Mengenalgebra (Zahlenmengen, ⊆/⊂, Potenzmenge, ∩/∪/∖, Komplement, De Morgan, M × N), 2.2 Relationen (Eigenschaften, Äquivalenzrelation, Äquivalenzklassen), 2.3 Abbildungen (Bild/Urbild, Komposition, injektiv/surjektiv/bijektiv), 2.4 Algebraische Strukturen (mod n, ℤₙ, Gruppe, Ring, Körper, Inverse mit erweitertem Euklid); Aufgaben 2.1.1–2.4.2 (wie weit am 16.11. gekommen: offen) | Folien „VL02 - Mengen, Relationen, Abbildungen und Strukturen“ (Teil 1: VL01) | [04](vorlesungen/04_2026-11-16.md) |
 
 ## Materialien in Moodle
 
@@ -24,6 +24,7 @@ Termine laut Kalender: Dr. Wortel 19.10., 04.11., 20.11., 02.12. · Dr. Heller 0
 | Folien VL00 – Begrüßung und Orga „Logik und Algebra“ (PDF, Dr. Heller) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192270) | 10.11.2026 | Termin 3 (Organisatorisches) |
 | Folien VL01 – Logik (PDF, 142 Folien, in Moodle „VL01 - Aussagenlogik“) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192271) | 10.11.2026 | Termin 3 (Kapitel 1.1–1.7) |
 | Aufgaben Aussagenlogik (Übungsblatt, 22 Aufgaben, PDF, Abschnitt „Logik - Übungen“) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192675) | 16.11.2026 | Termin 3–4; eigene Lösungen: [uebungen/aussagenlogik_loesungen.md](uebungen/aussagenlogik_loesungen.md) |
+| Folien VL02 – Mengen, Relationen, Abbildungen und Strukturen (PDF, 94 Folien, Dr. Heller) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192687) | 17.11.2026 | Termin 4 ff. (Kapitel 2.1–2.4) |
 
 ## Prüfung (laut Veranstaltungs- und Prüfungsübersicht)
 
