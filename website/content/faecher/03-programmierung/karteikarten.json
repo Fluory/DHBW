@@ -3,527 +3,800 @@
     {
       "id": "prog-k001",
       "topic": "Einführung",
-      "front": "Was ist ein **Algorithmus**? Welche 4 Anforderungen gibt es?",
-      "back": "Eine Schrittfolge, die ein Problem systematisch löst, unabhängig von der Sprache.\nAnforderungen: Endlichkeit, Ausführbarkeit, Korrektheit, Effizienz.",
+      "front": "Was ist ein **Algorithmus**, und welche 4 Anforderungen muss er erfüllen?",
+      "back": "Ein Algorithmus ist eine genaue Schrittfolge, die ein Problem löst, egal in welcher Programmiersprache.\nDie 4 Anforderungen: **Endlichkeit** (die Beschreibung ist endlich lang), **Ausführbarkeit** (jeder Schritt ist machbar), **Korrektheit** (das Ergebnis stimmt) und **Effizienz** (keine unnötige Zeit und kein unnötiger Speicher).\nBeispiel: Ein Kochrezept ist ein Algorithmus fürs Kochen, „max(3, 7)“ ist einer fürs Finden der größeren Zahl.",
       "exam": true
     },
     {
       "id": "prog-k002",
       "topic": "Einführung",
-      "front": "**determiniert** vs. **deterministisch**",
-      "back": "determiniert: gleiche Eingabe → immer **gleiches Ergebnis**.\ndeterministisch: der **nächste Schritt** ist immer eindeutig (es geht um den Weg).",
+      "front": "**determiniert** vs. **deterministisch**: Was ist der Unterschied?",
+      "back": "**determiniert** heißt: gleiche Eingabe → immer **gleiches Ergebnis**.\n**deterministisch** heißt: Der **nächste Schritt** ist zu jedem Zeitpunkt eindeutig. Es geht also um den Weg, nicht um das Ergebnis.\nMerkhilfe: determini**sch** wie **Sch**ritt.\nBeispiel: `max(3, 7)` liefert immer 7, ist also determiniert. Ein Würfelwurf ist es nicht.",
       "exam": true
     },
     {
       "id": "prog-k003",
       "topic": "Einführung",
-      "front": "Stack vs. Queue",
-      "back": "Stack = LIFO (last in, first out), z. B. Zurück-Taste im Browser.\nQueue = FIFO (first in, first out), z. B. Druckaufträge.",
+      "front": "**Stack** vs. **Queue**: Welches Element kommt jeweils zuerst wieder heraus?",
+      "back": "Beim **Stack** (Stapel) kommt das zuletzt hineingelegte Element zuerst heraus: **LIFO** = last in, first out.\nBei der **Queue** (Warteschlange) kommt das zuerst hineingelegte zuerst heraus: **FIFO** = first in, first out.\nBeispiel Stack: Die Zurück-Taste im Browser springt zur zuletzt besuchten Seite. Beispiel Queue: Druckaufträge werden in der Reihenfolge gedruckt, in der sie ankamen.",
       "exam": true
     },
     {
       "id": "prog-k004",
       "topic": "Einführung",
-      "front": "Interpreter, Compiler, Zwischencode: Wo steht Python?",
-      "back": "Interpreter: Zeile für Zeile. Compiler: vorab alles in Maschinencode (C, Rust).\nPython ist eine **Zwischencode-Sprache**: erst Bytecode, dann führt die VM ihn aus.",
+      "front": "Interpreter, Compiler, Zwischencode: Zu welcher Art gehört Python?",
+      "back": "Python ist eine **Zwischencode-Sprache**: Erst wird der Quelltext in **Bytecode** übersetzt, dann führt die **Python-VM** ihn aus.\nEin **Interpreter** führt Anweisung für Anweisung direkt aus (Shell-Skripte). Ein **Compiler** übersetzt vorab alles in Maschinencode für einen bestimmten Prozessor (C, Rust).\n**Bytecode** ist eine Zwischenform zwischen Quelltext und Maschinencode. Die **VM** (virtuelle Maschine) ist ein Programm, das diesen Bytecode ausführt. Vorteil: Derselbe Bytecode läuft auf jedem Rechner mit Python.",
       "exam": true
     },
     {
       "id": "prog-k005",
       "topic": "Einführung",
-      "front": "Wofür sind `uv`, `ruff` und `ty`?",
-      "back": "uv: Python/Projekte/Pakete verwalten, starten (`uv run hallo.py`).\nruff: Formatierung und Stil. ty: prüft Datentypen, ohne das Programm auszuführen.",
+      "front": "Wofür sind `uv`, `ruff` und `ty` da?",
+      "back": "**uv** installiert Python, verwaltet Projekte und Pakete und startet Programme: `uv run hallo.py`.\n**ruff** prüft Stil und Formatierung: `uv run ruff check .` und `uv run ruff format .`.\n**ty** prüft die Datentypen, **ohne** das Programm zu starten: `uv run ty check`.\nBeispiel: Bei `alter: int = \"30\"` meldet ty einen Fehler. Python selbst führt die Zeile ohne Meldung aus.",
       "exam": true
     },
     {
       "id": "prog-k006",
       "topic": "Variablen, Datentypen und Operatoren",
-      "front": "`/` vs. `//` vs. `%`",
-      "back": "`7 / 2` → 3.5 (immer float)\n`7 // 2` → 3 (abrunden)\n`7 % 2` → 1 (Rest)",
+      "front": "Was ergeben `7 / 2`, `7 // 2` und `7 % 2`?",
+      "back": "`/` teilt normal und liefert **immer** einen float (Kommazahl). `//` teilt ganzzahlig und rundet **ab**. `%` (Modulo) liefert den **Rest**.\nStell dir 7 Äpfel für 2 Personen vor: Jeder bekommt 3 (`//`), 1 bleibt übrig (`%`).\n`print(7 / 2)  # 3.5`\n`print(7 // 2)  # 3`\n`print(7 % 2)  # 1`\n`print(6 / 3)  # 2.0`",
       "exam": true
     },
     {
       "id": "prog-k007",
       "topic": "Variablen, Datentypen und Operatoren",
       "front": "Was ergibt `-7 // 2`?",
-      "back": "**-4**. `//` rundet ab, also zur kleineren Zahl hin (−3.5 → −4). In Java käme −3 heraus.",
+      "back": "Es ergibt **-4**.\n`//` rundet immer **ab**, also zur kleineren Zahl hin. −3,5 abgerundet ist −4, denn −4 ist kleiner als −3,5.\nJava schneidet die Nachkommastellen nur ab und käme auf −3.\n`print(-7 // 2)  # -4`\n`print(7 // 2)  # 3`",
       "exam": true
     },
     {
       "id": "prog-k008",
       "topic": "Variablen, Datentypen und Operatoren",
-      "front": "Rangfolge der Operatoren (kurz)",
-      "back": "Klammern → `**` → Punkt (`*` `/` `//` `%`) → Strich (`+` `-`) → Vergleiche → `not` → `and` → `or`.\nBeispiel: `2 + 3 * 4` → 14.",
+      "front": "In welcher Reihenfolge rechnet Python die Operatoren (Rangfolge)?",
+      "back": "Von stark nach schwach: Klammern → `**` → Punktrechnung (`*` `/` `//` `%`) → Strichrechnung (`+` `-`) → Vergleiche → `not` → `and` → `or`.\nWas stärker bindet, wird zuerst gerechnet, wie „Punkt vor Strich“ in der Schule. Im Zweifel setzt du Klammern.\n`print(2 + 3 * 4)  # 14`\n`print((2 + 3) * 4)  # 20`\n`print(2 * 3 ** 2)  # 18`",
       "exam": true
     },
     {
       "id": "prog-k009",
       "topic": "Variablen, Datentypen und Operatoren",
       "front": "Warum ist `0.1 + 0.2 == 0.3` False?",
-      "back": "Floats sind ungenau: `0.1 + 0.2` ergibt 0.30000000000000004. Für Geld nimmt man `Decimal(\"19.99\")`.",
+      "back": "Weil Kommazahlen (float) im Rechner **binär** gespeichert werden und 0.1 dort nicht genau darstellbar ist.\nEs bleibt ein winziger Rundungsfehler, und `==` vergleicht exakt. Für Geld nimmst du deshalb `Decimal` aus dem Modul `decimal` und übergibst den Wert als Text.\n`print(0.1 + 0.2)  # 0.30000000000000004`\n`print(0.1 + 0.2 == 0.3)  # False`\n`from decimal import Decimal`\n`print(Decimal(\"0.1\") + Decimal(\"0.2\"))  # 0.3`",
       "exam": true
     },
     {
       "id": "prog-k010",
       "topic": "Variablen, Datentypen und Operatoren",
-      "front": "String-Index und Slicing bei `text = \"Hallo\"`",
-      "back": "`text[0]` → H, `text[-1]` → o, `text[1:3]` → al (Stopp-Index nicht dabei).",
+      "front": "Was liefern `text[0]`, `text[-1]` und `text[1:3]` bei `text = \"Hallo\"`?",
+      "back": "`text[0]` → H, `text[-1]` → o, `text[1:3]` → al.\nGezählt wird ab **0**. Negative Indizes zählen von hinten, −1 ist das letzte Zeichen. Beim **Slicing** `[start:stopp]` (Ausschnitt) ist der Start dabei, der Stopp **nicht**.\n`text = \"Hallo\"`\n`print(text[0], text[-1], text[1:3])  # H o al`",
       "exam": true
     },
     {
       "id": "prog-k011",
       "topic": "Variablen, Datentypen und Operatoren",
-      "front": "f-String mit 2 Nachkommastellen",
-      "back": "`preis = 12.5`\n`f\"Preis: {preis:.2f} €\"` → Preis: 12.50 €",
+      "front": "Wie gibst du `preis = 12.5` mit genau 2 Nachkommastellen aus?",
+      "back": "Mit einem f-String und `:.2f` in der geschweiften Klammer.\nEin **f-String** ist ein Text mit `f` davor, in dem `{…}` durch den Wert ersetzt wird. `:.2f` heißt: als Kommazahl (f = float) mit 2 Stellen nach dem Punkt, gerundet.\n`preis = 12.5`\n`print(f\"Preis: {preis:.2f} €\")  # Preis: 12.50 €`",
       "exam": true
     },
     {
       "id": "prog-k012",
       "topic": "Variablen, Datentypen und Operatoren",
-      "front": "Die 4 Fehlerarten",
-      "back": "Syntaxfehler (`print(\"Hi\"`), Typfehler (`\"Alter: \" + 36`), Laufzeitfehler (Division durch 0), Logikfehler (`5 + 2 / 2` → 6.0 statt 3.5, keine Meldung).",
+      "front": "Welche 4 Fehlerarten gibt es, und woran erkennst du sie?",
+      "back": "**Syntaxfehler**: Die Form stimmt nicht, das Programm startet gar nicht, z. B. `print(\"Hi\"` (Klammer fehlt).\n**Typfehler**: Die Typen passen nicht zusammen, z. B. `\"Alter: \" + 36` → TypeError. ty meldet ihn schon vor dem Start.\n**Laufzeitfehler**: Das Programm bricht erst beim Ausführen ab, z. B. Division durch 0 → ZeroDivisionError.\n**Logikfehler**: Es läuft ohne Meldung, rechnet aber falsch, z. B. `5 + 2 / 2` ergibt 6.0 statt 3.5, weil Punkt vor Strich gilt.",
       "exam": true
     },
     {
       "id": "prog-k013",
       "topic": "Kontrollstrukturen und Listen",
-      "front": "if / elif / else: Wie viele Zweige laufen?",
-      "back": "Genau **einer**: der erste Treffer. Danach prüft Python die anderen nicht mehr.\nDarum Bereiche richtig sortieren (z. B. erst `>= 90`, dann `>= 50`).",
+      "front": "if / elif / else: Wie viele Zweige laufen höchstens?",
+      "back": "Genau **einer**: der erste, dessen Bedingung wahr ist, oder `else`, wenn keine passt.\nPython prüft von oben nach unten und hört beim ersten Treffer auf. Darum musst du Bereiche sortieren: die strengste Grenze zuerst.\n`punkte = 95`\n`if punkte >= 50: print(\"bestanden\")  # bestanden`\n`elif punkte >= 90: print(\"sehr gut\")  # (wird nie erreicht)`\nRichtig wäre: erst `>= 90`, dann `>= 50`.",
       "exam": true
     },
     {
       "id": "prog-k014",
       "topic": "Kontrollstrukturen und Listen",
-      "front": "`match` – was ist besonders?",
-      "back": "Vergleicht einen Wert mit festen Fällen, erster Treffer gewinnt, kein break nötig.\n`case \"A\" | \"B\":` = mehrere Werte, `case _:` = Standardfall. Bereiche (`< 3`) gehen nicht.",
+      "front": "Was ist bei `match` besonders?",
+      "back": "`match` vergleicht **einen** Wert mit festen Fällen (`case`), der erste passende Fall läuft.\nAnders als Javas `switch` braucht es kein `break` und rutscht nicht in den nächsten Fall durch.\n`case \"A\" | \"B\":` fasst mehrere Werte zusammen, `case _:` ist der Standardfall für alles andere.\nBereiche wie `note < 3` gehen damit nicht, dafür nimmst du `if`/`elif`.",
       "exam": true
     },
     {
       "id": "prog-k015",
       "topic": "Kontrollstrukturen und Listen",
-      "front": "Welche Werte gelten in einer Bedingung als falsch?",
-      "back": "`False, None, 0, 0.0, \"\", []`.\nAlles andere ist wahr, auch `\"0\"`, `-1` und `[0]`.",
+      "front": "Welche Werte gelten in einer Bedingung als falsch (**falsy**)?",
+      "back": "`False`, `None`, `0`, `0.0`, `\"\"` (leerer Text) und `[]` (leere Liste).\nAlles andere gilt als wahr (**truthy**), auch `\"0\"`, `-1`, `\" \"` und `[0]`, denn die sind nicht leer und nicht null. Deshalb prüft `if warenkorb:`, ob die Liste etwas enthält.\n`print(bool(0), bool(\"\"), bool([]))  # False False False`\n`print(bool(\"0\"), bool(-1), bool([0]))  # True True True`",
       "exam": true
     },
     {
       "id": "prog-k016",
       "topic": "Kontrollstrukturen und Listen",
-      "front": "Kurzschluss bei `and`",
-      "back": "Ist die linke Seite False, wird die rechte gar nicht ausgewertet.\n`anzahl > 0 and summe / anzahl > 100` → kein ZeroDivisionError. Absicherung nach vorn!",
+      "front": "Was bedeutet **Kurzschlussauswertung** bei `and`?",
+      "back": "Ist die linke Seite von `and` falsch, wertet Python die rechte gar nicht mehr aus, denn das Ergebnis ist schon False.\nSo baust du links eine Sicherung ein („Absicherung nach vorn“). Bei `or` gilt es umgekehrt: Ist links wahr, wird rechts übersprungen.\n`anzahl = 0`\n`print(anzahl > 0 and 100 / anzahl > 5)  # False`\nVertauscht (`100 / anzahl > 5 and anzahl > 0`) gäbe es einen ZeroDivisionError.",
       "exam": true
     },
     {
       "id": "prog-k017",
       "topic": "for-Schleifen ganz langsam",
       "front": "Welche Zahlen liefert `range(1, 6)`?",
-      "back": "1 2 3 4 5. **Start ist dabei, Stopp nicht.** Für 1 bis n: `range(1, n + 1)`.",
+      "back": "1, 2, 3, 4, 5. **Der Start ist dabei, der Stopp nicht.**\nSo liefert `range(0, n)` genau n Zahlen. Für 1 bis n schreibst du deshalb `range(1, n + 1)`.\n`print(list(range(1, 6)))  # [1, 2, 3, 4, 5]`",
       "exam": true
     },
     {
       "id": "prog-k018",
       "topic": "for-Schleifen ganz langsam",
-      "front": "`range(5)`, `range(2, 11, 2)`, `range(5, 0, -1)`",
-      "back": "range(5) → 0 1 2 3 4\nrange(2, 11, 2) → 2 4 6 8 10\nrange(5, 0, -1) → 5 4 3 2 1",
+      "front": "Welche Zahlen liefern `range(5)`, `range(2, 11, 2)` und `range(5, 0, -1)`?",
+      "back": "`range(5)` → 0 1 2 3 4: Bei nur einem Wert ist das der Stopp, der Start ist 0.\n`range(2, 11, 2)` → 2 4 6 8 10: Der dritte Wert ist die **Schrittweite**.\n`range(5, 0, -1)` → 5 4 3 2 1: rückwärts, die 0 ist als Stopp nicht dabei.\n`print(list(range(5)))  # [0, 1, 2, 3, 4]`\n`print(list(range(2, 11, 2)))  # [2, 4, 6, 8, 10]`\n`print(list(range(5, 0, -1)))  # [5, 4, 3, 2, 1]`",
       "exam": true
     },
     {
       "id": "prog-k019",
       "topic": "for-Schleifen ganz langsam",
-      "front": "Wie liest du eine for-Schleife Runde für Runde? (Beispiel Summe)",
-      "back": "`summe = 0`\n`for i in range(1, 4): summe += i`\nRunde 1: i=1, summe=1 · Runde 2: i=2, summe=3 · Runde 3: i=3, summe=6 → **6**.",
+      "front": "Wie liest du eine for-Schleife Runde für Runde? (Beispiel: Summe von 1 bis 3)",
+      "back": "Du schreibst für jede Runde auf, welchen Wert die Schleifenvariable hat und was danach in den anderen Variablen steht.\nSo siehst du jeden Schritt, statt das Ergebnis zu raten.\n`summe = 0`\n`for i in range(1, 4): summe += i`\n`print(summe)  # 6`\nRunde 1: i = 1, summe = 0 + 1 = 1 · Runde 2: i = 2, summe = 1 + 2 = 3 · Runde 3: i = 3, summe = 3 + 3 = **6**.",
       "exam": true
     },
     {
       "id": "prog-k020",
       "topic": "Kontrollstrukturen und Listen",
-      "front": "while vs. for",
-      "back": "for: über eine Folge, Anzahl bekannt (`for x in liste`).\nwhile: solange die Bedingung wahr ist, Anzahl unbekannt (z. B. bis sich Geld verdoppelt). Zähler ändern, sonst Endlosschleife!",
+      "front": "Wann nimmst du `while`, wann `for`?",
+      "back": "`for` nimmst du, wenn du über eine Folge läufst und die Zahl der Runden feststeht (`for x in liste`, `for i in range(10)`).\n`while` läuft, **solange** eine Bedingung wahr ist. Das passt, wenn du vorher nicht weißt, wie oft.\nIn der while-Schleife muss sich etwas ändern, sonst läuft sie endlos (**Endlosschleife**). Beispiel: Wie viele Jahre, bis sich 100 € bei 10 % Zins verdoppeln?\n`geld = 100`\n`jahre = 0`\n`while geld < 200: geld *= 1.1; jahre += 1`\n`print(jahre)  # 8`",
       "exam": true
     },
     {
       "id": "prog-k021",
       "topic": "Kontrollstrukturen und Listen",
-      "front": "break vs. continue",
-      "back": "break: Schleife **sofort verlassen**.\ncontinue: nur **diesen Durchlauf** überspringen, weiter mit dem nächsten Wert.",
+      "front": "`break` vs. `continue`: Was ist der Unterschied?",
+      "back": "`break` beendet die **ganze Schleife** sofort, es geht nach der Schleife weiter.\n`continue` überspringt nur den **Rest dieser Runde** und macht mit dem nächsten Wert weiter.\nMerke: break = raus, continue = nächste Runde.\nBeispiel: Schleife über `range(1, 6)` mit `if i == 3:` vor dem `print(i)`. Mit `continue` → 1 2 4 5, mit `break` → 1 2.",
       "exam": true
     },
     {
       "id": "prog-k022",
       "topic": "Kontrollstrukturen und Listen",
-      "front": "Wichtige Listen-Befehle bei `noten = [2, 1, 3]`",
-      "back": "`noten.append(4)` → [2, 1, 3, 4]\n`len(noten)` → 4, `sum` → 10, `noten[-1]` → 4",
+      "front": "Was ergeben `append`, `len`, `sum` und `[-1]` bei `noten = [2, 1, 3]`?",
+      "back": "`noten.append(4)` hängt 4 hinten an und ändert die Liste selbst.\n`len` zählt die Elemente, `sum` addiert sie, `noten[-1]` ist das letzte Element.\n`noten = [2, 1, 3]`\n`noten.append(4)`\n`print(noten)  # [2, 1, 3, 4]`\n`print(len(noten), sum(noten), noten[-1])  # 4 10 4`",
       "exam": true
     },
     {
       "id": "prog-k023",
       "topic": "Kontrollstrukturen und Listen",
-      "front": "`sorted(liste)` – ändert das die Liste?",
-      "back": "Nein. `sorted` liefert eine **sortierte Kopie**, das Original bleibt gleich.",
+      "front": "Ändert `sorted(liste)` die Liste selbst?",
+      "back": "Nein. `sorted` liefert eine **neue, sortierte Kopie**, das Original bleibt, wie es war.\nDas Ergebnis musst du deshalb in einer Variable speichern oder direkt benutzen.\n`zahlen = [3, 1, 2]`\n`neu = sorted(zahlen)`\n`print(zahlen, neu)  # [3, 1, 2] [1, 2, 3]`",
       "exam": true
     },
     {
       "id": "prog-k024",
       "topic": "Kontrollstrukturen und Listen",
-      "front": "Die Falle `[[0] * 4] * 3`",
-      "back": "`* 3` kopiert nur die **Verweise**: 3 Pfeile auf EINE Zeile.\n`m[0][0] = 9` → [[9,0,0,0], [9,0,0,0], [9,0,0,0]]. Richtig: jede Zeile in einer Schleife mit append neu bauen.",
+      "front": "Warum ist `[[0] * 4] * 3` eine Falle?",
+      "back": "`* 3` kopiert nicht die Zeile, sondern nur den **Verweis** auf sie: Die Matrix enthält dreimal **dieselbe** Liste.\nEin Verweis ist wie ein Pfeil auf ein Objekt. Drei Pfeile auf eine Zeile heißt: Eine Änderung sieht man in allen drei. Richtig: jede Zeile in einer Schleife mit `append` neu bauen.\n`m = [[0] * 4] * 3`\n`m[0][0] = 9`\n`print(m)  # [[9, 0, 0, 0], [9, 0, 0, 0], [9, 0, 0, 0]]`",
       "exam": true
     },
     {
       "id": "prog-k025",
       "topic": "Kontrollstrukturen und Listen",
-      "front": "`b = a` bei Listen",
-      "back": "Kopiert nichts! Zwei Namen, eine Liste. `b.append(4)` ändert auch `a`.",
+      "front": "Was passiert bei `b = a`, wenn `a` eine Liste ist?",
+      "back": "Es wird **nichts kopiert**. `b` ist nur ein zweiter Name für **dieselbe** Liste.\nEin Name ist in Python wie ein Namensschild an einem Objekt, `=` hängt ein weiteres Schild an. Änderungen über `b` siehst du deshalb auch über `a`.\n`a = [1, 2, 3]`\n`b = a`\n`b.append(4)`\n`print(a)  # [1, 2, 3, 4]`\n`print(a is b)  # True`",
       "exam": true
     },
     {
       "id": "prog-k026",
       "topic": "Funktionen und Rekursion",
-      "front": "**Parameter** vs. **Argument**",
-      "back": "Parameter: Platzhalter in der Definition (`def f(name)`).\nArgument: konkreter Wert beim Aufruf (`f(\"Bob\")`).",
+      "front": "**Parameter** vs. **Argument**: Was ist was?",
+      "back": "Der **Parameter** ist der Platzhalter in der Definition, das **Argument** ist der konkrete Wert beim Aufruf.\nBeim Aufruf zeigt der Parameter auf das Argument und verhält sich in der Funktion wie eine lokale Variable.\n`def gruss(name: str) -> str: return \"Hallo \" + name`\n`print(gruss(\"Bob\"))  # Hallo Bob`\nHier ist `name` der Parameter und `\"Bob\"` das Argument.",
       "exam": true
     },
     {
       "id": "prog-k027",
       "topic": "Funktionen und Rekursion",
-      "front": "`print` vs. `return`",
-      "back": "return gibt den Wert an den Aufrufer zurück. print zeigt ihn nur an.\nEine Funktion ohne return liefert **None**.",
+      "front": "`print` vs. `return` in einer Funktion: Was ist der Unterschied?",
+      "back": "`return` gibt einen Wert an die Aufrufstelle **zurück**, damit man damit weiterrechnen kann. `print` zeigt ihn nur auf dem Bildschirm an.\nEine Funktion ohne `return` liefert automatisch **None** (= „kein Wert“).\n`def mit_print(x: int) -> None: print(x * 2)`\n`def mit_return(x: int) -> int: return x * 2`\n`a = mit_print(3)  # 6`\n`print(a, mit_return(3))  # None 6`",
       "exam": true
     },
     {
       "id": "prog-k028",
       "topic": "Funktionen und Rekursion",
-      "front": "break vs. return",
-      "back": "break verlässt nur die Schleife, der Rest der Funktion läuft weiter.\nreturn beendet die **ganze Funktion** sofort.",
+      "front": "`break` vs. `return` in einer Schleife in einer Funktion",
+      "back": "`break` verlässt nur die **Schleife**. Der Code nach der Schleife läuft weiter.\n`return` beendet die **ganze Funktion** sofort, egal wie tief du in Schleifen steckst.\nBeispiel: Schleife über 1 bis 10, bei 5 abbrechen, nach der Schleife `print(\"Ende\")`. Mit `break` → 1 2 3 4 Ende, mit `return` → nur 1 2 3 4.",
       "exam": true
     },
     {
       "id": "prog-k029",
       "topic": "Funktionen und Rekursion",
-      "front": "LEGB-Regel",
-      "back": "Python sucht Namen von innen nach außen: Local → Enclosing → Global → Built-in. Erster Treffer gewinnt.",
+      "front": "Was ist die **LEGB-Regel**?",
+      "back": "Die Reihenfolge, in der Python einen Namen sucht: **L**ocal (in der Funktion) → **E**nclosing (umschließende Funktion) → **G**lobal (Datei) → **B**uilt-in (eingebaut, z. B. `print`, `len`).\nDer erste Treffer gewinnt. Ein lokaler Name verdeckt also einen globalen mit gleichem Namen.\n`x = \"global\"`\n`def f() -> str: x = \"lokal\"; return x`\n`print(f(), x)  # lokal global`",
       "exam": true
     },
     {
       "id": "prog-k030",
       "topic": "Funktionen und Rekursion",
-      "front": "Warum gibt `zaehler += 1` in einer Funktion einen Fehler?",
-      "back": "Eine Zuweisung macht `zaehler` lokal. Dann wird gelesen, bevor ein Wert da ist → **UnboundLocalError**. Besser: als Parameter übergeben und mit return zurückgeben.",
+      "front": "Warum gibt `zaehler += 1` in einer Funktion einen Fehler, wenn `zaehler` global ist?",
+      "back": "Weil jede **Zuweisung** in einer Funktion den Namen dort **lokal** macht.\n`zaehler += 1` heißt `zaehler = zaehler + 1`. Python will den lokalen `zaehler` lesen, bevor er einen Wert hat → **UnboundLocalError**.\nLösung: Wert als Parameter hineingeben und mit `return` zurückgeben.\n`zaehler = 0`\n`def erhoehe(z: int) -> int: return z + 1`\n`zaehler = erhoehe(zaehler)`\n`print(zaehler)  # 1`",
       "exam": true
     },
     {
       "id": "prog-k031",
       "topic": "Funktionen und Rekursion",
-      "front": "Liste in einer Funktion ändern: sieht der Aufrufer das?",
-      "back": "`liste[0] = 99` oder `append`: **ja** (gleiches Objekt).\n`liste = [7, 7]`: nein, nur lokale Neubindung.",
+      "front": "Eine Funktion bekommt eine Liste und ändert sie. Sieht der Aufrufer die Änderung?",
+      "back": "Kommt darauf an: `liste[0] = 99` oder `liste.append(…)` ändern das **Objekt selbst**, das sieht der Aufrufer.\n`liste = [7, 7]` hängt dagegen nur das **lokale** Namensschild an eine neue Liste, außen ändert sich nichts. Python übergibt keine Kopien, sondern Namen für dasselbe Objekt.\n`def f(liste: list[int]) -> None: liste[0] = 99; liste = [7, 7]`\n`zahlen = [1, 2]`\n`f(zahlen)`\n`print(zahlen)  # [99, 2]`",
       "exam": true
     },
     {
       "id": "prog-k032",
       "topic": "Funktionen und Rekursion",
-      "front": "Falle: Liste als Standardwert `def f(x, liste=[])`",
-      "back": "Die Liste wird einmal erzeugt und von allen Aufrufen geteilt: f(1) → [1], f(2) → [1, 2].\nRichtig: `liste=None` und im Rumpf neu anlegen.",
+      "front": "Was ist die Falle bei `def f(x, liste=[])`?",
+      "back": "Der Standardwert `[]` wird **nur einmal** erzeugt, wenn Python das `def` liest. Alle Aufrufe ohne zweites Argument teilen sich diese eine Liste.\nRichtig: `liste: list[int] | None = None` und im Rumpf `if liste is None: liste = []`.\n`def f(x: int, liste: list[int] = []) -> list[int]: liste.append(x); return liste`\n`print(f(1))  # [1]`\n`print(f(2))  # [1, 2]`",
       "exam": true
     },
     {
       "id": "prog-k033",
       "topic": "Funktionen und Rekursion",
-      "front": "Gibt es Überladung in Python?",
-      "back": "Nein. Ein zweites `def` mit gleichem Namen überschreibt das erste. Stattdessen Standardwerte (`satz=0.19`) oder `*args`.",
+      "front": "Gibt es **Überladung** in Python (zwei Funktionen mit gleichem Namen, aber anderen Parametern)?",
+      "back": "Nein. Ein zweites `def` mit demselben Namen **ersetzt** das erste, denn ein Name zeigt immer nur auf ein Objekt.\nEin Aufruf passend zur alten Version gibt danach einen TypeError. Statt Überladung nimmt man **Standardwerte** (`satz: float = 0.19`) oder `*args`.\n`def calc(a: int) -> int: return a`\n`def calc(a: int, b: int) -> int: return a + b`\n`print(calc(1, 2))  # 3`\n`calc(5)  # TypeError`",
       "exam": true
     },
     {
       "id": "prog-k034",
       "topic": "Funktionen und Rekursion",
-      "front": "Imperativ vs. applikativ",
-      "back": "Imperativ: „Wie mache ich es?“ – Anweisungen, Variablen ändern sich, Schleifen.\nApplikativ: „Was ist das Ergebnis?“ – Funktionen anwenden, Rekursion, keine Nebenwirkungen.",
+      "front": "Imperativ vs. applikativ: Was ist der Unterschied?",
+      "back": "**Imperativ** fragt „Wie mache ich es?“: Anweisungen in fester Reihenfolge, Variablen ändern sich, Schleifen.\n**Applikativ** (funktional) fragt „Was ist das Ergebnis?“: Man wendet Funktionen an, nichts wird verändert, keine Nebenwirkungen, Wiederholung per **Rekursion**.\nBeispiel Fakultät: imperativ mit `for` und `ergebnis *= i`, applikativ mit `n * fakultaet(n - 1)`.",
       "exam": true
     },
     {
       "id": "prog-k035",
       "topic": "Funktionen und Rekursion",
-      "front": "Die 2 Pflichtteile einer Rekursion",
-      "back": "1. Abbruchbedingung (Basisfall), z. B. `if n == 0: return 1`.\n2. Rekursiver Aufruf mit kleinerem Argument: `n * fakultaet(n - 1)`.",
+      "front": "Welche 2 Pflichtteile braucht jede **Rekursion**?",
+      "back": "Erstens eine **Abbruchbedingung** (Basisfall), bei der sich die Funktion nicht mehr selbst aufruft. Zweitens einen **rekursiven Aufruf** mit einem kleineren Argument, das sich dem Basisfall nähert.\n**Rekursion** heißt: Eine Funktion ruft sich selbst auf. Fehlt der Basisfall, ruft sie sich endlos auf.\n`def fak(n: int) -> int: return 1 if n == 0 else n * fak(n - 1)`\n`print(fak(4))  # 24`",
       "exam": true
     },
     {
       "id": "prog-k036",
       "topic": "Funktionen und Rekursion",
-      "front": "Aufrufstapel bei `fakultaet(3)`",
-      "back": "Abstieg: 3·f(2) → 2·f(1) → 1·f(0) → Basisfall 1.\nAufstieg: 1·1 = 1, 2·1 = 2, 3·2 = **6**.",
+      "front": "Wie sieht der Aufrufstapel bei `fakultaet(3)` aus?",
+      "back": "Jeder Aufruf bekommt einen eigenen **Rahmen** (Speicherbereich mit eigenem n) auf dem **Aufrufstapel** und wartet auf das Ergebnis des nächsten.\nAbstieg: fakultaet(3) wartet auf fakultaet(2), das auf fakultaet(1), das auf fakultaet(0). fakultaet(0) liefert 1 (Basisfall).\nAufstieg: 1 · 1 = 1, dann 2 · 1 = 2, dann 3 · 2 = **6**.",
       "exam": true
     },
     {
       "id": "prog-k037",
       "topic": "Funktionen und Rekursion",
-      "front": "Was passiert bei `fakultaet(-1)` mit `if n == 0`?",
-      "back": "n wird −1, −2, … und erreicht nie 0 → **RecursionError** (ca. 1000 Rahmen). Robuster: `if n <= 0`.",
+      "front": "Was passiert bei `fakultaet(-1)`, wenn der Basisfall `if n == 0` ist?",
+      "back": "Es gibt einen **RecursionError**.\nn wird −1, −2, −3 … und erreicht nie 0. Python bricht nach etwa 1000 Rahmen auf dem Aufrufstapel ab. Robuster ist `if n <= 0: return 1`.\n`def fak(n: int) -> int: return 1 if n == 0 else n * fak(n - 1)`\n`fak(-1)  # RecursionError`",
       "exam": true
     },
     {
       "id": "prog-k038",
       "topic": "Klassen und Objekte",
-      "front": "Klasse vs. Objekt",
-      "back": "Klasse = Bauplan (`class Konto:`).\nObjekt/Instanz = konkretes Exemplar (`anna = Konto(\"Anna\", 100)`).",
+      "front": "Klasse vs. Objekt: Was ist der Unterschied?",
+      "back": "Eine **Klasse** ist der Bauplan. Ein **Objekt** (auch **Instanz**) ist ein konkretes Exemplar nach diesem Plan mit eigenen Attributwerten.\nAus einer Klasse kannst du beliebig viele Objekte erzeugen, jedes hat seine eigenen Werte.\nBeispiel: `class Konto:` ist der Plan. `anna = Konto(\"Anna\", 100)` und `ben = Konto(\"Ben\", 0)` sind zwei Objekte.",
       "exam": true
     },
     {
       "id": "prog-k039",
       "topic": "Klassen und Objekte",
-      "front": "Was macht `__init__` und was ist `self`?",
-      "back": "`__init__` ist der Konstruktor: Er läuft automatisch beim Erzeugen und setzt die Attribute, z. B. `self.kontostand = kontostand`.\n`self` ist das Objekt selbst (Java: `this`).",
+      "front": "Was macht `__init__`, und was ist `self`?",
+      "back": "`__init__` ist der **Konstruktor**: Er läuft **automatisch** bei jedem `Konto(…)` und legt die Attribute des neuen Objekts an.\n`self` ist das Objekt, das gerade gebaut oder benutzt wird (Java: `this`). Es ist keine Kopie, sondern das Objekt selbst.\nBeispiel: Mit `self.kontostand = kontostand` im `__init__` bekommt genau dieses neue Objekt sein eigenes Attribut `kontostand`.",
       "exam": true
     },
     {
       "id": "prog-k040",
       "topic": "Klassen und Objekte",
       "front": "Warum hat `einzahlen(self, betrag)` zwei Parameter, aber `anna.einzahlen(50)` nur ein Argument?",
-      "back": "Python macht daraus `Konto.einzahlen(anna, 50)`. Das Objekt vor dem Punkt wird zu self.",
+      "back": "Python setzt das Objekt vor dem Punkt automatisch als ersten Parameter ein.\nAus `anna.einzahlen(50)` wird intern `Konto.einzahlen(anna, 50)`, also `self = anna` und `betrag = 50`.\nDarum schreibst du `self` nur in der Definition, nie beim Aufruf.",
       "exam": true
     },
     {
       "id": "prog-k041",
       "topic": "Klassen und Objekte",
-      "front": "`__str__` vs. `__repr__`",
-      "back": "`__str__`: Text für Menschen, den `print(anna)` zeigt → Konto von Anna: 100 Euro.\n`__repr__`: Text für Entwickler, sieht aus wie der Aufruf → `Konto('Anna', 100)`; ihn zeigen Konsole und `print([anna])`.",
+      "front": "`__str__` vs. `__repr__`: Wer benutzt was?",
+      "back": "`__str__` liefert Text für Menschen, ihn zeigt `print(anna)` → Konto von Anna: 100 Euro.\n`__repr__` liefert Text für Entwickler und sieht aus wie der Aufruf → `Konto('Anna', 100)`. Ihn zeigen die Konsole und Listen, auch bei `print([anna])`.\nFehlen beide, siehst du nur etwas wie `<Konto object at 0x…>`.",
       "exam": true
     },
     {
       "id": "prog-k042",
       "topic": "Klassen und Objekte",
-      "front": "`konto2 = konto1` – wie viele Konten?",
-      "back": "**Eins.** Nur ein zweites Namensschild. `konto1 is konto2` → True.",
+      "front": "Wie viele Konten gibt es nach `konto2 = konto1`?",
+      "back": "**Eins.**\n`konto2 = konto1` erzeugt kein neues Objekt, sondern hängt nur ein zweites Namensschild an dasselbe Konto. Zahlst du über `konto2` ein, siehst du es auch über `konto1`.\n`is` prüft, ob zwei Namen auf dasselbe Objekt zeigen: `konto1 is konto2` → True.",
       "exam": true
     },
     {
       "id": "prog-k043",
       "topic": "Klassen und Objekte",
-      "front": "Klassenattribut-Falle: `ben.anzahl_konten += 1`",
-      "back": "Legt ein neues **Instanzattribut** nur bei ben an. Der Zähler in der Klasse bleibt gleich. Immer über den Klassennamen ändern: `Konto.anzahl_konten += 1`.",
+      "front": "Warum ändert `ben.anzahl_konten += 1` den Zähler der Klasse **nicht**?",
+      "back": "Weil eine Zuweisung über ein Objekt immer ein **Instanzattribut** bei genau diesem Objekt anlegt.\n`ben.anzahl_konten += 1` liest erst den Klassenwert (z. B. 2) und speichert 3 als neues Attribut nur bei `ben`. Die Klasse und alle anderen Objekte sehen weiter 2.\nRichtig: über den Klassennamen ändern, `Konto.anzahl_konten += 1`.",
       "exam": true
     },
     {
       "id": "prog-k044",
       "topic": "Klassen und Objekte",
       "front": "Was ist eine **Property**?",
-      "back": "Eine Methode, die man wie ein Attribut benutzt, ohne Klammern: `lena.jahresgehalt` → 50400 bei 4200 im Monat.\nOhne Setter nur lesbar: Zuweisung → AttributeError.",
+      "back": "Eine Methode, die man von außen wie ein Attribut benutzt, also **ohne Klammern**. Man schreibt `@property` darüber.\nDer Wert wird bei jedem Zugriff neu berechnet. Ohne **Setter** (Methode zum Schreiben) ist sie nur lesbar, eine Zuweisung gibt AttributeError.\nBeispiel: `lena.jahresgehalt` → 50400 bei einem Monatsgehalt von 4200. `lena.jahresgehalt()` mit Klammern wäre falsch.",
       "exam": true
     },
     {
       "id": "prog-k045",
       "topic": "Klassen und Objekte",
-      "front": "`_kontostand` – ist das geschützt?",
-      "back": "Nein, nur eine **Konvention** („intern“). Python prüft nichts. `__x` wird zu `_Klasse__x` (Name Mangling), schützt aber auch nicht.",
+      "front": "Ist `_kontostand` (mit Unterstrich) vor Zugriff geschützt?",
+      "back": "Nein. Ein Unterstrich vorne ist nur eine **Vereinbarung**: „Das ist intern, bitte nicht von außen benutzen.“\nPython prüft das nicht, `anna._kontostand = -5` funktioniert. Zwei Unterstriche (`__x`) benennt Python in `_Klasse__x` um (**Name Mangling**). Das verhindert Namenskonflikte bei Vererbung, schützt aber auch nicht.",
       "exam": true
     },
     {
       "id": "prog-k046",
       "topic": "Klassen und Objekte",
-      "front": "Was erzeugt `@dataclass`?",
-      "back": "`__init__`, `__repr__` und `__eq__`. Dann vergleicht `==` die **Werte**. Ohne: == vergleicht nur, ob es dasselbe Objekt ist.",
+      "front": "Was erzeugt `@dataclass` automatisch?",
+      "back": "`__init__`, `__repr__` und `__eq__`, alles aus den Attributen mit Typangabe.\nDurch `__eq__` vergleicht `==` dann die **Werte** der Attribute. Ohne `@dataclass` prüft `==` bei eigenen Klassen nur, ob es **dasselbe** Objekt ist.\nBeispiel: `Kunde(\"Anna\") == Kunde(\"Anna\")` → True mit `@dataclass`, False ohne.",
       "exam": true
     },
     {
       "id": "prog-k047",
       "topic": "Klassen und Objekte",
-      "front": "Hat-ein vs. Ist-ein",
-      "back": "Hat-ein (Komposition): Objekt als Attribut, z. B. Konto hat Kunde.\nIst-ein (Vererbung): Sparkonto ist ein Konto → `class Sparkonto(Konto)`.",
+      "front": "Hat-ein vs. Ist-ein: Wann Komposition, wann Vererbung?",
+      "back": "**Hat-ein** (Komposition): Ein Objekt speichert ein anderes als Attribut, z. B. ein Konto hat einen Kunden (`self.kunde = kunde`).\n**Ist-ein** (Vererbung): Die Unterklasse ist eine besondere Art der Oberklasse, z. B. ein Sparkonto ist ein Konto → `class Sparkonto(Konto):`.\nTest: Klingt „X ist ein Y“ richtig, nimm Vererbung. „Ein Konto ist ein Kunde“ klingt falsch, also Hat-ein.",
       "exam": true
     },
     {
       "id": "prog-k048",
       "topic": "Klassen und Objekte",
-      "front": "Die 4 OOP-Prinzipien",
-      "back": "Kapselung, Vererbung, Polymorphismus, Abstraktion.",
+      "front": "Was sind die 4 Prinzipien der OOP?",
+      "back": "**Kapselung**: Das Objekt bestimmt selbst, wie sein Zustand geändert wird, z. B. nur über Methoden und Properties.\n**Vererbung**: Eine Unterklasse übernimmt Attribute und Methoden der Oberklasse („ist ein“).\n**Polymorphismus**: Derselbe Aufruf bewirkt je nach Klasse etwas anderes.\n**Abstraktion**: Gemeinsames steht in einer Oberklasse, Details bleiben weg, z. B. die abstrakte Klasse `Zahlungsart`.",
       "exam": true
     },
     {
       "id": "prog-k049",
       "topic": "Vererbung und Polymorphie",
-      "front": "Wozu `super().__init__(...)`?",
-      "back": "Legt den Teil der Oberklasse an (z. B. `name`, `kontostand`). Python ruft ihn **nicht** von selbst auf.\nVergessen → erst beim Zugriff `tom.name` ein AttributeError.",
+      "front": "Wozu brauchst du `super().__init__(...)` im Konstruktor einer Unterklasse?",
+      "back": "Es ruft den Konstruktor der **Oberklasse** auf, der deren Attribute (z. B. `self.name`) im neuen Objekt anlegt.\nHat die Unterklasse ein eigenes `__init__`, ruft Python den der Oberklasse **nicht** von selbst auf.\nVergisst du `super().__init__(name)`, fehlt `name`, und erst beim Zugriff `tom.name` kommt ein AttributeError.",
       "exam": true
     },
     {
       "id": "prog-k050",
       "topic": "Vererbung und Polymorphie",
-      "front": "Was ist **Überschreiben**?",
-      "back": "Die Unterklasse schreibt eine Methode mit gleichem Namen und gleichen Parametern neu. Mit `super().methode()` kann sie die alte Version mitbenutzen.",
+      "front": "Was heißt **Überschreiben**?",
+      "back": "Eine Unterklasse schreibt eine geerbte Methode mit **gleichem Namen und gleichen Parametern** neu.\nFür Objekte der Unterklasse läuft dann die neue Version, für die Oberklasse weiter die alte.\nMit `super().methode()` benutzt die neue Version die alte mit, z. B. `return super().monatskosten() + 150 * self.team`.",
       "exam": true
     },
     {
       "id": "prog-k051",
       "topic": "Vererbung und Polymorphie",
-      "front": "Überladen vs. Überschreiben",
-      "back": "Überladen (gleiche Klasse, andere Parameter): gibt es in Python **nicht**.\nÜberschreiben (Unterklasse, gleiche Parameter): gibt es.",
+      "front": "Überladen vs. Überschreiben: Was davon gibt es in Python?",
+      "back": "**Überschreiben** gibt es: Eine Unterklasse schreibt eine geerbte Methode mit gleichen Parametern neu.\n**Überladen** gibt es **nicht**: Mehrere Methoden mit gleichem Namen, aber anderen Parametern in derselben Klasse. Das zweite `def` ersetzt einfach das erste.\nErsatz fürs Überladen: Standardwerte wie `def brutto(netto: float, satz: float = 0.19)`.",
       "exam": true
     },
     {
       "id": "prog-k052",
       "topic": "Vererbung und Polymorphie",
-      "front": "Methodensuche (MRO)",
-      "back": "Erst in der Klasse des Objekts, dann in der Oberklasse, zuletzt in `object`. `Manager.__mro__` → Manager, Mitarbeiter, object.",
+      "front": "In welcher Reihenfolge sucht Python eine Methode (**MRO**)?",
+      "back": "Zuerst in der Klasse des Objekts, dann in der Oberklasse, dann deren Oberklasse und zuletzt in `object`.\nDiese Reihenfolge heißt **MRO** (Method Resolution Order). Der erste Treffer wird ausgeführt.\n`class Mitarbeiter: pass`\n`class Manager(Mitarbeiter): pass`\n`print([k.__name__ for k in Manager.__mro__])  # ['Manager', 'Mitarbeiter', 'object']`",
       "exam": true
     },
     {
       "id": "prog-k053",
       "topic": "Vererbung und Polymorphie",
-      "front": "`isinstance` vs. `type(x) is`",
-      "back": "Bei `anna = Sparkonto(...)`:\n`isinstance(anna, Konto)` → True (zählt Oberklassen mit)\n`type(anna) is Konto` → False (nur genaue Klasse)",
+      "front": "`isinstance(x, Klasse)` vs. `type(x) is Klasse`: Was ist der Unterschied?",
+      "back": "`isinstance` zählt auch Oberklassen mit, `type(x) is` prüft nur die **genaue** Klasse.\nEin Sparkonto ist auch ein Konto (Vererbung), aber seine genaue Klasse ist Sparkonto.\n`class Konto: pass`\n`class Sparkonto(Konto): pass`\n`anna = Sparkonto()`\n`print(isinstance(anna, Konto))  # True`\n`print(type(anna) is Konto)  # False`",
       "exam": true
     },
     {
       "id": "prog-k054",
       "topic": "Vererbung und Polymorphie",
       "front": "Was ist **Polymorphie**?",
-      "back": "Derselbe Aufruf, verschiedenes Verhalten – je nach Klasse des Objekts.\nBeispiel: `zahlung.bezahlen(betrag)` bucht bei `Kreditkarte` ab und schreibt bei `Rechnungskauf` eine Rechnung.",
+      "back": "Derselbe Methodenaufruf führt je nach Klasse des Objekts anderen Code aus.\nDer aufrufende Code muss die genaue Klasse nicht kennen, er ruft einfach `zahlung.bezahlen(betrag)` auf.\nIst `zahlung` eine `Kreditkarte`, wird abgebucht, bei `Rechnungskauf` wird eine Rechnung geschrieben. Neue Zahlungsarten kommen dazu, ohne dass der Aufrufer geändert werden muss.",
       "exam": true
     },
     {
       "id": "prog-k055",
       "topic": "Vererbung und Polymorphie",
       "front": "Was ist **Duck Typing**?",
-      "back": "Python prüft beim Ausführen nur, ob das Objekt die Methode hat, nicht seine Klasse („quakt es wie eine Ente?“).\nBeispiel: Jedes Objekt mit `bezahlen()` funktioniert in `zahlung.bezahlen(betrag)`. ty meldet trotzdem `invalid-argument-type`, wenn es nicht zur Typangabe passt.",
+      "back": "Python prüft beim Ausführen nur, ob das Objekt die aufgerufene Methode hat, nicht, von welcher Klasse es ist („Wenn es quakt wie eine Ente, ist es eine Ente“).\nJedes Objekt mit `bezahlen()` funktioniert also in `zahlung.bezahlen(betrag)`, auch ohne gemeinsame Oberklasse.\nty prüft dagegen die Typangabe: Passt das Objekt nicht zu `zahlung: Zahlungsart`, meldet ty `invalid-argument-type`.",
       "exam": true
     },
     {
       "id": "prog-k056",
       "topic": "Vererbung und Polymorphie",
-      "front": "Abstrakte Klasse: wie und wozu?",
-      "back": "`class Zahlungsart(ABC)` mit `@abstractmethod def bezahlen(...)` legt eine Pflichtmethode für alle Unterklassen fest.\n`Zahlungsart()` gibt sofort einen **TypeError**; erzeugen kann man nur Unterklassen, die `bezahlen` umsetzen.",
+      "front": "Abstrakte Klasse: Wie schreibst du sie, und wozu dient sie?",
+      "back": "Mit `class Zahlungsart(ABC):` und `@abstractmethod` über einer Methode (beides aus dem Modul `abc`) legst du eine **Pflichtmethode** fest.\n**Abstrakt** heißt: Von dieser Klasse selbst gibt es keine Objekte. `Zahlungsart()` gibt sofort einen **TypeError**.\nObjekte gibt es nur von Unterklassen, die alle abstrakten Methoden umsetzen. So beschreibt die Oberklasse, *was* alle können müssen, die Unterklassen sagen, *wie*.",
       "exam": true
     },
     {
       "id": "prog-k057",
       "topic": "Vererbung und Polymorphie",
-      "front": "Abstrakte Klasse vs. Fähigkeit (Interface)",
-      "back": "Abstrakte Klasse = Kategorie („ist ein“): darf Attribute und `__init__` haben, nur eine pro Klasse.\nFähigkeit = „kann …“: nur abstrakte Methoden, beliebig viele: `class Rechnung(Dokument, Druckbar, Versendbar)`.",
+      "front": "Abstrakte Klasse (Kategorie) vs. Fähigkeit (Interface): Was ist der Unterschied?",
+      "back": "Eine abstrakte Klasse ist eine **Kategorie** („ist ein“): Sie darf Attribute und ein `__init__` haben, eine Klasse hat höchstens eine.\nEine **Fähigkeit** („kann …“) enthält nur abstrakte Methoden, eine Klasse darf beliebig viele haben.\nBeispiel: `class Rechnung(Dokument, Druckbar, Versendbar):` – Rechnung ist ein Dokument und kann gedruckt und versendet werden.",
       "exam": true
     },
     {
       "id": "prog-k058",
       "topic": "Projekt Kaffeeshop",
-      "front": "Kaffeeshop Stufe 1: Welche Klassen und Beziehungen?",
-      "back": "Lager *hat viele* Produkte, Warenkorb *hat einen* Kunden und *viele* Positionen, Position *hat ein* Produkt + Menge. Nur Hat-ein, keine Vererbung.",
+      "front": "Kaffeeshop Stufe 1: Welche Klassen gibt es, und wie hängen sie zusammen?",
+      "back": "`Lager` hat viele Produkte, `Warenkorb` hat einen Kunden und viele Positionen, `Position` hat ein Produkt und eine Menge.\nDas sind alles **Hat-ein-Beziehungen** (ein Objekt speichert andere als Attribut), keine Vererbung.\nBeispiel: `korb.kunde` ist ein Kunde-Objekt, `korb.positionen` eine Liste von Positionen.",
       "exam": true
     },
     {
       "id": "prog-k059",
       "topic": "Variablen, Datentypen und Operatoren",
-      "front": "IndexError, NameError, TypeError – typische Auslöser",
-      "back": "IndexError: `noten[5]` bei 5 Elementen.\nNameError: Name nie zugewiesen oder Tippfehler.\nTypeError: `\"Alter: \" + 36`, Argument fehlt.",
+      "front": "IndexError, NameError, TypeError: Was löst sie typischerweise aus?",
+      "back": "**IndexError**: Den Index gibt es nicht, z. B. `noten[5]` bei 5 Elementen (gültig sind 0 bis 4).\n**NameError**: Der Name ist unbekannt, weil nie zugewiesen oder vertippt (`Zahl` statt `zahl`).\n**TypeError**: Der Typ passt nicht, z. B. `\"Alter: \" + 36`, oder beim Aufruf fehlt ein Argument.\nDen Fehlernamen findest du in der letzten Zeile der Fehlermeldung (Traceback von unten lesen).",
       "exam": true
     },
     {
       "id": "prog-k060",
       "topic": "Variablen, Datentypen und Operatoren",
-      "front": "Welche Fehler laufen **ohne** Meldung durch?",
-      "back": "Logikfehler, z. B. `5 + 2 / 2`, falscher Startwert, Tippfehler bei einer Attributzuweisung (`anna.kontostnad = 500` legt still ein neues Attribut an).",
+      "front": "Welche Fehler laufen **ohne** Fehlermeldung durch?",
+      "back": "**Logikfehler**: Das Programm läuft, rechnet aber falsch. Python kann nicht wissen, was du gemeint hast.\nBeispiele: `5 + 2 / 2` statt `(5 + 2) / 2`, ein falscher Startwert, oder ein Tippfehler bei einer Attributzuweisung.\n`anna.kontostnad = 500` legt still ein neues Attribut an, `anna.kontostand` bleibt unverändert. ty würde es melden.",
       "exam": true
     },
     {
       "id": "prog-k061",
       "topic": "for-Schleifen ganz langsam",
-      "front": "Wo steht `summe = 0` beim Aufsummieren – und warum?",
-      "back": "**Vor** der Schleife, sonst wird die Summe jede Runde wieder 0.\n`for x in [1, 2, 3]:` mit `summe = 0` in der Schleife ergibt 3 statt 6.",
+      "front": "Wo steht `summe = 0` beim Aufsummieren, und warum?",
+      "back": "**Vor** der Schleife. Stünde es in der Schleife, würde die Summe jede Runde wieder auf 0 gesetzt.\nAm Ende bliebe dann nur der letzte Wert übrig.\n`summe = 0`\n`for x in [1, 2, 3]: summe += x`\n`print(summe)  # 6`\nMit `summe = 0` in der Schleife käme 3 heraus.",
       "exam": true
     },
     {
       "id": "prog-k062",
       "topic": "for-Schleifen ganz langsam",
-      "front": "Zählen statt summieren: Wie zählst du die Noten ≥ 4 in `[2, 5, 4]`?",
-      "back": "`anzahl = 0` vor der Schleife, `anzahl += 1` nur im `if`.\nRunde 1: 2 → nein (0) · Runde 2: 5 → ja (1) · Runde 3: 4 → ja (**2**).",
+      "front": "Wie zählst du die Noten ≥ 4 in `[2, 5, 4]`?",
+      "back": "`anzahl = 0` vor der Schleife, `anzahl += 1` nur, wenn die Bedingung wahr ist.\nZählen heißt: pro Treffer 1 dazu, nicht den Wert selbst addieren. Im Rumpf: `if n >= 4:` und darunter eingerückt `anzahl += 1`.\nRunde 1: 2 → nein (0) · Runde 2: 5 → ja (1) · Runde 3: 4 → ja (**2**).",
       "exam": true
     },
     {
       "id": "prog-k063",
       "topic": "for-Schleifen ganz langsam",
       "front": "Wie legst du eine Rundentabelle an?",
-      "back": "Eine Spalte pro Variable, eine Zeile pro Runde, Startwerte in die erste Zeile.\nBeispiel `for i in range(2, 9, 3): print(i * i)`: i = 2, 5, 8 → Ausgabe 4, 25, 64.",
+      "back": "Eine Spalte pro Variable, eine Zeile pro Runde, die Startwerte in die erste Zeile.\nSo rechnest du jede Runde einzeln und verlierst nicht den Überblick.\n`for i in range(2, 9, 3): print(i * i, end=\" \")  # 4 25 64`\nTabelle: i = 2 → 4 · i = 5 → 25 · i = 8 → 64. Die 11 ist nicht mehr dabei, denn der Stopp ist 9.",
       "exam": true
     },
     {
       "id": "prog-k064",
       "topic": "Vererbung und Polymorphie",
       "front": "Was erbt jede Klasse von `object`?",
-      "back": "Die Standardfassungen von `__str__`, `__repr__` und `__eq__`.\nWer in `Konto` ein eigenes `__str__` schreibt, überschreibt also eine Methode von `object`.",
+      "back": "Unter anderem die Standardfassungen von `__str__`, `__repr__` und `__eq__`.\n`object` ist die Oberklasse aller Klassen, auch wenn du sie nicht hinschreibst.\nSchreibst du in `Konto` ein eigenes `__str__`, überschreibst du also eine Methode von `object`. Das Standard-`__eq__` prüft nur, ob es dasselbe Objekt ist.",
       "exam": true
     },
     {
       "id": "prog-k065",
       "topic": "Vererbung und Polymorphie",
-      "front": "Wozu `type(self).__name__` in `__repr__`?",
-      "back": "Es liefert den Namen der **echten** Klasse, damit die Ausgabe auch für Unterklassen stimmt.\nGeerbtes `__repr__` bei einem Sparkonto → `Sparkonto(inhaber='Anna')` statt `Konto(…)`.",
+      "front": "Wozu schreibst du `type(self).__name__` in `__repr__`?",
+      "back": "Es liefert den Namen der **echten** Klasse des Objekts, nicht den der Klasse, in der die Methode steht.\nSo stimmt die Ausgabe auch für Unterklassen, die `__repr__` nur erben.\nBeispiel: Ein Sparkonto zeigt mit dem geerbten `__repr__` → `Sparkonto(inhaber='Anna')` statt `Konto(…)`.",
       "exam": true
     },
     {
       "id": "prog-k066",
       "topic": "Vererbung und Polymorphie",
-      "front": "Eine Unterklasse setzt die abstrakte Methode nicht um. Was passiert?",
-      "back": "Sie bleibt selbst abstrakt: Schon **beim Erzeugen** kommt ein TypeError, nicht erst beim Aufruf.\n`class PayPal(Zahlungsart): pass` → `PayPal()` scheitert.",
+      "front": "Eine Unterklasse setzt eine abstrakte Methode nicht um. Was passiert?",
+      "back": "Sie bleibt selbst abstrakt. Schon **beim Erzeugen** eines Objekts kommt ein TypeError, nicht erst beim Aufruf der Methode.\nPython prüft beim Anlegen, ob alle `@abstractmethod`-Methoden umgesetzt sind.\nBeispiel: `class PayPal(Zahlungsart): pass` → `PayPal()` scheitert mit TypeError.",
       "exam": true
     },
     {
       "id": "prog-k067",
       "topic": "Vererbung und Polymorphie",
-      "front": "Wie prüfst du, ob ein Objekt eine Fähigkeit hat?",
-      "back": "Mit `isinstance(objekt, Faehigkeit)` und nur dann die Methode aufrufen.\n`isinstance(lieferschein, Versendbar)` → False, also kein `versenden()` (sonst AttributeError).",
+      "front": "Wie prüfst du, ob ein Objekt eine Fähigkeit hat, bevor du die Methode aufrufst?",
+      "back": "Mit `isinstance(objekt, Faehigkeit)`, und nur wenn das True ist, rufst du die Methode auf.\nSonst gäbe es einen AttributeError, weil das Objekt die Methode gar nicht hat.\nBeispiel: `isinstance(lieferschein, Versendbar)` → False, also kein `versenden()` aufrufen.",
       "exam": true
     },
     {
       "id": "prog-k068",
       "topic": "Vererbung und Polymorphie",
-      "front": "Wozu `@override` (aus `typing`)?",
-      "back": "Markiert: „Diese Methode ersetzt eine der Oberklasse.“ Python ignoriert es, ty prüft es.\nTippfehler `def abhebn(…)` mit `@override` → ty meldet ihn, statt still eine neue Methode anzulegen.",
+      "front": "Wozu dient `@override` (aus `typing`)?",
+      "back": "Es markiert: „Diese Methode ersetzt eine Methode der Oberklasse.“ Python selbst ignoriert die Markierung, ty prüft sie.\nGibt es in der Oberklasse keine Methode mit diesem Namen, meldet ty `invalid-explicit-override`.\nBeispiel: Tippfehler `def abhebn(…)` mit `@override` → ty meldet ihn. Ohne `@override` wäre `abhebn` still eine neue Methode.",
       "exam": true
     },
     {
       "id": "prog-k069",
       "topic": "Vererbung und Polymorphie",
       "front": "Polymorphie: Was entscheidet die Typangabe, was das Objekt?",
-      "back": "Die Typangabe (`zahlung: Zahlungsart`) legt fest, was ty erlaubt.\nDas Objekt entscheidet beim Ausführen, welches `bezahlen()` läuft (Kreditkarte, Rechnungskauf …).",
+      "back": "Die Typangabe (`zahlung: Zahlungsart`) legt fest, was **ty** erlaubt: nur Methoden, die `Zahlungsart` hat.\nDas **Objekt** entscheidet beim Ausführen, welche Fassung von `bezahlen()` läuft, z. B. die von `Kreditkarte` oder von `Rechnungskauf`.\nPython schaut dabei nicht auf die Typangabe, sondern auf die Klasse des Objekts.",
       "exam": true
     },
     {
       "id": "prog-k070",
       "topic": "Projekt Kaffeeshop",
       "front": "`lager.finden(nummer)`: Wo steht `return None`?",
-      "back": "**Nach** der Schleife, eine Stufe weniger eingerückt als `for`.\nEin `else: return None` unter dem `if` beendet die Suche schon beim ersten falschen Produkt.",
+      "back": "**Nach** der Schleife, eine Stufe weniger eingerückt als `for`.\nErst wenn alle Produkte geprüft sind und keins passt, ist klar, dass es keinen Treffer gibt.\nEin `else: return None` unter dem `if` in der Schleife beendet die Suche schon beim ersten nicht passenden Produkt.",
       "exam": true
     },
     {
       "id": "prog-k071",
       "topic": "Projekt Kaffeeshop",
-      "front": "`finden()` vs. `suchen()` im Lager",
-      "back": "finden: **ein** Produkt oder `None`, beim ersten Treffer sofort `return`.\nsuchen: **Liste** aller Treffer (leere Liste, `append`, `return` nach der Schleife); kein Treffer → `[]`.",
+      "front": "`finden()` vs. `suchen()` im Lager: Was liefern sie?",
+      "back": "`finden` liefert **ein** Produkt oder `None` und springt beim ersten Treffer sofort mit `return` heraus.\n`suchen` liefert eine **Liste** aller Treffer: leere Liste anlegen, Treffer mit `append` sammeln, `return` nach der Schleife.\nGibt es keinen Treffer, liefert `suchen` eine leere Liste `[]`, `finden` liefert `None`.",
       "exam": true
     },
     {
       "id": "prog-k072",
       "topic": "Projekt Kaffeeshop",
       "front": "Welche Prüfung macht `warenkorb.hinzufuegen(produkt, menge)`?",
-      "back": "`schon_im_korb + menge > produkt.bestand` → `return False`, sonst Position anlegen oder erhöhen.\nBeispiel: 3 French Press auf Lager, 3 im Korb, noch 1 dazu → 3 + 1 > 3 → False.",
+      "back": "Ist `schon_im_korb + menge > produkt.bestand`, liefert sie `False`. Sonst legt sie eine Position an oder erhöht die Menge.\nMan muss mitzählen, was schon im Korb liegt, sonst könnte man in mehreren Schritten mehr bestellen als da ist.\nBeispiel: 3 French Press auf Lager, 3 im Korb, noch 1 dazu → 3 + 1 > 3 → False.",
       "exam": true
     },
     {
       "id": "prog-k073",
       "topic": "Projekt Kaffeeshop",
-      "front": "Nach dem Bestellen: Warum `korb.positionen = []` statt `korb.positionen.clear()`?",
-      "back": "Die Bestellung zeigt auf **dieselbe** Liste wie der Korb.\n`clear()` leert deshalb auch die Bestellung; `= []` gibt nur dem Korb eine neue, leere Liste.",
+      "front": "Warum `korb.positionen = []` statt `korb.positionen.clear()` nach dem Bestellen?",
+      "back": "Die Bestellung zeigt auf **dieselbe** Liste wie der Korb, denn beim Anlegen wurde nichts kopiert.\n`clear()` leert das Listenobjekt selbst, also auch die Bestellung. `korb.positionen = []` gibt nur dem Korb eine neue, leere Liste, die Bestellung behält die alte.",
       "exam": true
     },
     {
       "id": "prog-k074",
       "topic": "Projekt Kaffeeshop",
       "front": "Stufe 2: Wie hängt der Bruttopreis von der Produktart ab?",
-      "back": "`Produkt` ist abstrakt mit `mwst_satz()`: Lebensmittel → 0.07, Zubehoer → 0.19. `bruttopreis` steht nur einmal in `Produkt` (Polymorphie).\nKaffee: 12.99 · 1,07 → 13.90 Euro.",
+      "back": "`Produkt` ist abstrakt mit der Methode `mwst_satz()`. `Lebensmittel` liefert 0.07, `Zubehoer` 0.19.\n`bruttopreis` steht nur einmal in `Produkt` und ruft `self.mwst_satz()` auf. Welcher Satz kommt, entscheidet das Objekt (Polymorphie).\nBeispiel: Kaffee 12.99 · 1,07 → 13.90 Euro, French Press 20.90 · 1,19 → 24.87 Euro.",
       "exam": true
     },
     {
       "id": "prog-k075",
       "topic": "Projekt Kaffeeshop",
       "front": "Wo wird der Warenkorb in `main()` angelegt?",
-      "back": "Einmal **vor** der `while True`-Schleife.\nStünde `korb = Warenkorb(kunde)` in der Schleife, wäre der Korb nach jeder Menüwahl wieder leer (wie `summe = 0` in der Schleife).",
+      "back": "Einmal **vor** der `while True`-Schleife des Menüs.\nStünde `korb = Warenkorb(kunde)` in der Schleife, gäbe es bei jeder Menüwahl einen neuen, leeren Korb. Es ist derselbe Fehler wie `summe = 0` in der Schleife.",
       "exam": true
+    },
+    {
+      "id": "prog-k076",
+      "topic": "Einführung",
+      "front": "Was heißt **terminierend**? (Und wie hängt es mit determiniert und deterministisch zusammen?)",
+      "back": "**terminierend** heißt: Der Algorithmus **endet** bei jeder erlaubten Eingabe nach endlich vielen Schritten.\nLern die drei als Trio: terminierend = **hört auf**, determiniert = gleiche Eingabe → **gleiches Ergebnis**, deterministisch = **nächster Schritt** immer eindeutig.\nBeispiel: `while True:` ohne `break` terminiert nie. Eine Fakultät mit `if n == 0` terminiert für −1 nicht.",
+      "exam": true
+    },
+    {
+      "id": "prog-k077",
+      "topic": "Einführung",
+      "front": "Was passiert Schritt für Schritt bei `uv run programm.py`?",
+      "back": "Python übersetzt den Quelltext in **Bytecode**, dann führt die **Python-VM** diesen Bytecode aus.\nEs entsteht keine `.exe`-Datei und kein Maschinencode für den Prozessor, und Java ist nicht beteiligt.\nuv sorgt vorher nur dafür, dass das richtige Python und die Pakete des Projekts benutzt werden.",
+      "exam": true
+    },
+    {
+      "id": "prog-k078",
+      "topic": "Einführung",
+      "front": "Was heißt **dynamisch typisiert**?",
+      "back": "Der Typ gehört zum **Wert**, nicht zum Namen. Ein Name kann später auf einen Wert mit anderem Typ zeigen.\nPython prüft Typen erst beim Ausführen, nicht vorher (das macht ty).\n`x = 5`\n`print(type(x))  # <class 'int'>`\n`x = \"fünf\"`\n`print(type(x))  # <class 'str'>`",
+      "exam": true
+    },
+    {
+      "id": "prog-k079",
+      "topic": "Variablen, Datentypen und Operatoren",
+      "front": "Python ist „dynamisch, aber **stark** typisiert“. Was heißt **stark**?",
+      "back": "Python wandelt Typen nicht heimlich um, wenn es nicht passt. Text und Zahl lassen sich nicht einfach verbinden.\n`\"3\" + 4` gibt deshalb einen **TypeError**, nicht 7 und nicht \"34\". Du musst selbst umwandeln.\n`print(int(\"3\") + 4)  # 7`\n`print(\"3\" + str(4))  # 34`\n`print(\"3\" + 4)  # TypeError`",
+      "exam": true
+    },
+    {
+      "id": "prog-k080",
+      "topic": "Variablen, Datentypen und Operatoren",
+      "front": "Prüft Python selbst die Typangaben wie `alter: int`?",
+      "back": "Nein. Python **ignoriert** Typangaben beim Ausführen. Nur ty prüft sie, und zwar vor dem Start.\nDie Typangabe ist ein Versprechen, ty passt auf, dass du es hältst.\n`alter: int = \"30\"`\n`print(alter)  # 30`\nPython gibt 30 aus, `uv run ty check` meldet `invalid-assignment`.",
+      "exam": true
+    },
+    {
+      "id": "prog-k081",
+      "topic": "Einführung",
+      "front": "Du willst ein Paket von pypi.org benutzen. Was ist der erste Schritt?",
+      "back": "Im Projektordner `uv add paketname` ausführen.\nuv lädt das Paket herunter, installiert es in die Projektumgebung `.venv` und trägt es ins Projekt ein. Erst danach klappt `import paketname`.\nEin `import` allein lädt nichts herunter. Werkzeuge nur für die Entwicklung kommen mit `uv add --dev`, z. B. `uv add --dev ruff ty pytest`.",
+      "exam": true
+    },
+    {
+      "id": "prog-k082",
+      "topic": "Einführung",
+      "front": "Welches Werkzeug macht was: `ruff`, `ty`, `pytest`, `uv add`?",
+      "back": "**ruff** prüft Stil und Formatierung (Linter), z. B. falsche Namen oder unbenutzte Importe.\n**ty** prüft Typen vor dem Start, z. B. `\"3\"` statt `int` als Argument.\n**pytest** führt deine Tests aus (`uv run pytest`). **uv add** fügt ein Paket zum Projekt hinzu.\nMerke: Typfehler vor dem Start → ty. Falsch gerechnet → pytest findet es, wenn du einen Test hast.",
+      "exam": true
+    },
+    {
+      "id": "prog-k083",
+      "topic": "Funktionen und Rekursion",
+      "front": "Wie schreibst du einen Test mit **pytest**?",
+      "back": "Eine Datei `test_….py` anlegen, darin Funktionen, die mit `test_` beginnen und mit `assert` prüfen. Starten mit `uv run pytest`.\n`assert bedingung` tut nichts, wenn die Bedingung stimmt, sonst gibt es einen AssertionError und pytest meldet den Test als fehlgeschlagen.\n`def fak(n: int) -> int: return 1 if n == 0 else n * fak(n - 1)`\n`assert fak(5) == 120  # (stimmt, keine Ausgabe)`\n`assert fak(3) == 5  # AssertionError`",
+      "exam": true
+    },
+    {
+      "id": "prog-k084",
+      "topic": "Funktionen und Rekursion",
+      "front": "Was ist der Unterschied zwischen `import math` und `from math import ceil`?",
+      "back": "`import math` holt das ganze Modul. Du rufst die Funktion **mit** Modulnamen auf: `math.ceil(3.2)`.\n`from math import ceil` holt nur den Namen `ceil`. Du rufst ihn **ohne** Modulnamen auf: `ceil(3.2)`. Der Name `math` ist dann unbekannt.\nEin **Modul** ist eine `.py`-Datei mit Funktionen, `math` ist eingebaut.\n`import math`\n`print(math.ceil(3.2))  # 4`\n`from math import ceil`\n`print(ceil(3.2))  # 4`",
+      "exam": true
+    },
+    {
+      "id": "prog-k085",
+      "topic": "Funktionen und Rekursion",
+      "front": "Nach `from math import ceil`: Was passiert bei `math.ceil(3.2)`?",
+      "back": "Es gibt einen **NameError**, denn nur der Name `ceil` wurde importiert, nicht `math`.\nPython kennt nur Namen, die zugewiesen oder importiert wurden. Für `math.ceil(…)` bräuchtest du `import math`.\n`from math import ceil`\n`print(ceil(3.2))  # 4`\n`math.ceil(3.2)  # NameError`",
+      "exam": true
+    },
+    {
+      "id": "prog-k086",
+      "topic": "Funktionen und Rekursion",
+      "front": "Was macht `math.ceil`, und wie unterscheidet es sich von `round`?",
+      "back": "`math.ceil` rundet **immer auf** zur nächsten ganzen Zahl. `round` rundet zur nächsten ganzen Zahl, bei 2,3 also ab.\nPraktisch für „Wie viele Kartons brauche ich?“: Auch für einen Rest von 1 Artikel brauchst du einen ganzen Karton.\n`import math`\n`print(math.ceil(23 / 6))  # 4`\n`print(round(23 / 10), math.ceil(23 / 10))  # 2 3`\n`print(math.ceil(12 / 6))  # 2`",
+      "exam": true
+    },
+    {
+      "id": "prog-k087",
+      "topic": "Klassen und Objekte",
+      "front": "Was ist ein **Modul**, was ein **Paket**, und wie importierst du daraus?",
+      "back": "Jede `.py`-Datei ist ein **Modul**. Ein Ordner mit Modulen und einer (gern leeren) Datei `__init__.py` ist ein **Paket**.\nImportiert wird mit Punkt-Schreibweise: `from banking.konto import Konto` holt die Klasse `Konto` aus der Datei `banking/konto.py`.\nAnders als in Java dürfen mehrere Klassen in einem Modul stehen.",
+      "exam": true
+    },
+    {
+      "id": "prog-k088",
+      "topic": "Funktionen und Rekursion",
+      "front": "Wozu dient `if __name__ == \"__main__\": main()`?",
+      "back": "`main()` läuft nur, wenn du die Datei **direkt startest** (`uv run shop.py`), nicht, wenn eine andere Datei sie **importiert**.\n`__name__` ist eine eingebaute Variable: Beim direkten Start enthält sie `\"__main__\"`, beim Import den Modulnamen (z. B. `\"shop\"`).\nSo kannst du die Funktionen der Datei in Tests importieren, ohne dass das ganze Programm losläuft.",
+      "exam": true
+    },
+    {
+      "id": "prog-k089",
+      "topic": "Variablen, Datentypen und Operatoren",
+      "front": "Wie schreibst du in Python eine **Konstante**, die ty prüfen kann?",
+      "back": "Mit `Final` aus dem Modul `typing`: `MWST_SATZ: Final = 0.19`.\nGroßbuchstaben allein sind nur eine Vereinbarung. Erst mit `Final` meldet ty jede spätere Zuweisung als Fehler. `const` oder `final double` gibt es in Python nicht (Java).\nPython selbst verhindert die Änderung nicht:\n`from typing import Final`\n`MWST_SATZ: Final = 0.19`\n`MWST_SATZ = 0.2`\n`print(MWST_SATZ)  # 0.2`",
+      "exam": true
+    },
+    {
+      "id": "prog-k090",
+      "topic": "Variablen, Datentypen und Operatoren",
+      "front": "Was ergibt `int(9.99)`? Rundet `int()`?",
+      "back": "Es ergibt **9**. `int()` **schneidet** die Nachkommastellen ab, es rundet nicht.\nZum Runden nimmst du `round()`. Bei negativen Zahlen schneidet `int()` Richtung 0 ab, anders als `//`.\n`print(int(9.99))  # 9`\n`print(round(9.99))  # 10`\n`print(int(-2.7), -27 // 10)  # -2 -3`",
+      "exam": true
+    },
+    {
+      "id": "prog-k091",
+      "topic": "Variablen, Datentypen und Operatoren",
+      "front": "Was ergeben `round(2.5)`, `round(3.5)` und `round(2.675, 2)`?",
+      "back": "`round(2.5)` → 2, `round(3.5)` → 4, `round(2.675, 2)` → 2.67.\nBei genau ,5 rundet Python zur **geraden** Zahl (2 und 4), nicht immer auf. Und 2.675 ist als float in Wahrheit etwas kleiner (2.67499…), darum wird abgerundet.\n`print(round(2.5), round(3.5), round(9.5))  # 2 4 10`\n`print(round(2.675, 2))  # 2.67`",
+      "exam": true
+    },
+    {
+      "id": "prog-k092",
+      "topic": "Variablen, Datentypen und Operatoren",
+      "front": "Was steht in `x` nach `x = 10`, `x -= 3`, `x *= 2`?",
+      "back": "**14**. Kurzschreibweisen wie `-=` und `*=` rechnen mit dem alten Wert und speichern das Ergebnis wieder in `x`.\n`x -= 3` heißt `x = x - 3`, `x *= 2` heißt `x = x * 2`. Schritt für Schritt: 10 − 3 = 7, 7 · 2 = 14.\n`x = 10`\n`x -= 3`\n`x *= 2`\n`print(x)  # 14`",
+      "exam": true
+    },
+    {
+      "id": "prog-k093",
+      "topic": "Variablen, Datentypen und Operatoren",
+      "front": "Wie rechnest du mit `//` und `%` zusammen? (Beispiel 17 und 5)",
+      "back": "`17 // 5` → 3 (wie oft passt 5 ganz hinein), `17 % 5` → 2 (was übrig bleibt).\nProbe: 3 · 5 + 2 = 17. Mit `% 2` prüfst du, ob eine Zahl gerade ist: Rest 0 heißt gerade.\n`print(17 // 5, 17 % 5)  # 3 2`\n`print(13 % 2 == 0)  # False`\n`print(9 % 3)  # 0`",
+      "exam": true
+    },
+    {
+      "id": "prog-k094",
+      "topic": "Variablen, Datentypen und Operatoren",
+      "front": "Warum ergibt `int(19.99 * 100)` nur 1998 Cent?",
+      "back": "Weil `19.99 * 100` wegen der float-Ungenauigkeit etwas **weniger** als 1999 ergibt und `int()` den Rest abschneidet.\nFloats werden binär gespeichert, viele Dezimalzahlen sind dort nicht genau darstellbar. Abhilfe: `round()` oder `Decimal(\"19.99\")`.\n`print(19.99 * 100)  # 1998.9999999999998`\n`print(int(19.99 * 100), round(19.99 * 100))  # 1998 1999`",
+      "exam": true
+    },
+    {
+      "id": "prog-k095",
+      "topic": "Kontrollstrukturen und Listen",
+      "front": "Python hat kein `do-while`. Wie schreibst du „mindestens einmal, bis die Eingabe passt“?",
+      "back": "Mit `while True:` und im Rumpf einem `break`, sobald die Eingabe gültig ist.\n`while True` ist immer wahr, die Schleife läuft also mindestens einmal. Nur das `break` beendet sie.\nAufbau: `while True:`, darin eingerückt `eingabe = input(\"Name: \")`, dann `if eingabe != \"\": break`, danach `print(\"Bitte etwas eingeben!\")`.\nAblauf: Eingabe holen → prüfen → passt sie, `break` → sonst Meldung und nächste Runde.",
+      "exam": true
+    },
+    {
+      "id": "prog-k096",
+      "topic": "Kontrollstrukturen und Listen",
+      "front": "Welchen Wert hat die Schleifenvariable nach einem `break`?",
+      "back": "Den Wert, den sie **beim `break`** hatte. Die Variable lebt nach der Schleife weiter.\nEine for-Schleife ist kein eigener Gültigkeitsbereich, und nach `break` wird nichts mehr weitergezählt.\nBeispiel: `for i in range(1, 10):` mit `if i > 7: break` im Rumpf. Bei i = 8 greift das `break`, danach gilt `i == 8`, nicht 9.",
+      "exam": true
+    },
+    {
+      "id": "prog-k097",
+      "topic": "Kontrollstrukturen und Listen",
+      "front": "Warum gibt `i = 1` und `while i <= len(umsaetze):` einen IndexError?",
+      "back": "Zwei Ursachen: Der Start bei 1 überspringt das erste Element (Index 0), und `<=` lässt am Ende `i = len(umsaetze)` zu.\nEine Liste mit n Elementen hat die Indizes **0 bis n − 1**. Bei 3 Umsätzen ist `umsaetze[3]` also schon außerhalb.\nKorrektur: `i = 0` und `while i < len(umsaetze):`, oder einfacher `for umsatz in umsaetze:`.",
+      "exam": true
+    },
+    {
+      "id": "prog-k098",
+      "topic": "Kontrollstrukturen und Listen",
+      "front": "Was ist ein **Off-by-one-Fehler**?",
+      "back": "Eine Schleife läuft **eine Runde zu viel oder zu wenig**, weil eine Grenze um 1 danebenliegt.\nTypische Ursachen: `range(1, n)` statt `range(1, n + 1)`, `<=` statt `<`, Start bei 1 statt 0.\n`print(list(range(1, 5)))  # [1, 2, 3, 4]`\n`print(list(range(1, 5 + 1)))  # [1, 2, 3, 4, 5]`",
+      "exam": true
+    },
+    {
+      "id": "prog-k099",
+      "topic": "Funktionen und Rekursion",
+      "front": "Eine Funktion setzt `prozent = 0` für ihren Parameter. Ändert sich `prozent` beim Aufrufer?",
+      "back": "Nein. `prozent = 0` lässt nur den **lokalen** Namen auf einen neuen Wert zeigen, das Objekt beim Aufrufer bleibt unberührt.\nBei einer Liste ist das anders: `preise[i] = …` ändert das gemeinsame Listenobjekt, das sieht der Aufrufer.\n`def f(preise: list[float], prozent: int) -> None: preise[0] = preise[0] * (100 - prozent) / 100; prozent = 0`\n`p, pr = [20.0], 10`\n`ergebnis = f(p, pr)`\n`print(p, pr, ergebnis)  # [18.0] 10 None`",
+      "exam": true
+    },
+    {
+      "id": "prog-k100",
+      "topic": "Funktionen und Rekursion",
+      "front": "Was ist ein **Standardwert** bei einem Parameter?",
+      "back": "Ein Wert, den der Parameter bekommt, wenn beim Aufruf kein Argument dafür übergeben wird.\nMan schreibt ihn mit `=` in die Definition. So kann man dieselbe Funktion mit weniger Argumenten aufrufen, statt sie zu überladen. Wird ein Argument übergeben, gilt der Standardwert nicht.\n`def brutto(netto: float, satz: float = 0.19) -> float: return round(netto * (1 + satz), 2)`\n`print(brutto(100))  # 119.0`\n`print(brutto(100, 0.07))  # 107.0`",
+      "exam": true
+    },
+    {
+      "id": "prog-k101",
+      "topic": "Funktionen und Rekursion",
+      "front": "Was sind **Schlüsselwortargumente**?",
+      "back": "Argumente, die du beim Aufruf **mit dem Parameternamen** übergibst: `brutto(satz=0.07, netto=100)`.\nDann zählt der **Name**, nicht die Reihenfolge. Das macht Aufrufe lesbarer und verhindert Verwechslungen.\n`def brutto(netto: float, satz: float = 0.19) -> float: return round(netto * (1 + satz), 2)`\n`print(brutto(satz=0.07, netto=100))  # 107.0`\n`brutto()  # TypeError`",
+      "exam": true
+    },
+    {
+      "id": "prog-k102",
+      "topic": "Funktionen und Rekursion",
+      "front": "Wo müssen Parameter mit Standardwert in der Definition stehen?",
+      "back": "**Hinter** den Parametern ohne Standardwert.\nPython ordnet Argumente erst der Reihe nach zu. Stünde ein Pflichtparameter hinter einem mit Standardwert, wäre unklar, wohin ein Argument gehört.\nFalsch: `def f(satz=0.19, netto):` → SyntaxError. Richtig: `def f(netto, satz=0.19):`.",
+      "exam": true
+    },
+    {
+      "id": "prog-k103",
+      "topic": "Funktionen und Rekursion",
+      "front": "Wie lange lebt eine Variable, die in einer Funktion zugewiesen wird?",
+      "back": "Nur **während des Aufrufs** und nur **in dieser Funktion**. Sie ist **lokal**.\nJeder Aufruf bekommt einen eigenen Rahmen, der nach `return` verschwindet. Außerhalb gibt es den Namen nicht → NameError.\n`def f() -> None: ergebnis = 5`\n`f()`\n`print(ergebnis)  # NameError`",
+      "exam": true
+    },
+    {
+      "id": "prog-k104",
+      "topic": "Kontrollstrukturen und Listen",
+      "front": "Schaffen `if` und `for` einen eigenen Gültigkeitsbereich?",
+      "back": "Nein, nur Funktionen tun das. Variablen aus einem `if`- oder Schleifenblock leben danach weiter.\nFalle: Wurde der Block nicht ausgeführt, wurde die Variable nie angelegt → NameError.\n`for i in range(3): letzter = i`\n`print(i, letzter)  # 2 2`\n`if False: neu = 1`\n`print(neu)  # NameError`",
+      "exam": true
+    },
+    {
+      "id": "prog-k105",
+      "topic": "Klassen und Objekte",
+      "front": "`==` vs. `is`: Was prüft was?",
+      "back": "`is` prüft **Identität**: Zeigen beide Namen auf **dasselbe** Objekt? `==` prüft **Gleichheit** der Werte.\nAchtung: Bei eigenen Klassen ohne `__eq__` (ohne `@dataclass`) prüft auch `==` nur die Identität. Zwei Konten mit gleichen Werten sind dann nicht `==`.\n`a = [1, 2]`\n`b = [1, 2]`\n`print(a == b, a is b)  # True False`\n`class Konto: pass`\n`print(Konto() == Konto())  # False`",
+      "exam": true
+    },
+    {
+      "id": "prog-k106",
+      "topic": "Klassen und Objekte",
+      "front": "Wie prüfst du, ob eine Variable „noch kein Objekt“ enthält?",
+      "back": "Mit `is None`, z. B. `if konto is None:`.\n`None` heißt „kein Wert“ (Java: `null`). Es gibt genau ein `None`-Objekt, darum prüft man mit `is`, nicht mit `==`.\n`konto = None`\n`print(konto is None)  # True`\n`zahl = 0`\n`print(zahl is None, zahl == 0)  # False True`",
+      "exam": true
+    },
+    {
+      "id": "prog-k107",
+      "topic": "Klassen und Objekte",
+      "front": "Kapselung mit Property: Wie hältst du einen Bestand nur über eine Methode änderbar?",
+      "back": "Den Wert in `_bestand` speichern, nach außen eine Property `bestand` **ohne Setter** anbieten, und nur die Methode `verkaufen` ändert `self._bestand`.\nSo kann von außen niemand `p.bestand = 999` schreiben (AttributeError), aber jeder kann den Bestand lesen.\nFehler, die du suchen solltest: `self.bestand = …` statt `self._bestand` im `__init__` oder in der Methode, und eine Methode `_verkaufen`, die von außen gebraucht wird.",
+      "exam": true
+    },
+    {
+      "id": "prog-k108",
+      "topic": "Klassen und Objekte",
+      "front": "Was ist ein **Setter**, und wie schreibst du ihn?",
+      "back": "Ein Setter ist die Methode, die beim **Zuweisen** an eine Property läuft (`anna.kontostand = x`). Er kann den neuen Wert prüfen.\nMan schreibt `@kontostand.setter` über eine zweite Methode `def kontostand(self, neuer_wert)`, die denselben Namen hat wie die Property.\nDamit die Regel auch beim Anlegen gilt, schreibt `__init__` `self.kontostand = …` (nutzt den Setter), nicht `self._kontostand = …`.",
+      "exam": true
+    },
+    {
+      "id": "prog-k109",
+      "topic": "Klassen und Objekte",
+      "front": "Was passiert, wenn `__init__` `self.bestand = bestand` schreibt, aber `bestand` eine Property ohne Setter ist?",
+      "back": "Schon beim Anlegen des Objekts kommt ein **AttributeError**.\n`self.bestand = …` ist eine Zuweisung an die Property, und ohne Setter darf man dort nichts zuweisen. Python meldet: `property 'bestand' of 'Produkt' object has no setter`.\nKorrektur: `self._bestand = bestand`. Einfach einen Setter ergänzen wäre falsch, dann könnte jeder von außen den Bestand setzen.",
+      "exam": true
+    },
+    {
+      "id": "prog-k110",
+      "topic": "Klassen und Objekte",
+      "front": "**Klassenattribut** vs. **Instanzattribut**: Wo steht was?",
+      "back": "Ein **Klassenattribut** steht direkt im Klassenrumpf (ohne `self.`). Es gibt den Wert nur einmal, alle Objekte teilen ihn (Java: `static`).\nEin **Instanzattribut** wird mit `self.name = …` angelegt, meist in `__init__`. Jedes Objekt hat seinen eigenen Wert.\n`class Konto: anzahl = 0`\n`a, b = Konto(), Konto()`\n`Konto.anzahl += 1`\n`print(a.anzahl, b.anzahl)  # 1 1`",
+      "exam": true
+    },
+    {
+      "id": "prog-k111",
+      "topic": "Vererbung und Polymorphie",
+      "front": "Statt `super().__init__(inhaber)`: Wie ruft man den Oberklassen-Konstruktor über den Klassennamen auf?",
+      "back": "Mit `Zahlungsart.__init__(self, inhaber)`. Hier musst du `self` **selbst** mitgeben.\n`super()` setzt `self` automatisch ein, der Klassenname nicht. Darum ist `Zahlungsart.__init__(inhaber)` ohne `self` falsch.\nIm Kurs ist `super().__init__(inhaber)` der übliche Weg.",
+      "exam": true
+    },
+    {
+      "id": "prog-k112",
+      "topic": "Vererbung und Polymorphie",
+      "front": "Was passiert, wenn du `@abstractmethod` über der Methode einer `ABC`-Klasse vergisst?",
+      "back": "Das Programm läuft trotzdem, aber die Methode ist **keine Pflicht** mehr.\nOhne `@abstractmethod` kann man Objekte der Oberklasse erzeugen, und Unterklassen dürfen die Methode weglassen. Fehler fallen dann erst später auf.\nMerke: Eine abstrakte Klasse braucht **beides**, `ABC` als Oberklasse und `@abstractmethod` über jeder Pflichtmethode.",
+      "exam": true
+    },
+    {
+      "id": "prog-k113",
+      "topic": "Nicht klausurrelevant",
+      "front": "Wie fängst du einen Fehler mit `try` / `except` ab?",
+      "back": "Den riskanten Code in einen `try`-Block, darunter `except Fehlerart:` mit dem, was im Fehlerfall passieren soll.\nTritt im `try`-Block genau diese Fehlerart auf, bricht das Programm nicht ab, sondern springt in den `except`-Block. Kam in der Probeklausur nicht vor.\n`def zahl(text: str) -> int | None:` mit `try: return int(text)` und `except ValueError: return None`\nErgebnis: `zahl(\"42\")` → 42, `zahl(\"abc\")` → None.",
+      "exam": false
+    },
+    {
+      "id": "prog-k114",
+      "topic": "Nicht klausurrelevant",
+      "front": "`raise`, `finally` und `except:` ohne Fehlerart: Was ist das?",
+      "back": "`raise ValueError(\"…\")` löst selbst einen Fehler aus. `finally:` läuft immer, egal ob ein Fehler kam.\n`except:` ohne Fehlerart fängt alles, auch Tippfehler, und versteckt sie. Darum immer die Fehlerart nennen, z. B. `except ValueError:`.\n`int(\"abc\")` gibt übrigens einen **ValueError**: Der Typ (Text) ist erlaubt, aber der Wert passt nicht. Kam in der Probeklausur nicht vor.",
+      "exam": false
     }
   ],
   "quiz": [
@@ -535,11 +808,11 @@
       "options": [
         "3 3 1",
         "3.5 3.5 1",
-        "3 3.5 0",
-        "3.5 3 1"
+        "3.5 3 1",
+        "3 3.5 0"
       ],
-      "correct": 3,
-      "explain": "`/` gibt immer float (3.5), `//` rundet ab (3), `%` ist der Rest (1)."
+      "correct": 2,
+      "explain": "`/` liefert **immer** einen float, also 3.5. `//` teilt ganzzahlig und rundet ab (3), `%` liefert den Rest von 7 : 2 (1).\nWer „3 3 1“ tippt, denkt an Java, wo `7 / 2` mit ganzen Zahlen 3 ergibt. In Python ist das nicht so."
     },
     {
       "id": "prog-q002",
@@ -547,13 +820,13 @@
       "q": "Was gibt dieser Code aus?",
       "code": "text = \"Hallo\"\nprint(text[1:3], text[-1])",
       "options": [
+        "al o",
         "all H",
         "al H",
-        "al o",
         "Hal o"
       ],
-      "correct": 2,
-      "explain": "`text[1:3]` nimmt Index 1 und 2 (Stopp 3 nicht dabei) → \"al\". `text[-1]` ist das letzte Zeichen."
+      "correct": 0,
+      "explain": "`text[1:3]` nimmt die Zeichen an Index 1 und 2, der Stopp 3 ist nicht dabei → \"al\". `text[-1]` ist das letzte Zeichen → \"o\".\n„all“ wäre richtig, wenn der Stopp mitzählen würde, „Hal“, wenn bei 1 zu zählen begonnen würde. Beides stimmt nicht: Gezählt wird ab 0, der Stopp ist exklusiv."
     },
     {
       "id": "prog-q003",
@@ -563,11 +836,11 @@
       "options": [
         "Kühl.",
         "Heiß!",
-        "Angenehm.",
-        "Kühl.\nAngenehm."
+        "Kühl.\nAngenehm.",
+        "Angenehm."
       ],
-      "correct": 2,
-      "explain": "25 < 20 ist falsch, 25 < 30 ist wahr → \"Angenehm.\". Danach prüft Python nichts mehr."
+      "correct": 3,
+      "explain": "25 < 0 ist falsch, 25 < 20 ist falsch, 25 < 30 ist wahr → \"Angenehm.\". Danach prüft Python keinen weiteren Zweig mehr.\nZwei Ausgaben („Kühl.“ und „Angenehm.“) sind unmöglich: Bei if/elif/else läuft immer höchstens ein Zweig."
     },
     {
       "id": "prog-q004",
@@ -576,12 +849,12 @@
       "code": "print(bool(\"0\"), bool(-1), bool(\"\"))",
       "options": [
         "False True True",
-        "False False False",
         "True True False",
+        "False False False",
         "True False True"
       ],
-      "correct": 2,
-      "explain": "\"0\" ist ein nicht leerer String → True, −1 ist nicht 0 → True, \"\" ist leer → False."
+      "correct": 1,
+      "explain": "\"0\" ist ein **nicht leerer** Text, also True, auch wenn eine 0 darin steht. −1 ist nicht 0, also True. \"\" ist leer, also False.\nVerlockend ist „False“ für \"0\": Python schaut aber nicht auf den Inhalt des Textes, nur darauf, ob er leer ist."
     },
     {
       "id": "prog-q005",
@@ -595,7 +868,7 @@
         "1 2 3 4 5"
       ],
       "correct": 2,
-      "explain": "range(1, 5): Start 1 ist dabei, Stopp 5 nicht → 1 2 3 4."
+      "explain": "`range(1, 5)` beginnt bei 1 (Start ist dabei) und hört vor 5 auf (Stopp ist nicht dabei) → 1 2 3 4.\n„1 2 3 4 5“ ist der typische Fehler, die 5 mitzuzählen. „0 1 2 3 4“ wäre `range(5)`."
     },
     {
       "id": "prog-q006",
@@ -603,13 +876,13 @@
       "q": "Was gibt dieser Code aus?",
       "code": "summe = 0\nfor i in range(1, 4):\n    summe += i\nprint(summe)",
       "options": [
+        "6",
         "4",
         "3",
-        "6",
         "10"
       ],
-      "correct": 2,
-      "explain": "i läuft 1, 2, 3 (nicht 4!). summe: 1 → 3 → 6."
+      "correct": 0,
+      "explain": "i läuft 1, 2, 3, die 4 ist als Stopp nicht dabei. summe: 0 + 1 = 1, 1 + 2 = 3, 3 + 3 = 6.\n10 käme heraus, wenn die 4 mitgezählt würde (1 + 2 + 3 + 4). 3 ist nur der Wert nach Runde 2."
     },
     {
       "id": "prog-q007",
@@ -618,12 +891,12 @@
       "code": "x = 0\nfor i in range(10, 0, -3):\n    x += i\nprint(i, x)",
       "options": [
         "1 18",
-        "1 22",
         "0 22",
-        "10 22"
+        "10 22",
+        "1 22"
       ],
-      "correct": 1,
-      "explain": "i = 10, 7, 4, 1 → x = 10 + 7 + 4 + 1 = 22. Nach der Schleife hat i den letzten Wert 1."
+      "correct": 3,
+      "explain": "Mit Schrittweite −3 läuft i 10, 7, 4, 1. Der nächste Wert wäre −2, das liegt hinter dem Stopp 0. x = 10 + 7 + 4 + 1 = 22.\nNach der Schleife behält i den letzten Wert 1, nicht den Stopp 0. „1 18“ entsteht, wenn man die 10 am Anfang vergisst."
     },
     {
       "id": "prog-q008",
@@ -631,13 +904,13 @@
       "q": "Was gibt dieser Code aus?",
       "code": "for i in range(1, 6):\n    if i == 3:\n        continue\n    print(i, end=\" \")",
       "options": [
-        "1 2 4 5",
         "3",
+        "1 2 4 5",
         "1 2 3 4 5",
         "1 2"
       ],
-      "correct": 0,
-      "explain": "continue überspringt nur den Durchlauf mit i = 3, die Schleife läuft weiter."
+      "correct": 1,
+      "explain": "`continue` überspringt nur den Rest der Runde mit i = 3. Das `print` wird ausgelassen, dann geht es mit 4 und 5 weiter.\n„1 2“ wäre das Ergebnis mit `break`: Das beendet die ganze Schleife. `continue` dagegen macht weiter."
     },
     {
       "id": "prog-q009",
@@ -647,11 +920,11 @@
       "options": [
         "1 2 3 4 5",
         "1 2 3 4 6 7 8 9 10",
-        "5",
-        "1 2 3 4"
+        "1 2 3 4",
+        "5"
       ],
-      "correct": 3,
-      "explain": "Bei i = 5 beendet break die Schleife sofort, die 5 wird nicht mehr gedruckt."
+      "correct": 2,
+      "explain": "Bei i = 5 wird `break` ausgeführt, **bevor** `print(i)` drankommt. Die Schleife endet sofort.\n„1 2 3 4 5“ ist falsch, weil das `if` vor dem `print` steht. „1 2 3 4 6 …“ wäre das Verhalten von `continue`."
     },
     {
       "id": "prog-q010",
@@ -659,13 +932,13 @@
       "q": "Was gibt dieser Code aus?",
       "code": "zaehler = 0\nfor i in range(3):\n    for j in range(2):\n        zaehler += 1\nprint(zaehler)",
       "options": [
+        "6",
         "2",
         "3",
-        "5",
-        "6"
+        "5"
       ],
-      "correct": 3,
-      "explain": "Die äußere Schleife läuft 3-mal, die innere jedes Mal 2-mal: 3 · 2 = 6."
+      "correct": 0,
+      "explain": "Die äußere Schleife läuft 3-mal. In **jeder** dieser Runden läuft die innere Schleife 2-mal. Zusammen 3 · 2 = 6 Erhöhungen.\n5 (3 + 2) ist der typische Fehler: Verschachtelte Schleifen multiplizieren sich, sie addieren sich nicht."
     },
     {
       "id": "prog-q011",
@@ -674,12 +947,12 @@
       "code": "a, b = 0, 1\nfor _ in range(6):\n    print(a, end=\" \")\n    a, b = b, a + b",
       "options": [
         "1 1 2 3 5 8",
-        "0 1 1 2 3 5",
         "0 1 2 3 4 5",
-        "0 1 2 4 8 16"
+        "0 1 2 4 8 16",
+        "0 1 1 2 3 5"
       ],
-      "correct": 1,
-      "explain": "a, b = b, a + b schiebt beide gleichzeitig weiter: Fibonacci 0 1 1 2 3 5."
+      "correct": 3,
+      "explain": "Ausgegeben wird a **vor** dem Weiterschieben, deshalb steht die 0 vorne. `a, b = b, a + b` rechnet erst beide rechten Werte aus und weist dann gleichzeitig zu: Das sind die Fibonacci-Zahlen.\n„1 1 2 3 5 8“ käme heraus, wenn erst weitergeschoben und dann ausgegeben würde."
     },
     {
       "id": "prog-q012",
@@ -693,7 +966,7 @@
         "[9, 0, 0, 0]"
       ],
       "correct": 1,
-      "explain": "`* 3` kopiert nur Verweise: alle 3 Zeilen sind dieselbe Liste. Also steht die 9 auch in Zeile 2."
+      "explain": "`* 3` kopiert nur den Verweis: Alle drei Zeilen sind **dieselbe** Liste. Die 9 in Zeile 0 steht deshalb auch in Zeile 2.\n„0“ wäre richtig, wenn jede Zeile eine eigene Liste wäre. „[9, 0, 0, 0]“ wäre die ganze Zeile, gefragt ist aber nur `falsch[2][0]`, ein einzelner Wert."
     },
     {
       "id": "prog-q013",
@@ -702,12 +975,12 @@
       "code": "a = [1, 2, 3]\nb = a\nb.append(4)\nprint(a)",
       "options": [
         "[1, 2, 3]",
-        "[1, 2, 3, 4]",
         "[4]",
+        "[1, 2, 3, 4]",
         "None"
       ],
-      "correct": 1,
-      "explain": "b = a kopiert nichts: zwei Namen, eine Liste. append über b ändert auch a."
+      "correct": 2,
+      "explain": "`b = a` kopiert nichts. `a` und `b` sind zwei Namen für dieselbe Liste, darum sieht man das `append` über `b` auch in `a`.\n„[1, 2, 3]“ wäre richtig, wenn `b = a` eine Kopie anlegen würde. Das tut es in Python nie."
     },
     {
       "id": "prog-q014",
@@ -715,13 +988,13 @@
       "q": "Was gibt dieser Code aus?",
       "code": "zahlen = [3, 1, 2]\ns = sorted(zahlen)\nprint(zahlen, s)",
       "options": [
-        "[1, 2, 3] [1, 2, 3]",
         "[3, 1, 2] [1, 2, 3]",
+        "[1, 2, 3] [1, 2, 3]",
         "[3, 1, 2] [3, 1, 2]",
         "[1, 2, 3] [3, 1, 2]"
       ],
-      "correct": 1,
-      "explain": "sorted() liefert eine neue, sortierte Liste. Das Original bleibt unverändert."
+      "correct": 0,
+      "explain": "`sorted()` liefert eine **neue**, sortierte Liste. Das Original `zahlen` bleibt unverändert.\n„[1, 2, 3] [1, 2, 3]“ wäre richtig, wenn `sorted` die Liste selbst sortieren würde. Das macht `zahlen.sort()`, nicht `sorted`."
     },
     {
       "id": "prog-q015",
@@ -729,13 +1002,13 @@
       "q": "Was gibt dieser Code aus?",
       "code": "def verdopple(x: int) -> None:\n    print(x * 2)\n\nergebnis = verdopple(3)\nprint(ergebnis)",
       "options": [
-        "6\nNone",
         "None\n6",
         "6\n6",
-        "6"
+        "6",
+        "6\nNone"
       ],
-      "correct": 0,
-      "explain": "verdopple druckt 6, gibt aber nichts zurück (kein return) → ergebnis ist None."
+      "correct": 3,
+      "explain": "Beim Aufruf druckt `verdopple` die 6. Die Funktion hat kein `return`, also liefert sie None, und `print(ergebnis)` zeigt None.\n„6 und 6“ ist der typische Fehler: `print` zeigt den Wert nur an, es gibt ihn nicht zurück."
     },
     {
       "id": "prog-q016",
@@ -744,12 +1017,12 @@
       "code": "def vorzeichen(x: int) -> str | None:\n    if x > 0:\n        return \"positiv\"\n\nprint(vorzeichen(5), vorzeichen(-3))",
       "options": [
         "positiv",
+        "positiv None",
         "positiv negativ",
-        "None None",
-        "positiv None"
+        "None None"
       ],
-      "correct": 3,
-      "explain": "Für x = −3 gibt es kein return → die Funktion liefert None."
+      "correct": 1,
+      "explain": "Für 5 gibt es ein `return \"positiv\"`. Für −3 ist die Bedingung falsch, und danach steht kein `return` mehr → Die Funktion liefert None.\n„negativ“ steht nirgends im Code, Python ergänzt keinen fehlenden Zweig. „positiv“ allein ist falsch, weil `print` beide Werte ausgibt, auch None."
     },
     {
       "id": "prog-q017",
@@ -758,12 +1031,12 @@
       "code": "def aendere_zahl(wert: int) -> None:\n    wert = wert + 1\n\ndef aendere_liste(liste: list[int]) -> None:\n    liste[0] = 99\n    liste = [7, 7, 7]\n\nzahl = 5\nzahlen = [1, 2, 3]\naendere_zahl(zahl)\naendere_liste(zahlen)\nprint(zahl, zahlen)",
       "options": [
         "5 [1, 2, 3]",
-        "5 [99, 2, 3]",
         "5 [7, 7, 7]",
+        "5 [99, 2, 3]",
         "6 [99, 2, 3]"
       ],
-      "correct": 1,
-      "explain": "wert = wert + 1 bindet nur lokal neu. liste[0] = 99 ändert das gemeinsame Objekt; liste = [7, 7, 7] ist wieder nur lokal."
+      "correct": 2,
+      "explain": "`wert = wert + 1` lässt nur den lokalen Namen auf 6 zeigen, `zahl` bleibt 5. `liste[0] = 99` ändert das gemeinsame Listenobjekt, das sieht der Aufrufer.\n`liste = [7, 7, 7]` ist wieder nur eine lokale Neubindung, deshalb ist „[7, 7, 7]“ falsch. „6“ wäre richtig, wenn Zahlen „per Referenz“ geändert würden. Das passiert nicht."
     },
     {
       "id": "prog-q018",
@@ -771,13 +1044,13 @@
       "q": "Was gibt dieser Code aus?",
       "code": "def falsch(wert: int, liste: list[int] = []) -> list[int]:\n    liste.append(wert)\n    return liste\n\nprint(falsch(1))\nprint(falsch(2))",
       "options": [
-        "[2]\n[1, 2]",
         "[1]\n[1, 2]",
+        "[2]\n[1, 2]",
         "[1]\n[2]",
         "[1, 2]\n[1, 2]"
       ],
-      "correct": 1,
-      "explain": "Der Standardwert [] wird nur einmal erzeugt und von beiden Aufrufen geteilt."
+      "correct": 0,
+      "explain": "Der Standardwert `[]` wird nur **einmal** erzeugt, beim Lesen des `def`. Beide Aufrufe hängen an dieselbe Liste an: erst [1], dann [1, 2].\n„[1] und [2]“ wäre das, was man erwartet, wenn bei jedem Aufruf eine neue Liste entstünde. Genau deshalb nimmt man `None` als Standardwert."
     },
     {
       "id": "prog-q019",
@@ -787,11 +1060,11 @@
       "options": [
         "1 2 3 4 5 Ende",
         "Ende",
-        "1 2 3 4",
-        "1 2 3 4 Ende"
+        "1 2 3 4 Ende",
+        "1 2 3 4"
       ],
-      "correct": 2,
-      "explain": "return beendet die ganze Funktion, auch mitten in der Schleife. \"Ende\" kommt nie dran."
+      "correct": 3,
+      "explain": "Bei i = 5 beendet `return` sofort die **ganze Funktion**, auch mitten in der Schleife. Das `print(\"Ende\")` nach der Schleife kommt nie dran.\n„1 2 3 4 Ende“ wäre das Ergebnis mit `break`: Das verlässt nur die Schleife, der Rest der Funktion läuft weiter."
     },
     {
       "id": "prog-q020",
@@ -800,12 +1073,12 @@
       "code": "def fakultaet(n: int) -> int:\n    if n == 0:\n        return 1\n    return n * fakultaet(n - 1)\n\nprint(fakultaet(4))",
       "options": [
         "6",
-        "RecursionError",
         "24",
+        "RecursionError",
         "10"
       ],
-      "correct": 2,
-      "explain": "4 · 3 · 2 · 1 · 1 = 24. Der Basisfall n == 0 liefert 1."
+      "correct": 1,
+      "explain": "fakultaet(4) = 4 · fakultaet(3) = 4 · 3 · fakultaet(2) = 4 · 3 · 2 · 1 · fakultaet(0), und fakultaet(0) ist 1 → 24.\nRecursionError gäbe es nur, wenn der Basisfall nie erreicht würde. Mit n = 4, 3, 2, 1, 0 wird er erreicht. 10 wäre die Summe 4 + 3 + 2 + 1."
     },
     {
       "id": "prog-q021",
@@ -814,12 +1087,12 @@
       "code": "class Konto:\n    def __init__(self, inhaber: str, kontostand: int = 0) -> None:\n        self.inhaber = inhaber\n        self.kontostand = kontostand\n\n    def einzahlen(self, betrag: int) -> None:\n        self.kontostand += betrag\n\nkonto1 = Konto(\"Anna\", 100)\nkonto2 = konto1\nkonto2.einzahlen(50)\nprint(konto1.kontostand, konto1 is konto2)",
       "options": [
         "100 False",
-        "150 True",
         "150 False",
+        "150 True",
         "100 True"
       ],
-      "correct": 1,
-      "explain": "konto2 = konto1 erzeugt kein zweites Konto. Beide Namen zeigen auf dasselbe Objekt."
+      "correct": 2,
+      "explain": "`konto2 = konto1` erzeugt kein zweites Konto, beide Namen zeigen auf dasselbe Objekt. Die Einzahlung über `konto2` ändert also auch `konto1`, und `is` ergibt True.\n„100 False“ wäre richtig, wenn die Zuweisung ein neues Konto kopieren würde. Das tut sie nicht."
     },
     {
       "id": "prog-q022",
@@ -833,7 +1106,7 @@
         "3 3 3"
       ],
       "correct": 0,
-      "explain": "`ben.anzahl_konten += 1` legt ein neues Instanzattribut nur bei ben an (3). Die Klasse und anna bleiben bei 2."
+      "explain": "Nach zwei Konten steht das Klassenattribut auf 2. `ben.anzahl_konten += 1` liest 2 und legt 3 als **neues Instanzattribut nur bei ben** an.\nDie Klasse und anna sehen weiter 2. „3 3 3“ wäre richtig, wenn man über `Konto.anzahl_konten += 1` erhöht hätte."
     },
     {
       "id": "prog-q023",
@@ -841,13 +1114,13 @@
       "q": "Was gibt dieser Code aus?",
       "code": "from dataclasses import dataclass\n\n@dataclass\nclass KundeD:\n    name: str\n\nclass KundeN:\n    def __init__(self, name: str) -> None:\n        self.name = name\n\nprint(KundeD(\"Anna\") == KundeD(\"Anna\"), KundeN(\"Anna\") == KundeN(\"Anna\"))",
       "options": [
-        "True False",
         "False True",
         "True True",
-        "False False"
+        "False False",
+        "True False"
       ],
-      "correct": 0,
-      "explain": "`@dataclass` erzeugt `__eq__` → Werte werden verglichen (True). Die normale Klasse vergleicht nur die Identität (False)."
+      "correct": 3,
+      "explain": "`@dataclass` erzeugt `__eq__`, dann vergleicht `==` die Werte der Attribute → True. Die normale Klasse hat kein eigenes `__eq__`, dort prüft `==` nur, ob es dasselbe Objekt ist → False.\n„True True“ ist die verlockende Antwort, weil beide Male „Anna“ drinsteht. Ohne `__eq__` zählt aber nur die Identität."
     },
     {
       "id": "prog-q024",
@@ -855,13 +1128,13 @@
       "q": "Was gibt dieser Code aus?",
       "code": "class Mitarbeiter:\n    def __init__(self, name: str, monatsgehalt: int) -> None:\n        self.name = name\n        self.monatsgehalt = monatsgehalt\n\n    @property\n    def jahresgehalt(self) -> int:\n        return self.monatsgehalt * 12\n\nlena = Mitarbeiter(\"Lena\", 4200)\nprint(lena.jahresgehalt)\nlena.monatsgehalt = 4500\nprint(lena.jahresgehalt)",
       "options": [
-        "50400\n54000",
         "4200\n4500",
+        "50400\n54000",
         "50400\n50400",
         "TypeError"
       ],
-      "correct": 0,
-      "explain": "Die Property wird bei jedem Zugriff neu berechnet: 4200 · 12 = 50400, nach der Änderung 4500 · 12 = 54000."
+      "correct": 1,
+      "explain": "Eine Property wird bei **jedem** Zugriff neu berechnet: 4200 · 12 = 50400, nach der Änderung 4500 · 12 = 54000.\n„50400 und 50400“ wäre richtig, wenn der Wert einmal beim Anlegen gespeichert würde. TypeError gäbe es nur, wenn man die Property mit Klammern aufriefe."
     },
     {
       "id": "prog-q025",
@@ -871,11 +1144,11 @@
       "options": [
         "False False",
         "True True",
-        "False True",
-        "True False"
+        "True False",
+        "False True"
       ],
-      "correct": 3,
-      "explain": "isinstance zählt Oberklassen mit → True. type(...) is Konto prüft nur die genaue Klasse → False."
+      "correct": 2,
+      "explain": "`isinstance` zählt Oberklassen mit: Ein Sparkonto ist auch ein Konto → True. `type(anna) is Konto` prüft nur die genaue Klasse, und die ist Sparkonto → False.\n„True True“ ist der typische Fehler, beide Prüfungen für gleich zu halten."
     },
     {
       "id": "prog-q026",
@@ -889,7 +1162,7 @@
         "TypeError"
       ],
       "correct": 0,
-      "explain": "Ohne `super().__init__(...)` wird `self.name` nie angelegt. Der Fehler kommt erst beim Zugriff."
+      "explain": "`Manager.__init__` ruft `super().__init__(name)` nicht auf, also wird `self.name` nie angelegt. Das Objekt entsteht trotzdem, der Fehler kommt erst beim Zugriff `tom.name`.\n„Tom“ ist die verlockende Antwort: Python ruft den Konstruktor der Oberklasse aber **nicht** von selbst auf, wenn die Unterklasse ein eigenes `__init__` hat."
     },
     {
       "id": "prog-q027",
@@ -903,7 +1176,7 @@
         "Sara arbeitet.\nLena schreibt Code.\nTom arbeitet."
       ],
       "correct": 3,
-      "explain": "Entwickler überschreibt arbeiten(). Manager nicht → Python findet die Methode in Mitarbeiter."
+      "explain": "Entwickler überschreibt `arbeiten()`, also läuft für Lena die neue Fassung. Manager hat keine eigene, darum findet Python die Methode in der Oberklasse Mitarbeiter.\n„Tom leitet.“ steht nirgends im Code. AttributeError gäbe es nur, wenn keine Klasse in der Kette die Methode hätte."
     },
     {
       "id": "prog-q028",
@@ -911,13 +1184,13 @@
       "q": "Was gibt dieser Code aus?",
       "code": "class Mitarbeiter:\n    def __init__(self, gehalt: int) -> None:\n        self.gehalt = gehalt\n\n    def monatskosten(self) -> int:\n        return self.gehalt\n\nclass Manager(Mitarbeiter):\n    def __init__(self, gehalt: int, team: int) -> None:\n        super().__init__(gehalt)\n        self.team = team\n\n    def monatskosten(self) -> int:\n        return super().monatskosten() + 150 * self.team\n\nsumme = 0\nfor person in [Mitarbeiter(3600), Mitarbeiter(4200), Manager(5800, 2)]:\n    summe += person.monatskosten()\nprint(summe)",
       "options": [
-        "13900",
         "14200",
+        "13900",
         "13000",
         "13600"
       ],
-      "correct": 0,
-      "explain": "3600 + 4200 + (5800 + 150 · 2) = 3600 + 4200 + 6100 = 13900. Manager ergänzt mit super()."
+      "correct": 1,
+      "explain": "Für die Mitarbeiter gilt das Gehalt: 3600 + 4200. Der Manager nimmt mit `super().monatskosten()` sein Gehalt 5800 und addiert 150 · 2 = 300. Summe: 3600 + 4200 + 6100 = 13900.\n13600 entsteht, wenn man die Zulage vergisst, 14200, wenn man 150 · 4 rechnet. Polymorphie: Jedes Objekt nutzt seine eigene `monatskosten()`."
     },
     {
       "id": "prog-q029",
@@ -927,16 +1200,16 @@
       "options": [
         "Ich sage Wuff\nIch sage None",
         "Ich sage Wuff\nAttributeError",
-        "TypeError",
-        "Ich sage Wuff\nTypeError"
+        "Ich sage Wuff\nTypeError",
+        "TypeError"
       ],
-      "correct": 3,
-      "explain": "Katze setzt die abstrakte Methode laut nicht um → schon Katze() gibt einen TypeError."
+      "correct": 2,
+      "explain": "Hund setzt `laut` um, also klappt die erste Zeile. Katze setzt die abstrakte Methode nicht um und bleibt damit abstrakt: Schon `Katze()` gibt einen TypeError.\nAttributeError ist verlockend, kommt aber nicht: Python prüft schon beim **Erzeugen**, nicht erst beim Methodenaufruf. „TypeError“ allein ist falsch, weil der Hund vorher fehlerfrei läuft."
     },
     {
       "id": "prog-q030",
       "topic": "Vererbung und Polymorphie",
-      "q": "Welche Aussage über Python stimmt?",
+      "q": "Welche Aussage über Methoden in Python stimmt?",
       "options": [
         "Python kann Methoden überschreiben, aber nicht überladen.",
         "Python kann Methoden überladen, aber nicht überschreiben.",
@@ -944,7 +1217,7 @@
         "Python kann weder überladen noch überschreiben."
       ],
       "correct": 0,
-      "explain": "Ein zweites def mit gleichem Namen ersetzt das erste (kein Überladen). Eine Unterklasse darf eine Methode neu schreiben (Überschreiben)."
+      "explain": "**Überschreiben** (eine Unterklasse schreibt eine geerbte Methode neu) geht. **Überladen** (gleicher Name, andere Parameter in derselben Klasse) geht nicht: Das zweite `def` ersetzt das erste.\n„Überladen und überschreiben“ ist der Java-Gedanke. In Python ersetzt man das Überladen durch Standardwerte."
     },
     {
       "id": "prog-q031",
@@ -953,12 +1226,12 @@
       "code": "noten = [2, 5, 1, 4, 5]\nanzahl = 0\nfor n in noten:\n    if n >= 4:\n        anzahl += 1\nprint(anzahl)",
       "options": [
         "2",
-        "3",
         "5",
-        "17"
+        "17",
+        "3"
       ],
-      "correct": 1,
-      "explain": "Gezählt wird nur, wenn n ≥ 4: Runden mit 5, 4, 5 → anzahl = 3. 5 wäre die Länge der Liste, 17 die Summe."
+      "correct": 3,
+      "explain": "Gezählt wird nur, wenn n ≥ 4 ist: bei 5, 4 und 5 → anzahl = 3. Die 4 zählt mit, weil `>=` „größer **oder gleich**“ heißt.\n5 wäre die Länge der Liste, 17 die Summe der Werte. 2 käme mit `>` statt `>=` heraus."
     },
     {
       "id": "prog-q032",
@@ -972,7 +1245,7 @@
         "1"
       ],
       "correct": 1,
-      "explain": "`summe = 0` steht in der Schleife und wird jede Runde zurückgesetzt. In der letzten Runde: 0 + 3 = 3."
+      "explain": "`summe = 0` steht **in** der Schleife und setzt die Summe jede Runde zurück. In der letzten Runde: 0 + 3 = 3.\n6 wäre richtig, wenn `summe = 0` vor der Schleife stünde. Genau das ist der typische Fehler."
     },
     {
       "id": "prog-q033",
@@ -981,12 +1254,12 @@
       "code": "preise = [4, 2, 7]\nfor i in range(len(preise)):\n    preise[i] = preise[i] * 2\nprint(preise)",
       "options": [
         "[4, 2, 7]",
-        "[8, 4, 14]",
         "[8, 4, 7]",
+        "[8, 4, 14]",
         "26"
       ],
-      "correct": 1,
-      "explain": "i läuft 0, 1, 2. In jeder Runde wird `preise[i]` durch das Doppelte ersetzt: 8, 4, 14."
+      "correct": 2,
+      "explain": "`range(len(preise))` liefert 0, 1, 2, also jeden Index. In jeder Runde wird `preise[i]` durch das Doppelte ersetzt: 8, 4, 14.\n„[4, 2, 7]“ wäre richtig, wenn nur eine Schleifenvariable verändert würde (`for p in preise: p = p * 2`). Hier wird aber über den Index in die Liste geschrieben."
     },
     {
       "id": "prog-q034",
@@ -994,13 +1267,13 @@
       "q": "Was gibt dieser Code aus?",
       "code": "class Konto:\n    def __init__(self, inhaber: str) -> None:\n        self.inhaber = inhaber\n\n    def __str__(self) -> str:\n        return f\"Konto von {self.inhaber}\"\n\n    def __repr__(self) -> str:\n        return f\"{type(self).__name__}(inhaber={self.inhaber!r})\"\n\nclass Sparkonto(Konto):\n    pass\n\ns = Sparkonto(\"Anna\")\nprint(s)\nprint([s])",
       "options": [
+        "Konto von Anna\n[Sparkonto(inhaber='Anna')]",
         "Konto von Anna\n[Konto von Anna]",
         "Sparkonto(inhaber='Anna')\n[Sparkonto(inhaber='Anna')]",
-        "Konto von Anna\n[Sparkonto(inhaber='Anna')]",
         "Konto von Anna\n[Konto(inhaber='Anna')]"
       ],
-      "correct": 2,
-      "explain": "`print(s)` nutzt `__str__`, die Liste nutzt `__repr__`. `type(self).__name__` liefert die echte Klasse Sparkonto."
+      "correct": 0,
+      "explain": "`print(s)` nutzt `__str__` → „Konto von Anna“. Eine Liste zeigt ihre Elemente immer mit `__repr__`, und `type(self).__name__` liefert die echte Klasse Sparkonto.\n„[Konto(inhaber='Anna')]“ ist verlockend, weil `__repr__` in Konto steht. Entscheidend ist aber die Klasse des Objekts, nicht die, in der die Methode steht."
     },
     {
       "id": "prog-q035",
@@ -1008,18 +1281,18 @@
       "q": "Was gibt dieser Code aus?",
       "code": "from abc import ABC, abstractmethod\n\nclass Druckbar(ABC):\n    @abstractmethod\n    def drucken(self) -> str: ...\n\nclass Versendbar(ABC):\n    @abstractmethod\n    def versenden(self) -> str: ...\n\nclass Rechnung(Druckbar, Versendbar):\n    def drucken(self) -> str:\n        return \"R druckt\"\n\n    def versenden(self) -> str:\n        return \"R sendet\"\n\nclass Lieferschein(Druckbar):\n    def drucken(self) -> str:\n        return \"L druckt\"\n\nfor d in [Rechnung(), Lieferschein()]:\n    if isinstance(d, Versendbar):\n        print(d.versenden())",
       "options": [
-        "R sendet",
         "R sendet\nL sendet",
         "AttributeError",
-        "R druckt\nR sendet"
+        "R druckt\nR sendet",
+        "R sendet"
       ],
-      "correct": 0,
-      "explain": "Nur die Rechnung hat die Fähigkeit Versendbar. Für den Lieferschein ist `isinstance` False, `versenden()` wird gar nicht aufgerufen."
+      "correct": 3,
+      "explain": "Nur Rechnung erbt von Versendbar. Für den Lieferschein ist `isinstance(d, Versendbar)` False, also wird `versenden()` gar nicht aufgerufen.\nAttributeError ist verlockend, weil der Lieferschein kein `versenden` hat. Die `isinstance`-Prüfung verhindert den Aufruf aber. „R druckt“ kommt nicht, weil `drucken()` nirgends aufgerufen wird."
     },
     {
       "id": "prog-q036",
       "topic": "Vererbung und Polymorphie",
-      "q": "Wie viele Oberklassen darf eine Klasse laut Vorlesung haben?",
+      "q": "Wie viele Oberklassen soll eine Klasse laut Vorlesung haben?",
       "options": [
         "Genau eine, wie in Java",
         "Eine Kategorie und beliebig viele Fähigkeiten",
@@ -1027,7 +1300,7 @@
         "Keine, Python kennt nur `interface`"
       ],
       "correct": 1,
-      "explain": "Python erlaubt mehrere Oberklassen. Im Kurs: eine Kategorie („ist ein“) plus beliebig viele Fähigkeiten („kann“), z. B. `Rechnung(Dokument, Druckbar, Versendbar)`."
+      "explain": "Python erlaubt mehrere Oberklassen. Im Kurs gilt: höchstens eine **Kategorie** („ist ein“, darf Attribute haben) und beliebig viele **Fähigkeiten** („kann …“), z. B. `Rechnung(Dokument, Druckbar, Versendbar)`.\n„Genau eine“ ist die Java-Regel für `extends`. Ein Schlüsselwort `interface` gibt es in Python nicht."
     },
     {
       "id": "prog-q037",
@@ -1036,12 +1309,12 @@
       "code": "from abc import ABC, abstractmethod\nfrom decimal import Decimal\n\nclass Produkt(ABC):\n    def __init__(self, preis: Decimal) -> None:\n        self.preis = preis\n\n    @abstractmethod\n    def mwst_satz(self) -> Decimal: ...\n\n    def bruttopreis(self) -> Decimal:\n        return (self.preis * (1 + self.mwst_satz())).quantize(Decimal(\"0.01\"))\n\nclass Lebensmittel(Produkt):\n    def mwst_satz(self) -> Decimal:\n        return Decimal(\"0.07\")\n\nclass Zubehoer(Produkt):\n    def mwst_satz(self) -> Decimal:\n        return Decimal(\"0.19\")\n\nkaffee = Lebensmittel(Decimal(\"12.99\"))\npresse = Zubehoer(Decimal(\"20.90\"))\nprint(kaffee.bruttopreis(), presse.bruttopreis())",
       "options": [
         "12.99 20.90",
-        "13.90 24.87",
         "13.90 22.36",
+        "13.90 24.87",
         "15.46 24.87"
       ],
-      "correct": 1,
-      "explain": "Jedes Objekt liefert seinen eigenen `mwst_satz()`: 12.99 · 1,07 → 13.90 und 20.90 · 1,19 → 24.87."
+      "correct": 2,
+      "explain": "Jedes Objekt liefert seinen eigenen `mwst_satz()`: 12.99 · 1,07 = 13.8993 → 13.90 und 20.90 · 1,19 = 24.871 → 24.87.\n„15.46“ entsteht, wenn man für den Kaffee auch 19 % nimmt. „12.99 20.90“ sind nur die Nettopreise."
     },
     {
       "id": "prog-q038",
@@ -1049,13 +1322,13 @@
       "q": "Was gibt dieser Code aus?",
       "code": "def finden(nummern: list[int], gesucht: int) -> int | None:\n    for nummer in nummern:\n        if nummer == gesucht:\n            return nummer\n        else:\n            return None\n    return None\n\nprint(finden([101, 102, 203], 203))",
       "options": [
-        "203",
         "None",
+        "203",
         "101",
         "IndexError"
       ],
-      "correct": 1,
-      "explain": "Das `else: return None` steht im Schleifenrumpf: Schon in Runde 1 (101 ≠ 203) endet die Funktion mit None. `return None` gehört hinter die Schleife."
+      "correct": 0,
+      "explain": "Das `else: return None` steht **in** der Schleife. Schon in Runde 1 (101 ≠ 203) endet die Funktion mit None, 203 wird nie geprüft.\n„203“ wäre richtig, wenn `return None` erst nach der Schleife stünde. Das ist der typische Fehler beim Finden-Muster."
     },
     {
       "id": "prog-q039",
@@ -1064,12 +1337,12 @@
       "code": "bestand = 3\nim_korb = 0\nfor menge in [5, 3, 1]:\n    if im_korb + menge > bestand:\n        print(False, end=\" \")\n    else:\n        im_korb += menge\n        print(True, end=\" \")",
       "options": [
         "False True True",
-        "False True False",
         "True True False",
-        "False False False"
+        "False False False",
+        "False True False"
       ],
-      "correct": 1,
-      "explain": "Runde 1: 0 + 5 > 3 → False. Runde 2: 0 + 3 > 3 ist falsch → True, `im_korb` = 3. Runde 3: 3 + 1 > 3 → False."
+      "correct": 3,
+      "explain": "Runde 1: 0 + 5 > 3 → False. Runde 2: 0 + 3 > 3 ist falsch, also True, und `im_korb` wird 3. Runde 3: 3 + 1 > 3 → False.\n„False True True“ entsteht, wenn man vergisst, dass nach Runde 2 schon 3 Stück im Korb liegen."
     },
     {
       "id": "prog-q040",
@@ -1083,7 +1356,548 @@
         "AttributeError"
       ],
       "correct": 1,
-      "explain": "Die Bestellung bekommt keine Kopie, sondern dieselbe Liste. `clear()` leert sie deshalb auch in der Bestellung."
+      "explain": "Die Bestellung bekommt keine Kopie, sondern **dieselbe** Liste wie `korb_positionen`. `clear()` leert dieses eine Listenobjekt, also auch die Bestellung.\nDie alte Liste wäre richtig, wenn `@dataclass` die Liste kopieren würde. Das tut es nicht."
+    },
+    {
+      "id": "prog-q041",
+      "topic": "Einführung",
+      "q": "Was heißt es, dass ein Algorithmus **terminierend** ist?",
+      "options": [
+        "Er liefert bei gleicher Eingabe immer das gleiche Ergebnis.",
+        "Der nächste Schritt ist immer eindeutig festgelegt.",
+        "Er endet bei jeder erlaubten Eingabe nach endlich vielen Schritten.",
+        "Er läuft so lange, bis der Nutzer ihn abbricht."
+      ],
+      "correct": 2,
+      "explain": "terminierend kommt von „Termin, Ende“: Der Algorithmus **hört auf**, und zwar für jede erlaubte Eingabe.\n„Gleiches Ergebnis bei gleicher Eingabe“ ist **determiniert**, „nächster Schritt eindeutig“ ist **deterministisch**. Diese Verwechslung ist die typische Falle."
+    },
+    {
+      "id": "prog-q042",
+      "topic": "Einführung",
+      "q": "Ein Algorithmus liefert für dieselbe Eingabe immer dasselbe Ergebnis, kann aber unterwegs verschiedene Wege gehen. Was ist er sicher?",
+      "options": [
+        "determiniert",
+        "deterministisch",
+        "terminierend",
+        "rekursiv"
+      ],
+      "correct": 0,
+      "explain": "**determiniert** heißt nur: gleiche Eingabe → gleiches Ergebnis. Über den Weg sagt es nichts.\n**deterministisch** wäre er erst, wenn auch jeder nächste Schritt eindeutig wäre. Hier sind verschiedene Wege möglich, also ist das nicht sicher. Ob er endet (terminierend), sagt die Frage auch nicht."
+    },
+    {
+      "id": "prog-q043",
+      "topic": "Einführung",
+      "q": "Was passiert bei `uv run programm.py`?",
+      "options": [
+        "Python erzeugt eine .exe-Datei und startet sie.",
+        "Der Code wird in Java übersetzt und von der Java-VM ausgeführt.",
+        "Der Code wird an einen Server geschickt und dort ausgeführt.",
+        "Python übersetzt den Quelltext in Bytecode, die Python-VM führt ihn aus."
+      ],
+      "correct": 3,
+      "explain": "Python ist eine Zwischencode-Sprache: Quelltext → **Bytecode** → die **Python-VM** (virtuelle Maschine) führt ihn aus.\nEine `.exe` erzeugt ein Compiler wie bei C, nicht Python. Die Java-VM ist ähnlich aufgebaut, hat mit Python aber nichts zu tun."
+    },
+    {
+      "id": "prog-q044",
+      "topic": "Einführung",
+      "q": "Was bedeutet „Python ist **dynamisch typisiert**“?",
+      "options": [
+        "Python prüft alle Typangaben vor dem Start.",
+        "Der Typ gehört zum Wert, ein Name kann später auf einen Wert anderen Typs zeigen.",
+        "Python wandelt `\"3\" + 4` automatisch in 7 um.",
+        "Variablen müssen mit ihrem Typ deklariert werden."
+      ],
+      "correct": 1,
+      "explain": "Bei dynamischer Typisierung hat der **Wert** einen Typ, der Name nicht. `x = 5` und danach `x = \"fünf\"` ist erlaubt.\nTypangaben prüft nicht Python, sondern ty. Und `\"3\" + 4` ist ein TypeError, denn Python ist zwar dynamisch, aber **stark** typisiert und wandelt nicht heimlich um."
+    },
+    {
+      "id": "prog-q045",
+      "topic": "Variablen, Datentypen und Operatoren",
+      "q": "Was gibt dieser Code aus?",
+      "code": "a = \"3\"\nb = 4\nprint(a + b)",
+      "options": [
+        "7",
+        "34",
+        "TypeError",
+        "None"
+      ],
+      "correct": 2,
+      "explain": "Python wandelt Text und Zahl nicht heimlich um („stark typisiert“), `\"3\" + 4` bricht mit TypeError ab.\n„34“ wäre JavaScript-Verhalten, „7“ käme mit `int(\"3\") + 4` heraus. Beides musst du in Python selbst hinschreiben."
+    },
+    {
+      "id": "prog-q046",
+      "topic": "Einführung",
+      "q": "Eine Funktion erwartet `int`, du übergibst `\"3\"`. Welches Werkzeug meldet das **vor** dem Start?",
+      "options": [
+        "ty",
+        "ruff",
+        "pytest",
+        "uv add"
+      ],
+      "correct": 0,
+      "explain": "**ty** ist der Typprüfer: Er liest die Typangaben und meldet, dass `\"3\"` ein `str` ist, kein `int`, ohne das Programm zu starten.\n**ruff** prüft Stil und Formatierung, nicht die Typen. **pytest** führt Tests aus, und `uv add` fügt Pakete hinzu."
+    },
+    {
+      "id": "prog-q047",
+      "topic": "Funktionen und Rekursion",
+      "q": "Nach `from math import ceil`: Welcher Aufruf funktioniert?",
+      "options": [
+        "`math.ceil(3.2)`",
+        "`math(ceil(3.2))`",
+        "`import ceil(3.2)`",
+        "`ceil(3.2)`"
+      ],
+      "correct": 3,
+      "explain": "`from math import ceil` holt nur den Namen `ceil` in dein Programm, darum rufst du ihn ohne Modulnamen auf.\n`math.ceil(3.2)` gibt hier einen NameError, weil der Name `math` gar nicht importiert wurde. Dafür bräuchtest du `import math`."
+    },
+    {
+      "id": "prog-q048",
+      "topic": "Funktionen und Rekursion",
+      "q": "Was gibt dieser Code aus?",
+      "code": "import math\n\nprint(math.ceil(23 / 6), math.ceil(23 / 10), math.ceil(12 / 6))",
+      "options": [
+        "3 2 2",
+        "4 3 2",
+        "4 2 2",
+        "3.83 2.3 2.0"
+      ],
+      "correct": 1,
+      "explain": "`math.ceil` rundet **immer auf**: 23 / 6 = 3,83 → 4, 23 / 10 = 2,3 → 3, 12 / 6 = 2,0 → 2 (schon ganz, bleibt 2).\n„3 2 2“ entsteht, wenn man normal rundet oder abschneidet. „3.83 …“ wären die Werte vor dem Runden, `ceil` liefert aber ganze Zahlen."
+    },
+    {
+      "id": "prog-q049",
+      "topic": "Einführung",
+      "q": "Du willst ein Paket von pypi.org in deinem Projekt nutzen. Was ist der erste Schritt?",
+      "options": [
+        "Einfach `import paketname` schreiben",
+        "`uv run paketname`",
+        "`uv add paketname` im Projektordner",
+        "Die .py-Datei von der Website kopieren"
+      ],
+      "correct": 2,
+      "explain": "`uv add` lädt das Paket herunter, installiert es in die Projektumgebung und trägt es ins Projekt ein. Danach klappt der Import.\n`import` allein lädt nichts herunter: Ohne Installation gibt es einen Fehler (`ModuleNotFoundError`). `uv run` startet nur ein Programm."
+    },
+    {
+      "id": "prog-q050",
+      "topic": "Funktionen und Rekursion",
+      "q": "In `shop.py` steht am Ende `if __name__ == \"__main__\": main()`. Was passiert, wenn eine andere Datei `import shop` ausführt?",
+      "options": [
+        "Die Funktionen werden geladen, `main()` läuft aber nicht.",
+        "`main()` läuft sofort los.",
+        "Es gibt einen NameError.",
+        "`import` klappt nur, wenn man `main` entfernt."
+      ],
+      "correct": 0,
+      "explain": "Beim Import enthält `__name__` den Modulnamen `\"shop\"`, nicht `\"__main__\"`. Die Bedingung ist falsch, also wird `main()` nicht aufgerufen.\n`main()` läuft nur beim direkten Start (`uv run shop.py`). Genau dafür gibt es die Zeile: So kann man die Funktionen importieren und testen, ohne dass das Programm losläuft."
+    },
+    {
+      "id": "prog-q051",
+      "topic": "Variablen, Datentypen und Operatoren",
+      "q": "Wie schreibst du eine Konstante, deren Änderung ty als Fehler meldet?",
+      "options": [
+        "`MWST_SATZ = 0.19` (Großschreibung reicht)",
+        "`const MWST_SATZ = 0.19`",
+        "`final double MWST_SATZ = 0.19`",
+        "`MWST_SATZ: Final = 0.19` mit `from typing import Final`"
+      ],
+      "correct": 3,
+      "explain": "Erst mit `Final` aus `typing` weiß ty, dass der Name nicht neu zugewiesen werden darf, und meldet jede spätere Zuweisung.\nGroßschreibung ist nur eine Vereinbarung, ty prüft sie nicht. `const` und `final double` gibt es in Python nicht (JavaScript bzw. Java)."
+    },
+    {
+      "id": "prog-q052",
+      "topic": "Variablen, Datentypen und Operatoren",
+      "q": "Was gibt dieser Code aus?",
+      "code": "print(7 // 2, 17 % 5, int(9.99))",
+      "options": [
+        "3.5 2 10",
+        "3 2 9",
+        "3 3 9",
+        "3 2 10"
+      ],
+      "correct": 1,
+      "explain": "`7 // 2` teilt ganzzahlig → 3. `17 % 5` ist der Rest: 17 = 3 · 5 + **2**. `int(9.99)` schneidet ab → 9.\n„10“ ist die Falle: `int()` rundet nicht, es wirft die Nachkommastellen weg. Runden würde `round(9.99)`."
+    },
+    {
+      "id": "prog-q053",
+      "topic": "Variablen, Datentypen und Operatoren",
+      "q": "Was gibt dieser Code aus?",
+      "code": "x = 10\nx -= 3\nx *= 2\nprint(x)",
+      "options": [
+        "17",
+        "7",
+        "14",
+        "20"
+      ],
+      "correct": 2,
+      "explain": "Schritt für Schritt: `x -= 3` macht aus 10 → 7, dann `x *= 2` aus 7 → 14.\n17 entsteht, wenn man erst mal 2 rechnet (20) und dann 3 abzieht. Die Zeilen laufen aber von oben nach unten."
+    },
+    {
+      "id": "prog-q054",
+      "topic": "Variablen, Datentypen und Operatoren",
+      "q": "Was gibt dieser Code aus?",
+      "code": "print(0.1 + 0.2 == 0.3, round(0.1 + 0.2, 2) == 0.3)",
+      "options": [
+        "False True",
+        "True True",
+        "False False",
+        "True False"
+      ],
+      "correct": 0,
+      "explain": "0.1 + 0.2 ergibt 0.30000000000000004, weil Kommazahlen binär gespeichert und dabei leicht ungenau sind. Der exakte Vergleich mit 0.3 ist deshalb False.\nRundet man vorher auf 2 Stellen, verschwindet der winzige Fehler, und der Vergleich ist True. „True True“ ist die Falle: Mathematisch stimmt es, im Rechner nicht."
+    },
+    {
+      "id": "prog-q055",
+      "topic": "Variablen, Datentypen und Operatoren",
+      "q": "Was gibt dieser Code aus?",
+      "code": "print(round(2.5), round(3.5), int(3.9))",
+      "options": [
+        "3 4 4",
+        "3 4 3",
+        "2 4 4",
+        "2 4 3"
+      ],
+      "correct": 3,
+      "explain": "`round` rundet bei genau ,5 zur **geraden** Zahl: 2.5 → 2, 3.5 → 4. `int(3.9)` schneidet ab → 3.\n„3 4 …“ wäre das Schulrunden (bei ,5 immer auf). „… 4“ am Ende ist die Falle, `int()` für Runden zu halten."
+    },
+    {
+      "id": "prog-q056",
+      "topic": "Kontrollstrukturen und Listen",
+      "q": "Was gibt dieser Code aus?",
+      "code": "summe = 0\nfor i in range(1, 10):\n    if i % 3 == 0:\n        continue\n    if i > 6:\n        break\n    summe += i\nprint(summe, i)",
+      "options": [
+        "12 6",
+        "12 7",
+        "19 7",
+        "21 9"
+      ],
+      "correct": 1,
+      "explain": "i = 1, 2 werden addiert (3). Bei 3 greift `continue` (durch 3 teilbar). 4 und 5 kommen dazu (12), 6 wird übersprungen. Bei i = 7 greift `break`, **bevor** addiert wird.\nNach `break` behält i den Wert 7. „19 7“ entsteht, wenn man die 7 noch addiert, „12 6“, wenn man glaubt, i bleibe beim letzten addierten Wert."
+    },
+    {
+      "id": "prog-q057",
+      "topic": "Kontrollstrukturen und Listen",
+      "q": "Python hat kein `do-while`. Wie schreibst du eine Eingabeschleife, die **mindestens einmal** läuft?",
+      "options": [
+        "`do: … while eingabe == \"\"`",
+        "`for _ in range(1):` um die Eingabe",
+        "`while True:` und im Rumpf `break`, sobald die Eingabe gültig ist",
+        "`while eingabe == \"\":` ohne vorherige Zuweisung"
+      ],
+      "correct": 2,
+      "explain": "`while True` ist immer wahr, also läuft der Rumpf auf jeden Fall einmal. Ein `break` beendet die Schleife, sobald die Eingabe passt.\n`do` gibt es in Python nicht (SyntaxError). `range(1)` läuft genau einmal, auch bei falscher Eingabe. `while eingabe == \"\"` ohne vorherige Zuweisung gibt einen NameError."
+    },
+    {
+      "id": "prog-q058",
+      "topic": "Kontrollstrukturen und Listen",
+      "q": "Was gibt dieser Code aus?",
+      "code": "umsaetze = [100, 250, 80]\nsumme = 0\ni = 1\nwhile i <= len(umsaetze):\n    summe += umsaetze[i]\n    i += 1\nprint(summe)",
+      "options": [
+        "IndexError",
+        "430",
+        "330",
+        "180"
+      ],
+      "correct": 0,
+      "explain": "`i` startet bei 1 und darf bis `len(umsaetze)` = 3 laufen. `umsaetze[3]` gibt es nicht, gültig sind nur 0 bis 2 → IndexError, und weil das `print` erst nach der Schleife kommt, gibt es **keine** Ausgabe.\nZudem wird `umsaetze[0]` übersprungen. 330 (250 + 80) wäre die Summe bis zum Absturz, die wird aber nie ausgegeben."
+    },
+    {
+      "id": "prog-q059",
+      "topic": "Kontrollstrukturen und Listen",
+      "q": "Wie korrigierst du die Schleife aus `i = 1` und `while i <= len(umsaetze):`, damit alle Umsätze addiert werden?",
+      "options": [
+        "`i = 1` und `while i < len(umsaetze):`",
+        "`i = 0` und `while i <= len(umsaetze):`",
+        "`i = 1` und `while i <= len(umsaetze) - 1:`",
+        "`i = 0` und `while i < len(umsaetze):`"
+      ],
+      "correct": 3,
+      "explain": "Eine Liste mit n Elementen hat die Indizes **0 bis n − 1**. Also bei 0 anfangen und mit `<` vor n aufhören.\nNur eine der beiden Ursachen zu beheben reicht nicht: Mit `i = 1` fehlt immer das erste Element, mit `<=` kommt am Ende der IndexError. Noch einfacher: `for umsatz in umsaetze:`."
+    },
+    {
+      "id": "prog-q060",
+      "topic": "Funktionen und Rekursion",
+      "q": "Was gibt dieser Code aus?",
+      "code": "def rabatt(preise: list[float], prozent: int) -> None:\n    for i in range(len(preise)):\n        preise[i] = preise[i] * (100 - prozent) / 100\n    prozent = 0\n\np = [10.0, 40.0]\npr = 25\ne = rabatt(p, pr)\nprint(p, pr, e)",
+      "options": [
+        "[7.5, 30.0] 0 None",
+        "[7.5, 30.0] 25 None",
+        "[10.0, 40.0] 25 None",
+        "[7.5, 30.0] 25 [7.5, 30.0]"
+      ],
+      "correct": 1,
+      "explain": "`preise[i] = …` ändert die gemeinsame Liste, das sieht der Aufrufer: 10 · 75 / 100 = 7.5 und 40 · 75 / 100 = 30.0. `prozent = 0` bindet nur den lokalen Namen neu, `pr` bleibt 25.\nDie Funktion hat kein `return`, also ist `e` None. „0“ ist die typische Falle: Eine Zahl im Aufrufer ändert sich durch Zuweisung im Parameter nie."
+    },
+    {
+      "id": "prog-q061",
+      "topic": "Funktionen und Rekursion",
+      "q": "Was gibt dieser Code aus?",
+      "code": "import math\n\ndef kartons(artikel: int, je_karton: int = 6) -> int:\n    return math.ceil(artikel / je_karton)\n\nprint(kartons(20), kartons(je_karton=8, artikel=20))",
+      "options": [
+        "4 4",
+        "3 3",
+        "4 3",
+        "4 0"
+      ],
+      "correct": 2,
+      "explain": "`kartons(20)` nimmt den Standardwert 6: 20 / 6 = 3,33 → aufgerundet 4. Beim zweiten Aufruf ordnen die **Namen** zu: `artikel = 20`, `je_karton = 8` → 20 / 8 = 2,5 → 3.\n„4 4“ entsteht, wenn man glaubt, der Standardwert gelte trotzdem. Wird ein Argument übergeben, ersetzt es den Standardwert."
+    },
+    {
+      "id": "prog-q062",
+      "topic": "Funktionen und Rekursion",
+      "q": "Was gibt dieser Code aus?",
+      "code": "def brutto(netto: float, satz: float = 0.19) -> float:\n    return round(netto * (1 + satz), 2)\n\nprint(brutto(100), brutto(100, 0.07))",
+      "options": [
+        "119.0 107.0",
+        "119.0 119.0",
+        "100 107.0",
+        "TypeError"
+      ],
+      "correct": 0,
+      "explain": "Ohne zweites Argument gilt der Standardwert `satz = 0.19` → 119.0. Mit `0.07` als zweitem Argument wird der Standardwert ersetzt → 107.0.\n„119.0 119.0“ ist falsch: Der Standardwert gilt nur, wenn **kein** Argument kommt. TypeError gäbe es nur, wenn `netto` fehlen würde."
+    },
+    {
+      "id": "prog-q063",
+      "topic": "Funktionen und Rekursion",
+      "q": "Was gibt dieser Code aus?",
+      "code": "def berechne() -> None:\n    ergebnis = 5\n\nberechne()\nprint(ergebnis)",
+      "options": [
+        "5",
+        "None",
+        "0",
+        "NameError"
+      ],
+      "correct": 3,
+      "explain": "`ergebnis` wird in der Funktion zugewiesen und ist deshalb **lokal**: Es lebt nur während des Aufrufs. Außerhalb ist der Name unbekannt → NameError.\n„5“ ist verlockend, weil die Funktion vorher lief. Ihr Rahmen samt `ergebnis` ist nach dem Aufruf aber weg. Wer den Wert außen braucht, gibt ihn mit `return` zurück."
+    },
+    {
+      "id": "prog-q064",
+      "topic": "Funktionen und Rekursion",
+      "q": "Was gibt dieser Code aus?",
+      "code": "def calc(a: int) -> int:\n    return a\n\ndef calc(a: int, b: int) -> int:\n    return a + b\n\nprint(calc(3))",
+      "options": [
+        "3",
+        "TypeError",
+        "6",
+        "SyntaxError"
+      ],
+      "correct": 1,
+      "explain": "Python kennt keine Überladung: Das zweite `def calc` **ersetzt** das erste. Es braucht zwei Argumente, der Aufruf mit einem gibt TypeError (`missing 1 required positional argument`).\n„3“ wäre richtig, wenn Python wie Java die passende Version nach der Anzahl der Argumente wählen würde. SyntaxError ist falsch, zwei `def` mit gleichem Namen sind erlaubt."
+    },
+    {
+      "id": "prog-q065",
+      "topic": "Klassen und Objekte",
+      "q": "Was gibt dieser Code aus?",
+      "code": "class Konto:\n    def __init__(self, stand: int) -> None:\n        self.stand = stand\n\n    def abheben(self, betrag: int) -> None:\n        self.stand -= betrag\n\na = Konto(200)\nb = a\nc = Konto(200)\nb.abheben(50)\nprint(a.stand, c.stand, a == c)",
+      "options": [
+        "200 200 True",
+        "150 200 True",
+        "150 200 False",
+        "150 150 False"
+      ],
+      "correct": 2,
+      "explain": "`b = a` erzeugt kein neues Konto. `a` und `b` sind zwei Namen für ein Objekt, darum hat `a` nach dem Abheben 150. `c` ist ein eigenes Objekt und bleibt bei 200.\n`==` vergleicht bei eigenen Klassen ohne `__eq__` nur die Identität. `a` und `c` sind verschiedene Objekte → False, egal welche Werte drinstehen."
+    },
+    {
+      "id": "prog-q066",
+      "topic": "Klassen und Objekte",
+      "q": "Was gibt dieser Code aus?",
+      "code": "a = [1, 2]\nb = [1, 2]\nc = a\nprint(a == b, a is b, a is c)",
+      "options": [
+        "True False True",
+        "True True True",
+        "False False True",
+        "True False False"
+      ],
+      "correct": 0,
+      "explain": "Bei Listen vergleicht `==` die **Inhalte**: `a` und `b` enthalten das Gleiche → True. `is` prüft, ob es **dasselbe** Objekt ist: `a` und `b` sind zwei Listen → False.\n`c = a` ist nur ein zweiter Name, also `a is c` → True. „True True True“ ist der typische Fehler, `is` und `==` gleichzusetzen."
+    },
+    {
+      "id": "prog-q067",
+      "topic": "Klassen und Objekte",
+      "q": "Was gibt dieser Code aus?",
+      "code": "class Produkt:\n    def __init__(self, bestand: int) -> None:\n        self._bestand = bestand\n\n    @property\n    def bestand(self) -> int:\n        return self._bestand\n\np = Produkt(3)\nprint(p.bestand)\np.bestand = 5\nprint(p.bestand)",
+      "options": [
+        "3\n5",
+        "5",
+        "3\nNone",
+        "3\nAttributeError"
+      ],
+      "correct": 3,
+      "explain": "Lesen über die Property klappt → 3. Die Property hat aber **keinen Setter**, deshalb ist `p.bestand = 5` verboten → AttributeError.\n„5“ wäre richtig, wenn `bestand` ein normales Attribut wäre. Genau das soll die Kapselung verhindern: Ändern nur über Methoden wie `verkaufen`."
+    },
+    {
+      "id": "prog-q068",
+      "topic": "Klassen und Objekte",
+      "q": "Was gibt dieser Code aus?",
+      "code": "class Produkt:\n    def __init__(self, bestand: int) -> None:\n        self.bestand = bestand\n\n    @property\n    def bestand(self) -> int:\n        return self._bestand\n\nprint(\"Start\")\np = Produkt(5)\nprint(p.bestand)",
+      "options": [
+        "Start\n5",
+        "Start\nAttributeError",
+        "AttributeError",
+        "Start\n0"
+      ],
+      "correct": 1,
+      "explain": "„Start“ wird noch gedruckt. Dann schreibt `__init__` `self.bestand = …`, das ist eine Zuweisung an die Property ohne Setter → AttributeError schon beim Anlegen.\n„Start 5“ ist verlockend, weil der Code harmlos aussieht. Korrektur: im Konstruktor `self._bestand = bestand`."
+    },
+    {
+      "id": "prog-q069",
+      "topic": "Klassen und Objekte",
+      "q": "Was gibt dieser Code aus?",
+      "code": "class Konto:\n    def __init__(self, kontostand: int) -> None:\n        self._kontostand = kontostand\n\n    @property\n    def kontostand(self) -> int:\n        return self._kontostand\n\n    @kontostand.setter\n    def kontostand(self, neuer_wert: int) -> None:\n        if neuer_wert < 0:\n            print(\"Ungültig!\")\n            return\n        self._kontostand = neuer_wert\n\nanna = Konto(100)\nanna.kontostand = -50\nprint(anna.kontostand)",
+      "options": [
+        "-50",
+        "Ungültig!\n-50",
+        "Ungültig!\n100",
+        "AttributeError"
+      ],
+      "correct": 2,
+      "explain": "`anna.kontostand = -50` ruft den **Setter** auf. Er prüft den Wert, druckt „Ungültig!“ und ändert `_kontostand` nicht. Danach liefert die Property weiter 100.\n„-50“ wäre richtig ohne Setter-Prüfung, also bei einem normalen Attribut. AttributeError gäbe es nur, wenn es gar keinen Setter gäbe."
+    },
+    {
+      "id": "prog-q070",
+      "topic": "Klassen und Objekte",
+      "q": "Was ist ein **Klassenattribut**?",
+      "options": [
+        "Ein Attribut direkt im Klassenrumpf, das sich alle Objekte teilen",
+        "Ein Attribut, das im Konstruktor mit `self.` angelegt wird",
+        "Ein Attribut mit Unterstrich wie `_bestand`",
+        "Eine Methode mit `@property`"
+      ],
+      "correct": 0,
+      "explain": "Ein Klassenattribut steht **direkt in der Klasse** (ohne `self.`) und existiert nur einmal, alle Objekte teilen es (wie `static` in Java). Typisch: ein Zähler `anzahl_konten = 0`.\nMit `self.` im Konstruktor entsteht ein **Instanzattribut**, das jedes Objekt einzeln hat. Der Unterstrich sagt nur „intern“, und eine Property ist eine Methode."
+    },
+    {
+      "id": "prog-q071",
+      "topic": "Vererbung und Polymorphie",
+      "q": "In `class Kreditkarte(Zahlungsart):` steht im Konstruktor `____.__init__(inhaber)`. Was gehört in die Lücke?",
+      "options": [
+        "`Zahlungsart`",
+        "`self`",
+        "`ABC`",
+        "`super()`"
+      ],
+      "correct": 3,
+      "explain": "`super()` liefert die Oberklasse passend zum aktuellen Objekt und setzt `self` automatisch ein. So legt `super().__init__(inhaber)` das Attribut `inhaber` an.\n`Zahlungsart.__init__(inhaber)` ist die Falle: Über den Klassennamen müsstest du `self` selbst mitgeben, also `Zahlungsart.__init__(self, inhaber)`. `self.__init__` würde den eigenen Konstruktor erneut aufrufen."
+    },
+    {
+      "id": "prog-q072",
+      "topic": "Vererbung und Polymorphie",
+      "q": "Du erzeugst ein Objekt einer Klasse, die von `ABC` erbt und eine Methode mit `@abstractmethod` hat. Was passiert?",
+      "options": [
+        "Das Objekt wird angelegt, der Fehler kommt erst beim Methodenaufruf.",
+        "TypeError",
+        "AttributeError",
+        "Es klappt, die abstrakte Methode liefert None."
+      ],
+      "correct": 1,
+      "explain": "Von einer abstrakten Klasse gibt es keine Objekte. Python prüft schon **beim Erzeugen**, ob alle abstrakten Methoden umgesetzt sind, und meldet TypeError.\n„Fehler erst beim Methodenaufruf“ ist die typische Falle. AttributeError kommt bei fehlenden Attributen, nicht bei abstrakten Klassen."
+    },
+    {
+      "id": "prog-q073",
+      "topic": "Vererbung und Polymorphie",
+      "q": "Was gibt dieser Code aus?",
+      "code": "from abc import ABC, abstractmethod\n\nclass Zahlungsart(ABC):\n    def __init__(self, inhaber: str) -> None:\n        self.inhaber = inhaber\n\n    @abstractmethod\n    def gebuehr(self, betrag: float) -> float: ...\n\nclass Lastschrift(Zahlungsart):\n    def gebuehr(self, betrag: float) -> float:\n        return 0\n\nclass Kreditkarte(Zahlungsart):\n    def __init__(self, inhaber: str) -> None:\n        super().__init__(inhaber)\n\n    def gebuehr(self, betrag: float) -> float:\n        return betrag * 0.03\n\nfor z in [Lastschrift(\"Lena\"), Kreditkarte(\"Tom\")]:\n    print(z.inhaber, z.gebuehr(200))",
+      "options": [
+        "Lena 6.0\nTom 6.0",
+        "Lena 0\nTom 0",
+        "Lena 0\nTom 6.0",
+        "TypeError"
+      ],
+      "correct": 2,
+      "explain": "Derselbe Aufruf `z.gebuehr(200)` führt je nach Objekt eine andere Methode aus (**Polymorphie**): Lastschrift liefert 0, Kreditkarte 200 · 0.03 = 6.0.\n„Tom 0“ entstünde, wenn immer die Methode der Oberklasse liefe. Die abstrakte Oberklasse macht keinen TypeError, weil nur Objekte der Unterklassen erzeugt werden."
+    },
+    {
+      "id": "prog-q074",
+      "topic": "Vererbung und Polymorphie",
+      "q": "Was bewirkt `@override` über einer Methode?",
+      "options": [
+        "ty prüft, ob die Methode wirklich eine Methode der Oberklasse ersetzt.",
+        "Python verhindert beim Ausführen, dass die Methode aufgerufen wird.",
+        "Die Methode der Oberklasse wird zusätzlich aufgerufen.",
+        "Die Methode wird abstrakt."
+      ],
+      "correct": 0,
+      "explain": "`@override` (aus `typing`) ist eine Markierung für **ty**: Gibt es in der Oberklasse keine Methode mit diesem Namen (z. B. Tippfehler `abhebn`), meldet ty `invalid-explicit-override`.\nPython selbst ignoriert die Markierung beim Ausführen. Die alte Methode mitbenutzen macht `super().methode()`, abstrakt macht `@abstractmethod`."
+    },
+    {
+      "id": "prog-q075",
+      "topic": "Klassen und Objekte",
+      "q": "Was ist `self` in einer Methode?",
+      "options": [
+        "Eine Kopie des Objekts",
+        "Die Klasse selbst",
+        "Ein Schlüsselwort, das man auch weglassen kann",
+        "Das Objekt, für das die Methode gerade aufgerufen wird"
+      ],
+      "correct": 3,
+      "explain": "Bei `anna.einzahlen(50)` ist `self` genau das Objekt `anna`. Änderungen über `self` ändern also das Objekt selbst.\nEine Kopie ist es nicht, sonst hätte `self.kontostand += betrag` keine Wirkung. Die Klasse wäre `Konto`, und weglassen kann man `self` in der Definition nicht."
+    },
+    {
+      "id": "prog-q076",
+      "topic": "Klassen und Objekte",
+      "q": "Wann läuft `__init__`?",
+      "options": [
+        "Nur, wenn man `konto.__init__()` selbst aufruft",
+        "Automatisch bei jedem Erzeugen eines Objekts, z. B. `Konto(\"Anna\")`",
+        "Einmal, wenn Python die Klasse liest",
+        "Beim ersten Methodenaufruf des Objekts"
+      ],
+      "correct": 1,
+      "explain": "`__init__` ist der **Konstruktor**. Python ruft ihn bei jedem `Konto(…)` automatisch auf und legt damit die Attribute des neuen Objekts an.\nSelbst aufrufen musst du ihn nicht. „Einmal beim Lesen der Klasse“ trifft auf Klassenattribute zu, nicht auf `__init__`."
+    },
+    {
+      "id": "prog-q077",
+      "topic": "Nicht klausurrelevant",
+      "q": "Was gibt dieser Code aus?",
+      "code": "def zahl_einlesen(text: str) -> int | None:\n    try:\n        return int(text)\n    except ValueError:\n        return None\n\nprint(zahl_einlesen(\"42\"), zahl_einlesen(\"abc\"))",
+      "options": [
+        "42 abc",
+        "ValueError",
+        "42 None",
+        "None None"
+      ],
+      "correct": 2,
+      "explain": "`int(\"42\")` klappt → 42. `int(\"abc\")` löst einen ValueError aus, den `except ValueError` abfängt und `None` zurückgibt. Das Programm bricht nicht ab.\n„ValueError“ wäre richtig ohne `try`/`except`. `try`/`except` kam in der Probeklausur nicht vor, ist also kein sicherer Klausurstoff."
+    },
+    {
+      "id": "prog-q078",
+      "topic": "Funktionen und Rekursion",
+      "q": "Was macht `return` in einer Funktion?",
+      "options": [
+        "Es beendet die Funktion sofort und gibt den Wert an die Aufrufstelle zurück.",
+        "Es gibt den Wert auf dem Bildschirm aus.",
+        "Es beendet nur die aktuelle Schleife.",
+        "Es speichert den Wert in einer globalen Variable."
+      ],
+      "correct": 0,
+      "explain": "`return` beendet die Funktion **sofort**, Code dahinter läuft nicht mehr. Der Wert geht an die Stelle, an der die Funktion aufgerufen wurde.\nAusgeben macht `print`, nicht `return`. Nur die Schleife verlassen macht `break`."
+    },
+    {
+      "id": "prog-q079",
+      "topic": "Funktionen und Rekursion",
+      "q": "Eine Funktion weist einer neuen Variable `rabatt` einen Wert zu. Wo gilt `rabatt`?",
+      "options": [
+        "Im ganzen Programm, sobald die Funktion einmal lief",
+        "In allen Funktionen derselben Datei",
+        "Nur im nächsten Aufruf derselben Funktion",
+        "Nur in dieser Funktion und nur während des Aufrufs"
+      ],
+      "correct": 3,
+      "explain": "Eine in einer Funktion zugewiesene Variable ist **lokal**: Sie entsteht beim Aufruf im eigenen Rahmen und verschwindet nach dem `return`.\n„Im ganzen Programm“ ist die Falle. Außerhalb gibt es NameError, und auch der nächste Aufruf beginnt mit einem neuen, leeren Rahmen."
+    },
+    {
+      "id": "prog-q080",
+      "topic": "Kontrollstrukturen und Listen",
+      "q": "Was gibt dieser Code aus?",
+      "code": "noten = [2, 3, 1]\nprint(noten[len(noten)])",
+      "options": [
+        "1",
+        "IndexError",
+        "3",
+        "None"
+      ],
+      "correct": 1,
+      "explain": "`len(noten)` ist 3, die gültigen Indizes sind aber nur 0, 1, 2. `noten[3]` gibt es nicht → IndexError.\n„1“ wäre das letzte Element, das bekommst du mit `noten[len(noten) - 1]` oder einfacher `noten[-1]`. Das ist der klassische Off-by-one-Fehler."
     }
   ]
 }
