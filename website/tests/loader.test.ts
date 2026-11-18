@@ -58,6 +58,14 @@ describe("Loader (Fixtures)", () => {
     expect(cheatsheetSubjectParams(library)).toEqual([{ fach: "grundlagen-it" }]);
   });
 
+  it("liest geschriebene Zusammenfassungen und den roten Faden", () => {
+    const git = getSubject("grundlagen-it", library)!;
+    expect(git.overview?.body).toContain("bauen aufeinander auf");
+    expect(git.chapters[0].writtenSummary?.body).toContain("Reste von unten");
+    expect(git.chapters[1].writtenSummary).toBeNull();
+    expect(getSubject("programmierung", library)!.overview).toBeNull();
+  });
+
   it("liest den Prolog", () => {
     expect(library.prolog?.title).toBe("Testprolog");
   });
@@ -109,6 +117,10 @@ describe("Loader (ungültiger Content)", () => {
     has(/02-vertrag\.md: Bilder/);
     has(/02-vertrag\.md: Unbekannter Alert-Typ \[!DANGER\]/);
     has(/01-kapitel\.md: H1 im Body/);
+  });
+
+  it("meldet ## in Zusammenfassungen", () => {
+    has(/zusammenfassung\/02-vertrag\.md: Überschrift ## in einer Zusammenfassung/);
   });
 
   it("meldet Fehler in Spickzetteln", () => {

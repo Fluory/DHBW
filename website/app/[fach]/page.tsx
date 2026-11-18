@@ -96,7 +96,7 @@ export default async function SubjectPage({ params }: { params: Promise<Params> 
             <li>
               <Link href={`/${subject.slug}/zusammenfassung`} className="sources-link">
                 <span className="chapter-title">Zusammenfassung des Fachs</span>
-                <span className="chapter-summary">Merkpunkte und typische Fehler aus allen Kapiteln als Stichpunkte auf einer Seite.</span>
+                <span className="chapter-summary">Das ganze Fach als zusammenhängender Text: der rote Faden und jedes Kapitel in eigenen Worten.</span>
               </Link>
             </li>
             {subject.chapters.some((chapter) => chapter.cheatsheet) ? (

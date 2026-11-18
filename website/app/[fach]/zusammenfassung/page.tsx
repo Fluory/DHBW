@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   if (!subject) return {};
   return {
     title: `Zusammenfassung · ${subject.title}`,
-    description: `Merkpunkte und typische Fehler aus allen Kapiteln von ${subject.title} auf einer Seite.`,
+    description: `Zusammenhängende Zusammenfassung aus allen Kapiteln von ${subject.title} auf einer Seite.`,
     alternates: { canonical: `/${fach}/zusammenfassung` },
   };
 }
@@ -33,13 +33,16 @@ export default async function SummaryPage({ params }: { params: Promise<Params> 
   if (!subject) notFound();
   const base = `/${subject.slug}`;
 
-  const markdown = subject.chapters
-    .map((chapter) => {
-      const sections = buildSummarySections(chapter.body);
-      const link = `[Zum Kapitel](${base}/${chapter.slug})`;
-      return `## ${pad(chapter.order)} · ${chapter.title}\n\n${chapter.summary}\n\n${sections ?? "Zu diesem Kapitel gibt es noch keine Merkpunkte."}\n\n${link}`;
-    })
-    .join("\n\n");
+  const parts = subject.chapters.map((chapter) => {
+    const link = `[Zum Kapitel mit Erklärungen und Übungen](${base}/${chapter.slug})`;
+    const head = `## ${pad(chapter.order)} · ${chapter.title}`;
+    // Geschriebene Zusammenfassung, sonst Stichpunkte aus den Merkkästen des Kapitels
+    if (chapter.writtenSummary) return `${head}\n\n${chapter.writtenSummary.body.trim()}\n\n${link}`;
+    const sections = buildSummarySections(chapter.body);
+    return `${head}\n\n${chapter.summary}\n\n${sections ?? "Zu diesem Kapitel gibt es noch keine Merkpunkte."}\n\n${link}`;
+  });
+  if (subject.overview) parts.unshift(`## Der rote Faden\n\n${subject.overview.body.trim()}`);
+  const markdown = parts.join("\n\n");
   const content = processMarkdown(markdown);
 
   return (
@@ -48,7 +51,7 @@ export default async function SummaryPage({ params }: { params: Promise<Params> 
         crumbs={[{ href: "/", label: "Semester 1" }, { href: base, label: subject.short }, { label: "Zusammenfassung" }]}
         kicker={`${subject.title} · Zusammenfassung`}
         title={`Zusammenfassung: ${subject.title}`}
-        summary="Pro Kapitel und Thema die Merkpunkte als Stichpunkte, darunter eingerückt die typischen Fehler. Für eine Seite pro Kapitel zum Ausdrucken gibt es die Spickzettel."
+        summary="Das ganze Fach als zusammenhängender Text: erst der rote Faden, dann jedes Kapitel in eigenen Worten mit Beispiel und dem, was du können musst. Für eine Seite pro Kapitel zum Ausdrucken gibt es die Spickzettel."
         content={content}
         footer={
           <Pager

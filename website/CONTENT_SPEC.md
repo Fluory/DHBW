@@ -108,6 +108,20 @@ Pro Fach optional `faecher/NN-<slug>/karteikarten.json`:
 - Texte: Inline-Markdown (`**fett**`, `*kursiv*`, `` `code` ``), Zeilenumbruch `\n`, Formeln als Unicode. Kein HTML.
 - Quiz: genau 4 Optionen, `correct` ist der Index 0–3, falsche Optionen sind typische Fehler.
 
+## Zusammenfassungen
+
+Pro Fach optional `faecher/NN-<slug>/zusammenfassung/`:
+
+- `00-ueberblick.md`: **der rote Faden** des Fachs. Wie hängen die Kapitel zusammen, in welcher Reihenfolge baut das Fach auf, was zählt in der Klausur (mit Gewicht)? 250–500 Wörter.
+- `NN-<kapitel-slug>.md` (gleicher Dateiname wie das Kapitel): die **geschriebene Zusammenfassung des Kapitels**. Sie ersetzt am Kapitelende und auf `/<fach>/zusammenfassung` die automatischen Stichpunkte aus den Kästen.
+
+Regeln:
+- Kein Frontmatter, keine Überschrift `#` oder `##` (die Seite setzt sie), Gliederung mit `###`.
+- **Zusammenhängender Text statt Stichpunktsammlung:** kurze Absätze, die aufeinander aufbauen und mit Übergängen verbunden sind („Damit kannst du …“, „Das braucht man, weil …“, „Im nächsten Schritt …“). Keine Kästen (`> [!…]`).
+- Aufbau eines Kapitels: ein Einstiegsabsatz (worum es geht, wozu, Anschluss an das vorige Kapitel), dann die Inhalte in der Reihenfolge, in der man sie versteht, mit **einem** durchgerechneten Beispiel, das die Teile verbindet. Zum Schluss `### Das musst du können` mit 3–6 Punkten. Diese Liste ist die einzige erlaubte längere Aufzählung.
+- Formeln und Tabellen sind erlaubt, wo sie Ordnung schaffen (z. B. eine Vergleichstabelle). Länge 250–600 Wörter.
+- Nur, was im Kapitel steht. Nicht klausurrelevante Teile höchstens in einem Satz erwähnen.
+
 ## Spickzettel
 
 Pro Kapitel optional `faecher/NN-<slug>/spickzettel/NN-<kapitel-slug>.md` (gleicher Dateiname wie das Kapitel, Probeklausuren haben keinen). Seite: `/<fach>/<kapitel>/spickzettel`, alle eines Fachs unter `/<fach>/spickzettel`.

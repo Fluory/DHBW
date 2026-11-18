@@ -37,7 +37,12 @@ export default async function ChapterPage({ params }: { params: Promise<Params> 
   const context = getChapter(fach, kapitel);
   if (!context) notFound();
   const { subject, chapter, prev, next } = context;
-  const content = processMarkdown(withSummary(chapter.body), { sourcePath: chapter.file, inlineSolutions: true });
+  const content = processMarkdown(
+    chapter.writtenSummary
+      ? `${chapter.body.trim()}\n\n## Zusammenfassung\n\n${chapter.writtenSummary.body.trim()}\n`
+      : withSummary(chapter.body),
+    { sourcePath: chapter.file, inlineSolutions: true },
+  );
   const base = `/${subject.slug}`;
 
   return (

@@ -7,6 +7,8 @@ import {
   CHEATSHEET_DIR,
   CHEATSHEET_MAX_WORDS,
   DECK_FILE,
+  SUMMARY_DIR,
+  SUMMARY_OVERVIEW_FILE,
   NUMBERED_FILE_PATTERN,
   SOURCES_FILE,
   SUBJECTS,
@@ -65,6 +67,8 @@ export interface ChapterEntry extends TextStats {
   file: string;
   /** Spickzettel aus `spickzettel/<gleicher Dateiname>.md` (optional). */
   cheatsheet: CheatSheetEntry | null;
+  /** Geschriebene Zusammenfassung aus `zusammenfassung/<gleicher Dateiname>.md` (optional). */
+  writtenSummary: CheatSheetEntry | null;
 }
 
 export interface SourcesEntry extends TextStats {
@@ -82,6 +86,8 @@ export interface SubjectEntry extends SubjectFrontmatter {
   sources: SourcesEntry | null;
   /** Karteikarten und Quiz aus `karteikarten.json` (optional). */
   deck: Deck | null;
+  /** Roter Faden des Fachs aus `zusammenfassung/00-ueberblick.md` (optional). */
+  overview: CheatSheetEntry | null;
   words: number;
   readingMinutes: number;
 }
@@ -193,9 +199,9 @@ function scanChapters(root: string, dirName: string, issues: ContentIssue[]): Ch
   for (const entry of listDir(absoluteDir)) {
     const file = rel("faecher", dirName, entry.name);
     if (entry.name === SUBJECT_FILE || entry.name === SOURCES_FILE) continue;
-    if (entry.isDirectory() && entry.name === CHEATSHEET_DIR) continue;
+    if (entry.isDirectory() && (entry.name === CHEATSHEET_DIR || entry.name === SUMMARY_DIR)) continue;
     if (entry.isDirectory()) {
-      issues.push({ file, message: `Unterordner sind in einem Fach nicht vorgesehen (außer ${CHEATSHEET_DIR}/).` });
+      issues.push({ file, message: `Unterordner sind in einem Fach nicht vorgesehen (außer ${CHEATSHEET_DIR}/ und ${SUMMARY_DIR}/).` });
       continue;
     }
     if (!entry.name.endsWith(".md")) continue;
@@ -232,11 +238,60 @@ function scanChapters(root: string, dirName: string, issues: ContentIssue[]): Ch
 
     const stats = checkBody(parsed.content, file, issues);
     if (stats.words === 0) issues.push({ file, message: "Kapitel enthält keinen Text." });
-    chapters.push({ slug, ...meta, file, ...stats, cheatsheet: null });
+    chapters.push({ slug, ...meta, file, ...stats, cheatsheet: null, writtenSummary: null });
   }
 
   attachCheatSheets(root, dirName, chapters, issues);
+  attachSummaries(root, dirName, chapters, issues);
   return chapters.sort((a, b) => a.order - b.order);
+}
+
+/** Prüft einen Zusammenfassungstext: kein Frontmatter, keine Überschriften der Ebenen 1–2 (die setzt die Seite). */
+function readSummaryFile(absolute: string, file: string, issues: ContentIssue[]): CheatSheetEntry | null {
+  const raw = readFile(absolute);
+  if (/^---\s*\n/.test(raw)) {
+    issues.push({ file, message: "Zusammenfassungen haben kein Frontmatter: Titel und Fach kommen vom Kapitel." });
+    return null;
+  }
+  const tree = parseMarkdown(raw);
+  visit(tree, "heading", (node) => {
+    if (node.depth === 2) {
+      issues.push({ file, message: `Überschrift ## in einer Zusammenfassung (Zeile ${node.position?.start.line}): Gliederung hier ab ###, ## setzt die Seite.` });
+    }
+  });
+  const stats = checkBody(raw, file, issues);
+  if (stats.words === 0) issues.push({ file, message: "Zusammenfassung enthält keinen Text." });
+  return { file, ...stats };
+}
+
+/**
+ * Liest `zusammenfassung/NN-slug.md` (gleicher Dateiname wie das Kapitel). `00-ueberblick.md` ist der rote Faden
+ * des ganzen Fachs und wird in `scanSubjects` gelesen.
+ */
+function attachSummaries(root: string, dirName: string, chapters: ChapterEntry[], issues: ContentIssue[]): void {
+  const absoluteDir = path.join(root, "faecher", dirName, SUMMARY_DIR);
+  if (!fs.existsSync(absoluteDir)) return;
+  const byFile = new Map(chapters.map((chapter) => [path.posix.basename(chapter.file), chapter]));
+  for (const entry of listDir(absoluteDir)) {
+    if (entry.name === SUMMARY_OVERVIEW_FILE) continue;
+    const file = rel("faecher", dirName, SUMMARY_DIR, entry.name);
+    if (entry.isDirectory() || !entry.name.endsWith(".md")) {
+      issues.push({ file, message: "Im Zusammenfassungs-Ordner sind nur .md-Dateien vorgesehen." });
+      continue;
+    }
+    const chapter = byFile.get(entry.name);
+    if (!chapter) {
+      issues.push({ file, message: `Kein Kapitel mit diesem Dateinamen: Eine Zusammenfassung heißt wie ihr Kapitel (NN-slug.md) oder ${SUMMARY_OVERVIEW_FILE}.` });
+      continue;
+    }
+    chapter.writtenSummary = readSummaryFile(path.join(absoluteDir, entry.name), file, issues);
+  }
+}
+
+function readOverview(root: string, dirName: string, issues: ContentIssue[]): CheatSheetEntry | null {
+  const absolute = path.join(root, "faecher", dirName, SUMMARY_DIR, SUMMARY_OVERVIEW_FILE);
+  if (!fs.existsSync(absolute)) return null;
+  return readSummaryFile(absolute, rel("faecher", dirName, SUMMARY_DIR, SUMMARY_OVERVIEW_FILE), issues);
 }
 
 /**
@@ -404,6 +459,7 @@ function scanSubjects(root: string, issues: ContentIssue[]): SubjectEntry[] {
       chapters,
       sources,
       deck,
+      overview: readOverview(root, entry.name, issues),
       words: chapters.reduce((sum, chapter) => sum + chapter.words, 0),
       readingMinutes: chapters.reduce((sum, chapter) => sum + chapter.readingMinutes, 0),
     });

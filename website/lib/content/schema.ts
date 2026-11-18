@@ -43,6 +43,9 @@ export const SOURCES_FILE = "quellen.md";
 export const CHEATSHEET_DIR = "spickzettel";
 /** Obergrenze, damit ein Spickzettel auf eine DIN-A4-Seite passt (Tabellen und Code brauchen zusätzlich Platz). */
 export const CHEATSHEET_MAX_WORDS = 650;
+/** Unterordner mit geschriebenen Zusammenfassungen: je Kapitel gleicher Dateiname, dazu der rote Faden des Fachs. */
+export const SUMMARY_DIR = "zusammenfassung";
+export const SUMMARY_OVERVIEW_FILE = "00-ueberblick.md";
 
 const text = z.string().trim().min(1, "darf nicht leer sein");
 const slug = z.string().regex(SLUG_PATTERN, "muss kebab-case sein (a-z, 0-9, Bindestriche)");
