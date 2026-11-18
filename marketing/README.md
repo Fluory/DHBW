@@ -6,6 +6,7 @@ Moodle: [Kurs 18615](https://moodle.heilbronn.dhbw.de/course/view.php?id=18615) 
 
 | Nr | Datum | Thema | Grundlage | Notiz |
 |---|---|---|---|---|
+| 1 | 18.11.2026 | (vorbereitet) Kap. 1 Grundlagen (Bedürfnis/Bedarf/Nachfrage, Maslow, Käufermarkt, 7 Stufen, Grundhaltungen, USP), Start Kap. 2 (SWOT, Marktgrößen) | vermutet: Skript Kap. 1–2 (Sicherheit hoch/mittel) | [01](vorlesungen/01_2026-11-18.md) |
 
 ## Materialien in Moodle
 
