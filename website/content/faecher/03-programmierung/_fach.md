@@ -23,7 +23,7 @@ Im Kurs schreibst du den Code von Hand in einem einfachen Texteditor, ohne IDE u
 
 - **Form:** Klausur, 120 Minuten.
 - **Termin:** 11.12.2026 (laut Lernplan).
-- **Musterklausur:** gibt es keine. Die besten Hinweise sind Folien, Selbsttest-Quizze und Musterlösungen.
+- **Probeklausur:** Es gibt die offizielle „Probeklausur Programmierung 1“ mit Musterlösung (60 Minuten, 60 Punkte, A5 OOP mit 18 Punkten). Dazu kommen Folien, Selbsttest-Quizze und Musterlösungen.
 - **Typische Aufgabenformen** (abgeleitet, nicht bestätigt): „Was gibt das Programm aus?“, „Welchen Wert hat die Variable nach jeder Zeile?“, „Finde und behebe den Fehler“ und „Schreibe eine Funktion oder Klasse nach dieser Beschreibung“.
 - **Noch offen:** Papier oder Rechner, erlaubte Hilfsmittel, Raum.
 
