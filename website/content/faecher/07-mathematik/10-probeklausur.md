@@ -1,6 +1,6 @@
 ---
 title: "Probeklausur"
-order: 9
+order: 10
 summary: "Eine Probeklausur mit 90 Punkten für 90 Minuten zum bisherigen Stoff: Folgen, Reihen, Finanzmathematik, Funktionen, Grenzwerte, Stetigkeit, ln und e. Mit Lösungen, Punkteschema und Auswertung."
 klausur: "relevant"
 ---

@@ -163,6 +163,10 @@ Anschaulich sagt die Vorlesung dazu: Eine kleine Änderung bei x bewirkt nur ein
 
 Kritisch sind also fast nur zwei Arten von Stellen: wo ein Nenner 0 wird, und wo eine Funktion „stückweise“ definiert ist und die Formel wechselt.
 
+> [!IMPORTANT]
+> **Das Wichtigste**
+> f ist stetig in x̂, wenn lim (x → x̂) f(x) = f(x̂). Das sind drei Prüfungen: f(x̂) existiert, links = rechts, und beide gleich f(x̂). Polynome, eˣ, ln, sin, cos und ihre Summen, Produkte und Verkettungen sind stetig; prüfen musst du nur Nennernullstellen und Nahtstellen stückweiser Funktionen.
+
 > [!WARNING]
 > **Typischer Fehler**
 > Stetigkeit an einer Stelle prüfen, die gar nicht in D liegt. 1/(x − 2) hat bei 2 eine Polstelle, ist aber auf ihrem Definitionsbereich ℝ \ {2} („alle reellen Zahlen ohne die 2“) stetig. An x = 2 fährt diese Straße gar nicht vorbei.
@@ -353,6 +357,12 @@ Eine Gleichung mit e löst du, indem du auf beiden Seiten ln nimmst. Beispiel: e
 >
 > Quelle: Folien 04.11., Aufgabe FU-6 (Folie 85, sinngemäß)
 
+> [!TIP]
+> **Übung 6 · mittel**
+> a) Löse ln(x + 1) = 2 exakt und gib einen Näherungswert an. b) f(x) = (x² − 9)/(x − 3) für x ≠ 3 und f(3) = c. Für welches c ist f stetig? c) Ist f mit c = 5 stetig? Welcher Fehler liegt dann vor?
+>
+> Quelle: eigene Aufgabe, Klausurstil
+
 ## Lösungen
 
 ### Übung 1
@@ -460,3 +470,21 @@ Für „falsch“ reicht ein einziges Gegenbeispiel.
 **e) Falsch.** Monoton heißt nur „wird nie kleiner“ (oder nie größer). Gegenbeispiel: f(x) = 5 ist monoton und stetig, nimmt den Wert 5 aber überall an, nicht genau einmal. Erst „streng monoton“ (wird immer echt größer) macht die Aussage richtig.
 
 Die Fallen stecken in kleinen Wörtern: offen oder geschlossen, monoton oder streng monoton.
+
+### Übung 6
+
+a)
+
+1. e hoch auf beiden Seiten: e^(ln(x + 1)) = e².
+2. e und ln heben sich auf: x + 1 = e².
+3. Minus 1: **x = e² − 1** ≈ 7,389 − 1 = 6,389.
+4. Probe: ln(6,389 + 1) = ln(7,389) ≈ 2. ✓ Und x + 1 > 0, also ist ln dort definiert.
+
+b)
+
+1. Kritische Stelle x = 3. Einsetzen gibt 0/0.
+2. Faktorisieren: x² − 9 = (x − 3)(x + 3). Kürzen: f(x) = x + 3 für x ≠ 3.
+3. Grenzwert: lim (x → 3) (x + 3) = 6.
+4. Stetig genau dann, wenn **c = 6**.
+
+c) Mit c = 5 ist f **nicht stetig**. Von links und rechts läuft der Graph auf 6 zu, aber der Punkt liegt bei 5: Der Grenzwert existiert, ist aber nicht gleich f(3). Das ist eine Lücke mit einem falsch gesetzten Punkt, kein Sprung (links = rechts) und kein Pol.

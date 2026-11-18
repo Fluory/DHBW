@@ -4,7 +4,7 @@ slug: "lernen-praesentieren"
 title: "Lernen, Präsentieren und Kommunizieren"
 short: "LPK"
 dozent: "Anke Menzler"
-pruefung: "Schriftliches Portfolio (Anforderungen noch unbekannt)"
+pruefung: "Testat, unbenotet (vermutlich als Portfolio; Anforderungen noch unbekannt)"
 pruefungsdatum: "2026-12-28"
 moodle: 18612
 stand: "fertig"
@@ -26,12 +26,14 @@ Es gab vier ganztägige Termine (06.10., 08.10., 12.10. und 02.11.2026). Alle si
 
 ### Prüfung
 
-- **Form:** schriftliche Portfolio-Leistung.
+- **Form laut Veranstaltungs- und Prüfungsübersicht:** **Testat**. Das Modul „Schlüsselqualifikationen“ schließt mit einem unbenoteten Leistungsnachweis ab. Es gibt also keine Note, nur „bestanden“ oder „nicht bestanden“. Für die ECTS-Punkte zählt es trotzdem.
+- **Wie das Testat erbracht wird:** vermutlich als Portfolio. Ein Portfolio besteht laut Prüfungsrecht aus mehreren Teilen, die studienbegleitend erbracht werden, zum Beispiel schriftliche Ausarbeitung, Präsentation oder Posterpräsentation. Bei Gruppenarbeit müssen die eigenen Anteile erkennbar sein. Der Studiengang hat eine allgemeine Postervorlage (etwa A1, Hochformat). Dass sie für dieses Fach gilt, ist nicht belegt.
 - **Abgabe:** laut Stundenplan Sammeltermin „Abgabe schriftliche Portfolioprüfungsleistungen“ am 28.12.2026. Der Termin nennt kein Fach. Er gilt deshalb nur vermutlich auch für dieses Fach.
+- **Frist verpasst:** Wer ohne wichtigen Grund nicht rechtzeitig abgibt, hat „nicht bestanden“. Bei Krankheit sofort Fristverlängerung beim Prüfungsamt beantragen (mit ärztlichem Attest).
 
 > [!WARNING]
 > **Achtung: Anforderungen noch unbekannt**
-> Aufgabenstellung, Umfang, Format, Abgabeweg, Bewertung, Einzel- oder Gruppenarbeit und KI-Regeln für das Portfolio stehen weder in Moodle noch in den Fotoprotokollen (Stand 06.11.2026). Auch ob die Präsentation vom 02.11. in die Note eingeht, ist offen. Frag bei der Dozentin nach, bevor du schreibst.
+> Aufgabenstellung, Umfang, Format, Abgabeweg, Bestehenskriterien, Einzel- oder Gruppenarbeit und KI-Regeln für das Testat stehen weder in Moodle noch in den Fotoprotokollen (Stand 12.11.2026). Auch ob die Präsentation vom 02.11. ein Teil des Testats ist, ist offen. Frag bei der Dozentin nach, bevor du schreibst.
 
 Das Feld „klausur“ der Kapitel steht deshalb überall auf „teilweise“. Was davon ins Portfolio gehört, lässt sich erst sagen, wenn die Aufgabe bekannt ist. Sinnvoll ist trotzdem: eigene Übungen, erhaltenes Feedback und Reflexionen schon jetzt aufschreiben. Daraus lässt sich ein Portfolio später leicht zusammenstellen.
 

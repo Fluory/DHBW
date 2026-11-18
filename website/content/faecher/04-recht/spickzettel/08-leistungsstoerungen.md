@@ -1,89 +1,76 @@
-## Überblick
-
-| Störung | Kern-§§ |
-|---|---|
-| gar nicht: Unmöglichkeit | §§ 275, 326, 283, 311a |
-| zu spät: Schuldnerverzug | §§ 286, 280 II, 281, 323 |
-| schlecht: Schlechtleistung | §§ 280, 281, 323 |
-| Rücksicht verletzt | §§ 241 II, 280 I |
-| Gläubiger nimmt nicht an | §§ 293 ff. |
-
 ## Zentralnorm § 280 I
 
-1. Schuldverhältnis
-2. Pflichtverletzung
-3. Vertretenmüssen (vermutet, § 280 I 2)
-4. Schaden
+Schuldverhältnis → Pflichtverletzung → Vertretenmüssen (vermutet, § 280 I 2; Gehilfen § 278) → Schaden.
 
 | Schaden | Grundlage | zusätzlich |
 |---|---|---|
 | neben der Leistung | § 280 I | – |
-| Verzögerungsschaden | §§ 280 I, II, 286 | Verzug |
-| statt der Leistung | §§ 280 I, III, 281 | Frist gesetzt und abgelaufen |
-| statt, nachträgliche Unmöglichkeit | §§ 280 I, III, 283 | keine Frist |
-| statt, anfängliche Unmöglichkeit | § 311a II | Schuldner kannte Hindernis oder musste es kennen |
-| Aufwendungen | § 284 | statt Schadensersatz statt der Leistung |
-
-**Vertretenmüssen (§ 276):** Vorsatz und Fahrlässigkeit. Fahrlässig = im Verkehr erforderliche Sorgfalt außer Acht gelassen (§ 276 II). Erfüllungsgehilfen wie eigenes Verschulden (§ 278), ohne Entlastung.
+| Verzögerung | §§ 280 I, II, 286 | Verzug |
+| statt der Leistung | §§ 280 I, III, 281 | Frist abgelaufen |
+| statt, nachträglich unmöglich | §§ 280 I, III, 283 | keine Frist |
+| statt, anfänglich unmöglich | § 311a II | Hindernis gekannt / kennen müssen |
 
 ## Unmöglichkeit, § 275
 
-| Art | Bedeutung |
-|---|---|
-| objektiv | niemand kann leisten |
-| subjektiv (Unvermögen) | nur der Schuldner kann nicht |
-| anfänglich / nachträglich | vor / nach Vertragsschluss |
-| praktisch, § 275 II | grobes Missverhältnis des Aufwands |
-| persönlich, § 275 III | persönliche Leistung unzumutbar |
+Primärpflicht entfällt (I–III) → Gegenleistung entfällt (§ 326 I 1, Gezahltes zurück IV). Ausnahmen: Gläubiger verantwortlich, Annahmeverzug (§ 326 II), Gefahrübergang (§ 446). Anfänglich unmöglicher Vertrag ist wirksam (§ 311a I).
 
-1. Primärpflicht entfällt (§ 275 I–III).
-2. Gegenleistung entfällt (§ 326 I 1); Gezahltes zurück (§ 326 IV).
-3. Ausnahmen: Gläubiger überwiegend verantwortlich (§ 326 II 1 Alt. 1), Annahmeverzug (§ 326 II 1 Alt. 2), Gefahrübergang (§§ 446, 447, 644).
-4. Schadensersatz nur bei Vertretenmüssen (§§ 280 I, III, 283 bzw. § 311a II).
+## Verzug, §§ 286, 293
 
-Anfänglich unmöglicher Vertrag ist **wirksam** (§ 311a I). **Absolutes Fixgeschäft:** Verspätung = Unmöglichkeit. **Relatives Fixgeschäft:** Rücktritt ohne Frist (§ 323 II Nr. 2).
+**Schuldnerverzug:** fällig + durchsetzbar + Mahnung (entbehrlich § 286 II: Kalenderdatum, berechenbar, Verweigerung) + Vertretenmüssen (§ 286 IV). Rechnung: spätestens 30 Tage (§ 286 III, Verbraucher nur mit Hinweis). Zinsen 5 / 9 Prozentpunkte (§ 288 I, II).
 
-## Schuldnerverzug, § 286
+**Gläubigerverzug:** Angebot (§§ 294, 295) + Nichtannahme, kein Verschulden nötig → Haftung nur grob (§ 300 I), Gefahr geht über (§§ 300 II, 326 II).
 
-1. Wirksamer, fälliger Anspruch (§ 271)
-2. Durchsetzbar (keine Einrede, z. B. § 320)
-3. Nichtleistung trotz Möglichkeit
-4. Mahnung nach Fälligkeit (§ 286 I), entbehrlich nach § 286 II:
-   - Nr. 1: Zeit nach dem Kalender bestimmt
-   - Nr. 2: ab Ereignis nach dem Kalender berechenbar
-   - Nr. 3: ernsthafte und endgültige Verweigerung
-   - Nr. 4: besondere Gründe
-5. Vertretenmüssen vermutet (§ 286 IV); Geldmangel entlastet nie
+**c.i.c.** §§ 280 I, 311 II, 241 II: Anbahnung, Schutzpflicht verletzt, Verschulden vermutet.
 
-Entgeltforderung: Verzug spätestens 30 Tage nach Fälligkeit und Rechnungszugang (§ 286 III), bei Verbrauchern nur mit Hinweis.
+## Kaufrecht: Mangel, §§ 433, 434
 
-**Folgen:** Zinsen 5 Prozentpunkte über Basiszins (§ 288 I), ohne Verbraucher bei Entgelt 9 Prozentpunkte (§ 288 II) plus 40 € (§ 288 V); nach Fristsetzung §§ 281, 323.
+Verkäufer schuldet mangelfreie Sache (§ 433 I 2). Mangel bei Gefahrübergang (Übergabe, § 446), wenn verfehlt:
 
-## Gläubigerverzug, §§ 293 ff.
+- subjektiv (§ 434 II): vereinbart
+- objektiv (§ 434 III): üblich, erwartbar (Funktionalität, Haltbarkeit)
+- Montage (§ 434 IV); Falschlieferung (§ 434 V)
 
-1. Leistung möglich
-2. Tatsächliches Angebot (§ 294); wörtlich genügt bei Annahmeverweigerung oder nötiger Mitwirkung (§ 295)
-3. Nichtannahme
+## Rechte des Käufers, § 437
 
-Kein Verschulden nötig. Folgen: Haftung nur Vorsatz und grobe Fahrlässigkeit (§ 300 I), Leistungsgefahr geht über bei Gattungsschuld (§ 300 II), Preisgefahr (§ 326 II 1 Alt. 2), Mehraufwand (§ 304).
+| Nr. | Recht | Voraussetzung |
+|---|---|---|
+| 1 | Nacherfüllung, § 439 | zuerst; Käufer wählt; Verkäufer zahlt (II) |
+| 2 | Rücktritt §§ 323, 346 / Minderung § 441 | Frist erfolglos oder entbehrlich; kein Verschulden nötig |
+| 3 | Schadensersatz §§ 280 ff. | Frist (statt) + Vertretenmüssen |
 
-## Schlechtleistung, § 313, c.i.c.
+**Grundschema:** Kaufvertrag → Mangel bei Gefahrübergang → kein Ausschluss → besondere Voraussetzungen → keine Verjährung.
 
-- **Schlechtleistung:** § 280 I, nach Fristsetzung § 281, Rücktritt § 323.
-- **§ 313:** Geschäftsgrundlage nach Vertragsschluss schwerwiegend verändert (I) oder gemeinsame Vorstellungen falsch (II), Festhalten unzumutbar → Anpassung, sonst Rücktritt oder Kündigung (III).
+**Frist entbehrlich:** Verweigerung (§ 323 II Nr. 1), Fehlschlag nach 2 Versuchen (§ 440 S. 2), Unmöglichkeit (§ 326 V).
 
-**c.i.c. (§§ 280 I, 311 II, 241 II):**
+**Rücktritt:** nicht bei unerheblichem Mangel (§ 323 V 2). **Minderung:** auch dann (§ 441 I 2).
 
-1. Schuldverhältnis: Verhandlungen (Nr. 1), Anbahnung (Nr. 2), ähnliche Kontakte (Nr. 3)
-2. Pflichtverletzung nach § 241 II
-3. Vertretenmüssen vermutet; Angestellte über § 278
-4. Schaden (§§ 249 ff.)
+**Minderung rechnen (§ 441 III):** Preis × (Wert mit Mangel ÷ Wert ohne). 600 € × 600/800 = 450 €, also 150 € weniger.
+
+**Schadensersatz:** an der Sache selbst = statt der Leistung (§§ 437 Nr. 3, 280 I, III, 281, Frist). An anderen Sachen = Mangelfolgeschaden (§§ 437 Nr. 3, 280 I, ohne Frist).
+
+**Ausschluss:** Kenntnis (§ 442), Vereinbarung (§ 444, nicht bei Arglist/Garantie), AGB (§ 309 Nr. 8 b).
+
+**Verjährung § 438:** 2 Jahre ab Ablieferung; Bauwerk 5; Arglist 3. Lieferung 16.11.2026 → 16.11.2028.
+
+**Garantie:** freiwillig, zusätzlich, frei gestaltbar.
+
+## Verbrauchsgüterkauf, §§ 474 ff.
+
+Verbraucher kauft Ware von Unternehmer:
+
+- Unterrichtung statt Frist (§ 475d I); Rücktritt schon nach **erstem** Fehlschlag (Nr. 2)
+- Rückgabekosten trägt Unternehmer (§ 475 VI)
+- kein Ausschluss zum Nachteil (§ 476 I)
+- Beweislastumkehr 1 Jahr (§ 477 I): Lieferung 16.11.2026 → bis 16.11.2027
+- Updates geschuldet, sonst Mangel (§ 475b)
 
 ## Typische Fehler
 
-- Nicht klären, welcher Schaden verlangt wird. Ersatzkauf-Mehrkosten = statt der Leistung.
-- Anfänglich unmöglichen Vertrag für nichtig halten (§ 311a I).
+- Ersatzkauf-Mehrkosten als Schaden neben der Leistung werten.
 - „Zahlbar sofort“ als Mahnung werten.
-- Verschulden des Gläubigers beim Gläubigerverzug prüfen.
-- Leistungsgefahr und Preisgefahr verwechseln.
-- § 823 statt c.i.c. prüfen: c.i.c. vermutet Verschulden, § 278 ohne Entlastung.
+- Sofort Rücktritt ohne Nacherfüllung.
+- „Anspruch aus § 439“ ohne § 437 zitieren.
+- Verschulden bei Rücktritt oder Minderung prüfen.
+- Beim kleinen Kratzer Rücktritt zulassen.
+- Minderung: Wertdifferenz einfach abziehen.
+- § 477 mit Gewährleistungsdauer verwechseln.

@@ -124,6 +124,8 @@ Auf Deutsch heißt das: ≠ liest du „ungleich“, ⇒ liest du „daraus folg
 2. Surjektiv? Nimm irgendein y, zum Beispiel y = 8. Gesucht x mit 2x + 1 = 8. Minus 1: 2x = 7. Durch 2: x = 3,5. Das geht für jedes y: x = (y − 1)/2. Surjektiv.
 3. Beides ja ⇒ bijektiv.
 
+Dieselben drei Begriffe kommen im Teil „Logik und Algebra“ wieder (Kapitel 9, „Abbildungen“), dort auch für Mengen ohne Zahlen, etwa Buchstaben oder Reste.
+
 > [!IMPORTANT]
 > **Das Wichtigste**
 > Nur eine bijektive Funktion hat eine Umkehrfunktion auf der ganzen Zielmenge. Nicht injektiv → D verkleinern (Personen wegschicken). Nicht surjektiv → Z auf das Bild verkleinern (leere Stühle abbauen).
@@ -175,6 +177,10 @@ Die zweite Tabelle ist die erste Tabelle mit vertauschten Zeilen.
 4. Buchstaben tauschen, weil man die Eingabe wieder x nennt: f⁻¹(x) = (x − 1)/2.
 5. Probe: f(3) = 7 und f⁻¹(7) = (7 − 1)/2 = 3.
 
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Umkehrfunktion = Automat rückwärts: y = f(x) schreiben, nach x auflösen, x und y tauschen, Probe f⁻¹(f(x)) = x. Schritte in umgekehrter Reihenfolge rückgängig machen (erst minus 1, dann durch 2). Das Bild von f ist die Definitionsmenge von f⁻¹.
+
 ## Quadratische Ergänzung
 
 Bei Parabeln wie x² − 4x + 1 kannst du nicht direkt nach x auflösen, weil x zweimal vorkommt (in x² und in −4x). Die quadratische Ergänzung schreibt den Ausdruck so um, dass x nur noch einmal vorkommt.
@@ -211,6 +217,10 @@ Beide Zeilen sind gleich. Die Umformung stimmt.
 8. Probe mit einer Zahl, zum Beispiel x = 5: links 6, rechts 6.
 
 Was du jetzt ablesen kannst: Der **Scheitel** (tiefster Punkt der Parabel) liegt bei (2 | −3). Denn (x − 2)² ist nie negativ und genau bei x = 2 gleich 0.
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> x² + bx + c = (x + b/2)² − (b/2)² + c: Zahl vor x halbieren, quadrieren, ergänzen und gleich wieder abziehen. Danach kommt x nur noch einmal vor, du liest den Scheitel ab und kannst nach x auflösen. Probe mit einer Zahl.
 
 > [!WARNING]
 > **Typischer Fehler**
@@ -371,6 +381,12 @@ Merke daraus: Ein kleiner Definitionsbereich heißt nicht automatisch beschränk
 >
 > Quelle: Folien 04.11., Aufgabe FU-8
 
+> [!TIP]
+> **Übung 6 · mittel**
+> Gegeben ist f: (0, ∞) → ℝ, f(x) = 1/x + 2. a) Mach eine Wertetabelle mit x = 0,1; 0,5; 1; 2; 10; 100. b) Zeige mit zwei Testpersonen x₁ < x₂, dass f streng monoton fallend ist. c) Ist f nach oben oder nach unten beschränkt? d) Gib das Bild an und bestimme f⁻¹ mit Probe.
+>
+> Quelle: eigene Aufgabe, wie Folie 73
+
 ## Lösungen
 
 ### Übung 1
@@ -508,3 +524,34 @@ Schnellprobe: a₀ ist immer p(x₀). p(1) = 1 − 1 − 4 + 2 = −2 und p(−2
 9. **Zahlenprobe:** f(3) = 5, f⁻¹(5) = 1 + √4 = 3. f(−1) = −7, f⁻¹(−7) = 1 − √(8/2) = 1 − 2 = −1. f(0) = −1, f⁻¹(−1) = 1 − √(2/2) = 0.
 
 √((x − 1)²) ist |x − 1| (der Abstand ohne Vorzeichen), nicht einfach x − 1. Genau deshalb braucht man die Fallunterscheidung.
+
+### Übung 6
+
+a)
+
+| x | 0,1 | 0,5 | 1 | 2 | 10 | 100 |
+|---|---|---|---|---|---|---|
+| f(x) = 1/x + 2 | 12 | 4 | 3 | 2,5 | 2,1 | 2,01 |
+
+Vermutung: fällt immer, bleibt über 2, wird nahe 0 riesig.
+
+b)
+
+1. Rechts minus links: f(x₂) − f(x₁) = (1/x₂ + 2) − (1/x₁ + 2) = 1/x₂ − 1/x₁.
+2. Auf einen Nenner: 1/x₂ − 1/x₁ = (x₁ − x₂)/(x₁x₂).
+3. Vorzeichen: x₁ − x₂ < 0, weil x₁ links liegt. x₁x₂ > 0, weil beide positiv sind.
+4. Negativ durch positiv ist negativ: f(x₂) − f(x₁) < 0, die rechte Person steht tiefer ⇒ **streng monoton fallend**.
+5. Zahlenprobe x₁ = 1, x₂ = 2: f(2) − f(1) = 2,5 − 3 = −0,5 und (1 − 2)/(1 · 2) = −0,5. ✓
+
+c)
+
+1. Rechter Rand x → ∞: 1/x → 0, also f(x) → 2. Weil 1/x immer positiv ist, bleibt f(x) > 2. **Boden 2**, wird nie erreicht.
+2. Linker Rand x → 0⁺: 1/x wird riesig (f(0,001) = 1002). **Keine Decke.**
+3. Also nach unten beschränkt, nach oben nicht, insgesamt nicht beschränkt.
+
+d)
+
+1. Bild: Jeder Wert über 2 kommt vor, 2 selbst nicht. Bild = (2, ∞).
+2. y = 1/x + 2 ⇒ y − 2 = 1/x ⇒ x = 1/(y − 2).
+3. Tauschen: **f⁻¹: (2, ∞) → (0, ∞), f⁻¹(x) = 1/(x − 2)**.
+4. Probe: f(0,5) = 4 und f⁻¹(4) = 1/(4 − 2) = 0,5. ✓

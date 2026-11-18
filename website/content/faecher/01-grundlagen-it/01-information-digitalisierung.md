@@ -57,11 +57,21 @@ Wichtig ist der Begriff **Redundanz**: Das ist der Teil einer Nachricht, der eig
 | Kompression | entfernen | RLE: AAAABBBCC wird zu 4A3B2C |
 | Fehlererkennung | hinzufügen | Paritätsbit, Hamming-Code |
 
-Bei RLE (Lauflängenkodierung) schreibst du für jede Folge gleicher Zeichen: Anzahl + Zeichen.
+Bei RLE (Lauflängenkodierung) schreibst du für jede Folge gleicher Zeichen: Anzahl + Zeichen. Die Folien nennen als zweites Kompressionsverfahren die **Huffman-Kodierung**: Häufige Zeichen bekommen kurze Bitfolgen, seltene lange, ähnlich wie beim Morsealphabet (das häufige E ist nur ein Punkt).
+
+**Wie hilft zusätzliche Redundanz?** Das einfachste Mittel ist das **Paritätsbit**. Der Sender hängt ein Bit an, sodass die Anzahl der Einsen gerade ist. Der Empfänger zählt nach:
+
+1. Sender: Daten 1011 0010 haben vier Einsen, also gerade. Paritätsbit 0, gesendet wird 1011 0010 **0**.
+2. Auf dem Kanal kippt ein Bit: Es kommt 1011 0**1**10 0 an.
+3. Empfänger zählt fünf Einsen, also ungerade. Er weiß: Hier ist etwas schiefgegangen.
+
+Welches Bit gekippt ist, weiß er nicht, und kippen zwei Bits, merkt er gar nichts. Bessere Verfahren wie der Hamming-Code fügen mehr Redundanz hinzu und können einen Fehler sogar korrigieren. Die Raumsonde Viking schickte 1975 je 6 Nutzbits in 32 Bits verpackt zur Erde.
+
+**Entropie in einem Satz:** Die Entropie sagt, wie viele Bits eine Nachricht im Durchschnitt mindestens braucht, also wie viel „Überraschung“ in ihr steckt. Die Folien nennen den Begriff nur. Als Ergänzung ein Gefühl dafür: Ein Münzwurf hat 2 gleich wahrscheinliche Ergebnisse und braucht 1 Bit (0 = Kopf, 1 = Zahl). Ein Würfel mit 8 Seiten braucht 3 Bit, weil 2³ = 8. Eine Nachricht, deren Inhalt du schon kennst, hat die Entropie 0: Sie überrascht dich nicht.
 
 > [!IMPORTANT]
 > **Das Wichtigste**
-> Kompression entfernt Redundanz und spart Bits. Fehlererkennung fügt Redundanz hinzu und braucht mehr Bits.
+> Shannons Modell: Quelle → Sender → Kanal (mit Störungen) → Empfänger → Ziel. Kompression entfernt Redundanz und spart Bits (RLE, Huffman). Fehlererkennung fügt Redundanz hinzu und braucht mehr Bits (Paritätsbit, Hamming-Code).
 
 > [!WARNING]
 > **Achtung**
@@ -182,6 +192,16 @@ So bestimmst du das Paritätsbit:
 > Erläutern Sie die technische Sichtweise der Digitalisierung.
 > *Quelle: Lernseite GIT, Aufgabe 1.3 (eigene Aufgabe im Klausurstil)*
 
+> [!TIP]
+> **Übung 7 · mittel**
+> Ein Sender nutzt ein gerades Paritätsbit. a) Welches Paritätsbit hängt er an 0110 1101? b) Beim Empfänger kommt 0110 1001 mit Paritätsbit 1 an. Erkennt er einen Fehler? c) Wird dabei Redundanz hinzugefügt oder entfernt?
+> *Quelle: eigene Aufgabe nach VL01 (Shannon, Redundanz)*
+
+> [!TIP]
+> **Übung 8 · Prüfungsniveau**
+> Erläutern Sie die Kette Daten → Information → Wissen → Handlung am Beispiel eines Kontostands.
+> *Quelle: eigene Aufgabe nach VL01 (Daten und Information)*
+
 ## Lösungen
 
 ### Übung 1
@@ -221,3 +241,13 @@ Daten sind unverarbeitete Zeichen ohne Bedeutung, zum Beispiel die Bitfolge 0000
 ### Übung 6
 
 Musterantwort in mehreren Sätzen: Digitalisierung ist im Kern ein Begriff aus der Elektrotechnik. Gemeint ist die Umwandlung analoger Signale in zeit- und wertediskrete, meist binäre Signale. Zeitdiskret heißt, dass man nur in festen Abständen misst. Wertediskret heißt, dass jeder Messwert auf eine von endlich vielen Stufen gerundet wird. Das geschieht, damit man die Werte elektronisch übertragen, speichern und verarbeiten kann. Texte, Bilder, Töne und Filme werden so als Folgen von 0 und 1 dargestellt.
+
+### Übung 7
+
+- a) 0110 1101 hat fünf Einsen (0+1+1+0 und 1+1+0+1 → 2 + 3). Fünf ist ungerade. Damit die Summe gerade wird, ist das Paritätsbit **1**.
+- b) 0110 1001 hat vier Einsen, dazu das Paritätsbit 1: zusammen fünf, also ungerade. Der Empfänger **erkennt einen Fehler**. Welches Bit gekippt ist (hier das sechste von links), weiß er nicht.
+- c) Redundanz wird **hinzugefügt**: Ein Bit mehr, das keine neue Nachricht trägt, aber Fehler sichtbar macht.
+
+### Übung 8
+
+Musterantwort: Daten sind reine Zeichen ohne Bedeutung, zum Beispiel die Zahl 42 oder die Bitfolge 000101010. Kommt der Kontext „Kontostand in Euro“ dazu, wird daraus die Information „Ich habe 42 €“. Verknüpfe ich diese Information mit anderer Information, etwa „Eine Kinokarte kostet 14 €“, entsteht Wissen: Das Geld reicht für eine Karte. Aus diesem Wissen folgt eine Handlung: Ich gehe ins Kino. Mit einem anderen Kontext, etwa „42 € Schulden“, würden dieselben Daten zu einer ganz anderen Handlung führen.

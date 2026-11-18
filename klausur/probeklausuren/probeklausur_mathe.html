@@ -1,0 +1,1002 @@
+<title>Probeklausur Mathematik I</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one calm exam column like a printed exam sheet; slim sticky bar with timer and score. */
+:root {
+  --bg: #ffffff; --paper: #f6f7f9; --fg: #1d2129; --muted: #5d6470; --line: #e1e4ea;
+  --accent: #3b4fa0; --ok: #2d5fc4; --ok-soft: #e9f0fd; --bad: #b8432f; --bad-soft: #fbece8;
+  --half: #a8690f; --half-soft: #fbf3e4; --code-bg: #f3f4f7;
+  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --radius: 8px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12141a; --paper: #191c23; --fg: #e7e9ee; --muted: #9aa1ad; --line: #2b2f39; --accent: #9fb0ff;
+    --ok: #8fb4ff; --ok-soft: #18233b; --bad: #ff9a85; --bad-soft: #3a1f1a; --half: #f0b85a; --half-soft: #33280f; --code-bg: #1b1e26;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12141a; --paper: #191c23; --fg: #e7e9ee; --muted: #9aa1ad; --line: #2b2f39; --accent: #9fb0ff;
+  --ok: #8fb4ff; --ok-soft: #18233b; --bad: #ff9a85; --bad-soft: #3a1f1a; --half: #f0b85a; --half-soft: #33280f; --code-bg: #1b1e26;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 16px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 46rem; margin: 0 auto; padding-block: 1.5rem 5rem; }
+h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 .35rem; text-wrap: balance; }
+h2 { font-size: 1.2rem; margin: 0; text-wrap: balance; }
+.lead { color: var(--muted); margin: 0 0 1rem; }
+.meta { display: flex; flex-wrap: wrap; gap: .4rem .8rem; font-size: .9rem; color: var(--muted); margin-bottom: 1rem; }
+.meta b { color: var(--fg); }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; padding-block: .6rem; margin-bottom: 1.5rem; }
+.timer { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 1.05rem; min-width: 4.5ch; }
+.timer.low { color: var(--bad); }
+.score { margin-left: auto; font-weight: 600; font-variant-numeric: tabular-nums; }
+button { font: inherit; font-size: .9rem; border-radius: 6px; padding: .4rem .8rem; cursor: pointer; border: 1px solid var(--line); background: var(--bg); color: var(--fg); }
+button:hover { border-color: var(--muted); }
+button.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); font-weight: 600; }
+button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.overview { width: 100%; border-collapse: collapse; font-size: .92rem; margin-bottom: 2rem; font-variant-numeric: tabular-nums; }
+.overview th, .overview td { text-align: left; padding: .35rem .5rem; border-bottom: 1px solid var(--line); }
+.overview td:last-child, .overview th:last-child { text-align: right; }
+.overview tr.sum td { font-weight: 700; border-bottom: 0; }
+section.task { border-top: 2px solid var(--fg); padding-top: .9rem; margin-top: 2.5rem; }
+.task-head { display: flex; align-items: baseline; gap: .75rem; flex-wrap: wrap; margin-bottom: .6rem; }
+.pts { font-size: .85rem; color: var(--muted); }
+.badge { margin-left: auto; font-size: .85rem; font-weight: 600; padding: .1rem .55rem; border-radius: 999px; font-variant-numeric: tabular-nums; }
+.badge.full { background: var(--ok-soft); color: var(--ok); } .badge.part { background: var(--half-soft); color: var(--half); } .badge.none { background: var(--bad-soft); color: var(--bad); }
+.q { padding-block: .9rem; border-bottom: 1px solid var(--line); }
+.q:last-child { border-bottom: 0; }
+.q > p { margin: 0 0 .5rem; }
+.q-label { font-weight: 600; margin-right: .3rem; }
+.options { display: grid; gap: .3rem; }
+.options label { display: flex; gap: .5rem; align-items: flex-start; cursor: pointer; padding: .25rem .4rem; border-radius: 6px; }
+.options label:hover { background: var(--paper); }
+.options input { margin-top: .3rem; }
+code { font-family: var(--font-mono); font-size: .88em; background: var(--code-bg); padding: 0 .25em; border-radius: 3px; }
+pre { font-family: var(--font-mono); font-size: .86rem; line-height: 1.5; background: var(--code-bg); border: 1px solid var(--line); border-radius: var(--radius); padding: .75rem .9rem; overflow-x: auto; margin: .4rem 0 .7rem; }
+pre code { background: none; padding: 0; }
+.ln { color: var(--muted); user-select: none; }
+textarea, input[type="text"], input[type="number"], select { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: .4rem .55rem; }
+textarea { width: 100%; font-family: var(--font-mono); font-size: .88rem; min-height: 4.5rem; resize: vertical; }
+textarea.code { min-height: 11rem; tab-size: 4; }
+textarea.prose { font-family: var(--font-body); font-size: .95rem; }
+input.gap { font-family: var(--font-mono); width: 11rem; max-width: 100%; }
+input.short { font-family: var(--font-mono); width: 8rem; }
+input[type="number"] { width: 6rem; }
+.row { display: flex; flex-wrap: wrap; gap: .5rem .9rem; align-items: center; margin-bottom: .45rem; }
+.row > span.lbl { min-width: 7rem; color: var(--muted); font-size: .92rem; }
+.grid-err { display: grid; grid-template-columns: 5rem 9.5rem minmax(0, 1fr); gap: .45rem; align-items: center; }
+.grid-err.two { grid-template-columns: 5rem minmax(0, 1fr); }
+.grid-err .h { font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.grid-err input[type="text"] { width: 100%; font-family: var(--font-mono); font-size: .86rem; }
+@media (max-width: 34rem) { .grid-err { grid-template-columns: 4.5rem minmax(0, 1fr); } .grid-err .fix, .grid-err .hfix { grid-column: 1 / -1; } }
+.mark-ok { background: var(--ok-soft) !important; } .mark-bad { background: var(--bad-soft) !important; }
+input.mark-ok, select.mark-ok, textarea.mark-ok { border-color: var(--ok); } input.mark-bad, select.mark-bad, textarea.mark-bad { border-color: var(--bad); }
+.sol { margin-top: .6rem; padding: .7rem .85rem; border-radius: var(--radius); background: var(--paper); border: 1px solid var(--line); font-size: .93rem; }
+.sol p { margin: .3rem 0; }
+.sol .t { font-weight: 600; }
+.rubric { display: grid; gap: .3rem; margin-top: .5rem; }
+.rubric label { display: flex; gap: .5rem; align-items: flex-start; cursor: pointer; }
+.rubric input { margin-top: .3rem; }
+.hint { color: var(--muted); font-size: .88rem; }
+.result { border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.1rem; margin: 1rem 0 1.5rem; background: var(--paper); }
+.result .big { font-size: 1.6rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.result p { margin: .3rem 0; }
+.actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 2.5rem; align-items: center; }
+.confirm { display: inline-flex; gap: .5rem; align-items: center; font-size: .9rem; }
+.table-scroll { overflow-x: auto; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Probeklausur Mathematik I</h1>
+    <p class="lead">Eine Übungsklausur für die 120-Minuten-Klausur am 18.12.: Teil A Analysis (Folgen, Reihen, Finanzmathematik, Funktionen, Grenzwerte, Stetigkeit) und Teil B Logik und Algebra (Aussagenlogik, Quantoren, Induktion, Mengen, Relationen, Abbildungen, Gruppe, Ring, Körper), je 60 Punkte. Rechne auf Papier mit, trag die Ergebnisse ein und klick auf „Prüfen“. Zahlen, Mengen und Auswahlfragen werden automatisch bewertet. Beweise und Rechenwege bewertest du mit der eingeblendeten Musterlösung selbst. Differential- und Integralrechnung fehlen noch, weil sie erst ab dem 20.11. drankommen.</p>
+    <div class="meta"><span><b>120</b> Minuten</span><span><b>120</b> Punkte</span><span>Hilfsmittel: offen, übe ohne Taschenrechner und Formelsammlung</span><span>bestanden ab <b>60</b> (Annahme: 50 %)</span></div>
+  </header>
+
+  <div class="bar" role="region" aria-label="Zeit und Punkte">
+    <span class="timer" id="timer">120:00</span>
+    <button type="button" id="timerBtn">Zeit starten</button>
+    <button type="button" class="primary" id="checkTop">Prüfen</button>
+    <button type="button" id="hideTop" hidden>Lösungen ausblenden</button>
+    <span class="score" id="scoreTop">noch nicht geprüft</span>
+  </div>
+
+  <div id="result" class="result" hidden></div>
+
+  <table class="overview" aria-label="Aufgabenübersicht">
+    <thead><tr><th>Aufgabe</th><th>Thema</th><th>Punkte</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Teil A · Folgen</td><td id="ov1">12</td></tr>
+      <tr><td>2</td><td>Reihen</td><td id="ov2">14</td></tr>
+      <tr><td>3</td><td>Finanzmathematik</td><td id="ov3">8</td></tr>
+      <tr><td>4</td><td>Funktionen, Umkehrfunktion, Monotonie</td><td id="ov4">12</td></tr>
+      <tr><td>5</td><td>Grenzwerte, Stetigkeit, ln und e</td><td id="ov5">14</td></tr>
+      <tr><td>6</td><td>Teil B · Aussagenlogik</td><td id="ov6">16</td></tr>
+      <tr><td>7</td><td>Quantoren, Beweise und Induktion</td><td id="ov7">12</td></tr>
+      <tr><td>8</td><td>Mengen</td><td id="ov8">10</td></tr>
+      <tr><td>9</td><td>Relationen und Abbildungen</td><td id="ov9">12</td></tr>
+      <tr><td>10</td><td>Algebraische Strukturen (mod n, Gruppe, Ring, Körper)</td><td id="ov10">10</td></tr>
+      <tr class="sum"><td></td><td>Summe</td><td id="ovSum">120</td></tr>
+    </tbody>
+  </table>
+
+  <form id="exam" autocomplete="off" spellcheck="false">
+
+  <h2 style="margin:2rem 0 1rem">Teil A · Analysis (60 Punkte)</h2>
+  <!-- ================= Aufgabe 1 ================= -->
+  <section class="task" data-task="1" data-max="12">
+    <div class="task-head"><h2>Aufgabe 1 · Folgen</h2><span class="pts">12 Punkte</span><span class="badge" hidden></span></div>
+    <p class="hint">Zahlen darfst du mit Komma oder Punkt eingeben (z. B. 0,5). Brüche bitte als Dezimalzahl, auf zwei Stellen gerundet.</p>
+    <div class="q mc" data-answer="d" data-name="m11">
+      <p><span class="q-label">1.1</span>(1 Punkt) Was gilt für die Folge bₙ = (−1)ⁿ/n?</p>
+      <div class="options">
+        <label><input type="radio" name="m11" id="m11a" value="a"> Sie ist streng monoton fallend und konvergiert gegen 0.</label>
+        <label><input type="radio" name="m11" id="m11b" value="b"> Sie ist bestimmt divergent gegen −∞.</label>
+        <label><input type="radio" name="m11" id="m11c" value="c"> Sie ist unbestimmt divergent, weil das Vorzeichen wechselt.</label>
+        <label><input type="radio" name="m11" id="m11d" value="d"> Sie ist nicht monoton, beschränkt und konvergiert gegen 0.</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: d.</span> Die Glieder −1; 0,5; −0,33; 0,25; … springen zwischen Minus und Plus, also <b>nicht monoton</b>. Ihr Betrag 1/n wird aber immer kleiner, darum liegen sie zwischen −1 und ½ (beschränkt) und laufen gegen <b>0</b>. Der Vorzeichenwechsel allein macht eine Folge nicht divergent, das gilt nur, wenn der Betrag nicht gegen 0 geht wie bei (−1)ⁿ.</p></div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">1.2</span>(4 Punkte) Gegeben ist die rekursive Folge b₁ = 2, bₙ₊₁ = ½ · bₙ + 3. Berechne die Glieder und vermute den Grenzwert.</p>
+      <div class="row"><span class="lbl">b₂ =</span><input type="text" class="short auto" id="a12a" data-kind="num" data-answer="4" data-points="1" aria-label="b₂ ="></div>
+      <div class="row"><span class="lbl">b₃ =</span><input type="text" class="short auto" id="a12b" data-kind="num" data-answer="5" data-points="1" aria-label="b₃ ="></div>
+      <div class="row"><span class="lbl">b₄ =</span><input type="text" class="short auto" id="a12c" data-kind="num" data-answer="5,5" data-points="1" aria-label="b₄ ="></div>
+      <div class="row"><span class="lbl">Grenzwert b =</span><input type="text" class="short auto" id="a12d" data-kind="num" data-answer="6" data-points="1" aria-label="Grenzwert b ="></div>
+      <div class="sol" hidden>
+        <p>b₂ = ½ · 2 + 3 = <b>4</b>, b₃ = ½ · 4 + 3 = <b>5</b>, b₄ = ½ · 5 + 3 = <b>5,5</b>. Der Abstand zu 6 halbiert sich jedes Mal: 4, 2, 1, 0,5.</p>
+        <p>Grenzwert: Wenn die Folge gegen b läuft, gilt im Grenzfall b = ½ · b + 3. Minus ½b: ½b = 3, also <b>b = 6</b>.</p>
+      </div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">1.3</span>(3 Punkte) Bestimme die Grenzwerte und das n₀.</p>
+      <div class="row"><span class="lbl">lim (3n² − n)/(6n² + 1) =</span><input type="text" class="short auto" id="a13a" data-kind="num" data-answer="0,5" data-points="1" aria-label="lim (3n² − n)/(6n² + 1) ="></div>
+      <div class="row"><span class="lbl">lim (4n³ − 2n + 7)/(1 − 2n³) =</span><input type="text" class="short auto" id="a13b" data-kind="num" data-answer="-2" data-points="1" aria-label="lim (4n³ − 2n + 7)/(1 − 2n³) ="></div>
+      <div class="row"><span class="lbl">aₙ = 5 − 2/n, ε = 0,01: kleinstes n₀ mit |aₙ − 5| &lt; ε für alle n ≥ n₀</span><input type="text" class="short auto" id="a13c" data-kind="num" data-answer="201" data-points="1" data-tol="0" aria-label="aₙ = 5 − 2/n, ε = 0,01: kleinstes n₀ mit |aₙ − 5| &amp;lt; ε für alle n ≥ n₀"></div>
+      <div class="sol" hidden>
+        <p>a) Gleicher Grad 2, also Vorzahlen teilen: 3/6 = <b>0,5</b>.</p>
+        <p>b) Gleicher Grad 3: 4/(−2) = <b>−2</b>. Achtung, die höchste Potenz im Nenner ist −2n³, das Vorzeichen gehört dazu.</p>
+        <p>c) |aₙ − 5| = 2/n &lt; 0,01 ⇔ n &gt; 200. Bei n = 200 ist der Abstand genau 0,01, also nicht kleiner. Darum <b>n₀ = 201</b>.</p>
+      </div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">1.4</span>(4 Punkte) Zeige mit der Differenz aₙ₊₁ − aₙ, dass aₙ = (3n − 1)/(n + 1) streng monoton wachsend ist. Gib außerdem eine untere und eine obere Schranke an.</p>
+      <textarea class="prose" id="t14" aria-label="1.4 Monotonie und Schranken"></textarea>
+      <div class="sol" hidden>
+        <p>1. aₙ₊₁ = (3(n + 1) − 1)/((n + 1) + 1) = (3n + 2)/(n + 2).</p>
+        <p>2. aₙ₊₁ − aₙ = (3n + 2)/(n + 2) − (3n − 1)/(n + 1) = ((3n + 2)(n + 1) − (3n − 1)(n + 2))/((n + 1)(n + 2)).</p>
+        <p>3. Zähler: (3n² + 5n + 2) − (3n² + 5n − 2) = 4. Also aₙ₊₁ − aₙ = 4/((n + 1)(n + 2)) &gt; 0 für alle n ⇒ <b>streng monoton wachsend</b>. Probe: a₂ − a₁ = 5/3 − 1 = 2/3 = 4/6.</p>
+        <p>4. Schranken: Weil die Folge wächst, ist a₁ = 1 die untere Schranke. Umschreiben: aₙ = (3(n + 1) − 4)/(n + 1) = 3 − 4/(n + 1) &lt; 3, also obere Schranke 3 (Grenzwert 3, wird nie erreicht).</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb14a" data-points="1"> aₙ₊₁ richtig hingeschrieben und auf einen Nenner gebracht (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb14b" data-points="1"> Zähler zu 4 vereinfacht (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb14c" data-points="1"> Vorzeichen begründet: Differenz &gt; 0 für alle n (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb14d" data-points="1"> untere Schranke 1 und obere Schranke 3 (oder größer) mit Begründung (+1)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 2 ================= -->
+  <section class="task" data-task="2" data-max="14">
+    <div class="task-head"><h2>Aufgabe 2 · Reihen</h2><span class="pts">14 Punkte</span><span class="badge" hidden></span></div>
+    <p class="hint">Zahlen darfst du mit Komma oder Punkt eingeben (z. B. 0,5). Brüche bitte als Dezimalzahl, auf zwei Stellen gerundet.</p>
+    <div class="q">
+      <p><span class="q-label">2.1</span>(4 Punkte) Berechne die Werte der geometrischen Reihen. Achte auf den Startindex.</p>
+      <div class="row"><span class="lbl">Σₖ₌₂^∞ 4 · (½)ᵏ =</span><input type="text" class="short auto" id="a21a" data-kind="num" data-answer="2" data-points="2" aria-label="Σₖ₌₂^∞ 4 · (½)ᵏ ="></div>
+      <div class="row"><span class="lbl">Σₖ₌₀^∞ 2 · (−⅓)ᵏ =</span><input type="text" class="short auto" id="a21b" data-kind="num" data-answer="1,5" data-points="2" aria-label="Σₖ₌₀^∞ 2 · (−⅓)ᵏ ="></div>
+      <div class="sol" hidden>
+        <p>a) q = ½, Start k = 2: erstes Glied 4 · ¼ = 1. Wert 1/(1 − ½) = <b>2</b>. Wer mit 4 als erstem Glied rechnet, bekommt 8 (Startindex-Fehler).</p>
+        <p>b) q = −⅓, Start k = 0: erstes Glied 2. 1 − q = 1 + ⅓ = 4/3. Wert 2/(4/3) = <b>1,5</b>.</p>
+      </div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">2.2</span>(3 Punkte) Schreibe 0,2777… (nur die 7 wiederholt sich) mit einer geometrischen Reihe als vollständig gekürzten Bruch.</p>
+      <div class="row"><span class="lbl">Zähler</span><input type="text" class="short auto" id="a22a" data-kind="num" data-answer="5" data-points="1" data-tol="0" aria-label="Zähler"></div>
+      <div class="row"><span class="lbl">Nenner</span><input type="text" class="short auto" id="a22b" data-kind="num" data-answer="18" data-points="1" data-tol="0" aria-label="Nenner"></div>
+      <textarea class="prose" id="t22" aria-label="2.2 Rechenweg"></textarea>
+      <div class="sol" hidden>
+        <p>1. Abtrennen: 0,2777… = 0,2 + 0,0777…</p>
+        <p>2. Reihe 0,07 + 0,007 + …: erstes Glied 7/100, q = 1/10, Wert (7/100)/(9/10) = 7/90.</p>
+        <p>3. 2/10 + 7/90 = 18/90 + 7/90 = 25/90 = <b>5/18</b>. Probe: 5 : 18 = 0,2777…</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb22" data-points="1"> Vorperiode abgetrennt und Reihe mit q = 1/10 aufgestellt (+1)</label>
+        </div>
+      </div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">2.3</span>(3 Punkte) Berechne Σₖ₌₁^∞ 1/((2k − 1)(2k + 1)). Tipp: 1/((2k − 1)(2k + 1)) = ½ · (1/(2k − 1) − 1/(2k + 1)).</p>
+      <div class="row"><span class="lbl">Wert der Reihe</span><input type="text" class="short auto" id="a23" data-kind="num" data-answer="0,5" data-points="2" aria-label="Wert der Reihe"></div>
+      <textarea class="prose" id="t23" aria-label="2.3 Teilsumme"></textarea>
+      <div class="sol" hidden>
+        <p>1. Ausschreiben: sₙ = ½ · ((1 − ⅓) + (⅓ − ⅕) + … + (1/(2n − 1) − 1/(2n + 1))).</p>
+        <p>2. Teleskop: Alles in der Mitte hebt sich weg, sₙ = ½ · (1 − 1/(2n + 1)).</p>
+        <p>3. 1/(2n + 1) → 0, also Wert <b>½</b>. Probe: s₁ = 1/3 = ½ · (1 − ⅓), s₂ = 1/3 + 1/15 = 2/5 = ½ · (1 − ⅕).</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb23" data-points="1"> Teilsumme sₙ = ½ · (1 − 1/(2n + 1)) angegeben (+1)</label>
+        </div>
+      </div>
+    </div>
+    <div class="q mc" data-answer="c" data-name="m24a">
+      <p><span class="q-label">2.4 a</span>(1 Punkt) Σₖ₌₁^∞ (2k + 1)/(3k − 1) ist …</p>
+      <div class="options">
+        <label><input type="radio" name="m24a" id="m24aa" value="a"> konvergent mit Wert 2/3</label>
+        <label><input type="radio" name="m24a" id="m24ab" value="b"> konvergent, weil die Glieder gegen 0 gehen</label>
+        <label><input type="radio" name="m24a" id="m24ac" value="c"> divergent, weil die Glieder gegen 2/3 ≠ 0 gehen</label>
+        <label><input type="radio" name="m24a" id="m24ad" value="d"> keine Aussage möglich</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: c.</span> Gleicher Grad, die Glieder gehen gegen 2/3. Wenn die Glieder nicht gegen 0 gehen, kommt jedes Mal etwa 0,67 dazu: <b>divergent</b> (Divergenzkriterium). 2/3 ist der Grenzwert der Glieder, nicht der Wert der Reihe.</p></div>
+    </div>
+    <div class="q mc" data-answer="a" data-name="m24b">
+      <p><span class="q-label">2.4 b</span>(1 Punkt) Σₖ₌₁^∞ 1/(k · √k) ist …</p>
+      <div class="options">
+        <label><input type="radio" name="m24b" id="m24ba" value="a"> konvergent, weil Σ 1/kᵖ mit p = 3/2 &gt; 1</label>
+        <label><input type="radio" name="m24b" id="m24bb" value="b"> divergent wie die harmonische Reihe</label>
+        <label><input type="radio" name="m24b" id="m24bc" value="c"> geometrisch mit q = 1/√k</label>
+        <label><input type="radio" name="m24b" id="m24bd" value="d"> divergent, weil √k → ∞</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: a.</span> k · √k = k^(3/2), also die Familie Σ 1/kᵖ mit p = 3/2 &gt; 1: <b>konvergent</b>. Geometrisch ist sie nicht, denn k steht in der Basis, nicht im Exponenten.</p></div>
+    </div>
+    <div class="q mc" data-answer="d" data-name="m24c">
+      <p><span class="q-label">2.4 c</span>(1 Punkt) Σₖ₌₁^∞ k/(k² + 1) ist …</p>
+      <div class="options">
+        <label><input type="radio" name="m24c" id="m24ca" value="a"> konvergent, weil die Glieder gegen 0 gehen</label>
+        <label><input type="radio" name="m24c" id="m24cb" value="b"> konvergent, Potenzabstand 1</label>
+        <label><input type="radio" name="m24c" id="m24cc" value="c"> konvergent nach dem Quotientenkriterium</label>
+        <label><input type="radio" name="m24c" id="m24cd" value="d"> divergent, Potenzabstand 2 − 1 = 1</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: d.</span> Die Glieder gehen zwar gegen 0, aber das reicht nicht. Potenzabstand 2 − 1 = 1, also verhält sich die Reihe wie Σ 1/k: <b>divergent</b>. Das Quotientenkriterium gibt hier L = 1, also keine Aussage.</p></div>
+    </div>
+    <div class="q mc" data-answer="b" data-name="m24d">
+      <p><span class="q-label">2.4 d</span>(1 Punkt) Σₖ₌₀^∞ 3ᵏ/k! ist …</p>
+      <div class="options">
+        <label><input type="radio" name="m24d" id="m24da" value="a"> divergent, weil 3ᵏ → ∞</label>
+        <label><input type="radio" name="m24d" id="m24db" value="b"> konvergent nach dem Quotientenkriterium: aₖ₊₁/aₖ = 3/(k + 1) → 0</label>
+        <label><input type="radio" name="m24d" id="m24dc" value="c"> geometrisch mit q = 3, also divergent</label>
+        <label><input type="radio" name="m24d" id="m24dd" value="d"> keine Aussage möglich, weil L = 1</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: b.</span> Bei k! und 3ᵏ nimmst du das Quotientenkriterium: aₖ₊₁/aₖ = 3ᵏ⁺¹/(k + 1)! · k!/3ᵏ = 3/(k + 1) → 0 &lt; 1, also <b>konvergent</b> (Wert e³). k! wächst schneller als 3ᵏ, darum ist es nicht geometrisch.</p></div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 3 ================= -->
+  <section class="task" data-task="3" data-max="8">
+    <div class="task-head"><h2>Aufgabe 3 · Finanzmathematik</h2><span class="pts">8 Punkte</span><span class="badge" hidden></span></div>
+    <p class="hint">Zahlen darfst du mit Komma oder Punkt eingeben (z. B. 0,5). Brüche bitte als Dezimalzahl, auf zwei Stellen gerundet.</p>
+    <div class="q">
+      <p><span class="q-label">3.1</span>(3 Punkte) Du zahlst 8 Jahre lang jeweils am Jahresende 1500 € auf ein Konto mit 4 % Zinsen. Verwende 1,04⁸ ≈ 1,368569. Runde auf Cent.</p>
+      <div class="row"><span class="lbl">Endwert E₈ in €</span><input type="text" class="short auto" id="a31a" data-kind="num" data-answer="13821,34" data-points="2" data-tol="1" aria-label="Endwert E₈ in €"></div>
+      <div class="row"><span class="lbl">davon Zinsen in €</span><input type="text" class="short auto" id="a31b" data-kind="num" data-answer="1821,34" data-points="1" data-tol="1" aria-label="davon Zinsen in €"></div>
+      <div class="sol" hidden>
+        <p>Sparplan: E₈ = r · ((1 + i)ⁿ − 1)/i = 1500 · (1,368569 − 1)/0,04 = 1500 · 9,214225 ≈ <b>13 821,34 €</b>.</p>
+        <p>Eingezahlt: 8 · 1500 = 12 000 €. Zinsen: 13 821,34 − 12 000 = <b>1821,34 €</b>.</p>
+      </div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">3.2</span>(2 Punkte) Eine Stiftung soll für immer jedes Jahr 900 € auszahlen (erste Zahlung in einem Jahr), Zins 3 %. Wie viel Kapital braucht sie heute?</p>
+      <div class="row"><span class="lbl">Barwert in €</span><input type="text" class="short auto" id="a32" data-kind="num" data-answer="30000" data-points="2" data-tol="1" aria-label="Barwert in €"></div>
+      <div class="sol" hidden>
+        <p>Ewige Rente: Barwert = r/i = 900/0,03 = <b>30 000 €</b>. Probe: 3 % von 30 000 € sind 900 €, das Kapital bleibt gleich.</p>
+      </div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">3.3</span>(2 Punkte) Wie viel ist eine Zahlung von 5000 € in 3 Jahren heute wert, bei 5 % Zinsen? Verwende 1,05³ = 1,157625.</p>
+      <div class="row"><span class="lbl">heutiger Wert in €</span><input type="text" class="short auto" id="a33" data-kind="num" data-answer="4319,19" data-points="2" data-tol="0.5" aria-label="heutiger Wert in €"></div>
+      <div class="sol" hidden>
+        <p>Abzinsen: K₀ = 5000/1,05³ = 5000/1,157625 ≈ <b>4319,19 €</b>. Probe: 4319,19 · 1,157625 ≈ 5000 €.</p>
+      </div>
+    </div>
+    <div class="q mc" data-answer="d" data-name="m34">
+      <p><span class="q-label">3.4</span>(1 Punkt) Warum benutzt man beim Sparplan die endliche Summenformel und nicht „erstes Glied/(1 − q)“?</p>
+      <div class="options">
+        <label><input type="radio" name="m34" id="m34a" value="a"> Weil die Raten am Jahresende eingezahlt werden.</label>
+        <label><input type="radio" name="m34" id="m34b" value="b"> Weil i in Prozent angegeben ist.</label>
+        <label><input type="radio" name="m34" id="m34c" value="c"> Weil die Formel nur für Monatsraten gilt.</label>
+        <label><input type="radio" name="m34" id="m34d" value="d"> Weil q = 1 + i &gt; 1 ist; die unendliche Formel gilt nur für |q| &lt; 1, und der Sparplan hat ohnehin endlich viele Raten.</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: d.</span> Die unendliche Formel gilt nur bei |q| &lt; 1. Beim Sparplan ist q = 1 + i &gt; 1, die verzinsten Raten werden größer. Bei der ewigen Rente wird dagegen abgezinst, q = 1/(1 + i) &lt; 1.</p></div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 4 ================= -->
+  <section class="task" data-task="4" data-max="12">
+    <div class="task-head"><h2>Aufgabe 4 · Funktionen, Umkehrfunktion, Monotonie</h2><span class="pts">12 Punkte</span><span class="badge" hidden></span></div>
+    <p class="hint">Zahlen darfst du mit Komma oder Punkt eingeben (z. B. 0,5). Brüche bitte als Dezimalzahl, auf zwei Stellen gerundet.</p>
+    <div class="q mc" data-answer="b" data-name="m41">
+      <p><span class="q-label">4.1</span>(1 Punkt) Was ist der größtmögliche Definitionsbereich von f(x) = √(x − 1)/(x − 3)?</p>
+      <div class="options">
+        <label><input type="radio" name="m41" id="m41a" value="a"> ℝ ∖ {3}</label>
+        <label><input type="radio" name="m41" id="m41b" value="b"> [1, ∞) ∖ {3}</label>
+        <label><input type="radio" name="m41" id="m41c" value="c"> (1, ∞)</label>
+        <label><input type="radio" name="m41" id="m41d" value="d"> [1, 3)</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: b.</span> Zwei Verbote: unter der Wurzel x − 1 ≥ 0, also x ≥ 1, und Nenner x − 3 ≠ 0, also x ≠ 3. Zusammen [1, ∞) ohne die 3. ℝ ∖ {3} vergisst die Wurzel, (1, ∞) schließt die erlaubte 1 aus.</p></div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">4.2</span>(2 Punkte) Gegeben ist f(x) = x² − 6x + 10. Bringe f mit quadratischer Ergänzung in die Form (x − d)² + e.</p>
+      <div class="row"><span class="lbl">d =</span><input type="text" class="short auto" id="a42a" data-kind="num" data-answer="3" data-points="1" aria-label="d ="></div>
+      <div class="row"><span class="lbl">e (kleinster Wert von f) =</span><input type="text" class="short auto" id="a42b" data-kind="num" data-answer="1" data-points="1" aria-label="e (kleinster Wert von f) ="></div>
+      <div class="sol" hidden>
+        <p>Zahl vor x ist −6, Hälfte −3, Quadrat 9: x² − 6x + 9 − 9 + 10 = <b>(x − 3)² + 1</b>. Scheitel (3 | 1), Bild auf ℝ ist [1, ∞). Probe x = 0: 10 und 9 + 1 = 10.</p>
+      </div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">4.3</span>(4 Punkte) Schränke ein auf f: [3, ∞) → [1, ∞), f(x) = x² − 6x + 10. Bestimme f⁻¹ mit Rechenweg und berechne damit zwei Werte.</p>
+      <textarea class="prose" id="t43" aria-label="4.3 Umkehrfunktion"></textarea>
+      <div class="row"><span class="lbl">f⁻¹(10) =</span><input type="text" class="short auto" id="a43a" data-kind="num" data-answer="6" data-points="1" aria-label="f⁻¹(10) ="></div>
+      <div class="row"><span class="lbl">f⁻¹(5) =</span><input type="text" class="short auto" id="a43b" data-kind="num" data-answer="5" data-points="1" aria-label="f⁻¹(5) ="></div>
+      <div class="sol" hidden>
+        <p>1. y = (x − 3)² + 1, also y − 1 = (x − 3)².</p>
+        <p>2. Wurzel: x − 3 = √(y − 1), nur Plus, weil x ≥ 3 und damit x − 3 ≥ 0.</p>
+        <p>3. x = 3 + √(y − 1), tauschen: <b>f⁻¹: [1, ∞) → [3, ∞), f⁻¹(x) = 3 + √(x − 1)</b>.</p>
+        <p>4. f⁻¹(10) = 3 + 3 = <b>6</b>, f⁻¹(5) = 3 + 2 = <b>5</b>. Probe: f(6) = 36 − 36 + 10 = 10, f(5) = 25 − 30 + 10 = 5.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb43a" data-points="1"> nach x aufgelöst, Vorzeichen der Wurzel mit x ≥ 3 begründet (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb43b" data-points="1"> f⁻¹(x) = 3 + √(x − 1) mit Definitionsmenge [1, ∞) (+1)</label>
+        </div>
+      </div>
+    </div>
+    <div class="q mc" data-answer="b" data-name="m44a">
+      <p><span class="q-label">4.4 a</span>(1 Punkt) Ist g: ℝ → ℝ, g(x) = x² − 6x + 10 injektiv oder surjektiv?</p>
+      <div class="options">
+        <label><input type="radio" name="m44a" id="m44aa" value="a"> injektiv, aber nicht surjektiv</label>
+        <label><input type="radio" name="m44a" id="m44ab" value="b"> weder injektiv noch surjektiv</label>
+        <label><input type="radio" name="m44a" id="m44ac" value="c"> surjektiv, aber nicht injektiv</label>
+        <label><input type="radio" name="m44a" id="m44ad" value="d"> bijektiv</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: b.</span> Nicht injektiv: g(2) = g(4) = 2 (zwei x, gleicher Wert). Nicht surjektiv: g(x) = (x − 3)² + 1 ≥ 1, Werte unter 1 wie 0 kommen nie heraus. Erst auf [3, ∞) → [1, ∞) ist g bijektiv.</p></div>
+    </div>
+    <div class="q mc" data-answer="a" data-name="m44b">
+      <p><span class="q-label">4.4 b</span>(1 Punkt) Welche Funktion ℝ → ℝ ist bijektiv?</p>
+      <div class="options">
+        <label><input type="radio" name="m44b" id="m44ba" value="a"> h(x) = 3x − 2</label>
+        <label><input type="radio" name="m44b" id="m44bb" value="b"> h(x) = x² + 1</label>
+        <label><input type="radio" name="m44b" id="m44bc" value="c"> h(x) = |x|</label>
+        <label><input type="radio" name="m44b" id="m44bd" value="d"> h(x) = 5</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: a.</span> 3x − 2 = y hat für jedes y genau eine Lösung x = (y + 2)/3, also injektiv und surjektiv. x² + 1 und |x| treffen Werte doppelt (h(−1) = h(1)) und lassen negative Werte frei, die konstante Funktion trifft nur die 5.</p></div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">4.5</span>(3 Punkte) Zeige mit zwei Testpersonen x₁ &lt; x₂, dass k: (−1, ∞) → ℝ, k(x) = x/(x + 1) streng monoton wachsend ist. Ist k nach oben beschränkt?</p>
+      <textarea class="prose" id="t45" aria-label="4.5 Monotonie"></textarea>
+      <div class="sol" hidden>
+        <p>1. k(x₂) − k(x₁) = x₂/(x₂ + 1) − x₁/(x₁ + 1) = (x₂(x₁ + 1) − x₁(x₂ + 1))/((x₁ + 1)(x₂ + 1)).</p>
+        <p>2. Zähler: x₁x₂ + x₂ − x₁x₂ − x₁ = x₂ − x₁. Also k(x₂) − k(x₁) = (x₂ − x₁)/((x₁ + 1)(x₂ + 1)).</p>
+        <p>3. x₂ − x₁ &gt; 0, und weil beide x &gt; −1 sind, ist x₁ + 1 &gt; 0 und x₂ + 1 &gt; 0. Positiv durch positiv ⇒ <b>streng monoton wachsend</b>. Probe x₁ = 0, x₂ = 1: k(1) − k(0) = ½ = 1/(1 · 2).</p>
+        <p>4. k(x) = 1 − 1/(x + 1) &lt; 1, also <b>nach oben durch 1 beschränkt</b> (wird nie erreicht). Nach unten nicht: k(−0,99) = −99.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb45a" data-points="1"> Differenz auf einen Nenner gebracht und Zähler x₂ − x₁ (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb45b" data-points="1"> Vorzeichen aller Faktoren begründet (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb45c" data-points="1"> obere Schranke 1 mit Begründung (+1)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 5 ================= -->
+  <section class="task" data-task="5" data-max="14">
+    <div class="task-head"><h2>Aufgabe 5 · Grenzwerte, Stetigkeit, ln und e</h2><span class="pts">14 Punkte</span><span class="badge" hidden></span></div>
+    <p class="hint">Zahlen darfst du mit Komma oder Punkt eingeben (z. B. 0,5). Brüche bitte als Dezimalzahl, auf zwei Stellen gerundet.</p>
+    <div class="q">
+      <p><span class="q-label">5.1</span>(5 Punkte) Bestimme die Grenzwerte.</p>
+      <div class="row"><span class="lbl">lim (x → 3) (x² − 2x − 3)/(x² − 9) =</span><input type="text" class="short auto" id="a51a" data-kind="num" data-answer="0,67" data-points="2" aria-label="lim (x → 3) (x² − 2x − 3)/(x² − 9) ="></div>
+      <div class="row"><span class="lbl">lim (x → ∞) (4x² − x)/(2x² + 7) =</span><input type="text" class="short auto" id="a51b" data-kind="num" data-answer="2" data-points="1" aria-label="lim (x → ∞) (4x² − x)/(2x² + 7) ="></div>
+      <div class="row"><span class="lbl">lim (x → 0) (√(x + 9) − 3)/x =</span><input type="text" class="short auto" id="a51c" data-kind="num" data-answer="0,17" data-points="2" aria-label="lim (x → 0) (√(x + 9) − 3)/x ="></div>
+      <div class="sol" hidden>
+        <p>a) 0/0, faktorisieren: (x − 3)(x + 1)/((x − 3)(x + 3)) = (x + 1)/(x + 3) → 4/6 = <b>2/3 ≈ 0,67</b>. Probe x = 3,001: ≈ 0,6667.</p>
+        <p>b) ∞/∞, gleicher Grad: 4/2 = <b>2</b>.</p>
+        <p>c) 0/0, mit (√(x + 9) + 3) erweitern: ((x + 9) − 9)/(x(√(x + 9) + 3)) = 1/(√(x + 9) + 3) → 1/6 ≈ <b>0,17</b>.</p>
+      </div>
+    </div>
+    <div class="q mc" data-answer="c" data-name="m52">
+      <p><span class="q-label">5.2</span>(1 Punkt) Was ist lim (x → 1⁻) 1/(x − 1)?</p>
+      <div class="options">
+        <label><input type="radio" name="m52" id="m52a" value="a"> +∞</label>
+        <label><input type="radio" name="m52" id="m52b" value="b"> existiert nicht</label>
+        <label><input type="radio" name="m52" id="m52c" value="c"> −∞</label>
+        <label><input type="radio" name="m52" id="m52d" value="d"> 0</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: c.</span> Von links ist x etwas kleiner als 1, der Nenner winzig negativ (x = 0,99: −0,01). 1 durch winzig Negatives ⇒ <b>−∞</b>. „Existiert nicht“ gilt für den beidseitigen Grenzwert, denn von rechts kommt +∞.</p></div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">5.3</span>(3 Punkte) f(x) = (x³ − 8)/(x − 2) für x ≠ 2 und f(2) = c. Für welches c ist f stetig? Tipp: x³ − 8 = (x − 2)(x² + 2x + 4).</p>
+      <div class="row"><span class="lbl">c =</span><input type="text" class="short auto" id="a53" data-kind="num" data-answer="12" data-points="2" aria-label="c ="></div>
+      <textarea class="prose" id="t53" aria-label="5.3 Begründung"></textarea>
+      <div class="sol" hidden>
+        <p>Stetig heißt f(2) = lim (x → 2) f(x). Kürzen: (x − 2)(x² + 2x + 4)/(x − 2) = x² + 2x + 4 → 4 + 4 + 4 = <b>12</b>. Probe: f(1,999) ≈ 11,994, f(2,001) ≈ 12,006.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb53" data-points="1"> Begründung: c muss der Grenzwert sein, erst kürzen, dann einsetzen (+1)</label>
+        </div>
+      </div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">5.4</span>(3 Punkte) ln und e ohne Taschenrechner (b auf zwei Stellen, ln 20 ≈ 2,9957).</p>
+      <div class="row"><span class="lbl">ln(e⁴) − 2 · ln(√e) =</span><input type="text" class="short auto" id="a54a" data-kind="num" data-answer="3" data-points="1" aria-label="ln(e⁴) − 2 · ln(√e) ="></div>
+      <div class="row"><span class="lbl">Lösung von e^(3x + 1) = 20: x ≈</span><input type="text" class="short auto" id="a54b" data-kind="num" data-answer="0,67" data-points="2" data-tol="0.01" aria-label="Lösung von e^(3x + 1) = 20: x ≈"></div>
+      <div class="sol" hidden>
+        <p>a) ln(e⁴) = 4, und 2 · ln(e^(1/2)) = 2 · ½ = 1. Ergebnis <b>3</b>.</p>
+        <p>b) ln auf beiden Seiten: 3x + 1 = ln 20, also x = (ln 20 − 1)/3 ≈ 1,9957/3 ≈ <b>0,665</b>.</p>
+      </div>
+    </div>
+    <div class="q mc" data-answer="d" data-name="m55">
+      <p><span class="q-label">5.5</span>(1 Punkt) f(x) = 1 für x ≥ 0 und f(x) = −1 für x &lt; 0. Was liegt bei x = 0 vor?</p>
+      <div class="options">
+        <label><input type="radio" name="m55" id="m55a" value="a"> Polstelle</label>
+        <label><input type="radio" name="m55" id="m55b" value="b"> Oszillationsstelle</label>
+        <label><input type="radio" name="m55" id="m55c" value="c"> keine Unstetigkeit</label>
+        <label><input type="radio" name="m55" id="m55d" value="d"> Sprungstelle</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: d.</span> Von links läuft f auf −1 zu, von rechts auf 1: links ≠ rechts, eine <b>Sprungstelle</b>. Bei einer Polstelle müssten die Werte nach ±∞ laufen, hier bleiben sie bei ±1.</p></div>
+    </div>
+    <div class="q mc" data-answer="a" data-name="m56">
+      <p><span class="q-label">5.6</span>(1 Punkt) f(x) = 2x + 1, g(x) = x². Was ist (g ∘ f)(1)?</p>
+      <div class="options">
+        <label><input type="radio" name="m56" id="m56a" value="a"> 9</label>
+        <label><input type="radio" name="m56" id="m56b" value="b"> 3</label>
+        <label><input type="radio" name="m56" id="m56c" value="c"> 5</label>
+        <label><input type="radio" name="m56" id="m56d" value="d"> 4</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: a.</span> g ∘ f heißt „g nach f“, also erst f: f(1) = 3, dann g: g(3) = <b>9</b>. 3 = (f ∘ g)(1) = f(1) ist die falsche Reihenfolge.</p></div>
+    </div>
+  </section>
+
+  <h2 style="margin:2rem 0 1rem">Teil B · Logik und Algebra (60 Punkte)</h2>
+  <!-- ================= Aufgabe 6 ================= -->
+  <section class="task" data-task="6" data-max="16">
+    <div class="task-head"><h2>Aufgabe 6 · Aussagenlogik</h2><span class="pts">16 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q mc" data-answer="b" data-name="m61">
+      <p><span class="q-label">6.1</span>(1 Punkt) Wann ist A → B falsch?</p>
+      <div class="options">
+        <label><input type="radio" name="m61" id="m61a" value="a"> bei A = f, B = w</label>
+        <label><input type="radio" name="m61" id="m61b" value="b"> bei A = w, B = f</label>
+        <label><input type="radio" name="m61" id="m61c" value="c"> bei A = f, B = f</label>
+        <label><input type="radio" name="m61" id="m61d" value="d"> bei A = w, B = w</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: b.</span> Die Implikation ist nur gebrochen, wenn die Voraussetzung gilt und die Folgerung nicht. Bei A = f ist A → B immer wahr („aus Falschem folgt alles“).</p></div>
+    </div>
+    <div class="q mc" data-answer="c" data-name="m62">
+      <p><span class="q-label">6.2</span>(1 Punkt) Welcher Satz ist gleichwertig zu „Wenn eine Zahl durch 6 teilbar ist, ist sie gerade“?</p>
+      <div class="options">
+        <label><input type="radio" name="m62" id="m62a" value="a"> Wenn eine Zahl gerade ist, ist sie durch 6 teilbar.</label>
+        <label><input type="radio" name="m62" id="m62b" value="b"> Wenn eine Zahl nicht durch 6 teilbar ist, ist sie ungerade.</label>
+        <label><input type="radio" name="m62" id="m62c" value="c"> Wenn eine Zahl ungerade ist, ist sie nicht durch 6 teilbar.</label>
+        <label><input type="radio" name="m62" id="m62d" value="d"> Eine Zahl ist durch 6 teilbar und gerade.</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: c.</span> Kontraposition ¬B → ¬A: Seiten tauschen und beide verneinen. Die erste Option ist die Umkehrung (4 ist gerade, aber nicht durch 6 teilbar), die zweite der Umkehrschluss (8 widerlegt ihn).</p></div>
+    </div>
+    <div class="q mc" data-answer="a" data-name="m63">
+      <p><span class="q-label">6.3</span>(1 Punkt) Welchen Wert hat ¬A ∨ B ∧ C bei A = w, B = w, C = f?</p>
+      <div class="options">
+        <label><input type="radio" name="m63" id="m63a" value="a"> f</label>
+        <label><input type="radio" name="m63" id="m63b" value="b"> w</label>
+        <label><input type="radio" name="m63" id="m63c" value="c"> hängt von der Klammerung ab, die fehlt</label>
+        <label><input type="radio" name="m63" id="m63d" value="d"> nicht auswertbar</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: a.</span> Vorrang ¬ vor ∧ vor ∨: (¬A) ∨ (B ∧ C) = f ∨ (w ∧ f) = f ∨ f = <b>f</b>. Die Vorrangregeln legen die Klammern eindeutig fest.</p></div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">6.4</span>(4 Punkte) Stelle die Ergebnisspalte der Wahrheitstafel von F = (A → B) ∧ (¬B ∨ C) auf.</p>
+      <p class="hint">Trag in jede Zeile w oder f ein (je ½ Punkt). Reihenfolge der Zeilen wie auf den Folien: A, B, C.</p>
+      <div class="row"><span class="lbl">A, B, C = w w w</span><input type="text" class="short auto" id="a641" data-kind="gap" data-answer="w" data-points="0.5" aria-label="A, B, C = w w w"></div>
+      <div class="row"><span class="lbl">A, B, C = w w f</span><input type="text" class="short auto" id="a642" data-kind="gap" data-answer="f" data-points="0.5" aria-label="A, B, C = w w f"></div>
+      <div class="row"><span class="lbl">A, B, C = w f w</span><input type="text" class="short auto" id="a643" data-kind="gap" data-answer="f" data-points="0.5" aria-label="A, B, C = w f w"></div>
+      <div class="row"><span class="lbl">A, B, C = w f f</span><input type="text" class="short auto" id="a644" data-kind="gap" data-answer="f" data-points="0.5" aria-label="A, B, C = w f f"></div>
+      <div class="row"><span class="lbl">A, B, C = f w w</span><input type="text" class="short auto" id="a645" data-kind="gap" data-answer="w" data-points="0.5" aria-label="A, B, C = f w w"></div>
+      <div class="row"><span class="lbl">A, B, C = f w f</span><input type="text" class="short auto" id="a646" data-kind="gap" data-answer="f" data-points="0.5" aria-label="A, B, C = f w f"></div>
+      <div class="row"><span class="lbl">A, B, C = f f w</span><input type="text" class="short auto" id="a647" data-kind="gap" data-answer="w" data-points="0.5" aria-label="A, B, C = f f w"></div>
+      <div class="row"><span class="lbl">A, B, C = f f f</span><input type="text" class="short auto" id="a648" data-kind="gap" data-answer="w" data-points="0.5" aria-label="A, B, C = f f f"></div>
+      <div class="sol" hidden>
+        <p>Zeilenweise: A → B ist nur bei A = w, B = f falsch (Zeilen 3 und 4). ¬B ∨ C ist nur bei B = w, C = f falsch (Zeilen 2 und 6). F ist wahr, wenn beides wahr ist: Zeilen 1, 5, 7, 8.</p>
+        <p>Ergebnisspalte: <b>w, f, f, f, w, f, w, w</b>.</p>
+      </div>
+    </div>
+    <div class="q mc" data-answer="c" data-name="m65">
+      <p><span class="q-label">6.5</span>(1 Punkt) Was ist F aus 6.4?</p>
+      <div class="options">
+        <label><input type="radio" name="m65" id="m65a" value="a"> eine Tautologie</label>
+        <label><input type="radio" name="m65" id="m65b" value="b"> ein Widerspruch</label>
+        <label><input type="radio" name="m65" id="m65c" value="c"> erfüllbar, aber keine Tautologie</label>
+        <label><input type="radio" name="m65" id="m65d" value="d"> keine Formel</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: c.</span> In der Ergebnisspalte steht mindestens ein w (erfüllbar), aber auch f (keine Tautologie).</p></div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">6.6</span>(4 Punkte) Normalformen von F aus 6.4.</p>
+      <div class="row"><span class="lbl">Anzahl der Vollkonjunktionen in der DNF</span><input type="text" class="short auto" id="a66a" data-kind="num" data-answer="4" data-points="1" data-tol="0" aria-label="Anzahl der Vollkonjunktionen in der DNF"></div>
+      <div class="row"><span class="lbl">Anzahl der Volldisjunktionen in der KNF</span><input type="text" class="short auto" id="a66b" data-kind="num" data-answer="4" data-points="1" data-tol="0" aria-label="Anzahl der Volldisjunktionen in der KNF"></div>
+      <p>Schreibe die KNF auf:</p>
+      <textarea class="prose" id="t66" aria-label="6.6 KNF"></textarea>
+      <div class="sol" hidden>
+        <p>DNF: je w-Zeile ein Block, 4 Stück. KNF: je f-Zeile ein Block, auch 4 Stück (Zeilen www, wwf, … haben 4 w und 4 f).</p>
+        <p>KNF aus den f-Zeilen (w, w, f), (w, f, w), (w, f, f), (f, w, f), Wert w wird verneint:</p>
+        <p><b>(¬A ∨ ¬B ∨ C) ∧ (¬A ∨ B ∨ ¬C) ∧ (¬A ∨ B ∨ C) ∧ (A ∨ ¬B ∨ C)</b></p>
+        <p class="hint">Probe: Zeile (w, w, f) in den ersten Block: f ∨ f ∨ f = f. Jeder Block verbietet genau seine Zeile.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb66a" data-points="1"> vier Blöcke aus den f-Zeilen, alle drei Variablen in jedem Block (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb66b" data-points="1"> Verneinung richtig: Wert w → verneint, Wert f → unverneint (+1)</label>
+        </div>
+      </div>
+    </div>
+    <div class="q mc" data-answer="a" data-name="m67a">
+      <p><span class="q-label">6.7 a</span>(1 Punkt) Gilt ¬(A ∧ ¬B) ≡ ¬A ∨ B?</p>
+      <div class="options">
+        <label><input type="radio" name="m67a" id="m67aa" value="a"> Ja, nach De Morgan und doppelter Negation</label>
+        <label><input type="radio" name="m67a" id="m67ab" value="b"> Nein, richtig wäre ¬A ∧ B</label>
+        <label><input type="radio" name="m67a" id="m67ac" value="c"> Nein, bei A = f, B = f verschieden</label>
+        <label><input type="radio" name="m67a" id="m67ad" value="d"> Nur, wenn A wahr ist</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: a.</span> De Morgan: ¬(A ∧ ¬B) ≡ ¬A ∨ ¬¬B ≡ ¬A ∨ B. Das ist übrigens A → B.</p></div>
+    </div>
+    <div class="q mc" data-answer="b" data-name="m67b">
+      <p><span class="q-label">6.7 b</span>(1 Punkt) Gilt (A → B) → C ≡ A → (B → C)?</p>
+      <div class="options">
+        <label><input type="radio" name="m67b" id="m67ba" value="a"> Ja, die Implikation ist assoziativ</label>
+        <label><input type="radio" name="m67b" id="m67bb" value="b"> Nein, sie unterscheiden sich z. B. bei A = f, B = f, C = f</label>
+        <label><input type="radio" name="m67b" id="m67bc" value="c"> Ja, weil beide nur bei C = f falsch sind</label>
+        <label><input type="radio" name="m67b" id="m67bd" value="d"> Nein, sie unterscheiden sich nur bei A = w, B = w, C = w</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: b.</span> Bei A = B = C = f: links (f → f) → f = w → f = <b>f</b>, rechts f → (…) = <b>w</b>. Eine abweichende Zeile reicht, bei Pfeil-Ketten zählen die Klammern.</p></div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">6.8</span>(2 Punkte) Vereinfache ¬(¬A ∨ B) ∨ B mit den logischen Gesetzen. Nenne in jeder Zeile das Gesetz.</p>
+      <textarea class="prose" id="t68" aria-label="6.8 Vereinfachung"></textarea>
+      <div class="sol" hidden>
+        <p>1. ¬(¬A ∨ B) ∨ B ≡ (A ∧ ¬B) ∨ B (De Morgan, doppelte Negation)</p>
+        <p>2. ≡ (A ∨ B) ∧ (¬B ∨ B) (Distributivität)</p>
+        <p>3. ≡ (A ∨ B) ∧ w (Komplement)</p>
+        <p>4. ≡ <b>A ∨ B</b> (Neutralität). Probe A = w, B = f: links ¬(f ∨ f) ∨ f = w, rechts w.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb68a" data-points="1"> De Morgan richtig angewendet (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb68b" data-points="1"> Ergebnis A ∨ B mit Gesetzen begründet (+1)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 7 ================= -->
+  <section class="task" data-task="7" data-max="12">
+    <div class="task-head"><h2>Aufgabe 7 · Quantoren, Beweise und Induktion</h2><span class="pts">12 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q mc" data-answer="c" data-name="m71">
+      <p><span class="q-label">7.1</span>(1 Punkt) Was ist die Verneinung von ∀x ∃y: x &lt; y?</p>
+      <div class="options">
+        <label><input type="radio" name="m71" id="m71a" value="a"> ∀x ∃y: x ≥ y</label>
+        <label><input type="radio" name="m71" id="m71b" value="b"> ∃x ∃y: x ≥ y</label>
+        <label><input type="radio" name="m71" id="m71c" value="c"> ∃x ∀y: x ≥ y</label>
+        <label><input type="radio" name="m71" id="m71d" value="d"> ∀x ∀y: x ≥ y</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: c.</span> Jeden Quantor umdrehen, Reihenfolge behalten, ¬ nach innen: ∃x ∀y ¬(x &lt; y) ≡ ∃x ∀y: x ≥ y. Wer nur innen verneint und die Quantoren stehen lässt, macht den häufigsten Fehler.</p></div>
+    </div>
+    <div class="q mc" data-answer="d" data-name="m72">
+      <p><span class="q-label">7.2</span>(1 Punkt) Auf ℕ = {1, 2, 3, …}: Welche Aussage ist wahr?</p>
+      <div class="options">
+        <label><input type="radio" name="m72" id="m72a" value="a"> ∀x ∃y: y &lt; x</label>
+        <label><input type="radio" name="m72" id="m72b" value="b"> ∃x ∀y: y &lt; x</label>
+        <label><input type="radio" name="m72" id="m72c" value="c"> ∀x ∀y: x ≤ y</label>
+        <label><input type="radio" name="m72" id="m72d" value="d"> ∃x ∀y: x ≤ y</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: d.</span> x = 1 ist kleiner oder gleich jeder natürlichen Zahl, also ist ∃x ∀y: x ≤ y <b>wahr</b>. ∀x ∃y: y &lt; x scheitert an x = 1 (es gibt kein kleineres y in ℕ).</p></div>
+    </div>
+    <div class="q mc" data-answer="d" data-name="m73">
+      <p><span class="q-label">7.3</span>(1 Punkt) P(x) = „x ist Primzahl“, G(x) = „x ist gerade“. Wie formalisiert man „Jede Primzahl größer als 2 ist ungerade“?</p>
+      <div class="options">
+        <label><input type="radio" name="m73" id="m73a" value="a"> ∀x (P(x) ∧ x &gt; 2 ∧ ¬G(x))</label>
+        <label><input type="radio" name="m73" id="m73b" value="b"> ∃x (P(x) ∧ x &gt; 2 → ¬G(x))</label>
+        <label><input type="radio" name="m73" id="m73c" value="c"> ∀x ((P(x) ∧ x &gt; 2) → G(x))</label>
+        <label><input type="radio" name="m73" id="m73d" value="d"> ∀x ((P(x) ∧ x &gt; 2) → ¬G(x))</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: d.</span> „Jedes … ist …“ heißt ∀ mit →: Für alle x gilt, wenn x eine Primzahl über 2 ist, dann ist x nicht gerade. Mit ∧ statt → hieße es „jede Zahl ist eine ungerade Primzahl über 2“.</p></div>
+    </div>
+    <div class="q mc" data-answer="b" data-name="m74">
+      <p><span class="q-label">7.4</span>(1 Punkt) Welches Beweismuster passt am besten zu „Ist n² ungerade, dann ist n ungerade“?</p>
+      <div class="options">
+        <label><input type="radio" name="m74" id="m74a" value="a"> Gegenbeispiel</label>
+        <label><input type="radio" name="m74" id="m74b" value="b"> Kontraposition: Ist n gerade, dann ist n² gerade</label>
+        <label><input type="radio" name="m74" id="m74c" value="c"> Vollständige Induktion über n</label>
+        <label><input type="radio" name="m74" id="m74d" value="d"> Ein paar Beispiele (n = 1, 3, 5) nachrechnen</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: b.</span> Direkt ist n² schwer zu „entwurzeln“. Kontraposition: n = 2k ⇒ n² = 4k² = 2 · (2k²) ist gerade. Beispiele beweisen nie ein „für alle“, und ein Gegenbeispiel gibt es nicht, weil die Aussage stimmt.</p></div>
+    </div>
+    <div class="q mc" data-answer="a" data-name="m75">
+      <p><span class="q-label">7.5</span>(1 Punkt) Was zeigt ein einziges Gegenbeispiel?</p>
+      <div class="options">
+        <label><input type="radio" name="m75" id="m75a" value="a"> dass eine „für alle“-Aussage falsch ist</label>
+        <label><input type="radio" name="m75" id="m75b" value="b"> dass eine „es gibt“-Aussage falsch ist</label>
+        <label><input type="radio" name="m75" id="m75c" value="c"> dass eine „für alle“-Aussage wahr ist</label>
+        <label><input type="radio" name="m75" id="m75d" value="d"> nichts, man braucht mehrere</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: a.</span> Ein Gegenbeispiel widerlegt ein ∀. Um ein ∃ zu widerlegen, müsstest du zeigen, dass es für <b>alle</b> nicht gilt.</p></div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">7.6</span>(6 Punkte) Zeige mit vollständiger Induktion: 2 + 6 + 10 + … + (4n − 2) = 2n² für alle n ∈ ℕ.</p>
+      <div class="row"><span class="lbl">Wert der linken Seite für n = 10</span><input type="text" class="short auto" id="a76" data-kind="num" data-answer="200" data-points="1" data-tol="0" aria-label="Wert der linken Seite für n = 10"></div>
+      <textarea class="prose" id="t76" aria-label="7.6 Induktionsbeweis"></textarea>
+      <div class="sol" hidden>
+        <p><b>Anfang n = 1:</b> links 4 · 1 − 2 = 2, rechts 2 · 1² = 2 ✓.</p>
+        <p><b>Annahme:</b> Für ein festes n gilt 2 + 6 + … + (4n − 2) = 2n².</p>
+        <p><b>Schluss:</b> Das neue Glied ist 4(n + 1) − 2 = 4n + 2. Dann 2 + … + (4n − 2) + (4n + 2) = <b>2n²</b> + 4n + 2 (← Annahme) = 2(n² + 2n + 1) = 2(n + 1)² ✓.</p>
+        <p>Für n = 10: 2 · 10² = <b>200</b>.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb76a" data-points="1"> Induktionsanfang für n = 1 gerechnet (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb76b" data-points="1"> Annahme „für ein festes n“ formuliert (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb76c" data-points="1"> neues Glied 4n + 2 richtig und Annahme eingesetzt (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb76d" data-points="1"> zu 2(n + 1)² umgeformt (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb76e" data-points="1"> Stelle der Annahme markiert und am Ende „gilt für alle n ∈ ℕ“ gefolgert (+1)</label>
+        </div>
+      </div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">7.7</span>(1 Punkt) Wie viele Zeilen hat die Wahrheitstafel einer Formel mit den Variablen A, B, C, D, E?</p>
+      <div class="row"><span class="lbl">Zeilen</span><input type="text" class="short auto" id="a77" data-kind="num" data-answer="32" data-points="1" data-tol="0" aria-label="Zeilen"></div>
+      <div class="sol" hidden>
+        <p>2⁵ = <b>32</b>: Jede Variable verdoppelt die Zeilen. Genau das zeigt man auf den Folien mit Induktion.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 8 ================= -->
+  <section class="task" data-task="8" data-max="10">
+    <div class="task-head"><h2>Aufgabe 8 · Mengen</h2><span class="pts">10 Punkte</span><span class="badge" hidden></span></div>
+    <p class="hint">Mengen gibst du als Liste ein, z. B. 2, 4, 6 (Reihenfolge egal, Klammern nicht nötig).</p>
+    <div class="q">
+      <p><span class="q-label">8.1</span>(5 Punkte) Grundmenge G = {1, 2, …, 10}, M = {x ∈ G ∣ x ist durch 3 teilbar}, N = {x ∈ G ∣ x ist ungerade}. Berechne:</p>
+      <div class="row"><span class="lbl">M ∩ N</span><input type="text" class="gap auto" id="a81a" data-kind="set" data-answer="3,9" data-points="1" placeholder="z. B. 1, 2" aria-label="M ∩ N"></div>
+      <div class="row"><span class="lbl">M ∪ N</span><input type="text" class="gap auto" id="a81b" data-kind="set" data-answer="1,3,5,6,7,9" data-points="1" aria-label="M ∪ N"></div>
+      <div class="row"><span class="lbl">N ∖ M</span><input type="text" class="gap auto" id="a81c" data-kind="set" data-answer="1,5,7" data-points="1" aria-label="N ∖ M"></div>
+      <div class="row"><span class="lbl">M̅ (Komplement in G)</span><input type="text" class="gap auto" id="a81d" data-kind="set" data-answer="1,2,4,5,7,8,10" data-points="1" aria-label="M̅ (Komplement in G)"></div>
+      <div class="row"><span class="lbl">(M ∪ N)̅</span><input type="text" class="gap auto" id="a81e" data-kind="set" data-answer="2,4,8,10" data-points="1" aria-label="(M ∪ N)̅"></div>
+      <div class="sol" hidden>
+        <p>Erst aufzählen: M = {3, 6, 9}, N = {1, 3, 5, 7, 9}.</p>
+        <p>M ∩ N = <b>{3, 9}</b> (in beiden) · M ∪ N = <b>{1, 3, 5, 6, 7, 9}</b> (in mindestens einer) · N ∖ M = <b>{1, 5, 7}</b> (in N, nicht in M) · M̅ = <b>{1, 2, 4, 5, 7, 8, 10}</b> · (M ∪ N)̅ = <b>{2, 4, 8, 10}</b>.</p>
+        <p class="hint">De-Morgan-Probe: M̅ ∩ N̅ = {1, 2, 4, 5, 7, 8, 10} ∩ {2, 4, 6, 8, 10} = {2, 4, 8, 10} ✓.</p>
+      </div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">8.2</span>(2 Punkte) Mächtigkeiten mit M und N aus 8.1.</p>
+      <div class="row"><span class="lbl">|𝒫(M)|</span><input type="text" class="short auto" id="a82a" data-kind="num" data-answer="8" data-points="1" data-tol="0" aria-label="|𝒫(M)|"></div>
+      <div class="row"><span class="lbl">|M × N|</span><input type="text" class="short auto" id="a82b" data-kind="num" data-answer="15" data-points="1" data-tol="0" aria-label="|M × N|"></div>
+      <div class="sol" hidden>
+        <p>|M| = 3, also |𝒫(M)| = 2³ = <b>8</b>. |M × N| = |M| · |N| = 3 · 5 = <b>15</b>.</p>
+      </div>
+    </div>
+    <div class="q mc" data-answer="d" data-name="m83">
+      <p><span class="q-label">8.3</span>(1 Punkt) Welche Aussage ist für M = {3, 6, 9} <b>falsch</b>?</p>
+      <div class="options">
+        <label><input type="radio" name="m83" id="m83a" value="a"> 3 ∈ M</label>
+        <label><input type="radio" name="m83" id="m83b" value="b"> {3} ⊆ M</label>
+        <label><input type="radio" name="m83" id="m83c" value="c"> {3} ∈ 𝒫(M)</label>
+        <label><input type="radio" name="m83" id="m83d" value="d"> {3} ∈ M</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: d.</span> In M stehen nur Zahlen, keine Mengen, also ist {3} ∈ M falsch. {3} ist eine Teilmenge von M und damit ein Element der Potenzmenge.</p></div>
+    </div>
+    <div class="q mc" data-answer="a" data-name="m84">
+      <p><span class="q-label">8.4</span>(1 Punkt) Was bedeutet M ⊂ N auf den Folien?</p>
+      <div class="options">
+        <label><input type="radio" name="m84" id="m84a" value="a"> M ⊆ N und M ≠ N (echte Teilmenge)</label>
+        <label><input type="radio" name="m84" id="m84b" value="b"> M ⊆ N, Gleichheit erlaubt</label>
+        <label><input type="radio" name="m84" id="m84c" value="c"> M und N sind disjunkt</label>
+        <label><input type="radio" name="m84" id="m84d" value="d"> N ⊆ M</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: a.</span> Die Folien unterscheiden ⊆ („Teilmenge oder gleich“) und ⊂ (<b>echte</b> Teilmenge). {1} ⊂ {1, 2} ist wahr, {1, 2} ⊂ {1, 2} falsch.</p></div>
+    </div>
+    <div class="q mc" data-answer="c" data-name="m85">
+      <p><span class="q-label">8.5</span>(1 Punkt) Welche Gleichung gilt für alle Mengen (Komplement in einer Grundmenge G)?</p>
+      <div class="options">
+        <label><input type="radio" name="m85" id="m85a" value="a"> (M ∩ N)̅ = M̅ ∩ N̅</label>
+        <label><input type="radio" name="m85" id="m85b" value="b"> M ∖ N = N ∖ M</label>
+        <label><input type="radio" name="m85" id="m85c" value="c"> (M ∩ N)̅ = M̅ ∪ N̅</label>
+        <label><input type="radio" name="m85" id="m85d" value="d"> M × N = N × M</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: c.</span> De Morgan: Das Komplement dreht ∩ zu ∪ um, wie ¬(A ∧ B) ≡ ¬A ∨ ¬B. Differenz und kartesisches Produkt sind nicht vertauschbar.</p></div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 9 ================= -->
+  <section class="task" data-task="9" data-max="12">
+    <div class="task-head"><h2>Aufgabe 9 · Relationen und Abbildungen</h2><span class="pts">12 Punkte</span><span class="badge" hidden></span></div>
+    <p class="hint">Mengen gibst du als Liste ein, z. B. 2, 4, 6 (Reihenfolge egal, Klammern nicht nötig).</p>
+    <div class="q mc" data-answer="b" data-name="m91">
+      <p><span class="q-label">9.1</span>(1 Punkt) Auf M = {1, 2, 3, 4} ist R = {(1, 1), (2, 2), (3, 3), (4, 4), (1, 3), (3, 1), (2, 4), (4, 2)}. Welche Eigenschaften hat R?</p>
+      <div class="options">
+        <label><input type="radio" name="m91" id="m91a" value="a"> reflexiv und antisymmetrisch, nicht transitiv</label>
+        <label><input type="radio" name="m91" id="m91b" value="b"> reflexiv, symmetrisch und transitiv</label>
+        <label><input type="radio" name="m91" id="m91c" value="c"> symmetrisch, aber nicht reflexiv</label>
+        <label><input type="radio" name="m91" id="m91d" value="d"> nur transitiv</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: b.</span> Diagonale voll (reflexiv), zu jedem (x, y) auch (y, x) (symmetrisch), und alle Ketten wie 1R3, 3R1 ⇒ 1R1 sind drin (transitiv). Also eine Äquivalenzrelation. Nicht antisymmetrisch: 1R3 und 3R1, aber 1 ≠ 3.</p></div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">9.2</span>(2 Punkte) Gib für R aus 9.1 die Äquivalenzklasse von 1 und die Anzahl der Klassen an.</p>
+      <div class="row"><span class="lbl">[1]</span><input type="text" class="gap auto" id="a92a" data-kind="set" data-answer="1,3" data-points="1" placeholder="z. B. 1, 2" aria-label="[1]"></div>
+      <div class="row"><span class="lbl">Anzahl der Klassen</span><input type="text" class="short auto" id="a92b" data-kind="num" data-answer="2" data-points="1" data-tol="0" aria-label="Anzahl der Klassen"></div>
+      <div class="sol" hidden>
+        <p>[1] = alle x mit xR1: <b>{1, 3}</b>. Die andere Schublade ist [2] = {2, 4}. Zusammen <b>2</b> Klassen, disjunkt und zusammen ganz M.</p>
+      </div>
+    </div>
+    <div class="q mc" data-answer="c" data-name="m93">
+      <p><span class="q-label">9.3</span>(1 Punkt) Welche Eigenschaften hat „x teilt y“ auf ℕ?</p>
+      <div class="options">
+        <label><input type="radio" name="m93" id="m93a" value="a"> reflexiv, symmetrisch, transitiv</label>
+        <label><input type="radio" name="m93" id="m93b" value="b"> nur symmetrisch</label>
+        <label><input type="radio" name="m93" id="m93c" value="c"> reflexiv, antisymmetrisch, transitiv, nicht symmetrisch</label>
+        <label><input type="radio" name="m93" id="m93d" value="d"> keine der vier</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: c.</span> x teilt x (reflexiv). 2 teilt 4, aber 4 nicht 2 (nicht symmetrisch). Teilen sich x und y gegenseitig, ist x = y (antisymmetrisch, in ℕ). x | y und y | z ⇒ x | z (transitiv).</p></div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">9.4</span>(3 Punkte) Zeige, dass R₃ = {(m, n) ∈ ℤ × ℤ ∣ m − n ist durch 3 teilbar} eine Äquivalenzrelation ist.</p>
+      <textarea class="prose" id="t94" aria-label="9.4 Nachweis"></textarea>
+      <div class="sol" hidden>
+        <p>Schreibe m R₃ n ⇔ m − n = 3k mit k ∈ ℤ.</p>
+        <p><b>Reflexiv:</b> m − m = 0 = 3 · 0.</p>
+        <p><b>Symmetrisch:</b> m − n = 3k ⇒ n − m = 3 · (−k), −k ∈ ℤ.</p>
+        <p><b>Transitiv:</b> m − n = 3k und n − p = 3l ⇒ m − p = (m − n) + (n − p) = 3(k + l).</p>
+        <p class="hint">Mit Zahlenbeispielen allein gibt es keine Punkte: „ja“ braucht ein Argument für alle m, n, p.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb94a" data-points="1"> reflexiv allgemein gezeigt (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb94b" data-points="1"> symmetrisch allgemein gezeigt (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb94c" data-points="1"> transitiv allgemein gezeigt (+1)</label>
+        </div>
+      </div>
+    </div>
+    <p>Für 9.5 bis 9.8: f : {1, 2, 3, 4, 5} → {1, 2, 3, 4, 5, 6} mit f(1) = 3, f(2) = 5, f(3) = 3, f(4) = 6, f(5) = 1.</p>
+    <div class="q">
+      <p><span class="q-label">9.5</span>(2 Punkte) Bild und Urbild.</p>
+      <div class="row"><span class="lbl">Bildmenge f({1, …, 5})</span><input type="text" class="gap auto" id="a95a" data-kind="set" data-answer="1,3,5,6" data-points="1" placeholder="z. B. 1, 2" aria-label="Bildmenge f({1, …, 5})"></div>
+      <div class="row"><span class="lbl">Urbild f⁻¹({3, 4})</span><input type="text" class="gap auto" id="a95b" data-kind="set" data-answer="1,3" data-points="1" aria-label="Urbild f⁻¹({3, 4})"></div>
+      <div class="sol" hidden>
+        <p>Bildmenge: alle Pfeilspitzen einsammeln, <b>{1, 3, 5, 6}</b>. Urbild von {3, 4}: wer landet auf 3 oder 4? 1 und 3 landen auf 3, auf 4 landet niemand, also <b>{1, 3}</b>.</p>
+      </div>
+    </div>
+    <div class="q mc" data-answer="a" data-name="m96">
+      <p><span class="q-label">9.6</span>(1 Punkt) Ist f injektiv oder surjektiv?</p>
+      <div class="options">
+        <label><input type="radio" name="m96" id="m96a" value="a"> weder injektiv noch surjektiv</label>
+        <label><input type="radio" name="m96" id="m96b" value="b"> injektiv, nicht surjektiv</label>
+        <label><input type="radio" name="m96" id="m96c" value="c"> surjektiv, nicht injektiv</label>
+        <label><input type="radio" name="m96" id="m96d" value="d"> bijektiv</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: a.</span> f(1) = f(3) = 3: nicht injektiv. 2 und 4 werden nie getroffen: nicht surjektiv. Bei 5 Elementen links und 6 rechts kann f ohnehin nie surjektiv sein.</p></div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">9.7</span>(1 Punkt) g : {1, …, 6} → {0, 1, 2, 3}, y ↦ y mod 4. Berechne die Komposition.</p>
+      <div class="row"><span class="lbl">(g ∘ f)(4) =</span><input type="text" class="short auto" id="a97" data-kind="num" data-answer="2" data-points="1" data-tol="0" aria-label="(g ∘ f)(4) ="></div>
+      <div class="sol" hidden>
+        <p>Erst f: f(4) = 6, dann g: 6 mod 4 = <b>2</b> (6 = 1 · 4 + 2).</p>
+      </div>
+    </div>
+    <div class="q mc" data-answer="c" data-name="m98">
+      <p><span class="q-label">9.8</span>(1 Punkt) Welche Zuordnung von {1, 2, 3} nach {a, b} ist <b>keine</b> Abbildung?</p>
+      <div class="options">
+        <label><input type="radio" name="m98" id="m98a" value="a"> 1 ↦ a, 2 ↦ a, 3 ↦ a</label>
+        <label><input type="radio" name="m98" id="m98b" value="b"> 1 ↦ b, 2 ↦ a, 3 ↦ b</label>
+        <label><input type="radio" name="m98" id="m98c" value="c"> 1 ↦ a, 2 ↦ b (3 bekommt nichts)</label>
+        <label><input type="radio" name="m98" id="m98d" value="d"> 1 ↦ a, 2 ↦ b, 3 ↦ a</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: c.</span> Bei einer Abbildung bekommt <b>jedes</b> Element links genau einen Partner. Wenn 3 nichts bekommt, ist es keine Abbildung. Dass alle auf a gehen, ist dagegen erlaubt.</p></div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 10 ================= -->
+  <section class="task" data-task="10" data-max="10">
+    <div class="task-head"><h2>Aufgabe 10 · Algebraische Strukturen: Reste, Gruppe, Ring, Körper</h2><span class="pts">10 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q">
+      <p><span class="q-label">10.1</span>(4 Punkte) Rechnen mit Resten.</p>
+      <div class="row"><span class="lbl">29 mod 6 =</span><input type="text" class="short auto" id="a101a" data-kind="num" data-answer="5" data-points="1" data-tol="0" aria-label="29 mod 6 ="></div>
+      <div class="row"><span class="lbl">−7 mod 4 =</span><input type="text" class="short auto" id="a101b" data-kind="num" data-answer="1" data-points="1" data-tol="0" aria-label="−7 mod 4 ="></div>
+      <div class="row"><span class="lbl">7 · 8 in ℤ₉ =</span><input type="text" class="short auto" id="a101c" data-kind="num" data-answer="2" data-points="1" data-tol="0" aria-label="7 · 8 in ℤ₉ ="></div>
+      <div class="row"><span class="lbl">Lösung x von 5 + x = 2 in (ℤ₇, +)</span><input type="text" class="short auto" id="a101d" data-kind="num" data-answer="4" data-points="1" data-tol="0" aria-label="Lösung x von 5 + x = 2 in (ℤ₇, +)"></div>
+      <div class="sol" hidden>
+        <p>29 = 4 · 6 + 5 → <b>5</b>. −7 = (−2) · 4 + 1 → <b>1</b> (der Rest ist nie negativ). 7 · 8 = 56 = 6 · 9 + 2 → <b>2</b>.</p>
+        <p>5 + x = 2: Inverses von 5 bezüglich + ist 7 − 5 = 2, also x = 2 + 2 = <b>4</b>. Probe: 5 + 4 = 9 → 2.</p>
+      </div>
+    </div>
+    <div class="q mc" data-answer="d" data-name="m102">
+      <p><span class="q-label">10.2</span>(1 Punkt) Warum ist ({1, 2, 3, 4, 5}, · mod 6) keine Gruppe?</p>
+      <div class="options">
+        <label><input type="radio" name="m102" id="m102a" value="a"> Weil · nicht assoziativ ist.</label>
+        <label><input type="radio" name="m102" id="m102b" value="b"> Weil es kein neutrales Element gibt.</label>
+        <label><input type="radio" name="m102" id="m102c" value="c"> Weil die Menge ungerade viele Elemente hat.</label>
+        <label><input type="radio" name="m102" id="m102d" value="d"> Weil 2 · 3 = 0 aus der Menge fällt und 2 kein Inverses hat.</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: d.</span> 2 · 3 = 6 → 0, das Ergebnis liegt nicht in der Menge, und in der Zeile von 2 (2, 4, 0, 2, 4) steht keine 1. Das neutrale Element 1 gibt es, und · mod 6 ist assoziativ.</p></div>
+    </div>
+    <div class="q mc" data-answer="b" data-name="m103">
+      <p><span class="q-label">10.3</span>(1 Punkt) Welche Struktur ist ein <b>Körper</b>?</p>
+      <div class="options">
+        <label><input type="radio" name="m103" id="m103a" value="a"> (ℤ, +, ·)</label>
+        <label><input type="radio" name="m103" id="m103b" value="b"> (ℤ₁₁, +, ·)</label>
+        <label><input type="radio" name="m103" id="m103c" value="c"> (ℤ₁₂, +, ·)</label>
+        <label><input type="radio" name="m103" id="m103d" value="d"> (ℕ, +, ·)</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: b.</span> 11 ist eine Primzahl, also hat jedes a ≠ 0 in ℤ₁₁ ein Inverses. ℤ ist nur ein Ring (2 hat kein Inverses), ℤ₁₂ hat Nullteiler (3 · 4 = 0), und ℕ ist bezüglich + nicht einmal eine Gruppe.</p></div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">10.4</span>(3 Punkte) Bestimme das Inverse von 7 in ℤ₂₆ mit dem erweiterten euklidischen Algorithmus.</p>
+      <div class="row"><span class="lbl">7⁻¹ in ℤ₂₆ =</span><input type="text" class="short auto" id="a104" data-kind="num" data-answer="15" data-points="2" data-tol="0" aria-label="7⁻¹ in ℤ₂₆ ="></div>
+      <textarea class="prose" id="t104" aria-label="10.4 Rechenweg"></textarea>
+      <div class="sol" hidden>
+        <p><b>Teilen mit Rest:</b> 26 = 3 · 7 + 5, dann 7 = 1 · 5 + 2, dann 5 = 2 · 2 + 1, dann 2 = 2 · 1 + 0. Letzter Rest ≠ 0 ist 1 = ggT(7, 26).</p>
+        <p><b>Rückwärts:</b> 1 = 5 − 2 · 2 = 5 − 2 · (7 − 5) = 3 · 5 − 2 · 7 = 3 · (26 − 3 · 7) − 2 · 7 = 3 · 26 − 11 · 7.</p>
+        <p>s = −11, also 7⁻¹ = −11 mod 26 = <b>15</b>. Probe: 7 · 15 = 105 = 4 · 26 + 1 ✓.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb104" data-points="1"> Divisionskette und Rückwärtseinsetzen vollständig, s mod 26 genommen (+1)</label>
+        </div>
+      </div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">10.5</span>(1 Punkt) Gib (ℤ₉)* an, also alle Elemente von ℤ₉ mit Inversem bezüglich ·.</p>
+      <div class="row"><span class="lbl">(ℤ₉)* =</span><input type="text" class="gap auto" id="a105" data-kind="set" data-answer="1,2,4,5,7,8" data-points="1" placeholder="z. B. 1, 2" aria-label="(ℤ₉)* ="></div>
+      <div class="sol" hidden>
+        <p>Inverses gibt es genau bei ggT(a, 9) = 1, also für alle a, die nicht durch 3 teilbar sind: <b>{1, 2, 4, 5, 7, 8}</b>. Zum Beispiel 2 · 5 = 10 → 1 und 4 · 7 = 28 → 1.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="actions">
+    <button type="button" class="primary" id="checkBottom">Prüfen</button>
+    <button type="button" id="resetBtn">Alles löschen</button>
+    <span class="confirm" id="resetConfirm" hidden>Wirklich alle Antworten löschen?
+      <button type="button" id="resetYes">Ja, löschen</button>
+      <button type="button" id="resetNo">Abbrechen</button>
+    </span>
+  </div>
+  <p class="hint" style="margin-top:1rem">Eigene Übungsklausur, keine offizielle Klausur. Aufbau und Punkte (120 Punkte für 120 Minuten, je die Hälfte für Analysis und für Logik und Algebra) sind eine Annahme, weil die Dozenten noch keine Hinweise zur Klausur gegeben haben. Alle Ergebnisse wurden mit Python nachgerechnet. Deine Eingaben werden nur in diesem Browser gespeichert.</p>
+  </form>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var KEY = "probeklausur-mathe-v1";
+  var form = document.getElementById("exam");
+  var checked = false;
+  var MAX = { 1: 12, 2: 14, 3: 8, 4: 12, 5: 14, 6: 16, 7: 12, 8: 10, 9: 12, 10: 10 };
+  var STARTCODE = {};
+
+  function fields() { return form.querySelectorAll("input, textarea, select"); }
+  function save() {
+    var d = {};
+    fields().forEach(function (el) { if (!el.id) return; d[el.id] = (el.type === "radio" || el.type === "checkbox") ? el.checked : el.value; });
+    d.__checked = checked;
+    try { localStorage.setItem(KEY, JSON.stringify(d)); } catch (e) {}
+  }
+  function load() {
+    var raw = null; try { raw = localStorage.getItem(KEY); } catch (e) {}
+    if (!raw) return; var d; try { d = JSON.parse(raw); } catch (e) { return; }
+    fields().forEach(function (el) {
+      if (!el.id || !(el.id in d)) return;
+      if (el.type === "radio" || el.type === "checkbox") el.checked = !!d[el.id]; else el.value = d[el.id];
+    });
+    if (d.__checked) grade();
+  }
+  form.addEventListener("input", function (ev) { save(); if (checked && ev.target.classList.contains("rb")) grade(); });
+  form.addEventListener("change", save);
+  form.addEventListener("submit", function (e) { e.preventDefault(); });
+
+  function normText(s) { return String(s).replace(/\r/g, "").split("\n").map(function (l) { return l.trim().replace(/\s+/g, " "); }).filter(function (l) { return l; }).join("\n"); }
+  function normGap(s) { return String(s).replace(/\s+/g, "").replace(/'/g, "\"").toLowerCase(); }
+  // Zahl aus deutscher Schreibweise lesen: "1.200", "12,5 %", "48,60 €", "-3"
+  function parseNum(s) {
+    var t = String(s).replace(/[\s€%]/g, "").replace(/[^0-9,.\-]/g, "");
+    if (t.indexOf(",") !== -1) t = t.replace(/\./g, "").replace(",", ".");
+    else if (/^-?\d{1,3}(\.\d{3})+$/.test(t)) t = t.replace(/\./g, "");
+    return t === "" ? NaN : parseFloat(t);
+  }
+  function numSet(s) { return (String(s).match(/-?\d+/g) || []).map(Number).sort(function (a, b) { return a - b; }).join(","); }
+  function mark(el, ok) { el.classList.remove("mark-ok", "mark-bad"); el.classList.add(ok ? "mark-ok" : "mark-bad"); }
+  function clearMarks() { document.querySelectorAll(".mark-ok, .mark-bad").forEach(function (el) { el.classList.remove("mark-ok", "mark-bad"); }); }
+  function fmt(n) { var r = Math.round(n * 10) / 10; return (r % 1 === 0 ? r.toFixed(0) : r.toFixed(1)).replace(".", ","); }
+
+  function gradeSection(sec) {
+    var s = 0;
+    // Single Choice
+    sec.querySelectorAll(".mc").forEach(function (q) {
+      var ans = q.dataset.answer, chosen = q.querySelector("input:checked"), ok = !!chosen && chosen.value === ans;
+      if (ok) s += 1;
+      q.querySelector('input[value="' + ans + '"]').parentElement.classList.add("mark-ok");
+      if (chosen && !ok) chosen.parentElement.classList.add("mark-bad");
+    });
+    // Automatisch bewertete Felder
+    sec.querySelectorAll(".auto").forEach(function (el) {
+      var kind = el.dataset.kind, answers = el.dataset.answer.split("|"), v = el.value, ok = false;
+      if (kind === "set") ok = numSet(v) === numSet(answers[0]);
+      else if (kind === "gap") ok = answers.some(function (a) { return normGap(a) === normGap(v); });
+      else if (kind === "num") { var x = parseNum(v), tol = Number(el.dataset.tol || 0.01); ok = !isNaN(x) && answers.some(function (a) { return Math.abs(parseNum(a) - x) <= tol; }); }
+      else ok = answers.some(function (a) { return normText(a) === normText(v); });
+      if (ok) s += Number(el.dataset.points);
+      mark(el, ok);
+    });
+    // Fehler finden
+    sec.querySelectorAll(".errblock").forEach(function (blk) {
+      var exp = JSON.parse(blk.dataset.expected), used = exp.map(function () { return false; });
+      var lines = blk.querySelectorAll(".eline"), types = blk.querySelectorAll(".etype");
+      lines.forEach(function (l, i) {
+        var line = parseInt(l.value, 10), t = types[i] ? types[i].value : null, hit = -1;
+        exp.forEach(function (e, k) { if (hit < 0 && !used[k] && e.line.indexOf(line) !== -1 && (!e.type || e.type === t)) hit = k; });
+        if (hit >= 0) { used[hit] = true; s += exp[hit].pts; }
+        mark(l, hit >= 0); if (types[i]) mark(types[i], hit >= 0);
+      });
+    });
+    // Selbstbewertung
+    sec.querySelectorAll(".rb").forEach(function (c) { if (c.checked) s += Number(c.dataset.points); });
+    sec.querySelectorAll(".sol").forEach(function (x) { x.hidden = false; });
+    return Math.min(Math.round(s * 100) / 100, Number(sec.dataset.max));
+  }
+
+  function grade() {
+    checked = true; clearMarks();
+    var total = 0;
+    document.querySelectorAll("section.task").forEach(function (sec) {
+      var k = sec.dataset.task, got = gradeSection(sec), max = MAX[k]; total += got;
+      var b = sec.querySelector(".badge"); b.hidden = false;
+      b.className = "badge " + (got >= max - 0.001 ? "full" : got > 0 ? "part" : "none");
+      b.textContent = fmt(got) + " / " + max + " P";
+      document.getElementById("ov" + k).textContent = fmt(got) + " / " + max;
+    });
+    document.getElementById("ovSum").textContent = fmt(total) + " / 120";
+    document.getElementById("scoreTop").textContent = fmt(total) + " / 120 Punkte";
+    var res = document.getElementById("result"); res.hidden = false;
+    res.innerHTML = '<div class="big">' + fmt(total) + ' von 120 Punkten</div><p>' + (total >= 60 ? "Bestanden (ab 60 Punkten)." : "Noch nicht bestanden. Ab 60 Punkten ist es geschafft.") +
+      '</p><p class="hint">Bei Erklärungen, Korrekturen und eigenem Code sind jetzt die Musterlösungen mit Häkchen eingeblendet. Hak ab, was bei dir stimmt, die Punkte rechnen sich sofort neu. Mit „Lösungen ausblenden“ versteckst du alles wieder, deine Antworten bleiben.</p>';
+    document.getElementById("hideTop").hidden = false;
+    save();
+  }
+
+  function hideSolutions() {
+    checked = false; clearMarks();
+    document.querySelectorAll(".sol").forEach(function (x) { x.hidden = true; });
+    document.querySelectorAll(".badge").forEach(function (b) { b.hidden = true; });
+    document.getElementById("result").hidden = true;
+    Object.keys(MAX).forEach(function (k) { document.getElementById("ov" + k).textContent = MAX[k]; });
+    document.getElementById("ovSum").textContent = "120";
+    document.getElementById("scoreTop").textContent = "noch nicht geprüft";
+    document.getElementById("hideTop").hidden = true;
+    save();
+  }
+
+  function goCheck() { grade(); document.getElementById("result").scrollIntoView({ block: "start" }); }
+  document.getElementById("checkTop").addEventListener("click", goCheck);
+  document.getElementById("checkBottom").addEventListener("click", goCheck);
+  document.getElementById("hideTop").addEventListener("click", function () { hideSolutions(); window.scrollTo(0, 0); });
+
+  var rc = document.getElementById("resetConfirm");
+  document.getElementById("resetBtn").addEventListener("click", function () { rc.hidden = false; });
+  document.getElementById("resetNo").addEventListener("click", function () { rc.hidden = true; });
+  document.getElementById("resetYes").addEventListener("click", function () {
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    form.reset(); Object.keys(STARTCODE).forEach(function (id) { document.getElementById(id).value = STARTCODE[id]; });
+    hideSolutions(); rc.hidden = true; stopTimer(); remaining = 7200; renderTimer(); timerBtn.textContent = "Zeit starten";
+  });
+
+  document.querySelectorAll("textarea.code").forEach(function (ta) {
+    ta.addEventListener("keydown", function (e) {
+      if (e.key === "Tab" && !e.shiftKey) { e.preventDefault(); var s = ta.selectionStart, en = ta.selectionEnd;
+        ta.value = ta.value.slice(0, s) + "    " + ta.value.slice(en); ta.selectionStart = ta.selectionEnd = s + 4; save(); }
+    });
+  });
+
+  var remaining = 7200, handle = null, timerEl = document.getElementById("timer"), timerBtn = document.getElementById("timerBtn");
+  function renderTimer() { var m = Math.floor(remaining / 60), s = remaining % 60; timerEl.textContent = String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0"); timerEl.classList.toggle("low", remaining <= 300); }
+  function stopTimer() { if (handle) { clearInterval(handle); handle = null; } }
+  timerBtn.addEventListener("click", function () {
+    if (handle) { stopTimer(); timerBtn.textContent = "Weiter"; return; }
+    if (remaining <= 0) remaining = 7200;
+    handle = setInterval(function () { remaining -= 1; renderTimer(); if (remaining <= 0) { stopTimer(); timerBtn.textContent = "Neu starten"; timerEl.textContent = "00:00 Zeit um"; } }, 1000);
+    timerBtn.textContent = "Pause";
+  });
+  renderTimer();
+  load();
+})();
+</script>

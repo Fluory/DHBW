@@ -4,840 +4,1274 @@
       "id": "git-k001",
       "topic": "Information und Digitalisierung",
       "front": "Was ist der Unterschied zwischen **Daten** und **Information**?",
-      "back": "Daten = Fakten ohne Bedeutung (z. B. 7). Erst mit Kontext werden sie Information: „7 °C in Deutschland“ heißt kalt, „7 °F in den USA“ heißt sehr kalt.",
+      "back": "Daten sind reine Zeichen ohne Bedeutung, zum Beispiel die Zahl 7. Erst ein **Kontext** macht daraus eine Information.\nWarum das wichtig ist: Dieselben Daten können ganz verschiedene Informationen sein.\nBeispiel: „7 °C in Deutschland“ heißt kalt, „7 °F in den USA“ heißt sehr kalt (etwa −14 °C).",
       "exam": true
     },
     {
       "id": "git-k002",
       "topic": "Information und Digitalisierung",
       "front": "Nenne die **drei Sichtweisen** der Digitalisierung.",
-      "back": "betriebswirtschaftlich · gesellschaftlich · technisch.\nTechnisch = analoge Signale werden **zeit- und wertediskret** (binär), z. B. 44 100 Messungen pro Sekunde.",
+      "back": "**Betriebswirtschaftlich** (Daten und Algorithmen für neue Prozesse, Produkte, Geschäftsmodelle), **gesellschaftlich** (Lebens- und Arbeitswelten wandern auf eine digitale Ebene, Stichwort Disruption) und **technisch**.\nTechnisch heißt: Analoge Signale werden **zeit- und wertediskret**, meist binär.\nBeispiel: Ein Mikrofonsignal wird 44 100-mal pro Sekunde gemessen (zeitdiskret) und jeder Wert auf eine von 65 536 Stufen gerundet (wertediskret, 16 Bit).",
       "exam": true
     },
     {
       "id": "git-k003",
       "topic": "Information und Digitalisierung",
       "front": "Nenne die **Phasen der Digitalisierung** mit Beispiel.",
-      "back": "1 einzelne Funktion (Rechnung automatisch) → 2 Funktionsbereich (Rechnungswesen) → 3 integrierter Prozess (Auftragsbearbeitung) → 4 1:1 überbetrieblich (lieferantengeführte Bestände) → heute m:n (B2B-Marktplätze).",
+      "back": "1 einzelne Funktion (Rechnung automatisch erstellen) → 2 ganzer Funktionsbereich (Rechnungswesen) → 3 integrierter Prozess über Abteilungen (Auftragsbearbeitung) → 4 1:1 mit einem Partner (lieferantengeführte Bestände) → heute m:n mit allen Partnern (B2B-Marktplätze).\nDie Logik dahinter: Die Reichweite wächst von einem Arbeitsschritt bis zu allen Partnern.\nNicht verwechseln mit den fünf Epochen der IT-Infrastruktur.",
       "exam": true
     },
     {
       "id": "git-k004",
       "topic": "IT-Infrastruktur und Cloud",
       "front": "Nenne die **sieben Hauptkomponenten** einer IT-Infrastruktur.",
-      "back": "1 Hardware · 2 Betriebssysteme · 3 Datenverwaltung (DBMS) · 4 Netzwerke · 5 Anwendungssysteme (ERP) · 6 Internet als Plattform · 7 Beratung/Systemintegratoren.\nOft vergessen: 6 und 7!",
+      "back": "1 Hardwareplattformen · 2 Betriebssysteme · 3 Datenverwaltung und -speicherung · 4 Netzwerke und Telekommunikation · 5 Anwendungssysteme · 6 Internet als Plattform · 7 Beratung und Systemintegratoren.\nMerkhilfe: ein Stapel von der Hardware unten bis zu den Menschen, die alles zusammenbauen.\nBeispiel Bäckereikette: Kassen-PCs (1), Windows (2), Kundendatenbank (3), WLAN (4), Warenwirtschaft (5), Onlinebestellung (6), IT-Dienstleister (7). Oft vergessen: 6 und 7.",
       "exam": true
     },
     {
       "id": "git-k005",
       "topic": "IT-Infrastruktur und Cloud",
       "front": "Was ist **Client-Server**, was ist **N-Tier**?",
-      "back": "Client = Eingabestelle des Benutzers, Server = hält gemeinsame Daten und Dienste.\n2-Tier: Client ↔ Server. N-Tier: Client → Webserver → Anwendungsserver → Datenbank.",
+      "back": "Der **Client** ist die Eingabestelle des Benutzers, der **Server** hält die gemeinsamen Daten und Dienste. Der Client fragt, der Server antwortet.\n**2-Tier** heißt: Client spricht direkt mit einem Server. **N-Tier** verteilt die Arbeit auf mehrere Server-Schichten: Client → Webserver → Anwendungsserver → Datenbankserver.\nBild: Gast (Client), Kellner (Webserver), Koch (Anwendungsserver), Lager (Datenbank).",
       "exam": true
     },
     {
       "id": "git-k006",
       "topic": "IT-Infrastruktur und Cloud",
       "front": "IaaS, PaaS, SaaS – je ein Beispiel?",
-      "back": "IaaS: virtuellen Server mieten, Linux selbst installieren (AWS).\nPaaS: nur eigenen Code hochladen (Google App Engine).\nSaaS: fertige Software im Browser (Salesforce).",
+      "back": "Die Frage ist immer: Wie viel betreibt der Anbieter, wie viel du?\n**IaaS**: nur virtuelle Server mieten, Betriebssystem selbst installieren (z. B. AWS, STACKIT). **PaaS**: Laufzeit und Datenbank kommen dazu, du lädst nur deinen Code hoch (Google App Engine). **SaaS**: fertige Software im Browser, du nutzt sie nur (Salesforce, Microsoft 365).\nPizza-Bild: gemietete Küche, Fertigteig-Station, Pizzeria.",
       "exam": true
     },
     {
       "id": "git-k007",
       "topic": "Mooresches Gesetz",
       "front": "Was hat **Moore** 1965 wirklich gesagt?",
-      "back": "Die **Anzahl der Transistoren** pro Chip verdoppelt sich jährlich, später korrigiert: alle **2 Jahre**.\nEs geht um die Anzahl, nicht um Größe oder Leistung.",
+      "back": "Die **Anzahl der Transistoren** pro Chip verdoppelt sich, zuerst jährlich, später korrigiert auf alle **2 Jahre**.\nEs geht um eine Anzahl, nicht um Leistung, Größe oder Preis. Leistung und Preis sind spätere Interpretationen, nicht von Moore.\nBeispiel: 1 Mrd. Transistoren werden nach 2 Jahren 2 Mrd., nach 4 Jahren 4 Mrd.",
       "exam": true
     },
     {
       "id": "git-k008",
       "topic": "Mooresches Gesetz",
       "front": "Nenne die **drei Interpretationen** des Mooreschen Gesetzes.",
-      "back": "Alle **18 Monate**: 1) Leistung der Mikroprozessoren verdoppelt sich, 2) Leistung der Computer verdoppelt sich, 3) Preis der Informationsverarbeitung **halbiert** sich.",
+      "back": "Alle **18 Monate**: 1) Die Leistung von **Mikroprozessoren** verdoppelt sich. 2) Die Leistung von **Computern** verdoppelt sich. 3) Der **Preis** für Informationsverarbeitung **halbiert** sich.\nKeine davon stammt von Moore selbst.\nFallen im Multiple Choice: „Speicher verdoppelt sich“, „Größe halbiert sich“, „Kosten verdoppeln sich“ sind falsch.",
       "exam": true
     },
     {
       "id": "git-k009",
       "topic": "Mooresches Gesetz",
       "front": "Rechnen: Verdopplung alle 2 Jahre – Faktor nach 10 Jahren?",
-      "back": "10 / 2 = 5 Verdopplungen → 2⁵ = **32-fach** (nicht 10-fach!).\nFormel: Faktor = 2 hoch (Zeitraum / Verdopplungszeit).",
+      "back": "Faktor **32**. Erst die Verdopplungen zählen: 10 Jahre / 2 Jahre = 5. Dann 2⁵ = 32.\nWarum nicht 10-fach? Jede Verdopplung nimmt mal 2, nicht plus 2: 1 → 2 → 4 → 8 → 16 → 32.\nFormel: Faktor = 2 hoch (Zeitraum / Verdopplungszeit).",
       "exam": true
     },
     {
       "id": "git-k010",
       "topic": "Zahlendarstellung",
       "front": "Stellenwerte für 8 Bit auswendig?",
-      "back": "128 64 32 16 8 4 2 1.\nHex: A=10, B=11, C=12, D=13, E=14, F=15. 16er-Potenzen: 1, 16, 256, 4096.",
+      "back": "Binär: 128 64 32 16 8 4 2 1 (von links nach rechts, die letzte Stelle ist immer 1). Hex-Stellen: 4096, 256, 16, 1. Hexziffern A = 10 bis F = 15.\nWarum auswendig: Damit rechnest du jede Umwandlung ohne Taschenrechner.\nBeispiel: 0100 0001 = 64 + 1 = 65, und 2F₁₆ = 2 · 16 + 15 = 47.",
       "exam": true
     },
     {
       "id": "git-k011",
       "topic": "Zahlendarstellung",
       "front": "Wie rechnest du **dezimal → binär**? (Beispiel 235)",
-      "back": "Restwertmethode: immer durch 2 teilen, Reste **von unten nach oben** lesen.\n235 → `1110 1011`₂.",
+      "back": "Mit der **Restwertmethode**: immer ganzzahlig durch 2 teilen, den Rest notieren, mit dem Ergebnis weiterrechnen, bis 0 herauskommt. Die Reste **von unten nach oben** lesen.\nWarum von unten? Der erste Rest ist die letzte Stelle (Wert 1).\nBeispiel 235: Reste 1, 1, 0, 1, 0, 1, 1, 1 → von unten gelesen **1110 1011₂**. Probe: 128 + 64 + 32 + 8 + 2 + 1 = 235.",
       "exam": true
     },
     {
       "id": "git-k012",
       "topic": "Zahlendarstellung",
       "front": "1011 0110₂ = ? (dezimal, ohne Vorzeichen)",
-      "back": "Stellenwerte über die Einsen addieren: 128 + 32 + 16 + 4 + 2 = **182**.",
+      "back": "**182**. Über jede 1 den Stellenwert schreiben und addieren.\n1011 0110: Einsen an den Stellen 128, 32, 16, 4 und 2.\nRechnung: 128 + 32 + 16 + 4 + 2 = 182. Hex-Probe: 1011 | 0110 = B6₁₆ = 11 · 16 + 6 = 182.",
       "exam": true
     },
     {
       "id": "git-k013",
       "topic": "Zahlendarstellung",
       "front": "Binär → Oktal/Hex: Wie gruppierst du?",
-      "back": "Immer **von rechts** gruppieren: Oktal 3 Bit, Hex 4 Bit, links mit Nullen auffüllen.\n100₁₀ = 0110 0100 → 001|100|100 = **144₈** und 0110|0100 = **64₁₆**. Probe: 64 + 32 + 4 = 100 ✓",
+      "back": "Immer **von rechts** gruppieren: 3 Bit für eine Oktalziffer, 4 Bit für eine Hexziffer, links mit Nullen auffüllen.\nWarum es klappt: 8 = 2³ und 16 = 2⁴.\nBeispiel 100₁₀ = 0110 0100₂: Hex 0110 | 0100 = **64₁₆**, Oktal 001 | 100 | 100 = **144₈**. Probe: 6 · 16 + 4 = 100.",
       "exam": true
     },
     {
       "id": "git-k014",
       "topic": "Zahlendarstellung",
       "front": "Zweierkomplement von −25 in 8 Bit?",
-      "back": "1) 25 = `0001 1001` 2) invertieren: `1110 0110` 3) +1: `1110 0111`.\nProbe: −128 + 64 + 32 + 4 + 2 + 1 = −25 ✓",
+      "back": "**1110 0111**. Rezept: Betrag in 8 Bit schreiben, alle Bits umdrehen, 1 addieren.\nSchritte: 25 = 0001 1001 → umgedreht 1110 0110 → +1 = 1110 0111.\nProbe: Das erste Bit zählt −128: −128 + 64 + 32 + 4 + 2 + 1 = −25.",
       "exam": true
     },
     {
       "id": "git-k015",
       "topic": "Zahlendarstellung",
       "front": "Wie liest du `1111 0001` im Zweierkomplement?",
-      "back": "Erstes Bit 1 → negativ. −128-Probe: −128 + 64 + 32 + 16 + 1 = **−15**.\nAchtung: Nicht 241 und das Minus nicht vergessen!",
+      "back": "**−15**. Das erste Bit ist 1, also ist die Zahl negativ.\n−128-Probe: Das höchste Bit zählt −128, alle anderen wie gewohnt: −128 + 64 + 32 + 16 + 1 = −15.\nOder: umdrehen 0000 1110, +1 = 0000 1111 = 15, Minus davor. Falle: als 241 lesen (das wäre ohne Vorzeichen).",
       "exam": true
     },
     {
       "id": "git-k016",
       "topic": "Zahlendarstellung",
       "front": "Wie rechnest du 42 − 17 in 8 Bit?",
-      "back": "a − b = a + (−b). Komplement von **17** (der Zahl hinter dem Minus): `1110 1111`.\n`0010 1010` + `1110 1111` = (1)`0001 1001` → Übertrag weg → **25**.",
+      "back": "Aus a − b wird a + (−b). Der Rechner braucht dafür keine eigene Subtrahierschaltung.\nSchritte: 42 = 0010 1010. −17: 0001 0001 → 1110 1110 → +1 = 1110 1111.\nSumme: 0010 1010 + 1110 1111 = (1) 0001 1001. Die 1 links fällt weg → 0001 1001 = **25**.",
       "exam": true
     },
     {
       "id": "git-k017",
       "topic": "Zahlendarstellung",
       "front": "Wann ist ein **Überlauf**? (8 Bit Zweierkomplement)",
-      "back": "Wenn das Ergebnis nicht in −128 … +127 passt. Faustregel: plus + plus ergibt minus (oder minus + minus ergibt plus).\n90 + 60 = 150 → `1001 0110` = −106 → Überlauf.",
+      "back": "Wenn das richtige Ergebnis nicht in −128 … +127 passt. Dann zeigt das Bitmuster einen falschen Wert.\nErkennen: plus + plus ergibt minus, oder minus + minus ergibt plus. Plus + minus läuft nie über.\nBeispiel: 90 + 60 = 150 > 127. Das Muster 1001 0110 wird als −106 gelesen → Überlauf.",
       "exam": true
     },
     {
       "id": "git-k018",
       "topic": "Zahlendarstellung",
       "front": "Wertebereiche bei 8 Bit?",
-      "back": "Ohne Vorzeichen: 0 … 255.\nZweierkomplement: **−128 … +127** (nur eine Null).\nVorzeichen-Betrag und Einerkomplement: −127 … +127 (zwei Nullen).",
+      "back": "Ohne Vorzeichen: **0 … 255** (2⁸ = 256 Muster). Zweierkomplement: **−128 … +127**, nur eine Null. Vorzeichen-Betrag und Einerkomplement: −127 … +127, mit zwei Nullen (+0 und −0).\nWarum ist das Zweierkomplement unsymmetrisch? Die Null belegt ein Muster auf der positiven Seite.\nAllgemein bei n Bit: −2ⁿ⁻¹ … 2ⁿ⁻¹ − 1, bei 16 Bit also −32 768 … 32 767.",
       "exam": true
     },
     {
       "id": "git-k019",
       "topic": "Zahlendarstellung",
       "front": "4,375₁₀ als binäre Kommazahl?",
-      "back": "4 = 100. Nachkomma immer ×2: 0,375→0,75 (0) → 1,5 (1) → 1,0 (1).\nErgebnis: **100,011₂**.",
+      "back": "**100,011₂**. Vor dem Komma wie gewohnt: 4 = 100.\nNach dem Komma fortlaufend mal 2, die Ziffer vor dem Komma ist das nächste Bit: 0,375 · 2 = 0,75 → 0; 0,75 · 2 = 1,5 → 1; 0,5 · 2 = 1,0 → 1, Rest 0.\nVon oben nach unten lesen: 011. Probe: 4 + ¼ + ⅛ = 4,375.",
       "exam": true
     },
     {
       "id": "git-k020",
       "topic": "Logik und Gatter",
       "front": "AND, OR, XOR in einem Satz?",
-      "back": "AND (∧): nur 1, wenn **alle** 1 sind.\nOR (∨): nur 0, wenn **alle** 0 sind.\nXOR (⊕): 1, wenn die Eingänge **verschieden** sind.",
+      "back": "**AND** (∧) ist nur 1, wenn alle Eingänge 1 sind. **OR** (∨) ist nur 0, wenn alle Eingänge 0 sind. **XOR** (⊕) ist 1, wenn die Eingänge verschieden sind.\nBilder: AND = Schließfach mit zwei Schlüsseln, OR = Klingel vorne oder hinten, XOR = Treppenhausschalter.\nUnterschied OR/XOR bei 1 und 1: OR = 1, XOR = 0.",
       "exam": true
     },
     {
       "id": "git-k021",
       "topic": "Logik und Gatter",
       "front": "Rezept: Wahrheitstabelle → DNF",
-      "back": "1) Nur Zeilen mit Y = 1 nehmen. 2) Pro Zeile ein ∧-Term: 1 → Variable, 0 → ¬Variable. 3) Alle Terme mit ∨ verbinden.\nZeile 1 0 1 → (A ∧ ¬B ∧ C).",
+      "back": "1) Nur die Zeilen mit Ausgang 1 nehmen. 2) Für jede einen UND-Term bauen: 1 wird zur Variablen, 0 zur negierten Variablen. 3) Alle Terme mit ∨ verbinden.\nWarum es immer klappt: Jeder Term beschreibt genau eine Zeile wie ein Steckbrief.\nBeispiel: Zeile A = 1, B = 0, C = 1 wird zu (A ∧ ¬B ∧ C).",
       "exam": true
     },
     {
       "id": "git-k022",
       "topic": "Logik und Gatter",
       "front": "**Kernregel** zum Vereinfachen?",
-      "back": "Zwei Terme unterscheiden sich nur in **einer** Variablen → sie fällt weg.\n(A ∧ B) ∨ (A ∧ ¬B) = A ∧ (B ∨ ¬B) = A ∧ 1 = **A**.",
+      "back": "Unterscheiden sich zwei UND-Terme nur in **einer** Variablen (einmal normal, einmal negiert), fällt diese Variable weg.\nWarum: B ∨ ¬B ist immer 1, also ist B egal.\nBeispiel: (A ∧ B) ∨ (A ∧ ¬B) = A ∧ (B ∨ ¬B) = A ∧ 1 = **A**.",
       "exam": true
     },
     {
       "id": "git-k023",
       "topic": "Logik und Gatter",
       "front": "Vereinfache: (¬A ∧ B) ∨ (A ∧ B)",
-      "back": "B ausklammern: B ∧ (¬A ∨ A) = B ∧ 1 = **B**.",
+      "back": "**B**. Beide Terme haben B, A kommt einmal normal und einmal negiert vor.\nRechnung: B ausklammern → B ∧ (¬A ∨ A) = B ∧ 1 = B.\nProbe: A = 0, B = 1 ergibt links (1 ∧ 1) ∨ 0 = 1, rechts B = 1 ✓",
       "exam": true
     },
     {
       "id": "git-k024",
       "topic": "Logik und Gatter",
       "front": "**Absorption**: A ∨ (A ∧ B) = ?",
-      "back": "**A**. Ist A = 1, ist alles 1. Ist A = 0, ist auch A ∧ B = 0.\nEbenso: A ∧ (A ∨ B) = A.",
+      "back": "**A**. Der kurze Term A „schluckt“ den langen Term A ∧ B.\nWarum: Ist A = 1, ist das Ganze 1. Ist A = 0, ist auch A ∧ B = 0, also das Ganze 0. Es hängt nur von A ab.\nEbenso gilt A ∧ (A ∨ B) = A.",
       "exam": true
     },
     {
       "id": "git-k025",
       "topic": "Logik und Gatter",
       "front": "**De Morgan**: ¬(A ∧ B) und ¬(A ∨ B)?",
-      "back": "¬(A ∧ B) = ¬A ∨ ¬B.\n¬(A ∨ B) = ¬A ∧ ¬B.\nMerke: Negation über die Klammer → ∧ wird ∨ (und umgekehrt), jede Variable wird negiert.",
+      "back": "¬(A ∧ B) = ¬A ∨ ¬B und ¬(A ∨ B) = ¬A ∧ ¬B.\nRegel: Ziehst du die Negation in die Klammer, wird aus ∧ ein ∨ (und umgekehrt), und jede Variable wird negiert.\nBeispiel: „Nicht (Kaffee und Kuchen)“ heißt: kein Kaffee oder kein Kuchen.",
       "exam": true
     },
     {
       "id": "git-k026",
       "topic": "Logik und Gatter",
       "front": "Vereinfache: (¬A ∧ ¬B) ∨ (¬A ∧ B) ∨ (A ∧ ¬B)",
-      "back": "Term ¬A∧¬B zweimal nutzen (x ∨ x = x):\nmit ¬A∧B → ¬A; mit A∧¬B → ¬B.\nErgebnis: **¬A ∨ ¬B** (= NAND).",
+      "back": "**¬A ∨ ¬B**, also NAND. Der Term ¬A ∧ ¬B wird zweimal benutzt (erlaubt, weil x ∨ x = x).\nPaar 1: (¬A ∧ ¬B) ∨ (¬A ∧ B) = ¬A. Paar 2: (¬A ∧ ¬B) ∨ (A ∧ ¬B) = ¬B.\nProbe: Die einzige fehlende Zeile ist A = B = 1, dort ist ¬A ∨ ¬B = 0 ✓",
       "exam": true
     },
     {
       "id": "git-k027",
       "topic": "Logik und Gatter",
       "front": "Vereinfache die Alarmanlage: (S∧¬T∧F) ∨ (S∧T∧¬F) ∨ (S∧T∧F)",
-      "back": "S∧T∧F mit beiden kombinieren: → S∧F und S∧T.\n(S∧F) ∨ (S∧T) = **S ∧ (T ∨ F)**.",
+      "back": "**S ∧ (T ∨ F)**. Der Term S ∧ T ∧ F passt zu beiden anderen und wird zweimal benutzt.\n(S ∧ ¬T ∧ F) ∨ (S ∧ T ∧ F) = S ∧ F. (S ∧ T ∧ ¬F) ∨ (S ∧ T ∧ F) = S ∧ T. Zusammen (S ∧ F) ∨ (S ∧ T) = S ∧ (T ∨ F).\nDas ist genau der Satz: „scharf und (Tür oder Fenster offen)“.",
       "exam": true
     },
     {
       "id": "git-k028",
       "topic": "Logik und Gatter",
       "front": "Welche Muster erkennst du sofort?",
-      "back": "(¬A ∧ B) ∨ (A ∧ ¬B) = **XOR**.\n(¬A ∧ ¬B) ∨ (A ∧ B) = **XNOR** (ein Gatter statt fünf).",
+      "back": "(¬A ∧ B) ∨ (A ∧ ¬B) ist **XOR** („ungleich“). (¬A ∧ ¬B) ∨ (A ∧ B) ist **XNOR** („gleich“).\nWarum wichtig: Diese Terme unterscheiden sich in zwei Variablen, die Kernregel hilft nicht. Wer das Muster erkennt, zeichnet ein Gatter statt fünf.\nBeispiel: Lampe an, wenn genau ein Schalter an ist → XOR.",
       "exam": true
     },
     {
       "id": "git-k029",
       "topic": "Logik und Gatter",
       "front": "Halbaddierer: welche Gatter?",
-      "back": "Summe s = **XOR** (1+1 → 0), Übertrag c = **AND**.\nVolladdierer = 2 Halbaddierer + 1 OR.",
+      "back": "Summe s = **XOR**, Übertrag c = **AND**. Das liest man direkt aus der Additionstabelle ab.\nWarum nicht OR? Bei 1 + 1 muss die Summe 0 sein (Übertrag 1), OR gäbe 1.\nVolladdierer = 2 Halbaddierer + 1 OR, er rechnet den Übertrag der vorigen Stelle mit: 1 + 1 + 1 = 11₂.",
       "exam": true
     },
     {
       "id": "git-k030",
       "topic": "Programmierung",
       "front": "Algorithmus, Programm, Prozess – Unterschied?",
-      "back": "Algorithmus: Handlungsvorschrift, endet in **endlicher Zeit** (Rezept).\nProgramm: Umsetzung in einer Sprache, darf endlos laufen (Webserver).\nProzess: **laufendes** Programm mit Daten (Browser im Taskmanager).",
+      "back": "**Algorithmus**: Handlungsvorschrift, die ein Problem in **endlicher Zeit** löst (Kuchenrezept). **Programm**: Umsetzung in einer Programmiersprache, darf endlos laufen (Webserver). **Prozess**: ein **laufendes** Programm mit seinen Daten (Browser im Taskmanager).\nMerkhilfe: Idee → aufgeschrieben → läuft gerade.\nBeispiel: Eine Uhr-App, die nie endet, ist ein Programm, aber kein Algorithmus.",
       "exam": true
     },
     {
       "id": "git-k031",
       "topic": "Programmierung",
       "front": "Compiler vs. Interpreter?",
-      "back": "Compiler: übersetzt **vorab das ganze** Programm in Maschinencode.\nInterpreter: übersetzt **zur Laufzeit** Befehl für Befehl (ggf. über Bytecode, Java/Python).",
+      "back": "Der **Compiler** übersetzt **vorab das ganze** Programm in Maschinencode für eine bestimmte Hardware. Der **Interpreter** übersetzt **zur Laufzeit** Befehl für Befehl und führt direkt aus.\nBild: Buchübersetzer gegen Dolmetscher bei einer Rede.\nZwischenweg: Java und Python übersetzen erst in maschinenunabhängigen Bytecode.",
       "exam": true
     },
     {
       "id": "git-k032",
       "topic": "Programmierung",
       "front": "Was liefert fakrek(4)? Was braucht jede Rekursion?",
-      "back": "4 · 3 · 2 · 1 = **24**.\nJede Rekursion braucht eine **Abbruchbedingung**, sonst läuft der Aufrufstapel über.",
+      "back": "**24**, denn fakrek(4) = 4 · fakrek(3) = 4 · 3 · fakrek(2) = 4 · 3 · 2 · fakrek(1) = 4 · 3 · 2 · 1.\nJede Rekursion braucht eine **Abbruchbedingung** (hier n == 1 oder n == 0). Ohne sie ruft sich die Funktion endlos auf, bis der Aufrufstapel überläuft.\nfakrek(4) erzeugt 4 Aufrufe, die alle gleichzeitig auf dem Stack liegen.",
       "exam": true
     },
     {
       "id": "git-k033",
       "topic": "Datenstrukturen",
       "front": "Stack: Prinzip und Operationen?",
-      "back": "**LIFO** (Tellerstapel). push(x) legt oben drauf, pop() nimmt oben weg, top() liest nur.\nFehlerfall: pop/top auf leerem Stack.",
+      "back": "**LIFO** (last in, first out), wie ein Tellerstapel: Was zuletzt drauf kam, geht zuerst wieder runter.\npush(x) legt oben drauf, pop() nimmt das oberste weg und gibt es zurück, top() liest es nur. Fehlerfall: pop() oder top() auf einem leeren Stack.\nBeispiel: push(3), push(7), pop() liefert 7, übrig ist [3].",
       "exam": true
     },
     {
       "id": "git-k034",
       "topic": "Datenstrukturen",
       "front": "Queue: Prinzip und Operationen?",
-      "back": "**FIFO** (Supermarktkasse). put(x) = enqueue: hinten anstellen. get() = dequeue: vorne entnehmen.\nFehlerfall: get() auf leerer Queue.",
+      "back": "**FIFO** (first in, first out), wie die Schlange an der Kasse: Wer zuerst kommt, ist zuerst dran.\nput(x) bzw. enqueue(x) stellt hinten an, get() bzw. dequeue() nimmt vorne weg. Fehlerfall: get() auf einer leeren Queue.\nBeispiel: put(3), put(7), get() liefert 3, übrig ist [7].",
       "exam": true
     },
     {
       "id": "git-k035",
       "topic": "Datenstrukturen",
       "front": "Stack durchspielen: push(4), push(8), push(2), pop(), push(5), top(), pop(), pop()",
-      "back": "Ausgaben: 2, 5 (top, bleibt), 5, 8.\nAm Ende liegt nur noch **[4]**.",
+      "back": "Ausgaben **2, 5, 5, 8**, am Ende liegt **[4]**.\nAblauf (oben = rechts): [4] → [4, 8] → [4, 8, 2] → pop 2 → [4, 8] → [4, 8, 5] → top liest 5, bleibt → pop 5 → pop 8 → [4].\nFalle: top() entfernt nichts, nur pop() nimmt weg.",
       "exam": true
     },
     {
       "id": "git-k036",
       "topic": "Datenstrukturen",
       "front": "Array vs. verkettete Liste – je Vor- und Nachteil?",
-      "back": "Array: + direkter Zugriff über Index (a[5]) · − feste Länge, Einfügen nur durch Umkopieren.\nListe: + Einfügen/Löschen durch Zeiger umhängen · − Suche ab dem Kopf.",
+      "back": "**Array**: + direkter Zugriff über den Index (a[5] in einem Schritt), − feste Länge, Einfügen nur durch Verschieben und Umkopieren.\n**Verkettete Liste**: + Einfügen und Löschen durch Zeiger umhängen, Länge flexibel, − kein Index, Suchen nur vom Kopf aus.\nBild: Schließfachwand gegen Schnitzeljagd.",
       "exam": true
     },
     {
       "id": "git-k037",
       "topic": "Datenstrukturen",
       "front": "Geordneten Binärbaum aufbauen: Regel?",
-      "back": "Immer an der Wurzel starten: kleiner → links, größer → rechts, bis ein freier Platz kommt.\nProbe: von links nach rechts gelesen = sortiert.",
+      "back": "An der Wurzel starten, vergleichen: **kleiner → links, größer → rechts**, bis ein freier Platz kommt. Dort wird der Wert ein neues Blatt.\nWichtig: genau in der gegebenen Reihenfolge einfügen.\nBeispiel 50, 30, 70, 40: 30 links von 50, 70 rechts, 40 < 50 → links, > 30 → rechts von 30. Probe: von links nach rechts gelesen 30, 40, 50, 70 sortiert.",
       "exam": true
     },
     {
       "id": "git-k038",
       "topic": "Datenstrukturen",
       "front": "Knoten im geordneten Binärbaum löschen: die drei Fälle?",
-      "back": "1 Blatt: einfach entfernen. 2 Ein Kind: das Kind rückt mit seinem Unterbaum nach.\n3 Zwei Kinder: ersetzen durch den **größten im linken** Teilbaum (1× links, dann ganz rechts) oder den **kleinsten im rechten** (1× rechts, dann ganz links).",
+      "back": "1) **Blatt**: einfach entfernen. 2) **Ein Kind**: Das Kind rückt mit seinem Unterbaum an die freie Stelle. 3) **Zwei Kinder**: ersetzen durch den größten Wert im linken Teilbaum (1× links, dann ganz rechts) oder den kleinsten im rechten (1× rechts, dann ganz links).\nWarum so? Nur dann bleibt „links kleiner, rechts größer“ erhalten.\nBeispiel: Wurzel 40 mit Kindern 20 und 60 → Ersatz 20 (größter links) oder 50 (kleinster rechts, falls vorhanden).",
       "exam": true
     },
     {
       "id": "git-k039",
       "topic": "Suchen und Sortieren",
       "front": "Lineare vs. binäre Suche?",
-      "back": "Linear: keine Voraussetzung, **O(n)**.\nBinär: Daten müssen **sortiert** sein, Mitte prüfen, Hälfte wegwerfen, **O(log n)**.",
+      "back": "**Lineare Suche**: keine Voraussetzung, alle nacheinander prüfen, Aufwand **O(n)**. **Binäre Suche**: Daten müssen **sortiert** und per Index erreichbar sein, Mitte prüfen, Hälfte wegwerfen, Aufwand **O(log n)**.\nWarum ist binär schneller? Jeder Schritt halbiert den Suchbereich.\nBeispiel 1 000 Elemente: linear bis 1 000 Vergleiche, binär höchstens 10.",
       "exam": true
     },
     {
       "id": "git-k040",
       "topic": "Suchen und Sortieren",
       "front": "Wie viele Schritte braucht die binäre Suche höchstens?",
-      "back": "Kleinstes k mit 2ᵏ > n.\nn = 1 000 → 2¹⁰ = 1 024 → **10** Schritte. n = 500 → 2⁹ = 512 → 9.",
+      "back": "Die kleinste Zahl k mit 2ᵏ > n.\nWarum: Jeder Vergleich halbiert den Bereich, nach k Schritten sind 2ᵏ Elemente abgedeckt.\nBeispiele: n = 1 000 → 2¹⁰ = 1 024 → **10** Schritte. n = 500 → 2⁹ = 512 → 9. n = 1 Mio. → 20.",
       "exam": true
     },
     {
       "id": "git-k041",
       "topic": "Suchen und Sortieren",
       "front": "Bubble Sort: Was steht nach dem 1. Durchlauf fest?",
-      "back": "Das **größte** Element steht **hinten**. Nachbarn vergleichen und tauschen. Aufwand **O(n²)**.\n[5,1,4,2,8] → nach Durchlauf 1: [1,4,2,5,8].",
+      "back": "Das **größte** Element steht **hinten**, es ist wie eine Blase nach oben gestiegen. Bubble Sort vergleicht immer zwei Nachbarn und tauscht, wenn sie falsch herum stehen. Aufwand **O(n²)**.\nBeispiel [5, 1, 4, 2, 8]: 5↔1, 5↔4, 5↔2, 5 < 8 → [1, 4, 2, 5, 8], die 8 ist fertig.\nFalle: Das kleinste steht nach dem 1. Durchlauf nicht automatisch vorne.",
       "exam": true
     },
     {
       "id": "git-k042",
       "topic": "Suchen und Sortieren",
       "front": "Merge Sort: Prinzip und Aufwand?",
-      "back": "Teile und Herrsche, rekursiv: in der Mitte teilen bis Einzelelemente, dann sortiert **zusammenführen** (Merge). Aufwand **O(n log n)**.",
+      "back": "**Teile und Herrsche**: Das Array in der Mitte teilen, bis nur Einzelelemente übrig sind, dann je zwei sortierte Stücke **zusammenführen** (mergen). Aufwand **O(n log n)**.\nWarum n log n? Es gibt etwa log₂ n Teilungsebenen, und auf jeder wird jedes Element einmal angefasst.\nBeispiel: [6, 2] und [8, 4] → [2, 6] und [4, 8] → Merge: 2, 4, 6, 8.",
       "exam": true
     },
     {
       "id": "git-k043",
       "topic": "Suchen und Sortieren",
       "front": "O-Notation zuordnen: O(1), O(log n), O(n), O(n log n), O(n²)",
-      "back": "O(1): Zugriff a[5] · O(log n): binäre Suche · O(n): lineare Suche · O(n log n): Merge Sort · O(n²): Bubble Sort.\nn verdoppelt → O(n²) wird 4-mal so lang.",
+      "back": "**O(1)**: Zugriff a[5] im Array. **O(log n)**: binäre Suche. **O(n)**: lineare Suche. **O(n log n)**: Merge Sort. **O(n²)**: Bubble Sort.\nDie O-Notation beschreibt, wie der Aufwand wächst, wenn n wächst.\nBeispiel: n verdoppeln → O(1) gleich, O(log n) ein Schritt mehr, O(n) doppelt, O(n²) viermal so lang.",
       "exam": true
     },
     {
       "id": "git-k044",
       "topic": "Rechnerarchitektur",
       "front": "Kern der **Von-Neumann**-Architektur?",
-      "back": "Programme und Daten liegen binär im **selben Speicher** und laufen über **einen gemeinsamen Bus**.\nMerke: 1 Speicher, 1 Bus.",
+      "back": "Programme **und** Daten liegen binär im **selben Speicher** und laufen über **einen gemeinsamen Bus**.\nFolge: Programme können wie Daten geladen und geändert werden, der Rechner ist universell programmierbar. Nachteil: Befehl und Daten müssen nacheinander über den Bus.\nMerke: 1 Speicher, 1 Bus (John von Neumann, 1946).",
       "exam": true
     },
     {
       "id": "git-k045",
       "topic": "Rechnerarchitektur",
       "front": "Die **fünf Komponenten** des Von-Neumann-Rechners?",
-      "back": "Rechenwerk (ALU) · Steuerwerk · Speicherwerk (Programme + Daten) · Ein-/Ausgabewerk · Bussystem.\nSteuer- + Rechenwerk = CPU. Den Bus nicht vergessen!",
+      "back": "**Rechenwerk** (ALU, rechnet), **Steuerwerk** (liest Befehle, steuert die Abfolge), **Speicherwerk** (Programme und Daten), **Ein-/Ausgabewerk** (Tastatur, Bildschirm) und **Bussystem** (verbindet alles).\nSteuerwerk + Rechenwerk bilden zusammen die CPU.\nIn der Skizze am häufigsten vergessen: der Bus.",
       "exam": true
     },
     {
       "id": "git-k046",
       "topic": "Rechnerarchitektur",
       "front": "Die **fünf Phasen** des Von-Neumann-Zyklus?",
-      "back": "1 FETCH (Befehl holen) · 2 DECODE (entschlüsseln) · 3 FETCH OPERANDS (Werte holen) · 4 EXECUTE (ALU rechnet) · 5 UPDATE INSTRUCTION POINTER (Befehlszähler weiter).\nNicht nur „Fetch – Decode – Execute“ nennen!",
+      "back": "1 **FETCH** (Befehl ins Befehlsregister holen) · 2 **DECODE** (Steuerwerk entschlüsselt) · 3 **FETCH OPERANDS** (Werte aus dem Speicher holen) · 4 **EXECUTE** (ALU rechnet) · 5 **UPDATE INSTRUCTION POINTER** (Befehlszähler auf den nächsten Befehl).\nDanach beginnt der Zyklus von vorn.\nBild Koch: Rezeptzeile lesen, verstehen, Zutaten holen, verarbeiten, Finger eine Zeile weiter. Nicht nur „Fetch – Decode – Execute“ nennen.",
       "exam": true
     },
     {
       "id": "git-k047",
       "topic": "Rechnerarchitektur",
       "front": "Was ist die **Harvard**-Architektur?",
-      "back": "Getrennte Speicher **und** getrennte Busse für Befehle und Daten. Befehl und Daten gleichzeitig holen → schneller, aber teurer.\nEinsatz: Mikrocontroller (Arduino), Signalverarbeitung.",
+      "back": "Getrennte **Speicher** und getrennte **Busse** für Befehle und Daten.\nFolge: Befehl und Daten werden gleichzeitig geholt (Einzelzyklus), also schneller, aber teurer.\nEinsatz: Mikrocontroller wie Arduino (AVR), Signalverarbeitung, KI-Rechner. Bild: Küche mit zwei Türen.",
       "exam": true
     },
     {
       "id": "git-k048",
       "topic": "Rechnerarchitektur",
       "front": "Von Neumann: Pro und Contra?",
-      "back": "Pro: einfacher, billiger.\nContra 1: **Flaschenhals** = der gemeinsame Bus (Befehl und Daten nacheinander, min. 2 Takte).\nContra 2: Sicherheit (Buffer Overflow, Code als Daten getarnt).",
+      "back": "**Pro**: einfacher und billiger zu bauen. **Contra 1**: der **Flaschenhals** = der gemeinsame Bus, Befehl und Daten nacheinander, mindestens 2 Takte pro Anweisung. **Contra 2**: Sicherheit, weil als Daten getarnter Code eingeschleust werden kann (z. B. Buffer Overflow).\nDer Engpass ist der Bus, nicht die ALU.\nHarvard dreht das um: schneller, aber teurer.",
       "exam": true
     },
     {
       "id": "git-k049",
       "topic": "Rechnerarchitektur",
       "front": "Steuer-, Adress-, Datenbus beim Lesen?",
-      "back": "Steuerbus: Lesebefehl · Adressbus: **wo** (Adresse der Zelle) · Datenbus: **was** (die Daten zur CPU).",
+      "back": "Steuerbus: **ob** (Lesebefehl). Adressbus: **wo** (Adresse der Speicherzelle). Datenbus: **was** (die Daten fließen von der Zelle zur CPU).\nBild Paketdienst: Auftrag „abholen“, Hausnummer, Paket.\nBeim Schreiben ist es gleich, nur fließen die Daten von der CPU zur Zelle.",
       "exam": true
     },
     {
       "id": "git-k050",
       "topic": "Speicher und RAID",
       "front": "Speicherhierarchie von oben nach unten?",
-      "back": "Register → L1 → L2 → L3 → RAM | SSD/Flash → Festplatte → Band/Cloud.\nNach unten: langsamer, größer, billiger pro Bit. Grenze volatil/persistent: zwischen RAM und Flash.",
+      "back": "Register → L1 → L2 → L3 → RAM | Flash/SSD → Festplatte → Band, optisch, Cloud.\nNach unten werden Zugriffszeit, Kapazität und Bits pro Euro größer: langsamer, größer, billiger pro Bit.\nDie Grenze volatil/persistent liegt zwischen RAM und Flash/SSD: Strom aus, RAM leer, SSD behält alles.",
       "exam": true
     },
     {
       "id": "git-k051",
       "topic": "Speicher und RAID",
       "front": "Warum hilft ein kleiner **Cache**?",
-      "back": "Wegen der **Lokalität**: Das Nächste liegt meist direkt neben dem Letzten. Beispiele: Schleifen, Arrays.\nFehlt etwas im Cache: Cache-Miss → aus dem RAM nachladen.",
+      "back": "Wegen der **Lokalität**: Programme greifen in kurzer Zeit nur auf einen kleinen Teil des Speichers zu, das Nächste liegt meist neben dem Letzten. Deshalb lädt man die Nachbarn gleich mit.\nBeispiele: Eine Schleife nutzt denselben Code immer wieder, ein Array liegt am Stück.\nFehlt etwas trotzdem: **Cache-Miss**, Nachladen aus dem langsamen RAM.",
       "exam": true
     },
     {
       "id": "git-k052",
       "topic": "Speicher und RAID",
       "front": "Adressleitungen ↔ Speichergröße?",
-      "back": "n Leitungen → 2ⁿ Byte. 2¹⁰ = 1 KB, 2²⁰ = 1 MB, 2³⁰ = 1 GB.\n32 Leitungen → 4 GB. 16 GB = 2⁴·2³⁰ = 2³⁴ → 34 Leitungen.",
+      "back": "n Adressleitungen → **2ⁿ** Byte, weil jede Leitung an oder aus ist. Merke 2¹⁰ = 1 KB, 2²⁰ = 1 MB, 2³⁰ = 1 GB, 2⁴⁰ = 1 TB.\nVorwärts: 32 Leitungen = 2² · 2³⁰ = 4 GB.\nRückwärts: 16 GB = 2⁴ · 2³⁰ = 2³⁴ → 34 Leitungen (Exponenten addieren).",
       "exam": true
     },
     {
       "id": "git-k053",
       "topic": "Speicher und RAID",
       "front": "RAID 0, 1, 5, 6: Prinzip, min. Platten, Ausfälle?",
-      "back": "RAID 0: Striping, 2 Platten, **0** Ausfälle.\nRAID 1: Spiegelung, 2, 1.\nRAID 5: Striping + Parität, 3, 1.\nRAID 6: doppelte Parität, 4, 2.",
+      "back": "RAID 0: Striping, mind. 2 Platten, **0** Ausfälle. RAID 1: Spiegelung, mind. 2, 1 Ausfall je Spiegelpaar. RAID 5: Striping + verteilte Parität, mind. **3**, **1** Ausfall. RAID 6: doppelte Parität, mind. **4**, **2** Ausfälle.\nWarum RAID 0 trotz „Redundant“ nicht sicher ist: Es gibt keine Kopie und keine Parität.\nNutzkapazität bei n Platten à C: n·C, n·C/2, (n−1)·C, (n−2)·C.",
       "exam": true
     },
     {
       "id": "git-k054",
       "topic": "Speicher und RAID",
       "front": "Nutzkapazität: 5 Platten à 4 TB?",
-      "back": "RAID 0: 5·4 = **20 TB** · RAID 5: (5−1)·4 = **16 TB** · RAID 6: (5−2)·4 = **12 TB**.",
+      "back": "RAID 0: 5 · 4 = **20 TB** (0 Ausfälle). RAID 5: (5 − 1) · 4 = **16 TB** (1 Ausfall). RAID 6: (5 − 2) · 4 = **12 TB** (2 Ausfälle).\nWarum weniger Platz? Bei RAID 5 geht eine Platte, bei RAID 6 gehen zwei Platten Kapazität für Parität drauf.\nMehr Sicherheit kostet also Platz.",
       "exam": true
     },
     {
       "id": "git-k055",
       "topic": "Datenbanken und SQL",
       "front": "Probleme des **Dateiansatzes**?",
-      "back": "Redundanz/Inkonsistenz (alte Adresse im Vertrieb) · Abhängigkeit Programm–Daten · fehlender Datenaustausch · mangelnde Datensicherheit.",
+      "back": "1) **Redundanz und Inkonsistenz**: dieselben Daten mehrfach, die Kopien laufen auseinander. 2) **Abhängigkeit Programm–Daten**: Ändert sich die Struktur, muss das Programm geändert werden. 3) **fehlender Datenaustausch**, wenig Flexibilität. 4) **mangelnde Datensicherheit**.\nBeispiel: Die Kundin zieht um, der Vertrieb ändert die Adresse, der Versand nicht → Paket an die alte Adresse.\nDas Problem ist nicht die Kopie, sondern dass sie sich widerspricht.",
       "exam": true
     },
     {
       "id": "git-k056",
       "topic": "Datenbanken und SQL",
       "front": "DB, DBMS, Datenbanksystem, Data Dictionary?",
-      "back": "DB = Daten. DBMS = Software, die sie verwaltet. Datenbanksystem = DB + DBMS.\nData Dictionary = Katalog der **Metadaten** (welche Tabellen, Attribute, Datentypen).",
+      "back": "**DB** = der Datenbestand. **DBMS** = die Software, die ihn verwaltet. **Datenbanksystem** = DB + DBMS (+ Anwendungen). **Data Dictionary** = Katalog mit den **Metadaten**: welche Tabellen, Spalten, Datentypen und Regeln es gibt.\nBild Bibliothek: Bücher (DB), Bibliothekarin (DBMS), Katalog (Data Dictionary).\nMetadaten-Beispiel: „Spalte Wohnort ist Text, höchstens 40 Zeichen.“",
       "exam": true
     },
     {
       "id": "git-k057",
       "topic": "Datenbanken und SQL",
       "front": "ER-Modell (Chen): Symbole?",
-      "back": "Rechteck = Entitätstyp · Raute = Beziehung · Ellipse = Attribut · unterstrichen = Schlüssel.\nBeispiel: Student – besucht (m:n) – Vorlesung.",
+      "back": "**Rechteck** = Entitätstyp, **Raute** = Beziehungstyp, **Ellipse** = Attribut, **unterstrichen** = Schlüsselattribut.\nEine Beziehung kann eigene Attribute haben, wenn sie zu keiner Seite allein gehört.\nBeispiel: [Buch] — <Ausleihe> — [Leser], das Rückgabedatum hängt an der Raute.",
       "exam": true
     },
     {
       "id": "git-k058",
       "topic": "Datenbanken und SQL",
       "front": "Beziehungen in Tabellen umsetzen?",
-      "back": "1:n → Fremdschlüssel auf der **n-Seite**.\n1:1 → Fremdschlüssel auf einer Seite.\nm:n → eigene **Hilfstabelle** mit beiden Fremdschlüsseln, z. B. BESUCHT(MatrNr, VNr).",
+      "back": "**1:n** → Fremdschlüssel auf der **n-Seite**. **1:1** → Fremdschlüssel auf einer der beiden Seiten. **m:n** → eigene **Hilfstabelle** mit beiden Fremdschlüsseln.\nWarum bei m:n nicht einfach eine Spalte? Ein Student hat viele Vorlesungen, das passt nicht in ein Feld (Werte sind atomar).\nBeispiel: BESUCHT(MatrNr, VNr), beide zusammen bilden den Primärschlüssel.",
       "exam": true
     },
     {
       "id": "git-k059",
       "topic": "Datenbanken und SQL",
       "front": "Reihenfolge beim Lesen einer SQL-Abfrage?",
-      "back": "1 FROM (welche Tabellen) → 2 WHERE (welche Zeilen) → 3 GROUP BY (Gruppen) → 4 SELECT (Spalten/Aggregate).\nAchtung: > und >= genau lesen!",
+      "back": "1 **FROM** (welche Tabellen, bei mehreren die Join-Bedingung) → 2 **WHERE** (welche Zeilen kommen durch) → 3 **GROUP BY** (Gruppen bilden) → 4 **SELECT** (welche Spalten oder Aggregate).\nWarum diese Reihenfolge? So führt die Datenbank die Abfrage aus, nicht so, wie sie dasteht.\nBild Excel: Tabelle öffnen, Filter setzen, Pivot, Spalten einblenden.",
       "exam": true
     },
     {
       "id": "git-k060",
       "topic": "Datenbanken und SQL",
       "front": "`SELECT ABT, COUNT(*) FROM ANGESTELLTER GROUP BY ABT;` – was kommt raus?",
-      "back": "Eine Zeile **pro Abteilung**: 1 | 1, 4 | 3, 5 | 4.\nOhne GROUP BY gäbe COUNT(*) nur eine Zeile: 8.",
+      "back": "Eine Zeile **pro Abteilung**: 1 | 1, 4 | 3, 5 | 4.\nGROUP BY ABT bildet drei Gruppen (Borg; Zelaya, Wallace, Jabbar; Smith, Wong, Narayan, English), COUNT(*) zählt die Zeilen jeder Gruppe.\nOhne GROUP BY gäbe es nur eine Zeile: 8.",
       "exam": true
     },
     {
       "id": "git-k061",
       "topic": "Information und Digitalisierung",
       "front": "Die Kette **Daten → Information → Wissen → Handlung** an einem Beispiel?",
-      "back": "7 (Daten) → „Es sind 7 °C“ (Information) → „7 °C ist in Deutschland kalt“ (Wissen) → Jacke anziehen (Handlung).",
+      "back": "Daten: **7**. Information: „Es sind 7 °C.“ (Kontext dazu). Wissen: „7 °C ist in Deutschland kalt.“ (mit anderem Wissen verknüpft). Handlung: Jacke anziehen.\nJede Stufe baut auf der vorigen auf.\nZweites Beispiel: 42 → „42 € Kontostand“ → „Kino kostet 14 €, reicht“ → ins Kino gehen.",
       "exam": true
     },
     {
       "id": "git-k062",
       "topic": "Information und Digitalisierung",
       "front": "Syntaktisch, semantisch, pragmatisch – am Beispiel Ampel?",
-      "back": "Syntaktisch = Form: Das obere Licht leuchtet rot.\nSemantisch = Bedeutung: „Halt“.\nPragmatisch = Nutzen: Ich bremse.",
+      "back": "**Syntaktisch** = Form, wie das Zeichen aussieht: Das obere Licht leuchtet rot. **Semantisch** = Bedeutung: „Halt.“ **Pragmatisch** = Nutzen, was ich daraus mache: Ich bremse.\nIn der Programmierung: Syntax entspricht dem Typ einer Variablen, Semantik ihrem Namen und Sinn.\nMerkhilfe: Form → Bedeutung → Handlung.",
       "exam": true
     },
     {
       "id": "git-k063",
       "topic": "Information und Digitalisierung",
       "front": "Shannon: Was passiert mit der **Redundanz** bei Kompression und bei Fehlererkennung?",
-      "back": "Kompression **entfernt** Redundanz: RLE macht aus AAAABBBCC → 4A3B2C.\nFehlererkennung **fügt** Redundanz hinzu: Ein Paritätsbit macht die Nachricht länger.",
+      "back": "Kompression **entfernt** Redundanz und spart Bits. Fehlererkennung **fügt** Redundanz hinzu und braucht mehr Bits.\nBeispiel Kompression: RLE macht aus AAAABBBCC (9 Zeichen) 4A3B2C (6 Zeichen).\nBeispiel Fehlererkennung: Ein Paritätsbit macht aus 8 Bit 9 Bit, dafür fällt ein gekipptes Bit auf.",
       "exam": true
     },
     {
       "id": "git-k064",
       "topic": "Information und Digitalisierung",
       "front": "Nutzen der IT im Unternehmen: die **drei Stufen**?",
-      "back": "Automatisierung (Rechnung automatisch) → Informatisierung (Verkaufsdaten auswerten) → Transformation (neue Prozesse, z. B. Fertigung erst nach Bestellung).",
+      "back": "**Automatisierung**: Bisherige Abläufe macht die IT, schneller und einheitlich (Rechnung automatisch). **Informatisierung**: Die dabei entstehenden Daten werden für Entscheidungen ausgewertet (Data Warehouse). **Transformation**: völlig neue Geschäftsprozesse (Fertigung erst nach Bestellung).\nJede Stufe baut auf der vorigen auf.\nFalle: Daten auswerten ist Informatisierung, nicht Automatisierung.",
       "exam": true
     },
     {
       "id": "git-k065",
       "topic": "Nicht klausurrelevant",
       "front": "ASCII und UTF-8: wie viele Bit, welcher Code für A?",
-      "back": "ASCII: 7 Bit = 128 Zeichen, A = 65 = 41₁₆, a = 97.\nUTF-8: ä braucht 2 Byte (C3 A4) → „Grüße“ = 5 Zeichen, aber 7 Byte.",
+      "back": "ASCII: 7 Bit, also 2⁷ = 128 Zeichen. A = 65 = 41₁₆, a = 97 = 61₁₆, Ziffern 0–9 = 48–57.\nUTF-8 ist ASCII-kompatibel: die ersten 128 Zeichen in 1 Byte, andere in 2–4 Byte. ä = C3 A4.\nDeshalb hat „Grüße“ 5 Zeichen, aber 7 Byte (ü und ß je 2 Byte). Exkurs, nicht klausurrelevant.",
       "exam": false
     },
     {
       "id": "git-k066",
       "topic": "IT-Infrastruktur und Cloud",
       "front": "Die **fünf Epochen** der IT-Infrastruktur in Reihenfolge?",
-      "back": "Großrechner → PC → Client-Server → Internet → Cloud.\nSie **überlagern** sich: Großrechner gibt es heute noch. Jahreszahlen sind nicht prüfungsrelevant.",
+      "back": "1 Groß- und Minirechner → 2 Personal Computing → 3 Client-Server → 4 internetbasierte Informationssysteme → 5 Cloud Computing.\nSie lösen sich nicht ab, sondern **überlagern** sich: Großrechner gibt es heute noch.\nJahreszahlen sind „historische Bezüge“ und nicht prüfungsrelevant, Reihenfolge und je ein Merkmal schon.",
       "exam": true
     },
     {
       "id": "git-k067",
       "topic": "IT-Infrastruktur und Cloud",
       "front": "Wie kann die IT-Landschaft **strukturiert** werden?",
-      "back": "Nach Schichten (die 7 Komponenten), nach Architektur (Großrechner, 2-Tier, N-Tier) und nach Betriebsmodell (eigener Betrieb oder Cloud als IaaS/PaaS/SaaS).",
+      "back": "Drei Blickwinkel: nach **Schichten** (die 7 Komponenten von Hardware bis Anwendung), nach **Architektur** (zentraler Großrechner, Client-Server mit 2-Tier oder N-Tier, verteilt übers Internet) und nach **Betriebsmodell** (selbst betreiben oder Cloud als IaaS, PaaS, SaaS).\nWarum drei? Jede Sicht beantwortet eine andere Frage: Was gibt es, wie hängt es zusammen, wer betreibt es?\nDas ist die Antwort auf die Klausurfrage „Wie kann die IT-Landschaft strukturiert werden?“.",
       "exam": true
     },
     {
       "id": "git-k068",
       "topic": "IT-Infrastruktur und Cloud",
       "front": "Was ist **Cloud Computing**, was ein **Hyperscaler**?",
-      "back": "Cloud = Rechenleistung und Programme über das Internet mieten statt selbst betreiben, meist im Abo.\nHyperscaler = große Anbieter: AWS, Microsoft Azure, Google Cloud, STACKIT.",
+      "back": "**Cloud Computing**: Rechenleistung und Programme über das Internet mieten statt selbst kaufen und betreiben, meist im Abo, oft über den Browser. **Hyperscaler**: sehr große Cloud-Anbieter wie AWS, Microsoft Azure, Google Cloud, STACKIT.\nBild: Strom aus der Steckdose statt eigenem Kraftwerk.\nBeispiel: Die New York Times wandelte mit gemieteten AWS-Rechnern 11 Mio. Artikel in 24 Stunden in PDF um.",
       "exam": true
     },
     {
       "id": "git-k069",
       "topic": "Mooresches Gesetz",
       "front": "Grenzen und Auswege des Mooreschen Gesetzes?",
-      "back": "Grenzen: Kosten pro Transistor steigen wieder · Energie und Kühlung wachsen.\nAuswege: neue Materialien, 3D-Chips, Quantencomputer, viele GPUs/Cluster parallel.",
+      "back": "**Grenzen**: Die Kosten pro Transistor steigen bei immer kleineren Strukturen wieder, Energie- und Kühlungsbedarf wachsen. **Auswege**: neue Materialien und Lithographie, 3D-Chipdesign, Quantencomputer, viele GPUs und Cluster parallel.\nWarum wichtig: „Nennen Sie Grenzen und Auswege“ verlangt beides.\nGrößenordnung: Ein aktueller Nvidia-KI-Chip hat 208 Mrd. Transistoren.",
       "exam": true
     },
     {
       "id": "git-k070",
       "topic": "Mooresches Gesetz",
       "front": "Wie wird **Multiple Choice** in der Klausur bewertet?",
-      "back": "Jede Option einzeln: richtig (nicht) angekreuzt +½, falsch −½; negative Summe → 0, nichts angekreuzt → 0.\n4 Optionen, alle richtig entschieden = 2 P.; eine falsche dazu = 1 P.",
+      "back": "Jede Option wird einzeln gewertet: richtig angekreuzt oder richtig nicht angekreuzt +½, falsch −½. Eine negative Summe zählt 0, nichts ankreuzen zählt 0.\nMindestens eine Option ist immer richtig.\nBeispiel 4 Optionen: alle richtig entschieden = 4 · ½ = 2 P. Eine falsche dazu angekreuzt = 3 · ½ − ½ = 1 P.",
       "exam": true
     },
     {
       "id": "git-k071",
       "topic": "Mooresches Gesetz",
       "front": "Die **fünf Treiber** des technischen Fortschritts? Was sagt Metcalfe?",
-      "back": "Moore · Massenspeicher · Metcalfe · sinkende Kommunikationskosten · Standardisierung.\nMetcalfe: n · (n − 1) Verbindungen, 10 Teilnehmer → 10 · 9 = 90.",
+      "back": "1 Mooresches Gesetz · 2 digitale Massenspeicher · 3 Gesetz von Metcalfe · 4 sinkende Kommunikationskosten · 5 Standardisierung.\n**Metcalfe**: Bei n Teilnehmern gibt es n · (n − 1) mögliche Verbindungen, jeder erreicht die n − 1 anderen.\nBeispiel: 10 Teilnehmer → 10 · 9 = 90, 20 Teilnehmer → 380: doppelt so viele Leute, gut viermal so viele Verbindungen.",
       "exam": true
     },
     {
       "id": "git-k072",
       "topic": "Zahlendarstellung",
       "front": "Binär addieren: die vier Regeln?",
-      "back": "0+0 = 0 · 0+1 = 1 · 1+1 = 0, Übertrag 1 · 1+1+1 = 1, Übertrag 1.\nBeispiel: 0001 1110 + 1101 0011 = 1111 0001 (30 + 211 = 241).",
+      "back": "0 + 0 = 0 · 0 + 1 = 1 · 1 + 1 = 0, Übertrag 1 · 1 + 1 + 1 = 1, Übertrag 1.\nWarum 1 + 1 = 10? Im Binärsystem gibt es keine Ziffer 2, also „0, eins gemerkt“.\nBeispiel: 0001 1110 + 1101 0011 = 1111 0001, also 30 + 211 = 241.",
       "exam": true
     },
     {
       "id": "git-k073",
       "topic": "Zahlendarstellung",
       "front": "−42 in 8 Bit: Vorzeichen-Betrag, Einerkomplement, Zweierkomplement?",
-      "back": "+42 = 0010 1010.\nVorzeichen-Betrag: `1010 1010` · Einerkomplement: `1101 0101` · Zweierkomplement: `1101 0110` (Standard).",
+      "back": "+42 = 0010 1010. **Vorzeichen-Betrag**: nur das erste Bit auf 1 → 1010 1010. **Einerkomplement**: alle Bits umdrehen → 1101 0101. **Zweierkomplement**: umdrehen + 1 → **1101 0110**.\nStandard ist das Zweierkomplement: nur eine Null, und die Addierschaltung kann auch subtrahieren.\nProbe: −128 + 64 + 16 + 4 + 2 = −42.",
       "exam": true
     },
     {
       "id": "git-k074",
       "topic": "Zahlendarstellung",
       "front": "Übertrag oder **Überlauf** – was ist der Unterschied?",
-      "back": "Übertrag = die 1, die links aus den 8 Bit fällt; im Zweierkomplement normal (42 − 17).\nÜberlauf = Ergebnis passt nicht in den Wertebereich, echter Fehler: 127 + 1 = `1000 0000` = −128.",
+      "back": "**Übertrag** = die 1, die links aus den 8 Bit herausfällt. Im Zweierkomplement ist das normal und wird ignoriert, etwa bei 42 − 17. **Überlauf** = das richtige Ergebnis passt nicht in den Wertebereich, ein echter Fehler.\nBeispiel Überlauf: 127 + 1 = 1000 0000, gelesen als −128.\nMerke: Ein Übertrag kann auftreten, ohne dass etwas falsch ist. Einen Überlauf erkennst du am Vorzeichen, nicht am Übertrag.",
       "exam": true
     },
     {
       "id": "git-k075",
       "topic": "Zahlendarstellung",
       "front": "30 − 45 in 8 Bit Zweierkomplement?",
-      "back": "45 = `0010 1101` → invertiert `1101 0010` → +1 = `1101 0011`.\n`0001 1110` + `1101 0011` = `1111 0001` → erstes Bit 1 → −128 + 64 + 32 + 16 + 1 = **−15**.",
+      "back": "**−15**. Das Komplement wird von der Zahl hinter dem Minus gebildet, also von 45.\n45 = 0010 1101 → umgedreht 1101 0010 → +1 = 1101 0011.\n0001 1110 + 1101 0011 = 1111 0001. Erstes Bit 1 → negativ: −128 + 64 + 32 + 16 + 1 = −15.",
       "exam": true
     },
     {
       "id": "git-k076",
       "topic": "Zahlendarstellung",
       "front": "Was ist eine **Gleitkommazahl**? (IEEE 754, 32 Bit)",
-      "back": "Z = Mantisse · Basis hoch Exponent, z. B. 2022 = 2,022 · 10³.\n32 Bit: 1 Bit Vorzeichen, 8 Bit Exponent, 23 Bit Mantisse.",
+      "back": "Eine Zahl der Form **Z = m · b hoch e**: Mantisse (die Ziffern) mal Basis hoch Exponent (wohin das Komma rückt), wie „2,022E3“ auf dem Taschenrechner.\nVorteil gegenüber Festkomma: sehr große und sehr kleine Zahlen mit wenigen Bits.\nIEEE 754 mit 32 Bit: 1 Bit Vorzeichen, 8 Bit Exponent, 23 Bit Mantisse. Beispiel 2022 = 2,022 · 10³.",
       "exam": true
     },
     {
       "id": "git-k077",
       "topic": "Zahlendarstellung",
       "front": "Warum speichert der Rechner 0,4 nicht exakt?",
-      "back": "0,4 ist binär periodisch: 0,0110 0110 … Die Bits reichen nie.\nDeshalb steht statt 18,4 in Wahrheit 18,3999996… im Speicher.",
+      "back": "Weil 0,4 im Binärsystem **periodisch** ist: 0,0110 0110 0110 … Beim fortgesetzten Malnehmen mit 2 kommt nie der Rest 0.\nRechnung: 0,4 → 0,8 (0) → 1,6 (1) → 1,2 (1) → 0,4 (0) → wieder von vorn.\nDie Mantisse wird nach 23 Bit abgeschnitten, deshalb steht statt 18,4 in Wahrheit 18,3999996… im Speicher.",
       "exam": true
     },
     {
       "id": "git-k078",
       "topic": "Nicht klausurrelevant",
       "front": "Was macht ein **Shift** um eine Stelle?",
-      "back": "Nach links: verdoppelt (23 → 46). Nach rechts: halbiert ganzzahlig (23 → 11).\nIEEE-754-Details (Bias 127, Hidden Bit) sind ebenfalls nur Exkurs.",
+      "back": "Alle Bits eine Stelle nach **links** schieben verdoppelt eine Zahl ohne Vorzeichen, nach **rechts** halbiert sie ganzzahlig.\nWarum: Jede Stelle ist doppelt so viel wert wie die rechts daneben.\nBeispiel: 23 = 0001 0111 → links 0010 1110 = 46, rechts 0000 1011 = 11. Exkurs, nicht klausurrelevant.",
       "exam": false
     },
     {
       "id": "git-k079",
       "topic": "Logik und Gatter",
       "front": "NAND, NOR, XNOR – wann ist der Ausgang 1?",
-      "back": "NAND: immer, außer bei 1 1.\nNOR: nur bei 0 0.\nXNOR: wenn beide Eingänge **gleich** sind (00, 11).",
+      "back": "**NAND**: 1, außer wenn beide Eingänge 1 sind. **NOR**: nur 1, wenn beide 0 sind. **XNOR**: 1, wenn beide **gleich** sind (00 oder 11).\nWarum leicht zu merken: Es sind AND, OR und XOR mit umgedrehter Ausgangsspalte.\nBeispiel A = 1, B = 0: NAND 1, NOR 0, XNOR 0.",
       "exam": true
     },
     {
       "id": "git-k080",
       "topic": "Logik und Gatter",
       "front": "Zeichen der Gatter nach IEC 60617-12?",
-      "back": "AND `&` · OR `≥1` · NOT `1` · XOR `=1`.\nEin Kreis am Ausgang heißt „nicht“: NAND = & mit Kreis, NOR = ≥1 mit Kreis, XNOR = =1 mit Kreis.",
+      "back": "AND: `&` · OR: `≥1` · NOT: `1` mit Kreis · XOR: `=1`. Ein **Kreis am Ausgang** heißt „nicht“: NAND = & mit Kreis, NOR = ≥1 mit Kreis, XNOR = =1 mit Kreis.\nDas ist die europäische Norm IEC 60617-12 (rechteckige Kästchen).\nEselsbrücke: ≥1 = „mindestens einer“, =1 = „genau einer“.",
       "exam": true
     },
     {
       "id": "git-k081",
       "topic": "Logik und Gatter",
       "front": "Rangfolge der Operatoren? Wie viele Zeilen hat eine Wahrheitstabelle?",
-      "back": "Zuerst ¬, dann ∧, dann ∨ (wie Punkt vor Strich), im Zweifel Klammern.\nn Eingänge → 2ⁿ Zeilen: 3 Eingänge → 8 Zeilen, von 000 bis 111 hochzählen.",
+      "back": "Rangfolge: zuerst ¬, dann ∧, dann ∨, wie Punkt vor Strich. Im Zweifel Klammern setzen. Eine Wahrheitstabelle mit n Eingängen hat **2ⁿ** Zeilen.\nWarum 2ⁿ? Jeder Eingang verdoppelt die Möglichkeiten.\nBeispiel: 3 Eingänge → 8 Zeilen, von 000 bis 111 wie Binärzahlen hochzählen, dann fehlt keine.",
       "exam": true
     },
     {
       "id": "git-k082",
       "topic": "Logik und Gatter",
       "front": "NOT, AND und OR nur aus NAND bauen?",
-      "back": "NOT A = NAND(A, A) · AND = NAND + zweites NAND als NOT (2 Gatter) · OR = NAND(¬A, ¬B) (3 Gatter).\nNAND ist ein **Universalgatter**.",
+      "back": "**NOT A** = NAND(A, A): beide Eingänge zusammenschalten (1 Gatter). **AND** = NAND und dahinter ein zweites NAND als NOT (2 Gatter). **OR** = NAND(¬A, ¬B) (3 Gatter).\nWarum OR so geht: De Morgan, ¬(¬A ∧ ¬B) = A ∨ B.\nNAND ist ein **Universalgatter**, mit ihm allein lässt sich jede Schaltung bauen.",
       "exam": true
     },
     {
       "id": "git-k083",
       "topic": "Logik und Gatter",
       "front": "Analyse: Y = (A ∨ B) ∧ ¬C – in welchen Zeilen ist Y = 1?",
-      "back": "Nur wenn C = 0 und A oder B = 1: ABC = 010, 100, 110 → **3** von 8 Zeilen.\nVorgehen: Hilfsspalten A ∨ B und ¬C, dann Zeile für Zeile.",
+      "back": "In **3** von 8 Zeilen: ABC = 010, 100 und 110.\nY = 1 braucht beides: A ∨ B = 1 und ¬C = 1, also C = 0 und mindestens eins von A, B.\nVorgehen: Hilfsspalten A ∨ B und ¬C anlegen, dann Zeile für Zeile verunden.",
       "exam": true
     },
     {
       "id": "git-k084",
       "topic": "Logik und Gatter",
       "front": "Text → Ausdruck: „Das Licht geht an, wenn Bewegung B erkannt wird und es dunkel D ist, oder wenn der Schalter S an ist.“",
-      "back": "Y = (B ∧ D) ∨ S.\nProbe: B = 1, D = 0, S = 0 → 0 (hell, Licht bleibt aus).",
+      "back": "**Y = (B ∧ D) ∨ S**. „und“ wird ∧, „oder“ wird ∨, und der Teil mit „oder wenn“ steht für sich.\nProbe: B = 1, D = 0, S = 0 → (1 ∧ 0) ∨ 0 = 0, das Licht bleibt aus (es ist hell).\nB = 0, D = 0, S = 1 → 0 ∨ 1 = 1: Der Schalter wirkt immer.",
       "exam": true
     },
     {
       "id": "git-k085",
       "topic": "Programmierung",
       "front": "Assembler vs. Hochsprache?",
-      "back": "Assembler: jeder Befehl = genau ein Maschinenbefehl mit Kurznamen (LDA, ADC, STA).\nHochsprache (Python, Java): für Menschen lesbar, braucht Compiler oder Interpreter.",
+      "back": "**Assembler**: Jeder Befehl entspricht genau einem Maschinenbefehl, nur mit Kurznamen (LDA laden, ADC addieren, STA speichern). Er ist prozessorabhängig.\n**Hochsprache** (Python, Java, C++): für Menschen lesbar, unabhängig vom Prozessor, braucht einen Compiler oder Interpreter.\nPrinzip im Assembler: Wert ins Register laden, rechnen, Ergebnis an eine Adresse zurückschreiben.",
       "exam": true
     },
     {
       "id": "git-k086",
       "topic": "Programmierung",
       "front": "Syntaxfehler vs. Semantikfehler?",
-      "back": "Syntaxfehler: falsch geschrieben (fehlendes Semikolon) → der Compiler übersetzt nicht.\nSemantikfehler: läuft, liefert aber Falsches, z. B. 7 / 2 = 3 in Java.",
+      "back": "**Syntaxfehler**: falsch geschrieben, zum Beispiel eine fehlende Klammer. Der Compiler meldet ihn, das Programm startet nicht. **Semantikfehler**: richtig geschrieben, aber falsche Bedeutung. Das Programm läuft und liefert still ein falsches Ergebnis.\nBild: „Ich esse gern Apfel ein“ (Syntax) gegen „Der Kühlschrank isst einen Apfel“ (Semantik).\nBeispiel Semantik: `double d = 7 / 2;` ergibt in Java 3.0 statt 3.5.",
       "exam": true
     },
     {
       "id": "git-k087",
       "topic": "Programmierung",
       "front": "Java: `double res = 10 / 3;` – welcher Wert?",
-      "back": "**3.0**: Erst rechnet int / int = 3 (Rest abgeschnitten), dann wird daraus double.\nRichtig: `(double) 10 / 3` = 3.333…",
+      "back": "**3.0**. Zuerst wird int / int gerechnet: 10 / 3 = 3, der Rest wird abgeschnitten. Erst danach wird die 3 in den double 3.0 umgewandelt.\nDas ist ein Semantikfehler: kein Fehler gemeldet, aber falsches Ergebnis.\nRichtig: `(double) 10 / 3` = 3.333…, weil dann schon vor der Division ein double vorliegt.",
       "exam": true
     },
     {
       "id": "git-k088",
       "topic": "Programmierung",
       "front": "Linker, Lader, Debugger – wer macht was?",
-      "back": "Linker: verbindet übersetzte Module (statisch in eine Datei oder dynamisch, z. B. DLL).\nLader: bringt das Programm in den RAM und addiert den Offset (Start 0x4000: 0x0120 → 0x4120).\nDebugger: Schritt für Schritt ausführen, Variablen ansehen.",
+      "back": "**Linker**: verbindet getrennt übersetzte Module zu einem Programm, statisch in eine Datei oder dynamisch zur Laufzeit (DLL). **Lader**: bringt das Programm in den Arbeitsspeicher und addiert den Offset zu allen Adressen. **Debugger**: führt Schritt für Schritt aus und zeigt Variablen und Register.\nBeispiel Lader: Ladeadresse 0x4000, Sprungziel 0x0120 → 0x4120.\nFalle: Linker und Lader verwechseln.",
       "exam": true
     },
     {
       "id": "git-k089",
       "topic": "Programmierung",
       "front": "Deklaration, Initialisierung, Zuweisung?",
-      "back": "`int zaehler;` = Deklaration (Typ + Name).\n`int summe = 0;` = Deklaration mit Initialisierung.\n`summe = summe + 5;` = Zuweisung (neuer Wert).",
+      "back": "**Deklaration**: `int zaehler;` legt Typ und Namen fest. **Initialisierung**: `int summe = 0;` gibt den ersten Wert. **Zuweisung**: `summe = summe + 5;` ändert den Wert.\nBild: Schachtel beschriften, zum ersten Mal befüllen, Inhalt austauschen.\nEine Variable darf erst gelesen werden, wenn sie einen Wert hat.",
       "exam": true
     },
     {
       "id": "git-k090",
       "topic": "Programmierung",
       "front": "Die vier Phasen eines Compilers?",
-      "back": "Scanner (zerlegt den Text in Symbole) → Parser (baut den Syntaxbaum) → semantische Analyse und Optimierung → Codeerzeugung (Maschinenprogramm).",
+      "back": "1 **Scanner** (lexikalische Analyse: Text in Grundsymbole zerlegen) → 2 **Parser** (syntaktische Analyse: Syntaxbaum bauen) → 3 **semantische Analyse** und Optimierung → 4 **Codeerzeugung** (Maschinenprogramm).\nVergleich Sprache: erst Wörter erkennen, dann Satzbau prüfen, dann Sinn prüfen, dann übersetzen.\nEin Syntaxfehler fällt in Phase 2 auf, der Parser kann keinen Baum bauen.",
       "exam": true
     },
     {
       "id": "git-k091",
       "topic": "Datenstrukturen",
       "front": "Liste: X hinter A einfügen – in welcher Reihenfolge?",
-      "back": "1 X.next = A.next (X zeigt auf B) · 2 A.next = X.\nUmgekehrt wäre der Weg zu B verloren.",
+      "back": "1) **X.next = A.next** (X zeigt auf B). 2) **A.next = X**.\nWarum diese Reihenfolge? Biegst du zuerst A auf X um, weiß niemand mehr, wo B liegt, und der Rest der Liste ist verloren.\nErgebnis: A → X → B, kein Element musste verschoben werden.",
       "exam": true
     },
     {
       "id": "git-k092",
       "topic": "Datenstrukturen",
       "front": "Sortierte Liste 10 → 19 → 36: Wie fügst du 25 ein?",
-      "back": "Vom Kopf laufen bis zum ersten größeren Element (36) und davor einhängen: 10 → 19 → **25** → 36.",
+      "back": "Vom Kopf aus laufen bis zum ersten Element, das größer ist (36), und davor einhängen: **10 → 19 → 25 → 36**.\nAblauf: 10 < 25 weiter, 19 < 25 weiter, 36 > 25 stopp. Dann 25.next = 36 und 19.next = 25.\nSo bleibt die Liste immer sortiert, das Einfügen kostet aber einen Durchlauf (O(n)).",
       "exam": true
     },
     {
       "id": "git-k093",
       "topic": "Datenstrukturen",
       "front": "Einfach vs. doppelt verkettete Liste?",
-      "back": "Einfach: nur next, nur vorwärts.\nDoppelt: prev + next, beide Richtungen, Löschen ohne Vorgängersuche; Preis: mehr Speicher.",
+      "back": "**Einfach verkettet**: jedes Element kennt nur den Nachfolger (next), du kannst nur vorwärts laufen. **Doppelt verkettet**: Vorgänger (prev) und Nachfolger (next), beide Richtungen.\nVorteil doppelt: Beim Löschen musst du den Vorgänger nicht erst vom Kopf aus suchen.\nPreis: ein zweiter Zeiger pro Element, also mehr Speicher.",
       "exam": true
     },
     {
       "id": "git-k094",
       "topic": "Datenstrukturen",
       "front": "Queue durchspielen: enqueue(4), enqueue(9), dequeue(), enqueue(3), dequeue(), enqueue(7)",
-      "back": "Ausgaben: 4, dann 9 (FIFO).\nAm Ende (vorne → hinten): **[3, 7]**.",
+      "back": "Ausgaben **4**, dann **9**, am Ende (vorne → hinten) **[3, 7]**.\nAblauf: [4] → [4, 9] → dequeue 4 → [9] → [9, 3] → dequeue 9 → [3] → [3, 7].\nFIFO: Wer zuerst kam, geht zuerst. Mit LIFO (Stack) wäre die erste Ausgabe 9.",
       "exam": true
     },
     {
       "id": "git-k095",
       "topic": "Datenstrukturen",
       "front": "Baumbegriffe: Wurzel, Blatt, Ebene, Höhe?",
-      "back": "Wurzel = Ursprung, Ebene 0. Blatt = Knoten ohne Kinder. Ebene = Kanten bis zur Wurzel. Höhe = tiefste Ebene.\nWurzel + eine Ebene darunter = Höhe 1.",
+      "back": "**Wurzel** = Ursprung, liegt auf Ebene 0. **Blatt** = Knoten ohne Kinder. **Ebene** = Anzahl Kanten von der Wurzel. **Höhe** = tiefste Ebene.\nWarum ab 0? Die Wurzel braucht null Kanten bis zu sich selbst.\nBeispiel: Wurzel mit zwei Kindern, die je ein Kind haben → Ebenen 0, 1, 2, Höhe 2.",
       "exam": true
     },
     {
       "id": "git-k096",
       "topic": "Datenstrukturen",
       "front": "Voll, vollständig, balanciert, degeneriert?",
-      "back": "Voll: jeder Knoten 0 oder 2 Kinder · vollständig: voll + alle Blätter auf der letzten Ebene · balanciert: Blätter auf letzter oder vorletzter Ebene · degeneriert: höchstens 1 Kind je Knoten, praktisch eine Liste (1, 2, 3, 4 sortiert eingefügt).",
+      "back": "**Voll**: jeder Knoten hat 0 oder 2 Kinder. **Vollständig**: voll, und alle Blätter liegen auf der letzten Ebene. **Balanciert**: alle Blätter auf der letzten oder vorletzten Ebene, Tiefe ≈ log₂(n + 1). **Degeneriert**: höchstens ein Kind je Knoten, praktisch eine Liste.\nWarum wichtig: Die Suchdauer hängt von der Tiefe ab.\nBeispiel degeneriert: 1, 2, 3, 4 sortiert eingefügt, jede Zahl hängt rechts an der vorigen.",
       "exam": true
     },
     {
       "id": "git-k097",
       "topic": "Datenstrukturen",
       "front": "Stack oder Queue: „Rückgängig“ im Editor, Druckaufträge am Drucker?",
-      "back": "Rückgängig = **Stack**: die letzte Aktion wird zuerst zurückgenommen (LIFO).\nDrucker = **Queue**: wer zuerst schickt, wird zuerst gedruckt (FIFO).",
+      "back": "„Rückgängig“ = **Stack**: Die zuletzt gemachte Aktion wird zuerst zurückgenommen (LIFO). Druckaufträge = **Queue**: Wer zuerst schickt, wird zuerst gedruckt (FIFO).\nDenkfrage: Brauche ich als Nächstes das neueste oder das älteste Element?\nWeitere Beispiele: Zurück-Taste im Browser (Stack), Warteschleife der Hotline (Queue).",
       "exam": true
     },
     {
       "id": "git-k098",
       "topic": "Datenstrukturen",
       "front": "Array mit 10 Elementen: welche Indizes?",
-      "back": "**0 bis 9**. a[10] gibt es nicht.\nZugriff a[i] ist direkt, O(1).",
+      "back": "**0 bis 9**. Der Index beginnt bei 0, deshalb ist der letzte Index Länge − 1.\na[10] gibt es nicht, der Zugriff wäre ein Fehler.\nDer Zugriff a[i] geht direkt in einem Schritt, O(1), egal wie lang das Array ist.",
       "exam": true
     },
     {
       "id": "git-k099",
       "topic": "Suchen und Sortieren",
       "front": "Binäre Suche nach 61 in [10, 19, 23, 25, 36, 61, 79, 81, 99]: welche Mitten?",
-      "back": "0–8 → Mitte 4 (36), 61 > 36 → 5–8 → Mitte 6 (79), 61 < 79 → 5–5 → Mitte 5 (61) gefunden.\n**3** Vergleiche.",
+      "back": "Bereich 0–8 → Mitte 4 (36), 61 > 36 → rechts weiter. Bereich 5–8 → Mitte 6 (79), 61 < 79 → links weiter. Bereich 5–5 → Mitte 5 (61), gefunden.\n**3 Vergleiche**. Mitte = (lo + hi) / 2, abgerundet.\nDie lineare Suche hätte 6 Vergleiche gebraucht (61 steht an Index 5).",
       "exam": true
     },
     {
       "id": "git-k100",
       "topic": "Suchen und Sortieren",
       "front": "Bubble Sort: Wann ist Schluss, wie viele Durchläufe höchstens?",
-      "back": "Schluss, wenn ein Durchlauf **ohne Tausch** bleibt.\nHöchstens n − 1 Durchläufe, bei 5 Elementen also 4.",
+      "back": "Schluss ist, wenn ein Durchlauf **ohne Tausch** bleibt. Höchstens **n − 1** Durchläufe sind nötig.\nWarum n − 1? Nach jedem Durchlauf steht ein weiteres großes Element fest, nach n − 1 Durchläufen auch das letzte.\nBeispiel 5 Elemente: höchstens 4 Durchläufe und 4 + 3 + 2 + 1 = 10 Vergleiche.",
       "exam": true
     },
     {
       "id": "git-k101",
       "topic": "Suchen und Sortieren",
       "front": "Merge Sort: Wo passiert die eigentliche Arbeit?",
-      "back": "Beim **Zusammenführen**: immer die vordersten Elemente vergleichen, das kleinere übernehmen. Geteilt wird stumpf in der Mitte.\n[27, 38, 43] + [3, 9, 10, 82] → [3, 9, 10, 27, 38, 43, 82].",
+      "back": "Beim **Zusammenführen** (Merge): Immer die vordersten Elemente beider sortierter Stücke vergleichen und das kleinere übernehmen. Geteilt wird stumpf in der Mitte, ohne zu sortieren.\nBeispiel [27, 38, 43] + [3, 9, 10, 82]: 3, 9, 10, dann 27, 38, 43, Rest 82.\nErgebnis [3, 9, 10, 27, 38, 43, 82].",
       "exam": true
     },
     {
       "id": "git-k102",
       "topic": "Suchen und Sortieren",
       "front": "Quicksort und Selection Sort: Prinzip und Aufwand?",
-      "back": "Quicksort: Pivot wählen, in kleiner/größer teilen, rekursiv; im Mittel O(n log n), schlimmstenfalls O(n²).\nSelection Sort: kleinstes Element suchen, nach vorne tauschen; O(n²).",
+      "back": "**Quicksort**: ein Pivot-Element wählen, kleinere links, größere rechts, beide Teile rekursiv sortieren. Im Mittel O(n log n), schlimmstenfalls O(n²). **Selection Sort**: das kleinste Element suchen und nach vorne tauschen, wiederholen. O(n²).\nBeide werden auf den Folien nur genannt.\nBeispiel Selection Sort [3, 1, 2]: 1 nach vorne → [1, 3, 2], dann 2 → [1, 2, 3].",
       "exam": true
     },
     {
       "id": "git-k103",
       "topic": "Suchen und Sortieren",
       "front": "Suche im geordneten Binärbaum: Aufwand?",
-      "back": "Balanciert **O(log n)**: 1 000 Knoten ≈ 10 Ebenen.\nDegeneriert **O(n)**, wie eine Liste.",
+      "back": "Balanciert **O(log n)**, degeneriert **O(n)**.\nWarum: Pro Ebene braucht die Suche einen Vergleich, also so viele Vergleiche wie der Baum tief ist.\nBeispiel: 1 000 Knoten balanciert ≈ 10 Ebenen, sortiert eingefügt bis zu 1 000 Ebenen wie eine Liste.",
       "exam": true
     },
     {
       "id": "git-k104",
       "topic": "Rechnerarchitektur",
       "front": "Befehlszähler vs. Befehlsregister? Weitere Register?",
-      "back": "Befehlszähler = **Adresse** des nächsten Befehls. Befehlsregister = der **aktuelle Befehl** selbst.\nAkkumulator: Operanden und Ergebnisse · Statusregister: z. B. Ergebnis eines Vergleichs.",
+      "back": "Der **Befehlszähler** (Program Counter) enthält die **Adresse** des nächsten Befehls. Das **Befehlsregister** enthält den **aktuellen Befehl** selbst.\nDazu: **Akkumulator** (im Rechenwerk, Operanden und Ergebnisse) und **Statusregister** (z. B. Ergebnis eines Vergleichs).\nBild Koch: Finger auf der Rezeptzeile (Befehlszähler) gegen der gelesene Satz im Kopf (Befehlsregister).",
       "exam": true
     },
     {
       "id": "git-k105",
       "topic": "Rechnerarchitektur",
       "front": "Was muss in die Von-Neumann-Skizze?",
-      "back": "5 beschriftete Kästen · Steuer- und Rechenwerk als CPU umrahmt · beim Speicher „Programme UND Daten“ · **ein** gemeinsamer Bus · Pfeile in beide Richtungen.",
+      "back": "1) Fünf beschriftete Kästen: Steuerwerk, Rechenwerk, Speicherwerk, Ein-/Ausgabewerk, Bussystem. 2) Steuer- und Rechenwerk als CPU umrahmt. 3) Beim Speicher „Programme UND Daten“. 4) **Ein** gemeinsamer Bus. 5) Pfeile in beide Richtungen.\nWarum der Zusatz beim Speicher? Genau das unterscheidet Von Neumann von Harvard.\nÜbe die Skizze, bis sie in 2 Minuten steht (8-Punkte-Block).",
       "exam": true
     },
     {
       "id": "git-k106",
       "topic": "Rechnerarchitektur",
       "front": "Welche Prozessoren nutzen welche Architektur?",
-      "back": "Intel x86: Von Neumann · AVR-Mikrocontroller (Arduino): Harvard · Apple M-Serie und ARM: **modifizierte** Harvard (innen getrennte Caches, gemeinsamer Hauptspeicher).",
+      "back": "Intel x86: **Von Neumann**. AVR-Mikrocontroller (Arduino): **Harvard**. Apple M-Serie und ARM (z. B. Snapdragon): **modifizierte Harvard**.\n„Modifiziert“ heißt: Innen, zwischen CPU und Caches, sind Befehle und Daten getrennt wie bei Harvard, der große Hauptspeicher ist gemeinsam wie bei Von Neumann.\nSo verbinden moderne Chips Tempo und günstigen Speicher.",
       "exam": true
     },
     {
       "id": "git-k107",
       "topic": "Rechnerarchitektur",
       "front": "Was folgt daraus, dass Programme und Daten im selben Speicher liegen?",
-      "back": "Programme können wie Daten geladen, geändert und gespeichert werden → der Rechner ist universell programmierbar (von Neumann, 1946).",
+      "back": "Programme können **wie Daten** geladen, geändert und gespeichert werden. Der Rechner ist damit **universell programmierbar** (Stored-Program-Prinzip).\nWarum das neu war: Frühere Rechner waren fest verdrahtet oder lasen das Programm von Lochstreifen.\nKehrseite: Als Daten getarnter Code kann eingeschleust werden (Sicherheitsrisiko).",
       "exam": true
     },
     {
       "id": "git-k108",
       "topic": "Speicher und RAID",
       "front": "RAID-5-Parität: Datenblöcke 1011, 0110, 1100?",
-      "back": "Parität = 1011 ⊕ 0110 ⊕ 1100 = **0001**.\nFällt 0110 aus: 1011 ⊕ 1100 ⊕ 0001 = 0110 ✓ wiederhergestellt.",
+      "back": "Parität = 1011 ⊕ 0110 ⊕ 1100 = **0001** (spaltenweise: 1, wenn die Anzahl der Einsen ungerade ist).\nFällt der Block 0110 aus, XOR-verknüpfst du die übrigen mit der Parität: 1011 ⊕ 1100 ⊕ 0001 = 0110 ✓\nIdee mit normalen Zahlen: 3, 5, 4 und Summe 12; fehlt die 5, rechnest du 12 − 3 − 4 = 5.",
       "exam": true
     },
     {
       "id": "git-k109",
       "topic": "Speicher und RAID",
       "front": "Volatil vs. persistent – was gehört wohin?",
-      "back": "Volatil (Strom weg = Inhalt weg): Register, Cache, RAM.\nPersistent: Flash/SSD, Festplatte, Magnetband.",
+      "back": "**Volatil** (flüchtig, Strom weg = Inhalt weg): Register, Cache, RAM. **Persistent** (bleibt erhalten): Flash/SSD, Festplatte, Magnetband.\nDie Grenze liegt in der Hierarchie zwischen RAM und Flash/SSD.\nBeispiel: Ein nicht gespeichertes Dokument liegt nur im RAM und ist nach einem Stromausfall weg.",
       "exam": true
     },
     {
       "id": "git-k110",
       "topic": "Speicher und RAID",
       "front": "RAID 1: Nutzkapazität? Ersetzt RAID ein Backup?",
-      "back": "RAID 1: n · C / 2, z. B. 4 Platten à 2 TB → 4 TB.\nKein Backup: Löschst du versehentlich eine Datei, ist sie sofort auf allen Platten weg.",
+      "back": "RAID 1: **n · C / 2**, weil jede Platte gespiegelt wird. Beispiel: 4 Platten à 2 TB → 4 TB nutzbar.\nRAID ersetzt **kein** Backup: Löschst du versehentlich eine Datei, wird das Löschen sofort auf alle Platten übertragen.\nRAID schützt nur vor dem Ausfall einer Platte, nicht vor Bedienfehlern oder Schadsoftware.",
       "exam": true
     },
     {
       "id": "git-k111",
       "topic": "Speicher und RAID",
       "front": "SSD vs. Festplatte vs. Band?",
-      "back": "Festplatte: Magnetscheiben und Lesekopf, bewegliche Teile.\nSSD: Flash, keine beweglichen Teile, sehr schnell, aber begrenzt viele Schreibzyklen.\nBand: für Backups.",
+      "back": "**Festplatte**: magnetisch beschichtete Scheiben und ein Schreib-/Lesekopf, also bewegliche Teile. **SSD**: Flash-Speicher aus NAND-/NOR-Gattern, keine beweglichen Teile, sehr schnell, aber nur begrenzt viele Schreibzyklen. **Magnetband**: langsam, billig pro Bit, für Backups.\nAlle drei sind persistent.\nIn der Hierarchie: SSD vor Festplatte vor Band.",
       "exam": true
     },
     {
       "id": "git-k112",
       "topic": "Datenbanken und SQL",
       "front": "Primärschlüssel vs. Fremdschlüssel?",
-      "back": "Primärschlüssel: identifiziert jede Zeile eindeutig (SSN).\nFremdschlüssel: verweist auf den Primärschlüssel einer anderen Tabelle (ABT → ABTNUMMER).",
+      "back": "**Primärschlüssel**: identifiziert jede Zeile eindeutig, zum Beispiel SSN in ANGESTELLTER. **Fremdschlüssel**: Spalte, die auf den Primärschlüssel einer anderen Tabelle verweist, zum Beispiel ABT → ABTNUMMER.\nWarum? So steht jede Angabe nur einmal in der Datenbank, und Tabellen verweisen aufeinander.\nBild: Versichertennummer (Primärschlüssel) steht auf jeder Arztrechnung (Fremdschlüssel).",
       "exam": true
     },
     {
       "id": "git-k113",
       "topic": "Datenbanken und SQL",
       "front": "Relation, Tupel, Attribut?",
-      "back": "Relation = Tabelle · Tupel = Zeile · Attribut = Spalte.\nFalle: „Relation“ heißt hier Tabelle, nicht Beziehung.",
+      "back": "**Relation** = Tabelle · **Tupel** = Zeile (Datensatz) · **Attribut** = Spalte mit Datentyp.\nFalle: „Relation“ heißt im relationalen Modell Tabelle, nicht Beziehung. Beziehungen heißen im ER-Modell Beziehungstypen.\nBeispiel: Die Relation ANGESTELLTER hat 8 Tupel und die Attribute VNAME, NNAME, SSN, GDATUM, GEHALT, ABT.",
       "exam": true
     },
     {
       "id": "git-k114",
       "topic": "Datenbanken und SQL",
       "front": "CREATE, INSERT, UPDATE, DELETE – und die typische Falle?",
-      "back": "CREATE TABLE legt an · INSERT INTO fügt ein · UPDATE … SET ändert · DELETE FROM löscht.\nFalle: Ohne WHERE trifft UPDATE oder DELETE **alle** Zeilen.",
+      "back": "**CREATE TABLE** legt eine Tabelle an, **INSERT INTO** fügt Zeilen ein, **UPDATE … SET** ändert Werte, **DELETE FROM** löscht Zeilen.\nFalle: Ohne WHERE treffen UPDATE und DELETE **alle** Zeilen.\nBeispiel: `DELETE FROM Student WHERE MatrNr = 87654321;` löscht genau einen Studenten, ohne WHERE alle.",
       "exam": true
     },
     {
       "id": "git-k115",
       "topic": "Datenbanken und SQL",
       "front": "Join: `SELECT PNUMMER, NNAME FROM PROJEKT, ABTEILUNG, ANGESTELLTER WHERE ABTNR = ABTNUMMER AND MGRSSN = SSN AND PSTANDORT = 'Stafford';`",
-      "back": "Stafford: Projekte 10 und 30 (Abt. 4) → Leiter 987654321 = Wallace.\nErgebnis: **10 | Wallace** und **30 | Wallace**.",
+      "back": "**10 | Wallace** und **30 | Wallace**.\nSchritte: In Stafford liegen die Projekte 10 und 30, beide mit ABTNR 4. Abteilung 4 hat MGRSSN 987654321. Diese SSN gehört Jennifer Wallace.\nDie Bedingungen ABTNR = ABTNUMMER und MGRSSN = SSN sind die Join-Bedingungen: Fremdschlüssel = Primärschlüssel.",
       "exam": true
     },
     {
       "id": "git-k116",
       "topic": "Datenbanken und SQL",
       "front": "SQL schreiben: „Wie viele Projekte kontrolliert jede Abteilung?“",
-      "back": "`SELECT ABTNR, COUNT(*) FROM PROJEKT GROUP BY ABTNR;`\n„jede“/„pro“ → GROUP BY. Ergebnis: 1 | 1, 4 | 2, 5 | 3.",
+      "back": "`SELECT ABTNR, COUNT(*) FROM PROJEKT GROUP BY ABTNR;`\nSignalwörter: „wie viele“ → COUNT, „jede“/„pro“ → GROUP BY über diese Spalte.\nErgebnis: 1 | 1, 4 | 2, 5 | 3 (Abteilung 5 hat die Projekte 1, 2 und 3).",
       "exam": true
     },
     {
       "id": "git-k117",
       "topic": "Datenbanken und SQL",
       "front": "OLTP vs. OLAP?",
-      "back": "OLTP: Tagesgeschäft (Kasse bucht), aktuelle Daten, zeilenweise (Row Store).\nOLAP: Analyse mit Historie, fast nur lesen, spaltenweise (Column Store), z. B. Data Warehouse. ETL bringt die Daten hinüber.",
+      "back": "**OLTP**: Tagesgeschäft (die Kasse bucht jeden Einkauf sofort), aktuelle Daten, ganze Datensätze lesen und schreiben, zeilenweise gespeichert (Row Store). **OLAP**: Analyse mit Historie, fast nur lesen, Aggregate, spaltenweise (Column Store), z. B. Data Warehouse.\n**ETL** (Extract, Transform, Load) bringt die Daten von OLTP nach OLAP.\nWarum Column Store für Analysen? Für die Umsatzsumme muss er nur die Umsatzspalte lesen.",
       "exam": true
     },
     {
       "id": "git-k118",
       "topic": "Datenbanken und SQL",
       "front": "Vor- und Nachteile eines DBMS?",
-      "back": "Vorteile: Redundanzkontrolle, Zugriffsrechte, dauerhafte Speicherung, Mehrbenutzerbetrieb, Integritätsbedingungen, Wiederherstellung.\nNachteil: hohe Anfangskosten, für einfache Fälle zu komplex.",
+      "back": "**Vorteile**: Redundanzkontrolle (Daten nur einmal, Sichten über Views), Zugriffsbeschränkungen, dauerhafte Speicherung, Mehrbenutzerbetrieb, Integritätsbedingungen, Wiederherstellung nach Fehlern. **Nachteile**: hohe Anfangskosten (Hardware, Software, Schulung), für einfache Fälle zu komplex.\nDateien bleiben sinnvoll bei sehr einfachen Daten oder nur einer Person.\nBeispiel Integrität: Das DBMS lässt nur gültige Noten von 1,0 bis 5,0 zu.",
       "exam": true
     },
     {
       "id": "git-k119",
       "topic": "Datenbanken und SQL",
       "front": "Kardinalität bestimmen: Rechnung und Posten?",
-      "back": "Zwei Fragen: Wie viele Posten hat eine Rechnung? Viele. Zu wie vielen Rechnungen gehört ein Posten? Zu einer.\n→ Rechnung **1 : n** Posten.",
+      "back": "Zwei Fragen, eine pro Richtung: Wie viele Posten hat eine Rechnung? **Viele** (n). Zu wie vielen Rechnungen gehört ein Posten? Zu **einer** (1).\nZusammen: Rechnung **1 : n** Posten.\nKommt auf beide Fragen „viele“ heraus, ist es m:n (Student – Vorlesung).",
       "exam": true
     },
     {
       "id": "git-k120",
       "topic": "Datenbanken und SQL",
       "front": "`WHERE ABT = 5 AND GEHALT > 30000` – ist Smith (genau 30000) dabei?",
-      "back": "**Nein**, > heißt echt größer. Ergebnis: Wong (40000) und Narayan (38000).\nMit >= wäre Smith dabei.",
+      "back": "**Nein**. > heißt echt größer, 30000 ist nicht größer als 30000.\nErgebnis von ABT = 5 AND GEHALT > 30000: Wong (40000) und Narayan (38000).\nMit >= wäre Smith dabei. In der Klausur jedes Vergleichszeichen einzeln lesen.",
+      "exam": true
+    },
+    {
+      "id": "git-k121",
+      "topic": "Information und Digitalisierung",
+      "front": "Shannons Kommunikationsmodell: aus welchen Stationen besteht es?",
+      "back": "Quelle → Sender → **Kanal** → Empfänger → Ziel. Auf den Kanal wirken **Störungen**.\nWarum das Modell wichtig ist: Es trennt die Bedeutung einer Nachricht von ihrer technischen Übertragung.\nBeispiel Telefonat: Du (Quelle) sprichst ins Handy (Sender), das Funknetz (Kanal) rauscht, das andere Handy (Empfänger) gibt es an deine Freundin (Ziel) weiter.",
+      "exam": true
+    },
+    {
+      "id": "git-k122",
+      "topic": "Information und Digitalisierung",
+      "front": "Gerades Paritätsbit: Welches Bit hängst du an 0110 1101, und was erkennt der Empfänger?",
+      "back": "0110 1101 hat fünf Einsen, also ungerade. Das Paritätsbit ist **1**, dann ist die Gesamtzahl gerade (6).\nDer Empfänger zählt nach. Ist die Anzahl ungerade, ist ein Bit gekippt. Welches, weiß er nicht.\nKippen zwei Bits, bleibt die Anzahl gerade und der Fehler bleibt unbemerkt.",
+      "exam": true
+    },
+    {
+      "id": "git-k123",
+      "topic": "Information und Digitalisierung",
+      "front": "Was sagt die **Entropie** einer Quelle, grob gesagt?",
+      "back": "Wie viele Bits eine Nachricht im Durchschnitt mindestens braucht, also wie viel „Überraschung“ in ihr steckt (Shannon). Die Folien nennen den Begriff nur.\nBei n gleich wahrscheinlichen Möglichkeiten sind es log₂ n Bit.\nBeispiel: Münzwurf 1 Bit, Würfel mit 8 Seiten 3 Bit (2³ = 8). Eine Nachricht, die du schon kennst, hat Entropie 0.",
+      "exam": true
+    },
+    {
+      "id": "git-k124",
+      "topic": "Information und Digitalisierung",
+      "front": "Wie spart die **Huffman-Kodierung** Bits?",
+      "back": "Häufige Zeichen bekommen **kurze** Bitfolgen, seltene **lange**. Im Mittel wird die Nachricht kürzer.\nDas ist Kompression, also wird Redundanz entfernt.\nVergleich Morsealphabet: Das häufige E ist ein einziger Punkt, das seltene Q ist lang (− − · −).",
+      "exam": true
+    },
+    {
+      "id": "git-k125",
+      "topic": "Information und Digitalisierung",
+      "front": "Welche **ökonomischen Folgen** der Digitalisierung nennen die Folien?",
+      "back": "Digitale Kopien kosten fast nichts (Fixkosten hoch, variable Kosten niedrig). **Netzwerkeffekte** und **Plattformen** ohne eigene Güter (Uber, Airbnb). **Long Tail**: Online lohnt sich ein riesiges Nischensortiment. **Freemium**: Gratisversion, bezahltes Abo. Niedrigere Eintrittsbarrieren und das Zusammenwachsen von Branchen.\nBeispiel Long Tail: Ein Onlinebuchhandel verkauft viele Titel, die eine Filiale nie ins Regal stellen würde.",
+      "exam": true
+    },
+    {
+      "id": "git-k126",
+      "topic": "Information und Digitalisierung",
+      "front": "Welche Rolle hatte die IT **vor** und **nach** dem Internet?",
+      "back": "**Vorher**: eine „EDV-Abteilung“ für Routinearbeit, nötig für Effizienz, aber nicht strategisch. **Nachher**: Teil des Kerngeschäfts mit digitalen Vertriebskanälen (Shops, CRM) und ganz digitalen Produkten.\nWarum der Wechsel? Über das Internet erreichen Firmen ihre Kunden direkt.\nBeispiel: Musik wird heute gestreamt (Spotify), das Produkt selbst ist digital.",
+      "exam": true
+    },
+    {
+      "id": "git-k127",
+      "topic": "IT-Infrastruktur und Cloud",
+      "front": "Vor- und Nachteile von Cloud Computing für ein Unternehmen?",
+      "back": "**Vorteile** (Folien): flexibel und skalierbar, Bezahlung nach Bedarf im Abo, Zugang über den Browser, keine eigene Anschaffung. **Nachteile** (Ergänzung): Abhängigkeit vom Anbieter, ohne Internet kein Zugriff, Daten liegen bei Fremden (Datenschutz).\nBeispiel: Wer nur im Dezember 20 statt 4 Server braucht, mietet die 16 zusätzlichen für einen Monat, statt sie das ganze Jahr ungenutzt stehen zu haben.",
+      "exam": true
+    },
+    {
+      "id": "git-k128",
+      "topic": "IT-Infrastruktur und Cloud",
+      "front": "Warum entstand **AWS**, und was zeigt das New-York-Times-Beispiel?",
+      "back": "Amazon hielt viel Rechenleistung für das Weihnachtsgeschäft vor und wollte sie im Rest des Jahres vermieten. Daraus wurde AWS.\nDie New York Times mietete dort viele Rechner und wandelte rund 11 Millionen Artikel in 24 Stunden in PDF um.\nKern: Für eine einmalige Spitze lohnt sich Mieten statt Kaufen.",
+      "exam": true
+    },
+    {
+      "id": "git-k129",
+      "topic": "IT-Infrastruktur und Cloud",
+      "front": "Ordne zu: SAP ERP, Linux, WLAN, MySQL-Server, IT-Dienstleister – welche Infrastruktur-Komponente?",
+      "back": "SAP ERP → **Anwendungssysteme**. Linux → **Betriebssystem-Plattformen**. WLAN → **Netzwerke und Telekommunikation**. MySQL-Server → **Datenverwaltung und -speicherung**. IT-Dienstleister → **Beratung und Systemintegratoren**.\nEs fehlen noch Hardwareplattformen (Laptops, Server) und das Internet als Plattform (Webdienste).\nMit einem Beispiel pro Komponente bekommst du bei „Nennen“ die Punkte sicher.",
+      "exam": true
+    },
+    {
+      "id": "git-k130",
+      "topic": "IT-Infrastruktur und Cloud",
+      "front": "Was heißen **virtuell** und **skalierbar** bei Cloud-Rechnern?",
+      "back": "**Virtuell**: Der Rechner existiert nur als Software auf einem großen echten Rechner des Anbieters. **Skalierbar**: Du kannst per Klick mehr oder weniger davon mieten.\nWarum das wichtig ist: So zahlt man nur, was man gerade braucht.\nBeispiel: Ein Shop startet am Black Friday 50 virtuelle Server und beendet sie am Montag wieder.",
+      "exam": true
+    },
+    {
+      "id": "git-k131",
+      "topic": "IT-Infrastruktur und Cloud",
+      "front": "Was macht im N-Tier-Modell welche Schicht?",
+      "back": "**Client**: Eingabe beim Benutzer (Browser). **Webserver**: nimmt Anfragen aus dem Internet an. **Anwendungsserver**: führt die Geschäftslogik aus. **Datenbankserver**: speichert die gemeinsamen Daten.\nWarum mehrere Schichten? Jede Schicht kann auf eigenen, günstigen Maschinen laufen und einzeln wachsen.\nBeispiel SAP R/3 aus der Vorlesung: eigener Internet Transaction Server und eigener Datenbankserver.",
+      "exam": true
+    },
+    {
+      "id": "git-k132",
+      "topic": "Mooresches Gesetz",
+      "front": "Preis halbiert sich alle 18 Monate: Was kostet ein Auftrag von 800 € nach 6 Jahren?",
+      "back": "**50 €**. Erst die Halbierungen zählen: 6 Jahre / 1,5 Jahre = 4. Dann durch 2⁴ = 16 teilen: 800 / 16 = 50.\nZum Nachzählen: 800 → 400 → 200 → 100 → 50.\nFalle: nicht 800 − 4 · 400 rechnen, jede Halbierung teilt den aktuellen Wert.",
+      "exam": true
+    },
+    {
+      "id": "git-k133",
+      "topic": "Mooresches Gesetz",
+      "front": "Metcalfe: Um welchen Faktor wachsen die Verbindungen, wenn ein Netz von 5 auf 10 Teilnehmer wächst?",
+      "back": "Um den Faktor **4,5**: 5 · 4 = 20 Verbindungen, 10 · 9 = 90 Verbindungen, 90 / 20 = 4,5.\nWarum mehr als doppelt? Jeder neue Teilnehmer kann mit **allen** bisherigen verbunden werden.\nDeshalb wächst der Nutzen eines Netzes überproportional, zum Beispiel bei sozialen Netzwerken.",
+      "exam": true
+    },
+    {
+      "id": "git-k134",
+      "topic": "Mooresches Gesetz",
+      "front": "Warum hängt die Transistorzahl mit dem Preis von Chips zusammen?",
+      "back": "Die **Fläche** ist der wichtigste Kostenfaktor bei der Chipherstellung. Passen mehr Transistoren auf dieselbe Fläche, bekommst du mehr Leistung für dasselbe Geld.\nDaraus entstanden die Interpretationen „Leistung verdoppelt sich“ und „Preis halbiert sich“.\nGrenze: Bei sehr kleinen Strukturen steigen die Kosten pro Transistor wieder.",
+      "exam": true
+    },
+    {
+      "id": "git-k135",
+      "topic": "Mooresches Gesetz",
+      "front": "Offizielles Klausur-MC: Welche Aussage zum Mooreschen Gesetz war laut Lösungsfolie **richtig**?",
+      "back": "Nur: „Die **Leistung** von Mikroprozessoren **verdoppelt** sich alle ca. 18 Monate.“\nFalsch waren: Transistoren **verdreifachen** sich, **Speicherkapazität** verdoppelt sich, **Größe** eines Transistors halbiert sich.\nLehre: Die Fallen stecken in einzelnen Wörtern. Wer nur die richtige ankreuzt, bekommt 4 · ½ = 2 Punkte.",
+      "exam": true
+    },
+    {
+      "id": "git-k136",
+      "topic": "Zahlendarstellung",
+      "front": "3A7₁₆ ins Oktalsystem – wie gehst du vor?",
+      "back": "Über binär: Jede Hexziffer wird zu 4 Bit, dann von rechts neu in Dreiergruppen teilen.\n3A7 = 0011 1010 0111 → 001 | 110 | 100 | 111 → **1647₈**.\nProbe: 3 · 256 + 10 · 16 + 7 = 935 und 512 + 6 · 64 + 4 · 8 + 7 = 935 ✓",
+      "exam": true
+    },
+    {
+      "id": "git-k137",
+      "topic": "Zahlendarstellung",
+      "front": "Was ist eine **Festkommadarstellung**?",
+      "back": "Das Komma steht immer an derselben Stelle, zum Beispiel nach 4 von 8 Bit.\nVorteil: einfach zu rechnen. Nachteil: kleiner Wertebereich und feste, grobe Schrittweite.\nBeispiel 4 + 4 Bit: 0100,0110 = 4 + ¼ + ⅛ = 4,375. Größter Wert 1111,1111 = 15,9375, kleinster Schritt ¹⁄₁₆.",
+      "exam": true
+    },
+    {
+      "id": "git-k138",
+      "topic": "Zahlendarstellung",
+      "front": "Wie **normalisierst** du eine binäre Kommazahl für die Gleitkommadarstellung?",
+      "back": "Das Komma so weit schieben, dass genau **eine 1** davor steht. Die Zahl der Stellen ist der Exponent (nach links geschoben = positiv).\nBeispiel 4,375 = 100,011₂ → Komma 2 Stellen nach links → **1,00011₂ · 2²**.\nProbe: 1,00011₂ = 1,09375, mal 4 = 4,375 ✓",
+      "exam": true
+    },
+    {
+      "id": "git-k139",
+      "topic": "Zahlendarstellung",
+      "front": "101,101₂ = ? (dezimal)",
+      "back": "**5,625**. Vor dem Komma gelten 4, 2, 1, nach dem Komma ½, ¼, ⅛.\nRechnung: 4 + 1 + ½ + ⅛ = 5 + 0,5 + 0,125 = 5,625.\nGegenprobe: 0,625 · 2 = 1,25 (1), 0,25 · 2 = 0,5 (0), 0,5 · 2 = 1,0 (1) → ,101 ✓",
+      "exam": true
+    },
+    {
+      "id": "git-k140",
+      "topic": "Zahlendarstellung",
+      "front": "−42 − 17 im 8-Bit-Zweierkomplement?",
+      "back": "**1100 0101 = −59**. Beide Zahlen werden negativ: −42 = 1101 0110, −17 = 1110 1111.\nSumme: 1101 0110 + 1110 1111 = (1) 1100 0101. Die 1 links fällt weg.\nProbe: −128 + 64 + 4 + 1 = −59. Kein Überlauf: minus + minus ergibt minus, −59 liegt im Bereich.",
+      "exam": true
+    },
+    {
+      "id": "git-k141",
+      "topic": "Zahlendarstellung",
+      "front": "Wertebereich bei n Bit: ohne Vorzeichen und im Zweierkomplement?",
+      "back": "Ohne Vorzeichen: **0 … 2ⁿ − 1**. Zweierkomplement: **−2ⁿ⁻¹ … 2ⁿ⁻¹ − 1**.\nWarum: n Bit ergeben 2ⁿ Muster. Im Zweierkomplement ist die Hälfte negativ, die Null zählt zur positiven Hälfte.\nBeispiel 16 Bit (Java short): 0 … 65 535 bzw. −32 768 … 32 767.",
+      "exam": true
+    },
+    {
+      "id": "git-k142",
+      "topic": "Zahlendarstellung",
+      "front": "712₈ = ? (dezimal und binär)",
+      "back": "**458** und **1 1100 1010₂**. Achterpotenzen von rechts: 1, 8, 64.\nRechnung: 7 · 64 + 1 · 8 + 2 = 448 + 8 + 2 = 458.\nBinär: jede Oktalziffer in 3 Bit → 7 = 111, 1 = 001, 2 = 010 → 111 001 010 (Folienübung 458₁₀ = 111001010₂).",
+      "exam": true
+    },
+    {
+      "id": "git-k143",
+      "topic": "Logik und Gatter",
+      "front": "Wie funktioniert ein **Volladdierer**?",
+      "back": "Er addiert zwei Bits A und B **plus** den Übertrag der vorigen Stelle. Gebaut aus **zwei Halbaddierern und einem ODER**.\nDer erste Halbaddierer rechnet A + B, der zweite addiert den eingehenden Übertrag, das ODER sammelt die beiden Überträge.\nBeispiel 1 + 1 + 1 = 3 = 11₂: Summe 1, Übertrag 1. Mehrere Volladdierer hintereinander ergeben ein Addierwerk.",
+      "exam": true
+    },
+    {
+      "id": "git-k144",
+      "topic": "Logik und Gatter",
+      "front": "Ausdruck → Schaltung: In welcher Reihenfolge zeichnest du die Gatter?",
+      "back": "Von **innen nach außen**: zuerst die innerste Klammer, dann die Operation darum. Jede Operation wird ein Gatter, jede Negation ein NOT (oder ein Kreis am Eingang).\nBeispiel Y = S ∧ (T ∨ F): ein ≥1-Gatter mit T und F, sein Ausgang und S gehen in ein &-Gatter.\nAm Ende Eingänge und Ausgang beschriften.",
+      "exam": true
+    },
+    {
+      "id": "git-k145",
+      "topic": "Logik und Gatter",
+      "front": "Schaltung: A und B gehen je durch ein NOT, dann in ein OR. Welches Gatter ist das?",
+      "back": "Ein **NAND**. Die Schaltung rechnet Y = ¬A ∨ ¬B.\nNach De Morgan gilt ¬A ∨ ¬B = ¬(A ∧ B).\nProbe in der Tabelle: Nur bei A = B = 1 ist Y = 0, sonst immer 1.",
+      "exam": true
+    },
+    {
+      "id": "git-k146",
+      "topic": "Logik und Gatter",
+      "front": "Garagentor: öffnet bei Fernbedienung F und keinem Hindernis H, oder immer bei Notschalter N. Ausdruck?",
+      "back": "**Y = (F ∧ ¬H) ∨ N**. „kein Hindernis“ wird ¬H, „und“ wird ∧, „oder immer“ wird ∨ mit einem eigenen Teil.\nSchaltung: H durch NOT, mit F in ein &-Gatter, dessen Ausgang mit N in ein ≥1-Gatter.\nProbe: F = 1, H = 1, N = 0 → 0 (Hindernis, Tor bleibt zu).",
+      "exam": true
+    },
+    {
+      "id": "git-k147",
+      "topic": "Logik und Gatter",
+      "front": "Welche **Rechengesetze** brauchst du für die Kernregel (A ∧ B) ∨ (A ∧ ¬B) = A?",
+      "back": "1) **Distributivgesetz**: A ausklammern → A ∧ (B ∨ ¬B). 2) **Komplement**: B ∨ ¬B = 1. 3) **Neutralität**: A ∧ 1 = A.\nDazu oft die **Idempotenz** x ∨ x = x: Ein Term darf mehrfach benutzt werden.\nWer die Gesetze nennt, zeigt in der Klausur sauber, warum die Vereinfachung stimmt.",
+      "exam": true
+    },
+    {
+      "id": "git-k148",
+      "topic": "Programmierung",
+      "front": "Iterativ vs. rekursiv: Was ist der Unterschied?",
+      "back": "**Iterativ**: Wiederholung mit einer **Schleife**, Ende über die Schleifenbedingung. **Rekursiv**: Die Funktion ruft sich **selbst** auf, Ende über die Abbruchbedingung.\nRekursion legt für jeden offenen Aufruf einen Eintrag auf den Aufrufstapel, die Schleife braucht nur ihre Variablen.\nBeispiel fakite(4): sum = 1 · 1 · 2 · 3 · 4 = 24, dasselbe wie fakrek(4).",
+      "exam": true
+    },
+    {
+      "id": "git-k149",
+      "topic": "Programmierung",
+      "front": "Wie haben sich die Programmiersprachen laut Folie entwickelt?",
+      "back": "Abstraktion von der Maschine (BASIC, Sprünge mit GOTO) → **strukturierte Programmierung** (Pascal: Schleifen, Bedingungen, Funktionen statt GOTO) → Referenzen und dynamische Datentypen → **Kapselung/Objektorientierung** (C++, Java) → **Speichersicherheit** (Rust).\nJeder Schritt nimmt dem Menschen eine Fehlerquelle ab.\nBeispiel: Ohne GOTO ist ein Programm leichter von oben nach unten zu lesen.",
+      "exam": true
+    },
+    {
+      "id": "git-k150",
+      "topic": "Programmierung",
+      "front": "Was misst der **TIOBE-Index**?",
+      "back": "Die **Popularität** von Programmiersprachen: wie viele Entwickler, Kurse, Anbieter und Suchanfragen es gibt.\nEr misst **nicht**, welche Sprache die beste ist und in welcher die meisten Codezeilen geschrieben werden.\nTypische MC-Falle: „TIOBE zeigt die beste Sprache“ ist falsch.",
+      "exam": true
+    },
+    {
+      "id": "git-k151",
+      "topic": "Programmierung",
+      "front": "Statisches vs. dynamisches Linken?",
+      "back": "**Statisch**: Alle Funktionen werden in **eine** ausführbare Datei gebunden. Vorteil: alles sicher vorhanden. Nachteil: große Datei.\n**Dynamisch**: Bibliotheken (DLL, Shared Library) werden erst zur Laufzeit gesucht. Vorteil: gemeinsame Speichernutzung, austauschbar. Nachteil: Fehlt eine Funktion, bricht das Programm ab.\nBeispiel: Ein Windows-Programm meldet „DLL nicht gefunden“ und startet nicht.",
+      "exam": true
+    },
+    {
+      "id": "git-k152",
+      "topic": "Programmierung",
+      "front": "Was ist **Bytecode**?",
+      "back": "Eine **maschinenunabhängige Zwischenform** zwischen Quellcode und Maschinencode. Java und Python übersetzen erst in Bytecode, eine virtuelle Maschine führt ihn aus.\nVorteil: schneller als reines Interpretieren, und dieselbe Datei läuft auf verschiedenen Prozessoren.\nBeispiel: Eine Java-`.class`-Datei läuft auf Windows und Linux gleich.",
+      "exam": true
+    },
+    {
+      "id": "git-k153",
+      "topic": "Programmierung",
+      "front": "Wie kann man einen Algorithmus grafisch darstellen?",
+      "back": "Als **Struktogramm** (verschachtelte Kästen für Folge, Verzweigung, Schleife, ohne GOTO) oder als **UML-Aktivitätsdiagramm** (Aktionen mit Pfeilen und Entscheidungsrauten).\nDas gehört zum **Modellieren**: einen Ausschnitt der Wirklichkeit abbilden, bevor man programmiert.\nDie Folien zeigen als Beispiel Selection Sort als Aktivitätsdiagramm.",
+      "exam": true
+    },
+    {
+      "id": "git-k154",
+      "topic": "Datenstrukturen",
+      "front": "Datentyp vs. Datenstruktur?",
+      "back": "Ein **elementarer Datentyp** ist ein einzelner Baustein, zum Beispiel int (32 Bit) oder char. Eine **Datenstruktur** legt **mehrere** Werte, auch verschiedener Typen, gemeinsam ab.\nBeispiel: int ist ein Datentyp, ein Array von 10 int ist eine Datenstruktur.\nSelbstdefinierte Struktur „Kunde“: ID (int), Name (String), Umsatz (float), wie eine Zeile in einer Datenbank.",
+      "exam": true
+    },
+    {
+      "id": "git-k155",
+      "topic": "Datenstrukturen",
+      "front": "Was ist ein **Ringpuffer**?",
+      "back": "Eine Queue in einem Array, bei der zwei Indizes auf Anfang und Ende zeigen. Erreicht ein Index das Array-Ende, springt er wieder nach vorne.\nWarum so? Beim Entnehmen muss nichts nach vorne verschoben werden.\nBild: Sushi-Laufband im Kreis. Beispiel: Array mit 5 Plätzen, Ende steht auf Index 4, das nächste put landet auf Index 0 (falls frei).",
+      "exam": true
+    },
+    {
+      "id": "git-k156",
+      "topic": "Datenstrukturen",
+      "front": "Wie löschst du B aus der einfach verketteten Liste A → B → C?",
+      "back": "Den **Vorgänger** A suchen und auf den Nachfolger von B zeigen lassen: **A.next = B.next** (also C).\nDanach ist B aus der Kette heraus, nichts wurde verschoben.\nIn der einfach verketteten Liste musst du A erst vom Kopf aus finden. Die doppelt verkettete kennt den Vorgänger direkt (B.prev).",
+      "exam": true
+    },
+    {
+      "id": "git-k157",
+      "topic": "Datenstrukturen",
+      "front": "Welche Struktur passt: 12 Monatsumsätze, ständig neue Lieder in einer Playlist einschieben?",
+      "back": "Monatsumsätze → **Array**: feste Anzahl, direkter Zugriff über den Index, umsatz[2] ist der März.\nPlaylist → **verkettete Liste**: Einschieben nur durch Zeiger umhängen, ohne alles zu verschieben.\nDenkfrage: Bleibt die Anzahl fest und greife ich über die Nummer zu, oder ändert sich die Folge ständig?",
+      "exam": true
+    },
+    {
+      "id": "git-k158",
+      "topic": "Datenstrukturen",
+      "front": "Folienbaum aus [26, 5, 18, 16, 1, 43, 39, 27, 12]: Wurzel, Blätter, Höhe?",
+      "back": "Wurzel **26**, Blätter **1, 12, 27**, Höhe **4** (Weg 26 → 5 → 18 → 16 → 12).\nAufbau: links 5 (mit 1 links, 18 rechts, an 18 links 16, an 16 links 12), rechts 43 (an 43 links 39, an 39 links 27).\nProbe von links nach rechts: 1, 5, 12, 16, 18, 26, 27, 39, 43 sortiert.",
+      "exam": true
+    },
+    {
+      "id": "git-k159",
+      "topic": "Datenstrukturen",
+      "front": "Pfadlänge eines Baums: Wie rechnest du sie aus?",
+      "back": "Pfadlänge = **Summe der Ebenen aller Knoten**. Die Wurzel zählt 0.\nBeispiel: Wurzel A (0), Kinder B und C (je 1), Enkel D, E, F (je 2) → 0 + 1 + 1 + 2 + 2 + 2 = **8**.\nNicht verwechseln mit der Höhe (tiefste Ebene, hier 2).",
+      "exam": true
+    },
+    {
+      "id": "git-k160",
+      "topic": "Datenstrukturen",
+      "front": "Wo nutzt man einen Stack im Rechner selbst?",
+      "back": "Im **Aufrufstapel**: Jeder offene Funktionsaufruf liegt dort, bis er fertig ist. Der zuletzt gestartete Aufruf endet zuerst (LIFO).\nBeispiel fakrek(3): fakrek(3), fakrek(2), fakrek(1) liegen übereinander, fakrek(1) kommt zuerst zurück.\nWeitere Anwendungen: Rückgängig im Editor, Klammern prüfen (jede „(“ push, jede „)“ pop).",
+      "exam": true
+    },
+    {
+      "id": "git-k161",
+      "topic": "Suchen und Sortieren",
+      "front": "Wie viele Vergleiche macht Bubble Sort höchstens bei n Elementen?",
+      "back": "**n · (n − 1) / 2**: Der erste Durchlauf vergleicht n − 1 Paare, der zweite n − 2 und so weiter.\nBeispiel 5 Elemente: 4 + 3 + 2 + 1 = 10. Bei 1 000 Elementen: 499 500.\nDarum O(n²): Zehnmal so viele Elemente heißt etwa hundertmal so viele Vergleiche.",
+      "exam": true
+    },
+    {
+      "id": "git-k162",
+      "topic": "Suchen und Sortieren",
+      "front": "Laufzeit hochrechnen: O(n²)-Verfahren braucht 4 s für 2 000 Elemente. Wie lange für 6 000?",
+      "back": "**36 s**. n wächst um den Faktor 3, bei O(n²) wächst die Zeit um 3² = 9, also 4 s · 9 = 36 s.\nBei O(n) wären es 4 s · 3 = 12 s.\nRezept: Faktor von n bestimmen, bei O(n) mal Faktor, bei O(n²) mal Faktor².",
+      "exam": true
+    },
+    {
+      "id": "git-k163",
+      "topic": "Suchen und Sortieren",
+      "front": "Welches Suchverfahren für eine **unsortierte** Liste mit 30 Namen?",
+      "back": "Die **lineare Suche**: Sie braucht keine Sortierung und funktioniert auch auf Listen ohne Index.\nBinäre Suche ginge nur nach vorherigem Sortieren, und das kostet mehr als einmal 30 Vergleiche.\nBei einem sortierten Array mit 1 Mio. Einträgen, in dem ständig gesucht wird, lohnt dagegen die binäre Suche (höchstens 20 Vergleiche).",
+      "exam": true
+    },
+    {
+      "id": "git-k164",
+      "topic": "Suchen und Sortieren",
+      "front": "Was heißt **log n** in der O-Notation, anschaulich?",
+      "back": "Wie oft du n halbieren kannst, bis 1 übrig ist (Logarithmus zur Basis 2).\nBeispiele: 8 → 4 → 2 → 1 sind 3 Halbierungen, also log₂ 8 = 3. Bei 1 000 sind es etwa 10, bei 1 Mio. etwa 20.\nDeshalb ist O(log n) so schnell: Tausendmal mehr Daten kosten nur rund 10 Schritte mehr.",
+      "exam": true
+    },
+    {
+      "id": "git-k165",
+      "topic": "Suchen und Sortieren",
+      "front": "Binäre Suche: Woran erkennst du, dass der Wert **nicht** vorhanden ist?",
+      "back": "Wenn der Bereich leer wird, also **lo > hi**.\nBeispiel [3, 8, 12, 17, 21] (Index 0–4), Suche nach 10: Mitte 2 (12), 10 < 12 → hi = 1. Mitte 0 (3), 10 > 3 → lo = 1. Mitte 1 (8), 10 > 8 → lo = 2. Jetzt lo = 2 > hi = 1, also nicht da.\nNach 3 Vergleichen steht das fest.",
+      "exam": true
+    },
+    {
+      "id": "git-k166",
+      "topic": "Rechnerarchitektur",
+      "front": "Was muss in die **Harvard-Skizze**?",
+      "back": "1) **Zwei** Speicher, beschriftet: Befehlsspeicher (nur Programm) und Datenspeicher (nur Daten). 2) **Zwei** Busse: Befehlsbus und Datenbus. 3) CPU mit Steuerwerk und Rechenwerk. 4) Ein-/Ausgabewerk. 5) Pfeile beim Datenbus in beide Richtungen.\nWarum zwei Busse beschriften? Nur getrennte Speicher reichen nicht für die volle Punktzahl.\nKurz dazu: Vorteil schneller (gleichzeitig holen), Nachteil teurer.",
+      "exam": true
+    },
+    {
+      "id": "git-k167",
+      "topic": "Rechnerarchitektur",
+      "front": "Befehl ADD 0x0200 an Adresse 0x0100, Akku 5, an 0x0200 steht 7: Was passiert im Zyklus?",
+      "back": "FETCH: Befehl von 0x0100 ins Befehlsregister. DECODE: „addieren, Operand bei 0x0200“. FETCH OPERANDS: 7 holen. EXECUTE: 5 + 7 → Akkumulator = **12**. UPDATE: Befehlszähler = **0x0101**.\nBefehl und Operand laufen beim Von-Neumann-Rechner nacheinander über denselben Bus.\nDanach beginnt FETCH an 0x0101.",
+      "exam": true
+    },
+    {
+      "id": "git-k168",
+      "topic": "Rechnerarchitektur",
+      "front": "Steuerwerk vs. Rechenwerk: Wer macht was?",
+      "back": "**Steuerwerk** (Control Unit): holt Befehle, interpretiert sie, lädt Operanden in die Register und entscheidet, wo es weitergeht. **Rechenwerk** (ALU): führt die arithmetischen und logischen Operationen aus.\nZusammen mit ihren Registern bilden sie die CPU.\nBild: Das Steuerwerk ist die Küchenchefin mit dem Rezept, das Rechenwerk der Koch am Herd.",
+      "exam": true
+    },
+    {
+      "id": "git-k169",
+      "topic": "Rechnerarchitektur",
+      "front": "Wie machen Hersteller moderne CPUs schneller (laut Folie)?",
+      "back": "Größere, mehrstufige **Caches** (L1 bis L3), **Sprungvorhersage**, **spekulative Ausführung** und **mehrere Kerne** (Multicore).\nWarum Caches? Sie mildern den Von-Neumann-Flaschenhals, weil weniger über den langsamen Bus zum RAM muss.\nSprungvorhersage: Die CPU rät bei einer Verzweigung, welcher Weg kommt, und arbeitet schon vor.",
+      "exam": true
+    },
+    {
+      "id": "git-k170",
+      "topic": "Rechnerarchitektur",
+      "front": "Harvard: Pro und Contra in je einem Satz?",
+      "back": "**Pro**: Befehl und Daten werden gleichzeitig über getrennte Busse geholt (Einzelzyklus), deshalb schneller und ohne Von-Neumann-Flaschenhals. **Contra**: Zwei Speicher und zwei Busse sind aufwendiger, also in der Regel teurer.\nDazu (Ergänzung): Code und Daten getrennt erschwert das Einschleusen von Code.\nDas ist das Spiegelbild der Von-Neumann-Argumente.",
+      "exam": true
+    },
+    {
+      "id": "git-k171",
+      "topic": "Rechnerarchitektur",
+      "front": "Wann und von wem stammt die Von-Neumann-Architektur, und was war neu?",
+      "back": "**John von Neumann, 1946**: ein Universalrechner, der nicht an ein festes Programm gebunden ist.\nNeu: Programm und Daten liegen binär im selben Speicher, also kann ein neues Programm einfach geladen werden (Stored-Program-Prinzip).\nDie Folie nennt auch die Zuse Z1 (1937). Das ist umstritten, weil die Z1 ihr Programm von Lochstreifen las.",
+      "exam": true
+    },
+    {
+      "id": "git-k172",
+      "topic": "Speicher und RAID",
+      "front": "4 Platten à 8 TB, 2 Platten dürfen ausfallen: welches RAID, wie viel nutzbar?",
+      "back": "**RAID 6**: doppelte Parität, verkraftet 2 Ausfälle, braucht mindestens 4 Platten. Nutzbar: (4 − 2) · 8 = **16 TB**.\nRAID 5 hätte 24 TB, aber nur 1 erlaubten Ausfall.\nMerke: Jede Platte, die ausfallen darf, kostet eine Platte Kapazität.",
+      "exam": true
+    },
+    {
+      "id": "git-k173",
+      "topic": "Speicher und RAID",
+      "front": "RAID 5: Blöcke 1100, 1010, 0111 – Parität, und wie holst du 1010 zurück?",
+      "back": "Parität = 1100 ⊕ 1010 ⊕ 0111 = 0110 ⊕ 0111 = **0001**.\nFällt 1010 aus: 1100 ⊕ 0111 ⊕ 0001 = 1011 ⊕ 0001 = **1010** ✓\nXOR ist spaltenweise 1, wenn die Anzahl der Einsen ungerade ist.",
+      "exam": true
+    },
+    {
+      "id": "git-k174",
+      "topic": "Speicher und RAID",
+      "front": "Was ist **Flash** (früher ROM/EPROM) und wofür wird er genutzt?",
+      "back": "Ein Speicher, der seinen Inhalt **ohne Strom behält** und meist nur gelesen wird.\nTypisch für **BIOS und Firmware**, also das, was beim Einschalten zuerst läuft. Auch SSDs bestehen aus Flash.\nIn der Hierarchie steht er unter dem RAM und ist der erste persistente Speicher.",
+      "exam": true
+    },
+    {
+      "id": "git-k175",
+      "topic": "Speicher und RAID",
+      "front": "Was ist ein **Cache-Miss**?",
+      "back": "Die CPU braucht Daten, die **nicht im Cache** liegen. Sie müssen über den Bus aus dem langsameren Arbeitsspeicher nachgeladen werden.\nDie Folie schreibt „Cache-fault“, üblich ist „Cache-Miss“.\nBild: Das Buch liegt nicht auf dem Schreibtisch, du musst in den Keller laufen.",
+      "exam": true
+    },
+    {
+      "id": "git-k176",
+      "topic": "Speicher und RAID",
+      "front": "Wie viele Adressleitungen für 64 KB, wie viel Speicher bei 48 Leitungen?",
+      "back": "64 KB = 2⁶ · 2¹⁰ = 2¹⁶ → **16 Leitungen**.\n48 Leitungen = 2⁸ · 2⁴⁰ = 256 · 1 TB = **256 TB**.\nRezept: Zahl vor der Einheit als Zweierpotenz, Einheit als Zweierpotenz (KB 10, MB 20, GB 30, TB 40), Exponenten addieren.",
+      "exam": true
+    },
+    {
+      "id": "git-k177",
+      "topic": "Datenbanken und SQL",
+      "front": "Chen-Notation: doppeltes Rechteck, doppelte Ellipse, gestrichelte Ellipse?",
+      "back": "**Doppeltes Rechteck** = schwache Entität (nur zusammen mit einer anderen eindeutig, z. B. ANGEHÖRIGER). **Doppelte Ellipse** = mehrwertiges Attribut (z. B. mehrere Standorte einer Abteilung). **Gestrichelte Ellipse** = abgeleitetes Attribut (wird berechnet, z. B. Anzahl Angestellte).\nDazu: Ellipse mit Unter-Ellipsen = zusammengesetztes Attribut (Name = Vorname + Nachname).\nFür einfache Modelle reichen die vier Grundsymbole.",
+      "exam": true
+    },
+    {
+      "id": "git-k178",
+      "topic": "Datenbanken und SQL",
+      "front": "`SELECT SUM(GEHALT), MAX(GEHALT), MIN(GEHALT), AVG(GEHALT) FROM ANGESTELLTER;` – Ergebnis?",
+      "back": "**Eine** Zeile: 281000 | 55000 | 25000 | 35125.\nOhne GROUP BY fassen Aggregate alle 8 Zeilen zu einem Wert zusammen. AVG = 281000 / 8 = 35125.\nMAX gehört Borg (55000), MIN haben Zelaya, English und Jabbar (25000).",
+      "exam": true
+    },
+    {
+      "id": "git-k179",
+      "topic": "Datenbanken und SQL",
+      "front": "Was ist der Unterschied zwischen `FROM A, B WHERE A.x = B.y` und `FROM A JOIN B ON A.x = B.y`?",
+      "back": "Im Ergebnis **keiner**. Beides ist ein Join, nur steht die Join-Bedingung einmal im WHERE, einmal nach ON.\nDie JOIN-Schreibweise trennt die Verknüpfung sauber von den Filterbedingungen.\nFehlt die Join-Bedingung ganz, wird jede Zeile von A mit jeder von B kombiniert (bei 6 Projekten und 3 Abteilungen 18 Zeilen).",
+      "exam": true
+    },
+    {
+      "id": "git-k180",
+      "topic": "Datenbanken und SQL",
+      "front": "Konzeptuelles, logisches und physisches Datenmodell?",
+      "back": "**Konzeptuell**: Sicht der Benutzer, unabhängig von der Software, das ER-Modell. **Logisch**: Tabellen mit Schlüsseln (relationales Modell). **Physisch**: wie gespeichert wird (Dateien, Indizes).\nWarum die Trennung? Ein DBMS arbeitet nicht direkt mit ER-Diagrammen, das Modell wird schrittweise übersetzt.\nReihenfolge im Entwurf: Anforderungen → ER-Schema → Tabellen → Speicherung.",
+      "exam": true
+    },
+    {
+      "id": "git-k181",
+      "topic": "Datenbanken und SQL",
+      "front": "`SELECT ANAME, SUM(GEHALT) FROM ANGESTELLTER, ABTEILUNG WHERE ABT = ABTNUMMER GROUP BY ANAME;`",
+      "back": "Administration **93000**, Headquarters **55000**, Research **133000**.\nDer Join hängt an jeden Angestellten den Abteilungsnamen, GROUP BY ANAME bildet drei Gruppen, SUM addiert die Gehälter.\nProbe: 93000 + 55000 + 133000 = 281000 = Summe aller Gehälter.",
+      "exam": true
+    },
+    {
+      "id": "git-k182",
+      "topic": "Datenbanken und SQL",
+      "front": "Was ist eine **Integritätsbedingung** und ein **View**?",
+      "back": "**Integritätsbedingung**: eine Regel, welche Werte und Beziehungen zulässig sind. Das DBMS lehnt alles andere ab, zum Beispiel eine Note 7,0 in einer Klausurverwaltung.\n**View** (Sicht): eine gefilterte oder zusammengefasste Sicht auf die Daten für bestimmte Benutzer, ohne die Daten zu kopieren.\nBeides gehört zu den Vorteilen eines DBMS (Redundanzkontrolle, Datenqualität).",
       "exam": true
     }
   ],
@@ -853,7 +1287,7 @@
         "Analoge Signale werden zeitkontinuierlich gespeichert"
       ],
       "correct": 1,
-      "explain": "Technisch heißt digital genau diskret und binär. A ist betriebswirtschaftlich, C gesellschaftlich, D ist das Gegenteil."
+      "explain": "Technisch heißt Digitalisierung: Analoge Signale werden in **zeit- und wertediskrete**, meist binäre Signale umgewandelt, damit man sie elektronisch speichern und verarbeiten kann.\n„Zeitkontinuierlich gespeichert“ klingt technisch, ist aber das Gegenteil: Digital heißt gerade in festen Schritten. „Neue Geschäftsmodelle“ ist die betriebswirtschaftliche, „Arbeitswelten auf digitaler Ebene“ die gesellschaftliche Sicht."
     },
     {
       "id": "git-q002",
@@ -866,7 +1300,7 @@
         "IaaS"
       ],
       "correct": 3,
-      "explain": "Bei IaaS mietest du nur Rechenleistung; Betriebssystem und Anwendungen verwaltest du selbst."
+      "explain": "Bei **IaaS** mietest du nur die Infrastruktur: virtuelle Server, Speicher, Netz. Betriebssystem und Anwendungen installierst und pflegst du selbst, genau wie im Beispiel.\nPaaS ist verlockend, wäre aber falsch: Dort stellt der Anbieter auch Laufzeitumgebung und Datenbank, du lädst nur deinen Code hoch. Bei SaaS nutzt du eine fertige Anwendung."
     },
     {
       "id": "git-q003",
@@ -879,7 +1313,7 @@
         "Die Anzahl der Transistoren verdreifacht sich jährlich"
       ],
       "correct": 2,
-      "explain": "Interpretationen: Leistung verdoppelt bzw. Preis halbiert alle 18 Monate. Speicher, Größe und „verdreifacht“ sind die typischen Fallen."
+      "explain": "Die drei Interpretationen lauten: Prozessorleistung verdoppelt, Computerleistung verdoppelt, **Preis halbiert** sich alle 18 Monate.\n„Speicherkapazität verdoppelt sich“ ist die verlockendste Falle, gehört aber zu keiner Interpretation. „Größe halbiert“ verwechselt Größe mit Anzahl, und „verdreifacht“ ist schlicht falsch."
     },
     {
       "id": "git-q004",
@@ -892,7 +1326,7 @@
         "32 Mrd."
       ],
       "correct": 1,
-      "explain": "8 / 2 = 4 Verdopplungen → 2⁴ = 16-fach → 16 Mrd. (8 Mrd. wäre linear gedacht)."
+      "explain": "Erst die Verdopplungen zählen: 8 Jahre / 2 Jahre = 4. Dann 2⁴ = 16, also 1 Mrd. · 16 = **16 Mrd.**\n8 Mrd. entsteht, wenn man linear denkt (4 · 2 = 8). Verdoppeln heißt aber jedes Mal mal 2: 1 → 2 → 4 → 8 → 16."
     },
     {
       "id": "git-q005",
@@ -905,7 +1339,7 @@
         "42"
       ],
       "correct": 2,
-      "explain": "2·16 + F(15) = 32 + 15 = 47."
+      "explain": "2F₁₆: Die 2 steht an der 16er-Stelle, F = 15 an der 1er-Stelle. 2 · 16 + 15 = 32 + 15 = **47**.\n35 entsteht, wenn man F als 3 oder die Stellen falsch liest; 42 ist schlicht geraten. Merke: Bei Hex immer F = 15, E = 14 usw. einsetzen."
     },
     {
       "id": "git-q006",
@@ -918,7 +1352,7 @@
         "0100 1011"
       ],
       "correct": 0,
-      "explain": "64 + 8 + 4 + 1 = 77 → 0100 1101. Bei der Restwertmethode die Reste von unten nach oben lesen."
+      "explain": "77 = 64 + 8 + 4 + 1, also Einsen an den Stellen 64, 8, 4 und 1: **0100 1101**.\n1011 0010 ist genau das umgedrehte Muster (Einerkomplement). Es entsteht auch, wenn man die Reste der Restwertmethode von oben statt von unten liest und dabei durcheinanderkommt. Probe immer: Stellenwerte addieren."
     },
     {
       "id": "git-q007",
@@ -931,7 +1365,7 @@
         "214₈"
       ],
       "correct": 1,
-      "explain": "Von rechts in 3er-Gruppen: 11|010|110 → 3 2 6. 652 entsteht, wenn man von links gruppiert; 214 ist dezimal, D6 ist hex."
+      "explain": "Von **rechts** in Dreiergruppen: 1101 0110 → 11 | 010 | 110 → 3 | 2 | 6 = **326₈**. Probe: 3 · 64 + 2 · 8 + 6 = 214 = 1101 0110₂.\n652₈ ist die typische Falle: Es entsteht, wenn man von links gruppiert (110 | 101 | 10). 214 ist der Dezimalwert, D6 der Hexwert."
     },
     {
       "id": "git-q008",
@@ -944,7 +1378,7 @@
         "1110 1100"
       ],
       "correct": 3,
-      "explain": "20 = 0001 0100 → invertieren 1110 1011 → +1 = 1110 1100. A ist nur das Einerkomplement, B Vorzeichen-Betrag."
+      "explain": "20 = 0001 0100 → alle Bits umdrehen: 1110 1011 → plus 1: **1110 1100**. Probe: −128 + 64 + 32 + 8 + 4 = −20.\n1110 1011 ist verlockend, weil es der Zwischenschritt ist: Das ist nur das Einerkomplement, die +1 fehlt. 1001 0100 wäre Vorzeichen-Betrag."
     },
     {
       "id": "git-q009",
@@ -957,7 +1391,7 @@
         "−5"
       ],
       "correct": 0,
-      "explain": "−128 + 64 + 32 + 16 + 8 + 2 = −6. 250 wäre ohne Vorzeichen; bei 6 fehlt das Minus; −5 entsteht, wenn man das +1 vergisst."
+      "explain": "Erstes Bit 1, also negativ. −128 + 64 + 32 + 16 + 8 + 2 = **−6**. Gegenprobe: umdrehen 0000 0101, +1 = 0000 0110 = 6.\n−5 ist die verlockendste Falle: Das kommt heraus, wenn man nach dem Umdrehen die +1 vergisst. 250 wäre der Wert ohne Vorzeichen."
     },
     {
       "id": "git-q010",
@@ -970,7 +1404,7 @@
         "1110 1011 = −21"
       ],
       "correct": 2,
-      "explain": "0011 0010 + 1011 1010 (−70) = 1110 1100. Erstes Bit 1 → negativ: −128+64+32+8+4 = −20. +20 entsteht, wenn man −50 statt −70 bildet."
+      "explain": "−70 bilden: 70 = 0100 0110 → 1011 1001 → +1 = 1011 1010. Dann 0011 0010 + 1011 1010 = **1110 1100**, erstes Bit 1, also −128 + 64 + 32 + 8 + 4 = −20.\n„1110 1100 = 236“ hat das richtige Muster, liest es aber ohne Vorzeichen. „+20“ entsteht, wenn man das Komplement von der falschen Zahl (50) bildet."
     },
     {
       "id": "git-q011",
@@ -983,7 +1417,7 @@
         "60 + 60"
       ],
       "correct": 1,
-      "explain": "150 > 127 passt nicht in −128 … +127. Plus + Minus läuft nie über; −120 und 120 passen."
+      "explain": "100 + 50 = 150, das ist größer als +127, passt also nicht in 8 Bit Zweierkomplement: **Überlauf** (plus + plus ergibt scheinbar minus).\n60 + 60 = 120 ist verlockend, weil es „groß“ aussieht, liegt aber noch unter 127. −100 + (−20) = −120 liegt über −128, und plus + minus kann nie überlaufen."
     },
     {
       "id": "git-q012",
@@ -996,7 +1430,7 @@
         "A"
       ],
       "correct": 3,
-      "explain": "A ausklammern: A ∧ (¬B ∨ B) = A ∧ 1 = A. B fällt weg, weil es einmal normal und einmal negiert vorkommt."
+      "explain": "A ausklammern: A ∧ (¬B ∨ B) = A ∧ 1 = **A**. B kommt einmal normal und einmal negiert vor und fällt nach der Kernregel weg.\n„A ∧ B“ ist falsch, weil auch die Zeile A = 1, B = 0 eine 1 liefert. Probe: A = 1, B = 0 → (1 ∧ 1) ∨ (1 ∧ 0) = 1, und A = 1 ✓"
     },
     {
       "id": "git-q013",
@@ -1009,7 +1443,7 @@
         "¬A ∧ ¬B"
       ],
       "correct": 0,
-      "explain": "∨ wird ∧, jede Variable wird negiert: ¬A ∧ ¬¬B = ¬A ∧ B. Typischer Fehler: das ∨ stehen lassen."
+      "explain": "De Morgan: ∨ wird ∧, jede Variable wird negiert. ¬(A ∨ ¬B) = ¬A ∧ ¬¬B = **¬A ∧ B**.\n„¬A ∨ B“ ist der typische Fehler: Die Negation wurde in die Klammer gezogen, aber das ∨ blieb stehen. „¬A ∧ ¬B“ vergisst, dass ¬¬B wieder B ist."
     },
     {
       "id": "git-q014",
@@ -1022,7 +1456,7 @@
         "A ∨ (B ∧ C)"
       ],
       "correct": 1,
-      "explain": "A∧B∧C zweimal nutzen: mit A∧B∧¬C → A∧B, mit ¬A∧B∧C → B∧C. (A∧B) ∨ (B∧C) = B ∧ (A ∨ C)."
+      "explain": "A ∧ B ∧ C passt zu beiden anderen Termen: mit A ∧ B ∧ ¬C ergibt es A ∧ B, mit ¬A ∧ B ∧ C ergibt es B ∧ C. (A ∧ B) ∨ (B ∧ C) = **B ∧ (A ∨ C)**.\n„B“ allein ist zu viel vereinfacht: Bei A = 0, B = 1, C = 0 ist der Ausdruck 0, B aber 1."
     },
     {
       "id": "git-q015",
@@ -1035,7 +1469,7 @@
         "1"
       ],
       "correct": 2,
-      "explain": "Absorption: Steckt der kurze Term A ganz im langen, fällt der lange weg."
+      "explain": "Absorption: Steckt der kurze Term A ganz im langen Term A ∧ B ∧ C, fällt der lange weg. Ergebnis **A**.\nWarum: Ist A = 1, ist alles 1. Ist A = 0, ist auch A ∧ B ∧ C = 0. „A ∨ B ∨ C“ ist falsch: Bei A = 0, B = 1 wäre es 1, der Ausdruck aber 0."
     },
     {
       "id": "git-q016",
@@ -1048,7 +1482,7 @@
         "A ∨ B"
       ],
       "correct": 3,
-      "explain": "Nur bei 00 ist Y = 0 → das ist OR. XOR wäre bei 11 gleich 0."
+      "explain": "Y ist nur in der Zeile 00 gleich 0, sonst 1: Das ist genau **OR** (A ∨ B).\nXOR ist die verlockende Falle, weil 01 und 10 passen. Aber XOR ist bei 11 gleich 0, hier ist Y = 1. ¬A ∨ ¬B (NAND) wäre bei 00 gleich 1."
     },
     {
       "id": "git-q017",
@@ -1061,7 +1495,7 @@
         "A ∧ B ∧ C"
       ],
       "correct": 0,
-      "explain": "1 → Variable, 0 → negierte Variable, alles mit ∧ verbinden."
+      "explain": "Im DNF-Teilausdruck wird jede 1 zur Variablen, jede 0 zur negierten Variablen, alles mit ∧ verbunden: **A ∧ ¬B ∧ C**.\n„A ∨ ¬B ∨ C“ hat die richtigen Variablen, aber den falschen Operator. Ein ODER-Term ist schon wahr, wenn nur eine Bedingung stimmt, und beschreibt damit nicht genau eine Zeile."
     },
     {
       "id": "git-q018",
@@ -1074,20 +1508,20 @@
         "4"
       ],
       "correct": 1,
-      "explain": "A ⊕ B ist in 2 von 4 Fällen 1 (01, 10), dazu muss C = 1 sein → 2 Zeilen (011, 101)."
+      "explain": "A ⊕ B ist in 2 von 4 Fällen 1 (A, B = 01 oder 10). Zusätzlich muss C = 1 sein. Also nur die Zeilen 011 und 101: **2 Zeilen**.\n4 ist verlockend, wenn man C vergisst und nur die XOR-Zeilen in der 8er-Tabelle zählt (010, 011, 100, 101)."
     },
     {
       "id": "git-q019",
       "topic": "Programmierung",
       "q": "Ein Programm zeigt jede Sekunde die Uhrzeit an und endet nie. Was ist es?",
       "options": [
-        "Ein Algorithmus",
         "Ein Programm, aber kein Algorithmus",
+        "Ein Algorithmus",
         "Ein Compiler",
         "Ein Syntaxfehler"
       ],
-      "correct": 1,
-      "explain": "Ein Algorithmus muss in endlicher Zeit enden. Ein Programm darf endlos laufen."
+      "correct": 0,
+      "explain": "Ein Algorithmus muss in **endlicher Zeit** enden. Ein Programm darf endlos laufen. Also ist es **ein Programm, aber kein Algorithmus**.\n„Ein Algorithmus“ ist die verlockende Antwort, weil es eine klare Anleitung ist. Es fehlt aber die Endlichkeit, die ein Algorithmus laut Definition braucht."
     },
     {
       "id": "git-q020",
@@ -1100,7 +1534,7 @@
         "Fehler"
       ],
       "correct": 2,
-      "explain": "pop() entfernt die 2, dann liegt [1, 3]. top() liest das oberste: 3 (bleibt liegen). LIFO."
+      "explain": "push(1), push(2) → [1, 2]. pop() entfernt die 2 → [1]. push(3) → [1, 3]. top() liest das oberste: **3**, es bleibt liegen.\n2 ist verlockend, weil es zuletzt gepusht und gepoppt wurde. Nach dem pop ist die 2 aber weg. 1 wäre FIFO gedacht."
     },
     {
       "id": "git-q021",
@@ -1113,7 +1547,7 @@
         "rechts von 30"
       ],
       "correct": 3,
-      "explain": "40 < 50 → links zu 30; 40 > 30 → rechts von 30."
+      "explain": "40 < 50 → nach links zu 30. 40 > 30 → **rechts von 30**.\n„Rechts von 50“ ist falsch, weil man schon an der Wurzel vergleicht: 40 ist kleiner als 50, also geht es links weiter. Immer an der Wurzel starten und Ebene für Ebene vergleichen."
     },
     {
       "id": "git-q022",
@@ -1126,7 +1560,7 @@
         "200"
       ],
       "correct": 1,
-      "explain": "Kleinstes k mit 2ᵏ > 200: 2⁷ = 128 reicht nicht, 2⁸ = 256 → 8. 200 wäre die lineare Suche."
+      "explain": "Kleinstes k mit 2ᵏ > 200: 2⁷ = 128 reicht nicht, 2⁸ = 256 reicht. Also höchstens **8** Vergleiche.\n7 ist verlockend, weil 128 „in der Nähe“ liegt. Mit 7 Halbierungen deckst du aber nur 127 Elemente ab. 200 wäre die lineare Suche."
     },
     {
       "id": "git-q023",
@@ -1139,7 +1573,7 @@
         "[2, 1, 4, 3, 5]"
       ],
       "correct": 2,
-      "explain": "4↔2, 4<5 ok, 5↔1, 5↔3 → [2, 4, 1, 3, 5]. Das größte (5) steht hinten, nicht das kleinste vorne."
+      "explain": "Durchlauf 1: 4↔2 → [2, 4, 5, 1, 3], 4 < 5 ok, 5↔1 → [2, 4, 1, 5, 3], 5↔3 → **[2, 4, 1, 3, 5]**. Das größte Element steht hinten.\n[1, 4, 2, 5, 3] wäre die Idee „das kleinste kommt zuerst nach vorne“. Das macht Selection Sort, nicht Bubble Sort."
     },
     {
       "id": "git-q024",
@@ -1152,7 +1586,7 @@
         "Es gibt zwei getrennte Speicher"
       ],
       "correct": 2,
-      "explain": "Der Engpass ist der gemeinsame Bus, nicht das Rechenwerk. Getrennte Speicher sind Harvard."
+      "explain": "Der **Flaschenhals** ist der gemeinsame Bus: Befehl und Daten liegen im selben Speicher und müssen nacheinander darüber. Jede Anweisung braucht mindestens zwei Takte.\n„Die ALU rechnet zu langsam“ ist die verlockende Falle. Die ALU könnte schneller, sie wartet aber auf den Bus."
     },
     {
       "id": "git-q025",
@@ -1165,7 +1599,7 @@
         "FETCH"
       ],
       "correct": 1,
-      "explain": "Reihenfolge: FETCH → DECODE → FETCH OPERANDS → EXECUTE → UPDATE INSTRUCTION POINTER."
+      "explain": "Reihenfolge: FETCH → DECODE → **FETCH OPERANDS** → EXECUTE → UPDATE INSTRUCTION POINTER.\nEXECUTE ist verlockend, weil man die Kurzform „Fetch – Decode – Execute“ kennt. Bevor die ALU rechnen kann, müssen aber erst die Werte (Operanden) geholt werden."
     },
     {
       "id": "git-q026",
@@ -1178,7 +1612,7 @@
         "2 MB"
       ],
       "correct": 0,
-      "explain": "2²² = 2² · 2²⁰ = 4 MB. Die Größe wächst exponentiell, nicht linear (n · 8 oder 2 · n ist falsch)."
+      "explain": "22 Leitungen → 2²² Byte. 2²² = 2² · 2²⁰ = 4 · 1 MB = **4 MB**.\n22 MB entsteht, wenn man die Leitungszahl einfach als Größe nimmt. Die Zahl der Adressen wächst aber exponentiell: Jede Leitung verdoppelt den Speicher."
     },
     {
       "id": "git-q027",
@@ -1191,7 +1625,7 @@
         "3 TB"
       ],
       "correct": 2,
-      "explain": "RAID 5: (n − 1) · C = 3 · 3 = 9 TB; eine Platte geht für Parität drauf. 12 TB wäre RAID 0, 6 TB RAID 1 oder RAID 6."
+      "explain": "RAID 5: (n − 1) · C = (4 − 1) · 3 TB = **9 TB**. Eine Platte Kapazität geht für die verteilte Parität drauf.\n12 TB wäre RAID 0 ohne jede Redundanz. 6 TB wäre RAID 1 (Hälfte) oder RAID 6 (zwei Platten Parität)."
     },
     {
       "id": "git-q028",
@@ -1204,7 +1638,7 @@
         "1"
       ],
       "correct": 3,
-      "explain": "Nur Wallace verdient mehr als 25000. Bei >= wären es 3."
+      "explain": "Nur Wallace verdient **mehr als** 25000, also COUNT(*) = **1**.\n3 ist die verlockende Falle: Das wäre richtig mit >= 25000. Zelaya und Jabbar haben genau 25000 und sind nicht „größer“."
     },
     {
       "id": "git-q029",
@@ -1217,7 +1651,7 @@
         "Beide Tabellen zu einer zusammenlegen"
       ],
       "correct": 2,
-      "explain": "m:n braucht eine Verknüpfungstabelle mit beiden Fremdschlüsseln als zusammengesetztem Schlüssel."
+      "explain": "m:n braucht eine **eigene Hilfstabelle** BESUCHT(MatrNr, VNr) mit beiden Fremdschlüsseln, die zusammen den Primärschlüssel bilden.\nEin Fremdschlüssel VNr in STUDENT ist verlockend, geht aber nicht: Ein Student besucht viele Vorlesungen, und in ein Feld passt nur ein Wert."
     },
     {
       "id": "git-q030",
@@ -1230,7 +1664,7 @@
         "Phase 1 der Digitalisierung"
       ],
       "correct": 1,
-      "explain": "Daten auswerten für bessere Entscheidungen = Informatisierung. Automatisierung wäre die automatische Rechnung."
+      "explain": "Vorhandene Daten auswerten, um besser zu entscheiden, ist **Informatisierung**.\nAutomatisierung ist verlockend, weil eine Software das erledigt. Automatisierung heißt aber: ein bisheriger Ablauf läuft jetzt in der IT, zum Beispiel die automatische Rechnung. Transformation wäre ein ganz neues Geschäftsmodell."
     },
     {
       "id": "git-q031",
@@ -1243,7 +1677,7 @@
         "Redundanz ist immer überflüssig"
       ],
       "correct": 2,
-      "explain": "Fehlererkennung (Paritätsbit) fügt Redundanz hinzu, Kompression entfernt sie. Am Telefon hilft „M wie Martha“ bei Rauschen."
+      "explain": "Fehlererkennung **fügt** Redundanz hinzu: Ein Paritätsbit verlängert die Nachricht, macht aber gekippte Bits sichtbar.\n„Redundanz ist immer überflüssig“ ist verlockend, weil das Wort so klingt. Am Telefon hilft „M wie Martha“ aber gerade bei Rauschen. Kompression entfernt Redundanz, sie fügt keine hinzu."
     },
     {
       "id": "git-q032",
@@ -1256,7 +1690,7 @@
         "Die Jahreszahlen sind der wichtigste Prüfstoff"
       ],
       "correct": 1,
-      "explain": "Reihenfolge Großrechner → PC → Client-Server → Internet → Cloud; die Epochen bestehen nebeneinander."
+      "explain": "Die Epochen **überlagern** sich: Großrechner, PCs, Client-Server und Cloud gibt es heute nebeneinander.\n„Mit der Cloud sind Großrechner verschwunden“ ist die typische falsche Multiple-Choice-Option. Banken und Versicherungen nutzen Großrechner bis heute."
     },
     {
       "id": "git-q033",
@@ -1269,7 +1703,7 @@
         "1203"
       ],
       "correct": 2,
-      "explain": "C = 12: 12 · 16 + 3 = 195. 179 entsteht mit C = 11, 192 ohne die 3, 1203 schreibt nur die Ziffern nebeneinander."
+      "explain": "C = 12. C3₁₆ = 12 · 16 + 3 = 192 + 3 = **195**.\n192 vergisst die 3 an der 1er-Stelle. 179 entsteht mit C = 11 (das wäre B). 1203 schreibt nur die Ziffern 12 und 03 nebeneinander, ohne Stellenwerte."
     },
     {
       "id": "git-q034",
@@ -1282,7 +1716,7 @@
         "0,0101₂"
       ],
       "correct": 0,
-      "explain": "×2: 1,625 → 1; 1,25 → 1; 0,5 → 0; 1,0 → 1. Von oben nach unten lesen: 0,1101. 0,1011 ist von unten gelesen."
+      "explain": "Fortlaufend mal 2: 0,8125 → 1,625 (1), 0,625 → 1,25 (1), 0,25 → 0,5 (0), 0,5 → 1,0 (1). Von **oben nach unten** gelesen: **0,1101₂**. Probe: ½ + ¼ + ¹⁄₁₆ = 0,8125.\n0,1011 ist die Falle: Das sind dieselben Bits von unten gelesen, wie man es bei der Restwertmethode vor dem Komma macht."
     },
     {
       "id": "git-q035",
@@ -1295,7 +1729,7 @@
         "Kein Problem, weil beide Zahlen positiv sind"
       ],
       "correct": 1,
-      "explain": "+127 ist der größte Wert. plus + plus ergibt minus → Überlauf. Ohne Vorzeichen wäre 128 kein Problem."
+      "explain": "+127 ist der größte Wert im 8-Bit-Zweierkomplement. 0111 1111 + 1 = 1000 0000, und das wird als **−128** gelesen: **Überlauf** (plus + plus ergibt minus).\n„Kein Problem, beide positiv“ ist verlockend, aber gerade zwei positive Zahlen können überlaufen. Ohne Vorzeichen (0 … 255) wäre 128 in Ordnung."
     },
     {
       "id": "git-q036",
@@ -1308,7 +1742,7 @@
         "1"
       ],
       "correct": 2,
-      "explain": "& = AND, ≥1 = OR, 1 = NOT (mit Kreis), =1 = XOR („genau einer“)."
+      "explain": "**=1** steht für XOR: „genau einer“ der Eingänge ist 1.\n≥1 ist die verlockende Falle: Das ist OR („mindestens einer“), das auch bei 1 und 1 eine 1 liefert. & ist AND, 1 mit Kreis ist NOT."
     },
     {
       "id": "git-q037",
@@ -1321,7 +1755,7 @@
         "4"
       ],
       "correct": 2,
-      "explain": "Zwei NANDs als NOT für ¬A und ¬B, dann NAND(¬A, ¬B) = A ∨ B (De Morgan). AND braucht 2, NOT 1."
+      "explain": "OR braucht **3** NAND-Gatter: zwei als NOT für ¬A und ¬B (je NAND mit sich selbst), dann NAND(¬A, ¬B) = ¬(¬A ∧ ¬B) = A ∨ B (De Morgan).\n2 ist verlockend, weil AND mit 2 NANDs geht. Bei OR müssen aber beide Eingänge einzeln negiert werden."
     },
     {
       "id": "git-q038",
@@ -1334,7 +1768,7 @@
         "¬A ∨ B"
       ],
       "correct": 1,
-      "explain": "De Morgan: ∧ wird ∨, jede Variable wird negiert. ¬A ∧ ¬B ist der häufigste Fehler."
+      "explain": "De Morgan: ¬(A ∧ B) = **¬A ∨ ¬B**. Das ∧ wird zu ∨, und jede Variable wird negiert.\n¬A ∧ ¬B ist der häufigste Fehler: Die Variablen wurden negiert, aber das ∧ blieb stehen. Probe A = 1, B = 0: ¬(1 ∧ 0) = 1, ¬A ∨ ¬B = 0 ∨ 1 = 1 ✓, ¬A ∧ ¬B = 0 ✗."
     },
     {
       "id": "git-q039",
@@ -1347,7 +1781,7 @@
         "Er zeigt Variablen Schritt für Schritt an"
       ],
       "correct": 2,
-      "explain": "A ist der Linker, B der Compiler, D der Debugger. Linker und Lader werden oft verwechselt."
+      "explain": "Der **Lader** bringt das fertige Programm in den Arbeitsspeicher und addiert zu allen Adressen den Offset, an den es geladen wurde (Start 0x4000: 0x0120 → 0x4120).\n„Er verbindet übersetzte Module“ ist die verlockende Antwort, aber das macht der **Linker**. Übersetzen macht der Compiler, Schritt für Schritt anzeigen der Debugger."
     },
     {
       "id": "git-q040",
@@ -1361,7 +1795,7 @@
         "Syntaxfehler"
       ],
       "correct": 1,
-      "explain": "int / int ergibt 3 (Rest abgeschnitten), erst danach wird 3 zu 3.0. Das ist ein Semantikfehler, kein Syntaxfehler."
+      "explain": "Zuerst rechnet Java int / int: 7 / 2 = 3, der Rest wird abgeschnitten. Erst dann wird die 3 in den double **3.0** umgewandelt.\n3.5 ist verlockend, weil r ein double ist. Der Typ der Zielvariablen ändert aber nichts an der Ganzzahldivision davor. Richtig wäre `(double) a / b`."
     },
     {
       "id": "git-q041",
@@ -1374,7 +1808,7 @@
         "Fehler"
       ],
       "correct": 1,
-      "explain": "FIFO: Das erste dequeue() liefert 4, das zweite 9. Übrig bleibt [3]. 3 wäre LIFO gedacht."
+      "explain": "FIFO: enqueue(4), enqueue(9) → [4, 9]. Das erste dequeue() liefert 4. enqueue(3) → [9, 3]. Das zweite dequeue() liefert **9**.\n3 ist verlockend, weil es zuletzt hineinkam: Das wäre LIFO, also ein Stack. 4 ist das Ergebnis des ersten, nicht des zweiten dequeue()."
     },
     {
       "id": "git-q042",
@@ -1387,7 +1821,7 @@
         "Ein Baum mit 2 als Wurzel"
       ],
       "correct": 1,
-      "explain": "Jeder Wert ist größer als der vorige und hängt rechts an: Höhe 3, Suche O(n)."
+      "explain": "Jeder Wert ist größer als der vorige und hängt rechts am letzten Knoten: 1 → 2 → 3 → 4. Es entsteht ein **degenerierter** Baum, praktisch eine Liste mit Höhe 3, Suche O(n).\n„Balancierter Baum der Höhe 2“ ist verlockend, weil 4 Knoten so passen würden. Das gilt aber nur bei günstiger Einfügereihenfolge, zum Beispiel 2, 1, 3, 4."
     },
     {
       "id": "git-q043",
@@ -1400,20 +1834,20 @@
         "30"
       ],
       "correct": 1,
-      "explain": "1× rechts zu 70, dann ganz links: 60. Die 40 wäre Variante „größter links“. 70 einfach hochziehen geht nicht."
+      "explain": "Variante „kleinster rechts“: einmal rechts zu 70, dann so weit links wie möglich: **60**. Die 60 wird Wurzel, und links bleibt alles kleiner, rechts alles größer.\n40 wäre richtig bei „größter links“ (einmal links zu 30, dann ganz rechts). 70 einfach hochziehen geht nicht, dann hinge die 60 falsch."
     },
     {
       "id": "git-q044",
       "topic": "Suchen und Sortieren",
       "q": "Welche Voraussetzung hat die **binäre** Suche?",
       "options": [
-        "keine",
         "sortierte Daten mit direktem Indexzugriff",
+        "keine",
         "Daten in einer verketteten Liste",
         "unsortierte Daten"
       ],
-      "correct": 1,
-      "explain": "Nur bei sortierten Daten darf man die Hälfte wegwerfen; ohne Index findet man die Mitte nicht schnell."
+      "correct": 0,
+      "explain": "Die binäre Suche braucht **sortierte** Daten (sonst darf man keine Hälfte wegwerfen) und **direkten Indexzugriff** (sonst findet man die Mitte nicht in einem Schritt).\n„Daten in einer verketteten Liste“ ist verlockend, weil Listen zum Kapitel gehören. In einer Liste müsstest du bis zur Mitte durchlaufen, damit ist der Vorteil weg."
     },
     {
       "id": "git-q045",
@@ -1426,20 +1860,20 @@
         "binäre Suche"
       ],
       "correct": 2,
-      "explain": "Merge Sort: log n Ebenen, je Ebene n Schritte. Bubble Sort O(n²), linear O(n), binär O(log n)."
+      "explain": "**Merge Sort**: etwa log₂ n Teilungsebenen, auf jeder wird jedes der n Elemente einmal angefasst, also O(n log n).\nDie binäre Suche ist verlockend, weil auch dort „log“ vorkommt. Sie hat aber nur O(log n). Bubble Sort ist O(n²), die lineare Suche O(n)."
     },
     {
       "id": "git-q046",
       "topic": "Rechnerarchitektur",
       "q": "Was enthält der **Befehlszähler**?",
       "options": [
-        "den aktuellen Befehl",
         "die Adresse des nächsten Befehls",
+        "den aktuellen Befehl",
         "das Ergebnis der ALU",
         "die Daten vom Datenbus"
       ],
-      "correct": 1,
-      "explain": "Der Befehlszähler hält eine Adresse. Den aktuellen Befehl selbst hält das Befehlsregister."
+      "correct": 0,
+      "explain": "Der **Befehlszähler** enthält die **Adresse** des nächsten Befehls. Nach jedem Befehl wird er erhöht oder bei einem Sprung neu gesetzt.\n„Den aktuellen Befehl“ ist die verlockende Falle: Der steht im **Befehlsregister**. Zähler = Adresse, Register = Befehl."
     },
     {
       "id": "git-q047",
@@ -1452,7 +1886,7 @@
         "Befehlsbus"
       ],
       "correct": 2,
-      "explain": "Steuerbus = ob (lesen/schreiben), Adressbus = wo, Datenbus = was."
+      "explain": "Steuerbus = **ob** (lesen oder schreiben), **Adressbus** = **wo** (welche Zelle), Datenbus = **was** (der Wert selbst). Die Adresse läuft also über den Adressbus.\nDer Datenbus ist verlockend, weil eine Adresse auch eine Zahl ist. Über den Datenbus läuft aber nur der Inhalt der Zelle."
     },
     {
       "id": "git-q048",
@@ -1465,7 +1899,7 @@
         "5 TB"
       ],
       "correct": 2,
-      "explain": "RAID 6: (n − 2) · C = 3 · 2 = 6 TB. 10 TB wäre RAID 0, 8 TB RAID 5, 5 TB RAID 1."
+      "explain": "RAID 6: (n − 2) · C = (5 − 2) · 2 TB = **6 TB**. Zwei Platten Kapazität gehen für die doppelte Parität drauf, dafür dürfen 2 Platten ausfallen.\n8 TB ist verlockend, das wäre aber RAID 5 mit nur einer Paritätsplatte. 10 TB wäre RAID 0, 5 TB RAID 1."
     },
     {
       "id": "git-q049",
@@ -1478,7 +1912,7 @@
         "Weil er billiger pro Bit ist als RAM"
       ],
       "correct": 1,
-      "explain": "Schleifen und Arrays greifen auf Nachbarn zu. Cache ist klein, volatil und teuer pro Bit."
+      "explain": "Wegen der **Lokalität**: Programme greifen in kurzer Zeit auf benachbarte Speicherstellen zu (Schleifen, Arrays). Der Cache lädt die Nachbarn gleich mit, deshalb trifft er meistens.\n„Weil er billiger pro Bit ist“ ist falsch: Cache ist teurer als RAM, gerade deshalb ist er klein. Er behält ohne Strom auch nichts."
     },
     {
       "id": "git-q050",
@@ -1491,7 +1925,7 @@
         "zwischen Festplatte und Band"
       ],
       "correct": 2,
-      "explain": "Register, Cache und RAM verlieren ohne Strom ihren Inhalt, ab Flash/SSD bleibt er erhalten."
+      "explain": "Register, Cache und RAM sind **volatil**, sie verlieren ohne Strom ihren Inhalt. Ab Flash/SSD bleibt er erhalten. Die Grenze liegt also **zwischen RAM und Flash/SSD**.\n„Zwischen L3-Cache und RAM“ ist verlockend, weil der RAM nicht mehr in der CPU sitzt. Er ist aber genauso flüchtig wie der Cache."
     },
     {
       "id": "git-q051",
@@ -1504,7 +1938,7 @@
         "512"
       ],
       "correct": 1,
-      "explain": "512 = 2⁹ und 1 GB = 2³⁰ → 9 + 30 = 39. Exponenten addieren, nicht multiplizieren."
+      "explain": "512 = 2⁹ und 1 GB = 2³⁰. 512 GB = 2⁹ · 2³⁰ = 2³⁹, also **39** Leitungen. Bei Potenzen mit gleicher Basis werden die Exponenten addiert.\n40 ist verlockend, weil 512 „fast 1 024“ ist und man an 1 TB = 2⁴⁰ denkt. Mit 40 Leitungen hätte man doppelt so viel, nämlich 1 TB."
     },
     {
       "id": "git-q052",
@@ -1518,7 +1952,7 @@
         "93000"
       ],
       "correct": 0,
-      "explain": "(25000 + 43000 + 25000) / 3 = 31000. 93000 wäre SUM, 43000 MAX, 25000 MIN."
+      "explain": "AVG bildet pro Gruppe den Durchschnitt: (25000 + 43000 + 25000) / 3 = 93000 / 3 = **31000**.\n93000 ist verlockend, weil es die Zwischensumme ist: Das wäre SUM(GEHALT). 43000 wäre MAX, 25000 MIN."
     },
     {
       "id": "git-q053",
@@ -1531,7 +1965,7 @@
         "Die Tabelle wird gelöscht, samt Struktur"
       ],
       "correct": 2,
-      "explain": "Ohne WHERE gilt der Befehl für alle Zeilen. Die leere Tabelle bleibt bestehen (das wäre DROP TABLE)."
+      "explain": "Ohne WHERE gilt DELETE für **alle Zeilen**. Die Tabelle selbst mit ihren Spalten bleibt bestehen, sie ist nur leer.\n„Die Tabelle wird samt Struktur gelöscht“ ist verlockend, das macht aber `DROP TABLE`. Eine Fehlermeldung gibt es nicht, und genau das macht den Befehl gefährlich."
     },
     {
       "id": "git-q054",
@@ -1544,7 +1978,567 @@
         "Backups der Datenbank"
       ],
       "correct": 1,
-      "explain": "Data Dictionary = Katalog mit Daten über Daten, z. B. „Wohnort ist Text, höchstens 40 Zeichen“."
+      "explain": "Das **Data Dictionary** ist der Katalog mit den **Metadaten**: welche Tabellen es gibt, welche Spalten, Datentypen und Regeln. Zum Beispiel „Wohnort ist Text, höchstens 40 Zeichen“.\n„Die Kundendaten selbst“ ist die Falle: Das sind die Nutzdaten. Das Dictionary beschreibt die Daten, es enthält sie nicht."
+    },
+    {
+      "id": "git-q055",
+      "topic": "Information und Digitalisierung",
+      "q": "In welcher Reihenfolge baut sich die Kette aus der Vorlesung auf?",
+      "options": [
+        "Daten → Information → Wissen → Handlung",
+        "Information → Daten → Wissen → Handlung",
+        "Daten → Wissen → Information → Handlung",
+        "Wissen → Information → Daten → Handlung"
+      ],
+      "correct": 0,
+      "explain": "Daten bekommen einen Kontext und werden so zur **Information**, verknüpfte Information ergibt **Wissen**, und daraus folgt eine **Handlung**. Beispiel: 7 → „7 °C“ → „kalt“ → Jacke.\n„Information → Daten“ ist verlockend, wenn man Daten für das Höhere hält. Daten sind aber das Rohmaterial ohne Bedeutung, sie stehen am Anfang."
+    },
+    {
+      "id": "git-q056",
+      "topic": "Information und Digitalisierung",
+      "q": "Ein Sender hängt an 1011 0010 ein **gerades** Paritätsbit an. Welches?",
+      "options": [
+        "0, weil die Anzahl der Einsen schon gerade ist",
+        "1, weil die letzte Stelle 0 ist",
+        "1, weil die Zahl gerade ist",
+        "0, weil die erste Stelle 1 ist"
+      ],
+      "correct": 0,
+      "explain": "1011 0010 hat vier Einsen, das ist schon gerade. Also ist das Paritätsbit **0**.\n„1, weil die Zahl gerade ist“ ist verlockend, verwechselt aber den Zahlenwert (178 ist gerade) mit der **Anzahl der Einsen**. Nur die Einsen zählen."
+    },
+    {
+      "id": "git-q057",
+      "topic": "Information und Digitalisierung",
+      "q": "Welche Aussage über die **technische** Sichtweise der Digitalisierung stimmt?",
+      "options": [
+        "Sie beschreibt neue Geschäftsmodelle durch Daten",
+        "Sie meint die Übertragung der Arbeitswelt auf eine digitale Ebene",
+        "Sie stammt aus der Betriebswirtschaft",
+        "Messwerte werden in festen Abständen erfasst und auf endlich viele Stufen gerundet"
+      ],
+      "correct": 3,
+      "explain": "Technisch heißt **zeit- und wertediskret**: in festen Abständen messen (zeitdiskret) und jeden Wert auf eine von endlich vielen Stufen runden (wertediskret).\n„Übertragung der Arbeitswelt auf eine digitale Ebene“ klingt technisch, ist aber die **gesellschaftliche** Sichtweise. Neue Geschäftsmodelle sind die betriebswirtschaftliche."
+    },
+    {
+      "id": "git-q058",
+      "topic": "Information und Digitalisierung",
+      "q": "Ein Händler baut ein Geschäftsmodell auf, bei dem Produkte erst nach der Onlinebestellung gefertigt werden. Welche Nutzenstufe ist das?",
+      "options": [
+        "Automatisierung",
+        "Informatisierung",
+        "Phase 1 der Digitalisierung",
+        "Transformation"
+      ],
+      "correct": 3,
+      "explain": "Ein völlig neuer Geschäftsprozess, der ohne IT nicht ginge, ist **Transformation**.\nAutomatisierung ist verlockend, weil vieles automatisch läuft. Automatisierung baut aber nur einen bisherigen Ablauf in der IT nach, sie erfindet ihn nicht neu."
+    },
+    {
+      "id": "git-q059",
+      "topic": "IT-Infrastruktur und Cloud",
+      "q": "Ein Entwickler lädt nur seinen Code hoch; Laufzeitumgebung und Datenbank stellt der Anbieter. Welches Modell?",
+      "options": [
+        "PaaS",
+        "IaaS",
+        "SaaS",
+        "On-Premise"
+      ],
+      "correct": 0,
+      "explain": "Bei **PaaS** (Platform as a Service) kommt die Plattform vom Anbieter: Laufzeit und Datenbank. Du lieferst nur deine Anwendung.\nIaaS ist verlockend, weil auch dort Server gemietet werden. Bei IaaS installierst du aber Betriebssystem und Laufzeit selbst."
+    },
+    {
+      "id": "git-q060",
+      "topic": "IT-Infrastruktur und Cloud",
+      "q": "Welche gehört **nicht** zu den sieben Hauptkomponenten einer IT-Infrastruktur?",
+      "options": [
+        "Internet als Plattform",
+        "Beratungsdienste und Systemintegratoren",
+        "Datenverwaltung und -speicherung",
+        "Kantine und Gebäudetechnik"
+      ],
+      "correct": 3,
+      "explain": "Die sieben sind: Hardware, Betriebssysteme, Datenverwaltung, Netzwerke, Anwendungssysteme, Internet als Plattform, Beratung/Systemintegratoren. Kantine und Gebäudetechnik gehören nicht dazu.\n„Beratungsdienste“ ist verlockend als falsche Antwort, weil sie keine Technik sind. Sie stehen aber ausdrücklich in der Liste und werden oft vergessen."
+    },
+    {
+      "id": "git-q061",
+      "topic": "IT-Infrastruktur und Cloud",
+      "q": "Was beschreibt eine **N-Tier**-Architektur?",
+      "options": [
+        "Ein Großrechner mit vielen Terminals",
+        "Die Arbeit wird auf mehrere Server-Schichten verteilt, z. B. Web-, Anwendungs- und Datenbankserver",
+        "Jeder Client hält seine eigenen Daten",
+        "Alle Programme laufen im Browser beim Kunden"
+      ],
+      "correct": 1,
+      "explain": "N-Tier heißt **mehrschichtig**: Client → Webserver → Anwendungsserver → Datenbankserver. Jede Schicht kann auf eigenen Maschinen laufen.\n„Großrechner mit Terminals“ ist verlockend, weil dort auch viele Geräte beteiligt sind. Das ist aber die erste Epoche, eine zentrale Architektur ohne Schichten."
+    },
+    {
+      "id": "git-q062",
+      "topic": "Mooresches Gesetz",
+      "q": "Was hat Gordon Moore 1965 **selbst** vorhergesagt?",
+      "options": [
+        "Die Anzahl der Transistoren pro Chip verdoppelt sich jährlich",
+        "Die Leistung von Computern verdoppelt sich alle 18 Monate",
+        "Der Preis von Chips halbiert sich jedes Jahr",
+        "Die Größe eines Transistors halbiert sich alle 2 Jahre"
+      ],
+      "correct": 0,
+      "explain": "Moore sprach von der **Anzahl** der Komponenten (Transistoren) pro Chip, zuerst jährliche Verdopplung, später alle zwei Jahre.\n„Leistung verdoppelt sich alle 18 Monate“ ist die verlockendste Falle: Das ist eine spätere **Interpretation**, nicht Moores eigene Aussage."
+    },
+    {
+      "id": "git-q063",
+      "topic": "Mooresches Gesetz",
+      "q": "Ein Rechenauftrag kostet 1 600 €. Der Preis halbiert sich alle 18 Monate. Was kostet er nach 6 Jahren?",
+      "options": [
+        "400 €",
+        "800 €",
+        "200 €",
+        "100 €"
+      ],
+      "correct": 3,
+      "explain": "6 Jahre / 1,5 Jahre = 4 Halbierungen. 2⁴ = 16, also 1 600 € / 16 = **100 €** (1 600 → 800 → 400 → 200 → 100).\n200 € ist verlockend: Das kommt heraus, wenn man mit 2-Jahres-Schritten rechnet (6 / 2 = 3 Halbierungen). Die Preis-Interpretation sagt aber 18 Monate, also 4 Halbierungen."
+    },
+    {
+      "id": "git-q064",
+      "topic": "Mooresches Gesetz",
+      "q": "Wie viele mögliche Verbindungen gibt es nach Metcalfe bei 6 Teilnehmern?",
+      "options": [
+        "12",
+        "36",
+        "15",
+        "30"
+      ],
+      "correct": 3,
+      "explain": "Formel n · (n − 1): 6 · 5 = **30**. Jeder der 6 kann die 5 anderen erreichen.\n36 ist verlockend (6 · 6), zählt aber auch die Verbindung „mit sich selbst“. 15 wäre richtig, wenn A–B und B–A als eine Verbindung zählten, die Folienformel zählt sie getrennt."
+    },
+    {
+      "id": "git-q065",
+      "topic": "Zahlendarstellung",
+      "q": "Was ist 1010 0111₂ in Hexadezimal?",
+      "options": [
+        "A7₁₆",
+        "7A₁₆",
+        "167₁₆",
+        "B7₁₆"
+      ],
+      "correct": 0,
+      "explain": "Von rechts in Vierergruppen: 1010 | 0111 → A | 7 = **A7₁₆**. Probe: 10 · 16 + 7 = 167.\n7A₁₆ ist die Falle mit vertauschten Gruppen. 167 ist der Dezimalwert, nicht hex."
+    },
+    {
+      "id": "git-q066",
+      "topic": "Zahlendarstellung",
+      "q": "Was ist 2AF₁₆ im Oktalsystem?",
+      "options": [
+        "2517₈",
+        "1257₈",
+        "687₈",
+        "5257₈"
+      ],
+      "correct": 1,
+      "explain": "Über binär: 2AF = 0010 1010 1111 → von rechts in Dreiergruppen 001 | 010 | 101 | 111 → **1257₈**. Probe: 512 + 128 + 40 + 7 = 687.\n687 ist der Dezimalwert. Wer von links in Dreiergruppen teilt, bekommt eine andere, falsche Ziffernfolge."
+    },
+    {
+      "id": "git-q067",
+      "topic": "Zahlendarstellung",
+      "q": "Welchen Wert hat 110,01₂?",
+      "options": [
+        "6,01",
+        "6,5",
+        "3,25",
+        "6,25"
+      ],
+      "correct": 3,
+      "explain": "Vor dem Komma 4 + 2 = 6, nach dem Komma ½ · 0 + ¼ · 1 = 0,25. Zusammen **6,25**.\n6,01 ist verlockend, weil man die Nachkommabits einfach dezimal abschreibt. Die Stellen nach dem Komma zählen aber ½, ¼, ⅛, nicht Zehntel und Hundertstel."
+    },
+    {
+      "id": "git-q068",
+      "topic": "Zahlendarstellung",
+      "q": "Wie lautet 6,75 normalisiert als binäre Gleitkommazahl?",
+      "options": [
+        "110,11₂ · 2⁰",
+        "11,011₂ · 2¹",
+        "0,11011₂ · 2³",
+        "1,1011₂ · 2²"
+      ],
+      "correct": 3,
+      "explain": "6,75 = 110,11₂. Normalisieren heißt: genau **eine 1 vor dem Komma**. Das Komma wandert 2 Stellen nach links → **1,1011₂ · 2²**. Probe: 1,6875 · 4 = 6,75.\n11,011₂ · 2¹ hat denselben Wert, ist aber nicht normalisiert, weil zwei Stellen vor dem Komma stehen."
+    },
+    {
+      "id": "git-q069",
+      "topic": "Zahlendarstellung",
+      "q": "Was gilt für die **Festkommadarstellung** im Vergleich zur Gleitkommadarstellung?",
+      "options": [
+        "Sie hat einen größeren Wertebereich",
+        "Das Komma steht immer an derselben Stelle, dadurch einfach, aber kleiner Wertebereich",
+        "Sie besteht aus Mantisse und Exponent",
+        "Sie kann 0,4 exakt speichern"
+      ],
+      "correct": 1,
+      "explain": "Bei Festkomma steht das Komma fest, zum Beispiel nach 4 von 8 Bit. Das ist einfach zu rechnen, der Bereich ist aber klein (bei 4 + 4 Bit höchstens 15,9375).\n„Mantisse und Exponent“ ist verlockend, beschreibt aber die **Gleitkommazahl**. 0,4 ist binär periodisch und in keiner der beiden Darstellungen exakt."
+    },
+    {
+      "id": "git-q070",
+      "topic": "Zahlendarstellung",
+      "q": "Welche Aussage zum Zweierkomplement mit 8 Bit stimmt?",
+      "options": [
+        "Es gibt zwei Darstellungen der Null",
+        "Der Bereich reicht von −127 bis +127",
+        "Das höchste Bit hat den Wert +128",
+        "Der Bereich reicht von −128 bis +127, und es gibt nur eine Null"
+      ],
+      "correct": 3,
+      "explain": "Im Zweierkomplement zählt das höchste Bit **−128**. So entsteht der Bereich −128 … +127 mit nur einer Null.\n„−127 bis +127“ ist verlockend, gilt aber für Vorzeichen-Betrag und Einerkomplement, die beide zwei Nullen (+0 und −0) haben."
+    },
+    {
+      "id": "git-q071",
+      "topic": "Zahlendarstellung",
+      "q": "Was ist −1 im 8-Bit-Zweierkomplement?",
+      "options": [
+        "1111 1111",
+        "1000 0001",
+        "1111 1110",
+        "0000 0001"
+      ],
+      "correct": 0,
+      "explain": "1 = 0000 0001 → umdrehen 1111 1110 → +1 = **1111 1111**. Wie beim Kilometerzähler, der von 000 einen Schritt zurück auf 999 springt.\n1000 0001 ist verlockend, das ist aber −1 in Vorzeichen-Betrag. 1111 1110 ist nur das Einerkomplement (die +1 fehlt)."
+    },
+    {
+      "id": "git-q072",
+      "topic": "Logik und Gatter",
+      "q": "Welche Zeilen (A B C) gehören in die DNF von Y = (A ∨ B) ∧ ¬C?",
+      "options": [
+        "010, 100, 110",
+        "001, 011, 101, 111",
+        "010, 100, 110, 111",
+        "100, 110"
+      ],
+      "correct": 0,
+      "explain": "Y = 1 braucht C = 0 und mindestens eins von A, B. Das sind die Zeilen **010, 100 und 110**.\n111 ist verlockend, weil A ∨ B dort 1 ist. Mit C = 1 ist ¬C aber 0, also Y = 0. Nur die 1-Zeilen gehören in die DNF."
+    },
+    {
+      "id": "git-q073",
+      "topic": "Logik und Gatter",
+      "q": "Welche Rechenregel steckt hinter (A ∧ B) ∨ (A ∧ ¬B) = A ∧ (B ∨ ¬B)?",
+      "options": [
+        "De Morgan",
+        "Absorption",
+        "Distributivgesetz (Ausklammern)",
+        "Doppelnegation"
+      ],
+      "correct": 2,
+      "explain": "Das gemeinsame A wird **ausgeklammert**: Das ist das Distributivgesetz. Danach folgen B ∨ ¬B = 1 (Komplement) und A ∧ 1 = A (Neutralität).\nDe Morgan ist verlockend, weil es das bekannteste Gesetz ist. De Morgan zieht aber eine **Negation** über eine Klammer, hier wird nichts negiert."
+    },
+    {
+      "id": "git-q074",
+      "topic": "Logik und Gatter",
+      "q": "Ein Halbaddierer bekommt A = 1 und B = 1. Was liefert er?",
+      "options": [
+        "Summe 1, Übertrag 0",
+        "Summe 1, Übertrag 1",
+        "Summe 2, Übertrag 0",
+        "Summe 0, Übertrag 1"
+      ],
+      "correct": 3,
+      "explain": "1 + 1 = 10₂: **Summe 0, Übertrag 1**. Summe = XOR(1, 1) = 0, Übertrag = AND(1, 1) = 1.\n„Summe 1, Übertrag 1“ ist verlockend: Das wäre 1 + 1 + 1 beim Volladdierer. „Summe 1“ allein entsteht, wenn man OR statt XOR nimmt."
+    },
+    {
+      "id": "git-q075",
+      "topic": "Logik und Gatter",
+      "q": "Welcher Ausdruck beschreibt: „Die Lampe leuchtet, wenn beide Schalter gleich stehen“?",
+      "options": [
+        "A ⊕ B",
+        "A ∧ B",
+        "A ∨ B",
+        "(¬A ∧ ¬B) ∨ (A ∧ B)"
+      ],
+      "correct": 3,
+      "explain": "„Gleich“ heißt: beide 0 **oder** beide 1. Das ist (¬A ∧ ¬B) ∨ (A ∧ B), also **XNOR**.\nA ∧ B ist verlockend, deckt aber nur den Fall „beide an“ ab. A ⊕ B ist genau das Gegenteil (ungleich)."
+    },
+    {
+      "id": "git-q076",
+      "topic": "Logik und Gatter",
+      "q": "Ein NOT-Gatter soll nur aus NAND gebaut werden. Wie?",
+      "options": [
+        "NAND mit beiden Eingängen an A",
+        "Zwei NAND hintereinander",
+        "NAND mit einem Eingang an 0",
+        "Das geht nicht, NAND ist kein Universalgatter"
+      ],
+      "correct": 0,
+      "explain": "Schaltet man beide Eingänge zusammen, gilt NAND(A, A) = ¬(A ∧ A) = **¬A**.\n„Zwei NAND hintereinander“ ist verlockend, ergibt aber **AND** (erst NAND, dann zurückdrehen). Ein Eingang fest auf 0 liefert immer 1, egal was A ist."
+    },
+    {
+      "id": "git-q077",
+      "topic": "Programmierung",
+      "q": "Was liefert die iterative Fakultät fakite(5)?",
+      "code": "long sum = 1;\nfor (int i = 1; i <= 5; i++) {\n    sum = sum * i;\n}",
+      "options": [
+        "15",
+        "24",
+        "120",
+        "720"
+      ],
+      "correct": 2,
+      "explain": "sum durchläuft 1, 2, 6, 24, **120** (mal 1, 2, 3, 4, 5).\n15 ist verlockend, wenn man addiert statt multipliziert (1 + 2 + 3 + 4 + 5). 24 ist fakite(4), also ein Durchlauf zu wenig; die Bedingung i <= 5 schließt die 5 ein."
+    },
+    {
+      "id": "git-q078",
+      "topic": "Programmierung",
+      "q": "Welche Phase eines Compilers baut den **Syntaxbaum**?",
+      "options": [
+        "Scanner",
+        "Codeerzeugung",
+        "Linker",
+        "Parser"
+      ],
+      "correct": 3,
+      "explain": "Der **Parser** macht die syntaktische Analyse und baut daraus den Syntaxbaum.\nDer Scanner ist verlockend, weil er als Erster den Text liest. Er zerlegt ihn aber nur in Grundsymbole (lexikalische Analyse). Der Linker gehört gar nicht zum Compiler."
+    },
+    {
+      "id": "git-q079",
+      "topic": "Programmierung",
+      "q": "Was misst der TIOBE-Index?",
+      "options": [
+        "Welche Sprache die meisten Codezeilen hat",
+        "Welche Sprache am schnellsten ist",
+        "Welche Sprache die beste ist",
+        "Wie populär eine Sprache ist (Entwickler, Kurse, Suchanfragen)"
+      ],
+      "correct": 3,
+      "explain": "TIOBE misst die **Popularität**: Entwickler, Kurse, Anbieter, Suchanfragen.\n„Die meisten Codezeilen“ ist verlockend, weil es nach Verbreitung klingt. Die Folie sagt ausdrücklich: weder die beste Sprache noch die meisten Codezeilen."
+    },
+    {
+      "id": "git-q080",
+      "topic": "Programmierung",
+      "q": "Ein Programm stürzt mit „DLL nicht gefunden“ ab. Welches Prinzip steckt dahinter?",
+      "options": [
+        "Dynamisches Linken",
+        "Statisches Linken",
+        "Ein Syntaxfehler",
+        "Ein Fehler des Laders beim Offset"
+      ],
+      "correct": 0,
+      "explain": "Beim **dynamischen Linken** werden Bibliotheken (DLLs) erst zur Laufzeit gesucht. Fehlt eine, bricht das Programm ab.\nStatisches Linken ist verlockend, weil es auch um Bibliotheken geht. Dort steckt aber alles schon in der einen Datei, es kann nichts fehlen."
+    },
+    {
+      "id": "git-q081",
+      "topic": "Datenstrukturen",
+      "q": "Stack und Queue starten leer. Beide bekommen 1, 2, 3 (push bzw. enqueue). Was liefern pop() und dequeue()?",
+      "options": [
+        "pop 3, dequeue 1",
+        "pop 1, dequeue 3",
+        "pop 3, dequeue 3",
+        "pop 1, dequeue 1"
+      ],
+      "correct": 0,
+      "explain": "Stack = LIFO: Das zuletzt gelegte (3) kommt zuerst. Queue = FIFO: Das zuerst gestellte (1) kommt zuerst. Also **pop 3, dequeue 1**.\n„pop 1, dequeue 3“ ist die klassische Verwechslung von LIFO und FIFO."
+    },
+    {
+      "id": "git-q082",
+      "topic": "Datenstrukturen",
+      "q": "Was ist ein **Vorteil** der verketteten Liste gegenüber dem Array?",
+      "options": [
+        "Direkter Zugriff auf das 5. Element in einem Schritt",
+        "Einfügen und Löschen nur durch Zeiger umhängen, ohne Umkopieren",
+        "Sie braucht weniger Speicher pro Element",
+        "Sie ist immer sortiert"
+      ],
+      "correct": 1,
+      "explain": "In der Liste hängst du zum Einfügen nur zwei Zeiger um. Im Array müsstest du alle folgenden Elemente verschieben.\nDer direkte Zugriff ist verlockend, ist aber gerade der Vorteil des **Arrays**. Die Liste braucht sogar mehr Speicher (der Zeiger), und sortiert ist nur eine sortierte Liste."
+    },
+    {
+      "id": "git-q083",
+      "topic": "Datenstrukturen",
+      "q": "Binärbaum aus 40, 20, 60, 10, 30, 50, 70, 25. Wie viele Vergleiche braucht die Suche nach 25?",
+      "options": [
+        "2",
+        "3",
+        "8",
+        "4"
+      ],
+      "correct": 3,
+      "explain": "Weg: 40 (25 < 40, links) → 20 (25 > 20, rechts) → 30 (25 < 30, links) → 25 gefunden. Das sind **4 Vergleiche**.\n3 ist verlockend, wenn man den letzten Vergleich mit der 25 selbst nicht mitzählt. Auch das Finden ist ein Vergleich."
+    },
+    {
+      "id": "git-q084",
+      "topic": "Datenstrukturen",
+      "q": "Welche Struktur passt zur „Zurück“-Taste im Browser?",
+      "options": [
+        "Stack",
+        "Queue",
+        "Array fester Länge",
+        "Binärbaum"
+      ],
+      "correct": 0,
+      "explain": "Die zuletzt besuchte Seite kommt zuerst zurück: **LIFO**, also ein Stack. Jede neue Seite ist ein push, „Zurück“ ein pop.\nQueue ist verlockend, weil die Seiten in einer Reihenfolge besucht wurden. Eine Queue gäbe aber die **älteste** Seite zuerst zurück."
+    },
+    {
+      "id": "git-q085",
+      "topic": "Datenstrukturen",
+      "q": "In einem Baum hat jeder Knoten 0 oder 2 Kinder, die Blätter liegen aber auf verschiedenen Ebenen. Wie heißt er?",
+      "options": [
+        "voll, aber nicht vollständig",
+        "vollständig",
+        "degeneriert",
+        "voll und vollständig"
+      ],
+      "correct": 0,
+      "explain": "**Voll** heißt: jeder Knoten 0 oder 2 Kinder. **Vollständig** verlangt zusätzlich, dass alle Blätter auf der letzten Ebene liegen. Das fehlt hier.\n„Vollständig“ ist verlockend, weil „voll“ und „vollständig“ ähnlich klingen. Degeneriert wäre ein Baum mit höchstens einem Kind je Knoten."
+    },
+    {
+      "id": "git-q086",
+      "topic": "Suchen und Sortieren",
+      "q": "Wie viele Vergleiche macht Bubble Sort bei 6 Elementen höchstens?",
+      "options": [
+        "15",
+        "36",
+        "6",
+        "30"
+      ],
+      "correct": 0,
+      "explain": "5 + 4 + 3 + 2 + 1 = **15**, also n · (n − 1) / 2 = 6 · 5 / 2.\n36 ist verlockend (n² = 6 · 6). O(n²) sagt aber nur, wie der Aufwand wächst, nicht die genaue Zahl der Vergleiche. 30 vergisst das Teilen durch 2."
+    },
+    {
+      "id": "git-q087",
+      "topic": "Suchen und Sortieren",
+      "q": "Bubble Sort braucht 3 s für 1 000 Elemente. Wie lange etwa für 3 000?",
+      "options": [
+        "9 s",
+        "6 s",
+        "27 s",
+        "12 s"
+      ],
+      "correct": 2,
+      "explain": "Bubble Sort ist O(n²). n wächst um den Faktor 3, die Zeit um 3² = 9: 3 s · 9 = **27 s**.\n9 s ist verlockend, das wäre aber lineares Wachstum O(n). Bei quadratischem Aufwand wird es viel schneller teuer."
+    },
+    {
+      "id": "git-q088",
+      "topic": "Suchen und Sortieren",
+      "q": "Welche Aussage zu Merge Sort stimmt?",
+      "options": [
+        "Das Sortieren passiert beim Teilen",
+        "Es setzt sortierte Daten voraus",
+        "Es hat den Aufwand O(n²)",
+        "Die Arbeit steckt im Zusammenführen sortierter Teilstücke"
+      ],
+      "correct": 3,
+      "explain": "Geteilt wird stumpf in der Mitte, bis Einzelelemente übrig sind. Die eigentliche Arbeit ist das **Zusammenführen**: vorderste Elemente vergleichen, kleineres übernehmen.\n„Beim Teilen“ ist die verlockende Falle, weil Teile und Herrsche nach Teilen klingt. Aufwand ist O(n log n), Voraussetzungen gibt es keine."
+    },
+    {
+      "id": "git-q089",
+      "topic": "Rechnerarchitektur",
+      "q": "Welche Aussage zur Harvard-Architektur stimmt?",
+      "options": [
+        "Sie hat einen gemeinsamen Speicher für Programm und Daten",
+        "Sie ist in der Regel billiger als Von Neumann",
+        "Intel-x86-PCs sind klassische Harvard-Rechner",
+        "Befehl und Daten können gleichzeitig geholt werden, weil Speicher und Busse getrennt sind"
+      ],
+      "correct": 3,
+      "explain": "Harvard trennt Befehls- und Datenspeicher **und** die Busse. Darum kann ein Befehl und ein Datum im selben Schritt geholt werden.\n„Billiger“ ist verlockend, weil Harvard Vorteile hat. Zwei Speicher und zwei Busse sind aber aufwendiger, also meist teurer. x86 ist Von Neumann."
+    },
+    {
+      "id": "git-q090",
+      "topic": "Rechnerarchitektur",
+      "q": "Was steht nach EXECUTE eines normalen Befehls (kein Sprung) im Befehlszähler, wenn der Befehl an 0x0100 stand?",
+      "options": [
+        "0x0100",
+        "die Adresse des Operanden",
+        "das Ergebnis der ALU",
+        "0x0101, nach UPDATE INSTRUCTION POINTER"
+      ],
+      "correct": 3,
+      "explain": "In der fünften Phase **UPDATE INSTRUCTION POINTER** wird der Befehlszähler auf den nächsten Befehl gesetzt, bei einer Adresse pro Befehl also **0x0101**.\n„Das Ergebnis der ALU“ ist verlockend, weil EXECUTE gerade gerechnet hat. Das Ergebnis landet aber im Akkumulator, nicht im Befehlszähler."
+    },
+    {
+      "id": "git-q091",
+      "topic": "Rechnerarchitektur",
+      "q": "Was gehört **nicht** zu den fünf Komponenten des Von-Neumann-Rechners?",
+      "options": [
+        "Steuerwerk",
+        "Bussystem",
+        "Ein-/Ausgabewerk",
+        "getrennter Befehlsspeicher"
+      ],
+      "correct": 3,
+      "explain": "Die fünf sind Rechenwerk, Steuerwerk, Speicherwerk, Ein-/Ausgabewerk und Bussystem. Ein **getrennter Befehlsspeicher** gehört zur Harvard-Architektur.\nDas Bussystem ist verlockend als „Nicht-Komponente“, weil es kein Kasten mit eigener Aufgabe zu sein scheint. Es gehört aber ausdrücklich dazu und wird in Skizzen oft vergessen."
+    },
+    {
+      "id": "git-q092",
+      "topic": "Speicher und RAID",
+      "q": "Wie viele Adressleitungen braucht man für 64 KB?",
+      "options": [
+        "64",
+        "16",
+        "512",
+        "6"
+      ],
+      "correct": 1,
+      "explain": "64 KB = 2⁶ · 2¹⁰ = 2¹⁶ Byte, also **16** Leitungen (Exponenten addieren).\n6 ist verlockend, weil 64 = 2⁶ ist. Dabei fehlt aber die Einheit KB = 2¹⁰. 64 nimmt die Zahl einfach als Leitungszahl."
+    },
+    {
+      "id": "git-q093",
+      "topic": "Speicher und RAID",
+      "q": "Welches RAID-Level verkraftet den Ausfall von **zwei** beliebigen Platten?",
+      "options": [
+        "RAID 6",
+        "RAID 5",
+        "RAID 0",
+        "RAID 1"
+      ],
+      "correct": 0,
+      "explain": "**RAID 6** speichert doppelte Parität und verkraftet 2 Ausfälle, es braucht mindestens 4 Platten.\nRAID 5 ist verlockend, weil es auch Parität nutzt. Mit nur einem Paritätsblock pro Zeile verkraftet es aber nur **einen** Ausfall."
+    },
+    {
+      "id": "git-q094",
+      "topic": "Speicher und RAID",
+      "q": "RAID 5: Blöcke 1001 und 0101, Parität 1100. Der erste Block fällt aus. Wie lautet er?",
+      "options": [
+        "0011",
+        "1100",
+        "1111",
+        "1001"
+      ],
+      "correct": 3,
+      "explain": "Übrige Blöcke und Parität XOR-verknüpfen: 0101 ⊕ 1100 = **1001** (spaltenweise 0⊕1 = 1, 1⊕1 = 0, 0⊕0 = 0, 1⊕0 = 1). Probe: 1001 ⊕ 0101 = 1100 ✓\n„1100“ ist verlockend, das ist aber nur der Paritätsblock selbst. Ohne die XOR-Verknüpfung mit dem übrigen Block bekommst du den verlorenen Block nicht zurück."
+    },
+    {
+      "id": "git-q095",
+      "topic": "Datenbanken und SQL",
+      "q": "Was liefert `SELECT COUNT(*), AVG(GEHALT) FROM ANGESTELLTER WHERE ABT = 5;` (Smith 30000, Wong 40000, Narayan 38000, English 25000)?",
+      "options": [
+        "4 | 33250",
+        "1 | 33250",
+        "4 | 133000",
+        "8 | 35125"
+      ],
+      "correct": 0,
+      "explain": "WHERE lässt 4 Zeilen durch. AVG = (30000 + 40000 + 38000 + 25000) / 4 = 133000 / 4 = **33250**. Eine Ergebniszeile: 4 | 33250.\n„4 | 133000“ ist verlockend, verwechselt aber AVG mit SUM. „8 | 35125“ wären die Werte ohne WHERE."
+    },
+    {
+      "id": "git-q096",
+      "topic": "Datenbanken und SQL",
+      "q": "Bei einer **1:n**-Beziehung Abteilung – Angestellter: Wo steht der Fremdschlüssel?",
+      "options": [
+        "In der Tabelle ABTEILUNG",
+        "In einer eigenen Hilfstabelle",
+        "In der Tabelle ANGESTELLTER (n-Seite)",
+        "In beiden Tabellen"
+      ],
+      "correct": 2,
+      "explain": "Der Fremdschlüssel gehört auf die **n-Seite**: Jeder Angestellte hat genau eine Abteilung, also eine Spalte ABT.\n„In ABTEILUNG“ ist verlockend, geht aber nicht: Eine Abteilung hat viele Angestellte, und in ein Feld passt nur ein Wert. Eine Hilfstabelle braucht man erst bei m:n."
+    },
+    {
+      "id": "git-q097",
+      "topic": "Datenbanken und SQL",
+      "q": "Welche Frage verlangt ein **GROUP BY**?",
+      "options": [
+        "Wie hoch ist das höchste Gehalt in der Firma?",
+        "Wie viele Angestellte hat die Firma?",
+        "Welche Angestellten verdienen mehr als 40000?",
+        "Wie hoch ist das Durchschnittsgehalt pro Abteilung?"
+      ],
+      "correct": 3,
+      "explain": "Das Signalwort ist **„pro“** (oder „je“): Für jede Abteilung soll eine eigene Zeile entstehen, also GROUP BY ABT.\n„Wie viele Angestellte hat die Firma?“ ist verlockend, weil COUNT vorkommt. Ohne „pro“ gibt es aber nur eine Ergebniszeile, ein GROUP BY ist nicht nötig."
     }
   ]
 }

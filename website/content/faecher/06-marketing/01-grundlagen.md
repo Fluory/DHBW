@@ -37,11 +37,16 @@ Maslow sagt: Menschen handeln wegen unerfüllter Bedürfnisse. Zuerst muss die u
 | 2 | Sicherheitsbedürfnisse | Versicherung, gutes Fahrradschloss |
 | 1 (unten) | physiologische Bedürfnisse (Nahrung, Schlaf, Gesundheit) | Brot beim Bäcker, Wasser |
 
+**So liest du die Pyramide:** Wer hungrig ist, denkt nicht an eine teure Uhr. Erst wenn eine Stufe ausreichend erfüllt ist, hört sie auf, der stärkste Antrieb zu sein. Dann wird die nächsthöhere Stufe wichtig. Das Skript nennt das „dominantes Handlungsmotiv“: das Bedürfnis direkt über der letzten erfüllten Stufe.
+
+**Warum braucht das Marketing Maslow?** Ein Unternehmen kann gezielt eine Stufe ansprechen. Eine Versicherung wirbt mit Sicherheit (Stufe 2), eine Luxusuhr mit Anerkennung (Stufe 4), ein Fotokurs mit Selbstverwirklichung (Stufe 5).
+
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
 > - Bedürfnis → Bedarf → Nachfrage: Wunsch → Wunsch mit Geld → Kauf am Markt.
-> - Maslow: fünf Stufen, von unten nach oben. Immer die nächste offene Stufe treibt an.
+> - Bedarf = der Teil des Bedürfnisses, den du mit deinem Geld erfüllen **kannst und willst**.
+> - Maslow: fünf Stufen, von unten nach oben: physiologisch → Sicherheit → sozial → Prestige → Selbstverwirklichung. Immer die nächste offene Stufe treibt an.
 
 > [!WARNING]
 > **Achtung**
@@ -103,8 +108,12 @@ Dazu kommen vier Grundhaltungen, wie ein Unternehmen auf den Markt schaut:
 |---|---|---|
 | Produktionsorientierung | viel und billig herstellen | andere Kundenwünsche werden vergessen |
 | Produktorientierung | das Produkt technisch immer verbessern | man übersieht, was Kunden wirklich brauchen |
-| Verkaufsorientierung | aggressiv werben und überreden | überredete Kunden sind oft unzufrieden und kaufen nicht wieder |
+| Verkaufsorientierung | aggressiv werben und überreden | überredete Kunden sind oft unzufrieden (Nachkaufdissonanz), erzählen das weiter und kaufen nicht wieder |
 | Marketingorientierung | die Kundenwünsche sind der Startpunkt | – (das ist das Ziel) |
+
+**Nachkaufdissonanz** heißt: Nach dem Kauf ärgerst du dich und zweifelst, ob der Kauf richtig war. Beispiel: Ein Verkäufer am Telefon hat dir einen Handyvertrag aufgeschwatzt, und am nächsten Tag merkst du, dass er viel zu teuer ist.
+
+**Merkhilfe für die sieben Stufen:** So planst du auch deine Klausurphase. Wo stehe ich (Analyse)? Was kommt dran (Prognose)? Welche Note will ich (Ziel)? Wie lerne ich, zum Beispiel erst Rechnen, dann Begriffe (Strategie)? Welches Material nehme ich (Mix)? Lernen (Umsetzung)? Probeklausur: Hat es gereicht (Controlling)?
 
 Gutes Marketing schaut auf Kunden und Konkurrenz und sucht mindestens einen einzigartigen Vorteil, den **USP** (unique selling proposition). Auf Deutsch: der eine Grund, warum man genau bei dir kauft und nicht beim Nachbarn. Bekanntes Beispiel: Ritter Sport wirbt seit Jahrzehnten mit der quadratischen Tafel („Quadratisch. Praktisch. Gut.“). Je nach Anspruchsgruppe spricht man von Absatzmarketing (Kunden, Handel), internem Marketing (Mitarbeiter), Beschaffungsmarketing (Lieferanten), Wettbewerbsmarketing (Konkurrenten) und Public Marketing (Öffentlichkeit).
 
@@ -116,12 +125,14 @@ Gutes Marketing schaut auf Kunden und Konkurrenz und sucht mindestens einen einz
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
-> Sieben Stufen: erst analysieren, dann planen, dann umsetzen und kontrollieren.
+> - Sieben Stufen: Situationsanalyse → Prognose → Ziele → Strategie → Marketingmix → Umsetzung → Controlling. Erst analysieren, dann planen, dann umsetzen und kontrollieren.
+> - Vier Grundhaltungen: Produktions-, Produkt-, Verkaufs- und Marketingorientierung. Nur bei der Marketingorientierung ist der Kundenwunsch der Startpunkt.
+> - USP = der eine einzigartige Vorteil, warum Kunden bei dir kaufen und nicht bei der Konkurrenz.
 
 > [!WARNING]
 > **Achtung**
 >
-> Verkaufsorientierung ist nicht Marketingorientierung. Überreden ersetzt keinen echten Kundennutzen.
+> Verkaufsorientierung ist nicht Marketingorientierung. Überreden ersetzt keinen echten Kundennutzen. Merke den Unterschied an der Reihenfolge: Bei der Verkaufsorientierung steht das Produkt schon fest, und man sucht Käufer. Bei der Marketingorientierung fragt man zuerst den Kunden und entwickelt dann das Produkt.
 
 ## Übungen
 
@@ -152,6 +163,20 @@ Gutes Marketing schaut auf Kunden und Konkurrenz und sucht mindestens einen einz
 > *Quelle: eigene Aufgabe (Skript S. 8)*
 >
 > Welche Grundhaltung? a) „Wir bauen das technisch beste Handy, ob es jemand braucht, ist egal.“ b) „Wir überreden jeden am Telefon zu einem Vertrag.“ c) „Erst fragen wir die Kunden, dann entwickeln wir.“ d) „Möglichst viel, möglichst billig herstellen.“
+
+> [!TIP]
+> **Übung 5 · mittel**
+>
+> *Quelle: Skript Marketing, Übung 1c (S. 7)*
+>
+> Nenne drei Gründe, warum Marketing für Unternehmen immer wichtiger geworden ist.
+
+> [!TIP]
+> **Übung 6 · leicht**
+>
+> *Quelle: eigene Aufgabe (Skript S. 6)*
+>
+> Ein Café plant ein neues Frühstücksangebot. Bring die Schritte in die Reihenfolge der sieben Stufen: a) prüfen, ob das Angebot nach drei Monaten genug verkauft wurde, b) Ziel: 40 Frühstücke pro Tag, c) Wie läuft das Geschäft am Morgen bisher, wer kommt? d) Preis, Karte und Werbung festlegen, e) Erwartung: Im Viertel öffnen zwei neue Bürogebäude, f) Entscheidung: Wir sprechen Berufstätige an, g) Personal schulen und starten.
 
 ## Lösungen
 
@@ -193,3 +218,23 @@ Eigene Lösungsskizze:
 - b) Überreden → Verkaufsorientierung
 - c) Kundenwunsch als Start → Marketingorientierung
 - d) Menge und Preis → Produktionsorientierung
+
+### Übung 5
+
+Eigene Lösungsskizze, abgeleitet aus Skript S. 4–9:
+
+1. Heute herrscht meist Käufermarkt: Das Angebot ist größer als die Nachfrage, der Kunde hat die Wahl.
+2. Viele Produkte sind fast gleich gut. Nur wer die Kundenwünsche besser trifft als die Konkurrenz, hat einen Wettbewerbsvorteil.
+3. Mehr Wettbewerb, auch international (Globalisierung): Kunden vergleichen leicht, zum Beispiel online.
+
+### Übung 6
+
+Eigene Lösungsskizze:
+
+1. c) Situationsanalyse: Wo stehen wir?
+2. e) Prognose: Was kommt auf uns zu?
+3. b) Marketingziel
+4. f) Marketingstrategie: welche Kunden, welcher Weg
+5. d) Marketingmix: Produkt, Preis, Vertrieb, Kommunikation
+6. g) Implementierung: umsetzen
+7. a) Controlling: Hat es geklappt?

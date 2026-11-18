@@ -56,6 +56,16 @@ Bei der **Sekundärforschung** nutzt man Daten, die es schon gibt. Intern: eigen
 | Experiment | mehrfach, dauerhaft, als Simulation | Preis in Filiale A ändern, in B nicht |
 | Tests | Labor-, Studio-, Markt-, Storetest, Testmarkt, Warentest | neues Getränk zuerst nur in einer Stadt verkaufen |
 
+Die Fachwörter kurz erklärt: Ein **Panel** ist eine feste Gruppe (Haushalte oder Geschäfte), die regelmäßig zum selben Thema berichtet. Beim **Experiment** ändert man bewusst eine Sache (etwa den Preis) und vergleicht mit einer Gruppe ohne Änderung. Beim **Storetest** wird ein Produkt in einigen echten Geschäften ausprobiert, beim **Testmarkt** in einer ganzen Region.
+
+| | Sekundärforschung | Primärforschung |
+|---|---|---|
+| Daten | gibt es schon | werden neu erhoben |
+| Kosten und Zeit | günstig, schnell | teuer, dauert länger |
+| passt zur Frage? | oft nur ungefähr, eventuell veraltet | genau passend, aktuell |
+| Wer kennt die Daten? | auch die Konkurrenz | nur du |
+| Typische Reihenfolge | zuerst | danach, wenn noch Fragen offen sind |
+
 > [!NOTE]
 > **Beispiel: Die Bäckerei**
 >
@@ -64,7 +74,8 @@ Bei der **Sekundärforschung** nutzt man Daten, die es schon gibt. Intern: eigen
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
-> Sekundär = vorhandene Daten, schnell und günstig. Primär = neue Daten, passend, aber teurer.
+> - Sekundär = vorhandene Daten (intern oder extern), schnell und günstig, aber evtl. veraltet. Primär = neue Daten, passend, aber teurer.
+> - Methoden der Primärforschung: Befragung, Beobachtung, Panel, Experiment, Tests.
 
 > [!WARNING]
 > **Achtung**
@@ -82,7 +93,15 @@ Wen befragt man? Bei der **Vollerhebung** alle Elemente der Grundgesamtheit, bei
 
 **Stell dir vor:** Du kochst Suppe. Um zu wissen, ob sie salzig genug ist, isst du nicht den ganzen Topf (Vollerhebung). Ein Löffel reicht (Stichprobe), aber nur, wenn du vorher gut umgerührt hast. Sonst schmeckst du nur die Salzschicht oben.
 
-Die Stichprobe kann zufällig gezogen werden (einfach, geschichtet, als Klumpen) oder bewusst (Quotenauswahl, Konzentrationsauswahl).
+Die Stichprobe kann zufällig gezogen werden oder bewusst ausgewählt werden:
+
+| Verfahren | Art | So funktioniert es |
+|---|---|---|
+| einfache Zufallsauswahl | zufällig | jeder hat die gleiche Chance, wie bei einer Lostrommel |
+| geschichtete Zufallsauswahl | zufällig | erst in Gruppen (Schichten) teilen, dann in jeder Gruppe losen |
+| Klumpenauswahl | zufällig | ganze Gruppen auslosen und dort alle befragen, zum Beispiel 5 komplette Kurse |
+| Quotenauswahl | bewusst | Interviewer wählen selbst, müssen aber Quoten einhalten (z. B. 60 % BWL) |
+| Konzentrationsauswahl | bewusst | nur die wichtigsten Elemente, zum Beispiel die 20 größten Kunden |
 
 **Mit Zahlen (eigene Zahlen):** An einer Hochschule studieren 2.000 Personen, 60 % BWL und 40 % Informatik. Du willst 200 befragen, also 10 %.
 
@@ -98,12 +117,14 @@ Die Stichprobe kann zufällig gezogen werden (einfach, geschichtet, als Klumpen)
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
-> Offen = freie Antwort, schwer auszuwerten, aber reich an Ideen. Geschlossen = vorgegebene Antworten, leicht auszuwerten.
+> - Offen = freie Antwort, schwer auszuwerten, aber reich an Ideen (Sonderform: Satzergänzung). Geschlossen = vorgegebene Antworten, leicht auszuwerten.
+> - Vollerhebung = alle aus der Grundgesamtheit. Teilerhebung = Stichprobe, zufällig (einfach, geschichtet, Klumpen) oder bewusst (Quote, Konzentration).
 
 > [!WARNING]
 > **Achtung**
 >
-> Eine Stichprobe ist nur aussagekräftig, wenn sie die Grundgesamtheit gut abbildet.
+> - Eine Stichprobe ist nur aussagekräftig, wenn sie die Grundgesamtheit gut abbildet.
+> - Quotenauswahl ist **keine** Zufallsauswahl: Die Quote steht fest, aber die Interviewer suchen die Personen selbst aus.
 
 ## Übungen
 
@@ -134,6 +155,20 @@ Die Stichprobe kann zufällig gezogen werden (einfach, geschichtet, als Klumpen)
 > *Quelle: Skript Marketing, Übung 16c (S. 35)*
 >
 > Ein Duschgel-Hersteller will wissen: 1 wie viel Körperpflege Haushalte kaufen, 2 wie sich Kunden vor dem Regal verhalten, 3 wo das Duschgel im Regal am besten steht, 4 wie sein Image ist, 5 wie stark Neurodermitis bei Jugendlichen zugenommen hat, 6 ob der Verschluss leicht zu bedienen ist, 7 wie sich die Umsätze mit verschiedenen Kunden entwickelt haben. Welche Methode passt jeweils?
+
+> [!TIP]
+> **Übung 5 · mittel**
+>
+> *Quelle: eigene Aufgabe (Skript S. 36)*
+>
+> Ein Fitnessstudio hat 1.500 Mitglieder: 900 im Basistarif, 450 im Premiumtarif, 150 im Studententarif. Es sollen 120 Mitglieder befragt werden. a) Wie viele aus jedem Tarif kommen in eine geschichtete Stichprobe? b) Welches Verfahren liegt vor, wenn man nur die 120 Mitglieder fragt, die am häufigsten trainieren?
+
+> [!TIP]
+> **Übung 6 · leicht**
+>
+> *Quelle: eigene Aufgabe (Skript S. 36)*
+>
+> Offene oder geschlossene Frage? a) „Was sollten wir an unserem Service verbessern?“ b) „Wie zufrieden sind Sie? ☐ sehr ☐ eher ☐ wenig ☐ gar nicht“ c) „Wenn ich an unsere Filiale denke, fällt mir als Erstes ein, dass …“ d) „Haben Sie in den letzten vier Wochen bei uns gekauft? ☐ ja ☐ nein“
 
 ## Lösungen
 
@@ -172,3 +207,21 @@ Eigene Lösungsskizze, andere gut begründete Antworten sind möglich:
 - 5 → Sekundärforschung, extern (Statistiken, Studien)
 - 6 → Test (Labor- oder Studiotest)
 - 7 → Sekundärforschung, intern (eigene Umsatzzahlen)
+
+### Übung 5
+
+Eigene Lösungsskizze:
+
+1. Auswahlsatz: 120 von 1.500 = 120 / 1.500 = 0,08, also 8 % aus jeder Schicht.
+2. Basis: 900 · 0,08 = 72 · Premium: 450 · 0,08 = 36 · Studenten: 150 · 0,08 = 12.
+3. Probe: 72 + 36 + 12 = 120.
+4. b) Man wählt bewusst die wichtigsten Elemente aus → Konzentrationsauswahl (keine Zufallsauswahl).
+
+### Übung 6
+
+Eigene Lösungsskizze:
+
+- a) offen (freie Antwort)
+- b) geschlossen (Skala)
+- c) offen, Sonderform Satzergänzung
+- d) geschlossen (ja / nein)

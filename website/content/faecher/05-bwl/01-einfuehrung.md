@@ -98,6 +98,14 @@ Die BWL kennt vier Modelltypen. Jeder beantwortet eine andere Frage.
 >
 > Das Mehl ist für die Bäckerei ein Inputgut, ein Verbrauchsgut und ein Investitionsgut. Das fertige Brötchen ist ein Outputgut. Isst du es zu Hause, ist es für dich ein Konsumgut.
 
+### So kreuzt du an
+
+1. Wer nutzt das Gut? Ein Unternehmen → Investitionsgut. Ein Privathaushalt → Konsumgut. Nie beides.
+2. Wie oft kann man es nutzen? Mehrmals (Haus, Maschine, Klimaanlage) → Gebrauchsgut. Nach einmal weg (Strom, Futter, Mehl) → Verbrauchsgut. Nie beides.
+3. In jeder Zeile stehen also genau zwei Kreuze, in die anderen zwei Felder kommt ein Strich.
+
+Beispiel: Ein Lieferwagen der Bäckerei wird jahrelang genutzt (Gebrauchsgut) und gehört einem Unternehmen (Investitionsgut). Das Mehl im Lieferwagen ist nach dem Backen weg (Verbrauchsgut) und ebenfalls ein Investitionsgut.
+
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
@@ -183,6 +191,8 @@ Die drei Kennzahlen unterscheiden sich also darin, was man vergleicht.
 | Eigenkapitalrentabilität | Gewinn · 100 / Eigenkapital | Gewinn mit Kapital | Prozent |
 | Gesamtkapitalrentabilität | (Gewinn + Fremdkapitalzinsen) · 100 / Gesamtkapital | Gewinn mit Kapital | Prozent |
 | Umsatzrentabilität | Gewinn · 100 / Umsatz | Gewinn mit Umsatz | Prozent |
+
+**Warum addiert man bei der Gesamtkapitalrentabilität die Fremdkapitalzinsen?** Das Gesamtkapital kommt von den Eigentümern **und** von der Bank. Die Eigentümer bekommen den Gewinn, die Bank bekommt die Zinsen. Was das ganze Kapital erwirtschaftet hat, ist also Gewinn plus Zinsen. Die Zinsen wurden vorher als Aufwand abgezogen, darum zählt man sie wieder dazu.
 
 > [!NOTE]
 > **Beispiel: Die Bäckerei (eigene Zahlen)**
@@ -276,6 +286,13 @@ Werden die Bauteile 10 % teurer, bleibt die Produktivität gleich, denn sie zäh
 >
 > Eine GmbH stellt im Jahr 1 23.625 Teile her, an 225 Arbeitstagen mit 14 Mitarbeitern. Leistung 945.000 €, Kosten 825.000 €, Gewinn 120.000 €, Eigenkapital 450.000 €. Im Jahr 2: 33.120 Teile, 230 Tage, 16 Mitarbeiter, Leistung 1.159.200 €, Kosten 1.120.000 €, Gewinn 39.200 €, Eigenkapital 550.000 €. Berechne für beide Jahre Arbeitsproduktivität, Wirtschaftlichkeit und Eigenkapitalrentabilität. Beurteile kurz.
 
+> [!TIP]
+> **Übung 7 · mittel**
+>
+> *Quelle: eigene Aufgabe*
+>
+> Die Bäckerei hat im Jahr 1.200.000 € Umsatz und 60.000 € Gewinn. Sie arbeitet mit 300.000 € Eigenkapital und 500.000 € Fremdkapital, für das sie 20.000 € Zinsen zahlt. Berechne Eigenkapitalrentabilität, Gesamtkapitalrentabilität und Umsatzrentabilität.
+
 ## Lösungen
 
 ### Übung 1
@@ -337,3 +354,11 @@ Offizielle Lösung.
 2. Wirtschaftlichkeit: Jahr 1: 945.000 / 825.000 = 1,145, die offizielle Lösung rundet auf 1,15. Jahr 2: 1.159.200 / 1.120.000 = 1,035.
 3. Eigenkapitalrentabilität: Jahr 1: 120.000 · 100 / 450.000 = 26,67 %. Jahr 2: 39.200 · 100 / 550.000 = 7,13 %.
 4. Beurteilung: Die Produktivität steigt (bessere Abläufe, Normteile, Qualifikation). Die Wirtschaftlichkeit sinkt, weil der Erlös je Stück von 40 € (945.000 / 23.625) auf 35 € (1.159.200 / 33.120) fällt. Die Rentabilität sinkt: weniger Gewinn bei mehr Eigenkapital.
+
+### Übung 7
+
+1. Eigenkapitalrentabilität = 60.000 · 100 / 300.000 = 20 %.
+2. Gesamtkapital = 300.000 + 500.000 = 800.000 €. Gesamtkapitalrentabilität = (60.000 + 20.000) · 100 / 800.000 = 80.000 · 100 / 800.000 = 10 %.
+3. Umsatzrentabilität = 60.000 · 100 / 1.200.000 = 5 %.
+
+Die Eigenkapitalrentabilität ist doppelt so hoch wie die Gesamtkapitalrentabilität. Der Grund: Ein Teil des Geldes ist geliehen und kostet nur 20.000 / 500.000 = 4 % Zinsen, verdient aber im Betrieb mehr.

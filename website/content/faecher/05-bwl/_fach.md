@@ -7,7 +7,7 @@ dozent: "Michaela Geiger"
 pruefung: "Klausur, 72 Minuten (zusammen mit Marketing 120 Minuten)"
 pruefungsdatum: "2026-12-16"
 moodle: 18616
-stand: "laeuft"
+stand: "fertig"
 description: "Wie ein Betrieb aufgebaut ist, welche Rechtsform er hat und wie er mit Zahlen gesteuert wird: Kennzahlen, Kosten, Deckungsbeitrag, ROI und Materialwirtschaft."
 ---
 
@@ -27,7 +27,7 @@ Die meisten Beispiele auf diesen Seiten spielen in einer kleinen Bäckerei. So s
 | Dauer | BWL und Marketing werden zusammen geschrieben: 120 Minuten. Der BWL-Teil hat laut erster Vorlesung 72 Minuten und 72 Punkte. Die Musterklausur 2025 hat ebenfalls 72 Punkte. |
 | Aufgabenarten | Wissens- und Verständnisfragen, Transferfragen zu einem Fall, Multiple Choice |
 | Rechnen | In der Musterklausur 2025 war etwa die Hälfte der Punkte Rechnen |
-| Stand der Vorlesung | Kapitel 1 bis 7 sind behandelt (bis 05.11.2026). Kapitel 9 folgt noch, die Vorlesungen laufen bis 17.11.2026. |
+| Stand der Vorlesung | Abgeschlossen (9 Termine, letzter am 17.11.2026). Behandelt wurden Skript-Kapitel 1 bis 9. Kapitel 10 Produktion kam nicht mehr dran. |
 
 > [!IMPORTANT]
 > **Offizieller Klausurhinweis**
@@ -47,7 +47,7 @@ Die meisten Beispiele auf diesen Seiten spielen in einer kleinen Bäckerei. So s
 > [!WARNING]
 > **Achtung**
 >
-> Kapitel 9 wurde noch nicht in der Vorlesung behandelt (Stand 06.11.2026). Das Kapitel ist aus dem Skript vorbereitet. Zu den Skript-Übungen in Kapitel 9 gibt es noch keine offiziellen Lösungen. Die Lösungen dort sind eigene Lösungen. Offiziell gelöst sind nur die Musterklausur-Aufgaben 6 und 7.
+> Für Kapitel 9 (Materialwirtschaft) gibt es seit 18.11.2026 die Folien mit offiziellen Lösungen zu allen Übungen 39 bis 51. Das Website-Kapitel ist damit abgeglichen. Bei Übung 49 rundet die Folie die Umschlagshäufigkeit auf 1,5 und kommt so auf 240 Tage. Rechne in der Klausur nachvollziehbar und schreib Rundungen hin.
 
 ### So lernst du am besten
 

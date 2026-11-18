@@ -20,6 +20,19 @@ Zwischen dem, was wir sehen, und unserer Reaktion liegen vier Schritte. Sie lauf
 3. **Bewerten:** ist unprofessionell.
 4. **Reagieren:** ignorieren, rügen, ansprechen.
 
+**Mit einem Beispiel:** Im Referat schaut ein Zuhörer die ganze Zeit aufs Handy.
+
+| Schritt | Was in deinem Kopf passiert | Ist das eine Tatsache? |
+|---|---|---|
+| Wahrnehmen | Er schaut seit drei Minuten aufs Handy. | ja |
+| Vermuten | Er langweilt sich. | nein, vielleicht schreibt er mit oder wartet auf eine wichtige Nachricht |
+| Bewerten | Das ist respektlos. | nein, ein Urteil |
+| Reagieren | Du wirst unsicher und sprichst schneller. | Folge der Vermutung, nicht der Tatsache |
+
+Wer nach Schritt 1 kurz stoppt und andere Vermutungen zulässt, kann ruhig weitermachen oder ihn gezielt einbinden („Was meinen Sie dazu?“).
+
+Ein **Feuerlöscher** ist eine kurze, eingeübte Reaktion, mit der du in einer stressigen Situation die Ruhe und die Führung im Gespräch zurückgewinnst (Souveränität).
+
 Für schwierige Situationen (Angriff, Blackout, Störung) gibt es **„Feuerlöscher“**:
 
 | Feuerlöscher | Beispiel |
@@ -28,6 +41,7 @@ Für schwierige Situationen (Angriff, Blackout, Störung) gibt es **„Feuerlös
 | Ziel fokussieren | „Unser Ziel heute ist ja …“ |
 | Einigkeit verdeutlichen | „Wir sind uns ja einig, dass …“ |
 | Umdefinieren, Rückfrage | „Wie meinen Sie das genau?“ |
+| Macht der inneren Bilder | dich selbst in einer starken Rolle sehen, zum Beispiel als Coach der Gruppe |
 | Spontan Recht geben | „Ja, genau! Und …“ |
 | Kraftvolle Pause | aufrichten, lächeln, Blickkontakt, schweigen |
 | Aktiv zuhören | „Habe ich Sie richtig verstanden, dass …?“ |
@@ -89,6 +103,10 @@ Den Ablauf planst du als Tabelle mit den Spalten Top, Funktion, Fragen, Methode,
 
 **Auf Deutsch heißt das:** Es reicht, dass **eine** Seite es so erlebt. Der andere muss den Konflikt noch gar nicht bemerkt haben. Konflikte können auch nützen: Sie bringen Klarheit, neue Lösungen und Innovation.
 
+Das Skript unterscheidet außerdem den **sozialen** Konflikt (zwischen zwei Parteien) vom **inneren** Konflikt (in einer Person, etwa „Lernen oder Geburtstagsfeier?“). In diesem Kapitel geht es um soziale Konflikte.
+
+**Konfliktfähigkeit** heißt nicht, Streit zu gewinnen. Das Skript beschreibt sie als Spielraum zwischen zwei Gegensatzpaaren: auf den anderen eingehen ↔ die eigenen Interessen durchdrücken, und den eigenen Standpunkt deutlich machen ↔ sich selbst aufgeben. Keines der Extreme ist gut. Ziel ist eine Lösung, die beide akzeptieren.
+
 | Konfliktart | Ursache | Was tun |
 |---|---|---|
 | Sachkonflikt | fehlende oder falsche Information, andere Interpretation | klären, Informationen austauschen |
@@ -145,7 +163,25 @@ Das Gespräch selbst läuft in **fünf Phasen**:
 4. **Handlungsorientierung:** nächste Schritte festhalten, Commitment sichern.
 5. **Abschluss:** Zufriedenheit mit Ablauf und Ergebnis erfragen, Stimmung prüfen.
 
-Werkzeuge: Ich-Botschaften (Beobachtung → Wirkung → Gefühl → Wunsch), aktives Zuhören (Kapitel 2) und die Harvard-Prinzipien: hart in der Sache, freundlich zum Menschen; Interessen statt Positionen; mehrere Lösungen entwickeln; objektive Kriterien.
+Werkzeuge: Ich-Botschaften (Beobachtung → Wirkung → Gefühl → Wunsch), aktives Zuhören (Kapitel 2) und die vier Prinzipien des **Harvard-Konzepts**. Es zielt auf eine Win-win-Lösung.
+
+| Prinzip | Auf Deutsch | Beispiel (Abgabetermin aus dem Abschnitt oben) |
+|---|---|---|
+| Sache und Mensch trennen | klar in der Sache, freundlich zum Menschen | „Ich finde Montag schwierig. Das liegt nicht an dir, sondern an meinem Wochenende.“ |
+| Interessen statt Positionen | nicht über die Forderung streiten, sondern fragen, wozu sie dient | Position „Freitag“, Interesse „freies Wochenende“; Position „Montag“, Interesse „Zeit zum Korrigieren“ |
+| mehrere Lösungen entwickeln | erst sammeln, dann entscheiden | Donnerstag fertig schreiben, Wochenende korrigieren, Abgabe Montag; oder Aufteilung nach Kapiteln |
+| objektive Kriterien | nach einem Maßstab entscheiden, den beide anerkennen | die offizielle Abgabefrist, die Bewertungskriterien |
+
+Eine **Position** ist das, was jemand fordert. Ein **Interesse** ist der Grund dahinter. Über Positionen kann man nur feilschen, bei Interessen findet man oft eine Lösung, die beide zufriedenstellt.
+
+**Konflikttypen nach Virginia Satir** (Skript Teil 2): Menschen reagieren im Konflikt oft in einem von vier Mustern. Je nach Situation wechseln sie zwischen ihnen. Jedes Muster hat auch eine Chance.
+
+| Typ | innerer Glaubenssatz (sinngemäß) | Chance |
+|---|---|---|
+| Ankläger | „Wenn ich nicht laut werde, passiert nichts.“ | macht mutig sichtbar, worum es geht |
+| Beschwichtiger | „Ich muss alle glücklich machen.“ | sucht Harmonie, erkennt die Bedürfnisse der anderen |
+| Rationalisierer | „Gefühle sind gefährlich, nur Logik zählt.“ | bringt das Gespräch auf eine ruhige Sachebene |
+| Ablenker | „Konflikte tun weh, schnell das Thema wechseln.“ | verschafft Abstand, die Stimmung kann sich erholen |
 
 > [!NOTE]
 > **Beispiel: Kollege reißt die Projekt-Timeline (eigene Vorbereitung, fiktiv)**
@@ -153,7 +189,7 @@ Werkzeuge: Ich-Botschaften (Beobachtung → Wirkung → Gefühl → Wunsch), akt
 
 > [!IMPORTANT]
 > **Das Wichtigste**
-> Ins Gespräch gehen nur Fakten, keine Vermutungen. „Er ist faul“ ist eine Bewertung. „Drei von sieben Aufgaben sind fertig“ ist eine Beobachtung.
+> Vorbereiten mit der quadratischen Vorklärung (Sache, Selbst, Appell, Beziehung), führen in fünf Phasen (Einstieg, Themenorientierung, Themenbearbeitung, Handlungsorientierung, Abschluss). Ins Gespräch gehen nur Fakten, keine Vermutungen: „Er ist faul“ ist eine Bewertung, „Drei von sieben Aufgaben sind fertig“ eine Beobachtung. Verhandelt wird über Interessen, nicht über Positionen.
 
 > [!WARNING]
 > **Achtung**
@@ -185,6 +221,11 @@ Werkzeuge: Ich-Botschaften (Beobachtung → Wirkung → Gefühl → Wunsch), akt
 > **Übung 5 · Prüfungsniveau**
 > Im Konfliktgespräch sagt dein Gegenüber: „Du hast den Plan doch viel zu knapp gemacht!“ Wähle einen passenden Feuerlöscher und formuliere deine Antwort. Erkläre in einem Satz, warum er hier passt.
 > Quelle: eigene Vorbereitung Konfliktgespräch, nach Skript Teil 1
+
+> [!TIP]
+> **Übung 6 · mittel**
+> Zwei Teammitglieder streiten: A will die Präsentation mit vielen Diagrammen, B will fast keinen Text und nur Bilder. Trenne Positionen und mögliche Interessen und entwickle nach dem Harvard-Konzept zwei Lösungen. Nenne ein objektives Kriterium für die Entscheidung.
+> Quelle: eigene Aufgabe nach Skript Teil 2, Harvard-Konzept
 
 ## Lösungen
 
@@ -248,3 +289,13 @@ d) Wertekonflikt → Umgang mit dem Unterschied klären, eine gemeinsame Regel f
 1. Feuerlöscher: **spontan Recht geben**.
 2. Antwort: „Ja, genau, das kann gut sein. Und deshalb möchte ich den Rest jetzt mit dir zusammen neu schätzen.“
 3. Begründung: Der Angriff verliert seine Kraft, weil du nicht in die Verteidigung gehst, und du lenkst das Gespräch auf die Lösung.
+
+### Übung 6
+
+*Beispiellösung.*
+
+1. **Positionen:** A: „viele Diagramme“. B: „nur Bilder“.
+2. **Mögliche Interessen (im Gespräch erfragen):** A will, dass die Aussagen belegt sind (analytische Präferenz). B will, dass das Publikum nicht liest, sondern zuhört.
+3. **Lösung 1:** pro Folie höchstens ein Diagramm mit Action Title, die übrigen Zahlen auf Backup-Folien.
+4. **Lösung 2:** Hauptfolien mit Bildern, die Daten als Handout oder im Anhang.
+5. **Objektives Kriterium:** Was braucht die Zielgruppe für ihre Entscheidung? Prüft das mit einem Probelauf vor einer Person, die das Thema nicht kennt.

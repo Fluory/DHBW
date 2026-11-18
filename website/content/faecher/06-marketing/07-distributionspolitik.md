@@ -17,7 +17,18 @@ In der Musterklausur 2025 gab es 7 Punkte: 3 für die Vorteile eines Onlineshops
 
 Beim **direkten Absatz** verkauft der Hersteller also ohne Zwischenhändler an den Kunden: eigener Laden, eigener Onlineshop, Automat oder Online-Marktplatz. Beim **indirekten Absatz** ist der Handel dazwischen: Hersteller → (Großhandel) → Einzelhandel → Kunde.
 
-Das Skript nennt sechs Kriterien für die Wahl des Absatzwegs: Lieferzeit, Marktabdeckung, Handelsspanne, Lagerung, Abhängigkeit, Kundenkontakt.
+Das Skript nennt sechs Kriterien für die Wahl des Absatzwegs. Welcher Weg wann besser ist, zeigt diese Tabelle (eigene Lösung zu Skript-Übung 29):
+
+| Kriterium | spricht für … | Begründung |
+|---|---|---|
+| Lieferzeit | indirekt | Der Händler hat die Ware vor Ort auf Lager, der Kunde nimmt sie sofort mit. |
+| Marktabdeckung | indirekt | Der Handel hat viele Geschäfte, der Hersteller allein erreicht weniger Orte. |
+| Handelsspanne | direkt | Kein Händler bekommt einen Teil des Preises. |
+| Lagerung | indirekt | Der Handel übernimmt Lager und Lagerkosten. |
+| Abhängigkeit | direkt | Der Hersteller entscheidet selbst über Preis und Auftritt, kein Händler kann ihn auslisten. |
+| Kundenkontakt | direkt | Der Hersteller spricht selbst mit dem Kunden und bekommt seine Daten und Wünsche mit. |
+
+Beim Onlineshop ist es etwas anders: Er deckt den Markt sogar sehr breit ab, weil man von überall bestellen kann. Dafür muss der Hersteller den Versand selbst organisieren.
 
 **Vorteile eines eigenen Onlineshops** (direkter Absatz):
 
@@ -27,7 +38,20 @@ Das Skript nennt sechs Kriterien für die Wahl des Absatzwegs: Lieferzeit, Markt
 - Kunden bestellen rund um die Uhr
 - weniger Abhängigkeit vom Handel, eigene Preise
 
-E-Commerce heißt Verkauf über das Internet: B2B an Unternehmen, B2C an Konsumenten. Oft nutzt man mehrere Kanäle gleichzeitig (Multi-Channel).
+E-Commerce heißt Verkauf über das Internet: B2B (business to business) an Unternehmen, B2C (business to consumer) an Konsumenten. Oft nutzt man mehrere Kanäle gleichzeitig (Multi-Channel), zum Beispiel Laden und Onlineshop.
+
+| Aspekt (Skript-Übung 30) | Chance | Risiko |
+|---|---|---|
+| Reichweite | Kunden in ganz Deutschland und im Ausland | starke Konkurrenz, ein Klick zum nächsten Shop |
+| Kosten | keine Miete für Läden, keine Handelsspanne | Shop, Pflege, Werbung im Netz kosten Geld |
+| Komfort | Bestellen rund um die Uhr | Kunde kann nicht anfassen und ausprobieren |
+| Marketing | Kundendaten, gezielte Werbung, Newsletter | Datenschutz muss eingehalten werden |
+| Preisgestaltung | eigene Preise, schnell änderbar | Kunden vergleichen Preise sofort |
+| Bezahlmöglichkeiten | viele Wege (Karte, PayPal, Rechnung) | Zahlungsausfälle, Betrug |
+| Logistik | zentrales Lager | Versand und viele Rücksendungen kosten |
+| Kundenservice | Chat, FAQ, schnelle Antworten | keine persönliche Beratung im Laden |
+
+Eigene Lösungsskizze zu den Stichworten aus dem Skript.
 
 > [!NOTE]
 > **Beispiel: Die Bäckerei**
@@ -37,7 +61,8 @@ E-Commerce heißt Verkauf über das Internet: B2B an Unternehmen, B2C an Konsume
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
-> Direkt = ohne Zwischenhändler. Indirekt = über den Handel.
+> - Direkt = ohne Zwischenhändler (eigener Laden, eigener Onlineshop). Indirekt = über den Handel (Groß- und Einzelhandel).
+> - Vorteile eines eigenen Onlineshops: keine Handelsspanne · direkter Kundenkontakt und Kundendaten · große Reichweite, auch international · rund um die Uhr · weniger Abhängigkeit vom Handel, eigene Preise.
 
 > [!WARNING]
 > **Achtung**
@@ -58,7 +83,7 @@ Eigene Absatzorgane: **Reisende** (fest angestellt im Außendienst, Fixum plus P
 | Franchising | Geber gibt selbstständigen Nehmern Marke, Einkauf, Werbung | Vertrag |
 | Handelsvertreter (§§ 84–92 HGB) | ständig, in fremdem Namen auf fremde Rechnung | Provision; höhere Delkredereprovision, wenn er für den Zahlungseingang haftet |
 | Handelsmakler (§§ 93–104 HGB) | von Fall zu Fall, fremder Name, fremde Rechnung | Courtage, je zur Hälfte von Käufer und Verkäufer |
-| Kommissionär (§§ 383–406 HGB) | eigener Name, fremde Rechnung | Provision |
+| Kommissionär (§§ 383–406 HGB) | eigener Name, fremde Rechnung; er hat die Ware in Besitz, Eigentümer bleibt der Lieferant | Provision |
 
 | | Reisender | Handelsvertreter |
 |---|---|---|
@@ -67,10 +92,19 @@ Eigene Absatzorgane: **Reisende** (fest angestellt im Außendienst, Fixum plus P
 | Bezahlung | Fixum + Provision | nur Provision |
 | Besonderes | weisungsgebunden, schreibt Berichte über Markt und Konkurrenz | kennt sein Gebiet, vertritt oft mehrere Firmen |
 
+**Merkhilfe für die Rechtsformen:** Frag zwei Dinge. 1. In wessen **Namen** wird der Vertrag geschlossen (wer steht auf dem Vertrag)? 2. Auf wessen **Rechnung** (wer trägt Gewinn und Verlust)?
+
+| | Name | Rechnung |
+|---|---|---|
+| Handel | eigener | eigene |
+| Kommissionär | eigener | fremde |
+| Handelsvertreter, Handelsmakler, Reisender | fremder | fremde |
+
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
-> Reisender = angestellt, Fixum + Provision. Handelsvertreter = selbstständig, nur Provision. Beide handeln in fremdem Namen auf fremde Rechnung.
+> - Reisender = angestellt, Fixum + Provision. Handelsvertreter = selbstständig, nur Provision. Beide handeln in fremdem Namen auf fremde Rechnung.
+> - Kommissionär = eigener Name, fremde Rechnung. Handelsmakler = von Fall zu Fall, Courtage von beiden Seiten. Handel = kauft und verkauft auf eigene Rechnung.
 
 > [!WARNING]
 > **Achtung**
@@ -115,7 +149,9 @@ Eigene Absatzorgane: **Reisende** (fest angestellt im Außendienst, Fixum plus P
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
-> Kritischer Umsatz = Fixkosten des Reisenden / (Provision Vertreter − Provision Reisender).
+> - Kritischer Umsatz = Fixkosten des Reisenden / (Provision Vertreter − Provision Reisender).
+> - Unter dem kritischen Umsatz ist der Handelsvertreter günstiger, darüber der Reisende.
+> - Neben den Kosten zählen: Marktkenntnis des Vertreters, Kontrolle und Weisungsrecht beim Reisenden, Einsatz nur für ein Unternehmen.
 
 > [!WARNING]
 > **Achtung**
@@ -161,6 +197,20 @@ Eigene Absatzorgane: **Reisende** (fest angestellt im Außendienst, Fixum plus P
 > *Quelle: Musterklausur Marketing 2025, A7 (4 Punkte)*
 >
 > Ein Gartenmöbelhersteller will in Spanien und Italien verkaufen. Reisender: 3.000 € brutto im Monat plus 13. Gehalt, Spesen 200 € im Monat, sonstige Kosten 4.000 € im Jahr, Provision 2 %. Handelsvertreter: Provision 4 %. a) Ab welchem Umsatz ist welche Lösung günstiger? b) Welcher Gesichtspunkt spielt neben den Kosten eine Rolle?
+
+> [!TIP]
+> **Übung 6 · mittel**
+>
+> *Quelle: Skript Marketing, Übung 29 (S. 56)*
+>
+> Direkter oder indirekter Absatz? Entscheide für jedes Kriterium und begründe kurz: Lieferzeit, Marktabdeckung, Handelsspanne, Lagerung, Abhängigkeit, Kundenkontakt.
+
+> [!TIP]
+> **Übung 7 · Prüfungsniveau**
+>
+> *Quelle: eigene Aufgabe (wie Musterklausur 2025, A7)*
+>
+> Reisender: 3.200 € Gehalt im Monat (12 Gehälter), 300 € Spesen im Monat, 1,5 % Provision. Handelsvertreter: 5,5 % Provision. a) Berechne den kritischen Jahresumsatz. b) Erwartet werden 900.000 € Jahresumsatz. Wer ist günstiger, und wie hoch sind die Kosten beider Lösungen?
 
 ## Lösungen
 
@@ -211,3 +261,24 @@ Eigene Lösungsskizze:
 3. U = 45.400 / 0,02 = 2.270.000 € kritischer Jahresumsatz.
 4. Unter 2,27 Mio. € ist der Handelsvertreter günstiger, darüber der Reisende.
 5. b) Der Vertreter kennt den fremden Markt, arbeitet aber oft für mehrere Firmen. Der Reisende ist weisungsgebunden, enger an das Unternehmen gebunden und liefert Informationen über Markt und Konkurrenz.
+
+### Übung 6
+
+Eigene Lösungsskizze:
+
+- Lieferzeit → indirekt (Ware liegt beim Händler vor Ort)
+- Marktabdeckung → indirekt (viele Geschäfte des Handels)
+- Handelsspanne → direkt (kein Händler verdient mit)
+- Lagerung → indirekt (der Handel lagert)
+- Abhängigkeit → direkt (keine Abhängigkeit vom Händler)
+- Kundenkontakt → direkt (eigener Kontakt und Kundendaten)
+
+### Übung 7
+
+Eigene Lösungsskizze:
+
+1. Fixkosten des Reisenden im Jahr: Gehalt 3.200 · 12 = 38.400 €, Spesen 300 · 12 = 3.600 €. Zusammen 42.000 €.
+2. Unterschied der Provisionen: 5,5 % − 1,5 % = 4 % = 0,04.
+3. a) Kritischer Umsatz = 42.000 / 0,04 = 1.050.000 €.
+4. b) 900.000 € liegen darunter → der Handelsvertreter ist günstiger.
+5. Probe: Vertreter 0,055 · 900.000 = 49.500 €. Reisender 42.000 + 0,015 · 900.000 = 42.000 + 13.500 = 55.500 €.

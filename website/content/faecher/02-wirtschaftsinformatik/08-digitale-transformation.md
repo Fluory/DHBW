@@ -13,7 +13,15 @@ Zum Schluss von Tag 2 verändern Daten, Vernetzung und KI das Geschäftsmodell s
 
 **Was ist das?** Der gemeinsame Kern aller Definitionen von Digitalisierung: Analoges wird digital dargestellt, übertragen und verarbeitet. Ursprünglich ist das ein technischer Begriff aus der Elektrotechnik.
 
-Bis Mitte der 1990er-Jahre hieß es: „IT unterstützt“ (EDV-Abteilung, Routine, nicht strategisch). Mit dem Internet heißt es: „IT wird Kerngeschäft“. Vertriebswege und Produkte werden digital. Bei der Sonnenschein AG ist der Onlineshop einer der wichtigsten Vertriebswege.
+Bis Mitte der 1990er-Jahre hieß es: „IT unterstützt“ (EDV-Abteilung, Routine, nicht strategisch). Mit dem Internet heißt es: „IT wird Kerngeschäft“. Vertriebswege und Produkte werden digital. Bei der Sonnenschein AG ist der Onlineshop einer der wichtigsten Vertriebswege, kein IT-Projekt am Rand.
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Digitalisierung = Analoges wird digital dargestellt, übertragen und verarbeitet. Bedeutung der IT: früher „IT unterstützt“, seit dem Internet „IT wird Kerngeschäft“.
+
+> [!WARNING]
+> **Achtung**
+> Digitalisierung und digitale Transformation sind nicht dasselbe. Digitalisierung ist der technische Kern, Transformation erst die Veränderung des Geschäftsmodells (nächster Abschnitt).
 
 ## Drei Stufen bis zur digitalen Transformation
 
@@ -66,15 +74,48 @@ So ordnest du ein Beispiel ein:
 
 **In einem Satz:** Beim Internet der Dinge sind Alltagsgegenstände selbst mit dem Internet verbunden und tauschen Daten aus.
 
-**Was ist das?** Das **Internet der Dinge (IoT, Internet of Things)** vernetzt physische Gegenstände mit Internettechnik. Smarte Gegenstände lassen sich identifizieren, adressieren und orten, verarbeiten Informationen, haben Sensoren und können etwas bewirken. **Beispiel:** ein Armband im Freizeitpark als Eintrittskarte, Zimmerschlüssel und Zahlungsmittel.
+**Was ist das?** Das **Internet der Dinge (IoT, Internet of Things)** vernetzt physische Gegenstände mit Internettechnik, zum Beispiel Maschinen, Produkte und Betriebsstoffe. Die Gegenstände tauschen Daten auch mit betrieblichen IS und mit Menschen aus.
 
-**Industrie 4.0** wendet das IoT auf die Fertigung an. Produkte, Maschinen und Informationssysteme steuern die Produktion gemeinsam (Smart Factory). Ziel: **Losgröße 1 zu Kosten der Massenfertigung**, also Einzelstücke so günstig wie Massenware. Die **Losgröße** ist die Zahl gleicher Stücke, die am Stück gefertigt werden. Losgröße 1 heißt: jedes Stück ist anders, zum Beispiel ein Müsli, das du online selbst zusammenstellst.
+Was einen Gegenstand „smart“ macht (nach Mattern und Flörkemeier), am Beispiel eines Armbands im Ferienclub:
+
+| Merkmal | Bedeutung | Armband |
+|---|---|---|
+| Identifikation | ist eindeutig erkennbar | gehört genau zu Gast Nr. 4711 |
+| Adressierbarkeit | ist im Netz ansprechbar | das System kann ihm Daten schicken |
+| Lokalisierbarkeit | weiß oder verrät, wo es ist | Gast ist gerade am Pool |
+| eingebettete Informationsverarbeitung | rechnet selbst | speichert das Guthaben |
+| Kooperationsfähigkeit | arbeitet mit anderen Systemen | Kasse und Zimmertür erkennen es |
+| Sensorik | nimmt etwas wahr | erkennt die Nähe zum Türschloss |
+| Effektorik | bewirkt etwas | öffnet die Tür |
+
+Reales Vorbild aus der Vorlesung: das Disney MagicBand (seit 2013) ist Eintrittskarte, Zimmerschlüssel und Zahlungsmittel und funkt per RFID. Ein Ferienclub der Sonnenschein AG könnte es genauso machen. Die Kehrseite: Bewegungs- und Konsumprofile der Gäste sind ein Datenschutzrisiko.
+
+**Industrie 4.0** wendet das IoT auf **industrielle Wertschöpfung** an. Alle Beteiligten werden zu **cyber-physischen Systemen (CPS)** vernetzt, also zu Dingen, die eine physische und eine digitale Seite haben. Drei Ziele: Effizienz der Geschäftsprozesse steigern, die Fertigung flexibler machen, innovative Produkte und Dienstleistungen anbieten. In der **Smart Factory** steuern Produkte, Maschinen und IS die Fertigung gemeinsam. Ziel: **Losgröße 1 zu Kosten der Massenfertigung**, also Einzelstücke so günstig wie Massenware. Die **Losgröße** ist die Zahl gleicher Stücke, die am Stück gefertigt werden. Losgröße 1 heißt: jedes Stück ist anders, zum Beispiel ein Müsli, das du online selbst zusammenstellst. Ausblick: Die EU spricht inzwischen von **Industrie 5.0** (menschzentriert, nachhaltig, widerstandsfähig).
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> IoT = physische Gegenstände über Internettechnik vernetzt (Armband im Ferienclub). Industrie 4.0 = IoT in der industriellen Fertigung mit cyber-physischen Systemen; Ziel Losgröße 1 zu Kosten der Massenfertigung.
+
+> [!WARNING]
+> **Achtung**
+> Industrie 4.0 ist nicht einfach „mehr Roboter“. Gemeint ist die Vernetzung von Produkten, Maschinen und IS. Und IoT bringt neben Chancen auch Risiken: Datenschutz, IT-Sicherheit, Ausfall der Technik.
 
 ## Smarte Produkte und digitale Geschäftsmodelle
 
 **Was ist das?** Smarte Produkte haben drei Schichten, am Beispiel einer Büroleuchte: physische Komponenten (Gehäuse, LED), intelligente Komponenten (Sensoren, Chip, Software), Vernetzung (Funkmodul, Cloud). Merksatz: „Wer die Daten hat, kann statt der Leuchte das Licht verkaufen.“
 
-**Beispiel „Licht als Service“:** Statt eine Leuchte zu kaufen, zahlt der Kunde eine feste Monatsmiete für gutes Licht. Der Anbieter plant, installiert, betreibt und wartet. Neues Risiko: Verfehlt der Anbieter die zugesagte Einsparung, bekommt er weniger Geld.
+Mit vernetzten Produkten ändert sich das Denken in drei Punkten: Das Angebot veraltet nicht mehr, sondern wird **per Update laufend besser**. Die Daten sind nicht nur Hinweise für das nächste Produkt, sondern **Teil des Angebots** (Fernwartung, Ausfallprognose). Und Geld fließt nicht einmal beim Verkauf, sondern **laufend, solange der Kunde nutzt**.
+
+**Beispiel „Licht als Service“ (Fall TRILUX):** Statt eine Leuchte zu kaufen, zahlt der Kunde eine feste Monatsmiete für gutes Licht. Der Anbieter plant, installiert, betreibt und wartet. Vier Canvas-Felder ändern sich:
+
+| Feld | klassisch | Licht als Service |
+|---|---|---|
+| Wertversprechen | gute Leuchte zum fairen Preis | gutes Licht zur festen Monatsmiete, keine Investition, kein Aufwand |
+| Kundensegmente | Großhandel, Elektriker, Planer | Unternehmen direkt |
+| Schlüsselaktivitäten | entwickeln, produzieren, verkaufen | planen, installieren, betreiben, warten |
+| Einnahmequellen | einmaliger Kaufpreis | feste Monatsmiete über Jahre |
+
+Neues Risiko für den Anbieter: Verfehlt er die zugesagte Einsparung, bekommt er weniger Geld (Fall Philips in den Parkhäusern von Washington).
 
 | Muster | Prinzip | möglich, weil … | Beispiele |
 |---|---|---|---|
@@ -86,7 +127,7 @@ Plattformen leben von **Netzwerkeffekten**: Mehr Käufer machen die Plattform f�
 
 > [!IMPORTANT]
 > **Das Wichtigste**
-> Drei Muster: Freemium, Plattform, Produkt als Service.
+> Drei Muster: Freemium (Basis gratis), Plattform (vermitteln und mitverdienen), Produkt als Service (Nutzung statt Besitz). Smarte Produkte: physische, intelligente und Vernetzungskomponenten. In allen Fällen ändert die IT, wofür und wie bezahlt wird.
 
 > [!WARNING]
 > **Achtung**
@@ -209,6 +250,11 @@ Von der SWOT zur Empfehlung kommt man mit der **TOWS-Matrix**: Man kombiniert je
 > Soll ein KI-Agent bei der Sonnenschein AG Umbuchungen und Erstattungen selbst auslösen dürfen? Begründe mit den Leitplanken.
 > *Quelle: Folie T2B4 F. 26–27, sinngemäß*
 
+> [!TIP]
+> **Übung 7 · mittel**
+> Die Sonnenschein AG überlegt, ihren Gästen im Ferienclub ein Armband zu geben, das Zimmer öffnet und Getränke bezahlt. Ordne es einer Kraft der digitalen Transformation zu, nenne zwei Merkmale smarter Objekte, die das Armband erfüllt, und ein Risiko.
+> *Quelle: Folie T2B4 F. 13 (IoT-Frage), sinngemäß*
+
 ## Lösungen
 
 ### Übung 1
@@ -255,3 +301,9 @@ Vertretbar ist **„selbst, aber nur bis zu einem Betrag“**. Die Folien modell
 2. Bei großer Tragweite entscheidet ein Mensch.
 3. Jede Aktion wird protokolliert, die Rechte des Agenten sind klar begrenzt.
 4. Die Haftung bleibt beim Unternehmen (Fall Air Canada). Deshalb keine unbegrenzte Freigabe.
+
+### Übung 7
+
+- **Kraft:** Vernetzung. Physische Gegenstände (Armband, Tür, Kasse) sind miteinander und mit den IS verbunden.
+- **Merkmale (zwei genügen):** Identifikation (das Band gehört zu genau einem Gast), Sensorik (es erkennt das Türschloss), Effektorik (es öffnet die Tür), Kooperationsfähigkeit (Kasse und Tür arbeiten mit ihm zusammen).
+- **Risiko (eins genügt):** Datenschutz, denn es entstehen Bewegungs- und Konsumprofile (DSGVO). Weitere: IT-Sicherheit (Manipulation, Diebstahl), Ausfall der Technik, Kosten, Akzeptanz der Gäste.

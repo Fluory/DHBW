@@ -98,6 +98,15 @@ Beispiel Bibliothek (Chen-Notation, vereinfacht):
 
 Das Rückgabedatum gehört weder zum Buch noch zum Leser, sondern zur einzelnen Ausleihe. Deshalb hängt es an der Raute.
 
+Die Folien zeigen noch einige Sonderformen der Chen-Notation. Für „einfache Entitäten modellieren“ reichen meist die vier Grundsymbole, die Sonderformen solltest du aber erkennen:
+
+| Symbol | Bedeutung | Beispiel aus der Firma |
+|---|---|---|
+| doppeltes Rechteck | schwache Entität: nur zusammen mit einer anderen identifizierbar | ANGEHÖRIGER (nur über den Angestellten eindeutig) |
+| doppelte Ellipse | mehrwertiges Attribut: mehrere Werte gleichzeitig | Standorte einer Abteilung |
+| gestrichelte Ellipse | abgeleitetes Attribut: wird ausgerechnet | Anzahl der Angestellten |
+| Ellipse mit Unter-Ellipsen | zusammengesetztes Attribut | Name = Vorname + Nachname |
+
 > [!IMPORTANT]
 > **Das Wichtigste**
 > Rechteck = Entitätstyp, Raute = Beziehung, Ellipse = Attribut, unterstrichen = Schlüssel. Kardinalität immer aus beiden Richtungen fragen.
@@ -232,7 +241,19 @@ WHERE ABT = 5 AND GEHALT > 30000;
 2. WHERE: Abteilung 5 haben Smith, Wong, Narayan und English. Davon verdienen mehr als 30000 nur Wong (40000) und Narayan (38000). Smith hat genau 30000 und fällt bei „>“ heraus.
 3. SELECT: Ergebnis **Franklin Wong 40000** und **Ramesh Narayan 38000**.
 
-**Aggregatfunktionen** fassen viele Zeilen zu einem Wert zusammen: SUM, MAX, MIN, AVG, COUNT. Ohne GROUP BY gibt es genau eine Ergebniszeile. Mit GROUP BY gibt es eine Zeile pro Gruppe.
+**Aggregatfunktionen** fassen viele Zeilen zu einem Wert zusammen: SUM (Summe), MAX (größter Wert), MIN (kleinster Wert), AVG (Durchschnitt, englisch average), COUNT (Anzahl). Ohne GROUP BY gibt es genau eine Ergebniszeile. Mit GROUP BY gibt es eine Zeile pro Gruppe.
+
+**Ohne GROUP BY (Folienabfrage):**
+
+```sql
+SELECT SUM(GEHALT), MAX(GEHALT), MIN(GEHALT), AVG(GEHALT)
+FROM ANGESTELLTER;
+```
+
+1. Alle acht Gehälter: 30000, 40000, 25000, 43000, 38000, 25000, 25000, 55000.
+2. SUM = 281000. MAX = 55000 (Borg). MIN = 25000.
+3. AVG = 281000 / 8 = 35125.
+4. Ergebnis: **eine** Zeile 281000 | 55000 | 25000 | 35125.
 
 **Durchgerechnetes Beispiel 2:**
 
@@ -271,6 +292,16 @@ WHERE ABTNR = ABTNUMMER       -- Projekt → Abteilung
 3. Diese SSN gehört Jennifer Wallace.
 4. Ergebnis: **10 | 4 | Wallace** und **30 | 4 | Wallace**.
 
+Dieselbe Abfrage lässt sich mit dem Schlüsselwort JOIN schreiben. Das Ergebnis ist gleich, nur die Join-Bedingung steht nach ON statt im WHERE:
+
+```sql
+SELECT PNUMMER, ABTNR, NNAME
+FROM PROJEKT
+  JOIN ABTEILUNG    ON ABTNR = ABTNUMMER
+  JOIN ANGESTELLTER ON MGRSSN = SSN
+WHERE PSTANDORT = 'Stafford';
+```
+
 > [!IMPORTANT]
 > **Das Wichtigste**
 > Reihenfolge beim Lesen: FROM → WHERE → GROUP BY → SELECT. Beim Join gehört „Fremdschlüssel = Primärschlüssel“ ins WHERE.
@@ -302,6 +333,14 @@ SELECT ABTNR, COUNT(*) FROM PROJEKT GROUP BY ABTNR;
 Ergebnis: 1 | 1, 4 | 2, 5 | 3.
 
 Alle SQL-Ergebnisse in diesem Kapitel sind mit SQLite auf den Firmentabellen nachgeprüft.
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Vier Fragen in dieser Reihenfolge: Was ausgeben (SELECT, bei „wie viele/Summe/Durchschnitt“ ein Aggregat)? Aus welchen Tabellen (FROM, bei mehreren die Join-Bedingung)? Welche Zeilen (WHERE)? Steht „pro“ oder „je“ in der Frage (GROUP BY)?
+
+> [!WARNING]
+> **Achtung**
+> „mindestens“ heißt >=, „mehr als“ heißt >. Texte gehören in einfache Hochkommas ('Research'). Steht eine Spalte nur in einer anderen Tabelle, brauchst du einen Join, und die Join-Bedingung darf nicht fehlen.
 
 ## OLTP und OLAP
 
@@ -358,6 +397,16 @@ Alle SQL-Ergebnisse in diesem Kapitel sind mit SQLite auf den Firmentabellen nac
 > **Übung 6 · Prüfungsniveau**
 > Modellieren Sie: Ein Student hat eine Matrikelnummer und einen Namen, eine Vorlesung hat eine Nummer und einen Titel. Ein Student besucht beliebig viele Vorlesungen, eine Vorlesung wird von vielen Studierenden besucht. Welche Kardinalität ist das, und wie wird es als Tabellen umgesetzt?
 > *Quelle: Lernseite GIT, Aufgabe 11.3 (eigene Aufgabe nach VL04 F. 32, 36)*
+
+> [!TIP]
+> **Übung 7 · mittel**
+> Was liefert diese Abfrage? `SELECT ANAME, SUM(GEHALT) FROM ANGESTELLTER, ABTEILUNG WHERE ABT = ABTNUMMER GROUP BY ANAME;`
+> *Quelle: eigene Aufgabe nach VL04 (Join und Aggregation)*
+
+> [!TIP]
+> **Übung 8 · Prüfungsniveau**
+> Schreiben Sie je eine Abfrage auf den Firmentabellen: a) Vor- und Nachname aller Angestellten, die mindestens 38000 verdienen. b) Die Zahl der Angestellten und ihr Durchschnittsgehalt in Abteilung 4. c) Alle Standorte der Projekte, die die Abteilung „Research“ kontrolliert.
+> *Quelle: eigene Aufgabe im Klausurstil (Synthese SQL)*
 
 ## Lösungen
 
@@ -425,3 +474,53 @@ Tabellen (Primärschlüssel zuerst):
 - STUDENT(**MatrNr**, Name)
 - VORLESUNG(**VNr**, Titel)
 - BESUCHT(**MatrNr**, **VNr**): Hilfstabelle mit beiden Fremdschlüsseln, die zusammen den Primärschlüssel bilden.
+
+### Übung 7
+
+1. FROM und WHERE: Jeder Angestellte wird über ABT = ABTNUMMER mit seiner Abteilung verbunden.
+2. GROUP BY ANAME: drei Gruppen.
+   - Headquarters (Abt. 1): Borg 55000 → Summe 55000.
+   - Administration (Abt. 4): 25000 + 43000 + 25000 = 93000.
+   - Research (Abt. 5): 30000 + 40000 + 38000 + 25000 = 133000.
+3. Ergebnis (die Reihenfolge der Zeilen ist ohne ORDER BY nicht festgelegt):
+
+| ANAME | SUM(GEHALT) |
+|---|---|
+| Administration | 93000 |
+| Headquarters | 55000 |
+| Research | 133000 |
+
+Probe: 93000 + 55000 + 133000 = 281000, die Summe aller Gehälter ✓
+
+### Übung 8
+
+a) „mindestens“ heißt >=:
+
+```sql
+SELECT VNAME, NNAME
+FROM ANGESTELLTER
+WHERE GEHALT >= 38000;
+```
+
+Ergebnis: Franklin Wong (40000), Jennifer Wallace (43000), Ramesh Narayan (38000), James Borg (55000). Narayan ist nur wegen >= dabei.
+
+b) Zwei Aggregate, keine Gruppe nötig, weil nur eine Abteilung gefragt ist:
+
+```sql
+SELECT COUNT(*), AVG(GEHALT)
+FROM ANGESTELLTER
+WHERE ABT = 4;
+```
+
+Ergebnis: 3 | 31000.
+
+c) Die Standorte stehen in PROJEKT, der Name „Research“ in ABTEILUNG. Also Join:
+
+```sql
+SELECT PSTANDORT
+FROM PROJEKT, ABTEILUNG
+WHERE ABTNR = ABTNUMMER
+  AND ANAME = 'Research';
+```
+
+Ergebnis: Bellaire, Sugarland, Houston (die Projekte 1, 2 und 3 der Abteilung 5).

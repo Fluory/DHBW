@@ -76,7 +76,7 @@ long fakrek(int n) {
 
 fakrek(4): 4 · fakrek(3) → 3 · fakrek(2) → 2 · fakrek(1) = 1 (Abbruch). Rückweg: 2 · 1 = 2 → 3 · 2 = 6 → 4 · 6 = **24**.
 
-fakrek(5) = **120**, 5 Aufrufe. Offene Aufrufe liegen auf dem Aufrufstapel (Stack).
+fakrek(5) = **120**, 5 Aufrufe. Offene Aufrufe liegen auf dem Aufrufstapel (Stack). **Iterativ** (fakite) = dieselbe Rechnung mit einer for-Schleife: sum = 1 · 1 · 2 · 3 · 4 = 24, kein Aufrufstapel nötig.
 
 ## Typische Fehler
 

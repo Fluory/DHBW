@@ -1,0 +1,823 @@
+{
+  "cards": [
+    {
+      "id": "lpk-k001",
+      "topic": "Lernen und Feedback",
+      "front": "Was ist die **Illusion des Wissens**, und was hilft dagegen?",
+      "back": "Die Illusion des Wissens heißt: Was du gelesen hast, fühlt sich an, als hättest du es verstanden. Das Gehirn verwechselt „kommt mir bekannt vor“ mit „kann ich“, weil es nach dem Sparprinzip arbeitet.\nGegenmittel: **aktiv abrufen**, also ohne Unterlagen erklären oder aufschreiben.\nBeispiel: Du hast das Kapitel zweimal gelesen, kannst es deiner Lerngruppe aber nicht ohne Skript erklären.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k002",
+      "topic": "Lernen und Feedback",
+      "front": "Was ist der **Rückschaufehler** beim Lernen?",
+      "back": "Mit der Musterlösung daneben wirkt jeder Schritt logisch, und du glaubst, du hättest es auch allein gekonnt.\nDu hast die Lösung aber nur **wiedererkannt**, nicht selbst erzeugt. In der Prüfung musst du sie erzeugen.\nGegenmittel: erst selbst schriftlich lösen, auch falsch, dann vergleichen.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k003",
+      "topic": "Lernen und Feedback",
+      "front": "Was ist **Gruppendenken**, und wie verhinderst du es?",
+      "back": "Gruppendenken heißt: In einer Gruppe stimmen alle zu, um die Harmonie zu wahren. Kritik und Zweifel bleiben aus, Fehler werden übersehen.\nGegenmittel: Eine Person nimmt bewusst die Gegenposition ein, und alle denken erst **einzeln** nach, bevor diskutiert wird.\nBeispiel: Alle finden die Gliederung gut, keiner sagt, dass Kapitel 3 fehlt.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k004",
+      "topic": "Lernen und Feedback",
+      "front": "Wie laufen die Abrufübungen **Laut denken** und **Denken auf Papier**?",
+      "back": "**Laut denken:** Unterlagen und Handy weg, einem Partner 2,5 Minuten ein Thema erklären, danach Lücken benennen, dann tauschen.\n**Denken auf Papier:** 3 Minuten Begriffe aus dem Kopf über ein Blatt verteilen, 4 Minuten mit Pfeilen verbinden und an jeden Pfeil schreiben, wie sie zusammenhängen, 2 Minuten mit Unterlagen in einer zweiten Farbe ergänzen.\nBeide wirken, weil du abrufen musst. Die Stellen, an denen du hängst, zeigen dir, was du noch üben musst.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k005",
+      "topic": "Lernen und Feedback",
+      "front": "Wie funktioniert die Übung **Kopf frei** (nach Allen)?",
+      "back": "4 Minuten alles aufschreiben, was dir im Kopf herumgeht. Jede Zeile bekommt „nächster Schritt“, „Termin“ oder wird gestrichen. Dann markierst du die **eine** Sache für die nächsten 24 Stunden.\nWarum: Offene Punkte belegen das Arbeitsgedächtnis. Auf dem Papier fühlen sie sich nicht mehr alle gleich dringend an.\nBeispiel: „Recht wiederholen“ wird zu „Dienstag 18 Uhr: Kapitel 2 Recht, Übung 1–3“.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k006",
+      "topic": "Lernen und Feedback",
+      "front": "**Eisenhower-Matrix**: Was heißt dringend, was wichtig, und welches Feld entscheidet?",
+      "back": "**Dringend** = es gibt eine Frist oder jemand wartet. **Wichtig** = es bringt dich deinem Studienziel näher.\nWichtig und dringend: sofort. Wichtig, nicht dringend: **terminieren**. Dringend, nicht wichtig: abgeben oder knapp erledigen. Weder noch: streichen.\nDas Feld „wichtig, nicht dringend“ entscheidet über den Studienerfolg, weil es sonst immer verdrängt wird. Beispiel: die Klausurwiederholung im Dezember.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k007",
+      "topic": "Lernen und Feedback",
+      "front": "Wie ist ein **Anker-Plan** aufgebaut?",
+      "back": "Satzmuster: „Nach [Anker] mache ich [Lerngewohnheit].“ Der Anker ist etwas, das du **täglich sicher** tust.\nDazu kommen ein Vorbereitungsschritt, eine kleine Belohnung und ein Partner, der als Advocatus Diaboli prüft, woran der Plan scheitern könnte.\nBeispiel: „Nach dem ersten Kaffee schreibe ich fünf Minuten auf, was ich gestern in Recht gelernt habe.“ Fang klein an: fünf Minuten, nicht zwei Stunden.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k008",
+      "topic": "Lernen und Feedback",
+      "front": "Wie gibst du Feedback nach dem **WWW-Schema**?",
+      "back": "1. **Wahrnehmung:** „Mir ist aufgefallen, dass …“ (nur, was du gesehen oder gehört hast)\n2. **Wirkung:** „Das wirkt auf mich …“\n3. **Wunsch:** „Ich würde mich freuen, wenn …“\nImmer als Ich-Botschaft, zeitnah, konkret, erst Positives. Beispiel: „Du hast die Zahlen auf Folie 3 sehr schnell vorgelesen. Ich konnte sie mir nicht merken. Ich wünsche mir nach jeder Zahl eine kurze Pause.“",
+      "exam": true
+    },
+    {
+      "id": "lpk-k009",
+      "topic": "Lernen und Feedback",
+      "front": "Wie **nimmst** du Feedback richtig an?",
+      "back": "Zuhören, dich fragen „Was löse ich beim anderen aus?“, **nicht rechtfertigen**, bei Unklarem nachfragen.\nDu entscheidest danach in Ruhe selbst, was du annimmst. Feedback ist die subjektive Wahrnehmung des anderen, nicht die Wahrheit.\nWarum nicht rechtfertigen: Wer sofort erklärt, warum es so war, hört nicht mehr zu, und der andere gibt beim nächsten Mal kein Feedback mehr.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k010",
+      "topic": "Lernen und Feedback",
+      "front": "Welche Rollen gibt es im **eduScrum**, und wer hatte sie im Kurs?",
+      "back": "**Product Owner:** die Dozentin. Sie bestimmt, was und warum gelernt wird, und prüft die Qualität.\n**Team Captain** (entspricht dem Scrum Master): sorgt dafür, dass das Team gut arbeitet.\n**Team:** organisiert sich selbst und arbeitet nach vereinbarten Akzeptanzkriterien.\nWichtig: Der Team Captain ist kein Chef, er kümmert sich um die Arbeitsweise, nicht um die Inhalte.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k011",
+      "topic": "Lernen und Feedback",
+      "front": "Was ist die **Definition of Done**, und was die **Definition of Fun**?",
+      "back": "Die **Definition of Done** legt vorher fest, wann eine Arbeit als fertig gilt. Die **Definition of Fun** hält fest, was das Team braucht, um gern zusammenzuarbeiten.\nOhne Definition of Done gibt es Streit darüber, was „fertig“ heißt.\nBeispiel aus dem Papierflieger-Spiel: Unfertige Flieger zählten nicht, ein Flieger musste mindestens 2 m fliegen.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k012",
+      "topic": "Lernen und Feedback",
+      "front": "Welche drei Fragen stellt die **Retrospektive**?",
+      "back": "Was lief gut? Was hat gehindert? Was nehmen wir mit?\nDie Retrospektive kommt nach jedem Sprint und schaut auf die **Arbeitsweise**, nicht auf das Ergebnis. Das Ergebnis zeigt das Team vorher im Sprint Review.\nIm Papierflieger-Spiel näherten sich so von Runde zu Runde Schätzung und Ergebnis an (Inspect and Adapt).",
+      "exam": true
+    },
+    {
+      "id": "lpk-k013",
+      "topic": "Kommunikationsmodelle",
+      "front": "Welche vier Seiten hat eine Nachricht im **Vier-Ohren-Modell** (Schulz von Thun)?",
+      "back": "**Sachinhalt** (worüber informiere ich?), **Selbstkundgabe** (was zeige ich von mir?), **Beziehungshinweis** (was halte ich von dir?), **Appell** (was will ich bei dir erreichen?).\nAlle vier werden gleichzeitig gesendet und empfangen. Das Modell heißt auch Kommunikationsquadrat.\nBeispiel „Die Ampel ist grün“: Sache = sie ist grün, Selbst = ich habe es eilig, Beziehung = du brauchst meine Hilfe, Appell = fahr los.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k014",
+      "topic": "Kommunikationsmodelle",
+      "front": "Wie entsteht laut Vier-Ohren-Modell ein **Missverständnis**?",
+      "back": "Sender und Empfänger benutzen verschiedene „Ohren“. Der Sender meint vielleicht eine Sachinformation, der Empfänger hört mit dem Beziehungsohr einen Vorwurf.\nDer Beziehungshinweis steckt oft nur in Tonfall und Mimik, deshalb ist er leicht falsch zu deuten.\nAbhilfe: nachfragen („Wie meinst du das?“) und als Sender den Appell offen aussprechen.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k015",
+      "topic": "Kommunikationsmodelle",
+      "front": "Was bedeutet der Merksatz „Der unerfüllte Wunsch von heute wird der Vorwurf von morgen“?",
+      "back": "Wer einen Wunsch nur versteckt äußert, statt ihn offen als Appell zu sagen, wird oft nicht verstanden. Der Wunsch bleibt unerfüllt, und daraus wird später Ärger oder ein Vorwurf.\nBeispiel: „Die Spülmaschine ist schon wieder voll …“ statt „Räum sie bitte heute aus.“\nLehre: Appelle klar formulieren, dann muss niemand raten.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k016",
+      "topic": "Kommunikationsmodelle",
+      "front": "Welche drei **Ich-Zustände** kennt die Transaktionsanalyse?",
+      "back": "**Eltern-Ich:** belehrend, bewertend oder fürsorglich („Das macht man so nicht.“).\n**Erwachsenen-Ich:** sachlich, prüfend („Was ist der Stand?“).\n**Kind-Ich:** spontan, trotzig oder angepasst („Immer ich!“).\nGespräche kippen, wenn die Zustände nicht zusammenpassen. Für Sachfragen ist das Erwachsenen-Ich meist die beste Ebene.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k017",
+      "topic": "Kommunikationsmodelle",
+      "front": "Welche Tücken und Stärken hat die **Transaktionsanalyse** laut Team-Flipchart?",
+      "back": "**Tücken:** Schubladendenken und Missverständnisse, wenn die Ich-Zustände nicht zusammenpassen.\n**Stärken:** Man kann sich an das Gegenüber anpassen und das eigene Verhalten reflektieren.\nWichtig: Das Modell beschreibt Zustände im Moment, keine Charaktere. „Der ist halt ein Kind-Ich“ ist genau das Schubladendenken.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k018",
+      "topic": "Kommunikationsmodelle",
+      "front": "Was zeigt das **Eisbergmodell** der Kommunikation?",
+      "back": "Nur der kleinste Teil ist sichtbar: Worte, Gestik, Mimik. Unter der Wasserlinie liegen Einstellungen, Erfahrungen, Werte, Kultur, Ziele und Bedürfnisse, und die steuern oft, wie ein Gespräch läuft.\nBeispiel: Die Gruppe streitet über die Schriftart, eigentlich fühlt sich die Person übergangen, die das Design gemacht hat.\nVerbindung zu Kapitel 3: Kultur liegt unter der Wasserlinie.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k019",
+      "topic": "Kommunikationsmodelle",
+      "front": "Was liegt beim **Eisberg bei Entscheidungen** (nach Oestereich und Schröder) über und unter Wasser?",
+      "back": "**Über Wasser:** Inhalt (Was wird entschieden?) und Geschäftsordnung (Wer darf entscheiden, nach welchen Regeln?).\n**Unter Wasser:** soziale Beziehungen (Gefühle, Vertrauen) und Unbewusstes (Ängste, Muster).\nWas unter Wasser liegt, entscheidet oft mit. Dreht sich ein Meeting immer um dasselbe Detail, liegt das Problem oft unter Wasser.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k020",
+      "topic": "Kommunikationsmodelle",
+      "front": "Was meint **Embodied Communication**?",
+      "back": "Einstellung und Körpersprache wirken **wechselseitig**. Die innere Haltung zeigt sich im Körper, aber eine offene Körperhaltung kann umgekehrt auch die innere Einstellung verändern.\nDas steht im Skript als Ergänzung zum Eisbergmodell.\nPraktisch: Vor einer Präsentation aufrichten und ruhig atmen kann dir helfen, dich sicherer zu fühlen (vergleiche „Body first“ in Kapitel 4).",
+      "exam": false
+    },
+    {
+      "id": "lpk-k021",
+      "topic": "Kommunikationsmodelle",
+      "front": "Was ist **aktives Zuhören**, und welche Werkzeuge gehören dazu?",
+      "back": "Aktives Zuhören heißt, den anderen verstehen zu wollen und ihm zurückzumelden, was du verstanden hast, statt schon deine Antwort vorzubereiten. Grundhaltung laut Skript: einfühlendes Verstehen-Wollen.\nWerkzeuge: paraphrasieren, Gefühl spiegeln, nachfragen, zusammenfassen, Pausen aushalten.\nBeispiel: „Habe ich dich richtig verstanden, dass dir die Zeit für die Folien fehlt?“",
+      "exam": true
+    },
+    {
+      "id": "lpk-k022",
+      "topic": "Kommunikationsmodelle",
+      "front": "Was ist beim **Paraphrasieren** der typische Fehler?",
+      "back": "Die Worte des anderen wörtlich zu wiederholen. Das wirkt mechanisch, wie ein Papagei.\nRichtig ist, in **eigenen Worten** zusammenzufassen, was du verstanden hast. Dann merkt der andere, ob du ihn wirklich verstanden hast, und kann korrigieren.\nBeispiel: Er sagt „Ich habe keine Lust mehr auf das Projekt.“ Gut: „Das Projekt nervt dich gerade richtig.“",
+      "exam": true
+    },
+    {
+      "id": "lpk-k023",
+      "topic": "Denkpräferenzen, Kultur und Stakeholder",
+      "front": "Welche vier **Denkpräferenzen nach Herrmann** gibt es, und was braucht jede?",
+      "back": "**Analytisch:** Zahlen, Daten, Fakten, Belege. **Strukturiert:** klaren Ablauf, Zeiten, Reihenfolge. **Sozial:** Beziehung und Sympathie, fragt nach den Folgen für andere. **Konzeptionell:** die große Idee gleich am Anfang, zieht eigene Schlüsse.\nJeder Mensch hat alle vier, aber unterschiedlich stark. In jedem Publikum sitzen alle vier.\nDas Modell ist kein Schubladentest, sondern hilft dir, alle anzusprechen.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k024",
+      "topic": "Denkpräferenzen, Kultur und Stakeholder",
+      "front": "Wie bedient eine Präsentation alle vier **Denkpräferenzen**?",
+      "back": "**Einleitung:** sozial (Kontakt aufbauen), konzeptionell (These, große Idee), strukturiert (Ablauf zeigen).\n**Hauptteil:** analytisch (Daten, Belege, Zusatzmaterial).\n**Ende:** konzeptionell (Kernaussage), sozial (Beziehung), strukturiert (sauberer Abschluss).\nTypischer Fehler: Wer selbst sehr analytisch denkt, vergisst leicht den sozialen Einstieg.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k025",
+      "topic": "Denkpräferenzen, Kultur und Stakeholder",
+      "front": "Welche Schichten hat die **Kulturzwiebel** (Hofstede), von außen nach innen?",
+      "back": "1. **Symbole** (Sprache, Gesten, Kleidung), 2. **Helden** (Vorbilder), 3. **Rituale** (Begrüßung, Meeting-Ablauf), 4. **Werte** (Kern).\nDie äußeren drei zeigen sich in Handlungen und sind sichtbar, die Werte sind unsichtbar.\nBeispiel: „Jedes Meeting beginnt mit Small Talk“ ist ein Ritual, „Pünktlichkeit ist Respekt“ ein Wert.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k026",
+      "topic": "Denkpräferenzen, Kultur und Stakeholder",
+      "front": "Was sind **Werte** im Sinne der Kulturzwiebel?",
+      "back": "Werte sind Überzeugungen, also die Neigung, bestimmte Zustände anderen vorzuziehen. Sie bilden den unsichtbaren Kern einer Kultur.\nSie werden **gelernt**: in Familie, Schule, Freundeskreis, Betrieb und Land.\nWarum wichtig: Ein Ritual zu kopieren heißt nicht, die Werte dahinter zu teilen. Du kannst im Ausland richtig grüßen und trotzdem im Meeting gegen eine Erwartung verstoßen.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k027",
+      "topic": "Denkpräferenzen, Kultur und Stakeholder",
+      "front": "Was ist eine **Kulturdimension**?",
+      "back": "Eine Kulturdimension ist ein Spektrum zwischen zwei Polen, wie ein Schieberegler. Jeder Pol steht für andere Werte, **kein Pol ist richtig oder falsch**.\nHofstedes Modell beruht auf einer großen Befragung von IBM-Mitarbeitenden. Jedes Land bekommt pro Dimension einen Wert.\nDie Werte beschreiben Tendenzen von Ländern, nicht einzelne Menschen.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k028",
+      "topic": "Denkpräferenzen, Kultur und Stakeholder",
+      "front": "Nenne die sechs **Kulturdimensionen nach Hofstede**.",
+      "back": "1. Machtdistanz, 2. Individualismus (↔ Kollektivismus), 3. Maskulinität (↔ Feminität), 4. Unsicherheitsvermeidung, 5. Langzeitorientierung, 6. Genuss ↔ Zurückhaltung.\nArbeitsfrage je Dimension, zum Beispiel Machtdistanz: Widerspricht man der Chefin im Meeting?\nMerkhilfe: drei über Menschen (Macht, Ich/Wir, Leistung/Fürsorge), drei über Zeit und Regeln (Unsicherheit, Langfrist, Genuss).",
+      "exam": true
+    },
+    {
+      "id": "lpk-k029",
+      "topic": "Denkpräferenzen, Kultur und Stakeholder",
+      "front": "Was bedeutet **Machtdistanz**? Gib ein Beispiel.",
+      "back": "Machtdistanz beschreibt, wie stark ungleiche Machtverteilung erwartet und akzeptiert wird.\nHohe Machtdistanz: Hierarchie wird akzeptiert, der Chefin widerspricht man nicht offen. Niedrige: flache Strukturen, Widerspruch im Meeting ist normal.\nBeispiel: Ein Team aus einem Land mit hoher Machtdistanz sagt im Call nie „Nein“, liefert aber etwas anderes. Hilfe: Rückmeldung einzeln oder schriftlich einholen.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k030",
+      "topic": "Denkpräferenzen, Kultur und Stakeholder",
+      "front": "Was bedeuten **Unsicherheitsvermeidung** und **Maskulinität** bei Hofstede wirklich?",
+      "back": "**Unsicherheitsvermeidung** ist nicht Risikovermeidung. Gemeint ist, wie sehr Unklarheit verunsichert und nach festen Regeln und Plänen verlangt.\n**Maskulinität** meint Leistung, Wettbewerb und Erfolg gegenüber Kooperation, Fürsorge und Lebensqualität.\nAchtung: Das Skript beschreibt Maskulinität mit Gewalt. Bei Hofstede geht es im Kern um Leistung gegenüber Fürsorge.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k031",
+      "topic": "Denkpräferenzen, Kultur und Stakeholder",
+      "front": "**High Context** vs. **Low Context** (Hall): Was ist der Unterschied?",
+      "back": "**Low Context** (z. B. Deutschland, USA): Die Botschaft steckt in den Worten, man sagt direkt, was man meint.\n**High Context** (z. B. China, Japan): Viel steckt im Zusammenhang, also in Beziehung, Tonfall und dem Ungesagten.\nBeispiel: Low Context „Bis Freitag schaffe ich das nicht.“ High Context „Freitag wird sportlich.“ Merksatz der Folie: „Direkte Worte sind nicht immer direkter Kontakt.“",
+      "exam": true
+    },
+    {
+      "id": "lpk-k032",
+      "topic": "Denkpräferenzen, Kultur und Stakeholder",
+      "front": "Was ist **Stakeholdermanagement**, und in welchen fünf Schritten läuft es?",
+      "back": "Stakeholdermanagement heißt, alle Beteiligten zu identifizieren, ihre Bedürfnisse und Erwartungen zu verstehen und angemessen zu berücksichtigen.\nSchritte: 1. identifizieren, 2. analysieren, 3. Maßnahmen planen, 4. Maßnahmen durchführen, 5. evaluieren.\nWarum: Es schafft Akzeptanz, senkt Risiken früh und hilft, Unterstützer zu finden.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k033",
+      "topic": "Denkpräferenzen, Kultur und Stakeholder",
+      "front": "Wie ordnest du Stakeholder ein, und warum sind die **Gegner** so wichtig?",
+      "back": "Nach Art: **komplementär** (Unterstützer), **konkurrierend** (Gegner), **neutral**. Dazu nach Einfluss (Stakeholder-Einfluss-Matrix).\nGegner stellen die kritischen Fragen. Wer sie vorher kennt, hat die Antworten schon vorbereitet und kann sie vielleicht sogar gewinnen.\nNeutrale können später zu Unterstützern oder Gegnern werden, deshalb beobachtest du sie.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k034",
+      "topic": "Denkpräferenzen, Kultur und Stakeholder",
+      "front": "Wie funktioniert die **Stakeholder-Einfluss-Matrix**?",
+      "back": "Zwei Achsen: Wie stark beeinflusst der Stakeholder das Thema, und wie stark beeinflusst das Thema ihn?\n**Quadrant 1** (beides stark): höchste Priorität, eng einbinden. **Quadrant 2** (eine Richtung stark): zum Beispiel ein Entscheider ohne eigenen Nutzen oder Betroffene ohne Stimme. **Quadrant 3** (beides schwach): beobachten.\nBeispiel: Bei der Bitte um Vorlesungsaufzeichnung steht die Dozentin in Quadrant 1.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k035",
+      "topic": "Denkpräferenzen, Kultur und Stakeholder",
+      "front": "Woran erkennst du laut Skript, **wie** jemand Informationen aufnimmt?",
+      "back": "An der Sprache: „Das sehe ich nicht so“ deutet auf **visuell**, „Das hört sich schlüssig an“ auf **auditiv**, „Das fühlt sich richtig an“ auf **kinästhetisch** (über Gefühl und Bewegung).\nMeist ist es gemischt, oft zeigt sich aber eine Tendenz.\nDas Skript nennt das als Hilfsmittel für die Stakeholder-Analyse, neben den Denkpräferenzen.",
+      "exam": false
+    },
+    {
+      "id": "lpk-k036",
+      "topic": "Moderation und Konflikte",
+      "front": "Welche vier Schritte liegen zwischen Beobachtung und Reaktion?",
+      "back": "1. **Wahrnehmen** (rollt die Augen), 2. **Vermuten** (ist gereizt), 3. **Bewerten** (ist unprofessionell), 4. **Reagieren** (ignorieren, rügen, ansprechen).\nDie Schritte laufen oft unbewusst und blitzschnell ab (Unconscious Bias).\nNur Schritt 1 ist eine Tatsache. Wer danach kurz stoppt und andere Vermutungen zulässt, reagiert fairer.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k037",
+      "topic": "Moderation und Konflikte",
+      "front": "Was ist ein **Feuerlöscher**, und welcher ist die Basis für alle?",
+      "back": "Ein Feuerlöscher ist eine kurze, eingeübte Reaktion, mit der du in Stress (Angriff, Blackout, Störung) deine Souveränität zurückgewinnst.\nBasis ist **Body first**: atmen, aufrichten, Haltung verändern, bewegen.\nWähle ein bis zwei Feuerlöscher aus und trainiere sie, bis sie automatisch kommen. Wer alle auf einmal lernen will, dem fällt im Stress keiner ein.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k038",
+      "topic": "Moderation und Konflikte",
+      "front": "Wie funktioniert der Feuerlöscher **Dolmetschen**?",
+      "back": "Du deutest einen negativen Vorwurf in etwas Positives um und nimmst ihm so die Spitze.\nBeispiel: „Seien Sie nicht so emotional!“ → „Wenn emotional heißt, dass ich mich in andere hineinversetzen kann, dann ja.“\nAndere Feuerlöscher: Ziel fokussieren, Einigkeit verdeutlichen, Rückfrage, spontan Recht geben, kraftvolle Pause, aktiv zuhören.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k039",
+      "topic": "Moderation und Konflikte",
+      "front": "Was macht eine **Moderatorin**, und was ist die **Doppelrolle**?",
+      "back": "Die Moderatorin führt durch den **Prozess**, nicht durch den Inhalt. Sie sorgt dafür, dass ein Ergebnis entsteht, bestimmt aber nicht, welches. Wie eine Schiedsrichterin, die selbst keine Tore schießt.\nDoppelrolle: Sie ist oft zugleich Expertin, Führungskraft oder Entscheiderin.\nDiese Rollen klärst du und trennst sie sichtbar: „Jetzt spreche ich als Projektleiterin.“",
+      "exam": true
+    },
+    {
+      "id": "lpk-k040",
+      "topic": "Moderation und Konflikte",
+      "front": "Wie lautet die **Moderationslogik** im Meeting?",
+      "back": "**Check-in → Orientierung → Prozess → Maßnahmen → Check-out.**\nCheck-in schafft Kontakt (z. B. Blitzlicht „In welcher Stimmung bist du heute?“), Orientierung zeigt Ziel und Ablauf, im Prozess wird gearbeitet, bei Maßnahmen wird beschlossen, Check-out sichert Ergebnis und Stimmung.\nAm Ende steht immer: Wer macht was mit wem bis wann?",
+      "exam": true
+    },
+    {
+      "id": "lpk-k041",
+      "topic": "Moderation und Konflikte",
+      "front": "Welche acht Schritte hat die **Vorbereitung einer Moderation**?",
+      "back": "1. Gesamtsituation verstehen, 2. Auftrag klären (Wozu? Nutzen?), 3. Themen eingrenzen, 4. Ziele bestimmen, 5. Zielgruppe analysieren (Entscheider, Experten, Betroffene, Schlüsselpersonen; eigene Rolle), 6. Prozess planen (Fragen, Methoden, Zeitslots), 7. Einladung, 8. Material und Raum.\nDer Ablauf kommt in eine Tabelle mit Top, Funktion, Fragen, Methode, Zeit, Wer.\nOhne geklärten Auftrag und Ziel endet ein Meeting ohne Ergebnis.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k042",
+      "topic": "Moderation und Konflikte",
+      "front": "Wann liegt laut Skript ein **Konflikt** vor?",
+      "back": "Wenn eine Partei ihr Denken, Fühlen oder Handeln als unvereinbar mit dem einer anderen erlebt und sich dadurch eingeschränkt sieht.\nEs reicht, dass **eine** Seite es so erlebt. Der andere muss es noch gar nicht bemerkt haben.\nKonflikte können nützen: Sie bringen Klarheit, neue Lösungen und Innovation.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k043",
+      "topic": "Moderation und Konflikte",
+      "front": "Welche fünf **Konfliktarten** gibt es, und was hilft jeweils?",
+      "back": "**Sachkonflikt** (fehlende oder falsche Information) → klären. **Interessenkonflikt** (konkurrierende Interessen) → verhandeln. **Beziehungskonflikt** (Vorurteile, wiederholtes negatives Verhalten) → Gefühlsebene einbeziehen. **Wertekonflikt** (Kultur, Prioritäten) → Umgang klären, tolerieren, nutzen. **Strukturkonflikt** (Zeit, Budget, Zuständigkeiten) → als Rahmen akzeptieren oder ans Umfeld geben.\nErst die Art bestimmen, dann die Strategie wählen.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k044",
+      "topic": "Moderation und Konflikte",
+      "front": "Welche fünf **Konfliktlösungsstrategien** gibt es?",
+      "back": "Einordnung nach eigenem und fremdem Interesse: **vermeiden** (beide niedrig), **nachgeben** (fremdes hoch, eigenes niedrig), **durchsetzen** (eigenes hoch, fremdes niedrig), **Kompromiss** (beide mittel), **Win-win** (beide hoch).\nBeim Kompromiss sind beide halb zufrieden, bei Win-win sind beide Interessen voll erfüllt.\nWin-win findest du, indem du nach dem Interesse hinter der Forderung fragst.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k045",
+      "topic": "Moderation und Konflikte",
+      "front": "Was ist die **quadratische Vorklärung**?",
+      "back": "Die Vorbereitung eines Konfliktgesprächs nach dem Vier-Ohren-Modell. Für jedes Feld beantwortest du die Frage für dich und vermutest die Antwort des anderen.\n**Sache** (Wie sehe ich den Sachverhalt?), **Selbst** (Welche Gefühle habe ich?), **Appell** (Was ist mein Ziel?), **Beziehung** (Wie stehen wir zueinander?), dazu: Welche Auswirkungen hat das Verhalten?\nDie vermuteten Antworten des anderen prüfst du im Gespräch.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k046",
+      "topic": "Moderation und Konflikte",
+      "front": "Welche fünf **Phasen** hat ein Konfliktgespräch?",
+      "back": "1. **Einstieg:** Klima und Rahmen (Anlass, Ziel, Dauer). 2. **Themenorientierung:** beide Sichtweisen darstellen und zusammenfassen. 3. **Themenbearbeitung:** Ursachen beleuchten, Lösungen sammeln, entscheiden. 4. **Handlungsorientierung:** nächste Schritte festhalten, Commitment sichern. 5. **Abschluss:** Zufriedenheit und Stimmung erfragen.\nIns Gespräch gehen nur Fakten: „6 von 10 Mal zu spät“ statt „du kommst immer zu spät“.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k047",
+      "topic": "Moderation und Konflikte",
+      "front": "Welche vier Prinzipien hat das **Harvard-Konzept**?",
+      "back": "1. Sache und Mensch trennen: hart in der Sache, freundlich zum Menschen. 2. **Interessen statt Positionen.** 3. Mehrere Lösungen entwickeln. 4. Objektive Kriterien.\nEine Position ist die Forderung („Abgabe Freitag“), ein Interesse der Grund dahinter („freies Wochenende“).\nÜber Positionen kann man nur feilschen, über Interessen findet man eine Win-win-Lösung.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k048",
+      "topic": "Moderation und Konflikte",
+      "front": "Welche **Konflikttypen nach Virginia Satir** nennt das Skript?",
+      "back": "**Ankläger** (wird laut, damit etwas passiert), **Beschwichtiger** (will alle glücklich machen), **Rationalisierer** (nur Logik, Gefühle gelten als gefährlich), **Ablenker** (wechselt schnell das Thema).\nMenschen wechseln je nach Situation zwischen den Typen. Jeder Typ hat auch eine Chance: Der Ankläger macht das Problem sichtbar, der Ablenker verschafft Abstand.\nIm Fotoprotokoll kommen die Typen nicht vor, nur im Skript.",
+      "exam": false
+    },
+    {
+      "id": "lpk-k049",
+      "topic": "Präsentieren und Pitch",
+      "front": "Welche **eine Frage** steht vor jeder Präsentation?",
+      "back": "**Was soll dein Publikum danach tun, wissen oder entscheiden?**\nWer das nicht in einem Satz sagen kann, hat laut Folie noch keine Präsentation, sondern nur Folien.\nDaraus folgen Kernbotschaft, höchstens drei Argumente und der Schluss. Wie beim Navi: Ohne Ziel gibt es keinen Weg.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k050",
+      "topic": "Präsentieren und Pitch",
+      "front": "Wie ist eine Präsentation aufgebaut, und welche drei Zwecke hat sie?",
+      "back": "Zwecke: **informieren, überzeugen, motivieren.**\nAufbau: **Einleitung** (Anlass, Thema, Ziel; mit Frage oder These einsteigen), **Hauptteil** (Information, Überzeugung, Motivation), **Ende** (Zusammenfassung, Appell, Eingangsfrage beantworten).\nDie Einleitung spricht die soziale, konzeptionelle und strukturierte Präferenz an, der Hauptteil die analytische.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k051",
+      "topic": "Präsentieren und Pitch",
+      "front": "Wie lauten die **vier Regeln** für Inhalt und Aufbau?",
+      "back": "1. Mit Frage, überraschender Zahl oder kurzer Szene einsteigen, nicht mit „Ich stelle Ihnen heute vor …“. 2. Höchstens **drei** Kernargumente. 3. **Zahlen übersetzen.** 4. **Stark enden** mit Kernaussage oder Call to Action, nicht mit „Danke! Fragen?“.\nWarum drei: „Ein viertes merkt sich niemand.“\nDanken kannst du mündlich, die letzte Folie gehört der Kernaussage.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k052",
+      "topic": "Präsentieren und Pitch",
+      "front": "Was ist ein **Action Title**?",
+      "back": "Ein Folientitel, der die Aussage der Folie als ganzen Satz nennt, statt nur das Thema.\nStatt „Ergebnisse“ lieber „Kosten sinken um 30 %“.\nWarum: Wer nur die Titel liest, kennt schon die ganze Geschichte. Das Publikum muss nicht selbst herausfinden, was die Folie zeigen soll.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k053",
+      "topic": "Präsentieren und Pitch",
+      "front": "Wie **übersetzt** du eine Zahl so, dass man sie sich merkt?",
+      "back": "Du machst aus einer abstrakten Zahl ein Bild aus dem Alltag.\nBeispiele: 30 % ≈ ein Drittel → „fast jeder dritte Euro“. 25 % → „jeder vierte Kunde“. 480 Minuten ÷ 60 = 8 Stunden → „ein ganzer Arbeitstag“.\nWichtig: Die Übersetzung muss rechnerisch stimmen. Jede Zahl, die eine KI liefert, prüfst du nach.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k054",
+      "topic": "Präsentieren und Pitch",
+      "front": "Welche vier Bestandteile hat eine Geschichte beim **Storytelling**?",
+      "back": "1. ein **Protagonist**, 2. mit einem klaren **Ziel**, 3. der sich **verändern** muss, 4. um sein Ziel zu erreichen.\nGrundmuster ist die Heldenreise. Leitsatz nach Andrew Stanton (Pixar): **„Make me care“**, das Publikum muss sich zuerst für die Figur interessieren.\nBeispiel: „Mia hat alles dreimal gelesen und ist durchgefallen. Dann hat sie nur Aufgaben ohne Lösung gerechnet und bestanden.“",
+      "exam": true
+    },
+    {
+      "id": "lpk-k055",
+      "topic": "Präsentieren und Pitch",
+      "front": "Welche **drei Präsentationsarten** zeigt das Fotoprotokoll, und was ist jeweils relevant?",
+      "back": "**Pitch / Angebot:** relevant sind Nutzen und Call to Action. Fehler: 80 % über sich selbst, 20 % über das Problem des Kunden.\n**Info / Status:** relevant sind Abweichungen und was du vom Publikum brauchst. Fehler: alles erzählen, was nach Plan läuft.\n**Wissenschaftlich:** relevant ist Nachvollziehbarkeit. Fehler: überzeugen wollen statt sauber belegen.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k056",
+      "topic": "Präsentieren und Pitch",
+      "front": "**Pyramidenprinzip** vs. **Trichtermodell**: Was ist der Unterschied?",
+      "back": "**Pyramidenprinzip** (Minto, Business): Ergebnis und Empfehlung zuerst, dann die Begründung. Entscheider haben wenig Zeit.\n**Trichtermodell** (Wissenschaft): breit beginnen mit Fragestellung und Stand der Forschung, dann Methode, Ergebnisse, Diskussion, Fazit.\nBeispiel Ticketsystem: Business beginnt mit „Führen Sie es ein“, Wissenschaft mit „Senkt es die Bearbeitungszeit?“.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k057",
+      "topic": "Präsentieren und Pitch",
+      "front": "Was unterscheidet **Business** und **Wissenschaft** bei Schwächen, Quellen und Fragerunde?",
+      "back": "**Schwächen:** Business benennt sie selten aktiv und bereitet Einwände vor. Wissenschaft benennt Limitationen offen, das ist ein **Qualitätsmerkmal**.\n**Quellen:** im Business optional, in der Wissenschaft Pflicht, mit Kurzbeleg auf der Folie und Verzeichnis am Ende.\n**Fragerunde:** im Business Chance für den Abschluss, in der Wissenschaft Verteidigung. „Das habe ich nicht untersucht“ ist besser als Raten.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k058",
+      "topic": "Präsentieren und Pitch",
+      "front": "Wie wird aus Werbesprache **wissenschaftliche Sprache**?",
+      "back": "„Unsere Lösung spart Ihnen 30 %“ → „Im untersuchten Fall sanken die Kosten um 30 % (n = 12).“ „Ich finde, dass …“ → „Die Ergebnisse deuten darauf hin, dass …“ „Man sieht hier …“ → „Abbildung 3 zeigt …“\nSuperlative wie „revolutionär“ oder „garantiert“ streichen. Fachbegriffe beim ersten Auftreten definieren.\nGrund: Wissenschaft will nachprüfbar sein, nicht überreden.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k059",
+      "topic": "Präsentieren und Pitch",
+      "front": "Welche vier **Leitfragen** hat ein Pitch, und was ist der **Ask**?",
+      "back": "1. Wer bist du, was machst du? 2. Welches Problem löst ihr mit welcher Idee? 3. Was ist das Besondere? 4. Was willst du vom Gegenüber, und wozu?\nDer **Ask** ist die Antwort auf Frage 4: deine konkrete Bitte an die Entscheider, zum Beispiel „30 Minuten Termin und ein Test im nächsten Semester“.\nOhne Ask kann das Publikum nichts entscheiden.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k060",
+      "topic": "Präsentieren und Pitch",
+      "front": "Was ist die **SIE-Analyse** der Zielgruppe?",
+      "back": "**Situation** (Was wissen die Zuhörer, welche Rolle haben sie, wer entscheidet?), **Interesse** (Was haben sie davon? „What's in it for me?“), **Einstellung** (positiv oder kritisch, welche Risiken sehen sie?).\nAus der Einstellung leitest du die erwarteten Einwände ab und bereitest Backup-Folien vor.\nBeispiel: Die Studiengangsleitung ist skeptisch, wer für den Raum haftet. Darauf brauchst du eine Antwort.",
+      "exam": true
+    },
+    {
+      "id": "lpk-k061",
+      "topic": "Präsentieren und Pitch",
+      "front": "Woran erkennst du **Hochstatus** und **Tiefstatus** (nach Johnstone)?",
+      "back": "**Hochstatus:** fester Stand, aufrechte Haltung, fester Blickkontakt, ganze Sätze, laut und ruhig, gleichmäßige Bewegungen.\n**Tiefstatus:** wippen, ausweichender Blick, leise, viele Füllwörter und Weichmacher („ähm“, „vielleicht“), sich ins Gesicht fassen.\nEs zählt die Summe der Signale. Beim Präsentieren hilft Hochstatus, passt er nicht zur Rolle, wirkt er überheblich.",
+      "exam": false
+    }
+  ],
+  "quiz": [
+    {
+      "id": "lpk-q001",
+      "topic": "Lernen und Feedback",
+      "q": "Du hast ein Kapitel zweimal gelesen und markiert. Es fühlt sich vertraut an. Welche Lernverzerrung droht?",
+      "options": [
+        "Rückschaufehler",
+        "Illusion des Wissens",
+        "Gruppendenken",
+        "Unconscious Bias"
+      ],
+      "correct": 1,
+      "explain": "Wiederlesen erzeugt Vertrautheit, und das Gehirn verwechselt „kommt mir bekannt vor“ mit „kann ich“. Das ist die **Illusion des Wissens**.\nDer Rückschaufehler ist verlockend, betrifft aber den Blick auf eine **Musterlösung**: Mit Lösung daneben wirkt alles logisch."
+    },
+    {
+      "id": "lpk-q002",
+      "topic": "Lernen und Feedback",
+      "q": "Welche Aufgabe gehört in das Feld **„wichtig, aber nicht dringend“** der Eisenhower-Matrix?",
+      "options": [
+        "Die Programmierabgabe, die morgen fällig ist",
+        "Die Wiederholung für eine Klausur in sechs Wochen",
+        "Eine Chatanfrage zu einer Formatierung, auf die jemand wartet",
+        "Urlaubsfotos sortieren"
+      ],
+      "correct": 1,
+      "explain": "Die Klausurwiederholung bringt dich dem Studienziel näher (wichtig), hat aber noch keine nahe Frist (nicht dringend). Sie bekommt einen festen Termin.\nDie Abgabe morgen ist auch wichtig, aber zusätzlich dringend. Sie gehört ins Feld „sofort erledigen“."
+    },
+    {
+      "id": "lpk-q003",
+      "topic": "Lernen und Feedback",
+      "q": "Welche Formulierung folgt dem **WWW-Feedback**?",
+      "options": [
+        "„Mir ist aufgefallen, dass auf Folie 2 viel Text steht. Ich habe gelesen statt zugehört. Ich wünsche mir eine Aussage pro Folie.“",
+        "„Deine Folien sind überladen, das liest keiner.“",
+        "„Man macht nicht so viel Text auf Folien.“",
+        "„Ich fand alles super, nur die Folien waren schlecht.“"
+      ],
+      "correct": 0,
+      "explain": "Die richtige Antwort hat alle drei Teile: Wahrnehmung (viel Text auf Folie 2), Wirkung (ich habe gelesen statt zugehört), Wunsch (eine Aussage pro Folie), und zwar als Ich-Botschaft.\n„Man macht nicht …“ klingt sachlich, ist aber ein Man-Satz, der deine Meinung hinter einer angeblichen Regel versteckt."
+    },
+    {
+      "id": "lpk-q004",
+      "topic": "Lernen und Feedback",
+      "q": "Du bekommst Feedback, das dich ärgert. Was ist laut Kurs die richtige Reaktion?",
+      "options": [
+        "Zuhören, bei Unklarem nachfragen und später entscheiden, was du annimmst",
+        "Sofort erklären, warum du es so gemacht hast",
+        "Dem anderen direkt ebenfalls Feedback geben",
+        "Das Feedback übernehmen, weil es die Wahrheit ist"
+      ],
+      "correct": 0,
+      "explain": "Beim Feedback-Nehmen gilt: zuhören, nicht rechtfertigen, nachfragen, und du entscheidest selbst, was du annimmst.\nVerlockend ist „sofort erklären“. Wer sich rechtfertigt, hört aber nicht mehr zu. Und Feedback ist subjektive Wahrnehmung, nicht die Wahrheit, deshalb musst du es auch nicht einfach übernehmen."
+    },
+    {
+      "id": "lpk-q005",
+      "topic": "Lernen und Feedback",
+      "q": "Wer ist im eduScrum des Kurses der **Product Owner**?",
+      "options": [
+        "Der Team Captain",
+        "Das ganze Team gemeinsam",
+        "Die Person, die im Sprint Review präsentiert",
+        "Die Dozentin"
+      ],
+      "correct": 3,
+      "explain": "Der Product Owner bestimmt, **was und warum** gelernt wird, und prüft die Qualität. Das war die Dozentin.\nDer Team Captain entspricht dem Scrum Master: Er sorgt dafür, dass das Team gut arbeitet, bestimmt aber nicht die Inhalte."
+    },
+    {
+      "id": "lpk-q006",
+      "topic": "Lernen und Feedback",
+      "q": "Wozu dient die **Retrospektive** am Ende eines Sprints?",
+      "options": [
+        "Die Arbeitsweise reflektieren: Was lief gut, was hat gehindert, was nehmen wir mit?",
+        "Das Ergebnis dem Product Owner zeigen",
+        "Die Aufgaben für den nächsten Sprint verteilen",
+        "Kurz abstimmen, wer gerade woran arbeitet"
+      ],
+      "correct": 0,
+      "explain": "Die Retrospektive schaut auf das **Wie** der Zusammenarbeit, nicht auf das Ergebnis.\nDas Ergebnis zu zeigen ist Aufgabe des **Sprint Reviews**. Aufgaben verteilen gehört ins Sprint Planning, das kurze Abstimmen ins Stand-up."
+    },
+    {
+      "id": "lpk-q007",
+      "topic": "Kommunikationsmodelle",
+      "q": "Beifahrer: „Die Ampel ist grün.“ Die Fahrerin hört: „Du fährst zu langsam.“ Mit welchem Ohr hat sie gehört?",
+      "options": [
+        "Sachohr",
+        "Selbstkundgabeohr",
+        "Beziehungsohr",
+        "Appellohr"
+      ],
+      "correct": 2,
+      "explain": "Sie bezieht den Satz auf sich und hört eine Aussage darüber, was der Beifahrer von ihr hält. Das ist das **Beziehungsohr**.\nDas Appellohr ist verlockend. Es würde aber nur „Fahr los!“ hören, ohne die Bewertung „du bist zu langsam“."
+    },
+    {
+      "id": "lpk-q008",
+      "topic": "Kommunikationsmodelle",
+      "q": "„Ich bin heute total müde.“ Welche Seite der Nachricht steht hier im Vordergrund?",
+      "options": [
+        "Sachinhalt",
+        "Beziehungshinweis",
+        "Appell",
+        "Selbstkundgabe"
+      ],
+      "correct": 3,
+      "explain": "Der Sprecher zeigt etwas von sich selbst, seinen Zustand. Das ist die **Selbstkundgabe**.\nNatürlich kann auch ein Appell mitschwingen („Nimm Rücksicht“), aber im Vordergrund steht, was er über sich preisgibt."
+    },
+    {
+      "id": "lpk-q009",
+      "topic": "Kommunikationsmodelle",
+      "q": "„Welche Teile der Präsentation fehlen noch?“ Aus welchem Ich-Zustand der Transaktionsanalyse kommt der Satz?",
+      "options": [
+        "Eltern-Ich",
+        "Erwachsenen-Ich",
+        "Kind-Ich",
+        "Aus keinem, Fragen haben keinen Ich-Zustand"
+      ],
+      "correct": 1,
+      "explain": "Die Frage ist sachlich und prüfend, ohne Bewertung. Das ist typisch für das **Erwachsenen-Ich**.\nEltern-Ich wäre „Ihr hättet längst fertig sein müssen“: belehrend und bewertend."
+    },
+    {
+      "id": "lpk-q010",
+      "topic": "Kommunikationsmodelle",
+      "q": "Ein Team streitet zum dritten Mal über die Schriftart. Was legt das **Eisbergmodell** nahe?",
+      "options": [
+        "Die Schriftart ist offenbar das wichtigste Thema",
+        "Es braucht eine Abstimmung nach Geschäftsordnung",
+        "Das Team hat zu wenige Informationen über Schriftarten",
+        "Der eigentliche Konflikt liegt vermutlich unter der Wasserlinie, etwa bei Gefühlen oder Vertrauen"
+      ],
+      "correct": 3,
+      "explain": "Sichtbar ist nur die Spitze: der Streit um das Detail. Darunter liegen Bedürfnisse, Werte und Gefühle, etwa „Ich fühle mich übergangen“.\nEine Abstimmung (Geschäftsordnung, über Wasser) beendet den Streit vielleicht, löst aber nicht das Problem unter Wasser."
+    },
+    {
+      "id": "lpk-q011",
+      "topic": "Kommunikationsmodelle",
+      "q": "Was ist beim **aktiven Zuhören** gutes Paraphrasieren?",
+      "options": [
+        "Den Satz des anderen wörtlich wiederholen",
+        "In eigenen Worten zusammenfassen, was du verstanden hast",
+        "Von einer ähnlichen eigenen Erfahrung erzählen",
+        "Sofort einen Lösungsvorschlag machen"
+      ],
+      "correct": 1,
+      "explain": "Beim Paraphrasieren gibst du **in eigenen Worten** zurück, was du verstanden hast. So kann der andere bestätigen oder korrigieren.\nWörtlich wiederholen klingt nah dran, wirkt aber mechanisch und zeigt nicht, dass du verstanden hast."
+    },
+    {
+      "id": "lpk-q012",
+      "topic": "Kommunikationsmodelle",
+      "q": "Welche Aussage zur **Transaktionsanalyse** stimmt?",
+      "options": [
+        "Jeder Mensch hat genau einen Ich-Zustand",
+        "Die Ich-Zustände beschreiben Zustände im Moment, keine festen Charaktereigenschaften",
+        "Das Kind-Ich sollte man im Beruf nie zeigen",
+        "Das Eltern-Ich ist immer belehrend"
+      ],
+      "correct": 1,
+      "explain": "Jede Person wechselt zwischen den Zuständen. Menschen als „Kind-Ich“ zu etikettieren ist das Schubladendenken, das das Team als Tücke genannt hat.\n„Das Eltern-Ich ist immer belehrend“ ist falsch: Es kann auch fürsorglich sein."
+    },
+    {
+      "id": "lpk-q013",
+      "topic": "Denkpräferenzen, Kultur und Stakeholder",
+      "q": "Eine Zuhörerin fragt nach der Präsentation: „Was bedeutet das für die Leute in der Abteilung?“ Welche Denkpräferenz zeigt die Frage?",
+      "options": [
+        "analytisch",
+        "strukturiert",
+        "sozial",
+        "konzeptionell"
+      ],
+      "correct": 2,
+      "explain": "Die Frage zielt auf die Folgen für Menschen. Das ist typisch für die **soziale** Präferenz.\nAnalytisch wäre „Woher stammt die Zahl?“, strukturiert „Wer macht was bis wann?“, konzeptionell „Wie passt das ins große Bild?“."
+    },
+    {
+      "id": "lpk-q014",
+      "topic": "Denkpräferenzen, Kultur und Stakeholder",
+      "q": "„Pünktlichkeit ist ein Zeichen von Respekt.“ In welche Schicht der **Kulturzwiebel** gehört das?",
+      "options": [
+        "Symbole",
+        "Helden",
+        "Rituale",
+        "Werte"
+      ],
+      "correct": 3,
+      "explain": "Es ist eine Überzeugung darüber, was gut ist, also ein **Wert** im unsichtbaren Kern.\nVerlockend ist „Rituale“, weil Pünktlichkeit mit dem Ablauf von Meetings zu tun hat. Das Ritual wäre aber das sichtbare Verhalten (z. B. „Jedes Meeting beginnt auf die Minute“), nicht die Überzeugung dahinter."
+    },
+    {
+      "id": "lpk-q015",
+      "topic": "Denkpräferenzen, Kultur und Stakeholder",
+      "q": "Was beschreibt die Kulturdimension **Unsicherheitsvermeidung**?",
+      "options": [
+        "Wie sehr Unklarheit verunsichert und nach festen Regeln und Plänen verlangt",
+        "Wie stark eine Kultur finanzielle Risiken scheut",
+        "Wie stark Hierarchie akzeptiert wird",
+        "Ob eher die Gruppe oder der Einzelne zählt"
+      ],
+      "correct": 0,
+      "explain": "Gemeint ist der Umgang mit **Unklarheit**: Braucht man einen detaillierten Plan, oder kann man mit Offenem gut leben?\nDie Verwechslung mit Risikovermeidung ist die typische Falle. Hierarchie ist Machtdistanz, Gruppe gegen Einzelnen ist Individualismus."
+    },
+    {
+      "id": "lpk-q016",
+      "topic": "Denkpräferenzen, Kultur und Stakeholder",
+      "q": "Ein Kollege sagt: „Freitag wird sportlich, wir geben unser Bestes.“ Gemeint ist: „Wir schaffen es eher nicht.“ Welcher Stil ist das?",
+      "options": [
+        "Low Context",
+        "Hohe Machtdistanz",
+        "High Context",
+        "Hoher Individualismus"
+      ],
+      "correct": 2,
+      "explain": "Die Botschaft steht nicht im Satz, sondern muss aus Situation und Beziehung gelesen werden. Das ist **High Context**.\nLow Context wäre „Bis Freitag schaffen wir das nicht.“ Machtdistanz kann mitspielen, beschreibt aber die Hierarchie, nicht wie direkt gesprochen wird."
+    },
+    {
+      "id": "lpk-q017",
+      "topic": "Denkpräferenzen, Kultur und Stakeholder",
+      "q": "Welcher Stakeholder hat in der **Stakeholder-Einfluss-Matrix** die höchste Priorität?",
+      "options": [
+        "Einer, der das Thema stark beeinflusst und selbst stark davon betroffen ist",
+        "Einer, der das Thema stark beeinflusst, den es aber nicht betrifft",
+        "Einer, den das Thema stark betrifft, der aber nichts entscheiden kann",
+        "Einer, der weder Einfluss hat noch betroffen ist"
+      ],
+      "correct": 0,
+      "explain": "Quadrant 1 (Einfluss in beide Richtungen stark) hat laut Skript die höchste Priorität. Hier fallen Make-or-break-Entscheidungen.\nDer Entscheider ohne eigenen Nutzen ist verlockend, weil er Macht hat. Er steht aber nur in Quadrant 2."
+    },
+    {
+      "id": "lpk-q018",
+      "topic": "Denkpräferenzen, Kultur und Stakeholder",
+      "q": "Warum sind **konkurrierende** Stakeholder (Gegner) für deine Planung besonders wichtig?",
+      "options": [
+        "Weil sie immer den größten Einfluss haben",
+        "Weil man sie früh aus dem Projekt heraushalten sollte",
+        "Weil sie laut Skript nie zu Unterstützern werden",
+        "Sie stellen die kritischen Fragen, auf die du dich vorbereiten kannst"
+      ],
+      "correct": 3,
+      "explain": "Gegner zeigen dir die Schwachstellen deines Vorhabens. Wer sie kennt, hat die Antworten schon parat und kann sie vielleicht sogar gewinnen.\nSie haben nicht automatisch den größten Einfluss. Den Einfluss bewertest du getrennt mit der Einfluss-Matrix."
+    },
+    {
+      "id": "lpk-q019",
+      "topic": "Moderation und Konflikte",
+      "q": "Ein Teilnehmer schaut im Meeting auf den Boden. Welcher der vier Schritte ist „Er ist unaufmerksam“?",
+      "options": [
+        "Wahrnehmen",
+        "Vermuten",
+        "Bewerten",
+        "Reagieren"
+      ],
+      "correct": 1,
+      "explain": "„Schaut auf den Boden“ ist die Wahrnehmung. „Er ist unaufmerksam“ ist eine **Vermutung** darüber, was dahintersteckt. Sie kann falsch sein.\nBewerten wäre der nächste Schritt, ein Urteil wie „Das ist unprofessionell“."
+    },
+    {
+      "id": "lpk-q020",
+      "topic": "Moderation und Konflikte",
+      "q": "Im Meeting greift dich jemand scharf an, und du bekommst einen Blackout. Womit fängst du laut Kurs an?",
+      "options": [
+        "Body first: atmen, aufrichten, Haltung verändern",
+        "Dolmetschen: den Vorwurf positiv umdeuten",
+        "Spontan Recht geben",
+        "Das Meeting sofort unterbrechen"
+      ],
+      "correct": 0,
+      "explain": "**Body first** ist die Basis für alle anderen Feuerlöscher. Erst wenn der Körper ruhiger ist, kommst du an die anderen Strategien heran.\nDolmetschen ist ein guter Feuerlöscher gegen Angriffe, braucht aber einen klaren Kopf, den du im Blackout gerade nicht hast."
+    },
+    {
+      "id": "lpk-q021",
+      "topic": "Moderation und Konflikte",
+      "q": "Was ist die Hauptaufgabe einer **Moderatorin**?",
+      "options": [
+        "Die inhaltlich beste Lösung durchsetzen",
+        "Durch den Prozess führen, damit die Gruppe zu einem Ergebnis kommt",
+        "Möglichst viel Fachwissen einbringen",
+        "Am Ende allein entscheiden"
+      ],
+      "correct": 1,
+      "explain": "Die Moderatorin ist wie eine Schiedsrichterin: Sie sorgt für Regeln, Zeit und Ergebnis, bestimmt aber nicht, **welches** Ergebnis.\nFachwissen einzubringen ist verlockend, gerade bei einer Doppelrolle. Dann muss sie den Rollenwechsel aber offen ansagen."
+    },
+    {
+      "id": "lpk-q022",
+      "topic": "Moderation und Konflikte",
+      "q": "Die Abgabe ist in zwei Tagen, und das Projekt hat zu wenig Personal. Welche Konfliktart ist das?",
+      "options": [
+        "Interessenkonflikt",
+        "Sachkonflikt",
+        "Strukturkonflikt",
+        "Beziehungskonflikt"
+      ],
+      "correct": 2,
+      "explain": "Die Ursache liegt außerhalb der Parteien: Zeit und Personal. Das ist ein **Strukturkonflikt**. Er lässt sich nicht im Zweiergespräch lösen, sondern nur als Rahmen akzeptieren oder an die Projektleitung zurückgeben.\nEin Interessenkonflikt läge vor, wenn zwei Personen Unterschiedliches wollen."
+    },
+    {
+      "id": "lpk-q023",
+      "topic": "Moderation und Konflikte",
+      "q": "Welche Strategie verfolgt ein **Kompromiss** im Unterschied zu **Win-win**?",
+      "options": [
+        "Kompromiss und Win-win sind dasselbe",
+        "Beim Kompromiss setzt sich die stärkere Seite durch",
+        "Beide geben etwas auf und sind halb zufrieden, statt beide Interessen voll zu erfüllen",
+        "Beim Kompromiss wird der Konflikt nicht angesprochen"
+      ],
+      "correct": 2,
+      "explain": "Beim Kompromiss liegen eigenes und fremdes Interesse in der Mitte. Bei Win-win sind beide hoch erfüllt, weil man nach den Interessen hinter den Forderungen sucht.\n„Die stärkere Seite setzt sich durch“ ist **durchsetzen**, „nicht ansprechen“ ist **vermeiden**."
+    },
+    {
+      "id": "lpk-q024",
+      "topic": "Moderation und Konflikte",
+      "q": "Welcher Satz passt in die Phase **Themenorientierung** eines Konfliktgesprächs?",
+      "options": [
+        "„Danke, dass du Zeit hast. Es geht heute um unsere Schnittstelle, wir haben 20 Minuten.“",
+        "„Ich habe bemerkt, dass der Meilenstein noch offen ist. Wie siehst du das?“",
+        "„Wir halten fest: Du lieferst bis Freitag, ich teste am Montag.“",
+        "„Wie geht es dir jetzt mit dem Ergebnis?“"
+      ],
+      "correct": 1,
+      "explain": "In der Themenorientierung stellen beide kurz ihre Sicht dar, und du sorgst für Verstehen. Der richtige Satz nennt eine Beobachtung und fragt nach der anderen Sicht.\nDer Satz mit „20 Minuten“ ist verlockend, weil er am Anfang steht. Er gehört aber zum **Einstieg** (Rahmen, Anlass, Dauer)."
+    },
+    {
+      "id": "lpk-q025",
+      "topic": "Präsentieren und Pitch",
+      "q": "Welcher Folientitel ist ein **Action Title**?",
+      "options": [
+        "„Ergebnisse“",
+        "„Kostenentwicklung 2025“",
+        "„Kosten sinken um 30 %“",
+        "„Danke für Ihre Aufmerksamkeit“"
+      ],
+      "correct": 2,
+      "explain": "Ein Action Title nennt die **Aussage** der Folie als Satz.\n„Kostenentwicklung 2025“ klingt konkreter als „Ergebnisse“, nennt aber immer noch nur das Thema. Das Publikum weiß nicht, ob die Kosten gestiegen oder gesunken sind."
+    },
+    {
+      "id": "lpk-q026",
+      "topic": "Präsentieren und Pitch",
+      "q": "Was gehört laut den vier Regeln auf die **letzte Folie**?",
+      "options": [
+        "„Danke! Fragen?“",
+        "Das Literaturverzeichnis",
+        "Die Kernaussage oder ein Call to Action",
+        "Eine Übersicht aller Folien"
+      ],
+      "correct": 2,
+      "explain": "Das Ende merkt sich das Publikum am besten. Dort steht deshalb die Kernaussage oder deine Bitte an das Publikum.\n„Danke! Fragen?“ ist die typische Falle. Danken kannst du mündlich, die Folie verschenkt sonst den wichtigsten Moment."
+    },
+    {
+      "id": "lpk-q027",
+      "topic": "Präsentieren und Pitch",
+      "q": "Wie viele **Kernargumente** solltest du laut Fotoprotokoll höchstens nennen?",
+      "options": [
+        "drei",
+        "eins",
+        "fünf",
+        "so viele, wie Belege vorhanden sind"
+      ],
+      "correct": 0,
+      "explain": "Laut Folie gilt: höchstens drei Kernargumente, denn „ein viertes merkt sich niemand“.\nEins ist verlockend, weil es zur „einen Botschaft“ passt. Die Botschaft ist aber die Kernaussage, die Argumente stützen sie, und davon dürfen es bis zu drei sein."
+    },
+    {
+      "id": "lpk-q028",
+      "topic": "Präsentieren und Pitch",
+      "q": "Wie gehst du in einer **wissenschaftlichen** Präsentation mit den Grenzen deiner Untersuchung um?",
+      "options": [
+        "Du benennst sie offen, das ist ein Qualitätsmerkmal",
+        "Du erwähnst sie nur, wenn jemand danach fragt",
+        "Du lässt sie weg, damit das Ergebnis überzeugt",
+        "Du legst sie auf eine Backup-Folie"
+      ],
+      "correct": 0,
+      "explain": "In der Wissenschaft sind offen benannte Limitationen ein **Qualitätsmerkmal**. Sie zeigen, dass du dein Ergebnis kritisch prüfst.\n„Nur auf Nachfrage“ oder Backup-Folien passen zur Business-Logik, wo Einwände vorbereitet, Schwächen aber selten aktiv benannt werden."
+    },
+    {
+      "id": "lpk-q029",
+      "topic": "Präsentieren und Pitch",
+      "q": "Welche Formulierung ist **wissenschaftlich**?",
+      "options": [
+        "„Unsere Lösung spart Ihnen garantiert 30 %.“",
+        "„Ich finde, die Kosten sind deutlich gesunken.“",
+        "„Man sieht hier, dass es klappt.“",
+        "„Im untersuchten Fall sanken die Kosten um 30 % (n = 12).“"
+      ],
+      "correct": 3,
+      "explain": "Die richtige Formulierung nennt den Geltungsbereich (untersuchter Fall) und die Stichprobengröße (n = 12). Damit ist sie nachprüfbar.\n„Ich finde …“ wirkt ehrlich, ist aber eine persönliche Meinung. Wissenschaftlich wäre „Die Ergebnisse deuten darauf hin, dass …“."
+    },
+    {
+      "id": "lpk-q030",
+      "topic": "Präsentieren und Pitch",
+      "q": "Was ist der häufigste **Pitch-Fehler** laut Fotoprotokoll?",
+      "options": [
+        "Zu viele Zahlen auf den Folien",
+        "Mit einer Geschichte einsteigen",
+        "Am Ende einen konkreten Ask nennen",
+        "80 % über sich selbst reden und nur 20 % über das Problem des Kunden"
+      ],
+      "correct": 3,
+      "explain": "Der Pitch soll den Nutzen für das Gegenüber zeigen. Wer vor allem über sich spricht, verfehlt das. Dreh das Verhältnis um.\nEin konkreter Ask ist kein Fehler, sondern Pflicht: Ohne Ask kann das Publikum nichts entscheiden."
+    }
+  ]
+}

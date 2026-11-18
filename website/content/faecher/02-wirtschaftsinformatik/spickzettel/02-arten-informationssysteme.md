@@ -19,6 +19,7 @@ B2B + B2C = **überbetrieblich**. B2B = Business to Business, B2C = Business to 
 Untertypen:
 - **Administrationssystem:** rationalisiert Massendaten (Lohnabrechnung).
 - **Dispositionssystem:** unterstützt/ersetzt operative Entscheidungen (automatische Bestellung bei Unterschreiten des Meldebestands).
+- Entscheidung von unten nach oben: **MIS → DSS → ESS** (Executive Support für die Leitung).
 
 ## Matrix und Grenzfälle
 

@@ -36,7 +36,8 @@ Soll-Kennzahlen sind Planwerte, Ist-Kennzahlen die tatsächlichen Werte. Absolut
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
-> Absolute Kennzahlen in €: Umsatz, Kosten, Gewinn, Deckungsbeitrag, Werbegewinn.
+> - Soll-Ist-Vergleich: Plan (Soll) neben Ergebnis (Ist) legen, Abweichung = Ist − Soll, dann den Grund suchen.
+> - Absolute Kennzahlen in €: Umsatz, Kosten, Gewinn, Deckungsbeitrag, Werbegewinn (Mehrumsatz − Werbekosten).
 
 > [!WARNING]
 > **Achtung**
@@ -79,12 +80,14 @@ Beispiel: 30 Reklamationen klingen viel. Bei 3.000 Aufträgen sind es aber nur 3
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
-> Jede Kennzahl lässt sich einem der 4P zuordnen. Das wird gern gefragt.
+> - Relative Kennzahlen = Zähler / Nenner · 100, zum Beispiel Werberendite = Mehrumsatz / Werbekosten · 100, Werbebudgetquote = Werbebudget / Umsatz · 100, Distributionsquote = Orte mit Produkt / mögliche Orte · 100.
+> - Jede Kennzahl lässt sich einem der 4P zuordnen. Das wird gern gefragt.
 
 > [!WARNING]
 > **Achtung**
 >
-> Werbegewinn = Mehrumsatz − Werbekosten (in €). Werberendite = Mehrumsatz / Werbekosten · 100 (in %). Nicht verwechseln.
+> - Werbegewinn = Mehrumsatz − Werbekosten (in €). Werberendite = Mehrumsatz / Werbekosten · 100 (in %). Nicht verwechseln.
+> - Der Tausenderpreis hier rechnet mit **allen** erreichten Personen. Der TKP aus Kapitel 8 rechnet nur mit den **Zielpersonen**. Lies genau, was gegeben ist.
 
 ## Übungen
 
@@ -115,6 +118,13 @@ Beispiel: 30 Reklamationen klingen viel. Bei 3.000 Aufträgen sind es aber nur 3
 > *Quelle: Skript Marketing, Übung 41, Teil 2 (S. 77), Duschgel*
 >
 > Marktvolumen 65 Mio. €, Umsatz 2.350.000 €, davon durch Werbung 450.000 €. Gesamtkosten 1.950.000 €, davon Werbung 450.000 €, variabler Anteil 55 %. TV: 320.000 € für 22 Mio. Personen. Anzeigen: 130.000 € für 2,2 Mio. Personen. Berechne dieselben Kennzahlen wie in Übung 3.
+
+> [!TIP]
+> **Übung 5 · mittel**
+>
+> *Quelle: eigene Aufgabe (Skript S. 76)*
+>
+> Ein Onlinehändler hatte geplant: 2 Mio. € Umsatz, höchstens 2 % Reklamationen, Werbebudget 80.000 €. Ist: 1,8 Mio. € Umsatz, 900 Reklamationen bei 30.000 Aufträgen, Werbebudget 90.000 €. a) Berechne die Abweichung beim Umsatz in € und in %. b) Berechne die Reklamationsquote und die Werbebudgetquote. c) Nenne je einen möglichen Grund für die Abweichungen.
 
 ## Lösungen
 
@@ -154,3 +164,12 @@ Eigene Lösungsskizze:
 5. Werbegewinn = 450.000 − 450.000 = 0 €.
 6. Werbebudgetquote = 450.000 / 2.350.000 · 100 = 19,15 %.
 7. Werberendite = 450.000 / 450.000 · 100 = 100 %. Die Werbung hat sich gerade so bezahlt.
+
+### Übung 5
+
+Eigene Lösungsskizze:
+
+1. a) Abweichung = Ist − Soll = 1.800.000 − 2.000.000 = −200.000 €. In Prozent vom Soll: −200.000 / 2.000.000 · 100 = −10 %.
+2. b) Reklamationsquote = 900 / 30.000 · 100 = 3 %. Geplant waren höchstens 2 %, also zu viele Reklamationen.
+3. b) Werbebudgetquote = 90.000 / 1.800.000 · 100 = 5 %. Geplant waren 80.000 / 2.000.000 · 100 = 4 %.
+4. c) Mögliche Gründe: Ein Konkurrent war billiger (Umsatz). Ein Lieferant hatte Qualitätsprobleme (Reklamationen). Weil der Umsatz schwach war, wurde mehr geworben, und die Werbung wirkte zu wenig (Budgetquote).

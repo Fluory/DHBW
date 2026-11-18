@@ -28,11 +28,27 @@ Es gibt drei Prozessarten:
 | Managementprozess | steuert das Unternehmen | Strategie, Controlling, Produktplanung |
 | Unterstützungsprozess | ermöglicht die Kernprozesse | Rechnungswesen, IT, Verwaltung |
 
-Ein **Prozessmodell** ist dynamisch: Was passiert wann, wer ist beteiligt? Ein **Datenmodell** ist statisch: Welche Daten gibt es, wie hängen sie zusammen? Das Vorgehen ist: **Ist-Modell** (wie läuft es wirklich?) → **Soll-Modell** (Schwachstellen beseitigen) → Umsetzung im IS.
+**So ordnest du einen Prozess ein:** Frag „Bekommt der Kunde direkt etwas davon?“ Ja → Kernprozess. Nein, aber es steuert das Unternehmen (Ziele, Planung, Kontrolle) → Managementprozess. Nein, es hält nur den Betrieb am Laufen → Unterstützungsprozess. Am Leuchtenhändler:
+
+| Prozess | Art | Begründung |
+|---|---|---|
+| Auftragsabwicklung | Kern | vom Kunden (Bestellung) zum Kunden (Lieferung) |
+| Reklamation | Kern | kundennah, wie der Service im Kfz-Beispiel |
+| Lohnabrechnung | Unterstützung | kein Kundenwert, aber nötig für den Betrieb |
+| Sortimentsplanung | Management | entspricht der Produktplanung, steuert das Angebot |
+
+Ein **Prozessmodell** ist dynamisch: Was passiert wann, wer ist beteiligt? Ein **Datenmodell** ist statisch: Welche Daten gibt es, wie hängen sie zusammen? Das Vorgehen ist: **Ist-Modell** (wie läuft es wirklich? Prozessanalyse) → **Soll-Modell** (Schwachstellen beseitigen) → **Umsetzung im IS** (zum Beispiel ERP-Customizing oder Workflow). Erst die Abläufe verbessern, dann in Software gießen. „Optimale“ Prozesse gibt es nicht.
+
+**Wozu modelliert man Prozesse?** Vier Nutzen aus der Vorlesung:
+
+1. **Transparenz:** Man sieht, wer was macht und wo Schnittstellen zwischen Abteilungen liegen.
+2. **Schwachstellen sichtbar machen:** Medienbrüche, Doppelarbeit und Wartezeiten fallen im Bild auf.
+3. **Standardisierung:** Der Ablauf ist an allen Standorten gleich.
+4. **Systemeinführung:** Das Modell ist der Ordnungsrahmen für die ERP-Einführung und das Customizing.
 
 > [!IMPORTANT]
 > **Das Wichtigste**
-> Prozessmodell (EPK) = Ablauf, dynamisch. Datenmodell (ER) = Daten, statisch. Erst Ist, dann Soll.
+> Geschäftsprozess = sachlogisch-zeitliche Abfolge von Tätigkeiten vom auslösenden Ereignis bis zum Ergebnis. Kernprozess = direkt wertschöpfend, Managementprozess = steuert, Unterstützungsprozess = ermöglicht. Prozessmodell (EPK) = Ablauf, dynamisch. Datenmodell (ER) = Daten, statisch. Erst Ist, dann Soll, dann Umsetzung im IS.
 
 > [!WARNING]
 > **Achtung**
@@ -174,6 +190,11 @@ Warum XOR-Split mit AND-Join nicht geht: Nach dem XOR kommt nur ein Weg an. Der 
 > Modelliere als EPK: Bei der Sonnenschein AG geht eine Stornoanfrage ein. Der Kundenservice prüft die Stornobedingungen im Buchungssystem. Ist die Stornierung kostenfrei, wird die Buchung direkt storniert. Fallen Gebühren an, wird zuerst eine Gebührenrechnung erstellt und dann storniert. Nach der Stornierung werden gleichzeitig das Hotel informiert und der Kunde benachrichtigt. Danach ist die Stornierung abgeschlossen.
 > *Quelle: Lernseite WI, Aufgabe 3.15 (eigene Aufgabe)*
 
+> [!TIP]
+> **Übung 6 · mittel**
+> Ordne die Prozesse des Leuchtenhändlers den drei Prozessarten zu und begründe kurz: Auftragsabwicklung, Reklamation, Lohnabrechnung, Sortimentsplanung.
+> *Quelle: Folie T1B3 (Übung Prozessarten am Leuchtenhändler), sinngemäß*
+
 ## Lösungen
 
 ### Übung 1
@@ -242,3 +263,12 @@ Prüfpunkte:
 2. Der XOR-Split folgt auf eine Funktion (Regel 4) und wird mit XOR zusammengeführt (Regel 5).
 3. Der AND-Split folgt auf ein Ereignis. Das ist erlaubt.
 4. Nach dem AND-Join folgt ein Ereignis. So wechseln sich Funktion und Ereignis auch über den Konnektor ab (Regel 2).
+
+### Übung 6
+
+Prüffrage: Bekommt der Kunde direkt etwas davon?
+
+- **Auftragsabwicklung → Kernprozess.** Sie läuft vom Kunden (Bestellung) zum Kunden (Lieferung) und schafft direkt Wert.
+- **Reklamation → Kernprozess.** Sie ist kundennah, wie der Service im Kfz-Beispiel. Viele halten sie für Unterstützung, aber der Kunde ist direkt beteiligt.
+- **Lohnabrechnung → Unterstützungsprozess.** Kein Kunde merkt etwas davon, aber ohne Lohn kein Betrieb.
+- **Sortimentsplanung → Managementprozess.** Sie entspricht der Produktplanung und steuert, was das Unternehmen anbietet.

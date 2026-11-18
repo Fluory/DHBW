@@ -144,6 +144,11 @@ So rechnest du die regelmäßige Verjährung:
 > a) Gläubiger und Schuldner verhandeln drei Monate über eine Ratenzahlung. b) Der Schuldner zahlt eine Abschlagsrate. Was passiert jeweils mit der Verjährung?
 > Quelle: eigene Aufgabe
 
+> [!TIP]
+> **Übung 7 · mittel**
+> Verbraucher V bestellt online eine Jacke und darf 14 Tage ab Erhalt der Ware widerrufen (§§ 355 II, 356 II Nr. 1 a). Bis wann muss er den Widerruf absenden, wenn er die Jacke a) am Dienstag, 24.11.2026, b) am Samstag, 21.11.2026, erhält?
+> Quelle: eigene Aufgabe (Widerruf, Kapitel 9)
+
 ## Lösungen
 
 ### Übung 1
@@ -211,3 +216,20 @@ So rechnest du die regelmäßige Verjährung:
 
 a) Hemmung (§ 203), also Pause-Taste. Die drei Monate zählen nicht mit. Die Verjährung tritt frühestens drei Monate nach Ende der Verhandlungen ein.
 b) Neubeginn (§ 212 I Nr. 1), also Reset-Taste. Wer eine Rate zahlt, zeigt: „Ich weiß, dass ich das schulde.“ Das ist ein Anerkenntnis. Die Frist beginnt neu.
+
+### Übung 7
+
+*Eigene Lösung, Wochentage mit Python geprüft.*
+
+**a)**
+
+1. Erhalt der Ware ist ein Ereignis im Lauf des Tages: Der 24.11. zählt nicht (§ 187 I).
+2. 14 Tage = zwei Wochen. Ende am gleichnamigen Wochentag (§ 188 II): Dienstag, 08.12.2026.
+3. Werktag, § 193 spielt keine Rolle. Ergebnis: bis Di 08.12.2026, 24 Uhr. Absenden genügt (§ 355 I 5).
+
+**b)**
+
+1. Der 21.11. zählt nicht (§ 187 I).
+2. Zwei Wochen später ist Samstag, 05.12.2026.
+3. Der Widerruf ist eine Willenserklärung. Fällt der letzte Tag auf einen Samstag, tritt der nächste Werktag an seine Stelle (§ 193): Montag, 07.12.2026.
+4. Ergebnis: bis Mo 07.12.2026, 24 Uhr.

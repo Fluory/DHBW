@@ -18,7 +18,7 @@ Beschäftigt sich mit **Konzeption, Entwicklung, Nutzung und Wartung von Informa
 ## System und Modell
 
 - **System:** Menge verknüpfter Elemente, grenzt sich von der Umwelt ab. Offene Systeme tauschen Input/Output mit der Umwelt.
-- **Systemgrenze** hängt vom **Zweck** der Betrachtung ab.
+- **Systemgrenze** hängt vom **Zweck** der Betrachtung ab: Lager, Warenwirtschaft = System; Kunde, Lieferant, Paketdienst = Umwelt (bei Lieferkettenanalyse ggf. System).
 - **Modell:** vereinfachte Abbildung eines Systems für einen bestimmten Zweck; Unwichtiges wird bewusst weggelassen (U-Bahn-Plan).
 - Qualität eines Modells = **Eignung für den Zweck**, nicht Vollständigkeit.
 

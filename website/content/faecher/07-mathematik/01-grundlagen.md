@@ -379,6 +379,44 @@ Auf Deutsch heißt das: „Wohin läuft 1/n, wenn n immer größer wird? Gegen 0
 >
 > Alle drei sind „∞/∞“, aber das erste bleibt bei 2, das zweite wächst, das dritte geht gegen 0. Dann musst du umformen (Kapitel 2).
 
+## Binomische Formeln und Ausklammern
+
+**In einem Satz:** Die binomischen Formeln sagen, wie man eine Klammer zum Quadrat ausrechnet, und rückwärts gelesen, wie man eine Summe in ein Produkt verwandelt.
+
+**Stell dir vor:** Ein quadratischer Garten mit Seitenlänge a + b. Du teilst ihn in vier Beete: ein großes Quadrat a · a, ein kleines Quadrat b · b und zwei gleiche Rechtecke a · b. Zusammen ist die Fläche a² + 2ab + b². Das ist die erste binomische Formel. Wer nur a² + b² rechnet, vergisst die zwei Rechtecke.
+
+**Mit Zahlen:** (3 + 2)² = 5² = 25. Mit den vier Beeten: 3² + 2 · 3 · 2 + 2² = 9 + 12 + 4 = 25. Ohne die Rechtecke wären es nur 9 + 4 = 13.
+
+**Die Formel:**
+
+| Name | Formel | Zahlenprobe mit a = 5, b = 2 |
+|---|---|---|
+| 1. binomische Formel | (a + b)² = a² + 2ab + b² | 49 = 25 + 20 + 4 |
+| 2. binomische Formel | (a − b)² = a² − 2ab + b² | 9 = 25 − 20 + 4 |
+| 3. binomische Formel | (a + b)(a − b) = a² − b² | 7 · 3 = 21 = 25 − 4 |
+
+- a und b sind beliebige Zahlen oder Ausdrücke, zum Beispiel a = x und b = 3.
+- 2ab heißt „2 mal a mal b“, das sind die zwei Rechtecke.
+
+**Ausklammern** ist Ausmultiplizieren rückwärts: Steckt in jedem Summanden derselbe Faktor, ziehst du ihn vor die Klammer. 6x + 9 = 3 · (2x + 3), x² − x = x · (x − 1), x³ − x = x · (x² − 1) = x(x − 1)(x + 1).
+
+**So steht es auf der Folie:** Die Folien setzen das voraus, ohne es zu erklären. In Kapitel 5 steckt die binomische Formel in der quadratischen Ergänzung (x² − 4x + 4 = (x − 2)²), in Kapitel 6 und 7 im Faktorisieren (x² − 4 = (x − 2)(x + 2)). Auf Deutsch heißt das: Wer diese drei Formeln sicher vorwärts **und** rückwärts kann, kommt durch die Analysis-Aufgaben viel schneller.
+
+**So rechnest du** x² − 9 als Produkt:
+
+1. Erkennen: zwei Quadrate mit Minus dazwischen. x² ist x zum Quadrat, 9 ist 3 zum Quadrat.
+2. Dritte binomische Formel rückwärts mit a = x und b = 3: x² − 3² = (x + 3)(x − 3).
+3. Probe durch Ausmultiplizieren: (x + 3)(x − 3) = x² − 3x + 3x − 9 = x² − 9. Passt.
+4. Zahlenprobe x = 5: 25 − 9 = 16 und (5 + 3)(5 − 3) = 8 · 2 = 16.
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> (a + b)² = a² + 2ab + b², (a − b)² = a² − 2ab + b², (a + b)(a − b) = a² − b². Rückwärts gelesen verwandeln sie Summen in Produkte, und Produkte kann man kürzen. Ausklammern: gemeinsamen Faktor vor die Klammer.
+
+> [!WARNING]
+> **Typischer Fehler**
+> (x + 3)² = x² + 9. Falsch, es fehlt 2 · x · 3 = 6x. Probe x = 1: (1 + 3)² = 16, aber 1 + 9 = 10. Und x² + 9 lässt sich **nicht** mit der dritten Formel zerlegen, die braucht ein Minus.
+
 ## Übungen
 
 > [!TIP]
@@ -408,6 +446,12 @@ Auf Deutsch heißt das: „Wohin läuft 1/n, wenn n immer größer wird? Gegen 0
 > [!TIP]
 > **Übung 5 · Prüfungsniveau**
 > Was passiert für n → ∞? a) 7/n · b) −2n² · c) 0,9ⁿ · d) 1,1ⁿ · e) n² − n (Vorsicht: „∞ − ∞“)
+>
+> Quelle: eigene Aufgabe
+
+> [!TIP]
+> **Übung 6 · mittel**
+> a) Multipliziere aus: (x − 4)² und (2x + 1)². b) Schreibe als Produkt: x² − 16, x² + 6x + 9 und 3x² − 12. c) Kürze (x² − 25)/(x − 5) für x ≠ 5.
 >
 > Quelle: eigene Aufgabe
 
@@ -498,3 +542,25 @@ e) n² − n ist „∞ − ∞“, also unbestimmt. Umformen:
 2. n → ∞ und n − 1 → ∞.
 3. Riesig mal riesig → +∞.
 4. Zahlenprobe n = 1000: 1000 · 999 = 999 000.
+
+### Übung 6
+
+a)
+
+1. (x − 4)²: zweite Formel mit a = x, b = 4: x² − 2 · x · 4 + 4² = **x² − 8x + 16**.
+2. (2x + 1)²: erste Formel mit a = 2x, b = 1: (2x)² + 2 · 2x · 1 + 1² = **4x² + 4x + 1**. Achtung: (2x)² = 4x², nicht 2x².
+3. Probe x = 1: (1 − 4)² = 9 und 1 − 8 + 16 = 9. (2 + 1)² = 9 und 4 + 4 + 1 = 9.
+
+b)
+
+1. x² − 16 = x² − 4² = **(x + 4)(x − 4)** (dritte Formel).
+2. x² + 6x + 9: 9 = 3² und 6x = 2 · x · 3, also erste Formel rückwärts: **(x + 3)²**.
+3. 3x² − 12: erst 3 ausklammern: 3(x² − 4), dann dritte Formel: **3(x + 2)(x − 2)**.
+4. Probe x = 2 bei der dritten: 3 · 4 − 12 = 0 und 3 · 4 · 0 = 0.
+
+c)
+
+1. Zähler zerlegen: x² − 25 = (x + 5)(x − 5).
+2. Bruch: (x + 5)(x − 5)/(x − 5).
+3. (x − 5) kürzen, das geht, weil x ≠ 5: **x + 5**.
+4. Probe x = 6: (36 − 25)/1 = 11 und 6 + 5 = 11.

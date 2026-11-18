@@ -120,11 +120,21 @@ So machst du ein Ziel SMART:
 
 **Beispiel aus der Vorlesung:** Unternehmensziel „Wiederbuchungsquote in zwei Jahren von 30 % auf 40 %“. Projektziel „CRM in neun Monaten produktiv, höchstens 150 000 €, alle Kundendaten aus Buchungssystem und Onlineshop im CRM“.
 
-Die **Projektmanagement-Phasen** nach DIN 69901: Initialisieren → Definieren → Planen → Steuern → Abschließen. Zum Abschluss gehört die Erfahrungssicherung.
+Die **Projektmanagement-Phasen** nach DIN 69901, am CRM-Projekt der Sonnenschein AG:
+
+| Phase | Was passiert | Am CRM |
+|---|---|---|
+| 1 Initialisieren | Zuständigkeiten klären, grobes Ziel, Projektauftrag | Die Vertriebsleitung beauftragt das Projekt, eine Projektleitung wird benannt. |
+| 2 Definieren | Ziele festlegen, Aufwand schätzen, Machbarkeit prüfen | SMART-Ziele: neun Monate, höchstens 150 000 € |
+| 3 Planen | was wann wie durch wen: Arbeitspakete, Termine, Kosten, Ressourcen, Risiken | Risiken: Datenübernahme, Schnittstelle zum Onlineshop, Schulung des Vertriebs |
+| 4 Steuern | Soll-Ist-Vergleich, gegensteuern | Die Schnittstelle verzögert sich, also wird umgeplant. |
+| 5 Abschließen | Abnahme, Abschlussbericht, Nachkalkulation, Erfahrungssicherung | Lessons Learned: Was machen wir beim nächsten Projekt anders? |
+
+Merkhilfe für die Reihenfolge: Erst wird das Projekt **angestoßen** (Initialisieren), dann wird **festgelegt, was** erreicht werden soll (Definieren), dann **wie** (Planen), dann **wird gearbeitet und nachgesteuert** (Steuern), dann **abgeschlossen**. Dieser Kreislauf läuft in jeder Projektphase erneut, nicht nur einmal.
 
 > [!IMPORTANT]
 > **Das Wichtigste**
-> Projekt = einmalig und begrenzt. SMART = spezifisch, messbar, akzeptiert, realistisch, terminiert. Fünf PM-Phasen.
+> Projekt = einmalig und begrenzt (Ziel, Zeit, Geld, Personal). SMART = spezifisch, messbar, akzeptiert, realistisch, terminiert. Fünf PM-Phasen: Initialisieren, Definieren, Planen, Steuern, Abschließen.
 
 > [!WARNING]
 > **Achtung**
@@ -141,21 +151,32 @@ Die **Projektmanagement-Phasen** nach DIN 69901: Initialisieren → Definieren �
 | Ergebnis | Gesamtsystem am Ende | nutzbares Teilergebnis nach jedem Abschnitt |
 | Kunde | am Anfang und bei der Abnahme | durchgehend eingebunden |
 
+Das **Agile Manifest** (2001) fasst die Haltung in vier Sätzen zusammen. Jeweils das Erste ist wichtiger als das Zweite, das Zweite ist aber nicht wertlos:
+
+1. Individuen und Interaktionen **mehr als** Prozesse und Werkzeuge.
+2. Funktionierende Software **mehr als** umfassende Dokumentation.
+3. Zusammenarbeit mit dem Kunden **mehr als** Vertragsverhandlung.
+4. Reagieren auf Veränderung **mehr als** das Befolgen eines Plans.
+
 **Scrum:** Alle Anforderungen stehen priorisiert im Product Backlog. Im Sprint Planning wird ein Teil ausgewählt. Der Sprint dauert höchstens einen Monat, mit einem täglichen Daily Scrum von 15 Minuten. Am Ende steht ein nutzbares Inkrement (auf Deutsch: „Zuwachs“, ein fertiges Stück Software), dann Review (Ergebnis zeigen) und Retrospektive (Rückblick: Was machen wir beim nächsten Mal besser?). **Backlog** heißt „Rückstand, Stapel unerledigter Aufgaben“, **Sprint** ist ein kurzer, fester Arbeitsabschnitt. Rollen:
 
 - **Product Owner:** vertritt Kunden und Markt, pflegt und priorisiert das Backlog.
 - **Scrum Master:** sorgt dafür, dass Scrum funktioniert, räumt Hindernisse weg.
 - **Developers:** setzen um und organisieren sich selbst.
 
+Ein Sprint am CRM: Im Sprint Planning wählt das Team „Kundenhistorie anzeigen“ aus dem Backlog. Zwei bis vier Wochen später wird die fertige Funktion im Review der Vertriebsleitung vorgeführt. Ihre Rückmeldung („auch Stornos anzeigen“) wandert als neuer Eintrag ins Backlog. Agil läuft beim CRM vor allem das **Anpassen der Standardsoftware**.
+
 Welches Vorgehen passt, zeigt die **Stacey-Matrix**: Sind Anforderungen klar und Technik bekannt (einfach, kompliziert), passt klassisch. Ist es komplex, passt agil. Ist es chaotisch, erst ausprobieren. Dazwischen gibt es **hybrid**: klassischer Rahmen, agile Teilprojekte.
 
 > [!IMPORTANT]
 > **Das Wichtigste**
-> Klar und bekannt → klassisch. Komplex und unklar → agil. Gemischt → hybrid.
+> Klassisch = ganzer Plan vorab, Ergebnis am Ende. Agil = in Sprints planen, nach jedem Sprint ein nutzbares Inkrement. Stacey-Matrix: klar und bekannt → klassisch, komplex → agil, chaotisch → erst ausprobieren, gemischt → hybrid. Scrum-Rollen: Product Owner (Backlog), Scrum Master (Hindernisse), Developers (umsetzen).
 
 > [!WARNING]
 > **Achtung**
 > Der Scrum Master verteilt keine Aufgaben und kontrolliert nicht. Die Developers organisieren sich selbst. Und in Scrum wird nicht der ganze Plan vorab festgelegt.
+
+**Exkurs Akzeptanz:** Auch das beste CRM nützt nichts, wenn der Vertrieb weiter mit Excel arbeitet. **Akzeptanz** ist die Bereitschaft, ein IS regelmäßig für die eigene Arbeit zu nutzen. Nach dem **TAM** (Technology Acceptance Model, Davis 1989) hängt sie von zwei Wahrnehmungen ab: Hilft mir das System (wahrgenommene **Nützlichkeit**)? Und ist es leicht zu bedienen (wahrgenommene **Benutzungsfreundlichkeit**)? UTAUT ist eine Weiterentwicklung. Deshalb gehören Schulung und frühe Einbindung der Nutzer zur Einführung.
 
 ## Betreiben: Helpdesk, SLA, ITIL
 
@@ -163,7 +184,13 @@ Welches Vorgehen passt, zeigt die **Stacey-Matrix**: Sind Anforderungen klar und
 
 Die Mitarbeitenden beschweren sich: A Anfragen werden verzögert beantwortet · B Systeme fallen aus · C bekannte Fehler werden nicht behoben · D neue Funktionswünsche werden nicht umgesetzt · E die Preise der IT sind unklar. Bessere Technik löst das nicht. Es muss geregelt werden, und zwar in einem **Service Level Agreement (SLA)**: einer Vereinbarung, welche Leistung die IT in welcher Qualität erbringt. Wie beim Handyvertrag: Dort steht, wie viel Datenvolumen du bekommst und was passiert, wenn das Netz ausfällt.
 
-**Mit Zahlen:** 99,5 % Verfügbarkeit klingt nach „immer“. Ein Monat mit 30 Tagen hat 720 Stunden. 0,5 % davon sind 3,6 Stunden, so lange darf das CRM im Monat ausfallen.
+**Mit Zahlen:** 99,5 % Verfügbarkeit klingt nach „immer“. So rechnest du die erlaubte Ausfallzeit aus:
+
+1. Stunden im Monat: 30 Tage · 24 Stunden = 720 Stunden.
+2. Erlaubter Ausfall in Prozent: 100 % − 99,5 % = 0,5 %.
+3. Ausfallzeit: 720 · 0,005 = 3,6 Stunden, also 3 Stunden und 36 Minuten im Monat.
+
+Bei 99,9 % wären es nur 720 · 0,001 = 0,72 Stunden, rund 43 Minuten.
 
 | SLA-Baustein (Beispielwerte) | löst |
 |---|---|
@@ -238,6 +265,16 @@ Beschwerde D regelt kein SLA. Ein neuer Wunsch ist ein neues Projekt.
 > Standard- oder Individualsoftware? Nenne je zwei Vor- und Nachteile und empfiehl der Sonnenschein AG eine Lösung für ihr CRM.
 > *Quelle: Folie T2B2 F. 13, sinngemäß (Tafelanschrieb aus der Vorlesung)*
 
+> [!TIP]
+> **Übung 7 · mittel**
+> Die Mitarbeitenden der Sonnenschein AG beschweren sich über den Helpdesk: A Anfragen werden verzögert beantwortet · B das CRM fällt aus · C bekannte Fehler werden nicht behoben · D Wünsche nach neuen Funktionen werden nicht umgesetzt · E die Preise der IT sind unklar. Welche Beschwerde löst welcher SLA-Baustein? Welche löst kein SLA, und warum?
+> *Quelle: Folie T2B2 F. 26–27, sinngemäß*
+
+> [!TIP]
+> **Übung 8 · mittel**
+> Ein Cloud-Anbieter sichert im SLA 99,8 % Verfügbarkeit pro Monat zu (30 Tage). Wie viele Stunden darf das System im Monat höchstens ausfallen? Im Mai fiel es insgesamt 2 Stunden aus. Wurde das SLA eingehalten?
+> *Quelle: eigene Aufgabe nach T2B2 F. 27*
+
 ## Lösungen
 
 ### Übung 1
@@ -276,3 +313,22 @@ Ein möglicher Vorschlag: „Bis 31.12.2027 steigt die Kundenzufriedenheit in de
 | Individual | passgenau, volle Kontrolle | teurer, langer Entwicklungsprozess |
 
 **Empfehlung: Standardsoftware.** Viele Unternehmen machen CRM ähnlich. Die Sonnenschein AG unterscheidet sich nicht durch ihre CRM-Software, sondern durch ihre Reisen. Die Besonderheiten (Feedback, Newsletter-Gruppen) lassen sich per Customizing abbilden.
+
+### Übung 7
+
+| Beschwerde | SLA-Baustein |
+|---|---|
+| A Anfragen verzögert | Kennzahl Antwortzeit, zum Beispiel höchstens 4 Stunden; dazu Eskalation |
+| B CRM fällt aus | Verfügbarkeit, zum Beispiel 99,5 % im Monat; dazu Eskalation |
+| C Fehler nicht behoben | Frist für die Fehlerbehebung, zum Beispiel 5 Arbeitstage |
+| E Preise unklar | Preis je Ticket, Vertragsstrafe |
+
+**D löst kein SLA.** Ein SLA regelt, in welcher Qualität ein vereinbarter Betrieb läuft. Eine neue Funktion ist ein neues Vorhaben, also ein neues Projekt: Der Lebenszyklus beginnt von vorn. Merksatz der Folie: Was nicht vereinbart ist, kann der Fachbereich auch nicht einfordern.
+
+### Übung 8
+
+1. Stunden im Monat: 30 · 24 = 720 Stunden.
+2. Erlaubter Ausfall: 100 % − 99,8 % = 0,2 % = 0,002.
+3. Höchstens 720 · 0,002 = **1,44 Stunden**, das sind 1 Stunde und rund 26 Minuten (0,44 · 60 = 26,4).
+
+Im Mai fiel das System 2 Stunden aus. 2 > 1,44, also wurde das SLA **nicht** eingehalten. Dann greift die vereinbarte Folge, zum Beispiel eine Vertragsstrafe.

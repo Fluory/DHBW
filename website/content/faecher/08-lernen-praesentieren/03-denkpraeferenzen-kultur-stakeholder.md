@@ -24,6 +24,17 @@ Neurodiversität bedeutet: Menschen denken und nehmen unterschiedlich wahr. Das 
 | sozial | Beziehung und Sympathie, besonders am Anfang und Ende; fragen nach den Folgen für andere | persönlich einsteigen und enden |
 | konzeptionell | die große Idee gleich am Anfang; ziehen eigene Schlüsse | These früh nennen, direkt ansprechen, damit du sie nicht verlierst |
 
+**Woran du die Präferenz erkennst:** Laut Skript an den Informationen, die jemand selbst gibt und erfragt.
+
+| Präferenz | typische Frage oder Aussage |
+|---|---|
+| analytisch | „Woher stammt diese Zahl?“ |
+| strukturiert | „Wie sieht der Zeitplan aus, und wer ist zuständig?“ |
+| sozial | „Was bedeutet das für das Team?“ |
+| konzeptionell | „Wie passt das ins große Bild?“ |
+
+Das Skript nennt dazu einen zweiten Blick: wie jemand Informationen aufnimmt. Sätze wie „Das sehe ich nicht so“ deuten auf visuell, „Das hört sich schlüssig an“ auf auditiv, „Das fühlt sich richtig an“ auf kinästhetisch (über Gefühl und Bewegung). Meist zeigt sich eine Tendenz, oft gemischt.
+
 > [!IMPORTANT]
 > **Das Wichtigste**
 > In jedem Publikum sitzen alle vier Präferenzen. Eine gute Präsentation bedient jede an der passenden Stelle (siehe Kapitel 5: Einleitung sozial, konzeptionell, strukturiert; Hauptteil analytisch).
@@ -72,7 +83,15 @@ Eine Kulturdimension beschreibt also ein Spektrum zwischen zwei Polen. Jeder Pol
 | Langzeitorientierung | Ausdauer, Zukunft ↔ Tradition, schnelle Ergebnisse | Quartalsziel oder Zehnjahresplan? |
 | Genuss ↔ Zurückhaltung | Freiheit, Freizeit ↔ Selbstdisziplin, Normen | Wie wichtig ist der Feierabend? |
 
-**High Context ↔ Low Context** (Edward T. Hall): In Low-Context-Kulturen (z. B. Deutschland, USA) steckt die Botschaft in den Worten. Man sagt direkt, was man meint. In High-Context-Kulturen (z. B. China, Japan) steckt viel im Zusammenhang: Beziehung, Tonfall, das Ungesagte. Fazit der Beispielfolie: „Kommunikation braucht Kontext – direkte Worte sind nicht immer direkter Kontakt.“ Die Quellen der Aufgabe nennen außerdem die GLOBE-Studie mit neun Dimensionen.
+**High Context ↔ Low Context** (Edward T. Hall): In Low-Context-Kulturen (z. B. Deutschland, USA) steckt die Botschaft in den Worten. Man sagt direkt, was man meint. In High-Context-Kulturen (z. B. China, Japan) steckt viel im Zusammenhang: Beziehung, Tonfall, das Ungesagte. Fazit der Beispielfolie: „Kommunikation braucht Kontext – direkte Worte sind nicht immer direkter Kontakt.“
+
+| Situation | eher Low Context | eher High Context |
+|---|---|---|
+| Termin ist nicht zu halten | „Bis Freitag schaffe ich das nicht. Ich brauche bis Mittwoch.“ | „Freitag wird sportlich. Wir geben unser Bestes.“ (gemeint: eher nicht) |
+| Kritik am Entwurf | „Abschnitt 2 ist unklar.“ | „Abschnitt 2 könnte man vielleicht noch etwas ausbauen.“ |
+| Ablehnung | „Nein.“ | „Das ist eine interessante Idee, darüber müssen wir nachdenken.“ |
+
+Die Sätze sind eigene Beispiele, keine Zitate aus einem bestimmten Land. Sie zeigen das Prinzip: Bei Low Context steht die Bedeutung im Satz, bei High Context musst du sie aus Beziehung und Situation lesen. Die Quellen der Aufgabe nennen außerdem die GLOBE-Studie mit neun Dimensionen.
 
 Im Team-Sprint hat jede Gruppe eine Dimension erarbeitet: Definition, Ländervergleich Deutschland, USA, China, mögliche Missverständnisse, drei Lösungsideen. Review: 4 Minuten pro Team.
 
@@ -88,7 +107,13 @@ Im Team-Sprint hat jede Gruppe eine Dimension erarbeitet: Definition, Länderver
 
 **In einem Satz:** Stakeholdermanagement heißt: Vorher überlegen, wen dein Vorhaben betrifft, und diese Leute rechtzeitig einbinden.
 
-Ausführlich: Stakeholdermanagement heißt, alle Beteiligten zu identifizieren, ihre Bedürfnisse und Erwartungen verstehen und angemessen berücksichtigen. Es schafft Beteiligung und Akzeptanz, senkt Risiken früh und hilft, Unterstützer zu finden.
+**Stell dir vor:** Du willst in deiner WG eine Katze anschaffen. Wer ist betroffen? Die Mitbewohnerin mit Allergie, der Vermieter, der Haustiere erlauben muss, der Mitbewohner, der gern füttern würde. Fragst du erst, wenn die Katze schon da ist, hast du drei Probleme. Fragst du vorher, kannst du Lösungen anbieten. Das ist Stakeholdermanagement im Kleinen.
+
+Ein **Stakeholder** ist laut Skript jede Person oder Gruppe, die an einer Sache ein Interesse hat oder vom Ergebnis betroffen ist. Man unterscheidet **interne** Stakeholder (Kolleginnen, Vorgesetzte, Kapitalgeber) und **externe** (Wettbewerber, Öffentlichkeit, Presse, externe Dienstleister). Du selbst bist auch immer Stakeholder. Das Skript empfiehlt, die Analyse zuerst für dich selbst zu machen.
+
+Ausführlich: Stakeholdermanagement heißt, alle Beteiligten zu identifizieren, ihre Bedürfnisse und Erwartungen verstehen und angemessen berücksichtigen. Es schafft Beteiligung und Akzeptanz, senkt Risiken früh und hilft, Unterstützer zu finden. Manipulation ist das nicht, solange du offen sagst, was du willst. Manipulation hieße, mit versteckten Interessen zu handeln.
+
+**Analysieren** heißt, für jeden Stakeholder zu fragen: Welche Ziele hat er? Welcher Nutzen steckt dahinter? Welche Bedürfnisse, welches Wissen, welche Motivation? Welche Werte? Wie denkt er (Denkpräferenz)? Welche Informationen braucht er wozu?
 
 Stakeholder werden eingeordnet als
 
@@ -96,7 +121,14 @@ Stakeholder werden eingeordnet als
 - **konkurrierend** (Gegner),
 - **neutral**,
 
-und nach ihrem **Einfluss** bewertet (Stakeholder-Einfluss-Matrix, Skript Teil 2, S. 18).
+und nach ihrem **Einfluss** bewertet. Dafür gibt es die **Stakeholder-Einfluss-Matrix** (Skript Teil 2). Sie hat zwei Achsen: Wie stark beeinflusst der Stakeholder das Thema? Und wie stark beeinflusst das Thema den Stakeholder?
+
+| | Thema beeinflusst ihn wenig | Thema beeinflusst ihn stark |
+|---|---|---|
+| **er beeinflusst das Thema stark** | Quadrant 2: z. B. Entscheider, für den das Thema keinen direkten Nutzen hat. Gewinnen, Nutzen zeigen. | Quadrant 1: höchste Priorität. Ihre Bedenken entscheiden über Erfolg oder Scheitern. Eng einbinden. |
+| **er beeinflusst das Thema wenig** | Quadrant 3: eher unwichtig, aber beobachten. Das kann sich ändern. | Quadrant 2: z. B. Betroffene, die vom Ergebnis profitieren oder leiden. Informieren, ernst nehmen. |
+
+Faustregel aus dem Skript: Je höher der Einfluss in eine der beiden Richtungen, desto größer das Interesse am Thema. Neutrale können später zu Unterstützern oder Gegnern werden. Ziel ist, möglichst viele Unterstützer zu haben und die Gegner zu kennen, vielleicht sogar zu gewinnen.
 
 Ablauf in fünf Schritten:
 
@@ -111,10 +143,12 @@ Leitfragen: Wer sind die wichtigsten Stakeholder? Was sind ihre Ziele und Intere
 > [!NOTE]
 > **Beispiel: Die Lerngruppe zieht in einen neuen Raum**
 > Unterstützer: die Mitglieder, die nah wohnen (Einfluss hoch). Gegner: zwei Mitglieder mit längerem Weg (Einfluss mittel, sie könnten wegbleiben). Neutral: die Hausverwaltung (Einfluss hoch, sie vergibt den Raum). Maßnahmen: Termin so legen, dass die Bahn passt; Raumbuchung früh klären.
+>
+> In der Matrix: Die Mitglieder mit langem Weg gehören in Quadrant 1 (der Umzug trifft sie stark, und ohne sie zerfällt die Gruppe). Die Hausverwaltung steht in Quadrant 2 (sie entscheidet, aber der Umzug ist ihr egal). Also: mit beiden zuerst sprechen.
 
 > [!IMPORTANT]
 > **Das Wichtigste**
-> Gerade die konkurrierenden Stakeholder sind wichtig. Sie stellen die kritischen Fragen. Wer sie vorher kennt, hat die Antworten schon vorbereitet.
+> Stakeholder identifizieren, analysieren, als Unterstützer, Gegner oder neutral einordnen und nach Einfluss bewerten. Höchste Priorität haben die, die das Thema stark beeinflussen und stark davon betroffen sind. Gerade die konkurrierenden Stakeholder sind wichtig: Sie stellen die kritischen Fragen. Wer sie vorher kennt, hat die Antworten schon vorbereitet.
 
 > [!WARNING]
 > **Achtung**
@@ -141,6 +175,11 @@ Leitfragen: Wer sind die wichtigsten Stakeholder? Was sind ihre Ziele und Intere
 > **Übung 4 · Prüfungsniveau**
 > Erstelle eine kurze Stakeholder-Analyse für folgendes Vorhaben: Dein Kurs möchte, dass eine Vorlesung künftig aufgezeichnet wird. Nenne mindestens vier Stakeholder mit Art, Einfluss, Interesse und einer Maßnahme.
 > Quelle: eigene Aufgabe nach Fotoprotokoll 08.10.
+
+> [!TIP]
+> **Übung 5 · mittel**
+> Ordne die Stakeholder aus Übung 4 in die Stakeholder-Einfluss-Matrix ein. Mit wem sprichst du zuerst, und warum?
+> Quelle: eigene Aufgabe nach Skript Teil 2, Stakeholder-Einfluss-Matrix
 
 ## Lösungen
 
@@ -179,3 +218,16 @@ d) Ritual (fester Ablauf).
 | Studiengangsleitung | neutral | hoch | Regeln der Hochschule, Gleichbehandlung der Kurse | Regeln vorab klären |
 | IT der Hochschule | neutral | mittel | Technik, Speicherplatz | technische Machbarkeit klären |
 | Kommilitonen, die nicht gefilmt werden wollen | konkurrierend | mittel | Datenschutz, eigene Wortbeiträge | nur Dozentin und Folien aufnehmen |
+
+### Übung 5
+
+*Beispiellösung. Andere Einordnungen sind vertretbar, wenn du sie begründest.*
+
+| Quadrant | Stakeholder | Begründung |
+|---|---|---|
+| 1 (beide Richtungen stark) | Dozentin | Sie entscheidet mit und wird selbst aufgezeichnet. |
+| 2 (er beeinflusst stark) | Studiengangsleitung | Sie setzt die Regeln, ist vom Ergebnis aber kaum betroffen. |
+| 2 (Thema beeinflusst ihn stark) | Studierende, Kommilitonen ohne Aufnahme-Wunsch | Das Ergebnis betrifft sie direkt, entscheiden können sie nicht. |
+| 3 (beide schwach) | IT der Hochschule | Erst wichtig, wenn die Technik zum Problem wird. Beobachten. |
+
+Zuerst sprichst du mit der Dozentin (Quadrant 1). Ohne ihre Zustimmung ist alles andere sinnlos, und ihre Bedenken bestimmen, welche Lösung überhaupt möglich ist.

@@ -156,6 +156,11 @@ Ergänzung aus dem Gesetz: Tiere sind keine Sachen, werden aber wie Sachen behan
 > Vertretbar oder nicht vertretbar (§ 91)? a) 50 Liter Heizöl b) der gebrauchte Golf mit Kennzeichen HN-AB 123 c) ein 20-€-Schein
 > Quelle: eigene Aufgabe
 
+> [!TIP]
+> **Übung 6 · mittel**
+> Ein Verbrauchsgüterkauf (§ 474 I) liegt vor, wenn ein Verbraucher von einem Unternehmer eine Ware kauft. Liegt einer vor? a) Ein Student kauft im Elektromarkt ein Handy. b) Eine Bäckermeisterin kauft beim Fachhändler einen Backofen für ihre Bäckerei. c) Ein Student kauft das gebrauchte Fahrrad seiner Kommilitonin.
+> Quelle: eigene Aufgabe (Kaufrecht, Kapitel 8)
+
 ## Lösungen
 
 ### Übung 1
@@ -191,3 +196,11 @@ Test bei jedem Punkt: Wäre dir ein anderes Exemplar derselben Sorte genauso rec
 a) Vertretbar, nach Maß bestimmt.
 b) Nicht vertretbar, ein individuelles Gebrauchtfahrzeug.
 c) Vertretbar, Geld wird nach Zahl bestimmt. Es ist zudem verbrauchbar (§ 92).
+
+### Übung 6
+
+Prüf bei jedem Fall zwei Rollen: Ist der Käufer Verbraucher (§ 13)? Ist der Verkäufer Unternehmer (§ 14)? Nur wenn beides stimmt, ist es ein Verbrauchsgüterkauf.
+
+a) Ja. Der Student kauft privat (Verbraucher), der Elektromarkt verkauft gewerblich (Unternehmer).
+b) Nein. Die Bäckermeisterin kauft für ihr Gewerbe. Sie ist hier Unternehmerin, nicht Verbraucherin.
+c) Nein. Die Kommilitonin verkauft privat. Sie ist Verbraucherin, keine Unternehmerin. Es gilt nur das normale Kaufrecht.

@@ -8,7 +8,7 @@
 
 **Target Costing:** vom Marktpreis rückwärts („Was darf es kosten?“), weil bis zu 80 % der Herstellkosten in der Entwicklung festgelegt werden.
 Target Price − Target Profit = Allowable Costs; Vergleich mit Drifting Costs → Zielkosten.
-Beispiel: 4 € − 1 € = **3 €** erlaubt; geschätzt 3,40 € → 0,40 € einsparen.
+Beispiel: 4 € − 1 € = **3 €** erlaubt; geschätzt 3,40 € → 0,40 € einsparen. Kostenlücke = Drifting − Allowable Costs; Gewinn in % vom Zielpreis rechnen.
 
 **Lebenszykluskostenrechnung:** alle Kosten und Erlöse über das ganze Produktleben.
 

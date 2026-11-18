@@ -152,6 +152,11 @@ Die fünf Fragen als Wenn-dann, mit dem Paragrafen auf Deutsch:
 > P (16) sucht sich bei V ein Skateboard für 150 € aus, V ist einverstanden. P will erst seine Eltern fragen und bittet um Aufschub bis morgen. Abends verweigern die Eltern P die Erlaubnis. Am nächsten Tag ruft V bei den Eltern an und fragt, ob der Kauf in Ordnung geht. Sie sagen „Ja“. Wie ist die Rechtslage?
 > Quelle: Skript S. 22, Fall Geschäftsfähigkeit 4
 
+> [!TIP]
+> **Übung 7 · mittel**
+> Lisa bestellt per E-Mail bei einem Copyshop Flyer für 0,10 € pro Stück. Sie will 100 schreiben, tippt aber 1.000. Der Shop druckt sofort, Papier und Farbe kosten ihn 40 €. Als die Rechnung über 100 € kommt, merkt Lisa den Fehler und ficht am selben Tag an. Muss sie etwas zahlen?
+> Quelle: eigene Aufgabe
+
 ## Lösungen
 
 ### Übung 1
@@ -227,3 +232,16 @@ Ergänzung, nicht Teil der offiziellen Lösung: Weil der Vertrag schon wirksam i
 5. **Aufforderung durch V:** V hat die Eltern danach am Telefon zur Erklärung aufgefordert. Nach § 108 II 1 Halbsatz 2 wird die vorher gegenüber P erklärte Verweigerung dadurch unwirksam. Die Genehmigung kann jetzt nur noch gegenüber V erklärt werden.
 6. **Genehmigung:** Die Eltern sagen V gegenüber „Ja“. Das ist eine Genehmigung. Sie wirkt zurück (§ 184 I).
 7. **Ergebnis:** Also ist der Kaufvertrag wirksam. V hat einen Anspruch auf 150 € aus § 433 II BGB.
+
+### Übung 7
+
+*Eigene Lösungsskizze, Rechnung mit Python geprüft.*
+
+1. **Anfechtungsgrund:** Lisa wollte „100“ schreiben und hat „1.000“ getippt. Sie hat sich vertippt: Erklärungsirrtum (§ 119 I Alt. 2).
+2. **Erklärung und Frist:** Sie ficht gegenüber dem Shop an (§ 143 I), und zwar am Tag der Entdeckung, also unverzüglich (§ 121 I 1).
+3. **Rechtsfolge:** Der Vertrag ist von Anfang an nichtig (§ 142 I). Die 100 € (1.000 × 0,10 €) muss sie nicht zahlen.
+4. **Vertrauensschaden (§ 122 I):** Lisa muss den Shop so stellen, als hätte er nie von der Bestellung gehört. Ohne die Bestellung hätte er nichts gedruckt. Sein Schaden: 40 € Material.
+5. **Obergrenze:** höchstens das Erfüllungsinteresse, also das, was der Shop bei Erfüllung gehabt hätte. 40 € liegen unter 100 €.
+6. **Ergebnis:** Lisa schuldet keinen Kaufpreis, aber 40 € Vertrauensschaden.
+
+Merke: Dein Irrtum, deine Kosten. Die Anfechtung befreit dich vom Vertrag, nicht vom Schaden des anderen.

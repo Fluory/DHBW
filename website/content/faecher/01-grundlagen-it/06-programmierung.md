@@ -47,9 +47,25 @@ BRK        ; Programmende
 
 Ein **Register** ist ein winziger Merkzettel direkt im Prozessor, auf dem er gerade rechnet (mehr in Kapitel 9). Das Prinzip: Wert in ein Register laden, dort rechnen, Ergebnis zurückschreiben. Weil Assembler bei großen Programmen unübersichtlich wird, entstanden **Hochsprachen** wie Python, Java oder C++. Sie brauchen ein Übersetzungsprogramm: einen Compiler oder einen Interpreter.
 
+### Wie sich die Hochsprachen entwickelt haben
+
+Die Folien zeichnen eine Entwicklungslinie. Jeder Schritt nimmt dem Menschen eine Fehlerquelle ab:
+
+| Schritt | Idee | Beispielsprache |
+|---|---|---|
+| Abstraktion von der Maschine | Befehle unabhängig vom Prozessor, Sprünge mit GOTO | BASIC |
+| strukturierte Programmierung | statt wilder Sprünge feste Blöcke: Schleifen, Bedingungen, Funktionen | Pascal |
+| Referenzen und dynamische Datentypen | Speicher zur Laufzeit anlegen (new) | |
+| Kapselung, Objektorientierung | Daten und Funktionen gehören zusammen in Klassen | C++, Java |
+| Speichersicherheit | die Sprache verhindert Zugriffe auf fremden Speicher | Rust |
+
+Der **TIOBE-Index** misst, wie **populär** eine Sprache ist (Entwickler, Kurse, Suchanfragen). Er sagt nicht, welche Sprache die beste ist und in welcher die meisten Codezeilen geschrieben sind.
+
+Vor dem Programmieren steht oft das **Modellieren**: Man bildet einen Ausschnitt der Wirklichkeit ab, zum Beispiel mit UML-Diagrammen. Manche Werkzeuge erzeugen daraus schon ein Code-Gerüst.
+
 > [!IMPORTANT]
 > **Das Wichtigste**
-> Maschinensprache (binär) → Assembler (symbolische Namen) → Hochsprache (für Menschen lesbar, braucht Compiler oder Interpreter).
+> Maschinensprache (binär) → Assembler (symbolische Namen) → Hochsprache (für Menschen lesbar, braucht Compiler oder Interpreter). Die Hochsprachen wurden immer strukturierter: GOTO → strukturierte Programmierung → Objektorientierung → Speichersicherheit.
 
 > [!WARNING]
 > **Achtung**
@@ -181,9 +197,40 @@ So läuft fakrek(4) ab:
 
 Jeder offene Aufruf liegt so lange auf dem Aufrufstapel (einem Stack, Kapitel 7).
 
+### Iterativ statt rekursiv
+
+Dieselbe Aufgabe geht auch mit einer Schleife. Das heißt **iterativ** (von lateinisch „wiederholen“). Die Folie zeigt beide Varianten nebeneinander:
+
+```java
+long fakite(int n) {
+    long sum = 1;
+    for (int i = 1; i <= n; i++) {
+        sum = sum * i;
+    }
+    return sum;
+}
+```
+
+So läuft fakite(4) ab:
+
+| i | Rechnung | sum danach |
+|---|---|---|
+| Start | | 1 |
+| 1 | 1 · 1 | 1 |
+| 2 | 1 · 2 | 2 |
+| 3 | 2 · 3 | 6 |
+| 4 | 6 · 4 | 24 |
+
+| | iterativ | rekursiv |
+|---|---|---|
+| Wiederholung durch | Schleife | Selbstaufruf |
+| Ende durch | Schleifenbedingung (i <= n wird falsch) | Abbruchbedingung (n == 1 oder n == 0) |
+| Speicher | eine Variable sum | ein Eintrag pro offenem Aufruf auf dem Aufrufstapel |
+| Ergebnis fakite(4) / fakrek(4) | 24 | 24 |
+
 > [!IMPORTANT]
 > **Das Wichtigste**
-> Teile und Herrsche = Prinzip (Aufgabe zerlegen). Rekursion = Technik (Funktion ruft sich selbst). Ohne Abbruchbedingung läuft sie endlos.
+> Teile und Herrsche = Prinzip (Aufgabe zerlegen). Rekursion = Technik (Funktion ruft sich selbst). Ohne Abbruchbedingung läuft sie endlos. Iterativ = dieselbe Aufgabe mit einer Schleife.
 
 > [!WARNING]
 > **Achtung**
@@ -221,6 +268,21 @@ Jeder offene Aufruf liegt so lange auf dem Aufrufstapel (einem Stack, Kapitel 7)
 > Was liefert fakrek(5), und wie viele Aufrufe von fakrek gibt es insgesamt? Was passiert, wenn man die Abbruchbedingung weglässt?
 > *Quelle: Lernseite GIT, Aufgabe 6.7 (eigene Aufgabe nach VL02 F. 141)*
 
+> [!TIP]
+> **Übung 7 · mittel**
+> Was liefert fakite(5)? Schreibe für jeden Schleifendurchlauf i und sum auf. Worin unterscheidet sich fakite von fakrek?
+> *Quelle: eigene Aufgabe nach VL02 (Beispiel Rekursion: N!)*
+
+> [!TIP]
+> **Übung 8 · Prüfungsniveau**
+> Multiple Choice (2 Punkte). Welche Aussagen sind korrekt?
+> 1. Der TIOBE-Index zeigt, welche Programmiersprache am besten ist.
+> 2. Der Parser baut im Compiler einen Syntaxbaum auf.
+> 3. Ein Interpreter übersetzt das Programm vorab vollständig in Maschinencode.
+> 4. Der Linker verbindet getrennt übersetzte Module zu einem lauffähigen Programm.
+>
+> *Quelle: eigene Aufgabe im Klausurstil*
+
 ## Lösungen
 
 ### Übung 1
@@ -252,3 +314,27 @@ Ein Algorithmus ist eine Handlungsvorschrift, die ein Problem in endlicher Zeit 
 1. fakrek(5) = 5 · fakrek(4), fakrek(4) = 4 · fakrek(3), fakrek(3) = 3 · fakrek(2), fakrek(2) = 2 · fakrek(1), fakrek(1) = 1. Rückweg: 2 · 1 = 2, 3 · 2 = 6, 4 · 6 = 24, 5 · 24 = **120**.
 2. Aufrufe mit n = 5, 4, 3, 2, 1: **5 Aufrufe**. Bei n = 1 greift die Abbruchbedingung.
 3. Ohne Abbruchbedingung ruft sich die Funktion endlos auf (0, −1, −2 …), bis der Aufrufstapel überläuft.
+
+### Übung 7
+
+| i | Rechnung | sum danach |
+|---|---|---|
+| Start | | 1 |
+| 1 | 1 · 1 | 1 |
+| 2 | 1 · 2 | 2 |
+| 3 | 2 · 3 | 6 |
+| 4 | 6 · 4 | 24 |
+| 5 | 24 · 5 | 120 |
+
+Danach ist i = 6, die Bedingung i <= 5 ist falsch, die Schleife endet. fakite(5) = **120**.
+
+Unterschied: fakite wiederholt mit einer **Schleife** (iterativ) und braucht nur die Variable sum. fakrek ruft sich **selbst** auf (rekursiv), braucht eine Abbruchbedingung und legt für jeden offenen Aufruf einen Eintrag auf den Aufrufstapel. Das Ergebnis ist gleich.
+
+### Übung 8
+
+Richtig sind **2 und 4**.
+
+- Option 1 ist falsch: TIOBE misst die Popularität, nicht die Qualität.
+- Option 3 ist falsch: Das macht der Compiler. Der Interpreter übersetzt zur Laufzeit Befehl für Befehl.
+
+Wer genau 2 und 4 ankreuzt, hat vier richtige Entscheidungen: 4 × ½ = 2 Punkte.

@@ -27,6 +27,12 @@ In der Klausur gibt es 6 Punkte für die „Eigenschaften der verschiedenen Verf
 
 **Faustregel:** Verdoppelt sich n, dann bleibt O(1) gleich, O(log n) braucht einen Schritt mehr, O(n) verdoppelt sich und O(n²) vervierfacht sich.
 
+**So rechnest du eine Laufzeit hoch:**
+
+1. Faktor bestimmen, um den n wächst, zum Beispiel ×2.
+2. Bei O(n) die Zeit mal diesen Faktor nehmen, bei O(n²) mal Faktor².
+3. Beispiel: Ein O(n²)-Verfahren braucht für 1 000 Elemente 3 Sekunden. Für 2 000 Elemente: Faktor 2, also 3 · 2² = **12 Sekunden**. Ein O(n)-Verfahren bräuchte 3 · 2 = 6 Sekunden.
+
 > [!IMPORTANT]
 > **Das Wichtigste**
 > Reihenfolge von schnell nach langsam: O(1) < O(log n) < O(n) < O(n log n) < O(n²).
@@ -119,6 +125,17 @@ Durchlauf 3:  kein Tausch mehr → sortiert
 - **Voraussetzung:** keine.
 - **Aufwand:** O(n²).
 - Höchstens n − 1 Durchläufe sind nötig. Die Folie sagt „so viele wie Elemente“; genau genommen reichen n − 1.
+
+**Warum O(n²)? Mit Zahlen (Ergänzung):** Bei 5 Elementen vergleicht der erste Durchlauf 4 Paare, der zweite 3, dann 2, dann 1. Zusammen sind das 4 + 3 + 2 + 1 = 10 Vergleiche, allgemein n · (n − 1) / 2. Das ist dieselbe Rechnung wie „alle stoßen an“ auf der Folie.
+
+| n | Vergleiche n · (n − 1) / 2 |
+|---|---|
+| 5 | 10 |
+| 10 | 45 |
+| 100 | 4 950 |
+| 1 000 | 499 500 |
+
+Zehnmal so viele Elemente bedeuten etwa hundertmal so viele Vergleiche. Das ist quadratisches Wachstum.
 
 > [!IMPORTANT]
 > **Das Wichtigste**
@@ -222,6 +239,16 @@ Quicksort und Selection Sort werden auf den Folien nur genannt. Ihre Beschreibun
 >
 > *Quelle: Lernseite GIT, Aufgabe 8.9 (eigene Aufgabe im Klausurstil)*
 
+> [!TIP]
+> **Übung 7 · mittel**
+> Welches Verfahren wählen Sie, und warum? a) Eine unsortierte Liste mit 30 Namen soll einmal nach „Kim“ durchsucht werden. b) In einem sortierten Array mit 1 Million Artikelnummern wird ständig gesucht. c) 10 Millionen Datensätze sollen sortiert werden.
+> *Quelle: eigene Aufgabe nach VL05 F. 3 („Such- und Sortierverfahren kennen“)*
+
+> [!TIP]
+> **Übung 8 · Prüfungsniveau**
+> Bubble Sort braucht auf einem Rechner für 2 000 Elemente 4 Sekunden. Wie lange ungefähr für 6 000 Elemente? Wie viele Vergleiche macht Bubble Sort bei 6 Elementen höchstens?
+> *Quelle: eigene Aufgabe*
+
 ## Lösungen
 
 ### Übung 1
@@ -292,3 +319,16 @@ Richtig sind **1 und 3**.
 
 - Option 2 ist falsch: Die Daten müssen sortiert sein.
 - Option 4 ist falsch: Bubble Sort ist O(n²).
+
+### Übung 7
+
+- a) **Lineare Suche:** Die Liste ist unsortiert, also darf man keine Hälfte wegwerfen. Bei 30 Namen sind höchstens 30 Vergleiche schnell erledigt. Erst sortieren würde mehr kosten als einmal durchlaufen.
+- b) **Binäre Suche:** Die Daten sind sortiert und per Index erreichbar. Höchstens 20 Vergleiche (2²⁰ ≈ 1,05 Mio. > 1 Mio.) statt bis zu 1 Million.
+- c) **Merge Sort:** O(n log n) statt O(n²). Bei 10 Millionen Elementen sind das grob 10⁷ · 23 ≈ 2,3 · 10⁸ Schritte statt rund 10¹⁴ bei Bubble Sort.
+
+### Übung 8
+
+1. n wächst von 2 000 auf 6 000, also um den Faktor 3.
+2. Bubble Sort ist O(n²): Die Zeit wächst um 3² = 9.
+3. 4 s · 9 = **36 Sekunden**.
+4. Vergleiche bei 6 Elementen: 5 + 4 + 3 + 2 + 1 = **15** (n · (n − 1) / 2 = 6 · 5 / 2 = 15).

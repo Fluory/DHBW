@@ -8,7 +8,7 @@ klausur: "nicht-relevant"
 > [!CAUTION]
 > **Nicht klausurrelevant**
 >
-> Kapitel 8 (Organisation) und Kapitel 10 (Produktion) stehen nicht auf der Liste „Könnte drankommen“ (gesehen am 06.11.2026). Beide wurden bis dahin auch noch nicht in der Vorlesung behandelt. Diese Seite ist nur ein kurzer Überblick zum Nachschlagen. Steck deine Lernzeit lieber in die Kapitel 6, 7 und 8 (Materialwirtschaft). „Könnte“ heißt aber: keine Garantie. Wenn die Vorlesung hier etwas als prüfungsrelevant nennt, gilt das.
+> Kapitel 8 (Organisation) und Kapitel 10 (Produktion) stehen nicht auf der Liste „Könnte drankommen“ (gesehen am 06.11.2026). Kapitel 8 wurde am 10.11.2026 in der Vorlesung behandelt, Kapitel 10 kam bis zum letzten Termin am 17.11.2026 nicht mehr dran. Diese Seite ist nur ein kurzer Überblick zum Nachschlagen. Steck deine Lernzeit lieber in die Website-Kapitel 6 (Rechnungswesen), 7 (Kennzahlen) und 8 (Materialwirtschaft). „Könnte“ heißt aber: keine Garantie. Wenn die Vorlesung hier etwas als prüfungsrelevant nennt, gilt das.
 
 Eine Bäckerei mit fünf Filialen braucht eine klare Ordnung: Wer ist der Chef der Filialleiterinnen? Wer darf Anweisungen geben? Und in der Backstube: Backt jeder Bäcker ein Brot von Anfang bis Ende, oder läuft der Teig von Station zu Station? Das erste ist Organisation, das zweite Produktion.
 

@@ -13,6 +13,8 @@ Ein Alltagsbeispiel: Beifahrer sagt „Die Ampel ist grün.“ Gemeint ist eine 
 
 **In einem Satz:** Jeder Satz sagt gleichzeitig etwas über die Sache, über dich, über eure Beziehung und darüber, was du willst.
 
+**Stell dir vor:** Jede Nachricht ist ein Paket mit vier Fächern. Du packst immer alle vier, auch wenn du nur an eines denkst. Dein Gegenüber hat vier Ohren und kann frei wählen, welches Fach es zuerst aufmacht. Packt es ein anderes Fach aus, als du gemeint hast, entsteht das Missverständnis.
+
 Jede Nachricht hat also vier Seiten. Sie werden gleichzeitig gesendet und gleichzeitig empfangen. Man nennt das Modell auch Kommunikationsquadrat.
 
 | Seite | Frage | Ampel-Beispiel |
@@ -22,7 +24,23 @@ Jede Nachricht hat also vier Seiten. Sie werden gleichzeitig gesendet und gleich
 | Beziehungshinweis | Was halte ich von dir? | Du brauchst meine Hilfe beim Fahren. |
 | Appell | Was will ich bei dir erreichen? | Fahr los! |
 
-Der Beziehungshinweis steckt oft nur in Tonfall und Mimik. Missverständnisse entstehen, wenn Sender und Empfänger verschiedene „Ohren“ benutzen. Ein Merksatz aus dem Skript: „Der unerfüllte Wunsch von heute wird der Vorwurf von morgen.“
+Der Beziehungshinweis steckt oft nur in Tonfall und Mimik. Missverständnisse entstehen, wenn Sender und Empfänger verschiedene „Ohren“ benutzen. Ein Merksatz aus dem Skript: „Der unerfüllte Wunsch von heute wird der Vorwurf von morgen.“ Auf Deutsch heißt das: Wer einen Appell nur versteckt sendet („Die Spülmaschine ist schon wieder voll …“), statt ihn offen auszusprechen, wird nicht gehört und ist später gekränkt.
+
+**Mit einem Beispiel aus der Lerngruppe:** Jemand sagt um 18:05 Uhr: „Wir wollten um 18 Uhr anfangen.“
+
+| Ohr des Empfängers | Was er hört | typische Reaktion |
+|---|---|---|
+| Sachohr | Es ist 5 Minuten nach dem vereinbarten Start. | „Stimmt, lass uns loslegen.“ |
+| Selbstkundgabeohr | Sie ist ungeduldig, vielleicht hat sie wenig Zeit. | „Musst du heute früher weg?“ |
+| Beziehungsohr | Sie hält mich für unzuverlässig. | „Ich war doch nur kurz zu spät!“ |
+| Appellohr | Seid nächstes Mal pünktlich. | „Okay, nächstes Mal bin ich früher da.“ |
+
+**So klärst du ein Missverständnis:**
+
+1. Merke, dass du gereizt reagieren willst. Das ist oft ein Zeichen, dass dein Beziehungsohr aktiv ist.
+2. Frag dich, was die drei anderen Seiten sein könnten.
+3. Frag nach: „Wie meinst du das? Geht es dir um die Uhrzeit oder um etwas anderes?“
+4. Als Sender: Sag deinen Appell offen („Ich möchte pünktlich anfangen, weil ich um 19 Uhr los muss“), dann muss niemand raten.
 
 > [!IMPORTANT]
 > **Das Wichtigste**
@@ -85,7 +103,11 @@ Ergänzung **Embodied Communication** (Skript): Einstellung und Körpersprache w
 
 ## Aktiv zuhören
 
-**In einem Satz:** Aktives Zuhören heißt: Du willst den anderen verstehen und zeigst ihm das, statt schon deine Antwort vorzubereiten. Am 08.10. gab es dazu eine Übung zu zweit (20 Minuten mit Feedback). A erzählt von einem wichtigen Erlebnis. B hört zu, stellt Fragen und versucht, das Relevante herauszufinden. Danach Feedback und Rollentausch.
+**In einem Satz:** Aktives Zuhören heißt: Du willst den anderen verstehen und zeigst ihm das, statt schon deine Antwort vorzubereiten.
+
+**Stell dir vor:** Du bestellst am Telefon eine Pizza. Am Ende sagt die Person: „Also eine große Margherita ohne Oliven an die Hauptstraße 5, richtig?“ Erst durch diese Wiederholung merkst du, dass sie „mit“ statt „ohne“ verstanden hätte, und kannst es korrigieren. Genau das macht aktives Zuhören im Gespräch: Du gibst zurück, was du verstanden hast, und der andere kann bestätigen oder richtigstellen.
+
+Laut Skript ist die Grundhaltung ein **einfühlendes Verstehen-Wollen**. Zuhören heißt also nicht, schon eine Antwort parat zu haben, sondern abzuwarten, was das Gegenüber mitteilen will. Am 08.10. gab es dazu eine Übung zu zweit (20 Minuten mit Feedback). A erzählt von einem wichtigen Erlebnis. B hört zu, stellt Fragen und versucht, das Relevante herauszufinden. Danach Feedback und Rollentausch.
 
 Werkzeuge (aus der eigenen Vorbereitung auf das Konfliktgespräch, nach Skript Teil 1):
 
@@ -95,6 +117,14 @@ Werkzeuge (aus der eigenen Vorbereitung auf das Konfliktgespräch, nach Skript T
 - **Zusammenfassen:** am Ende eines Abschnitts in einem Satz.
 - **Pausen aushalten:** nach einer Frage still bleiben.
 
+> [!NOTE]
+> **Beispiel: Aktiv zuhören in der Lerngruppe**
+> A: „Ich habe gestern bis zwei Uhr an der Programmierabgabe gesessen, und jetzt soll ich auch noch die Folien machen.“
+>
+> Schlecht: „Ich hatte letzte Woche auch viel zu tun.“ (Das lenkt auf dich.)
+>
+> Besser: „Du bist also gerade ziemlich am Limit (Gefühl spiegeln), und die Folien kommen obendrauf (paraphrasieren). Was würde dir helfen (nachfragen)?“ Dann Pause, bis A antwortet.
+
 > [!IMPORTANT]
 > **Das Wichtigste**
 > Erst verstehen, dann antworten. Die Frage „Habe ich dich richtig verstanden, dass …?“ klärt viele Missverständnisse, bevor sie entstehen.
@@ -102,6 +132,12 @@ Werkzeuge (aus der eigenen Vorbereitung auf das Konfliktgespräch, nach Skript T
 > [!WARNING]
 > **Achtung**
 > Paraphrasieren heißt nicht, die Worte des anderen wörtlich zu wiederholen. Das wirkt mechanisch. Fass in eigenen Worten zusammen, was du verstanden hast.
+
+## Weitere Modelle auf dem Aufgabenblatt
+
+> [!CAUTION]
+> **Nur genannt, nicht behandelt**
+> Laut Aufgabenblatt vom 06.10. standen auch die fünf Axiome (Watzlawick), das Organon-Modell und die Lasswell-Formel zur Auswahl. In den Fotoprotokollen wurden aber nur das Vier-Ohren-Modell, die Transaktionsanalyse und das Eisbergmodell vorgestellt. Zu den anderen Modellen gibt es im Kursmaterial keine Inhalte, deshalb stehen sie hier nicht.
 
 ## Übungen
 
@@ -124,6 +160,11 @@ Werkzeuge (aus der eigenen Vorbereitung auf das Konfliktgespräch, nach Skript T
 > **Übung 4 · Prüfungsniveau**
 > Aufgabe aus dem Skript zum Eisbergmodell: Finde je zwei Beispiele für Werte und für kulturelle Prägungen, die deine eigene Kommunikation beeinflussen. Beschreibe jeweils, woran man das „über Wasser“ sehen kann.
 > Quelle: Skript Teil 1, Aufgabe zum Eisbergmodell (sinngemäß)
+
+> [!TIP]
+> **Übung 5 · mittel**
+> Eine Kommilitonin sagt: „Ich verstehe in Mathe gar nichts mehr, und alle anderen scheinen es locker zu können.“ Formuliere eine Antwort, die paraphrasiert, ein Gefühl spiegelt und nachfragt. Formuliere außerdem eine typische schlechte Antwort und sag, warum sie nicht hilft.
+> Quelle: eigene Aufgabe nach der Übung „Effektive Kommunikation“, Fotoprotokoll 08.10.
 
 ## Lösungen
 
@@ -162,3 +203,12 @@ c) Kind-Ich (trotzig, beklagend).
 | Wert: Ehrlichkeit vor Harmonie. | Ich gebe in der Gruppe direkt Kritik, auch wenn es unangenehm wird. |
 | Kultur: Ich bin mit direkter Sprache aufgewachsen (Low Context, Kapitel 3). | Ich sage „Das funktioniert nicht“ statt „Vielleicht könnte man überlegen …“. |
 | Kultur: In meinem Ausbildungsbetrieb duzen sich alle. | Ich spreche Dozentinnen manchmal zu locker an und merke das erst an der Reaktion. |
+
+### Übung 5
+
+*Beispiellösung.*
+
+1. **Paraphrasieren:** „Du kommst in Mathe gerade nicht mehr mit …“
+2. **Gefühl spiegeln:** „… und fühlst dich damit ziemlich allein, weil es bei den anderen so leicht aussieht.“
+3. **Nachfragen:** „Ab welchem Thema ist es schwierig geworden?“ Danach still bleiben und die Antwort abwarten.
+4. **Schlechte Antwort:** „Ach, das ist doch gar nicht so schwer.“ Sie wischt das Gefühl weg, die Kommilitonin fühlt sich nicht verstanden und erzählt nicht weiter.

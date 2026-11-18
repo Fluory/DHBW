@@ -1,9 +1,9 @@
 ---
 title: "Quellen: Vertrags- und Schuldrecht"
-summary: "Woraus dieses Fach zusammengestellt ist: Skript, offizielle Lösungen aus Moodle, eigene Vorlesungsnotizen und das BGB. Mit Liste der veralteten oder ungenauen Stellen im Skript."
+summary: "Woraus dieses Fach zusammengestellt ist: zwei Skripte, offizielle Lösungen aus Moodle, eigene Vorlesungsnotizen und das BGB. Mit Liste der veralteten oder ungenauen Stellen im Skript."
 ---
 
-Stand: 06.11.2026. Die Vorlesung läuft noch. Stoff ab Skriptseite 38 (Kapitel 8 und 9) war bis zu diesem Datum nicht behandelt.
+Stand: 18.11.2026. Die Vorlesung läuft noch (letzter Termin 23.11.2026). Stoff ab Skriptseite 38 (Kapitel 8 und 9) und das Kaufrecht-Skript sind nach den Notizen vermutlich ab dem 12.11.2026 dran.
 
 ## Verwendete Quellen
 
@@ -12,7 +12,10 @@ Stand: 06.11.2026. Die Vorlesung läuft noch. Stoff ab Skriptseite 38 (Kapitel 8
 | Skript „Bürgerliches Recht I – BGB Allgemeiner Teil, Schuldrecht Allgemeiner Teil“ (51 S., Moodle-Kurs 18614) | Vorlesungsskript der Dozentin | gesehen 09.10.2026 | alle Kapitel; Seitenangaben „S.“ beziehen sich auf die PDF-Seiten |
 | „Lösungen Zugang WE, Anfechtung“ (Moodle) | offizielle Lösungen zu Skript S. 11, 14–15, 18 | gesehen 27.10.2026 | Kapitel 3 und 4 |
 | „Lösungen Minderjährigenrecht“ (Moodle) | offizielle Lösungen zu Skript S. 22, Fälle 1–4 | gesehen 06.11.2026 | Kapitel 4 |
-| Eigene Vorlesungsnotizen, Termine 1–3 (13.10., 15.10., 26.10.2026) | Mitschrift | bis 06.11.2026 | Zuordnung Stoff zu Terminen (dort selbst als „vermutet“ markiert) |
+| „Lösung Stellvertretung“ (Moodle) | offizielle Lösungen zu Skript S. 25–26, Fälle 1–7 | gesehen 17.11.2026 | Kapitel 5 |
+| Skript „Schuldrecht Besonderer Teil – Kaufrecht“ (15 S., Moodle-Kurs 18614) | Vorlesungsskript der Dozentin, mit 13 Fällen | gesehen 17.11.2026 | Kapitel 8 (Kaufrecht), Kapitel 9 (Verbraucherverträge), Kapitel 7 (E-Book-Fall); Seitenangaben „Kaufrecht-Skript S.“ |
+| „Auflagen für den Gesetzestext in der Klausur“ (Moodle, 1 S.) | Hinweise der Dozentin | gesehen 10.11.2026 | Zu diesem Fach, Probeklausur |
+| Eigene Vorlesungsnotizen, Termine 1–6 (13.10. bis 18.11.2026) | Mitschrift und Vorbereitung | bis 18.11.2026 | Zuordnung Stoff zu Terminen (dort selbst als „vermutet“ markiert) |
 | Eigene Lernseite Recht (HTML, Stand 30.10.2026, Minderjährigen-Fälle am 06.11. aktualisiert) | Zusammenfassung des Skripts mit Übungen | 06.11.2026 | Aufbau, Prüfungsschemata, eigene Lösungsskizzen |
 | BGB in der aktuellen Fassung | Gesetz | Oktober 2026 | Ergänzungen, die über das Skript hinausgehen |
 
@@ -29,11 +32,14 @@ Offizielle Lösungen sind in den Kapiteln als **„offizielle Lösung (sinngemä
 | Vertrag 1–3 | 14–15 | ja (CD-Fall dort als „Fall 4“ nummeriert) | 3 |
 | Anfechtung 1–4 | 18 | ja | 4 |
 | Geschäftsfähigkeit 1–4 | 22 | ja, seit 06.11.2026 | 4 |
-| Stellvertretung 1–7 | 25–26 | nein | 5 |
+| Stellvertretung 1–7 | 25–26 | ja, seit 17.11.2026 | 5 |
 | Schuldverhältnis 1–2 | 37 | nein | 7 |
 | Leistungsstörungen 1–6, c.i.c. | 44–46 | nein | 8 |
+| Kaufrecht 1, 2 (mit Varianten), 4a/4b, 5–8 | Kaufrecht-Skript 12–14 | nein | 8 |
+| Kaufrecht 2.1 (E-Book) | Kaufrecht-Skript 12 | nein | 7 |
+| Kaufrecht 3, 9–11 (Rückgabe, AGB, Widerruf) | Kaufrecht-Skript 13, 15 | nein | 9 |
 
-Nach den offiziellen Minderjährigen-Lösungen vom 06.11.2026 wurden zwei frühere eigene Skizzen korrigiert: Fall 1 (Ergebnis „kein wirksamer Kaufvertrag“ statt „schwebend unwirksam“) und Fall 3 (erst Einwilligung verneinen, dann § 110). Auch bei Anfechtung Fall 4 war eine frühere Skizze falsch (Aufklärungspflicht besteht).
+Nach den offiziellen Minderjährigen-Lösungen vom 06.11.2026 wurden zwei frühere eigene Skizzen korrigiert: Fall 1 (Ergebnis „kein wirksamer Kaufvertrag“ statt „schwebend unwirksam“) und Fall 3 (erst Einwilligung verneinen, dann § 110). Auch bei Anfechtung Fall 4 war eine frühere Skizze falsch (Aufklärungspflicht besteht). Nach der offiziellen Stellvertretungs-Lösung vom 17.11.2026 wurden Fall 3 (Umfang der Vollmacht durch Auslegung, keine interne Haftung nach § 280 in 3b) und Fall 7 (Anspruch aus § 179 I auf Erfüllung) angepasst; Fälle 2, 4 und 6 kamen als Übungen dazu.
 
 ## Kapitel und Skriptseiten
 
@@ -46,8 +52,8 @@ Nach den offiziellen Minderjährigen-Lösungen vom 06.11.2026 wurden zwei frühe
 | 5 Stellvertretung | BGB AT 7.0 | 23–27 | 15.10. und 26.10.2026 |
 | 6 Fristen und Verjährung | BGB AT 8.0, 9.0 | 28 | 26.10.2026 |
 | 7 Schuldverhältnis | Schuldrecht AT Einführung, 1.0, 2.0 | 29–37 | 26.10.2026 |
-| 8 Leistungsstörungen | Schuldrecht AT 3.0–3.5 | 38–46 | ab 09.11.2026 |
-| 9 Schadensersatz, Abtretung, AGB | Schuldrecht AT 3.6, 4.0, 5.0 | 47–49 | später |
+| 8 Leistungsstörungen und Kaufrecht | Schuldrecht AT 3.0–3.5; Kaufrecht-Skript 1.0–1.4 | 38–46; KR 1–9 | 12.11., 18.11. und 23.11.2026 |
+| 9 Schadensersatz, Abtretung, AGB, Verbraucherverträge | Schuldrecht AT 3.6, 4.0, 5.0; Kaufrecht-Skript 1.5 | 47–49; KR 9–11 | 12.11. und 23.11.2026 |
 
 ## Wo das Skript veraltet oder ungenau ist
 
@@ -72,6 +78,7 @@ Nach den offiziellen Minderjährigen-Lösungen vom 06.11.2026 wurden zwei frühe
 - Wie viele Fälle hat die Klausur? Ist das Gesetz als Hilfsmittel erlaubt?
 - Gehören die §§ 327 ff. (digitale Produkte) zum Klausurstoff oder sind sie nur Überblick?
 - Wie ausführlich werden Fristen und Verjährung geprüft?
-- Welche Lösung bevorzugt die Dozentin bei den Streitpunkten (Stellvertretung Fall 4, Schuldverhältnis Fall 1)?
+- Welche Lösung bevorzugt die Dozentin beim Streitpunkt Schuldverhältnis Fall 1 (Zahlung an die Ehefrau)? (Stellvertretung Fall 4 ist seit der offiziellen Lösung geklärt: Geschäft für den, den es angeht.)
+- Kaufrecht: Wie ausführlich kommen die digitalen Elemente (§§ 475a–475c) und § 312k dran? Erwartet die Dozentin bei Fall 10 (Fitnessstudio) § 309 Nr. 7, obwohl das Skript nur § 309 Nr. 8 b nennt?
 
 Diese Seiten ersetzen weder das Skript noch die Vorlesung. Bei Abweichungen gilt die Vorlesung.

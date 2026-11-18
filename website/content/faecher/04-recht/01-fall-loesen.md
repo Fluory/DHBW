@@ -47,7 +47,7 @@ Reihenfolge laut Skript (S. 50): erst vertragliche, dann gesetzliche Anspruchsgr
 
 | Reihenfolge | Wichtige Anspruchsgrundlagen |
 |---|---|
-| 1. Vertrag, Erfüllung | § 433 I 1 und II (Kauf), § 535 (Miete), § 631 I (Werkvertrag), § 488 I 2 (Darlehen) |
+| 1. Vertrag, Erfüllung | § 433 I 1 und II (Kauf), § 535 (Miete), § 631 I (Werkvertrag), § 488 I 2 (Darlehen); bei Mängeln §§ 437 Nr. 1, 439 I (Nacherfüllung), §§ 437 Nr. 2, 323 I, 346 I (Rücktritt) |
 | 2. Vertrag, Schadensersatz | §§ 280 ff., §§ 437 Nr. 3, 280 ff. |
 | 3. vertragsähnlich | §§ 280 I, 311 II, 241 II (c.i.c.), § 122, § 179 |
 | 4. Eigentum und Besitz | § 985, § 861, § 1004 |
@@ -201,6 +201,11 @@ Ein Vorschlag für 60 Minuten (eigene Ergänzung, nicht aus dem Skript):
 > Löse den Kleid-Fall vollständig im Gutachtenstil, ohne oben nachzusehen: Schaufenster, Preisschild 500 €, Glück will 1.500 €. Muss er das Kleid für 500 € hergeben?
 > Quelle: Skript S. 51, Musterlösung im Anhang
 
+> [!TIP]
+> **Übung 6 · mittel**
+> K hat bei Händler V einen Fernseher gekauft, der Bildstörungen hat. Formuliere die Obersätze: a) K will, dass V das Gerät kostenlos repariert. b) K will vom Kauf zurücktreten und sein Geld zurück.
+> Quelle: eigene Aufgabe (Kaufrecht, Kapitel 8)
+
 ## Lösungen
 
 ### Übung 1
@@ -246,3 +251,12 @@ Frage dich bei jedem Punkt: Ist der Anspruch nie entstanden, ist er weggefallen,
 4. **Angebot der Frau Müller?** Ja. Sie erklärt, das Kleid für 500 € kaufen zu wollen.
 5. **Annahme durch Glück?** Nein. Er nennt 1.500 €. Das ist nach § 150 II BGB eine Ablehnung, verbunden mit einem neuen Angebot. Das Angebot von Frau Müller erlischt (§ 146 BGB).
 6. **Ergebnis:** Also ist kein Kaufvertrag über 500 € zustande gekommen. Frau Müller hat keinen Anspruch. Glück muss das Kleid nicht für 500 € hergeben.
+
+### Übung 6
+
+Bei Mängelrechten ist § 437 die Schaltzentrale. Er wird immer mitzitiert, zusammen mit der Norm, in der die Details stehen.
+
+a) „K könnte gegen V einen Anspruch auf Nacherfüllung in Form der Nachbesserung aus §§ 437 Nr. 1, 439 I BGB haben.“
+b) „K könnte gegen V einen Anspruch auf Rückzahlung des Kaufpreises aus §§ 437 Nr. 2, 323 I, 346 I BGB haben.“
+
+Typischer Fehler: nur „aus § 439“ oder nur „aus § 346“ zitieren. Ohne § 437 fehlt die Verbindung zum Kaufvertrag.

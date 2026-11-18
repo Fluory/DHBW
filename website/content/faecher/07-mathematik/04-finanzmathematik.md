@@ -167,6 +167,10 @@ Die Formel gibt genau das, was wir in der Tabelle Jahr für Jahr ausgerechnet ha
 4. Teilen: 500 : 0,628895 ≈ 795,05 €.
 5. Probe: 795,05 · 0,628895/0,05 ≈ 10 000 €.
 
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Rate aus dem Sparziel: r = Eₙ · i/((1 + i)ⁿ − 1). Das ist die Endwertformel nach r umgestellt. Probe immer mit der Endwertformel.
+
 > [!WARNING]
 > **Typischer Fehler**
 > Einfach Ziel durch Anzahl Jahre rechnen: 10 000/10 = 1000 €. Das vergisst die Zinsen. Weil die Zinsen mithelfen, reicht eine kleinere Rate.
@@ -263,6 +267,12 @@ Die Summe wächst immer langsamer und kommt der 2000 immer näher. Das passt zur
 > r = 200 € jährlich am Jahresende, i = 10 %, n = 4. a) Schreibe den Endwert als Summe der vier verzinsten Einzahlungen und rechne aus. b) Schreibe die Summe mit Σ, ziehe r heraus und nenne q. c) Prüfe mit der Formel Eₙ = r · ((1 + i)ⁿ − 1)/i.
 >
 > Quelle: eigene Aufgabe, wie Tafel 04.11.
+
+> [!TIP]
+> **Übung 6 · mittel**
+> Abzinsen einer einzelnen Zahlung: Wie viel musst du heute bei 4 % Zinsen anlegen, damit in 5 Jahren genau 10 000 € auf dem Konto sind? Verwende 1,04⁵ ≈ 1,216653. Mach die Probe mit dem Zinseszins.
+>
+> Quelle: eigene Aufgabe, wie Folie „Sparplan und Rentenrechnung“ (Abzinsen)
 
 ## Lösungen
 
@@ -367,3 +377,14 @@ c)
 2. Minus 1: 0,4641.
 3. Geteilt durch i: 0,4641 : 0,1 = 4,641.
 4. Mal r: 200 · 4,641 = 928,20 €. Stimmt mit a) überein.
+
+### Übung 6
+
+Gesucht ist der heutige Wert (Barwert) K₀ einer Zahlung, die erst in 5 Jahren kommt.
+
+1. Zinseszins vorwärts: K₅ = K₀ · 1,04⁵.
+2. Rückwärts (abzinsen): durch den Faktor teilen, K₀ = K₅/1,04⁵.
+3. Einsetzen: K₀ = 10 000/1,216653 ≈ **8219,27 €**.
+4. Probe vorwärts: 8219,27 · 1,216653 ≈ 10 000,00 €. ✓
+
+Bild: Abzinsen ist der Schneeball rückwärts. Jedes Jahr wird durch 1,04 geteilt statt mit 1,04 malgenommen. Genau so wird bei der ewigen Rente jede einzelne künftige Zahlung auf heute zurückgerechnet.

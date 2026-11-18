@@ -455,6 +455,13 @@ Die Fixkosten bleiben in jeder Zeile gleich. Die variablen Kosten wachsen mit je
 >
 > 3.400 Stück kosten 273.000 €, im Mai kosten 3.600 Stück 282.000 €. Der Preis ist 77 € je Stück. Die 3.600 Stück im Mai sind 80 % der Kapazität. 1) Wo liegt die Nutzenschwelle in Stück und als Umsatz? 2) Wie hoch ist das Ergebnis bei 72 % und bei 100 % Auslastung? 3) Wie viel muss man verkaufen, um 11.200 € Gewinn zu machen?
 
+> [!TIP]
+> **Übung 7 · Prüfungsniveau**
+>
+> *Quelle: eigene Aufgabe nach der Bilanzgliederung (Skript S. 71)*
+>
+> Eine Bäckerei-GmbH hat am 31.12. diese Posten: Gebäude 300.000 €, Backöfen und Maschinen 120.000 €, Rohstoffvorräte 40.000 €, Forderungen an Kunden 25.000 €, Bankguthaben 15.000 €, Bankdarlehen 250.000 €, Verbindlichkeiten bei Lieferanten 50.000 €, Rückstellungen 20.000 €. Das Eigenkapital ist nicht angegeben. a) Ordne jeden Posten in die Bilanz ein. b) Berechne Anlagevermögen, Umlaufvermögen, Bilanzsumme, Fremdkapital und Eigenkapital.
+
 ## Lösungen
 
 ### Übung 1
@@ -512,3 +519,20 @@ Offizielle Lösung.
 4. 3) Menge = (120.000 + 11.200) / 32 = 4.100 Stück. Umsatz = 4.100 · 77 = 315.700 €.
 
 Achtung: 3.600 Stück sind 80 %, nicht 100 %.
+
+### Übung 7
+
+a)
+- Aktiva, A. Anlagevermögen (Sachanlagen): Gebäude, Backöfen und Maschinen.
+- Aktiva, B. Umlaufvermögen: Rohstoffvorräte (Vorräte), Forderungen, Bankguthaben (flüssige Mittel).
+- Passiva, Fremdkapital: Rückstellungen, Bankdarlehen und Verbindlichkeiten bei Lieferanten (Verbindlichkeiten).
+- Passiva, A. Eigenkapital: fehlt, wird ausgerechnet.
+
+b)
+1. Anlagevermögen = 300.000 + 120.000 = 420.000 €.
+2. Umlaufvermögen = 40.000 + 25.000 + 15.000 = 80.000 €.
+3. Bilanzsumme = 420.000 + 80.000 = 500.000 €. Das ist auch die Summe der Passiva.
+4. Fremdkapital = 250.000 + 50.000 + 20.000 = 320.000 €. Rückstellungen zählen zum Fremdkapital.
+5. Eigenkapital = 500.000 − 320.000 = 180.000 €.
+
+Falle: Bankguthaben ist Vermögen (links), das Bankdarlehen ist Schuld (rechts).

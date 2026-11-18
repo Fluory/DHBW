@@ -47,6 +47,7 @@ BI: vor allem Stufe 1–2, Data Science: 3–4 (vereinfacht).
 - **Data Science:** interdisziplinär (Informatik, Statistik, Fachwissen), gewinnt mit wissenschaftlichem Vorgehen Informationen aus großen Datenbeständen für Entscheidungen.
 - KI ⊃ Machine Learning ⊃ Deep Learning ⊃ Generative KI.
 - **Expertensystem:** feste Regeln von Menschen. **ML:** lernt Regeln aus Daten.
+- Klassische MUS: Berichtssysteme → DSS („Was wäre, wenn?“) → Expertensysteme → EIS (Top-Management) → BI → Big Data → Data Science.
 - ML ist ein Werkzeug der Data Science, nicht umgekehrt.
 
 **CRISP-DM** (mit Rücksprüngen, kein Wasserfall):

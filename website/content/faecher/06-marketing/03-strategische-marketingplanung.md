@@ -38,12 +38,13 @@ Bekanntheit misst man so:
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
-> Ökonomisch = in Geld oder Stück messbar. Psychografisch = im Kopf des Kunden.
+> - Ökonomisch = in Geld oder Stück messbar (Absatz, Umsatz, Marktanteil, Gewinn). Psychografisch = im Kopf des Kunden (Bekanntheit, Image, Kaufabsicht, Kundenzufriedenheit).
+> - Bekanntheit: Recall = ungestützt, Recognition = gestützt, Top-of-Mind = die zuerst genannte Marke.
 
 > [!WARNING]
 > **Achtung**
 >
-> Gestützt heißt: mit Hilfe (Recognition). Ungestützt heißt: ohne Hilfe (Recall). Nicht vertauschen.
+> Gestützt heißt: mit Hilfe (Recognition). Ungestützt heißt: ohne Hilfe (Recall). Nicht vertauschen. Eselsbrücke: Re**call** = du musst die Marke selbst „aufrufen“, Re**cognition** = du „erkennst“ sie nur wieder.
 
 ## Ansoff-Matrix: Wachstumsstrategien
 
@@ -63,6 +64,13 @@ Die Matrix stellt also zwei Fragen: Altes oder neues Produkt? Alter oder neuer M
 | **Produkt bisher** | Marktdurchdringung: mehr vom Alten an die alten Kunden, z. B. Preisaktionen, mehr Werbung | Marktentwicklung: Altes in neue Märkte, z. B. neues Land, neue Käufergruppe, Onlineshop |
 | **Produkt neu** | Produktentwicklung: Neues für die alten Kunden, z. B. Innovation, Weiterentwicklung | Diversifikation: Neues in neue Märkte |
 
+Was heißt das in den vier Feldern genauer (Skript S. 25)?
+
+- **Marktdurchdringung:** mehr vom Bisherigen an die bisherigen Kunden, zum Beispiel größere Packungen, Preissenkungen für bisherige Nichtkäufer, neue Werbung, um Kunden der Konkurrenz abzuwerben.
+- **Marktentwicklung:** das bisherige Produkt für neue Märkte, zum Beispiel neue Regionen oder Länder oder eine neue Käufergruppe (die Profi-Bohrmaschine jetzt auch für Heimwerker).
+- **Produktentwicklung:** neue Produkte für die bisherigen Kunden. Drei Formen: echte Innovation (etwas völlig Neues), Quasi-Innovation (Weiterentwicklung, etwa ein neues Modell) und Me-too-Produkt (Nachahmung eines Konkurrenzprodukts).
+- **Diversifikation:** neue Produkte für neue Märkte. Das ist am riskantesten, weil Produkt **und** Kunden neu sind.
+
 Diversifikation gibt es in drei Arten:
 
 | Art | Bedeutung | Beispiel aus dem Skript |
@@ -79,12 +87,14 @@ Diversifikation gibt es in drei Arten:
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
-> Vier Felder: Marktdurchdringung, Marktentwicklung, Produktentwicklung, Diversifikation.
+> - Altes Produkt + alter Markt = Marktdurchdringung · altes Produkt + neuer Markt = Marktentwicklung · neues Produkt + alter Markt = Produktentwicklung · neues Produkt + neuer Markt = Diversifikation.
+> - Diversifikation: horizontal (verwandtes Produkt, gleiche Stufe), vertikal (vor- oder nachgelagerte Stufe), lateral (kein Zusammenhang).
 
 > [!WARNING]
 > **Achtung**
 >
-> Bisherige Produkte in neuen Märkten, zum Beispiel per Onlineshop, sind Marktentwicklung, nicht Produktentwicklung.
+> - Bisherige Produkte in neuen Märkten, zum Beispiel per Onlineshop, sind Marktentwicklung, nicht Produktentwicklung.
+> - Prüfe immer beide Fragen getrennt: erst „Produkt neu?“, dann „Markt neu?“. Wer nur auf das Produkt schaut, verwechselt Produktentwicklung und Diversifikation.
 
 ## Marktsegmentierung und Zielgruppen
 
@@ -117,7 +127,9 @@ Das Skript nennt Zielgruppen-Kürzel wie DINKs (Doppelverdiener ohne Kinder) und
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
-> Segmentierung heißt: großer gemischter Markt → kleine gleichartige Teilmärkte.
+> - Segmentierung heißt: großer gemischter Markt → kleine gleichartige Teilmärkte, die gezielt bearbeitet werden.
+> - Kriterien: soziodemografisch, psychografisch, verhaltensbezogen.
+> - Strategien: Massenmarkt (ein Produkt für alle), Segmentkonzentration (ein Segment), selektive Spezialisierung (mehrere ausgewählte), Marktabdeckung (alle).
 
 > [!WARNING]
 > **Achtung**
@@ -149,7 +161,9 @@ Anforderungen nach Kotler:
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
-> Positionierung = ein klarer USP, der sich im Kopf des Kunden von der Konkurrenz abhebt.
+> - Positionierung = ein klarer USP, der sich im Kopf des Kunden von der Konkurrenz abhebt.
+> - Anforderungen nach Kotler: vor der Produktentwicklung festlegen · nur eine Eigenschaft herausstellen · nicht leicht kopierbar · langfristig angelegt.
+> - Eine Positionierungslücke im Eigenschaftsraum lohnt sich nur, wenn es dafür genug Nachfrage gibt.
 
 > [!WARNING]
 > **Achtung**
@@ -192,6 +206,20 @@ Anforderungen nach Kotler:
 > *Quelle: Musterklausur Marketing 2025, A5a (3 Punkte)*
 >
 > Nenne drei Anforderungen nach Kotler für eine erfolgreiche Positionierung.
+
+> [!TIP]
+> **Übung 6 · mittel**
+>
+> *Quelle: Skript Marketing, Übung 14a und 14b (S. 33)*
+>
+> a) Warum legt man Imageziele langfristiger fest (etwa fünf Jahre) als Umsatzziele (etwa ein Jahr)? b) Ein Hersteller von Babynahrung will in ausländische Supermärkte und gleichzeitig die Marketingkosten senken. Wie hängen die beiden Ziele zusammen, und was muss er entscheiden?
+
+> [!TIP]
+> **Übung 7 · Prüfungsniveau**
+>
+> *Quelle: eigene Aufgabe (Skript S. 25, Musterklausur 2025, A5b)*
+>
+> Ein Gartenmöbelhersteller verkauft bisher Holztische über Gartencenter in Deutschland. Welche Wachstumsstrategie liegt jeweils vor? a) eigener Onlineshop für Kunden in ganz Europa, b) Sitzkissen und Sonnenschirme passend zu den Tischen, c) ein Sägewerk, das auch Holz an Schreinereien verkauft, d) „3 Stühle kaufen, 4 bekommen“ im Gartencenter, e) ein Klapptisch, der genau so aussieht wie der Bestseller der Konkurrenz.
 
 ## Lösungen
 
@@ -237,3 +265,21 @@ Eigene Lösungsskizze:
 2. Sie stellt nur eine Produkteigenschaft heraus.
 3. Sie ist nicht leicht kopierbar.
 4. Falls eine vierte gefragt ist: Sie ist langfristig angelegt.
+
+### Übung 6
+
+Eigene Lösungsskizze (das Skript stellt nur die Frage):
+
+1. a) Ein Image entsteht im Kopf der Kunden. Das braucht viele Kontakte mit der Marke und lässt sich nicht in wenigen Monaten ändern. Umsatz dagegen kann man mit Preisaktionen oder Werbung schnell beeinflussen und jedes Jahr messen.
+2. b) Die Ziele stehen im Konflikt: Für neue Supermärkte im Ausland braucht man mehr Werbung, Listungsgebühren und Vertrieb, also mehr Marketingkosten.
+3. b) Entscheidung: Das Unternehmen muss Prioritäten setzen, also ein Ziel vorziehen (zum Beispiel erst Auslandsmärkte, Kostensenkung später) oder beide Ziele abschwächen.
+
+### Übung 7
+
+Eigene Lösungsskizze. Für jede Idee fragst du: Produkt neu? Markt neu?
+
+- a) altes Produkt, neue Länder → Marktentwicklung
+- b) neues, verwandtes Produkt für dieselben Kunden → Produktentwicklung (wer es als neuen Markt sieht, kann horizontale Diversifikation begründen)
+- c) vorgelagerte Stufe (Rohstoff Holz), neue Kunden → vertikale Diversifikation
+- d) altes Produkt, alter Markt, Preisaktion → Marktdurchdringung
+- e) Nachahmung eines Konkurrenzprodukts → Produktentwicklung als Me-too-Produkt

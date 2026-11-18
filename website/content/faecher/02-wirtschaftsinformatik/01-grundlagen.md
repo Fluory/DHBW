@@ -62,13 +62,21 @@ Ob Daten für jemanden eine Information sind, hängt von seinem Wissen und Zweck
 **Stell dir vor:** Ein Fußballverein ist ein System: Spieler, Trainer, Platz und Regeln hängen zusammen. Willst du nur das Spiel verstehen, gehören die elf Spieler dazu. Willst du die Finanzen verstehen, gehören auch Sponsoren und Fans dazu. Die Grenze ziehst du je nach Frage.
 
 - Ein **System** ist eine Menge verknüpfter Elemente, die sich von ihrer Umwelt abgrenzt. Offene Systeme tauschen Input und Output mit der Umwelt aus: Der Leuchtenhändler bekommt Bestellungen und Ware und gibt Lieferungen und Rechnungen ab. **Wo die Systemgrenze liegt, hängt vom Zweck der Betrachtung ab.**
+- **Offen** heißt: Das System nimmt etwas von außen auf (Input) und gibt etwas nach außen ab (Output). Ein Unternehmen ist immer ein offenes System.
+- Von einer **Black Box** („schwarzer Kasten“) spricht man, wenn dich nur Input und Output interessieren, nicht das Innere. Für die Kundin ist der Shop eine Black Box: Bestellung rein, Paket raus.
 - Ein **Modell** ist eine vereinfachte Abbildung eines Systems für einen bestimmten Zweck. Unwichtiges wird bewusst weggelassen. **Beispiel:** Auf dem U-Bahn-Plan stimmen die Entfernungen nicht, aber zum Umsteigen ist er perfekt.
+
+**Mit Beispiel: System oder Umwelt?** Kunde, Lager, Paketdienst, Warenwirtschaft und Lieferant beim Leuchtenhändler.
+
+1. Frage: Gehört es zum Unternehmen, und wird es von ihm gesteuert? Lager und Warenwirtschaft: ja, also **System**.
+2. Kunde, Paketdienst und Lieferant sind eigene Firmen oder Personen. Sie tauschen nur Input und Output mit dem Händler, also **Umwelt**.
+3. Gegenprobe mit dem Zweck: Untersuchst du die ganze Lieferkette, ziehst du die Grenze weiter. Dann gehören Lieferant und Paketdienst mit zum System.
 
 Die Qualität eines Modells ist seine Eignung für den Zweck. In der Wirtschaftsinformatik sind Modelle zentral: In Kapitel 3 kommt das Prozessmodell (EPK), in Kapitel 4 das Datenmodell (ER).
 
 > [!IMPORTANT]
 > **Das Wichtigste**
-> Systemgrenze = abhängig vom Zweck. Modell = zweckorientierte Vereinfachung.
+> System = verknüpfte Elemente mit Grenze zur Umwelt; die Systemgrenze hängt vom Zweck ab. Offenes System = tauscht Input und Output mit der Umwelt. Modell = zweckorientierte Vereinfachung, gut ist es, wenn es zum Zweck passt.
 
 > [!WARNING]
 > **Achtung**
@@ -85,6 +93,10 @@ Die Qualität eines Modells ist seine Eignung für den Zweck. In der Wirtschafts
 - Ein **Informationssystem (IS)** besteht aus menschlichen **und** maschinellen Elementen. Es versorgt seine Nutzer mit den richtigen Informationen zur richtigen Zeit.
 - Ein **Anwendungssystem (AS)** ist nur der technische Teil: Anwendungssoftware, Basissoftware und Hardware.
 
+Die drei Schichten des AS am Leuchtenhändler: **Anwendungssoftware** ist das Programm für die Fachaufgabe (Warenwirtschaft, Shop). **Basissoftware** ist das, worauf es läuft (Betriebssystem, Datenbanksystem). **Hardware** sind Server, PCs und Scanner im Lager.
+
+**Aufgabe betrieblicher IS:** Sie unterstützen die betrieblichen Aufgaben, indem sie die Menschen mit den **richtigen Informationen zur richtigen Zeit** versorgen. Beispiel: Die Lageristin sieht beim Kommissionieren sofort, welcher Lagerplatz zu Leuchte 4711 gehört. Diese Frage steht als Multiple-Choice-Beispiel in den offiziellen Klausurhinweisen.
+
 ```text
 ┌──────────── Informationssystem (Mensch + Maschine) ────────────┐
 │  Mensch als Nutzer                                             │
@@ -100,7 +112,7 @@ Die Qualität eines Modells ist seine Eignung für den Zweck. In der Wirtschafts
 
 > [!IMPORTANT]
 > **Das Wichtigste**
-> Anwendungssystem = Technik. Informationssystem = Technik + Mensch.
+> Anwendungssystem = Technik (Anwendungssoftware, Basissoftware, Hardware). Informationssystem = Technik + Mensch. Aufgabe eines IS: Menschen mit den richtigen Informationen zur richtigen Zeit versorgen.
 
 > [!WARNING]
 > **Achtung**
@@ -181,6 +193,16 @@ Das **Langfristziel** nach Mertens ist die „sinnhafte Vollautomation“: Was e
 > Der Leuchtenhändler führt ein neues Warenwirtschaftssystem ein. Die Software arbeitet technisch fehlerfrei, trotzdem gehen Bestellungen verspätet raus. Nenne zu jeder sozio-technischen Komponente eine mögliche Ursache. Liegt das Problem an der Software?
 > *Quelle: Folie T1B1 F. 28, sinngemäß*
 
+> [!TIP]
+> **Übung 7 · mittel**
+> Ordne beim Leuchtenhändler zu: Gehört es zum System oder zur Umwelt? Kunde, Lager, Paketdienst, Warenwirtschaft, Lieferant. Wann würde sich die Grenze verschieben?
+> *Quelle: Aufgabe „System oder Umwelt?“ aus T1B1, sinngemäß*
+
+> [!TIP]
+> **Übung 8 · Prüfungsniveau**
+> Multiple Choice wie in der Klausur (alle richtigen ankreuzen, je Option ±½ Punkt): Was ist die Aufgabe betrieblicher Informationssysteme? A Nutzer mit den richtigen Informationen zur richtigen Zeit versorgen · B betriebliche Aufgaben unterstützen · C Computerhardware herstellen · D die Hierarchiestufen eines Unternehmens darstellen
+> *Quelle: offizielle Beispielfrage aus den Klausurhinweisen, Optionen eigene (keine offizielle Lösung)*
+
 ## Lösungen
 
 ### Übung 1
@@ -218,3 +240,15 @@ Kernaussage: Information ist zweck- und personenabhängig.
 - **Organisation:** Abläufe nicht angepasst, Rollen und Rechte falsch verteilt.
 
 **Nein**, die Software war fehlerfrei. Das Problem liegt im Zusammenspiel der Komponenten.
+
+### Übung 7
+
+1. **System:** Lager und Warenwirtschaft. Sie gehören zum Unternehmen und werden von ihm gesteuert.
+2. **Umwelt:** Kunde, Paketdienst und Lieferant. Mit ihnen tauscht der Händler nur Input (Bestellungen, Ware) und Output (Lieferungen, Rechnungen).
+3. **Grenze verschiebt sich:** Untersucht man die ganze Lieferkette, gehören Lieferant und Paketdienst mit zum System. Die Grenze hängt vom Zweck ab.
+
+### Übung 8
+
+**A und B ankreuzen, C und D nicht.** Ein betriebliches IS unterstützt die Aufgaben im Unternehmen, indem es die Menschen mit den passenden Informationen versorgt. Hardware herstellen gehört nicht einmal zur Wirtschaftsinformatik. Hierarchiestufen zeigt das Organigramm (Aufbauorganisation, Kapitel 5).
+
+Punkte: Alle vier Entscheidungen richtig ergibt 4 × ½ = 2 Punkte. Kreuzt du zum Beispiel nur A an, ist B falsch nicht angekreuzt: 3 × ½ − 1 × ½ = 1 Punkt.

@@ -63,7 +63,9 @@ Ein Konflikt liegt vor, wenn eine Partei ihr Denken, Fühlen oder Handeln als un
 4. **Handlungsorientierung:** nächste Schritte, Commitment
 5. **Abschluss:** Zufriedenheit und Stimmung prüfen
 
-**Werkzeuge:** Ich-Botschaft (Beobachtung → Wirkung → Gefühl → Wunsch), aktives Zuhören, Harvard-Prinzipien: hart in der Sache, freundlich zum Menschen; Interessen statt Positionen; mehrere Lösungen; objektive Kriterien.
+**Werkzeuge:** Ich-Botschaft (Beobachtung → Wirkung → Gefühl → Wunsch), aktives Zuhören, Harvard-Prinzipien: hart in der Sache, freundlich zum Menschen; Interessen statt Positionen; mehrere Lösungen; objektive Kriterien. Position = Forderung, Interesse = Grund dahinter.
+
+**Konflikttypen (Satir):** Ankläger · Beschwichtiger · Rationalisierer · Ablenker; jeder Typ hat auch eine Chance.
 
 ## Typische Fehler
 

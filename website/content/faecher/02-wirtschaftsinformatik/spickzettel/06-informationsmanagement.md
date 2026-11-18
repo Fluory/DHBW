@@ -54,6 +54,8 @@ PM-Phasen: Initialisieren → Definieren → Planen → Steuern → Abschließen
 
 **Scrum:** Product Backlog → Sprint Planning → Sprint (max. 1 Monat, Daily Scrum 15 min) → Inkrement → Review, Retrospektive. Rollen: **Product Owner** (priorisiert Backlog), **Scrum Master** (räumt Hindernisse weg), **Developers** (organisieren sich selbst).
 
+**Agiles Manifest:** Individuen > Prozesse · funktionierende Software > Dokumentation · Kundenzusammenarbeit > Vertrag · Reagieren auf Veränderung > Plan.
+
 **Stacey-Matrix:** einfach/kompliziert → klassisch; komplex → agil; chaotisch → ausprobieren; gemischt → **hybrid**.
 
 ## Betreiben

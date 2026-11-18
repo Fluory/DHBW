@@ -194,6 +194,27 @@ F ──┘       ├─[&]── Y
 S ──────────┘
 ```
 
+So gehst du Schritt für Schritt vor:
+
+1. Die innerste Klammer zuerst: T ∨ F wird ein Kästchen mit ≥1, Eingänge T und F.
+2. Dann die äußere Operation: S ∧ (…) wird ein Kästchen mit &. Ein Eingang ist S, der andere der Ausgang des ≥1-Gatters.
+3. Jede Negation wird ein NOT-Gatter (Kästchen mit 1 und Kreis) oder ein Kreis direkt am Eingang.
+4. Ausgang beschriften: Y.
+
+**Standardweg ohne Vereinfachen (DNF direkt):** Für L = (¬A ∧ B) ∨ (A ∧ ¬B) aus Übung 1 brauchst du zwei NOT, zwei AND und ein OR:
+
+```text
+A ──┬──[1]o── ¬A ──┐
+    │               ├─[&]── ¬A∧B ──┐
+B ──┼───────────────┘              │
+    │                              ├─[≥1]── L
+A ──┴───────────────┐              │
+                    ├─[&]── A∧¬B ──┘
+B ─────[1]o── ¬B ───┘
+```
+
+Das ist immer richtig, aber lang. Wer das Muster erkennt, zeichnet stattdessen ein einziges XOR-Gatter (=1).
+
 ### Rückweg: Schaltung → Tabelle (Analyse)
 
 1. Für jedes Gatter eine Hilfsspalte anlegen.
@@ -251,11 +272,23 @@ S ──────────┘
 | 1 | 0 | 1 | 0 |
 | 1 | 1 | 0 | 1 |
 
-Die Summenspalte ist genau XOR, die Übertragsspalte genau AND. Ein **Halbaddierer** besteht also aus einem XOR- und einem AND-Gatter. Ein **Volladdierer** nimmt zusätzlich den Übertrag der vorigen Stelle auf und besteht aus zwei Halbaddierern und einem ODER. Mehrere Volladdierer hintereinander ergeben ein Addierwerk.
+Die Summenspalte ist genau XOR, die Übertragsspalte genau AND. Ein **Halbaddierer** besteht also aus einem XOR- und einem AND-Gatter.
+
+```text
+A ──┬───────┐
+    │       ├─[=1]── s (Summe)
+B ──┼──┬────┘
+    │  │
+    └──┼────┐
+       │    ├─[&]─── c (Übertrag)
+       └────┘
+```
+
+Ein **Volladdierer** nimmt zusätzlich den Übertrag c_ein der vorigen Stelle auf. Er besteht aus zwei Halbaddierern und einem ODER: Der erste addiert A und B, der zweite addiert dazu c_ein, und das ODER sammelt die beiden Überträge ein. Beispiel A = 1, B = 1, c_ein = 1: Das ist 1 + 1 + 1 = 3 = 11₂, also Summe 1 und Übertrag 1, genau die Regel aus Kapitel 4. Mehrere Volladdierer hintereinander, die den Übertrag weiterreichen, ergeben ein **Addierwerk**, zum Beispiel für 4 Bit.
 
 > [!IMPORTANT]
 > **Das Wichtigste**
-> Halbaddierer: Summe = XOR, Übertrag = AND.
+> Halbaddierer: Summe = XOR, Übertrag = AND. Volladdierer = zwei Halbaddierer + ein ODER, rechnet zusätzlich den eingehenden Übertrag mit. Mehrere Volladdierer hintereinander = Addierwerk.
 
 > [!WARNING]
 > **Achtung**
@@ -296,6 +329,23 @@ Die Summenspalte ist genau XOR, die Übertragsspalte genau AND. Ein **Halbaddier
 > **Übung 6 · Prüfungsniveau**
 > Y = 1 genau in den Zeilen ABC = 001, 011, 101, 111. Stelle die DNF auf und vereinfache.
 > *Quelle: Lernseite GIT, Training V7 (eigene Aufgabe)*
+
+> [!TIP]
+> **Übung 7 · mittel**
+> Analysieren Sie diese Schaltung: Stellen Sie die Wahrheitstabelle mit Hilfsspalten auf und geben Sie den Ausdruck an. Welches einzelne Gatter verhält sich genauso?
+>
+> ```text
+> A ──[1]o──┐
+>           ├─[≥1]── Y
+> B ──[1]o──┘
+> ```
+>
+> *Quelle: eigene Aufgabe (Analyse, nach VL05 F. 3)*
+
+> [!TIP]
+> **Übung 8 · Prüfungsniveau**
+> Ein Garagentor soll sich öffnen (Y = 1), wenn die Fernbedienung F gedrückt ist und kein Hindernis H erkannt wird, oder wenn der Notschalter N betätigt ist. Stellen Sie die Wahrheitstabelle auf, geben Sie einen Ausdruck an und skizzieren Sie die Schaltung mit Gattern nach IEC 60617-12.
+> *Quelle: eigene Aufgabe im Klausurstil (Synthese)*
 
 ## Lösungen
 
@@ -382,3 +432,45 @@ Mit Python über alle 8 Zeilen geprüft: DNF und vereinfachter Ausdruck sind gle
 3. 101 und 111 zusammenfassen: (A ∧ ¬B ∧ C) ∨ (A ∧ B ∧ C) = A ∧ C ∧ (¬B ∨ B) = A ∧ C (B fällt weg).
 4. (¬A ∧ C) ∨ (A ∧ C) = C (A fällt weg).
 5. Ergebnis: **Y = C**. In allen 1-Zeilen ist C = 1, A und B sind egal.
+
+### Übung 7
+
+1. Die Schaltung negiert beide Eingänge und verknüpft sie mit ODER: Y = ¬A ∨ ¬B.
+2. Wahrheitstabelle mit Hilfsspalten:
+
+| A | B | ¬A | ¬B | Y = ¬A ∨ ¬B |
+|---|---|---|---|---|
+| 0 | 0 | 1 | 1 | 1 |
+| 0 | 1 | 1 | 0 | 1 |
+| 1 | 0 | 0 | 1 | 1 |
+| 1 | 1 | 0 | 0 | 0 |
+
+3. Y ist nur bei A = B = 1 gleich 0. Das ist genau **NAND**. Nach De Morgan gilt ¬A ∨ ¬B = ¬(A ∧ B).
+
+### Übung 8
+
+1. Drei Eingänge, also 8 Zeilen. Y = 1, wenn (F = 1 und H = 0) oder N = 1.
+
+| F | H | N | Y |
+|---|---|---|---|
+| 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 1 |
+| 0 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 1 |
+| 1 | 0 | 0 | 1 |
+| 1 | 0 | 1 | 1 |
+| 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 |
+
+2. Ausdruck direkt aus dem Text: **Y = (F ∧ ¬H) ∨ N**. (Die DNF mit den fünf 1-Zeilen wäre auch richtig, nur länger.)
+3. Probe mit zwei Zeilen: F = 1, H = 1, N = 0 → (1 ∧ 0) ∨ 0 = 0 ✓ (Hindernis, Tor bleibt zu). F = 0, H = 1, N = 1 → 0 ∨ 1 = 1 ✓ (Notschalter).
+4. Schaltung:
+
+```text
+H ──[1]o──┐
+          ├─[&]──┐
+F ────────┘      ├─[≥1]── Y
+N ───────────────┘
+```
+
+Mit Python über alle 8 Zeilen geprüft: Tabelle und Ausdruck stimmen überein.

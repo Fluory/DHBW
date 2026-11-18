@@ -390,6 +390,12 @@ Geh die Fragen in dieser Reihenfolge durch. Bei der ersten passenden hörst du a
 >
 > Quelle: Folien 04.11., Aufgabe R-5 (Folie 55)
 
+> [!TIP]
+> **Übung 6 · Prüfungsniveau**
+> Konvergent oder divergent? Nenne jedes Mal das Kriterium aus „Welches Kriterium? Die Reihenfolge“. Berechne den Wert, wo es geht. a) Σₖ₌₁^∞ 3 · (⅖)ᵏ · b) Σₖ₌₁^∞ (k² + 1)/(2k²) · c) Σₖ₌₀^∞ 2ᵏ/k! · d) Σₖ₌₁^∞ 1/√k
+>
+> Quelle: eigene Aufgabe, Klausurstil
+
 ## Lösungen
 
 ### Übung 1
@@ -489,3 +495,32 @@ Probe:
 | 2 | ½ + 1/6 = ⅔ | 1 − ⅓ = ⅔ |
 | 3 | ⅔ + 1/12 = ¾ | 1 − ¼ = ¾ |
 | 4 | ¾ + 1/20 = ⅘ | 1 − ⅕ = ⅘ |
+
+### Übung 6
+
+a) Σₖ₌₁^∞ 3 · (⅖)ᵏ:
+
+1. Frage 1: Glieder → 0? Ja, (⅖)ᵏ wird winzig. Weiter.
+2. Frage 2: k steht im Exponenten der festen Zahl ⅖ → **geometrisch**, q = ⅖, |q| < 1 → konvergent.
+3. Startindex k = 1: erstes Glied 3 · ⅖ = 6/5.
+4. 1 − q = 1 − ⅖ = 3/5.
+5. Wert: (6/5)/(3/5) = 6/5 · 5/3 = **2**.
+
+b) Σₖ₌₁^∞ (k² + 1)/(2k²):
+
+1. Frage 1: Wohin gehen die Glieder? Gleicher Grad 2 oben und unten → Vorzahlen 1/2. Die Glieder gehen gegen **½, nicht gegen 0**.
+2. Also **divergent** nach dem Divergenzkriterium. Fertig, die anderen Fragen braucht man nicht.
+3. Probe: Jedes Glied ist größer als ½ (k = 1: 1; k = 10: 0,505), also kommt jedes Mal mehr als ½ dazu.
+
+c) Σₖ₌₀^∞ 2ᵏ/k!:
+
+1. k! und xᵏ kommen vor → **Quotientenkriterium**.
+2. aₖ₊₁/aₖ = 2ᵏ⁺¹/(k + 1)! · k!/2ᵏ = 2 · 1/(k + 1) = 2/(k + 1).
+3. Für k → ∞ geht 2/(k + 1) → 0. L = 0 < 1 → **konvergent**.
+4. Zur Info: Der Wert ist e² ≈ 7,389. Ausrechnen kann man ihn mit dem Quotientenkriterium nicht, es sagt nur „konvergent“.
+
+d) Σₖ₌₁^∞ 1/√k:
+
+1. Glieder → 0, aber das reicht nicht.
+2. √k = k^(1/2), also Form 1/kᵖ mit p = ½.
+3. p = ½ ist nicht > 1 → **divergent**. Die Partialsummen wachsen wie bei der harmonischen Reihe ohne Ende (s₁₀₀ ≈ 18,59).

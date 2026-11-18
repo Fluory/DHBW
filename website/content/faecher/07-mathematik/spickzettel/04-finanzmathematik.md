@@ -63,7 +63,7 @@ Bild: Geld anlegen, nur die Zinsen abheben, Kontostand bleibt gleich.
 - 100 € pro Jahr, 5 %: 100/0,05 = **2000 €**.
 - 1000 € pro Jahr, 4 %: 1000/0,04 = **25 000 €**. Probe: 4 % von 25 000 = 1000.
 
-**Abzinsen:** 100 € in einem Jahr sind heute 100/1,05 ≈ 95,24 €.
+**Abzinsen:** 100 € in einem Jahr sind heute 100/1,05 ≈ 95,24 €. Allgemein K₀ = Kₙ/(1 + i)ⁿ: 10 000 € in 5 Jahren bei 4 % sind heute 10 000/1,04⁵ ≈ 8219,27 €.
 
 Folie: Barwert = Σₖ₌₁^∞ r · (1/(1 + i))ᵏ → auf Deutsch: „Jede Zahlung in k Jahren k-mal durch 1 + i teilen, alles addieren.“
 

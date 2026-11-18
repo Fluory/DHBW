@@ -264,6 +264,16 @@ Ein Schreibzugriff läuft genauso, nur fließen die Daten im 3. Schritt von der 
 >
 > *Quelle: Lernseite GIT, Aufgabe 9.9 (eigene Aufgabe im Klausurstil)*
 
+> [!TIP]
+> **Übung 7 · Prüfungsniveau**
+> Skizzieren Sie die Harvard-Architektur und nennen Sie je einen Vor- und Nachteil gegenüber der Von-Neumann-Architektur. (3 Punkte)
+> *Quelle: eigene Aufgabe nach Punkteverteilung KV F. 9 („Skizzen, Eigenschaften, Pro und Con“)*
+
+> [!TIP]
+> **Übung 8 · mittel**
+> Der Befehlszähler steht auf 0x0100. Dort steht der Befehl ADD 0x0200 („addiere den Wert an Adresse 0x0200 zum Akkumulator“). Beschreiben Sie, was in jeder der fünf Phasen passiert und wo sich Befehlszähler, Befehlsregister und Akkumulator ändern. Im Akkumulator steht vorher 5, an Adresse 0x0200 steht 7; jeder Befehl belegt eine Adresse.
+> *Quelle: eigene Aufgabe nach VL03a (Von-Neumann-Zyklus, Register)*
+
 ## Lösungen
 
 ### Übung 1
@@ -307,3 +317,27 @@ Richtig sind **1 und 3**.
 
 - Option 2 ist falsch: Harvard ist in der Regel teurer.
 - Option 4 ist falsch: Der Engpass ist der gemeinsame Bus, nicht die ALU.
+
+### Übung 7
+
+Die Skizze aus dem Abschnitt „Die Harvard-Architektur“. Für volle Punkte prüfst du:
+
+1. **Zwei** getrennte Speicher, beschriftet: Befehlsspeicher (nur Programm) und Datenspeicher (nur Daten).
+2. **Zwei** getrennte Busse, beschriftet: Befehlsbus und Datenbus.
+3. CPU mit Steuerwerk und Rechenwerk, dazu das Ein-/Ausgabewerk.
+4. Pfeile in beide Richtungen beim Datenbus (lesen und schreiben).
+
+- **Vorteil:** Befehl und Daten können gleichzeitig geholt werden (Einzelzyklus). Es gibt keinen Von-Neumann-Flaschenhals, die Architektur ist schneller.
+- **Nachteil:** Zwei Speicher und zwei Busse sind aufwendiger, die Architektur ist in der Regel teurer.
+
+### Übung 8
+
+| Phase | Was passiert | Register danach |
+|---|---|---|
+| 1 FETCH | Befehl von Adresse 0x0100 holen | Befehlsregister = ADD 0x0200 |
+| 2 DECODE | Steuerwerk erkennt: addieren, Operand liegt an 0x0200 | unverändert |
+| 3 FETCH OPERANDS | Wert an Adresse 0x0200 holen: 7 | unverändert |
+| 4 EXECUTE | ALU rechnet 5 + 7 | Akkumulator = 12 |
+| 5 UPDATE INSTRUCTION POINTER | auf den nächsten Befehl zeigen | Befehlszähler = 0x0101 |
+
+Danach beginnt der Zyklus mit FETCH an 0x0101 von vorn. Beim Von-Neumann-Rechner laufen der Befehl (Phase 1) und der Operand (Phase 3) nacheinander über denselben Bus: Das ist der Flaschenhals.

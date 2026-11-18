@@ -1,11 +1,11 @@
 ---
-title: "Schadensersatz, Abtretung und AGB"
+title: "Schadensersatz, Abtretung, AGB und Verbraucherverträge"
 order: 9
-summary: "Wie viel Schadensersatz man bekommt (§§ 249–254), wie Forderungen und Schulden den Besitzer wechseln (§§ 398 ff., 414 ff.) und wann Allgemeine Geschäftsbedingungen gelten (§§ 305–310)."
+summary: "Wie viel Schadensersatz man bekommt (§§ 249–254), wie Forderungen und Schulden den Besitzer wechseln (§§ 398 ff., 414 ff.), wann Allgemeine Geschäftsbedingungen gelten (§§ 305–310) und wann ein Verbraucher widerrufen kann (§§ 312b–312k, 355–357)."
 klausur: "relevant"
 ---
 
-Die letzten drei Bausteine des Allgemeinen Schuldrechts. Kapitel 8 sagt, **ob** jemand Schadensersatz schuldet. Die §§ 249 ff. sagen, **wie viel**. Dazu kommen der Wechsel von Gläubiger oder Schuldner und die Kontrolle des Kleingedruckten. Das Skript behandelt das auf S. 47–49. In der Vorlesung war es bis 06.11.2026 noch nicht dran. Im Skript gibt es dazu keine Fälle. Die Übungen sind eigene Aufgaben mit eigener Lösungsskizze.
+Die letzten drei Bausteine des Allgemeinen Schuldrechts. Kapitel 8 sagt, **ob** jemand Schadensersatz schuldet. Die §§ 249 ff. sagen, **wie viel**. Dazu kommen der Wechsel von Gläubiger oder Schuldner und die Kontrolle des Kleingedruckten. Das Skript behandelt das auf S. 47–49, die Vorlesung vermutlich am 12.11.2026. Dazu kommen die Verbraucherverträge (Widerruf, Fernabsatz, Online-Bestellung) aus dem Kaufrecht-Skript (Kap. 1.5, S. 9–11), vermutlich am 23.11.2026. Die AGB- und Widerrufsfälle stehen im Kaufrecht-Skript (S. 13 und 15). Offizielle Lösungen gibt es dazu noch nicht. Alle Lösungen unten sind eigene Skizzen.
 
 Ein Alltagsbeispiel: Du schließt einen Vertrag mit einem Fitnessstudio. In den AGB steht: „Kündigung nur per Einschreiben, drei Monate vor Ablauf.“ Gilt das? Seit einigen Jahren nicht mehr. Warum, zeigt dieses Kapitel.
 
@@ -102,9 +102,14 @@ Prüfungsschema AGB:
 
 | Stufe | Was gilt | Beispiele |
 |---|---|---|
-| § 309, ohne Wertungsmöglichkeit | immer unwirksam | Haftungsausschluss für Körperschäden oder grobes Verschulden (Nr. 7), überlange Laufzeiten (Nr. 9), strengere Form als Textform (Nr. 13) |
+| § 309, ohne Wertungsmöglichkeit | immer unwirksam | Haftungsausschluss für Körperschäden oder grobes Verschulden (Nr. 7), Einschränkung der Mängelrechte bei neu hergestellten Sachen (Nr. 8 b), überlange Laufzeiten (Nr. 9), strengere Form als Textform (Nr. 13) |
 | § 308, mit Wertungsmöglichkeit | Wertung im Einzelfall | unangemessen lange Annahmefrist (Nr. 1), einseitiger Änderungsvorbehalt (Nr. 4) |
 | § 307, Generalklausel | unwirksam bei unangemessener Benachteiligung, auch bei Unklarheit (Transparenzgebot) | Auffangtatbestand |
+
+Zwei Nummern aus § 309, die in den Fällen des Kaufrecht-Skripts gebraucht werden, auf Deutsch:
+
+- **§ 309 Nr. 7 a:** Wer bei Verletzung von **Leben, Körper oder Gesundheit** haftet, darf diese Haftung in AGB nicht ausschließen oder begrenzen, auch nicht für einfache Fahrlässigkeit. **Nr. 7 b:** Für **sonstige Schäden** darf nur die Haftung für **grobes** Verschulden nicht ausgeschlossen werden. (Ergänzung aus dem Gesetz, das Skript nennt nur Nr. 8 b.)
+- **§ 309 Nr. 8 b:** Bei Verträgen über **neu hergestellte Sachen** dürfen AGB die Mängelrechte nicht einfach auf „nur Nachbesserung“ beschränken. Der Käufer muss bei Fehlschlagen der Nacherfüllung **mindern oder zurücktreten** dürfen (Nr. 8 b bb). Beim Verbrauchsgüterkauf ist ein solcher Ausschluss ohnehin unwirksam (§ 476 I).
 
 **Verbraucherfreundliche Änderungen** (teilweise nicht im Skript, aber geltendes Recht):
 
@@ -121,6 +126,47 @@ Prüfungsschema AGB:
 > [!WARNING]
 > **Achtung**
 > Das Skript (S. 48) sagt: „Überraschende und mehrdeutige Klauseln sind unwirksam, § 305c I.“ Richtig ist: Überraschende Klauseln werden nicht Vertragsbestandteil (§ 305c I). Mehrdeutige Klauseln sind nicht unwirksam, sondern werden kundenfreundlich ausgelegt (§ 305c II).
+
+## Verbraucherverträge: Widerruf, Fernabsatz, Online-Bestellung
+
+**In einem Satz:** Bei Käufen im Internet, am Telefon oder an der Haustür darf ein Verbraucher den Vertrag innerhalb von 14 Tagen ohne Grund widerrufen.
+
+**Stell dir vor:** Im Laden kannst du den Stuhl anfassen, dich draufsetzen und den Verkäufer fragen. Online siehst du nur ein Foto. An der Haustür wirst du vielleicht überrumpelt. Deshalb gibt dir das Gesetz in diesen Fällen eine Bedenkzeit: Du darfst es dir noch einmal anders überlegen. Im Laden gibt es diese Bedenkzeit nicht.
+
+**Was ist das?** Ein **Widerrufsrecht** (§ 312g I) besteht bei
+
+- Verträgen **außerhalb von Geschäftsräumen** (§ 312b): Verbraucher und Unternehmer sind gleichzeitig an einem Ort, der **kein Geschäftsraum** ist (Haustür, Mensa, Ausflugsfahrt). Geschäftsraum ist ein fester Laden mit dauerhafter Tätigkeit oder ein beweglicher Stand mit gewöhnlicher Tätigkeit, etwa ein Marktstand (§ 312b II).
+- **Fernabsatzverträgen** (§ 312c): Unternehmer und Verbraucher schließen den Vertrag **ausschließlich** mit **Fernkommunikationsmitteln** (Brief, Telefon, E-Mail, Internet), und zwar im Rahmen eines für den Fernabsatz **organisierten** Vertriebssystems. Beispiele: Onlineshop, Katalog, **Teleshopping**.
+
+Ausnahmen stehen in § 312g II (aus dem Gesetz ergänzt: zum Beispiel nach Kundenwunsch angefertigte Waren oder versiegelte Hygieneartikel nach Entfernen der Versiegelung).
+
+So prüfst du den Widerruf (§§ 312g I, 355):
+
+1. **Verbrauchervertrag:** Verbraucher (§ 13) und Unternehmer (§ 14).
+2. **Außerhalb von Geschäftsräumen** (§ 312b) **oder Fernabsatzvertrag** (§ 312c).
+3. **Keine Ausnahme** (§ 312g II).
+4. **Widerrufserklärung** gegenüber dem Unternehmer (§ 355 I 2). Eine Begründung ist nicht nötig. Rechtzeitige **Absendung** genügt (§ 355 I 5).
+5. **Frist:** 14 Tage (§ 355 II 1). Beginn mit Vertragsschluss (§ 355 II 2), beim Kauf einer Ware erst mit **Erhalt der Ware** (§ 356 II Nr. 1 a). Hat der Unternehmer nicht richtig belehrt, erlischt das Recht spätestens **12 Monate und 14 Tage** nach diesem Beginn (§ 356 III 2).
+6. **Rechtsfolge (§ 357):** Rückgewähr spätestens nach 14 Tagen (§ 357 I). Die unmittelbaren Rücksendekosten trägt grundsätzlich der Verbraucher, wenn er darüber informiert wurde (§ 357 V 1). Viele Händler übernehmen sie freiwillig.
+
+> [!NOTE]
+> **Beispiel: Der Schreibtischstuhl (Wochentage mit Python geprüft)**
+> Du bestellst online einen Stuhl. Er kommt am Fr 20.11.2026 an.
+> 1. Beginn mit Erhalt der Ware (§ 356 II Nr. 1 a). Der 20.11. zählt nicht (§ 187 I).
+> 2. 14 Tage = zwei Wochen, Ende am gleichnamigen Wochentag (§ 188 II): **Fr 04.12.2026**, 24 Uhr.
+> 3. Du schickst die Widerrufs-E-Mail am 04.12. um 22 Uhr ab: rechtzeitig, die Absendung genügt (§ 355 I 5).
+
+**Online bestellen (§§ 312i, 312j):** Unternehmer im Internet haben besondere Pflichten. Wichtig ist die **Button-Lösung** (§ 312j III): Ein Vertrag mit einem Verbraucher kommt nur zustande, wenn der Bestellbutton gut lesbar mit **„zahlungspflichtig bestellen“** oder einer ebenso eindeutigen Formulierung beschriftet ist. Steht dort nur „Weiter“ oder „Bestellen“, gibt es **keinen** Vertrag.
+
+**Kündigungsbutton (§ 312k):** Bei Abos und anderen Dauerschuldverhältnissen, die online abgeschlossen werden können, muss es eine gut sichtbare Kündigungsschaltfläche geben. Fehlt sie, kann der Verbraucher **jederzeit ohne Frist** kündigen (§ 312k VI).
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Widerruf (§§ 312g, 355): nur Verbraucher gegen Unternehmer, nur außerhalb von Geschäftsräumen oder im Fernabsatz, 14 Tage ab Erhalt der Ware, ohne Grund, Absendung genügt. Button ohne „zahlungspflichtig bestellen“ → kein Vertrag (§ 312j III).
+
+> [!WARNING]
+> **Achtung**
+> Widerruf ist **kein** Mängelrecht: Er braucht keinen Mangel und keinen Grund. Umgekehrt gibt es im **Ladengeschäft kein gesetzliches** Widerrufsrecht. Ein „Rückgaberecht“ im Laden gibt es nur, wenn der Händler es freiwillig vertraglich einräumt (Kaufrecht-Skript Fall 3). Und ein fehlender „zahlungspflichtig“-Button ist keine Frage des Widerrufs: Dann gibt es gar keinen Vertrag.
 
 ## Übungen
 
@@ -148,6 +194,26 @@ Prüfungsschema AGB:
 > **Übung 5 · Prüfungsniveau**
 > Student S schließt im Oktober 2026 einen Vertrag mit einem Fitnessstudio. In den AGB steht: „Laufzeit 24 Monate. Der Vertrag verlängert sich jeweils um 12 Monate, wenn er nicht 3 Monate vor Ablauf schriftlich per Einschreiben gekündigt wird.“ Welche Teile sind wirksam?
 > Quelle: eigene Aufgabe
+
+> [!TIP]
+> **Übung 6 · Prüfungsniveau**
+> V bietet K eine neue Waschmaschine an, verweist auf seine AGB und händigt sie aus. K nimmt an, ohne die AGB zu erwähnen. Laut AGB hat der Käufer bei Mängeln nur einen Anspruch auf Nachbesserung. K entdeckt einen Mangel und will zurücktreten. V lehnt unter Hinweis auf die AGB ab. Zu Recht?
+> Quelle: Kaufrecht-Skript S. 15, Fall 9
+
+> [!TIP]
+> **Übung 7 · Prüfungsniveau**
+> B wird nach einer Probestunde Mitglied im Fitnessstudio des A. A händigt Vertrag und AGB aus. Darin steht: Nutzung auf eigene Gefahr, Haftung nur für Vorsatz und grobe Fahrlässigkeit. Eine von A nicht richtig befestigte Hantel fällt B auf die Schulter: Prellung, T-Shirt zerrissen. A beruft sich auf die AGB, grobe Fahrlässigkeit liege nicht vor. Hat B einen Schadensersatzanspruch?
+> Quelle: Kaufrecht-Skript S. 15, Fall 10
+
+> [!TIP]
+> **Übung 8 · mittel**
+> Fred bestellt im Teleshopping über die eingeblendete Hotline eine Haarschneidemaschine für 99 €. Er packt sie aus, baut sie zusammen und findet sie zu groß für sein Bad. Er will sie gleich zurückschicken. Kann er das?
+> Quelle: Kaufrecht-Skript S. 15, Fall 11
+
+> [!TIP]
+> **Übung 9 · mittel**
+> Billy kauft im Möbelhaus ein Regal. Es ist einwandfrei. Nach zehn Monaten gefällt es ihm nicht mehr. Er hat von einem „unbegrenzten Rückgaberecht“ gehört und will das Regal gegen Erstattung des Kaufpreises zurückgeben. Hat er einen Anspruch?
+> Quelle: Kaufrecht-Skript S. 13, Fall 3
 
 ## Lösungen
 
@@ -201,3 +267,50 @@ Vorab: Zerleg die Klausel in ihre vier Teile und prüf jeden Teil einzeln. Eine 
 5. **„schriftlich per Einschreiben“:** Keine strengere Form als Textform und keine besonderen Zugangserfordernisse (§ 309 Nr. 13 b, c). Unwirksam. Eine E-Mail genügt.
 6. **Rechtsfolge:** Der Vertrag bleibt im Übrigen wirksam (§ 306 I). An die Stelle der unwirksamen Teile tritt das Gesetz (§ 306 II).
 7. **Ergebnis:** Also ist nur die Erstlaufzeit von 24 Monaten wirksam. Wurde der Vertrag online geschlossen, gilt zusätzlich der Kündigungsbutton nach § 312k.
+
+### Übung 6
+
+*Eigene Lösungsskizze (keine offizielle Lösung vorhanden), im Gutachtenstil. Annahme: Die Waschmaschine ist neu, der Sachverhalt sagt es nicht ausdrücklich.*
+
+1. **Obersatz:** K könnte ein Rücktrittsrecht aus §§ 437 Nr. 2, 323 I BGB haben, wenn die AGB-Klausel es nicht wirksam ausschließt.
+2. **AGB (§ 305 I):** Die Bedingungen sind für viele Verträge vorformuliert und von V gestellt.
+3. **Einbeziehung (§ 305 II):** V hat bei Vertragsschluss auf die AGB hingewiesen und sie ausgehändigt. K konnte sie lesen. Indem er das Angebot annimmt, das auf die AGB verweist, ist er einverstanden. Also sind sie einbezogen.
+4. **Inhaltskontrolle (§ 309 Nr. 8 b bb):** Bei neu hergestellten Sachen darf die Haftung nicht auf Nacherfüllung beschränkt werden, ohne dem Käufer ausdrücklich das Recht vorzubehalten, bei Fehlschlagen zu mindern oder zurückzutreten. Dieser Vorbehalt fehlt. Die Klausel ist unwirksam. Ist K Verbraucher, ist der Ausschluss außerdem nach § 476 I unwirksam.
+5. **Folge (§ 306 II):** Es gilt das Gesetz.
+6. **Aber:** Auch nach dem Gesetz ist der Rücktritt nachrangig. K muss V erst eine angemessene Frist zur Nacherfüllung setzen (§ 323 I; Verbraucher: Unterrichtung, § 475d I), wenn sie nicht entbehrlich ist.
+7. **Ergebnis:** V kann sich nicht auf seine AGB berufen. Sofort zurücktreten kann K aber auch nicht. Erst muss die Nacherfüllung scheitern.
+
+### Übung 7
+
+*Eigene Lösungsskizze (keine offizielle Lösung vorhanden), im Gutachtenstil.*
+
+1. **Obersatz:** B könnte gegen A einen Anspruch auf Schadensersatz aus §§ 280 I, 241 II BGB haben.
+2. **Schuldverhältnis:** Fitnessvertrag (Mitgliedschaft).
+3. **Pflichtverletzung:** A muss die Geräte sicher bereitstellen (Schutzpflicht, § 241 II). Eine nicht richtig befestigte Hantel verletzt diese Pflicht.
+4. **Vertretenmüssen:** wird vermutet (§ 280 I 2). Jedenfalls liegt einfache Fahrlässigkeit vor (§ 276 II).
+5. **Haftungsausschluss durch AGB?** Die AGB sind einbezogen (Hinweis, Aushändigung, § 305 II). Aber: Nach **§ 309 Nr. 7 a** darf die Haftung für Verletzungen von Körper und Gesundheit auch bei einfacher Fahrlässigkeit nicht ausgeschlossen werden. Die Klausel schließt genau das aus. Sie ist unwirksam (Ergänzung aus dem Gesetz, das Skript nennt nur § 309 Nr. 8 b). Für das T-Shirt erlaubt § 309 Nr. 7 b zwar grundsätzlich den Ausschluss einfacher Fahrlässigkeit. Eine Klausel mit teilweise verbotenem Inhalt wird aber **nicht** auf den erlaubten Teil gekürzt (keine geltungserhaltende Reduktion). Sie fällt ganz weg.
+6. **Folge (§ 306 II):** A haftet nach dem Gesetz.
+7. **Schaden:** Arztkosten (§ 249 II 1), **Schmerzensgeld** für die Prellung (§ 253 II), Ersatz für das T-Shirt.
+8. **Ergebnis:** Also hat B einen Schadensersatzanspruch. A kann sich nicht auf die AGB berufen. Daneben kommt § 823 I in Betracht.
+
+### Übung 8
+
+*Eigene Lösungsskizze (keine offizielle Lösung vorhanden), im Gutachtenstil.*
+
+1. **Obersatz:** Fred könnte ein Widerrufsrecht aus §§ 312g I, 355 BGB haben.
+2. **Verbrauchervertrag:** Fred ist Verbraucher (§ 13), der Anbieter Unternehmer (§ 14).
+3. **Fernabsatzvertrag (§ 312c):** Der Vertrag kam ausschließlich über Fernkommunikationsmittel zustande (Fernsehen und Telefon). Teleshopping mit Hotline ist ein organisiertes Fernabsatzsystem. Dass Fred die Maschine im Fernsehen „gesehen“ hat, ändert daran nichts.
+4. **Keine Ausnahme (§ 312g II):** nicht ersichtlich. Zum Ausprobieren auspacken und zusammenbauen darf man.
+5. **Frist:** 14 Tage ab Erhalt der Ware (§§ 355 II, 356 II Nr. 1 a). Fred will sofort zurückschicken. Das ist rechtzeitig.
+6. **Erklärung:** gegenüber dem Unternehmer (§ 355 I 2). Ein Grund ist nicht nötig. „Zu groß fürs Bad“ reicht also, und er müsste es nicht einmal sagen.
+7. **Ergebnis:** Also kann Fred widerrufen. Rückgewähr binnen 14 Tagen (§ 357 I). Die Rücksendekosten trägt er, wenn er darüber informiert wurde und der Händler sie nicht übernimmt (§ 357 V).
+
+### Übung 9
+
+*Eigene Lösungsskizze (keine offizielle Lösung vorhanden), im Gutachtenstil.*
+
+1. **Obersatz:** Billy könnte gegen das Möbelhaus einen Anspruch auf Rückzahlung des Kaufpreises haben.
+2. **Rücktritt wegen Mangels (§§ 437 Nr. 2, 323, 346 I)?** Dafür braucht es einen Sachmangel. Das Regal ist einwandfrei. Es gefällt Billy nur nicht mehr. Kein Mangel, also kein Rücktritt.
+3. **Widerruf (§§ 312g, 355)?** Nur bei Verträgen außerhalb von Geschäftsräumen oder im Fernabsatz. Billy hat im Laden gekauft. Außerdem wären 14 Tage längst vorbei. Kein Widerruf.
+4. **Vertragliches Rückgaberecht?** Ein Rücktrittsrecht kann vertraglich vereinbart werden (§ 346 I). Ob und unter welchen Bedingungen der Händler ein freiwilliges Rückgaberecht einräumt, ergibt sich nur aus **seinen** Bedingungen (Vertragsfreiheit). „Davon gehört haben“ reicht nicht.
+5. **Ergebnis:** Einen gesetzlichen Anspruch hat Billy nicht. Er bekommt sein Geld nur, wenn das Möbelhaus ihm vertraglich ein Rückgaberecht eingeräumt hat und er dessen Bedingungen erfüllt. Wie lange ein solches Rückgaberecht tatsächlich ist, steht nicht im Skript.

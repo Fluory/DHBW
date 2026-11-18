@@ -4,658 +4,1064 @@
       "id": "mathe-k001",
       "topic": "Grundlagen",
       "front": "Prozent als Dezimalzahl: 5 %, 2,5 %, 0,25 %",
-      "back": "5 % = 0,05 · 2,5 % = 0,025 · 0,25 % = 0,0025.\nFaktor bei 5 % Zinsen: 1 + i = 1,05.",
+      "back": "Prozent heißt „von hundert“, also durch 100 teilen: 5 % = 0,05 · 2,5 % = 0,025 · 0,25 % = 0,0025.\nIn jede Formel kommt der Zinssatz i als Dezimalzahl, der Faktor ist 1 + i.\nBeispiel: Bei 5 % wird jedes Jahr mit 1,05 malgenommen, 100 € werden zu 105 €.",
       "exam": true
     },
     {
       "id": "mathe-k002",
       "topic": "Grundlagen",
       "front": "Was bedeutet Σₖ₌₁³ k²?",
-      "back": "Alle k von 1 bis 3 einsetzen und addieren: 1² + 2² + 3² = 1 + 4 + 9 = **14**.",
+      "back": "Σ ist ein Befehl: für k nacheinander jeden Wert vom Start (unten) bis zum Ende (oben) einsetzen und alles addieren.\nHier: 1² + 2² + 3² = 1 + 4 + 9 = **14**.\nAnzahl der Summanden = Ende − Start + 1 = 3.",
       "exam": true
     },
     {
       "id": "mathe-k003",
       "topic": "Grundlagen",
       "front": "Potenzregel aᵏ · bᵏ",
-      "back": "aᵏ · bᵏ = (a·b)ᵏ.\nBeispiel: (−1)ᵏ · (⅕)ᵏ = (−⅕)ᵏ.",
+      "back": "Gleicher Exponent: Die Basen darf man zusammenfassen, aᵏ · bᵏ = (a · b)ᵏ.\nWarum: Ausgeschrieben steht k-mal a und k-mal b da, also k-mal (a · b).\nBeispiel aus R-2c: (−1)ᵏ · (⅕)ᵏ = (−⅕)ᵏ. Probe k = 2: 1 · 1/25 = 1/25 = (−⅕)².",
       "exam": true
     },
     {
       "id": "mathe-k004",
       "topic": "Folgen",
       "front": "Was ist eine **Folge**?",
-      "back": "Eine durchnummerierte Liste von Zahlen a₁, a₂, a₃, … (eine Funktion ℕ → ℝ). aₙ heißt Glied, n heißt Index.\nBeispiel aₙ = 2n: 2, 4, 6, …",
+      "back": "Eine nummerierte Liste von Zahlen a₁, a₂, a₃, …, bei der auf jedem Platz n genau eine Zahl aₙ sitzt. Formal ist das eine Funktion ℕ → ℝ, n ↦ aₙ.\nn heißt Index (Platznummer), aₙ heißt Glied (der Wert dort).\nBeispiel aₙ = 2n: 2, 4, 6, …, also a₄ = 8.",
       "exam": true
     },
     {
       "id": "mathe-k005",
       "topic": "Folgen",
       "front": "explizit vs. rekursiv",
-      "back": "explizit: direkte Formel, z. B. aₙ = n² → a₃ = 9.\nrekursiv: aus dem Vorgänger, z. B. a₁ = 2, aₙ = aₙ₋₁ + 3 → 2, 5, 8, 11.",
+      "back": "**Explizit:** eine direkte Formel, du setzt die Platznummer ein, z. B. aₙ = n² → a₃ = 9.\n**Rekursiv:** Startwert plus Regel „neues Glied aus dem alten“, du arbeitest dich Platz für Platz vor.\nBeispiel: a₁ = 2, aₙ = aₙ₋₁ + 3 ergibt 2, 5, 8, 11, also a₄ = 11.",
       "exam": true
     },
     {
       "id": "mathe-k006",
       "topic": "Folgen",
       "front": "Bildungsgesetz finden: −3, 3, −3, 3, …",
-      "back": "aₙ = (−1)ⁿ · 3 (ab n = 1). Der Faktor (−1)ⁿ macht das Vorzeichen abwechselnd (**alternierend**).",
+      "back": "aₙ = (−1)ⁿ · 3 (ab n = 1).\nDer Betrag ist immer 3, das Vorzeichen wechselt. (−1)ⁿ ist bei ungeradem n gleich −1 und bei geradem n gleich +1, so eine Folge heißt **alternierend**.\nProbe: n = 1 gibt −3, n = 2 gibt +3. Passt.",
       "exam": true
     },
     {
       "id": "mathe-k007",
       "topic": "Folgen",
       "front": "Bildungsgesetz finden: 1, ¼, 1/9, 1/16, …",
-      "back": "aₙ = 1/n².",
+      "back": "aₙ = 1/n².\nTrick: Platznummer über die Glieder schreiben. Die Nenner 1, 4, 9, 16 sind 1², 2², 3², 4², also genau die Platznummer zum Quadrat.\nProbe: n = 3 gibt 1/9. Passt.",
       "exam": true
     },
     {
       "id": "mathe-k008",
       "topic": "Folgen",
       "front": "streng monoton wachsend – Definition und Test",
-      "back": "aₙ < aₙ₊₁ für alle n.\nTest: Differenz aₙ₊₁ − aₙ > 0. Beispiel aₙ = n²: (n+1)² − n² = 2n + 1 > 0.",
+      "back": "Definition: aₙ < aₙ₊₁ für **alle** n, jede Stufe ist echt höher.\nTest: Rechne aₙ₊₁ − aₙ aus. Immer > 0 heißt streng wachsend, immer < 0 streng fallend.\nBeispiel aₙ = n²: (n + 1)² − n² = 2n + 1, das ist für n ≥ 1 immer positiv.",
       "exam": true
     },
     {
       "id": "mathe-k009",
       "topic": "Folgen",
       "front": "Ist (−1)ⁿ monoton?",
-      "back": "Nein, die Glieder springen −1, 1, −1, 1 hin und her. Aber beschränkt: |aₙ| ≤ 1.",
+      "back": "Nein. Die Glieder springen −1, 1, −1, 1, …: einmal hoch, einmal runter wie eine Achterbahn.\nDie Differenzen sind +2, −2, +2, …, ihr Vorzeichen wechselt.\nBeschränkt ist die Folge aber: |aₙ| ≤ 1, Boden −1 und Decke 1.",
       "exam": true
     },
     {
       "id": "mathe-k010",
       "topic": "Folgen",
       "front": "Was heißt **beschränkt**?",
-      "back": "Es gibt ein C mit |aₙ| ≤ C für alle n (die Folge bleibt in einem Streifen).\nBeispiel 1 + 1/n: 1 < aₙ ≤ 2.",
+      "back": "Es gibt eine feste Zahl C mit |aₙ| ≤ C für alle n. Alle Glieder liegen dann im Streifen zwischen −C (Boden) und C (Decke).\nBeides muss es geben, Boden **und** Decke.\nBeispiel 1 + 1/n: 2; 1,5; 1,33; … also 1 < aₙ ≤ 2, beschränkt. Gegenbeispiel n²: kein Deckel.",
       "exam": true
     },
     {
       "id": "mathe-k011",
       "topic": "Folgen",
       "front": "Ist eine konstante Folge aₙ = 7 monoton?",
-      "back": "Ja, monoton wachsend **und** fallend (aber nicht streng). Sie ist beschränkt.",
+      "back": "Ja, monoton wachsend **und** monoton fallend, aber **nicht streng**.\nWarum: aₙ₊₁ − aₙ = 7 − 7 = 0, und 0 erfüllt sowohl ≥ 0 als auch ≤ 0, aber weder > 0 noch < 0.\nSie ist beschränkt (Boden und Decke 7) und konvergiert gegen 7. Das war die Falle in F-2e.",
       "exam": true
     },
     {
       "id": "mathe-k012",
       "topic": "Folgen",
       "front": "Konvergenz in einfachen Worten",
-      "back": "aₙ → a heißt: Für jede noch so kleine Genauigkeit ε liegen ab einem Index n₀ **alle** Glieder näher als ε an a: |aₙ − a| < ε.",
+      "back": "aₙ → a heißt: Egal welche Genauigkeit ε > 0 jemand verlangt, ab einem Platz n₀ liegen **alle** weiteren Glieder näher als ε an a, also |aₙ − a| < ε.\nAm Anfang darf die Folge machen, was sie will.\nBeispiel 1 − 1/n → 1: Für ε = 0,01 klappt es ab n₀ = 101, denn dort ist der Abstand 1/101 < 0,01.",
       "exam": true
     },
     {
       "id": "mathe-k013",
       "topic": "Folgen",
       "front": "Nullfolge, bestimmt divergent, unbestimmt divergent",
-      "back": "Nullfolge: Grenzwert 0 (z. B. 1/n).\nbestimmt divergent: → +∞ oder −∞ (z. B. n²).\nunbestimmt: springt ohne Ziel (z. B. (−1)ⁿ).",
+      "back": "**Nullfolge:** Grenzwert 0, z. B. 1/n.\n**Bestimmt divergent:** läuft nach +∞ oder −∞, z. B. n² → +∞.\n**Unbestimmt divergent:** springt ohne Ziel, z. B. (−1)ⁿ oder (−1)ⁿ · n.\nBeide Divergenz-Arten sind „nicht konvergent“, ∞ ist kein Grenzwert.",
       "exam": true
     },
     {
       "id": "mathe-k014",
       "topic": "Folgen",
       "front": "Monotonie-Kriterium",
-      "back": "monoton **und** beschränkt ⇒ konvergent.\nBeschränkt allein reicht nicht: (−1)ⁿ ist beschränkt, aber divergent.",
+      "back": "Monoton **und** beschränkt ⇒ konvergent. Bild: Wer nur hochsteigt und an eine Decke stößt, muss irgendwo zur Ruhe kommen.\nBeschränkt allein reicht nicht: (−1)ⁿ ist beschränkt, aber divergent.\nBeispiel: 1 − 1/n ist wachsend und bleibt unter 1, also konvergent (gegen 1).",
       "exam": true
     },
     {
       "id": "mathe-k015",
       "topic": "Folgen",
       "front": "Grenzwert eines Bruchs von Polynomen (Faustregel)",
-      "back": "Durch die höchste Potenz des Nenners teilen.\nGrad gleich → Leitkoeffizienten teilen: (2n² − 3)/(n² + n + 1) → **2**.\nZählergrad kleiner → 0. Zählergrad größer → ±∞.",
+      "back": "Jeden Summanden oben und unten durch die höchste Potenz des Nenners teilen; alles der Form Zahl/nᵖ geht gegen 0.\nAbkürzung über den Grad: gleich → Vorzahlen teilen, oben kleiner → 0, oben größer → ±∞.\nBeispiel (2n² − 3)/(n² + n + 1) → 2/1 = **2**. Probe n = 1000: ≈ 1,998.",
       "exam": true
     },
     {
       "id": "mathe-k016",
       "topic": "Folgen",
       "front": "Grenzwert von (8k³ − 4k² − 8)/(6k³ + 2k − 1)?",
-      "back": "Gleicher Grad 3 → 8/6 = **4/3**.",
+      "back": "Erst zusammenfassen, dann Grad ablesen. Oben und unten steht k³, gleicher Grad 3.\nAlso Vorzahlen teilen: 8/6 = **4/3**.\nProbe k = 1000: ≈ 1,3327, das liegt nahe 4/3 ≈ 1,3333.",
       "exam": true
     },
     {
       "id": "mathe-k017",
       "topic": "Folgen",
       "front": "Grund-Nullfolgen",
-      "back": "1/n → 0 und qⁿ → 0 für |q| < 1, z. B. (½)ⁿ → 0. Auch e⁻ⁿ → 0.",
+      "back": "1/n → 0 und qⁿ → 0 für |q| < 1, auch e⁻ⁿ = 1/eⁿ → 0.\nWarum qⁿ: Bei |q| < 1 bleibt jedes Mal nur ein Teil übrig, wie „jedes Mal die Hälfte vom Rest essen“.\nZahlen: (½)ⁿ = 0,5; 0,25; 0,125; … und 0,9⁵⁰ ≈ 0,005.",
       "exam": true
     },
     {
       "id": "mathe-k018",
       "topic": "Folgen",
       "front": "Wachstums-Rangliste (wer gewinnt für große n?)",
-      "back": "ln n < √n < n < n² < eⁿ.\nBeispiel: −7n³ + 4n² + 10 → −∞, weil −7n³ dominiert.",
+      "back": "Von langsam nach schnell: ln n ≪ √n ≪ n ≪ n² ≪ 2ⁿ ≪ eⁿ ≪ n!. Der schnellste Term entscheidet, wohin ein Ausdruck läuft.\nBeispiel: −7n³ + 4n² + 10 → −∞, weil −7n³ alles andere überwiegt.\nProbe n = 10: −7000 + 400 + 10 = −6590.",
       "exam": true
     },
     {
       "id": "mathe-k019",
       "topic": "Folgen",
       "front": "Arithmetische Folge: Formeln",
-      "back": "konstante Differenz d: aₙ = a₁ + (n − 1)·d, Sₙ = n/2 · (a₁ + aₙ).\na₁ = 3, d = 4: a₁₀ = 3 + 9·4 = 39, S₁₀ = 5 · 42 = 210.",
+      "back": "Konstante Differenz d (immer dasselbe dazu): aₙ = a₁ + (n − 1) · d und Sₙ = n/2 · (a₁ + aₙ).\nn − 1, weil Platz n erst n − 1 Schritte hinter sich hat.\nBeispiel a₁ = 3, d = 4: a₁₀ = 3 + 9 · 4 = 39 und S₁₀ = 5 · (3 + 39) = 210.",
       "exam": true
     },
     {
       "id": "mathe-k020",
       "topic": "Folgen",
       "front": "Geometrische Folge: Formeln",
-      "back": "konstanter Quotient q: aₙ = a₁ · qⁿ⁻¹, Sₙ = a₁ · (qⁿ − 1)/(q − 1).\na₁ = 2, q = 3: a₈ = 2 · 3⁷ = 4374, S₆ = 728.",
+      "back": "Konstanter Quotient q (immer mit derselben Zahl mal): aₙ = a₁ · qⁿ⁻¹ und Sₙ = a₁ · (qⁿ − 1)/(q − 1), nur für q ≠ 1.\nProbe n = 1: a₁ · q⁰ = a₁.\nBeispiel a₁ = 2, q = 3: a₈ = 2 · 3⁷ = 4374 und S₆ = 2 · 728/2 = 728.",
       "exam": true
     },
     {
       "id": "mathe-k021",
       "topic": "Reihen",
       "front": "Was ist eine **Reihe**?",
-      "back": "Eine unendliche Summe Σ aₖ = a₀ + a₁ + a₂ + … Man schaut auf die **Teilsummen** sₙ = a₀ + … + aₙ. Haben sie einen Grenzwert s, ist die Reihe konvergent mit Summe s.",
+      "back": "Eine unendliche Summe a₀ + a₁ + a₂ + … Man schaut auf die **Teilsummen** sₙ = a₀ + … + aₙ, das sind die Zwischenstände wie Kontostände.\nHaben die sₙ einen Grenzwert s, ist die Reihe konvergent mit Wert s, sonst divergent.\nBeispiel: ½ + ¼ + ⅛ + … hat die Zwischenstände 0,5; 0,75; 0,875; … → 1.",
       "exam": true
     },
     {
       "id": "mathe-k022",
       "topic": "Reihen",
       "front": "Teilsummen von Σ (k = 0 bis ∞) (½)ᵏ",
-      "back": "s₀ = 1, s₁ = 1,5, s₂ = 1,75, s₃ = 1,875 → Summe **2**.",
+      "back": "s₀ = 1, s₁ = 1,5, s₂ = 1,75, s₃ = 1,875, s₄ = 1,9375 → Summe **2**.\nWas bis 2 fehlt, halbiert sich jedes Mal: 1; 0,5; 0,25; 0,125.\nMit der Formel: erstes Glied/(1 − q) = 1/(1 − ½) = 2.",
       "exam": true
     },
     {
       "id": "mathe-k023",
       "topic": "Reihen",
       "front": "Geometrische Reihe: Formel",
-      "back": "Σ (k = 0 bis ∞) qᵏ = 1/(1 − q), nur für |q| < 1.\nAllgemein: **erstes Glied / (1 − q)**, z. B. Σ (½)ᵏ ab k = 0 = 1/(1 − ½) = 2.",
+      "back": "Σₖ₌₀^∞ qᵏ = 1/(1 − q), aber **nur für |q| < 1**. Allgemein: Wert = erstes Glied/(1 − q).\nWarum: Die endliche Summe ist (1 − qⁿ⁺¹)/(1 − q), und qⁿ⁺¹ → 0 bei |q| < 1.\nBeispiel Σₖ₌₀^∞ (⅓)ᵏ = 1/(1 − ⅓) = 3/2. Bei |q| ≥ 1 divergiert die Reihe.",
       "exam": true
     },
     {
       "id": "mathe-k024",
       "topic": "Reihen",
       "front": "Σ (k = 1 bis ∞) (½)ᵏ = ?",
-      "back": "Start bei k = 1 → erstes Glied ½. ½ / (1 − ½) = **1** (nicht 2!).",
+      "back": "**1** (nicht 2!).\nDer Startindex bestimmt das erste Glied: Bei k = 1 ist es (½)¹ = ½, nicht 1.\nRechnung: ½/(1 − ½) = ½/½ = 1. Probe: ½ + ¼ + ⅛ + … nähert sich 1.",
       "exam": true
     },
     {
       "id": "mathe-k025",
       "topic": "Reihen",
       "front": "Σ (k = 0 bis ∞) (−1)ᵏ · (⅕)ᵏ = ?",
-      "back": "Zusammenfassen: (−⅕)ᵏ, q = −⅕, erstes Glied 1. 1/(1 + ⅕) = **5/6**.",
+      "back": "**5/6**.\nGleicher Exponent: (−1)ᵏ(⅕)ᵏ = (−⅕)ᵏ, also geometrisch mit q = −⅕, |q| < 1. Start k = 0, erstes Glied 1.\n1/(1 − (−⅕)) = 1/(6/5) = 5/6. Bei negativem q wird aus 1 − q eine Summe.",
       "exam": true
     },
     {
       "id": "mathe-k026",
       "topic": "Reihen",
       "front": "Periodenzahl 0,3̄ als Bruch",
-      "back": "0,3 + 0,03 + … = (3/10) / (1 − 1/10) = (3/10)/(9/10) = **1/3**.",
+      "back": "0,333… = 3/10 + 3/100 + …, erstes Glied 3/10 und q = 1/10 (eine Ziffer wiederholt sich).\nWert: (3/10)/(1 − 1/10) = (3/10)/(9/10) = **1/3**.\nProbe: 1 : 3 = 0,333…",
       "exam": true
     },
     {
       "id": "mathe-k027",
       "topic": "Reihen",
       "front": "Periodenzahl 0,1̄2̄ als Bruch",
-      "back": "Periodenlänge 2 → q = 1/100. (12/100)/(99/100) = 12/99 = **4/33**.",
+      "back": "Periodenlänge 2 → q = 1/100, erstes Glied 12/100.\n(12/100)/(99/100) = 12/99 = **4/33** (gekürzt durch 3).\nProbe: 4 : 33 = 0,1212…",
       "exam": true
     },
     {
       "id": "mathe-k028",
       "topic": "Reihen",
       "front": "Teleskopsumme Σ (k = 1 bis ∞) 1/(k(k + 1))",
-      "back": "1/(k(k+1)) = 1/k − 1/(k+1). Die Mitte hebt sich weg: sₙ = 1 − 1/(n+1) → **1**.",
+      "back": "Zerlegen: 1/(k(k + 1)) = 1/k − 1/(k + 1). Ausgeschrieben (1 − ½) + (½ − ⅓) + … heben sich alle mittleren Teile weg.\nÜbrig: sₙ = 1 − 1/(n + 1) → **1**.\nProbe n = 3: ½ + 1/6 + 1/12 = ¾ = 1 − ¼.",
       "exam": true
     },
     {
       "id": "mathe-k029",
       "topic": "Reihen",
       "front": "Σ (k = 1 bis ∞) 6/k² = ?",
-      "back": "Konstante vorziehen: 6 · Σ 1/k² = 6 · π²/6 = **π² ≈ 9,87**.",
+      "back": "Konstante Faktoren darf man vor die Summe ziehen (bei konvergenten Reihen): 6 · Σ 1/k².\nΣ 1/k² = π²/6 (Folie), also 6 · π²/6 = **π² ≈ 9,87**.\nOhne den Faktor wäre der Wert ≈ 1,645.",
       "exam": true
     },
     {
       "id": "mathe-k030",
       "topic": "Reihen",
       "front": "Warnung: 1 + 2 + 4 + 8 + … = −1?",
-      "back": "Unsinn! Die Reihe divergiert, mit divergenten Reihen darf man nicht wie mit normalen Summen rechnen.",
+      "back": "Unsinn! Die Reihe divergiert, die Zwischenstände 1, 3, 7, 15, … wachsen ohne Ende.\nDer Trick „x = 1 + 2x, also x = −1“ tut so, als gäbe es einen Wert x. Mit divergenten Reihen darf man aber nicht wie mit normalen Zahlen rechnen.\nMerke: Rechenregeln nur für konvergente Reihen.",
       "exam": true
     },
     {
       "id": "mathe-k031",
       "topic": "Reihen",
       "front": "Notwendiges Kriterium",
-      "back": "Σ aₖ konvergent ⇒ aₖ → 0.\nAlso: aₖ geht **nicht** gegen 0 ⇒ divergent. Geht aₖ gegen 0, weiß man **noch nichts**.",
+      "back": "Σ aₖ konvergent ⇒ aₖ → 0. Umgedreht benutzt: Gehen die Glieder **nicht** gegen 0, ist die Reihe divergent.\nGehen sie gegen 0, weiß man **noch nichts**.\nBeispiel: Σ k/(k + 1) divergiert, weil die Glieder gegen 1 gehen. Σ 1/k divergiert trotz 1/k → 0.",
       "exam": true
     },
     {
       "id": "mathe-k032",
       "topic": "Reihen",
       "front": "Harmonische Reihe Σ 1/k",
-      "back": "**Divergent** (→ ∞), obwohl 1/k → 0. Sie wächst nur sehr langsam: s₁₀ ≈ 2,93.",
+      "back": "**Divergent** (→ ∞), obwohl 1/k → 0.\nWarum: Fasst man ⅓ + ¼, dann ⅕ bis ⅛ usw. zusammen, ist jede Gruppe mindestens ½. Unendlich oft ½ ergibt ∞.\nSie wächst nur sehr langsam: s₁₀ ≈ 2,93, s₁₀₀ ≈ 5,19.",
       "exam": true
     },
     {
       "id": "mathe-k033",
       "topic": "Reihen",
       "front": "Σ 1/kᵖ – wann konvergent?",
-      "back": "Genau für p > 1. Σ 1/k² konvergiert (π²/6), Σ 1/k divergiert.",
+      "back": "Konvergent **genau dann, wenn p > 1**. Bei p ≤ 1 divergent.\nk steht unten in der Basis, der Exponent p ist fest (anders als bei qᵏ).\nBeispiele: Σ 1/k² konvergiert (π²/6 ≈ 1,645), Σ 1/k und Σ 1/√k (p = ½) divergieren.",
       "exam": true
     },
     {
       "id": "mathe-k034",
       "topic": "Reihen",
       "front": "Potenzabstand-Regel bei Brüchen",
-      "back": "Abstand = Nennergrad − Zählergrad.\n> 1 → konvergent (Σ (k+1)/(k³+2): Abstand 2).\n≤ 1 → divergent (Σ k/(k²+5): Abstand 1).",
+      "back": "Abstand = Nennergrad − Zählergrad. Abstand > 1 → konvergent, Abstand ≤ 1 → divergent.\nWarum: Für großes k verhält sich der Bruch wie 1/k^Abstand.\nBeispiele: Σ (k + 1)/(k³ + 2) hat Abstand 2 → konvergent. Σ k/(k² + 5) hat Abstand 1 → wie 1/k, divergent.",
       "exam": true
     },
     {
       "id": "mathe-k035",
       "topic": "Reihen",
       "front": "Quotientenkriterium",
-      "back": "L = lim |aₖ₊₁/aₖ|: L < 1 konvergent, L > 1 divergent, L = 1 keine Aussage. Nimm es, wenn k! oder xᵏ vorkommt.\nΣ 1/k!: L = lim 1/(k + 1) = 0 → konvergent.",
+      "back": "L = lim |aₖ₊₁/aₖ|: L < 1 konvergent, L > 1 divergent, L = 1 keine Aussage. Nimm es, wenn k! oder xᵏ vorkommt.\nIdee: Schrumpft jedes Glied am Ende um einen Faktor < 1, verhält sich die Reihe wie eine konvergente geometrische Reihe.\nBeispiel Σ 1/k!: aₖ₊₁/aₖ = 1/(k + 1) → 0, also konvergent (Wert e).",
       "exam": true
     },
     {
       "id": "mathe-k036",
       "topic": "Finanzmathematik",
       "front": "Zinseszins: einmalige Zahlung",
-      "back": "Kₙ = r · (1 + i)ⁿ.\n1000 € zu 5 %: nach 2 Jahren 1000 · 1,05² = **1102,50 €**.",
+      "back": "Kₙ = r · (1 + i)ⁿ: Jedes Jahr wird mit dem Zinsfaktor 1 + i malgenommen, also n-mal.\nDas ist eine geometrische Folge mit q = 1 + i; es gibt Zinsen auf die Zinsen.\nBeispiel 1000 € zu 5 % nach 2 Jahren: 1000 · 1,05² = 1000 · 1,1025 = **1102,50 €** (ohne Zinseszins nur 1100 €).",
       "exam": true
     },
     {
       "id": "mathe-k037",
       "topic": "Finanzmathematik",
       "front": "Sparplan (Endwert): Formel",
-      "back": "Eₙ = r · ((1 + i)ⁿ − 1) / i. Das ist eine endliche geometrische Reihe mit q = 1 + i.",
+      "back": "Eₙ = r · ((1 + i)ⁿ − 1)/i. r = Rate am Ende jeder Periode, i = Zins pro Periode, n = Anzahl der Raten.\nWarum: Eₙ = r + r(1 + i) + … + r(1 + i)ⁿ⁻¹ ist eine endliche geometrische Reihe mit q = 1 + i, und q − 1 = i.\nBeispiel r = 100, i = 0,05, n = 3: 315,25 €.",
       "exam": true
     },
     {
       "id": "mathe-k038",
       "topic": "Finanzmathematik",
       "front": "Sparplan: r = 100 €, i = 5 %, n = 3",
-      "back": "100 · (1,05³ − 1)/0,05 = 100 · 3,1525 = **315,25 €**.\nProbe: 110,25 + 105 + 100 = 315,25.",
+      "back": "100 · (1,05³ − 1)/0,05 = 100 · 0,157625/0,05 = 100 · 3,1525 = **315,25 €**.\nProbe einzeln: Die 1. Rate wird 2 Jahre verzinst (110,25), die 2. ein Jahr (105), die 3. gar nicht (100). Summe 315,25.\nZinsen: 315,25 − 300 = 15,25 €.",
       "exam": true
     },
     {
       "id": "mathe-k039",
       "topic": "Finanzmathematik",
       "front": "Folienbeispiel: 100 € pro Monat, 0,25 % pro Monat, 60 Monate",
-      "back": "E₆₀ = 100 · (1,0025⁶⁰ − 1)/0,0025 ≈ **6464,67 €** (Folie: ca. 6460 €). Eingezahlt 6000 €.",
+      "back": "E₆₀ = 100 · (1,0025⁶⁰ − 1)/0,0025 ≈ 100 · 64,6467 ≈ **6464,67 €** (Folie: ca. 6460 €).\nZins und Laufzeit sind beide pro Monat, das muss zusammenpassen.\nEingezahlt 60 · 100 = 6000 €, die Zinsen sind also rund 464,67 €.",
       "exam": true
     },
     {
       "id": "mathe-k040",
       "topic": "Finanzmathematik",
       "front": "Ewige Rente (Barwert)",
-      "back": "B = r / i.\n1000 € pro Jahr bei 4 %: 1000/0,04 = **25 000 €**.",
+      "back": "Barwert B = r/i. Bild: Geld anlegen und nur die Zinsen abheben, das Kapital bleibt für immer gleich.\nBeispiel 1000 € pro Jahr bei 4 %: 1000/0,04 = **25 000 €**.\nProbe: 4 % von 25 000 € sind genau 1000 €.",
       "exam": true
     },
     {
       "id": "mathe-k041",
       "topic": "Finanzmathematik",
       "front": "Warum beim Sparplan nur die endliche Formel?",
-      "back": "Beim Sparplan ist q = 1 + i > 1 → die unendliche Reihe divergiert. Bei der ewigen Rente ist q = 1/(1 + i) < 1 → unendliche Formel erlaubt.",
+      "back": "Beim Sparplan ist q = 1 + i > 1: Die verzinsten Raten werden größer, die unendliche Reihe würde divergieren. Darum nur die endliche Formel.\nBei der ewigen Rente wird abgezinst, q = 1/(1 + i) < 1, also ist „erstes Glied/(1 − q)“ erlaubt.\nBeispiel i = 5 %: q = 1,05 beim Sparplan, q ≈ 0,952 beim Barwert.",
       "exam": true
     },
     {
       "id": "mathe-k042",
       "topic": "Funktionen, Umkehrfunktion und Monotonie",
       "front": "Definitionsmenge, Wertemenge, Bild",
-      "back": "D: erlaubte x. W: Zielmenge. Bild: Werte, die wirklich herauskommen.\nx² auf ℝ: W = ℝ, Bild = [0, ∞).",
+      "back": "**D** (Definitionsmenge): was darf rein. **W/Z** (Ziel- oder Wertemenge): wo Ergebnisse liegen dürfen, wird festgelegt. **Bild**: was wirklich herauskommt, muss man ausrechnen.\nDas Bild ist immer ein Teil der Zielmenge.\nBeispiel x² + 1 auf ℝ: Zielmenge ℝ, Bild [1, ∞), weil x² nie negativ ist.",
       "exam": true
     },
     {
       "id": "mathe-k043",
       "topic": "Funktionen, Umkehrfunktion und Monotonie",
       "front": "Größter Definitionsbereich: Rezept",
-      "back": "Nenner ≠ 0, unter der Wurzel ≥ 0.\n1/(x² − 1): D = ℝ \\ {−1, 1}.",
+      "back": "Zwei Verbote prüfen: Nenner ≠ 0 und unter einer Wurzel ≥ 0. Alles andere darf rein.\nBeispiel 1/(x² − 1): Nenner 0 bei x² = 1, also x = 1 oder x = −1. D = ℝ \\ {−1, 1}.\nBeispiel √(x − 2): x − 2 ≥ 0, also D = [2, ∞).",
       "exam": true
     },
     {
       "id": "mathe-k044",
       "topic": "Funktionen, Umkehrfunktion und Monotonie",
       "front": "injektiv, surjektiv, bijektiv",
-      "back": "injektiv: jeder Wert höchstens einmal getroffen. surjektiv: jeder Wert der Zielmenge mindestens einmal. bijektiv: genau einmal → Umkehrfunktion existiert.",
+      "back": "**injektiv:** jeder Wert wird höchstens einmal getroffen (kein Stuhl doppelt besetzt).\n**surjektiv:** jeder Wert der Zielmenge mindestens einmal (kein Stuhl leer).\n**bijektiv:** genau einmal, dann gibt es die Umkehrfunktion.\nBeispiel x² auf ℝ → ℝ: nicht injektiv (f(2) = f(−2)), nicht surjektiv (−1 kommt nie).",
       "exam": true
     },
     {
       "id": "mathe-k045",
       "topic": "Stetigkeit, Verkettung, ln und e",
       "front": "Verkettung (f ∘ g)(x)",
-      "back": "(f ∘ g)(x) = f(g(x)): **zuerst g (innen), dann f**. Die Reihenfolge ist wichtig.\nf(x) = x + 1, g(x) = x²: f(g(3)) = f(9) = 10, aber g(f(3)) = g(4) = 16.",
+      "back": "(f ∘ g)(x) = f(g(x)): **zuerst g (innen), dann f (außen)**. Gelesen „f nach g“, von rechts nach links.\nDie Reihenfolge ist wichtig, meistens ist f ∘ g ≠ g ∘ f.\nBeispiel f(x) = x + 1, g(x) = x²: f(g(3)) = f(9) = 10, aber g(f(3)) = g(4) = 16.",
       "exam": true
     },
     {
       "id": "mathe-k046",
       "topic": "Funktionen, Umkehrfunktion und Monotonie",
       "front": "Definitionsbereich von f/g",
-      "back": "Wo f und g beide definiert sind, **ohne** die Nullstellen von g.\n√x / (x − 1): D = [0, ∞) ohne 1.",
+      "back": "Dort, wo f **und** g definiert sind, **ohne** die Nullstellen von g (durch 0 darf man nicht teilen).\nBeispiel √x/(x − 1): √x braucht x ≥ 0, und x − 1 = 0 bei x = 1.\nAlso D = [0, ∞) ohne die 1.",
       "exam": true
     },
     {
       "id": "mathe-k047",
       "topic": "Funktionen, Umkehrfunktion und Monotonie",
       "front": "Umkehrfunktion: was ist f⁻¹?",
-      "back": "f⁻¹ macht f rückgängig: f⁻¹(f(x)) = x. Graph an y = x spiegeln. **Nicht** 1/f(x)!\nJede streng monotone Funktion hat eine Umkehrfunktion.",
+      "back": "f⁻¹ macht f rückgängig: f⁻¹(f(x)) = x, der Automat läuft rückwärts. Der Graph ist an y = x gespiegelt.\n**Nicht** 1/f(x): Bei f(x) = 2x + 1 ist f⁻¹(7) = 3, aber 1/f(7) = 1/15.\nJede streng monotone Funktion ist injektiv und hat deshalb eine Umkehrfunktion.",
       "exam": true
     },
     {
       "id": "mathe-k048",
       "topic": "Funktionen, Umkehrfunktion und Monotonie",
       "front": "Folie 62: f: [2, ∞) → ℝ, f(x) = x² − 4x + 1. Wie lautet f⁻¹?",
-      "back": "(x − 2)² − 3 = y ⇒ x = 2 + √(y + 3).\nf⁻¹(x) = **2 + √(x + 3)**. Probe: f(5) = 6, f⁻¹(6) = 5.",
+      "back": "Quadratisch ergänzen: y = (x − 2)² − 3. Dann y + 3 = (x − 2)², Wurzel: x − 2 = √(y + 3), nur Plus, weil x ≥ 2.\nTauschen: f⁻¹(x) = **2 + √(x + 3)** mit f⁻¹: [−3, ∞) → [2, ∞).\nProbe: f(5) = 6 und f⁻¹(6) = 2 + 3 = 5.",
       "exam": true
     },
     {
       "id": "mathe-k049",
       "topic": "Grenzwerte von Funktionen",
       "front": "Grenzwert bei 0/0: lim (x → 2) (x² − 4)/(x − 2)",
-      "back": "Faktorisieren: (x − 2)(x + 2)/(x − 2) = x + 2 → **4**.",
+      "back": "Einsetzen gibt 0/0, also umformen. Dritte binomische Formel: x² − 4 = (x − 2)(x + 2).\nKürzen (erlaubt, weil x nur nahe 2 ist, nie gleich): x + 2 → **4**.\nProbe: x = 1,99 gibt 3,99, x = 2,01 gibt 4,01.",
       "exam": true
     },
     {
       "id": "mathe-k050",
       "topic": "Grenzwerte von Funktionen",
       "front": "Zahl/0: 1/x für x → 0 von rechts und von links",
-      "back": "Von rechts (x = 0,01 → 100) geht es nach +∞, von links (x = −0,01 → −100) nach −∞.\nLinks ≠ rechts ⇒ lim (x → 0) 1/x existiert nicht.",
+      "back": "Von rechts (x = 0,01 → 100, x = 0,001 → 1000) geht es nach **+∞**, von links (x = −0,01 → −100) nach **−∞**.\nZahl durch winzig Positives ist riesig positiv, durch winzig Negatives riesig negativ.\nLinks ≠ rechts ⇒ lim (x → 0) 1/x **existiert nicht**.",
       "exam": true
     },
     {
       "id": "mathe-k051",
       "topic": "Grenzwerte von Funktionen",
       "front": "Standard-Grenzwert sin(x)/x für x → 0",
-      "back": "**1** (Bogenmaß). Probe: sin(0,1)/0,1 ≈ 0,998.",
+      "back": "**1** (Taschenrechner im Bogenmaß, RAD).\nEinsetzen gibt 0/0, kürzen geht nicht, darum merkt man sich den Wert. Für kleine x ist sin(x) fast genau x.\nProbe: sin(0,1)/0,1 ≈ 0,998, sin(0,01)/0,01 ≈ 0,99998.",
       "exam": true
     },
     {
       "id": "mathe-k052",
       "topic": "Grenzwerte von Funktionen",
       "front": "lim (x → 0) sin(1/x)",
-      "back": "Existiert **nicht**: Der Sinus schwingt immer schneller zwischen −1 und 1 (Oszillation).",
+      "back": "Existiert **nicht** (Oszillationsstelle).\nWarum: Für x → 0 wird 1/x riesig, der Sinus wächst aber nicht mit, sondern schwingt immer schneller zwischen −1 und 1.\nZahlen: x = 2/π gibt 1, x = 2/(3π) gibt −1, x = 2/(5π) gibt wieder 1. Die Werte bleiben aber beschränkt, also kein Pol.",
       "exam": true
     },
     {
       "id": "mathe-k053",
       "topic": "Stetigkeit, Verkettung, ln und e",
       "front": "Wann ist f in x̂ stetig?",
-      "back": "Wenn lim (x → x̂) f(x) existiert und gleich f(x̂) ist. Anschaulich: Graph ohne Absetzen zeichnen.\nx² bei 2: von links und rechts → 4, und f(2) = 4 → stetig.",
+      "back": "Wenn lim (x → x̂) f(x) existiert **und** gleich f(x̂) ist. Drei Prüfungen: f(x̂) gibt es, links = rechts, und beides passt zusammen.\nAnschaulich: Graph ohne Absetzen zeichnen, kein Loch, keine Stufe.\nBeispiel x² bei 2: von links und rechts → 4, und f(2) = 4, also stetig.",
       "exam": true
     },
     {
       "id": "mathe-k054",
       "topic": "Stetigkeit, Verkettung, ln und e",
       "front": "c so wählen, dass f stetig ist: f(x) = (x² + 2x − 3)/(x² + x − 2), f(1) = c",
-      "back": "Kürzen: (x + 3)(x − 1)/((x + 2)(x − 1)) = (x + 3)/(x + 2). x = 1: c = **4/3**.",
+      "back": "c muss der Grenzwert an der Stelle 1 sein. Einsetzen gibt 0/0, also faktorisieren: (x + 3)(x − 1)/((x + 2)(x − 1)).\nKürzen: (x + 3)/(x + 2), dann x = 1 einsetzen: c = **4/3**.\nProbe: f(0,999) ≈ 1,3334, f(1,001) ≈ 1,3332.",
       "exam": true
     },
     {
       "id": "mathe-k055",
       "topic": "Stetigkeit, Verkettung, ln und e",
       "front": "Die 3 Unstetigkeitstypen",
-      "back": "Sprungstelle (links ≠ rechts), Polstelle (|f| → ∞, z. B. 1/(x − 2) bei 2), Oszillationsstelle (sin(1/x) bei 0).",
+      "back": "**Sprungstelle:** links ≠ rechts (Paketpreis bei 2 kg, oder 1 für x ≥ 0 und −1 für x < 0).\n**Polstelle:** |f(x)| wächst über alle Grenzen, z. B. 1/(x − 2) bei 2 (f(2,01) = 100).\n**Oszillationsstelle:** f schwingt immer schneller und kommt keiner Zahl nahe, z. B. sin(1/x) bei 0.",
       "exam": true
     },
     {
       "id": "mathe-k056",
       "topic": "Stetigkeit, Verkettung, ln und e",
       "front": "Welche Funktionen sind stetig?",
-      "back": "Polynome überall, p/q wo q ≠ 0, exp, ln, sin, cos auf ihrem Definitionsbereich. Summen, Produkte und Verkettungen stetiger Funktionen auch.",
+      "back": "Polynome überall, Brüche p/q überall, wo q ≠ 0 ist, Wurzeln auf [0, ∞), eˣ, ln, sin, cos auf ihrem Definitionsbereich.\nSummen, Produkte, Quotienten und Verkettungen stetiger Funktionen sind wieder stetig.\nKritisch sind deshalb nur Nennernullstellen und Nahtstellen stückweiser Funktionen.",
       "exam": true
     },
     {
       "id": "mathe-k057",
       "topic": "Stetigkeit, Verkettung, ln und e",
       "front": "ln-Regeln",
-      "back": "ln(a·b) = ln a + ln b · ln(a/b) = ln a − ln b · ln(aʳ) = r · ln a.\nBeispiel: ln 8 = 3 · ln 2.",
+      "back": "ln(a · b) = ln a + ln b (mal wird plus) · ln(a/b) = ln a − ln b (geteilt wird minus) · ln(aʳ) = r · ln a (Hochzahl nach vorne).\nSie kommen von den Potenzregeln, weil ln nach der Hochzahl fragt.\nBeispiel: ln 8 = ln 2³ = 3 · ln 2 ≈ 3 · 0,693 = 2,079.",
       "exam": true
     },
     {
       "id": "mathe-k058",
       "topic": "Stetigkeit, Verkettung, ln und e",
       "front": "e und ln heben sich auf",
-      "back": "eˡⁿ ᵃ = a und ln(eᵃ) = a: e hoch und ln machen sich gegenseitig rückgängig.\n√(e³ ˡⁿ ⁴) = √(eˡⁿ ⁶⁴) = √64 = **8**.",
+      "back": "e^(ln a) = a und ln(eᵃ) = a: e-hoch und ln machen sich gegenseitig rückgängig, wie Quadrieren und Wurzelziehen bei positiven Zahlen.\nBeispiel √(e^(3 ln 4)): 3 ln 4 = ln 4³ = ln 64, also e^(ln 64) = 64 und √64 = **8**.\nZum Gleichungslösen: auf beiden Seiten ln nehmen.",
       "exam": true
     },
     {
       "id": "mathe-k059",
       "topic": "Stetigkeit, Verkettung, ln und e",
       "front": "Zusammenfassen: ln 2x + ln 2y − ln z − ln 4",
-      "back": "= ln(2x · 2y / (4z)) = **ln(xy/z)**.",
+      "back": "Plus kommt in den Zähler, Minus in den Nenner: ln((2x · 2y)/(z · 4)) = ln(4xy/(4z)) = **ln(xy/z)**.\nDie Regeln „mal wird plus“ und „geteilt wird minus“ rückwärts benutzt.\nProbe x = 1,5, y = 2, z = 3: links ln 3 + ln 4 − ln 3 − ln 4 = 0, rechts ln 1 = 0.",
       "exam": true
     },
     {
       "id": "mathe-k060",
       "topic": "Aussagenlogik",
       "front": "Was ist eine **Aussage**?",
-      "back": "Ein Satz, der entweder wahr (w) oder falsch (f) ist.\n„5 ist kleiner als 3“ ist eine (falsche) Aussage; „Komm pünktlich!“ und „x + 2 = 5“ (x offen) sind keine.",
+      "back": "Ein Satz, bei dem man sinnvoll fragen kann, ob er stimmt: entweder wahr (w) oder falsch (f). Den Wert muss man nicht kennen.\n„5 ist kleiner als 3“ ist eine (falsche) Aussage, die Goldbach-Vermutung auch (Wert unbekannt).\nKeine Aussagen: „Komm pünktlich!“ (Befehl), „Logik ist schön“ (Meinung), „x + 2 = 5“ (x offen).",
       "exam": true
     },
     {
       "id": "mathe-k061",
       "topic": "Aussagenlogik",
       "front": "A ∨ B vs. A ⊻ B",
-      "back": "∨ (oder) ist auch wahr, wenn **beide** wahr sind; ⊻ (entweder-oder) nur, wenn genau eins wahr ist.\nA = w, B = w: A ∨ B = w, aber A ⊻ B = f.",
+      "back": "∨ (oder) ist auch wahr, wenn **beide** wahr sind, es ist nur bei f, f falsch. ⊻ (entweder-oder) ist nur wahr, wenn **genau eins** wahr ist.\nIm Alltag meint „oder“ oft ⊻, in der Logik ist ∨ einschließend.\nBeispiel A = w, B = w: A ∨ B = w, aber A ⊻ B = f.",
       "exam": true
     },
     {
       "id": "mathe-k062",
       "topic": "Aussagenlogik",
       "front": "Wann ist A → B **falsch**?",
-      "back": "Nur bei A = w und B = f.\n„Wenn es regnet, nehme ich den Schirm“ ist nur gebrochen, wenn es regnet und kein Schirm da ist. Bei A = f ist A → B immer wahr.",
+      "back": "**Nur** bei A = w und B = f.\nBild: „Wenn es regnet, nehme ich den Schirm“ ist nur gebrochen, wenn es regnet und kein Schirm da ist. Über trockene Tage wurde nichts versprochen.\nDarum ist A → B bei A = f immer wahr: „Aus Falschem folgt alles.“",
       "exam": true
     },
     {
       "id": "mathe-k063",
       "topic": "Aussagenlogik",
       "front": "Was bedeutet A ↔ B?",
-      "back": "Wahr, wenn A und B **denselben** Wert haben (beide w oder beide f); das ist (A → B) ∧ (B → A).\n„n durch 4 teilbar ↔ n gerade“ ist falsch: n = 6.",
+      "back": "A ↔ B ist wahr, wenn A und B **denselben** Wert haben (beide w oder beide f). Es ist die Implikation in beide Richtungen: (A → B) ∧ (B → A).\nBeispiel „n durch 4 teilbar ↔ n gerade“ ist falsch: n = 6 ist gerade, aber nicht durch 4 teilbar.\nDie Richtung „durch 4 teilbar → gerade“ allein stimmt.",
       "exam": true
     },
     {
       "id": "mathe-k064",
       "topic": "Aussagenlogik",
       "front": "**Kontraposition** von A → B",
-      "back": "¬B → ¬A: Seiten tauschen **und** beide verneinen – gleichwertig zu A → B.\n„durch 4 teilbar → gerade“ = „ungerade → nicht durch 4 teilbar“.",
+      "back": "¬B → ¬A: Seiten tauschen **und** beide verneinen. Das ist gleichwertig zu A → B (in allen 4 Zeilen gleich).\nWarum: Falls B nicht gilt, kann A nicht gegolten haben, sonst wäre B ja gefolgt.\nBeispiel: „durch 4 teilbar → gerade“ ist dasselbe wie „ungerade → nicht durch 4 teilbar“.",
       "exam": true
     },
     {
       "id": "mathe-k065",
       "topic": "Aussagenlogik",
       "front": "Ist ¬A → ¬B gleichwertig zu A → B?",
-      "back": "Nein, das ist der **Umkehrschluss** (Denkfehler). Bei A = f, B = w: A → B = w, aber ¬A → ¬B = f.\n„Wer lernt, besteht“ heißt nicht „wer nicht lernt, fällt durch“.",
+      "back": "Nein, das ist der **Umkehrschluss**, ein Denkfehler.\nGegenbeispiel A = f, B = w: A → B = w, aber ¬A → ¬B = w → f = f. Eine abweichende Zeile reicht.\nAlltag: „Wer lernt, besteht“ heißt nicht „wer nicht lernt, fällt durch“. Richtig umdrehen geht nur mit Kontraposition.",
       "exam": true
     },
     {
       "id": "mathe-k066",
       "topic": "Aussagenlogik",
       "front": "A → B ohne Pfeil schreiben",
-      "back": "A → B ≡ ¬A ∨ B.\nProbe A = w, B = f: ¬A ∨ B = f ∨ f = f, genau wie A → B.",
+      "back": "A → B ≡ ¬A ∨ B: „Entweder gilt A nicht, oder B gilt.“\nWarum: Beide Formeln sind nur bei A = w, B = f falsch.\nProbe A = w, B = f: ¬A ∨ B = f ∨ f = f, genau wie A → B. Diese Umformung brauchst du fast bei jedem Vereinfachen.",
       "exam": true
     },
     {
       "id": "mathe-k067",
       "topic": "Aussagenlogik",
       "front": "Tautologie, Widerspruch, erfüllbar",
-      "back": "Tautologie: bei **allen** Belegungen wahr (A ∨ ¬A). Widerspruch: bei **keiner** (A ∧ ¬A).\nErfüllbar: bei **mindestens einer** wahr (z. B. A ∧ B bei A = B = w).",
+      "back": "**Tautologie:** bei **allen** Belegungen wahr, z. B. A ∨ ¬A.\n**Widerspruch:** bei **keiner** wahr, z. B. A ∧ ¬A.\n**Erfüllbar:** bei **mindestens einer** wahr, z. B. A ∧ B (bei A = B = w).\nSchau nur in die Ergebnisspalte: lauter w, kein w oder mindestens ein w.",
       "exam": true
     },
     {
       "id": "mathe-k068",
       "topic": "Aussagenlogik",
       "front": "Wie viele Zeilen hat eine Wahrheitstafel mit n Variablen?",
-      "back": "2ⁿ, weil jede Variable w oder f sein kann.\n3 Variablen: 2³ = 8 Zeilen, 4 Variablen: 16.",
+      "back": "2ⁿ Zeilen, weil jede neue Variable die Zeilen verdoppelt (jede alte Zeile einmal mit w, einmal mit f).\n3 Variablen: 2³ = 8 Zeilen, 4 Variablen: 2⁴ = 16.\nEs zählt die Anzahl **verschiedener** Variablen, nicht die Anzahl der Operatoren.",
       "exam": true
     },
     {
       "id": "mathe-k069",
       "topic": "Aussagenlogik",
       "front": "Vorrangregeln: Was bindet am stärksten?",
-      "back": "¬ vor ∧ vor ∨ vor → vor ↔ (wie Minus vor Mal vor Plus).\n¬A ∧ B ∨ C heißt ((¬A) ∧ B) ∨ C.",
+      "back": "¬ vor ∧ vor ∨ vor → vor ↔, wie Minus-Vorzeichen vor Mal vor Plus.\nDarum heißt ¬A ∧ B ∨ C so viel wie ((¬A) ∧ B) ∨ C.\nBeispiel A ∨ B ∧ C bei A = w, C = f: richtig A ∨ (B ∧ C) = w; falsch gelesen (A ∨ B) ∧ C = f.",
       "exam": true
     },
     {
       "id": "mathe-k070",
       "topic": "Aussagenlogik",
       "front": "De Morgan",
-      "back": "¬(A ∧ B) ≡ ¬A ∨ ¬B und ¬(A ∨ B) ≡ ¬A ∧ ¬B: Die Negation wandert in die Klammer, ∧ und ∨ tauschen.\n„Nicht (Kaffee und Kuchen)“ = „kein Kaffee oder kein Kuchen“.",
+      "back": "¬(A ∧ B) ≡ ¬A ∨ ¬B und ¬(A ∨ B) ≡ ¬A ∧ ¬B: Die Negation wandert in die Klammer, und ∧ und ∨ **tauschen**.\nAlltag: „Nicht (Kaffee und Kuchen)“ = „kein Kaffee oder kein Kuchen“. Wer nur Kaffee trinkt, hat nicht beides.\nProbe A = w, B = f: ¬(w ∧ f) = w und f ∨ w = w.",
       "exam": true
     },
     {
       "id": "mathe-k071",
       "topic": "Aussagenlogik",
       "front": "Vereinfache (A ∧ B) ∨ (A ∧ ¬B)",
-      "back": "A ausklammern: A ∧ (B ∨ ¬B) ≡ A ∧ w ≡ **A**.\nGesetze: Distributivität, Komplement, Neutralität.",
+      "back": "**A**. A ausklammern (Distributivität rückwärts): A ∧ (B ∨ ¬B). Komplement: B ∨ ¬B ≡ w. Neutralität: A ∧ w ≡ A.\nAnschaulich: Ob B gilt oder nicht, ist egal, es zählt nur A.\nProbe A = w, B = f: (w ∧ f) ∨ (w ∧ w) = w = A.",
       "exam": true
     },
     {
       "id": "mathe-k072",
       "topic": "Aussagenlogik",
       "front": "Wie viele boolesche Funktionen mit n Variablen gibt es?",
-      "back": "2 hoch (2ⁿ): Die Tafel hat 2ⁿ Zeilen, jede Zeile kann w oder f sein.\nn = 2: 2⁴ = **16**, n = 3: 2⁸ = 256.",
+      "back": "2^(2ⁿ): Die Tafel hat 2ⁿ Zeilen, und in jeder Zeile kann das Ergebnis w oder f sein.\nn = 2: 4 Zeilen, also 2⁴ = **16** Funktionen (g₁ bis g₁₆). n = 3: 2⁸ = 256.\nJede Formel beschreibt eine davon, gleichwertige Formeln dieselbe.",
       "exam": true
     },
     {
       "id": "mathe-k073",
       "topic": "Aussagenlogik",
       "front": "NAND und NOR",
-      "back": "NAND = ¬(A ∧ B): nur bei A = B = w falsch.\nNOR = ¬(A ∨ B): nur bei A = B = f wahr.",
+      "back": "**NAND** = ¬(A ∧ B): nur bei A = B = w falsch, sonst wahr („nicht beide“).\n**NOR** = ¬(A ∨ B): nur bei A = B = f wahr („weder noch“).\nAus GIT kennst du sie als Gatter. Beispiel A = w, B = f: NAND = w, NOR = f.",
       "exam": true
     },
     {
       "id": "mathe-k074",
       "topic": "Aussagenlogik",
       "front": "Was ist eine **Vollkonjunktion** (Minterm)?",
-      "back": "Alle Variablen genau einmal, mit ∧ verbunden, evtl. verneint; sie ist in genau **einer** Zeile wahr.\nA ∧ ¬B ∧ C ist nur bei (w, f, w) wahr. A ∧ C ist bei 3 Variablen keine (B fehlt).",
+      "back": "Alle Variablen kommen genau einmal vor, mit ∧ verbunden, manche verneint. Sie ist in genau **einer** Zeile wahr.\nBeispiel A ∧ ¬B ∧ C ist nur bei (w, f, w) wahr.\nA ∧ C ist bei drei Variablen **keine** Vollkonjunktion, weil B fehlt.",
       "exam": true
     },
     {
       "id": "mathe-k075",
       "topic": "Aussagenlogik",
       "front": "DNF aus der Wahrheitstafel: Rezept",
-      "back": "Nimm die Zeilen mit **w**: Variable mit w bleibt, mit f wird verneint; Vollkonjunktionen mit ∨ verbinden.\nWahr nur bei (w, f) und (f, w): (A ∧ ¬B) ∨ (¬A ∧ B).",
+      "back": "Nimm die Zeilen mit **w**. Pro Zeile ein ∧-Block: Variable mit Wert w bleibt, mit Wert f wird verneint. Blöcke mit ∨ verbinden.\nWarum: Jeder Block ist genau in seiner Zeile wahr, das ∨ sammelt alle erlaubten Zeilen.\nBeispiel wahr nur bei (w, f) und (f, w): (A ∧ ¬B) ∨ (¬A ∧ B), also A ⊻ B.",
       "exam": true
     },
     {
       "id": "mathe-k076",
       "topic": "Aussagenlogik",
       "front": "KNF aus der Wahrheitstafel: Rezept",
-      "back": "Nimm die Zeilen mit **f**: Variable mit w wird verneint, mit f bleibt; Volldisjunktionen mit ∧ verbinden.\nFalsch nur bei (w, w): KNF = ¬A ∨ ¬B.",
+      "back": "Nimm die Zeilen mit **f**. Pro Zeile ein ∨-Block: Variable mit Wert w wird **verneint**, mit Wert f bleibt sie. Blöcke mit ∧ verbinden.\nWarum: Jeder Block ist genau in seiner Zeile falsch, er verbietet sie.\nBeispiel falsch nur bei (w, w): KNF = ¬A ∨ ¬B. Probe: bei (w, w) ist f ∨ f = f.",
       "exam": true
     },
     {
       "id": "mathe-k077",
       "topic": "Aussagenlogik",
       "front": "∀ und ∃",
-      "back": "∀x P(x): für **alle** x gilt P. ∃x P(x): es gibt **mindestens ein** x mit P.\nAuf ℕ: ∀x „x gerade“ ist f (x = 1), ∃x „x gerade“ ist w (x = 2).",
+      "back": "∀x P(x): P gilt für **alle** x. ∃x P(x): es gibt **mindestens ein** x mit P (mehrere erlaubt).\n∀ widerlegt man mit einem Gegenbeispiel, ∃ beweist man mit einem Beispiel.\nAuf ℕ: ∀x „x gerade“ ist f (x = 1), ∃x „x gerade“ ist w (x = 2).",
       "exam": true
     },
     {
       "id": "mathe-k078",
       "topic": "Aussagenlogik",
       "front": "Quantoren verneinen",
-      "back": "¬∀x P(x) ≡ ∃x ¬P(x) und ¬∃x P(x) ≡ ∀x ¬P(x): Quantor umdrehen, innen verneinen.\nGegenteil von „alle haben ein Ticket“: „**mindestens einer** hat keins“.",
+      "back": "¬∀x P(x) ≡ ∃x ¬P(x) und ¬∃x P(x) ≡ ∀x ¬P(x): Quantor umdrehen, ¬ nach innen.\nWarum: ∀ ist ein großes ∧, ∃ ein großes ∨, also ist das De Morgan.\nAlltag: Das Gegenteil von „alle haben ein Ticket“ ist „**mindestens einer** hat keins“, nicht „keiner hat eins“.",
       "exam": true
     },
     {
       "id": "mathe-k079",
       "topic": "Aussagenlogik",
       "front": "Darf man ∀ und ∃ vertauschen?",
-      "back": "Nein. ∀y ∃x T(x, y): jede Zahl y hat irgendeinen Teiler x. ∃x ∀y T(x, y): **ein** x teilt alle.\nD = {2, 3, 5}, M = {4, 6, 9, 10}: das erste ist w, das zweite f.",
+      "back": "Nein, verschiedene Quantoren darf man nicht tauschen (gleiche schon).\n∀y ∃x T(x, y): jede Zahl y hat irgendeinen Teiler x. ∃x ∀y T(x, y): **ein und dasselbe** x teilt alle y.\nMit D = {2, 3, 5}, M = {4, 6, 9, 10}: das erste ist w (jede Zeile hat ein Kreuz), das zweite f (keine Spalte voll).",
       "exam": true
     },
     {
       "id": "mathe-k080",
       "topic": "Aussagenlogik",
       "front": "„Jede Quadratzahl ist gerade“ formalisieren und verneinen",
-      "back": "∀x (Q(x) → G(x)) – mit →, nicht mit ∧. Falsch wegen x = 9.\nVerneinung: ∃x (Q(x) ∧ ¬G(x)), „es gibt eine ungerade Quadratzahl“.",
+      "back": "∀x (Q(x) → G(x)), mit →, nicht mit ∧. Mit ∧ hieße es „jede Zahl ist eine gerade Quadratzahl“.\nFalsch wegen x = 9 (Gegenbeispiel).\nVerneinung: ∃x ¬(Q(x) → G(x)) ≡ ∃x (Q(x) ∧ ¬G(x)), „es gibt eine ungerade Quadratzahl“, wahr (9).",
       "exam": true
     },
     {
       "id": "mathe-k081",
       "topic": "Aussagenlogik",
       "front": "Vollständige Induktion: die 3 Schritte",
-      "back": "1. Anfang: A(1) nachrechnen. 2. Annahme: A(n) gilt für **ein festes** n. 3. Schluss: A(n + 1) mit der Annahme herleiten.\nWie Dominosteine: Der erste fällt, und jeder stößt den nächsten um.",
+      "back": "1. **Anfang:** A(1) nachrechnen. 2. **Annahme:** A(n) gilt für **ein festes** n. 3. **Schluss:** A(n + 1) mit der Annahme herleiten und die Stelle markieren.\nBild: Dominosteine. Der erste fällt, und jeder stößt den nächsten um, also fallen alle.\nBeispiele (n = 1, 2, 3 ausrechnen) zeigen nur, dass es plausibel ist.",
       "exam": true
     },
     {
       "id": "mathe-k082",
       "topic": "Aussagenlogik",
       "front": "Induktion: 1 + 2 + … + n = n(n + 1)/2, der Schluss",
-      "back": "1 + … + n + (n + 1) = n(n + 1)/2 + (n + 1) (← Annahme) = (n + 1)(n + 2)/2 ✓.\nAnfang n = 1: 1 = 1 · 2/2 ✓.",
+      "back": "Ziel: 1 + … + n + (n + 1) = (n + 1)(n + 2)/2.\nDie ersten n Summanden durch die Annahme ersetzen: n(n + 1)/2 + (n + 1). Auf einen Bruch: (n(n + 1) + 2(n + 1))/2, (n + 1) ausklammern: (n + 1)(n + 2)/2 ✓.\nAnfang n = 1: links 1, rechts 1 · 2/2 = 1 ✓.",
       "exam": true
     },
     {
       "id": "mathe-k083",
       "topic": "Aussagenlogik",
       "front": "Beweismuster Kontraposition, Widerspruch, Gegenbeispiel",
-      "back": "Kontraposition: statt A → B zeigst du ¬B → ¬A. Widerspruch: Gegenteil annehmen, bis A ∧ ¬A herauskommt.\nGegenbeispiel: Ein einziges widerlegt ein „für alle“; Beispiele beweisen es nie.",
+      "back": "**Kontraposition:** statt A → B zeigst du ¬B → ¬A (z. B. „n² gerade → n gerade“ über „n ungerade → n² ungerade“).\n**Widerspruch:** Gegenteil annehmen, bis A ∧ ¬A herauskommt (Euklid: keine größte Primzahl).\n**Gegenbeispiel:** Ein einziges widerlegt ein „für alle“; Beispiele beweisen es nie.",
       "exam": true
     },
     {
       "id": "mathe-k084",
       "topic": "Aussagenlogik",
       "front": "→ vs. ⇒",
-      "back": "→ steht **in** einer Formel. F₁ ⇒ F₂ ist eine Aussage **über** Formeln: „F₁ → F₂ ist eine Tautologie“.\nModus Ponens: A ∧ (A → B) ⇒ B.",
+      "back": "→ ist ein Baustein **in** einer Formel und hat je nach Zeile einen Wert. F₁ ⇒ F₂ ist eine Aussage **über** Formeln: „In jeder Zeile, in der F₁ wahr ist, ist F₂ wahr“, also „F₁ → F₂ ist eine Tautologie“.\nBeispiel Modus Ponens: A ∧ (A → B) ⇒ B.\nGenauso: ↔ in der Formel, ≡ über Formeln.",
       "exam": true
     },
     {
       "id": "mathe-k085",
       "topic": "Stetigkeit, Verkettung, ln und e",
       "front": "(g ∘ f)(3) mit f(x) = x + 1 und g(x) = x²",
-      "back": "Erst f: f(3) = 4, dann g: g(4) = **16**.\nAndersherum (f ∘ g)(3) = f(9) = 10 – die Reihenfolge zählt.",
+      "back": "Erst f: f(3) = 3 + 1 = 4. Dann g: g(4) = 4² = **16**.\nBei g ∘ f läuft das rechte f zuerst, wie in g(f(x)) die innere Klammer.\nAndersherum (f ∘ g)(3) = f(9) = 10, die Reihenfolge zählt.",
       "exam": true
     },
     {
       "id": "mathe-k086",
       "topic": "Stetigkeit, Verkettung, ln und e",
       "front": "Wann darf man g ∘ f bilden?",
-      "back": "Wenn alles, was f ausgibt, im Definitionsbereich von g liegt.\nf = sin liefert Werte in [−1, 1], g ist auf [−2, 2] definiert → passt.",
+      "back": "Wenn alles, was f ausgibt, im Definitionsbereich von g liegt: f(D_f) ⊆ D_g. „Der Ausgang passt in den Eingang.“\nBeispiel: sin liefert Werte in [−1, 1], g(x) = 1 − x² ist auf [−2, 2] definiert, also passt es.\nGegenbeispiel: f(0) = 1 passt nicht in ein g, das nur (0, 1) annimmt.",
       "exam": true
     },
     {
       "id": "mathe-k087",
       "topic": "Stetigkeit, Verkettung, ln und e",
       "front": "f(x) = x² + 1 für x ≤ 2, f(x) = ax − 3 für x > 2: welches a macht f stetig?",
-      "back": "Beide Seiten bei x = 2 gleich setzen: 2² + 1 = 5 = 2a − 3 → **a = 4**.",
+      "back": "Kritisch ist nur die Nahtstelle x = 2. Beide Formeln müssen dort denselben Wert liefern.\nLinks: 2² + 1 = 5. Rechts: 2a − 3. Gleichsetzen: 2a − 3 = 5, also 2a = 8 und **a = 4**.\nProbe: f(2,01) = 4 · 2,01 − 3 = 5,04, das liegt nahe 5.",
       "exam": true
     },
     {
       "id": "mathe-k088",
       "topic": "Stetigkeit, Verkettung, ln und e",
       "front": "Linker Grenzwert = rechter Grenzwert: reicht das für Stetigkeit?",
-      "back": "Nein, auch der Funktionswert muss passen.\nGegenbeispiel: f(x) = 0 für x ≠ 0, f(0) = 1: Grenzwert 0, aber f(0) = 1.",
+      "back": "Nein. Zusätzlich muss der Funktionswert passen: lim = f(x̂).\nGegenbeispiel: f(x) = 0 für x ≠ 0 und f(0) = 1. Von beiden Seiten läuft f auf 0 zu, aber der Punkt liegt bei 1.\nDas ist wie ein Stein, der aus einer glatten Straße ragt.",
       "exam": true
     },
     {
       "id": "mathe-k089",
       "topic": "Stetigkeit, Verkettung, ln und e",
       "front": "Was bedeutet ln a = k?",
-      "back": "Dasselbe wie eᵏ = a: ln fragt „e hoch wie viel ergibt a?“.\nDarum ln 1 = 0 und ln e = 1; ln a gibt es nur für a > 0.",
+      "back": "ln a = k bedeutet dasselbe wie eᵏ = a: ln fragt „e hoch wie viel ergibt a?“.\nDarum ln 1 = 0 (e⁰ = 1) und ln e = 1 (e¹ = e).\nln a gibt es nur für a > 0, weil e hoch irgendwas nie 0 oder negativ ist. Beispiel: ln 7,39 ≈ 2, weil e² ≈ 7,39.",
       "exam": true
     },
     {
       "id": "mathe-k090",
       "topic": "Stetigkeit, Verkettung, ln und e",
       "front": "Löse e²ˣ⁻¹ = 5 (e hoch 2x − 1)",
-      "back": "ln auf beiden Seiten: 2x − 1 = ln 5 → x = **(1 + ln 5)/2** ≈ 1,305.",
+      "back": "ln auf beiden Seiten: ln(e^(2x − 1)) = ln 5, also 2x − 1 = ln 5.\nPlus 1, durch 2: x = **(1 + ln 5)/2** ≈ (1 + 1,609)/2 ≈ 1,305.\nProbe: e^(2 · 1,305 − 1) = e^1,61 ≈ 5.",
       "exam": true
     },
     {
       "id": "mathe-k091",
       "topic": "Stetigkeit, Verkettung, ln und e",
       "front": "log₂ a mit ln ausrechnen",
-      "back": "log₂ a = ln a / ln 2.\nlog₂ 8 = ln 8 / ln 2 = 3 ln 2 / ln 2 = **3**.",
+      "back": "log₂ a = ln a/ln 2 (Basis umrechnen).\nWarum: Aus a = 2ʸ folgt mit ln auf beiden Seiten ln a = y · ln 2.\nBeispiel log₂ 8 = ln 8/ln 2 = 3 ln 2/ln 2 = **3**, denn 2³ = 8.",
       "exam": true
     },
     {
       "id": "mathe-k092",
       "topic": "Grundlagen",
       "front": "Was ist n! (Fakultät)?",
-      "back": "Alle Zahlen von 1 bis n malnehmen: 4! = 1 · 2 · 3 · 4 = 24, und 0! = 1.\nTrick: (k + 1)! = (k + 1) · k!, also 4!/5! = 1/5.",
+      "back": "Alle ganzen Zahlen von 1 bis n malnehmen: 4! = 1 · 2 · 3 · 4 = 24. Festgelegt ist 0! = 1.\nTrick: (k + 1)! = (k + 1) · k!, jede Fakultät enthält die vorige.\nDamit kürzt du Brüche: 4!/5! = 4!/(5 · 4!) = 1/5. Probe: 24/120 = 1/5.",
       "exam": true
     },
     {
       "id": "mathe-k093",
       "topic": "Grundlagen",
       "front": "Unbestimmte Ausdrücke mit ∞",
-      "back": "∞ − ∞, ∞/∞ und 0 · ∞ sagen allein nichts – man muss umformen.\nAlle „∞/∞“: 2n/n → 2, n²/n → ∞, n/n² → 0.",
+      "back": "∞ − ∞, ∞/∞ und 0 · ∞ heißen **unbestimmt**: Die Kurzschrift allein sagt nichts, du musst umformen (ausklammern, durch die höchste Potenz teilen).\nZahlen zeigen es: Alle drei sind „∞/∞“, aber 2n/n → 2, n²/n → ∞ und n/n² → 0.\nDagegen sind ∞ + ∞ = ∞ und 1/∞ = 0 eindeutig.",
       "exam": true
     },
     {
       "id": "mathe-k094",
       "topic": "Funktionen, Umkehrfunktion und Monotonie",
       "front": "Streng monoton wachsende Funktion: Test",
-      "back": "Aus x₁ < x₂ folgt f(x₁) < f(x₂). Rechentrick: zeige f(x₂) − f(x₁) > 0.\n2x + 1: Differenz = 2(x₂ − x₁) > 0 → streng wachsend.",
+      "back": "Aus x₁ < x₂ folgt f(x₁) < f(x₂), für **alle** Paare. Rechentrick: zeige f(x₂) − f(x₁) > 0 (rechts minus links positiv).\nBeispiel 2x + 1: f(x₂) − f(x₁) = 2(x₂ − x₁) > 0, weil x₂ rechts liegt.\nEin paar eingesetzte Zahlen sind nur eine Vermutung, kein Beweis.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k095",
+      "topic": "Grundlagen",
+      "front": "Die drei **binomischen Formeln**",
+      "back": "(a + b)² = a² + 2ab + b² · (a − b)² = a² − 2ab + b² · (a + b)(a − b) = a² − b².\nDas 2ab sind im Bild vom quadratischen Garten die zwei Rechtecke, die man nicht vergessen darf.\nProbe a = 5, b = 2: (5 + 2)² = 49 = 25 + 20 + 4.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k096",
+      "topic": "Grundlagen",
+      "front": "x² − 9 als Produkt schreiben",
+      "back": "(x + 3)(x − 3), dritte binomische Formel rückwärts mit a = x, b = 3.\nDas brauchst du beim Kürzen von 0/0-Grenzwerten und beim Faktorisieren.\nProbe x = 5: 25 − 9 = 16 und 8 · 2 = 16. Achtung: x² + 9 lässt sich so nicht zerlegen.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k097",
+      "topic": "Grundlagen",
+      "front": "Darf man (2 + 3)/2 zu 3 kürzen?",
+      "back": "Nein. Kürzen darf man nur **Faktoren** (Malzahlen), keine Summanden.\n(2 + 3)/2 = 5/2 = 2,5. Kürzen ginge bei (2 · 3)/2 = 3.\nDarum erst faktorisieren, dann kürzen: (x² − 4)/(x − 2) = (x − 2)(x + 2)/(x − 2) = x + 2.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k098",
+      "topic": "Grundlagen",
+      "front": "Doppelbruch (3/10)/(1 − 1/10) ausrechnen",
+      "back": "Erst den Nenner: 1 − 1/10 = 9/10. Dann geteilt = mal Kehrwert: 3/10 · 10/9 = 30/90 = **1/3**.\nSo sehen fast alle Werte geometrischer Reihen aus („erstes Glied/(1 − q)“).\nProbe: 1/3 = 0,333…, und das ist genau 0,3 + 0,03 + …",
+      "exam": true
+    },
+    {
+      "id": "mathe-k099",
+      "topic": "Folgen",
+      "front": "ε-Definition mit Zahlen: aₙ = 2 + 3/n, ab welchem n₀ ist |aₙ − 2| < 0,01?",
+      "back": "Abstand |aₙ − 2| = 3/n. Bedingung 3/n < 0,01 ⇔ n > 300, also **n₀ = 301**.\nBei n = 300 ist der Abstand genau 0,01, also noch nicht kleiner.\nZu jedem ε gibt es so ein n₀ (die erste ganze Zahl über 3/ε), darum konvergiert die Folge gegen 2.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k100",
+      "topic": "Folgen",
+      "front": "Die drei Sätze über konvergente Folgen (F. 25)",
+      "back": "1. Eine Folge hat **höchstens einen** Grenzwert.\n2. Jede konvergente Folge ist **beschränkt**.\n3. **Monoton und beschränkt** ⇒ konvergent.\nAchtung Richtung: Beschränkt allein ⇒ konvergent ist falsch, Gegenbeispiel (−1)ⁿ.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k101",
+      "topic": "Folgen",
+      "front": "Ist eine Folge arithmetisch oder geometrisch? Der Erkennungstest",
+      "back": "**Differenzen** bilden (Glied minus Vorgänger): immer gleich → arithmetisch. 5, 8, 11, 14: immer 3.\n**Quotienten** bilden (Glied durch Vorgänger): immer gleich → geometrisch. 3, 6, 12, 24: immer 2.\nFaustregel: n als Faktor (3n + 1) → arithmetisch, n im Exponenten (3 · 2ⁿ) → geometrisch.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k102",
+      "topic": "Reihen",
+      "front": "Welches Kriterium? Die Reihenfolge der Fragen",
+      "back": "1. Glieder → 0? Nein → divergent. 2. Geometrisch (qᵏ)? → konvergent genau bei |q| < 1. 3. Bruch aus Potenzen? → Potenzabstand > 1. 4. k! oder xᵏ? → Quotientenkriterium. 5. „etwas mit k minus dasselbe mit k + 1“? → Teleskop.\nBei der ersten passenden Frage aufhören.\nBeispiel Σ (k² + 1)/(2k²): schon Frage 1 sagt divergent (Glieder → ½).",
+      "exam": true
+    },
+    {
+      "id": "mathe-k103",
+      "topic": "Reihen",
+      "front": "Ist Σ k⁻² eine geometrische Reihe?",
+      "back": "Nein. k⁻² = 1/k²: Die Basis ist k (läuft), der Exponent fest. Geometrisch heißt umgekehrt: feste Basis q, k im Exponenten.\nSie konvergiert trotzdem, als Σ 1/kᵖ mit p = 2 > 1, Wert π²/6 ≈ 1,645.\nGeometrisch wäre z. B. Σ 2⁻ᵏ = Σ (½)ᵏ.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k104",
+      "topic": "Reihen",
+      "front": "Periodenzahl mit Vorperiode: 4,31222… (nur die 2 wiederholt sich)",
+      "back": "Erst abtrennen: 4,31 + 0,00222…\nDie Reihe 0,002 + 0,0002 + … hat erstes Glied 2/1000 und q = 1/10, Wert (2/1000)/(9/10) = 2/900.\nZusammen 3879/900 + 2/900 = **3881/900**. Probe: 3881 : 900 = 4,31222…",
+      "exam": true
+    },
+    {
+      "id": "mathe-k105",
+      "topic": "Reihen",
+      "front": "Teleskop mit Abstand 2: Σₖ₌₁^∞ (1/k − 1/(k + 2))",
+      "back": "Eine Zahl geht erst **zwei** Klammern später wieder hinaus, darum bleiben am Anfang zwei Stücke übrig: 1 und ½.\nsₙ = 1 + ½ − 1/(n + 1) − 1/(n + 2) → **3/2**.\nProbe n = 2: (1 − ⅓) + (½ − ¼) = 2/3 + 1/4 = 11/12, und 1,5 − ⅓ − ¼ = 11/12.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k106",
+      "topic": "Finanzmathematik",
+      "front": "Abzinsen: Was ist eine Zahlung Kₙ in n Jahren heute wert?",
+      "back": "K₀ = Kₙ/(1 + i)ⁿ, also Zinseszins rückwärts: n-mal durch 1 + i teilen.\nBeispiel 10 000 € in 5 Jahren bei 4 %: 10 000/1,04⁵ ≈ **8219,27 €**.\nProbe: 8219,27 · 1,04⁵ ≈ 10 000 €.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k107",
+      "topic": "Finanzmathematik",
+      "front": "Rate berechnen: Welche Rate r ergibt in n Jahren den Endwert Eₙ?",
+      "back": "r = Eₙ · i/((1 + i)ⁿ − 1), die Endwertformel nach r umgestellt.\nBeispiel 10 000 € in 10 Jahren bei 5 %: 500/0,628895 ≈ **795,05 €** pro Jahr.\nNicht einfach 10 000/10 = 1000 €, die Zinsen helfen mit.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k108",
+      "topic": "Finanzmathematik",
+      "front": "Zins pro Jahr, Rate pro Monat: Was ist zu beachten?",
+      "back": "Zins, Rate und Laufzeit müssen zur **selben Periode** passen, also alles in Monaten oder alles in Jahren.\nBeispiel der Folie: 100 € pro Monat, 0,25 % pro Monat, n = 60 Monate.\nMischen (Jahreszins mit Monatsraten) gibt falsche Endwerte.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k109",
+      "topic": "Funktionen, Umkehrfunktion und Monotonie",
+      "front": "Quadratische Ergänzung: x² + bx + c umformen",
+      "back": "x² + bx + c = (x + b/2)² − (b/2)² + c: Zahl vor x halbieren, quadrieren, ergänzen und gleich wieder abziehen.\nBeispiel x² − 4x + 1: Hälfte −2, Quadrat 4, also (x − 2)² − 4 + 1 = (x − 2)² − 3, Scheitel (2 | −3).\nProbe x = 0: links 1, rechts 4 − 3 = 1.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k110",
+      "topic": "Funktionen, Umkehrfunktion und Monotonie",
+      "front": "Rezept: Umkehrfunktion bestimmen",
+      "back": "1. y = f(x) hinschreiben (bei Parabeln erst quadratisch ergänzen). 2. Prüfen, ob f auf D injektiv ist. 3. Bild bestimmen. 4. Nach x auflösen. 5. x und y tauschen. 6. Probe f⁻¹(f(x)) = x.\nBeispiel f(x) = 2x + 1: x = (y − 1)/2, also f⁻¹(x) = (x − 1)/2. Probe f(3) = 7, f⁻¹(7) = 3.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k111",
+      "topic": "Funktionen, Umkehrfunktion und Monotonie",
+      "front": "Plus oder Minus vor der Wurzel bei f⁻¹?",
+      "back": "Das entscheidet die Definitionsmenge von f.\nBei f: [2, ∞) ist x − 2 ≥ 0, also x − 2 = +√(y + 3). Bei x < 1 (FU-8, linker Teil) ist x − 1 < 0, also das Minus.\nGrund: √((x − 1)²) = |x − 1|, nicht x − 1.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k112",
+      "topic": "Funktionen, Umkehrfunktion und Monotonie",
+      "front": "Senkrechter und waagrechter Linientest",
+      "back": "**Senkrecht:** Trifft jede senkrechte Linie den Graphen höchstens einmal? Dann ist es eine Funktion (jedes x ein Ergebnis).\n**Waagrecht:** Trifft jede waagrechte Linie höchstens einmal? Dann ist f injektiv.\nBeispiel Parabel x²: Funktion ja, aber y = 4 trifft zweimal (±2), also nicht injektiv.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k113",
+      "topic": "Funktionen, Umkehrfunktion und Monotonie",
+      "front": "Beschränktheit einer Funktion prüfen",
+      "back": "An den Rändern von D schauen: Wohin läuft f(x)? Gibt es einen Boden und eine Decke?\nAm offenen Rand nicht einsetzen, sondern Zahlen nahe dran (0,9; 0,99; 0,999).\nBeispiel 1/x + 2 auf (0, ∞): für x → ∞ gegen 2 (Boden), für x → 0⁺ riesig (keine Decke), also nicht beschränkt.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k114",
+      "topic": "Grenzwerte von Funktionen",
+      "front": "Die Taktik für lim (x → a) f(x)",
+      "back": "1. Einsetzen. 2. Zahl → fertig. 3. Zahl/0 → Vorzeichen links und rechts prüfen. 4. 0/0 → faktorisieren und kürzen. 5. ∞/∞ (bei x → ∞) → durch die höchste Potenz teilen. 6. Probe mit Zahlen nahe dran.\nBeispiel (x² − 9)/(x − 3) bei 3: 0/0, kürzen zu x + 3 → 6.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k115",
+      "topic": "Grenzwerte von Funktionen",
+      "front": "Wann existiert lim (x → a) f(x)?",
+      "back": "Genau dann, wenn linker und rechter Grenzwert existieren und **gleich** sind.\nx → a⁺ heißt von rechts (größere Zahlen), x → a⁻ von links.\nBeispiel 1/(x − 2) bei 2: links −∞, rechts +∞, also existiert der Grenzwert nicht. Bei 1/x² sind beide +∞.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k116",
+      "topic": "Grenzwerte von Funktionen",
+      "front": "lim (x → 0) (√(x + 4) − 2)/x mit Erweitern",
+      "back": "0/0, also mit (√(x + 4) + 2) erweitern. Oben dritte binomische Formel: (x + 4) − 4 = x.\nKürzen: 1/(√(x + 4) + 2) → 1/(2 + 2) = **¼**.\nProbe x = 0,01: ≈ 0,24984.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k117",
+      "topic": "Grenzwerte von Funktionen",
+      "front": "Zahl/0: Welches Vorzeichen hat der Grenzwert?",
+      "back": "Nur auf die Vorzeichen schauen: Zähler positiv, Nenner winzig positiv → +∞. Genau ein Minus → −∞. Zwei Minus → +∞.\nOhne + oder − an der Stelle beide Seiten prüfen.\nBeispiel (2x − 3)/(x − 1) bei 1: Zähler −1. Von rechts −∞, von links +∞, existiert nicht.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k118",
+      "topic": "Stetigkeit, Verkettung, ln und e",
+      "front": "Was ist mit ln(a + b)?",
+      "back": "Dafür gibt es **keine** Regel. ln(a + b) ist nicht ln a + ln b.\nProbe: ln(1 + 1) = ln 2 ≈ 0,69, aber ln 1 + ln 1 = 0.\nRegeln gibt es nur für Produkte, Quotienten und Potenzen im ln.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k119",
+      "topic": "Stetigkeit, Verkettung, ln und e",
+      "front": "Löse ln(x + 1) = 2",
+      "back": "e hoch auf beiden Seiten: x + 1 = e², also **x = e² − 1** ≈ 6,389.\ne und ln heben sich auf, wie bei eˣ = 5 ⇒ x = ln 5 andersherum.\nProbe: ln(7,389) ≈ 2. Prüfe auch, dass x + 1 > 0 ist (sonst gibt es kein ln).",
+      "exam": true
+    },
+    {
+      "id": "mathe-k120",
+      "topic": "Aussagenlogik",
+      "front": "Absorption",
+      "back": "A ∧ (A ∨ B) ≡ A und A ∨ (A ∧ B) ≡ A.\nWarum: Wenn A schon verlangt ist, ist „A oder B“ automatisch erfüllt; B spielt keine Rolle.\nProbe A = f, B = w: f ∧ (f ∨ w) = f ∧ w = f = A.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k121",
+      "topic": "Aussagenlogik",
+      "front": "Modus Tollens: (A → B) ∧ ¬B ⇒ ?",
+      "back": "⇒ ¬A. Wenn aus A immer B folgt und B nicht gilt, kann A nicht gegolten haben.\nAlltag: „Wenn es regnet, ist die Straße nass. Sie ist nicht nass. Also regnet es nicht.“\nAchtung: (A → B) ∧ B ⇒ A gilt **nicht** (die Straße kann auch vom Sprengwagen nass sein).",
+      "exam": true
+    },
+    {
+      "id": "mathe-k122",
+      "topic": "Aussagenlogik",
+      "front": "A ⊻ B mit ¬, ∧, ∨ schreiben",
+      "back": "A ⊻ B ≡ (A ∨ B) ∧ ¬(A ∧ B): „mindestens eine, aber nicht beide“.\nAls DNF: (A ∧ ¬B) ∨ (¬A ∧ B), aus den w-Zeilen (w, f) und (f, w).\nProbe A = B = w: (w ∨ w) ∧ ¬w = w ∧ f = f.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k123",
+      "topic": "Aussagenlogik",
+      "front": "Wie prüfst du, ob F₁ ⇒ F₂ gilt?",
+      "back": "Nur die Zeilen anschauen, in denen F₁ wahr ist. Ist dort überall auch F₂ wahr, gilt die Folgerung. Gleichwertig: F₁ → F₂ ist eine Tautologie.\nEine Zeile mit F₁ = w und F₂ = f ist ein Gegenbeispiel.\nBeispiel A ∨ B ⇒ A gilt nicht: Zeile A = f, B = w.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k124",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "front": "Warum gilt ∅ ⊆ M für jede Menge M?",
+      "back": "∅ ⊆ M heißt ∀x (x ∈ ∅ → x ∈ M). Die Voraussetzung x ∈ ∅ ist nie erfüllt.\nAus Falschem folgt alles: Die Implikation ist für jedes x wahr.\nGenauso ist „>“ antisymmetrisch, weil x > y und y > x nie zugleich gelten.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k125",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "front": "Was ist eine **Menge**, und was ist |M|?",
+      "back": "Eine Sammlung von Dingen ohne Reihenfolge und ohne Wiederholung: {1, 2, 2} = {2, 1}. x ∈ M heißt „x liegt in M“.\n|M| (Mächtigkeit) ist die Anzahl der **verschiedenen** Elemente, gezählt in den äußeren Klammern.\nBeispiel: |{1, 2, 2, 3}| = 3, |{ℕ, ℤ}| = 2, |{∅}| = 1.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k126",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "front": "ℕ, ℕ₀, ℤ, ℚ, ℝ",
+      "back": "ℕ = {1, 2, 3, …} (in diesem Kurs **ohne** 0), ℕ₀ = {0, 1, 2, …}, ℤ = ganze Zahlen, ℚ = Brüche p/q mit q ∈ ℕ, ℝ = alle Zahlen auf dem Zahlenstrahl.\nJede steckt in der nächsten: ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ.\nBeispiele: −3 ∈ ℤ, aber −3 ∉ ℕ; √2 ∈ ℝ, aber √2 ∉ ℚ.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k127",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "front": "Beschreibende Schreibweise {x ∈ M ∣ P(x)}",
+      "back": "„Alle x aus M mit der Eigenschaft P“. Der Strich ∣ heißt „mit der Eigenschaft“, P(x) wirkt wie ein Filter.\nBeispiel {x ∈ ℕ ∣ x gerade} = {2, 4, 6, …}.\n{x ∈ ℕ ∣ x < 0} = ∅, weil keine natürliche Zahl negativ ist.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k128",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "front": "⊆ und ⊂ auf den Folien",
+      "back": "M ⊆ N: alles aus M liegt in N, **Gleichheit erlaubt**. M ⊂ N: **echte** Teilmenge, also M ⊆ N und M ≠ N.\nImmer gilt M ⊆ M und ∅ ⊆ M.\nBeispiel: {1} ⊂ {1, 2} ist wahr, {1, 2} ⊂ {1, 2} ist falsch, {1, 2} ⊆ {1, 2} ist wahr.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k129",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "front": "Element oder Teilmenge? 1 und {1} bei N = {1, 2}",
+      "back": "1 ∈ N (die Zahl steht drin), {1} ⊆ N (jedes Element von {1} liegt in N), aber {1} ∉ N (in N stehen keine Mengen).\nIn der Potenzmenge ist es umgekehrt: {1} ∈ 𝒫(N), aber 1 ∉ 𝒫(N).\nMerke: ∈ verbindet Element und Menge, ⊆ Menge und Menge.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k130",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "front": "Potenzmenge 𝒫(M) und ihre Größe",
+      "back": "𝒫(M) = Menge **aller** Teilmengen von M, auch ∅ und M selbst. Sie hat 2^|M| Elemente.\nWarum: Pro Element „drin oder nicht“, zwei Möglichkeiten, wie die 2ⁿ Zeilen einer Wahrheitstafel.\nBeispiel 𝒫({1, 2}) = {∅, {1}, {2}, {1, 2}}, 2² = 4 Elemente. Bei |M| = 4 sind es 16.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k131",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "front": "∩, ∪, ∖ und Komplement mit G = {1, …, 8}, M = {1, 3, 5}, N = {2, 3, 5}",
+      "back": "M ∩ N = {3, 5} (in beiden, wie ∧) · M ∪ N = {1, 2, 3, 5} (in mindestens einer, wie ∨) · M ∖ N = {1} (in M, nicht in N) · M̅ = G ∖ M = {2, 4, 6, 7, 8} (wie ¬).\nBei ∖ zählt die Reihenfolge: N ∖ M = {2}.\nDisjunkt heißt M ∩ N = ∅.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k132",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "front": "De Morgan für Mengen",
+      "back": "(M ∪ N)̅ = M̅ ∩ N̅ und (M ∩ N)̅ = M̅ ∪ N̅: Das Komplement dreht ∪ und ∩ um, genau wie ¬ bei ∨ und ∧.\nBeispiel G = {1, …, 8}, M = {1, 3, 5}, N = {2, 3, 5}: (M ∩ N)̅ = {1, 2, 4, 6, 7, 8} = M̅ ∪ N̅.\nAlle Logikgesetze gelten mit ∩ statt ∧, ∪ statt ∨ und ∅ statt f.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k133",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "front": "Kartesisches Produkt M × N",
+      "back": "Alle geordneten Paare (x, y) mit x ∈ M und y ∈ N. Es hat |M| · |N| Elemente.\nBei Paaren zählt die Reihenfolge: (1, a) ≠ (a, 1), also M × N ≠ N × M.\nBeispiel {1, 2} × {a, b, c}: 2 · 3 = 6 Paare von (1, a) bis (2, c). M × ∅ = ∅.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k134",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "front": "Was ist eine **Relation**?",
+      "back": "Eine Teilmenge R ⊆ M × N, also eine Liste von Paaren, die in Beziehung stehen. Statt (x, y) ∈ R schreibt man xRy.\nSie ist dasselbe wie ein zweistelliges Prädikat P(x, y).\nBeispiel „x teilt y“ auf {1, 2, 3, 4}: (2, 4) ∈ R, (4, 2) ∉ R.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k135",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "front": "Die vier Eigenschaften einer Relation auf M",
+      "back": "**reflexiv:** xRx für alle x · **symmetrisch:** xRy → yRx · **antisymmetrisch:** xRy ∧ yRx → x = y · **transitiv:** xRy ∧ yRz → xRz.\n„Nein“ zeigst du mit einem Gegenbeispiel, „ja“ mit einem Argument für alle.\nBeispiel ≤ auf ℝ: reflexiv, nicht symmetrisch (2 ≤ 5, nicht 5 ≤ 2), antisymmetrisch, transitiv.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k136",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "front": "Ist „≠“ auf ℝ transitiv?",
+      "back": "Nein. 2 ≠ 5 und 5 ≠ 2, daraus müsste 2 ≠ 2 folgen, das ist falsch.\nBei Transitivität darf z = x sein, diesen Fall vergisst man leicht.\n≠ ist auch nicht reflexiv (3 ≠ 3 ist falsch) und nicht antisymmetrisch, aber symmetrisch.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k137",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "front": "Äquivalenzrelation und Äquivalenzklasse",
+      "back": "Äquivalenzrelation = reflexiv + symmetrisch + transitiv, „gleich in einem Aspekt“ (gleicher Rest, gleiche Farbe).\nDie Klasse [a] = {x ∣ xRa} ist die Schublade von a. Klassen überlappen nie und decken ganz M ab.\nBeispiel R₅ auf ℤ (m − n durch 5 teilbar): fünf Klassen [0] bis [4], z. B. [2] = {…, −3, 2, 7, 12, …}.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k138",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "front": "Abbildung f : M → N, Bildmenge und Zielmenge",
+      "back": "Jedes x ∈ M bekommt **genau ein** f(x) ∈ N. Kreuztabelle: jede Zeile genau ein Kreuz.\nZielmenge N = was erlaubt ist, Bildmenge f(M) = was wirklich herauskommt, f(M) ⊆ N.\nBeispiel f(a) = f(b) = 1, f(c) = 3, f(d) = 4 nach {1, 2, 3, 4}: Bildmenge {1, 3, 4}.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k139",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "front": "Urbild f⁻¹(V)",
+      "back": "f⁻¹(V) = {x ∈ M ∣ f(x) ∈ V}: „Wer landet in V?“ Das gibt es für **jede** Abbildung, auch ohne Umkehrabbildung, und es kann leer sein.\nBeispiel f(a) = f(b) = 1, f(c) = 3, f(d) = 4: f⁻¹({1}) = {a, b}, f⁻¹({2}) = ∅, f⁻¹({3, 4}) = {c, d}.\nDas Bild f(U) fragt dagegen „wohin?“.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k140",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "front": "Injektiv, surjektiv, bijektiv bei Abbildungen: Beispiel mod p",
+      "back": "h : ℕ₀ → {0, …, p − 1}, n ↦ n mod p ist **surjektiv** (Rest r kommt von n = r), aber **nicht injektiv** (h(0) = h(p) = 0).\nDer ASCII-Code {A, …, Z} → {0, …, 127} ist injektiv, aber nicht surjektiv (nur 65 bis 90).\nBei endlichen Mengen geht bijektiv nur bei gleich vielen Elementen.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k141",
+      "topic": "Algebraische Strukturen",
+      "front": "a mod n berechnen, auch für negative a",
+      "back": "a = q · n + r mit 0 ≤ r < n, dann a mod n = r. Der Rest ist **nie negativ**.\n17 mod 5 = 2 (17 = 3 · 5 + 2), 20 mod 4 = 0.\n−3 mod 5 = 2, denn −3 = (−1) · 5 + 2. Bild: Uhr, 22 Uhr + 5 Stunden = 27 mod 24 = 3 Uhr.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k142",
+      "topic": "Algebraische Strukturen",
+      "front": "Rechnen in ℤₙ: Darf man vorher Reste nehmen?",
+      "back": "Ja: (a + b) mod n = ((a mod n) + (b mod n)) mod n, dasselbe für ·. Vielfache von n ändern den Rest nicht.\nBeispiel n = 5, a = 17, b = 28: 17 · 28 = 476, 476 mod 5 = 1. Schneller: 2 · 3 = 6, 6 mod 5 = 1.\nIn ℤₙ immer: rechnen, dann Rest. In ℤ₆ ist 4 · 5 = 20 → 2.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k143",
+      "topic": "Algebraische Strukturen",
+      "front": "Was ist eine **Verknüpfung**?",
+      "back": "Eine Abbildung M × M → M: zwei Elemente rein, eins raus, und das Ergebnis liegt wieder in M.\nBeispiele: + und · auf ℤ, ∪ und ∩ auf Mengen, + und · mod n auf ℤₙ.\nGegenbeispiel: − auf ℕ, denn 3 − 5 = −2 ∉ ℕ.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k144",
+      "topic": "Algebraische Strukturen",
+      "front": "Die Gruppenaxiome (G1) bis (G4)",
+      "back": "(G1) neutrales Element e: a ∗ e = e ∗ a = a. (G2) zu jedem a ein Inverses a⁻¹: a ∗ a⁻¹ = e. (G3) assoziativ. (G4) kommutativ ⇒ abelsche Gruppe.\nBeispiel (ℤ₅, +): e = 0, Inverses von 2 ist 3 (2 + 3 = 5 → 0).\nGegenbeispiel (ℝ, ·): Die 0 hat kein Inverses.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k145",
+      "topic": "Algebraische Strukturen",
+      "front": "Gruppe an der Verknüpfungstafel prüfen",
+      "back": "Neutrales Element: die Zeile, die genau die Kopfzeile wiederholt. Inverse: **jede Zeile** muss das neutrale Element enthalten. Abelsch: Tafel spiegelbildlich zur Diagonale.\nBei + und · mod n ist die Assoziativität von ℤ geerbt.\nBeispiel (ℤ₆, ·): Zeile 2 ist 0, 2, 4, 0, 2, 4, keine 1, also keine Gruppe.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k146",
+      "topic": "Algebraische Strukturen",
+      "front": "Inverses von a in (ℤₙ, +)",
+      "back": "n − a (für a ≠ 0), und 0 ist zu sich selbst invers. (ℤₙ, +) ist für jedes n eine abelsche Gruppe.\nBeispiel ℤ₅: Inverses von 2 ist 3, Inverses von 4 ist 1.\nDamit löst du Gleichungen: 2 + x = 1 in ℤ₅ ⇒ x = 3 + 1 = 4. Probe 2 + 4 = 6 → 1.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k147",
+      "topic": "Algebraische Strukturen",
+      "front": "(a ∗ b)⁻¹ = ?",
+      "back": "(a ∗ b)⁻¹ = b⁻¹ ∗ a⁻¹, die Reihenfolge dreht sich um.\nBild: Socken an, dann Schuhe an. Rückgängig: erst Schuhe aus, dann Socken aus.\nIn abelschen Gruppen ist die Reihenfolge egal, aber im Allgemeinen nicht (Abbildungen mit ∘).",
+      "exam": true
+    },
+    {
+      "id": "mathe-k148",
+      "topic": "Algebraische Strukturen",
+      "front": "Untergruppen-Kriterium",
+      "back": "U ⊆ G ist Untergruppe, wenn: U ≠ ∅, a, b ∈ U ⇒ a ∗ b ∈ U, und a ∈ U ⇒ a⁻¹ ∈ U.\nBeispiel 2ℤ in (ℤ, +): 0 ist gerade, gerade + gerade ist gerade, −(gerade) ist gerade.\nGegenbeispiel ℕ in (ℤ, +): −3 ∉ ℕ, die Inversen fehlen.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k149",
+      "topic": "Algebraische Strukturen",
+      "front": "Ring und Körper: der Unterschied",
+      "back": "**Ring:** (R, +) abelsche Gruppe, · assoziativ, Distributivgesetze. Inverse bei · nicht verlangt.\n**Körper:** kommutativer Ring mit 1 ≠ 0, in dem jedes a ≠ 0 ein Inverses bei · hat, man kann also durch alles außer 0 teilen.\nBeispiele: ℤ ist Ring, kein Körper (2 · z = 1 hat keine ganze Lösung); ℚ und ℝ sind Körper.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k150",
+      "topic": "Algebraische Strukturen",
+      "front": "Wann ist ℤₙ ein Körper?",
+      "back": "Genau dann, wenn n eine **Primzahl** ist. Dann ist jedes a von 1 bis n − 1 teilerfremd zu n und hat ein Inverses.\nℤ₆ ist kein Körper: 2 · 3 = 6 → 0, ein **Nullteiler**, und 2 hat kein Inverses.\nℤ₇ ist ein Körper: Inverse 1↔1, 2↔4, 3↔5, 6↔6.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k151",
+      "topic": "Algebraische Strukturen",
+      "front": "Wann hat a in ℤₙ ein Inverses bezüglich ·?",
+      "back": "Genau dann, wenn ggT(a, n) = 1 (a und n teilerfremd). Diese a bilden die Gruppe (ℤₙ)*.\nBeispiel ℤ₁₀: (ℤ₁₀)* = {1, 3, 7, 9}, Inverse 3 ↔ 7 und 9 ↔ 9 (81 → 1).\n4 hat keins: ggT(4, 10) = 2, und 4 · b ist immer gerade, nie ≡ 1.",
+      "exam": true
+    },
+    {
+      "id": "mathe-k152",
+      "topic": "Algebraische Strukturen",
+      "front": "Erweiterter euklidischer Algorithmus: Inverses von 7 in ℤ₁₀",
+      "back": "1. Teilen mit Rest: 10 = 1 · 7 + 3, 7 = 2 · 3 + 1, 3 = 3 · 1 + 0. ggT = 1.\n2. Rückwärts: 1 = 7 − 2 · 3 = 7 − 2 · (10 − 7) = 3 · 7 − 2 · 10.\n3. s = 3 ist das Inverse. Probe: 7 · 3 = 21 = 2 · 10 + 1. Ist s negativ, nimm s mod n.",
       "exam": true
     }
   ],
@@ -671,7 +1077,7 @@
         "aₙ = 2ⁿ⁻¹"
       ],
       "correct": 0,
-      "explain": "Jedes Glied ist das Doppelte: 2¹, 2², 2³, 2⁴. Bei 2n käme 2, 4, 6, 8 heraus."
+      "explain": "Jedes Glied ist das Doppelte des vorigen, und der Exponent ist genau die Platznummer: 2¹, 2², 2³, 2⁴. Also aₙ = 2ⁿ.\naₙ = 2n ist verlockend, gibt aber 2, 4, 6, 8: Da kommt immer 2 dazu statt mal 2. 2ⁿ⁻¹ beginnt bei 1."
     },
     {
       "id": "mathe-q002",
@@ -684,7 +1090,7 @@
         "14"
       ],
       "correct": 1,
-      "explain": "2 → 5 → 8 → 11. Arithmetische Folge mit d = 3."
+      "explain": "Platz für Platz vorarbeiten: d₁ = 2, d₂ = 5, d₃ = 8, d₄ = 11. Es ist eine arithmetische Folge mit d = 3, also d₄ = 2 + 3 · 3 = 11.\nWer 8 wählt, hat bei d₃ aufgehört; 14 wäre schon d₅."
     },
     {
       "id": "mathe-q003",
@@ -697,7 +1103,7 @@
         "streng wachsend, unbeschränkt"
       ],
       "correct": 2,
-      "explain": "2; 1,5; 1,33; 1,25 … wird kleiner und bleibt zwischen 1 und 2."
+      "explain": "Die Glieder 2; 1,5; 1,33; 1,25 werden kleiner (bₙ₊₁ − bₙ = −1/(n(n + 1)) < 0) und bleiben zwischen 1 und 2. Also streng fallend und beschränkt.\n„Nicht monoton, beschränkt“ passt zu (−1)ⁿ, nicht hierher: Hier geht es nie wieder hoch."
     },
     {
       "id": "mathe-q004",
@@ -710,7 +1116,7 @@
         "Jede konvergente Folge ist beschränkt."
       ],
       "correct": 2,
-      "explain": "Gegenbeispiel (−1)ⁿ: beschränkt, aber divergent. Für Konvergenz braucht es zusätzlich Monotonie."
+      "explain": "Falsch ist „jede beschränkte Folge ist konvergent“: (−1)ⁿ bleibt zwischen −1 und 1 und springt trotzdem ohne Ziel hin und her.\nDie anderen drei sind Sätze der Folie. Verwechsle nicht die Richtung: Konvergent ⇒ beschränkt stimmt, beschränkt ⇒ konvergent nicht."
     },
     {
       "id": "mathe-q005",
@@ -723,7 +1129,7 @@
         "0"
       ],
       "correct": 1,
-      "explain": "Gleicher Grad → Leitkoeffizienten: 2/1 = 2."
+      "explain": "Oben und unten ist der Grad 2, also bleiben nur die Vorzahlen: 2n²/n² = 2. Die anderen Teile werden nach dem Teilen durch n² zu 0.\n∞ ist verlockend, weil Zähler und Nenner wachsen, aber „∞/∞“ ist unbestimmt. Probe n = 1000: ≈ 1,998."
     },
     {
       "id": "mathe-q006",
@@ -736,7 +1142,7 @@
         "0"
       ],
       "correct": 3,
-      "explain": "Zählergrad 1 < Nennergrad 2 → der Nenner wächst schneller → 0."
+      "explain": "Zählergrad 1 < Nennergrad 2: Der Nenner wächst viel schneller, der Bruch geht gegen 0. Nach Teilen durch n²: (−5/n + 1/n²)/(4 − 7/n²) → 0/4.\n−5/4 wäre der Quotient der Vorzahlen, den nimmt man nur bei gleichem Grad."
     },
     {
       "id": "mathe-q007",
@@ -749,7 +1155,7 @@
         "unbestimmt divergent"
       ],
       "correct": 3,
-      "explain": "Der Betrag wird groß, aber das Vorzeichen wechselt ständig. Kein fester Grenzwert, auch nicht ±∞."
+      "explain": "Der Betrag n wird groß, aber das Vorzeichen wechselt: −1, 2, −3, 4, … Die Folge läuft also weder gegen eine Zahl noch gegen +∞ oder −∞: unbestimmt divergent.\n„+∞“ ist falsch, weil jedes zweite Glied negativ ist."
     },
     {
       "id": "mathe-q008",
@@ -762,7 +1168,7 @@
         "35"
       ],
       "correct": 0,
-      "explain": "a₁₀ = 3 + (10 − 1) · 4 = 3 + 36 = 39. Typischer Fehler: 10 · 4 statt 9 · 4."
+      "explain": "a₁₀ = a₁ + (10 − 1) · d = 3 + 9 · 4 = 39. Platz 10 hat erst 9 Schritte hinter sich.\n43 entsteht durch 3 + 10 · 4, also mit n statt n − 1. Probe mit n = 1: Es muss 3 herauskommen."
     },
     {
       "id": "mathe-q009",
@@ -775,7 +1181,7 @@
         "48"
       ],
       "correct": 1,
-      "explain": "a₈ = 2 · 3⁷ = 2 · 2187 = 4374. Exponent ist n − 1 = 7, nicht 8."
+      "explain": "a₈ = a₁ · q⁸⁻¹ = 2 · 3⁷ = 2 · 2187 = 4374.\n13 122 = 2 · 3⁸ ist der Fehler „qⁿ statt qⁿ⁻¹“. Probe n = 1: 2 · 3⁰ = 2, so muss es sein."
     },
     {
       "id": "mathe-q010",
@@ -788,7 +1194,7 @@
         "1"
       ],
       "correct": 3,
-      "explain": "Start bei k = 1 → erstes Glied ½. ½/(1 − ½) = 1. Die 2 wäre der Wert ab k = 0."
+      "explain": "Start bei k = 1, also ist das erste Glied (½)¹ = ½. Wert = ½/(1 − ½) = 1. Die Zwischenstände 0,5; 0,75; 0,875 nähern sich 1.\nDie 2 ist der Wert der Reihe ab k = 0, dort ist das erste Glied (½)⁰ = 1."
     },
     {
       "id": "mathe-q011",
@@ -801,7 +1207,7 @@
         "1"
       ],
       "correct": 1,
-      "explain": "Erstes Glied 1, q = −⅕: 1/(1 − (−⅕)) = 1/(6/5) = 5/6."
+      "explain": "Erstes Glied (−⅕)⁰ = 1, q = −⅕. Wert = 1/(1 − (−⅕)) = 1/(6/5) = 5/6.\n5/4 entsteht, wenn man 1 − q als 1 − ⅕ = 4/5 rechnet und das Minus von q vergisst. Probe: 1 − 0,2 + 0,04 − 0,008 ≈ 0,832."
     },
     {
       "id": "mathe-q012",
@@ -814,7 +1220,7 @@
         "3/2"
       ],
       "correct": 0,
-      "explain": "Erstes Glied 3, q = −½: 3/(1 + ½) = 3/(3/2) = 2."
+      "explain": "Erstes Glied 3 · (−½)⁰ = 3, q = −½. Wert = 3/(1 + ½) = 3/(3/2) = 2.\n6 kommt heraus, wenn man 1 − q als 1 − ½ rechnet (Minus vergessen). Mit q negativ wird aus 1 − q eine Summe."
     },
     {
       "id": "mathe-q013",
@@ -827,7 +1233,7 @@
         "6/45"
       ],
       "correct": 2,
-      "explain": "Periodenlänge 2 → q = 1/100: (12/100)/(99/100) = 12/99 = 4/33."
+      "explain": "Zwei Ziffern wiederholen sich, also q = 1/100 und erstes Glied 12/100. (12/100)/(99/100) = 12/99 = 4/33.\n12/100 ist nur das erste Glied 0,12, nicht die ganze Periodenzahl. Probe: 4 : 33 = 0,1212…"
     },
     {
       "id": "mathe-q014",
@@ -840,7 +1246,7 @@
         "1"
       ],
       "correct": 3,
-      "explain": "Teleskopsumme: sₙ = 1 − 1/(n+1) → 1."
+      "explain": "Teleskop: 1/(k(k + 1)) = 1/k − 1/(k + 1). Alle mittleren Teile heben sich weg, sₙ = 1 − 1/(n + 1) → 1.\n½ ist nur das erste Glied (k = 1). Probe: ½ + 1/6 + 1/12 = ¾ und das wächst gegen 1."
     },
     {
       "id": "mathe-q015",
@@ -853,7 +1259,7 @@
         "Noch nichts – sie kann konvergieren oder divergieren."
       ],
       "correct": 3,
-      "explain": "Das notwendige Kriterium kann nur „divergent“ beweisen. Beispiel Σ 1/k: Summanden → 0, trotzdem divergent."
+      "explain": "Das notwendige Kriterium kann nur „divergent“ beweisen, nie „konvergent“. Glieder → 0 heißt: noch keine Entscheidung.\nVerlockend ist „konvergiert“, aber Σ 1/k hat Glieder → 0 und divergiert trotzdem. „Wert 0“ verwechselt Glieder mit Summe."
     },
     {
       "id": "mathe-q016",
@@ -866,7 +1272,7 @@
         "Σ 1/k²"
       ],
       "correct": 0,
-      "explain": "Potenzabstand 2 − 1 = 1 → verhält sich wie 1/k → divergent. Die anderen konvergieren."
+      "explain": "Σ k/(k² + 5): Potenzabstand 2 − 1 = 1, für großes k wie 1/k, also divergent wie die harmonische Reihe.\nΣ 1/k² ist verlockend, weil es „ähnlich“ aussieht, aber p = 2 > 1 konvergiert. Σ 1/(2k⁵) und Σ (½)ᵏ konvergieren auch."
     },
     {
       "id": "mathe-q017",
@@ -879,7 +1285,7 @@
         "Ja, Abstand 1"
       ],
       "correct": 2,
-      "explain": "Die Summanden gehen gegen 2/5, nicht gegen 0 → notwendiges Kriterium verletzt → divergent. 2/5 ist der Grenzwert der Glieder, nicht der Reihe."
+      "explain": "Die Glieder gehen gegen 2/5 (gleicher Grad, Vorzahlen 2/5), nicht gegen 0. Also kommt jedes Mal etwa 0,4 dazu: divergent nach dem Divergenzkriterium.\n„Ja, gegen 2/5“ verwechselt den Grenzwert der **Glieder** mit dem Wert der **Reihe**."
     },
     {
       "id": "mathe-q018",
@@ -892,7 +1298,7 @@
         "1105,00 €"
       ],
       "correct": 2,
-      "explain": "1000 · 1,05² = 1000 · 1,1025 = 1102,50 €. 1100 € wäre ohne Zinseszins."
+      "explain": "1000 · 1,05² = 1000 · 1,1025 = 1102,50 €. Im 2. Jahr gibt es 5 % auf 1050 €, also 52,50 € statt 50 €.\n1100 € ist der Fehler „ohne Zinseszins“: zweimal nur 50 € auf das Startkapital."
     },
     {
       "id": "mathe-q019",
@@ -905,7 +1311,7 @@
         "315,00 €"
       ],
       "correct": 0,
-      "explain": "100 · (1,05³ − 1)/0,05 = 315,25 €. Probe: 110,25 + 105 + 100."
+      "explain": "100 · (1,05³ − 1)/0,05 = 315,25 €. Probe: 1. Rate 2 Jahre verzinst (110,25), 2. Rate 1 Jahr (105), 3. Rate gar nicht (100).\n331,01 € entsteht, wenn jede Rate ein Jahr zu lang verzinst wird (Einzahlung am Jahresanfang)."
     },
     {
       "id": "mathe-q020",
@@ -918,7 +1324,7 @@
         "624 €"
       ],
       "correct": 0,
-      "explain": "Ewige Rente B = r/i = 600/0,04 = 15 000 €. Probe: 4 % von 15 000 € sind 600 €."
+      "explain": "Ewige Rente: Barwert = r/i = 600/0,04 = 15 000 €. Probe: 4 % von 15 000 € sind 600 €, das Kapital bleibt gleich.\n24 000 € wäre 600/0,025; 2400 € entsteht durch 600 · 4, also mit 4 statt 0,04 gerechnet und malgenommen."
     },
     {
       "id": "mathe-q021",
@@ -931,7 +1337,7 @@
         "1 + i im Exponenten n"
       ],
       "correct": 2,
-      "explain": "Prozent immer als Dezimalzahl: 5 % = 0,05. Mit i = 5 kommt Unsinn heraus."
+      "explain": "Falsch ist i = 5: Prozent kommt immer als Dezimalzahl in die Formel, 5 % = 0,05. Mit i = 5 würde der Faktor 6, das Geld versechsfachte sich jedes Jahr.\nDie anderen drei sind richtig: q = 1,05, i = 0,05, und (1 + i) steht mit Exponent n in der Formel."
     },
     {
       "id": "mathe-q022",
@@ -944,7 +1350,7 @@
         "ℝ \\ {−1, 1}"
       ],
       "correct": 3,
-      "explain": "Nenner = (x² − 1)² = 0 bei x = 1 und x = −1. Beide raus."
+      "explain": "Nenner x⁴ − 2x² + 1 = (x² − 1)², das ist 0 bei x² = 1, also bei x = 1 **und** x = −1. D = ℝ \\ {−1, 1}.\nℝ \\ {1} ist verlockend, vergisst aber die negative Lösung von x² = 1."
     },
     {
       "id": "mathe-q023",
@@ -957,7 +1363,7 @@
         "zuerst g, dann f"
       ],
       "correct": 3,
-      "explain": "(f ∘ g)(x) = f(g(x)): Die innere Funktion g wird zuerst ausgerechnet."
+      "explain": "(f ∘ g)(x) = f(g(x)): Die innere Funktion g wird zuerst ausgerechnet, dann f. Gelesen „f nach g“.\n„Zuerst f, dann g“ ist der typische Lesefehler von links nach rechts. Beispiel f(x) = x + 1, g(x) = x²: f(g(3)) = 10."
     },
     {
       "id": "mathe-q024",
@@ -970,7 +1376,7 @@
         "Ja, f⁻¹ = 1/f"
       ],
       "correct": 1,
-      "explain": "Zwei x mit gleichem Wert → nicht injektiv. Erst auf [2, ∞) eingeschränkt ginge es."
+      "explain": "f(0) = 2 und f(4) = 16 − 16 + 2 = 2: zwei x mit demselben Wert, also nicht injektiv, keine Umkehrfunktion auf ℝ → ℝ.\n„f⁻¹(x) = 2 + √(x + 2)“ ist verlockend, gilt aber erst nach Einschränkung auf [2, ∞) → [−2, ∞)."
     },
     {
       "id": "mathe-q025",
@@ -983,7 +1389,7 @@
         "0"
       ],
       "correct": 1,
-      "explain": "0/0 heißt umformen: (x − 2)(x + 2)/(x − 2) = x + 2 → 4."
+      "explain": "Einsetzen gibt 0/0, das heißt nur „umformen“. (x − 2)(x + 2)/(x − 2) = x + 2 → 4.\n„Existiert nicht (0/0)“ ist der typische Fehler: 0/0 ist kein Ergebnis, sondern ein Auftrag. Probe: x = 1,99 gibt 3,99."
     },
     {
       "id": "mathe-q026",
@@ -996,7 +1402,7 @@
         "−1/5"
       ],
       "correct": 0,
-      "explain": "Durch x² teilen: (2 + 3/x − 1/x²)/(1 + 5/x²) → 2."
+      "explain": "Durch x² teilen: (2 + 3/x − 1/x²)/(1 + 5/x²) → 2/1 = 2. Gleicher Grad, Vorzahlen teilen.\n∞ ist verlockend, weil Zähler und Nenner wachsen, aber das Verhältnis bleibt bei 2. Probe x = 1000: ≈ 2,003."
     },
     {
       "id": "mathe-q027",
@@ -1009,7 +1415,7 @@
         "c = 3"
       ],
       "correct": 2,
-      "explain": "Kürzen: (x − 3)(x + 2)/(x(x + 1)). Bei x = 1: (−2)·3/(1·2) = −3."
+      "explain": "Zähler = (x − 1)(x − 3)(x + 2), Nenner = x(x − 1)(x + 1). Kürzen und x = 1 einsetzen: (−2) · 3/(1 · 2) = −3.\nc = 0 ist falsch: Einsetzen in die ungekürzte Formel gibt 0/0, nicht 0."
     },
     {
       "id": "mathe-q028",
@@ -1022,7 +1428,7 @@
         "12"
       ],
       "correct": 1,
-      "explain": "3 ln 4 = ln 4³ = ln 64, also e³ ˡⁿ ⁴ = 64 und √64 = 8. 64 ist der Wert ohne Wurzel."
+      "explain": "3 ln 4 = ln 4³ = ln 64, also e^(3 ln 4) = 64 und √64 = 8.\n64 ist der Wert ohne die Wurzel; 12 entsteht, wenn man 3 · 4 rechnet und das ln nicht beachtet."
     },
     {
       "id": "mathe-q029",
@@ -1035,7 +1441,7 @@
         "A = w, B = w"
       ],
       "correct": 1,
-      "explain": "Die Implikation ist nur gebrochen, wenn die Voraussetzung wahr und die Folgerung falsch ist. Bei A = f ist A → B immer wahr."
+      "explain": "Die Implikation ist nur gebrochen, wenn die Voraussetzung erfüllt ist und die Folgerung nicht: A = w, B = f.\nA = f, B = w ist verlockend, weil es „komisch“ wirkt, aber bei falscher Voraussetzung ist A → B immer wahr."
     },
     {
       "id": "mathe-q030",
@@ -1048,7 +1454,7 @@
         "n ist durch 4 teilbar und gerade."
       ],
       "correct": 2,
-      "explain": "Kontraposition ¬B → ¬A: tauschen und beide verneinen. Option 1 ist die Umkehrung, Option 2 der Umkehrschluss (n = 6 widerlegt beide)."
+      "explain": "Kontraposition ¬B → ¬A: tauschen **und** beide verneinen, also „wenn n ungerade, dann nicht durch 4 teilbar“.\n„Wenn n gerade ist, ist n durch 4 teilbar“ ist nur die Umkehrung und falsch (n = 6). „Nicht durch 4 → ungerade“ ist der Umkehrschluss, auch n = 6 widerlegt ihn."
     },
     {
       "id": "mathe-q031",
@@ -1061,7 +1467,7 @@
         "¬∃x P(x)"
       ],
       "correct": 2,
-      "explain": "Nicht alle erfüllen P heißt: Mindestens einer erfüllt P nicht. Quantor umdrehen, innen verneinen."
+      "explain": "Nicht alle erfüllen P heißt: Mindestens einer erfüllt P nicht, also ∃x ¬P(x). Quantor umdrehen, ¬ nach innen.\n∀x ¬P(x) hieße „keiner erfüllt P“, das ist viel stärker. Beispiel: Nicht alle Zahlen sind gerade, aber es ist nicht so, dass keine gerade ist."
     },
     {
       "id": "mathe-q032",
@@ -1074,7 +1480,7 @@
         "Es gibt keine ungerade Primzahl."
       ],
       "correct": 1,
-      "explain": "¬∃x (P(x) ∧ G(x)) ≡ ∀x (P(x) → ¬G(x)): Alle Primzahlen sind ungerade. (Die Verneinung ist falsch, denn 2 ist eine gerade Primzahl.)"
+      "explain": "¬∃x (P(x) ∧ G(x)) ≡ ∀x ¬(P(x) ∧ G(x)) ≡ ∀x (P(x) → ¬G(x)): „Jede Primzahl ist ungerade.“ (Die Verneinung ist falsch, denn 2 ist eine gerade Primzahl.)\n„Es gibt eine ungerade Primzahl“ ist verlockend, verneint aber nur das „gerade“ und lässt ∃ stehen."
     },
     {
       "id": "mathe-q033",
@@ -1087,7 +1493,7 @@
         "(A ∧ B) ∨ (¬A ∧ ¬B)"
       ],
       "correct": 0,
-      "explain": "Je w-Zeile eine Vollkonjunktion, f-Werte verneint, mit ∨ verbunden. Das ist das exklusive Oder A ⊻ B. Option 4 wäre A ↔ B."
+      "explain": "Je w-Zeile eine Vollkonjunktion, f-Werte verneint, mit ∨ verbunden: (A ∧ ¬B) ∨ (¬A ∧ B). Das ist A ⊻ B.\nDie Option mit lauter ∨ in den Klammern und ∧ dazwischen ist eine KNF-Form. (A ∧ B) ∨ (¬A ∧ ¬B) gehört zu den Zeilen (w, w) und (f, f), das ist A ↔ B."
     },
     {
       "id": "mathe-q034",
@@ -1100,7 +1506,7 @@
         "(A → B) ↔ (¬A ∨ B)"
       ],
       "correct": 3,
-      "explain": "A → B ≡ ¬A ∨ B gilt in allen 4 Zeilen. Option 1 scheitert bei A = B = f, Option 3 bei A = f, B = w, und A ∧ ¬A ist ein Widerspruch."
+      "explain": "A → B ≡ ¬A ∨ B gilt in allen 4 Zeilen, also ist (A → B) ↔ (¬A ∨ B) eine Tautologie.\n(A → B) ↔ (A ∨ B) ist verlockend, scheitert aber bei A = B = f (links w, rechts f). A ∧ ¬A ist ein Widerspruch, (A ∨ B) → A scheitert bei A = f, B = w."
     },
     {
       "id": "mathe-q035",
@@ -1113,7 +1519,7 @@
         "¬A ∨ B"
       ],
       "correct": 1,
-      "explain": "De Morgan: Die Negation wandert hinein und ∨ wird zu ∧. „Weder A noch B“."
+      "explain": "De Morgan: Die Negation wandert in die Klammer und ∨ wird zu ∧: ¬A ∧ ¬B, „weder A noch B“.\n¬A ∨ ¬B ist der Fehler „nur die Variablen verneint, Operator stehen gelassen“. Probe A = w, B = f: ¬(w ∨ f) = f, aber ¬A ∨ ¬B = w."
     },
     {
       "id": "mathe-q036",
@@ -1126,7 +1532,7 @@
         "32"
       ],
       "correct": 2,
-      "explain": "4 verschiedene Variablen A, B, C, D → 2⁴ = 16 Zeilen. Die Anzahl der Operatoren spielt keine Rolle."
+      "explain": "Vier verschiedene Variablen A, B, C, D, also 2⁴ = 16 Zeilen.\n8 wäre richtig bei drei Variablen. Die Anzahl der Operatoren (∧, ∨, ¬) ändert nichts an der Zeilenzahl."
     },
     {
       "id": "mathe-q037",
@@ -1139,7 +1545,7 @@
         "5"
       ],
       "correct": 1,
-      "explain": "C muss f sein (4 Zeilen), dazu A oder B wahr: (w, w), (w, f), (f, w) → 3 Zeilen."
+      "explain": "C muss f sein (4 der 8 Zeilen), und dazu A ∨ B wahr: (w, w), (w, f), (f, w). Also 3 Zeilen.\n4 ist verlockend, wenn man nur „C = f“ zählt und vergisst, dass bei A = B = f auch A ∨ B falsch ist."
     },
     {
       "id": "mathe-q038",
@@ -1152,7 +1558,7 @@
         "hängt von der Leserichtung ab"
       ],
       "correct": 0,
-      "explain": "∧ bindet stärker als ∨: A ∨ (B ∧ C) = w ∨ f = w. Falsch gelesen als (A ∨ B) ∧ C käme f heraus."
+      "explain": "∧ bindet stärker als ∨: A ∨ (B ∧ C) = w ∨ (w ∧ f) = w ∨ f = w.\nWer von links nach rechts liest, rechnet (A ∨ B) ∧ C = w ∧ f = f. Die Vorrangregel ist eindeutig, „nicht auswertbar“ stimmt nicht."
     },
     {
       "id": "mathe-q039",
@@ -1165,7 +1571,7 @@
         "∃y ∀x T(x, y)"
       ],
       "correct": 1,
-      "explain": "Jede Zahl y hat einen Teiler aus {2, 3, 5}: 4 (2), 6 (2), 9 (3), 10 (2). Aber kein x teilt alle y, und kein y wird von allen x geteilt."
+      "explain": "∀y ∃x T(x, y) ist wahr: 4, 6 und 10 haben den Teiler 2, die 9 den Teiler 3.\n∃x ∀y T(x, y) ist verlockend (gleiche Buchstaben), verlangt aber **ein** x für alle y: 2 teilt 9 nicht, 3 teilt 4 nicht, 5 teilt 4 nicht. Falsch."
     },
     {
       "id": "mathe-q040",
@@ -1178,7 +1584,7 @@
         "A(n) für n = 1 bis 10 nachrechnen und fertig"
       ],
       "correct": 3,
-      "explain": "Beispiele beweisen nie ein „für alle“. Der Schluss von n auf n + 1 ist das, was alle Dominosteine umwirft."
+      "explain": "Beispiele für n = 1 bis 10 beweisen nichts über n = 11. Ein Induktionsbeweis braucht Anfang, Annahme für ein festes n und den Schluss von n auf n + 1.\nDie Annahme „für ein festes n“ gehört dazu, sie ist kein Zirkelschluss, weil man daraus erst n + 1 herleitet."
     },
     {
       "id": "mathe-q041",
@@ -1191,7 +1597,7 @@
         "¬A ∧ ¬B"
       ],
       "correct": 1,
-      "explain": "KNF: f-Zeile (w, w), Variablen mit w werden verneint → ¬A ∨ ¬B. Das ist NAND, ¬(A ∧ B)."
+      "explain": "KNF: Für die einzige f-Zeile (w, w) ein ∨-Block, Variablen mit Wert w werden verneint: ¬A ∨ ¬B. Das ist NAND.\nA ∨ B ist verlockend, wäre aber bei (f, f) falsch. Probe: ¬A ∨ ¬B ist bei (w, w) gleich f ∨ f = f, sonst w."
     },
     {
       "id": "mathe-q042",
@@ -1204,7 +1610,7 @@
         "13"
       ],
       "correct": 1,
-      "explain": "g ∘ f: zuerst f, dann g. f(3) = 4, g(4) = 16. 10 wäre (f ∘ g)(3)."
+      "explain": "g ∘ f heißt: zuerst f, dann g. f(3) = 4, g(4) = 16.\n10 ist (f ∘ g)(3) = f(9), also die falsche Reihenfolge. 36 entsteht durch (3 · 2)²."
     },
     {
       "id": "mathe-q043",
@@ -1217,7 +1623,7 @@
         "a = 5"
       ],
       "correct": 1,
-      "explain": "Links bei 2: 2² + 1 = 5. Rechts: 2a − 3. 2a − 3 = 5 → 2a = 8 → a = 4 (bei a = 8 wurde das Teilen durch 2 vergessen)."
+      "explain": "Beide Formeln müssen bei x = 2 gleich sein: 2² + 1 = 5 = 2a − 3, also 2a = 8 und a = 4.\na = 8 ist der Fehler „durch 2 teilen vergessen“, a = 5 entsteht, wenn man nur den linken Wert abschreibt."
     },
     {
       "id": "mathe-q044",
@@ -1230,7 +1636,7 @@
         "x = (5 + 1)/2 = 3"
       ],
       "correct": 1,
-      "explain": "ln auf beiden Seiten: 2x − 1 = ln 5, also 2x = 1 + ln 5 und x = (1 + ln 5)/2 ≈ 1,305."
+      "explain": "ln auf beiden Seiten: 2x − 1 = ln 5. Plus 1: 2x = 1 + ln 5, durch 2: x = (1 + ln 5)/2 ≈ 1,305.\n(ln 5 − 1)/2 ist ein Vorzeichenfehler beim Umstellen. (5 + 1)/2 = 3 vergisst das ln ganz."
     },
     {
       "id": "mathe-q045",
@@ -1243,7 +1649,7 @@
         "1/ln 2"
       ],
       "correct": 1,
-      "explain": "log₂(4e²) = 2 + 2 · log₂ e = 2 + 2/ln 2. Die Hälfte ist 1 + 1/ln 2, minus 1/ln 2 bleibt 1."
+      "explain": "log₂(4e²) = log₂ 4 + 2 log₂ e = 2 + 2/ln 2. Die Hälfte: 1 + 1/ln 2. Minus 1/ln 2 bleibt 1.\n1/ln 2 ist verlockend, wenn man die Hälfte nur auf die 2 anwendet und nicht auf beide Summanden."
     },
     {
       "id": "mathe-q046",
@@ -1256,7 +1662,7 @@
         "keiner, sin ist überall stetig"
       ],
       "correct": 2,
-      "explain": "sin(1/x) schwingt immer schneller zwischen −1 und 1 und kommt keiner Zahl nahe. Die Werte werden aber nicht riesig, also kein Pol."
+      "explain": "sin(1/x) schwingt immer schneller zwischen −1 und 1 und kommt keiner Zahl nahe: Oszillationsstelle.\nPolstelle ist verlockend, weil 1/x riesig wird, aber der Sinus bleibt beschränkt. Ein Pol braucht |f(x)| → ∞."
     },
     {
       "id": "mathe-q047",
@@ -1269,7 +1675,7 @@
         "Nein, Brüche sind nie stetig"
       ],
       "correct": 1,
-      "explain": "Stetigkeit prüft man nur an Stellen aus D. Brüche sind überall stetig, wo der Nenner ≠ 0 ist."
+      "explain": "Stetigkeit prüft man nur an Stellen aus dem Definitionsbereich. Auf ℝ \\ {2} ist 1/(x − 2) ein Bruch mit Nenner ≠ 0, also überall stetig.\n„Nein, Polstelle“ ist verlockend, aber die 2 gehört gar nicht zu D, dort wird nichts geprüft."
     },
     {
       "id": "mathe-q048",
@@ -1282,7 +1688,7 @@
         "ln(x² − y²) / ln(2(x − y))"
       ],
       "correct": 1,
-      "explain": "Minus wird geteilt: ln((x − y)(x + y)/(2(x − y))), (x − y) kürzen → ln((x + y)/2). Probe x = 3, y = 1: ln 8 − ln 4 = ln 2."
+      "explain": "Minus wird geteilt: ln((x − y)(x + y)/(2(x − y))). (x − y) kürzen (x > y): ln((x + y)/2). Probe x = 3, y = 1: ln 8 − ln 4 = ln 2.\nln(x + y) vergisst die 2 im Nenner; der Quotient zweier ln ist keine ln-Regel."
     },
     {
       "id": "mathe-q049",
@@ -1295,7 +1701,7 @@
         "24"
       ],
       "correct": 1,
-      "explain": "5! = 5 · 4!, also 4!/5! = 1/5. Probe: 24/120 = 1/5."
+      "explain": "5! = 5 · 4!, also 4!/5! = 4!/(5 · 4!) = 1/5. Probe: 24/120 = 1/5.\n4/5 ist verlockend („4 durch 5“), aber die Fakultäten kürzen sich nicht so: 4!/5! ≠ 4/5."
     },
     {
       "id": "mathe-q050",
@@ -1308,7 +1714,501 @@
         "Ja, aber nur, weil f(0) = 0 ist"
       ],
       "correct": 1,
-      "explain": "Ein einziges Gegenpaar reicht. Erst auf [0, ∞) ist x² streng wachsend; f(1) < f(3) ist nur ein Beispiel."
+      "explain": "Ein einziges Gegenpaar reicht: −3 < −1, aber f(−3) = 9 > f(−1) = 1. Auf ganz ℝ fällt x² links von 0.\n„Ja, weil f(1) < f(3)“ ist nur ein Beispiel, kein Beweis für alle Paare. Erst auf [0, ∞) ist x² streng wachsend."
+    },
+    {
+      "id": "mathe-q051",
+      "topic": "Grundlagen",
+      "q": "Was ist (x + 3)²?",
+      "options": [
+        "x² + 6x + 9",
+        "x² + 9",
+        "x² + 3x + 9",
+        "2x + 6"
+      ],
+      "correct": 0,
+      "explain": "Erste binomische Formel: x² + 2 · x · 3 + 3² = x² + 6x + 9. Probe x = 1: 16 = 1 + 6 + 9.\nx² + 9 ist der häufigste Fehler: Es fehlt das 2ab, im Bild vom Garten die zwei Rechtecke. Probe x = 1 gäbe 10 statt 16."
+    },
+    {
+      "id": "mathe-q052",
+      "topic": "Grundlagen",
+      "q": "Was ist (3/5) : (9/10)?",
+      "options": [
+        "3/2",
+        "27/50",
+        "2/3",
+        "1/3"
+      ],
+      "correct": 2,
+      "explain": "Geteilt heißt mal Kehrwert: 3/5 · 10/9 = 30/45 = 2/3.\n27/50 entsteht, wenn man einfach malnimmt (3/5 · 9/10) statt mit dem Kehrwert. 3/2 ist das richtige Ergebnis umgedreht."
+    },
+    {
+      "id": "mathe-q053",
+      "topic": "Folgen",
+      "q": "aₙ = 2 + 3/n. Ab welchem n₀ gilt |aₙ − 2| < 0,01 für alle n ≥ n₀?",
+      "options": [
+        "n₀ = 3",
+        "n₀ = 300",
+        "n₀ = 30",
+        "n₀ = 301"
+      ],
+      "correct": 3,
+      "explain": "Abstand 3/n < 0,01 ⇔ n > 300. Bei n = 300 ist der Abstand genau 0,01, also nicht kleiner, darum n₀ = 301.\n300 ist verlockend, scheitert aber am „echt kleiner“. 30 hätte man mit ε = 0,1 bekommen."
+    },
+    {
+      "id": "mathe-q054",
+      "topic": "Folgen",
+      "q": "Welche Folge ist geometrisch?",
+      "options": [
+        "3, 6, 12, 24, …",
+        "5, 8, 11, 14, …",
+        "1, 4, 9, 16, …",
+        "1, ½, ⅓, ¼, …"
+      ],
+      "correct": 0,
+      "explain": "Bei 3, 6, 12, 24 ist der Quotient immer 2: aₙ = 3 · 2ⁿ⁻¹.\n5, 8, 11, 14 ist arithmetisch (Differenz immer 3), nicht geometrisch. 1, 4, 9, 16 sind Quadratzahlen, die Quotienten 4, 2,25, 1,78 sind nicht konstant."
+    },
+    {
+      "id": "mathe-q055",
+      "topic": "Reihen",
+      "q": "Σₖ₌₁^∞ 3 · (⅖)ᵏ = ?",
+      "options": [
+        "6/5",
+        "5",
+        "2",
+        "divergent"
+      ],
+      "correct": 2,
+      "explain": "Geometrisch mit q = ⅖, |q| < 1. Start k = 1, erstes Glied 3 · ⅖ = 6/5. Wert (6/5)/(3/5) = 2.\n5 ist der Wert ab k = 0 (3/(3/5)), also der Startindex-Fehler. 6/5 ist nur das erste Glied."
+    },
+    {
+      "id": "mathe-q056",
+      "topic": "Reihen",
+      "q": "Welches Kriterium entscheidet Σ k³ · 2ᵏ/k! am schnellsten?",
+      "options": [
+        "Teleskopsumme",
+        "Potenzabstand-Regel",
+        "geometrische Reihe",
+        "Quotientenkriterium"
+      ],
+      "correct": 3,
+      "explain": "Es kommen k! und 2ᵏ vor, also das Quotientenkriterium: L = lim ((k + 1)/k)³ · 2/(k + 1) = 0 < 1, konvergent.\nDie Potenzabstand-Regel ist verlockend wegen k³, gilt aber nur für Brüche aus reinen Potenzen von k ohne k! und 2ᵏ."
+    },
+    {
+      "id": "mathe-q057",
+      "topic": "Finanzmathematik",
+      "q": "Wie viel musst du heute bei 4 % anlegen, um in 5 Jahren 10 000 € zu haben? (1,04⁵ ≈ 1,2167)",
+      "options": [
+        "≈ 8219 €",
+        "8000 €",
+        "≈ 12 167 €",
+        "≈ 9615 €"
+      ],
+      "correct": 0,
+      "explain": "Abzinsen: K₀ = 10 000/1,04⁵ ≈ 10 000/1,2167 ≈ 8219 €. Probe: 8219 · 1,2167 ≈ 10 000.\n8000 € entsteht, wenn man 5 · 4 % = 20 % einfach abzieht, also ohne Zinseszins. 12 167 € wäre aufgezinst statt abgezinst."
+    },
+    {
+      "id": "mathe-q058",
+      "topic": "Finanzmathematik",
+      "q": "Warum darf man beim Sparplan nicht „erstes Glied/(1 − q)“ benutzen?",
+      "options": [
+        "Weil die Raten am Jahresende kommen",
+        "Weil der Zinssatz in Prozent angegeben ist",
+        "Weil q = 1 + i > 1 ist und die unendliche Reihe divergiert",
+        "Weil die Formel nur für q < 0 gilt"
+      ],
+      "correct": 2,
+      "explain": "Die unendliche Formel gilt nur bei |q| < 1. Beim Sparplan ist q = 1 + i > 1, die verzinsten Raten werden größer, und die Laufzeit ist endlich. Darum die endliche Formel.\nDie Prozentangabe ist kein Grund, man rechnet sie einfach in eine Dezimalzahl um."
+    },
+    {
+      "id": "mathe-q059",
+      "topic": "Funktionen, Umkehrfunktion und Monotonie",
+      "q": "Was ergibt die quadratische Ergänzung von x² − 6x + 5?",
+      "options": [
+        "(x − 6)² + 5",
+        "(x − 3)² + 5",
+        "(x + 3)² − 4",
+        "(x − 3)² − 4"
+      ],
+      "correct": 3,
+      "explain": "Hälfte von −6 ist −3, Quadrat 9. x² − 6x + 9 − 9 + 5 = (x − 3)² − 4. Probe x = 0: 5 und 9 − 4 = 5.\n(x − 3)² + 5 vergisst, die ergänzte 9 wieder abzuziehen. (x + 3)² hat das falsche Vorzeichen in der Klammer."
+    },
+    {
+      "id": "mathe-q060",
+      "topic": "Funktionen, Umkehrfunktion und Monotonie",
+      "q": "f: [1, ∞) → [2, ∞), f(x) = (x − 1)² + 2. Was ist f⁻¹(x)?",
+      "options": [
+        "1 + √(x − 2)",
+        "1 − √(x − 2)",
+        "√(x − 2) − 1",
+        "1/((x − 1)² + 2)"
+      ],
+      "correct": 0,
+      "explain": "y − 2 = (x − 1)², Wurzel mit Plus, weil x ≥ 1 und damit x − 1 ≥ 0: x = 1 + √(y − 2). Probe f(3) = 6, f⁻¹(6) = 1 + 2 = 3.\n1 − √(x − 2) wäre der linke Ast (x ≤ 1). 1/f ist der Kehrwert, nicht die Umkehrfunktion."
+    },
+    {
+      "id": "mathe-q061",
+      "topic": "Funktionen, Umkehrfunktion und Monotonie",
+      "q": "Ist f: (0, ∞) → ℝ, f(x) = 1/x + 2 beschränkt?",
+      "options": [
+        "Nein, nur nach oben",
+        "Ja, zwischen 2 und 3",
+        "Nein, nur nach unten (durch 2)",
+        "Ja, weil D nur positive Zahlen enthält"
+      ],
+      "correct": 2,
+      "explain": "Für x → ∞ geht f gegen 2 und bleibt darüber (Boden 2). Für x → 0⁺ wird 1/x riesig, f(0,001) = 1002: keine Decke.\n„Zwischen 2 und 3“ ist verlockend, weil f(1) = 3, aber links von 1 wird f größer. Ein kleiner D heißt nicht beschränkte Werte."
+    },
+    {
+      "id": "mathe-q062",
+      "topic": "Grenzwerte von Funktionen",
+      "q": "lim (x → 1) (x³ − 1)/(x² − 1) = ?",
+      "options": [
+        "1",
+        "0",
+        "existiert nicht",
+        "3/2"
+      ],
+      "correct": 3,
+      "explain": "0/0, also faktorisieren: (x − 1)(x² + x + 1)/((x − 1)(x + 1)). Kürzen und einsetzen: 3/2. Probe x = 1,001: ≈ 1,5008.\n„Existiert nicht“ ist der typische Fehler bei 0/0. 0 oder 1 ergibt sich nur, wenn man 0/0 als Zahl liest."
+    },
+    {
+      "id": "mathe-q063",
+      "topic": "Grenzwerte von Funktionen",
+      "q": "lim (x → ∞) (5x + 7)/(x² + 1) = ?",
+      "options": [
+        "0",
+        "5",
+        "∞",
+        "7"
+      ],
+      "correct": 0,
+      "explain": "Zählergrad 1 < Nennergrad 2, der Nenner wächst schneller. Durch x² teilen: (5/x + 7/x²)/(1 + 1/x²) → 0. Probe x = 1000: ≈ 0,005.\n5 wäre der Quotient der Vorzahlen, den nimmt man nur bei gleichem Grad."
+    },
+    {
+      "id": "mathe-q064",
+      "topic": "Grenzwerte von Funktionen",
+      "q": "lim (x → 2) 1/(x − 2)²?",
+      "options": [
+        "0",
+        "existiert nicht, links −∞ und rechts +∞",
+        "+∞ (von beiden Seiten)",
+        "1/4"
+      ],
+      "correct": 2,
+      "explain": "(x − 2)² ist auf beiden Seiten winzig positiv, also 1 durch winzig Positives → +∞ von links und von rechts. Das ist ein uneigentlicher Grenzwert.\n„Links −∞, rechts +∞“ gilt für 1/(x − 2) ohne Quadrat. Das Quadrat macht den Nenner immer positiv."
+    },
+    {
+      "id": "mathe-q065",
+      "topic": "Stetigkeit, Verkettung, ln und e",
+      "q": "f(x) = (x² − 9)/(x − 3) für x ≠ 3, f(3) = c. Für welches c ist f stetig?",
+      "options": [
+        "c = 9",
+        "c = 0",
+        "c = 3",
+        "c = 6"
+      ],
+      "correct": 3,
+      "explain": "Kürzen: (x − 3)(x + 3)/(x − 3) = x + 3, Grenzwert bei 3 ist 6. Stetig heißt f(3) = Grenzwert, also c = 6.\nc = 0 ist verlockend, weil der Zähler bei 3 null ist, aber auch der Nenner ist null: 0/0 ist kein Wert."
+    },
+    {
+      "id": "mathe-q066",
+      "topic": "Aussagenlogik",
+      "q": "Welche Folgerung gilt?",
+      "options": [
+        "(A → B) ∧ ¬B ⇒ ¬A",
+        "(A → B) ∧ B ⇒ A",
+        "(A → B) ⇒ (B → A)",
+        "A ∨ B ⇒ A"
+      ],
+      "correct": 0,
+      "explain": "Modus Tollens: Die linke Seite ist nur bei A = f, B = f wahr, und dort ist ¬A wahr.\n(A → B) ∧ B ⇒ A ist verlockend, scheitert aber bei A = f, B = w („Straße nass, aber es regnet nicht“). Die Umkehrung B → A folgt nie aus A → B."
+    },
+    {
+      "id": "mathe-q067",
+      "topic": "Aussagenlogik",
+      "q": "Vereinfache A ∧ (A ∨ B).",
+      "options": [
+        "A ∨ B",
+        "A ∧ B",
+        "A",
+        "B"
+      ],
+      "correct": 2,
+      "explain": "Absorption: Wenn A schon verlangt ist, ist „A oder B“ automatisch erfüllt, übrig bleibt A. Probe A = w, B = f: w ∧ w = w = A.\nA ∧ B ist verlockend, wenn man „ausmultipliziert“ und den Teil A ∧ A vergisst: (A ∧ A) ∨ (A ∧ B) = A ∨ (A ∧ B) = A."
+    },
+    {
+      "id": "mathe-q068",
+      "topic": "Aussagenlogik",
+      "q": "Was zeigt man im Induktionsschluss?",
+      "options": [
+        "A(n + 1) gilt ohne die Annahme",
+        "A(1) ist wahr",
+        "A(n) gilt für alle n",
+        "Aus A(n) folgt A(n + 1)"
+      ],
+      "correct": 3,
+      "explain": "Der Schluss zeigt: Wenn die Aussage für ein festes n gilt, dann auch für n + 1. Dabei wird die Annahme benutzt.\n„A(1) ist wahr“ ist der Induktionsanfang, ein anderer Schritt. „A(n) für alle n“ ist das Ziel, das man nicht voraussetzen darf."
+    },
+    {
+      "id": "mathe-q069",
+      "topic": "Aussagenlogik",
+      "q": "Welche Formel ist gleichwertig zu ¬(A → B)?",
+      "options": [
+        "A ∧ ¬B",
+        "¬A → ¬B",
+        "¬A ∨ B",
+        "¬A ∧ B"
+      ],
+      "correct": 0,
+      "explain": "A → B ≡ ¬A ∨ B, verneint mit De Morgan: ¬(¬A ∨ B) ≡ A ∧ ¬B. Das ist genau der eine Fall, in dem A → B falsch ist.\n¬A → ¬B ist der Umkehrschluss, kein Verneinen. ¬A ∨ B ist A → B selbst."
+    },
+    {
+      "id": "mathe-q070",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "q": "Welche Aussage ist für N = {1, 2} **falsch**?",
+      "options": [
+        "{1} ⊆ N",
+        "1 ∈ N",
+        "{1} ∈ N",
+        "{1} ∈ 𝒫(N)"
+      ],
+      "correct": 2,
+      "explain": "In N stehen nur die Zahlen 1 und 2, keine Mengen, also ist {1} ∈ N falsch.\n{1} ⊆ N stimmt (jedes Element von {1} liegt in N), und {1} ∈ 𝒫(N) stimmt, weil die Potenzmenge aus Teilmengen besteht."
+    },
+    {
+      "id": "mathe-q071",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "q": "Wie viele Elemente hat 𝒫({a, b, c})?",
+      "options": [
+        "9",
+        "6",
+        "3",
+        "8"
+      ],
+      "correct": 3,
+      "explain": "|𝒫(M)| = 2^|M| = 2³ = 8: ∅, {a}, {b}, {c}, {a, b}, {a, c}, {b, c}, {a, b, c}.\n6 ist verlockend, wenn man ∅ und M selbst vergisst. Beide sind immer Teilmengen."
+    },
+    {
+      "id": "mathe-q072",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "q": "Wie viele Elemente hat {∅, 1, {1}}?",
+      "options": [
+        "3",
+        "2",
+        "1",
+        "0"
+      ],
+      "correct": 0,
+      "explain": "Zähle, was direkt in den äußeren Klammern steht: die leere Menge, die Zahl 1 und die Menge {1}. Drei verschiedene Dinge.\n2 ist verlockend, wenn man 1 und {1} für dasselbe hält, oder ∅ als „nichts“ nicht mitzählt."
+    },
+    {
+      "id": "mathe-q073",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "q": "G = {1, …, 8}, M = {1, 3, 5}, N = {2, 3, 5}. Was ist M ∖ N?",
+      "options": [
+        "{1, 2}",
+        "{2}",
+        "{1}",
+        "{3, 5}"
+      ],
+      "correct": 2,
+      "explain": "M ∖ N = in M, aber nicht in N: Aus {1, 3, 5} streichst du 3 und 5, übrig bleibt {1}.\n{2} ist N ∖ M, die umgedrehte Differenz. {3, 5} ist der Durchschnitt M ∩ N."
+    },
+    {
+      "id": "mathe-q074",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "q": "Was ist (M ∩ N)̅ nach De Morgan?",
+      "options": [
+        "M̅ ∖ N̅",
+        "M̅ ∩ N̅",
+        "M ∪ N",
+        "M̅ ∪ N̅"
+      ],
+      "correct": 3,
+      "explain": "Das Komplement dreht ∩ zu ∪ um: (M ∩ N)̅ = M̅ ∪ N̅, wie ¬(A ∧ B) ≡ ¬A ∨ ¬B.\nM̅ ∩ N̅ ist der Fehler „Operator nicht umgedreht“. Probe mit G = {1, …, 8}, M = {1, 3, 5}, N = {2, 3, 5}: links 6 Elemente, M̅ ∩ N̅ = {4, 6, 7, 8} nur 4."
+    },
+    {
+      "id": "mathe-q075",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "q": "Wie viele Elemente hat {1, 2, 3} × {a, b}?",
+      "options": [
+        "6",
+        "5",
+        "9",
+        "8"
+      ],
+      "correct": 0,
+      "explain": "|M × N| = |M| · |N| = 3 · 2 = 6 Paare: (1, a), (1, b), (2, a), (2, b), (3, a), (3, b).\n5 = 3 + 2 ist der Fehler „addieren statt multiplizieren“. 8 = 2³ verwechselt es mit der Potenzmenge."
+    },
+    {
+      "id": "mathe-q076",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "q": "Welche Eigenschaften hat „<“ auf ℝ?",
+      "options": [
+        "symmetrisch und transitiv",
+        "reflexiv, antisymmetrisch, transitiv",
+        "nicht reflexiv, nicht symmetrisch, antisymmetrisch, transitiv",
+        "keine der vier"
+      ],
+      "correct": 2,
+      "explain": "3 < 3 ist falsch (nicht reflexiv), 2 < 5 aber nicht 5 < 2 (nicht symmetrisch). x < y und y < x gelten nie zugleich, also ist die Antisymmetrie-Implikation immer wahr. Und x < y < z ⇒ x < z.\n„Keine der vier“ ist verlockend, weil man antisymmetrisch für „nicht symmetrisch“ hält. „Reflexiv“ gilt für ≤, nicht für <."
+    },
+    {
+      "id": "mathe-q077",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "q": "Welche Relation ist eine **Äquivalenzrelation** auf ℤ?",
+      "options": [
+        "„m teilt n“",
+        "„m ≤ n“",
+        "„m ≠ n“",
+        "„m − n ist gerade“"
+      ],
+      "correct": 3,
+      "explain": "„m − n gerade“ ist reflexiv (0 ist gerade), symmetrisch (n − m = −(m − n)) und transitiv (Summe gerader Zahlen ist gerade). Klassen: gerade und ungerade Zahlen.\n„m ≤ n“ ist verlockend (reflexiv und transitiv), aber nicht symmetrisch: 2 ≤ 5, nicht 5 ≤ 2."
+    },
+    {
+      "id": "mathe-q078",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "q": "R₅ = „m − n durch 5 teilbar“ auf ℤ. Welche Zahl liegt in der Klasse [2]?",
+      "options": [
+        "−3",
+        "−2",
+        "3",
+        "10"
+      ],
+      "correct": 0,
+      "explain": "[2] = alle Zahlen mit Rest 2 bei Division durch 5: …, −8, −3, 2, 7, 12, … Probe: −3 − 2 = −5 ist durch 5 teilbar.\n−2 ist verlockend („minus 2“), liegt aber in [3]: −2 = (−1) · 5 + 3."
+    },
+    {
+      "id": "mathe-q079",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "q": "Für welche Zuordnung von M = {1, 2, 3} nach N = {a, b} gilt: Sie ist **keine** Abbildung?",
+      "options": [
+        "1 ↦ a, 2 ↦ b, 3 ↦ b",
+        "1 ↦ a, 2 ↦ a, 3 ↦ a",
+        "1 ↦ a, 1 ↦ b, 2 ↦ a, 3 ↦ b",
+        "1 ↦ b, 2 ↦ a, 3 ↦ a"
+      ],
+      "correct": 2,
+      "explain": "Bei einer Abbildung bekommt jedes x **genau einen** Partner. Bei „1 ↦ a, 1 ↦ b, …“ hat die 1 zwei Partner, also ist sie nur eine Relation.\nAlles auf a abbilden ist verlockend als „falsch“, ist aber erlaubt: Rechts darf etwas doppelt oder gar nicht getroffen werden."
+    },
+    {
+      "id": "mathe-q080",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "q": "f(a) = f(b) = 1, f(c) = 3, f(d) = 4, Zielmenge {1, 2, 3, 4}. Was ist f⁻¹({2})?",
+      "options": [
+        "{b}",
+        "existiert nicht, weil f nicht bijektiv ist",
+        "{2}",
+        "∅"
+      ],
+      "correct": 3,
+      "explain": "Niemand landet auf 2, also ist das Urbild die leere Menge ∅.\n„Existiert nicht“ verwechselt das Urbild einer Menge mit der Umkehrabbildung. Das Urbild f⁻¹(V) gibt es für jede Abbildung, nur die Umkehrabbildung braucht Bijektivität."
+    },
+    {
+      "id": "mathe-q081",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "q": "f(x) = x², g(x) = x + 1. Was ist (g ∘ f)(2)?",
+      "options": [
+        "5",
+        "9",
+        "6",
+        "4"
+      ],
+      "correct": 0,
+      "explain": "g ∘ f heißt „g nach f“, also erst f: f(2) = 4, dann g: g(4) = 5.\n9 = (f ∘ g)(2) = f(3) ist der Lesefehler von links nach rechts."
+    },
+    {
+      "id": "mathe-q082",
+      "topic": "Mengen, Relationen, Abbildungen",
+      "q": "Welche Abbildung ist **bijektiv**?",
+      "options": [
+        "h : ℕ₀ → {0, …, 4}, n ↦ n mod 5",
+        "f : ℝ → ℝ, x ↦ x²",
+        "g : ℝ₀⁺ → ℝ₀⁺, x ↦ x²",
+        "ASCII-Code {A, …, Z} → {0, …, 127}"
+      ],
+      "correct": 2,
+      "explain": "Auf ℝ₀⁺ gibt es keine Doppeltreffer (keine negativen x), und jedes y ≥ 0 hat das Urbild √y. Also bijektiv.\nf : ℝ → ℝ mit derselben Vorschrift ist weder injektiv (f(2) = f(−2)) noch surjektiv (−1 kommt nie). h ist surjektiv, aber nicht injektiv."
+    },
+    {
+      "id": "mathe-q083",
+      "topic": "Algebraische Strukturen",
+      "q": "Was ist −3 mod 5?",
+      "options": [
+        "−2",
+        "−3",
+        "3",
+        "2"
+      ],
+      "correct": 3,
+      "explain": "Der Rest liegt immer in 0 … 4: −3 = (−1) · 5 + 2, also Rest 2. Probe: −3 und 2 unterscheiden sich um 5.\n3 ist verlockend (Minus einfach weglassen), aber 3 hat bei Division durch 5 den Rest 3, und 3 − (−3) = 6 ist nicht durch 5 teilbar."
+    },
+    {
+      "id": "mathe-q084",
+      "topic": "Algebraische Strukturen",
+      "q": "Welche Struktur ist **keine** Gruppe?",
+      "options": [
+        "(ℤ₆ ∖ {0}, · mod 6)",
+        "(ℤ₆, + mod 6)",
+        "(ℝ ∖ {0}, ·)",
+        "(ℤ, +)"
+      ],
+      "correct": 0,
+      "explain": "In ℤ₆ ∖ {0} ist 2 · 3 = 6 → 0, das Ergebnis fällt aus der Menge, und 2 hat kein Inverses (Zeile 2 enthält keine 1).\n(ℤ₆, +) ist verlockend als Fehler, ist aber eine Gruppe: e = 0, Inverses n − a. Erst ohne die nicht teilerfremden Elemente wird es mit · eine Gruppe."
+    },
+    {
+      "id": "mathe-q085",
+      "topic": "Algebraische Strukturen",
+      "q": "Was ist das Inverse von 3 in (ℤ₇, ·)?",
+      "options": [
+        "5",
+        "4",
+        "3",
+        "−3"
+      ],
+      "correct": 0,
+      "explain": "3 · 5 = 15 = 2 · 7 + 1, Rest 1. Mit Euklid: 7 = 2 · 3 + 1 ⇒ 1 = 7 − 2 · 3, s = −2, und −2 mod 7 = 5.\n4 ist das Inverse von 3 bezüglich +, denn 3 + 4 = 7 → 0. −3 ist kein Rest in ℤ₇ und gehört zu +, nicht zu ·."
+    },
+    {
+      "id": "mathe-q086",
+      "topic": "Algebraische Strukturen",
+      "q": "Welche Menge ist ein **Körper**?",
+      "options": [
+        "ℤ₁₀",
+        "ℤ",
+        "ℤ₆",
+        "ℤ₇"
+      ],
+      "correct": 3,
+      "explain": "7 ist eine Primzahl, also ist jedes a von 1 bis 6 teilerfremd zu 7 und hat ein Inverses. ℤ₇ ist ein Körper.\nℤ ist verlockend, weil man dort gut rechnet, aber 2 hat kein ganzzahliges Inverses. ℤ₆ und ℤ₁₀ haben Nullteiler (2 · 3 = 0, 2 · 5 = 0)."
+    },
+    {
+      "id": "mathe-q087",
+      "topic": "Algebraische Strukturen",
+      "q": "Welche Elemente hat (ℤ₁₂)* (die Elemente mit Inversem bezüglich ·)?",
+      "options": [
+        "{1, 11}",
+        "{1, 2, 3, 5, 7, 11}",
+        "{1, 3, 5, 7, 9, 11}",
+        "{1, 5, 7, 11}"
+      ],
+      "correct": 3,
+      "explain": "Inverse gibt es genau für a mit ggT(a, 12) = 1, also nicht durch 2 und nicht durch 3 teilbar: 1, 5, 7, 11. Probe: 5 · 5 = 25 → 1, 7 · 7 = 49 → 1.\n{1, 2, 3, 5, 7, 11} verwechselt „teilerfremd zu 12“ mit „Primzahl oder 1“: 2 und 3 teilen 12."
+    },
+    {
+      "id": "mathe-q088",
+      "topic": "Algebraische Strukturen",
+      "q": "Euklid für a = 5 in ℤ₁₂ liefert 1 = 5 · 5 − 2 · 12. Was ist das Inverse von 5?",
+      "options": [
+        "−2",
+        "5",
+        "12",
+        "2"
+      ],
+      "correct": 1,
+      "explain": "In 1 = s · a + t · n ist s der Faktor vor a, hier s = 5. Probe: 5 · 5 = 25 = 2 · 12 + 1.\n−2 ist verlockend, ist aber t, der Faktor vor n = 12. Der gehört nicht zum Inversen."
     }
   ]
 }

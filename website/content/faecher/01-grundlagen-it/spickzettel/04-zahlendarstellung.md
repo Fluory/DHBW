@@ -26,6 +26,7 @@ Hexziffern: A = 10, B = 11, C = 12, D = 13, E = 14, F = 15.
 
 **Binär ↔ Oktal / Hex:** Gruppen bilden, **immer von rechts**. 3 Bit = 1 Oktalziffer, 4 Bit = 1 Hexziffer.
 0110 0100₂ = **64₁₆**. 001 100 100₂ = **144₈**. Beides = 100.
+Hex → Oktal über binär: 2AF₁₆ = 0010 1010 1111 = 001 010 101 111 = **1257₈** (= 687).
 
 ## Binär addieren
 
@@ -61,6 +62,11 @@ Das Ergebnis passt nicht in den Bereich. Erkennbar am Vorzeichen:
 
 Nachkommateil fortlaufend **mal 2**, die Ziffer vor dem Komma ist das nächste Bit, von **oben nach unten** lesen.
 0,625 · 2 = 1,25 → 1 · 0,25 · 2 = 0,5 → 0 · 0,5 · 2 = 1,0 → 1 ⇒ **0,101₂**
+
+Rückwärts: Stellenwerte ½, ¼, ⅛ addieren: 101,101₂ = 4 + 1 + ½ + ⅛ = **5,625**. 0,4 ist binär periodisch (0,0110 0110 …), also nie exakt.
+
+- **Festkomma:** Komma an fester Stelle (z. B. 4 + 4 Bit: 0100,0110 = 4,375). Einfach, kleiner Bereich.
+- **Gleitkomma:** Z = m · bᵉ (Mantisse · Basis hoch Exponent), 2022 = 2,022 · 10³. Normalisieren: genau eine 1 vor das Komma, 100,011₂ = 1,00011₂ · 2². IEEE 754, 32 Bit: 1 Vorzeichen, 8 Exponent, 23 Mantisse.
 
 ## Typische Fehler
 

@@ -93,15 +93,15 @@ So füllst du einen Canvas:
 | Schlüsselpartner | Plattenfirmen und Künstler, Podcast-Produzenten, Cloud-Anbieter |
 | Kostenstruktur | Lizenzzahlungen (größter Posten), IT, Entwicklung, Marketing |
 
-**Freemium** (aus „free“ = gratis und „Premium“): Der Zugang ist gratis, um viele Nutzer anzuziehen. Später sollen sie eine zahlende Version kaufen. Das funktioniert, weil ein weiterer Nutzer bei digitalen Diensten fast keine variablen Kosten verursacht.
+**Freemium** (aus „free“ = gratis und „Premium“): Der Zugang ist gratis, um viele Nutzer anzuziehen. Später sollen sie eine zahlende Version kaufen. Das funktioniert, weil ein weiterer Nutzer bei digitalen Diensten fast keine variablen Kosten verursacht. **Variable Kosten** sind Kosten, die mit jedem zusätzlichen Kunden steigen. Ausgedachtes Zahlenbeispiel: Kostet ein weiterer Gratis-Hörer den Anbieter 0,05 € im Monat, kosten 99 Gratis-Hörer zusammen 99 · 0,05 € = 4,95 €. Zahlt ein einziger Abonnent 10 € im Monat, trägt er diese 99 Gratis-Hörer und es bleiben noch 5,05 € übrig. Bei einem gedruckten Magazin wäre jedes Gratis-Heft teures Papier. Bei Spielen wie Pokémon Go heißt das Muster **Free-to-play**: Das Spiel ist gratis, Geld bringt der Kauf von Spielwährung.
 
 > [!IMPORTANT]
 > **Das Wichtigste**
-> Neun Felder. Mit Kundensegmenten und Wertversprechen beginnen. Bei der Transferaufgabe je Feld zwei konkrete Einträge.
+> Neun Felder: Schlüsselpartner, Schlüsselaktivitäten, Schlüsselressourcen, Wertversprechen, Kundenbeziehungen, Kanäle, Kundensegmente, Kostenstruktur, Einnahmequellen. Mit Kundensegmenten und Wertversprechen beginnen. Bei der Transferaufgabe je Feld zwei konkrete Einträge, die genau zu diesem Unternehmen passen.
 
 > [!WARNING]
 > **Achtung**
-> Der Canvas beschreibt nicht, welche IT-Systeme ein Unternehmen nutzt. Er beschreibt, wie es Wert schafft und Geld verdient.
+> Der Canvas beschreibt nicht, welche IT-Systeme ein Unternehmen nutzt. Er beschreibt, wie es Wert schafft und Geld verdient. Typische Verwechslungen: Wertversprechen (Nutzen für den Kunden) und Einnahmequellen (wofür er zahlt) sowie Schlüsselpartner (liefern zu) und Kundensegmente (bekommen den Wert). Allgemeine Einträge wie „gute Qualität“ oder „Kunden“ bringen keine Punkte.
 
 ## Aufbau- und Ablauforganisation
 
@@ -177,6 +177,11 @@ Das Ergebnis ist ein **CRM**: Es führt Kundendaten zusammen, wertet sie aus und
 > Leite aus Geschäftsmodell, Unternehmensaufbau und Newsletter-Prozess der Sonnenschein AG fachliche Anforderungen an ein IS ab. Formuliere drei Sätze „Das System soll …“.
 > *Quelle: Folie T2B1 F. 21 (Gruppenarbeit), sinngemäß (offizielle Lösung T2B1 mit Lösungen, F. 23–26)*
 
+> [!TIP]
+> **Übung 7 · mittel**
+> Was verkauft ein Reiseveranstalter wie die Sonnenschein AG eigentlich, wenn ihm weder Hotels noch Flugzeuge gehören? Beantworte die Frage mit den Canvas-Feldern Wertversprechen, Schlüsselpartner und Einnahmequellen.
+> *Quelle: Einstiegsfrage T2B1 F. 6, sinngemäß*
+
 ## Lösungen
 
 ### Übung 1
@@ -209,7 +214,7 @@ Offizielle mögliche Lösung (Auszug):
 | Schlüsselpartner | Zahlungsdienstleister (Kreditkarte, PayPal) · Versanddienstleister · soziale Netzwerke |
 | Einnahmequellen | 0,20 US$ Gebühr pro eingestelltem Artikel · 3,5 % Provision pro Verkauf (Verkäufer zahlen, Käufer nicht) |
 
-Achtung: Die Verkäufer sind bei Etsy ein **Kundensegment**, kein Schlüsselpartner. Etsy ist ein Beispiel für das Muster **Plattform** (Kapitel 8).
+Achtung: Die Verkäufer sind bei Etsy ein **Kundensegment**, kein Schlüsselpartner. Etsy ist ein Beispiel für das Muster **Plattform** (Kapitel 8). Die 3,5 % Provision sind der Stand 2014 aus diesem Fall. In Block 4 nennt eine andere Folie für 2025 6,5 %. Die 0,20 US$ je eingestelltem Artikel sind in beiden gleich.
 
 ### Übung 5
 
@@ -240,3 +245,13 @@ Anforderungen:
 - „Das System soll Einwilligungen verwalten.“
 
 Diese Anforderungen beschreiben ein CRM.
+
+### Übung 7
+
+Er verkauft das **Bündel**: eine Pauschalreise aus einer Hand.
+
+- **Wertversprechen:** Flug, Hotel und Transfer sind ausgewählt, kombiniert und organisiert. Der Kunde hat einen Ansprechpartner, wenn etwas schiefgeht.
+- **Schlüsselpartner:** Hotels und Fluggesellschaften liefern die Einzelleistungen. Das Buchungssystem Amadeus verbindet die Partner, die IT-Tochter betreibt die Systeme.
+- **Einnahmequellen:** Erlös je gebuchter Pauschalreise.
+
+Die Wertschöpfung liegt also im Auswählen, Bündeln und Betreuen, nicht im Besitz von Hotel oder Flugzeug.

@@ -193,6 +193,11 @@ Fristen für die Annahme: unter Anwesenden und am Telefon nur sofort (§ 147 I).
 > Verbraucher K bekommt von der Schnellversand GmbH unbestellt eine CD für 15 €. Im Brief steht: Wenn K die CD nicht binnen zwei Wochen zurückschickt, gehe man von einer Annahme aus. Ein frankierter Rückumschlag liegt bei. K legt die CD beiseite. Hat die GmbH einen Anspruch auf den Kaufpreis?
 > Quelle: Skript S. 15, Fall Vertrag 3
 
+> [!TIP]
+> **Übung 7 · mittel**
+> Ein Onlineshop zeigt Kopfhörer für 49 €. Du legst sie in den Warenkorb und klickst auf „zahlungspflichtig bestellen“. Sofort kommt eine automatische Mail: „Wir haben Ihre Bestellung erhalten.“ Am nächsten Tag schreibt der Shop: „Leider ausverkauft.“ Ist ein Kaufvertrag zustande gekommen?
+> Quelle: eigene Aufgabe
+
 ## Lösungen
 
 ### Übung 1
@@ -262,3 +267,14 @@ Vorab die drei Fragen: Wer will was von wem woraus? Die GmbH will 15 € von K a
 5. **Annahme durch Schweigen:** Bloßes Schweigen ist keine Willenserklärung. Die GmbH kann das nicht einseitig anders festlegen.
 6. **§ 241a BGB:** Durch die Lieferung unbestellter Ware an einen Verbraucher wird kein Anspruch begründet. Ein Vertrag kommt nur zustande, wenn K zahlt oder ausdrücklich annimmt. Eine konkludente Annahme scheidet aus.
 7. **Ergebnis:** Also ist kein Kaufvertrag zustande gekommen. Die GmbH hat keinen Anspruch auf Zahlung.
+
+### Übung 7
+
+*Eigene Lösungsskizze.*
+
+1. **Obersatz:** Zwischen dir und dem Shop könnte ein Kaufvertrag nach § 433 BGB zustande gekommen sein, durch Angebot und Annahme.
+2. **Angebot des Shops?** Die Anzeige im Shop ist eine invitatio ad offerendum. Der Shop will sich nicht gegenüber jedem binden, sonst müsste er auch dann liefern, wenn das Lager leer ist.
+3. **Angebot von dir:** Mit dem Klick auf „zahlungspflichtig bestellen“ gibst du ein Angebot ab.
+4. **Annahme durch die automatische Mail?** „Wir haben Ihre Bestellung erhalten“ bestätigt nur den Eingang (§ 312i I 1 Nr. 3). Ein Wille, den Vertrag zu schließen, ist darin nicht zu erkennen. Also keine Annahme.
+5. **Zweite Mail:** „Leider ausverkauft“ ist eine Ablehnung.
+6. **Ergebnis:** Also ist kein Kaufvertrag zustande gekommen. Anders wäre es, wenn die erste Mail lautet: „Wir nehmen Ihre Bestellung an“ oder wenn der Shop die Ware schon verschickt.

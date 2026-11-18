@@ -190,6 +190,13 @@ Die Balanced Scorecard ist ein Managementsystem. Sie setzt die Strategie in konk
 >
 > Umsatz 3.000.000 €. Kosten: 800.000 €, 500.000 €, 600.000 € und 800.000 €. Anlagevermögen 1.700.000 €, Umlaufvermögen 700.000 €, Eigenkapital 900.000 €. Berechne Gewinn, Kapitalumschlag in %, Umsatzrentabilität, ROI und Fremdkapital, jeweils mit einer Nachkommastelle.
 
+> [!TIP]
+> **Übung 6 · mittel**
+>
+> *Quelle: eigene Aufgabe*
+>
+> a) Welche Art von Kennzahl ist das: absolute Zahl, Gliederungszahl, Beziehungszahl oder Indexzahl? 1) Eigenkapital / Gesamtkapital = 36 %, 2) Umsatz je Mitarbeiter = 120.000 €, 3) Umsatz 2026 = 108 (2024 = 100), 4) Gewinn 50.000 €. b) Zu welcher Perspektive der Balanced Scorecard gehört: 1) Reklamationsquote, 2) Weiterbildungstage je Mitarbeiter, 3) Cashflow, 4) Wiederkaufrate der Kunden?
+
 ## Lösungen
 
 ### Übung 1
@@ -241,3 +248,17 @@ Ergebnisse laut offizieller Musterlösung.
 3. Umsatzrentabilität = 300.000 / 3.000.000 · 100 = 10,0 %.
 4. ROI = 10,0 % · 1,25 = 12,5 %. Probe: 300.000 / 2.400.000 · 100 = 12,5 %.
 5. Fremdkapital = 2.400.000 − 900.000 = 1.500.000 €.
+
+### Übung 6
+
+a)
+1. Gliederungszahl: ein Teil (Eigenkapital) im Verhältnis zum Ganzen (Gesamtkapital).
+2. Beziehungszahl: zwei verschiedene Größen (Euro und Köpfe).
+3. Indexzahl: Entwicklung gegenüber dem Basisjahr 2024 = 100, also 8 % mehr.
+4. absolute Zahl: ein einzelner Betrag ohne Verhältnis.
+
+b)
+1. Prozesse: Fehler im Ablauf. Zur Kundenperspektive passt sie auch, wenn man sie als Kundenzufriedenheit liest. Mit Begründung ist beides vertretbar.
+2. Mitarbeiter und Lernen.
+3. Finanzen.
+4. Kunden (Kundentreue).

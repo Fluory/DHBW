@@ -371,6 +371,13 @@ Die UG ist eine „Mini-GmbH“. Ihr Stammkapital liegt zwischen 1 € und 24.99
 >
 > Die „Sonne KG“ macht 120.000 € Gewinn. Komplementärin Anna hat 200.000 € eingelegt, Kommanditist Ben 100.000 €. Vereinbart sind: 5 % Zinsen auf die Einlagen für das ganze Jahr, 2.000 € Tätigkeitsvergütung im Monat für Anna, Rest im Verhältnis 2 : 1. Wie viel bekommt jeder?
 
+> [!TIP]
+> **Übung 7 · mittel**
+>
+> *Quelle: eigene Aufgabe*
+>
+> a) Welcher Firmengrundsatz ist verletzt? 1) Ein Ein-Mann-Betrieb nennt sich „Deutschlands größter Fahrradhändler“. 2) Im selben Ort gibt es schon die „Rad-Huber OHG“, ein neuer Händler will „Rad Huber OHG“ heißen. b) Istkaufmann oder Formkaufmann? Wirkt der Eintrag deklaratorisch oder konstitutiv? 1) ein großer Malerbetrieb mit 25 Mitarbeitern als e. K., 2) die „Rad-Huber GmbH“. c) Bei der „Rad GmbH & Co. KG“ fehlen 40.000 €. Wer zahlt?
+
 ## Lösungen
 
 ### Übung 1
@@ -425,3 +432,15 @@ Ergebnisse laut offizieller Musterlösung:
 4. Verhältnis 2 : 1 → 3 Teile zu je 27.000 €. Anna 54.000 €, Ben 27.000 €.
 5. Gesamt: Anna 10.000 + 24.000 + 54.000 = 88.000 €. Ben 5.000 + 27.000 = 32.000 €.
 6. Probe: 88.000 + 32.000 = 120.000 €.
+
+### Übung 7
+
+a)
+1. Firmenwahrheit: Der Name täuscht über die Größe.
+2. Firmenausschließlichkeit: Der Name ist am selben Ort mit einer anderen Firma verwechselbar.
+
+b)
+1. Istkaufmann (§ 1 HGB), weil der Betrieb nach Art und Umfang eine kaufmännische Organisation braucht. Der Eintrag ist deklaratorisch: Er bestätigt nur, was schon gilt.
+2. Formkaufmann (§ 6 HGB), weil die GmbH wegen ihrer Rechtsform Kaufmann ist. Der Eintrag ist konstitutiv: Erst mit ihm entsteht die GmbH.
+
+c) Der Komplementär ist die Verwaltungs-GmbH. Sie haftet voll, aber nur mit ihrem eigenen Vermögen. Die Kommanditisten haften nur bis zu ihrer Haftsumme, soweit sie noch nicht eingezahlt ist. Kein Mensch haftet mit seinem Privatvermögen.

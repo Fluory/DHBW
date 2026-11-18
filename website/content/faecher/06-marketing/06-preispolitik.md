@@ -23,6 +23,22 @@ Es gibt also drei Wege, einen Preis zu bestimmen:
 
 **Target Costing** rechnet rückwärts vom Markt aus: „Was darf es kosten?“ statt „Was kostet es?“. Der Grund: Bis zu 80 % der Herstellkosten werden schon in der Entwicklung festgelegt. Erzielbarer Preis (Target Price) − geplanter Gewinn (Target Profit) = vom Markt erlaubte Kosten (Allowable Costs). Diese vergleicht man mit den geschätzten Kosten des Produktkonzepts (Drifting Costs). Daraus ergeben sich die Zielkosten. Die **Lebenszykluskostenrechnung** betrachtet alle Kosten und Erlöse über das ganze Leben eines Produkts.
 
+### Rechenweg: Target Costing
+
+1. Zielpreis (Target Price) bestimmen: Was zahlen Kunden höchstens?
+2. Zielgewinn (Target Profit) abziehen. Ist er in % angegeben, rechne ihn vom Zielpreis aus.
+3. Ergebnis = Allowable Costs, also die Kosten, die der Markt erlaubt.
+4. Mit den geschätzten Kosten des bisherigen Konzepts vergleichen (Drifting Costs).
+5. Differenz = Kostenlücke, die in der Entwicklung eingespart werden muss.
+
+**Durchgerechnet (eigene Zahlen): ein Akku-Rasenmäher.** Kunden zahlen höchstens 300 €. Der Gewinn soll 15 % vom Preis sein. Das erste Konzept würde 280 € kosten.
+
+1. Zielpreis = 300 €.
+2. Zielgewinn = 15 % von 300 = 0,15 · 300 = 45 €.
+3. Allowable Costs = 300 − 45 = 255 €.
+4. Drifting Costs = 280 €.
+5. Kostenlücke = 280 − 255 = 25 €. Das sind 25 / 280 · 100 = 8,93 % der geschätzten Kosten. Die Entwickler müssen also zum Beispiel einen billigeren Motor oder ein einfacheres Gehäuse finden.
+
 > [!NOTE]
 > **Beispiel: Die Bäckerei (eigene Zahlen)**
 >
@@ -31,18 +47,25 @@ Es gibt also drei Wege, einen Preis zu bestimmen:
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
-> Kostenorientiert: von innen nach außen. Target Costing: vom Marktpreis rückwärts zu den erlaubten Kosten.
+> - Drei Wege zum Preis: kostenorientiert, wettbewerbsorientiert, nachfrageorientiert.
+> - Target Costing: vom Marktpreis rückwärts. Zielpreis − Zielgewinn = Allowable Costs. Kostenlücke = Drifting Costs − Allowable Costs.
 
 > [!WARNING]
 > **Achtung**
 >
-> Target Costing beginnt beim Preis, nicht bei den Kosten.
+> Target Costing beginnt beim Preis, nicht bei den Kosten. Typischer Fehler: Gewinn auf die Kosten aufschlagen (280 + 45 = 325 €). Das ist normale Kalkulation, und 325 € würde am Markt niemand zahlen.
 
 ## Zuschlagskalkulation (Vollkosten)
 
 **In einem Satz:** Die Zuschlagskalkulation baut den Preis Schicht für Schicht auf: erst die direkten Kosten, dann prozentuale Aufschläge für alles andere, dann der Gewinn, dann Puffer für Skonto und Rabatt.
 
 **Stell dir vor:** Für eine Torte weißt du genau, wie viel Mehl, Butter und Arbeitszeit drinstecken (**Einzelkosten**: Fertigungsmaterial und Fertigungslöhne). Die Miete, den Strom und die Buchhaltung kannst du keiner einzelnen Torte zuordnen (**Gemeinkosten**). Darum schlägst du dafür einen festen Prozentsatz auf, zum Beispiel „auf jeden Euro Material kommen noch 10 Cent für das Lager“.
+
+Drei Preise am Ende der Rechnung klingen ähnlich:
+
+- **Barverkaufspreis:** Das Geld, das am Ende wirklich bei dir ankommt, wenn der Kunde schnell zahlt und Skonto abzieht.
+- **Zielverkaufspreis:** der Preis vor Skonto. So viel zahlt der Kunde, wenn er erst am Ende des Zahlungsziels zahlt (Skonto = Abzug für schnelles Zahlen).
+- **Listenverkaufspreis:** der Preis in der Preisliste, von dem der Kunde noch Rabatt abzieht.
 
 ### Rechenweg: vom Material zum Listenpreis
 
@@ -67,7 +90,9 @@ Es gibt also drei Wege, einen Preis zu bestimmen:
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
-> Material → Fertigung → Herstellkosten → Selbstkosten → Barverkaufspreis → Zielverkaufspreis → Listenverkaufspreis.
+> - Material → Fertigung → Herstellkosten → Selbstkosten → Barverkaufspreis → Zielverkaufspreis → Listenverkaufspreis.
+> - Einzelkosten (Material, Löhne) sind direkt zurechenbar. Gemeinkosten (Miete, Verwaltung) kommen als Zuschlag in % dazu.
+> - Gewinn wird **vom Hundert** auf die Selbstkosten aufgeschlagen, Skonto und Rabatt rechnest du **im Hundert**: geteilt durch (1 − Satz).
 
 > [!WARNING]
 > **Achtung**
@@ -123,7 +148,9 @@ Die Produktion lohnt sich, wenn der Deckungsbeitrag positiv ist und freie Kapazi
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
-> Break-even = Fixkosten / Stückdeckungsbeitrag.
+> - Stückdeckungsbeitrag db = Preis − variable Stückkosten. Break-even = Fixkosten / db.
+> - Kurzfristige Preisuntergrenze = variable Stückkosten. Langfristige Preisuntergrenze = Selbstkosten je Stück.
+> - Ein Produkt lohnt sich, wenn der Deckungsbeitrag positiv ist und freie Kapazität da ist.
 
 > [!WARNING]
 > **Achtung**
@@ -135,7 +162,13 @@ Die Produktion lohnt sich, wenn der Deckungsbeitrag positiv ist und freie Kapazi
 
 **In einem Satz:** Bei neuen Produkten entscheidest du, ob du teuer startest und dann senkst oder billig startest, um schnell viele Kunden zu bekommen.
 
-Bei der Preispositionierung wählt man Hochpreis, Mittelpreis oder Niedrigpreis. Für neue Produkte gibt es zwei Strategien:
+Bei der **Preispositionierung** wählt man ein Preisniveau für längere Zeit:
+
+- **Hochpreisstrategie:** hoher Preis wegen eines besonderen Leistungsvorteils (Premiumkaffee, Markenuhr).
+- **Mittelpreisstrategie:** mittlerer Preis für mittlere Qualität.
+- **Niedrigpreisstrategie:** Mindestqualität zum niedrigen Preis (Discounter-Eigenmarke).
+
+Für neue Produkte gibt es zwei Strategien:
 
 - **Skimming** (englisch „abschöpfen“, wie den Rahm von der Milch): teuer starten, später schrittweise senken. Ziel: schnelle Erträge. Alltagsbeispiel: Neue Smartphone-Modelle und Spielekonsolen sind zum Start am teuersten und werden mit der Zeit billiger. Wer unbedingt zuerst dabei sein will, zahlt mehr.
 - **Penetration** (englisch „durchdringen“): billig starten, damit sich das Produkt schnell verbreitet. Anfangs deckt der Preis eventuell nicht einmal die Kosten. Ziel: langfristig großer Marktanteil. Alltagsbeispiel: ein Abo, das in den ersten Monaten fast nichts kostet.
@@ -161,12 +194,15 @@ Dazu kommen psychologische Preise (19,99 € wirkt billiger als 20 €), die ver
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
-> Skimming = hoch starten, dann senken. Penetration = niedrig starten, schnell verbreiten.
+> - Preispositionierung: Hoch-, Mittel- oder Niedrigpreisstrategie.
+> - Skimming = hoch starten, dann senken (kurzfristige Erträge). Penetration = niedrig starten, schnell verbreiten (langfristig Marktanteil).
+> - Preisdifferenzierung: räumlich, persönlich, zeitlich, sachlich, mengenmäßig, Produktbündel.
 
 > [!WARNING]
 > **Achtung**
 >
-> Bei der persönlichen Preisdifferenzierung geht es um die Kundengruppe, bei der sachlichen um eine andere Leistung.
+> - Bei der persönlichen Preisdifferenzierung geht es um die Kundengruppe, bei der sachlichen um eine andere Leistung.
+> - Preispositionierung (dauerhaftes Preisniveau) nicht mit Skimming/Penetration (Einführungspreis eines neuen Produkts) verwechseln.
 
 ## Übungen
 
@@ -204,6 +240,20 @@ Dazu kommen psychologische Preise (19,99 € wirkt billiger als 20 €), die ver
 > *Quelle: Skript Marketing, Übung 22 (S. 50)*
 >
 > Fertigungsmaterial 100 €, Materialgemeinkosten 10 %, Fertigungslöhne 50 €, Fertigungsgemeinkosten 80 %, Verwaltungsgemeinkosten 8 %, Vertriebsgemeinkosten 6 %, Gewinn 12 %, Skonto 3 %, Rabatt 25 %. Berechne den Listenverkaufspreis.
+
+> [!TIP]
+> **Übung 6 · mittel**
+>
+> *Quelle: eigene Aufgabe (Skript S. 49)*
+>
+> Ein Hersteller plant eine Smartwatch. Kunden zahlen höchstens 180 €. Der Gewinn soll 20 % vom Preis sein. Das bisherige Konzept würde 160 € je Stück kosten. Berechne die Allowable Costs und die Kostenlücke in € und in % der geschätzten Kosten.
+
+> [!TIP]
+> **Übung 7 · Prüfungsniveau**
+>
+> *Quelle: eigene Aufgabe, aufbauend auf Skript-Übung 24 (S. 52)*
+>
+> Ein Zulieferer stellt ein Steuermodul her: variable Kosten 340 € je Stück, Fixkosten 81.000 € im Monat, Kapazität 500 Stück. Er verkauft derzeit 400 Stück zu 520 €. Ein neuer Kunde bietet für 100 zusätzliche Stück nur 400 € je Stück. a) Liegt der Preis über der kurzfristigen Preisuntergrenze? b) Um wie viel ändert sich der Gewinn, wenn der Zulieferer annimmt? c) Warum wäre 400 € als Preis für alle Kunden auf Dauer zu wenig?
 
 ## Lösungen
 
@@ -248,3 +298,21 @@ Eigene Lösungsskizze:
 5. Barverkaufspreis = 228 + 27,36 (12 %) = 255,36 €.
 6. Zielverkaufspreis = 255,36 / 0,97 = 263,26 € (Skonto 7,90 €).
 7. Listenverkaufspreis = 263,26 / 0,75 = 351,01 € (Rabatt 87,75 €).
+
+### Übung 6
+
+Eigene Lösungsskizze:
+
+1. Zielpreis = 180 €.
+2. Zielgewinn = 0,20 · 180 = 36 €.
+3. Allowable Costs = 180 − 36 = 144 €.
+4. Kostenlücke = 160 − 144 = 16 €. In Prozent: 16 / 160 · 100 = 10 % der geschätzten Kosten müssen eingespart werden.
+
+### Übung 7
+
+Eigene Lösungsskizze:
+
+1. a) Kurzfristige Preisuntergrenze = variable Stückkosten = 340 €. 400 € liegen darüber.
+2. b) db des Zusatzauftrags = 400 − 340 = 60 € je Stück. Die Fixkosten sind schon da und ändern sich nicht. Freie Kapazität: 500 − 400 = 100 Stück, passt genau. Mehr Gewinn = 100 · 60 = 6.000 €.
+3. Probe: vorher 400 · 180 − 81.000 = −9.000 €. Nachher −9.000 + 6.000 = −3.000 €. Der Verlust wird kleiner.
+4. c) Langfristig müssen alle Kosten gedeckt sein. Selbstkosten je Stück bei voller Auslastung = 340 + 81.000 / 500 = 502 €. Bei 400 € für alle Kunden würde jedes Stück 102 € Verlust bringen.

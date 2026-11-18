@@ -275,6 +275,32 @@ Warum ist das wichtig? Der Aufwand einer Suche hängt von der Länge des Wegs ab
 > **Achtung**
 > Die Zahlen genau in der gegebenen Reihenfolge einfügen. Beim Löschen mit zwei Kindern nie einfach das linke Kind hochziehen, sonst ist die Ordnung kaputt. Mach immer die Probe: von links nach rechts gelesen muss die Folge sortiert sein.
 
+## Welche Datenstruktur passt?
+
+In der Klausur heißt „anwenden“ oft: Zu einer Situation die passende Struktur wählen und begründen. Stell dir dazu immer die Frage: **Welches Element brauche ich als Nächstes?**
+
+1. Immer das zuletzt hinzugefügte? → **Stack** (LIFO).
+2. Immer das am längsten wartende? → **Queue** (FIFO).
+3. Ein beliebiges über seine Nummer, und die Anzahl ändert sich nicht? → **Array**.
+4. Viele Einfügungen und Löschungen mitten drin? → **verkettete Liste**.
+5. Schnell suchen und trotzdem leicht einfügen? → **geordneter Binärbaum**.
+
+| Situation | Struktur | Begründung |
+|---|---|---|
+| Zurück-Taste im Browser | Stack | Die zuletzt besuchte Seite kommt zuerst zurück. |
+| Druckaufträge, Warteschleife im Callcenter | Queue | Wer zuerst kommt, wird zuerst bedient. |
+| Messwerte für die 7 Wochentage | Array | Feste Anzahl, direkter Zugriff über den Index 0–6. |
+| Playlist, in der ständig Lieder eingeschoben werden | verkettete Liste | Einfügen nur durch Zeiger umhängen, ohne Umkopieren. |
+| Kundennummern, die oft gesucht und neu angelegt werden | geordneter Binärbaum | Suche über links/rechts, neue Nummer als Blatt anhängen. |
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Frage dich, welches Element du als Nächstes brauchst: das neueste (Stack), das älteste (Queue), eines über seine Nummer (Array), eines mitten in einer sich ständig ändernden Folge (Liste) oder eines über „kleiner/größer“ (Binärbaum).
+
+> [!WARNING]
+> **Achtung**
+> Begründe immer mit dem Prinzip (LIFO, FIFO, Index, Zeiger, links kleiner/rechts größer), nicht nur mit dem Namen. „Stack, weil es passt“ bringt keinen Punkt.
+
 ## Vergleich der Datenstrukturen
 
 Die O-Angaben sind eine Ergänzung (O-Notation in Kapitel 8). Auf Deutsch: O(1) heißt „ein Schritt, egal wie viele Daten“, O(n) heißt „im schlimmsten Fall einmal alles ansehen“, O(log n) heißt „bei jedem Schritt fällt die Hälfte weg“.
@@ -320,6 +346,16 @@ Die O-Angaben sind eine Ergänzung (O-Notation in Kapitel 8). Auf Deutsch: O(1) 
 > **Übung 6 · Prüfungsniveau**
 > Löschen Sie im Baum aus Übung 5 den Knoten 20. Geben Sie beide Varianten an.
 > *Quelle: Lernseite GIT, Aufgabe 7.9 (eigene Aufgabe im Klausurstil)*
+
+> [!TIP]
+> **Übung 7 · mittel**
+> Welche Datenstruktur passt? Begründen Sie kurz. a) „Rückgängig“ in einem Zeichenprogramm b) Kunden an der Hotline in der Reihenfolge ihres Anrufs bedienen c) die 12 Monatsumsätze eines Jahres d) eine Bestenliste, in die ständig neue Ergebnisse an der richtigen Stelle eingefügt werden.
+> *Quelle: eigene Aufgabe nach VL05 F. 3 („Anwendung der Datenstrukturen“)*
+
+> [!TIP]
+> **Übung 8 · Prüfungsniveau**
+> Suchen Sie im Baum aus Übung 5 nach 25 und nach 55. Geben Sie den Weg an und zählen Sie die Vergleiche. Wie viele Vergleiche wären es höchstens, wenn dieselben 8 Zahlen sortiert eingefügt worden wären?
+> *Quelle: eigene Aufgabe*
 
 ## Lösungen
 
@@ -404,3 +440,18 @@ Variante kleinster rechts:
          /  \    /  \
        10   30  50   70
 ```
+
+### Übung 7
+
+- a) **Stack:** Die zuletzt gemachte Aktion wird zuerst zurückgenommen (LIFO). Jede neue Aktion kommt mit push oben drauf, „Rückgängig“ ist ein pop.
+- b) **Queue:** Wer zuerst anruft, wird zuerst bedient (FIFO). Neue Anrufer kommen mit put/enqueue hinten dazu, die nächste freie Person nimmt mit get/dequeue den vordersten.
+- c) **Array:** Die Anzahl ist fest (12), und du greifst direkt über den Index zu, zum Beispiel umsatz[2] für März (Index ab 0).
+- d) **sortierte Liste:** Die Liste bleibt immer geordnet. Ein neues Ergebnis wird beim ersten größeren bzw. kleineren Element eingehängt, nur durch Zeiger umhängen. (Ein geordneter Binärbaum ist auch vertretbar, wenn du links/rechts begründest.)
+
+### Übung 8
+
+Baum aus Übung 5: Wurzel 40, links 20 (Kinder 10 und 30, an 30 links 25), rechts 60 (Kinder 50 und 70).
+
+- **Suche 25:** 25 < 40 → links zu 20. 25 > 20 → rechts zu 30. 25 < 30 → links zu 25, gefunden. Verglichen mit 40, 20, 30, 25: **4 Vergleiche**.
+- **Suche 55:** 55 > 40 → rechts zu 60. 55 < 60 → links zu 50. 55 > 50 → rechts, dort ist nichts. Verglichen mit 40, 60, 50: **3 Vergleiche**, dann steht fest: 55 ist nicht vorhanden.
+- **Sortiert eingefügt** (10, 20, 25, 30, 40, 50, 60, 70): Jede Zahl hängt rechts an der vorigen, der Baum degeneriert zur Liste mit 8 Ebenen. Für die 70 oder eine fehlende größere Zahl brauchst du **8 Vergleiche**, so viele wie bei der linearen Suche.

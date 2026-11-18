@@ -450,6 +450,12 @@ Ohne Bruch gilt dasselbe: Klammere die höchste Potenz aus. −7n³ + 4n² + 10 
 >
 > Quelle: Folien „Folgen“, Aufgabe F-6 (F. 35)
 
+> [!TIP]
+> **Übung 7 · mittel**
+> Gegeben ist aₙ = 2 + 3/n. a) Vermute den Grenzwert a mit n = 10, 100, 1000. b) Ab welchem Platz n₀ ist der Abstand |aₙ − a| kleiner als ε = 0,01? c) Und für ε = 0,001? d) Erkläre in einem Satz, warum das die Konvergenz zeigt.
+>
+> Quelle: eigene Aufgabe zur ε-Definition (F. 20)
+
 ## Lösungen
 
 Die Lösungen sind selbst nachgerechnet. Die Besprechung in der Vorlesung kann in der Schreibweise abweichen.
@@ -614,3 +620,24 @@ Quotienten:
 | Fₙ₊₁/Fₙ | 1 | 2 | 1,5 | 1,667 | 1,6 | 1,625 | 1,615 | 1,619 | 1,6176 |
 
 Die Quotienten liegen abwechselnd über und unter 1,618 und kommen immer näher. Die Quotientenfolge ist nicht monoton, aber konvergent gegen den Goldenen Schnitt.
+
+### Übung 7
+
+a)
+
+| n | 10 | 100 | 1000 |
+|---|---|---|---|
+| aₙ = 2 + 3/n | 2,3 | 2,03 | 2,003 |
+
+Die Glieder laufen auf **a = 2** zu.
+
+b)
+
+1. Abstand ausrechnen: |aₙ − 2| = |3/n| = 3/n (n ist positiv, also auch 3/n).
+2. Bedingung: 3/n < 0,01.
+3. Mal n und durch 0,01 teilen: n > 3/0,01 = 300.
+4. Bei n = 300 ist der Abstand genau 0,01, also noch nicht **kleiner**. Erst ab **n₀ = 301** gilt es: 3/301 ≈ 0,00997 < 0,01.
+
+c) 3/n < 0,001 ⇔ n > 3000, also **n₀ = 3001**.
+
+d) Für jedes noch so kleine ε findest du so ein n₀, nämlich die erste ganze Zahl über 3/ε. Ab dort liegen **alle** weiteren Glieder näher als ε an 2. Genau das verlangt die Definition ∀ε > 0 ∃n₀ ∀n ≥ n₀: |aₙ − a| < ε.

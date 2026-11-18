@@ -104,6 +104,19 @@ Die Folien nennen die drei Servicemodelle nur mit Namen. Die Erklärung hier ist
 | PaaS – Platform as a Service | zusätzlich Laufzeitumgebung und Datenbank | nur deine Anwendung | Google App Engine, SAP BTP |
 | SaaS – Software as a Service | eine fertige Anwendung im Browser | nichts, du nutzt sie nur | Salesforce, Microsoft 365 |
 
+### Vor- und Nachteile der Cloud
+
+Die Folien nennen die Vorteile über die Beispiele: Rechenleistung ist **flexibel** und **skalierbar**, man zahlt meist im **Abo** nach Bedarf, der Zugang läuft über den **Browser**. Die New York Times musste für eine einmalige Aufgabe keine eigenen Rechner kaufen. Die Nachteile stehen nicht auf den Folien. Die folgende Liste ist eine Ergänzung, damit du bei „Pro und Contra“ etwas sagen kannst.
+
+| Vorteile | Nachteile (Ergänzung) |
+|---|---|
+| keine Anschaffung, du zahlst nur, was du nutzt | Abhängigkeit vom Anbieter |
+| in Minuten mehr oder weniger Leistung | ohne Internetverbindung kein Zugriff |
+| Wartung und Updates macht der Anbieter | Daten liegen bei einem fremden Unternehmen (Datenschutz) |
+| Zugriff von überall über den Browser | laufende Kosten können sich über Jahre summieren |
+
+**Mit Zahlen (eigenes Beispiel):** Eine Firma braucht nur im Dezember 20 Server, sonst 4. Kauft sie selbst, stehen elf Monate lang 16 Server fast ungenutzt herum. Mietet sie in der Cloud, zahlt sie elf Monate für 4 und einen Monat für 20 Server. Genau diese Überlegung stand am Anfang von AWS.
+
 > [!NOTE]
 > **Beispiel: Wie kann die IT-Landschaft strukturiert werden?**
 > Eine gute Antwort nennt drei Blickwinkel. Nach **Schichten**: die sieben Komponenten von der Hardware bis zur Anwendung. Nach **Architektur**: zentral am Großrechner, Client-Server mit 2-Tier oder N-Tier, verteilt über das Internet. Nach **Betriebsmodell**: eigener Betrieb im Unternehmen oder Bezug aus der Cloud als IaaS, PaaS oder SaaS.
@@ -148,6 +161,16 @@ Die Folien nennen die drei Servicemodelle nur mit Namen. Die Erklärung hier ist
 >
 > *Quelle: Lernseite GIT, Aufgabe 2.6 (eigene Aufgabe im Klausurstil)*
 
+> [!TIP]
+> **Übung 6 · mittel**
+> Ordnen Sie den sieben Hauptkomponenten zu: a) SAP ERP b) Linux c) WLAN im Büro d) ein IT-Dienstleister, der das neue System einführt e) ein Datenbankserver mit MySQL f) Laptops der Mitarbeitenden.
+> *Quelle: eigene Aufgabe nach VL01 F. 24*
+
+> [!TIP]
+> **Übung 7 · Prüfungsniveau**
+> Erläutern Sie zwei Vorteile des Cloud Computing für ein Unternehmen am Beispiel der New York Times.
+> *Quelle: eigene Aufgabe nach VL01 (Cloud Computing)*
+
 ## Lösungen
 
 ### Übung 1
@@ -191,3 +214,18 @@ Wichtig in der Skizze: alle Kästen beschriftet, Pfeile in beide Richtungen.
 Richtig sind **1, 2 und 4**. Falsch ist 3, denn die Epochen überlagern sich und Großrechner gibt es bis heute.
 
 Punkte bei korrekter Antwort: vier richtige Entscheidungen × ½ = 2 Punkte.
+
+### Übung 6
+
+- a) SAP ERP → **Anwendungssysteme**
+- b) Linux → **Betriebssystem-Plattformen**
+- c) WLAN → **Netzwerke und Telekommunikation**
+- d) IT-Dienstleister → **Beratungsdienste und Systemintegratoren**
+- e) MySQL-Datenbankserver → **Datenverwaltung und -speicherung**
+- f) Laptops → **Hardwareplattformen**
+
+Übrig bleibt „Internet als Plattform“, zum Beispiel ein Webdienst, über den Kunden bestellen.
+
+### Übung 7
+
+Musterantwort: Die New York Times wollte rund 11 Millionen alte Artikel in PDF umwandeln. Dafür brauchte sie für kurze Zeit sehr viel Rechenleistung. Erster Vorteil: Sie musste keine eigenen Server kaufen, die danach nutzlos herumgestanden hätten, sondern hat die Rechner bei Amazon nur für die Dauer der Aufgabe gemietet und bezahlt. Zweiter Vorteil: Die Leistung ist skalierbar. Sie konnte sehr viele virtuelle Rechner gleichzeitig starten, sodass die Arbeit in 24 Stunden erledigt war, statt wochenlang auf wenigen eigenen Rechnern zu laufen.

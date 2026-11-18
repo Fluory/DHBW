@@ -52,8 +52,8 @@ CI beantwortet also die Frage „Wer sind wir?“. Das Unternehmen soll überall
 | Bestandteil | Was gehört dazu? |
 |---|---|
 | Corporate Design | Logo, Briefpapier, Website, Gebäude |
-| Corporate Communication | Auftreten und Sprache nach außen |
-| Corporate Behaviour | Verhalten gegenüber Kunden, Lieferanten, Mitarbeitern |
+| Corporate Communication | Auftreten und Sprache nach außen, auch die „Corporate Language“: feste Begriffe, zum Beispiel ob man von „Autos“ oder „Fahrzeugen“ spricht |
+| Corporate Behaviour | Verhalten gegenüber Kunden, Lieferanten, Mitarbeitern, zum Beispiel faire Bezahlung oder der Umgang mit Kritik |
 
 > [!NOTE]
 > **Beispiel: Die Bäckerei**
@@ -77,6 +77,8 @@ CI beantwortet also die Frage „Wer sind wir?“. Das Unternehmen soll überall
 **Stell dir vor:** Dein Studium. „In drei Jahren habe ich den Bachelor“ ist das große Ziel. „Dieses Semester bestehe ich alle Klausuren“ ist ein Zwischenschritt. „Heute Abend rechne ich zwei Übungen“ ist das, was du jetzt tust. Genauso hat ein Betrieb lange, mittlere und kurze Ziele.
 
 Ein gutes Ziel ist außerdem **operational**, also so genau, dass man es überprüfen kann. Es sagt Inhalt (was?), Ausmaß (wie viel?), Zeitbezug (wann?) und Geltungsbereich (wo?).
+
+So prüfst du ein Ziel: „Wir wollen mehr verkaufen“ ist nicht operational. Es fehlen Ausmaß, Zeit und Ort. Operational wird es so: „Wir wollen den Umsatz mit Brötchen (Inhalt) um 10 % (Ausmaß) bis Ende 2027 (Zeitbezug) in der Filiale am Markt (Geltungsbereich) steigern.“
 
 | Ebene | Zeithorizont | Leitfrage |
 |---|---|---|
@@ -192,6 +194,13 @@ Ein gutes Ziel ist außerdem **operational**, also so genau, dass man es überpr
 >
 > Ein Unternehmen will mehr für den Umweltschutz tun. Welche Zielbeziehung besteht zu a) langfristiger Gewinnmaximierung, b) Sicherung der Arbeitsplätze, c) dem Image? Begründe.
 
+> [!TIP]
+> **Übung 6 · mittel**
+>
+> *Quelle: eigene Aufgabe*
+>
+> a) Zu welchem Faktor des Makroumfelds gehört das? 1) Die Zentralbank erhöht die Zinsen. 2) Ein neues Gesetz verlangt Lieferketten-Nachweise. 3) Immer mehr Menschen arbeiten im Homeoffice. 4) Ein neues Verfahren macht Solarzellen billiger. b) Nenne für eine Bäckerei-GmbH vier Stakeholder mit je einem typischen Interesse. Welcher davon ist auch Shareholder?
+
 ## Lösungen
 
 ### Übung 1
@@ -234,3 +243,13 @@ Offizielle Lösung:
 - a) Gewinn: kurzfristig konkurrierend, denn Umweltschutz kostet Geld und die Absatzchancen sind unsicher. Mittel- bis langfristig ist eine komplementäre Beziehung möglich.
 - b) Arbeitsplätze: grundsätzlich komplementär. Umweltfreundliche Produkte sichern den Absatz und damit die Arbeitsplätze.
 - c) Image: komplementär, zum Beispiel durch Umweltsponsoring als Werbung.
+
+### Übung 6
+
+a)
+1. ökonomisch (Zinsen)
+2. rechtlich (Gesetz). Eine politische Entscheidung steckt dahinter, aber das Ergebnis ist eine Rechtsvorschrift.
+3. soziokulturell (Lebensstil, Arbeitsweise)
+4. technologisch (neues Verfahren)
+
+b) Beispiele: Gesellschafter wollen Gewinn und Wertsteigerung · Mitarbeiter wollen sichere Arbeitsplätze und faire Löhne · Kunden wollen frische Ware zu fairen Preisen · Lieferanten wollen pünktlich bezahlt werden · die Bank will Zinsen und Tilgung · der Staat will Steuern · Nachbarn wollen keinen Lärm. Shareholder sind nur die Gesellschafter, denn nur sie besitzen Anteile.

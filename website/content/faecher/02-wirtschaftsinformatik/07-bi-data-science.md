@@ -20,7 +20,11 @@ Klausurrelevant sind: Informationsbedarf, der Aufbau eines BI-Systems mit Data W
 | Nachfrage | was sie tatsächlich anfragt | Sie misst nur den Blutdruck. |
 | Angebot | was verfügbar ist | In der Akte liegen Röntgenbilder von vor zehn Jahren. |
 
-Ziel ist, dass sich diese vier Mengen möglichst stark überschneiden.
+Ziel ist, dass sich diese vier Mengen möglichst stark überschneiden. Die Schnittmenge aus benötigt, nachgefragt und verfügbar heißt **Informationsstand**. Ihn will man vergrößern.
+
+**Mit Beispiel:** Der Produktmanager der Sonnenschein AG fragt nach „Anzahl der Beschwerden je Hotel und Woche“ (Nachfrage). Angeboten wird ein Monatsbericht mit Umsatz je Hotel (Angebot). Für seine Aufgabe, Fehlreservierungen abzustellen, bräuchte er aber Daten zur **Ursache**: An welcher Stelle ging die Reservierung schief (objektiver Bedarf)? Nachfrage, Angebot und Bedarf passen hier kaum zusammen.
+
+Bei einer **Bedarfsanalyse** stellt man fünf Fragen: **Inhalt** (was?), **Häufigkeit** (wie oft?), **Form** (wie aufbereitet?), **Medium** (auf welchem Weg?) und **Wichtigkeit** (wie dringend?).
 
 **Pull** („ziehen“): Der Nutzer holt die Information selbst (Suche, Abfrage), wie wenn du die Wetter-App öffnest. **Push** („schieben“): Das System liefert sie von sich aus (Bericht jeden Montag, Warnmeldung), wie die Unwetterwarnung, die von selbst aufs Handy kommt.
 
@@ -31,6 +35,29 @@ Ziel ist, dass sich diese vier Mengen möglichst stark überschneiden.
 > [!WARNING]
 > **Achtung**
 > „Der objektive Informationsbedarf ist das, was eine Managerin bei der IT anfragt“ ist falsch. Das ist die Nachfrage.
+
+## Managementunterstützungssysteme: von Berichten bis BI
+
+**Was ist das?** Systeme, die Führungskräfte bei Entscheidungen unterstützen, heißen **Managementunterstützungssysteme (MUS)**. Sie sind über Jahrzehnte gewachsen. Neue Systeme kamen hinzu, die alten blieben, oft als Teil von BI:
+
+Abfrage- und Berichtssysteme (ab den 1960ern) → Decision Support Systems (DSS) → Expertensysteme → Executive Information Systems (EIS) → Business Intelligence (Data Warehouse, OLAP, Data Mining) → ab etwa 2010 Big Data → Data Science und Machine Learning.
+
+| System | Was es tut | Beispiel Sonnenschein AG |
+|---|---|---|
+| Abfrage- und Berichtssystem | einfache Auswertungen; Abfragen startet der Nutzer (Pull), Berichte erzeugt das System regelmäßig (Push) | monatlicher Umsatzbericht je Reiseziel |
+| DSS (Entscheidungsunterstützung) | Handlungsalternativen mit Modellen durchspielen („Was wäre, wenn?“) oder verborgene Muster in Daten suchen | Wie ändert sich der Gewinn, wenn die Kreta-Preise um 5 % sinken? |
+| Expertensystem | menschliches Expertenwissen als Wenn-dann-Regeln (Regelbasis), dazu Fakten (Faktenbasis); ein Regelinterpreter leitet neue Fakten ab | Kreditvergabe, Fehlersuche |
+| EIS (Führungsinformationssystem) | kompakte Übersicht aller wichtigen Kennzahlen für das Top-Management, aus internen und externen Quellen | Kennzahlencockpit, Balanced Scorecard; heute Management-Dashboard |
+
+**Mit Zahlen zum DSS:** Eine Kreta-Reise kostet 1 000 €, der Veranstalter zahlt Hotel und Flug 800 €, es gibt 500 Buchungen. Gewinn: 500 · (1 000 − 800) = 100 000 €. Sinkt der Preis um 5 % auf 950 € und steigen die Buchungen dadurch auf 600, ist der Gewinn 600 · (950 − 800) = 90 000 €. Das DSS zeigt also: Trotz 100 zusätzlicher Buchungen sinkt der Gewinn. Erst ab 667 Buchungen (100 000 € / 150 € ≈ 666,7) wäre er wieder mindestens so hoch wie vorher. (Ausgedachte Zahlen.)
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Klassische MUS: Abfrage- und Berichtssysteme, DSS („Was wäre, wenn?“), Expertensysteme (Regeln von Menschen), EIS (Übersicht fürs Top-Management). Danach kamen BI, Big Data und Data Science; die alten Systeme blieben.
+
+> [!WARNING]
+> **Achtung**
+> Ein Expertensystem lernt nicht aus Daten. Seine Regeln schreiben Menschen hinein. Und ein EIS ist für das Top-Management, nicht für die Sachbearbeitung.
 
 ## Business Intelligence und Data Warehouse
 
@@ -149,6 +176,14 @@ So wählst du die Methode:
 
 **Train/Test (Anhang):** Wie beim Lernen für die Klausur: Du übst mit alten Aufgaben, aber ob du es verstanden hast, zeigt erst eine Aufgabe, die du noch nicht kennst. Man teilt alte Daten, zum Beispiel 80 % zum Lernen und 20 % zum Testen. Das Modell sieht die Testantworten nicht. So erkennt man, ob es nur auswendig gelernt hat (Overfitting).
 
+So rechnest du das Beispiel der Folie:
+
+1. 1 000 alte Buchungen mit bekannter Antwort (storniert ja/nein).
+2. 80 % Training: 1 000 · 0,8 = 800 Buchungen. 20 % Test: 1 000 · 0,2 = 200 Buchungen.
+3. Das Modell sagt die 200 Testfälle vorher und liegt bei 170 richtig: 170 / 200 = 0,85 = **85 %**.
+
+**Vorsicht mit Prozenten:** Wird nur jede 20. Buchung storniert, sind das 1 / 20 = 5 %. Ein Modell, das stur immer „nicht storniert“ sagt, liegt dann bei 95 % richtig und findet trotzdem keinen einzigen Storno. Beim Clustering gibt es keine richtige Antwort; dort prüft man, ob die Gruppen fachlich Sinn ergeben.
+
 > [!IMPORTANT]
 > **Das Wichtigste**
 > Zielspalte? Nein → Clustering. Ja und Zahl → Regression. Ja und Kategorie → Klassifikation.
@@ -188,6 +223,11 @@ So wählst du die Methode:
 > **Übung 6 · Prüfungsniveau**
 > Im Onlineshop werden Hotels falsch reserviert, Sonderwünsche gehen verloren. Der Produktmanager fragt nach „jede Woche Anzahl der Beschwerden und Kulanzkosten je Hotel“. Angeboten wird ein monatlicher Standardbericht mit Umsatz und Auslastung je Hotel. Was braucht er wirklich, was fragt er nicht nach, was braucht er nicht?
 > *Quelle: Folie T2B3 F. 7, sinngemäß*
+
+> [!TIP]
+> **Übung 7 · mittel**
+> Die Sonnenschein AG hat 2 500 vergangene Buchungen mit bekannter Antwort „storniert ja/nein“. a) Wie viele Buchungen kommen bei 80/20 in den Testdatensatz? b) Das Modell liegt bei 425 Testfällen richtig. Wie hoch ist die Trefferquote? c) Nur 4 % aller Buchungen werden storniert. Warum ist eine Trefferquote von 96 % dann kein gutes Zeichen?
+> *Quelle: eigene Aufgabe nach T2B3, Anhang F. 32*
 
 ## Lösungen
 
@@ -234,3 +274,11 @@ Regression und Klassifikation sind überwacht, Clustering ist unüberwacht.
 - **Nicht nötig:** Umsatz und Auslastung je Hotel. Das ist Angebot ohne Bedarf.
 
 Nachfrage, Bedarf und Angebot sind verschieden. Ziel ist, ihre Schnittmenge zu vergrößern.
+
+### Übung 7
+
+a) Test = 20 %: 2 500 · 0,2 = **500 Buchungen**. Die übrigen 2 500 · 0,8 = 2 000 sind Trainingsdaten.
+
+b) Trefferquote = richtige / alle Testfälle = 425 / 500 = 0,85 = **85 %**.
+
+c) Wenn nur 4 % storniert werden, sind 96 % nicht storniert. Ein Modell, das immer „nicht storniert“ sagt, erreicht deshalb ohne jedes Lernen 96 % und findet keinen einzigen Storno. Eine hohe Prozentzahl sagt bei seltenen Ereignissen wenig aus.

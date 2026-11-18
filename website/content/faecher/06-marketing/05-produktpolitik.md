@@ -32,12 +32,15 @@ Es gibt also drei Arten von Zusatznutzen.
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
-> Grundnutzen + drei Zusatznutzen: funktional, emotional, sozial. Werbung stellt meist den Zusatznutzen in den Mittelpunkt.
+> - Grundnutzen = die technische Grundfunktion (Uhr: Uhrzeit anzeigen).
+> - Funktionaler Zusatznutzen = mehr Technik als nötig (wasserdicht). Emotionaler Zusatznutzen = Freude an Form, Farbe, Marke (schönes Design). Sozialer Zusatznutzen = Anerkennung durch andere (Luxusuhr als Statussymbol).
+> - Werbung stellt meist den Zusatznutzen in den Mittelpunkt, denn den Grundnutzen haben alle Konkurrenzprodukte auch.
 
 > [!WARNING]
 > **Achtung**
 >
-> In der Klausur jede Art erklären und mit einem Beispiel zum gefragten Produkt belegen. Nur Begriffe nennen reicht nicht.
+> - In der Klausur jede Art erklären und mit einem Beispiel zum gefragten Produkt belegen. Nur Begriffe nennen reicht nicht.
+> - Emotional und sozial nicht verwechseln: Emotional = **du selbst** freust dich (auch wenn niemand es sieht). Sozial = **andere** sehen es und bewundern dich.
 
 ## Produktpolitische Maßnahmen, Programm und Gestaltung
 
@@ -51,7 +54,7 @@ Es gibt also drei Arten von Zusatznutzen.
 | Variation | Produkt wird verbessert, das alte verschwindet | neues Handymodell ersetzt das alte |
 | Eliminierung | Produkt wird vom Markt genommen | eine Chipssorte wird eingestellt |
 
-**Programmbreite** = wie viele Produktarten. **Programmtiefe** = wie viele Sorten je Art. Bäckerei: Brot, Brötchen und Kuchen sind 3 Produktarten (Breite 3). Brot gibt es in 8 Sorten (Tiefe beim Brot 8). Die Produktgestaltung umfasst im engeren Sinn Qualität, Ausstattung, Design und Verpackung, im weiteren Sinn Kundendienst, Garantie und Marke. Die Verpackung hat sechs Aspekte: Schutz, Verwendung, Logistik, Kommunikation, Kosten, Ökologie.
+**Programmbreite** = wie viele Produktarten. **Programmtiefe** = wie viele Sorten je Art. Bäckerei: Brot, Brötchen und Kuchen sind 3 Produktarten (Breite 3). Brot gibt es in 8 Sorten (Tiefe beim Brot 8). Die Produktgestaltung umfasst im engeren Sinn Qualität, Ausstattung, Design und Verpackung, im weiteren Sinn Kundendienst, Garantie und Marke. Die Verpackung hat sechs Aspekte: Schutz (nichts geht kaputt), Verwendung (leicht zu öffnen und zu dosieren), Logistik (stapelbar, passt auf die Palette), Kommunikation (fällt im Regal auf, informiert), Kosten (billig herzustellen) und Ökologie (wenig Müll, recycelbar).
 
 > [!NOTE]
 > **Beispiel: Die Bäckerei**
@@ -61,7 +64,9 @@ Es gibt also drei Arten von Zusatznutzen.
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
-> Innovation (Differenzierung, Diversifikation), Variation, Eliminierung.
+> - Innovation = neues Produkt: als Differenzierung (neue Variante zusätzlich) oder Diversifikation (neue Produktart).
+> - Variation = verbessertes Produkt ersetzt das alte. Eliminierung = Produkt wird vom Markt genommen.
+> - Programmbreite = Zahl der Produktarten, Programmtiefe = Zahl der Sorten je Art.
 
 > [!WARNING]
 > **Achtung**
@@ -82,6 +87,10 @@ Fachlich: Eine Marke ist ein Vorstellungsbild im Kopf. Sie hilft, ein Produkt wi
 | Familienmarke | mehrere Produkte unter einem gemeinsamen Namen | Nivea: Creme, Nivea Men, Nivea Sun |
 | Dachmarke | alle Produkte des Unternehmens unter einem Namen | Miele: Waschmaschine, Staubsauger, Herd |
 
+Je größer das Dach, desto billiger und desto riskanter: Eine Dachmarke braucht nur eine Werbung für alles, aber ein Skandal trifft alle Produkte. Bei Einzelmarken muss jede Marke einzeln aufgebaut werden, dafür schadet ein Flop den anderen nicht. Eine **Markenerweiterung** (bekannter Name für ein neues Produkt) ist laut Skript die häufigste Art, neue Produkte einzuführen, weil sie billiger ist als eine ganz neue Marke.
+
+**Was bringt eine starke Marke dem Unternehmen?** (eigene Zusammenfassung zu Skript S. 42) Kunden erkennen das Produkt schnell wieder, vertrauen ihm und sind bereit, mehr zu zahlen. Neue Produkte unter dem Namen setzen sich leichter durch, und der Handel nimmt sie eher ins Regal.
+
 Das **Markensteuerrad** nach Esch beschreibt die Markenidentität, also wie das Unternehmen seine Marke sieht. Stell es dir wie einen Steckbrief für eine Person vor: Wer bin ich (Kern)? Was kann ich für dich tun (Nutzen)? Wie bin ich drauf (Tonalität)? Was habe ich (Attribute)? Wie sehe ich aus (Bild)? In der Mitte steht die Markenkompetenz, darum herum vier Teile. Die Leitfragen stammen aus der Grafik im Skript (S. 45).
 
 | Teil | Leitfrage | Inhalt |
@@ -91,6 +100,15 @@ Das **Markensteuerrad** nach Esch beschreibt die Markenidentität, also wie das 
 | Markentonalität | Wie biete ich an? | Persönlichkeit, Beziehung, Erlebnisse |
 | Markenattribute | Über welche Eigenschaften verfüge ich? | Eigenschaften der Angebote und des Unternehmens |
 | Markenbild | Wie trete ich auf? | Design, Logo, Kommunikation |
+
+**Psychosozialer Nutzen** heißt: Die Marke gibt dir ein gutes Gefühl oder Ansehen bei anderen. Er steht neben dem funktionalen Nutzen (was das Produkt technisch kann).
+
+**Merkhilfe:** Die vier Teile außen bilden zwei Paare. Nutzen und Attribute sind die **Sache** (Was bringt es? Was hat es?). Tonalität und Bild sind das **Gefühl und der Auftritt** (Wie fühlt es sich an? Wie sieht es aus?).
+
+> [!NOTE]
+> **Beispiel: Markensteuerrad einer Uhrenmarke (eigene Ideen)**
+>
+> Kompetenz: „Schweizer Uhrmacherkunst seit 1890.“ Nutzen: zeigt die Zeit zuverlässig (funktional), man fühlt sich elegant (psychosozial). Attribute: Saphirglas, Automatikwerk, 10 Jahre Garantie. Tonalität: edel, ruhig, traditionsbewusst. Markenbild: schlichtes Logo, Schwarz und Gold, Anzeigen in Wirtschaftszeitschriften.
 
 **Branding** sind alle Maßnahmen, damit ein Angebot klar einer Marke zugeordnet wird. Formen: Wortmarke, Buchstabenmarke, Bildmarke, kombinierte Marke.
 
@@ -102,7 +120,8 @@ Das **Markensteuerrad** nach Esch beschreibt die Markenidentität, also wie das 
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
-> Markensteuerrad: Kompetenz in der Mitte, außen Nutzen, Tonalität, Attribute, Markenbild.
+> - Markenarten: Einzelmarke (jedes Produkt eigene Marke), Familienmarke (Produktgruppe unter einem Namen), Dachmarke (alle Produkte unter dem Firmennamen).
+> - Markensteuerrad nach Esch: Markenkompetenz in der Mitte („Wer bin ich?“), außen Markennutzen („Was biete ich an?“), Markentonalität („Wie biete ich an?“), Markenattribute („Über welche Eigenschaften verfüge ich?“), Markenbild („Wie trete ich auf?“).
 
 > [!WARNING]
 > **Achtung**
@@ -122,6 +141,10 @@ Das **Markensteuerrad** nach Esch beschreibt die Markenidentität, also wie das 
 | flach (wenige Sorten) | Discountstrategie | Universalstrategie |
 | tief (viele Sorten) | Spezialisierungsstrategie | Multispezialisierungsstrategie |
 
+So liest du die Tabelle: Ein Discounter hat wenige Warenarten und je Art nur ein, zwei Sorten (schmal und flach). Ein Kaufhaus hat fast alles in vielen Sorten (breit und tief). Ein Uhrenfachgeschäft hat nur Uhren, die aber in hunderten Modellen (schmal und tief).
+
+Die **Sortimentspyramide** ordnet das Sortiment in Stufen, von der feinsten zur gröbsten: Sorte → Artikel → Artikelgruppe → Warengruppe → Warenbereich. Beispiel Supermarkt: „Vollmilch 3,5 %, 1 Liter“ (Sorte) gehört zum Artikel Vollmilch, zur Artikelgruppe Milch, zur Warengruppe Molkereiprodukte, zum Warenbereich Lebensmittel.
+
 Sortimentsmaßnahmen: Diversifikation (breiter), Differenzierung (tiefer), Variation (Sorten austauschen), Bereinigung (weniger Breite oder Tiefe).
 
 > [!NOTE]
@@ -132,7 +155,9 @@ Sortimentsmaßnahmen: Diversifikation (breiter), Differenzierung (tiefer), Varia
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
-> Breite = Zahl der Warenarten. Tiefe = Zahl der Sorten je Art.
+> - Kernsortiment = Hauptgeschäft, Randsortiment = ergänzt den Kern, Zusatzsortiment = hat mit dem Kern nichts zu tun.
+> - Breite = Zahl der Warenarten. Tiefe = Zahl der Sorten je Art.
+> - Sortimentsdiversifikation = breiter, Sortimentsdifferenzierung = tiefer, Variation = Sorten austauschen, Bereinigung = kleiner.
 
 > [!WARNING]
 > **Achtung**
@@ -175,6 +200,20 @@ Sortimentsmaßnahmen: Diversifikation (breiter), Differenzierung (tiefer), Varia
 > *Quelle: Musterklausur Marketing 2025, A2b (4 Punkte)*
 >
 > Nenne die weiteren Bestandteile des von Esch weiterentwickelten Markensteuerrads.
+
+> [!TIP]
+> **Übung 6 · leicht**
+>
+> *Quelle: Skript Marketing, Übung 19a (S. 47)*
+>
+> Ist das Sortiment breit oder schmal, flach oder tief? a) Kaufhaus, b) Tankstellen-Shop, c) Uhrenfachgeschäft. Welche Sortimentsstrategie verfolgt jeder?
+
+> [!TIP]
+> **Übung 7 · mittel**
+>
+> *Quelle: Skript Marketing, Übung 21 (S. 47)*
+>
+> Welche Maßnahme der Sortimentspolitik? 1 Eine Limonade bekommt eine neue Rezeptur und ein neues Design. 2 Ein Lebensmittelhersteller führt eine Bio- und eine Fair-Trade-Linie zusätzlich zur Standardlinie ein. 3 Ein Baumarkt bietet Wandfarben nur noch in Standardgrößen an. 4 Ein Sportgerätehersteller bietet zusätzlich Fitness-Apps an. 5 Ein Schuhgeschäft führt Damenschuhe jetzt auch in Halbgrößen und Spezialgrößen. 6 Ein Supermarkt verkauft auch Handyverträge.
 
 ## Lösungen
 
@@ -224,3 +263,22 @@ Eigene Lösungsskizze. In der Mitte steht die Markenkompetenz („Wer bin ich?�
 2. Markentonalität: „Wie biete ich an?“
 3. Markenattribute: „Über welche Eigenschaften verfüge ich?“
 4. Markenbild: „Wie trete ich auf?“
+
+### Übung 6
+
+Eigene Lösungsskizze:
+
+- a) Kaufhaus: breit und tief → Multispezialisierungsstrategie (viele Warenarten, je viele Sorten).
+- b) Tankstellen-Shop: eher breit (Getränke, Snacks, Zeitschriften, Autozubehör), aber flach (je nur wenige Sorten) → Universalstrategie. Wer nur auf die wenigen Sorten schaut, kann auch schmal und flach (Discountstrategie) begründen.
+- c) Uhrenfachgeschäft: schmal (nur Uhren) und tief (sehr viele Modelle) → Spezialisierungsstrategie.
+
+### Übung 7
+
+Eigene Lösungsskizze:
+
+- 1 → Variation (die alte Limonade wird ausgetauscht)
+- 2 → Differenzierung (mehr Sorten derselben Ware, tiefer)
+- 3 → Bereinigung (weniger Tiefe)
+- 4 → Diversifikation (neue Warenart, breiter)
+- 5 → Differenzierung (mehr Sorten, tiefer)
+- 6 → Diversifikation (neue Warenart, breiter)

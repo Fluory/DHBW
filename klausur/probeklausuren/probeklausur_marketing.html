@@ -1,0 +1,640 @@
+<title>Probeklausur Marketing</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one calm exam column like a printed exam sheet; slim sticky bar with timer and score. */
+:root {
+  --bg: #ffffff; --paper: #f6f7f9; --fg: #1d2129; --muted: #5d6470; --line: #e1e4ea;
+  --accent: #3b4fa0; --ok: #2d5fc4; --ok-soft: #e9f0fd; --bad: #b8432f; --bad-soft: #fbece8;
+  --half: #a8690f; --half-soft: #fbf3e4; --code-bg: #f3f4f7;
+  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --radius: 8px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12141a; --paper: #191c23; --fg: #e7e9ee; --muted: #9aa1ad; --line: #2b2f39; --accent: #9fb0ff;
+    --ok: #8fb4ff; --ok-soft: #18233b; --bad: #ff9a85; --bad-soft: #3a1f1a; --half: #f0b85a; --half-soft: #33280f; --code-bg: #1b1e26;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12141a; --paper: #191c23; --fg: #e7e9ee; --muted: #9aa1ad; --line: #2b2f39; --accent: #9fb0ff;
+  --ok: #8fb4ff; --ok-soft: #18233b; --bad: #ff9a85; --bad-soft: #3a1f1a; --half: #f0b85a; --half-soft: #33280f; --code-bg: #1b1e26;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 16px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 46rem; margin: 0 auto; padding-block: 1.5rem 5rem; }
+h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 .35rem; text-wrap: balance; }
+h2 { font-size: 1.2rem; margin: 0; text-wrap: balance; }
+.lead { color: var(--muted); margin: 0 0 1rem; }
+.meta { display: flex; flex-wrap: wrap; gap: .4rem .8rem; font-size: .9rem; color: var(--muted); margin-bottom: 1rem; }
+.meta b { color: var(--fg); }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; padding-block: .6rem; margin-bottom: 1.5rem; }
+.timer { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 1.05rem; min-width: 4.5ch; }
+.timer.low { color: var(--bad); }
+.score { margin-left: auto; font-weight: 600; font-variant-numeric: tabular-nums; }
+button { font: inherit; font-size: .9rem; border-radius: 6px; padding: .4rem .8rem; cursor: pointer; border: 1px solid var(--line); background: var(--bg); color: var(--fg); }
+button:hover { border-color: var(--muted); }
+button.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); font-weight: 600; }
+button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.overview { width: 100%; border-collapse: collapse; font-size: .92rem; margin-bottom: 2rem; font-variant-numeric: tabular-nums; }
+.overview th, .overview td { text-align: left; padding: .35rem .5rem; border-bottom: 1px solid var(--line); }
+.overview td:last-child, .overview th:last-child { text-align: right; }
+.overview tr.sum td { font-weight: 700; border-bottom: 0; }
+section.task { border-top: 2px solid var(--fg); padding-top: .9rem; margin-top: 2.5rem; }
+.task-head { display: flex; align-items: baseline; gap: .75rem; flex-wrap: wrap; margin-bottom: .6rem; }
+.pts { font-size: .85rem; color: var(--muted); }
+.badge { margin-left: auto; font-size: .85rem; font-weight: 600; padding: .1rem .55rem; border-radius: 999px; font-variant-numeric: tabular-nums; }
+.badge.full { background: var(--ok-soft); color: var(--ok); } .badge.part { background: var(--half-soft); color: var(--half); } .badge.none { background: var(--bad-soft); color: var(--bad); }
+.q { padding-block: .9rem; border-bottom: 1px solid var(--line); }
+.q:last-child { border-bottom: 0; }
+.q > p { margin: 0 0 .5rem; }
+.q-label { font-weight: 600; margin-right: .3rem; }
+.options { display: grid; gap: .3rem; }
+.options label { display: flex; gap: .5rem; align-items: flex-start; cursor: pointer; padding: .25rem .4rem; border-radius: 6px; }
+.options label:hover { background: var(--paper); }
+.options input { margin-top: .3rem; }
+code { font-family: var(--font-mono); font-size: .88em; background: var(--code-bg); padding: 0 .25em; border-radius: 3px; }
+pre { font-family: var(--font-mono); font-size: .86rem; line-height: 1.5; background: var(--code-bg); border: 1px solid var(--line); border-radius: var(--radius); padding: .75rem .9rem; overflow-x: auto; margin: .4rem 0 .7rem; }
+pre code { background: none; padding: 0; }
+.ln { color: var(--muted); user-select: none; }
+textarea, input[type="text"], input[type="number"], select { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: .4rem .55rem; }
+textarea { width: 100%; font-family: var(--font-mono); font-size: .88rem; min-height: 4.5rem; resize: vertical; }
+textarea.code { min-height: 11rem; tab-size: 4; }
+textarea.prose { font-family: var(--font-body); font-size: .95rem; }
+input.gap { font-family: var(--font-mono); width: 11rem; max-width: 100%; }
+input.short { font-family: var(--font-mono); width: 8rem; }
+input[type="number"] { width: 6rem; }
+.row { display: flex; flex-wrap: wrap; gap: .5rem .9rem; align-items: center; margin-bottom: .45rem; }
+.row > span.lbl { min-width: 7rem; color: var(--muted); font-size: .92rem; }
+.grid-err { display: grid; grid-template-columns: 5rem 9.5rem minmax(0, 1fr); gap: .45rem; align-items: center; }
+.grid-err.two { grid-template-columns: 5rem minmax(0, 1fr); }
+.grid-err .h { font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.grid-err input[type="text"] { width: 100%; font-family: var(--font-mono); font-size: .86rem; }
+@media (max-width: 34rem) { .grid-err { grid-template-columns: 4.5rem minmax(0, 1fr); } .grid-err .fix, .grid-err .hfix { grid-column: 1 / -1; } }
+.mark-ok { background: var(--ok-soft) !important; } .mark-bad { background: var(--bad-soft) !important; }
+input.mark-ok, select.mark-ok, textarea.mark-ok { border-color: var(--ok); } input.mark-bad, select.mark-bad, textarea.mark-bad { border-color: var(--bad); }
+.sol { margin-top: .6rem; padding: .7rem .85rem; border-radius: var(--radius); background: var(--paper); border: 1px solid var(--line); font-size: .93rem; }
+.sol p { margin: .3rem 0; }
+.sol .t { font-weight: 600; }
+.rubric { display: grid; gap: .3rem; margin-top: .5rem; }
+.rubric label { display: flex; gap: .5rem; align-items: flex-start; cursor: pointer; }
+.rubric input { margin-top: .3rem; }
+.hint { color: var(--muted); font-size: .88rem; }
+.result { border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.1rem; margin: 1rem 0 1.5rem; background: var(--paper); }
+.result .big { font-size: 1.6rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.result p { margin: .3rem 0; }
+.actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 2.5rem; align-items: center; }
+.confirm { display: inline-flex; gap: .5rem; align-items: center; font-size: .9rem; }
+.table-scroll { overflow-x: auto; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Probeklausur Marketing</h1>
+    <p class="lead">Diese Übungsklausur ist wie die Musterklausur Marketing 2025 aufgebaut: 7 Aufgaben, 48 Punkte, ein durchgehender Fall, gleiche Themen und Punkte (Marktgrößen und BCG 12, Produktpolitik 10, Marketing-Mix 6, Push/Pull 6, Positionierung und Onlineshop 6, TKP 4, Reisender oder Handelsvertreter 4). Füll alles aus und klick auf „Prüfen“. Rechenergebnisse und Auswahlfragen werden automatisch bewertet. Freie Antworten bewertest du mit der eingeblendeten Musterlösung selbst.</p>
+    <div class="meta"><span><b>48</b> Minuten</span><span><b>48</b> Punkte</span><span>Hilfsmittel: noch nicht bekannt, einfacher Taschenrechner einplanen</span><span>Richtwert bestanden ab <b>24</b></span></div>
+  </header>
+
+  <div class="bar" role="region" aria-label="Zeit und Punkte">
+    <span class="timer" id="timer">48:00</span>
+    <button type="button" id="timerBtn">Zeit starten</button>
+    <button type="button" class="primary" id="checkTop">Prüfen</button>
+    <button type="button" id="hideTop" hidden>Lösungen ausblenden</button>
+    <span class="score" id="scoreTop">noch nicht geprüft</span>
+  </div>
+
+  <div id="result" class="result" hidden></div>
+
+  <table class="overview" aria-label="Aufgabenübersicht">
+    <thead><tr><th>Aufgabe</th><th>Thema</th><th>Punkte</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Marktgrößen, relativer Marktanteil, BCG-Matrix</td><td id="ov1">12</td></tr>
+      <tr><td>2</td><td>Produktpolitik: Zusatznutzen und Markensteuerrad</td><td id="ov2">10</td></tr>
+      <tr><td>3</td><td>Marketing-Mix</td><td id="ov3">6</td></tr>
+      <tr><td>4</td><td>Verkaufsförderung: Push und Pull</td><td id="ov4">6</td></tr>
+      <tr><td>5</td><td>Positionierung und Onlineshop</td><td id="ov5">6</td></tr>
+      <tr><td>6</td><td>Tausenderkontaktpreis</td><td id="ov6">4</td></tr>
+      <tr><td>7</td><td>Reisender oder Handelsvertreter</td><td id="ov7">4</td></tr>
+      <tr class="sum"><td></td><td>Summe</td><td id="ovSum">48</td></tr>
+    </tbody>
+  </table>
+
+  <form id="exam" autocomplete="off" spellcheck="false">
+
+  <!-- ================= Aufgabe 1 ================= -->
+  <section class="task" data-task="1" data-max="12">
+    <div class="task-head"><h2>Aufgabe 1 · Marktgrößen, relativer Marktanteil, BCG-Matrix</h2><span class="pts">12 Punkte</span><span class="badge" hidden></span></div>
+    <p class="hint">Der Fall für die ganze Klausur: Die Holmberg Radwerk GmbH (ausgedacht) stellt E-Bikes und Fahrradhelme her und verkauft bisher über den Fahrradfachhandel in Deutschland. Runde auf zwei Nachkommastellen. Zahlen darfst du mit Komma oder Punkt eingeben, Einheiten sind egal.</p>
+    <div style="overflow-x:auto"><table class="overview" aria-label="Marktdaten Holmberg">
+      <thead><tr><th>Marktsegment</th><th>Marktvolumen (Mio. €)</th><th>Umsatz Holmberg (Mio. €)</th><th>Marktanteil Holmberg</th><th>Umsatz stärkster Konkurrent (Mio. €)</th><th>Marktpotenzial (Mio. €)</th><th>Ausschöpfungsgrad</th><th>Marktvolumen Vorjahr (Mio. €)</th></tr></thead>
+      <tbody>
+        <tr><td>E-Bikes</td><td>600</td><td>48</td><td>?</td><td>90</td><td>800</td><td>?</td><td>480</td></tr>
+        <tr><td>Helme</td><td>?</td><td>9</td><td>6 %</td><td>30</td><td>?</td><td>90 %</td><td>147</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="q">
+      <p><span class="q-label">1.1</span>(6 Punkte) Berechne die fehlenden Werte. Für den relativen Marktanteil brauchst du außerdem den Marktanteil des stärksten Konkurrenten.</p>
+      <div class="row"><span class="lbl">E-Bikes: Marktanteil Holmberg (%)</span><input type="text" class="short auto" id="n11a" data-kind="num" data-answer="8" data-tol="0.01" data-points="1" aria-label="E-Bikes: Marktanteil Holmberg (%)"></div>
+      <div class="row"><span class="lbl">E-Bikes: Marktanteil stärkster Konkurrent (%)</span><input type="text" class="short auto" id="n11b" data-kind="num" data-answer="15" data-tol="0.01" data-points="1" aria-label="E-Bikes: Marktanteil stärkster Konkurrent (%)"></div>
+      <div class="row"><span class="lbl">E-Bikes: Marktausschöpfungsgrad (%)</span><input type="text" class="short auto" id="n11c" data-kind="num" data-answer="75" data-tol="0.01" data-points="1" aria-label="E-Bikes: Marktausschöpfungsgrad (%)"></div>
+      <div class="row"><span class="lbl">Helme: Marktvolumen (Mio. €)</span><input type="text" class="short auto" id="n11d" data-kind="num" data-answer="150" data-tol="0.01" data-points="1" aria-label="Helme: Marktvolumen (Mio. €)"></div>
+      <div class="row"><span class="lbl">Helme: Marktanteil stärkster Konkurrent (%)</span><input type="text" class="short auto" id="n11e" data-kind="num" data-answer="20" data-tol="0.01" data-points="1" aria-label="Helme: Marktanteil stärkster Konkurrent (%)"></div>
+      <div class="row"><span class="lbl">Helme: Marktpotenzial (Mio. €)</span><input type="text" class="short auto" id="n11f" data-kind="num" data-answer="166.67" data-tol="0.01" data-points="1" aria-label="Helme: Marktpotenzial (Mio. €)"></div>
+      <div class="sol" hidden>
+        <p><b>E-Bikes</b> (alles gegeben, nur einsetzen):</p>
+        <p>Marktanteil Holmberg = Umsatz · 100 / Marktvolumen = 48 · 100 / 600 = <b>8 %</b>. Konkurrent = 90 · 100 / 600 = <b>15 %</b>. Ausschöpfungsgrad = Marktvolumen · 100 / Marktpotenzial = 600 · 100 / 800 = <b>75 %</b>.</p>
+        <p><b>Helme</b> (hier musst du umstellen):</p>
+        <p>Marktvolumen = Umsatz · 100 / Marktanteil = 9 · 100 / 6 = <b>150 Mio. €</b>. Konkurrent = 30 · 100 / 150 = <b>20 %</b>. Marktpotenzial = Marktvolumen · 100 / Ausschöpfungsgrad = 150 · 100 / 90 = <b>166,67 Mio. €</b>.</p>
+        <p class="hint">Probe: Das Potenzial muss mindestens so groß sein wie das Volumen (166,67 ≥ 150). Falle: Marktanteil mit dem Potenzial statt mit dem Volumen rechnen (48 · 100 / 800 = 6 % wäre falsch).</p>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">1.2</span>(2 Punkte) Berechne den relativen Marktanteil von Holmberg in beiden Segmenten (als Dezimalzahl).</p>
+      <div class="row"><span class="lbl">E-Bikes</span><input type="text" class="short auto" id="n12a" data-kind="num" data-answer="0.53" data-tol="0.01" data-points="1" aria-label="E-Bikes"></div>
+      <div class="row"><span class="lbl">Helme</span><input type="text" class="short auto" id="n12b" data-kind="num" data-answer="0.3" data-tol="0.01" data-points="1" aria-label="Helme"></div>
+      <div class="sol" hidden>
+        <p>Relativer Marktanteil = eigener Marktanteil / Marktanteil des <b>stärksten</b> Konkurrenten.</p>
+        <p>E-Bikes: 8 / 15 = <b>0,53</b>. Helme: 6 / 20 = <b>0,30</b>. Beide Werte liegen unter 1: Holmberg ist in keinem Segment Marktführer.</p>
+        <p class="hint">Falle: kein Prozentzeichen. 0,53 heißt „etwa halb so groß wie der Stärkste“, nicht 53 %.</p>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">1.3</span>(4 Punkte) Berechne das Marktwachstum gegenüber dem Vorjahr (in %) und ordne beide Segmente in die BCG-Matrix ein. Als hoch gilt hier ein Marktwachstum über 10 % und ein relativer Marktanteil über 1.</p>
+      <div class="row"><span class="lbl">E-Bikes: Marktwachstum (%)</span><input type="text" class="short auto" id="n13a" data-kind="num" data-answer="25" data-tol="0.01" data-points="1" aria-label="E-Bikes: Marktwachstum (%)"></div>
+      <div class="row"><span class="lbl">Helme: Marktwachstum (%)</span><input type="text" class="short auto" id="n13b" data-kind="num" data-answer="2.04" data-tol="0.01" data-points="1" aria-label="Helme: Marktwachstum (%)"></div>
+      <div class="sol" hidden>
+        <p>Marktwachstum = (Volumen neu − Volumen alt) / Volumen alt · 100.</p>
+        <p>E-Bikes: (600 − 480) / 480 · 100 = 120 / 480 · 100 = <b>25 %</b>. Helme: (150 − 147) / 147 · 100 = 3 / 147 · 100 = <b>2,04 %</b>.</p>
+        <p class="hint">Falle: durch den neuen Wert teilen (120 / 600 = 20 %). Geteilt wird durch den alten Wert, den Ausgangspunkt.</p>
+      </div>
+    </div>
+    <div class="q mc" data-answer="b" data-name="m13c">
+      <p><span class="q-label">1.3 c</span>In welches Feld gehören die <b>E-Bikes</b> (Wachstum 25 %, relativer Marktanteil 0,53)?</p>
+      <div class="options">
+        <label><input type="radio" name="m13c" id="m13ca" value="a"> Star</label>
+        <label><input type="radio" name="m13c" id="m13cb" value="b"> Question Mark</label>
+        <label><input type="radio" name="m13c" id="m13cc" value="c"> Cash Cow</label>
+        <label><input type="radio" name="m13c" id="m13cd" value="d"> Poor Dog</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: b.</span> Hohes Wachstum (25 % &gt; 10 %) und relativer Marktanteil unter 1 → <b>Question Mark</b>. Normstrategie: investieren, wenn der Markt aussichtsreich ist, sonst zurückziehen. Ein Star hätte zusätzlich einen relativen Marktanteil über 1.</p></div>
+    </div>
+    <div class="q mc" data-answer="c" data-name="m13d">
+      <p><span class="q-label">1.3 d</span>In welches Feld gehören die <b>Helme</b> (Wachstum 2,04 %, relativer Marktanteil 0,30), und was ist die Normstrategie?</p>
+      <div class="options">
+        <label><input type="radio" name="m13d" id="m13da" value="a"> Cash Cow: halten und abschöpfen</label>
+        <label><input type="radio" name="m13d" id="m13db" value="b"> Question Mark: investieren oder aufgeben</label>
+        <label><input type="radio" name="m13d" id="m13dc" value="c"> Poor Dog: desinvestieren</label>
+        <label><input type="radio" name="m13d" id="m13dd" value="d"> Star: investieren und ausbauen</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: c.</span> Geringes Wachstum und kleiner relativer Marktanteil → <b>Poor Dog</b>, Normstrategie desinvestieren (Marktanteil zurückfahren, verkaufen oder einstellen). Cash Cow wäre es nur mit einem relativen Marktanteil über 1. Hinweis: Helme könnten trotzdem sinnvoll sein, weil Kunden sie zusammen mit dem E-Bike kaufen.</p></div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 2 ================= -->
+  <section class="task" data-task="2" data-max="10">
+    <div class="task-head"><h2>Aufgabe 2 · Produktpolitik: Zusatznutzen und Markensteuerrad</h2><span class="pts">10 Punkte</span><span class="badge" hidden></span></div>
+    <p class="hint">Holmberg plant ein neues Premium-E-Bike „Holmberg City Pro“.</p>
+    <div class="q mc" data-answer="b" data-name="m21">
+      <p><span class="q-label">2.1</span>(1 Punkt) Was ist der <b>Grundnutzen</b> des E-Bikes?</p>
+      <div class="options">
+        <label><input type="radio" name="m21" id="m21a" value="a"> Es fährt bis zu 120 km mit einer Akkuladung.</label>
+        <label><input type="radio" name="m21" id="m21b" value="b"> Man kommt mit Unterstützung eines Motors von A nach B.</label>
+        <label><input type="radio" name="m21" id="m21c" value="c"> Es sieht elegant aus.</label>
+        <label><input type="radio" name="m21" id="m21d" value="d"> Die Nachbarn bewundern es.</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: b.</span> Der Grundnutzen ist die technische Grundfunktion: fahren, also von A nach B kommen. Die große Reichweite ist schon <b>mehr Technik als nötig</b>, also funktionaler Zusatznutzen.</p></div>
+    </div>
+    <div class="q mc" data-answer="d" data-name="m22">
+      <p><span class="q-label">2.2</span>(1 Punkt) „Der Akku hält 120 km, das Rad hat ein eingebautes Navi.“ Welcher Nutzen?</p>
+      <div class="options">
+        <label><input type="radio" name="m22" id="m22a" value="a"> Grundnutzen</label>
+        <label><input type="radio" name="m22" id="m22b" value="b"> Emotionaler Zusatznutzen</label>
+        <label><input type="radio" name="m22" id="m22c" value="c"> Sozialer Zusatznutzen</label>
+        <label><input type="radio" name="m22" id="m22d" value="d"> Funktionaler Zusatznutzen</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: d.</span> Mehr Technik als für das reine Fahren nötig → <b>funktionaler</b> Zusatznutzen.</p></div>
+    </div>
+    <div class="q mc" data-answer="a" data-name="m23">
+      <p><span class="q-label">2.3</span>(1 Punkt) „Der Rahmen in mattem Petrol mit Ledersattel macht mir jedes Mal Freude.“ Welcher Nutzen?</p>
+      <div class="options">
+        <label><input type="radio" name="m23" id="m23a" value="a"> Emotionaler Zusatznutzen</label>
+        <label><input type="radio" name="m23" id="m23b" value="b"> Sozialer Zusatznutzen</label>
+        <label><input type="radio" name="m23" id="m23c" value="c"> Funktionaler Zusatznutzen</label>
+        <label><input type="radio" name="m23" id="m23d" value="d"> Grundnutzen</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: a.</span> Freude an Form, Farbe und Material, die du <b>selbst</b> empfindest → <b>emotionaler</b> Zusatznutzen. Sozial wäre es erst, wenn es um die Bewunderung durch andere ginge.</p></div>
+    </div>
+    <div class="q mc" data-answer="c" data-name="m24">
+      <p><span class="q-label">2.4</span>(1 Punkt) „Im Büro fragen alle nach meinem Holmberg, das kann sich nicht jeder leisten.“ Welcher Nutzen?</p>
+      <div class="options">
+        <label><input type="radio" name="m24" id="m24a" value="a"> Funktionaler Zusatznutzen</label>
+        <label><input type="radio" name="m24" id="m24b" value="b"> Emotionaler Zusatznutzen</label>
+        <label><input type="radio" name="m24" id="m24c" value="c"> Sozialer Zusatznutzen</label>
+        <label><input type="radio" name="m24" id="m24d" value="d"> Grundnutzen</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: c.</span> Anerkennung und Ansehen bei <b>anderen</b> → <b>sozialer</b> Zusatznutzen (Statussymbol).</p></div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">2.5</span>(2 Punkte) Holmberg verkauft auch Fahrradhelme. Nenne für einen Helm je ein eigenes Beispiel für funktionalen und für sozialen Zusatznutzen.</p>
+      <textarea class="prose" id="t25" aria-label="2.5 Zusatznutzen Helm"></textarea>
+      <div class="sol" hidden>
+        <p>Grundnutzen des Helms: den Kopf beim Sturz schützen.</p>
+        <p><b>Funktional</b> (mehr Technik als nötig), z. B. eingebautes Rücklicht, Belüftung, Sturzsensor, der automatisch einen Notruf sendet.</p>
+        <p><b>Sozial</b> (Anerkennung durch andere), z. B. ein Helm einer angesagten Marke, wie ihn bekannte Radprofis tragen, damit andere sehen: Ich gehöre dazu.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb25a" data-points="1"> funktionales Beispiel passt (mehr Technik als nötig) (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb25b" data-points="1"> soziales Beispiel passt (Anerkennung durch andere) (+1)</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">2.6</span>(4 Punkte) Das Markensteuerrad nach Esch hat in der Mitte die Markenkompetenz („Wer bin ich?“). Schreib zu jeder Leitfrage den Namen des passenden äußeren Bestandteils.</p>
+      <div class="row"><span class="lbl">„Was biete ich an?“</span><input type="text" class="gap auto" id="g26a" data-kind="gap" data-answer="Markennutzen|Nutzen" data-points="1" aria-label="„Was biete ich an?“"></div>
+      <div class="row"><span class="lbl">„Wie biete ich an?“</span><input type="text" class="gap auto" id="g26b" data-kind="gap" data-answer="Markentonalität|Tonalität|Markentonalitaet|Tonalitaet" data-points="1" aria-label="„Wie biete ich an?“"></div>
+      <div class="row"><span class="lbl">„Über welche Eigenschaften verfüge ich?“</span><input type="text" class="gap auto" id="g26c" data-kind="gap" data-answer="Markenattribute|Attribute|Markenattribut" data-points="1" aria-label="„Über welche Eigenschaften verfüge ich?“"></div>
+      <div class="row"><span class="lbl">„Wie trete ich auf?“</span><input type="text" class="gap auto" id="g26d" data-kind="gap" data-answer="Markenbild|Bild" data-points="1" aria-label="„Wie trete ich auf?“"></div>
+      <div class="sol" hidden>
+        <p><b>Markennutzen</b> (Was biete ich an? funktionaler und psychosozialer Nutzen) · <b>Markentonalität</b> (Wie biete ich an? Persönlichkeit, Gefühle) · <b>Markenattribute</b> (Über welche Eigenschaften verfüge ich?) · <b>Markenbild</b> (Wie trete ich auf? Logo, Design, Kommunikation).</p>
+        <p>Für Holmberg zum Beispiel: Nutzen = entspannt und sicher ankommen · Tonalität = ruhig, hochwertig, skandinavisch klar · Attribute = Akku mit 120 km, 5 Jahre Garantie · Bild = schlichtes Logo, Petrol und Weiß.</p>
+        <p class="hint">Merkhilfe: Nutzen und Attribute sind die Sache, Tonalität und Bild sind Gefühl und Auftritt. Tonalität und Bild nicht verwechseln: „Wie biete ich an?“ = Tonalität.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 3 ================= -->
+  <section class="task" data-task="3" data-max="6">
+    <div class="task-head"><h2>Aufgabe 3 · Marketing-Mix</h2><span class="pts">6 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q mc" data-answer="d" data-name="m31">
+      <p><span class="q-label">3.1</span>(1 Punkt) Holmberg gewährt Fahrradhändlern, die bis zum 31. März zahlen, 3 % Skonto. Zu welchem Bereich des Marketing-Mix gehört das?</p>
+      <div class="options">
+        <label><input type="radio" name="m31" id="m31a" value="a"> Product (Produktpolitik)</label>
+        <label><input type="radio" name="m31" id="m31b" value="b"> Promotion (Kommunikationspolitik)</label>
+        <label><input type="radio" name="m31" id="m31c" value="c"> Place (Distributionspolitik)</label>
+        <label><input type="radio" name="m31" id="m31d" value="d"> Price (Preispolitik, Konditionen)</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: d.</span> Skonto ist eine Zahlungsbedingung und gehört zur <b>Konditionenpolitik</b>, also zu <b>Price</b>. Es hat zwar mit Händlern zu tun, ist aber keine Entscheidung über den Absatzweg (Place).</p></div>
+    </div>
+    <div class="q mc" data-answer="a" data-name="m32">
+      <p><span class="q-label">3.2</span>(1 Punkt) Holmberg verkauft das E-Bike künftig zusätzlich über ein Netz von Handelsvertretern in Österreich. Zu welchem Bereich gehört das?</p>
+      <div class="options">
+        <label><input type="radio" name="m32" id="m32a" value="a"> Place (Distributionspolitik)</label>
+        <label><input type="radio" name="m32" id="m32b" value="b"> Price (Preispolitik)</label>
+        <label><input type="radio" name="m32" id="m32c" value="c"> Promotion (Kommunikationspolitik)</label>
+        <label><input type="radio" name="m32" id="m32d" value="d"> Product (Produktpolitik)</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: a.</span> Absatzorgane wie Handelsvertreter entscheiden über den Weg zum Kunden → <b>Place</b>. „Place“ heißt Vertrieb, nicht Standort.</p></div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">3.3</span>(4 Punkte) Nenne die vier Bereiche des Marketing-Mix und je <b>zwei</b> konkrete Maßnahmen für das neue Premium-E-Bike „Holmberg City Pro“.</p>
+      <textarea class="prose" id="t33" aria-label="3.3 Marketing-Mix" style="min-height:9rem"></textarea>
+      <div class="sol" hidden>
+        <p>Eigene Lösungsskizze, andere passende Maßnahmen sind genauso richtig. Wichtig: konkret für dieses Premium-E-Bike, und alles passt zum Premium-Anspruch.</p>
+        <p><b>Product (Produktpolitik):</b> Akku mit 120 km Reichweite und Diebstahlschutz per App · 5 Jahre Garantie und kostenloser erster Service.</p>
+        <p><b>Price (Preispolitik):</b> Hochpreisstrategie (z. B. 3.900 €) · Finanzierung in 24 Raten oder Dienstrad-Leasing über den Arbeitgeber.</p>
+        <p><b>Place (Distributionspolitik):</b> ausgewählte Fachhändler mit Probefahrt · eigener Onlineshop mit Lieferung fahrbereit nach Hause.</p>
+        <p><b>Promotion (Kommunikationspolitik):</b> Probefahr-Events in Innenstädten (Verkaufsförderung) · Instagram-Videos mit Pendlern, die mit dem Rad ins Büro fahren.</p>
+        <p class="hint">„Werbung machen“ oder „guter Preis“ allein bringt keinen Punkt. Ein Discounter-Verkauf würde nicht zum Premium-Anspruch passen.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb33a" data-points="0.5"> Product: 1. passende Maßnahme (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb33b" data-points="0.5"> Product: 2. passende Maßnahme (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb33c" data-points="0.5"> Price: 1. passende Maßnahme (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb33d" data-points="0.5"> Price: 2. passende Maßnahme (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb33e" data-points="0.5"> Place: 1. passende Maßnahme (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb33f" data-points="0.5"> Place: 2. passende Maßnahme (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb33g" data-points="0.5"> Promotion: 1. passende Maßnahme (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb33h" data-points="0.5"> Promotion: 2. passende Maßnahme (+½)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 4 ================= -->
+  <section class="task" data-task="4" data-max="6">
+    <div class="task-head"><h2>Aufgabe 4 · Verkaufsförderung: Push und Pull</h2><span class="pts">6 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q mc" data-answer="b" data-name="m41">
+      <p><span class="q-label">4.1</span>(1 Punkt) Holmberg gibt Fahrradhändlern für den neuen Helm einen Einführungsrabatt und stellt ein Display mit Testhelmen in den Laden. Was ist das?</p>
+      <div class="options">
+        <label><input type="radio" name="m41" id="m41a" value="a"> Consumer Promotion im Rahmen einer Pull-Strategie</label>
+        <label><input type="radio" name="m41" id="m41b" value="b"> Trade Promotion im Rahmen einer Push-Strategie</label>
+        <label><input type="radio" name="m41" id="m41c" value="c"> Staff Promotion im Rahmen einer Pull-Strategie</label>
+        <label><input type="radio" name="m41" id="m41d" value="d"> Sponsoring</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: b.</span> Anreize für den <b>Handel</b> = Trade Promotion. Der Hersteller „drückt“ die Ware über den Handel zum Kunden = <b>Push</b>. Consumer Promotion würde sich direkt an den Endverbraucher richten.</p></div>
+    </div>
+    <div class="q mc" data-answer="a" data-name="m42">
+      <p><span class="q-label">4.2</span>(1 Punkt) Welche Aussage passt zur <b>Pull</b>-Strategie?</p>
+      <div class="options">
+        <label><input type="radio" name="m42" id="m42a" value="a"> Der Hersteller spricht die Endverbraucher direkt an, sie fragen das Produkt im Handel nach, der Handel muss es aufnehmen.</label>
+        <label><input type="radio" name="m42" id="m42b" value="b"> Der Hersteller gibt dem Handel Rabatte, damit er das Produkt ins Regal nimmt.</label>
+        <label><input type="radio" name="m42" id="m42c" value="c"> Sie ist besonders günstig und darum ideal für kleine Unternehmen.</label>
+        <label><input type="radio" name="m42" id="m42d" value="d"> Sie richtet sich an die eigenen Außendienstmitarbeiter.</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: a.</span> Pull = <b>endverbraucherorientiert</b>: Werbung und Proben erzeugen einen Nachfragesog. Laut Skript ist Pull vergleichsweise <b>teuer</b> und eher für große, etablierte Unternehmen. Antwort b beschreibt Push.</p></div>
+    </div>
+    <div class="q mc" data-answer="c" data-name="m43">
+      <p><span class="q-label">4.3</span>(1 Punkt) Für welche Lage empfiehlt das Skript besonders die <b>Push</b>-Strategie?</p>
+      <div class="options">
+        <label><input type="radio" name="m43" id="m43a" value="a"> für Produkte, die kurz vor der Eliminierung stehen</label>
+        <label><input type="radio" name="m43" id="m43b" value="b"> für sehr bekannte Marken großer Konzerne</label>
+        <label><input type="radio" name="m43" id="m43c" value="c"> für neue Produkte, die erst in den Handel kommen müssen</label>
+        <label><input type="radio" name="m43" id="m43d" value="d"> nur für Dienstleistungen</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: c.</span> Push eignet sich laut Skript <b>besonders für neue Produkte</b>: Der Handel muss sie erst ins Sortiment nehmen, und dafür braucht er Anreize. Große, bekannte Marken nutzen eher Pull.</p></div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">4.4</span>(3 Punkte) Erkläre die Unterschiede zwischen Push- und Pull-Strategie an drei Merkmalen.</p>
+      <textarea class="prose" id="t44" aria-label="4.4 Push und Pull"></textarea>
+      <div class="sol" hidden>
+        <p><b>Zielgruppe:</b> Push richtet sich an den <b>Handel</b>, Pull an den <b>Endverbraucher</b>.</p>
+        <p><b>Wirkrichtung:</b> Bei Push wird die Ware über den Handel zum Kunden „gedrückt“ (Warendruck, der Handel macht den Kunden aufmerksam). Bei Pull erzeugt der Hersteller einen <b>Nachfragesog</b>: Kunden verlangen das Produkt, der Handel muss es aufnehmen.</p>
+        <p><b>Einsatz und Kosten:</b> Push eignet sich besonders für neue Produkte. Pull ist teurer und aufwendiger und eher etwas für große, etablierte Unternehmen.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb44a" data-points="1"> Zielgruppe Handel gegen Endverbraucher (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb44b" data-points="1"> Richtung: Ware drücken gegen Nachfragesog (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb44c" data-points="1"> Einsatz/Kosten: neue Produkte gegen große, bekannte Unternehmen (+1)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 5 ================= -->
+  <section class="task" data-task="5" data-max="6">
+    <div class="task-head"><h2>Aufgabe 5 · Positionierung und Onlineshop</h2><span class="pts">6 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q">
+      <p><span class="q-label">5.1</span>(3 Punkte) Holmberg will das City Pro als „das E-Bike mit der größten Reichweite“ positionieren. Nenne drei Anforderungen nach Kotler an eine erfolgreiche Positionierung.</p>
+      <textarea class="prose" id="t51" aria-label="5.1 Kotler"></textarea>
+      <div class="sol" hidden>
+        <p>Nach Kotler soll die Positionierung</p>
+        <p>1. schon <b>vor der Produktentwicklung</b> festgelegt werden, · 2. <b>nur eine</b> Produkteigenschaft herausstellen (hier: Reichweite), keine Mehrfachpositionierung, · 3. <b>nicht leicht kopierbar</b> sein, · 4. <b>langfristig</b> angelegt sein.</p>
+        <p class="hint">Drei der vier reichen. Falle: „günstig, sportlich und nachhaltig zugleich“ wäre eine Mehrfachpositionierung.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb51a" data-points="1"> 1. Anforderung richtig (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb51b" data-points="1"> 2. Anforderung richtig (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb51c" data-points="1"> 3. Anforderung richtig (+1)</label>
+        </div>
+      </div>
+    </div>
+    <div class="q mc" data-answer="d" data-name="m52">
+      <p><span class="q-label">5.2</span>(1 Punkt) Holmberg verkauft die bisherigen E-Bikes zusätzlich über einen eigenen Onlineshop an Kunden in ganz Europa. Welche Wachstumsstrategie nach Ansoff ist das?</p>
+      <div class="options">
+        <label><input type="radio" name="m52" id="m52a" value="a"> Produktentwicklung</label>
+        <label><input type="radio" name="m52" id="m52b" value="b"> Diversifikation</label>
+        <label><input type="radio" name="m52" id="m52c" value="c"> Marktdurchdringung</label>
+        <label><input type="radio" name="m52" id="m52d" value="d"> Marktentwicklung</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: d.</span> Bisheriges Produkt + neue Kunden (andere Länder) = <b>Marktentwicklung</b>. Der Onlineshop ist kein neues Produkt, sondern ein neuer Weg zu neuen Kunden.</p></div>
+    </div>
+    <div class="q mc" data-answer="c" data-name="m53">
+      <p><span class="q-label">5.3</span>(1 Punkt) Welche Aussage ist <b>kein</b> Vorteil des eigenen Onlineshops für Holmberg?</p>
+      <div class="options">
+        <label><input type="radio" name="m53" id="m53a" value="a"> Es fällt keine Handelsspanne an.</label>
+        <label><input type="radio" name="m53" id="m53b" value="b"> Holmberg bekommt direkten Kundenkontakt und Kundendaten.</label>
+        <label><input type="radio" name="m53" id="m53c" value="c"> Der Fachhandel übernimmt Lagerung und Probefahrten.</label>
+        <label><input type="radio" name="m53" id="m53d" value="d"> Kunden können rund um die Uhr und überregional bestellen.</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: c.</span> Lagerung und Beratung durch den Fachhandel sind Vorteile des <b>indirekten</b> Absatzes. Beim eigenen Onlineshop (direkter Absatz) muss Holmberg Lager und Versand selbst organisieren. Die anderen drei sind typische Vorteile des Onlineshops.</p></div>
+    </div>
+    <div class="q mc" data-answer="b" data-name="m54">
+      <p><span class="q-label">5.4</span>(1 Punkt) Welche Absatzform ist der eigene Onlineshop?</p>
+      <div class="options">
+        <label><input type="radio" name="m54" id="m54a" value="a"> indirekter Absatz über den Einzelhandel</label>
+        <label><input type="radio" name="m54" id="m54b" value="b"> direkter Absatz</label>
+        <label><input type="radio" name="m54" id="m54c" value="c"> Absatz über einen Kommissionär</label>
+        <label><input type="radio" name="m54" id="m54d" value="d"> Absatz über einen Handelsmakler</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: b.</span> Der Hersteller verkauft ohne Zwischenhändler selbst an den Kunden → <b>direkter Absatz</b>. Daraus folgen die Vorteile: keine Handelsspanne, Kundendaten, weniger Abhängigkeit vom Handel.</p></div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 6 ================= -->
+  <section class="task" data-task="6" data-max="4">
+    <div class="task-head"><h2>Aufgabe 6 · Tausenderkontaktpreis</h2><span class="pts">4 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q">
+      <p><span class="q-label">6.1</span>(3 Punkte) Holmberg will das City Pro bewerben. Angebot A: ein Pendler-Podcast mit 1.200.000 Hörern, Preis 15.000 €, Anteil der Zielgruppe 25 %. Angebot B: ein Instagram-Kanal mit 400.000 Followern, Preis 8.100 €, Anteil der Zielgruppe 45 %. Berechne:</p>
+      <div class="row"><span class="lbl">A: erreichte Zielpersonen</span><input type="text" class="short auto" id="n61a" data-kind="num" data-answer="300000" data-tol="0.5" data-points="1" aria-label="A: erreichte Zielpersonen"></div>
+      <div class="row"><span class="lbl">A: TKP (€)</span><input type="text" class="short auto" id="n61b" data-kind="num" data-answer="50" data-tol="0.01" data-points="1" aria-label="A: TKP (€)"></div>
+      <div class="row"><span class="lbl">B: TKP (€)</span><input type="text" class="short auto" id="n61c" data-kind="num" data-answer="45" data-tol="0.01" data-points="1" aria-label="B: TKP (€)"></div>
+      <div class="sol" hidden>
+        <p>1. Zielpersonen A = 1.200.000 · 0,25 = <b>300.000</b>. Zielpersonen B = 400.000 · 0,45 = 180.000.</p>
+        <p>2. TKP A = 15.000 / 300.000 · 1.000 = <b>50,00 €</b>.</p>
+        <p>3. TKP B = 8.100 / 180.000 · 1.000 = <b>45,00 €</b>.</p>
+        <p class="hint">Falle: mit allen Nutzern rechnen. Dann käme A = 15.000 / 1.200.000 · 1.000 = 12,50 € und B = 20,25 € heraus, und man würde falsch A wählen.</p>
+      </div>
+    </div>
+    <div class="q mc" data-answer="c" data-name="m62">
+      <p><span class="q-label">6.2</span>(1 Punkt) Für welches Angebot sollte sich Holmberg entscheiden?</p>
+      <div class="options">
+        <label><input type="radio" name="m62" id="m62a" value="a"> A, weil es absolut mehr Menschen erreicht</label>
+        <label><input type="radio" name="m62" id="m62b" value="b"> A, weil es den niedrigeren TKP hat</label>
+        <label><input type="radio" name="m62" id="m62c" value="c"> B, weil es 1.000 Zielpersonen günstiger erreicht</label>
+        <label><input type="radio" name="m62" id="m62d" value="d"> B, weil es absolut billiger ist</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: c.</span> Entscheidend ist der Preis je 1.000 <b>Zielpersonen</b>: B mit 45,00 € gegen A mit 50,00 €. Dass B auch absolut billiger ist, ist nicht die Begründung: Ein billigeres Angebot kann trotzdem den höheren TKP haben.</p></div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 7 ================= -->
+  <section class="task" data-task="7" data-max="4">
+    <div class="task-head"><h2>Aufgabe 7 · Reisender oder Handelsvertreter</h2><span class="pts">4 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q">
+      <p><span class="q-label">7.1</span>(2 Punkte) Holmberg will in Österreich verkaufen. Reisender: 3.400 € brutto im Monat plus 13. Gehalt, Spesen 300 € im Monat, sonstige Kosten 5.200 € im Jahr, Umsatzprovision 2 %. Handelsvertreter: Umsatzprovision 7 %. Berechne:</p>
+      <div class="row"><span class="lbl">Fixkosten des Reisenden im Jahr (€)</span><input type="text" class="short auto" id="n71a" data-kind="num" data-answer="53000" data-tol="0.5" data-points="1" aria-label="Fixkosten des Reisenden im Jahr (€)"></div>
+      <div class="row"><span class="lbl">kritischer Jahresumsatz (€)</span><input type="text" class="short auto" id="n71b" data-kind="num" data-answer="1060000" data-tol="1" data-points="1" aria-label="kritischer Jahresumsatz (€)"></div>
+      <div class="sol" hidden>
+        <p>1. Fixkosten: Gehalt 3.400 · 13 = 44.200 € · Spesen 300 · 12 = 3.600 € · sonstige 5.200 € → <b>53.000 €</b>.</p>
+        <p>2. Gleichsetzen: 53.000 + 0,02 · U = 0,07 · U → 53.000 = 0,05 · U → U = 53.000 / 0,05 = <b>1.060.000 €</b>.</p>
+        <p class="hint">Fallen: 13. Gehalt vergessen (3.400 · 12) oder durch 0,07 statt durch den Unterschied 0,05 teilen (53.000 / 0,07 = 757.142,86 €).</p>
+      </div>
+    </div>
+    <div class="q mc" data-answer="d" data-name="m72">
+      <p><span class="q-label">7.2</span>(1 Punkt) Erwartet wird ein Jahresumsatz von 900.000 €. Was ist günstiger?</p>
+      <div class="options">
+        <label><input type="radio" name="m72" id="m72a" value="a"> Der Reisende, weil er weniger Provision bekommt</label>
+        <label><input type="radio" name="m72" id="m72b" value="b"> Beide kosten gleich viel</label>
+        <label><input type="radio" name="m72" id="m72c" value="c"> Der Reisende, weil 900.000 € über dem kritischen Umsatz liegen</label>
+        <label><input type="radio" name="m72" id="m72d" value="d"> Der Handelsvertreter, weil 900.000 € unter dem kritischen Umsatz liegen</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: d.</span> 900.000 € &lt; 1.060.000 € → <b>Handelsvertreter</b>. Probe: Vertreter 0,07 · 900.000 = 63.000 €, Reisender 53.000 + 0,02 · 900.000 = 71.000 €. Die kleinere Provision des Reisenden lohnt sich erst über dem kritischen Umsatz, weil vorher seine Fixkosten überwiegen.</p></div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">7.3</span>(1 Punkt) Welcher Gesichtspunkt spielt neben den Kosten eine Rolle?</p>
+      <textarea class="prose" id="t73" aria-label="7.3 weiterer Gesichtspunkt"></textarea>
+      <div class="sol" hidden>
+        <p>Zum Beispiel: Der Handelsvertreter kennt den österreichischen Markt und hat schon Kunden, arbeitet aber oft für mehrere Firmen und setzt sich weniger für Holmberg ein. Der Reisende ist weisungsgebunden, arbeitet nur für Holmberg und liefert Berichte über Markt und Konkurrenz.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb73a" data-points="1"> ein sinnvoller Gesichtspunkt mit Begründung (Marktkenntnis, Kontrolle, Bindung an das Unternehmen …) (+1)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="actions">
+    <button type="button" class="primary" id="checkBottom">Prüfen</button>
+    <button type="button" id="resetBtn">Alles löschen</button>
+    <span class="confirm" id="resetConfirm" hidden>Wirklich alle Antworten löschen?
+      <button type="button" id="resetYes">Ja, löschen</button>
+      <button type="button" id="resetNo">Abbrechen</button>
+    </span>
+  </div>
+  <p class="hint" style="margin-top:1rem">Eigene Übungsklausur nach dem Aufbau der Musterklausur Marketing 2025, keine offizielle Klausur und keine offizielle Lösung. Fall und Zahlen sind ausgedacht, alle Rechnungen wurden mit Python nachgerechnet. Marketing wird am 16.12. zusammen mit BWL geschrieben; die 50 %-Grenze gilt dort für das ganze Modul. Deine Eingaben werden nur in diesem Browser gespeichert.</p>
+  </form>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var KEY = "probeklausur-marketing-v1";
+  var form = document.getElementById("exam");
+  var checked = false;
+  var MAX = { 1: 12, 2: 10, 3: 6, 4: 6, 5: 6, 6: 4, 7: 4 };
+  var STARTCODE = {};
+
+  function fields() { return form.querySelectorAll("input, textarea, select"); }
+  function save() {
+    var d = {};
+    fields().forEach(function (el) { if (!el.id) return; d[el.id] = (el.type === "radio" || el.type === "checkbox") ? el.checked : el.value; });
+    d.__checked = checked;
+    try { localStorage.setItem(KEY, JSON.stringify(d)); } catch (e) {}
+  }
+  function load() {
+    var raw = null; try { raw = localStorage.getItem(KEY); } catch (e) {}
+    if (!raw) return; var d; try { d = JSON.parse(raw); } catch (e) { return; }
+    fields().forEach(function (el) {
+      if (!el.id || !(el.id in d)) return;
+      if (el.type === "radio" || el.type === "checkbox") el.checked = !!d[el.id]; else el.value = d[el.id];
+    });
+    if (d.__checked) grade();
+  }
+  form.addEventListener("input", function (ev) { save(); if (checked && ev.target.classList.contains("rb")) grade(); });
+  form.addEventListener("change", save);
+  form.addEventListener("submit", function (e) { e.preventDefault(); });
+
+  function normText(s) { return String(s).replace(/\r/g, "").split("\n").map(function (l) { return l.trim().replace(/\s+/g, " "); }).filter(function (l) { return l; }).join("\n"); }
+  function normGap(s) { return String(s).replace(/\s+/g, "").replace(/'/g, "\"").toLowerCase(); }
+  // Zahl aus deutscher Schreibweise lesen: "1.200", "12,5 %", "48,60 €", "-3"
+  function parseNum(s) {
+    var t = String(s).replace(/[\s€%]/g, "").replace(/[^0-9,.\-]/g, "");
+    if (t.indexOf(",") !== -1) t = t.replace(/\./g, "").replace(",", ".");
+    else if (/^-?\d{1,3}(\.\d{3})+$/.test(t)) t = t.replace(/\./g, "");
+    return t === "" ? NaN : parseFloat(t);
+  }
+  function numSet(s) { return (String(s).match(/-?\d+/g) || []).map(Number).sort(function (a, b) { return a - b; }).join(","); }
+  function mark(el, ok) { el.classList.remove("mark-ok", "mark-bad"); el.classList.add(ok ? "mark-ok" : "mark-bad"); }
+  function clearMarks() { document.querySelectorAll(".mark-ok, .mark-bad").forEach(function (el) { el.classList.remove("mark-ok", "mark-bad"); }); }
+  function fmt(n) { var r = Math.round(n * 10) / 10; return (r % 1 === 0 ? r.toFixed(0) : r.toFixed(1)).replace(".", ","); }
+
+  function gradeSection(sec) {
+    var s = 0;
+    // Single Choice
+    sec.querySelectorAll(".mc").forEach(function (q) {
+      var ans = q.dataset.answer, chosen = q.querySelector("input:checked"), ok = !!chosen && chosen.value === ans;
+      if (ok) s += 1;
+      q.querySelector('input[value="' + ans + '"]').parentElement.classList.add("mark-ok");
+      if (chosen && !ok) chosen.parentElement.classList.add("mark-bad");
+    });
+    // Automatisch bewertete Felder
+    sec.querySelectorAll(".auto").forEach(function (el) {
+      var kind = el.dataset.kind, answers = el.dataset.answer.split("|"), v = el.value, ok = false;
+      if (kind === "set") ok = numSet(v) === numSet(answers[0]);
+      else if (kind === "gap") ok = answers.some(function (a) { return normGap(a) === normGap(v); });
+      else if (kind === "num") { var x = parseNum(v), tol = Number(el.dataset.tol || 0.01); ok = !isNaN(x) && answers.some(function (a) { return Math.abs(parseNum(a) - x) <= tol; }); }
+      else ok = answers.some(function (a) { return normText(a) === normText(v); });
+      if (ok) s += Number(el.dataset.points);
+      mark(el, ok);
+    });
+    // Fehler finden
+    sec.querySelectorAll(".errblock").forEach(function (blk) {
+      var exp = JSON.parse(blk.dataset.expected), used = exp.map(function () { return false; });
+      var lines = blk.querySelectorAll(".eline"), types = blk.querySelectorAll(".etype");
+      lines.forEach(function (l, i) {
+        var line = parseInt(l.value, 10), t = types[i] ? types[i].value : null, hit = -1;
+        exp.forEach(function (e, k) { if (hit < 0 && !used[k] && e.line.indexOf(line) !== -1 && (!e.type || e.type === t)) hit = k; });
+        if (hit >= 0) { used[hit] = true; s += exp[hit].pts; }
+        mark(l, hit >= 0); if (types[i]) mark(types[i], hit >= 0);
+      });
+    });
+    // Selbstbewertung
+    sec.querySelectorAll(".rb").forEach(function (c) { if (c.checked) s += Number(c.dataset.points); });
+    sec.querySelectorAll(".sol").forEach(function (x) { x.hidden = false; });
+    return Math.min(Math.round(s * 100) / 100, Number(sec.dataset.max));
+  }
+
+  function grade() {
+    checked = true; clearMarks();
+    var total = 0;
+    document.querySelectorAll("section.task").forEach(function (sec) {
+      var k = sec.dataset.task, got = gradeSection(sec), max = MAX[k]; total += got;
+      var b = sec.querySelector(".badge"); b.hidden = false;
+      b.className = "badge " + (got >= max - 0.001 ? "full" : got > 0 ? "part" : "none");
+      b.textContent = fmt(got) + " / " + max + " P";
+      document.getElementById("ov" + k).textContent = fmt(got) + " / " + max;
+    });
+    document.getElementById("ovSum").textContent = fmt(total) + " / 48";
+    document.getElementById("scoreTop").textContent = fmt(total) + " / 48 Punkte";
+    var res = document.getElementById("result"); res.hidden = false;
+    res.innerHTML = '<div class="big">' + fmt(total) + ' von 48 Punkten</div><p>' + (total >= 24 ? "Bestanden (ab 24 Punkten)." : "Noch nicht bestanden. Ab 24 Punkten ist es geschafft.") +
+      '</p><p class="hint">Bei Erklärungen, Korrekturen und eigenem Code sind jetzt die Musterlösungen mit Häkchen eingeblendet. Hak ab, was bei dir stimmt, die Punkte rechnen sich sofort neu. Mit „Lösungen ausblenden“ versteckst du alles wieder, deine Antworten bleiben.</p>';
+    document.getElementById("hideTop").hidden = false;
+    save();
+  }
+
+  function hideSolutions() {
+    checked = false; clearMarks();
+    document.querySelectorAll(".sol").forEach(function (x) { x.hidden = true; });
+    document.querySelectorAll(".badge").forEach(function (b) { b.hidden = true; });
+    document.getElementById("result").hidden = true;
+    Object.keys(MAX).forEach(function (k) { document.getElementById("ov" + k).textContent = MAX[k]; });
+    document.getElementById("ovSum").textContent = "48";
+    document.getElementById("scoreTop").textContent = "noch nicht geprüft";
+    document.getElementById("hideTop").hidden = true;
+    save();
+  }
+
+  function goCheck() { grade(); document.getElementById("result").scrollIntoView({ block: "start" }); }
+  document.getElementById("checkTop").addEventListener("click", goCheck);
+  document.getElementById("checkBottom").addEventListener("click", goCheck);
+  document.getElementById("hideTop").addEventListener("click", function () { hideSolutions(); window.scrollTo(0, 0); });
+
+  var rc = document.getElementById("resetConfirm");
+  document.getElementById("resetBtn").addEventListener("click", function () { rc.hidden = false; });
+  document.getElementById("resetNo").addEventListener("click", function () { rc.hidden = true; });
+  document.getElementById("resetYes").addEventListener("click", function () {
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    form.reset(); Object.keys(STARTCODE).forEach(function (id) { document.getElementById(id).value = STARTCODE[id]; });
+    hideSolutions(); rc.hidden = true; stopTimer(); remaining = 2880; renderTimer(); timerBtn.textContent = "Zeit starten";
+  });
+
+  document.querySelectorAll("textarea.code").forEach(function (ta) {
+    ta.addEventListener("keydown", function (e) {
+      if (e.key === "Tab" && !e.shiftKey) { e.preventDefault(); var s = ta.selectionStart, en = ta.selectionEnd;
+        ta.value = ta.value.slice(0, s) + "    " + ta.value.slice(en); ta.selectionStart = ta.selectionEnd = s + 4; save(); }
+    });
+  });
+
+  var remaining = 2880, handle = null, timerEl = document.getElementById("timer"), timerBtn = document.getElementById("timerBtn");
+  function renderTimer() { var m = Math.floor(remaining / 60), s = remaining % 60; timerEl.textContent = String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0"); timerEl.classList.toggle("low", remaining <= 300); }
+  function stopTimer() { if (handle) { clearInterval(handle); handle = null; } }
+  timerBtn.addEventListener("click", function () {
+    if (handle) { stopTimer(); timerBtn.textContent = "Weiter"; return; }
+    if (remaining <= 0) remaining = 2880;
+    handle = setInterval(function () { remaining -= 1; renderTimer(); if (remaining <= 0) { stopTimer(); timerBtn.textContent = "Neu starten"; timerEl.textContent = "00:00 Zeit um"; } }, 1000);
+    timerBtn.textContent = "Pause";
+  });
+  renderTimer();
+  load();
+})();
+</script>

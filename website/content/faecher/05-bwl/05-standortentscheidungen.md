@@ -172,6 +172,13 @@ Die USA haben den höchsten Nutzwert, knapp vor Tschechien.
 >
 > Erkläre kurz an je einem Beispiel die drei Kategorien, in die man die Ziele von Standortentscheidungen einteilen kann.
 
+> [!TIP]
+> **Übung 6 · mittel**
+>
+> *Quelle: eigene Aufgabe*
+>
+> Ordne jeden Standortfaktor einer der drei Gruppen zu (unternehmensbezogen, produktionsbezogen, absatzbezogen): a) Gewerbesteuer der Gemeinde, b) Zahl der Fachkräfte in der Region, c) drei Konkurrenten in derselben Straße, d) Autobahnanschluss für die Lkw mit Rohstoffen, e) Kunden kaufen gern Produkte „aus der Region“, f) Vorschrift, dass 50 % der Teile im Land gefertigt werden.
+
 ## Lösungen
 
 ### Übung 1
@@ -203,3 +210,14 @@ Offizielle Musterlösung (gleich dem Folientext), je Kategorie 2 Punkte für Erk
 1. Wachstumsziele: Standorte errichten oder erweitern, zum Beispiel für neue Beschaffungsquellen, Absatzmärkte oder mehr Kapazität.
 2. Strukturveränderungsziele: Standorte aufteilen, verlagern oder vereinigen, zum Beispiel wegen Just-in-time-Belieferung, Importbeschränkungen, Marktnähe, Arbeits- oder Transportkosten, Wechselkursen oder Steuern.
 3. Schrumpfungsziele: Standorte teilweise oder ganz stilllegen, zum Beispiel um Kapazitäten zu verringern oder das Sortiment zu verkleinern.
+
+### Übung 6
+
+So gehst du vor: Frag, wen der Faktor betrifft. Den Staat und die Rahmenbedingungen → unternehmensbezogen. Die Herstellung (Boden, Material, Arbeit, Verkehr) → produktionsbezogen. Die Kunden und den Verkauf → absatzbezogen.
+
+- a) unternehmensbezogen (Wirtschafts- und Steuerpolitik)
+- b) produktionsbezogen (Arbeitskräfte)
+- c) absatzbezogen (Konkurrenz)
+- d) produktionsbezogen (Verkehrsinfrastruktur)
+- e) absatzbezogen (Herkunftsgoodwill, lokale Nachfrage)
+- f) unternehmensbezogen (rechtliche Situation, Local content)

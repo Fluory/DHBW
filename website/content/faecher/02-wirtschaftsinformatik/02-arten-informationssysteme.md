@@ -41,11 +41,19 @@ B2B und B2C zusammen heißen **überbetrieblich**. Sie werden mit der Digitalisi
 
 Zuordnung zu den Unternehmensebenen: Transaktionssysteme liegen vor allem auf der **operativen** Ebene (Tagesgeschäft). Entscheidungsunterstützung liegt beim **mittleren und oberen** Management. Interaktionssysteme liegen **quer über alle Ebenen**, intern und nach außen.
 
-**Untertypen (Exkurs):** Administrationssysteme rationalisieren Massendaten wie die Lohnabrechnung. Dispositionssysteme unterstützen oder ersetzen operative Entscheidungen, zum Beispiel eine automatische Bestellung, sobald der Meldebestand unterschritten ist.
+**Untertypen der Transaktionssysteme (Exkurs):**
+
+- **Administrationssysteme** rationalisieren die Verarbeitung von Massendaten. Bei gut strukturierten Aufgaben ersetzen sie den Menschen ganz. Beispiel: Die Lohnabrechnung rechnet jeden Monat für alle 80 Beschäftigten nach festen Regeln.
+- **Dispositionssysteme** unterstützen oder ersetzen operative Entscheidungen („disponieren“ heißt einteilen, entscheiden). Beispiel: Fällt der Bestand der Leuchte 4711 unter den Meldebestand von 30 Stück, schlägt das System eine Bestellung vor oder löst sie selbst aus. Bei teuren Artikeln gibt erst der Einkäufer frei.
+- Die Daten der operativen Systeme werden für die höheren Ebenen verdichtet. Das **ERP** ist vor allem Administrations- und Dispositionssystem.
+
+**Untertypen der Entscheidungsunterstützung (Exkurs):** Planungssysteme helfen bei schlecht strukturierten Entscheidungen (Wie viele Leuchten verkaufen wir nächstes Jahr?). Kontrollsysteme prüfen, ob der Plan eingehalten wird (Managementbericht). Von unten nach oben in der Hierarchie heißen die Systeme **MIS** (Management-Informationssysteme), **DSS** (Decision Support Systems) und **ESS** (Executive Support Systems, für die Unternehmensleitung).
+
+**Zusammenarbeitssysteme (Exkurs):** E-Mail (zeitversetzt, asynchron), Video- und Chat-Konferenzen (gleichzeitig, synchron) und gemeinsame Werkzeuge wie Wikis, Projektmanagement- und Workflow-Tools.
 
 > [!IMPORTANT]
 > **Das Wichtigste**
-> Record = Transaktion, Insight = Entscheidung, Engagement = Interaktion.
+> Record = Transaktion (operative Ebene), Insight = Entscheidung (mittleres und oberes Management), Engagement = Interaktion (quer über alle Ebenen). Administrationssystem = Massendaten (Lohn), Dispositionssystem = operative Entscheidung (Bestellvorschlag).
 
 > [!WARNING]
 > **Achtung**
@@ -82,11 +90,24 @@ Die Einordnung ist selten eindeutig. Ein CRM erfasst Verkaufschancen (Transaktio
 | SCM (Supply Chain Management) | gestaltet die ganze Lieferkette bis zum Endkunden, gemeinsame Bedarfsplanung mit Lieferanten | Transaktion, B2B | SAP IBP |
 | CRM (Customer Relationship Management) | Aufbau und Pflege dauerhafter, profitabler Kundenbeziehungen; zuerst ein betriebswirtschaftliches Konzept, das IS unterstützen | Transaktion und Interaktion, B2B/B2C | Salesforce, HubSpot |
 
-Weitere Typen: E-Business (Shopify), BI (Power BI), Dokumentenmanagement (DMS) und Groupware (Teams).
+Weitere typische Systeme:
 
-Beim CRM unterscheidet man **operatives** CRM (Kontakte, Verkaufschancen, Service) und **analytisches** CRM (Kundendaten auswerten).
+| System | Wofür | Einordnung | Beispiel |
+|---|---|---|---|
+| E-Business | über das Internet verkaufen und einkaufen | Interaktion, B2C/B2B | Shopify, Shopware |
+| BI (Business Intelligence) | Daten auswerten und als Kennzahlen zeigen | Entscheidung, intern | Power BI, Tableau |
+| DMS / CMS | Dokumente bzw. Webinhalte verwalten und freigeben | Transaktion und Interaktion | DocuWare, TYPO3 |
+| Groupware | Kommunikation und Zusammenarbeit im Team | Interaktion, intern | Teams, Slack |
+| Excel | Liste, Auswertung oder Planung | je nach Nutzung (Grenzfall) | – |
+
+Beim CRM unterscheidet man **operatives** CRM (Kontakte, Verkaufschancen, Service) und **analytisches** CRM (Kundendaten auswerten). Leitfrage der Vorlesung: Wie erkennt der Händler, welche Stammkunden seit Monaten nichts bestellt haben?
+
+1. **Analytisches CRM:** die Kaufhistorie auswerten, zum Beispiel letztes Kaufdatum, Häufigkeit und Umsatz je Kunde. Ausgedachtes Beispiel: Ein Kunde mit 6 Bestellungen im Jahr 2025 und keiner seit März 2026 fällt auf.
+2. **Operatives CRM:** diesen Kunden gezielt ansprechen, etwa mit einem Newsletter oder einem Angebot, und den Kontakt dokumentieren.
 
 Der **Bullwhip-Effekt** (Peitscheneffekt): Bei einer Peitsche wird aus einer kleinen Handbewegung am Ende ein großer Ausschlag. Ausgedachtes Zahlenbeispiel: Kunden kaufen 10 % mehr. Der Händler bestellt zur Sicherheit 20 % mehr, der Großhändler 40 % mehr, der Hersteller produziert 80 % mehr. Kleine Nachfrageschwankungen beim Endkunden schaukeln sich entlang der Lieferkette zu immer größeren Bestellschwankungen auf. Geteilte Absatz- und Bestandsdaten im SCM dämpfen ihn.
+
+**Beispiel SCM:** Wie hat der Händler vor Weihnachten genug Leuchten, ohne das Lager zu überfüllen? Er erstellt eine Absatzprognose, plant den Bedarf gemeinsam mit den Lieferanten, teilt Bestands- und Absatzdaten mit ihnen und hält einen Sicherheitsbestand. Weil alle dieselben Zahlen sehen, bestellt niemand „zur Sicherheit“ doppelt.
 
 **Beispiel ERP:** Beim Leuchtenhändler geht ein Auftrag über 40 Stehleuchten ein.
 
@@ -167,6 +188,11 @@ Ohne Integration entsteht ein **Medienbruch** (die Information wechselt das „M
 > Frau Weber aus Heilbronn bestellt im Onlineshop die Stehleuchte „Luna“ für 189 €. Welche Daten muss man nur einmal erfassen, und was braucht das Management (vertikale Integration)?
 > *Quelle: Folie T1B2 F. 23, sinngemäß*
 
+> [!TIP]
+> **Übung 7 · mittel**
+> Der Leuchtenhändler will wissen, welche Stammkunden seit Monaten nichts mehr bestellt haben, und sie zurückgewinnen. Welche Art von CRM hilft bei welchem Schritt? Begründe kurz.
+> *Quelle: Gruppenarbeit „Steckbrief CRM“ aus T1B2, Leitfrage sinngemäß*
+
 ## Lösungen
 
 ### Übung 1
@@ -201,3 +227,10 @@ Andere Antworten sind vertretbar, wenn sie begründet sind.
 
 - **Einmal erfassen:** Kunden- und Auftragsdaten bei der Bestellung im Shop: Name, Liefer- und Rechnungsadresse, Artikel, Menge, Preis, Zahlungsart. Vertrieb, Lager und Buchhaltung nutzen sie weiter.
 - **Management (vertikal):** verdichtete Zahlen wie Umsatz je Serie, Monat und Region, Retourenquote, Lieferzeiten und Zahlungsausfälle für die Sortiments- und Einkaufsplanung.
+
+### Übung 7
+
+1. **Erkennen = analytisches CRM.** Es wertet die Kaufhistorie aus: letztes Kaufdatum, Häufigkeit, Umsatz je Kunde. Wer früher oft bestellt hat und seit Monaten nicht mehr, steht auf der Liste.
+2. **Zurückgewinnen = operatives CRM.** Mit den zentralen Kundendaten werden diese Kunden gezielt angesprochen (Newsletter, Angebot), und der Kontakt wird dokumentiert.
+
+Das zeigt, warum ein CRM ein Grenzfall ist: Es dient der Entscheidung (Auswertung), der Transaktion (Kundendaten pflegen) und der Interaktion (Ansprache).

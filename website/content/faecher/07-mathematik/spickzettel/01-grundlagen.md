@@ -77,6 +77,16 @@ Kₙ = K₀ · (1 + i)ⁿ heißt: K₀ Startkapital, i Zinssatz als Dezimalzahl,
 - Wachstum: ln n ≪ √n ≪ n ≪ n² ≪ 2ⁿ ≪ eⁿ ≪ n!
 - **Unbestimmt:** ∞ − ∞, ∞/∞, 0 · ∞ → umformen. n² − n = n(n − 1) → ∞.
 
+## Binomische Formeln
+
+| Formel | Probe a = 5, b = 2 |
+|---|---|
+| (a + b)² = a² + 2ab + b² | 49 = 25 + 20 + 4 |
+| (a − b)² = a² − 2ab + b² | 9 = 25 − 20 + 4 |
+| (a + b)(a − b) = a² − b² | 21 = 25 − 4 |
+
+Rückwärts zum Faktorisieren: x² − 9 = (x + 3)(x − 3). Ausklammern: x³ − x = x(x − 1)(x + 1).
+
 ## Typische Fehler
 
 - 1/2 + 1/3 = 2/5. Nenner nie addieren.
@@ -87,3 +97,4 @@ Kₙ = K₀ · (1 + i)ⁿ heißt: K₀ Startkapital, i Zinssatz als Dezimalzahl,
 - (2k)! ist nicht 2 · k!: 6! = 720, 2 · 3! = 12.
 - 5 % ist 0,05, nicht 0,5.
 - |a + b| ist nicht immer |a| + |b|.
+- (x + 3)² = x² + 9 (das 2ab fehlt).

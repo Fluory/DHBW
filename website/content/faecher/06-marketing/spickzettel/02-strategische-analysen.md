@@ -19,7 +19,7 @@ Vorgehen: 1. interne Analyse · 2. externe Analyse · 3. Strategien ableiten.
 | Marktanteil | dein Teil am Marktvolumen | eigener Umsatz · 100 / Marktvolumen |
 | Marktausschöpfungsgrad | ausgeschöpfter Teil des Potenzials | Marktvolumen · 100 / Marktpotenzial |
 
-Umgestellt: Marktvolumen = Umsatz · 100 / Marktanteil. Marktpotenzial = Marktvolumen · 100 / Ausschöpfungsgrad.
+Umgestellt: Marktvolumen = Umsatz · 100 / Marktanteil. Marktpotenzial = Marktvolumen · 100 / Ausschöpfungsgrad. Marktanteil Konkurrent = sein Umsatz · 100 / Marktvolumen.
 
 **Beispiel:** Potenzial 10.000, Volumen 8.000, eigener Absatz 800.
 Marktanteil = 800 · 100 / 8.000 = **10 %**. Ausschöpfung = 8.000 · 100 / 10.000 = **80 %**.
@@ -69,3 +69,4 @@ Weg einer SGE: Question Mark (Einführung) → Star (Wachstum) → Cash Cow (Rei
 - Relativen Marktanteil in Prozent angeben. Schreib 0,8, nicht 80 %.
 - Langsameres Wachstum als Wachstumsphase deuten. Das ist Reife.
 - Beim Marktwachstum durch den neuen statt den alten Wert teilen.
+- Beim relativen Marktanteil durch alle Konkurrenten zusammen statt durch den stärksten teilen.

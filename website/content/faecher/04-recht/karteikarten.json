@@ -4,553 +4,994 @@
       "id": "recht-k001",
       "topic": "Fall lösen",
       "front": "Die vier Fragen vor jeder Falllösung",
-      "back": "Wer will was von wem woraus? Beispiel: V will 450 € Oktobermiete von M aus **§ 535 II BGB**. Ohne „woraus“ (Anspruchsgrundlage) ist es nur ein Wunsch.",
+      "back": "Wer will was von wem woraus? Erst wenn alle vier Fragen beantwortet sind, kannst du den Obersatz schreiben.\nDas „woraus“ ist immer ein Paragraf, der eine Rechtsfolge gibt. Ohne ihn ist es nur ein Wunsch, kein Anspruch.\nBeispiel: V (wer) will 450 € Oktobermiete (was) von M (von wem) aus **§ 535 II BGB** (woraus).",
       "exam": true
     },
     {
       "id": "recht-k002",
       "topic": "Fall lösen",
       "front": "Gutachtenstil: die vier Schritte",
-      "back": "1. Obersatz („K *könnte* … aus § 433 I 1 haben“) 2. Voraussetzung/Definition („Dazu *müsste* …“) 3. Subsumtion („*Hier* …“) 4. Ergebnis („*Also* …“).",
+      "back": "1. Obersatz im Konjunktiv: „K *könnte* gegen V einen Anspruch auf … aus § 433 I 1 BGB haben.“\n2. Voraussetzung mit Definition: „Dazu *müsste* …“\n3. Subsumtion: „*Hier* hat …“ – Sachverhalt mit der Definition vergleichen.\n4. Ergebnis im Indikativ: „*Also* …“. So bekommst du Punkte für den Weg, nicht nur für das Ergebnis.",
       "exam": true
     },
     {
       "id": "recht-k003",
       "topic": "Fall lösen",
       "front": "Gutachtenstil oder Urteilsstil: „K hat keinen Anspruch, weil kein Vertrag vorliegt.“",
-      "back": "Urteilsstil: Ergebnis zuerst, Begründung mit „weil“. In der Klausur Gutachtenstil nur bei Problemen, Eindeutiges (z. B. 20-Jähriger ist volljährig) in einem kurzen Satz.",
+      "back": "Urteilsstil: Das Ergebnis steht vorn, die Begründung folgt mit „weil“. In der Klausur ist das falsch, wo ein Problem liegt.\nAber: Eindeutiges stellst du in einem kurzen Satz fest, ohne Gutachten. Sonst fehlt dir die Zeit.\nBeispiel: „K ist 20 Jahre alt und damit voll geschäftsfähig (§ 2).“ Das reicht.",
       "exam": false
     },
     {
       "id": "recht-k004",
       "topic": "Fall lösen",
       "front": "Anspruchsaufbau in drei Stufen",
-      "back": "1. entstanden? (hindernd: §§ 105, 125, 134, 138) 2. nicht untergegangen? (Erfüllung § 362, Aufrechnung § 389, Anfechtung § 142) 3. durchsetzbar? (Einreden: Verjährung § 214, §§ 273, 320). Beispiel: Kaufpreis bezahlt → Anspruch nach § 362 erloschen.",
+      "back": "1. Entstanden? (Vertrag; Nichtigkeit nach §§ 105, 125, 134, 138 verhindert es)\n2. Nicht untergegangen? (Erfüllung § 362, Aufrechnung § 389, Anfechtung § 142)\n3. Durchsetzbar? (Einreden: Verjährung § 214, §§ 273, 320)\nDie Reihenfolge ist fest, weil man nur prüfen kann, ob etwas erloschen ist, das vorher entstanden ist. Beispiel: Kaufpreis bezahlt → Anspruch entstanden, aber nach § 362 erloschen.",
       "exam": true
     },
     {
       "id": "recht-k005",
       "topic": "Fall lösen",
       "front": "Einwendung vs. Einrede",
-      "back": "Einwendung (z. B. Erfüllung, Geschäftsunfähigkeit) wirkt automatisch, das Gericht beachtet sie von selbst. Einrede (z. B. Verjährung, § 214 I) wirkt nur, wenn der Schuldner sich darauf beruft.",
+      "back": "Eine **Einwendung** wirkt von selbst, das Gericht beachtet sie ohne Zutun (Erfüllung, Geschäftsunfähigkeit). Eine **Einrede** gibt nur ein Recht, die Leistung zu verweigern. Sie wirkt erst, wenn sich der Schuldner darauf beruft.\nBeispiel: Ein verjährter Anspruch besteht weiter. Nur wenn S sagt „Ich berufe mich auf Verjährung“ (§ 214 I), muss er nicht zahlen.",
       "exam": true
     },
     {
       "id": "recht-k006",
       "topic": "Fall lösen",
       "front": "Musterfall Schaufensterkleid: Preisschild 500 €, Glück verlangt 1.500 €. Anspruch von Frau Müller?",
-      "back": "Nein. Schaufenster = *invitatio ad offerendum*, das Angebot macht Frau Müller. Glücks „1.500 €“ ist Ablehnung + neues Angebot (§ 150 II). Kein Vertrag, also auch nichts anzufechten.",
+      "back": "Nein, kein Anspruch. Das Schaufenster ist nur eine *invitatio ad offerendum*, also eine Einladung, selbst ein Angebot zu machen.\nDas Angebot über 500 € macht Frau Müller. Glücks Antwort „1.500 €“ ist Ablehnung plus neues Angebot (§ 150 II).\nWeil es keine Willenserklärung des Glück zu 500 € gibt, ist auch nichts anzufechten.",
       "exam": true
     },
     {
       "id": "recht-k007",
       "topic": "Grundlagen",
       "front": "Rechtsfähigkeit (§ 1 BGB)",
-      "back": "Fähigkeit, Träger von Rechten und Pflichten zu sein. Beginnt mit Vollendung der Geburt. Ein 3 Tage altes Baby ist rechtsfähig, aber geschäftsunfähig (§ 104 Nr. 1).",
+      "back": "Rechtsfähigkeit ist die Fähigkeit, Träger von Rechten und Pflichten zu sein. Sie beginnt mit der Vollendung der Geburt (§ 1).\nSie ist nicht dasselbe wie Geschäftsfähigkeit: Rechte *haben* ist etwas anderes als selbst Verträge *schließen*.\nBeispiel: Ein 3 Tage altes Baby kann ein Haus erben (rechtsfähig), aber nichts kaufen (geschäftsunfähig, § 104 Nr. 1).",
       "exam": false
     },
     {
       "id": "recht-k008",
       "topic": "Grundlagen",
       "front": "Verbraucher (§ 13) vs. Unternehmer (§ 14)",
-      "back": "Es zählt der Zweck des einzelnen Geschäfts. Bäckerin kauft privat ein Sofa: Verbraucherin; Backofen für die Bäckerei: Unternehmerin. Eine GmbH ist nie Verbraucher.",
+      "back": "**Verbraucher (§ 13):** natürliche Person, die überwiegend privat handelt. **Unternehmer (§ 14):** handelt gewerblich oder selbständig beruflich, kann auch eine GmbH sein.\nEs zählt der Zweck **des einzelnen Geschäfts**, nicht die Person.\nBeispiel: Die Bäckerin kauft privat ein Sofa (Verbraucherin) und für die Backstube einen Ofen (Unternehmerin). Eine GmbH ist nie Verbraucher.",
       "exam": true
     },
     {
       "id": "recht-k009",
       "topic": "WE & Vertrag",
       "front": "Willenserklärung (Definition)",
-      "back": "Willensäußerung, die auf einen rechtlichen Erfolg gerichtet ist. Ausdrücklich („Ich kaufe“) oder konkludent (Ware aufs Kassenband). Schweigen ist grundsätzlich keine WE.",
+      "back": "Eine Willensäußerung, die auf einen rechtlichen Erfolg gerichtet ist. Sie kann ausdrücklich („Ich kaufe“) oder konkludent sein, also durch schlüssiges Verhalten.\nSchweigen ist grundsätzlich keine WE, weil man daraus keinen Willen ablesen kann.\nBeispiel: Ware wortlos aufs Kassenband legen = konkludentes Angebot zum Kauf.",
       "exam": true
     },
     {
       "id": "recht-k010",
       "topic": "WE & Vertrag",
       "front": "Abgabe einer empfangsbedürftigen WE",
-      "back": "Mit Wissen und Willen so auf den Weg gebracht, dass sie ohne weiteres Zutun den Empfänger erreicht. Kündigung im eigenen Postausgangskorb: noch nicht abgegeben.",
+      "back": "Abgegeben ist die WE, wenn der Erklärende sie mit Wissen und Willen so auf den Weg bringt, dass sie ohne sein weiteres Zutun den Empfänger erreicht.\nWichtig, weil ohne Abgabe gar nichts wirksam werden kann.\nBeispiel: Kündigung liegt im eigenen Postausgangskorb → nicht abgegeben. In den Postbriefkasten geworfen → abgegeben. E-Mail: Klick auf „Senden“.",
       "exam": false
     },
     {
       "id": "recht-k011",
       "topic": "WE & Vertrag",
       "front": "Zugang (§ 130 I 1)",
-      "back": "Die WE ist so in den Machtbereich des Empfängers gelangt, dass er unter normalen Umständen Kenntnis nehmen kann. Entscheidend ist die **Möglichkeit**, nicht das Lesen (Brief 10 Uhr, Empfänger im Urlaub: trotzdem zugegangen).",
+      "back": "Zugegangen ist eine WE, wenn sie so in den Machtbereich des Empfängers gelangt, dass er unter normalen Umständen Kenntnis nehmen kann (§ 130 I 1).\nEs zählt die **Möglichkeit**, nicht das tatsächliche Lesen. Sonst könnte jeder den Zugang durch Nichtlesen verhindern.\nBeispiel: Brief Dienstag 10 Uhr im Hausbriefkasten, Empfänger im Urlaub → am Dienstag zugegangen.",
       "exam": true
     },
     {
       "id": "recht-k012",
       "topic": "WE & Vertrag",
       "front": "Brief um 23 Uhr in den Geschäftsbriefkasten – wann zugegangen?",
-      "back": "Erst am nächsten Morgen zu Geschäftsbeginn. Wer am letzten Fristtag abends einwirft, ist zu spät (Skriptfall Zugang 1).",
+      "back": "Erst am nächsten Morgen zu Geschäftsbeginn. Ein Geschäftsbriefkasten wird nach Feierabend normalerweise nicht mehr geleert.\nDer Brief ist zwar im Machtbereich, aber mit Kenntnisnahme ist erst am nächsten Tag zu rechnen.\nBeispiel (Skript Fall Zugang 1): Kündigung bis 30.06., eingeworfen 30.06. um 23 Uhr → Zugang 01.07., zu spät.",
       "exam": true
     },
     {
       "id": "recht-k013",
       "topic": "WE & Vertrag",
       "front": "Empfangsbote vs. Erklärungsbote",
-      "back": "Empfangsbote (erwachsene Familie, Sekretärin): Zugang mit Übergabe, Risiko trägt der Empfänger. Erklärungsbote (4-jähriges Kind, Pförtner ohne Auftrag): Risiko trägt der Erklärende.",
+      "back": "**Empfangsbote** (erwachsenes Familienmitglied, Sekretärin): wie ein zweiter Briefkasten. Mit Übergabe an ihn ist die WE zugegangen, das Risiko der Weitergabe trägt der Empfänger.\n**Erklärungsbote** (kleines Kind, Pförtner ohne Befugnis): verlängerter Arm des Erklärenden. Verliert er die Erklärung, trägt das der Erklärende.\nBeispiel: Kündigung an die 4-jährige Tochter des Vermieters, sie wirft sie weg → nicht zugegangen.",
       "exam": true
     },
     {
       "id": "recht-k014",
       "topic": "WE & Vertrag",
       "front": "Vertrag (Definition)",
-      "back": "Zwei übereinstimmende, wirksame Willenserklärungen: Angebot (Antrag) und Annahme, §§ 145 ff. Das Angebot muss so bestimmt sein, dass ein „Ja“ genügt (Ware + Preis).",
+      "back": "Ein Vertrag besteht aus zwei übereinstimmenden, wirksamen Willenserklärungen: Angebot (im Gesetz „Antrag“) und Annahme (§§ 145 ff.).\nDas Angebot muss so bestimmt sein, dass ein bloßes „Ja“ genügt. Beim Kauf heißt das: Ware und Preis stehen fest.\nBeispiel: „Ich verkaufe dir mein Rad für 80 €.“ – „Ja.“ → Vertrag über 80 €.",
       "exam": true
     },
     {
       "id": "recht-k015",
       "topic": "WE & Vertrag",
       "front": "*invitatio ad offerendum*",
-      "back": "Aufforderung, selbst ein Angebot abzugeben: Schaufenster, Prospekt, Katalog, Online-Shop. Grund: Bäcker mit 20 Brezeln will nicht an 50 Leute gebunden sein. Das Angebot macht der Kunde.",
+      "back": "Eine Aufforderung an andere, selbst ein Angebot zu machen: Schaufenster, Prospekt, Katalog, Onlineshop. Das Angebot macht dann der Kunde.\nGrund: Der Händler will nicht gegenüber jedem gebunden sein. Er könnte sonst mehr verkaufen, als er hat.\nBeispiel: Bäcker mit 20 Brezeln im Fenster, 50 Kunden wollen eine → er entscheidet selbst, wessen Angebot er annimmt.",
       "exam": true
     },
     {
       "id": "recht-k016",
       "topic": "WE & Vertrag",
       "front": "§ 150 BGB",
-      "back": "Verspätete Annahme (I) oder Annahme mit Änderungen (II) = neues Angebot. Fred bietet 120 €, Fritz antwortet „für 130 €“: Ablehnung + neues Angebot über 130 €.",
+      "back": "Eine **verspätete** Annahme (§ 150 I) und eine Annahme **mit Änderungen** (§ 150 II) gelten als neues Angebot. Das alte Angebot ist damit erloschen (§ 146).\nDer Grund: Ein Vertrag braucht ein reines „Ja“ zu genau dem, was angeboten wurde.\nBeispiel: Fred bietet 120 €, Fritz antwortet „für 130 €“ → Ablehnung + neues Angebot über 130 €. Fred muss jetzt Ja sagen.",
       "exam": true
     },
     {
       "id": "recht-k017",
       "topic": "WE & Vertrag",
       "front": "Unbestellte Ware (§ 241a)",
-      "back": "Kein Anspruch gegen den Verbraucher. „Schweigen gilt als Annahme“ ändert nichts – Schweigen ist keine WE (CD für 15 €: kein Kaufpreisanspruch).",
+      "back": "Schickt ein Unternehmer einem Verbraucher Ware, die dieser nicht bestellt hat, entsteht kein Anspruch gegen den Verbraucher (§ 241a).\nEin Satz wie „Schweigen gilt als Annahme“ ändert nichts: Schweigen ist keine WE, und das kann der Absender nicht einseitig festlegen.\nBeispiel: Unbestellte CD für 15 € mit Rückumschlag, K legt sie beiseite → kein Kaufpreisanspruch.",
       "exam": true
     },
     {
       "id": "recht-k018",
       "topic": "WE & Vertrag",
       "front": "Formverstoß (§ 125) – Beispiel Grundstück",
-      "back": "Formverstoß macht nichtig (§ 125 S. 1). Grundstückskauf braucht notarielle Beurkundung (§ 311b I 1); Handschlag-Kauf für 80.000 € ist nichtig. Heilung durch Auflassung + Grundbucheintrag (§ 311b I 2).",
+      "back": "Ein Formverstoß macht das Geschäft nichtig (§ 125 S. 1). Der Grundstückskauf braucht notarielle Beurkundung (§ 311b I 1), weil er so folgenreich ist.\nAusnahme Heilung: Mit Auflassung und Eintragung ins Grundbuch wird der Vertrag doch wirksam (§ 311b I 2).\nBeispiel: Handschlag-Kauf eines Grundstücks für 80.000 € → nichtig.",
       "exam": true
     },
     {
       "id": "recht-k019",
       "topic": "Unwirksamkeit",
       "front": "Nichtigkeitsgründe",
-      "back": "§ 105 (Geschäftsunfähiger), § 125 (Form), § 134 (gesetzliches Verbot, z. B. Schwarzarbeit), § 138 (Sittenwidrigkeit/Wucher). Nichtig = von Anfang an unwirksam, keine Anfechtung nötig.",
+      "back": "§ 105 (Geschäftsunfähiger), § 125 (Formverstoß), § 134 (gesetzliches Verbot), § 138 I (Sittenwidrigkeit), § 138 II (Wucher).\nNichtig heißt: von Anfang an unwirksam, ohne dass jemand etwas erklären muss. Deshalb gibt es hier nichts anzufechten.\nBeispiel: Werkvertrag „ohne Rechnung“ (Schwarzarbeit) → nichtig nach § 134.",
       "exam": false
     },
     {
       "id": "recht-k020",
       "topic": "Unwirksamkeit",
       "front": "Prüfungsschema Anfechtung",
-      "back": "1. Anfechtungsgrund (§§ 119, 120, 123) 2. Anfechtungserklärung (§ 143 I) 3. Frist (§ 121 bzw. § 124) 4. Folge: nichtig von Anfang an (§ 142 I), ggf. Vertrauensschaden (§ 122).",
+      "back": "1. Anfechtungsgrund (§ 119 I, § 119 II, § 120 oder § 123)\n2. Anfechtungserklärung gegenüber dem Gegner (§ 143 I), das Wort „anfechten“ ist nicht nötig\n3. Frist: unverzüglich (§ 121) bzw. ein Jahr bei § 123 (§ 124)\n4. Folge: nichtig von Anfang an (§ 142 I); bei §§ 119, 120 Vertrauensschaden (§ 122). Beispiel: Ferienwohnung Juli statt Juni gebucht → Erklärungsirrtum, sofort anfechten, 604 € Ersatz.",
       "exam": true
     },
     {
       "id": "recht-k021",
       "topic": "Unwirksamkeit",
       "front": "Inhaltsirrtum vs. Erklärungsirrtum",
-      "back": "Inhaltsirrtum (§ 119 I Alt. 1): richtiges Wort, falsche Bedeutung („Dutzend“ = 10 gedacht). Erklärungsirrtum (§ 119 I Alt. 2): versprochen/vertippt (11.000 statt 12.000 €).",
+      "back": "**Inhaltsirrtum (§ 119 I Alt. 1):** Du sagst das richtige Wort, kennst aber seine Bedeutung nicht („Dutzend“, gemeint 10).\n**Erklärungsirrtum (§ 119 I Alt. 2):** Du sagst etwas anderes, als du wolltest: versprochen, verschrieben, vertippt.\nTestfrage: Wollte die Person genau diese Worte? Nein → Erklärungsirrtum. Ja, aber falsche Bedeutung → Inhaltsirrtum. Beispiel: 11.000 € statt 12.000 € getippt → Erklärungsirrtum.",
       "exam": true
     },
     {
       "id": "recht-k022",
       "topic": "Unwirksamkeit",
       "front": "Eigenschaftsirrtum (§ 119 II)",
-      "back": "Irrtum über verkehrswesentliche Eigenschaft = wertbildender Faktor (Echtheit, Alter). V verkauft „Picasso-Kopie“ für 1.000 €, es ist ein Original: V kann anfechten. Der Preis selbst ist keine Eigenschaft.",
+      "back": "Irrtum über eine verkehrswesentliche Eigenschaft einer Person oder Sache, also über wertbildende Faktoren wie Echtheit, Alter, Material.\nDer Preis selbst ist keine Eigenschaft, nur die Faktoren, die ihn bestimmen.\nBeispiel: V verkauft ein Bild als „Kopie“ für 1.000 €, es ist ein echtes Original → V kann nach § 119 II anfechten.",
       "exam": true
     },
     {
       "id": "recht-k023",
       "topic": "Unwirksamkeit",
       "front": "Anfechtungsfristen",
-      "back": "§§ 119, 120: unverzüglich = ohne schuldhaftes Zögern (§ 121 I). § 123 (Täuschung/Drohung): 1 Jahr ab Entdeckung (§ 124). Entdeckt 02.11.2026 → bis 02.11.2027, 24 Uhr.",
+      "back": "Bei Irrtum (§§ 119, 120): **unverzüglich**, also ohne schuldhaftes Zögern ab Kenntnis (§ 121 I). Bei Täuschung oder Drohung (§ 123): **ein Jahr** ab Entdeckung bzw. Ende der Zwangslage (§ 124).\nDer Getäuschte bekommt mehr Zeit, weil er nicht schuld ist.\nBeispiel: Täuschung entdeckt am 02.11.2026 → Anfechtung bis 02.11.2027, 24 Uhr (§§ 187 I, 188 II).",
       "exam": true
     },
     {
       "id": "recht-k024",
       "topic": "Unwirksamkeit",
       "front": "Vertrauensschaden (§ 122) – Fall Ferienwohnung",
-      "back": "Wer wegen eigenen Irrtums anficht, ersetzt das negative Interesse. Paul: 4 € Porto + 600 € abgesagte Miete = 604 €; Obergrenze Erfüllungsinteresse 800 € ist eingehalten.",
+      "back": "Wer wegen eines eigenen Irrtums anficht, muss den Vertrauensschaden ersetzen (§ 122 I): Der andere wird so gestellt, als hätte er nie von dem Geschäft gehört.\nObergrenze ist das Erfüllungsinteresse, also was er bei Erfüllung gehabt hätte.\nBeispiel Ferienwohnung: 4 € Porto + 600 € abgesagte Familie = 604 €. Das ist weniger als 800 € Mietpreis, also zu zahlen.",
       "exam": true
     },
     {
       "id": "recht-k025",
       "topic": "Unwirksamkeit",
       "front": "Arglistige Täuschung durch Verschweigen (§ 123 I)",
-      "back": "Möglich, wenn eine Aufklärungspflicht besteht. Gebrauchtwagenhändler verschweigt reparierten Unfall (200 €): K kann anfechten, Frist 1 Jahr (§ 124).",
+      "back": "Ja, Täuschung durch Verschweigen ist möglich, wenn eine **Aufklärungspflicht** besteht. Der Getäuschte kann dann nach § 123 I Alt. 1 anfechten.\nEin Gebrauchtwagenhändler muss Unfälle ungefragt nennen, weil sie für den Kaufentschluss wichtig sind.\nBeispiel (offizielle Lösung Anfechtung 4): reparierter Unfall, 200 € Schaden, verschwiegen → K kann anfechten, Frist 1 Jahr (§ 124).",
       "exam": false
     },
     {
       "id": "recht-k026",
       "topic": "Unwirksamkeit",
       "front": "Drei Altersstufen der Geschäftsfähigkeit",
-      "back": "0–6: geschäftsunfähig, WE nichtig (§§ 104, 105). 7–17: beschränkt (§ 106). Ab 18: voll (§ 2).",
+      "back": "0–6 Jahre: geschäftsunfähig, WE nichtig (§§ 104 Nr. 1, 105 I).\n7–17 Jahre: beschränkt geschäftsfähig (§§ 2, 106), wirksam nur nach §§ 107 ff.\nAb 18: voll geschäftsfähig (§ 2). Beispiel: Ein 6-Jähriger kauft Kaugummi → nichtig. Ein 16-Jähriger kauft ein Skateboard ohne Eltern → schwebend unwirksam.",
       "exam": true
     },
     {
       "id": "recht-k027",
       "topic": "Unwirksamkeit",
       "front": "Lediglich rechtlich vorteilhaft (§ 107)",
-      "back": "Nur, wenn der Minderjährige ausschließlich etwas bekommt. Geschenktes Fahrrad: wirksam. Saxophon (Wert 2.000 €) für 800 €: rechtlich nachteilig (Zahlungspflicht), wirtschaftlicher Vorteil zählt nicht.",
+      "back": "Lediglich rechtlich vorteilhaft ist ein Geschäft nur, wenn der Minderjährige ausschließlich etwas bekommt und keine Pflicht übernimmt (§ 107).\nEs zählt die **rechtliche**, nicht die wirtschaftliche Seite. Jeder Kauf ist wegen der Zahlungspflicht nachteilig.\nBeispiel: Geschenktes Fahrrad → wirksam. Saxophon (Wert 2.000 €) für 800 € → nachteilig, trotz Schnäppchen.",
       "exam": true
     },
     {
       "id": "recht-k028",
       "topic": "Unwirksamkeit",
       "front": "Einwilligung vs. Genehmigung",
-      "back": "Einwilligung = vorher (§ 183). Fehlt sie: schwebend unwirksam (§ 108 I). Genehmigung = nachher, rückwirkend (§ 184 I); Verweigerung → endgültig unwirksam.",
+      "back": "**Einwilligung** = vorherige Zustimmung (§ 183). **Genehmigung** = nachträgliche Zustimmung, sie wirkt zurück (§ 184 I).\nFehlt die Einwilligung, ist der Vertrag schwebend unwirksam (§ 108 I). Mit Genehmigung wird er von Anfang an wirksam, mit Verweigerung endgültig unwirksam.\nBeispiel: Eltern sagen am Abend „Ja“ zur Konsole, die der 16-Jährige mittags gekauft hat → wirksam seit mittags.",
       "exam": false
     },
     {
       "id": "recht-k029",
       "topic": "Unwirksamkeit",
       "front": "Taschengeldparagraf (§ 110)",
-      "back": "Wirksam, wenn der Minderjährige vollständig **bewirkt** (bezahlt) mit überlassenen Mitteln. Konsole 250 €: 160 € sofort + Raten → § 110 greift nicht.",
+      "back": "Ein Vertrag des Minderjährigen ist von Anfang an wirksam, wenn er die Leistung vollständig **bewirkt** (bezahlt) mit Mitteln, die ihm dafür oder zur freien Verfügung überlassen wurden (§ 110).\nTeilzahlung reicht nicht, weil sonst noch eine Schuld offen wäre.\nBeispiel: Konsole 250 €: 160 € sofort aus Taschengeld, Rest in Raten → § 110 greift nicht.",
       "exam": true
     },
     {
       "id": "recht-k030",
       "topic": "Unwirksamkeit",
       "front": "§ 108 II: Vertragspartner fordert die Eltern zur Erklärung auf",
-      "back": "Die Genehmigung kann nur noch ihm gegenüber erklärt werden; eine vorher dem Kind gegenüber erklärte Verweigerung wird unwirksam, Schweigen 2 Wochen = verweigert. Skateboard-Fall: Eltern sagen am Telefon „Ja“ → Vertrag wirksam.",
+      "back": "Fordert der Vertragspartner die Eltern zur Erklärung auf, kann die Genehmigung nur noch **ihm** gegenüber erklärt werden. Eine vorher gegenüber dem Kind erklärte Genehmigung oder Verweigerung wird unwirksam (§ 108 II 1).\nSchweigen die Eltern zwei Wochen, gilt die Genehmigung als verweigert (§ 108 II 2).\nBeispiel Skateboard: Eltern verweigern abends gegenüber P, V ruft an, sie sagen „Ja“ → wirksam.",
       "exam": true
     },
     {
       "id": "recht-k031",
       "topic": "Vertretung",
       "front": "Stellvertretung (§ 164 I): die drei Voraussetzungen",
-      "back": "1. eigene WE des Vertreters (sonst Bote) 2. im fremden Namen (Offenkundigkeit, § 164 I 2) 3. mit Vertretungsmacht. Zusätzlich muss Vertretung zulässig sein (nicht bei Testament, Eheschließung). Folge: Mitbewohnerin kauft „für dich“ mit deiner Erlaubnis eine Bohrmaschine → du schuldest den Kaufpreis.",
+      "back": "1. Eigene WE des Vertreters (sonst ist er Bote)\n2. Im Namen des Vertretenen (Offenkundigkeit, § 164 I 2)\n3. Mit Vertretungsmacht (Vollmacht, Gesetz, Organstellung, Rechtsschein)\nDazu muss Vertretung zulässig sein (nicht bei Testament, Eheschließung). Beispiel: Mitbewohnerin kauft mit deiner Erlaubnis „für dich“ eine Bohrmaschine → du schuldest den Kaufpreis.",
       "exam": true
     },
     {
       "id": "recht-k032",
       "topic": "Vertretung",
       "front": "Vertreter oder Bote?",
-      "back": "Vertreter hat Entscheidungsspielraum („gute Jacke, max. 100 €“). Bote überbringt fremde WE („Anzug Nr. 7 für 299 €“). 6-Jähriger mit genauem Einkaufszettel = Bote, Vertrag wirksam.",
+      "back": "Der **Vertreter** gibt eine eigene WE ab und hat Entscheidungsspielraum. Der **Bote** überbringt nur eine fertige, fremde WE.\nEntscheidend ist, wie er nach außen auftritt. Ein Bote braucht keine Geschäftsfähigkeit.\nBeispiel: „Kauf eine gute Jacke, max. 100 €“ → Vertreter. 6-Jähriger mit genauem Einkaufszettel → Bote, Vertrag Mutter–Bäcker wirksam (offizielle Lösung).",
       "exam": true
     },
     {
       "id": "recht-k033",
       "topic": "Vertretung",
       "front": "Duldungs- vs. Anscheinsvollmacht",
-      "back": "Duldung: Der Vertretene weiß, dass jemand für ihn auftritt, und lässt es geschehen (Chef zahlt die Bestellungen des Azubis wortlos). Anschein: Er weiß es nicht, hätte es aber bei Sorgfalt erkennen und verhindern können. Beide Male gebunden, wenn der Dritte gutgläubig ist.",
+      "back": "**Duldung:** Der Vertretene **weiß**, dass jemand für ihn auftritt, und lässt es geschehen. **Anschein:** Er weiß es **nicht**, hätte es aber bei Sorgfalt erkennen und verhindern können.\nIn beiden Fällen wird er behandelt, als hätte er Vollmacht erteilt, wenn der Dritte gutgläubig ist.\nBeispiel: Chef zahlt die Bestellungen des Angestellten wortlos → Duldung. Er sieht nie in die Rechnungen → Anschein.",
       "exam": true
     },
     {
       "id": "recht-k034",
       "topic": "Vertretung",
       "front": "Vertreter ohne Vertretungsmacht (§§ 177, 179)",
-      "back": "Vertrag schwebend unwirksam (§ 177 I). Verweigert der Vertretene: Vertreter haftet – kannte er den Mangel, nach Wahl Erfüllung oder Schadensersatz (§ 179 I), sonst nur Vertrauensschaden (§ 179 II).",
+      "back": "Der Vertrag ist schwebend unwirksam (§ 177 I). Genehmigt der Vertretene, ist er wirksam. Verweigert er, haftet der Vertreter selbst (§ 179).\nKannte der Vertreter den Mangel: nach Wahl des Partners Erfüllung oder Schadensersatz (§ 179 I). Sonst nur Vertrauensschaden (§ 179 II).\nBeispiel: V kauft für B ein Smartphone statt Kaffeeautomat, B lehnt ab → X kann von V Abnahme und Zahlung verlangen.",
       "exam": true
     },
     {
       "id": "recht-k035",
       "topic": "Fristen",
       "front": "Fristberechnung (§§ 187 I, 188 II)",
-      "back": "Ereignistag zählt nicht; Ende am gleichnamigen Tag um 24 Uhr. Zugang Fr 30.10.2026, 2 Wochen → Fr 13.11.2026, 24 Uhr.",
+      "back": "Der Ereignistag zählt nicht (§ 187 I). Die Frist endet am gleichnamigen Wochentag bzw. gleichen Datum um 24 Uhr (§ 188 II).\nGrund: Ein angebrochener Tag wäre sonst ein verkürzter Fristtag.\nBeispiel: Zugang Fr 30.10.2026, Frist 2 Wochen → Tag 1 ist Sa 31.10., Ende Fr 13.11.2026, 24 Uhr.",
       "exam": true
     },
     {
       "id": "recht-k036",
       "topic": "Fristen",
       "front": "Fristende am Wochenende (§ 193)",
-      "back": "Ist eine WE abzugeben oder zu leisten und fällt der letzte Tag auf Sa, So oder Feiertag, gilt der nächste Werktag: Sa 12.12.2026 → Mo 14.12.2026.",
+      "back": "Ist eine WE abzugeben oder eine Leistung zu bewirken und fällt der letzte Tag auf Samstag, Sonntag oder Feiertag, tritt der nächste Werktag an die Stelle (§ 193).\nNiemand soll am Wochenende handeln müssen.\nBeispiel: Zahlungsfrist endet rechnerisch Sa 12.12.2026 → Zahlung bis Mo 14.12.2026.",
       "exam": false
     },
     {
       "id": "recht-k037",
       "topic": "Fristen",
       "front": "Regelmäßige Verjährung (§§ 195, 199 I)",
-      "back": "3 Jahre, Beginn mit Schluss des Jahres der Entstehung + Kenntnis. Anspruch vom 30.10.2026 verjährt mit Ablauf des 31.12.2029.",
+      "back": "3 Jahre (§ 195). Beginn erst mit dem **Schluss des Jahres**, in dem der Anspruch entstanden ist und der Gläubiger Schuldner und Umstände kennt (§ 199 I).\nDas heißt Ultimoverjährung: Alle Ansprüche eines Jahres verjähren am selben Tag.\nBeispiel: Kaufpreis entstanden am 30.10.2026 → Beginn 31.12.2026 → Ablauf 31.12.2029.",
       "exam": true
     },
     {
       "id": "recht-k038",
       "topic": "Fristen",
       "front": "Was bewirkt die Verjährung?",
-      "back": "Der Anspruch besteht weiter, der Schuldner darf die Leistung verweigern (Einrede, § 214 I). Wer trotzdem zahlt, kann nicht zurückfordern (§ 214 II).",
+      "back": "Der Anspruch besteht weiter, aber der Schuldner darf die Leistung verweigern (Einrede, § 214 I). Er muss sich darauf berufen.\nZahlt er trotzdem, kann er das Geld nicht zurückfordern (§ 214 II), denn die Schuld war ja noch da.\nBeispiel: S zahlt 2031 eine 2026 entstandene Kaufpreisschuld → kein Rückforderungsrecht.",
       "exam": false
     },
     {
       "id": "recht-k039",
       "topic": "Schuldverhältnis",
       "front": "Trennungs- und Abstraktionsprinzip",
-      "back": "Brezel kaufen = 3 Geschäfte: Kaufvertrag (§ 433) + 2 Übereignungen (§ 929). Die Übereignung ist auch wirksam, wenn der Kaufvertrag nichtig ist; Rückgabe dann über § 812.",
+      "back": "**Trennungsprinzip:** Kaufvertrag (§ 433, Verpflichtung) und Übereignung (§ 929, Verfügung) sind getrennte Geschäfte. **Abstraktionsprinzip:** Die Übereignung ist auch wirksam, wenn der Kaufvertrag nichtig ist.\nDie Rückgabe läuft dann über die ungerechtfertigte Bereicherung (§ 812).\nBeispiel: Brezel kaufen = 3 Geschäfte: Kaufvertrag + Übereignung der Brezel + Übereignung des Geldes.",
       "exam": true
     },
     {
       "id": "recht-k040",
       "topic": "Schuldverhältnis",
       "front": "Stückschuld vs. Gattungsschuld",
-      "back": "Stück: individuell (Einzelstück-Kleid). Gattung: nach Merkmalen (5 Zentner Kartoffeln), mittlere Art und Güte (§ 243 I); geht ein Sack kaputt, muss ein anderer geliefert werden.",
+      "back": "**Stückschuld:** ein individuell bestimmter Gegenstand (dieses gebrauchte Handy). **Gattungsschuld:** nur nach Merkmalen bestimmt (5 Zentner Kartoffeln), geschuldet ist mittlere Art und Güte (§ 243 I).\nWichtig für die Unmöglichkeit: Geht die Stücksache unter, kann niemand mehr liefern. Aus der Gattung kann man dagegen ein anderes Exemplar nehmen.\nBeispiel: Ein Sack Kartoffeln verdirbt → anderer Sack.",
       "exam": false
     },
     {
       "id": "recht-k041",
       "topic": "Schuldverhältnis",
       "front": "Konkretisierung (§ 243 II)",
-      "back": "Holschuld: aussondern + bereitstellen. Bringschuld: beim Gläubiger anbieten. Schickschuld: ordnungsgemäß versenden. Danach Stückschuld.",
+      "back": "Mit der Konkretisierung (§ 243 II) wird aus der Gattungsschuld eine Stückschuld. Dazu muss der Schuldner „das seinerseits Erforderliche“ tun:\nHolschuld: aussondern, bereitstellen, ggf. benachrichtigen. Bringschuld: beim Gläubiger anbieten. Schickschuld: ordnungsgemäß versenden.\nBeispiel: 15 Ballen Stoff ausgesondert und zur Abholung bereitgestellt → nur noch diese 15 Ballen sind geschuldet.",
       "exam": true
     },
     {
       "id": "recht-k042",
       "topic": "Schuldverhältnis",
       "front": "Aufrechnung (§§ 387–389)",
-      "back": "Gegenseitigkeit, Gleichartigkeit, Gegenforderung fällig, Hauptforderung erfüllbar, Erklärung (§ 388). A schuldet 1.000 €, B schuldet 300 € → nach Aufrechnung nur noch 700 € (§ 389).",
+      "back": "Voraussetzungen: Gegenseitigkeit, Gleichartigkeit (meist Geld), Gegenforderung fällig und durchsetzbar, eigene Schuld erfüllbar, Aufrechnungserklärung (§§ 387, 388).\nWirkung: Beide Forderungen erlöschen, soweit sie sich decken (§ 389).\nBeispiel: A schuldet B 1.000 €, B schuldet A fällige 300 € → nach Aufrechnung schuldet A nur noch 1.000 € − 300 € = 700 €.",
       "exam": true
     },
     {
       "id": "recht-k043",
       "topic": "Schuldverhältnis",
       "front": "Rücktritt vs. Kündigung",
-      "back": "Rücktritt (§§ 346 ff.): Rückgewähr, ex tunc. Kündigung: Dauerschuldverhältnis endet nur für die Zukunft (ex nunc). Computer 1.500 €, 200 € Wertersatz → K bekommt ca. 1.300 € zurück.",
+      "back": "**Rücktritt** (§§ 346 ff.) wickelt den Vertrag rückwärts ab: Sache zurück, Geld zurück (ex tunc). **Kündigung** beendet ein Dauerschuldverhältnis nur für die Zukunft (ex nunc).\nBeim Rücktritt kann Wertersatz für Schäden anfallen (§ 346 II).\nBeispiel: Computer 1.500 € zurückgegeben, durch unsachgemäße Nutzung 200 € Schaden → K bekommt etwa 1.500 € − 200 € = 1.300 €.",
       "exam": false
     },
     {
       "id": "recht-k044",
       "topic": "Störungen",
       "front": "Unmöglichkeit: Rechtsfolgen",
-      "back": "Schuldner frei (§ 275 I), Gegenleistung entfällt (§ 326 I 1). Schadensersatz statt der Leistung nur bei Vertretenmüssen (§§ 280 I, III, 283), das vermutet wird (§ 280 I 2).",
+      "back": "Der Schuldner wird frei (§ 275 I), der Gläubiger muss nicht zahlen (§ 326 I 1). Schon Gezahltes gibt es zurück (§ 326 IV).\nSchadensersatz statt der Leistung nur, wenn der Schuldner die Unmöglichkeit zu vertreten hat (§§ 280 I, III, 283). Das wird vermutet (§ 280 I 2).\nBeispiel: Verkaufter Gebrauchtwagen brennt ohne Verschulden vor Übergabe aus → keiner muss leisten.",
       "exam": true
     },
     {
       "id": "recht-k045",
       "topic": "Störungen",
       "front": "Anfängliche Unmöglichkeit: Gemälde verbrannte schon vor Vertragsschluss",
-      "back": "Vertrag trotzdem wirksam (§ 311a I). V muss nicht liefern (§ 275 I), K nicht zahlen (§ 326 I). Schadensersatz nur, wenn V es kannte oder kennen musste (§ 311a II).",
+      "back": "Der Vertrag ist trotzdem **wirksam** (§ 311a I), nicht nichtig. V muss nicht liefern (§ 275 I), K nicht zahlen (§ 326 I).\nSchadensersatz statt der Leistung gibt es nach § 311a II nur, wenn V das Hindernis kannte oder kennen musste.\nBeispiel: Bild am Vortag unbemerkt verbrannt, V konnte es nicht wissen → beide frei, kein Schadensersatz.",
       "exam": false
     },
     {
       "id": "recht-k046",
       "topic": "Störungen",
       "front": "Schuldnerverzug (§ 286): Voraussetzungen",
-      "back": "Fälliger, durchsetzbarer Anspruch · Nichtleistung trotz Möglichkeit · Mahnung (oder entbehrlich, § 286 II/III) · Vertretenmüssen (vermutet, § 286 IV; Geldmangel entlastet nie).",
+      "back": "1. Fälliger, durchsetzbarer Anspruch (§ 271, keine Einrede)\n2. Nichtleistung, obwohl die Leistung möglich ist\n3. Mahnung nach Fälligkeit oder entbehrlich (§ 286 II, III)\n4. Vertretenmüssen, vermutet (§ 286 IV). Geldmangel entlastet nie. Beispiel: Mitbewohner schuldet 40 € Strom, du mahnst, er zahlt nicht → Verzug.",
       "exam": true
     },
     {
       "id": "recht-k047",
       "topic": "Störungen",
       "front": "Wann ist keine Mahnung nötig? (§ 286 II)",
-      "back": "Nr. 1 Kalenderdatum („bis 30.11.“) · Nr. 2 ab Ereignis berechenbar („10 Tage nach Lieferung“) · Nr. 3 ernsthafte Verweigerung · Nr. 4 besondere Gründe. „Zahlbar sofort“ reicht nicht.",
+      "back": "Nr. 1: Leistungszeit nach dem Kalender bestimmt („bis 30.11.“). Nr. 2: ab einem Ereignis berechenbar („10 Tage nach Lieferung“). Nr. 3: ernsthafte und endgültige Verweigerung. Nr. 4: besondere Gründe.\nIn diesen Fällen ersetzt der Kalender oder das Verhalten des Schuldners die Mahnung.\n„Zahlbar sofort“ ist kein Kalenderdatum, dann hilft nur eine Mahnung oder § 286 III.",
       "exam": true
     },
     {
       "id": "recht-k048",
       "topic": "Störungen",
       "front": "30-Tage-Regel (§ 286 III) – Fliesenleger-Fall",
-      "back": "Entgeltforderung: Verzug spätestens 30 Tage nach Fälligkeit + Rechnungszugang. Zugang 06.06. → Ende 06.07. → Verzug ab 07.07. Verbraucher nur bei Hinweis in der Rechnung.",
+      "back": "Bei Entgeltforderungen kommt der Schuldner spätestens 30 Tage nach Fälligkeit und Zugang einer Rechnung in Verzug (§ 286 III). Bei Verbrauchern nur, wenn die Rechnung darauf hinweist.\nFliesenleger-Fall: Zugang 06.06., der Tag zählt nicht → Tag 30 ist der 06.07. → Verzug ab 07.07.\nZinsen gibt es dann für 07.07. bis 25.07. = 19 Tage.",
       "exam": false
     },
     {
       "id": "recht-k049",
       "topic": "Störungen",
       "front": "Gläubigerverzug (§§ 293 ff.)",
-      "back": "Schuldner bietet richtig an, Gläubiger nimmt nicht an – kein Verschulden nötig. Folgen: Schuldner haftet nur für Vorsatz/grobe Fahrlässigkeit (§ 300 I), Gegenleistung bleibt (§ 326 II).",
+      "back": "Der Schuldner bietet richtig an, der Gläubiger nimmt nicht an (§ 293). Ein Verschulden des Gläubigers ist nicht nötig.\nFolgen: Der Schuldner haftet nur noch für Vorsatz und grobe Fahrlässigkeit (§ 300 I), die Gefahr geht über (§ 300 II), der Kaufpreis bleibt geschuldet, wenn die Sache zufällig untergeht (§ 326 II).\nBeispiel: Kartoffeln telefonisch angeboten, Hans lehnt ab, Kartoffeln gestohlen → Hans muss zahlen.",
       "exam": true
     },
     {
       "id": "recht-k050",
       "topic": "Störungen",
       "front": "Erfüllungsgehilfe (§ 278)",
-      "back": "Der Schuldner haftet für das Verschulden seiner Gehilfen wie für eigenes, ohne Entlastung. Gehilfe des Elektromeisters E beschädigt bei der Antennenmontage das Dach → E ersetzt Dach und Möbel (§§ 280 I, 241 II, 278).",
+      "back": "Der Schuldner haftet für das Verschulden seiner Erfüllungsgehilfen wie für eigenes (§ 278). Eine Entlastung (wie bei § 831) gibt es nicht.\nGrund: Wer andere für sich arbeiten lässt, trägt auch deren Fehler.\nBeispiel: Gehilfe des Elektromeisters E beschädigt bei der Antennenmontage das Dach → E ersetzt nach §§ 280 I, 241 II, 278.",
       "exam": false
     },
     {
       "id": "recht-k051",
       "topic": "Störungen",
       "front": "c.i.c. (§§ 280 I, 311 II, 241 II)",
-      "back": "Schon beim Anbahnen eines Vertrags gibt es Rücksichtspflichten. Kundin rutscht im Kaufhaus auf Obstrest aus → Arztkosten ersetzt. Vorteil ggü. § 823: § 278 ohne Entlastung, Verschulden vermutet.",
+      "back": "Schon beim Anbahnen eines Vertrags entstehen Rücksichtspflichten (§ 311 II, § 241 II). Werden sie schuldhaft verletzt, gibt es Schadensersatz (§ 280 I).\nVorteil gegenüber § 823: Verschulden wird vermutet, und für Angestellte gilt § 278 ohne Entlastung.\nBeispiel: Kundin rutscht im Kaufhaus auf einem Obstrest aus → Arztkosten nach §§ 280 I, 311 II Nr. 2, 241 II.",
       "exam": true
     },
     {
       "id": "recht-k052",
       "topic": "SE · AGB",
       "front": "Umfang des Schadensersatzes (§ 249)",
-      "back": "Naturalrestitution, bei Sachschaden stattdessen Geld (§ 249 II 1), auch Folgeschäden. Rad: Reparatur 180 € + 20 € Bahnfahrt = 200 €.",
+      "back": "Herzustellen ist der Zustand ohne das schädigende Ereignis (§ 249 I). Bei Personen- und Sachschäden kann man stattdessen Geld verlangen (§ 249 II 1), auch Folgeschäden und entgangenen Gewinn (§ 252).\nGerechnet wird mit der Differenz: Vermögen jetzt minus Vermögen ohne das Ereignis.\nBeispiel: Rad beschädigt: Reparatur 180 € + 20 € Bahnfahrt = 200 € Schaden.",
       "exam": false
     },
     {
       "id": "recht-k053",
       "topic": "SE · AGB",
       "front": "Mitverschulden (§ 254)",
-      "back": "Der Geschädigte trägt seinen Anteil. Wasserschaden 4.000 €, Anteil Eigentümer 25 % → 4.000 € · 75 % = 3.000 €.",
+      "back": "Hat der Geschädigte an der Entstehung oder Vergrößerung des Schadens mitgewirkt, trägt er seinen Anteil selbst (§ 254).\nSo wird fair verteilt, wer wie viel verursacht hat.\nBeispiel: Wasserschaden 4.000 €, Eigentümer hat eine Woche zugesehen, Anteil 25 % → er bekommt 4.000 € × 75 % = 3.000 €.",
       "exam": false
     },
     {
       "id": "recht-k054",
       "topic": "SE · AGB",
       "front": "Abtretung (§ 398)",
-      "back": "Vertrag Alt- und Neugläubiger, Schuldner muss nicht mitwirken. Er behält alle Einwendungen (§ 404); zahlt er ahnungslos an den Altgläubiger, wird er frei (§ 407).",
+      "back": "Abtretung (§ 398) ist ein Vertrag zwischen Alt- und Neugläubiger. Der Schuldner muss weder zustimmen noch davon wissen.\nEr wird geschützt: Er behält alle Einwendungen (§ 404). Zahlt er ahnungslos an den Altgläubiger, wird er frei (§ 407).\nBeispiel: A tritt eine 500-€-Forderung an N ab, S zahlt ohne Kenntnis an A → N muss sich an A halten.",
       "exam": false
     },
     {
       "id": "recht-k055",
       "topic": "SE · AGB",
       "front": "AGB-Prüfung: Reihenfolge",
-      "back": "1. AGB? (§ 305 I) 2. Einbeziehung (§ 305 II) 3. Individualabrede (§ 305b), überraschend (§ 305c I) 4. Auslegung (§ 305c II) 5. Inhaltskontrolle § 309 → § 308 → § 307 6. Folge § 306.",
+      "back": "1. AGB? (§ 305 I) 2. Einbeziehung (§ 305 II) 3. Vorrang der Individualabrede (§ 305b), keine überraschende Klausel (§ 305c I) 4. Auslegung zulasten des Verwenders (§ 305c II) 5. Inhaltskontrolle: § 309 → § 308 → § 307 6. Rechtsfolge § 306.\nVom Speziellen zum Allgemeinen: § 309 ist am eindeutigsten, § 307 ist die Auffangnorm.\nBeispiel: „Umtausch ausgeschlossen“ in AGB, Verkäuferin sagt „14 Tage Umtausch“ → Individualabrede geht vor.",
       "exam": true
     },
     {
       "id": "recht-k056",
       "topic": "SE · AGB",
       "front": "Einbeziehung von AGB (§ 305 II)",
-      "back": "Ausdrücklicher Hinweis **bei** Vertragsschluss + zumutbare Kenntnisnahme + Einverständnis. AGB auf der Rückseite des Lieferscheins: zu spät, nicht einbezogen.",
+      "back": "Nötig sind: ausdrücklicher Hinweis **bei** Vertragsschluss (Nr. 1), zumutbare Möglichkeit der Kenntnisnahme (Nr. 2) und Einverständnis.\nDer Kunde soll vor dem Vertrag wissen, worauf er sich einlässt. Gegenüber Unternehmern gilt § 305 II nicht (§ 310 I).\nBeispiel: AGB nur auf der Rückseite des Lieferscheins → zu spät, nicht einbezogen.",
       "exam": true
     },
     {
       "id": "recht-k057",
       "topic": "SE · AGB",
       "front": "Fitnessstudio-AGB (§ 309 Nr. 9, Nr. 13)",
-      "back": "Erstlaufzeit 24 Monate: wirksam. Verlängerung um 12 Monate: unwirksam. 3 Monate Kündigungsfrist: unwirksam (max. 1 Monat). „Nur per Einschreiben“: unwirksam (max. Textform).",
+      "back": "Erstlaufzeit 24 Monate: wirksam (§ 309 Nr. 9 a, max. 2 Jahre). Verlängerung um 12 Monate: unwirksam (nur unbefristet mit monatlicher Kündigung, Nr. 9 b). 3 Monate Kündigungsfrist: unwirksam (max. 1 Monat, Nr. 9 c).\n„Nur per Einschreiben“: unwirksam, mehr als Textform darf nicht verlangt werden (Nr. 13).\nFolge: Der Vertrag bleibt, statt der Klauseln gilt das Gesetz (§ 306).",
       "exam": true
     },
     {
       "id": "recht-k058",
       "topic": "SE · AGB",
       "front": "Rechtsfolge unwirksamer AGB (§ 306)",
-      "back": "Vertrag bleibt im Übrigen wirksam, an die Stelle tritt das Gesetz. Keine geltungserhaltende Reduktion: „Jede Haftung ausgeschlossen“ fällt komplett weg.",
+      "back": "Der Vertrag bleibt im Übrigen wirksam (§ 306 I). An die Stelle der unwirksamen Klausel tritt das Gesetz (§ 306 II).\nKeine geltungserhaltende Reduktion: Die Klausel wird nicht auf das gerade noch Erlaubte gekürzt, sonst hätte der Verwender kein Risiko.\nBeispiel: „Jede Haftung ausgeschlossen“ fällt komplett weg, es gilt die gesetzliche Haftung.",
       "exam": false
     },
     {
       "id": "recht-k059",
       "topic": "Unwirksamkeit",
       "front": "Saxophon-Fall (Skript S. 22): Hans (17) kauft ein Saxophon (Wert 2.000 €) für 800 €. Ergebnis laut offizieller Lösung?",
-      "back": "Annahme rechtlich **nachteilig** (Zahlungspflicht), der wirtschaftliche Vorteil zählt nicht (§ 107). Ergebnis der offiziellen Lösung: **kein wirksamer Kaufvertrag**.",
+      "back": "Kein wirksamer Kaufvertrag. Hans ist 17, also beschränkt geschäftsfähig (§ 106).\nDie Annahme ist rechtlich **nachteilig**, weil Hans 800 € zahlen muss (§ 433 II). Der wirtschaftliche Vorteil (Wert 2.000 €) zählt nicht (§ 107). Eine Einwilligung fehlt.\nDie offizielle Lösung prüft § 108 nicht weiter und endet hier.",
       "exam": true
     },
     {
       "id": "recht-k060",
       "topic": "Unwirksamkeit",
       "front": "DVD-Player-Fall: Max (17) bekommt 250 € für „einen DVD-Player“ und zahlt 249 €. Prüfreihenfolge laut offizieller Lösung?",
-      "back": "§ 107 a) rechtlich vorteilhaft (–) · b) Einwilligung (–), weil bei der Geldübergabe noch kein **konkreter** Player feststand · § 110 (+): Mittel zu diesem Zweck überlassen und voll bezahlt ⇒ Vertrag wirksam, Huber hat den Kaufpreisanspruch.",
+      "back": "1. Lediglich rechtlich vorteilhaft? Nein, Zahlungspflicht.\n2. Einwilligung? Nein, bei der Geldübergabe stand noch kein **konkreter** Player fest.\n3. § 110? Ja: Max hat voll bezahlt, mit Mitteln, die ihm zu diesem Zweck überlassen wurden.\nErgebnis: Vertrag von Anfang an wirksam, Huber hat den Kaufpreisanspruch (und schon erhalten). Die Aufforderung nach § 108 II läuft ins Leere.",
       "exam": true
     },
     {
       "id": "recht-k061",
       "topic": "WE & Vertrag",
       "front": "Willenserklärung: objektiver Tatbestand",
-      "back": "Ein äußeres Verhalten, das ein objektiver Empfänger als Willen zu einer Rechtsfolge verstehen darf. Beispiel: Wer im Laden sagt „Ich nehme die Jacke“ oder sie aufs Kassenband legt, erklärt objektiv einen Kaufwillen.",
+      "back": "Ein äußeres Verhalten, das ein objektiver Empfänger als Willen zu einer Rechtsfolge verstehen darf. Es kommt auf die Sicht des Empfängers an (§§ 133, 157).\nSo wird der Verkehr geschützt: Niemand muss in fremde Köpfe schauen.\nBeispiel: Wer die Jacke aufs Kassenband legt oder sagt „Ich nehme die Jacke“, erklärt objektiv einen Kaufwillen.",
       "exam": true
     },
     {
       "id": "recht-k062",
       "topic": "WE & Vertrag",
       "front": "Willenserklärung: subjektiver Tatbestand (drei Elemente)",
-      "back": "Handlungswille (bewusst handeln, kein Reflex) · Erklärungsbewusstsein (wissen, dass man etwas rechtlich Erhebliches erklärt) · Geschäftswille (ein bestimmtes Geschäft wollen). Fehlt nur der Geschäftswille („Dutzend“ = 10 gedacht), liegt eine WE vor, sie ist aber anfechtbar (§ 119 I).",
+      "back": "**Handlungswille:** bewusst handeln, kein Reflex. **Erklärungsbewusstsein:** wissen, dass man etwas rechtlich Erhebliches erklärt. **Geschäftswille:** ein bestimmtes Geschäft wollen.\nFehlt nur der Geschäftswille, liegt trotzdem eine WE vor. Sie ist aber anfechtbar (§ 119 I).\nBeispiel: „Ein Dutzend“ bestellt, 10 gemeint → WE wirksam, Inhaltsirrtum.",
       "exam": true
     },
     {
       "id": "recht-k063",
       "topic": "Vertretung",
       "front": "Fehlende Offenkundigkeit: Folge und Ausnahme",
-      "back": "Wer nicht erkennbar im fremden Namen handelt, schließt ein Eigengeschäft und kann nicht anfechten (§ 164 II). Ausnahme „Geschäft für den, den es angeht“: Fritz zahlt das Rad bar, dem Händler ist egal, wer Partner wird → Vertrag mit Fred.",
+      "back": "Wer nicht erkennbar im fremden Namen handelt, schließt ein **Eigengeschäft**. Er kann nicht anfechten, nur weil er eigentlich für einen anderen handeln wollte (§ 164 II).\nAusnahme **Geschäft für den, den es angeht**: Ist es dem Partner gleichgültig, wer Vertragspartner wird (Bargeschäft des täglichen Lebens), wird auf die Offenkundigkeit verzichtet.\nBeispiel (offizielle Lösung Fall 4): Fritz zahlt das Rad für Fred bar → Vertrag Fred–Händler.",
       "exam": true
     },
     {
       "id": "recht-k064",
       "topic": "Vertretung",
       "front": "Wie geschäftsfähig müssen Vertreter und Bote sein?",
-      "back": "Der Vertreter muss nur beschränkt geschäftsfähig sein (§ 165), weil die Folgen den Vertretenen treffen; der Bote braucht gar keine Geschäftsfähigkeit. Beispiel: Ein 16-jähriger Azubi kauft wirksam für seine Chefin ein.",
+      "back": "Der Vertreter muss nur **beschränkt** geschäftsfähig sein (§ 165), weil die Folgen den Vertretenen treffen, nicht ihn. Der Bote braucht gar keine Geschäftsfähigkeit.\nDer Minderjährige wird also nicht belastet.\nBeispiel: Ein 16-jähriger Azubi kauft wirksam für seine Chefin ein. Ein 6-Jähriger kann nur Bote sein (§ 104 Nr. 1).",
       "exam": true
     },
     {
       "id": "recht-k065",
       "topic": "Vertretung",
       "front": "Vollmacht: Können (außen) vs. Dürfen (innen)",
-      "back": "Die Vollmacht (Innen- oder Außenvollmacht, § 167 I) bestimmt, was der Vertreter nach außen kann; interne Weisungen nur, was er darf. Peter soll „bestens verkaufen“, intern „mindestens 5.000 €“, verkauft für 4.500 € → Vertrag wirksam, Peter haftet nur intern.",
+      "back": "Die Vollmacht bestimmt, was der Vertreter nach außen **kann**. Der Auftrag im Innenverhältnis bestimmt, was er **darf**. Wie weit die Vollmacht reicht, klärst du durch **Auslegung**.\nOffizielle Lösung Fall 3: „für **mindestens** 5.000 € verkaufen“ begrenzt auch die Vollmacht → Verkauf für 4.500 € ohne Vertretungsmacht (§ 177). „**Bestens** verkaufen, ich rechne mit 5.000 €“ → Vollmacht unbegrenzt, Vertrag mit Heinz wirksam (§ 164 I).",
       "exam": true
     },
     {
       "id": "recht-k066",
       "topic": "Vertretung",
       "front": "Duldungsvollmacht: Voraussetzungen und Folge",
-      "back": "Jemand tritt wiederholt ohne Vollmacht für den Vertretenen auf, dieser weiß es und schreitet nicht ein, der Dritte ist gutgläubig → der Vertretene wird behandelt, als hätte er Vollmacht erteilt. Beispiel: Angestellter A kauft monatelang bei H ein, Chef C zahlt jedes Mal → C ist gebunden.",
+      "back": "Voraussetzungen: Jemand tritt wiederholt und über eine gewisse Dauer ohne Vollmacht für den Vertretenen auf. Dieser **weiß** es und schreitet nicht ein, obwohl er könnte. Der Dritte ist gutgläubig.\nFolge: Der Vertretene wird behandelt, als hätte er Vollmacht erteilt.\nBeispiel (offizielle Lösung Fall 5): Angestellter A kauft wiederholt bei H ein, Chef C zahlt jedes Mal → Vertrag C–H.",
       "exam": true
     },
     {
       "id": "recht-k067",
       "topic": "Vertretung",
       "front": "§ 179 I vs. § 179 II: Haftung des Vertreters ohne Vertretungsmacht",
-      "back": "Kannte er den Mangel: nach Wahl des Partners Erfüllung oder Schadensersatz (I). Kannte er ihn nicht: nur Vertrauensschaden, höchstens bis zum Erfüllungsinteresse (II). Keine Haftung, wenn der Partner den Mangel kannte oder kennen musste oder der Vertreter minderjährig war (III).",
+      "back": "Kannte der Vertreter den Mangel: nach Wahl des Partners **Erfüllung oder Schadensersatz** (§ 179 I). Kannte er ihn nicht: nur **Vertrauensschaden**, höchstens bis zum Erfüllungsinteresse (§ 179 II).\nKeine Haftung, wenn der Partner den Mangel kannte oder kennen musste oder der Vertreter minderjährig war und ohne Zustimmung handelte (§ 179 III).\nBeispiel: Ben behauptet bewusst falsch eine Vollmacht, Tom lehnt ab → L kann von Ben 1.200 € gegen das Rad verlangen.",
       "exam": true
     },
     {
       "id": "recht-k068",
       "topic": "Vertretung",
       "front": "§ 177 II und § 178: Was kann der Geschäftspartner tun, solange der Vertretene schweigt?",
-      "back": "Er kann den Vertretenen zur Genehmigung auffordern; Schweigen 2 Wochen = verweigert (§ 177 II). Kannte er den Mangel nicht, kann er bis zur Genehmigung widerrufen (§ 178).",
+      "back": "Er kann den Vertretenen zur Genehmigung **auffordern**. Schweigt dieser zwei Wochen, gilt die Genehmigung als verweigert (§ 177 II).\nKannte er den Mangel der Vertretungsmacht nicht, kann er bis zur Genehmigung **widerrufen** (§ 178).\nSo muss der Partner nicht ewig in der Schwebe bleiben. Beispiel: Aufforderung am Mo 16.11.2026 → Schweigen bis Mo 30.11.2026 = Verweigerung.",
       "exam": false
     },
     {
       "id": "recht-k069",
       "topic": "Vertretung",
       "front": "§ 166 II: Vertreter handelt nach bestimmten Weisungen",
-      "back": "Dann zählt auch das Wissen des Vertretenen. Maier lässt Schulze gezielt einen Wagen kaufen, von dessen Unfall Maier weiß → Maier kann nicht wegen Täuschung anfechten, obwohl Schulze ahnungslos war.",
+      "back": "Handelt der Vertreter nach bestimmten Weisungen, zählt auch das Wissen des Vertretenen (§ 166 II). Grundsätzlich käme es nur auf den Vertreter an (§ 166 I).\nWer selbst Bescheid weiß, soll sich nicht hinter einem ahnungslosen Vertreter verstecken.\nBeispiel (offizielle Lösung Fall 2): Maier weiß vom Unfall und lässt Schulze genau diesen Wagen kaufen → keine Täuschung, keine Anfechtung.",
       "exam": false
     },
     {
       "id": "recht-k070",
       "topic": "Störungen",
       "front": "Die vier Leistungsstörungen",
-      "back": "Leistung kommt gar nicht (Unmöglichkeit), zu spät (Schuldnerverzug), schlecht (Schlechterfüllung) oder der Gläubiger nimmt nicht an (Gläubigerverzug). Nur der Gläubigerverzug ist keine Pflichtverletzung des Schuldners.",
+      "back": "Die Leistung kommt **gar nicht** (Unmöglichkeit), **zu spät** (Schuldnerverzug), **schlecht** (Schlechtleistung), oder der **Gläubiger nimmt nicht an** (Gläubigerverzug).\nNur der Gläubigerverzug ist keine Pflichtverletzung des Schuldners.\nBeispiel Konsole: Lager abgebrannt / 3 Wochen zu spät / Controller kaputt / du machst dem Boten nicht auf.",
       "exam": true
     },
     {
       "id": "recht-k071",
       "topic": "Störungen",
       "front": "Arten der Unmöglichkeit",
-      "back": "Objektiv (niemand kann: Auto verbrannt) oder subjektiv (nur der Schuldner nicht: Auto gestohlen), beides § 275 I; anfänglich (§ 311a) oder nachträglich (§§ 280, 283). § 275 II (grobes Missverhältnis) und III (persönlich unzumutbar) sind Einreden.",
+      "back": "**Objektiv:** niemand kann leisten (Auto verbrannt). **Subjektiv:** nur der Schuldner nicht (Auto gestohlen). Beides fällt unter § 275 I. **Anfänglich** (vor Vertragsschluss, § 311a) oder **nachträglich** (§§ 280, 283).\n§ 275 II (grobes Missverhältnis) und III (persönlich unzumutbar) sind Einreden: Der Schuldner muss sich darauf berufen.\nBeispiel § 275 II: Ring liegt auf dem Meeresgrund.",
       "exam": true
     },
     {
       "id": "recht-k072",
       "topic": "Störungen",
       "front": "Wann wird eine Gattungsschuld unmöglich?",
-      "back": "Erst nach Konkretisierung (§ 243 II), vorher muss aus der Gattung neu geliefert werden. Baumwoll-Fall: 15 Ballen bei Holschuld ausgesondert und bereitgestellt, dann gestohlen → Leistung unmöglich, kein Kaufpreis, ohne Verschulden kein Schadensersatz.",
+      "back": "Erst nach der Konkretisierung (§ 243 II). Vorher muss der Schuldner aus der Gattung ein anderes Stück liefern, solange es die Gattung noch gibt.\nNach der Konkretisierung ist nur noch genau diese Sache geschuldet. Geht sie unter, ist die Leistung unmöglich.\nBeispiel: 15 Ballen bei Holschuld ausgesondert und bereitgestellt, dann gestohlen → unmöglich, kein Kaufpreis, ohne Verschulden kein Schadensersatz.",
       "exam": true
     },
     {
       "id": "recht-k073",
       "topic": "Störungen",
       "front": "Schadensersatz: neben, wegen Verzögerung, statt der Leistung",
-      "back": "Neben der Leistung: nur § 280 I (nasse Möbel). Verzögerungsschaden: §§ 280 I, II, 286 (Mietwagen, Zinsen). Statt der Leistung: §§ 280 I, III, 281 (Frist) bzw. 283 (Unmöglichkeit) oder § 311a II. Immer zuerst sagen, welcher Schaden verlangt wird.",
+      "back": "**Neben der Leistung:** § 280 I (Begleitschäden, z. B. nasse Möbel). **Verzögerungsschaden:** §§ 280 I, II, 286 (Mietwagen, Zinsen). **Statt der Leistung:** §§ 280 I, III, 281 (mit Frist), 283 (nachträgliche Unmöglichkeit) oder § 311a II.\nDie Art des Schadens bestimmt die Zusatzvoraussetzungen.\nBeispiel: Mehrkosten für einen Ersatzkauf = statt der Leistung, also Frist nötig.",
       "exam": true
     },
     {
       "id": "recht-k074",
       "topic": "Störungen",
       "front": "Rechtsfolgen des Schuldnerverzugs",
-      "back": "Verzögerungsschaden (§§ 280 I, II, 286), Verzugszinsen (§ 288: 5 Prozentpunkte über Basiszins, ohne Verbraucher bei Entgeltforderungen 9 + 40 € Pauschale), nach erfolgloser Frist Schadensersatz statt der Leistung (§ 281) oder Rücktritt (§ 323). Beispiel: „zahlbar bis 30.11.2026“ → Verzug ab Di 01.12.2026.",
+      "back": "Verzögerungsschaden (§§ 280 I, II, 286). Verzugszinsen: 5 Prozentpunkte über Basiszins (§ 288 I), ohne Verbraucher bei Entgeltforderungen 9 Prozentpunkte plus 40 € Pauschale (§ 288 II, V).\nNach erfolgloser Frist zusätzlich Schadensersatz statt der Leistung (§ 281) oder Rücktritt (§ 323).\nBeispiel: „zahlbar bis 30.11.2026“ → am 30.11. darf noch gezahlt werden, Verzug ab Di 01.12.2026.",
       "exam": true
     },
     {
       "id": "recht-k075",
       "topic": "Störungen",
       "front": "Gläubigerverzug (§§ 293–295): Voraussetzungen",
-      "back": "Leistung möglich · tatsächliches Angebot wie geschuldet (§ 294) bzw. wörtliches, wenn der Gläubiger schon abgelehnt hat (§ 295) · Nichtannahme. Verschulden ist nicht nötig: Du bist zum Liefertermin nicht zu Hause → Annahmeverzug.",
+      "back": "1. Leistung möglich. 2. Angebot so, wie geschuldet (§ 294); ein **wörtliches** Angebot genügt, wenn der Gläubiger schon erklärt hat, er nehme nicht an, oder mitwirken muss (§ 295). 3. Nichtannahme.\nVerschulden ist nicht nötig, weil Annahme keine Pflicht, sondern eine Obliegenheit ist.\nBeispiel: Du bist zum vereinbarten Liefertermin nicht zu Hause → Annahmeverzug.",
       "exam": true
     },
     {
       "id": "recht-k076",
       "topic": "Störungen",
       "front": "Absolutes vs. relatives Fixgeschäft",
-      "back": "Absolut: Leistung nach dem Termin sinnlos → Unmöglichkeit (DJ kommt am Tag nach der Party). Relativ: Vertrag soll mit dem Termin stehen und fallen, Leistung wäre nachholbar → Rücktritt ohne Frist (§ 323 II Nr. 2).",
+      "back": "**Absolutes Fixgeschäft:** Nach dem Termin ist die Leistung sinnlos → Unmöglichkeit (§ 275 I). **Relatives Fixgeschäft:** Der Vertrag soll mit dem Termin stehen und fallen, die Leistung wäre aber nachholbar → Rücktritt ohne Frist (§ 323 II Nr. 2).\nTestfrage: Hätte die Leistung später noch irgendeinen Sinn?\nBeispiel: DJ kommt am Tag nach der Party → absolut. Hochzeitstorte soll am 12.06. kommen, ein Tag später wäre sie nur schlechter → relativ.",
       "exam": false
     },
     {
       "id": "recht-k077",
       "topic": "Störungen",
       "front": "Preisgefahr: Wann muss der Käufer trotz Untergang zahlen?",
-      "back": "Ab Übergabe (§ 446), beim Versendungskauf ab Übergabe an den Transporteur (§ 447, aber nicht beim Verbrauchsgüterkauf, § 475 II) und im Annahmeverzug (§ 326 II). Online-Laptop geht als Verbraucherpaket verloren → du musst nicht zahlen.",
+      "back": "Grundsätzlich ab **Übergabe** (§ 446). Beim Versendungskauf schon ab Übergabe an den Transporteur (§ 447), aber **nicht** beim Verbrauchsgüterkauf (§ 475 II). Außerdem im Annahmeverzug (§ 326 II).\nVorher trägt der Verkäufer das Risiko: Er bekommt kein Geld, wenn die Sache zufällig untergeht (§ 326 I).\nBeispiel: Online bestellter Laptop geht beim Paketdienst verloren → du als Verbraucher musst nicht zahlen.",
       "exam": false
     },
     {
       "id": "recht-k078",
       "topic": "Klausurhinweise",
       "front": "Gesetzestext in der Klausur: Was ist erlaubt?",
-      "back": "Textmarker, Unterstreichungen, Paragrafenverweise (z. B. „§ 433“ am Rand) und Klebezettel, die leer sind oder nur Gesetz oder Paragraf tragen („BGB“, „§ 433“).",
+      "back": "Erlaubt: Textmarker, Unterstreichungen, Paragrafenverweise am Rand (z. B. „§ 433“) und Klebezettel, die leer sind oder nur Gesetz bzw. Paragraf tragen („BGB“, „§ 433“).\nGrund: Verweise helfen beim Finden, verraten aber keinen Inhalt.\nBeispiel: Neben § 286 „§ 280“ an den Rand schreiben → erlaubt.",
       "exam": true
     },
     {
       "id": "recht-k079",
       "topic": "Klausurhinweise",
       "front": "Gesetzestext in der Klausur: Was ist verboten, und was droht?",
-      "back": "Normüberschriften auf Klebezetteln („§ 433 Kaufvertrag“), Stichworte und Sätze, Zahlen und Buchstaben außer §-Verweisen, Ausrufezeichen, Einlagen wie Schemata. Die Aufsicht macht Stichproben, ein Verstoß gilt als Täuschungsversuch.",
+      "back": "Verboten: Normüberschriften auf Klebezetteln („§ 433 Kaufvertrag“), Stichworte und Sätze, Zahlen und Buchstaben, die keine §-Verweise sind, Ausrufezeichen, Einlagen wie Schemata.\nDie Aufsicht macht Stichproben. Ein Verstoß gilt als **Täuschungsversuch**.\nBeispiel: „3 Jahre“ neben § 195 → verboten, vor der Klausur wegradieren.",
+      "exam": true
+    },
+    {
+      "id": "recht-k080",
+      "topic": "Kaufrecht",
+      "front": "Pflichten aus dem Kaufvertrag (§ 433)",
+      "back": "Verkäufer: Sache **übergeben und übereignen**, frei von Sach- und Rechtsmängeln (§ 433 I). Käufer: Kaufpreis **zahlen** und Sache **abnehmen** (§ 433 II).\nDer Vertrag begründet nur die Pflichten. Eigentum geht erst mit der Übereignung über (§ 929).\nBeispiel: Liefert der Händler ein E-Bike mit zu schwachem Akku, verletzt er § 433 I 2. Das ist der Einstieg in alle Mängelrechte.",
+      "exam": true
+    },
+    {
+      "id": "recht-k081",
+      "topic": "Kaufrecht",
+      "front": "Sachmangel (§ 434): die drei Anforderungen",
+      "back": "Mangelfrei ist die Sache nur, wenn sie bei Gefahrübergang **allen** Anforderungen entspricht: **subjektiv** (wie vereinbart, § 434 II), **objektiv** (wie üblich und erwartbar, § 434 III) und bei Montage den **Montageanforderungen** (§ 434 IV).\nSeit 2022 reicht „wie vereinbart“ allein nicht mehr.\nBeispiel: Vereinbart sind 500 Wh Akku, eingebaut 300 Wh → subjektiver Mangel. Akku hält 10 Minuten → objektiver Mangel.",
+      "exam": true
+    },
+    {
+      "id": "recht-k082",
+      "topic": "Kaufrecht",
+      "front": "Gefahrübergang (§ 446): Warum ist der Zeitpunkt wichtig?",
+      "back": "Der Mangel muss **bei Gefahrübergang** vorliegen, grundsätzlich bei der **Übergabe** (§§ 434 I, 446).\nWas danach kaputtgeht, ist das Risiko des Käufers und kein Mangel.\nBeispiel: Display ist beim Auspacken kaputt → Mangel. Handy fällt dir eine Woche später herunter → kein Mangel.",
+      "exam": true
+    },
+    {
+      "id": "recht-k083",
+      "topic": "Kaufrecht",
+      "front": "Falschlieferung (§ 434 V)",
+      "back": "Liefert der Verkäufer eine **andere** als die geschuldete Sache, steht das einem Sachmangel gleich (§ 434 V).\nDer Käufer hat dann dieselben Rechte aus § 437.\nBeispiel: Bestellt ist das Fahrrad Modell X in Größe L, geliefert wird Modell Y → Nacherfüllung durch Lieferung des richtigen Rads.",
+      "exam": false
+    },
+    {
+      "id": "recht-k084",
+      "topic": "Kaufrecht",
+      "front": "§ 437: Welche Rechte hat der Käufer bei einem Mangel?",
+      "back": "**Nr. 1:** Nacherfüllung (§ 439). **Nr. 2:** Rücktritt (§§ 440, 323, 326 V) oder Minderung (§ 441). **Nr. 3:** Schadensersatz (§§ 440, 280, 281, 283, 311a) oder Aufwendungsersatz (§ 284).\n§ 437 ist die Schaltzentrale: Er zählt die Rechte auf und verweist auf die Details.\nZitierbeispiel: „K könnte gegen V einen Anspruch aus §§ 437 Nr. 1, 439 I BGB haben.“",
+      "exam": true
+    },
+    {
+      "id": "recht-k085",
+      "topic": "Kaufrecht",
+      "front": "Grundschema für jedes Mängelrecht",
+      "back": "1. Wirksamer Kaufvertrag (§ 433)\n2. Sachmangel (§ 434) bei Gefahrübergang (§ 446)\n3. Kein Ausschluss (§§ 442, 444, AGB, beim Verbraucher § 476)\n4. Besondere Voraussetzungen des Rechts (Frist, Vertretenmüssen)\n5. Keine Verjährung (§ 438). Dieses Gerüst schreibst du bei jedem Kauffall zuerst hin.",
+      "exam": true
+    },
+    {
+      "id": "recht-k086",
+      "topic": "Kaufrecht",
+      "front": "Vorrang der Nacherfüllung: Was heißt das?",
+      "back": "Rücktritt, Minderung und Schadensersatz statt der Leistung gibt es grundsätzlich erst, wenn eine **angemessene Frist zur Nacherfüllung** erfolglos abgelaufen ist (§§ 323 I, 281 I).\nDer Verkäufer soll eine zweite Chance bekommen, den Mangel selbst zu beheben.\nBeispiel: Neue Kaffeemühle mahlt nicht → erst Reparatur oder neue Mühle verlangen, nicht sofort Geld zurück.",
+      "exam": true
+    },
+    {
+      "id": "recht-k087",
+      "topic": "Kaufrecht",
+      "front": "Nacherfüllung (§ 439): Wer wählt, wer zahlt?",
+      "back": "Der **Käufer** wählt zwischen Nachbesserung (Reparatur) und Nachlieferung (neue Sache, § 439 I). Der **Verkäufer** trägt alle erforderlichen Kosten: Transport, Wege, Arbeit, Material (§ 439 II).\nDer Käufer muss die Sache zur Verfügung stellen (§ 439 V).\nBeispiel (Skript Fall 2): Händler will Geld für die Display-Reparatur → unzulässig, sie ist kostenlos.",
+      "exam": true
+    },
+    {
+      "id": "recht-k088",
+      "topic": "Kaufrecht",
+      "front": "Wann muss der Verkäufer nicht nacherfüllen?",
+      "back": "Wenn die Nacherfüllung **unmöglich** ist (§ 275 I), bei **grobem Missverhältnis** (§ 275 II) oder wenn die gewählte Art **unverhältnismäßige Kosten** verursacht (§ 439 IV). Im letzten Fall bleibt die andere Art.\nBeispiel: Schrank wird nicht mehr produziert → Nachlieferung unmöglich. Dann bleibt nur die Reparatur oder, wenn auch die scheitert, Rücktritt oder Minderung.",
+      "exam": false
+    },
+    {
+      "id": "recht-k089",
+      "topic": "Kaufrecht",
+      "front": "Rücktritt im Kaufrecht: Prüfungsschema (§§ 437 Nr. 2, 323 I, 346 I)",
+      "back": "1. Kaufvertrag 2. Sachmangel bei Gefahrübergang 3. kein Ausschluss 4. erfolglose angemessene Frist zur Nacherfüllung oder Entbehrlichkeit 5. Mangel nicht unerheblich (§ 323 V 2) 6. Rücktrittserklärung (§ 349).\nRechtsfolge: Rückgewähr nach § 346 I, Ware gegen Geld.\nBeispiel: Fernseher mit Bildstörungen, V verweigert jede Reparatur → Rücktritt ohne Frist (§ 323 II Nr. 1).",
+      "exam": true
+    },
+    {
+      "id": "recht-k090",
+      "topic": "Kaufrecht",
+      "front": "Wann ist die Frist zur Nacherfüllung entbehrlich?",
+      "back": "§ 323 II Nr. 1: Verkäufer **verweigert** ernsthaft und endgültig. § 440: Nacherfüllung **fehlgeschlagen**, unzumutbar oder zu Recht verweigert. § 326 V: Nacherfüllung **unmöglich**. Beim Verbrauchsgüterkauf zusätzlich § 475d.\nEine Frist wäre in diesen Fällen sinnlos.\nBeispiel: „Ich repariere da gar nichts“ → sofort Rücktritt möglich.",
+      "exam": true
+    },
+    {
+      "id": "recht-k091",
+      "topic": "Kaufrecht",
+      "front": "Wann gilt eine Nachbesserung als fehlgeschlagen (§ 440 S. 2)?",
+      "back": "Nach dem **zweiten** erfolglosen Versuch, wenn sich nichts anderes ergibt.\nDann braucht der Käufer keine weitere Frist für Rücktritt oder Schadensersatz.\nBeispiel (Skript Fall 8): Wohnwagen zweimal erfolglos repariert → fehlgeschlagen. Beim Verbrauchsgüterkauf reicht schon der **erste** Fehlschlag (§ 475d I Nr. 2).",
+      "exam": true
+    },
+    {
+      "id": "recht-k092",
+      "topic": "Kaufrecht",
+      "front": "Rücktritt oder Minderung bei einem kleinen Kratzer?",
+      "back": "Kein Rücktritt, weil der Mangel **unerheblich** ist (§ 323 V 2). Minderung ist aber möglich, denn § 441 I 2 schließt § 323 V 2 aus.\nGrund: Wegen einer Kleinigkeit soll nicht der ganze Vertrag rückabgewickelt werden, ein Preisnachlass ist aber fair.\nBeispiel: Schreibtisch mit kleinem Kratzer → behalten und weniger zahlen.",
+      "exam": true
+    },
+    {
+      "id": "recht-k093",
+      "topic": "Kaufrecht",
+      "front": "Minderung berechnen (§ 441 III)",
+      "back": "Geminderter Preis = Kaufpreis × (Wert mit Mangel ÷ Wert ohne Mangel).\nDer Preis sinkt im selben **Verhältnis** wie der Wert, nicht um die bloße Wertdifferenz.\nBeispiel: Kaufpreis 600 €, Wert ohne Mangel 800 €, mit Mangel 600 € → 600 € × 600/800 = 450 €. Minderung 150 €, zu viel Gezahltes zurück (§ 441 IV).",
+      "exam": true
+    },
+    {
+      "id": "recht-k094",
+      "topic": "Kaufrecht",
+      "front": "„Ich kann nichts dafür, der Kratzer kommt aus dem Werk.“ Hilft das dem Verkäufer?",
+      "back": "Gegen Nacherfüllung, Rücktritt und Minderung **nicht**. Sie setzen kein Verschulden voraus.\nNur der Schadensersatz (§ 437 Nr. 3) verlangt, dass der Verkäufer den Mangel zu vertreten hat (§ 280 I).\nBeispiel (Skript Fall 5): Schrank 6.000 €, Minderung 300 € → V kann nur 5.700 € verlangen.",
+      "exam": true
+    },
+    {
+      "id": "recht-k095",
+      "topic": "Kaufrecht",
+      "front": "Schadensersatz statt der Leistung im Kaufrecht",
+      "back": "Grundlage: §§ 437 Nr. 3, 280 I, III, 281 (nach erfolgloser Frist), 283 (Nacherfüllung nachträglich unmöglich) oder 311a II (anfänglich unmöglich).\nZusätzlich nötig: **Vertretenmüssen**, vermutet nach § 280 I 2. Ersetzt wird der Wert der mangelfreien Leistung.\nBeispiel: Nach erfolgloser Frist kauft K eine gleichwertige Maschine woanders 50 € teurer → 50 € Mehrkosten.",
+      "exam": true
+    },
+    {
+      "id": "recht-k096",
+      "topic": "Kaufrecht",
+      "front": "Mangelfolgeschaden",
+      "back": "Ein Schaden an **anderen** Rechtsgütern des Käufers, den die mangelhafte Sache verursacht. Grundlage: §§ 437 Nr. 3, 280 I, **ohne** Frist.\nEine Frist wäre sinnlos, denn die Nacherfüllung macht den Folgeschaden nicht ungeschehen.\nBeispiel: Undichter Wasserkocher zerstört das Ladegerät → Ersatz für das Ladegerät, wenn der Verkäufer den Mangel zu vertreten hat.",
+      "exam": true
+    },
+    {
+      "id": "recht-k097",
+      "topic": "Kaufrecht",
+      "front": "Kenntnis des Käufers (§ 442)",
+      "back": "Kennt der Käufer den Mangel bei Vertragsschluss, hat er keine Mängelrechte (§ 442 I 1). Bei grob fahrlässiger Unkenntnis nur, wenn der Verkäufer arglistig war oder eine Garantie gab (§ 442 I 2).\nWer sehenden Auges kauft, soll sich nicht später beschweren.\nBeispiel: Rostiger Rahmen beim Gebrauchtrad deutlich sichtbar und besprochen → keine Rechte wegen des Rosts.",
+      "exam": false
+    },
+    {
+      "id": "recht-k098",
+      "topic": "Kaufrecht",
+      "front": "Gewährleistungsausschluss (§ 444): Wann gilt er nicht?",
+      "back": "Ein vertraglicher Ausschluss ist möglich, aber unwirksam, wenn der Verkäufer den Mangel **arglistig verschwiegen** oder eine **Garantie** übernommen hat (§ 444).\nBeim Verbrauchsgüterkauf ist ein Ausschluss ohnehin unwirksam (§ 476 I), in AGB gelten die §§ 305 ff.\nBeispiel: Privatverkauf „ohne Gewährleistung“, Verkäufer verschweigt bewusst einen Rahmenbruch → Käufer hat trotzdem Rechte.",
+      "exam": true
+    },
+    {
+      "id": "recht-k099",
+      "topic": "Kaufrecht",
+      "front": "Verjährung der Mängelansprüche (§ 438)",
+      "back": "Regelfall **2 Jahre** (§ 438 I Nr. 3), Beginn mit der **Ablieferung** (§ 438 II), nicht am Jahresende. Bauwerk und Baustoffe 5 Jahre, bei Arglist die regelmäßigen 3 Jahre (§§ 438 III, 195).\nBeispiel: Lieferung Mo 16.11.2026 → Ablauf Do 16.11.2028 (§§ 187 I, 188 II).\nRücktritt und Minderung hängen über § 218 daran (aus dem Gesetz).",
+      "exam": true
+    },
+    {
+      "id": "recht-k100",
+      "topic": "Kaufrecht",
+      "front": "Garantie vs. Gewährleistung",
+      "back": "**Gewährleistung:** gesetzlich, gegen den Verkäufer, für Mängel bei Gefahrübergang, meist 2 Jahre. **Garantie:** freiwilliges Zusatzversprechen, oft vom Hersteller, Inhalt frei gestaltbar (Vertragsfreiheit).\nDie Garantie gilt zusätzlich und ersetzt die Gewährleistung nicht.\nBeispiel: 5 Jahre Herstellergarantie auf den Motor + 2 Jahre Gewährleistung gegen den Händler.",
+      "exam": true
+    },
+    {
+      "id": "recht-k101",
+      "topic": "Kaufrecht",
+      "front": "Verbrauchsgüterkauf (§ 474 I)",
+      "back": "Ein **Verbraucher** (§ 13) kauft von einem **Unternehmer** (§ 14) eine **Ware**. Auch Ware plus Dienstleistung zählt (§ 474 I 2).\nDann gelten zusätzlich die Schutzregeln der §§ 475–479 (§ 474 II).\nBeispiel: Student kauft im Elektromarkt ein Handy → ja. Student kauft von einer Kommilitonin ein Rad → nein, beide privat.",
+      "exam": true
+    },
+    {
+      "id": "recht-k102",
+      "topic": "Kaufrecht",
+      "front": "§ 475d I: Rücktritt beim Verbrauchsgüterkauf ohne Fristsetzung",
+      "back": "Der Verbraucher muss keine Frist setzen, sondern den Unternehmer nur über den Mangel **unterrichten**. Bleibt dieser eine angemessene Zeit untätig, darf er zurücktreten (Nr. 1).\nEine angemessene Zeit muss trotzdem verstreichen, außer in den Fällen Nr. 2–5.\nFür den Schadensersatz gilt dasselbe nach § 475d II.",
+      "exam": true
+    },
+    {
+      "id": "recht-k103",
+      "topic": "Kaufrecht",
+      "front": "Verbraucher: Rücktritt schon nach dem ersten Reparaturversuch?",
+      "back": "Ja, nach **§ 475d I Nr. 2**, abweichend von § 440 S. 2 (zwei Versuche). Das gilt auch, wenn sich nach der Reparatur ein **anderer** Mangel zeigt.\nVerbraucher sollen nicht mehrfach auf Reparaturen warten müssen.\nBeispiel (Skript Fall 2, Variante 1): Display repariert, fällt erneut aus → Anton kann sofort zurücktreten, Rückgabekosten trägt der Händler (§ 475 VI).",
+      "exam": true
+    },
+    {
+      "id": "recht-k104",
+      "topic": "Kaufrecht",
+      "front": "§ 476: Kann man beim Verbrauchsgüterkauf die Gewährleistung ausschließen?",
+      "back": "Nein. Abweichungen zum Nachteil des Verbrauchers sind unwirksam (§ 476 I 1).\nVon den objektiven Anforderungen darf man nur abweichen, wenn der Verbraucher **vorher eigens** informiert wurde **und** es **ausdrücklich und gesondert** vereinbart ist (§ 476 I 2). Verjährung verkürzen: bei neuen Sachen nicht unter 2 Jahre, bei gebrauchten nicht unter 1 Jahr (§ 476 II).\nBeispiel: „Gekauft wie gesehen“ beim Händler → unwirksam.",
+      "exam": true
+    },
+    {
+      "id": "recht-k105",
+      "topic": "Kaufrecht",
+      "front": "Beweislastumkehr (§ 477 I)",
+      "back": "Zeigt sich ein Mangel **innerhalb eines Jahres** seit Gefahrübergang, wird vermutet, dass er schon bei Gefahrübergang da war. Dann muss der **Unternehmer** das Gegenteil beweisen.\n§ 477 verlängert nicht die Gewährleistung, er regelt nur die Beweislast.\nBeispiel: Lieferung 16.11.2026 → Vermutung bis 16.11.2027. Ausfall am 10.03.2028 → du musst beweisen, Rechte bestehen bis 16.11.2028.",
+      "exam": true
+    },
+    {
+      "id": "recht-k106",
+      "topic": "Kaufrecht",
+      "front": "Vorschuss und Rückgabekosten beim Verbrauchsgüterkauf",
+      "back": "Für die Kosten der Nacherfüllung kann der Verbraucher einen **Vorschuss** verlangen (§ 475 IV). Der Unternehmer muss in angemessener Frist ab Unterrichtung und ohne erhebliche Unannehmlichkeiten nacherfüllen (§ 475 V).\nTritt der Verbraucher zurück, trägt der **Unternehmer** die Kosten der Rückgabe (§ 475 VI).\nBeispiel: Waschmaschine muss zum Händler gebracht werden → Transport zahlt der Händler, auf Wunsch im Voraus.",
+      "exam": false
+    },
+    {
+      "id": "recht-k107",
+      "topic": "Kaufrecht",
+      "front": "Waren mit digitalen Elementen (§ 475b): Was gilt für Updates?",
+      "back": "Funktioniert die Ware ohne ihre Software nicht (Smartwatch, Smartphone), schuldet der Verkäufer auch **Updates**: Er muss informieren und sie bereitstellen (§ 475b IV Nr. 2). Fehlen sie, ist das ein Sachmangel, auch wenn sie vom Hersteller kommen.\nInstalliert der Verbraucher ein angebotenes Update nicht, haftet der Verkäufer insoweit nicht (§ 475b V).\nWie ausführlich das in der Klausur kommt, ist offen (Skript Fall 2, Variante 2).",
+      "exam": false
+    },
+    {
+      "id": "recht-k108",
+      "topic": "Kaufrecht",
+      "front": "Sonderangebot 60 % billiger, der Verschluss der Kette hakt. Hat K Mängelrechte?",
+      "back": "Ja. Ein günstiger Preis bedeutet **nicht**, dass eine mangelhafte Sache vereinbart ist. Der hakende Verschluss verfehlt die objektiven Anforderungen (§ 434 III).\nVerweigert V jede Fehlerbeseitigung, ist die Frist entbehrlich (§ 323 II Nr. 1).\nBeispiel (Skript Fall 6): K kann die richtig berechneten 40 € Minderung verlangen (§§ 437 Nr. 2, 441).",
+      "exam": true
+    },
+    {
+      "id": "recht-k109",
+      "topic": "Kaufrecht",
+      "front": "Zweimal erfolglos repariert, jetzt bietet der Händler eine neue Sache an. Muss der Käufer annehmen?",
+      "back": "Nein. Der Käufer hat die Nachbesserung gewählt (§ 439 I). Nach zwei Fehlschlägen gilt sie als fehlgeschlagen (§ 440 S. 2), eine weitere Frist ist nicht nötig.\nDer Verkäufer kann nicht einseitig auf die andere Art umschwenken.\nBeispiel (Skript Fall 8): K verlangt zu Recht Schadensersatz statt der ganzen Leistung (§§ 437 Nr. 3, 280 I, III, 281) und gibt den Wohnwagen zurück.",
+      "exam": true
+    },
+    {
+      "id": "recht-k110",
+      "topic": "Kaufrecht",
+      "front": "Käufer setzt nur 3 Tage Frist für eine Reparatur. Wirkungslos?",
+      "back": "Nein. 3 Tage sind für eine Reparatur meist zu kurz. Nach der Rechtsprechung (nicht im Skript) setzt eine zu kurze Frist aber eine **angemessene** Frist in Gang.\nIst auch die angemessene Zeit erfolglos verstrichen, kann der Käufer seine Rechte geltend machen.\nBeispiel (Skript Fall 7): Nach zwei Monaten ohne Reparatur → Schadensersatz statt der Leistung zu Recht verlangt.",
+      "exam": false
+    },
+    {
+      "id": "recht-k111",
+      "topic": "Widerruf",
+      "front": "Widerrufsrecht (§§ 312g, 355): Voraussetzungen",
+      "back": "1. Verbraucher ↔ Unternehmer 2. Vertrag **außerhalb von Geschäftsräumen** (§ 312b) oder **Fernabsatzvertrag** (§ 312c) 3. keine Ausnahme (§ 312g II) 4. Widerrufserklärung gegenüber dem Unternehmer, **ohne Grund** 5. innerhalb von 14 Tagen.\nGrund: Wer die Ware nicht sieht oder überrumpelt wird, bekommt Bedenkzeit.\nBeispiel: Online bestellter Stuhl gefällt nicht → widerrufen.",
+      "exam": true
+    },
+    {
+      "id": "recht-k112",
+      "topic": "Widerruf",
+      "front": "Fernabsatzvertrag (§ 312c)",
+      "back": "Unternehmer und Verbraucher schließen den Vertrag **ausschließlich** mit Fernkommunikationsmitteln (Brief, Telefon, E-Mail, Internet), im Rahmen eines für den Fernabsatz **organisierten** Vertriebssystems.\nDer Verbraucher sieht Ware und Partner nicht „in Natur“, deshalb wird er geschützt.\nBeispiele: Onlineshop, Katalog, **Teleshopping** mit Hotline (Skript Fall 11).",
+      "exam": true
+    },
+    {
+      "id": "recht-k113",
+      "topic": "Widerruf",
+      "front": "Vertrag außerhalb von Geschäftsräumen (§ 312b)",
+      "back": "Verbraucher und Unternehmer sind gleichzeitig körperlich an einem Ort, der **kein Geschäftsraum** ist (Haustür, Mensa, Ausflugsfahrt).\nGeschäftsraum ist ein fester Laden mit dauerhafter Tätigkeit oder ein beweglicher Stand mit gewöhnlicher Tätigkeit, etwa ein Marktstand (§ 312b II).\nBeispiel: Vertreter verkauft dir in der Mensa ein Zeitschriften-Abo → Widerrufsrecht.",
+      "exam": false
+    },
+    {
+      "id": "recht-k114",
+      "topic": "Widerruf",
+      "front": "Widerrufsfrist: Dauer, Beginn, Fristwahrung",
+      "back": "**14 Tage** (§ 355 II 1). Beginn mit Vertragsschluss, beim Kauf einer Ware erst mit **Erhalt** der Ware (§ 356 II Nr. 1 a). Zur Fristwahrung genügt die rechtzeitige **Absendung** (§ 355 I 5).\nBeispiel (mit Python geprüft): Erhalt Fr 20.11.2026, der Tag zählt nicht → Ende Fr 04.12.2026. E-Mail am 04.12. um 22 Uhr abgeschickt → rechtzeitig.",
+      "exam": true
+    },
+    {
+      "id": "recht-k115",
+      "topic": "Widerruf",
+      "front": "Folgen des Widerrufs (§ 357)",
+      "back": "Beide Seiten geben das Empfangene spätestens nach **14 Tagen** zurück (§ 357 I). Die unmittelbaren Rücksendekosten trägt grundsätzlich der **Verbraucher**, wenn er darüber informiert wurde (§ 357 V).\nViele Händler übernehmen sie freiwillig.\nBeispiel: Haarschneidemaschine für 99 € zurück, 99 € zurück, Porto zahlt Fred, falls der Händler darüber belehrt hat.",
+      "exam": false
+    },
+    {
+      "id": "recht-k116",
+      "topic": "Widerruf",
+      "front": "Was passiert bei falscher Widerrufsbelehrung?",
+      "back": "Die Frist beginnt nicht richtig zu laufen. Das Widerrufsrecht erlischt aber spätestens **12 Monate und 14 Tage** nach Erhalt der Ware bzw. Vertragsschluss (§ 356 III 2).\nSo bekommt der Unternehmer einen Anreiz, korrekt zu belehren, ohne ewig in der Schwebe zu bleiben.\nBeispiel: Ware erhalten im November 2026, keine Belehrung → Widerruf noch bis Ende November 2027 möglich.",
+      "exam": false
+    },
+    {
+      "id": "recht-k117",
+      "topic": "Widerruf",
+      "front": "Button-Lösung (§ 312j III)",
+      "back": "Online kommt ein Vertrag mit einem Verbraucher nur zustande, wenn der Bestellbutton gut lesbar mit **„zahlungspflichtig bestellen“** oder einer ebenso eindeutigen Formulierung beschriftet ist.\nDer Verbraucher soll klar erkennen, dass er gleich Geld schuldet.\nBeispiel: Button heißt nur „Weiter“ → **kein Vertrag**. Das ist keine Frage des Widerrufs.",
+      "exam": true
+    },
+    {
+      "id": "recht-k118",
+      "topic": "Widerruf",
+      "front": "Kündigungsbutton (§ 312k)",
+      "back": "Bei online abschließbaren Dauerschuldverhältnissen (Abos) muss es eine gut sichtbare Kündigungsschaltfläche und eine Bestätigungsseite geben (seit 1.7.2022).\nFehlt sie, kann der Verbraucher **jederzeit ohne Kündigungsfrist** kündigen (§ 312k VI).\nBeispiel: Streaming-Abo ohne Kündigungsbutton → sofortige Kündigung möglich.",
+      "exam": false
+    },
+    {
+      "id": "recht-k119",
+      "topic": "Widerruf",
+      "front": "Gibt es im Laden ein Widerrufsrecht?",
+      "back": "Nein. Das gesetzliche Widerrufsrecht gilt nur außerhalb von Geschäftsräumen und im Fernabsatz. Im Laden konntest du die Ware ja ansehen.\nEin „Rückgaberecht“ im Laden gibt es nur, wenn der Händler es freiwillig vertraglich einräumt.\nBeispiel (Skript Fall 3): Regal nach zehn Monaten zurückgeben, nur weil es nicht mehr gefällt → kein gesetzlicher Anspruch, kein Mangel.",
+      "exam": true
+    },
+    {
+      "id": "recht-k120",
+      "topic": "SE · AGB",
+      "front": "§ 309 Nr. 8 b: AGB „nur Nachbesserung“",
+      "back": "Bei **neu hergestellten** Sachen dürfen AGB die Mängelrechte nicht auf Nachbesserung beschränken, ohne dem Käufer ausdrücklich das Recht vorzubehalten, bei Fehlschlagen zu **mindern oder zurückzutreten** (Nr. 8 b bb).\nFolge: Klausel unwirksam, es gilt das Gesetz (§ 306 II).\nBeispiel (Skript Fall 9): Neue Waschmaschine, AGB „nur Nachbesserung“ → unwirksam. Rücktritt aber trotzdem erst nach erfolgloser Frist.",
+      "exam": true
+    },
+    {
+      "id": "recht-k121",
+      "topic": "SE · AGB",
+      "front": "§ 309 Nr. 7: Haftungsausschluss in AGB",
+      "back": "**Nr. 7 a:** Die Haftung für Verletzung von **Leben, Körper, Gesundheit** darf nicht ausgeschlossen werden, auch nicht für einfache Fahrlässigkeit. **Nr. 7 b:** Für sonstige Schäden ist nur der Ausschluss **grober** Fahrlässigkeit und Vorsatz verboten.\nBeispiel (Skript Fall 10, aus dem Gesetz ergänzt): Fitnessstudio „Haftung nur bei grober Fahrlässigkeit“, Hantel fällt auf die Schulter → Klausel unwirksam, A haftet für Arztkosten und Schmerzensgeld.",
+      "exam": true
+    },
+    {
+      "id": "recht-k122",
+      "topic": "SE · AGB",
+      "front": "Schuldübernahme vs. Schuldbeitritt",
+      "back": "**Schuldübernahme** (§§ 414, 415): Der neue Schuldner tritt **an die Stelle** des alten. Der Gläubiger muss mitwirken, weil ihm nicht egal ist, wer zahlt.\n**Schuldbeitritt** (Vertrag, § 311 I): Der neue Schuldner tritt **neben** den alten, beide haften.\nBeispiel: Die Mutter tritt dem Handyvertrag ihres Sohnes bei → Anbieter kann von beiden zahlen lassen.",
+      "exam": false
+    },
+    {
+      "id": "recht-k123",
+      "topic": "SE · AGB",
+      "front": "Immaterieller Schaden (§ 253)",
+      "back": "Schäden, die kein Geld kosten (Schmerzen, Ärger), werden nur ersetzt, wo das Gesetz es vorsieht (§ 253 I).\nWichtigster Fall: **Schmerzensgeld** bei Verletzung von Körper, Gesundheit, Freiheit oder sexueller Selbstbestimmung (§ 253 II).\nBeispiel: Prellung durch eine herunterfallende Hantel → Arztkosten (§ 249 II) plus Schmerzensgeld.",
+      "exam": true
+    },
+    {
+      "id": "recht-k124",
+      "topic": "SE · AGB",
+      "front": "Überraschende vs. mehrdeutige AGB-Klausel (§ 305c)",
+      "back": "**Überraschend** (§ 305c I): Die Klausel wird gar nicht Vertragsbestandteil. **Mehrdeutig** (§ 305c II): Sie gilt, wird aber zulasten des Verwenders ausgelegt.\nDas Skript (S. 48) nennt beide „unwirksam“ – das ist ungenau.\nBeispiel: Beim Kauf eines Druckers steht im Kleingedruckten ein Abo für Tinte → überraschend, nicht einbezogen.",
+      "exam": false
+    },
+    {
+      "id": "recht-k125",
+      "topic": "SE · AGB",
+      "front": "Vorrang der Individualabrede (§ 305b)",
+      "back": "Was im Einzelfall persönlich vereinbart wird, geht den AGB vor.\nGrund: Wer etwas ausdrücklich zusagt, soll sich nicht hinter dem Kleingedruckten verstecken.\nBeispiel: AGB „Umtausch ausgeschlossen“, Verkäuferin sagt beim Kauf „14 Tage Umtausch“ → du kannst 14 Tage umtauschen.",
+      "exam": true
+    },
+    {
+      "id": "recht-k126",
+      "topic": "Vertretung",
+      "front": "Insichgeschäft (§ 181): Wann ist es erlaubt?",
+      "back": "Grundsätzlich darf ein Vertreter nicht mit sich selbst oder für beide Seiten abschließen. Erlaubt ist es, wenn es **gestattet** ist, wenn es **ausschließlich der Erfüllung einer Verbindlichkeit** dient oder (Rechtsprechung) für den Vertretenen lediglich rechtlich vorteilhaft ist.\nBeispiel (offizielle Lösung Fall 6): Käufer und Verkäufer befreien die Notariatsangestellte von § 181 → Auflassung für beide zulässig.",
+      "exam": true
+    },
+    {
+      "id": "recht-k127",
+      "topic": "Vertretung",
+      "front": "Woher kommt Vertretungsmacht?",
+      "back": "**Rechtsgeschäftlich:** Vollmacht (§ 167). **Gesetzlich:** Eltern für ihr Kind (§ 1629), Ehegatten in Gesundheitsfragen (§ 1358). **Organschaftlich:** Vorstand der AG, Geschäftsführer der GmbH.\nFehlt alles, kann noch eine Rechtsscheinvollmacht helfen (Duldung, Anschein).\nBeispiel: Die Mutter kauft für ihr 5-jähriges Kind einen Kindersitz im Namen des Kindes → gesetzliche Vertretung.",
+      "exam": false
+    },
+    {
+      "id": "recht-k128",
+      "topic": "Vertretung",
+      "front": "Kündigung durch einen Vertreter ohne Vertretungsmacht",
+      "back": "Bei einseitigen Rechtsgeschäften wie einer Kündigung ist Vertretung ohne Vertretungsmacht grundsätzlich unzulässig (§ 180 S. 1). Die Erklärung ist **nichtig**, nicht schwebend unwirksam.\nDer Empfänger soll nicht im Unklaren bleiben, ob gekündigt ist.\nBeispiel: Mitbewohner kündigt ohne Vollmacht deinen Handyvertrag → wirkungslos, du musst selbst kündigen.",
+      "exam": false
+    },
+    {
+      "id": "recht-k129",
+      "topic": "Fristen",
+      "front": "Monatsfrist, wenn es den Tag im Folgemonat nicht gibt (§ 188 III)",
+      "back": "Dann endet die Frist am **letzten Tag** des Monats (§ 188 III).\nBeispiel: Ereignis Sa 31.10.2026, Frist 1 Monat → einen 31.11. gibt es nicht → Ende Mo 30.11.2026, 24 Uhr.\nFällt dieser letzte Tag auf ein Wochenende und ist etwas zu erklären oder zu leisten, gilt zusätzlich § 193.",
+      "exam": false
+    },
+    {
+      "id": "recht-k130",
+      "topic": "Fristen",
+      "front": "Hemmung vs. Neubeginn der Verjährung",
+      "back": "**Hemmung** (§ 209) = Pause-Taste: Die Zeit der Hemmung zählt nicht mit, z. B. bei Verhandlungen (§ 203) oder Klage (§ 204). **Neubeginn** (§ 212) = Reset-Taste: Die Frist beginnt neu, z. B. bei einem Anerkenntnis.\nBeispiel: Schuldner zahlt eine Abschlagsrate → Anerkenntnis, die drei Jahre laufen neu (§ 212 I Nr. 1).",
+      "exam": true
+    },
+    {
+      "id": "recht-k131",
+      "topic": "Fristen",
+      "front": "Ab wann ist man volljährig (§ 187 II 2)?",
+      "back": "Beim Lebensalter zählt der Geburtstag **mit** (§ 187 II 2). Man ist also am 18. Geburtstag ab 0 Uhr volljährig.\nDas ist die Ausnahme zu § 187 I, wo der Ereignistag nicht zählt.\nBeispiel: Geboren am 14.12.2008 → ab Mo 14.12.2026, 0 Uhr voll geschäftsfähig (§ 2).",
+      "exam": false
+    },
+    {
+      "id": "recht-k132",
+      "topic": "Schuldverhältnis",
+      "front": "Holschuld, Bringschuld, Schickschuld (§ 269)",
+      "back": "Ohne Vereinbarung gilt der Wohnsitz des Schuldners als Leistungsort: **Holschuld** (Regelfall). **Bringschuld:** Der Schuldner liefert zum Gläubiger. **Schickschuld:** Der Schuldner versendet, der Erfolg tritt beim Gläubiger ein.\nDavon hängt ab, was der Schuldner für die Konkretisierung tun muss.\nBild: Pizza abholen / Lieferdienst / Paket per Post.",
+      "exam": true
+    },
+    {
+      "id": "recht-k133",
+      "topic": "Schuldverhältnis",
+      "front": "Wann gelten die §§ 327 ff. (digitale Produkte)?",
+      "back": "Bei Verbraucherverträgen (Unternehmer ↔ Verbraucher, § 327 I) über digitale Inhalte oder Dienstleistungen (Apps, E-Books, Streaming, § 327 II), gegen Geld **oder personenbezogene Daten** (§ 327 III).\nNicht bei Waren mit digitalen Elementen wie einer Smartwatch: dort gilt Kaufrecht (§ 327a III).\nBeispiel: Kostenlose Foto-App, die Daten für Werbung nutzt → §§ 327 ff. gelten.",
+      "exam": false
+    },
+    {
+      "id": "recht-k134",
+      "topic": "Schuldverhältnis",
+      "front": "E-Book wird trotz Aufforderung nicht bereitgestellt. Rechte?",
+      "back": "Der Unternehmer muss das digitale Produkt unverzüglich bereitstellen (§ 327b). Kommt er der Aufforderung nicht nach, kann die Verbraucherin den Vertrag **beenden** (§ 327c I) und den Preis zurückverlangen (§ 327o).\nBei Vertretenmüssen kommt Schadensersatz dazu (§ 327c II).\nBeispiel: Kaufrecht-Skript Fall 2.1 (eigene Lösungsskizze).",
+      "exam": false
+    },
+    {
+      "id": "recht-k135",
+      "topic": "Schuldverhältnis",
+      "front": "Erfüllung durch Zahlung an einen Dritten (§ 362 II)",
+      "back": "Die Schuld erlischt nur, wenn an den **Gläubiger** geleistet wird (§ 362 I). An einen Dritten nur, wenn der Gläubiger zugestimmt oder ihn ermächtigt hat (§§ 362 II, 185).\nWer an den Falschen zahlt, muss unter Umständen doppelt zahlen.\nBeispiel (Skript Fall Schuldverhältnis 1): Bargeld in den offenen Briefkasten im Hausflur → keine sichere Leistung, S trägt das Risiko (§ 270 I).",
+      "exam": true
+    },
+    {
+      "id": "recht-k136",
+      "topic": "Fall lösen",
+      "front": "Wie zitierst du Mängelrechte richtig?",
+      "back": "Immer **§ 437** plus die Norm mit den Details: Nacherfüllung **§§ 437 Nr. 1, 439 I**, Rücktritt **§§ 437 Nr. 2, 323 I, 346 I**, Minderung **§§ 437 Nr. 2, 441**, Schadensersatz **§§ 437 Nr. 3, 280 I, III, 281 I**.\nOhne § 437 fehlt die Verbindung zum Kaufvertrag.\nObersatz-Beispiel: „K könnte gegen V einen Anspruch auf Rückzahlung von 300 € aus §§ 437 Nr. 2, 323 I, 346 I BGB haben.“",
+      "exam": true
+    },
+    {
+      "id": "recht-k137",
+      "topic": "Fall lösen",
+      "front": "In welcher Reihenfolge prüfst du Anspruchsgrundlagen?",
+      "back": "Erst **vertragliche** (§ 433, § 437 …), dann vertragsähnliche (c.i.c., § 179), dann Eigentum und Besitz (§ 985), dann Delikt (§ 823), dann Bereicherung (§ 812) (Skript S. 50).\nGrund: Der Vertrag ist am genauesten auf die Beteiligten zugeschnitten.\nBeispiel Fitnessstudio-Fall: erst §§ 280 I, 241 II aus dem Vertrag, danach § 823 I.",
+      "exam": false
+    },
+    {
+      "id": "recht-k138",
+      "topic": "Grundlagen",
+      "front": "Vertretbare Sache (§ 91)",
+      "back": "Eine Sache, die nach Zahl, Maß oder Gewicht bestimmt wird und austauschbar ist. Testfrage: Wäre dir ein anderes Exemplar derselben Sorte genauso recht?\nWichtig für Stück- oder Gattungsschuld.\nBeispiel: 50 Liter Heizöl, ein 20-€-Schein → vertretbar. Der gebrauchte Golf mit Kennzeichen HN-AB 123 → nicht vertretbar.",
+      "exam": false
+    },
+    {
+      "id": "recht-k139",
+      "topic": "Grundlagen",
+      "front": "Juristische Person",
+      "back": "Eine vom Recht als Person anerkannte Vereinigung oder Vermögensmasse. Sie ist selbst rechtsfähig und handelt durch ihre Organe (Vorstand, Geschäftsführer).\nSie ist nie Verbraucher, weil § 13 eine natürliche Person verlangt.\nBeispiele: GmbH, AG, eingetragener Verein, Stiftung, Gemeinde. Die GmbH ist selbst Eigentümerin ihrer Firmenwagen.",
+      "exam": false
+    },
+    {
+      "id": "recht-k140",
+      "topic": "Störungen",
+      "front": "Wegfall der Geschäftsgrundlage (§ 313)",
+      "back": "Die Grundlage des Vertrags hat sich nach Vertragsschluss schwerwiegend verändert (I) oder gemeinsame Vorstellungen waren von Anfang an falsch (II). Die Parteien hätten so nicht abgeschlossen, Festhalten ist unzumutbar.\nFolge: zuerst Anpassung, sonst Rücktritt oder Kündigung (§ 313 III).\nAber: seltene Ausnahme. Ein schlechtes Geschäft allein reicht nie.",
+      "exam": false
+    },
+    {
+      "id": "recht-k141",
+      "topic": "Unwirksamkeit",
+      "front": "Wucher (§ 138 II)",
+      "back": "Nichtig ist ein Geschäft, wenn ein **auffälliges Missverhältnis** von Leistung und Gegenleistung besteht **und** eine Zwangslage, Unerfahrenheit, mangelndes Urteilsvermögen oder erhebliche Willensschwäche **ausgebeutet** wird.\nEin hoher Preis allein reicht nicht.\nBeispiel: Schlüsseldienst verlangt nachts 900 € von jemandem, der ausgesperrt ist → Wucher.",
+      "exam": false
+    },
+    {
+      "id": "recht-k142",
+      "topic": "Unwirksamkeit",
+      "front": "Erst auslegen, dann anfechten",
+      "back": "Bevor du einen Irrtum prüfst, klärst du, was die Erklärung bedeutet. Maßgeblich ist, wie der Empfänger sie verstehen durfte (§§ 133, 157).\nErst wenn Gemeintes und objektiv Erklärtes auseinanderfallen, kommt eine Anfechtung in Betracht.\nBeispiel: „Ein Dutzend Brötchen“ darf der Bäcker als 12 verstehen. Wer 10 meinte, kann nur nach § 119 I anfechten.",
       "exam": true
     }
   ],
@@ -566,7 +1007,7 @@
         "„K könnte gegen V einen Anspruch aus § 433 I 1 BGB haben.“"
       ],
       "correct": 3,
-      "explain": "Der Gutachtenstil beginnt mit einem Obersatz im Konjunktiv („könnte“). „Weil“ und „denn“ zeigen den Urteilsstil."
+      "explain": "Der Gutachtenstil beginnt mit einer Frage im Konjunktiv („könnte“), danach folgen Voraussetzung, Subsumtion und Ergebnis.\nVerlockend ist „K hat einen Anspruch, weil …“: Das ist Urteilsstil, denn das Ergebnis steht vorn und „weil“ liefert die Begründung nach."
     },
     {
       "id": "recht-q002",
@@ -579,7 +1020,7 @@
         "Ja, über 190 € als Mittelwert"
       ],
       "correct": 2,
-      "explain": "Eine Annahme mit Änderungen gilt als Ablehnung plus neues Angebot. Leas Angebot ist erloschen (§ 146)."
+      "explain": "Eine Annahme mit Änderungen gilt als Ablehnung plus neues Angebot (§ 150 II). Leas Angebot über 200 € ist damit erloschen (§ 146).\nDass Tom vor Freitag geantwortet hat, hilft nicht: Rechtzeitig ist nur ein reines „Ja“ eine Annahme. Jetzt müsste Lea Toms Angebot über 180 € annehmen."
     },
     {
       "id": "recht-q003",
@@ -592,7 +1033,7 @@
         "Nein – das Schaufenster ist nur eine invitatio ad offerendum, V hat Ks Angebot nicht angenommen"
       ],
       "correct": 3,
-      "explain": "Erst K gibt das Angebot ab. V nimmt es nicht an, also kein Vertrag (Skriptfall Vertrag 1)."
+      "explain": "Das Schaufenster ist eine invitatio ad offerendum. Das Angebot macht erst K im Laden, und V hat es nicht angenommen (Skript Fall Vertrag 1).\nVerlockend ist „bindendes Angebot“: Dann müsste V die Kamera an jeden Passanten verkaufen, auch wenn sie längst weg ist. Genau das will das Gesetz vermeiden."
     },
     {
       "id": "recht-q004",
@@ -605,7 +1046,7 @@
         "Ja, weil nur die Abgabe zählt"
       ],
       "correct": 2,
-      "explain": "Zugang erfordert die Möglichkeit der Kenntnisnahme unter normalen Umständen (§ 130 I 1); ein Büro leert nachts nicht den Briefkasten."
+      "explain": "Zugegangen ist eine Erklärung, wenn unter normalen Umständen mit Kenntnisnahme zu rechnen ist (§ 130 I 1). Ein Geschäftsbriefkasten wird nachts nicht geleert, also geht die Kündigung erst am 01.07. zu.\n„Einwurf vor 24 Uhr genügt“ verwechselt Abgabe und Zugang. Beim Privatbriefkasten gilt das genauso nicht, es kommt auf die übliche Leerungszeit an."
     },
     {
       "id": "recht-q005",
@@ -618,7 +1059,7 @@
         "Gar nicht, M war ja abwesend"
       ],
       "correct": 2,
-      "explain": "Entscheidend ist die Möglichkeit der Kenntnisnahme, nicht das tatsächliche Lesen. Der Urlaub ist Ms Risiko."
+      "explain": "Entscheidend ist die Möglichkeit der Kenntnisnahme. Der Brief liegt am Dienstag zur üblichen Zeit im Briefkasten, also ist er am Dienstag zugegangen. Der Urlaub ist Ms Risiko.\n„Erst wenn M ihn liest“ ist falsch: Sonst könnte jeder den Zugang verhindern, indem er Post einfach nicht öffnet."
     },
     {
       "id": "recht-q006",
@@ -631,7 +1072,7 @@
         "Zugegangen, sobald das Kind sie annimmt"
       ],
       "correct": 1,
-      "explain": "Eine Vierjährige ist nicht zum Empfang ermächtigt; Verlust geht zulasten des Erklärenden (Skriptfall Zugang 2)."
+      "explain": "Ein 4-jähriges Kind ist nicht geeignet, Erklärungen entgegenzunehmen. Es ist kein Empfangsbote, sondern Erklärungsbote des Müller. Wirft es den Brief weg, trägt Müller das Risiko (Skript Fall Zugang 2).\n„Nichtig nach § 105“ passt nicht: Das Kind gibt keine eigene Willenserklärung ab, es soll nur etwas weitertragen."
     },
     {
       "id": "recht-q007",
@@ -644,7 +1085,7 @@
         "Nur wenn der Empfänger zustimmt"
       ],
       "correct": 1,
-      "explain": "Ein Widerruf hindert die Wirksamkeit, wenn er vorher oder gleichzeitig zugeht."
+      "explain": "Eine Willenserklärung wird nicht wirksam, wenn vorher oder gleichzeitig ein Widerruf zugeht (§ 130 I 2). Der Anruf um 8 Uhr kam vor dem Brief um 11 Uhr.\n„Der Brief war schon abgegeben“ hilft nicht: Abgabe allein macht eine empfangsbedürftige Erklärung noch nicht wirksam, erst der Zugang."
     },
     {
       "id": "recht-q008",
@@ -657,7 +1098,7 @@
         "Nein – Schweigen ist keine Annahme, § 241a schließt Ansprüche aus"
       ],
       "correct": 3,
-      "explain": "Schweigen hat keinen Erklärungswert und kann vom Absender nicht einseitig umdefiniert werden (§ 241a)."
+      "explain": "Schweigen ist keine Willenserklärung, und der Absender kann das nicht einseitig festlegen. Außerdem schließt § 241a bei unbestellter Ware jeden Anspruch gegen den Verbraucher aus.\nDer beigelegte Rückumschlag ändert nichts: K muss gar nichts tun, auch nicht zurückschicken."
     },
     {
       "id": "recht-q009",
@@ -670,7 +1111,7 @@
         "Nein – ohne notarielle Beurkundung nichtig (§§ 311b I 1, 125)"
       ],
       "correct": 3,
-      "explain": "Grundstückskauf braucht den Notar; Heilung nur durch Auflassung und Grundbucheintrag (§ 311b I 2)."
+      "explain": "Ein Grundstückskauf braucht notarielle Beurkundung (§ 311b I 1). Ohne sie ist er nichtig (§ 125 S. 1). Heilung nur durch Auflassung und Grundbucheintrag (§ 311b I 2).\n„Verträge sind formfrei“ stimmt nur als Grundsatz. Für besonders folgenreiche Geschäfte macht das Gesetz Ausnahmen."
     },
     {
       "id": "recht-q010",
@@ -683,7 +1124,7 @@
         "Eigenschaftsirrtum, § 119 II"
       ],
       "correct": 1,
-      "explain": "Wer sich verschreibt oder vertippt, erklärt etwas, das er so gar nicht erklären wollte."
+      "explain": "A wollte „12.000“ schreiben und hat „11.000“ getippt: Er hat etwas erklärt, was er so gar nicht erklären wollte. Das ist ein Erklärungsirrtum (§ 119 I Alt. 2).\nInhaltsirrtum wäre es, wenn er „11.000“ schreiben wollte, aber über die Bedeutung irrte. Hier stimmt schon das Wort nicht."
     },
     {
       "id": "recht-q011",
@@ -696,7 +1137,7 @@
         "Erklärungsirrtum, § 119 I Alt. 2"
       ],
       "correct": 1,
-      "explain": "Alter und Echtheit sind verkehrswesentliche, wertbildende Eigenschaften."
+      "explain": "Alter und Echtheit sind wertbildende, verkehrswesentliche Eigenschaften der Sache. Wer sich darüber irrt, kann nach § 119 II anfechten.\nEin Motivirrtum wäre es nur, wenn sich B über einen Grund außerhalb der Sache irrt, etwa „die Vase passt zu meinem Sofa“."
     },
     {
       "id": "recht-q012",
@@ -709,7 +1150,7 @@
         "Ja, innerhalb eines Jahres nach § 124"
       ],
       "correct": 1,
-      "explain": "Ein Irrtum nur über Beweggründe berechtigt nicht zur Anfechtung."
+      "explain": "C hat sich nur über den Grund für den Kauf geirrt. Am Geschenkpapier selbst stimmt alles. Ein reiner Motivirrtum berechtigt nicht zur Anfechtung.\n§ 119 II greift nicht, weil die abgesagte Feier keine Eigenschaft des Papiers ist. Sonst könnte jeder jeden Kauf rückgängig machen, wenn sich sein Plan ändert."
     },
     {
       "id": "recht-q013",
@@ -722,7 +1163,7 @@
         "800 €"
       ],
       "correct": 0,
-      "explain": "§ 122 I: 4 € + 600 € = 604 €; die Obergrenze (Erfüllungsinteresse 800 €) ist nicht überschritten."
+      "explain": "Nach § 122 I muss Frau Maier Paul so stellen, als hätte er nie von der Buchung gehört: 4 € + 600 € = 604 €. Die Obergrenze, das Erfüllungsinteresse von 800 €, ist nicht überschritten.\n1.404 € wäre Vertrauensschaden plus Mietpreis. Den Mietpreis schuldet sie gerade nicht, weil der Vertrag durch die Anfechtung nichtig ist."
     },
     {
       "id": "recht-q014",
@@ -735,7 +1176,7 @@
         "Nein, schwebend unwirksam (§ 108)"
       ],
       "correct": 0,
-      "explain": "Jonas bekommt nur etwas und muss nichts leisten; spätere Kosten sind nur wirtschaftliche Folgen."
+      "explain": "Bei einer Schenkung bekommt Jonas nur etwas und muss nichts geben. Das ist lediglich rechtlich vorteilhaft, also ohne Eltern wirksam (§ 107).\n„Schwebend unwirksam“ wäre richtig bei einem Kauf. Spätere Kosten wie Versicherung und Benzin sind nur wirtschaftliche Folgen, keine rechtlichen Pflichten aus der Schenkung."
     },
     {
       "id": "recht-q015",
@@ -748,7 +1189,7 @@
         "Endgültig unwirksam – § 110 greift nicht, weil nicht vollständig bezahlt"
       ],
       "correct": 3,
-      "explain": "„Bewirkt“ heißt vollständig bezahlt. Ohne Einwilligung schwebend unwirksam, die Ablehnung der Eltern macht es endgültig."
+      "explain": "§ 110 verlangt, dass Paul die Leistung vollständig bewirkt, also ganz bezahlt hat. 160 € von 250 € reichen nicht. Ohne Einwilligung ist der Vertrag schwebend unwirksam, die Ablehnung der Eltern macht ihn endgültig unwirksam.\nDass Taschengeld zur freien Verfügung ist, hilft nur, wenn auch vollständig gezahlt wird. Bei Raten ist das nicht der Fall."
     },
     {
       "id": "recht-q016",
@@ -761,7 +1202,7 @@
         "Nichtig, weil Max minderjährig ist"
       ],
       "correct": 1,
-      "explain": "Die Einwilligung wird verneint, weil noch kein konkreter Player feststand. Aber § 110 greift: Max hat mit zweckgebunden überlassenen Mitteln voll bezahlt. Der Vertrag ist von Anfang an wirksam, § 108 II läuft ins Leere."
+      "explain": "Die Einwilligung wird verneint, weil bei der Geldübergabe noch kein konkreter Player feststand. Aber § 110 greift: Max hat voll bezahlt, mit Mitteln, die ihm zu diesem Zweck überlassen wurden. Der Vertrag ist von Anfang an wirksam (offizielle Lösung).\nDie Antwort „nach 2 Wochen verweigert“ ist verlockend, passt aber nicht: § 108 II setzt einen schwebend unwirksamen Vertrag voraus. Hier schwebt nichts."
     },
     {
       "id": "recht-q017",
@@ -774,7 +1215,7 @@
         "Ja, zwischen Sohn und Bäcker"
       ],
       "correct": 2,
-      "explain": "Ein Bote überbringt eine fremde WE und braucht keine Geschäftsfähigkeit."
+      "explain": "Der Sohn bekommt einen genauen Zettel und hat keinen Spielraum. Er überbringt die Willenserklärung der Mutter, ist also Bote. Ein Bote braucht keine Geschäftsfähigkeit, der Vertrag kommt zwischen Mutter und Bäcker zustande (offizielle Lösung).\n„Nein, geschäftsunfähig“ wäre nur richtig, wenn der Sohn eine eigene Erklärung abgeben müsste, also Vertreter wäre."
     },
     {
       "id": "recht-q018",
@@ -787,7 +1228,7 @@
         "Nur von B Vertrauensschaden verlangen"
       ],
       "correct": 0,
-      "explain": "V handelte ohne Vertretungsmacht und kannte den Mangel; nach Verweigerung haftet er selbst."
+      "explain": "V hatte nur Vollmacht für einen Kaffeevollautomaten. Für das Smartphone fehlt sie, B hat die Genehmigung verweigert (§ 177 I). V kannte den Mangel und haftet deshalb nach § 179 I auf Erfüllung oder Schadensersatz. Die offizielle Lösung nennt die Erfüllung: Abnahme und Zahlung.\n„Von B zahlen lassen“ ist falsch, weil die Vollmacht das Smartphone nicht deckt."
     },
     {
       "id": "recht-q019",
@@ -800,7 +1241,7 @@
         "Nein, der Angestellte haftet allein nach § 179"
       ],
       "correct": 0,
-      "explain": "Der Chef weiß vom Auftreten und unternimmt nichts; das ist der Fall der Duldungsvollmacht."
+      "explain": "Der Chef weiß, dass der Angestellte für ihn auftritt, und unternimmt nichts. Er zahlt sogar. Das ist Duldungsvollmacht, er ist gebunden (offizielle Lösung Fall 5).\nAnscheinsvollmacht wäre es, wenn der Chef nichts wüsste, es aber hätte erkennen können. Entscheidend ist das Wissen."
     },
     {
       "id": "recht-q020",
@@ -813,7 +1254,7 @@
         "Mo 16.11.2026, 24 Uhr"
       ],
       "correct": 2,
-      "explain": "Der Zugangstag zählt nicht (§ 187 I); Ende am gleichnamigen Wochentag zwei Wochen später (§ 188 II)."
+      "explain": "Der Zugangstag zählt nicht (§ 187 I), Tag 1 ist Samstag, 31.10. Zwei Wochen enden am gleichnamigen Wochentag (§ 188 II): Freitag, 13.11.2026, 24 Uhr.\nDonnerstag, 12.11., ist der häufigste Fehler: Wer den Zugangstag mitzählt, ist einen Tag zu früh."
     },
     {
       "id": "recht-q021",
@@ -826,7 +1267,7 @@
         "Mit Ablauf des 31.12.2029"
       ],
       "correct": 3,
-      "explain": "3 Jahre (§ 195), Beginn mit Schluss des Jahres 2026 (§ 199 I)."
+      "explain": "Regelmäßige Verjährung: 3 Jahre (§ 195), Beginn erst mit dem Schluss des Jahres 2026 (§ 199 I). Ablauf also am 31.12.2029.\n„30.10.2029“ ist verlockend, weil man drei Jahre ab Entstehung zählt. § 199 I schiebt den Beginn aber ans Jahresende."
     },
     {
       "id": "recht-q022",
@@ -839,7 +1280,7 @@
         "Nur B"
       ],
       "correct": 3,
-      "explain": "Die Gegenforderung des Aufrechnenden muss fällig sein: As 300 € sind es nicht, Bs 1.000 € schon. B darf seine eigene Schuld vorzeitig erfüllen."
+      "explain": "Wer aufrechnet, muss seine eigene Forderung (Gegenforderung) schon verlangen können. Bs Forderung über 1.000 € ist fällig, As 300 € sind es noch nicht. Also kann nur B aufrechnen. Seine eigene Schuld darf er im Zweifel früher erfüllen (§ 271 II).\n„Beide“ ist falsch, weil A mit einer noch nicht fälligen Forderung nichts verlangen kann."
     },
     {
       "id": "recht-q023",
@@ -852,7 +1293,7 @@
         "K muss zahlen, weil der Vertrag geschlossen war"
       ],
       "correct": 0,
-      "explain": "Stückschuld unmöglich → § 275 I; Kaufpreis entfällt nach § 326 I; ohne Vertretenmüssen kein Schadensersatz."
+      "explain": "Ein bestimmter Gebrauchtwagen ist eine Stückschuld. Ist er zerstört, wird V frei (§ 275 I), und K muss nicht zahlen (§ 326 I 1). Ohne Vertretenmüssen gibt es keinen Schadensersatz.\n„Gleichwertigen Wagen liefern“ würde nur bei einer Gattungsschuld passen. Dieser Wagen ist einmalig."
     },
     {
       "id": "recht-q024",
@@ -865,7 +1306,7 @@
         "Ab 07.06."
       ],
       "correct": 2,
-      "explain": "„Zahlbar sofort“ ist keine Mahnung; § 286 III: 30 Tage ab Zugang, Ende 06.07., Verzug ab 07.07."
+      "explain": "„Zahlbar sofort“ ist weder Mahnung noch Kalenderdatum. Es gilt § 286 III: 30 Tage nach Zugang der Rechnung. Zugang 06.06., Tag 30 ist der 06.07., Verzug ab 07.07.\n„Ab 07.06.“ wäre richtig, wenn „sofort“ eine Mahnung ersetzen würde. Das tut es nicht."
     },
     {
       "id": "recht-q025",
@@ -878,7 +1319,7 @@
         "Ja, immer"
       ],
       "correct": 0,
-      "explain": "Ist die Leistungszeit nach dem Kalender bestimmt, ist die Mahnung entbehrlich."
+      "explain": "Ist die Leistungszeit nach dem Kalender bestimmt, ersetzt der Kalender die Mahnung (§ 286 II Nr. 1). Der Kunde ist ab dem 01.12.2026 im Verzug.\n„Erst nach 30 Tagen“ verwechselt Nr. 1 mit der Rechnungsregel des § 286 III, die nur greift, wenn kein Datum vereinbart ist."
     },
     {
       "id": "recht-q026",
@@ -891,7 +1332,7 @@
         "Wegfall der Geschäftsgrundlage"
       ],
       "correct": 1,
-      "explain": "Die Fahrt zum Flug kann nicht sinnvoll nachgeholt werden; § 275 I, du musst nicht zahlen (§ 326 I)."
+      "explain": "Die Fahrt zum Flug um 8 Uhr kann um 9 Uhr nicht mehr sinnvoll erbracht werden. Das ist ein absolutes Fixgeschäft, Verspätung bedeutet Unmöglichkeit (§ 275 I). Du musst nicht zahlen (§ 326 I).\nSchuldnerverzug setzt voraus, dass die Leistung noch nachholbar ist. Das ist sie hier nicht."
     },
     {
       "id": "recht-q027",
@@ -904,7 +1345,7 @@
         "Nein, § 326 I"
       ],
       "correct": 2,
-      "explain": "Wörtliches Angebot genügt (§ 295), Leistungsgefahr ging über (§ 300 II), Gegenleistungsgefahr nach § 326 II."
+      "explain": "Hans hat erklärt, er nehme nicht an. Dann genügt Pauls wörtliches Angebot (§ 295), Hans ist im Annahmeverzug. Die Gefahr ist übergegangen (§ 300 II), und Paul behält den Kaufpreisanspruch (§ 326 II 1 Alt. 2).\n„Paul muss neue Kartoffeln bringen“ wäre ohne Annahmeverzug richtig, weil die Bringschuld noch nicht konkretisiert war."
     },
     {
       "id": "recht-q028",
@@ -917,7 +1358,7 @@
         "Ja, AGB gelten immer"
       ],
       "correct": 0,
-      "explain": "Der Hinweis muss bei Vertragsschluss erfolgen; danach gilt das Gesetz (§ 306 II)."
+      "explain": "AGB werden nur Vertragsinhalt, wenn bei Vertragsschluss ausdrücklich auf sie hingewiesen wird (§ 305 II Nr. 1). Der Lieferschein kommt erst danach. Es gilt das Gesetz (§ 306 II).\n„Ja, mit Annahme der Lieferung“ ist falsch, weil der Vertrag schon im Laden geschlossen war. Nachträglich kann eine Seite den Inhalt nicht allein ändern."
     },
     {
       "id": "recht-q029",
@@ -930,7 +1371,7 @@
         "Keines, G hat ein normales Gebot abgegeben"
       ],
       "correct": 2,
-      "explain": "G hebt die Hand bewusst (Handlungswille), weiß aber nicht, dass er damit etwas rechtlich Erhebliches erklärt. Objektiv sieht es wie ein Gebot aus."
+      "explain": "G hebt die Hand bewusst, also hat er Handlungswillen. Er weiß aber nicht, dass er etwas rechtlich Erhebliches erklärt: Es fehlt das Erklärungsbewusstsein.\nDer objektive Tatbestand liegt gerade vor, denn für den Auktionator sieht es wie ein Gebot aus. Deshalb ist der Fall schwierig."
     },
     {
       "id": "recht-q030",
@@ -943,7 +1384,7 @@
         "WE wirksam, aber anfechtbar nach § 119 I"
       ],
       "correct": 3,
-      "explain": "Handlungswille und Erklärungsbewusstsein liegen vor. Weicht nur der Geschäftswille ab, gilt die WE, K kann wegen Inhaltsirrtums anfechten."
+      "explain": "Handlungswille und Erklärungsbewusstsein liegen vor, nur der Geschäftswille weicht ab. Die WE ist wirksam, K kann aber wegen Inhaltsirrtums anfechten (§ 119 I Alt. 1).\n„Keine Willenserklärung“ ist falsch, weil der fehlende Geschäftswille die WE nicht verhindert. Sonst bräuchte man § 119 gar nicht."
     },
     {
       "id": "recht-q031",
@@ -956,7 +1397,7 @@
         "Vertretungsmacht"
       ],
       "correct": 2,
-      "explain": "Nach § 165 genügt beschränkte Geschäftsfähigkeit, denn die Folgen treffen den Vertretenen."
+      "explain": "Nach § 165 genügt **beschränkte** Geschäftsfähigkeit, denn die Folgen treffen den Vertretenen, nicht den Vertreter. Volle Geschäftsfähigkeit ist also keine Voraussetzung.\nEigene WE, Handeln im fremden Namen und Vertretungsmacht sind dagegen die drei Kernvoraussetzungen des § 164 I."
     },
     {
       "id": "recht-q032",
@@ -969,7 +1410,7 @@
         "Vertragspartner des Händlers"
       ],
       "correct": 0,
-      "explain": "Ben überbringt eine fertige fremde Erklärung ohne Spielraum. Ein Vertreter würde selbst entscheiden („ein gutes Rad bis 500 €“)."
+      "explain": "Ben überbringt eine fertige Erklärung von Lisa, ohne selbst etwas zu entscheiden. Er ist Bote.\nVertreter wäre er, wenn er Spielraum hätte, etwa „Kauf ein gutes Rad bis 500 €“. Vertragspartner wird Lisa, nicht Ben."
     },
     {
       "id": "recht-q033",
@@ -977,12 +1418,12 @@
       "q": "Heinz bevollmächtigt Peter, seinen Pkw „bestens zu verkaufen“, und sagt ihm intern, er erwarte mindestens 5.000 €. Peter verkauft im Namen von Heinz für 4.500 €. Rechtslage?",
       "options": [
         "Vertrag schwebend unwirksam nach § 177",
-        "Vertrag mit Heinz wirksam, Peter haftet höchstens intern",
+        "Vertrag mit Heinz wirksam (§ 164 I)",
         "Vertrag mit Peter selbst",
         "Vertrag nichtig nach § 134"
       ],
       "correct": 1,
-      "explain": "Die Vollmacht nach außen war unbeschränkt (Können). Die 5.000 € betreffen nur das Innenverhältnis (Dürfen)."
+      "explain": "„Bestens verkaufen“ mit einer bloßen Erwartung von 5.000 € begrenzt die Vollmacht nicht. Aus Gründen des Verkehrsschutzes ist sie beim Preis unbegrenzt. Peter handelt mit Vertretungsmacht, der Vertrag wirkt für Heinz (§ 164 I, offizielle Lösung Fall 3b).\n„Schwebend unwirksam“ wäre richtig in Fall 3a: Dort hieß es „für mindestens 5.000 €“, und die Auslegung ergibt eine begrenzte Vollmacht."
     },
     {
       "id": "recht-q034",
@@ -995,7 +1436,7 @@
         "Nur den Vertrauensschaden, höchstens bis zum Erfüllungsinteresse"
       ],
       "correct": 3,
-      "explain": "V kannte den Mangel der Vertretungsmacht nicht, also haftet er nur nach § 179 II."
+      "explain": "V kannte den Mangel seiner Vertretungsmacht nicht. Deshalb haftet er nur auf den Vertrauensschaden, höchstens bis zum Erfüllungsinteresse (§ 179 II).\nErfüllung oder Schadensersatz nach Wahl (§ 179 I) gibt es nur, wenn der Vertreter den Mangel kannte. Ganz frei ist V auch nicht, weil der Partner sich auf seine Erklärung verlassen hat."
     },
     {
       "id": "recht-q035",
@@ -1008,7 +1449,7 @@
         "Nur, wenn er nachträglich genehmigt"
       ],
       "correct": 2,
-      "explain": "Er hätte das wiederholte Auftreten bei Sorgfalt erkennen und verhindern können. Bei Wissen wäre es Duldungsvollmacht."
+      "explain": "Der Chef weiß nichts, hätte das wiederholte Auftreten aber bei Sorgfalt erkennen und verhindern können. Das ist Anscheinsvollmacht, er ist gebunden.\nDuldungsvollmacht setzt Wissen voraus. „Nein, er wusste nichts“ übersieht, dass auch fahrlässiges Nichtwissen einen Rechtsschein setzen kann."
     },
     {
       "id": "recht-q036",
@@ -1021,7 +1462,7 @@
         "Ein Zettel mit dem Prüfschema zu § 164"
       ],
       "correct": 1,
-      "explain": "Erlaubt sind leere Zettel oder nur Gesetz bzw. Paragraf. Normüberschriften, Stichworte, Ausrufezeichen und Schemata sind verboten."
+      "explain": "Erlaubt sind leere Klebezettel oder solche, die nur Gesetz oder Paragraf tragen, also „§ 433“.\n„§ 433 Kaufvertrag“ ist verlockend, enthält aber die Normüberschrift, und die ist ausdrücklich verboten. Stichworte, Ausrufezeichen und Schemata gelten als Täuschungsversuch."
     },
     {
       "id": "recht-q037",
@@ -1034,7 +1475,7 @@
         "Eine Mini-Tabelle zu § 286 II"
       ],
       "correct": 2,
-      "explain": "Nur Paragrafenverweise sind erlaubt. Zahlen ohne §-Bezug, Stichworte, Ausrufezeichen und Übersichten gelten als Täuschungsversuch."
+      "explain": "Nur Paragrafenverweise sind erlaubt, also „§ 280“ neben § 286.\n„3 Jahre“ neben § 195 wirkt harmlos, ist aber eine Zahl ohne §-Bezug und damit verboten. Das gilt auch für Stichworte wie „Verzug!“ und Mini-Tabellen."
     },
     {
       "id": "recht-q038",
@@ -1047,7 +1488,7 @@
         "Die Leistung ist noch möglich"
       ],
       "correct": 0,
-      "explain": "Annahmeverzug setzt kein Verschulden voraus (Skript S. 42). Er ist auch keine Pflichtverletzung."
+      "explain": "Annahmeverzug braucht kein Verschulden des Gläubigers (Skript S. 42). Es genügt, dass er die richtig angebotene Leistung nicht annimmt.\nAngebot, Nichtannahme und Möglichkeit der Leistung sind dagegen Voraussetzungen. Wer meint, man brauche Verschulden, verwechselt den Gläubiger- mit dem Schuldnerverzug."
     },
     {
       "id": "recht-q039",
@@ -1060,7 +1501,7 @@
         "30 Tage nach Zugang der Rechnung"
       ],
       "correct": 1,
-      "explain": "Kalenderdatum: Mahnung entbehrlich (§ 286 II Nr. 1). Am 30.11. darf K noch zahlen, Verzug ab dem Folgetag."
+      "explain": "Kalenderdatum: Die Mahnung ist entbehrlich (§ 286 II Nr. 1). Am 30.11. darf K noch zahlen, der Verzug beginnt am Folgetag, Dienstag, 01.12.2026.\n„Ab 30.11.“ ist der typische Fehler: Der letzte Tag gehört noch zur Zahlungsfrist."
     },
     {
       "id": "recht-q040",
@@ -1073,7 +1514,7 @@
         "F schuldet Schadensersatz statt der Leistung"
       ],
       "correct": 2,
-      "explain": "Die Holschuld ist konkretisiert (§ 243 II), also unmöglich (§ 275 I); Kaufpreis entfällt (§ 326 I); Diebstahl ist Zufall, F hat nichts zu vertreten."
+      "explain": "Bei der Holschuld hat F mit Aussondern und Bereitstellen das Erforderliche getan. Die Schuld ist konkretisiert (§ 243 II), der Diebstahl macht die Leistung unmöglich (§ 275 I). D muss nicht zahlen (§ 326 I), und weil F nichts zu vertreten hat, gibt es keinen Schadensersatz.\n„F muss 15 neue Ballen liefern“ wäre vor der Konkretisierung richtig."
     },
     {
       "id": "recht-q041",
@@ -1086,7 +1527,410 @@
         "§ 311a II"
       ],
       "correct": 1,
-      "explain": "Mietwagenkosten sind ein Verzögerungsschaden, dafür muss Schuldnerverzug vorliegen."
+      "explain": "Mietwagenkosten entstehen, weil die Leistung zu spät kommt. Das ist ein Verzögerungsschaden, Grundlage §§ 280 I, II, 286, also mit Verzug.\n„§ 280 I allein“ ist verlockend, ist aber nur für Schäden neben der Leistung ohne Verspätung gedacht. Für Verspätungsschäden verlangt § 280 II ausdrücklich den Verzug."
+    },
+    {
+      "id": "recht-q042",
+      "topic": "Kaufrecht",
+      "q": "Die neue Motorsäge von K startet nicht. Welche Anspruchsgrundlage nennst du im Obersatz für die kostenlose Reparatur?",
+      "options": [
+        "§§ 437 Nr. 1, 439 I BGB",
+        "§ 439 I BGB allein",
+        "§ 433 I 1 BGB",
+        "§§ 280 I, III, 281 I BGB"
+      ],
+      "correct": 0,
+      "explain": "Die Nacherfüllung steht in § 439, die Verbindung zum Kaufvertrag und zum Mangel stellt § 437 Nr. 1 her. Deshalb zitierst du beide zusammen.\n„§ 439 allein“ ist verlockend, weil dort die Details stehen. Ohne § 437 fehlt aber die Anspruchsgrundlage, so zitiert auch das Skript (Klausuraufbau S. 50)."
+    },
+    {
+      "id": "recht-q043",
+      "topic": "Kaufrecht",
+      "q": "K bemerkt zu Hause, dass der neue Toaster nicht heizt. Er schreibt dem Händler sofort: „Ich trete zurück, Geld zurück!“ Eine Frist hat er nicht gesetzt, der Händler wäre zur Reparatur bereit. Wirksam?",
+      "options": [
+        "Nein, erst muss eine angemessene Frist zur Nacherfüllung erfolglos ablaufen (§ 323 I)",
+        "Ja, bei einem erheblichen Mangel geht der Rücktritt sofort",
+        "Ja, weil der Toaster neu ist",
+        "Nein, Rücktritt gibt es im Kaufrecht nur bei Verschulden"
+      ],
+      "correct": 0,
+      "explain": "Die Nacherfüllung hat Vorrang. Rücktritt nach §§ 437 Nr. 2, 323 I gibt es erst nach erfolgloser Frist oder wenn sie entbehrlich ist, etwa bei Verweigerung. Der Händler ist aber bereit.\nDie Erheblichkeit ist zwar nötig (§ 323 V 2), ersetzt aber nicht die Frist. Und Verschulden braucht der Rücktritt gerade nicht."
+    },
+    {
+      "id": "recht-q044",
+      "topic": "Kaufrecht",
+      "q": "Ein neuer Schreibtisch hat einen kleinen Kratzer, den der Händler trotz Fristsetzung nicht beseitigt. Was kann die Käuferin?",
+      "options": [
+        "Zurücktreten und mindern, beides zugleich",
+        "Zurücktreten, aber nicht mindern",
+        "Mindern, aber nicht zurücktreten",
+        "Nichts, der Mangel ist zu klein"
+      ],
+      "correct": 2,
+      "explain": "Ein kleiner Kratzer ist ein unerheblicher Mangel. Der Rücktritt ist dann ausgeschlossen (§ 323 V 2), die Minderung bleibt möglich (§ 441 I 2).\n„Nichts“ ist der typische Fehler: Auch ein kleiner Mangel ist ein Mangel. Nur das schärfste Mittel, der Rücktritt, ist versperrt."
+    },
+    {
+      "id": "recht-q045",
+      "topic": "Kaufrecht",
+      "q": "Kaufpreis 900 €. Ohne Mangel wäre die Sache 1.000 € wert, mit Mangel 700 €. Auf welchen Preis wird gemindert (§ 441 III)?",
+      "options": [
+        "600 €",
+        "700 €",
+        "630 €",
+        "200 €"
+      ],
+      "correct": 2,
+      "explain": "Der Preis sinkt im selben Verhältnis wie der Wert: 900 € × 700/1.000 = 630 €. Die Minderung beträgt also 270 €.\n600 € wäre der Kaufpreis minus Wertdifferenz (900 € − 300 €). So wird gerade nicht gerechnet, sonst würde ein günstiger Kauf unverhältnismäßig billiger."
+    },
+    {
+      "id": "recht-q046",
+      "topic": "Kaufrecht",
+      "q": "Die neuen Kopfhörer knistern. Wer entscheidet, ob repariert oder ein neues Paar geliefert wird?",
+      "options": [
+        "Der Verkäufer",
+        "Der Hersteller",
+        "Das entscheidet ein Gutachter",
+        "Der Käufer (§ 439 I)"
+      ],
+      "correct": 3,
+      "explain": "Beim Kauf hat der Käufer das Wahlrecht zwischen Nachbesserung und Nachlieferung (§ 439 I). Der Verkäufer kann nur eine unverhältnismäßig teure Art verweigern (§ 439 IV).\n„Der Verkäufer“ ist verlockend, weil das bei digitalen Produkten so ist (§ 327l). Bei Sachen gilt das nicht."
+    },
+    {
+      "id": "recht-q047",
+      "topic": "Kaufrecht",
+      "q": "Ein Laptop wird am Mo 16.11.2026 geliefert. Wann verjähren die Mängelansprüche im Regelfall?",
+      "options": [
+        "Mit Ablauf des 31.12.2028",
+        "Mit Ablauf von Do 16.11.2028",
+        "Mit Ablauf des 31.12.2029",
+        "Mit Ablauf von Di 16.11.2027"
+      ],
+      "correct": 1,
+      "explain": "§ 438 I Nr. 3: 2 Jahre, Beginn mit der Ablieferung (§ 438 II). Der Liefertag zählt nicht (§ 187 I), Ende am gleichen Datum (§ 188 II): 16.11.2028.\n„31.12.2029“ ist die regelmäßige Verjährung nach §§ 195, 199. Sie gilt für Mängel gerade nicht. Der 16.11.2027 ist das Ende der Beweislastumkehr des § 477."
+    },
+    {
+      "id": "recht-q048",
+      "topic": "Kaufrecht",
+      "q": "Verbraucher V lässt das defekte Display seines neuen Handys beim Händler reparieren. Es fällt kurz danach wieder aus. Kann er ohne weitere Frist zurücktreten?",
+      "options": [
+        "Ja, beim Verbrauchsgüterkauf genügt der erste Fehlschlag (§ 475d I Nr. 2)",
+        "Nein, erst nach dem zweiten Fehlschlag (§ 440 S. 2)",
+        "Nein, er muss erst eine neue Frist setzen",
+        "Ja, aber nur, wenn der Händler den Fehler verschuldet hat"
+      ],
+      "correct": 0,
+      "explain": "§ 475d I Nr. 2 weicht für Verbraucher von § 440 S. 2 ab: Schon nach dem ersten erfolglosen Versuch ist die Frist entbehrlich.\n„Zweiter Fehlschlag“ ist die allgemeine Regel und gilt zwischen Privatleuten oder Unternehmern. Verschulden braucht der Rücktritt nie."
+    },
+    {
+      "id": "recht-q049",
+      "topic": "Kaufrecht",
+      "q": "Verbraucherin V kauft im März 2026 einen Kühlschrank beim Händler. Im November 2026 fällt der Kompressor aus. Wer muss beweisen, ob der Fehler schon bei Übergabe da war?",
+      "options": [
+        "V, weil sie Rechte geltend macht",
+        "Der Händler, denn innerhalb eines Jahres wird das vermutet (§ 477 I)",
+        "Niemand, nach 6 Monaten ist die Gewährleistung vorbei",
+        "Der Hersteller"
+      ],
+      "correct": 1,
+      "explain": "Zeigt sich ein Mangel innerhalb eines Jahres seit Gefahrübergang, wird vermutet, dass er schon bei Übergabe da war (§ 477 I). Der Händler muss das widerlegen.\nDie „6 Monate“ sind eine alte Regel, die seit 2022 auf ein Jahr verlängert ist. Die Gewährleistung selbst dauert sowieso 2 Jahre."
+    },
+    {
+      "id": "recht-q050",
+      "topic": "Kaufrecht",
+      "q": "Ein undichter neuer Wasserkocher zerstört Ks Ladegerät daneben. Der Händler hat den Mangel zu vertreten. Anspruchsgrundlage für das Ladegerät?",
+      "options": [
+        "§§ 437 Nr. 3, 280 I, III, 281 I BGB (nach Fristsetzung)",
+        "§§ 437 Nr. 2, 441 BGB",
+        "§§ 437 Nr. 3, 280 I BGB (Mangelfolgeschaden, ohne Frist)",
+        "§ 439 I BGB"
+      ],
+      "correct": 2,
+      "explain": "Das Ladegerät ist ein anderes Rechtsgut. Der Schaden daran ist ein Mangelfolgeschaden, Grundlage §§ 437 Nr. 3, 280 I. Eine Frist ist sinnlos, denn eine Reparatur des Wasserkochers bringt das Ladegerät nicht zurück.\n§ 281 ist für Schadensersatz statt der Leistung, also Ersatz für den Wasserkocher selbst."
+    },
+    {
+      "id": "recht-q051",
+      "topic": "Kaufrecht",
+      "q": "Kratzer am Schrank kommen aus dem Herstellerwerk. Nachbesserung scheitert, Ersatz ist nicht lieferbar. K mindert um 300 €. V: „Ich kann nichts dafür.“ Was muss K zahlen (Preis 6.000 €)?",
+      "options": [
+        "6.000 €, weil V nichts dafür kann",
+        "Nichts, K kann zurücktreten",
+        "5.700 €, aber nur, wenn V den Kratzer verschuldet hat",
+        "5.700 €, denn Minderung braucht kein Verschulden"
+      ],
+      "correct": 3,
+      "explain": "Minderung und Rücktritt setzen kein Vertretenmüssen voraus. Vs Einwand hilft nur gegen Schadensersatz (Skript Fall 5). Die Frist ist entbehrlich (§§ 326 V, 440), also 6.000 € − 300 € = 5.700 €.\nDie letzte Option klingt ähnlich, stellt aber eine falsche Bedingung auf. Genau diese Verwechslung prüft der Fall."
+    },
+    {
+      "id": "recht-q052",
+      "topic": "Kaufrecht",
+      "q": "Privatverkauf eines Fahrrads „ohne Gewährleistung“. Der Verkäufer verschweigt bewusst einen Rahmenbruch. Hat der Käufer Mängelrechte?",
+      "options": [
+        "Nein, Ausschluss ist Ausschluss",
+        "Ja, der Ausschluss gilt bei arglistigem Verschweigen nicht (§ 444)",
+        "Nein, unter Privatleuten gibt es keine Gewährleistung",
+        "Nur, wenn ein Verbrauchsgüterkauf vorliegt"
+      ],
+      "correct": 1,
+      "explain": "Ein Gewährleistungsausschluss ist zwischen Privatleuten erlaubt, aber nicht, wenn der Verkäufer den Mangel arglistig verschweigt oder eine Garantie gibt (§ 444).\n„Nur beim Verbrauchsgüterkauf“ verwechselt § 444 mit § 476: Dort ist schon der Ausschluss selbst unwirksam, hier scheitert er an der Arglist."
+    },
+    {
+      "id": "recht-q053",
+      "topic": "Kaufrecht",
+      "q": "K kauft eine Kette 60 % unter dem regulären Preis. Der Verschluss hakt. V verweigert jede Reparatur: „Bei dem Preis!“ Kann K mindern?",
+      "options": [
+        "Nein, bei Sonderangeboten ist die Gewährleistung ausgeschlossen",
+        "Nein, er muss erst eine Frist setzen",
+        "Ja, ein Sonderpreis heißt nicht, dass ein Mangel vereinbart ist; die Frist ist wegen der Verweigerung entbehrlich",
+        "Ja, aber nur um 60 %"
+      ],
+      "correct": 2,
+      "explain": "Der hakende Verschluss verfehlt die objektiven Anforderungen (§ 434 III). Ein günstiger Preis ändert daran nichts. V verweigert ernsthaft und endgültig, also ist die Frist entbehrlich (§ 323 II Nr. 1, Skript Fall 6).\n„Erst Frist setzen“ wäre ohne Verweigerung richtig. Die 60 % sind der Rabatt, nicht der Minderungsbetrag."
+    },
+    {
+      "id": "recht-q054",
+      "topic": "Kaufrecht",
+      "q": "Nach zwei erfolglosen Reparaturen am neuen Wohnwagen bietet Händler H einen neuen gleichen Typs an. K lehnt ab und verlangt Schadensersatz statt der ganzen Leistung. Zu Recht?",
+      "options": [
+        "Nein, K muss die Nachlieferung annehmen",
+        "Nein, Schadensersatz gibt es erst nach einer dritten Reparatur",
+        "Ja, aber nur, wenn K Verbraucher ist",
+        "Ja, die gewählte Nachbesserung ist fehlgeschlagen (§ 440 S. 2), H kann nicht einseitig umschwenken"
+      ],
+      "correct": 3,
+      "explain": "K hat die Reparatur gewählt (§ 439 I). Nach zwei Fehlschlägen gilt sie als fehlgeschlagen, eine weitere Frist ist nicht nötig (§§ 281 II, 440). Das Vertretenmüssen wird vermutet, H hat eine eigene Werkstatt (Skript Fall 8).\n„K muss annehmen“ übersieht, dass das Wahlrecht beim Käufer liegt. Die Regel gilt für alle Käufer, nicht nur für Verbraucher."
+    },
+    {
+      "id": "recht-q055",
+      "topic": "Kaufrecht",
+      "q": "Verbraucherin V kauft beim Händler eine Smartwatch. Der Händler informiert nie über Updates und stellt keine bereit. Was liegt vor?",
+      "options": [
+        "Kein Mangel, Updates sind Sache des Herstellers",
+        "Ein Fall der §§ 327 ff., nicht des Kaufrechts",
+        "Ein Sachmangel (§ 475b), auch wenn die Updates vom Hersteller kommen",
+        "Kein Mangel, solange die Uhr bei Übergabe funktionierte"
+      ],
+      "correct": 2,
+      "explain": "Eine Smartwatch funktioniert ohne Software nicht. Sie ist eine Ware mit digitalen Elementen, es gilt Kaufrecht (§ 475b, § 327a III). Der Verkäufer schuldet Information über Updates und deren Bereitstellung (§ 475b IV Nr. 2).\n„Sache des Herstellers“ ist verlockend, aber § 475b macht den Verkäufer verantwortlich, auch wenn ein Dritter die Software liefert."
+    },
+    {
+      "id": "recht-q056",
+      "topic": "Kaufrecht",
+      "q": "Welcher Kauf ist ein Verbrauchsgüterkauf (§ 474 I)?",
+      "options": [
+        "Studentin kauft das Fahrrad ihrer Kommilitonin",
+        "Bäckermeisterin kauft beim Fachhändler einen Backofen für die Bäckerei",
+        "Eine GmbH kauft Laptops für ihre Mitarbeiter",
+        "Studentin kauft im Elektromarkt ein Handy"
+      ],
+      "correct": 3,
+      "explain": "Ein Verbrauchsgüterkauf braucht einen Verbraucher als Käufer und einen Unternehmer als Verkäufer. Das passt nur beim Handy im Elektromarkt.\nBeim Fahrrad fehlt der Unternehmer, bei Backofen und Laptops der Verbraucher. Die GmbH kann nie Verbraucher sein (§ 13)."
+    },
+    {
+      "id": "recht-q057",
+      "topic": "Widerruf",
+      "q": "Fred bestellt im Teleshopping über die Hotline eine Haarschneidemaschine für 99 €. Er packt sie aus, baut sie zusammen und findet sie zu groß. Kann er sie zurückgeben?",
+      "options": [
+        "Nein, er hat sie im Fernsehen gesehen",
+        "Ja, Widerruf: Fernabsatzvertrag, 14 Tage ab Erhalt, ohne Grund",
+        "Nein, nur bei einem Mangel",
+        "Nein, durch den Zusammenbau ist das Widerrufsrecht erloschen"
+      ],
+      "correct": 1,
+      "explain": "Der Vertrag kam ausschließlich über Fernkommunikationsmittel in einem organisierten Fernabsatzsystem zustande (§ 312c). Fred hat ein Widerrufsrecht (§§ 312g I, 355), ein Grund ist nicht nötig.\n„Im Fernsehen gesehen“ ist der Kniff des Skript-Falls 11: Teleshopping ist ausdrücklich Fernabsatz. Ausprobieren schadet dem Widerruf nicht."
+    },
+    {
+      "id": "recht-q058",
+      "topic": "Widerruf",
+      "q": "Billy kauft im Möbelhaus ein einwandfreies Regal. Nach zehn Monaten gefällt es ihm nicht mehr. Hat er einen gesetzlichen Anspruch auf Rückgabe gegen Geld?",
+      "options": [
+        "Ja, Widerruf innerhalb eines Jahres",
+        "Ja, Rücktritt nach § 437 Nr. 2",
+        "Ja, weil das Möbelhaus Unternehmer ist",
+        "Nein, im Laden gibt es kein gesetzliches Widerrufsrecht und es liegt kein Mangel vor"
+      ],
+      "correct": 3,
+      "explain": "Mängelrechte brauchen einen Mangel, den gibt es nicht. Ein gesetzliches Widerrufsrecht besteht nur bei Fernabsatz und außerhalb von Geschäftsräumen, und die 14 Tage wären längst vorbei (Skript Fall 3).\nEin Rückgaberecht gibt es nur, wenn das Möbelhaus es freiwillig vertraglich einräumt. Unternehmer zu sein allein begründet keinen Anspruch."
+    },
+    {
+      "id": "recht-q059",
+      "topic": "Widerruf",
+      "q": "Du erhältst die online bestellte Jacke am Fr 20.11.2026. Bis wann kannst du widerrufen?",
+      "options": [
+        "Bis Fr 04.12.2026, Absenden genügt",
+        "Bis Do 03.12.2026",
+        "Bis Fr 20.12.2026",
+        "Bis Mo 07.12.2026"
+      ],
+      "correct": 0,
+      "explain": "14 Tage ab Erhalt der Ware (§§ 355 II, 356 II Nr. 1 a). Der 20.11. zählt nicht (§ 187 I), Ende nach zwei Wochen am gleichnamigen Wochentag (§ 188 II): Fr 04.12.2026. Rechtzeitige Absendung genügt (§ 355 I 5).\nDo 03.12. entsteht, wenn man den Liefertag mitzählt. Mo 07.12. wäre nur richtig, wenn der letzte Tag auf ein Wochenende fiele (§ 193)."
+    },
+    {
+      "id": "recht-q060",
+      "topic": "Widerruf",
+      "q": "Im Onlineshop heißt der letzte Button nur „Bestellen“. Ein Verbraucher klickt. Folge?",
+      "options": [
+        "Vertrag, aber der Verbraucher kann widerrufen",
+        "Vertrag, der Button ist egal",
+        "Vertrag, aber nur zum halben Preis",
+        "Kein Vertrag (§ 312j III)"
+      ],
+      "correct": 3,
+      "explain": "Nach der Button-Lösung kommt ein Vertrag mit einem Verbraucher nur zustande, wenn der Button eindeutig auf die Zahlungspflicht hinweist, etwa „zahlungspflichtig bestellen“ (§ 312j III). „Bestellen“ reicht nicht.\n„Vertrag mit Widerruf“ ist der typische Fehler: Ohne Vertrag gibt es nichts zu widerrufen."
+    },
+    {
+      "id": "recht-q061",
+      "topic": "SE · AGB",
+      "q": "V verkauft eine neue Waschmaschine. Seine einbezogenen AGB sagen: „Bei Mängeln nur Nachbesserung.“ Nachbesserung schlägt fehl. Kann K zurücktreten?",
+      "options": [
+        "Nein, er hat den AGB zugestimmt",
+        "Nein, AGB gehen dem Gesetz vor",
+        "Ja, die Klausel ist nach § 309 Nr. 8 b unwirksam, es gilt das Gesetz",
+        "Ja, aber nur, weil K die AGB nicht gelesen hat"
+      ],
+      "correct": 2,
+      "explain": "Bei neu hergestellten Sachen muss dem Käufer bei Fehlschlagen der Nacherfüllung Minderung oder Rücktritt bleiben (§ 309 Nr. 8 b bb). Die Klausel fällt weg, es gilt das Gesetz (§ 306 II). Nach dem Fehlschlag ist der Rücktritt möglich (§ 440).\n„Er hat zugestimmt“ hilft nicht: Auch wirksam einbezogene AGB unterliegen der Inhaltskontrolle."
+    },
+    {
+      "id": "recht-q062",
+      "topic": "SE · AGB",
+      "q": "Fitnessstudio-AGB: „Haftung nur für Vorsatz und grobe Fahrlässigkeit.“ Eine schlecht befestigte Hantel (einfache Fahrlässigkeit) verletzt B an der Schulter. Haftet das Studio?",
+      "options": [
+        "Nein, es war nur einfache Fahrlässigkeit",
+        "Nein, Nutzung auf eigene Gefahr ist vereinbart",
+        "Nur für das zerrissene T-Shirt",
+        "Ja, die Haftung für Körperschäden kann nicht ausgeschlossen werden (§ 309 Nr. 7 a)"
+      ],
+      "correct": 3,
+      "explain": "§ 309 Nr. 7 a verbietet, die Haftung für Verletzungen von Körper und Gesundheit auch bei einfacher Fahrlässigkeit auszuschließen. Die Klausel ist unwirksam, A haftet aus §§ 280 I, 241 II, auch auf Schmerzensgeld (§ 253 II).\n„Nur einfache Fahrlässigkeit“ wäre bei bloßen Sachschäden ein Argument (§ 309 Nr. 7 b). Bei Körperschäden gilt das nicht."
+    },
+    {
+      "id": "recht-q063",
+      "topic": "Widerruf",
+      "q": "Ein Streaming-Abo kann online abgeschlossen werden, auf der Website gibt es aber keinen Kündigungsbutton. Was kann die Verbraucherin?",
+      "options": [
+        "Jederzeit ohne Kündigungsfrist kündigen (§ 312k VI)",
+        "Nur zum Ende der Mindestlaufzeit kündigen",
+        "Den Vertrag anfechten",
+        "Nichts, der Button ist nur eine Empfehlung"
+      ],
+      "correct": 0,
+      "explain": "§ 312k verlangt bei online abschließbaren Dauerschuldverhältnissen eine gut sichtbare Kündigungsschaltfläche. Fehlt sie, kann der Verbraucher jederzeit fristlos kündigen.\n„Nur zum Ende der Laufzeit“ wäre die normale Regel. Gerade die soll bei fehlendem Button nicht gelten."
+    },
+    {
+      "id": "recht-q064",
+      "topic": "Vertretung",
+      "q": "Fred gibt Fritz 1.400 € in bar für ein Mountainbike. Fritz kauft und zahlt sofort, sagt aber nicht, für wen. Zwischen wem kommt der Vertrag zustande?",
+      "options": [
+        "Zwischen Fritz und dem Händler (§ 164 II)",
+        "Gar nicht, die Offenkundigkeit fehlt",
+        "Zwischen Fred und Fritz",
+        "Zwischen Fred und dem Händler (Geschäft für den, den es angeht)"
+      ],
+      "correct": 3,
+      "explain": "Die Offenkundigkeit fehlt zwar, aber beim Bargeschäft des täglichen Lebens ist dem Händler gleichgültig, wer sein Vertragspartner ist. Dann wird auf die Offenkundigkeit verzichtet (offizielle Lösung Fall 4).\n„Fritz und Händler“ wäre die Regel des § 164 II. Die offizielle Lösung wendet hier ausdrücklich die Ausnahme an."
+    },
+    {
+      "id": "recht-q065",
+      "topic": "Vertretung",
+      "q": "Maier weiß vom Unfall des Sportwagens und schickt Schulze, der nichts weiß, genau diesen Wagen zu kaufen. Kann Maier wegen arglistiger Täuschung anfechten?",
+      "options": [
+        "Nein, wegen § 166 II zählt Maiers Wissen, also keine Täuschung",
+        "Ja, es zählt nur Schulzes Unkenntnis (§ 166 I)",
+        "Ja, der Verkäufer musste den Unfall ungefragt nennen",
+        "Nein, weil Schulze nur Bote war"
+      ],
+      "correct": 0,
+      "explain": "Grundsätzlich zählt das Wissen des Vertreters (§ 166 I). Handelt er nach bestimmten Weisungen, zählt auch das des Vertretenen (§ 166 II). Maier kannte den Unfall, wer die Wahrheit kennt, wird nicht getäuscht (offizielle Lösung Fall 2).\nDie Aufklärungspflicht besteht zwar, aber sie hilft nicht, wenn der Käufer schon Bescheid weiß."
+    },
+    {
+      "id": "recht-q066",
+      "topic": "Vertretung",
+      "q": "Käufer und Verkäufer bevollmächtigen dieselbe Notariatsangestellte, für beide die Auflassung zu erklären, und befreien sie von § 181. Wirksam?",
+      "options": [
+        "Ja, das Insichgeschäft ist gestattet",
+        "Nein, Mehrvertretung ist immer verboten",
+        "Nur mit Genehmigung des Gerichts",
+        "Nein, Grundstücksgeschäfte sind höchstpersönlich"
+      ],
+      "correct": 0,
+      "explain": "§ 181 verbietet die Mehrvertretung nur, soweit sie nicht gestattet ist. Hier haben beide Seiten ausdrücklich befreit, die Vertretung ist voll wirksam (offizielle Lösung Fall 6).\n„Immer verboten“ übersieht die Ausnahmen im Gesetz. Höchstpersönlich sind nur Geschäfte wie Testament und Eheschließung."
+    },
+    {
+      "id": "recht-q067",
+      "topic": "Vertretung",
+      "q": "Heinz bevollmächtigt Peter, seinen Pkw „für mindestens 5.000 €“ zu verkaufen. Peter verkauft im Namen von Heinz für 4.500 €. Rechtslage?",
+      "options": [
+        "Vertrag mit Heinz wirksam, Peter haftet nur intern",
+        "Peter handelt ohne Vertretungsmacht, der Vertrag ist schwebend unwirksam (§ 177 I)",
+        "Vertrag zwischen Peter und dem Käufer",
+        "Vertrag nichtig nach § 138"
+      ],
+      "correct": 1,
+      "explain": "Die Weisung „mindestens 5.000 €“ begrenzt durch Auslegung auch die Vollmacht (offizielle Lösung Fall 3a). Für 4.500 € fehlt die Vertretungsmacht, Heinz kann genehmigen, sonst haftet Peter nach § 179.\n„Wirksam, nur interne Haftung“ passt zu Fall 3b („bestens verkaufen, ich rechne mit 5.000 €“): Dort ist die Zahl nur eine Erwartung."
+    },
+    {
+      "id": "recht-q068",
+      "topic": "Schuldverhältnis",
+      "q": "Frau Schmitt kauft gegen Geld ein E-Book. Der Händler stellt die Datei trotz Aufforderung nicht bereit. Was kann sie?",
+      "options": [
+        "Nachbesserung nach § 439 verlangen",
+        "Den Vertrag beenden und den Preis zurückverlangen (§§ 327c I, 327o)",
+        "Nur Schadensersatz, wenn der Händler schuld ist",
+        "Nichts, digitale Produkte sind kein Kaufgegenstand"
+      ],
+      "correct": 1,
+      "explain": "Für E-Books gegen Preis gelten die §§ 327 ff. Bei Nichtbereitstellung trotz Aufforderung kann die Verbraucherin den Vertrag beenden (§ 327c I) und bekommt ihr Geld zurück (§ 327o).\n§ 439 ist Kaufrecht für Sachen. Schadensersatz ist nur zusätzlich möglich (§ 327c II), die Beendigung braucht kein Verschulden."
+    },
+    {
+      "id": "recht-q069",
+      "topic": "Fristen",
+      "q": "Ein Ereignis tritt am Sa 31.10.2026 ein. Die Frist beträgt einen Monat. Wann endet sie?",
+      "options": [
+        "Di 01.12.2026, 24 Uhr",
+        "Fr 27.11.2026, 24 Uhr",
+        "Do 31.12.2026, 24 Uhr",
+        "Mo 30.11.2026, 24 Uhr"
+      ],
+      "correct": 3,
+      "explain": "Nach § 188 II würde die Frist am 31.11. enden. Den gibt es nicht, also endet sie am letzten Tag des Monats (§ 188 III): Mo 30.11.2026.\nDer 01.12. ist der häufigste Fehler: Man „rutscht“ in den nächsten Monat. § 188 III verhindert genau das."
+    },
+    {
+      "id": "recht-q070",
+      "topic": "SE · AGB",
+      "q": "Schaden 2.400 €. Die Geschädigte hat ein Drittel mitverschuldet (§ 254). Wie viel bekommt sie?",
+      "options": [
+        "1.600 €",
+        "800 €",
+        "2.400 €",
+        "2.000 €"
+      ],
+      "correct": 0,
+      "explain": "Ihr Anteil wird abgezogen: 2.400 € × 2/3 = 1.600 € (2.400 € − 800 €).\n800 € ist ihr eigener Anteil, nicht der Ersatz. Wer diese Zahl wählt, hat die Rechnung umgedreht."
+    },
+    {
+      "id": "recht-q071",
+      "topic": "Fall lösen",
+      "q": "Welche der folgenden Verteidigungen ist eine Einrede, die der Schuldner erheben muss?",
+      "options": [
+        "Erfüllung (§ 362)",
+        "Verjährung (§ 214 I)",
+        "Geschäftsunfähigkeit (§ 105)",
+        "Anfechtung, sobald sie erklärt ist (§ 142)"
+      ],
+      "correct": 1,
+      "explain": "Eine Einrede gibt nur ein Recht, die Leistung zu verweigern. Verjährung wirkt nur, wenn sich der Schuldner darauf beruft (§ 214 I).\nErfüllung, Geschäftsunfähigkeit und die erklärte Anfechtung sind Einwendungen: Das Gericht beachtet sie von selbst, ein „Hochhalten“ ist nicht nötig."
+    },
+    {
+      "id": "recht-q072",
+      "topic": "SE · AGB",
+      "q": "A tritt seine Forderung über 500 € gegen S an N ab. S erfährt nichts davon und zahlt an A. Muss S an N noch einmal zahlen?",
+      "options": [
+        "Nein, die Zahlung an A befreit ihn (§ 407 I)",
+        "Ja, N ist Gläubiger geworden",
+        "Ja, die Abtretung hätte S zustimmen müssen",
+        "Nur die Hälfte, 250 €"
+      ],
+      "correct": 0,
+      "explain": "Der Schuldner wird geschützt: Zahlt er ohne Kenntnis der Abtretung an den Altgläubiger, muss der Neugläubiger das gegen sich gelten lassen (§ 407 I). N muss sich an A halten (§ 816 II).\nDass N Gläubiger geworden ist, stimmt zwar. Trotzdem soll S nicht doppelt zahlen, nur weil ihm niemand Bescheid gesagt hat. Zustimmen musste S nicht."
     }
   ]
 }

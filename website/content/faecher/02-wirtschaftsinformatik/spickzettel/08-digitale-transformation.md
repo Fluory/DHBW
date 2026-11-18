@@ -29,7 +29,7 @@ Einordnen:
 ## IoT und Industrie 4.0
 
 - **IoT:** vernetzt physische Gegenstände mit Internettechnik; smart = identifizierbar, adressierbar, ortbar, verarbeitet Informationen, Sensoren, kann etwas bewirken.
-- **Industrie 4.0:** IoT in der Fertigung, Produkte, Maschinen und IS steuern gemeinsam (Smart Factory). Ziel: **Losgröße 1 zu Kosten der Massenfertigung**.
+- **Industrie 4.0:** IoT in der Fertigung, cyber-physische Systeme; Produkte, Maschinen und IS steuern gemeinsam (Smart Factory). Ziel: **Losgröße 1 zu Kosten der Massenfertigung**.
 
 ## Smarte Produkte, digitale Geschäftsmodelle
 

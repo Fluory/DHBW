@@ -38,6 +38,17 @@ Dazu: **Folientitel als Aussage** (Action Title). Statt „Ergebnisse“ lieber 
 
 **Auftreten:** Struktur, Klarheit, Zeitmanagement, Powerpose und Mindset, „Own the stage“, Blickkontakt, „Dress for the show“, Farbe, Sprache.
 
+**Hochstatus und Tiefstatus** (Skript Teil 1, nach Keith Johnstone): Dein Körper sendet Statussignale, noch bevor du etwas sagst. Das Publikum liest daraus, ob du sicher bist.
+
+| Hochstatus (wirkt sicher) | Tiefstatus (wirkt unsicher) |
+|---|---|
+| fester Stand, aufrechte Haltung | wippen, Füße nach innen, sich klein machen |
+| fester Blickkontakt, Kopf ruhig | ausweichender Blick, ruckartige Kopfbewegungen |
+| ganze Sätze, laut und ruhig | leise, viele Füllwörter („ähm“) und Weichmacher („vielleicht“, „eventuell“) |
+| gleichmäßige Bewegungen und Atmung, Raum einnehmen | hastige Bewegungen, sich in die Haare oder ins Gesicht fassen |
+
+Ein einzelnes Signal sagt wenig, es zählt die Summe. Beim Präsentieren hilft dir der Hochstatus. Das Skript warnt aber: Passt hoher Status nicht zu deiner Rolle, wirkt er schnell überheblich. Ziel ist, im Status flexibel zu sein und auf Augenhöhe zu kommunizieren.
+
 > [!IMPORTANT]
 > **Das Wichtigste**
 > Eine Präsentation plant man vom Ende her: Was soll das Publikum danach tun? Daraus folgen Kernbotschaft, höchstens drei Argumente und der Schluss.
@@ -88,17 +99,34 @@ Dieselbe Praxisarbeit wird also im Unternehmen anders präsentiert als an der Ho
 | Merkmal | Business | Wissenschaft |
 |---|---|---|
 | Ziel | Handlung: Auftrag, Budget, Zustimmung | Verständnis und kritische Prüfung |
+| Publikum | Entscheider und Kunden mit wenig Zeit, suchen ihren Nutzen | Fachpublikum und Prüfende, suchen Lücken in der Argumentation |
 | Aufbau | Ergebnis zuerst (Pyramidenprinzip nach Minto) | Fragestellung, Stand der Forschung, Methode, Ergebnisse, Diskussion, Fazit (Trichtermodell) |
+| Argumentation | Nutzen, Referenzen, Storytelling, Emotion erlaubt | Daten, Quellen, Methode; Emotion ersetzt keinen Beleg |
+| Folien | Markenoptik, Bilder, wenig Text, eine Botschaft pro Folie | nüchtern, Diagramme mit Achsenbeschriftung und Einheiten, Abbildungen mit Quelle |
 | Schwächen | selten aktiv benannt, Einwände vorbereitet | Limitationen offen benennen ist ein Qualitätsmerkmal |
 | Quellen | optional | Pflicht: Kurzbeleg auf der Folie, Verzeichnis am Ende |
 | Schluss | Call to Action | Antwort auf die Forschungsfrage, Ausblick |
 | Fragerunde | Chance für den Abschluss | Verteidigung: „Das habe ich nicht untersucht“ ist besser als Raten |
 
+**Pyramide und Trichter mit einem Beispiel:** Deine Praxisarbeit untersucht, ob ein neues Ticketsystem die Bearbeitungszeit im Support senkt.
+
+| Pyramidenprinzip (Business) | Trichtermodell (Wissenschaft) |
+|---|---|
+| 1. Empfehlung: „Führen Sie das System in allen Teams ein.“ | 1. Fragestellung: „Senkt das System die Bearbeitungszeit?“ |
+| 2. Begründung: „Im Pilot sank die Bearbeitungszeit um ein Drittel.“ | 2. Stand der Forschung: Was ist dazu bekannt? |
+| 3. Details: Kosten, Zeitplan | 3. Methode: Vergleich von Pilot- und Kontrollteam |
+| | 4. Ergebnis, 5. Diskussion mit Grenzen, 6. Fazit |
+
+Die Pyramide beginnt oben mit dem Ergebnis, weil Entscheider wenig Zeit haben. Der Trichter beginnt breit bei der Frage und wird enger bis zum Ergebnis, damit Prüfende jeden Schritt nachvollziehen können. Die Zahl im Beispiel ist erfunden.
+
+**Problem statt nur Relevanz** (Skript Teil 2, Kap. 5): Neben dem Ziel ist die **Problemstellung** das wichtigste Bewertungskriterium einer wissenschaftlichen Arbeit. „Digitalisierung wird immer wichtiger“ zeigt nur, dass ein Thema relevant ist. Ein Problem ist eine anspruchsvolle, noch ungelöste Aufgabe: Welche Schwierigkeit ergibt sich daraus, und für wen?
+
 **Wortwahl von Werbung zu Wissenschaft:**
 
 - „Unsere Lösung spart Ihnen 30 % Kosten.“ → „Im untersuchten Fall sanken die Kosten um 30 % (n = 12).“
+- „Das ist die beste Methode.“ → „Die Methode erzielte in dieser Stichprobe die höchsten Werte.“
 - „Ich finde, dass …“ → „Die Ergebnisse deuten darauf hin, dass …“
-- „revolutionär, einzigartig, garantiert“ → streichen.
+- „revolutionär, einzigartig, garantiert“ → streichen. Superlative sind wissenschaftlich verdächtig.
 - „Man sieht hier …“ → „Abbildung 3 zeigt …“
 - Fachbegriffe beim ersten Auftreten definieren.
 
@@ -110,7 +138,7 @@ In beiden Welten gilt: Zielgruppe kennen, roter Faden, eine Kernaussage, saubere
 
 > [!WARNING]
 > **Achtung**
-> Diese Regeln stammen aus den Präsentationsfolien. Sie zeigen, worauf die Dozentin bei wissenschaftlicher Arbeit achtet. Offizielle Vorgaben für das schriftliche Portfolio sind sie nicht.
+> Diese Regeln stammen aus den Präsentationsfolien. Sie zeigen, worauf die Dozentin bei wissenschaftlicher Arbeit achtet. Offizielle Vorgaben für das Testat (vermutlich ein Portfolio) sind sie nicht.
 
 ## Der Pitch
 
@@ -123,13 +151,21 @@ In beiden Welten gilt: Zielgruppe kennen, roter Faden, eine Kernaussage, saubere
 3. Was ist das Besondere an der Idee?
 4. Was ist das Ziel des Pitches? Was willst du vom Gegenüber, und wozu?
 
-Für die Vorbereitung helfen die **Präsentations-Leitfragen**: Ziel, Kernbotschaft, Zielgruppe (hier: Entscheider), Nutzen für Zielgruppe und Betroffene, Emotionen, Geschichte, Struktur, Argumente, Start und Ende. Zur Zielgruppenanalyse passt die **SIE-Analyse** aus dem Skript: Situation, Interesse („What's in it for me?“), Einstellung.
+Für die Vorbereitung helfen die **Präsentations-Leitfragen**: Ziel, Kernbotschaft, Zielgruppe (hier: Entscheider), Nutzen für Zielgruppe und Betroffene, Emotionen, Geschichte, Struktur, Argumente, Start und Ende. Zur Zielgruppenanalyse passt die **SIE-Analyse** aus dem Skript:
+
+| Buchstabe | Frage | Beispiel: Pitch vor der Studiengangsleitung |
+|---|---|---|
+| **S**ituation | Was wissen die Zuhörer schon, welche Rolle haben sie, wer entscheidet? | kennt die Raumlage, entscheidet über Räume, hat wenig Zeit |
+| **I**nteresse | Was haben sie davon? („What's in it for me?“) | weniger Abbrüche, zufriedene Studierende |
+| **E**instellung | Sind sie positiv oder kritisch? Welche Risiken sehen sie? | eher skeptisch: Wer haftet, wer schließt ab? |
+
+Aus der Einstellung leitest du die erwarteten Einwände und deine Backup-Folien ab.
 
 > [!NOTE]
 > **Beispiel: Ein eigener Übungspitch**
 > Für das Thema „Geschäftsidee pitchen“ entstand eine bewusst provokante, fiktive Idee mit Web-Folien und einem Sprechtext von höchstens 2:30 Minuten. Aufbau in neun Folien: Einstieg mit einer Frage, Problem, zwei Figuren, Wendepunkt, Lösung, Geschäftsmodell, Markt, die Bitte an die Investoren (der „Ask“), Schluss mit derselben Kernbotschaft wie am Anfang. Alle Zahlen waren fiktiv und so gekennzeichnet. Vorbereitet wurden außerdem kritische Fragen mit kurzen Antworten und eine Stakeholder-Analyse (Kapitel 3).
 
-Laut Material nicht bekannt sind Redezeit, Bewertungskriterien und ob der Pitch benotet wird. Als einziger Anhaltspunkt hatten die Review-Präsentationen im Kulturdimensionen-Sprint 4 Minuten pro Team.
+Laut Material nicht bekannt sind Redezeit, Bewertungskriterien und ob der Pitch zum Testat zählt. Benotet wird er nicht, denn das Testat ist laut Prüfungsübersicht unbenotet. Als einziger Anhaltspunkt hatten die Review-Präsentationen im Kulturdimensionen-Sprint 4 Minuten pro Team.
 
 > [!IMPORTANT]
 > **Das Wichtigste**
@@ -165,6 +201,11 @@ Laut Material nicht bekannt sind Redezeit, Bewertungskriterien und ob der Pitch 
 > **Übung 5 · Prüfungsniveau**
 > Plane einen Pitch von 3 Minuten für eine eigene Idee: Beantworte die vier Pitch-Leitfragen, formuliere die Kernbotschaft in einem Satz, nenne höchstens drei Argumente, drei erwartete Einwände und deinen Ask.
 > Quelle: Arbeitsauftrag „Pitch vorbereiten“, Fotoprotokoll 02.11., Folie 17
+
+> [!TIP]
+> **Übung 6 · mittel**
+> Deine Praxisarbeit zeigt: Nach Einführung digitaler Checklisten sank in deiner Abteilung die Fehlerquote bei Bestellungen (untersucht über drei Monate, eine Abteilung). Schreib je drei Einstiegssätze für die Präsentation a) vor der Abteilungsleitung und b) vor der Hochschule. Nenne für b) eine Grenze der Untersuchung.
+> Quelle: eigene Aufgabe nach Fotoprotokoll 02.11., Folien 8–13
 
 ## Lösungen
 
@@ -215,3 +256,13 @@ c) „Abbildung 2 zeigt, dass die Fehlerquote nach der Einführung sank.“
 | Drei Einwände | Datenschutz? Wer pflegt das? Gibt es das schon? → je eine Backup-Folie |
 | Ask | „Ich bitte um 30 Minuten mit der Studiengangsleitung und die Erlaubnis für einen Test im nächsten Semester.“ |
 | Zeitplan | Einstieg 0:00–0:30, Problem bis 1:00, Idee bis 2:00, Argumente bis 2:40, Ask und Schluss bis 3:00 |
+
+### Übung 6
+
+*Beispiellösung.*
+
+a) **Business (Pyramide, Ergebnis zuerst):** „Ich empfehle, die digitalen Checklisten in allen Abteilungen einzuführen. In unserer Abteilung gab es danach deutlich weniger fehlerhafte Bestellungen. Ich brauche heute Ihre Zustimmung für den Roll-out im nächsten Quartal.“
+
+b) **Wissenschaft (Trichter, Frage zuerst):** „Fehlerhafte Bestellungen verursachen Nacharbeit, und es ist unklar, ob Checklisten das verhindern. Meine Forschungsfrage lautet: Senken digitale Checklisten die Fehlerquote bei Bestellungen? Dazu habe ich die Fehlerquote drei Monate vor und nach der Einführung verglichen.“
+
+**Grenze:** Untersucht wurde nur eine Abteilung über drei Monate. Andere Einflüsse, etwa neue Mitarbeitende oder weniger Bestellungen, sind nicht ausgeschlossen. Das Ergebnis lässt sich deshalb nicht ohne Weiteres auf andere Abteilungen übertragen.

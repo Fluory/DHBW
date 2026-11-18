@@ -70,17 +70,30 @@ Dazu eine Methode für Mitschriften: Notizen schreiben → Fragen dazu formulier
 
 **In einem Satz:** Feedback heißt: Du beschreibst, was du gesehen hast und was es bei dir ausgelöst hat, ohne ein Urteil über die Person zu fällen.
 
-Feedback ist die Beschreibung deiner eigenen, subjektiven Wahrnehmung. Es ist nicht die Wahrheit. Es hilft, blinde Flecken zu erkennen, Zusammenarbeit zu verbessern und die eigene Wirkung kennenzulernen.
+**Stell dir vor:** Du hast Spinat zwischen den Zähnen und gehst gleich in ein Vorstellungsgespräch. Du selbst siehst es nicht. Wer es dir sagt, tut dir einen Gefallen, auch wenn es kurz unangenehm ist. So funktioniert Feedback: Andere sehen etwas an dir, das du selbst nicht sehen kannst. Man nennt das einen **blinden Fleck**.
+
+Feedback ist die Beschreibung deiner eigenen, subjektiven Wahrnehmung. Es ist nicht die Wahrheit. Wozu es gut ist (Flipchart vom 06.10.):
+
+- Störungen im Kontakt beseitigen und Missverständnisse klären,
+- Zusammenarbeit verbessern,
+- blinde Flecken erkennen,
+- mehr Handlungsmöglichkeiten bekommen,
+- die eigene Wirkung kennenlernen.
 
 **Feedback geben** nach dem WWW-Schema:
 
-1. **Wahrnehmung:** „Mir ist aufgefallen, dass …“
-2. **Wirkung:** „Das wirkt auf mich …“
-3. **Wunsch:** „Ich würde mich freuen, wenn …“
+1. **Wahrnehmung:** „Mir ist aufgefallen, dass …“ Hier steht nur, was du gesehen oder gehört hast, wie eine Kamera.
+2. **Wirkung:** „Das wirkt auf mich …“ Hier steht, was es bei dir ausgelöst hat. Das ist deine Sicht, deshalb in der Ich-Form.
+3. **Wunsch:** „Ich würde mich freuen, wenn …“ Hier steht ein konkreter Vorschlag für das nächste Mal.
 
-Dazu: Ich-Botschaften statt Du- oder Man-Sätzen. Zeitnah und konkret. Erst Positives, dann Kritisches.
+Dazu: Ich-Botschaften statt Du- oder Man-Sätzen. Ein Du-Satz („Du bist chaotisch“) ist ein Urteil über die Person, ein Man-Satz („Man muss doch pünktlich sein“) versteckt deine Meinung hinter einer angeblichen Regel. Beides lädt zur Verteidigung ein. Gib Feedback zeitnah und konkret. Erst Positives, dann Kritisches.
 
-**Feedback nehmen:** zuhören, dich fragen „Was löse ich beim anderen aus?“, nicht rechtfertigen, nachfragen, wenn etwas unklar ist. Du entscheidest selbst, was du annimmst.
+| Statt (Urteil) | Besser (Ich-Botschaft) |
+|---|---|
+| „Du bist unzuverlässig.“ | „Mir ist aufgefallen, dass dein Teil zweimal nach der vereinbarten Zeit kam. Ich konnte dadurch erst spät zusammenfügen.“ |
+| „Man redet nicht so lange.“ | „Ich habe nach etwa acht Minuten den Faden verloren. Ich wünsche mir, dass du nach jedem Punkt kurz zusammenfasst.“ |
+
+**Feedback nehmen:** zuhören, dich fragen „Was löse ich beim anderen aus?“, nicht rechtfertigen, nachfragen, wenn etwas unklar ist. Du entscheidest selbst, was du annimmst. Im Kurs hieß es dazu: Feedback ist ein Geschenk. Ein guter erster Satz ist einfach „Danke, das schaue ich mir an.“
 
 > [!NOTE]
 > **Beispiel: Feedback nach einer Präsentation**
@@ -100,15 +113,34 @@ Dazu: Ich-Botschaften statt Du- oder Man-Sätzen. Zeitnah und konkret. Erst Posi
 
 **Stell dir vor:** Eure Gruppe hat vier Wochen für eine Hausarbeit. Variante 1: Jeder schreibt still seinen Teil, in der letzten Nacht fügt ihr alles zusammen und merkt, dass zwei Teile dasselbe erklären und einer fehlt. Variante 2: Jeden Freitag zeigt ihr euch den Stand, besprecht in zehn Minuten, was hakt, und verteilt neu. Variante 1 ist wie das Wasserfallmodell, Variante 2 ist agil.
 
-Die Termine liefen im eduScrum-Format. Das ist Scrum, angepasst für Lerngruppen. Agile Vorgehensmodelle arbeiten in kurzen Schleifen mit häufigen Teilergebnissen und regelmäßiger Anpassung. Klassische Modelle wie das Wasserfallmodell planen alles vorab und arbeiten nacheinander ab.
+Die Termine liefen im eduScrum-Format. Das ist Scrum, angepasst für Lerngruppen. Ein **Sprint** ist eine feste, kurze Arbeitsrunde (Time-Box), an deren Ende ein vorzeigbares Teilergebnis steht.
+
+| | klassisch (z. B. Wasserfall, V-Modell) | agil (z. B. Scrum) |
+|---|---|---|
+| Planung | alles vorab | in kurzen Schleifen, regelmäßig neu priorisieren |
+| Ablauf | nacheinander (sequentiell) | in Wiederholungen (iterativ), Stück für Stück (inkrementell) |
+| Ergebnis | am Ende | häufig Teilergebnisse |
+| Team | Aufgaben werden zugeteilt | organisiert sich selbst, passt die Arbeitsweise laufend an |
+
+Agilität ist laut Fotoprotokoll auch eine Haltung: die Fähigkeit, sich vorausschauend an Veränderungen anzupassen.
 
 | Element | Bedeutung im Kurs |
 |---|---|
+| **Rollen** | |
 | Product Owner | Dozentin: bestimmt, was und warum gelernt wird, prüft die Qualität |
 | Team Captain (Scrum Master) | sorgt dafür, dass das Team gut arbeitet |
 | Team | organisiert sich selbst, arbeitet nach Akzeptanzkriterien |
-| Sprint Planning, Stand-up, Review, Retrospektive | planen, kurz abstimmen, Ergebnis zeigen, Arbeitsweise reflektieren |
+| **Ereignisse** | |
+| Sprint Planning | Team bilden, Lernziele klären, Arbeit planen |
+| Stand-up | 5 Minuten: Wo stehen wir? Was hakt? |
+| Sprint Review | Ergebnis zeigen |
+| Retrospektive | Arbeitsweise reflektieren |
+| **Artefakte** (Arbeitsmittel) | |
+| Product Backlog | Liste der Aufgaben mit Lernzielen und Akzeptanzkriterien |
+| Scrum Board | Tafel mit den Spalten To do, In Arbeit, Fertig |
 | Definition of Done / of Fun | wann eine Arbeit fertig ist / was wir brauchen, um gern zusammenzuarbeiten |
+
+Ein **Akzeptanzkriterium** ist eine vorher vereinbarte, prüfbare Bedingung, die ein Ergebnis erfüllen muss, damit es zählt.
 
 Im **Papierflieger-Spiel** wurde das ausprobiert: Planen (2 Minuten), Bauen (3 Minuten), Prüfen und Anpassen (2 Minuten), mehrere Runden. Vor jeder Runde schätzt das Team, wie viele Flieger es schafft. Mit jeder Runde nähern sich Schätzung und Ergebnis an.
 
@@ -146,6 +178,11 @@ Im **Papierflieger-Spiel** wurde das ausprobiert: Planen (2 Minuten), Bauen (3 M
 > **Übung 5 · Prüfungsniveau**
 > Mach die Übung „Denken auf Papier“ zum Thema Kommunikationsmodelle (Kapitel 2). Beschreibe danach in drei Sätzen, was dir gefehlt hat und wie du die Lücke schließen willst. Reflexionen dieser Art könnten Teil eines Portfolios sein.
 > Quelle: Lernübung „Denken auf Papier“, Fotoprotokoll 08.10.
+
+> [!TIP]
+> **Übung 6 · mittel**
+> Eure Dreiergruppe soll in zwei Wochen eine Präsentation abgeben. Plane das Vorgehen im eduScrum-Format: Wie lang ist ein Sprint, was gehört ins Product Backlog, wie lautet eure Definition of Done, und welche drei Fragen stellt ihr in der Retrospektive?
+> Quelle: eigene Aufgabe nach Fotoprotokoll 06.10.
 
 ## Lösungen
 
@@ -191,3 +228,13 @@ Die Aufgaben b) und e) bekommen einen festen Termin im Kalender. Genau diese Auf
 *Beispiel für eine Reflexion.*
 
 „Ich konnte das Vier-Ohren-Modell und das Eisbergmodell aus dem Kopf nennen und verbinden. Bei der Transaktionsanalyse wusste ich nur die drei Ich-Zustände, aber nicht, warum Gespräche zwischen ihnen schiefgehen. Ich lese den Abschnitt in Kapitel 2 noch einmal und erkläre ihn morgen in der Lerngruppe laut.“
+
+### Übung 6
+
+*Beispiellösung.*
+
+1. **Sprintlänge:** vier Tage. So gibt es in zwei Wochen drei Sprints und drei Zwischenstände.
+2. **Product Backlog:** Kernbotschaft festlegen, Zielgruppe klären, Quellen suchen, Folien bauen, Sprechtext schreiben, Probelauf mit Stoppuhr. Jede Aufgabe bekommt ein Akzeptanzkriterium, zum Beispiel „Probelauf dauert höchstens 10 Minuten“.
+3. **Scrum Board:** Die Aufgaben wandern von To do über In Arbeit nach Fertig. Jeder sieht, was offen ist.
+4. **Definition of Done:** Eine Folie ist fertig, wenn sie einen Action Title hat, jede Zahl eine Quelle hat und jemand anderes sie gegengelesen hat.
+5. **Retrospektive** nach jedem Sprint: Was lief gut? Was hat gehindert? Was nehmen wir mit?

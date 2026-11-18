@@ -18,6 +18,7 @@ Plane vom Ende her: **Was soll dein Publikum danach tun, wissen oder entscheiden
 - **Action Title:** Folientitel als Aussage („Kosten sinken um 30 %“ statt „Ergebnisse“).
 - **Vorbereitung:** eine Botschaft, drei Einwände mit Backup-Folien, Probelauf mit Stoppuhr. KI darf Folien bauen; Kernaussage, Zielgruppe, Nutzen kommen von dir, jede KI-Zahl prüfen.
 - **Auftreten:** Struktur, Klarheit, Zeitmanagement, Powerpose, „Own the stage“, Blickkontakt, „Dress for the show“, Farbe, Sprache.
+- **Hochstatus** (fester Stand, Blickkontakt, ganze Sätze, ruhig und laut) statt **Tiefstatus** (wippen, Füllwörter, Weichmacher, ins Gesicht fassen).
 
 ## Storytelling
 

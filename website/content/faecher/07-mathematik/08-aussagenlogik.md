@@ -180,6 +180,10 @@ Definition 1.2.1: A → B ist genau dann falsch, wenn A wahr und B falsch ist.
 
 Auf Deutsch heißt das: Eine Implikation prüfst du, indem du nach dem einen verbotenen Fall suchst: Voraussetzung erfüllt, Folgerung nicht. Gibt es diesen Fall nicht, ist sie wahr.
 
+> [!IMPORTANT]
+> **Das Wichtigste**
+> A → B ist **nur** falsch bei A = w und B = f. Ist A falsch, ist A → B immer wahr („aus Falschem folgt alles“). Prüfen heißt: nach dem einen verbotenen Fall suchen.
+
 > [!WARNING]
 > **Typischer Fehler**
 > A → B mit „A ist wahr und B ist wahr“ verwechseln. Die Implikation sagt nichts darüber, ob A gilt. Sie sagt nur: **Falls** A gilt, dann auch B. Die Zeilen mit A = f sind alle wahr.
@@ -233,6 +237,10 @@ Auf Deutsch heißt das: Gleichwertig prüfst du mit der Wahrheitstafel. Zwei Spa
 3. Vergleiche Zeile für Zeile.
 4. Alle Zeilen gleich: gleichwertig. Mindestens eine Zeile verschieden: nicht gleichwertig, und diese Zeile ist dein Gegenbeispiel.
 
+> [!IMPORTANT]
+> **Das Wichtigste**
+> A ↔ B ist wahr, wenn beide gleich sind, und A ↔ B ≡ (A → B) ∧ (B → A). Gleichwertig zu A → B sind die Kontraposition ¬B → ¬A und ¬A ∨ B, **nicht** der Umkehrschluss ¬A → ¬B. Gleichwertigkeit prüfst du Zeile für Zeile, eine abweichende Zeile ist das Gegenbeispiel.
+
 > [!WARNING]
 > **Typischer Fehler**
 > Der Umkehrschluss. „Wer täglich eine Stunde Logik lernt, besteht“ heißt **nicht** „Wer nicht täglich lernt, fällt durch“. Jemand kann auch ohne tägliches Lernen bestehen, das verbietet die Aussage nicht. Richtig umdrehen geht nur mit Kontraposition: „Wer nicht besteht, hat nicht täglich gelernt.“
@@ -284,6 +292,10 @@ Warum das wichtig ist: A ∨ B ∧ C mit A = w und C = f.
 
 Weitere Regeln: Mehrere ∧ hintereinander (oder mehrere ∨) brauchen keine Klammern. Ketten mit → oder ↔ immer klammern.
 
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Syntax = Bauregeln (welche Zeichenkette ist eine Formel), Semantik = Wahrheitswert bei einer Belegung. Ausgewertet wird von innen nach außen. Vorrang: ¬ vor ∧ vor ∨ vor → vor ↔, also A ∨ B ∧ C = A ∨ (B ∧ C).
+
 > [!WARNING]
 > **Typischer Fehler**
 > Bei ¬ die Klammer weglassen. ¬(C ∧ D) ist etwas anderes als ¬C ∧ D. Die Klammer hinter ¬ bleibt, sobald mehr als eine Variable verneint werden soll.
@@ -322,6 +334,10 @@ Benannte Tautologien der Folie:
 | Satz vom Widerspruch | ¬(A ∧ ¬A) | nichts ist zugleich wahr und falsch |
 | Modus Ponens | (A ∧ (A → B)) → B | gilt A und „wenn A, dann B“, dann gilt B |
 | Kontraposition | (A → B) ↔ (¬B → ¬A) | siehe oben |
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Schau nur auf die Ergebnisspalte: mindestens ein w = erfüllbar, nur w = Tautologie, kein w = Widerspruch. Die Verneinung einer Tautologie ist ein Widerspruch und umgekehrt.
 
 > [!WARNING]
 > **Typischer Fehler**
@@ -435,6 +451,10 @@ Beispiel: (A ∧ B) ∨ (A ∧ ¬B)
 
 Probe mit A = w, B = f: Anfang (w ∧ f) ∨ (w ∧ w) = f ∨ w = w. Ende A = w. Passt.
 
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Mit den Gesetzen formst du ohne Wahrheitstafel um. Die wichtigsten: De Morgan (¬ wandert hinein, ∧ und ∨ tauschen), Distributivität (in beide Richtungen), Komplement (A ∧ ¬A ≡ f, A ∨ ¬A ≡ w), Neutralität (A ∧ w ≡ A, A ∨ f ≡ A), Absorption (A ∧ (A ∨ B) ≡ A). Pro Zeile ein Gesetz, mit Namen, am Ende eine Probe.
+
 > [!WARNING]
 > **Typischer Fehler**
 > Bei De Morgan nur die Variablen verneinen und den Operator stehen lassen: ¬(A ∧ B) ist **nicht** ¬A ∧ ¬B. Gegenprobe A = w, B = f: links ¬(w ∧ f) = ¬f = w, rechts f ∧ w = f.
@@ -495,6 +515,10 @@ NAND und NOR kennst du aus GIT als Gatter. Laut Folien kommen sie in Kapitel 3.3
 4. k = Binärzahl + 1.
 
 Beispiel ¬A: Zeilen ff, fw, wf, ww ergeben w, w, f, f = 1100 = 12. Also k = 13, ¬A ist g₁₃.
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Eine n-stellige boolesche Funktion hat eine Tafel mit 2ⁿ Zeilen; es gibt 2^(2ⁿ) solche Funktionen, bei n = 2 also 16. Für die Nummer g_k: Zeilen ff, fw, wf, ww, Spalte als Binärzahl lesen, plus 1.
 
 > [!WARNING]
 > **Typischer Fehler**
@@ -566,6 +590,10 @@ Zwei Blöcke, die sich nur in **einer** Variable unterscheiden, kannst du zusamm
 (¬A ∧ B ∧ ¬C) ∨ (¬A ∧ B ∧ C) ≡ ¬A ∧ B ∧ (¬C ∨ C) ≡ ¬A ∧ B ∧ w ≡ ¬A ∧ B.
 
 Für g brauchst du den Block ¬A ∧ B ∧ C zweimal (Idempotenz erlaubt das Verdoppeln): einmal mit ¬A ∧ B ∧ ¬C zu ¬A ∧ B, einmal mit A ∧ B ∧ C zu B ∧ C. Ergebnis g ≡ (¬A ∧ B) ∨ (B ∧ C) ≡ **B ∧ (¬A ∨ C)** (mit Python geprüft). Systematisch geht das laut Folien später mit KV-Diagrammen (Kapitel 3.2).
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> DNF: je **w-Zeile** ein ∧-Block (Wert w → Variable, Wert f → ¬Variable), Blöcke mit ∨ verbinden. KNF: je **f-Zeile** ein ∨-Block (Wert w → ¬Variable, Wert f → Variable), Blöcke mit ∧ verbinden. In jedem Block stehen alle Variablen. Wenige w → DNF, wenige f → KNF.
 
 > [!WARNING]
 > **Typischer Fehler**
@@ -651,6 +679,10 @@ Warum das stimmt: ∀ ist ein großes ∧ („x₁ und x₂ und x₃ …“), �
 
 Beispiel: „Jede Quadratzahl ist gerade“ = ∀x (Q(x) → G(x)). Verneint: ∃x ¬(Q(x) → G(x)) ≡ ∃x (Q(x) ∧ ¬G(x)): „Es gibt eine ungerade Quadratzahl.“ Das stimmt, die 9.
 
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Prädikat = Satz mit Lücke. ∀x P(x): für alle x; ∃x P(x): für mindestens ein x. Verneinen: ¬∀x P(x) ≡ ∃x ¬P(x) und ¬∃x P(x) ≡ ∀x ¬P(x). „Jedes Q ist G“ = ∀x (Q(x) → G(x)). Verschiedene Quantoren darf man nicht vertauschen.
+
 > [!WARNING]
 > **Typische Fehler**
 > (1) Beim Verneinen den Quantor stehen lassen: ¬∀x P(x) ist **nicht** ∀x ¬P(x). (2) „Jede Quadratzahl ist gerade“ mit ∧ statt → schreiben: ∀x (Q(x) ∧ G(x)) hieße „jede Zahl ist eine gerade Quadratzahl“. Bei „jedes … ist …“ steht nach ∀ fast immer ein →. (3) ∀ und ∃ vertauschen.
@@ -697,6 +729,10 @@ Beim Kochen gibt es feste Grundtechniken: anbraten, kochen, backen. Bei jedem Re
 4. Das widerspricht der Annahme. Mit 2, 3, 5, 7 ist N = 211, und 211 ist selbst eine Primzahl.
 
 **Gegenbeispiel:** „Jede Quadratzahl ist gerade“ widerlegt die 9. Aber Achtung: Beispiele **beweisen** nie ein „für alle“. Dass es für 1, 2 und 3 stimmt, heißt nichts für 4.
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Fünf Muster: direkt, Kontraposition (¬B → ¬A zeigen), Widerspruch (Gegenteil annehmen bis A ∧ ¬A), Gegenbeispiel (widerlegt ein „für alle“), vollständige Induktion. Ein Gegenbeispiel widerlegt, Beispiele beweisen nie ein „für alle“.
 
 > [!WARNING]
 > **Typischer Fehler**
@@ -748,13 +784,17 @@ Beispiel 1 + 2 + … + n = n(n + 1)/2:
 
 Ein weiteres Folienbeispiel: Eine Wahrheitstafel mit n Variablen hat 2ⁿ Zeilen. Anfang: 1 Variable, 2 Zeilen = 2¹. Schluss: Eine neue Variable verdoppelt die Zeilen (jede alte Zeile einmal mit w, einmal mit f), also 2 · 2ⁿ = 2ⁿ⁺¹.
 
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Induktion in drei Schritten: **Anfang** A(1) nachrechnen, **Annahme** A(n) für ein festes n, **Schluss** A(n + 1) so umformen, dass die Annahme eingesetzt werden kann, und die Stelle markieren. Bild: Der erste Dominostein fällt, und jeder stößt den nächsten um.
+
 > [!WARNING]
 > **Typischer Fehler**
 > (1) Den Induktionsanfang weglassen. Ohne ersten Stein fällt nichts. (2) Die Annahme „für alle n“ formulieren. Dann hättest du das Ziel schon vorausgesetzt. Richtig ist „für ein festes n“. (3) Im Schluss die Annahme nicht benutzen. Wenn du sie nirgends brauchst, stimmt meist etwas nicht.
 
 ## Übungen
 
-Die Übungen 1 bis 21 stehen sinngemäß auf den Folien VL01. Die Übungen 22 bis 24 sind eigene Aufgaben im Klausurstil. Zu den Folienaufgaben stehen die Lösungen in der Vorlesung; hier sind sie selbst gerechnet und mit Python über alle Belegungen geprüft.
+Die Übungen 1 bis 21 stehen sinngemäß auf den Folien VL01. Die Übungen 22 bis 26 sind eigene Aufgaben im Klausurstil. Zu den Folienaufgaben stehen die Lösungen in der Vorlesung; hier sind sie selbst gerechnet und mit Python über alle Belegungen geprüft.
 
 > [!TIP]
 > **Übung 1 · leicht**
@@ -897,6 +937,18 @@ Die Übungen 1 bis 21 stehen sinngemäß auf den Folien VL01. Die Übungen 22 bi
 > [!TIP]
 > **Übung 24 · Prüfungsniveau**
 > Aus der Analysis: Eine Folge (aₙ) konvergiert gegen a, wenn gilt: ∀ε > 0 ∃n₀ ∈ ℕ ∀n ≥ n₀: |aₙ − a| < ε. a) Lies die Formel in einem deutschen Satz vor. b) Verneine sie Schritt für Schritt. c) Was bedeutet die Verneinung auf Deutsch?
+>
+> Quelle: eigene Aufgabe
+
+> [!TIP]
+> **Übung 25 · mittel**
+> Prüfe mit einer Wahrheitstafel, ob die Folgerung gilt: a) (A → B) ∧ ¬B ⇒ ¬A (der „Modus Tollens“) b) (A → B) ∧ B ⇒ A c) (A ∨ B) ∧ (A → C) ∧ (B → C) ⇒ C. Erkläre jede in einem Alltagssatz.
+>
+> Quelle: eigene Aufgabe, wie Übungsblatt „Aussagenlogik“, Aufgabe 4
+
+> [!TIP]
+> **Übung 26 · Prüfungsniveau**
+> Zeige mit vollständiger Induktion: 1 + 3 + 9 + … + 3ⁿ⁻¹ = (3ⁿ − 1)/2 für alle n ∈ ℕ. Prüfe die Formel vorher für n = 1, 2, 3.
 >
 > Quelle: eigene Aufgabe
 
@@ -1256,3 +1308,51 @@ b) Verneinen nach dem Rezept:
 Achtung: Die Bedingungen ε > 0 und n ≥ n₀ werden **nicht** verneint. Sie sagen nur, wo gesucht wird.
 
 c) Auf Deutsch: „Es gibt einen Mindestabstand ε, so dass hinter jedem Platz n₀ noch ein Glied kommt, das mindestens ε von a entfernt ist.“ Die Folge kommt a also nie dauerhaft nahe. Beispiel aus Kapitel 2: aₙ = (−1)ⁿ und a = 1. Mit ε = 1 ist hinter jedem n₀ noch ein ungerades n mit |−1 − 1| = 2 ≥ 1.
+
+### Übung 25
+
+Rezept: Nur die Zeilen anschauen, in denen die linke Seite wahr ist. Ist dort auch die rechte Seite wahr, gilt die Folgerung.
+
+a)
+
+| A | B | A → B | ¬B | links: (A → B) ∧ ¬B | rechts: ¬A |
+|---|---|---|---|---|---|
+| w | w | w | f | f | f |
+| w | f | f | w | f | f |
+| f | w | w | f | f | w |
+| f | f | w | w | **w** | **w** |
+
+Links ist nur in Zeile 4 wahr, dort ist auch ¬A wahr. **Die Folgerung gilt.** Alltag: „Wenn es regnet, ist die Straße nass. Die Straße ist nicht nass. Also regnet es nicht.“
+
+b)
+
+| A | B | A → B | links: (A → B) ∧ B | rechts: A |
+|---|---|---|---|---|
+| w | w | w | w | w |
+| w | f | f | f | w |
+| f | w | w | **w** | **f** |
+| f | f | w | f | f |
+
+In Zeile 3 ist links wahr, A aber falsch. **Die Folgerung gilt nicht.** Alltag: „Wenn es regnet, ist die Straße nass. Die Straße ist nass.“ Daraus folgt nicht, dass es regnet, vielleicht fuhr der Sprengwagen vorbei. Das ist der Denkfehler „Bestätigung der Folgerung“.
+
+c) Mit drei Variablen 8 Zeilen (mit Python geprüft): Die linke Seite ist genau in den Zeilen (w, w, w), (w, f, w) und (f, w, w) wahr, und dort ist überall C = w. **Die Folgerung gilt.** Das ist die **Fallunterscheidung**: „Ich fahre mit dem Bus oder mit dem Rad. Mit dem Bus komme ich pünktlich, mit dem Rad auch. Also komme ich pünktlich.“
+
+### Übung 26
+
+**Vorher prüfen:**
+
+| n | links | rechts (3ⁿ − 1)/2 |
+|---|---|---|
+| 1 | 1 | (3 − 1)/2 = 1 |
+| 2 | 1 + 3 = 4 | (9 − 1)/2 = 4 |
+| 3 | 1 + 3 + 9 = 13 | (27 − 1)/2 = 13 |
+
+1. **Induktionsanfang n = 1:** Links steht nur das erste Glied 3⁰ = 1. Rechts (3¹ − 1)/2 = 1. ✓
+2. **Induktionsannahme:** Für ein festes n gilt 1 + 3 + … + 3ⁿ⁻¹ = (3ⁿ − 1)/2.
+3. **Induktionsschluss:** Ziel ist 1 + 3 + … + 3ⁿ⁻¹ + 3ⁿ = (3ⁿ⁺¹ − 1)/2. Das neue Glied ist 3ⁿ (Exponent (n + 1) − 1 = n).
+   - 1 + 3 + … + 3ⁿ⁻¹ + 3ⁿ = **(3ⁿ − 1)/2** + 3ⁿ (← hier die Annahme)
+   - = (3ⁿ − 1)/2 + 2 · 3ⁿ/2 (auf den Nenner 2 bringen)
+   - = (3ⁿ − 1 + 2 · 3ⁿ)/2 = (3 · 3ⁿ − 1)/2
+   - = (3ⁿ⁺¹ − 1)/2 ✓ (denn 3 · 3ⁿ = 3ⁿ⁺¹)
+
+Damit gilt die Formel für alle n ∈ ℕ. Das ist genau die Summenformel der endlichen geometrischen Reihe aus Kapitel 3 mit q = 3.

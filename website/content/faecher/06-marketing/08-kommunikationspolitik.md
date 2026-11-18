@@ -13,7 +13,22 @@ In der Musterklausur 2025 gab es 10 Punkte: 6 für Push und Pull, 4 für den Tau
 
 **In einem Satz:** Werbung soll auffallen, ehrlich und klar sein und mehr bringen, als sie kostet.
 
-Werbung soll vier Grundsätze erfüllen: Wirksamkeit, Wahrheit (nicht täuschen), Klarheit und Wirtschaftlichkeit. Ihre Funktionen sind Bekanntmachung, Information, Suggestion (Gefühle durch Farbe und Musik), Image und Erinnerung.
+Werbung soll vier Grundsätze erfüllen:
+
+- **Werbewirksamkeit:** Sie muss die Zielgruppe wirklich erreichen und beeinflussen, etwa durch auffällige Farben, Bilder, Texte.
+- **Werbewahrheit:** Sie darf nicht täuschen (Gesetz gegen den unlauteren Wettbewerb, UWG).
+- **Werbeklarheit:** Die Aussage muss klar und verständlich sein.
+- **Wirtschaftlichkeit:** Die Kosten müssen in einem vernünftigen Verhältnis zum Erfolg stehen. Problem: Den Erfolg kann man schwer messen.
+
+Werbung hat fünf Funktionen:
+
+| Funktion | Bedeutung | Beispiel Bäckerei |
+|---|---|---|
+| Bekanntmachung | auf ein Produkt hinweisen | „Neu: unser Dinkelbrot“ |
+| Information | Eigenschaften, Preis, Bezugsort nennen | „4,20 €, in allen Filialen“ |
+| Suggestion | Gefühle wecken durch Farbe, Bilder, Musik | warmes Licht, Duft-Bild vom Ofen |
+| Image | sich positiv von der Konkurrenz abheben | „Handwerk seit drei Generationen“ |
+| Erinnerung | durch Wiederholung im Gedächtnis bleiben | jeden Samstag dieselbe Anzeige |
 
 Ein **Werbeplan** beantwortet neun Fragen: Was bewerben? Wen ansprechen? Was erreichen? Wie vorgehen (Strategie)? Welche Aussage? Welche Medien? Wann? Wo? Mit wie viel Geld?
 
@@ -31,7 +46,8 @@ Eine zweite Formel aus dem Skript ist PPPP: Picture (Bild), Promise (Versprechen
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
-> AIDA: Attention → Interest → Desire → Action.
+> - Grundsätze der Werbung: Wirksamkeit, Wahrheit, Klarheit, Wirtschaftlichkeit.
+> - AIDA: Attention → Interest → Desire → Action. PPPP: Picture, Promise, Prove, Push.
 
 > [!WARNING]
 > **Achtung**
@@ -74,7 +90,9 @@ Eine zweite Formel aus dem Skript ist PPPP: Picture (Bild), Promise (Versprechen
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
-> Der kleinere TKP gewinnt. Es zählt der Preis je 1.000 Zielpersonen, nicht der absolute Preis.
+> - TKP = Kosten / (Nutzer · Zielgruppenanteil) · 1.000. Der kleinere TKP gewinnt.
+> - Es zählt der Preis je 1.000 Zielpersonen, nicht der absolute Preis.
+> - Above-the-Line (klassisch): Mediawerbung, Direktwerbung, Verkaufsförderung, PR. Below-the-Line (modern): Sponsoring, Product Placement, Event-, virales, Guerilla-, Online-Marketing.
 
 > [!WARNING]
 > **Achtung**
@@ -86,7 +104,7 @@ Eine zweite Formel aus dem Skript ist PPPP: Picture (Bild), Promise (Versprechen
 
 **Was ist das?** **Messen** richten sich vor allem an Fachbesucher und sind im B2B-Bereich wichtig. Ziele: Geschäftsabschlüsse, Kontakte, Markttransparenz, Trends erkennen, neue Zielgruppen, Image. Vorteil: persönlicher Kontakt und direkter Vergleich mit der Konkurrenz. Nachteil: hohe Kosten, Erfolg schwer messbar, viel Organisation.
 
-**Verkaufsförderung** (Sales Promotion) sind zeitlich begrenzte Aktionen mit zusätzlichen Kaufanreizen. Im Schnitt fließen etwa 25 % des Kommunikationsbudgets hinein.
+**Verkaufsförderung** (Sales Promotion) sind zeitlich begrenzte Aktionen mit zusätzlichen Kaufanreizen, meist zusammen mit dem Handel. Im Schnitt fließen etwa 25 % des Kommunikationsbudgets hinein. Gründe laut Skript: Es kommen immer mehr Produkte auf den Markt, der Druck, mehr zu verkaufen, steigt, und normale Werbung wirkt wegen der Reizüberflutung schwächer.
 
 **Stell dir vor (Push und Pull):** Ein neuer Schokoriegel. Bei **Push** überzeugt der Hersteller zuerst den Supermarkt mit Rabatt und einem auffälligen Aufsteller an der Kasse. Der Supermarkt „drückt“ den Riegel dann zum Kunden. Bei **Pull** läuft zuerst Werbung im Fernsehen und auf TikTok. Kunden fragen im Supermarkt danach, und der Supermarkt „zieht“ den Riegel ins Regal, weil er sonst Kunden verliert.
 
@@ -113,12 +131,16 @@ Eine zweite Formel aus dem Skript ist PPPP: Picture (Bild), Promise (Versprechen
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
-> Push = über den Handel drücken. Pull = beim Endkunden Nachfrage erzeugen, die den Handel zieht.
+> - Push = handelsorientiert: Anreize für den Handel (Rabatte, Displays), der Handel drückt die Ware zum Kunden. Eignet sich besonders für neue Produkte.
+> - Pull = endverbraucherorientiert: Werbung und Proben beim Endkunden erzeugen einen Nachfragesog, der Handel muss listen. Teurer, eher für große, etablierte Unternehmen.
+> - Verkaufsförderung: Staff Promotion (eigene Verkäufer), Trade Promotion (Handel), Consumer Promotion (Verbraucher).
+> - Sponsoring = Förderung von Sport, Kultur, Sozialem, der Sponsor bleibt passiv. Event-Marketing = eigenes Ereignis.
 
 > [!WARNING]
 > **Achtung**
 >
-> Push ist handelsorientiert, nicht endverbraucherorientiert. Handelsorientierte Verkaufsförderung heißt Trade Promotion, nicht Staff Promotion.
+> - Push ist handelsorientiert, nicht endverbraucherorientiert. Handelsorientierte Verkaufsförderung heißt Trade Promotion, nicht Staff Promotion.
+> - Zu viel Verkaufsförderung schadet: Gibt es ständig Aktionen, kauft kaum noch jemand zum Normalpreis, und eine hochpreisige Marke wirkt billig (vgl. Skript-Übung 38).
 
 ## Übungen
 
@@ -163,6 +185,20 @@ Eine zweite Formel aus dem Skript ist PPPP: Picture (Bild), Promise (Versprechen
 > *Quelle: Musterklausur Marketing 2025, A4 (6 Punkte)*
 >
 > Mit Verkaufsförderung setzt man Push- oder Pull-Strategien um. Erkläre beide Strategien und gehe auf die Unterschiede ein.
+
+> [!TIP]
+> **Übung 7 · mittel**
+>
+> *Quelle: Skript Marketing, Übung 37 (S. 68), Zahlen daraus*
+>
+> Ein Hersteller plant für seine Gebäckrolle eine Sommeraktion: Auf jede Rolle kommt gratis ein Trinkbecher, der Preis bleibt gleich. Kosten: Becher 160.000 €, Verpackung 20.000 €, Abpacken 35.000 €, Material für den Handel 25.000 €. Ziel: 900.000 verkaufte Rollen. a) Wie hoch sind die Kosten der Aktion je Rolle? b) Ist das Push, Pull oder beides? c) Nenne zwei Fragen, die du vor der Entscheidung klären würdest.
+
+> [!TIP]
+> **Übung 8 · mittel**
+>
+> *Quelle: Skript Marketing, Übung 35 (S. 65)*
+>
+> Ein Softwareanbieter gibt 500.000 € im Jahr für Messen aus. Ziele gibt es keine, Gespräche werden nicht notiert, und die Verkäufer sagen: „Messen kann man nicht messen.“ Schlage vier Maßnahmen vor, damit Messen erfolgreicher und ihr Erfolg sichtbar wird.
 
 ## Lösungen
 
@@ -217,3 +253,21 @@ Eigene Lösungsskizze:
 1. Push: Der Hersteller richtet sich an den Handel. Er schafft Anreize wie Preisnachlässe oder Displays, damit der Handel das Produkt ins Sortiment nimmt. Es entsteht Warendruck. Der Handel macht dann seinerseits die Kunden aufmerksam.
 2. Pull: Der Hersteller richtet sich direkt an den Endverbraucher, zum Beispiel mit Werbung oder Proben. Es entsteht ein Nachfragesog. Kunden verlangen das Produkt im Laden, der Handel muss es aufnehmen.
 3. Unterschiede: Zielgruppe (Handel oder Endkunde), Richtung (Ware wird gedrückt oder Nachfrage zieht), Einsatz (Push eher für neue Produkte, Pull teurer und eher für große, bekannte Unternehmen).
+
+### Übung 7
+
+Eigene Lösungsskizze:
+
+1. a) Kosten gesamt = 160.000 + 20.000 + 35.000 + 25.000 = 240.000 €. Je Rolle: 240.000 / 900.000 = 0,27 € (genau 0,2667 €).
+2. b) Beides: Der Becher auf der Packung und das Display sprechen den Endkunden an (Consumer Promotion, Pull). Die Verkaufsunterlagen und Display-Einheiten für den Handel sind Trade Promotion (Push).
+3. c) Zum Beispiel: Bringt jede Rolle mehr als 0,27 € zusätzlichen Deckungsbeitrag, also lohnt sich die Aktion? Kaufen die Kunden danach weiter, oder ziehen sie nur ihren Kauf vor? Passt ein Gratisbecher zum Image der Marke?
+
+### Übung 8
+
+Eigene Lösungsskizze (andere sinnvolle Maßnahmen zählen auch):
+
+1. Für jede Messe vorher messbare Ziele festlegen, zum Beispiel 80 Gespräche mit Neukunden und 15 Angebote.
+2. Jedes Gespräch in einem Formular oder im CRM dokumentieren (Wer? Was? Nächster Schritt?).
+3. Nach der Messe nachfassen und zählen, wie viele Aufträge aus den Kontakten entstehen.
+4. Kosten je Kontakt und je Auftrag berechnen und die Messen miteinander vergleichen. Schwache Messen streichen, das Geld in die besten stecken.
+5. Gäste vorher gezielt einladen, damit die richtigen Leute an den Stand kommen.

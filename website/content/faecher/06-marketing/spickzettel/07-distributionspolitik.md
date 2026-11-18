@@ -6,7 +6,7 @@
 | Beispiele | eigener Laden, eigener Onlineshop, Automat, Online-Marktplatz | Supermarkt, Fachhandel |
 | Kosten | keine Handelsspanne | Handel behält die Handelsspanne |
 
-**Kriterien für den Absatzweg:** Lieferzeit, Marktabdeckung, Handelsspanne, Lagerung, Abhängigkeit, Kundenkontakt.
+**Kriterien für den Absatzweg:** für indirekt sprechen Lieferzeit, Marktabdeckung, Lagerung; für direkt Handelsspanne, Abhängigkeit, Kundenkontakt.
 
 **Vorteile eigener Onlineshop:**
 

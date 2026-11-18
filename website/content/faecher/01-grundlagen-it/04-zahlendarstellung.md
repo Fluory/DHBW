@@ -94,7 +94,14 @@ Weil 8 = 2³ und 16 = 2⁴ ist, entspricht eine Oktalziffer genau drei Bit und e
 - Oktal: von rechts 001 | 100 | 100 → 1 | 4 | 4 → **144₈**.
 - Probe: 1 · 64 + 4 · 8 + 4 = 100 ✓
 
-Zwischen Oktal und Hex rechnest du am einfachsten über den Umweg Binär.
+Rückwärts geht es genauso: Jede Hexziffer wird zu genau vier Bit, jede Oktalziffer zu genau drei Bit. Zwischen Oktal und Hex rechnest du über den Umweg Binär.
+
+**Durchgerechnetes Beispiel:** 3A7₁₆ ins Oktalsystem
+
+1. Jede Hexziffer in 4 Bit: 3 = 0011, A = 1010, 7 = 0111. Zusammen: 0011 1010 0111.
+2. Neu gruppieren, von rechts in Dreiergruppen: 001 | 110 | 100 | 111.
+3. Jede Gruppe umrechnen: 1 | 6 | 4 | 7 → **1647₈**.
+4. Probe über dezimal: 3A7₁₆ = 3 · 256 + 10 · 16 + 7 = 935. 1647₈ = 1 · 512 + 6 · 64 + 4 · 8 + 7 = 512 + 384 + 32 + 7 = 935 ✓
 
 > [!IMPORTANT]
 > **Das Wichtigste**
@@ -283,17 +290,76 @@ Bits:         1   0   0 ,  0    1    1   = 4 + 0,25 + 0,125 = 4,375
 4. 0,5 · 2 = 1,0 → Bit 1, Rest 0, fertig.
 5. Ergebnis: **100,011₂**. Probe: 4 + ¼ + ⅛ = 4,375 ✓
 
-Manche Dezimalbrüche sind binär periodisch: 0,4 = 0,0110 0110 0110 … Sie lassen sich nicht exakt speichern.
+**Rückwärts (binär → dezimal):** Über jedes Bit den Stellenwert schreiben und addieren, vor dem Komma 4, 2, 1, nach dem Komma ½, ¼, ⅛, ¹⁄₁₆.
 
-Eine **Gleitkommazahl** ist die wissenschaftliche Schreibweise, die du vom Taschenrechner kennst („2,022E3“). Sie besteht aus Mantisse m, Basis b und Exponent e: Z = m · b hoch e, zum Beispiel 2022 = 2,022 · 10³. Auf Deutsch: Die **Mantisse** sind die eigentlichen Ziffern (2,022), der **Exponent** sagt, um wie viele Stellen das Komma verschoben wird (3 Stellen nach rechts). Nach dem Standard IEEE 754 hat eine 32-Bit-Zahl 1 Bit Vorzeichen, 8 Bit Exponent und 23 Bit Mantisse. Weil viele Dezimalbrüche binär periodisch sind, wird statt 18,4 in Wahrheit 18,3999996… gespeichert.
+```text
+Stellenwert:  4   2   1 ,  ½    ¼    ⅛
+Bits:         1   0   1 ,  1    0    1   = 4 + 1 + 0,5 + 0,125 = 5,625
+```
+
+Manche Dezimalbrüche sind binär periodisch. So sieht das bei 0,4 aus:
+
+```text
+0,4 · 2 = 0,8 → 0
+0,8 · 2 = 1,6 → 1   weiter mit 0,6
+0,6 · 2 = 1,2 → 1   weiter mit 0,2
+0,2 · 2 = 0,4 → 0   wieder 0,4: ab hier wiederholt sich alles
+```
+
+Also 0,4 = 0,0110 0110 0110 … Der Rest wird nie 0. Die Zahl lässt sich mit endlich vielen Bits nicht exakt speichern.
+
+### Festkomma und Gleitkomma
+
+Die Klausurvorbereitung nennt „Darstellung nicht ganzzahliger Werte (Festkomma/Gleitkomma)“. Es gibt zwei Wege, eine Kommazahl in eine feste Anzahl Bits zu packen.
+
+**Festkomma in einem Satz:** Das Komma steht immer an derselben Stelle, zum Beispiel nach dem vierten von acht Bits.
+
+**Stell dir vor:** Ein Preisschild mit genau vier Feldern vor und zwei Feldern nach dem Komma. 0012,50 € passt, 12 345,00 € nicht, 0,005 € auch nicht. Einfach, aber der Bereich ist klein.
+
+**Mit Zahlen:** 8 Bit, davon 4 vor und 4 nach dem Komma (der Begriff „Festkomma“ ist die übliche Bezeichnung, die Folien zeigen nur die Kommazahlen selbst):
+
+| Bitmuster | gelesen als | Wert |
+|---|---|---|
+| 0100 0110 | 0100,0110 | 4 + ¼ + ⅛ = 4,375 |
+| 1111 1111 | 1111,1111 | 15,9375 (größter Wert) |
+| 0000 0001 | 0000,0001 | ¹⁄₁₆ = 0,0625 (kleinster Schritt) |
+
+Größer als knapp 16 und feiner als ¹⁄₁₆ geht nicht.
+
+**Gleitkomma in einem Satz:** Das Komma „gleitet“ an die Stelle, die gerade passt, und eine eigene Zahl merkt sich, wohin.
+
+**Stell dir vor:** die wissenschaftliche Schreibweise auf dem Taschenrechner, „2,022E3“. Eine **Gleitkommazahl** besteht aus Mantisse m, Basis b und Exponent e: Z = m · b hoch e, zum Beispiel 2022 = 2,022 · 10³. Auf Deutsch: Die **Mantisse** sind die eigentlichen Ziffern (2,022), die **Basis** ist 10 im Alltag und 2 im Rechner, der **Exponent** sagt, um wie viele Stellen das Komma verschoben wird (3 Stellen nach rechts). Vorteil: Mit wenigen Bits lassen sich sehr große und sehr kleine Zahlen darstellen.
+
+**So rechnest du (Normalisieren):**
+
+1. Die Zahl wie oben binär schreiben, mit Komma.
+2. Das Komma so weit schieben, dass genau eine 1 davor steht.
+3. Zählen, um wie viele Stellen du geschoben hast. Nach links geschoben ergibt einen positiven Exponenten.
+4. Schreiben als 1,… · 2 hoch Exponent.
+
+**Durchgerechnetes Beispiel:** 4,375 = 100,011₂
+
+1. Binär: 100,011.
+2. Komma zwei Stellen nach links: 1,00011.
+3. Zwei Stellen nach links, also Exponent 2.
+4. 4,375 = **1,00011₂ · 2²**. Probe: 1,00011₂ = 1 + ¹⁄₁₆ + ¹⁄₃₂ = 1,09375, und 1,09375 · 4 = 4,375 ✓
+
+Das Folienbeispiel 18,4 läuft genauso: 18 = 10010₂, 0,4 = 0,0110 0110 …₂, zusammen 10010,0110 0110 …, normalisiert 1,0010 0110 0110 … · 2⁴. Nach dem Standard IEEE 754 hat eine 32-Bit-Zahl 1 Bit Vorzeichen, 8 Bit Exponent und 23 Bit Mantisse. Weil die Periode nach 23 Bit abgeschnitten wird, steht statt 18,4 in Wahrheit 18,3999996… im Speicher.
+
+| | Festkomma | Gleitkomma |
+|---|---|---|
+| Komma | an fester Stelle | wird über den Exponenten verschoben |
+| Wertebereich | klein | sehr groß |
+| Aufwand | einfach zu rechnen | aufwendiger (eigene Prozessorbefehle) |
+| Genauigkeit | gleiche Schrittweite überall | viele Stellen, aber oft gerundet |
 
 > [!IMPORTANT]
 > **Das Wichtigste**
-> Nachkommastellen: fortlaufend mit 2 multiplizieren, die Ziffer vor dem Komma ist das nächste Bit.
+> Nachkommastellen: fortlaufend mit 2 multiplizieren, die Ziffer vor dem Komma ist das nächste Bit, von oben nach unten lesen. Festkomma: Komma an fester Stelle, einfach, kleiner Bereich. Gleitkomma: Z = m · b hoch e (Mantisse mal Basis hoch Exponent), großer Bereich, oft ungenau, weil Zahlen wie 0,4 binär periodisch sind.
 
 > [!WARNING]
 > **Achtung**
-> Nicht durch 2 teilen wie beim Vorkommateil. Hinter dem Komma wird multipliziert, und die Bits liest man von oben nach unten.
+> Nicht durch 2 teilen wie beim Vorkommateil. Hinter dem Komma wird multipliziert, und die Bits liest man von oben nach unten. Beim Normalisieren muss genau **eine** 1 vor dem Komma stehen, und der Exponent zählt die Stellen, um die das Komma gewandert ist.
 
 > [!CAUTION]
 > **Nicht klausurrelevant**
@@ -330,6 +396,21 @@ Eine **Gleitkommazahl** ist die wissenschaftliche Schreibweise, die du vom Tasch
 > **Übung 6 · mittel**
 > Wandle 4,375₁₀ in eine binäre Kommazahl um.
 > *Quelle: Lernseite GIT, Aufgabe 4.13 (eigene Aufgabe nach VL02 F. 45)*
+
+> [!TIP]
+> **Übung 7 · mittel**
+> Rechne 2AF₁₆ ins Oktalsystem um (über den Umweg Binär) und mache die Probe im Dezimalsystem.
+> *Quelle: eigene Aufgabe nach VL02 (Binär ↔ Oktal/Hex)*
+
+> [!TIP]
+> **Übung 8 · Prüfungsniveau**
+> Berechne −42 − 17 im 8-Bit-Zweierkomplement. Gibt es einen Überlauf?
+> *Quelle: Folie GIT VL02 (Übung Zweierkomplement), sinngemäß*
+
+> [!TIP]
+> **Übung 9 · Prüfungsniveau**
+> a) Welchen Dezimalwert hat 101,101₂? b) Wandle 6,75 in eine binäre Kommazahl um und normalisiere sie in die Form 1,… · 2 hoch e. c) Warum kann 0,4 als Gleitkommazahl nicht exakt gespeichert werden?
+> *Quelle: eigene Aufgabe nach VL02 (Kommazahlen, Gleitkomma)*
 
 ## Lösungen
 
@@ -388,3 +469,40 @@ In beiden Fällen ergibt plus + plus scheinbar minus.
 3. 0,75 · 2 = 1,5 → Bit 1, weiter mit 0,5 (die 1 vor dem Komma wird abgezogen).
 4. 0,5 · 2 = 1,0 → Bit 1, Rest 0, fertig.
 5. Bits von oben nach unten lesen: **100,011₂**. Probe: 4 + ¼ + ⅛ = 4,375 ✓
+
+### Übung 7
+
+1. Jede Hexziffer in 4 Bit: 2 = 0010, A = 1010, F = 1111. Zusammen: 0010 1010 1111.
+2. Von rechts in Dreiergruppen: 001 | 010 | 101 | 111 (die führende 0 der ersten Vierergruppe rutscht in die linke Gruppe).
+3. Jede Gruppe umrechnen: 1 | 2 | 5 | 7 → **1257₈**.
+4. Probe: 2AF₁₆ = 2 · 256 + 10 · 16 + 15 = 512 + 160 + 15 = 687. 1257₈ = 1 · 512 + 2 · 64 + 5 · 8 + 7 = 512 + 128 + 40 + 7 = 687 ✓
+
+### Übung 8
+
+1. −42 − 17 = (−42) + (−17). Beide Zahlen werden negativ.
+2. −42: 42 = 0010 1010 → umdrehen 1101 0101 → +1 = 1101 0110.
+3. −17: 17 = 0001 0001 → umdrehen 1110 1110 → +1 = 1110 1111.
+4. Addieren:
+
+```text
+  1101 0110   (−42)
++ 1110 1111   (−17)
+= (1) 1100 0101
+```
+
+5. Die vordere 1 fällt aus den 8 Bit heraus und wird ignoriert: 1100 0101.
+6. Ablesen: erstes Bit 1, also negativ. −128 + 64 + 4 + 1 = **−59** ✓
+7. **Kein Überlauf:** minus + minus ergibt minus, und −59 liegt im Bereich −128 … +127. Der herausfallende Übertrag ist kein Fehler.
+
+### Übung 9
+
+a) Stellenwerte 4, 2, 1, ½, ¼, ⅛: 4 + 1 + ½ + ⅛ = **5,625**.
+
+b)
+1. Vor dem Komma: 6 = 110₂.
+2. Nach dem Komma: 0,75 · 2 = 1,5 → Bit 1, weiter mit 0,5. 0,5 · 2 = 1,0 → Bit 1, Rest 0.
+3. Zusammen: 6,75 = **110,11₂**. Probe: 4 + 2 + ½ + ¼ = 6,75 ✓
+4. Normalisieren: Komma zwei Stellen nach links, damit genau eine 1 davor steht: **1,1011₂ · 2²**.
+5. Probe: 1,1011₂ = 1 + ½ + ⅛ + ¹⁄₁₆ = 1,6875, und 1,6875 · 4 = 6,75 ✓
+
+c) 0,4 ist im Binärsystem periodisch (0,0110 0110 …). Beim fortgesetzten Multiplizieren mit 2 kommt nie der Rest 0 heraus. Die Mantisse hat aber nur eine feste Anzahl Bits (bei 32 Bit sind es 23), also wird abgeschnitten. Gespeichert ist dann nur eine Näherung.

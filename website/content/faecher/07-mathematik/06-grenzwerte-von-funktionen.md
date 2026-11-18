@@ -105,6 +105,10 @@ Ergänzung, nicht wörtlich auf der Folie: lim (x → x̂) f(x) existiert genau 
 
 Auf Deutsch heißt das: Der beidseitige Grenzwert ist nur da, wenn beide Brückenhälften am selben Punkt ankommen.
 
+> [!IMPORTANT]
+> **Das Wichtigste**
+> x → a⁺ heißt „von rechts“ (Zahlen größer als a), x → a⁻ heißt „von links“. Der Grenzwert lim (x → a) existiert nur, wenn linker und rechter Grenzwert gleich sind. Prüfe ohne kleines + oder − immer beide Seiten.
+
 > [!WARNING]
 > **Typischer Fehler**
 > Nur von rechts testen und dann „Grenzwert +∞“ schreiben. Bei 1/x ist links −∞ und rechts +∞, also existiert lim (x → 0) 1/x **nicht**. Ohne kleines + oder − musst du immer beide Seiten prüfen.
@@ -120,6 +124,14 @@ Folie 75 unterscheidet drei Fälle. Bei Folgen hießen sie konvergent, bestimmt 
 | existiert nicht | weder eine Zahl noch ±∞: es schwingt, oder links ≠ rechts | sin(1/x) für x → 0 | 1, −1, 1, −1 … |
 
 „∞“ heißt unendlich. Es ist keine Zahl, sondern bedeutet „wird größer als jede Zahl, die du dir ausdenkst“.
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Drei mögliche Antworten: eine Zahl (konvergent), +∞ oder −∞ (uneigentlicher Grenzwert) oder „existiert nicht“ (links ≠ rechts oder Schwingen). Schreib bei ±∞ immer dazu, von welcher Seite.
+
+> [!WARNING]
+> **Typischer Fehler**
+> „Uneigentlich“ und „existiert nicht“ verwechseln. Bei 1/x² für x → 0 kommen beide Seiten bei +∞ an, das ist ein uneigentlicher Grenzwert +∞. Bei 1/x laufen die Seiten nach +∞ und −∞ auseinander, dort existiert der Grenzwert nicht.
 
 ## Die Taktik
 
@@ -288,6 +300,12 @@ Warum? Wenn x winzig wird, wird 1/x riesig (siehe d). Der Sinus wächst aber nic
 >
 > Quelle: Folien 04.11., Aufgabe FU-5
 
+> [!TIP]
+> **Übung 6 · mittel**
+> Berechne lim (x → 1) (x³ − 1)/(x² − 1). Tipp: x³ − 1 = (x − 1)(x² + x + 1). Mach eine Zahlenprobe mit 0,999 und 1,001.
+>
+> Quelle: eigene Aufgabe, wie Folie 75 a
+
 ## Lösungen
 
 ### Übung 1
@@ -446,3 +464,19 @@ Ergebnis: 0.
 | f(x) | −110 | −10 100 | −9900 | −90 |
 
 Ergebnis: −∞ (uneigentlicher Grenzwert, beide Seiten gleich).
+
+### Übung 6
+
+1. Einsetzen: oben 1 − 1 = 0, unten 1 − 1 = 0. Also 0/0 ⇒ umformen.
+2. Zähler mit dem Tipp: x³ − 1 = (x − 1)(x² + x + 1). Probe durch Ausmultiplizieren: x³ + x² + x − x² − x − 1 = x³ − 1. ✓
+3. Nenner mit der dritten binomischen Formel: x² − 1 = (x − 1)(x + 1).
+4. Kürzen: (x − 1) fällt weg. Übrig: (x² + x + 1)/(x + 1).
+5. Neu einsetzen: (1 + 1 + 1)/(1 + 1) = **3/2**.
+
+Probe:
+
+| x | 0,999 | 1,001 |
+|---|---|---|
+| f(x) | ≈ 1,49925 | ≈ 1,50075 |
+
+Beide liegen um 1,5.

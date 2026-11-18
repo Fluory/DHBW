@@ -32,7 +32,8 @@ Die vier Bereiche heißen auf Englisch Product, Price, Place, Promotion.
 > [!IMPORTANT]
 > **Das Wichtigste**
 >
-> Product = Produktpolitik, Price = Preispolitik, Place = Distributionspolitik, Promotion = Kommunikationspolitik.
+> - Product = Produktpolitik, Price = Preispolitik, Place = Distributionspolitik, Promotion = Kommunikationspolitik.
+> - Je zwei Instrumente zum Merken: Product (Produktgestaltung, Marke), Price (Preisdifferenzierung, Konditionen), Place (Absatzwege, Absatzorgane), Promotion (Werbung, Verkaufsförderung).
 
 > [!WARNING]
 > **Achtung**
@@ -57,6 +58,8 @@ Abstimmen muss man aus zwei Gründen: Das Budget je Periode ist begrenzt, und di
 | Price | hoher, konstanter Kapselpreis, Skimming, befristete Aktionen, Versand gratis ab einer Mindestmenge |
 | Place | Kapseln nur direkt (online, Boutiquen), Maschinen auch im Fachhandel |
 | Promotion | Markenauftritt in Boutiquen und durch das Personal, Sportsponsoring |
+
+**Warum passt das zusammen?** Alle vier P sagen „Premium“: ein besonderes Produkt mit Club-Service, ein hoher Preis, Verkauf in eigenen, edlen Boutiquen und ein gepflegter Markenauftritt. Ein Kapselverkauf im Discounter würde dieses Bild zerstören.
 
 > [!IMPORTANT]
 > **Das Wichtigste**
@@ -131,6 +134,13 @@ Abstimmen muss man aus zwei Gründen: Das Budget je Periode ist begrenzt, und di
 >
 > Ein Hersteller von Gartentischen und Sitzmöbeln. Nenne die Bestandteile des Marketing-Mix und je zwei konkrete Beispiele für dieses Unternehmen.
 
+> [!TIP]
+> **Übung 6 · mittel**
+>
+> *Quelle: eigene Aufgabe (Skript S. 70)*
+>
+> Ein Hersteller bringt eine Luxus-Handtasche für 900 € heraus. Geplant: Verkauf auch über Discounter-Aktionswochen, Werbung mit Flyern „Jetzt zuschlagen!“, Lederqualität aus Italien, Ratenzahlung ohne Zinsen. Welche Maßnahmen passen nicht zum Gesamtbild? Begründe und schlage je eine passende Alternative vor.
+
 ## Lösungen
 
 ### Übung 1
@@ -176,3 +186,11 @@ Eigene Lösungsskizze, andere passende Beispiele sind genauso richtig:
 2. Preispolitik: Saisonpreise im Frühjahr · Mengenrabatt für Gastronomie, zum Beispiel Biergärten.
 3. Distributionspolitik: eigener Onlineshop · Verkauf über Gartencenter oder Handelsvertreter.
 4. Kommunikationspolitik: Werbung mit Instagram-Influencern · Messeauftritt oder Sonderplatzierung im Baumarkt.
+
+### Übung 6
+
+Eigene Lösungsskizze:
+
+1. Passt: italienisches Leder (Product) und der hohe Preis (Price) sagen „Luxus“. Ratenzahlung (Price, Konditionen) kann passen, weil sie den Kauf erleichtert, ohne den Preis zu senken.
+2. Passt nicht: Discounter-Aktionswochen (Place). Luxus wirkt billig neben Sonderangeboten. Alternative: eigene Boutiquen oder ausgewählte Fachgeschäfte.
+3. Passt nicht: Flyer „Jetzt zuschlagen!“ (Promotion). Das klingt nach Schnäppchen. Alternative: Anzeigen in Modezeitschriften oder Kooperation mit einer bekannten Person aus der Modebranche.

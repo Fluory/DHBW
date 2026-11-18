@@ -2,380 +2,583 @@
   "cards": [
     {
       "id": "mkt-k001",
-      "topic": "Grundlagen",
-      "front": "Bedürfnis → Bedarf → Nachfrage",
-      "back": "Bedürfnis = Mangelgefühl (Lea hat Hunger) · Bedarf = Bedürfnis mit Kaufkraft (Lea hat 5 € und will einen Döner) · Nachfrage = am Markt wirksam (Lea kauft den Döner).",
+      "topic": "Grundlagen des Marketings",
+      "front": "Bedürfnis → Bedarf → Nachfrage: Was ist der Unterschied?",
+      "back": "**Bedürfnis** = Mangelgefühl, **Bedarf** = Bedürfnis, das du mit Geld erfüllen kannst und willst, **Nachfrage** = der Bedarf zeigt sich am Markt.\nJede Stufe setzt die vorige voraus: ohne Geld kein Bedarf, ohne Kauf keine Nachfrage.\nBeispiel: Lea hat Hunger (Bedürfnis), hat 5 € und will einen Döner (Bedarf), kauft ihn am Stand (Nachfrage).",
       "exam": false
     },
     {
       "id": "mkt-k002",
-      "topic": "Grundlagen",
-      "front": "Bedürfnispyramide nach Maslow",
-      "back": "Von unten: physiologische Bedürfnisse → Sicherheit → soziale Bedürfnisse → Prestigebedürfnisse (so im Skript) → Selbstverwirklichung. Es treibt immer die nächste unerfüllte Stufe; Beispiel Stufe 4: Markenschuhe.",
+      "topic": "Grundlagen des Marketings",
+      "front": "Bedürfnispyramide nach Maslow: die fünf Stufen",
+      "back": "Von unten: physiologische Bedürfnisse → Sicherheit → soziale Bedürfnisse → **Prestigebedürfnisse** (so im Skript) → Selbstverwirklichung.\nEs treibt immer die nächste noch nicht erfüllte Stufe an. Wer hungrig ist, denkt nicht an Prestige.\nMarketing nutzt das: Eine Versicherung spricht Stufe 2 an, Markenschuhe Stufe 4.",
       "exam": false
     },
     {
       "id": "mkt-k003",
-      "topic": "Grundlagen",
-      "front": "Marketing-Grundhaltungen",
-      "back": "Produktionsorientierung (viel und billig) · Produktorientierung (technisch bestes Produkt) · Verkaufsorientierung (aggressiv überreden, Kunden oft unzufrieden) · Marketingorientierung (Kundenwünsche sind der Startpunkt).",
+      "topic": "Grundlagen des Marketings",
+      "front": "Die vier Grundhaltungen gegenüber dem Absatzmarkt",
+      "back": "Produktionsorientierung (viel und billig herstellen) · Produktorientierung (technisch bestes Produkt) · Verkaufsorientierung (aggressiv überreden) · Marketingorientierung (Kundenwunsch ist der Startpunkt).\nNur die Marketingorientierung fragt zuerst den Kunden. Die anderen starten beim eigenen Produkt.\nBeispiel: „Wir fragen die Kunden und backen dann glutenfreies Brot“ = Marketingorientierung.",
       "exam": false
     },
     {
       "id": "mkt-k004",
-      "topic": "Analyse",
+      "topic": "Strategische Analysen",
       "front": "SWOT-Analyse und ihre vier Strategien",
-      "back": "S/W intern, O/T extern. SO: Stärken für Chancen nutzen · ST: Stärken gegen Risiken · WO: Schwächen abbauen für Chancen · WT: Bedrohung bei Schwächen abwehren.",
+      "back": "Stärken und Schwächen liegen **innen** (das Unternehmen kann sie ändern), Chancen und Risiken kommen von **außen**.\nStrategien: SO = Stärken nutzen, um Chancen zu ergreifen · ST = Stärken gegen Risiken · WO = Schwächen abbauen, um Chancen zu nutzen · WT = sich schützen, wo man schwach ist.\nBeispiel SO: freie Produktionskapazität (Stärke) nutzen, um den Trend zu Lifestyle-Taschen (Chance) zu bedienen.",
       "exam": true
     },
     {
       "id": "mkt-k005",
-      "topic": "Analyse",
-      "front": "Marktanteil und Marktausschöpfungsgrad (Tische: MV 150 Mio., Miller 12 Mio., MP 187,5 Mio.)",
-      "back": "Marktanteil = 12 · 100 / 150 = 8 % · MAG = Marktvolumen · 100 / Marktpotenzial = 150 / 187,5 = 80 %.",
+      "topic": "Strategische Analysen",
+      "front": "Marktanteil und Marktausschöpfungsgrad: Formeln und Beispiel",
+      "back": "Marktanteil = eigener Umsatz · 100 / **Marktvolumen**. Ausschöpfungsgrad = Marktvolumen · 100 / Marktpotenzial.\nBeide teilen „Teil durch Ganzes“: einmal dein Teil vom verkauften Markt, einmal der verkaufte Markt vom möglichen.\nTische: Umsatz 12, Volumen 150, Potenzial 187,5 Mio. € → Marktanteil 12 · 100 / 150 = 8 %, Ausschöpfung 150 · 100 / 187,5 = 80 %.",
       "exam": true
     },
     {
       "id": "mkt-k006",
-      "topic": "Analyse",
-      "front": "Relativer Marktanteil",
-      "back": "Eigener Marktanteil / Marktanteil des größten Konkurrenten, als Dezimalzahl. Miller 8 %, Konkurrent 10 % → 0,8. Stühle: 2 % / 28 % ≈ 0,07.",
+      "topic": "Strategische Analysen",
+      "front": "Relativer Marktanteil: Formel und Bedeutung",
+      "back": "Relativer Marktanteil = eigener Marktanteil / Marktanteil des **stärksten** Konkurrenten, als Dezimalzahl (keine %).\nEr zeigt die Position im Wettbewerb: über 1 = du bist Marktführer, unter 1 = jemand ist größer.\nBeispiel: 8 % gegen 10 % → 8 / 10 = 0,8. Stühle: 2 % gegen 28 % → 0,07.",
       "exam": true
     },
     {
       "id": "mkt-k007",
-      "topic": "Analyse",
-      "front": "Produktlebenszyklus: Phasen",
-      "back": "Einführung (Gewinn negativ) → Wachstum (Umsatz steigt immer schneller) → Reife (steigt noch, aber langsamer) → Sättigung (stagniert) → Degeneration (fällt schnell, Kosten senken). Phase bestimmen über (neu − alt) / alt · 100.",
+      "topic": "Strategische Analysen",
+      "front": "Produktlebenszyklus: Phasen und wie du sie aus Zahlen erkennst",
+      "back": "Einführung → Wachstum (Zuwächse werden größer) → Reife (Umsatz steigt noch, Zuwächse werden kleiner) → Sättigung (≈ 0 %) → Degeneration (Umsatz fällt).\nDie Phase erkennst du an der Veränderung von Jahr zu Jahr: (neu − alt) / alt · 100.\nBeispiel: 23,3 → 26,2 → 28,5 Mio. € = +12,45 %, +8,78 %: steigt, aber langsamer → Reife.",
       "exam": true
     },
     {
       "id": "mkt-k008",
-      "topic": "Analyse",
-      "front": "BCG-Portfolio: vier Felder",
-      "back": "Question Marks (wenig MA, starkes Wachstum: investieren oder aufgeben) · Stars (hoher MA, starkes Wachstum: ausbauen) · Cash Cows (hoher MA, stagnierend: abschöpfen) · Poor Dogs (desinvestieren).",
+      "topic": "Strategische Analysen",
+      "front": "BCG-Matrix: die vier Felder und Normstrategien",
+      "back": "Question Marks (hohes Wachstum, kleiner rel. MA): investieren oder aufgeben · Stars (hohes Wachstum, großer rel. MA): investieren, ausbauen · Cash Cows (geringes Wachstum, großer rel. MA): halten, abschöpfen · Poor Dogs (geringes Wachstum, kleiner rel. MA): desinvestieren.\nAchsen: senkrecht Marktwachstum, waagerecht relativer Marktanteil.\nBeispiel: Wachstum 25 %, rel. MA 0,6 → Question Mark.",
       "exam": true
     },
     {
       "id": "mkt-k009",
-      "topic": "Strategie",
-      "front": "Ansoff-Matrix",
-      "back": "Altes Produkt/alter Markt: Marktdurchdringung · altes Produkt/neuer Markt: Marktentwicklung · neues Produkt/alter Markt: Produktentwicklung · neu/neu: Diversifikation.",
+      "topic": "Strategische Marketingplanung",
+      "front": "Ansoff-Matrix: die vier Wachstumsstrategien",
+      "back": "Zwei Fragen: Produkt alt oder neu? Markt alt oder neu?\nalt/alt = Marktdurchdringung · altes Produkt/neuer Markt = Marktentwicklung · neues Produkt/alter Markt = Produktentwicklung · neu/neu = Diversifikation.\nBeispiel Fahrradhersteller: Sonderpreisaktion = Durchdringung, Webshop für ganz Deutschland = Marktentwicklung, Tandems = Produktentwicklung.",
       "exam": true
     },
     {
       "id": "mkt-k010",
-      "topic": "Strategie",
+      "topic": "Strategische Marketingplanung",
       "front": "Diversifikation: horizontal, vertikal, lateral",
-      "back": "Horizontal: Fahrrad + Regenkleidung · vertikal: Schuhe + Rohleder · lateral (ohne Zusammenhang): Yamaha + Pianos.",
-      "exam": false
+      "back": "Horizontal = verwandtes Produkt auf derselben Stufe · vertikal = vor- oder nachgelagerte Stufe · lateral = kein Zusammenhang.\nEntscheidend ist, wie nah das neue Produkt am bisherigen Geschäft liegt.\nSkript-Beispiele: Fahrradhändler + Regenkleidung (horizontal), Schuhfabrik verkauft Rohleder (vertikal), Motorradhersteller baut Pianos (lateral).",
+      "exam": true
     },
     {
       "id": "mkt-k011",
-      "topic": "Strategie",
-      "front": "Segmentierungskriterien",
-      "back": "Soziodemografisch (Alter, Einkommen, Wohnort) · psychografisch (Werte, Einstellungen, Motive) · verhaltensbezogen (Markentreue, Preisklasse, Einkaufsstätte).",
+      "topic": "Strategische Marketingplanung",
+      "front": "Die drei Gruppen von Segmentierungskriterien",
+      "back": "**Soziodemografisch** (Alter, Geschlecht, Einkommen, Wohnort) · **psychografisch** (Werte, Interessen, Einstellungen) · **verhaltensbezogen** (Markentreue, Kaufhäufigkeit, Preisklasse, Mediennutzung).\nMit ihnen bildet man Gruppen mit ähnlichen Wünschen, die man gezielt anspricht.\nBeispiel: „Studierende, 19–25, kaufen online, achten auf Nachhaltigkeit“ kombiniert alle drei.",
       "exam": false
     },
     {
       "id": "mkt-k012",
-      "topic": "Strategie",
-      "front": "USP und Positionierung nach Kotler",
-      "back": "Einzigartiger Vorteil in der Kundenwahrnehmung. Anforderungen: vor der Produktentwicklung festlegen · nur eine Eigenschaft herausstellen · nicht leicht kopierbar · langfristig.",
+      "topic": "Strategische Marketingplanung",
+      "front": "Positionierung: Anforderungen nach Kotler (Musterklausur A5a)",
+      "back": "1. vor der Produktentwicklung festlegen · 2. nur **eine** Eigenschaft herausstellen · 3. nicht leicht kopierbar · 4. langfristig angelegt.\nWarum? Nur eine klare Eigenschaft bleibt im Kopf des Kunden hängen. Wer alles verspricht, landet in keiner „Schublade“.\nBeispiel: Volvo = Sicherheit, Media Markt = Niedrigpreis.",
       "exam": true
     },
     {
       "id": "mkt-k013",
-      "topic": "Produkt",
-      "front": "Grund- und Zusatznutzen am Beispiel Uhr",
-      "back": "Grundnutzen: Uhrzeit anzeigen. Zusatznutzen funktional (wasserdicht), emotional (Design, Marke), sozial (Prestige einer Luxusmarke). Werbung betont den Zusatznutzen.",
+      "topic": "Produktpolitik",
+      "front": "Grund- und Zusatznutzen am Beispiel Uhr (Musterklausur A2a)",
+      "back": "Grundnutzen: Die Uhr zeigt die Uhrzeit.\nFunktionaler Zusatznutzen = mehr Technik (wasserdicht, Stoppuhr) · emotionaler = Freude an Design und Marke (Lederarmband) · sozialer = Anerkennung durch andere (Luxusuhr als Statussymbol).\nIn der Klausur jede Art erklären **und** mit einem Uhr-Beispiel belegen, nur Begriffe reichen nicht.",
       "exam": true
     },
     {
       "id": "mkt-k014",
-      "topic": "Preis",
-      "front": "Skimming vs. Penetration",
-      "back": "Skimming: hoch starten, dann senken (kurzfristige Erträge). Penetration: niedrig starten, schnelle Verbreitung im Massenmarkt.",
-      "exam": false
+      "topic": "Preispolitik",
+      "front": "Skimming oder Penetration?",
+      "back": "**Skimming:** hoch starten, Preis später senken. Ziel: schnell hohe Erträge, die Entwicklungskosten kommen rasch zurück.\n**Penetration:** niedrig starten, um schnell viele Kunden zu gewinnen; anfangs evtl. ohne Kostendeckung. Ziel: langfristig großer Marktanteil.\nBeispiel: Neue Spielkonsole teuer zum Start = Skimming. Streaming-Abo im ersten Monat fast gratis = Penetration.",
+      "exam": true
     },
     {
       "id": "mkt-k015",
-      "topic": "Distribution",
-      "front": "Reisender vs. Handelsvertreter: kritischer Umsatz",
-      "back": "U = Fixkosten Reisender / (Provision HV − Provision R). Bsp.: 45.400 / (0,04 − 0,02) = 2,27 Mio. €; darunter Handelsvertreter, darüber Reisender günstiger.",
+      "topic": "Distributionspolitik",
+      "front": "Kritischer Umsatz Reisender gegen Handelsvertreter: Formel",
+      "back": "U = Fixkosten des Reisenden / (Provision Vertreter − Provision Reisender).\nAn diesem Umsatz kosten beide gleich viel. Darunter ist der Vertreter günstiger (keine Fixkosten), darüber der Reisende (kleinere Provision).\nMusterklausur A7: Fix 3.000 · 13 + 200 · 12 + 4.000 = 45.400 € → 45.400 / (0,04 − 0,02) = 2.270.000 €.",
       "exam": true
     },
     {
       "id": "mkt-k016",
-      "topic": "Kommunikation",
-      "front": "Tausenderkontaktpreis (TKP)",
-      "back": "TKP = Kosten / (Nutzer · Zielgruppenanteil) · 1.000. A: 10.000 / (900.000 · 0,6) · 1.000 = 18,52 € · B: 7.000 / (500.000 · 0,7) · 1.000 = 20,00 € → A wählen.",
+      "topic": "Kommunikationspolitik",
+      "front": "Tausenderkontaktpreis (TKP): Formel und Beispiel",
+      "back": "TKP = Kosten / (Nutzer · Zielgruppenanteil) · 1.000 = Kosten für 1.000 Personen der Zielgruppe.\nDer kleinere TKP gewinnt, auch wenn das Angebot absolut teurer ist.\nMusterklausur A6: A = 10.000 / 540.000 · 1.000 = 18,52 €, B = 7.000 / 350.000 · 1.000 = 20,00 € → Influencer A.",
       "exam": true
     },
     {
       "id": "mkt-k017",
-      "topic": "Kommunikation",
-      "front": "Push- vs. Pull-Strategie",
-      "back": "Push: Hersteller → Händler (Anreize für Listung), Handel drückt Ware zum Kunden. Pull: Werbung beim Endkunden erzeugt Nachfragesog, Handel muss listen.",
+      "topic": "Kommunikationspolitik",
+      "front": "Push- und Pull-Strategie (Musterklausur A4)",
+      "back": "**Push** = handelsorientiert: Der Hersteller gibt dem Handel Anreize (Rabatte, Displays), der Handel „drückt“ die Ware zum Kunden. Gut für neue Produkte.\n**Pull** = endverbraucherorientiert: Werbung und Proben beim Kunden erzeugen einen Nachfragesog, der Handel muss das Produkt listen. Teurer, eher für große, bekannte Firmen.\nBeispiel: Einführungsrabatt für Supermärkte = Push. TV-Spot, nach dem Kunden im Laden nachfragen = Pull.",
       "exam": true
     },
     {
       "id": "mkt-k018",
-      "topic": "Kommunikation",
-      "front": "AIDA",
-      "back": "Attention → Interest → Desire → Action: die Stufen, die Werbung beim Kunden auslösen soll. Beispiel: Plakat fällt auf → „48 h Teigruhe“ interessiert → Foto weckt Lust → „Probierscheibe gratis“ führt zum Kauf.",
+      "topic": "Kommunikationspolitik",
+      "front": "AIDA-Modell",
+      "back": "Attention → Interest → Desire → Action: die vier Stufen, durch die Werbung den Kunden führen soll.\nFehlt eine Stufe, kauft er nicht, zum Beispiel wenn das Plakat auffällt, aber nicht sagt, worum es geht.\nBeispiel: Plakat fällt auf → „48 h Teigruhe“ weckt Interesse → Foto macht Lust → „Probierscheibe gratis“ führt zum Kauf.",
       "exam": false
     },
     {
       "id": "mkt-k019",
-      "topic": "Mix",
-      "front": "Marketing-Mix (4P) am Beispiel Gartenmöbel",
-      "back": "Product: wetterfestes Holz, Garantie · Price: Saisonpreise, Mengenrabatt · Place: eigener Onlineshop, Gartencenter · Promotion: Influencer, Messe.",
+      "topic": "Marketing-Mix",
+      "front": "Marketing-Mix für einen Gartenmöbelhersteller (Musterklausur A3)",
+      "back": "Je P zwei konkrete Maßnahmen: Product: wetterfestes Holz, Garantie · Price: Saisonpreise im Frühjahr, Mengenrabatt für Biergärten · Place: eigener Onlineshop, Gartencenter · Promotion: Instagram-Influencer, Messeauftritt.\nPunkte gibt es nur für Beispiele, die zum Fall passen. „Werbung machen“ ist zu allgemein.\nPrüfe am Ende: Senden alle vier P dieselbe Botschaft?",
       "exam": true
     },
     {
       "id": "mkt-k020",
-      "topic": "Kontrolle",
+      "topic": "Erfolgskontrolle",
       "front": "Werbegewinn und Werberendite",
-      "back": "Werbegewinn = werbebedingter Mehrumsatz − Werbekosten · Werberendite = Mehrumsatz / Werbekosten · 100. Bsp.: 30.000 € Mehrumsatz, 10.000 € Kosten → 20.000 € bzw. 300 %.",
-      "exam": false
+      "back": "Werbegewinn = werbebedingter Mehrumsatz − Werbekosten (in €). Werberendite = Mehrumsatz / Werbekosten · 100 (in %).\nDer Werbegewinn sagt, wie viel übrig bleibt, die Rendite, wie viel jeder Werbe-Euro bringt.\nBeispiel: 30.000 € Mehrumsatz, 10.000 € Kosten → Werbegewinn 20.000 €, Werberendite 300 %.",
+      "exam": true
     },
     {
       "id": "mkt-k021",
-      "topic": "Grundlagen",
-      "front": "Verkäufermarkt vs. Käufermarkt",
-      "back": "Verkäufermarkt: Knappheit, Nachfrage > Angebot, Engpass Produktion, Verkäufer hat die Macht (neue Konsole ausverkauft). Käufermarkt: Überfluss, Angebot > Nachfrage, Engpass Absatz, Käufer hat die Macht. Heute meist Käufermarkt → Marketing nötig.",
+      "topic": "Grundlagen des Marketings",
+      "front": "Verkäufermarkt oder Käufermarkt?",
+      "back": "Verkäufermarkt: Knappheit, Nachfrage > Angebot, Engpass Produktion, der Verkäufer hat die Macht. Käufermarkt: Überfluss, Angebot > Nachfrage, Engpass Absatz, der Käufer hat die Macht.\nHeute herrscht meist Käufermarkt, darum braucht man Marketing.\nBeispiel: neue Konsole ausverkauft, kein Rabatt = Verkäufermarkt. Ein Jahr später Rabattschlacht = Käufermarkt.",
       "exam": true
     },
     {
       "id": "mkt-k022",
-      "topic": "Grundlagen",
-      "front": "Marketing (Definition) und die sieben Stufen nach Meffert",
-      "back": "Planung, Organisation, Durchführung und Kontrolle aller Tätigkeiten, damit das Angebot zu den Kundenwünschen passt. Stufen: Situationsanalyse → Prognose → Ziele → Strategie → Marketingmix → Implementierung → Controlling.",
+      "topic": "Grundlagen des Marketings",
+      "front": "Marketing-Definition und die sieben Stufen nach Meffert",
+      "back": "Marketing = Planung, Organisation, Durchführung und Kontrolle aller Tätigkeiten, damit das Angebot zu den Kundenwünschen passt. Also viel mehr als Werbung.\nStufen: Situationsanalyse → Prognose → Ziele → Strategie → Marketingmix → Implementierung → Controlling.\nMerkhilfe: erst analysieren, dann planen, dann umsetzen und kontrollieren.",
       "exam": false
     },
     {
       "id": "mkt-k023",
-      "topic": "Analyse",
-      "front": "Marktpotenzial vs. Marktvolumen",
-      "back": "Marktpotenzial = was höchstens verkauft werden könnte; Marktvolumen = was alle Anbieter wirklich verkauft haben. Umgestellt: Marktvolumen = Umsatz · 100 / Marktanteil, z. B. 20 · 100 / 12 = 166,67 Mio. €.",
+      "topic": "Strategische Analysen",
+      "front": "Marktpotenzial und Marktvolumen: Unterschied und Umstellen",
+      "back": "Marktpotenzial = was höchstens verkauft werden könnte. Marktvolumen = was alle Anbieter wirklich verkauft haben. Darum gilt immer Potenzial ≥ Volumen.\nUmgestellt: Marktvolumen = Umsatz · 100 / Marktanteil. Potenzial = Volumen · 100 / Ausschöpfungsgrad.\nBeispiel: 20 Mio. €, 12 % → Volumen 166,67 Mio. €; bei 80 % Ausschöpfung Potenzial 208,33 Mio. €.",
       "exam": true
     },
     {
       "id": "mkt-k024",
-      "topic": "Analyse",
-      "front": "Marktwachstum (Achse der BCG-Matrix)",
-      "back": "(Marktvolumen neu − alt) / alt · 100. Brötchenmarkt 200.000 → 220.000 €: 20.000 / 200.000 · 100 = 10 %.",
+      "topic": "Strategische Analysen",
+      "front": "Marktwachstum (senkrechte Achse der BCG-Matrix)",
+      "back": "Marktwachstum = (Marktvolumen neu − alt) / alt · 100.\nGeteilt wird durch den **alten** Wert, weil das Wachstum vom Ausgangspunkt aus gemessen wird.\nBeispiel: 320 → 400 Mio. € → 80 / 320 · 100 = 25 %. Falsch wäre 80 / 400 = 20 %.",
       "exam": true
     },
     {
       "id": "mkt-k025",
-      "topic": "Analyse",
+      "topic": "Strategische Analysen",
       "front": "Merkmale der „Stars“ in der BCG-Matrix (Musterklausur A1c)",
-      "back": "Hoher relativer Marktanteil · hohes Marktwachstum · Umsatzbringer, meist in der Wachstumsphase · Normstrategie: investieren und Position ausbauen.",
+      "back": "1. hoher relativer Marktanteil · 2. hohes Marktwachstum · 3. erfolgreiche Umsatzbringer, meist in der Wachstumsphase · 4. Normstrategie: investieren, Position halten und ausbauen.\nStars verdienen schon Geld, brauchen aber viel davon, um im wachsenden Markt vorne zu bleiben.\nWächst der Markt nicht mehr, wird aus dem Star eine Cash Cow.",
       "exam": true
     },
     {
       "id": "mkt-k026",
-      "topic": "Strategie",
-      "front": "Ökonomische vs. psychografische Marketingziele",
-      "back": "Ökonomisch: in Euro oder Stück messbar (Umsatz, Marktanteil, Gewinn). Psychografisch: im Kopf des Kunden, per Befragung gemessen (Bekanntheit, Image, Zufriedenheit). Beispiel: „80 % der Anwohner kennen uns“ ist psychografisch.",
+      "topic": "Strategische Marketingplanung",
+      "front": "Ökonomische und psychografische Marketingziele",
+      "back": "Ökonomisch = in Euro oder Stück messbar (Absatz, Umsatz, Marktanteil, Gewinn). Psychografisch = im Kopf des Kunden (Bekanntheit, Image, Kaufabsicht, Zufriedenheit), gemessen per Befragung.\nImageziele plant man langfristiger, weil sich Bilder im Kopf nur langsam ändern.\nBeispiel: „10 % mehr Brötchen“ = ökonomisch, „80 % der Anwohner kennen uns“ = psychografisch.",
       "exam": false
     },
     {
       "id": "mkt-k027",
-      "topic": "Strategie",
+      "topic": "Strategische Marketingplanung",
       "front": "Brand Recall, Brand Recognition, Top-of-Mind",
-      "back": "Recall = aktiv, ungestützt („Welche Bäckereien kennst du?“) · Recognition = passiv, gestützt („Kennst du dieses Logo?“) · Top-of-Mind = die allererste genannte Marke.",
+      "back": "Recall = aktiv, **ungestützt** („Welche Bäckereien kennst du?“). Recognition = passiv, **gestützt**, mit Hilfe wie einem Logo („Kennst du dieses Logo?“). Top-of-Mind = die allererste genannte Marke.\nUngestützte Bekanntheit ist schwerer zu erreichen und darum mehr wert.\nEselsbrücke: Recall = selbst aufrufen, Recognition = wiedererkennen.",
       "exam": false
     },
     {
       "id": "mkt-k028",
-      "topic": "Strategie",
-      "front": "Strategien der Marktbearbeitung (Uhrenhersteller)",
-      "back": "Massenmarkt: ein Modell für alle · Segmentkonzentration: nur Damenuhren · selektive Spezialisierung: Damen- und Kinderuhren · Marktabdeckung: alle Segmente.",
+      "topic": "Strategische Marketingplanung",
+      "front": "Strategien der Marktbearbeitung (Beispiel Uhrenhersteller)",
+      "back": "Massenmarkt = ein Modell für alle · Segmentkonzentration = ein Segment (nur Damenuhren) · selektive Spezialisierung = mehrere ausgewählte Segmente (Damen und Kinder) · Marktabdeckung = alle Segmente.\nZähle die bedienten Segmente: eins, einige oder alle.\nBeispiel: Taschen für Business, Reise, Damen, Outdoor, aber nicht für Sport und Schule = selektive Spezialisierung.",
       "exam": false
     },
     {
       "id": "mkt-k029",
       "topic": "Marktforschung",
       "front": "Marktanalyse, Marktbeobachtung, Marktprognose",
-      "back": "Analyse = einmal zu einem Zeitpunkt (Foto, Umfrage vor dem neuen Produkt) · Beobachtung = laufend (Film, z. B. Panel) · Prognose = Blick in die Zukunft (erwartetes Marktwachstum).",
+      "back": "Analyse = einmal, zu einem Zeitpunkt (wie ein Foto) · Beobachtung = laufend über längere Zeit (wie ein Film) · Prognose = Vorhersage für die Zukunft.\nEin Panel fragt immer wieder dieselbe Gruppe, darum ist es Marktbeobachtung.\nBeispiel: Umfrage vor einer Produktentwicklung = Analyse, halbjährliches Handelspanel = Beobachtung, erwartetes Marktwachstum = Prognose.",
       "exam": false
     },
     {
       "id": "mkt-k030",
       "topic": "Marktforschung",
-      "front": "Sekundär- vs. Primärforschung",
-      "back": "Sekundär: vorhandene Daten, intern (eigene Kassendaten) oder extern (Statistiken); schnell und billig, evtl. veraltet. Primär: neu erhobene Daten (Befragung, Beobachtung, Panel, Experiment, Test); passend, aber teurer.",
+      "front": "Sekundär- und Primärforschung",
+      "back": "Sekundär = Daten, die es schon gibt: intern (eigene Kassendaten) oder extern (Statistiken, Studien). Schnell und billig, aber eventuell veraltet und auch der Konkurrenz bekannt.\nPrimär = neu erhobene Daten: Befragung, Beobachtung, Panel, Experiment, Test. Genau passend, aber teurer.\n„Sekundär“ heißt „aus zweiter Hand“, nicht „unwichtig“.",
       "exam": false
     },
     {
       "id": "mkt-k031",
       "topic": "Marktforschung",
-      "front": "Offene vs. geschlossene Frage; Voll- vs. Teilerhebung",
-      "back": "Offen = freie Antwort, ideenreich, schwer auszuwerten; geschlossen = Antworten vorgegeben (Skala). Vollerhebung = alle der Grundgesamtheit, Teilerhebung = Stichprobe, z. B. geschichtet: 60 % BWL von 200 = 120 Befragte.",
+      "front": "Offene und geschlossene Fragen; Voll- und Teilerhebung",
+      "back": "Offen = freie Antwort, ideenreich, schwer auszuwerten. Geschlossen = Antworten vorgegeben (ja/nein, Skala), leicht auszuwerten.\nVollerhebung = alle aus der Grundgesamtheit, Teilerhebung = Stichprobe.\nGeschichtete Stichprobe: 60 % der Studierenden sind BWL, bei 200 Befragten also 0,6 · 200 = 120 aus BWL.",
       "exam": false
     },
     {
       "id": "mkt-k032",
-      "topic": "Produkt",
-      "front": "Innovation, Differenzierung, Variation, Eliminierung",
-      "back": "Innovation = neues Produkt, als Differenzierung (neue Variante neben der alten: Cola ohne Zucker) oder Diversifikation (neue Produktart) · Variation = verbessertes Produkt ersetzt das alte · Eliminierung = Produkt wird eingestellt.",
+      "topic": "Produktpolitik",
+      "front": "Produktinnovation, Differenzierung, Variation, Eliminierung",
+      "back": "Innovation = neues Produkt, als Differenzierung (neue Variante **zusätzlich**, das alte bleibt) oder Diversifikation (neue Produktart). Variation = verbessertes Produkt **ersetzt** das alte. Eliminierung = Produkt wird eingestellt.\nPrüffrage: Bleibt das alte Produkt im Angebot?\nBeispiel: Cola zusätzlich ohne Zucker = Differenzierung, neues Handymodell statt des alten = Variation.",
       "exam": false
     },
     {
       "id": "mkt-k033",
-      "topic": "Produkt",
+      "topic": "Produktpolitik",
       "front": "Einzelmarke, Familienmarke, Dachmarke",
-      "back": "Einzelmarke: jedes Produkt eigene Marke (Ferrero: Nutella, Hanuta) · Familienmarke: Produktgruppe unter einem Namen (Nivea Men, Nivea Sun) · Dachmarke: alle Produkte unter dem Firmennamen (Miele).",
+      "back": "Einzelmarke = jedes Produkt eigene Marke (Ferrero: Nutella, Hanuta) · Familienmarke = Produktgruppe unter einem Namen (Nivea Men, Nivea Sun) · Dachmarke = alle Produkte unter dem Firmennamen (Miele).\nJe größer das Dach, desto billiger die Werbung, aber desto mehr Produkte trifft ein Imageschaden.\nEinzelmarke: ein Flop schadet den anderen nicht, aber jede Marke kostet eigene Werbung.",
       "exam": false
     },
     {
       "id": "mkt-k034",
-      "topic": "Produkt",
+      "topic": "Produktpolitik",
       "front": "Markensteuerrad nach Esch (Musterklausur A2b)",
-      "back": "Mitte: Markenkompetenz („Wer bin ich?“). Außen: Markennutzen („Was biete ich?“), Markentonalität („Wie biete ich an?“, Persönlichkeit), Markenattribute („Welche Eigenschaften?“), Markenbild („Wie trete ich auf?“, Logo, Design).",
+      "back": "Mitte: Markenkompetenz („Wer bin ich?“). Außen die vier weiteren Teile: Markennutzen („Was biete ich an?“), Markentonalität („Wie biete ich an?“, Persönlichkeit, Gefühle), Markenattribute („Über welche Eigenschaften verfüge ich?“), Markenbild („Wie trete ich auf?“, Logo, Design).\nGefragt sind meist die vier äußeren Teile.\nMerkhilfe: Nutzen und Attribute = die Sache, Tonalität und Bild = Gefühl und Auftritt.",
       "exam": true
     },
     {
       "id": "mkt-k035",
-      "topic": "Produkt",
-      "front": "Programmbreite vs. Programmtiefe",
-      "back": "Breite = Zahl der Produktarten, Tiefe = Zahl der Sorten je Art. Bäckerei: Brot, Brötchen, Kuchen → Breite 3; 8 Brotsorten → Tiefe beim Brot 8.",
+      "topic": "Produktpolitik",
+      "front": "Programmbreite und Programmtiefe",
+      "back": "Breite = Zahl der Produktarten. Tiefe = Zahl der Sorten je Produktart.\nBreiter wird es durch neue Arten, tiefer durch mehr Sorten derselben Art.\nBäckerei: Brot, Brötchen, Kuchen = Breite 3. Brot in 8 Sorten = Tiefe beim Brot 8.",
       "exam": false
     },
     {
       "id": "mkt-k036",
-      "topic": "Produkt",
+      "topic": "Produktpolitik",
       "front": "Kern-, Rand- und Zusatzsortiment",
-      "back": "Kern = Hauptgeschäft mit dem größten Umsatz (Brot) · Rand = ergänzt den Kern (Marmelade) · Zusatz = passt nicht zum Kern (Lottoscheine an der Kasse).",
+      "back": "Kern = Hauptgeschäft, immer da, größter Umsatz · Rand = ergänzt den Kern, oft nur kurz · Zusatz = hat mit dem Kern nichts zu tun.\nPrüffrage: Passt der Artikel zum Hauptgeschäft? Ja → Rand. Nein → Zusatz.\nBäckerei: Brot = Kern, Brotbeutel = Rand, Spielzeug an der Kasse = Zusatz.",
       "exam": false
     },
     {
       "id": "mkt-k037",
-      "topic": "Preis",
-      "front": "Drei Wege zum Preis",
-      "back": "Kostenorientiert (aus den eigenen Kosten) · wettbewerbsorientiert (nach dem Leitpreis der Konkurrenz) · nachfrageorientiert (Preistests: Wie viel verkaufe ich bei welchem Preis?).",
+      "topic": "Preispolitik",
+      "front": "Drei Wege, einen Preis zu bestimmen",
+      "back": "Kostenorientiert (aus den eigenen Kosten, Voll- oder Teilkostenrechnung) · wettbewerbsorientiert (nach der Konkurrenz, vor allem dem Leitpreis) · nachfrageorientiert (Preistests: Wie viel verkaufe ich bei welchem Preis?).\nIn der Praxis kombiniert man sie: Die Kosten setzen die Untergrenze, der Markt die Obergrenze.\nBeispiel Fahrrad: „Ich habe 300 € bezahlt“ = Kosten, „Was kosten ähnliche Räder?“ = Wettbewerb.",
       "exam": false
     },
     {
       "id": "mkt-k038",
-      "topic": "Preis",
-      "front": "Target Costing",
-      "back": "Rückwärts vom Markt: Zielpreis − Zielgewinn = erlaubte Kosten (Allowable Costs), verglichen mit den geschätzten Kosten (Drifting Costs). Torte: 4 € − 1 € = 3 € erlaubt; geschätzt 3,40 € → 0,40 € einsparen.",
-      "exam": false
+      "topic": "Preispolitik",
+      "front": "Target Costing: Ablauf",
+      "back": "Rückwärts vom Markt: Zielpreis − Zielgewinn = Allowable Costs (vom Markt erlaubte Kosten). Vergleich mit den geschätzten Kosten (Drifting Costs) → Kostenlücke.\nGrund: Bis zu 80 % der Herstellkosten werden schon in der Entwicklung festgelegt.\nBeispiel: Zielpreis 300 €, Gewinn 15 % = 45 € → erlaubt 255 €. Geschätzt 280 € → 25 € einsparen.",
+      "exam": true
     },
     {
       "id": "mkt-k039",
-      "topic": "Preis",
-      "front": "Zuschlagskalkulation: Reihenfolge",
-      "back": "Material + MGK → Fertigung + FGK → Herstellkosten + Verwaltungs-/Vertriebs-GK → Selbstkosten + Gewinn → Barverkaufspreis / (1 − Skonto) → Zielverkaufspreis / (1 − Rabatt) → Listenpreis. Torte: 46 € Herstellkosten → 52,90 € Selbstkosten → 71,98 € Listenpreis.",
+      "topic": "Preispolitik",
+      "front": "Zuschlagskalkulation: die Reihenfolge",
+      "back": "Material + MGK = Materialkosten · Löhne + FGK = Fertigungskosten · Summe = Herstellkosten · + Verwaltungs- und Vertriebs-GK = Selbstkosten · + Gewinn = Barverkaufspreis · / (1 − Skonto) = Zielverkaufspreis · / (1 − Rabatt) = Listenpreis.\nGemeinkosten kommen als Prozent dazu, weil man sie keinem Stück direkt zuordnen kann.\nTorte: Herstellkosten 46 € → Selbstkosten 52,90 € → Listenpreis 71,98 €.",
       "exam": true
     },
     {
       "id": "mkt-k040",
-      "topic": "Preis",
-      "front": "Warum Skonto und Rabatt „im Hundert“?",
-      "back": "Der Kunde zieht sie vom höheren Rechnungspreis ab, darum teilt man durch (1 − Satz) statt aufzuschlagen. Du willst 98 € bei 2 % Skonto: 98 / 0,98 = 100 €; mit 98 + 2 % = 99,96 € bekämst du nur 97,96 €.",
+      "topic": "Preispolitik",
+      "front": "Warum rechnet man Skonto und Rabatt „im Hundert“?",
+      "back": "Der Kunde zieht Skonto und Rabatt vom **höheren** Rechnungspreis ab. Darum teilst du durch (1 − Satz), statt Prozent aufzuschlagen.\nNur so bleibt nach dem Abzug genau der gewünschte Betrag übrig.\nBeispiel: Du willst 98 €, Skonto 2 % → 98 / 0,98 = 100 €; 100 − 2 = 98. Mit 98 · 1,02 = 99,96 € bekämst du nur 97,96 €.",
       "exam": true
     },
     {
       "id": "mkt-k041",
-      "topic": "Preis",
+      "topic": "Preispolitik",
       "front": "Break-even und Preisuntergrenzen (Skript-Übung 24)",
-      "back": "Break-even = Fixkosten / (Preis − kv). 81.000 / (520 − 340) = 450 Stück. Kurzfristige Preisuntergrenze = kv (340 €), langfristige = Selbstkosten je Stück (340 + 81.000 / 500 = 502 €).",
+      "back": "Break-even-Menge = Fixkosten / db, mit db = Preis − variable Stückkosten. Kurzfristige Preisuntergrenze = variable Stückkosten, langfristige = Selbstkosten je Stück.\nKurzfristig sind die Fixkosten ohnehin da, langfristig müssen aber alle Kosten gedeckt sein.\nBeispiel: 81.000 / (520 − 340) = 450 Stück. PUG kurzfristig 340 €, langfristig 340 + 81.000 / 500 = 502 €.",
       "exam": true
     },
     {
       "id": "mkt-k042",
-      "topic": "Preis",
-      "front": "Arten der Preisdifferenzierung",
-      "back": "Räumlich (Region), persönlich (Studententarif), zeitlich (Kino am Dienstag), sachlich (1. und 2. Klasse), mengenmäßig (Mengenrabatt), Produktbündel (Menüpreis).",
+      "topic": "Preispolitik",
+      "front": "Sechs Arten der Preisdifferenzierung",
+      "back": "Räumlich (Region) · persönlich (Kundengruppe) · zeitlich (Tages-, Jahreszeit) · sachlich (andere Leistung) · mengenmäßig (Kaufmenge) · Produktbündel (Kombination).\nIdee: Jede Kundengruppe zahlt so viel, wie sie zu zahlen bereit ist.\nBeispiele: Studententarif = persönlich, Kino am Dienstag = zeitlich, Bahn 1./2. Klasse = sachlich, Menüpreis = Bündel.",
       "exam": false
     },
     {
       "id": "mkt-k043",
-      "topic": "Distribution",
-      "front": "Direkter vs. indirekter Absatz",
-      "back": "Direkt: Hersteller verkauft selbst (eigener Laden, eigener Onlineshop). Indirekt: Handel dazwischen (Hersteller → Großhandel → Einzelhandel → Kunde), der Händler behält die Handelsspanne.",
+      "topic": "Distributionspolitik",
+      "front": "Direkter und indirekter Absatz",
+      "back": "Direkt = der Hersteller verkauft selbst, ohne Zwischenhändler (eigener Laden, eigener Onlineshop, Automat). Indirekt = der Handel sitzt dazwischen (Hersteller → Großhandel → Einzelhandel → Kunde).\nBeim indirekten Absatz behält der Händler die Handelsspanne, erreicht dafür viele Kunden.\nBeispiel: Turnschuhe im Markenshop = direkt, im Sportgeschäft = indirekt.",
       "exam": false
     },
     {
       "id": "mkt-k044",
-      "topic": "Distribution",
+      "topic": "Distributionspolitik",
       "front": "Vorteile eines eigenen Onlineshops (Musterklausur A5b)",
-      "back": "Keine Handelsspanne · direkter Kundenkontakt und Kundendaten · große Reichweite, auch international · Bestellung rund um die Uhr · weniger Abhängigkeit vom Handel, eigene Preise.",
+      "back": "1. keine Handelsspanne · 2. direkter Kundenkontakt und Kundendaten · 3. große Reichweite, auch international · 4. Bestellung rund um die Uhr · 5. weniger Abhängigkeit vom Handel, eigene Preise.\nAlle Vorteile folgen daraus, dass der Onlineshop **direkter** Absatz ist.\nLaut Ansoff ist der Onlineshop für bisherige Produkte Marktentwicklung.",
       "exam": true
     },
     {
       "id": "mkt-k045",
-      "topic": "Distribution",
-      "front": "Reisender vs. Handelsvertreter",
-      "back": "Reisender: Angestellter mit Arbeitsvertrag, Fixum + Provision, weisungsgebunden. Handelsvertreter: selbstständiger Kaufmann (§§ 84 ff. HGB), nur Provision, oft für mehrere Firmen. Beide handeln in fremdem Namen auf fremde Rechnung.",
+      "topic": "Distributionspolitik",
+      "front": "Reisender und Handelsvertreter: Unterschiede",
+      "back": "Reisender = Angestellter mit Arbeitsvertrag, Fixum + Provision, weisungsgebunden, berichtet über Markt und Konkurrenz. Handelsvertreter = selbstständiger Kaufmann (§§ 84 ff. HGB), nur Provision, kennt sein Gebiet, oft für mehrere Firmen.\nGemeinsam: Beide handeln in fremdem Namen auf fremde Rechnung.\nDarum ist der Reisende fix teurer, aber bei großem Umsatz günstiger.",
       "exam": true
     },
     {
       "id": "mkt-k046",
-      "topic": "Distribution",
+      "topic": "Distributionspolitik",
       "front": "Handelsvertreter, Handelsmakler, Kommissionär",
-      "back": "Handelsvertreter: ständig, fremder Name, fremde Rechnung, Provision · Handelsmakler: von Fall zu Fall, Courtage je zur Hälfte von beiden Seiten · Kommissionär: eigener Name, fremde Rechnung, Provision.",
+      "back": "Handelsvertreter: ständig, fremder Name, fremde Rechnung, Provision · Handelsmakler: von Fall zu Fall, fremder Name, fremde Rechnung, Courtage je zur Hälfte von Käufer und Verkäufer · Kommissionär: **eigener** Name, fremde Rechnung, Provision.\nPrüffragen: Wer steht auf dem Vertrag (Name)? Wer trägt Gewinn und Verlust (Rechnung)?\nDer Kommissionär tritt wie ein Händler auf, die Ware gehört aber weiter dem Lieferanten.",
       "exam": false
     },
     {
       "id": "mkt-k047",
-      "topic": "Kommunikation",
-      "front": "Above-the-Line vs. Below-the-Line (laut Skript)",
-      "back": "Above (klassisch): Mediawerbung, Direktwerbung, Verkaufsförderung, PR. Below (modern): Sponsoring, Product Placement, Eventmarketing, virales und Guerilla-Marketing, Online-Marketing.",
+      "topic": "Kommunikationspolitik",
+      "front": "Above-the-Line und Below-the-Line (laut Skript)",
+      "back": "Above (klassisch): Mediawerbung (TV, Radio, Zeitschrift, Plakat, Kino), Direktwerbung, Verkaufsförderung, PR. Below (modern): Sponsoring, Product Placement, Eventmarketing, virales und Guerilla-Marketing, Online-Marketing.\nFalle: Verkaufsförderung und PR stehen im Skript bei Above-the-Line.\nBeispiel: Flyer = Direktwerbung = Above, Google-Anzeige = Online-Marketing = Below.",
       "exam": false
     },
     {
       "id": "mkt-k048",
-      "topic": "Kommunikation",
+      "topic": "Kommunikationspolitik",
       "front": "Staff, Trade und Consumer Promotion",
-      "back": "Staff = eigene Verkäufer (Schulung, Prämien) · Trade = Handel (Werbezuschüsse, Displays, befristete Nachlässe) · Consumer = Verbraucher (Coupons, Proben, Gewinnspiele).",
+      "back": "Staff = eigene Verkäufer (Schulung, Provision, Verkäuferwettbewerbe) · Trade = Handel (Displays, Werbezuschüsse, befristete Nachlässe) · Consumer = Verbraucher (Preisnachlass, Coupons, Multibuys, Proben, Gewinnspiele).\nDas Wort sagt, wer gefördert wird: staff = Personal, trade = Handel, consumer = Verbraucher.\nTrade Promotion gehört zur Push-, Consumer Promotion zur Pull-Strategie.",
       "exam": false
     },
     {
       "id": "mkt-k049",
-      "topic": "Kommunikation",
+      "topic": "Kommunikationspolitik",
       "front": "Vier Grundsätze der Werbung",
-      "back": "Wirksamkeit, Wahrheit (nicht täuschen, UWG), Klarheit, Wirtschaftlichkeit. Beispiel: „Bestes Brot der Welt“ ohne Beleg verletzt die Werbewahrheit.",
+      "back": "Wirksamkeit (erreicht und beeinflusst die Zielgruppe) · Wahrheit (nicht täuschen, UWG) · Klarheit (verständlich) · Wirtschaftlichkeit (Kosten im Verhältnis zum Erfolg).\nBei der Wirtschaftlichkeit ist das Problem, dass sich der Erfolg schwer messen lässt.\nBeispiel: „Bestes Brot der Welt“ ohne Beleg verletzt die Werbewahrheit.",
       "exam": false
     },
     {
       "id": "mkt-k050",
-      "topic": "Mix",
+      "topic": "Marketing-Mix",
       "front": "Die 4P und ihre Instrumente",
-      "back": "Product (Programm, Produktgestaltung, Marke) · Price (Preisforderung, Differenzierung, Konditionen) · Place (Absatzwege, Absatzorgane, Logistik) · Promotion (Werbung, PR, Sponsoring, Verkaufsförderung). „Place“ heißt Vertrieb, nicht Standort.",
+      "back": "Product = Produktpolitik (Programm, Produktgestaltung, Marke) · Price = Preispolitik (Preisforderung, Differenzierung, Konditionen) · Place = Distributionspolitik (Absatzwege, Absatzorgane, Logistik) · Promotion = Kommunikationspolitik (Werbung, PR, Sponsoring, Verkaufsförderung).\n„Place“ heißt Vertrieb, also der Weg zum Kunden, nicht Standort.\nBeispiel: Versand gratis ab Mindestmenge = Price (Konditionen).",
       "exam": true
     },
     {
       "id": "mkt-k051",
-      "topic": "Mix",
+      "topic": "Marketing-Mix",
       "front": "Abstimmung des Marketing-Mix in drei Stufen",
-      "back": "Grobabstimmung (wie viel Gewicht bekommt jedes P?) → Feinabstimmung (innerhalb eines P) → Feinstabstimmung (Gesamtmix optimieren). Grund: Budget begrenzt, Instrumente wirken aufeinander (teure Werbung beeinflusst den Preis).",
+      "back": "Grobabstimmung (wie viel Gewicht und Budget bekommt jedes P?) → Feinabstimmung (innerhalb eines P) → Feinstabstimmung (Gesamtmix optimieren).\nWarum abstimmen? Das Budget ist begrenzt, und die Instrumente wirken aufeinander.\nBeispiel: Teure Einführungswerbung beeinflusst den Preis; ein Technikprodukt braucht Beratung im Handel.",
       "exam": false
     },
     {
       "id": "mkt-k052",
-      "topic": "Kontrolle",
-      "front": "Absolute vs. relative Kennzahlen im Marketing",
-      "back": "Absolut in €: Umsatz, Gewinn, Deckungsbeitrag, Werbegewinn. Relativ (· 100): Marktanteil, Reklamationsquote, DB in %, Distributionsquote, Werberendite, Bekanntheitsgrad. Beispiel: 30 Reklamationen bei 3.000 Aufträgen = 1 %.",
+      "topic": "Erfolgskontrolle",
+      "front": "Absolute und relative Kennzahlen",
+      "back": "Absolut (in €): Umsatz, Kosten, Gewinn, Deckungsbeitrag, Werbegewinn. Relativ (Zähler / Nenner · 100): Marktanteil, Reklamationsquote, DB in %, Distributionsquote, Werberendite, Bekanntheitsgrad.\nRelative Zahlen machen große und kleine Unternehmen vergleichbar.\nBeispiel: 30 Reklamationen bei 3.000 Aufträgen = 30 / 3.000 · 100 = 1 %.",
       "exam": false
     },
     {
       "id": "mkt-k053",
-      "topic": "Kontrolle",
+      "topic": "Erfolgskontrolle",
       "front": "Distributionsquote und Bekanntheitsgrad",
-      "back": "Distributionsquote = Einkaufsorte mit dem Produkt / mögliche Einkaufsorte · 100 (Place). Bekanntheitsgrad = Kenner / alle potenziellen Kunden · 100 (Promotion).",
+      "back": "Distributionsquote = Einkaufsorte mit dem Produkt / mögliche Einkaufsorte · 100 (gehört zu Place). Bekanntheitsgrad = Kenner / alle potenziellen Kunden · 100 (gehört zu Promotion).\nBeide zeigen, wie gut das Produkt den Kunden erreicht: im Regal oder im Kopf.\nBeispiel: in 300 von 500 Supermärkten = 60 %; 400 von 1.000 kennen die Marke = 40 %.",
       "exam": false
+    },
+    {
+      "id": "mkt-k054",
+      "topic": "Grundlagen des Marketings",
+      "front": "USP (unique selling proposition)",
+      "back": "Der USP ist der eine einzigartige Vorteil, wegen dem Kunden bei dir kaufen und nicht bei der Konkurrenz.\nIn Käufermärkten mit vielen ähnlichen Produkten braucht man ihn, um überhaupt wahrgenommen zu werden. Man stellt ihn z. B. über Verpackung oder Werbung heraus.\nBeispiel: Ritter Sport mit der quadratischen Tafel, Geox mit dem Schuh, der „atmet“.",
+      "exam": true
+    },
+    {
+      "id": "mkt-k055",
+      "topic": "Grundlagen des Marketings",
+      "front": "Nachkaufdissonanz",
+      "back": "Nach dem Kauf ärgerst du dich und zweifelst, ob der Kauf richtig war.\nSie entsteht typisch bei der Verkaufsorientierung: Wer überredet wurde, ist oft unzufrieden, erzählt das weiter und kauft nicht wieder.\nBeispiel: Ein Telefonverkäufer schwatzt dir einen teuren Vertrag auf, am nächsten Tag bereust du es.",
+      "exam": false
+    },
+    {
+      "id": "mkt-k056",
+      "topic": "Grundlagen des Marketings",
+      "front": "Anspruchsgruppen und ihre Marketingarten",
+      "back": "Verbraucher und Handel → Absatzmarketing · eigene Mitarbeiter → internes Marketing · Lieferanten → Beschaffungsmarketing · Konkurrenten → Wettbewerbsmarketing · Öffentlichkeit, Anwohner → Public Marketing.\nMarketing richtet sich also nicht nur an Kunden, sondern an alle, die auf das Unternehmen einwirken.\nBeispiel: Ein Tag der offenen Tür für Anwohner ist Public Marketing.",
+      "exam": false
+    },
+    {
+      "id": "mkt-k057",
+      "topic": "Strategische Analysen",
+      "front": "Marktanteil des stärksten Konkurrenten berechnen",
+      "back": "Gleiche Formel wie beim eigenen Marktanteil, nur mit **seinem** Umsatz: Umsatz Konkurrent · 100 / Marktvolumen.\nDu brauchst den Wert für den relativen Marktanteil.\nMusterklausur, Stühle: 70 · 100 / 250 = 28 %. Eigener Anteil 5 · 100 / 250 = 2 %, relativ 2 / 28 = 0,07.",
+      "exam": true
+    },
+    {
+      "id": "mkt-k058",
+      "topic": "Strategische Analysen",
+      "front": "Marktpotenzial aus dem Ausschöpfungsgrad",
+      "back": "Marktpotenzial = Marktvolumen · 100 / Marktausschöpfungsgrad.\nDas Potenzial ist der ganze mögliche Markt, das Volumen nur der ausgeschöpfte Teil davon. Darum teilt man durch den Prozentsatz.\nMusterklausur, Stühle: 250 · 100 / 95 = 263,16 Mio. €. Probe: 263,16 ≥ 250.",
+      "exam": true
+    },
+    {
+      "id": "mkt-k059",
+      "topic": "Strategische Analysen",
+      "front": "Warum relativer statt absoluter Marktanteil in der BCG-Matrix?",
+      "back": "Der relative Marktanteil zeigt die Stellung im Wettbewerb, der absolute nicht.\nEin kleiner absoluter Anteil kann eine starke Position sein, wenn alle anderen noch kleiner sind.\nBeispiel: 10 % klingt wenig. Hat der Stärkste nur 5 %, bist du mit 10 / 5 = 2,0 Marktführer.",
+      "exam": true
+    },
+    {
+      "id": "mkt-k060",
+      "topic": "Strategische Analysen",
+      "front": "Weg einer SGE durch die BCG-Matrix und ausgewogenes Portfolio",
+      "back": "Question Mark (Einführung) → Star (Wachstum) → Cash Cow (Reife, Sättigung) → Poor Dog (Degeneration).\nAusgewogen ist ein Portfolio, wenn Cash Cows das Geld für Question Marks und Stars liefern und genug Nachwuchs da ist.\nNur Cash Cows und Poor Dogs = gefährlich, weil keine Produkte nachwachsen.",
+      "exam": false
+    },
+    {
+      "id": "mkt-k061",
+      "topic": "Strategische Analysen",
+      "front": "Vor- und Nachteile der Portfolioanalyse",
+      "back": "Vorteile: einfach und anschaulich, alle SGE auf einen Blick, zeigt, ob das Portfolio ausgewogen ist.\nNachteile: nur zwei Größen (Wachstum, rel. Marktanteil), Trennlinien willkürlich, Normstrategien nur Faustregeln.\nBeispiel: Ein Poor Dog kann noch einen positiven Deckungsbeitrag bringen und für das Sortiment wichtig sein.",
+      "exam": false
+    },
+    {
+      "id": "mkt-k062",
+      "topic": "Strategische Marketingplanung",
+      "front": "Formen der Produktentwicklung (Ansoff)",
+      "back": "Echte Innovation (völlig neu) · Quasi-Innovation (Weiterentwicklung) · Me-too-Produkt (Nachahmung eines Konkurrenzprodukts).\nAlle drei sind neue Produkte für den **bisherigen** Markt, also Produktentwicklung.\nSkript-Beispiele: Elektromotor für Pkw (echte Innovation), neuer Mini (Quasi-Innovation).",
+      "exam": false
+    },
+    {
+      "id": "mkt-k063",
+      "topic": "Strategische Marketingplanung",
+      "front": "Persona",
+      "back": "Eine Persona ist eine erfundene Beispielperson für eine Zielgruppe, mit Name, Gesicht, Alltag, Zielen, Wünschen und Problemen.\nSie macht die Zielgruppe greifbar: Das Team fragt „Was würde Lena dazu sagen?“ statt „Was will Segment B?“.\nBeispiel: „Lena, 22, studiert, fährt Rad zur Uni, will eine wasserdichte, schicke Tasche.“",
+      "exam": false
+    },
+    {
+      "id": "mkt-k064",
+      "topic": "Strategische Marketingplanung",
+      "front": "Kunden gewinnen, binden, zurückgewinnen",
+      "back": "Neukundengewinnung = Erstkäufer gewinnen · Kundenbindung = bestehende Kunden kaufen wieder · Kundenrückgewinnung = enttäuschte Kunden zurückholen.\nDie Rückgewinnung ist laut Skript am schwersten, weil der Kunde unzufrieden ist und schon nach Neuem sucht.\nMittel: etwas Neues bieten, das zu seinen Wünschen passt, plus ein besonderes Angebot.",
+      "exam": false
+    },
+    {
+      "id": "mkt-k065",
+      "topic": "Marktforschung",
+      "front": "Methoden der Primärforschung",
+      "back": "Befragung (mündlich, schriftlich, online) · Beobachtung (z. B. per Video) · Panel (feste Gruppe berichtet regelmäßig) · Experiment (eine Sache bewusst ändern und vergleichen) · Tests (Labor-, Store-, Markttest).\nWelche passt? Frag dich, ob du Meinungen (Befragung), Verhalten (Beobachtung) oder Entwicklungen über Zeit (Panel) brauchst.\nBeispiel: Wie verhalten sich Kunden vor dem Regal? → Beobachtung.",
+      "exam": false
+    },
+    {
+      "id": "mkt-k066",
+      "topic": "Marktforschung",
+      "front": "Auswahlverfahren für Stichproben",
+      "back": "Zufällig: einfache Zufallsauswahl (Lostrommel), geschichtet (in Gruppen teilen, dann je Gruppe losen), Klumpen (ganze Gruppen auslosen). Bewusst: Quotenauswahl (Interviewer wählen selbst nach Quote), Konzentrationsauswahl (nur die wichtigsten).\nQuotenauswahl ist **keine** Zufallsauswahl.\nBeispiel geschichtet: 1.500 Mitglieder, 120 Befragte = 8 % → aus 900 Basis-Mitgliedern 72.",
+      "exam": false
+    },
+    {
+      "id": "mkt-k067",
+      "topic": "Produktpolitik",
+      "front": "Verpackung: die sechs Aspekte",
+      "back": "Schutz · Verwendung · Logistik · Kommunikation · Kosten · Ökologie.\nDie Verpackung muss das Produkt schützen und gleichzeitig im Regal werben, billig und umweltfreundlich sein.\nBeispiel Müsli: Beutel schützt vor Feuchtigkeit (Schutz), Karton fällt im Regal auf (Kommunikation), aus Recyclingpappe (Ökologie).",
+      "exam": false
+    },
+    {
+      "id": "mkt-k068",
+      "topic": "Produktpolitik",
+      "front": "Sortimentsbreite und -tiefe: die vier Strategien",
+      "back": "schmal + flach = Discountstrategie · breit + flach = Universalstrategie · schmal + tief = Spezialisierungsstrategie · breit + tief = Multispezialisierungsstrategie.\nBreite = Zahl der Warenarten, Tiefe = Sorten je Art.\nBeispiel: Uhrenfachgeschäft (nur Uhren, viele Modelle) = Spezialisierung, Kaufhaus = Multispezialisierung.",
+      "exam": false
+    },
+    {
+      "id": "mkt-k069",
+      "topic": "Produktpolitik",
+      "front": "Sortimentsmaßnahmen",
+      "back": "Diversifikation = breiter (neue Warenart) · Differenzierung = tiefer (mehr Sorten) · Variation = Sorten austauschen · Bereinigung = weniger Breite oder Tiefe.\nPrüffrage: Kommt eine neue **Art** dazu oder nur eine neue **Sorte**?\nBeispiel: Supermarkt verkauft Handyverträge = Diversifikation, Schuhe auch in Halbgrößen = Differenzierung.",
+      "exam": false
+    },
+    {
+      "id": "mkt-k070",
+      "topic": "Produktpolitik",
+      "front": "Branding: Markenformen",
+      "back": "Wortmarke (Microsoft) · Buchstabenmarke (AEG) · Bildmarke (Nike-„Swoosh“) · kombinierte Marke (BMW).\nBranding sind alle Maßnahmen, damit ein Angebot klar einer Marke zugeordnet und wiedererkannt wird.\nZiele laut Skript: Identifikation und Abgrenzung, Image, Sympathie, Erinnerung.",
+      "exam": false
+    },
+    {
+      "id": "mkt-k071",
+      "topic": "Preispolitik",
+      "front": "Target Costing durchrechnen",
+      "back": "1. Zielpreis · 2. − Zielgewinn = Allowable Costs · 3. Drifting Costs − Allowable Costs = Kostenlücke.\nIst der Gewinn in % angegeben, rechnest du ihn vom **Zielpreis** aus, nicht von den Kosten.\nBeispiel Smartwatch: 180 € − 20 % · 180 (= 36 €) = 144 €. Geschätzt 160 € → Lücke 16 € = 10 %.",
+      "exam": true
+    },
+    {
+      "id": "mkt-k072",
+      "topic": "Preispolitik",
+      "front": "Zusatzauftrag unter dem normalen Preis: annehmen?",
+      "back": "Annehmen, wenn der Preis über den variablen Stückkosten liegt (positiver db) und freie Kapazität da ist.\nDie Fixkosten fallen sowieso an, also erhöht jeder positive db den Gewinn.\nBeispiel: kv 340 €, Angebot 400 €, 100 Stück frei → 100 · 60 = 6.000 € mehr Gewinn.",
+      "exam": true
+    },
+    {
+      "id": "mkt-k073",
+      "topic": "Preispolitik",
+      "front": "Barverkaufspreis, Zielverkaufspreis, Listenverkaufspreis",
+      "back": "Barverkaufspreis = was nach Skonto bei dir ankommt · Zielverkaufspreis = Preis vor Skonto (der Kunde zahlt ihn, wenn er das Zahlungsziel ausnutzt) · Listenverkaufspreis = Preis in der Preisliste vor Rabatt.\nVom Bar- zum Listenpreis rechnest du zweimal „im Hundert“.\nBeispiel: 255,36 / 0,97 = 263,26 € → / 0,75 = 351,01 €.",
+      "exam": true
+    },
+    {
+      "id": "mkt-k074",
+      "topic": "Preispolitik",
+      "front": "Preispositionierung und Konditionenpolitik",
+      "back": "Preispositionierung: Hochpreis (besonderer Leistungsvorteil), Mittelpreis (mittlere Qualität), Niedrigpreis (Mindestqualität, billig).\nKonditionenpolitik: Lieferbedingungen (frei Haus), Zahlungsbedingungen (Skonto, Zahlungsziel), Finanzierung (Kredit), Rabatte (Menge, Treue).\nBeispiel: „Versand kostenlos ab 50 €“ ist eine Lieferbedingung, also Konditionenpolitik.",
+      "exam": false
+    },
+    {
+      "id": "mkt-k075",
+      "topic": "Distributionspolitik",
+      "front": "Kritischer Umsatz Schritt für Schritt",
+      "back": "1. Fixkosten des Reisenden aufs Jahr: Gehalt · 12 (· 13 mit 13. Gehalt) + Spesen · 12 + Sonstiges. 2. Provisionen als Dezimalzahl. 3. U = Fix / (pV − pR). 4. Vergleichen: unter U Vertreter, über U Reisender.\nFalle: durch die Vertreterprovision allein teilen.\nBeispiel: 42.000 / (0,055 − 0,015) = 1.050.000 €.",
+      "exam": true
+    },
+    {
+      "id": "mkt-k076",
+      "topic": "Distributionspolitik",
+      "front": "Kriterien für den Absatzweg: direkt oder indirekt?",
+      "back": "Für **indirekt** sprechen Lieferzeit (Ware liegt beim Händler), Marktabdeckung (viele Geschäfte) und Lagerung (der Handel lagert). Für **direkt** sprechen Handelsspanne (fällt weg), Abhängigkeit (kein Händler entscheidet mit) und Kundenkontakt (eigene Kundendaten).\nEs gibt also keinen immer besseren Weg.\nViele Hersteller nutzen darum beides (Multi-Channel).",
+      "exam": false
+    },
+    {
+      "id": "mkt-k077",
+      "topic": "Kommunikationspolitik",
+      "front": "Verkaufsförderung: Merkmale und Risiko",
+      "back": "Verkaufsförderung = zeitlich begrenzte Aktionen mit zusätzlichem Kaufanreiz, meist mit dem Handel zusammen; im Schnitt rund 25 % des Kommunikationsbudgets.\nRisiko: Gibt es ständig Aktionen, kauft niemand mehr zum Normalpreis, und eine Premiummarke wirkt billig.\nBeispiel: Becher gratis auf der Packung im Sommer, Kosten 240.000 € für 900.000 Packungen = 0,27 € je Stück.",
+      "exam": false
+    },
+    {
+      "id": "mkt-k078",
+      "topic": "Kommunikationspolitik",
+      "front": "Funktionen der Werbung",
+      "back": "Bekanntmachung · Information · Suggestion (Gefühle durch Farbe, Bilder, Musik) · Image (positiv abheben) · Erinnerung (durch Wiederholung).\nJede Werbung erfüllt meist mehrere Funktionen gleichzeitig.\nBeispiel: „Neu: Dinkelbrot, 4,20 €“ = Bekanntmachung und Information; jede Woche dieselbe Anzeige = Erinnerung.",
+      "exam": false
+    },
+    {
+      "id": "mkt-k079",
+      "topic": "Kommunikationspolitik",
+      "front": "Messen: Ziele, Vor- und Nachteile",
+      "back": "Ziele: Abschlüsse, Kontakte, Markttransparenz, Trends, Image; wichtig vor allem im B2B.\nVorteile: persönlicher Kontakt, direkter Vergleich mit der Konkurrenz. Nachteile: hohe Kosten je Kontakt, Erfolg schwer messbar, viel Organisation.\nErfolg messbar machen: Ziele vorher festlegen, Gespräche dokumentieren, Aufträge danach zählen.",
+      "exam": false
+    },
+    {
+      "id": "mkt-k080",
+      "topic": "Erfolgskontrolle",
+      "front": "Soll-Ist-Vergleich und Abweichung",
+      "back": "Abweichung = Ist − Soll, in % vom Soll: (Ist − Soll) / Soll · 100. Danach sucht man den Grund (Abweichungsanalyse).\nErst der Grund zeigt, was man ändern muss.\nBeispiel: Soll 2 Mio. €, Ist 1,8 Mio. € → −200.000 € = −10 %.",
+      "exam": false
+    },
+    {
+      "id": "mkt-k081",
+      "topic": "Erfolgskontrolle",
+      "front": "Werbebudgetquote und Reklamationsquote",
+      "back": "Werbebudgetquote = Werbebudget / Umsatz · 100 (Promotion). Reklamationsquote = Reklamationen / Aufträge · 100 (Product).\nBeide sind relative Kennzahlen und machen Jahre oder Firmen vergleichbar.\nBeispiel: 90.000 € Werbung bei 1,8 Mio. € Umsatz = 5 %; 900 Reklamationen bei 30.000 Aufträgen = 3 %.",
+      "exam": false
+    },
+    {
+      "id": "mkt-k082",
+      "topic": "Marketing-Mix",
+      "front": "Passt der Marketing-Mix zusammen?",
+      "back": "Alle vier P müssen dieselbe Botschaft senden. Prüfe jede Maßnahme: Passt sie zu Qualität, Preis und Zielgruppe?\nWidersprüche zerstören das Bild beim Kunden.\nBeispiel: Luxustasche für 900 € im Discounter mit Flyer „Jetzt zuschlagen!“ passt nicht. Nespresso dagegen: Premiumprodukt, hoher Preis, eigene Boutiquen, edler Auftritt.",
+      "exam": true
     }
   ],
   "quiz": [
     {
       "id": "mkt-q001",
-      "topic": "Analyse",
+      "topic": "Strategische Analysen",
       "q": "Marktvolumen Tische 150 Mio. €, Umsatz der Miller KG 12 Mio. €. Marktanteil?",
       "options": [
         "12 %",
@@ -384,11 +587,11 @@
         "80 %"
       ],
       "correct": 1,
-      "explain": "Marktanteil = 12 · 100 / 150 = 8 %."
+      "explain": "Marktanteil = eigener Umsatz · 100 / Marktvolumen = 12 · 100 / 150 = 8 %.\n0,8 ist der **relative** Marktanteil (8 % / 10 % des Konkurrenten), und 80 % ist der Ausschöpfungsgrad. 12 % wäre einfach die Umsatzzahl mit Prozentzeichen."
     },
     {
       "id": "mkt-q002",
-      "topic": "Analyse",
+      "topic": "Strategische Analysen",
       "q": "Miller hat 8 % Marktanteil, der größte Konkurrent 10 %. Relativer Marktanteil?",
       "options": [
         "80 %",
@@ -397,11 +600,11 @@
         "−2 %"
       ],
       "correct": 1,
-      "explain": "Eigener MA / MA des größten Konkurrenten = 8 / 10 = 0,8, als Dezimalzahl."
+      "explain": "Relativer Marktanteil = eigener Marktanteil / Marktanteil des stärksten Konkurrenten = 8 / 10 = 0,8.\nEr wird als Dezimalzahl angegeben, nicht als 80 %. 1,25 entsteht, wenn man umgekehrt teilt (10 / 8)."
     },
     {
       "id": "mkt-q003",
-      "topic": "Analyse",
+      "topic": "Strategische Analysen",
       "q": "Ein Produkt hat einen hohen relativen Marktanteil in einem stagnierenden Markt und bringt Geldüberschüsse. BCG-Feld?",
       "options": [
         "Poor Dog",
@@ -410,11 +613,11 @@
         "Cash Cow"
       ],
       "correct": 3,
-      "explain": "Hoher Marktanteil + geringes Wachstum = Cash Cow: halten und abschöpfen."
+      "explain": "Hoher relativer Marktanteil in einem kaum wachsenden Markt = Cash Cow. Sie bringt mehr Geld, als sie braucht: halten und abschöpfen.\nEin Star hätte zusätzlich ein **hohes** Marktwachstum, ein Poor Dog einen kleinen Marktanteil."
     },
     {
       "id": "mkt-q004",
-      "topic": "Strategie",
+      "topic": "Strategische Marketingplanung",
       "q": "Ein Fahrradhersteller verkauft sein bisheriges Rad nun auch in Frankreich. Ansoff-Strategie?",
       "options": [
         "Produktentwicklung",
@@ -423,11 +626,11 @@
         "Marktentwicklung"
       ],
       "correct": 3,
-      "explain": "Altes Produkt, neuer Markt (neue Region) = Marktentwicklung."
+      "explain": "Bisheriges Produkt + neuer Markt (neues Land) = Marktentwicklung.\nProduktentwicklung wäre ein neues Produkt für die bisherigen Kunden. Das Rad ist aber dasselbe, nur der Markt ist neu."
     },
     {
       "id": "mkt-q005",
-      "topic": "Strategie",
+      "topic": "Strategische Marketingplanung",
       "q": "Yamaha baut Motorräder und Pianos. Welche Diversifikation?",
       "options": [
         "Vertikal",
@@ -436,11 +639,11 @@
         "Horizontal"
       ],
       "correct": 2,
-      "explain": "Kein sachlicher Zusammenhang zwischen den Produkten = laterale Diversifikation."
+      "explain": "Motorräder und Pianos haben sachlich nichts miteinander zu tun → laterale Diversifikation.\nHorizontal wäre ein verwandtes Produkt auf derselben Stufe (z. B. Motorradhelme), vertikal eine vor- oder nachgelagerte Stufe (z. B. eigene Reifenproduktion)."
     },
     {
       "id": "mkt-q006",
-      "topic": "Kommunikation",
+      "topic": "Kommunikationspolitik",
       "q": "Medium A: 10.000 €, 900.000 Nutzer, 60 % Zielgruppe. Medium B: 7.000 €, 500.000 Nutzer, 70 % Zielgruppe. Welches hat den niedrigeren TKP?",
       "options": [
         "A mit 11,11 €",
@@ -449,11 +652,11 @@
         "A mit 18,52 €"
       ],
       "correct": 3,
-      "explain": "TKP A = 10.000 / 540.000 · 1.000 = 18,52 €; B = 7.000 / 350.000 · 1.000 = 20,00 €."
+      "explain": "Zuerst Zielpersonen: A 900.000 · 0,6 = 540.000, B 500.000 · 0,7 = 350.000. TKP A = 10.000 / 540.000 · 1.000 = 18,52 €, TKP B = 7.000 / 350.000 · 1.000 = 20,00 €.\n11,11 € entsteht, wenn man den Zielgruppenanteil vergisst (10.000 / 900.000 · 1.000). Dann wäre das Ergebnis zwar auch A, aber mit falscher Zahl."
     },
     {
       "id": "mkt-q007",
-      "topic": "Distribution",
+      "topic": "Distributionspolitik",
       "q": "Reisender: 45.400 € Fixkosten + 2 % Provision. Handelsvertreter: 4 % Provision. Erwarteter Umsatz 3 Mio. €. Was ist günstiger?",
       "options": [
         "Reisender (kritischer Umsatz 2,27 Mio. €)",
@@ -462,11 +665,11 @@
         "Beide gleich teuer"
       ],
       "correct": 0,
-      "explain": "U(krit) = 45.400 / 0,02 = 2,27 Mio. €. Bei 3 Mio. €: Reisender 105.400 €, Vertreter 120.000 €."
+      "explain": "Kritischer Umsatz = 45.400 / (0,04 − 0,02) = 2.270.000 €. 3 Mio. € liegen darüber, also ist der Reisende günstiger: 45.400 + 0,02 · 3.000.000 = 105.400 € gegen 0,04 · 3.000.000 = 120.000 €.\n„Vertreter, weil keine Fixkosten“ stimmt nur unter dem kritischen Umsatz."
     },
     {
       "id": "mkt-q008",
-      "topic": "Kontrolle",
+      "topic": "Erfolgskontrolle",
       "q": "Werbebedingter Mehrumsatz 30.000 €, Werbekosten 10.000 €. Werberendite?",
       "options": [
         "33,3 %",
@@ -475,11 +678,11 @@
         "20.000 €"
       ],
       "correct": 1,
-      "explain": "Werberendite = 30.000 / 10.000 · 100 = 300 %; der Werbegewinn wäre 20.000 €."
+      "explain": "Werberendite = Mehrumsatz / Werbekosten · 100 = 30.000 / 10.000 · 100 = 300 %.\n20.000 € ist der Werbegewinn (Mehrumsatz − Kosten), also eine andere Kennzahl in €. 33,3 % entsteht, wenn man umgekehrt teilt."
     },
     {
       "id": "mkt-q009",
-      "topic": "Preis",
+      "topic": "Preispolitik",
       "q": "Ein Hersteller führt eine Spielkonsole teuer ein und senkt den Preis später schrittweise. Strategie?",
       "options": [
         "Mengenrabatt",
@@ -488,11 +691,11 @@
         "Skimming"
       ],
       "correct": 3,
-      "explain": "Hoch starten, dann senken = Abschöpfungsstrategie (Skimming)."
+      "explain": "Hoch einsteigen und den Preis später schrittweise senken = Skimming (Abschöpfung). Wer zuerst dabei sein will, zahlt mehr.\nPenetration wäre das Gegenteil: billig einsteigen, um schnell viele Kunden zu gewinnen."
     },
     {
       "id": "mkt-q010",
-      "topic": "Grundlagen",
+      "topic": "Grundlagen des Marketings",
       "q": "Lea hat 5 € und möchte sich einen Döner kaufen. Was liegt vor?",
       "options": [
         "Bedürfnis",
@@ -501,11 +704,11 @@
         "Marktpotenzial"
       ],
       "correct": 1,
-      "explain": "Ein Wunsch mit Kaufkraft ist Bedarf. Erst der Kauf am Stand ist Nachfrage."
+      "explain": "Ein Wunsch plus Geld, das man ausgeben kann und will = Bedarf.\nNachfrage ist erst der tatsächliche Kauf am Stand. Bedürfnis wäre nur der Hunger, ganz ohne Geld."
     },
     {
       "id": "mkt-q011",
-      "topic": "Grundlagen",
+      "topic": "Grundlagen des Marketings",
       "q": "Eine neue Konsole ist überall ausverkauft, Händler geben keinen Rabatt. Welche Marktsituation?",
       "options": [
         "Käufermarkt",
@@ -514,11 +717,11 @@
         "Sättigungsmarkt"
       ],
       "correct": 2,
-      "explain": "Nachfrage > Angebot, der Verkäufer hat die Macht."
+      "explain": "Ware ist knapp, die Nachfrage größer als das Angebot, der Händler muss nichts tun → Verkäufermarkt: Der Verkäufer hat die Macht.\nIm Käufermarkt wäre es umgekehrt: viel Ware, Rabatte, der Käufer hat die Wahl."
     },
     {
       "id": "mkt-q012",
-      "topic": "Grundlagen",
+      "topic": "Grundlagen des Marketings",
       "q": "„Wir bauen das technisch beste Handy, ob es jemand braucht, ist egal.“ Welche Grundhaltung?",
       "options": [
         "Marketingorientierung",
@@ -527,11 +730,11 @@
         "Produktorientierung"
       ],
       "correct": 3,
-      "explain": "Fokus auf technische Verbesserung statt auf Kundenwünsche."
+      "explain": "Der Fokus liegt auf der ständigen technischen Verbesserung des Produkts, nicht auf dem Kunden → Produktorientierung.\nProduktionsorientierung hieße „viel und billig herstellen“. Marketingorientierung würde zuerst fragen, was Kunden brauchen."
     },
     {
       "id": "mkt-q013",
-      "topic": "Analyse",
+      "topic": "Strategische Analysen",
       "q": "Umsatz 20 Mio. €, Marktanteil 12 %. Wie groß ist das Marktvolumen?",
       "options": [
         "166,67 Mio. €",
@@ -540,11 +743,11 @@
         "208,33 Mio. €"
       ],
       "correct": 0,
-      "explain": "Marktvolumen = 20 · 100 / 12 = 166,67 Mio. €. 208,33 Mio. € wäre das Potenzial bei 80 % Ausschöpfung."
+      "explain": "Marktvolumen = Umsatz · 100 / Marktanteil = 20 · 100 / 12 = 166,67 Mio. €.\n208,33 Mio. € ist das Marktpotenzial, wenn das Volumen zu 80 % ausgeschöpft ist. 240 Mio. € entsteht durch 20 · 12 statt durch Teilen."
     },
     {
       "id": "mkt-q014",
-      "topic": "Analyse",
+      "topic": "Strategische Analysen",
       "q": "Umsatz einer Produktgruppe: 23,3 → 26,2 → 28,5 → 30,0 Mio. €. Welche Phase des Lebenszyklus?",
       "options": [
         "Einführung",
@@ -553,11 +756,11 @@
         "Degeneration"
       ],
       "correct": 1,
-      "explain": "Die Zuwächse sinken (+12,45 %, +8,78 %, +5,26 %): Der Umsatz steigt noch, aber langsamer."
+      "explain": "Veränderungen: (26,2 − 23,3) / 23,3 · 100 = +12,45 %, dann +8,78 %, dann +5,26 %. Der Umsatz steigt, aber immer langsamer → Reife.\nWachstum wäre es nur, wenn die Zuwächse größer würden. Nur auf „Umsatz steigt“ zu schauen ist die Falle."
     },
     {
       "id": "mkt-q015",
-      "topic": "Analyse",
+      "topic": "Strategische Analysen",
       "q": "Der Trend zu regionalen Lebensmitteln ist für eine Bäckerei in der SWOT-Analyse …",
       "options": [
         "eine Stärke",
@@ -566,11 +769,11 @@
         "eine Chance"
       ],
       "correct": 3,
-      "explain": "Er kommt von außen und ist positiv. Stärken liegen im Unternehmen."
+      "explain": "Ein Trend kommt von außen und ist positiv → Chance.\nStärken liegen im Unternehmen und können von ihm beeinflusst werden, zum Beispiel ein eigenes Rezept. Den Trend kann die Bäckerei nicht selbst machen."
     },
     {
       "id": "mkt-q016",
-      "topic": "Strategie",
+      "topic": "Strategische Marketingplanung",
       "q": "Man zeigt Befragten ein Logo und fragt: „Kennen Sie das?“ Was wird gemessen?",
       "options": [
         "Brand Recognition",
@@ -579,11 +782,11 @@
         "Kundenzufriedenheit"
       ],
       "correct": 0,
-      "explain": "Gestützt (mit Hilfe) = Recognition. Ungestützt = Recall."
+      "explain": "Mit Gedächtnisstütze (Logo) gefragt = gestützt = Brand Recognition.\nBrand Recall wäre ungestützt: „Welche Marken fallen dir ein?“ ohne jede Hilfe."
     },
     {
       "id": "mkt-q017",
-      "topic": "Strategie",
+      "topic": "Strategische Marketingplanung",
       "q": "Ein Taschenhersteller bedient Business, Reise, Damen und Outdoor, aber nicht Sportler und Schüler. Strategie?",
       "options": [
         "Massenmarktstrategie",
@@ -592,11 +795,11 @@
         "Marktabdeckung"
       ],
       "correct": 2,
-      "explain": "Mehrere ausgewählte Segmente, aber nicht alle."
+      "explain": "Mehrere ausgewählte Segmente, aber nicht alle → selektive Spezialisierung.\nMarktabdeckung hieße: alle Segmente, also auch Sport und Schule. Segmentkonzentration wäre nur ein einziges Segment."
     },
     {
       "id": "mkt-q018",
-      "topic": "Strategie",
+      "topic": "Strategische Marketingplanung",
       "q": "Was ist **keine** Anforderung an eine Positionierung nach Kotler?",
       "options": [
         "Vor der Produktentwicklung festlegen",
@@ -605,7 +808,7 @@
         "Langfristig angelegt"
       ],
       "correct": 1,
-      "explain": "Kotler verlangt genau eine herausgestellte Eigenschaft, keine Mehrfachpositionierung."
+      "explain": "Kotler verlangt, **nur eine** Eigenschaft herauszustellen, keine Mehrfachpositionierung. „Möglichst viele Eigenschaften“ ist also keine Anforderung.\nDie anderen drei (vor der Entwicklung, nicht kopierbar, langfristig) stehen so im Skript."
     },
     {
       "id": "mkt-q019",
@@ -618,7 +821,7 @@
         "Marktbeobachtung"
       ],
       "correct": 3,
-      "explain": "Dieselbe Gruppe wird wiederholt erfasst, also laufend über längere Zeit."
+      "explain": "Ein Panel erfasst dieselbe Gruppe immer wieder, hier jedes halbe Jahr → laufend über längere Zeit = Marktbeobachtung.\nMarktanalyse wäre eine einmalige Erhebung zu einem Zeitpunkt."
     },
     {
       "id": "mkt-q020",
@@ -631,7 +834,7 @@
         "Primärforschung, Panel"
       ],
       "correct": 1,
-      "explain": "Die Daten gibt es schon (sekundär), und sie stammen aus dem eigenen Unternehmen (intern)."
+      "explain": "Die Daten gibt es schon (sekundär), und sie stammen aus dem eigenen Unternehmen (intern).\nPrimärforschung hieße, extra neue Daten zu erheben, etwa Kunden zu befragen. Extern wären fremde Daten wie Statistiken."
     },
     {
       "id": "mkt-q021",
@@ -644,11 +847,11 @@
         "120"
       ],
       "correct": 3,
-      "explain": "60 % von 200 = 120; so stimmt das Verhältnis der Grundgesamtheit."
+      "explain": "Geschichtet heißt: Das Verhältnis der Grundgesamtheit bleibt erhalten. 60 % von 200 = 0,6 · 200 = 120.\n1.200 sind 60 % aller 2.000 Studierenden, nicht der Stichprobe. 60 ist nur die Prozentzahl."
     },
     {
       "id": "mkt-q022",
-      "topic": "Produkt",
+      "topic": "Produktpolitik",
       "q": "Neben dem normalen Croissant gibt es jetzt auch ein veganes; das alte bleibt. Welche Maßnahme?",
       "options": [
         "Differenzierung",
@@ -657,11 +860,11 @@
         "Laterale Diversifikation"
       ],
       "correct": 0,
-      "explain": "Differenzierung ergänzt das alte Produkt, Variation ersetzt es."
+      "explain": "Neue Variante **zusätzlich**, das alte Croissant bleibt → Differenzierung.\nVariation würde das alte Produkt ersetzen. Laterale Diversifikation wäre eine ganz neue Produktart ohne Zusammenhang."
     },
     {
       "id": "mkt-q023",
-      "topic": "Produkt",
+      "topic": "Produktpolitik",
       "q": "Miele verkauft Waschmaschinen, Staubsauger und Herde unter einem Namen. Markentyp?",
       "options": [
         "Einzelmarke",
@@ -670,11 +873,11 @@
         "Familienmarke"
       ],
       "correct": 2,
-      "explain": "Alle Produkte des Unternehmens laufen unter dem Firmennamen."
+      "explain": "Alle Produkte des Unternehmens laufen unter dem Firmennamen Miele → Dachmarke.\nEine Familienmarke umfasst nur eine Produktgruppe (z. B. Nivea Sun), eine Einzelmarke gibt jedem Produkt einen eigenen Namen."
     },
     {
       "id": "mkt-q024",
-      "topic": "Produkt",
+      "topic": "Produktpolitik",
       "q": "Eine Luxusuhr wird gekauft, damit Kollegen sie bewundern. Welcher Nutzen?",
       "options": [
         "Grundnutzen",
@@ -683,11 +886,11 @@
         "Sozialer Zusatznutzen"
       ],
       "correct": 3,
-      "explain": "Anerkennung durch andere ist sozialer Zusatznutzen; Freude am Design wäre emotional."
+      "explain": "Gekauft, damit **andere** sie bewundern = Anerkennung = sozialer Zusatznutzen.\nEmotional wäre die eigene Freude am Design, auch wenn niemand hinschaut. Funktional wäre mehr Technik."
     },
     {
       "id": "mkt-q025",
-      "topic": "Produkt",
+      "topic": "Produktpolitik",
       "q": "Welcher Teil des Markensteuerrads beantwortet „Wie biete ich an?“ (Persönlichkeit, Beziehung)?",
       "options": [
         "Markentonalität",
@@ -696,11 +899,11 @@
         "Markenbild"
       ],
       "correct": 0,
-      "explain": "Kompetenz = Wer bin ich?, Attribute = Eigenschaften, Bild = Wie trete ich auf?"
+      "explain": "„Wie biete ich an?“ mit Persönlichkeit und Beziehung = Markentonalität.\nMarkenbild klingt ähnlich, fragt aber „Wie trete ich auf?“ (Logo, Design). Attribute sind die Eigenschaften, Kompetenz ist der Kern."
     },
     {
       "id": "mkt-q026",
-      "topic": "Preis",
+      "topic": "Preispolitik",
       "q": "Barverkaufspreis 63,48 €, Skonto 2 %. Zielverkaufspreis?",
       "options": [
         "64,75 €",
@@ -709,11 +912,11 @@
         "65,48 €"
       ],
       "correct": 1,
-      "explain": "Im Hundert: 63,48 / 0,98 = 64,78 €. Aufschlagen (63,48 · 1,02 = 64,75 €) ist der typische Fehler."
+      "explain": "Skonto „im Hundert“: Zielverkaufspreis = 63,48 / 0,98 = 64,78 €.\n63,48 · 1,02 = 64,75 € ist der typische Fehler: Dann bleiben nach 2 % Abzug nur 63,46 € statt 63,48 €."
     },
     {
       "id": "mkt-q027",
-      "topic": "Preis",
+      "topic": "Preispolitik",
       "q": "Preis 520 €, variable Kosten 340 €, Fixkosten 81.000 €. Break-even-Menge?",
       "options": [
         "156 Stück",
@@ -722,11 +925,11 @@
         "500 Stück"
       ],
       "correct": 2,
-      "explain": "81.000 / (520 − 340) = 81.000 / 180 = 450 Stück."
+      "explain": "Break-even = Fixkosten / db = 81.000 / (520 − 340) = 81.000 / 180 = 450 Stück.\n156 Stück entsteht durch 81.000 / 520, also durch den Preis statt durch den Deckungsbeitrag. 500 ist die Kapazität."
     },
     {
       "id": "mkt-q028",
-      "topic": "Preis",
+      "topic": "Preispolitik",
       "q": "Kunden zahlen höchstens 4 € für ein Stück Torte, geplant ist 1 € Gewinn. Was sind die Allowable Costs?",
       "options": [
         "5 €",
@@ -735,11 +938,11 @@
         "3 €"
       ],
       "correct": 3,
-      "explain": "Target Costing: Zielpreis − Zielgewinn = 4 − 1 = 3 € erlaubte Kosten."
+      "explain": "Target Costing: Zielpreis − Zielgewinn = Allowable Costs = 4 − 1 = 3 €.\n5 € entsteht, wenn man den Gewinn aufschlägt wie in der normalen Kalkulation. Target Costing rechnet aber rückwärts vom Marktpreis."
     },
     {
       "id": "mkt-q029",
-      "topic": "Preis",
+      "topic": "Preispolitik",
       "q": "Das Kino ist dienstags billiger. Welche Preisdifferenzierung?",
       "options": [
         "Zeitlich",
@@ -748,11 +951,11 @@
         "Räumlich"
       ],
       "correct": 0,
-      "explain": "Der Preis hängt vom Zeitpunkt ab, nicht von Person, Leistung oder Ort."
+      "explain": "Der Preis hängt vom Wochentag ab → zeitliche Preisdifferenzierung.\nPersönlich wäre ein anderer Preis für eine Kundengruppe (Studenten), sachlich eine andere Leistung (Loge statt Parkett)."
     },
     {
       "id": "mkt-q030",
-      "topic": "Distribution",
+      "topic": "Distributionspolitik",
       "q": "Wer handelt im eigenen Namen auf fremde Rechnung?",
       "options": [
         "Handelsvertreter",
@@ -761,11 +964,11 @@
         "Handelsmakler"
       ],
       "correct": 2,
-      "explain": "Handelsvertreter und Makler handeln in fremdem Namen; der Reisende ist Angestellter."
+      "explain": "Der Kommissionär tritt in **eigenem** Namen auf, handelt aber auf Rechnung des Lieferanten.\nHandelsvertreter und Handelsmakler handeln in fremdem Namen. Der Reisende ist Angestellter und schließt ebenfalls in fremdem Namen ab."
     },
     {
       "id": "mkt-q031",
-      "topic": "Distribution",
+      "topic": "Distributionspolitik",
       "q": "Reisender: 33.000 € Fixkosten im Jahr + 2 % Provision. Handelsvertreter: 6 %. Kritischer Umsatz?",
       "options": [
         "550.000 €",
@@ -774,11 +977,11 @@
         "660.000 €"
       ],
       "correct": 1,
-      "explain": "33.000 / (0,06 − 0,02) = 825.000 €. Falle: 33.000 / 0,06 = 550.000 €."
+      "explain": "Kritischer Umsatz = 33.000 / (0,06 − 0,02) = 33.000 / 0,04 = 825.000 €.\n550.000 € ist die Falle: 33.000 / 0,06 teilt nur durch die Vertreterprovision. Gleichsetzen zeigt, dass nur der Unterschied der Provisionen zählt."
     },
     {
       "id": "mkt-q032",
-      "topic": "Distribution",
+      "topic": "Distributionspolitik",
       "q": "Ein Turnschuhhersteller verkauft über seinen eigenen Onlineshop. Welcher Absatzweg?",
       "options": [
         "Indirekter Absatz",
@@ -787,11 +990,11 @@
         "Direkter Absatz"
       ],
       "correct": 3,
-      "explain": "Kein Zwischenhändler, also direkt und ohne Handelsspanne."
+      "explain": "Kein Zwischenhändler, der Hersteller verkauft selbst → direkter Absatz, ohne Handelsspanne.\nIndirekt wäre es erst, wenn ein Sportgeschäft oder ein anderer Händler dazwischen wäre."
     },
     {
       "id": "mkt-q033",
-      "topic": "Kommunikation",
+      "topic": "Kommunikationspolitik",
       "q": "Zeitung: 1.500 €, 200.000 Leser, 30 % Zielgruppe. Radio: 900 €, 80.000 Hörer, 50 % Zielgruppe. Welcher TKP ist kleiner?",
       "options": [
         "Zeitung mit 7,50 €",
@@ -800,11 +1003,11 @@
         "Zeitung mit 25,00 €"
       ],
       "correct": 2,
-      "explain": "Zeitung 1.500 / 60.000 · 1.000 = 25,00 €; Radio 900 / 40.000 · 1.000 = 22,50 €."
+      "explain": "Zielpersonen: Zeitung 200.000 · 0,3 = 60.000, Radio 80.000 · 0,5 = 40.000. TKP Zeitung = 1.500 / 60.000 · 1.000 = 25,00 €, Radio = 900 / 40.000 · 1.000 = 22,50 €.\n7,50 € (Zeitung) und 11,25 € (Radio) entstehen, wenn man den Zielgruppenanteil weglässt."
     },
     {
       "id": "mkt-q034",
-      "topic": "Kommunikation",
+      "topic": "Kommunikationspolitik",
       "q": "Ein Hersteller gibt dem Supermarkt Werbezuschüsse und ein Display für sein neues Produkt. Was ist das?",
       "options": [
         "Trade Promotion im Rahmen einer Push-Strategie",
@@ -813,11 +1016,11 @@
         "Sponsoring"
       ],
       "correct": 0,
-      "explain": "Anreize für den Handel = Trade Promotion; der Handel „drückt“ die Ware zum Kunden (Push)."
+      "explain": "Anreize für den Handel (Werbezuschüsse, Display) = Trade Promotion. Damit drückt der Hersteller die Ware über den Handel zum Kunden = Push.\nConsumer Promotion und Pull würden sich direkt an den Endverbraucher richten, etwa mit Proben oder Coupons."
     },
     {
       "id": "mkt-q035",
-      "topic": "Kommunikation",
+      "topic": "Kommunikationspolitik",
       "q": "In welcher Reihenfolge wirkt Werbung nach AIDA?",
       "options": [
         "Interest → Attention → Action → Desire",
@@ -826,11 +1029,11 @@
         "Action → Interest → Desire → Attention"
       ],
       "correct": 2,
-      "explain": "Erst Aufmerksamkeit, dann Interesse, dann Kaufwunsch, dann Kauf."
+      "explain": "AIDA = Attention → Interest → Desire → Action: erst auffallen, dann Interesse, dann Kaufwunsch, dann Kauf.\nDesire vor Interest geht nicht: Man will nichts haben, wovon man noch nicht weiß, worum es geht."
     },
     {
       "id": "mkt-q036",
-      "topic": "Mix",
+      "topic": "Marketing-Mix",
       "q": "Wofür steht „Place“ im Marketing-Mix?",
       "options": [
         "Standortwahl des Unternehmens",
@@ -839,11 +1042,11 @@
         "Positionierung im Kopf des Kunden"
       ],
       "correct": 1,
-      "explain": "Place = Absatzwege, Absatzorgane, Logistik."
+      "explain": "Place = Distributionspolitik: Absatzwege, Absatzorgane, Logistik, also der Weg zum Kunden.\n„Standort“ ist die verlockende Übersetzung, aber im Marketing-Mix geht es nicht um den Firmensitz."
     },
     {
       "id": "mkt-q037",
-      "topic": "Mix",
+      "topic": "Marketing-Mix",
       "q": "Die Marketingleitung legt fest, wie viel Budget jedes der vier P bekommt. Welche Stufe der Abstimmung?",
       "options": [
         "Feinabstimmung",
@@ -852,11 +1055,11 @@
         "Grobabstimmung"
       ],
       "correct": 3,
-      "explain": "Grob = zwischen den P (inter-instrumental), fein = innerhalb eines P."
+      "explain": "Wie viel Gewicht und Budget jedes P bekommt, ist die Abstimmung **zwischen** den Instrumenten = Grobabstimmung.\nFeinabstimmung wäre die Abstimmung **innerhalb** eines P, etwa welche Werbeträger man nutzt."
     },
     {
       "id": "mkt-q038",
-      "topic": "Kontrolle",
+      "topic": "Erfolgskontrolle",
       "q": "Werbekosten 200 €, werbebedingter Mehrumsatz 500 €. Werbegewinn?",
       "options": [
         "300 €",
@@ -865,11 +1068,11 @@
         "40 %"
       ],
       "correct": 0,
-      "explain": "Werbegewinn = 500 − 200 = 300 € (absolut). 250 % wäre die Werberendite."
+      "explain": "Werbegewinn = Mehrumsatz − Werbekosten = 500 − 200 = 300 € (absolut).\n250 % wäre die Werberendite (500 / 200 · 100), eine andere Kennzahl in Prozent."
     },
     {
       "id": "mkt-q039",
-      "topic": "Kontrolle",
+      "topic": "Erfolgskontrolle",
       "q": "Umsatz 400.000 €, variable Kosten 180.000 €. Deckungsbeitrag in %?",
       "options": [
         "45 %",
@@ -878,7 +1081,358 @@
         "25 %"
       ],
       "correct": 1,
-      "explain": "DB = 400.000 − 180.000 = 220.000 €; 220.000 / 400.000 · 100 = 55 %."
+      "explain": "DB = 400.000 − 180.000 = 220.000 €. DB in % = 220.000 / 400.000 · 100 = 55 %.\n45 % ist der Anteil der variablen Kosten am Umsatz (180.000 / 400.000), also genau das Gegenstück."
+    },
+    {
+      "id": "mkt-q040",
+      "topic": "Grundlagen des Marketings",
+      "q": "Welche Stufe der Maslow-Pyramide spricht eine Werbung für eine Hausratversicherung vor allem an?",
+      "options": [
+        "Sicherheitsbedürfnisse",
+        "Physiologische Bedürfnisse",
+        "Prestigebedürfnisse",
+        "Selbstverwirklichung"
+      ],
+      "correct": 0,
+      "explain": "Eine Versicherung schützt vor Verlusten und gibt ein sicheres Gefühl → Stufe 2, Sicherheitsbedürfnisse.\nPrestige (Stufe 4) wäre Anerkennung durch andere, etwa mit einer Luxusuhr. Mit einer Versicherung kann man niemanden beeindrucken."
+    },
+    {
+      "id": "mkt-q041",
+      "topic": "Grundlagen des Marketings",
+      "q": "Was ist ein USP?",
+      "options": [
+        "Ein einzigartiger Vorteil, wegen dem Kunden bei diesem Anbieter kaufen",
+        "Der niedrigste Preis am Markt",
+        "Eine Werbekampagne mit Prominenten",
+        "Der Marktanteil des Marktführers"
+      ],
+      "correct": 0,
+      "explain": "USP = unique selling proposition: der eine Vorteil, den die Konkurrenz nicht hat, zum Beispiel die quadratische Tafel bei Ritter Sport.\nEin niedriger Preis **kann** ein USP sein (Media Markt), ist es aber nicht automatisch. Er ist nur ein mögliches Beispiel."
+    },
+    {
+      "id": "mkt-q042",
+      "topic": "Grundlagen des Marketings",
+      "q": "Welche Stufe des Marketingmanagements kommt direkt nach der Situationsanalyse?",
+      "options": [
+        "Marketingziele",
+        "Marketingmix",
+        "Prognose",
+        "Marketing-Controlling"
+      ],
+      "correct": 2,
+      "explain": "Reihenfolge: Situationsanalyse → Prognose → Ziele → Strategie → Mix → Implementierung → Controlling. Nach „Wo stehen wir?“ kommt „Was kommt auf uns zu?“.\nZiele erst danach festlegen, weil sie die erwartete Entwicklung berücksichtigen müssen."
+    },
+    {
+      "id": "mkt-q043",
+      "topic": "Strategische Analysen",
+      "q": "Marktvolumen 80 Mio. €, eigener Umsatz 6 Mio. €, stärkster Konkurrent 16 Mio. €. Wie hoch ist der relative Marktanteil?",
+      "options": [
+        "7,5 %",
+        "0,08",
+        "0,38",
+        "2,67"
+      ],
+      "correct": 2,
+      "explain": "Erst die Marktanteile: eigen 6 · 100 / 80 = 7,5 %, Konkurrent 16 · 100 / 80 = 20 %. Relativ = 7,5 / 20 = 0,375 ≈ 0,38.\n7,5 % ist nur der eigene Marktanteil. 2,67 entsteht, wenn man umgekehrt teilt (20 / 7,5). 0,08 entsteht, wenn man durch alle anderen Anbieter zusammen teilt (6 / 74)."
+    },
+    {
+      "id": "mkt-q044",
+      "topic": "Strategische Analysen",
+      "q": "Marktvolumen 250 Mio. €, Marktausschöpfungsgrad 95 %. Wie groß ist das Marktpotenzial?",
+      "options": [
+        "263,16 Mio. €",
+        "237,50 Mio. €",
+        "345,00 Mio. €",
+        "95,00 Mio. €"
+      ],
+      "correct": 0,
+      "explain": "Marktpotenzial = Marktvolumen · 100 / Ausschöpfungsgrad = 250 · 100 / 95 = 263,16 Mio. €.\n237,50 Mio. € entsteht durch 250 · 0,95. Das kann nicht stimmen, denn das Potenzial muss größer sein als das Volumen."
+    },
+    {
+      "id": "mkt-q045",
+      "topic": "Strategische Analysen",
+      "q": "Das Marktvolumen steigt von 320 auf 400 Mio. €. Wie hoch ist das Marktwachstum?",
+      "options": [
+        "20 %",
+        "25 %",
+        "80 %",
+        "1,25 %"
+      ],
+      "correct": 1,
+      "explain": "Marktwachstum = (neu − alt) / alt · 100 = (400 − 320) / 320 · 100 = 80 / 320 · 100 = 25 %.\n20 % entsteht, wenn man durch den neuen Wert teilt (80 / 400). Geteilt wird immer durch den alten Wert, den Ausgangspunkt."
+    },
+    {
+      "id": "mkt-q046",
+      "topic": "Strategische Analysen",
+      "q": "„Die Produktion hat 26 % freie Kapazität.“ Was ist das in der SWOT-Analyse?",
+      "options": [
+        "Eine Chance",
+        "Eine Schwäche",
+        "Ein Risiko",
+        "Eine Stärke"
+      ],
+      "correct": 3,
+      "explain": "Freie Kapazität liegt im Unternehmen (innen) und ist nützlich: Man kann schnell mehr herstellen → Stärke.\n„Chance“ ist verlockend, weil es nach Möglichkeit klingt. Chancen kommen aber von außen, etwa ein Trend am Markt."
+    },
+    {
+      "id": "mkt-q047",
+      "topic": "Strategische Analysen",
+      "q": "Eine Geschäftseinheit hat einen relativen Marktanteil von 0,6 in einem Markt mit 25 % Wachstum. Was ist die Normstrategie?",
+      "options": [
+        "Investieren oder aufgeben (Question Mark)",
+        "Halten und abschöpfen (Cash Cow)",
+        "Investieren und ausbauen (Star)",
+        "Desinvestieren (Poor Dog)"
+      ],
+      "correct": 0,
+      "explain": "Hohes Wachstum + relativer Marktanteil unter 1 = Question Mark: Entweder investieren, damit ein Star daraus wird, oder sich zurückziehen.\nEin Star hätte einen relativen Marktanteil über 1, also eine führende Position."
+    },
+    {
+      "id": "mkt-q048",
+      "topic": "Strategische Marketingplanung",
+      "q": "Ein Hersteller von Holztischen bietet die Tische künftig über einen eigenen Onlineshop europaweit an. Welche Wachstumsstrategie ist das?",
+      "options": [
+        "Produktentwicklung",
+        "Marktentwicklung",
+        "Marktdurchdringung",
+        "Diversifikation"
+      ],
+      "correct": 1,
+      "explain": "Das Produkt bleibt gleich (Tische), neu sind die Kunden in anderen Ländern → Marktentwicklung.\nDer Onlineshop wirkt neu, ist aber kein neues **Produkt**, sondern ein neuer Weg zu neuen Kunden. Darum ist es keine Produktentwicklung."
+    },
+    {
+      "id": "mkt-q049",
+      "topic": "Strategische Marketingplanung",
+      "q": "Ein Hersteller bringt ein Produkt heraus, das das Erfolgsprodukt der Konkurrenz nachahmt. Wie heißt das?",
+      "options": [
+        "Echte Innovation",
+        "Laterale Diversifikation",
+        "Me-too-Produkt",
+        "Variation"
+      ],
+      "correct": 2,
+      "explain": "Eine Nachahmung eines Wettbewerbsprodukts heißt im Skript Me-too-Produkt. Es ist eine Form der Produktentwicklung.\nEchte Innovation wäre etwas völlig Neues, das es so noch nicht gab."
+    },
+    {
+      "id": "mkt-q050",
+      "topic": "Strategische Marketingplanung",
+      "q": "Welche Segmentierung ist das: „Kunden, die jede Woche online bestellen und sehr markentreu sind“?",
+      "options": [
+        "Soziodemografisch",
+        "Psychografisch",
+        "Verhaltensbezogen",
+        "Geografisch"
+      ],
+      "correct": 2,
+      "explain": "Kaufhäufigkeit, Einkaufsweg (online) und Markentreue beschreiben, wie Kunden sich **verhalten** → verhaltensbezogen.\nPsychografisch wären Werte und Einstellungen, etwa „legt Wert auf Nachhaltigkeit“. Soziodemografisch wären Alter oder Einkommen."
+    },
+    {
+      "id": "mkt-q051",
+      "topic": "Marktforschung",
+      "q": "Ein Duschgel-Hersteller will wissen, wie sich Kunden vor dem Regal tatsächlich verhalten. Welche Methode passt am besten?",
+      "options": [
+        "Beobachtung",
+        "Befragung",
+        "Sekundärforschung, extern",
+        "Panel"
+      ],
+      "correct": 0,
+      "explain": "Tatsächliches Verhalten sieht man am besten, indem man zuschaut, zum Beispiel per Video → Beobachtung.\nEine Befragung liefert nur, was Kunden über ihr Verhalten **sagen**. Das weicht oft davon ab, was sie wirklich tun."
+    },
+    {
+      "id": "mkt-q052",
+      "topic": "Marktforschung",
+      "q": "Interviewer suchen ihre Befragten selbst aus, müssen aber einhalten: 60 % BWL, 40 % Informatik. Welches Verfahren ist das?",
+      "options": [
+        "Geschichtete Zufallsauswahl",
+        "Quotenauswahl",
+        "Klumpenauswahl",
+        "Vollerhebung"
+      ],
+      "correct": 1,
+      "explain": "Feste Quote, aber die Personen wählt der Interviewer bewusst aus → Quotenauswahl, keine Zufallsauswahl.\nBei der geschichteten Zufallsauswahl würde man innerhalb jeder Gruppe **losen**. Dieselben 60 : 40 machen den Unterschied nicht aus, sondern wer auswählt."
+    },
+    {
+      "id": "mkt-q053",
+      "topic": "Produktpolitik",
+      "q": "Die alte Limonade bekommt ein neues Rezept und ein neues Design, die alte Version verschwindet. Welche Maßnahme ist das?",
+      "options": [
+        "Differenzierung",
+        "Eliminierung",
+        "Innovation",
+        "Variation"
+      ],
+      "correct": 3,
+      "explain": "Das Produkt wird verändert und ersetzt das alte → Variation.\nDifferenzierung wäre es, wenn die alte Limonade bleibt und die neue zusätzlich ins Regal kommt."
+    },
+    {
+      "id": "mkt-q054",
+      "topic": "Produktpolitik",
+      "q": "Ein Uhrenfachgeschäft führt nur Uhren, die aber in hunderten Modellen. Welche Sortimentsstrategie ist das?",
+      "options": [
+        "Spezialisierungsstrategie (schmal und tief)",
+        "Universalstrategie (breit und flach)",
+        "Discountstrategie (schmal und flach)",
+        "Multispezialisierungsstrategie (breit und tief)"
+      ],
+      "correct": 0,
+      "explain": "Nur eine Warenart = schmal, viele Sorten = tief → Spezialisierungsstrategie.\nMultispezialisierung bräuchte zusätzlich viele Warenarten (breit), wie in einem Kaufhaus."
+    },
+    {
+      "id": "mkt-q055",
+      "topic": "Produktpolitik",
+      "q": "Eine Bäckerei bietet wiederverwendbare Brotbeutel an. Zu welchem Sortiment gehören sie?",
+      "options": [
+        "Kernsortiment",
+        "Randsortiment",
+        "Zusatzsortiment",
+        "Universalsortiment"
+      ],
+      "correct": 1,
+      "explain": "Brotbeutel ergänzen das Hauptgeschäft Brot → Randsortiment.\nZusatzsortiment wäre etwas ohne Bezug zum Kern, etwa Spielzeug an der Kasse."
+    },
+    {
+      "id": "mkt-q056",
+      "topic": "Preispolitik",
+      "q": "Kunden zahlen höchstens 180 €, der Gewinn soll 20 % vom Preis sein, geschätzte Kosten 160 €. Wie groß ist die Kostenlücke?",
+      "options": [
+        "16 €",
+        "20 €",
+        "36 €",
+        "4 €"
+      ],
+      "correct": 0,
+      "explain": "Allowable Costs = 180 − 0,20 · 180 = 180 − 36 = 144 €. Kostenlücke = 160 − 144 = 16 €.\n36 € ist nur der Zielgewinn. 20 € ist der Abstand zwischen Preis und Kosten, ohne an den Gewinn zu denken."
+    },
+    {
+      "id": "mkt-q057",
+      "topic": "Preispolitik",
+      "q": "Variable Kosten 340 € je Stück, Kapazität frei. Ein Kunde bietet 400 € je Stück für einen Zusatzauftrag. Was gilt kurzfristig?",
+      "options": [
+        "Ablehnen, weil der Preis unter den Selbstkosten liegt",
+        "Ablehnen, weil der Preis unter dem Listenpreis liegt",
+        "Annehmen, jedes Stück bringt 60 € Deckungsbeitrag",
+        "Annehmen, weil jedes Stück 400 € Gewinn bringt"
+      ],
+      "correct": 2,
+      "explain": "Kurzfristige Preisuntergrenze = variable Stückkosten (340 €). 400 € liegen darüber, also bringt jedes Stück 400 − 340 = 60 € db, und die Fixkosten sind ohnehin da.\n„Unter den Selbstkosten“ ist die langfristige Grenze. Für einen einzelnen Zusatzauftrag mit freier Kapazität zählt die kurzfristige."
+    },
+    {
+      "id": "mkt-q058",
+      "topic": "Preispolitik",
+      "q": "Selbstkosten 228 €, Gewinnzuschlag 12 %. Wie hoch ist der Barverkaufspreis?",
+      "options": [
+        "259,09 €",
+        "240,00 €",
+        "255,36 €",
+        "27,36 €"
+      ],
+      "correct": 2,
+      "explain": "Der Gewinn wird **vom Hundert** auf die Selbstkosten aufgeschlagen: 228 · 1,12 = 228 + 27,36 = 255,36 €.\n259,09 € entsteht durch 228 / 0,88, also „im Hundert“. So rechnet man nur Skonto und Rabatt, nicht den Gewinn."
+    },
+    {
+      "id": "mkt-q059",
+      "topic": "Preispolitik",
+      "q": "Eine Discounter-Eigenmarke bietet Mindestqualität zu einem sehr niedrigen Preis, dauerhaft. Welche Strategie ist das?",
+      "options": [
+        "Penetrationsstrategie",
+        "Skimmingstrategie",
+        "Mengenmäßige Preisdifferenzierung",
+        "Niedrigpreisstrategie"
+      ],
+      "correct": 3,
+      "explain": "Ein dauerhaft niedriges Preisniveau bei Mindestqualität = Niedrigpreisstrategie (Preispositionierung).\nPenetration ist ein niedriger **Einführungspreis**, der später steigen kann, um sich schnell zu verbreiten."
+    },
+    {
+      "id": "mkt-q060",
+      "topic": "Distributionspolitik",
+      "q": "Reisender: 3.200 € Gehalt × 12, Spesen 300 € im Monat, 1,5 % Provision. Handelsvertreter: 5,5 %. Kritischer Jahresumsatz?",
+      "options": [
+        "763.636 €",
+        "1.050.000 €",
+        "2.800.000 €",
+        "1.000.000 €"
+      ],
+      "correct": 1,
+      "explain": "Fixkosten = 3.200 · 12 + 300 · 12 = 38.400 + 3.600 = 42.000 €. U = 42.000 / (0,055 − 0,015) = 42.000 / 0,04 = 1.050.000 €.\n763.636 € ist die Falle 42.000 / 0,055: Dann teilt man nur durch die Vertreterprovision."
+    },
+    {
+      "id": "mkt-q061",
+      "topic": "Distributionspolitik",
+      "q": "Welches Kriterium spricht am ehesten für den **indirekten** Absatz über den Handel?",
+      "options": [
+        "Keine Handelsspanne",
+        "Direkter Kontakt zum Kunden",
+        "Unabhängigkeit vom Händler",
+        "Große Marktabdeckung durch viele Geschäfte"
+      ],
+      "correct": 3,
+      "explain": "Der Handel hat viele Geschäfte und erreicht damit Kunden an vielen Orten → Marktabdeckung spricht für indirekt.\nKeine Handelsspanne, Kundenkontakt und Unabhängigkeit sind dagegen typische Vorteile des **direkten** Absatzes."
+    },
+    {
+      "id": "mkt-q062",
+      "topic": "Kommunikationspolitik",
+      "q": "Ein Hersteller schult die eigenen Verkäufer und veranstaltet einen Verkäuferwettbewerb. Welche Verkaufsförderung ist das?",
+      "options": [
+        "Trade Promotion",
+        "Staff Promotion",
+        "Consumer Promotion",
+        "Public Relations"
+      ],
+      "correct": 1,
+      "explain": "Staff = Personal: Maßnahmen für die eigenen Verkäufer.\nTrade Promotion klingt nach Verkauf, richtet sich aber an den **Handel** (Displays, Werbezuschüsse)."
+    },
+    {
+      "id": "mkt-q063",
+      "topic": "Kommunikationspolitik",
+      "q": "Eine Gratis-Becher-Aktion kostet 240.000 € und soll 900.000 Packungen verkaufen. Wie hoch sind die Aktionskosten je Packung?",
+      "options": [
+        "3,75 €",
+        "0,24 €",
+        "0,27 €",
+        "2,67 €"
+      ],
+      "correct": 2,
+      "explain": "Kosten je Stück = 240.000 / 900.000 = 0,2667 ≈ 0,27 €.\n3,75 € entsteht, wenn man umgekehrt teilt (900.000 / 240.000). Prüfe immer: Euro durch Stück ergibt Euro je Stück."
+    },
+    {
+      "id": "mkt-q064",
+      "topic": "Kommunikationspolitik",
+      "q": "Welche Strategie passt laut Skript eher für große, bekannte Unternehmen, weil sie teurer ist?",
+      "options": [
+        "Pull-Strategie",
+        "Push-Strategie",
+        "Trade Promotion",
+        "Staff Promotion"
+      ],
+      "correct": 0,
+      "explain": "Pull richtet sich mit Werbung direkt an die Endverbraucher. Das kostet viel und lohnt sich vor allem für große, etablierte Marken.\nPush eignet sich laut Skript besonders für **neue** Produkte, die erst in den Handel kommen müssen."
+    },
+    {
+      "id": "mkt-q065",
+      "topic": "Marketing-Mix",
+      "q": "Ein Premium-Kaffee wird teuer verkauft, beworben in edlen Boutiquen, aber zusätzlich im Discounter verramscht. Was ist das Problem?",
+      "options": [
+        "Der Preis ist zu hoch",
+        "Promotion fehlt im Mix",
+        "Es gibt zu viele Sorten",
+        "Place passt nicht zu Product, Price und Promotion"
+      ],
+      "correct": 3,
+      "explain": "Die vier P müssen dieselbe Botschaft senden. Der Discounter-Verkauf (Place) sagt „billig“, alles andere sagt „Premium“.\nEin hoher Preis ist kein Fehler, er passt zum Premiumprodukt."
+    },
+    {
+      "id": "mkt-q066",
+      "topic": "Erfolgskontrolle",
+      "q": "Soll-Umsatz 2,0 Mio. €, Ist-Umsatz 1,8 Mio. €. Wie hoch ist die Abweichung in Prozent?",
+      "options": [
+        "−11,11 %",
+        "+10 %",
+        "−10 %",
+        "−0,2 %"
+      ],
+      "correct": 2,
+      "explain": "Abweichung = (Ist − Soll) / Soll · 100 = (1,8 − 2,0) / 2,0 · 100 = −10 %.\n−11,11 % entsteht, wenn man durch den Ist-Wert teilt. Bezugsgröße ist der Plan, also das Soll."
     }
   ]
 }

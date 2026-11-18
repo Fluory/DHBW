@@ -54,6 +54,22 @@ Der Datenbankentwurf läuft in drei Stufen (nach Scheer): erst das Was, dann das
 
 **Faustregel:** Entity-Typen sind Substantive, Relationships sind Verben. „Mitarbeiter betreut Kunde.“
 
+**So liest du einen Falltext** (Regeln der offiziellen Musterlösung):
+
+1. Substantive, über die mehrere Angaben gespeichert werden (Kunde, Gerät, Bauteil), werden **Entity-Typen**.
+2. Steht im Text „eindeutig“, ist das Attribut ein **Schlüsselattribut**. Steht dort „kann gleich sein“ oder „nicht eindeutig“, ist es kein Schlüssel. Dann ergänzt du eine Nummer, zum Beispiel Kunden-Nr.
+3. Ein Verb zwischen zwei Dingen („bezieht“, „besteht aus“) wird eine **Relationship**.
+4. Die Kardinalität fragst du **in beide Richtungen** ab (nächster Abschnitt).
+5. Eine Angabe, die erst für ein **Paar** feststeht (Sonderrabatt für Kunde *und* Gerät), kommt an die Raute.
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Rechteck = Entity-Typ, Ellipse = Attribut, unterstrichen = Schlüsselattribut, Raute = Relationship. Modelliert wird der Entity-Typ (Kunde), nicht das einzelne Entity (Meier GmbH).
+
+> [!WARNING]
+> **Achtung**
+> Eine Bezeichnung, die laut Text nicht eindeutig ist (Name, Adresse), darf kein Schlüssel sein. Ergänze dann eine Nummer. Und „Meier GmbH“ als Rechteck zu zeichnen, ist falsch: Das ist ein Entity, kein Entity-Typ.
+
 ## Kardinalitäten
 
 **In einem Satz:** Die Kardinalität sagt, wie viele Fäden an einer Karte hängen dürfen.
@@ -194,6 +210,11 @@ Funktionen eines DBMS:
 > Fall Gerätehersteller (gekürzt). Jedes Bauteil hat eine eindeutige Bauteilnummer, eine Bezeichnung (kann mehrfach vorkommen), einen Einkaufspreis und einen Vorrat. Jedes Gerät hat eine eindeutige Bezeichnung, einen Lagerbestand und einen Verkaufspreis. Ein Gerät besteht aus mehreren Bauteilen; jedes Bauteil wird in genau einem Gerät verwendet. Zu jedem Kunden werden Name und Adresse gespeichert; beides ist nicht eindeutig. Ein Kunde bezieht mehrere Geräte, ein Gerät geht an mehrere Kunden. Für bestimmte Kombinationen aus Kunde und Gerät ist ein Sonderrabatt in Prozent vereinbart. a) Erstelle das ER-Modell und ergänze, wo nötig, einen Schlüssel. b) Überführe es in Relationen.
 > *Quelle: Zusatzaufgabe Datenmodellierung „Gerätehersteller“ (Moodle), sinngemäß (offizielle Musterlösung)*
 
+> [!TIP]
+> **Übung 6 · Prüfungsniveau**
+> Zusatzfrage zum Gerätehersteller (Übung 5): Ein Bauteil darf jetzt in mehreren Geräten stecken, und für jedes Gerät soll gespeichert werden, wie viele Stück eines Bauteils verbaut sind. Was ändert sich im ER-Modell und im Relationenmodell?
+> *Quelle: Zusatzaufgabe Datenmodellierung „Gerätehersteller“, Zusatzfrage, sinngemäß (offizielle Musterlösung)*
+
 ## Lösungen
 
 ### Übung 1
@@ -274,3 +295,15 @@ b) Relationen:
 - bezieht(**Kunden-Nr.↑**, **G-Bezeichnung↑**, Sonderrabatt): n:m, eigene Relation
 
 Typische Fehler laut Musterlösung: Kunde ohne Schlüssel oder mit (Name, Adresse) als Schlüssel, B-Bezeichnung als Schlüssel von Bauteil, Bauteil-Nr. als Fremdschlüssel in Gerät, Sonderrabatt als Attribut von Kunde oder Gerät.
+
+### Übung 6
+
+Offizielle Musterlösung sinngemäß.
+
+1. **Kardinalität neu bestimmen:** Ein Gerät besteht aus mehreren Bauteilen, und ein Bauteil steckt jetzt in mehreren Geräten. Also wird „besteht aus“ zu **n:m**.
+2. **Attribut an die Raute:** Die verbaute Stückzahl gehört weder allein zum Gerät noch allein zum Bauteil, sondern zum Paar. Sie wird das Attribut **Anzahl** an „besteht aus“.
+3. **Relationen:** Der Fremdschlüssel G-Bezeichnung in Bauteil fällt weg, denn ein Bauteil hätte jetzt mehrere Geräte. Neu ist eine eigene Relation:
+   - Bauteil(**Bauteil-Nr.**, B-Bezeichnung, Einkaufspreis, Vorrat)
+   - besteht aus(**G-Bezeichnung↑**, **Bauteil-Nr.↑**, Anzahl)
+
+Mit Zahlen: Gerät „Mixer X“ enthält 2 Stück von Bauteil 501, Gerät „Mixer Y“ 4 Stück davon. In der Tabelle „besteht aus“ stehen dann die Zeilen (Mixer X, 501, 2) und (Mixer Y, 501, 4). Das ist eine Stückliste: Dieselbe Beziehung wird je nach Kardinalität anders überführt.

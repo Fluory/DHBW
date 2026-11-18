@@ -85,7 +85,16 @@ Die wichtigsten Formen kurz:
 
 **In einem Satz:** Beim Franchising „mietet“ ein selbstständiger Unternehmer ein fertiges Geschäftskonzept samt bekannter Marke.
 
-Der Franchisegeber hat ein erprobtes Geschäftskonzept. Er überlässt dem Franchisenehmer Marke, Wissen, Ausstattung und Werbung. Der Franchisenehmer gründet mit eigenem Geld. Er bleibt rechtlich und wirtschaftlich selbstständig. Er zahlt eine Einstiegsgebühr und laufende Beiträge und lässt sich kontrollieren. Beispiele: McDonald's, Fressnapf, Subway.
+Der Franchisegeber hat ein erprobtes Geschäftskonzept. Der Franchisenehmer übernimmt es gegen Gebühr. Wer was leistet:
+
+| Franchisegeber (FG) leistet … | Franchisenehmer (FN) leistet … |
+|---|---|
+| Geschäftsmodell mit Waren und Dienstleistungen | gründet mit eigenem Kapital |
+| Marke und Warenzeichen, Lizenzen für Herstellung und Vertrieb | bleibt rechtlich und wirtschaftlich selbstständig |
+| Know-how, Ausstattung, teils Finanzhilfen | zahlt eine einmalige Einstiegsgebühr und laufende Beiträge |
+| allgemeine Werbung | erlaubt Kontrollen durch den Franchisegeber |
+
+Laut Skript eignet sich Franchising vor allem für standardisierte Leistungen, die sich überall gleich wiederholen lassen. Beispiele: McDonald's, Fressnapf, Subway.
 
 | Vorteile für … | laut offizieller Lösung zu Skript-Übung 23a |
 |---|---|
@@ -144,6 +153,13 @@ Der Franchisegeber hat ein erprobtes Geschäftskonzept. Er überlässt dem Franc
 >
 > a) Welche zwei Arten der Fusion gibt es? b) Die A-AG und die B-AG gehen in einer neuen C-AG auf. Welche Art ist das?
 
+> [!TIP]
+> **Übung 6 · mittel**
+>
+> *Quelle: eigene Aufgabe*
+>
+> Bestimme jeweils die Richtung (horizontal, vertikal, anorganisch) und die Form des Zusammenschlusses. a) Drei Brauereien vereinbaren einen gemeinsamen Mindestpreis für Bier. b) Ein Autohersteller und ein Batteriehersteller gründen zusammen eine neue Batteriefabrik-GmbH, beide bleiben selbstständig. c) Eine Dachgesellschaft hält jeweils 80 % an einer Bäckerei, einem Hotel und einer Spedition und gibt ihnen die Strategie vor.
+
 ## Lösungen
 
 ### Übung 1
@@ -179,3 +195,11 @@ Offizielle Lösung:
 
 1. a) Fusion durch Aufnahme: A nimmt B auf, B wird gelöscht. Fusion durch Neugründung: A und B gehen in C auf, beide werden gelöscht.
 2. b) Fusion durch Neugründung.
+
+### Übung 6
+
+a) Horizontal, weil alle drei auf derselben Stufe brauen. Form: Kartell (Preiskartell), also Kooperation. Kartelle sind grundsätzlich verboten (§ 1 GWB).
+
+b) Vertikal, weil die Batterie eine Vorstufe des Autos ist. Form: Joint Venture (Gemeinschaftsunternehmen), also Kooperation. Die Mütter bleiben rechtlich und wirtschaftlich selbstständig.
+
+c) Anorganisch, weil die Töchter in verschiedenen Branchen arbeiten. Form: Konzern unter einheitlicher Leitung, die Dachgesellschaft ist eine Holding. Das ist Konzentration: Die Töchter bleiben rechtlich selbstständig, sind aber wirtschaftlich unselbstständig.

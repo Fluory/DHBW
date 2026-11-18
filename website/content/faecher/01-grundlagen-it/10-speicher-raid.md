@@ -241,6 +241,16 @@ XOR ist 1, wenn die Anzahl der Einsen in einer Spalte ungerade ist, wie beim Par
 >
 > *Quelle: Lernseite GIT, Aufgabe 10.7 (eigene Aufgabe im Klausurstil)*
 
+> [!TIP]
+> **Übung 7 · mittel**
+> Ein kleines Büro kauft ein NAS mit 4 Platten à 8 TB. a) Es sollen 2 Platten gleichzeitig ausfallen dürfen. Welches RAID-Level wählen Sie, und wie viel Platz bleibt nutzbar? b) Wie viel wäre es bei RAID 5 und RAID 1? c) Warum braucht das Büro trotzdem ein Backup?
+> *Quelle: eigene Aufgabe nach VL03b (RAID)*
+
+> [!TIP]
+> **Übung 8 · Prüfungsniveau**
+> Erläutern Sie, warum ein Cache die Arbeit der CPU beschleunigt, obwohl er viel kleiner als der Arbeitsspeicher ist. Nennen Sie ein Beispiel.
+> *Quelle: eigene Aufgabe nach VL03b (Cache, Lokalität)*
+
 ## Lösungen
 
 ### Übung 1
@@ -288,3 +298,13 @@ Richtig sind **2 und 3**.
 
 - Option 1 ist falsch: RAID 0 hat keine Redundanz.
 - Option 4 ist falsch: Nach unten wird die Zugriffszeit länger.
+
+### Übung 7
+
+- a) **RAID 6:** doppelte Parität, verkraftet 2 Ausfälle, braucht mindestens 4 Platten (passt genau). Nutzbar: (4 − 2) · 8 TB = **16 TB**.
+- b) RAID 5: (4 − 1) · 8 = **24 TB**, aber nur 1 Ausfall. RAID 1: 4 · 8 / 2 = **16 TB**, 1 Ausfall je Spiegelpaar.
+- c) RAID schützt nur vor dem Ausfall von Platten. Löscht jemand versehentlich eine Datei oder verschlüsselt ein Schadprogramm die Daten, passiert das sofort auf allen Platten. Nur ein getrenntes Backup hat dann noch die alte Fassung.
+
+### Übung 8
+
+Musterantwort: Die CPU rechnet viel schneller, als der Arbeitsspeicher Daten liefern kann. Ein Cache ist ein kleiner, sehr schneller Speicher direkt in oder an der CPU. Er hilft wegen der **Lokalität**: Programme greifen in kurzer Zeit meist nur auf einen kleinen, zusammenhängenden Teil des Speichers zu. Deshalb lädt man beim Zugriff auf ein Wort gleich seine Nachbarn mit in den Cache. Beispiel: Eine Schleife führt denselben Programmteil hundertmal aus, und beim Durchlaufen eines Arrays liegt das nächste Element direkt neben dem letzten. Diese Zugriffe treffen fast alle den Cache. Nur bei einem Cache-Miss muss die CPU über den langsamen Bus aus dem Arbeitsspeicher nachladen.

@@ -153,6 +153,11 @@ Rechte des Verbrauchers in Kurzform: Bereitstellung ist Hauptpflicht (§ 327b). 
 > K kauft von V einen Computer für 1.500 €. Vereinbart ist, dass K ihn innerhalb von drei Wochen ohne Angabe von Gründen zurückgeben kann. Kurz nach der Übergabe beschädigt K durch unsachgemäße Handhabung das Laufwerk (Reparatur 200 €). Nach zwei Wochen erklärt K den Rücktritt. Wie ist die Rechtslage?
 > Quelle: Skript S. 37, Fall Schuldverhältnis 2
 
+> [!TIP]
+> **Übung 6 · mittel**
+> Frau Schmitt kauft bei einem Buchhändler gegen Geld ein E-Book. Der Händler stellt die Datei nicht bereit, auch nicht, nachdem sie ihn dazu aufgefordert hat. Welche Rechte hat sie?
+> Quelle: Kaufrecht-Skript S. 12, Fall 2.1
+
 ## Lösungen
 
 ### Übung 1
@@ -212,3 +217,15 @@ c) Gattungsschuld, genauer eine beschränkte Gattungsschuld (nur aus dem Lager).
 5. **Rückgewähr:** V muss 1.500 € zurückzahlen, K den Computer zurückgeben, Zug um Zug (§ 348).
 6. **Wertersatz (§ 346 II 1 Nr. 3):** Der Computer ist verschlechtert. Unsachgemäße Handhabung ist kein bestimmungsgemäßer Gebrauch. § 346 III 1 Nr. 3 hilft K nicht, weil er nur für gesetzliche Rücktrittsrechte gilt. Also schuldet K Wertersatz. Anhaltspunkt sind die Reparaturkosten von 200 €.
 7. **Ergebnis:** V zahlt 1.500 € zurück, K gibt den Computer zurück und leistet rund 200 € Wertersatz. Verrechnet bekommt K etwa 1.500 € − 200 € = 1.300 €.
+
+### Übung 6
+
+*Eigene Lösungsskizze (keine offizielle Lösung vorhanden), im Gutachtenstil.*
+
+1. **Welches Recht?** Ein E-Book ist ein digitaler Inhalt. Frau Schmitt ist Verbraucherin, der Händler Unternehmer, sie zahlt einen Preis. Also gelten die §§ 327 ff. (§ 327 I, II), nicht das normale Kaufrecht. Ein körperlicher Datenträger (z. B. eine CD, § 475a I) liegt nicht vor.
+2. **Pflicht:** Der Unternehmer muss das digitale Produkt unverzüglich nach Vertragsschluss bereitstellen, wenn nichts anderes vereinbart ist (§ 327b).
+3. **Verletzung:** Er hat es nicht bereitgestellt, auch nicht nach der Aufforderung.
+4. **Rechtsfolge:** Frau Schmitt kann den Vertrag **beenden** (§ 327c I) und den Preis zurückverlangen (§ 327o). Hat der Händler die Nichtbereitstellung zu vertreten, kommt Schadensersatz dazu (§ 327c II).
+5. **Ergebnis:** Sie kann den Vertrag beenden und ihr Geld zurückverlangen.
+
+Offen ist, ob die Dozentin hier die §§ 327 ff. oder eine andere Lösung erwartet.

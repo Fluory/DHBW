@@ -70,9 +70,16 @@ So gehst du vor:
 
 Weitere Werte: 6 Jahre bei 18 Monaten ergibt 6 / 1,5 = 4 Verdopplungen, also Faktor 2⁴ = 16. 20 Jahre bei 2 Jahren ergibt 10 Verdopplungen, also Faktor 2¹⁰ = 1 024.
 
+**Halbieren geht genauso, nur rückwärts.** Bei der Preis-Interpretation halbiert sich der Preis alle 18 Monate. Du zählst wieder die Schritte, teilst dann aber durch 2 hoch diese Zahl.
+
+1. Ein Rechenauftrag kostet heute 800 €. Wie viel nach 6 Jahren?
+2. 6 Jahre / 1,5 Jahre = 4 Halbierungen.
+3. 2⁴ = 16, also 800 € / 16 = **50 €**.
+4. Zum Nachzählen: 800 → 400 → 200 → 100 → 50.
+
 > [!IMPORTANT]
 > **Das Wichtigste**
-> Erst die Verdopplungen zählen, dann 2 hoch diese Zahl rechnen.
+> Erst die Verdopplungen zählen (Zeitraum geteilt durch Verdopplungszeit), dann 2 hoch diese Zahl rechnen. Bei einer Halbierung teilst du durch diesen Faktor.
 
 > [!WARNING]
 > **Achtung**
@@ -187,6 +194,16 @@ Mit n Teilnehmern gibt es n · (n − 1) mögliche Verbindungen. Auf Deutsch: Je
 >
 > *Quelle: Lernseite GIT, Aufgabe 3.3 (eigene Aufgabe im Klausurstil)*
 
+> [!TIP]
+> **Übung 7 · mittel**
+> Ein Server kostet heute 4 800 €. Laut Interpretation halbiert sich der Preis alle 18 Monate. Was würde dieselbe Leistung nach 4,5 Jahren kosten?
+> *Quelle: eigene Aufgabe*
+
+> [!TIP]
+> **Übung 8 · mittel**
+> Ein Netzwerk wächst von 5 auf 10 Teilnehmer. Um welchen Faktor wächst die Zahl der möglichen Verbindungen nach Metcalfe? Warum ist das mehr als das Doppelte?
+> *Quelle: eigene Aufgabe nach VL01 (Gesetz von Metcalfe)*
+
 ## Lösungen
 
 ### Übung 1
@@ -229,3 +246,18 @@ Richtig sind **2 und 4**.
 
 - Option 1 ist falsch: Die Kosten halbieren sich, sie verdoppeln sich nicht.
 - Option 3 ist falsch: Die Taktfrequenz ist keine Interpretation aus der Vorlesung.
+
+### Übung 7
+
+1. Halbierungen: 4,5 Jahre / 1,5 Jahre = 3.
+2. Faktor: 2³ = 8.
+3. Preis: 4 800 € / 8 = **600 €**.
+4. Zum Nachzählen: 4 800 → 2 400 → 1 200 → 600.
+
+### Übung 8
+
+1. 5 Teilnehmer: 5 · 4 = 20 Verbindungen.
+2. 10 Teilnehmer: 10 · 9 = 90 Verbindungen.
+3. Faktor: 90 / 20 = **4,5**.
+
+Es ist mehr als das Doppelte, weil jeder neue Teilnehmer mit **allen** bisherigen verbunden werden kann. Doppelt so viele Teilnehmer heißt: doppelt so viele Leute, die jeweils fast doppelt so viele andere erreichen.

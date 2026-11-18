@@ -10,6 +10,8 @@ Sachlogisch-zeitliche Abfolge von Tätigkeiten: durch **Ereignisse ausgelöst**,
 
 - **Prozessmodell** (EPK) = dynamisch (was wann, wer). **Datenmodell** (ER) = statisch (welche Daten, wie verknüpft).
 - Vorgehen: **Ist-Modell** → **Soll-Modell** → Umsetzung im IS.
+- Nutzen: Transparenz, Schwachstellen (Medienbrüche, Wartezeiten), Standardisierung, Ordnungsrahmen für Systemeinführung.
+- Reklamation = Kern, Lohnabrechnung = Unterstützung, Sortimentsplanung = Management.
 
 ## Elemente
 

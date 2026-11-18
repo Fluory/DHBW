@@ -8,7 +8,7 @@ pruefung: "Klausur, 120 Minuten"
 pruefungsdatum: "2026-12-18"
 moodle: 18613
 stand: "laeuft"
-description: "Zwei Teile: Analysis (Folgen, Reihen, Finanzmathematik, Funktionen, Grenzwerte, Stetigkeit; Differential- und Integralrechnung folgen) und Logik und Algebra (bisher Aussagenlogik; Mengen, Relationen, algebraische Strukturen, boolesche Algebra und Lineare Algebra folgen)."
+description: "Zwei Teile: Analysis (Folgen, Reihen, Finanzmathematik, Funktionen, Grenzwerte, Stetigkeit; Differential- und Integralrechnung folgen) und Logik und Algebra (bisher Aussagenlogik sowie Mengen, Relationen, Abbildungen und Gruppe, Ring, Körper; boolesche Algebra und Lineare Algebra folgen)."
 ---
 
 ## Zu diesem Fach
@@ -32,6 +32,8 @@ Das Material sind die Foliensätze in Moodle („Analysis – Folgen“ vom 19.1
 
 Dieser Teil begann am 09.11. mit der Orga (Foliensatz „VL00 – Orga“) und dem Kapitel **Logik** (Foliensatz „VL01 – Aussagenlogik“, Abschnitte 1.1 bis 1.7). Die Themen kommen laut VL00 in dieser Reihenfolge: Logik, Mengen, Relationen und Abbildungen, algebraische Strukturen (Gruppe, Ring, Körper), Boolesche Algebra und Minimierung, Lineare Algebra. Am Ende gibt es Hinweise zur Klausur.
 
+Am 16.11. (ganztags) ging es mit dem Foliensatz „VL02 – Mengen, Relationen, Abbildungen und Strukturen“ weiter (Abschnitte 2.1 bis 2.4). Er enthält schon die algebraischen Strukturen Gruppe, Ring und Körper und das Rechnen mit Resten (mod n). Wie weit die Vorlesung an diesem Tag kam, ist nicht bekannt.
+
 Jede Einheit beginnt mit einer Fragerunde zur letzten Einheit. Aufgaben werden direkt in der Vorlesung gerechnet, oft kurz mit dem Nachbarn („Flüsterrunde“). Die Folien schreiben die Implikation als A → B und die Äquivalenz als A ↔ B; ⇒ und ⇔ sind für „folgt logisch“ und „gleichwertig“ reserviert. Die Wahrheitstafeln kennst du schon aus Grundlagen der IT, nur mit w und f statt 1 und 0.
 
 ### Prüfung
@@ -40,12 +42,12 @@ Jede Einheit beginnt mit einer Fragerunde zur letzten Einheit. Aufgaben werden d
 - **Termin:** 18.12.2026.
 - **Noch offen:** ob eine Formelsammlung oder ein Taschenrechner erlaubt ist. Übe so, dass du die Formeln selbst hinschreiben kannst.
 - **Noch offen:** wie viel der Teil „Logik und Algebra“ in der Klausur zählt. VL00 sagt dazu nichts.
-- **Typische Aufgaben** (abgeleitet aus den Folienaufgaben): Grenzwerte von Folgen und Funktionen bestimmen, das passende Konvergenzkriterium wählen und begründen, den Wert einer geometrischen Reihe oder Teleskopsumme berechnen, einen Sparplan rechnen, eine Umkehrfunktion bestimmen, Monotonie und Beschränktheit nachweisen, einen Parameter für Stetigkeit bestimmen. Im Logik-Teil: Wahrheitstafeln aufstellen, Gleichwertigkeit prüfen, mit Gesetzen vereinfachen, DNF und KNF bestimmen, Quantoren formalisieren und verneinen, eine Induktion führen.
+- **Typische Aufgaben** (abgeleitet aus den Folienaufgaben): Grenzwerte von Folgen und Funktionen bestimmen, das passende Konvergenzkriterium wählen und begründen, den Wert einer geometrischen Reihe oder Teleskopsumme berechnen, einen Sparplan rechnen, eine Umkehrfunktion bestimmen, Monotonie und Beschränktheit nachweisen, einen Parameter für Stetigkeit bestimmen. Im Logik-Teil: Wahrheitstafeln aufstellen, Gleichwertigkeit prüfen, mit Gesetzen vereinfachen, DNF und KNF bestimmen, Quantoren formalisieren und verneinen, eine Induktion führen; Mengenoperationen und Potenzmengen ausrechnen, Relationen auf reflexiv, symmetrisch, antisymmetrisch und transitiv prüfen, Bild, Urbild und injektiv/surjektiv bestimmen, in ℤₙ rechnen, eine Gruppe an der Verknüpfungstafel prüfen, ein Inverses mit dem erweiterten euklidischen Algorithmus bestimmen.
 
 > [!IMPORTANT]
 > **Stand des Fachs**
 > Analysis: Zwei von vier Terminen sind vorbei (19.10. und 04.11.). Noch kommen der 20.11. und der 02.12., beide ganztags. Laut Folien fehlen noch **Differentialrechnung** (Ableiten) und **Integralrechnung**. Welches Thema an welchem Termin kommt, ist geschätzt.
-> Logik und Algebra: Der erste von sechs Terminen war am 09.11. Ob das ganze Logik-Kapitel (VL01) an diesem Vormittag geschafft wurde oder am 16.11. weitergeht, ist nicht bekannt. Mengen, Relationen, algebraische Strukturen, boolesche Algebra und Lineare Algebra folgen.
+> Logik und Algebra: Zwei von sechs Terminen sind vorbei (09.11. und 16.11.). Die Foliensätze VL01 (Logik) und VL02 (Mengen, Relationen, Abbildungen, Gruppe, Ring, Körper) liegen vor; wie weit die Vorlesung jeweils kam, ist nicht bekannt. Boolesche Algebra und Lineare Algebra folgen.
 
 ### Was du können musst
 
@@ -70,6 +72,11 @@ Die Checkliste nach den ersten beiden Terminen:
 - [ ] Formeln mit den logischen Gesetzen (De Morgan, Distributivität, Absorption …) vereinfachen
 - [ ] DNF und KNF aus einer Wahrheitstafel ablesen
 - [ ] Sätze mit ∀ und ∃ formalisieren und verneinen; einen Induktionsbeweis führen
+- [ ] ∈ und ⊆ unterscheiden, Potenzmenge und kartesisches Produkt bilden, ∩, ∪, ∖ und Komplement ausrechnen
+- [ ] eine Relation auf reflexiv, symmetrisch, antisymmetrisch und transitiv prüfen; Äquivalenzklassen angeben
+- [ ] Bild, Urbild und Komposition einer Abbildung bestimmen; injektiv, surjektiv, bijektiv begründen
+- [ ] mit Resten rechnen (a mod n, ℤₙ), eine Gruppe an der Verknüpfungstafel prüfen, Ring und Körper unterscheiden
+- [ ] ein Inverses in ℤₙ mit dem erweiterten euklidischen Algorithmus bestimmen
 
 ### In welcher Reihenfolge du lernst
 
@@ -78,7 +85,8 @@ Die Checkliste nach den ersten beiden Terminen:
 3. **Kapitel 4:** Finanzmathematik. Die Anwendung der geometrischen Reihe.
 4. **Kapitel 5 bis 7:** Funktionen. Kapitel 6 braucht das Rezept aus Kapitel 2.
 5. **Kapitel 8:** Aussagenlogik. Unabhängig von der Analysis, kann parallel gelernt werden.
-6. **Kapitel 9:** Probeklausur zur Analysis, mit Zeitlimit.
+6. **Kapitel 9:** Mengen, Relationen, Abbildungen und algebraische Strukturen. Baut auf Kapitel 8 auf (∩ ist ∧, ∪ ist ∨).
+7. **Kapitel 10:** Probeklausur zur Analysis, mit Zeitlimit.
 
 > [!TIP]
 > **Lernhinweis**
@@ -96,7 +104,8 @@ Die Checkliste nach den ersten beiden Terminen:
 | 6 | Grenzwerte von Funktionen | 04.11. | FU-5 |
 | 7 | Stetigkeit, Verkettung, ln und e | 04.11. | FU-1, FU-6, FU-7 |
 | 8 | Aussagenlogik (Logik und Algebra) | 09.11. | VL01, Aufgaben 1.1.1 bis 1.7.4 |
-| 9 | Probeklausur (nur Analysis) | – | – |
+| 9 | Mengen, Relationen, Abbildungen und algebraische Strukturen (Logik und Algebra) | 16.11. | VL02, Aufgaben 2.1.1 bis 2.4.2 |
+| 10 | Probeklausur (nur Analysis) | – | – |
 
 ## Mathe-Symbole vorlesen
 
@@ -110,8 +119,11 @@ Die Folien sind in Symbolen geschrieben. Ein Symbol, das du nicht vorlesen kanns
 | ℝ | „die reellen Zahlen“: alle Zahlen auf dem Zahlenstrahl | −2,5; 0; √2; π liegen alle in ℝ |
 | ∈ | „liegt in“ oder „ist Element von“ | 3 ∈ ℕ: „3 liegt in den natürlichen Zahlen“ |
 | ∉ | „liegt nicht in“ | −1 ∉ ℕ: „−1 ist keine natürliche Zahl“ |
-| ⊂ | „ist Teilmenge von“: alles links liegt auch rechts | ℕ ⊂ ℝ: „jede natürliche Zahl ist auch eine reelle Zahl“ |
+| ⊆ | „ist Teilmenge von“: alles links liegt auch rechts (gleich erlaubt) | {1, 2} ⊆ {1, 2} |
+| ⊂ | „ist echte Teilmenge von“: Teilmenge und nicht gleich (so in VL02) | ℕ ⊂ ℝ: „jede natürliche Zahl ist auch eine reelle Zahl, aber nicht umgekehrt“ |
 | ∩ | „geschnitten mit“: was in beiden Mengen liegt | [0, 5] ∩ [3, 8] = [3, 5] |
+| ∪, ∖ | „vereinigt mit“: in mindestens einer; „ohne“: links, aber nicht rechts (Kapitel 9) | {1, 2} ∪ {2, 3} = {1, 2, 3}, {1, 2} ∖ {2, 3} = {1} |
+| a mod n | „a modulo n“: der Rest beim Teilen durch n (Kapitel 9) | 17 mod 5 = 2 |
 | ∀ | „für alle“ | ∀n ∈ ℕ: n ≥ 1, „für alle n aus ℕ gilt n ≥ 1“ |
 | ∃ | „es gibt (mindestens ein)“ | ∃n ∈ ℕ: n > 100, „es gibt ein n, das größer als 100 ist“ |
 | ⇒ | „daraus folgt“ oder „wenn …, dann …“ | x = 2 ⇒ x² = 4 (umgekehrt nicht: aus x² = 4 kann auch x = −2 folgen) |

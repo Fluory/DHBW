@@ -45,6 +45,8 @@ Stakeholdermanagement heißt, alle Beteiligten zu identifizieren, ihre Bedürfni
 
 **Einordnung:** komplementär (Unterstützer), konkurrierend (Gegner), neutral; dazu nach **Einfluss** bewerten (Stakeholder-Einfluss-Matrix).
 
+**Einfluss-Matrix** (Achsen: Stakeholder → Thema, Thema → Stakeholder): Q1 beide stark = höchste Priorität, eng einbinden · Q2 eine Richtung stark = gewinnen bzw. informieren · Q3 beide schwach = beobachten.
+
 **Ablauf:** 1. identifizieren → 2. analysieren → 3. Maßnahmen planen → 4. durchführen → 5. evaluieren.
 
 Leitfragen: Wer sind die wichtigsten Stakeholder? Was sind ihre Ziele und Interessen an uns?

@@ -1,6 +1,6 @@
 ## Ziele
 
-Materialwirtschaftliches Optimum: richtiges Material, richtige Menge und Qualität, richtige Zeit, richtiger Ort, geringe Kosten. Formalziel: langfristige Gewinnoptimierung. Unterziele: Beschaffungs-, Transport-, Lager-, Fehlmengenkosten gering halten.
+Materialwirtschaftliches Optimum: richtiges Material, richtige Menge und Qualität, richtige Zeit, richtiger Ort, geringe Kosten. Formalziel: langfristige Gewinnoptimierung. Unterziele: Beschaffungs-, Transport-, Lager-, Fehlmengenkosten gering halten. Zielkonflikt: Kosten ↔ Qualität ↔ Lieferbereitschaft.
 
 ## Beschaffungsprinzipien
 
@@ -42,8 +42,8 @@ Programmorientiert (Stücklisten, A/B) oder verbrauchsorientiert (Vergangenheit,
 2. 9 · 25,77 = 231,9
 3. 50 + 231,9 ≈ **282 Paletten**
 
-Bestände: Lager- (= Inventur-), Höchst-, Sicherheits- („eiserne Reserve“), Melde-, Buchbestand.
-Bestellpunktverfahren: bei Meldebestand, feste Menge. Bestellrhythmusverfahren: feste Termine.
+Bestände: Lager- (= Inventur-), Höchst-, Sicherheits- („eiserne Reserve“), Melde-, Buchbestand. Bestellmenge = Höchstbestand − Sicherheitsbestand.
+Bestellpunktverfahren: bei Meldebestand, feste Menge. Bestellrhythmusverfahren: feste Termine, variable Menge.
 
 ## Optimale Bestellmenge (Andler)
 
@@ -57,11 +57,13 @@ Bestellpunktverfahren: bei Meldebestand, feste Menge. Bestellrhythmusverfahren: 
 
 xB 1.000, Kf 50 €, k 100 €, kL 0,10: √(100.000 ÷ 10) = **100 Stück**, 10 Bestellungen, je 500 € Lager- und Bestellkosten.
 
-Annahmen: konstanter Bedarf, Preise ohne Rabatt, konstante Kostensätze, keine Fehlmengen, sofortige Lieferung, unbegrenzte Kapazität.
+Tabellenmethode: je Bestellanzahl Menge, Ø Bestand (Menge ÷ 2), Lagerwert (Ø Bestand · Preis), Lagerkosten (· kL) + Bestellkosten → kleinste Summe (Übung 44: 20 × 400 Stück, 2.048,80 €; Andler 390,58 ≈ 391).
+
+Prämissen: genug Lagerraum, beliebig teilbar, keine Rabatte, gleichmäßiger Verbrauch, keine Lieferbeschränkung, keine Preisänderung, keine Finanzengpässe.
 
 ## Sourcing
 
-Solo: nur ein Anbieter (erzwungen). Single: bewusst einer (Partnerschaft, Qualität, Rabatte; aber Abhängigkeit, Ausfallrisiko). Multiple: viele, Wettbewerb nutzen.
+Solo: nur ein Anbieter (erzwungen). Single: bewusst einer (bessere Konditionen, wenig Koordination, niedrige Prozesskosten; aber Abhängigkeit, wenig Flexibilität). Multiple: viele, Wettbewerb nutzen, mehr Aufwand.
 
 ## Lagerkennzahlen
 
@@ -72,6 +74,7 @@ Solo: nur ein Anbieter (erzwungen). Single: bewusst einer (Partnerschaft, Qualit
 5. Lagerzinsen = Ø Bestand · Preis · Lagerzinssatz ÷ 100
 
 Ø Wert 350.000 €, Einsatz 3,85 Mio. €, Zins 15 %: Umschlag **11**, Dauer **32,7 Tage**, Zinssatz **1,36 %**, Zinsen ≈ 4.773 €.
+Übung 49: (500 + 9.725) ÷ 13 = 786,5; 1.200 ÷ 786,5 ≈ 1,5; 360 ÷ 1,5 = **240 Tage**; Lagerkosten 786,5 · 150 · 0,2 = 23.595 € + 2 · 130 € = **23.855 €**.
 
 ## Typische Fehler
 

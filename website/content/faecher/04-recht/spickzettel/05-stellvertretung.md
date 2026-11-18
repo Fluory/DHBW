@@ -11,7 +11,7 @@ Drei Personen: **Vertretener** (wird Vertragspartner), **Vertreter** (handelt), 
 ## Prüfungsschema § 164
 
 1. **Eigene Willenserklärung** des Vertreters (§ 164 I 1), sonst Bote.
-2. **Im fremden Namen** (Offenkundigkeit), auch aus den Umständen (§ 164 I 2). Ausnahmen: Geschäft für den, den es angeht (Bargeschäfte des täglichen Lebens); Geschäft mit dem Inhaber eines Gewerbebetriebs.
+2. **Im fremden Namen** (Offenkundigkeit), auch aus den Umständen (§ 164 I 2). Ausnahmen: Geschäft für den, den es angeht (Bargeschäft des täglichen Lebens, Partner gleichgültig → Vertrag mit Hintermann); Geschäft mit dem Inhaber eines Gewerbebetriebs.
 3. **Mit Vertretungsmacht:** Vollmacht, gesetzlich, organschaftlich, sonst Rechtsscheinvollmacht. Grenze: § 181.
 4. **Zulässigkeit:** nicht bei höchstpersönlichen Geschäften (Testament § 2064, Eheschließung § 1311).
 
@@ -39,6 +39,7 @@ Entscheidend ist das Auftreten nach außen.
 - **Innenvollmacht** gegenüber Vertreter, **Außenvollmacht** gegenüber Drittem (§ 167 I).
 - Umfang: Spezial- (ein Geschäft), Gattungs- (eine Art), Generalvollmacht (alle).
 - Erlöschen (§ 168): Widerruf, Ende des Arbeitsvertrags, Geschäft erledigt.
+- Umfang durch **Auslegung**: „mindestens 5.000 €“ begrenzt die Vollmacht, „bestens, ich rechne mit 5.000 €“ nicht.
 
 **Vollmacht = Können (außen). Auftrag = Dürfen (innen).** Verstoß nur gegen interne Anweisung → Vertrag wirksam, Vertreter haftet intern.
 
@@ -83,4 +84,4 @@ Einseitige Rechtsgeschäfte (Kündigung) ohne Vertretungsmacht: nichtig (§ 180 
 - Vollmacht und Auftrag vermischen: Interner Verstoß macht den Vertrag nicht unwirksam.
 - Duldung und Anschein verwechseln: Unterschied ist das Wissen.
 - Kündigung ohne Vertretungsmacht als schwebend unwirksam behandeln (§ 180 S. 1).
-- Bei Willensmängeln auf den Vertretenen statt auf den Vertreter abstellen.
+- Bei Willensmängeln auf den Vertretenen statt auf den Vertreter abstellen (Ausnahme § 166 II: Weisung → Wissen des Vertretenen zählt).
