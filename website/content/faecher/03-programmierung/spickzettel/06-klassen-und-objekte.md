@@ -28,33 +28,32 @@ a.einzahlen(50)
 print(a.stand, b.stand)  # 150 0
 ```
 
-- Erzeugen ohne `new`. `a.einzahlen(50)` = `Konto.einzahlen(a, 50)`.
-- Genau ein `__init__`, Varianten über Standardwerte.
+- Erzeugen ohne `new`. `a.einzahlen(50)` = `Konto.einzahlen(a, 50)`. Genau ein `__init__`.
 
 ## Ausgabe: __str__ und __repr__
 
-| Methode | für | benutzt von |
-|---|---|---|
-| `__str__` | Menschen | `print()`, f-Strings |
-| `__repr__` | Entwickler | Konsole, Listen |
-
-`__str__` gibt mit `return` einen Text zurück. Ohne `__str__` zeigt `print(a)` nur `<__main__.Konto object at 0x…>`.
+`__str__` für Menschen (`print()`, f-Strings), `__repr__` für Entwickler (Konsole, Listen). `__str__` gibt mit `return` einen Text zurück. Ohne `__str__` zeigt `print(a)` nur `<__main__.Konto object at 0x…>`.
 
 ## Namen und Klassenattribute
 
-`k2 = k1` erzeugt kein neues Konto, nur einen zweiten Namen: Änderung über `k2` ist bei `k1` sichtbar, `k1 is k2` ist `True`. Bei eigenen Klassen vergleicht `==` zunächst nur die Identität.
-
 ```python
-class Konto:
-    anzahl = 0          # Klassenattribut
-
-    def __init__(self):
-        Konto.anzahl += 1  # Klassenname
-
-Konto()
-Konto()
-print(Konto.anzahl)  # 2
+a = Konto("A", 100)
+b = a                  # kein neues Objekt, zweiter Name
+c = Konto("A", 100)    # eigenes Objekt
+b.einzahlen(50)
+print(a.stand, c.stand)        # 150 100
+print(a is b, a == c, a is c)  # True False False
 ```
+
+Jedes `Konto(…)` = genau ein neues Objekt. `is`: dasselbe Objekt? `==` bei eigenen Klassen ohne `@dataclass`: auch nur Identität. Kopie: `copy.copy(a)`.
+
+| | Klassenattribut | Instanzattribut |
+|---|---|---|
+| steht | direkt im Klassenrumpf | `self.x = …` in `__init__` |
+| gibt es | einmal für alle | einmal pro Objekt |
+| ändern | `Konto.anzahl += 1` | `self.x = …` |
+
+`objekt.klassenattr = 10` legt ein **Instanzattribut** nur bei diesem Objekt an.
 
 ## Kapselung mit Properties
 
@@ -90,25 +89,21 @@ print(k.stand)    # 100
 | Änderung mit Regeln | `_attr` + Property mit Setter |
 | berechnet | Property ohne eigenes Attribut |
 
+**Kapselungsfehler finden** (Plan: `_bestand` intern, Property nur lesbar, nur `verkaufen` ändert):
+
+1. `self.bestand = …` / `self.bestand -= …` ohne Unterstrich → schreibt über Property ohne Setter: `AttributeError: property … has no setter`. Korrektur: `self._bestand`.
+2. Property verändert etwas (`self._bestand = 0`) → nur `return self._bestand`.
+3. Öffentliche Methode mit `_` (`_verkaufen`) → `verkaufen`.
+4. Zweiter Weg zum Ändern (Setter, `bestand_setzen`) → streichen.
+
+Setter ergänzen „repariert“ den Absturz, verletzt aber den Plan.
+
 ## Hat-ein, Module, @dataclass
 
 - **Hat ein**: Attribut mit anderem Objekt (`self.kunde = kunde`), Verweis, keine Kopie.
 - Modul = `.py`-Datei, Paket = Ordner mit `__init__.py`: `from banking.konto import Konto`.
 
-```python
-from dataclasses import dataclass
-
-@dataclass
-class Kunde:
-    name: str
-    ort: str
-
-k = Kunde("A", "Nord")
-print(k)  # Kunde(name='A', ort='Nord')
-print(k == Kunde("A", "Nord"))  # True
-```
-
-`@dataclass` erzeugt `__init__`, `__repr__`, `__eq__`. Für Datenbehälter; für Verhalten mit Regeln normale Klasse mit Properties.
+`@dataclass` über `class Kunde:` mit `name: str` und `ort: str` erzeugt `__init__`, `__repr__`, `__eq__`: `Kunde("A", "N") == Kunde("A", "N")` ist `True`. Für Datenbehälter; für Verhalten mit Regeln normale Klasse mit Properties.
 
 ## Typische Fehler
 
@@ -116,7 +111,6 @@ print(k == Kunde("A", "Nord"))  # True
 - `self.` vor dem Attribut vergessen.
 - In `__str__` `print` statt `return`.
 - `self.anzahl += 1` legt ein Instanzattribut an, Klassenzähler bleibt.
-- Tippfehler `a.stnad = 500`: still neues Attribut.
+- `a == c` bei gleichen Werten für `True` gehalten.
 - Property mit Klammern aufgerufen: `TypeError`.
 - Im Setter `self.stand = …` statt `self._stand`: `RecursionError`.
-- `@dataclass` prüft keine Werte.

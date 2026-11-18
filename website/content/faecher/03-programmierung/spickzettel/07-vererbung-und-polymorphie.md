@@ -7,10 +7,8 @@ class Konto:
     def __init__(self, inhaber, stand=0):
         self.inhaber = inhaber
         self.stand = stand
-
     def einzahlen(self, betrag):
         self.stand += betrag
-
     def abheben(self, betrag):
         if betrag > self.stand:
             return False
@@ -27,9 +25,7 @@ s.einzahlen(500)          # geerbt
 print(s.stand, s.zins)    # 1500 2
 ```
 
-Merksatz: Eigenes `__init__` → `super().__init__(…)` ist Pflicht, Python ruft es nicht selbst auf.
-
-`isinstance(s, Konto)` → True (zählt Unterklassen mit), `type(s) is Konto` → False (nur genaue Klasse).
+Merksatz: Eigenes `__init__` → `super().__init__(…)` ist Pflicht, Python ruft es nicht selbst auf. `isinstance(s, Konto)` → True (zählt Unterklassen mit), `type(s) is Konto` → False (nur genaue Klasse).
 
 ## Überschreiben
 
@@ -42,7 +38,6 @@ class Girokonto(Konto):
     def __init__(self, inh, stand, dispo):
         super().__init__(inh, stand)
         self.dispo = dispo
-
     @override
     def abheben(self, betrag):
         if betrag > self.stand + self.dispo:
@@ -73,45 +68,46 @@ for k in konten:
 # False (Konto) / True (Girokonto)
 ```
 
-**Duck Typing:** Python prüft beim Ausführen nur, ob die Methode existiert, nicht die Klasse.
+**Duck Typing:** Python prüft nur, ob die Methode existiert.
 
 ## object und abstrakte Klassen
 
 Jede Klasse erbt von `object` (Standard-`__str__`, `__repr__`, `__eq__`).
 
-```python
-from abc import ABC, abstractmethod
-
-class Zahlungsart(ABC):
-    @abstractmethod
-    def bezahlen(self) -> str: ...
-
-Zahlungsart()  # TypeError
-```
+`class Zahlungsart(ABC):` mit `@abstractmethod` (Import `from abc import ABC, abstractmethod`). `Zahlungsart()` → `TypeError`.
 
 - Keine Objekte einer abstrakten Klasse, Fehler schon **beim Erzeugen**.
 - Jede Unterklasse muss alle `@abstractmethod` überschreiben, sonst bleibt sie abstrakt.
+
+## Lückentext: ABC, super(), Polymorphie
+
+```python
+class Versand(ABC):                     # (1) ABC
+    def __init__(self, empf):
+        self.empf = empf
+    @abstractmethod                     # (2) Methode ohne Rumpf
+    def kosten(self, kg): ...
+
+class Express(Versand):                 # (3) Oberklasse
+    def __init__(self, empf, zuschlag):
+        super().__init__(empf)          # (4) ohne self
+        self.zuschlag = zuschlag
+    @override
+    def kosten(self, kg):
+        return 4.90 + kg * self.zuschlag
+
+v = Express("Ben", 1.5)
+print(v.kosten(2.0))  # (5) gleicher Aufruf für jede Versandart: 7.9
+```
+
+- Alternative zu (4): `Versand.__init__(self, empf)`, dann **mit** `self`.
+- (2) leer lassen: läuft, aber `Versand(…)` wäre erlaubt.
 
 ## Fähigkeiten statt Interfaces
 
 Python hat kein `interface`, erlaubt aber mehrere Oberklassen: erst Kategorie, dann Fähigkeiten.
 
-```python
-class Druckbar(ABC):
-    @abstractmethod
-    def drucken(self) -> None: ...
-
-class Dokument: ...
-
-class Lieferschein(Dokument, Druckbar):
-    @override
-    def drucken(self) -> None:
-        print("druckt")
-
-d = Lieferschein()
-if isinstance(d, Druckbar):
-    d.drucken()  # druckt
-```
+`class Lieferschein(Dokument, Druckbar):` mit `Druckbar(ABC)` und `@abstractmethod def drucken`. Nutzen: `if isinstance(d, Druckbar): d.drucken()`.
 
 - **Kategorie** („ist ein“): konkrete und abstrakte Methoden, Attribute, Konstruktor, eine je Klasse.
 - **Fähigkeit** („kann“): nur abstrakte Methoden, beliebig viele je Klasse.
@@ -119,7 +115,6 @@ if isinstance(d, Druckbar):
 ## Typische Fehler
 
 - `super().__init__` vergessen: `AttributeError` erst bei der ersten Methode.
-- `super.__init__(…)` ohne Klammern hinter `super`.
-- Unterklasse überschreibt Attribut der Oberklasse (`self.stand = laufzeit`).
+- `super.__init__(…)` ohne Klammern hinter `super`; `Versand.__init__(empf)` ohne `self`: `TypeError`.
 - Import von `override`, `ABC`, `abstractmethod` vergessen (`NameError`) oder `(ABC)` vergessen.
 - Fähigkeit ohne `isinstance` genutzt: `AttributeError`.

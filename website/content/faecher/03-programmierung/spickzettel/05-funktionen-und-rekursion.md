@@ -8,23 +8,7 @@ def addiere(a: int, b: int) -> int:
 print(addiere(5, 7))  # 12
 ```
 
-| Teil | Bedeutung |
-|---|---|
-| `def` | Definition beginnt |
-| `a`, `b` | Parameter (Platzhalter) |
-| `5`, `7` | Argumente (Werte beim Aufruf) |
-| `-> int` | Rückgabetyp, prüft nur ty |
-| `return` | beendet, liefert Ergebnis |
-
-Merksatz: `def` legt nur an, erst `name(...)` führt aus.
-
-```python
-def main() -> None:
-    print("Start")
-
-if __name__ == "__main__":
-    main()  # nur bei direktem Start
-```
+`a`, `b` = Parameter (Platzhalter), `5`, `7` = Argumente (Werte beim Aufruf), `-> int` = Rückgabetyp (prüft nur ty). `def` legt nur an, erst `name(...)` führt aus. `if __name__ == "__main__": main()` startet nur bei direktem Start.
 
 ## print oder return?
 
@@ -34,21 +18,12 @@ if __name__ == "__main__":
 | weiterrechnen möglich? | nein (`None`) | ja |
 | beendet Funktion? | nein | ja, sofort |
 
-```python
-def f() -> None:
-    print(119.0)
-
-a = f()     # zeigt 119.0
-print(a)    # None
-```
-
 - Ohne `return` (auch in einem Zweig): `None`.
-- Mehrere Werte = Tupel: `return min(z), max(z)`, dann `k, g = ...`.
 - `break` verlässt die Schleife, `return` die ganze Funktion.
 
 ## Gültigkeit und Parameter
 
-- Variablen in der Funktion sind **lokal** (eigener Rahmen auf dem Aufrufstapel).
+- Variablen in der Funktion sind **lokal** (eigener Rahmen auf dem Aufrufstapel). Außen benutzt: `NameError`. `x = 99` in der Funktion ändert ein globales `x` nicht.
 - `if`/`for` bilden keinen eigenen Bereich, Funktionen schon. Suche: LEGB.
 - Globale Variable in der Funktion zuweisen: `UnboundLocalError`.
 - Parameter zeigt auf **dasselbe Objekt** wie das Argument.
@@ -62,6 +37,8 @@ z = [1, 2, 3]
 aendere(z)
 print(z)  # [99, 2, 3]
 ```
+
+Zahl als Parameter: `menge = 0` in der Funktion hängt nur den lokalen Namen um, außen bleibt der alte Wert. Begründung in zwei Sätzen: „Parameter und Variable zeigen auf **dieselbe Liste**, `liste[i] = …` verändert sie. `menge = 0` verändert kein Objekt, nur der **lokale Name** zeigt auf eine neue Zahl.“
 
 ## Standardwerte statt Überladung
 
@@ -77,24 +54,19 @@ print(brutto(satz=0.07, netto=100))  # 107.0
 ```
 
 ```python
-def summe(*zahlen: int) -> int:
-    ergebnis = 0
-    for zahl in zahlen:
-        ergebnis += zahl
-    return ergebnis
+def tische(gaeste: int, je_tisch: int = 4) -> int:
+    return math.ceil(gaeste / je_tisch)  # immer aufrunden
 
-print(summe(1, 2, 3, 4))  # 10
+tische(10)                   # 10/4 = 2.5 → 3
+tische(10, 6)                # Standard gilt nicht → 2
+tische(je_tisch=3, gaeste=7) # Name zählt → 3
 ```
 
-Standardwert-Parameter stehen hinten. Liste als Standardwert: stattdessen `None` und in der Funktion `[]`.
+Standardwert-Parameter stehen hinten, beim Aufruf erst ohne, dann mit Namen. `math.ceil(x=2.3)`: `TypeError`. Zweites `def flaeche(a, b)` ersetzt `def flaeche(a)`: `flaeche(3)` → `TypeError: missing … 'b'`. Lösung: `b: float | None = None`. `*zahlen` sammelt beliebig viele Argumente. Liste als Standardwert: stattdessen `None` und in der Funktion `[]`.
 
 ## Imperativ und applikativ
 
-| | imperativ | applikativ |
-|---|---|---|
-| Frage | Wie? | Was ist das Ergebnis? |
-| Zustand | ändert sich | bleibt |
-| Wiederholung | `for`, `while` | Rekursion |
+Imperativ: Wie? Zustand ändert sich, `for`/`while`. Applikativ: Was ist das Ergebnis? Zustand bleibt, Rekursion.
 
 ## Rekursion
 
@@ -133,6 +105,8 @@ pytest: `uv add --dev pytest`, Datei `test_….py`, Funktionen `test_…`, `uv r
 - `main` ohne Klammern: nichts passiert.
 - Fehlendes `return` in einem Zweig.
 - Zwei `def addiere`: `TypeError` beim Aufruf, kein `SyntaxError`.
+- Glauben, eine Zahl in `main` ändere sich durch die Funktion.
+- `math.ceil` mit Runden verwechselt; Schlüsselwortargumente nach Reihenfolge zugeordnet.
 - Liste als Standardwert: wird zwischen Aufrufen geteilt.
 - Basisfall `return 0` bei der Fakultät: alles wird 0.
 - `fakultaet(-1)`: läuft an `n == 0` vorbei, `RecursionError`.

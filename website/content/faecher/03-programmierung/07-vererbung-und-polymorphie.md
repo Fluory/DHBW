@@ -11,7 +11,7 @@ Ein Alltagsbeispiel: Im Onlineshop klickst du auf „Jetzt bezahlen“. Ob Kredi
 
 > [!NOTE]
 > **Stand der Vorlesung**
-> Am 03.11. wurden Vererbung, `super()` und Überschreiben behandelt (VL6 F. 1–29, Übung 1 und 2). Der Rest ab F. 30 (Polymorphie, `object`, abstrakte Klassen, Fähigkeiten, Übung 3 bis 5) ist laut Plan für den 06.11. vorgesehen. Ob das so stattgefunden hat, ist noch nicht bestätigt.
+> Am 03.11. wurden Vererbung, `super()` und Überschreiben behandelt (VL6 F. 1–29, Übung 1 und 2). Der Rest ab F. 30 (Polymorphie, `object`, abstrakte Klassen, Fähigkeiten, Übung 3 bis 5) war laut Plan am 06.11. dran. Sicher klausurrelevant ist er: Die offizielle Probeklausur fragt abstrakte Klassen, `super()` und Polymorphie in einem Lückentext ab (Abschnitt „Alles zusammen“ unten).
 
 In diesem Kapitel liegt die Oberklasse in einer eigenen Datei `konto.py`. Die Beispiele holen sie mit `from konto import Konto`, wie auf den Folien:
 
@@ -340,6 +340,96 @@ TypeError: Can't instantiate abstract class Zahlungsart without an implementatio
 > **Achtung**
 > Ohne `(ABC)` hinter dem Klassennamen wirkt `@abstractmethod` nicht. Den Import `from abc import ABC, abstractmethod` nicht vergessen.
 
+## Alles zusammen: abstrakte Oberklasse, super() und Polymorphie
+
+### Was ist das?
+
+**In einem Satz:** In der Klausur kommen abstrakte Klasse, `@abstractmethod`, Vererbung, `super().__init__` und Polymorphie oft in **einem** Programm vor, meist als Lückentext.
+
+**Stell dir vor:** Ein Versandhandel hat ein Formular „Versand“ mit zwei Pflichtfeldern: Empfänger und „So berechnen sich die Kosten: ______“. Das leere Feld muss jede Versandart selbst ausfüllen (abstrakte Methode). Ein Formular „Versand“ ohne Versandart kann man nicht abschicken (keine Objekte der abstrakten Klasse). Express hat zusätzlich ein Feld „Zuschlag“. Den Empfänger trägt Express aber nicht selbst ein, sondern sagt: „Mach erst den allgemeinen Teil wie im Grundformular“ (`super().__init__`). Und die Packstation ruft bei jedem Paket einfach „Kosten?“ auf, egal welche Versandart es ist (Polymorphie).
+
+**Mit Code:**
+
+```python
+from abc import ABC, abstractmethod
+from typing import override
+
+
+class Versand(ABC):
+    def __init__(self, empfaenger: str) -> None:
+        self.empfaenger = empfaenger
+
+    @abstractmethod
+    def kosten(self, gewicht_kg: float) -> float:
+        """Versandkosten in Euro."""
+
+
+class Standardversand(Versand):
+    @override
+    def kosten(self, gewicht_kg: float) -> float:
+        return 4.90
+
+
+class Expressversand(Versand):
+    def __init__(self, empfaenger: str, zuschlag_je_kg: float) -> None:
+        super().__init__(empfaenger)
+        self.zuschlag_je_kg = zuschlag_je_kg
+
+    @override
+    def kosten(self, gewicht_kg: float) -> float:
+        return 4.90 + gewicht_kg * self.zuschlag_je_kg
+
+
+sendungen: list[Versand] = [Standardversand("Ada"), Expressversand("Ben", 1.50)]
+for sendung in sendungen:
+    print(sendung.empfaenger, f"{sendung.kosten(2.0):.2f}")
+print(vars(sendungen[1]))
+v = Versand("Cem")
+```
+
+```text
+Ada 4.90
+Ben 7.90
+{'empfaenger': 'Ben', 'zuschlag_je_kg': 1.5}
+Traceback (most recent call last):
+  File "beispiel.py", line 34, in <module>
+    v = Versand("Cem")
+TypeError: Can't instantiate abstract class Versand without an implementation for abstract method 'kosten'
+```
+
+| Teil | Zeile im Code | was er bewirkt |
+|---|---|---|
+| abstrakte Klasse | `class Versand(ABC):` | von `Versand` selbst gibt es keine Objekte: `TypeError` |
+| Pflichtmethode | `@abstractmethod` über `kosten` | jede Unterklasse muss `kosten` umsetzen |
+| Vererbung | `class Expressversand(Versand):` | Express bekommt `empfaenger` und alles andere von `Versand` |
+| Oberklassen-Konstruktor | `super().__init__(empfaenger)` | legt `empfaenger` im neuen Express-Objekt an |
+| Überschreiben | `@override def kosten(…)` | jede Unterklasse rechnet anders, ty prüft den Namen |
+| Polymorphie | `sendung.kosten(2.0)` in der Schleife | derselbe Aufruf, je nach Objekt eine andere Methode |
+
+| Runde | `sendung` zeigt auf | `kosten` aus … | Rechnung | Ausgabe |
+|---|---|---|---|---|
+| 1 | Standardversand | Standardversand | fest 4,90 | Ada 4.90 |
+| 2 | Expressversand | Expressversand | 4,90 + 2,0 · 1,50 | Ben 7.90 |
+
+### So füllst du einen Lückentext
+
+1. **Oberklasse der abstrakten Klasse:** Steht oben `from abc import ABC, abstractmethod`? Dann gehört `ABC` in die Klammer: `class Versand(ABC):`.
+2. **Über der Methode ohne Rumpf:** Hat eine Methode nur einen Docstring oder `...`, gehört `@abstractmethod` darüber.
+3. **Oberklasse einer Unterklasse:** Welches Attribut benutzt die Unterklasse, ohne es selbst anzulegen (hier `empfaenger`)? Die Klasse, die es anlegt, gehört in die Klammer.
+4. **Vor `.__init__(…)`:** `super()`, mit Klammern. Die Argumente sind die Parameter der Oberklasse, **ohne** `self`.
+5. **Methodenaufruf in der Schleife:** der Name der abstrakten Methode, denn genau die hat jede Unterklasse.
+6. Probe: Rechne die Ausgabe für jedes Objekt der Schleife aus.
+
+Statt `super().__init__(empfaenger)` geht auch `Versand.__init__(self, empfaenger)`. Dann musst du `self` aber selbst übergeben. Ohne `self` kommt `TypeError: Versand.__init__() missing 1 required positional argument: 'empfaenger'`.
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> `class X(ABC)` + `@abstractmethod` = abstrakt, `X(…)` gibt `TypeError`. Unterklasse mit eigenem `__init__` ruft zuerst `super().__init__(…)` auf. Polymorphie: derselbe Aufruf `objekt.methode()` führt je nach Klasse des Objekts eine andere Methode aus.
+
+> [!WARNING]
+> **Typischer Fehler**
+> Vor `.__init__(empfaenger)` den Klassennamen `Versand` schreiben: Das geht nur als `Versand.__init__(self, empfaenger)`. `super` ohne Klammern schreiben. Die Lücke für `@abstractmethod` leer lassen: Das Programm läuft dann zwar, `Versand("Cem")` wäre aber erlaubt, und in der Klausur gibt es keinen Punkt.
+
 ## Fähigkeiten statt Interfaces
 
 ### Was ist das?
@@ -463,6 +553,52 @@ Lieferschein L-2001 wird gedruckt
 > Eine Klasse `PayPal(Zahlungsart)` hat ein `__init__` mit `email`, aber kein `bezahlen()`. `Zahlungsart` ist abstrakt wie im Abschnitt „object und abstrakte Klassen“. Was passiert bei `PayPal("anna@example.com")`? Wann kommt der Fehler?
 >
 > Quelle: VL6 F. 47 (sinngemäß)
+
+> [!TIP]
+> **Übung 6 · Prüfungsniveau**
+> Fülle die sechs Lücken. Was gibt das Programm aus? Wo genau steckt die Polymorphie?
+>
+> ```python
+> from abc import ___1___, abstractmethod
+> from typing import override
+>
+>
+> class Tarif(___2___):
+>     def __init__(self, name: str) -> None:
+>         self.name = name
+>
+>     ___3___
+>     def monatspreis(self) -> float:
+>         """Preis pro Monat in Euro."""
+>
+>
+> class Basis(Tarif):
+>     @override
+>     def monatspreis(self) -> float:
+>         return 9.99
+>
+>
+> class Premium(___4___):
+>     def __init__(self, name: str, extras: int) -> None:
+>         ___5___.__init__(name)
+>         self.extras = extras
+>
+>     @override
+>     def monatspreis(self) -> float:
+>         return 9.99 + self.extras * 2.5
+>
+>
+> for tarif in [Basis("Ada"), Premium("Ben", 2)]:
+>     print(tarif.name, f"{tarif.___6___():.2f}")
+> ```
+>
+> Quelle: offizielle Probeklausur, A5.9 (sinngemäß, eigenes Beispiel)
+
+> [!TIP]
+> **Übung 7 · leicht**
+> (a) Was passiert bei `Tarif("Cem")` mit der Klasse aus Übung 6? (b) Was macht `super().__init__(name)`? (c) Wofür steht `@override`, und was passiert beim Ausführen, wenn es fehlt? (d) Jemand schreibt in Lücke 5 `Tarif` statt `super()`. Was passiert, und wie wäre es mit dem Klassennamen richtig?
+>
+> Quelle: offizielle Probeklausur, A5.5, A5.6, A5.9 (sinngemäß)
 
 ## Lösungen
 
@@ -596,3 +732,65 @@ Traceback (most recent call last):
     p = PayPal("anna@example.com")
 TypeError: Can't instantiate abstract class PayPal without an implementation for abstract method 'bezahlen'
 ```
+
+### Übung 6
+
+| Lücke | Inhalt | woran du es erkennst |
+|---|---|---|
+| 1 | `ABC` | es wird aus `abc` importiert und gebraucht |
+| 2 | `ABC` | `Tarif` ist der Oberbegriff mit Pflichtmethode |
+| 3 | `@abstractmethod` | `monatspreis` hat nur einen Docstring, keinen Rumpf |
+| 4 | `Tarif` | `Premium` benutzt `name`, das `Tarif` anlegt |
+| 5 | `super()` | Aufruf des Oberklassen-Konstruktors |
+| 6 | `monatspreis` | die Methode, die jede Unterklasse hat |
+
+```python
+from abc import ABC, abstractmethod
+from typing import override
+
+
+class Tarif(ABC):
+    def __init__(self, name: str) -> None:
+        self.name = name
+
+    @abstractmethod
+    def monatspreis(self) -> float:
+        """Preis pro Monat in Euro."""
+
+
+class Basis(Tarif):
+    @override
+    def monatspreis(self) -> float:
+        return 9.99
+
+
+class Premium(Tarif):
+    def __init__(self, name: str, extras: int) -> None:
+        super().__init__(name)
+        self.extras = extras
+
+    @override
+    def monatspreis(self) -> float:
+        return 9.99 + self.extras * 2.5
+
+
+for tarif in [Basis("Ada"), Premium("Ben", 2)]:
+    print(tarif.name, f"{tarif.monatspreis():.2f}")
+```
+
+```text
+Ada 9.99
+Ben 14.99
+```
+
+Ben: 9,99 + 2 · 2,50 = 14,99. Die Polymorphie steckt in `tarif.monatspreis()`: derselbe Aufruf, in Runde 1 läuft die Methode aus `Basis`, in Runde 2 die aus `Premium`.
+
+### Übung 7
+
+(a) `TypeError: Can't instantiate abstract class Tarif without an implementation for abstract method 'monatspreis'`. Von einer abstrakten Klasse gibt es keine Objekte.
+
+(b) Er ruft den Konstruktor der Oberklasse `Tarif` auf, mit demselben Objekt. Der legt `self.name` im neuen Premium-Objekt an.
+
+(c) `@override` sagt: Diese Methode ersetzt eine Methode der Oberklasse. ty prüft das und findet so Tippfehler im Namen. Beim Ausführen ändert es nichts, das Programm läuft auch ohne.
+
+(d) `Tarif.__init__(name)` gibt `TypeError: Tarif.__init__() missing 1 required positional argument: 'name'`, weil `name` jetzt für `self` gehalten wird. Mit Klassennamen richtig: `Tarif.__init__(self, name)`.

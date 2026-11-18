@@ -228,6 +228,152 @@ K001 K002 2
 > **Achtung**
 > Zuweisen über ein Objekt (`ben.anzahl_konten += 1` oder `self.anzahl += 1`) legt ein neues Instanzattribut an. Der Zähler in der Klasse bleibt gleich (F. 40–41). Ein Tippfehler wie `anna.kontostnad = 500` legt still ein neues Attribut an; nur ty meldet das (F. 38).
 
+## Zwei Namen oder zwei Objekte? Aliasing, == und is
+
+### Was ist das?
+
+**In einem Satz:** `b = a` baut kein neues Objekt, sondern gibt demselben Objekt einen zweiten Namen; nur ein neuer Aufruf der Klasse wie `Kundenkarte(…)` baut ein neues.
+
+**Stell dir vor:** Mia hat eine Kundenkarte. Ihre Mitbewohnerin nennt sie „die Karte am Schlüsselbund“. Das sind zwei Namen für **eine** Karte. Wer mit „der Karte am Schlüsselbund“ einkauft, sammelt Punkte auf Mias Karte. Beantragt Mia eine zweite Karte, steht vielleicht derselbe Name und derselbe Punktestand darauf, aber es ist ein anderes Stück Plastik. Punkte auf der einen landen nicht auf der anderen. Zwei Namen für dasselbe Objekt heißen **Aliasing** (Alias = anderer Name).
+
+**Mit Code:**
+
+```python
+import copy
+
+
+class Kundenkarte:
+    def __init__(self, name: str, punkte: int) -> None:
+        self.name = name
+        self.punkte = punkte
+
+    def sammeln(self, menge: int) -> None:
+        self.punkte += menge
+
+
+a = Kundenkarte("Mia", 40)
+b = a
+c = Kundenkarte("Mia", 40)
+b.sammeln(10)
+print(a.punkte)
+print(c.punkte)
+print(a == c, a is c, a is b)
+d = copy.copy(a)
+d.sammeln(5)
+print(a.punkte, d.punkte, a is d)
+```
+
+```text
+50
+40
+False False True
+50 55 False
+```
+
+| Zeile | was passiert | Objekte danach |
+|---|---|---|
+| `a = Kundenkarte("Mia", 40)` | neues Objekt, `a` zeigt darauf | Karte 1: 40 |
+| `b = a` | **kein** neues Objekt, `b` zeigt auf Karte 1 | Karte 1: 40 (Namen `a`, `b`) |
+| `c = Kundenkarte("Mia", 40)` | zweites, eigenes Objekt | Karte 1: 40, Karte 2: 40 (Name `c`) |
+| `b.sammeln(10)` | `self` ist Karte 1 | Karte 1: **50**, Karte 2: 40 |
+| `d = copy.copy(a)` | echte Kopie von Karte 1 | Karte 3: 50 (Name `d`) |
+| `d.sammeln(5)` | nur Karte 3 ändert sich | Karte 1: 50, Karte 3: 55 |
+
+**`==` und `is`:**
+
+| Vergleich | Frage | `a` und `c` |
+|---|---|---|
+| `a is c` | Ist es **dasselbe** Objekt? | False |
+| `a == c` bei einer normalen Klasse | ohne eigenes `__eq__` dieselbe Frage wie `is` | False |
+| `p == q` bei `@dataclass` | Sind die **Werte** gleich? | True (siehe unten) |
+
+```python
+from dataclasses import dataclass
+
+
+@dataclass
+class Punktestand:
+    name: str
+    punkte: int
+
+
+p = Punktestand("Mia", 40)
+q = Punktestand("Mia", 40)
+print(p == q, p is q)
+```
+
+```text
+True False
+```
+
+### So beantwortest du „Was wird ausgegeben?“
+
+1. Zähle die Aufrufe `Klasse(…)`. Jeder baut genau **ein** neues Objekt. Nummeriere sie: Objekt 1, Objekt 2, …
+2. Schreib zu jedem Namen, auf welches Objekt er zeigt. `b = a` heißt: `b` zeigt auf dasselbe wie `a`.
+3. Jede Methode über einen Namen ändert das Objekt, auf das dieser Name zeigt. Trag den neuen Wert beim Objekt ein, nicht beim Namen.
+4. `is`: gleiche Objektnummer? `==` bei normalen Klassen: auch gleiche Objektnummer. Bei `@dataclass`: gleiche Werte.
+5. Begründung in einem Satz: „`b = a` erzeugt kein neues Objekt, `a` und `b` sind zwei Namen für dasselbe Konto, deshalb ist die Einzahlung über `b` auch bei `a` sichtbar.“
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> `b = a` = zweiter Name, kein neues Objekt. Nur `Klasse(…)` (oder `copy.copy`) erzeugt ein neues. `is` fragt „dasselbe Objekt?“. `==` fragt bei eigenen Klassen ohne `@dataclass` dasselbe.
+
+> [!WARNING]
+> **Typischer Fehler**
+> Bei `a == c` `True` ankreuzen, weil die Werte gleich sind. Bei einer normalen Klasse ist es `False`. Und glauben, nach `b = a` habe `a` noch den alten Wert.
+
+## Klassenattribut oder Instanzattribut?
+
+### Was ist das?
+
+**In einem Satz:** Ein Instanzattribut gehört einem einzelnen Objekt, ein Klassenattribut gehört der Klasse und gilt für alle Objekte gemeinsam.
+
+**Stell dir vor:** In einer WG hat jede Person ihr eigenes Fach im Kühlschrank (Instanzattribut). Was in Mias Fach liegt, liegt nicht in Toms. Am Kühlschrank hängt außerdem ein Zettel „Putztag: Samstag“ (Klassenattribut). Den gibt es nur einmal, alle lesen denselben. Ändert jemand den Zettel, gilt das für alle. Klebt sich Mia aber einen eigenen Zettel „Putztag: Sonntag“ in ihr Fach, gilt der nur für sie.
+
+```python
+class Kundenkarte:
+    bonus_prozent = 2  # Klassenattribut: eins für alle
+
+    def __init__(self, name: str) -> None:
+        self.name = name  # Instanzattribute: jedes Objekt hat eigene
+        self.punkte = 0
+
+
+mia = Kundenkarte("Mia")
+tom = Kundenkarte("Tom")
+print(mia.bonus_prozent, tom.bonus_prozent)
+Kundenkarte.bonus_prozent = 3
+print(mia.bonus_prozent, tom.bonus_prozent)
+mia.bonus_prozent = 10
+print(mia.bonus_prozent, tom.bonus_prozent, Kundenkarte.bonus_prozent)
+```
+
+```text
+2 2
+3 3
+10 3 3
+```
+
+| Zeile | was passiert |
+|---|---|
+| `Kundenkarte.bonus_prozent = 3` | der gemeinsame Zettel wird geändert, beide lesen 3 |
+| `mia.bonus_prozent = 10` | **neues Instanzattribut** nur bei Mia, es verdeckt das Klassenattribut |
+
+| | Klassenattribut | Instanzattribut |
+|---|---|---|
+| wo steht es? | direkt im Klassenrumpf, ohne `self.` | in `__init__` mit `self.name = …` |
+| wie oft gibt es den Wert? | einmal für alle Objekte | einmal pro Objekt |
+| ändern mit | `Klasse.attribut = …` | `objekt.attribut = …` bzw. `self.attribut = …` |
+| Java | `static` | normales Feld |
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Klassenattribut = steht direkt in der Klasse, gilt für alle gemeinsam, ändern über den Klassennamen. Instanzattribut = `self.x` im Konstruktor, jedes Objekt hat sein eigenes.
+
+> [!WARNING]
+> **Typischer Fehler**
+> Ein Klassenattribut mit `self.` im Konstruktor anlegen: Dann ist es ein Instanzattribut. Oder über ein Objekt zuweisen (`mia.bonus_prozent = 10`) und glauben, alle Objekte hätten jetzt 10.
+
 ## Kapselung mit Properties
 
 ### Was ist das?
@@ -302,6 +448,112 @@ Weil `__init__` mit `self.kontostand = kontostand` (ohne Unterstrich) schon den 
 > [!WARNING]
 > **Achtung**
 > Property mit Klammern aufrufen (`lena.jahresgehalt()`) gibt `TypeError: 'int' object is not callable`. Einer Property ohne Setter etwas zuweisen gibt `AttributeError`. Im Setter `self.kontostand = …` statt `self._kontostand = …` ruft den Setter immer wieder auf, bis `RecursionError` kommt.
+
+## Kapselungsfehler finden
+
+### Was ist das?
+
+**In einem Satz:** Bei dieser Aufgabe bekommst du einen Plan, wie eine Klasse ihre Daten schützen soll, und eine Klasse, die an mehreren Stellen dagegen verstößt.
+
+**Stell dir vor:** Ein Kino verkauft Plätze. Die Zahl der freien Plätze steht auf einer Tafel hinter der Kasse (`_plaetze`). Jeder darf auf die Tafel schauen (Property zum Lesen). Ändern darf sie nur die Kassiererin beim Verkauf (Methode `buchen`). Kapselungsfehler sind: Jemand schreibt von außen auf die Tafel, die Kassiererin ist hinter einer Tür „Nur für Personal“ versteckt, obwohl Kunden zu ihr sollen, oder es gibt einen zweiten Weg, die Tafel beliebig zu überschreiben.
+
+Der Plan: `Veranstaltung` hält die freien Plätze in `_plaetze`. Von außen sind sie über die Property `plaetze` nur **lesbar**. Nur die Methode `buchen` darf sie verringern. Diese Klasse verstößt an vier Stellen dagegen:
+
+```python
+class Veranstaltung:
+    def __init__(self, titel: str, plaetze: int) -> None:
+        self.titel = titel
+        self.plaetze = plaetze
+
+    @property
+    def plaetze(self) -> int:
+        return self._plaetze
+
+    def plaetze_setzen(self, wert: int) -> None:
+        self._plaetze = wert
+
+    def _buchen(self, anzahl: int) -> bool:
+        if anzahl > self._plaetze:
+            return False
+        self.plaetze -= anzahl
+        return True
+
+
+konzert = Veranstaltung("Konzert", 100)
+```
+
+```text
+Traceback (most recent call last):
+  File "beispiel.py", line 20, in <module>
+    konzert = Veranstaltung("Konzert", 100)
+  File "beispiel.py", line 4, in __init__
+    self.plaetze = plaetze
+    ^^^^^^^^^^^^
+AttributeError: property 'plaetze' of 'Veranstaltung' object has no setter
+```
+
+### So suchst du
+
+Geh den Plan Punkt für Punkt durch und frag bei jeder Zeile, die `plaetze` oder `_plaetze` enthält: Passt das?
+
+1. **Wo wird geschrieben?** Jede Zeile mit `self.plaetze = …` oder `self.plaetze -= …` (ohne Unterstrich) schreibt über die Property. Die hat keinen Setter: `AttributeError`.
+2. **Was tut die Property?** Sie soll nur `return self._plaetze` enthalten und nichts verändern.
+3. **Wie heißt die Methode?** Ein Unterstrich vorne heißt „intern, nicht von außen benutzen“. Eine Methode, die von außen aufgerufen werden soll, hat keinen.
+4. **Gibt es einen zweiten Weg zum Ändern?** Jede öffentliche Methode, die `_plaetze` beliebig setzt, hebelt den Plan aus.
+
+| Zeile | Verstoß | Korrektur |
+|---|---|---|
+| 4 | `self.plaetze = plaetze` schreibt über die Property ohne Setter: `AttributeError` schon beim Anlegen | `self._plaetze = plaetze` |
+| 10–11 | `plaetze_setzen` erlaubt jedem, den Bestand beliebig zu setzen | Methode streichen |
+| 13 | `_buchen` mit Unterstrich gilt als intern, soll aber von außen aufgerufen werden | `def buchen(…)` |
+| 16 | `self.plaetze -= anzahl` schreibt wieder über die Property: `AttributeError` | `self._plaetze -= anzahl` |
+
+Die korrigierte Klasse:
+
+```python
+class Veranstaltung:
+    def __init__(self, titel: str, plaetze: int) -> None:
+        self.titel = titel
+        self._plaetze = plaetze
+
+    @property
+    def plaetze(self) -> int:
+        return self._plaetze
+
+    def buchen(self, anzahl: int) -> bool:
+        if anzahl > self._plaetze:
+            print(f"Nur noch {self._plaetze} Plätze frei.")
+            return False
+        self._plaetze -= anzahl
+        return True
+
+
+konzert = Veranstaltung("Konzert", 100)
+print(konzert.buchen(30), konzert.plaetze)
+print(konzert.buchen(80), konzert.plaetze)
+konzert.plaetze = 500
+```
+
+```text
+True 70
+Nur noch 70 Plätze frei.
+False 70
+Traceback (most recent call last):
+  File "beispiel.py", line 21, in <module>
+    konzert.plaetze = 500
+    ^^^^^^^^^^^^^^^
+AttributeError: property 'plaetze' of 'Veranstaltung' object has no setter
+```
+
+Der letzte Fehler ist hier **gewollt**: Von außen kann niemand mehr die Plätze setzen. Genau das verlangt der Plan.
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Innen schreibst du immer auf `self._attribut` (mit Unterstrich), außen liest man über die Property ohne Unterstrich. Eine Property ohne Setter ist nur lesbar, jede Zuweisung an sie gibt `AttributeError`. Öffentliche Methoden haben keinen Unterstrich.
+
+> [!WARNING]
+> **Typischer Fehler**
+> Den Absturz „reparieren“, indem du einen `@plaetze.setter` ergänzt. Dann läuft das Programm, aber jeder kann von außen `konzert.plaetze = 500` schreiben, und der Plan ist verletzt. In der Probeklausur gibt das nur einen halben Punkt je Stelle. Richtig ist, innen auf `_plaetze` zu schreiben.
 
 ## Hat-ein-Beziehung, Module und @dataclass
 
@@ -417,6 +669,74 @@ Vor- und Nachteile der OOP (F. 60): Vorteile sind Struktur, Wiederverwendung, Ka
 >
 > Quelle: VL5 Übung 4 (sinngemäß)
 
+> [!TIP]
+> **Übung 6 · mittel**
+> Was wird ausgegeben? Begründe die erste Zahl in einem Satz.
+>
+> ```python
+> class Sparschwein:
+>     def __init__(self, besitzer: str, inhalt: int) -> None:
+>         self.besitzer = besitzer
+>         self.inhalt = inhalt
+>
+>     def einwerfen(self, betrag: int) -> None:
+>         self.inhalt += betrag
+>
+>
+> x = Sparschwein("Leo", 20)
+> y = Sparschwein("Leo", 20)
+> z = x
+> z.einwerfen(5)
+> y.einwerfen(1)
+> print(x.inhalt, y.inhalt, z.inhalt)
+> print(x == y, x is z, x == z)
+> ```
+>
+> Quelle: offizielle Probeklausur, A5.7 (sinngemäß, eigenes Beispiel)
+
+> [!TIP]
+> **Übung 7 · Prüfungsniveau**
+> Plan: `Akku` hält die Ladung in `_ladung`. Von außen ist sie über die Property `ladung` nur lesbar. Nur die Methode `entladen` darf sie verringern. Finde die vier Verstöße und korrigiere sie. Was passiert beim Ausführen von `Akku("X1", 80)` mit der fehlerhaften Klasse?
+>
+> ```python
+> class Akku:
+>     def __init__(self, modell: str, ladung: int) -> None:
+>         self.modell = modell
+>         self.ladung = ladung
+>
+>     @property
+>     def ladung(self) -> int:
+>         self._ladung = 100
+>         return self._ladung
+>
+>     def _entladen(self, menge: int) -> None:
+>         if menge <= self._ladung:
+>             self.ladung -= menge
+> ```
+>
+> Quelle: offizielle Probeklausur, A5.8 (sinngemäß, eigene Klasse)
+
+> [!TIP]
+> **Übung 8 · leicht**
+> (a) Was ist ein Objekt? (b) Wann läuft `__init__`? (c) Wofür steht `self` in `konto.einzahlen(50)`? (d) Was gibt das Programm aus?
+>
+> ```python
+> class Kurs:
+>     max_teilnehmer = 20
+>
+>     def __init__(self, titel: str) -> None:
+>         self.titel = titel
+>
+>
+> a = Kurs("Python")
+> b = Kurs("Excel")
+> Kurs.max_teilnehmer = 25
+> b.max_teilnehmer = 12
+> print(a.max_teilnehmer, b.max_teilnehmer, Kurs.max_teilnehmer)
+> ```
+>
+> Quelle: offizielle Probeklausur, A5.1 bis A5.4 (sinngemäß, erweitert)
+
 ## Lösungen
 
 ### Übung 1
@@ -515,3 +835,68 @@ Ungültiger Preis: -9
 ```
 
 12,99 · 1,19 = 15,4581, auf Cent gerundet 15,46.
+
+### Übung 6
+
+```text
+25 21 25
+False True True
+```
+
+1. Zwei Aufrufe `Sparschwein(…)`: Objekt 1 (`x`) und Objekt 2 (`y`), beide mit 20.
+2. `z = x`: `z` zeigt auf Objekt 1. Kein neues Objekt.
+3. `z.einwerfen(5)`: Objekt 1 hat 25. `y.einwerfen(1)`: Objekt 2 hat 21.
+4. `x` und `z` zeigen auf Objekt 1: beide 25.
+5. `x == y`: verschiedene Objekte, keine `@dataclass`: `False`. `x is z` und `x == z`: dasselbe Objekt: `True`.
+
+Begründung: `z = x` erzeugt kein neues Sparschwein, `x` und `z` sind zwei Namen für dasselbe Objekt, deshalb ist der Einwurf über `z` auch bei `x` sichtbar.
+
+### Übung 7
+
+Mit der fehlerhaften Klasse bricht schon `Akku("X1", 80)` ab: `AttributeError: property 'ladung' of 'Akku' object has no setter`, weil Zeile 4 über die Property schreibt.
+
+| Stelle | Verstoß | Korrektur |
+|---|---|---|
+| Konstruktor | `self.ladung = ladung` schreibt über die Property ohne Setter | `self._ladung = ladung` |
+| Property | `self._ladung = 100` setzt bei jedem Lesen die Ladung auf 100 | Zeile streichen, nur `return self._ladung` |
+| Methodenname | `_entladen` gilt als intern, soll aber von außen aufgerufen werden | `def entladen(…)` |
+| in der Methode | `self.ladung -= menge` schreibt über die Property | `self._ladung -= menge` |
+
+```python
+class Akku:
+    def __init__(self, modell: str, ladung: int) -> None:
+        self.modell = modell
+        self._ladung = ladung
+
+    @property
+    def ladung(self) -> int:
+        return self._ladung
+
+    def entladen(self, menge: int) -> None:
+        if menge <= self._ladung:
+            self._ladung -= menge
+
+
+akku = Akku("X1", 80)
+akku.entladen(30)
+print(akku.ladung)
+akku.entladen(70)
+print(akku.ladung)
+```
+
+```text
+50
+50
+```
+
+Das zweite `entladen(70)` passiert nicht, weil 70 mehr ist als die verbleibenden 50.
+
+### Übung 8
+
+(a) Ein konkretes Exemplar einer Klasse mit eigenen Attributwerten. (b) Automatisch bei jedem Erzeugen, also bei jedem `Konto(…)`. (c) Für das Objekt `konto`, für das die Methode gerade aufgerufen wird, keine Kopie.
+
+(d) Ausgabe `25 12 25`. `Kurs.max_teilnehmer = 25` ändert das gemeinsame Klassenattribut, `a` liest es mit. `b.max_teilnehmer = 12` legt ein eigenes Instanzattribut nur bei `b` an.
+
+```text
+25 12 25
+```

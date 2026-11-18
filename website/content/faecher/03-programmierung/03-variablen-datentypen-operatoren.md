@@ -1,7 +1,7 @@
 ---
 title: "Variablen, Datentypen und Operatoren"
 order: 3
-summary: "Werte und ihre Typen, Namen für Werte, Rechnen und Vergleichen, Texte und f-Strings, Typumwandlung und die vier Fehlerarten."
+summary: "Werte und ihre Typen, dynamische Typisierung und Typangaben, Konstanten mit Final, Rechnen, Abschneiden und Runden, Texte und f-Strings, Typumwandlung und die vier Fehlerarten."
 klausur: "relevant"
 ---
 
@@ -74,6 +74,73 @@ Im Kurs nutzen wir die dritte Zeile.
 > [!WARNING]
 > **Achtung**
 > `true` (klein) ist ein Fehler, richtig ist `True`. Und `None` ist nicht dasselbe wie `0` oder `""`.
+
+## Dynamisch und statisch typisiert, Typangaben
+
+### Was ist das?
+
+**In einem Satz:** „Dynamisch typisiert“ heißt, dass in Python der Typ am Wert klebt und nicht am Namen, und geprüft wird erst, wenn die Zeile wirklich läuft.
+
+**Stell dir vor:** Ein Umzugskarton mit Klebezettel. In **Java** (statisch) steht auf dem Zettel fest „nur Bücher“. Wer Geschirr hineinlegen will, wird schon beim Packen (beim Kompilieren) gestoppt. In **Python** (dynamisch) steht auf dem Zettel nur ein Name, etwa `x`. Du kannst ihn heute an einen Karton mit Büchern kleben und morgen an einen mit Geschirr. Was drin ist, weiß der Karton selbst. Erst wenn jemand versucht, Geschirr wie ein Buch aufzuschlagen, merkt man den Fehler, also beim Ausführen.
+
+**Mit Code:**
+
+```python
+x = 5
+print(type(x))
+x = "fünf"
+print(type(x))
+alter: int = 25
+alter = "alt"
+print(alter)
+print("3" + 4)
+```
+
+```text
+<class 'int'>
+<class 'str'>
+alt
+Traceback (most recent call last):
+  File "beispiel.py", line 8, in <module>
+    print("3" + 4)
+          ~~~~^~~
+TypeError: can only concatenate str (not "int") to str
+```
+
+Was du daran siehst, Zeile für Zeile:
+
+| Zeile | was passiert | was es zeigt |
+|---|---|---|
+| 1–4 | `x` zeigt erst auf eine Zahl, dann auf einen Text | **dynamisch**: Der Name hat keinen festen Typ |
+| 5–7 | Typangabe `int`, trotzdem läuft `alter = "alt"` | Python **prüft Typangaben nicht** selbst, das macht ty |
+| 8 | `"3" + 4` bricht mit `TypeError` ab | **stark typisiert**: Python mischt Text und Zahl nicht von selbst, es kommt nicht 7 und nicht `"34"` heraus |
+
+| | statisch (Java, C) | dynamisch (Python) | Python mit Typangaben + ty |
+|---|---|---|---|
+| Typ gehört zu … | der Variablen | dem Wert | dem Wert, die Angabe ist ein Versprechen |
+| geprüft wird … | beim Kompilieren | erst beim Ausführen der Zeile | vorher durch `uv run ty check` |
+| `x = 5`, dann `x = "fünf"` | Fehler | erlaubt | läuft, ty meldet es |
+
+**Typangaben** schreibst du so (im Kurs erwünscht, in der Klausur ohne Abzug, wenn sie fehlen):
+
+| wo | Schreibweise | Beispiel |
+|---|---|---|
+| Variable | `name: typ = wert` | `menge: int = 3` |
+| Parameter | `(name: typ)` | `def brutto(netto: float)` |
+| Rückgabe | `-> typ` | `def brutto(netto: float) -> float:` |
+| nichts zurück | `-> None` | `def main() -> None:` |
+| Liste von … | `list[typ]` | `preise: list[float] = [2.5, 4.0]` |
+| Wert oder nichts | `typ \| None` | `def finden(nr: int) -> Produkt \| None:` |
+
+**So steht es auf der Folie (VL1 F. 56, VL2 F. 14):** „dynamisch, aber stark typisiert“. Auf Deutsch heißt das: dynamisch = der Typ hängt am Wert und wird beim Ausführen geprüft; stark = Python wandelt Text und Zahl nie heimlich ineinander um.
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Dynamisch typisiert: Ein Name kann später auf einen Wert anderen Typs zeigen. Python selbst ignoriert Typangaben, erst ty prüft sie vor dem Start. `"3" + 4` ist ein `TypeError`.
+
+> [!WARNING]
+> **Typischer Fehler**
+> „Dynamisch“ mit „Python prüft die Typangaben beim Ausführen“ verwechseln. Python prüft sie nie. Und glauben, `"3" + 4` ergebe 7 wie in manchen anderen Sprachen.
 
 ## Variablen und Konstanten
 
@@ -151,6 +218,52 @@ Traceback (most recent call last):
 NameError: name 'status' is not defined
 ```
 
+## Konstanten mit Final
+
+### Was ist das?
+
+**In einem Satz:** Eine Konstante ist ein Wert, der sich im Programm nie ändern soll, zum Beispiel ein Steuersatz.
+
+**Stell dir vor:** Auf einen Zettel schreibst du „MwSt = 19 %“ und hängst ihn in einen Bilderrahmen an die Wand. Großbuchstaben auf dem Zettel sind nur ein Hinweis „bitte nicht ändern“. Erst der Rahmen mit dem Schild **Final** sorgt dafür, dass die Prüferin (ty) jeden meldet, der den Zettel austauschen will.
+
+```python
+from typing import Final
+
+MAX_PLAETZE: Final = 5
+print(MAX_PLAETZE)
+MAX_PLAETZE = 6
+print(MAX_PLAETZE)
+```
+
+```text
+5
+6
+```
+
+Python selbst lässt die zweite Zuweisung durch. `uv run ty check` meldet sie aber vor dem Start als Fehler (`invalid-assignment`), weil `MAX_PLAETZE` mit `Final` markiert ist.
+
+| Schreibweise | Konstante? | warum |
+|---|---|---|
+| `MAX_PLAETZE: Final = 5` mit `from typing import Final` | ja | ty meldet jede spätere Zuweisung |
+| `MAX_PLAETZE = 5` | nur Vereinbarung | Großbuchstaben sagen „bitte nicht ändern“, prüfen tut das niemand |
+| `const MAX_PLAETZE = 5` | nein | `const` gibt es in Python nicht: `SyntaxError` |
+| `final int MAX_PLAETZE = 5` | nein | das ist Java-Schreibweise: `SyntaxError` |
+
+So schreibst du eine Konstante:
+
+1. Ganz oben `from typing import Final`.
+2. Name in `UPPER_SNAKE_CASE`, also Großbuchstaben mit Unterstrichen.
+3. Hinter den Namen `: Final`, dann `= wert`.
+4. Benutzen wie jede Variable: `netto * (1 + MWST_SATZ)`.
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Konstante: `NAME: Final = wert` mit `from typing import Final`. Nur so meldet ty eine spätere Zuweisung. Python selbst verhindert sie nicht.
+
+> [!WARNING]
+> **Typischer Fehler**
+> `const` oder `final double` aus anderen Sprachen schreiben. Oder glauben, Großschreibung allein mache einen Wert unveränderlich. Den Import `from typing import Final` vergessen gibt `NameError`.
+
 ## Operatoren
 
 ### Was ist das?
@@ -213,6 +326,138 @@ print(2 + 17 % 5 * 2 // 3)
 > [!WARNING]
 > **Achtung**
 > Typische Fehler: `-7 // 2` für −3 halten (richtig: −4). `n / 2 == 0` statt `n % 2 == 0` zum Prüfen auf gerade. `alter == "30"` ist `False`, weil die Zahl 30 nicht der Text "30" ist. `x++` ist ein `SyntaxError`, `++x` ist gültig und tut nichts (zweimal Vorzeichen Plus, F. 58).
+
+## Ganzzahldivision, Rest, Abschneiden und Runden
+
+### Was ist das?
+
+**In einem Satz:** Python hat mehrere Arten, eine Kommazahl zu einer ganzen Zahl zu machen, und jede liefert ein etwas anderes Ergebnis.
+
+**Stell dir vor:** Ein Zahlenstrahl mit −3,7 und 3,7 darauf.
+
+- **Abschneiden** mit `int()`: Du schneidest mit der Schere alles hinter dem Komma ab. Aus 3,7 wird 3, aus −3,7 wird −3. Du gehst also immer **Richtung 0**.
+- **Abrunden** mit `//` (und `math.floor`): Du gehst immer nach **links** auf dem Zahlenstrahl. Aus 3,5 wird 3, aus −3,5 wird −4.
+- **Aufrunden** mit `math.ceil`: immer nach **rechts**. Aus 3,2 wird 4.
+- **Runden** mit `round()`: zur **nächsten** ganzen Zahl. Genau in der Mitte (x,5) zur **geraden** Nachbarzahl.
+
+**Mit Zahlen:**
+
+```python
+print(int(9.99), int(-9.99), int(2.5), int(-2.5))
+print(7 // 2, -7 // 2, 7 % 2, -7 % 2)
+print(round(9.99), round(2.5), round(3.5), round(4.5), round(-2.5))
+print(round(3.14159, 2), round(2.675, 2))
+```
+
+```text
+9 -9 2 -2
+3 -4 1 1
+10 2 4 4 -2
+3.14 2.67
+```
+
+| Ausdruck | Ergebnis | Regel in Worten |
+|---|---|---|
+| `int(9.99)` | 9 | abschneiden, **nicht** runden |
+| `int(-9.99)` | -9 | abschneiden geht Richtung 0 |
+| `7 // 2` | 3 | wie oft passt 2 ganz in 7? |
+| `-7 // 2` | -4 | −3,5 nach links: −4 |
+| `7 % 2` | 1 | Rest: 7 = 3 · 2 + **1** |
+| `17 % 5` | 2 | 17 = 3 · 5 + **2** |
+| `round(9.99)` | 10 | nächste ganze Zahl |
+| `round(2.5)` | 2 | genau die Mitte: zur geraden Zahl |
+| `round(3.5)` | 4 | genau die Mitte: zur geraden Zahl |
+| `round(3.14159, 2)` | 3.14 | zweites Argument = Nachkommastellen |
+| `7 / 2` | 3.5 | `/` liefert immer `float` |
+
+Merkprobe für `//` und `%`: (a // b) · b + (a % b) ergibt wieder a. Beispiel: 17 // 5 = 3, 17 % 5 = 2, und 3 · 5 + 2 = 17.
+
+### Kommazahlen sind ungenau
+
+**Stell dir vor:** Schreib 1/3 als Dezimalzahl auf: 0,333333… Irgendwann musst du aufhören, und dann fehlt ein kleines Stück. Der Rechner speichert Zahlen im Zweiersystem. Dort geht 0,1 genauso wenig glatt auf wie 1/3 bei uns. Es bleibt ein winziger Rest.
+
+```python
+import math
+
+print(0.1 + 0.2)
+print(0.1 + 0.2 == 0.3)
+print(round(0.1 + 0.2, 2) == 0.3)
+print(math.isclose(0.1 + 0.2, 0.3))
+```
+
+```text
+0.30000000000000004
+False
+True
+True
+```
+
+Kommazahlen vergleichst du deshalb nie mit `==`. Entweder vorher runden oder `math.isclose` nehmen. Für Geld nimmst du `Decimal("0.10")` (siehe unten bei der Typumwandlung).
+
+### Kurzschreibweisen Schritt für Schritt
+
+```python
+x = 10
+x -= 3
+x *= 2
+x //= 4
+x %= 2
+print(x)
+```
+
+```text
+1
+```
+
+| Zeile | bedeutet | Rechnung | x danach |
+|---|---|---|---|
+| `x = 10` | – | – | 10 |
+| `x -= 3` | `x = x - 3` | 10 − 3 | 7 |
+| `x *= 2` | `x = x * 2` | 7 · 2 | 14 |
+| `x //= 4` | `x = x // 4` | 14 // 4 | 3 |
+| `x %= 2` | `x = x % 2` | Rest von 3 : 2 | 1 |
+
+### Vorrang: was wird zuerst gerechnet?
+
+| Rang | Operatoren | Beispiel |
+|---|---|---|
+| 1 (zuerst) | Klammern `( )` | `(2 + 3) * 4` = 20 |
+| 2 | `**` (von rechts nach links) | `2 ** 3 ** 2` = 2 ** 9 = 512 |
+| 3 | Vorzeichen `-x` | `-2 ** 2` = −(2²) = −4 |
+| 4 | `*`, `/`, `//`, `%` (von links) | `2 * 3 % 4` = 6 % 4 = 2 |
+| 5 | `+`, `-` (von links) | `10 - 4 - 3` = 3 |
+| 6 | Vergleiche `==`, `<`, `>=` … | `1 + 2 > 2` ist `True` |
+| 7 | `not` | |
+| 8 | `and` | |
+| 9 (zuletzt) | `or` | |
+
+```python
+print(-2 ** 2, (-2) ** 2, 2 ** 3 ** 2)
+print(10 - 4 - 3, 2 * 3 % 4, 1 + 2 > 2 and not 3 < 1)
+```
+
+```text
+-4 4 512
+3 2 True
+```
+
+**So steht es auf der Folie (VL2 F. 53–64):** Die arithmetischen Operatoren stehen dort als eine Reihe `+ - * / // % **`, dazu die Regeln: `/` liefert immer `float`, `//` rundet ab, `%` ist der Rest (Modulo). Auf Deutsch heißt das: `/` teilt genau, `//` zählt, wie oft es ganz passt, `%` sagt, was übrig bleibt.
+
+### So rechnest du eine „Was wird ausgegeben?“-Zeile
+
+1. Klammern auflösen, dann `**`, dann Punktrechnung von links, dann Strichrechnung.
+2. Bei `//` abrunden (nach links), bei `int()` abschneiden (Richtung 0), bei `round()` zur nächsten Zahl, bei x,5 zur geraden.
+3. Typ bestimmen: Kam `/` oder ein `float` vor, ist das Ergebnis ein `float` und wird mit `.0` angezeigt.
+4. Bei `==` mit Kommazahlen: Rechne mit, ob ein winziger Rest bleibt. `0.1 + 0.2 == 0.3` ist `False`.
+5. Bei `-=`, `*=` und Co.: eine Rundentabelle mit dem Wert nach jeder Zeile.
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> `int()` schneidet ab (Richtung 0), `//` rundet ab (nach links), `round()` rundet zur nächsten Zahl, bei x,5 zur geraden. `%` ist der Rest. `0.1 + 0.2 == 0.3` ist `False`.
+
+> [!WARNING]
+> **Typischer Fehler**
+> `int(9.99)` für 10 halten (richtig: 9). `int(-2.7)` und `-7 // 2` gleich behandeln: `int(-2.7)` ist −2, `-7 // 2` ist −4. `round(2.5)` für 3 halten (richtig: 2). `-2 ** 2` für 4 halten (richtig: −4, weil `**` vor dem Vorzeichen kommt).
 
 ## Strings, f-Strings und Typumwandlung
 
@@ -353,6 +598,64 @@ ZeroDivisionError: division by zero
 > **Achtung**
 > Ein Programm, das ohne Fehlermeldung läuft, ist nicht automatisch richtig. Prüfe das Ergebnis mit einem Beispiel, das du im Kopf rechnen kannst.
 
+### Fehler finden: Schritt für Schritt
+
+In der Probeklausur steht ein kurzes Programm mit **zwei Syntaxfehlern, einem Laufzeitfehler und einem Logikfehler**. Ein eigenes Beispiel in derselben Art: Das Programm soll für 4 Tassen zu je 2,50 € mit 10 % Rabatt `Endpreis: 9.00 Euro` ausgeben.
+
+```python
+from typing import Final
+
+RABATT: Final = 0.10
+
+
+def endpreis(menge: int, einzelpreis: float) -> float
+    return menge * einzelpreis * RABATT
+
+
+def main() -> None:
+    menge = "4"
+    preis = endpreis(menge, 2.50)
+    print(f"Endpreis: {preis:.2f} Euro"
+
+
+main()
+```
+
+**Stell dir vor:** Du kontrollierst einen Brief in drei Durchgängen. Erst Rechtschreibung und Satzzeichen (Syntax). Dann liest du ihn laut vor und schaust, wo du stolperst (Laufzeit). Zuletzt fragst du: Steht da inhaltlich das, was gemeint war? (Logik)
+
+1. **Syntaxfehler zuerst.** Geh jede Zeile durch und prüf Doppelpunkte, Klammern und Anführungszeichen paarweise.
+   - Zeile 6: Der Funktionskopf endet ohne `:`. Python meldet `SyntaxError: expected ':'`. Korrektur: `-> float:`.
+   - Zeile 13: Die Klammer von `print(` wird nie geschlossen. Python meldet erst nach der ersten Korrektur `SyntaxError: '(' was never closed`. Korrektur: `… Euro")`.
+   - Wichtig: Python meldet immer nur **einen** Syntaxfehler auf einmal. Such deshalb selbst alle.
+2. **Laufzeitfehler.** Schreib dir auf, welchen Wert und Typ jede Variable wirklich hat. `menge` ist der Text `"4"`. In `endpreis` rechnet Python `"4" * 2.50` und bricht ab:
+
+```text
+Traceback (most recent call last):
+  File "beispiel.py", line 16, in <module>
+    main()
+    ~~~~^^
+  File "beispiel.py", line 12, in main
+    preis = endpreis(menge, 2.50)
+  File "beispiel.py", line 7, in endpreis
+    return menge * einzelpreis * RABATT
+           ~~~~~~^~~~~~~~~~~~~
+TypeError: can't multiply sequence by non-int of type 'float'
+```
+
+Korrektur des Laufzeitfehlers: `menge = 4` (ohne Anführungszeichen).
+3. **Logikfehler.** Jetzt läuft das Programm und gibt `Endpreis: 1.00 Euro` aus. Rechne im Kopf nach: 4 · 2,50 = 10,00 €, minus 10 % sind 9,00 €. `* RABATT` liefert nur den Rabatt selbst (1,00 €). Korrektur: `menge * einzelpreis * (1 - RABATT)`. Ausgabe: `Endpreis: 9.00 Euro`.
+
+| Zeile | Fehlerart | Fehler | Korrektur |
+|---|---|---|---|
+| 6 | Syntax | `:` fehlt am Ende des Funktionskopfs | `-> float:` |
+| 13 | Syntax | schließende Klammer fehlt | `… Euro")` |
+| 11 (Abbruch in 7) | Laufzeit | `"4"` ist Text, `"4" * 2.50` gibt `TypeError` | `menge = 4` |
+| 7 | Logik | `* RABATT` berechnet den Rabatt, nicht den Endpreis | `* (1 - RABATT)` |
+
+> [!WARNING]
+> **Typischer Fehler**
+> Die Fehlerart falsch benennen: Der `TypeError` ist ein **Laufzeitfehler**, weil das Programm startet und erst beim Rechnen abbricht. Den Logikfehler meldet kein Werkzeug, du findest ihn nur, indem du das Ergebnis mit einer Kopfrechnung vergleichst.
+
 ## Übungen
 
 > [!TIP]
@@ -397,6 +700,44 @@ ZeroDivisionError: division by zero
 > Berechne aus `jahr = "2026"` die Zahl 2026, nur mit `ord()`, Indexzugriff und Rechenoperatoren, ohne `int()`. Tipp: `ord("7") - ord("0")` ergibt 7.
 >
 > Quelle: VL2 F. 82, Knobelaufgabe (sinngemäß)
+
+> [!TIP]
+> **Übung 7 · mittel**
+> Was wird ausgegeben? `int(7.9)` · `int(-7.9)` · `-9 // 4` · `-9 % 4` · `round(6.5)` · `round(7.5)` · `0.1 * 3 == 0.3` · `2 + 3 ** 2 * 2`. Und was steht nach `x = 8`, `x += 4`, `x //= 5`, `x *= 3` in `x`?
+>
+> Quelle: offizielle Probeklausur, A2.2 (sinngemäß, andere Zahlen)
+
+> [!TIP]
+> **Übung 8 · Prüfungsniveau**
+> Das Programm soll für 3 Fahrten zu je 12 km mit 0,30 € pro km `Erstattung: 10.80 Euro` ausgeben. Finde zwei Syntaxfehler, einen Laufzeitfehler und einen Logikfehler. Nenne jeweils Zeile, Fehlerart und Korrektur.
+>
+> ```python
+> from typing import Final
+>
+> KM_SATZ: Final = 0.30
+>
+>
+> def erstattung(fahrten: int, km_je_fahrt: float) -> float:
+>     return fahrten + km_je_fahrt * KM_SATZ
+>
+>
+> def main() -> None
+>     fahrten = 3
+>     km = "12"
+>     betrag = erstattung(fahrten, km)
+>     print(f"Erstattung: {betrag:.2f} Euro)
+>
+>
+> main()
+> ```
+>
+> Quelle: offizielle Probeklausur, A2.3 (sinngemäß, eigenes Programm)
+
+> [!TIP]
+> **Übung 9 · leicht**
+> Welche Zeile legt eine Konstante so an, dass ty eine spätere Zuweisung als Fehler meldet? (a) `const MAX_PLAETZE = 5` (b) `MAX_PLAETZE = 5` (c) `MAX_PLAETZE: Final = 5` mit `from typing import Final` (d) `final int MAX_PLAETZE = 5`. Was passiert beim **Ausführen**, wenn später `MAX_PLAETZE = 6` folgt?
+>
+> Quelle: offizielle Probeklausur, A2.1 (sinngemäß)
 
 ## Lösungen
 
@@ -508,3 +849,71 @@ print(zahl, type(zahl))
 ```text
 2026 <class 'int'>
 ```
+
+### Übung 7
+
+| Ausdruck | Ergebnis | warum |
+|---|---|---|
+| `int(7.9)` | 7 | abschneiden |
+| `int(-7.9)` | -7 | abschneiden geht Richtung 0 |
+| `-9 // 4` | -3 | −9 / 4 = −2,25, nach links: −3 |
+| `-9 % 4` | 3 | Probe: −3 · 4 + 3 = −9 |
+| `round(6.5)` | 6 | Mitte: zur geraden Zahl |
+| `round(7.5)` | 8 | Mitte: zur geraden Zahl |
+| `0.1 * 3 == 0.3` | False | 0.1 · 3 ist 0.30000000000000004 |
+| `2 + 3 ** 2 * 2` | 20 | 3² = 9, 9 · 2 = 18, 2 + 18 |
+
+Rundentabelle für `x`: 8 → `+= 4` → 12 → `//= 5` → 2 → `*= 3` → 6.
+
+```python
+print(int(7.9), int(-7.9), -9 // 4, -9 % 4, round(6.5), round(7.5), 0.1 * 3 == 0.3, 2 + 3 ** 2 * 2)
+x = 8
+x += 4
+x //= 5
+x *= 3
+print(x)
+```
+
+```text
+7 -7 -3 3 6 8 False 20
+6
+```
+
+### Übung 8
+
+| Zeile | Fehlerart | Fehler | Korrektur |
+|---|---|---|---|
+| 10 | Syntax | `:` fehlt hinter `-> None` | `def main() -> None:` |
+| 14 | Syntax | f-String ohne schließendes `"` | `… Euro")` |
+| 12 (Abbruch in 7) | Laufzeit | `"12" * 0.30` gibt `TypeError: can't multiply sequence by non-int of type 'float'` | `km = 12` |
+| 7 | Logik | `+` statt `*`: 3 + 12 · 0,30 = 6,60 | `fahrten * km_je_fahrt * KM_SATZ` |
+
+Schritt für Schritt: Nach den beiden Syntax-Korrekturen startet das Programm und bricht mit `TypeError` ab. Nach `km = 12` läuft es, gibt aber `Erstattung: 6.60 Euro` aus. Kopfrechnung: 3 · 12 = 36 km, 36 · 0,30 = 10,80 €. Erst mit `*` stimmt es.
+
+```python
+from typing import Final
+
+KM_SATZ: Final = 0.30
+
+
+def erstattung(fahrten: int, km_je_fahrt: float) -> float:
+    return fahrten * km_je_fahrt * KM_SATZ
+
+
+def main() -> None:
+    fahrten = 3
+    km = 12
+    betrag = erstattung(fahrten, km)
+    print(f"Erstattung: {betrag:.2f} Euro")
+
+
+main()
+```
+
+```text
+Erstattung: 10.80 Euro
+```
+
+### Übung 9
+
+Richtig ist (c). (b) ist nur eine Vereinbarung, niemand prüft sie. (a) und (d) sind keine Python-Syntax und geben `SyntaxError`. Beim Ausführen passiert bei `MAX_PLAETZE = 6` **nichts Besonderes**: Python ändert den Wert auf 6. Nur `uv run ty check` meldet die Zuweisung vorher als Fehler.

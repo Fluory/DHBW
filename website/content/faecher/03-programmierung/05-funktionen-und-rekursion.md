@@ -281,6 +281,157 @@ print(anhaengen(1), anhaengen(2))
 > **Achtung**
 > Lokale Variable außen benutzen gibt `NameError`. Globale Variable in der Funktion ändern gibt `UnboundLocalError`. Eine Liste als Standardwert meldet ruff mit B006.
 
+## Parameterübergabe: Die Liste ändert sich, die Zahl nicht
+
+### Was ist das?
+
+**In einem Satz:** Eine Funktion bekommt keine Kopie, sondern einen zweiten Namen für dasselbe Objekt; ob du draußen eine Änderung siehst, hängt davon ab, ob die Funktion das **Objekt verändert** oder nur den **Namen umhängt**.
+
+**Stell dir vor:** In der Küche steht ein Einkaufszettel am Kühlschrank. Deine Mitbewohnerin bekommt von dir einen Hinweis: „Der Zettel am Kühlschrank heißt für dich `liste`.“ Schreibt sie etwas **auf den Zettel**, siehst du es auch, denn es ist derselbe Zettel. Nimmt sie stattdessen einen **neuen leeren Zettel** und nennt den jetzt `liste`, bleibt dein Zettel am Kühlschrank, wie er war. Mit einer Zahl geht nur das Zweite: Eine Zahl kann man nicht beschreiben, man kann den Namen nur an eine andere Zahl hängen.
+
+**Mit Code:**
+
+```python
+def auffuellen(bestaende: list[int], menge: int) -> None:
+    for i in range(len(bestaende)):
+        bestaende[i] += menge
+    menge = 0
+
+
+def main() -> None:
+    lager = [3, 8, 0]
+    nachschub = 5
+    ergebnis = auffuellen(lager, nachschub)
+    print(lager)
+    print(nachschub)
+    print(ergebnis)
+
+
+main()
+```
+
+```text
+[8, 13, 5]
+5
+None
+```
+
+Was die Namen nacheinander bedeuten:
+
+| Zeitpunkt | Name in `main` → Objekt | Name in `auffuellen` → Objekt |
+|---|---|---|
+| beim Aufruf | `lager` → Liste [3, 8, 0], `nachschub` → 5 | `bestaende` → **dieselbe** Liste, `menge` → **dieselbe** 5 |
+| nach der Schleife | `lager` → Liste [8, 13, 5] | `bestaende` → dieselbe Liste [8, 13, 5] |
+| nach `menge = 0` | `nachschub` → 5 (unverändert) | `menge` → **neue** Zahl 0 |
+| nach dem Ende | `ergebnis` → `None` (kein `return`) | Rahmen weg, `bestaende` und `menge` gibt es nicht mehr |
+
+1. `bestaende[i] += menge` schreibt **in die Liste hinein**. Weil `lager` und `bestaende` auf dieselbe Liste zeigen, sieht `main` die Änderung.
+2. `menge = 0` verändert kein Objekt. Es hängt nur das lokale Namensschild `menge` an eine neue Zahl. `nachschub` in `main` zeigt weiter auf 5.
+3. Die Funktion hat kein `return`. Deshalb ist `ergebnis` gleich `None`.
+
+**Die Regel:**
+
+| in der Funktion steht … | Art | draußen sichtbar? |
+|---|---|---|
+| `liste[i] = …`, `liste.append(…)`, `liste += [...]` | Objekt verändern | ja |
+| `liste = [...]`, `zahl = 0`, `zahl += 1` | Namen neu binden | nein |
+
+Zahlen, Texte und Tupel kann man gar nicht verändern (sie sind **unveränderlich**). Mit ihnen gibt es nur die zweite Zeile. Deshalb ändert eine Funktion nie eine Zahl in `main`. Will sie einen neuen Wert liefern, braucht sie `return`.
+
+**So steht es auf der Folie (VL4 F. 28–33):** Übergabe „call by object reference“: Namen, keine Kopien, der Parameter zeigt auf dasselbe Objekt wie das Argument. „Call by object reference“ heißt wörtlich „Aufruf mit Verweis auf das Objekt“. Auf Deutsch heißt das: Es wird nichts kopiert, die Funktion bekommt nur einen zweiten Namen für dasselbe Ding.
+
+### So begründest du es in zwei Sätzen
+
+Die Probeklausur verlangt genau diese Begründung. Eine Vorlage zum Anpassen:
+
+1. „Der Parameter `bestaende` und die Variable `lager` in `main` zeigen auf **dieselbe Liste**. `bestaende[i] += menge` verändert diese eine Liste, deshalb sieht `main` die neuen Werte.“
+2. „`menge = 0` verändert kein Objekt, sondern lässt nur den **lokalen Namen** `menge` auf eine neue Zahl zeigen. `nachschub` in `main` zeigt weiter auf 5.“
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Namen zeigen auf Objekte, beim Aufruf wird nichts kopiert. Eine veränderte Liste ist außen sichtbar, eine neue Zuweisung an einen Parameter nicht. Ohne `return` ist das Ergebnis `None`.
+
+> [!WARNING]
+> **Typischer Fehler**
+> Glauben, `nachschub` werde in `main` auch 0. Glauben, die Liste bleibe unverändert, weil „Funktionen nur Kopien bekommen“. Und beim dritten `print` etwas anderes als `None` erwarten, obwohl die Funktion kein `return` hat.
+
+## Gültigkeitsbereich: lokal und global Schritt für Schritt
+
+### Was ist das?
+
+**In einem Satz:** Eine Variable, die in einer Funktion entsteht, gibt es nur in dieser Funktion und nur, solange der Aufruf läuft.
+
+**Stell dir vor:** Ein Hotelzimmer. Was du im Zimmer auf den Tisch legst (lokale Variablen), sieht niemand auf dem Flur. Beim Auschecken wird das Zimmer geräumt. Was in der Lobby hängt (globale Variablen), kannst du aus jedem Zimmer heraus anschauen. Hängst du in deinem Zimmer ein eigenes Bild mit demselben Titel auf, ändert das nichts am Bild in der Lobby.
+
+**Mit Code:**
+
+```python
+x = 10
+
+
+def f() -> None:
+    x = 99
+    y = 5
+    print("innen:", x, y)
+
+
+f()
+print("außen:", x)
+print(y)
+```
+
+```text
+innen: 99 5
+außen: 10
+Traceback (most recent call last):
+  File "beispiel.py", line 12, in <module>
+    print(y)
+          ^
+NameError: name 'y' is not defined
+```
+
+| Zeile | wo? | was passiert |
+|---|---|---|
+| `x = 10` | global | globales `x` zeigt auf 10 |
+| `x = 99` in `f` | lokal | **neues** lokales `x`, das globale bleibt 10 |
+| `y = 5` in `f` | lokal | `y` gibt es nur in `f` |
+| `print("außen:", x)` | global | das globale `x`: 10 |
+| `print(y)` | global | ein globales `y` gibt es nicht: `NameError` |
+
+Lesen geht aber: Steht in der Funktion keine Zuweisung an den Namen, sucht Python ihn außen (Reihenfolge LEGB).
+
+```python
+MWST_SATZ = 0.19
+
+
+def brutto(netto: float) -> float:
+    return netto * (1 + MWST_SATZ)  # globale Variable nur lesen: geht
+
+
+print(brutto(100.0))
+```
+
+```text
+119.0
+```
+
+### So bestimmst du, welches x gemeint ist
+
+1. Steht die Zeile in einer Funktion? Wenn nein: global.
+2. Wird dem Namen **irgendwo in dieser Funktion** etwas zugewiesen (`x = …`, `x += …`)? Dann ist er in der ganzen Funktion lokal.
+3. Wenn nein: Python sucht ihn außen (global, dann eingebaut wie `print`).
+4. Nach dem Aufruf sind alle lokalen Namen weg. Wer sie außen benutzt, bekommt `NameError`.
+
+Es gibt das Schlüsselwort `global`, um eine globale Variable in einer Funktion zu ändern. Sauberer ist, den neuen Wert mit `return` zurückzugeben.
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> In einer Funktion zugewiesene Variablen sind lokal: Sie gelten nur in dieser Funktion und nur während des Aufrufs. Ein gleichnamiges globales `x` bleibt unverändert.
+
+> [!WARNING]
+> **Typischer Fehler**
+> Glauben, eine lokale Variable sei nach dem Aufruf noch da (`NameError`). Glauben, `x = 99` in der Funktion ändere das globale `x`. Und `zaehler += 1` auf eine globale Variable in der Funktion gibt `UnboundLocalError`.
+
 ## Standardwerte statt Überladung
 
 ### Was ist das?
@@ -327,6 +478,144 @@ print(summe(1, 2), summe(1, 2, 3, 4), summe())
 > [!WARNING]
 > **Achtung**
 > Zwei `def addiere` hintereinander geben keinen `SyntaxError`. Der Fehler kommt erst beim Aufruf als `TypeError`, wenn die Anzahl der Argumente nicht zur zweiten Fassung passt. ruff warnt vorher mit F811.
+
+## Standard- und Schlüsselwortargumente Schritt für Schritt
+
+### Was ist das?
+
+**In einem Satz:** Ein Standardwert ist der Wert, den ein Parameter bekommt, wenn du beim Aufruf nichts angibst, und ein Schlüsselwortargument sagt per Name, welcher Wert in welchen Parameter gehört.
+
+**Stell dir vor:** Beim Bäcker bestellst du „ein Brötchen“. Ohne weitere Angabe bekommst du das normale, also den Standard. Sagst du „ein Brötchen, Sorte: Mohn“, gilt deine Angabe. Und ob du „Sorte: Mohn, Anzahl: 3“ oder „Anzahl: 3, Sorte: Mohn“ sagst, ist egal, weil du die Namen dazusagst.
+
+**Mit Code:** Wie viele Tische braucht eine Feier, wenn an jeden Tisch `je_tisch` Gäste passen? Ein halb voller Tisch ist auch ein Tisch, also wird mit `math.ceil` **aufgerundet**.
+
+```python
+import math
+
+
+def tische(gaeste: int, je_tisch: int = 4) -> int:
+    return math.ceil(gaeste / je_tisch)
+
+
+print(tische(10))
+print(tische(10, 6))
+print(tische(8))
+print(tische(je_tisch=3, gaeste=7))
+```
+
+```text
+3
+2
+2
+3
+```
+
+| Aufruf | gaeste | je_tisch | Rechnung | aufgerundet |
+|---|---|---|---|---|
+| `tische(10)` | 10 | 4 (Standard) | 10 / 4 = 2,5 | 3 |
+| `tische(10, 6)` | 10 | 6 (Standard gilt nicht) | 10 / 6 = 1,67 | 2 |
+| `tische(8)` | 8 | 4 (Standard) | 8 / 4 = 2,0 | 2 |
+| `tische(je_tisch=3, gaeste=7)` | 7 (per Name) | 3 (per Name) | 7 / 3 = 2,33 | 3 |
+
+**Die Regeln:**
+
+| Regel | Beispiel | sonst |
+|---|---|---|
+| Parameter mit Standardwert stehen hinten | `def tische(gaeste, je_tisch=4)` | `SyntaxError` |
+| beim Aufruf erst Werte ohne Namen, dann mit Namen | `tische(7, je_tisch=3)` | `tische(je_tisch=3, 7)`: `SyntaxError` |
+| bei Schlüsselwortargumenten zählt der Name, nicht die Reihenfolge | `tische(je_tisch=3, gaeste=7)` | – |
+| der Name muss genau stimmen | `tische(7, je=3)` | `TypeError: … unexpected keyword argument 'je'` |
+
+**Eingebaute Funktionen** haben das auch:
+
+```python
+print(round(3.14159, 2), round(3.14159, ndigits=2))
+print("a", "b", sep="-")
+```
+
+```text
+3.14 3.14
+a-b
+```
+
+`round(zahl, ndigits)` hat den Standardwert „keine Nachkommastellen“: `round(2.6)` ist 3. `print` hat den Standardwert `sep=" "`. `math.ceil` dagegen nimmt nur einen Wert ohne Namen. `math.ceil(x=2.3)` gibt `TypeError: math.ceil() takes no keyword arguments`.
+
+### So rechnest du einen Aufruf aus
+
+1. Schreib die Parameter der Funktion als Spalten auf.
+2. Verteile die Werte **ohne Namen** von links nach rechts.
+3. Verteile die Werte **mit Namen** nach ihrem Namen.
+4. Was dann noch leer ist, bekommt seinen Standardwert.
+5. Erst jetzt den Rumpf ausrechnen. Bei `math.ceil` immer aufrunden, auch bei 2,1.
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Ohne Angabe gilt der Standardwert, mit Angabe nicht. Schlüsselwortargumente ordnet Python nach dem Namen zu, die Reihenfolge ist egal. `math.ceil` rundet immer auf.
+
+> [!WARNING]
+> **Typischer Fehler**
+> `math.ceil` mit normalem Runden verwechseln: `math.ceil(2.25)` ist 3, nicht 2. Glauben, der Standardwert gelte auch, wenn ein zweites Argument dasteht. Und bei `tische(je_tisch=3, gaeste=7)` die Werte nach der Reihenfolge statt nach dem Namen zuordnen.
+
+## Keine Überladung: das zweite def gewinnt
+
+### Was ist das?
+
+**In einem Satz:** Schreibst du zwei Funktionen mit demselben Namen, gilt nur die zweite, denn `def` ist eine Zuweisung an den Namen.
+
+**Stell dir vor:** Du klebst auf eine Klingel das Namensschild „Müller“. Danach klebst du ein neues Schild „Müller“ darüber, das zu einer anderen Wohnung führt. Wer jetzt „Müller“ klingelt, landet immer in der zweiten Wohnung. Das erste Schild ist verdeckt.
+
+```python
+def flaeche(a: float) -> float:
+    return a * a
+
+
+def flaeche(a: float, b: float) -> float:
+    return a * b
+
+
+print(flaeche(3, 4))
+print(flaeche(3))
+```
+
+```text
+12
+Traceback (most recent call last):
+  File "beispiel.py", line 10, in <module>
+    print(flaeche(3))
+          ~~~~~~~^^^
+TypeError: flaeche() missing 1 required positional argument: 'b'
+```
+
+1. Das erste `def` lässt den Namen `flaeche` auf die Funktion mit einem Parameter zeigen.
+2. Das zweite `def` lässt denselben Namen auf die Funktion mit zwei Parametern zeigen. Die erste ist damit weg.
+3. `flaeche(3, 4)` passt zur zweiten: 12.
+4. `flaeche(3)` passt nicht, es fehlt `b`: `TypeError`. Ein `SyntaxError` kommt nicht, die Datei ist grammatisch in Ordnung.
+
+**So geht es richtig:** eine einzige Funktion mit Standardwert.
+
+```python
+def flaeche(a: float, b: float | None = None) -> float:
+    if b is None:
+        b = a  # nur eine Seite angegeben: Quadrat
+    return a * b
+
+
+print(flaeche(3, 4))
+print(flaeche(3))
+```
+
+```text
+12
+9
+```
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Python kennt keine Überladung. Das zweite `def` mit gleichem Namen ersetzt das erste. Varianten baust du mit Standardwerten.
+
+> [!WARNING]
+> **Typischer Fehler**
+> Erwarten, dass Python wie Java je nach Anzahl der Argumente die passende Fassung wählt. Den Fehler als `SyntaxError` einordnen: Er kommt erst beim Aufruf, als `TypeError`.
 
 ## Imperativ und applikativ
 
@@ -531,6 +820,70 @@ Gute Tests prüfen auch Randfälle, etwa die leere Liste oder den Exponenten 0 (
 >
 > Quelle: VL4 F. 82–85, Übung Teil 2 (sinngemäß)
 
+> [!TIP]
+> **Übung 6 · Prüfungsniveau**
+> (a) Was gibt `main()` aus? (b) Begründe in zwei Sätzen, warum sich `liste` ändert, `prozent` aber nicht.
+>
+> ```python
+> def preise_erhoehen(preise: list[float], aufschlag: int) -> None:
+>     for i in range(len(preise)):
+>         preise[i] = preise[i] * (100 + aufschlag) / 100
+>     aufschlag = 0
+>
+>
+> def main() -> None:
+>     liste = [10.0, 40.0]
+>     prozent = 25
+>     preise_erhoehen(liste, prozent)
+>     print(liste)
+>     print(prozent)
+>     print(preise_erhoehen(liste, prozent))
+> ```
+>
+> Quelle: offizielle Probeklausur, A4.4 (sinngemäß, andere Zahlen)
+
+> [!TIP]
+> **Übung 7 · mittel**
+> Was geben die Aufrufe aus?
+>
+> ```python
+> import math
+>
+>
+> def pakete(stueck: int, je_paket: int = 8) -> int:
+>     return math.ceil(stueck / je_paket)
+>
+>
+> print(pakete(20))
+> print(pakete(20, 5))
+> print(pakete(16))
+> print(pakete(je_paket=6, stueck=13))
+> print(round(2.567, ndigits=1))
+> ```
+>
+> Quelle: offizielle Probeklausur, A4.5 (sinngemäß, andere Zahlen)
+
+> [!TIP]
+> **Übung 8 · mittel**
+> (a) Was gibt das Programm aus, und wo bricht es ab? (b) Eine Datei enthält `def preis(netto)` und darunter `def preis(netto, satz)`. Was passiert bei `preis(100)`, und wie löst man das in Python?
+>
+> ```python
+> rabatt = 5
+>
+>
+> def berechne(preis: float) -> float:
+>     rabatt = 10
+>     ergebnis = preis - rabatt
+>     return ergebnis
+>
+>
+> print(berechne(50.0))
+> print(rabatt)
+> print(ergebnis)
+> ```
+>
+> Quelle: offizielle Probeklausur, A4.2 und A4.3 (sinngemäß)
+
 ## Lösungen
 
 ### Übung 1
@@ -688,3 +1041,56 @@ print(potenz(2, 4), potenz(2, -2), potenz(5, 0))
 3 0
 16.0 0.25 1.0
 ```
+
+### Übung 6
+
+(a) Ausgabe:
+
+```text
+[12.5, 50.0]
+25
+None
+```
+
+1. 10,0 · 125 / 100 = 12,5 und 40,0 · 125 / 100 = 50,0. Die Liste in `main` ist jetzt `[12.5, 50.0]`.
+2. `prozent` bleibt 25. `aufschlag = 0` ändert nur den lokalen Namen.
+3. Der dritte `print` ruft die Funktion noch einmal auf. Sie hat kein `return`, also wird `None` ausgegeben. (Nebenbei erhöht dieser Aufruf die Liste ein zweites Mal, ausgegeben wird sie aber nicht mehr.)
+
+(b) Der Parameter `preise` und die Variable `liste` zeigen auf dieselbe Liste, und `preise[i] = …` verändert diese eine Liste. `aufschlag = 0` verändert dagegen kein Objekt, sondern lässt nur den lokalen Namen auf eine neue Zahl zeigen, `prozent` in `main` zeigt weiter auf 25.
+
+### Übung 7
+
+| Aufruf | stueck | je_paket | Rechnung | Ergebnis |
+|---|---|---|---|---|
+| `pakete(20)` | 20 | 8 (Standard) | 2,5 aufrunden | 3 |
+| `pakete(20, 5)` | 20 | 5 | 4,0 | 4 |
+| `pakete(16)` | 16 | 8 (Standard) | 2,0 | 2 |
+| `pakete(je_paket=6, stueck=13)` | 13 | 6 | 2,17 aufrunden | 3 |
+
+`round(2.567, ndigits=1)` rundet auf eine Nachkommastelle: `2.6`.
+
+```text
+3
+4
+2
+3
+2.6
+```
+
+### Übung 8
+
+(a) Ausgabe `40.0`, dann `5`, dann Abbruch:
+
+```text
+40.0
+5
+Traceback (most recent call last):
+  File "beispiel.py", line 12, in <module>
+    print(ergebnis)
+          ^^^^^^^^
+NameError: name 'ergebnis' is not defined
+```
+
+In `berechne` ist `rabatt = 10` ein **neues lokales** `rabatt`: 50 − 10 = 40.0. Das globale `rabatt` bleibt 5. `ergebnis` gab es nur während des Aufrufs.
+
+(b) Das zweite `def` ersetzt das erste. `preis(100)` gibt `TypeError: preis() missing 1 required positional argument: 'satz'`. Lösung: eine Funktion mit Standardwert, etwa `def preis(netto: float, satz: float = 0.19) -> float:`.

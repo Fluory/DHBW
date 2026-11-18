@@ -210,6 +210,80 @@ Python hat kein `do`–`while`. Für „mindestens einmal“ nimmt man `while Tr
 > **Achtung**
 > Typische Fehler (F. 62–64): Endlosschleife, weil die Zählvariable im Block nie geändert wird (abbrechen mit Strg+C). Falscher Startwert, dann läuft die Schleife nie. Falsche Schrittweite, etwa `i = i + 2`.
 
+## do-while-Ersatz: while True mit break
+
+### Was ist das?
+
+**In einem Satz:** Manche Sachen musst du mindestens einmal machen, bevor du prüfen kannst, ob es gereicht hat, und dafür schreibt man in Python `while True:` mit einem `break` im Rumpf.
+
+**Stell dir vor:** Du probierst Schuhe an. Ob sie passen, weißt du erst, **nachdem** du sie anprobiert hast. Also: anprobieren, prüfen, passt es, dann aufhören, sonst das nächste Paar. Eine normale `while`-Schleife prüft **vorher**. Du müsstest wissen, ob der Schuh passt, bevor du ihn anprobierst. Andere Sprachen haben dafür `do … while`. Python nicht.
+
+| Sprache | Schleife, die mindestens einmal läuft |
+|---|---|
+| Java, C | `do { … } while (bedingung);` |
+| Python | `while True:` … `if passt: break` |
+
+**Mit Code:** Eine Menge wird so lange abgefragt, bis sie gültig ist. Statt echter Tastatureingaben steht hier eine Liste, damit du die Ausgabe nachvollziehen kannst:
+
+```python
+eingaben = ["abc", "-5", "7"]  # stellt drei Tastatureingaben dar
+versuch = 0
+while True:
+    text = eingaben[versuch]
+    versuch += 1
+    print(f"Eingabe: {text}")
+    if text.isdigit() and int(text) > 0:
+        break
+    print("Ungültig, bitte noch einmal.")
+menge = int(text)
+print(f"Menge: {menge} nach {versuch} Versuchen")
+```
+
+```text
+Eingabe: abc
+Ungültig, bitte noch einmal.
+Eingabe: -5
+Ungültig, bitte noch einmal.
+Eingabe: 7
+Menge: 7 nach 3 Versuchen
+```
+
+`text.isdigit()` ist `True`, wenn der Text nur aus Ziffern besteht. `"-5"` hat ein Minuszeichen, deshalb `False`.
+
+| Runde | text | versuch danach | gültig? | was passiert |
+|---|---|---|---|---|
+| 1 | "abc" | 1 | nein | Meldung, nächste Runde |
+| 2 | "-5" | 2 | nein (Minuszeichen) | Meldung, nächste Runde |
+| 3 | "7" | 3 | ja | `break`: raus aus der Schleife |
+
+Mit echter Tastatur sieht es genauso aus, nur mit `input()`:
+
+```python
+while True:
+    text = input("Menge: ")
+    if text.isdigit() and int(text) > 0:
+        break
+    print("Ungültig, bitte noch einmal.")
+menge = int(text)
+print(f"Bestellt: {menge}")
+```
+
+### So baust du die Schleife auf
+
+1. `while True:` hinschreiben. Die Bedingung ist immer wahr, also läuft die Schleife mindestens einmal.
+2. Im Rumpf zuerst das tun, was mindestens einmal passieren muss (Eingabe holen).
+3. Danach prüfen: `if gültig: break`.
+4. Dahinter steht, was bei ungültiger Eingabe passiert (Meldung). Dann beginnt die nächste Runde von selbst.
+5. Nach der Schleife ist die Eingabe sicher gültig.
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Python hat kein `do-while`. Für „mindestens einmal, bis es passt“ schreibst du `while True:` und im Rumpf `break`, sobald die Bedingung erfüllt ist.
+
+> [!WARNING]
+> **Typischer Fehler**
+> Das `break` vergessen: Dann läuft `while True` endlos. Oder das `break` vor die Eingabe setzen: Dann endet die Schleife sofort. Und `do:` oder `do while` schreiben gibt einen `SyntaxError`.
+
 ## Schleifen mit for, break und continue
 
 ### Was ist das?
@@ -283,6 +357,84 @@ continue-Schleife: 5
 > [!WARNING]
 > **Achtung**
 > `break` beendet die ganze Schleife, `continue` nur diese Runde. Eine Summe startet mit 0, ein Produkt mit 1.
+
+## continue und break zusammen nachverfolgen
+
+### Was ist das?
+
+**In einem Satz:** Stehen `continue` und `break` in derselben Schleife, gehst du Runde für Runde durch und prüfst in **genau der Reihenfolge, in der sie im Code stehen**, ob eines davon greift.
+
+**Stell dir vor:** Du sammelst auf einem Spaziergang Steine. Regel 1: Rote Steine lässt du liegen und gehst weiter (`continue`). Regel 2: Ist es 18 Uhr, gehst du nach Hause (`break`). Sammeln tust du nur, wenn keine Regel greift. Kommt um 18 Uhr ein roter Stein, greift zuerst Regel 1: Du lässt ihn liegen, schaust aber gar nicht erst auf die Uhr.
+
+**Mit Code:**
+
+```python
+summe = 0
+for i in range(1, 12):
+    if i % 3 == 0:
+        continue
+    if i > 8:
+        break
+    summe += i
+print(summe, i)
+```
+
+```text
+27 10
+```
+
+Die Rundentabelle. Pro Runde stellst du die Fragen von oben nach unten:
+
+| i | `i % 3 == 0`? → `continue` | `i > 8`? → `break` | summe danach |
+|---|---|---|---|
+| 1 | nein | nein | 1 |
+| 2 | nein | nein | 3 |
+| 3 | **ja**, weiter mit 4 | – (nicht geprüft) | 3 |
+| 4 | nein | nein | 7 |
+| 5 | nein | nein | 12 |
+| 6 | **ja** | – | 12 |
+| 7 | nein | nein | 19 |
+| 8 | nein | nein (8 ist nicht > 8) | 27 |
+| 9 | **ja** | – (9 > 8 wird gar nicht geprüft!) | 27 |
+| 10 | nein | **ja, Abbruch** | 27 (nicht mehr addiert) |
+
+Addiert wird also bei 1, 2, 4, 5, 7, 8. Danach steht in `summe` 27 und in `i` 10. Die 11 kommt nie dran.
+
+**Was steht nach der Schleife in `i`?**
+
+- Nach `break` behält `i` den Wert der Runde, in der abgebrochen wurde. Hier 10.
+- Endet die Schleife normal, behält `i` den **letzten** Wert aus der Folge:
+
+```python
+for i in range(3):
+    print("Runde", i)
+print("danach:", i)
+```
+
+```text
+Runde 0
+Runde 1
+Runde 2
+danach: 2
+```
+
+`range(3)` liefert 0, 1, 2. Die 3 kommt nie vor, also ist `i` danach 2, nicht 3.
+
+### So gehst du vor
+
+1. Tabelle anlegen: eine Spalte für die Schleifenvariable, je eine Spalte für jede Bedingung in Code-Reihenfolge, eine für das Ergebnis.
+2. Runde für Runde: erste Bedingung prüfen. Greift `continue`, ist die Runde sofort vorbei. Die Zeilen darunter, auch die anderen Bedingungen, kommen nicht dran.
+3. Greift `break`, ist die **ganze Schleife** vorbei. Die Rechnung darunter passiert in dieser Runde nicht mehr.
+4. Sonst die Rechnung ausführen und den neuen Wert eintragen.
+5. Am Ende ablesen: Welche Werte wurden verarbeitet? Was steht in den Variablen?
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Die Reihenfolge im Code entscheidet. `continue` beendet nur die Runde, `break` die ganze Schleife. Nach `break` behält die Schleifenvariable den Wert der Abbruchrunde.
+
+> [!WARNING]
+> **Typischer Fehler**
+> Den Wert der Abbruchrunde noch mitzählen: Das `break` kommt vor dem Addieren. Glauben, `i` sei nach der Schleife „eins weiter“. Und bei einem Wert, der beide Bedingungen erfüllt (hier die 9), das `break` greifen lassen, obwohl das `continue` vorher steht.
 
 ## Listen und Tupel
 
@@ -393,6 +545,94 @@ print(hoechster)
 > **Achtung**
 > Startest du das Maximum mit `hoechster = 0`, ist das Ergebnis bei lauter negativen Werten falsch (Musterlösung Übung 6). `noten[5]` bei fünf Elementen gibt `IndexError`.
 
+## IndexError in while-Schleifen (Off-by-one)
+
+### Was ist das?
+
+**In einem Satz:** Eine `while`-Schleife über eine Liste greift oft um genau eins daneben, weil die Nummern bei 0 beginnen und bei Länge minus 1 enden.
+
+**Stell dir vor:** Ein Zaun mit 3 Feldern braucht 4 Pfosten. Wer Felder und Pfosten verwechselt, liegt um eins daneben. Englisch heißt das **Off-by-one-Fehler**. Bei Listen: 3 Elemente haben die Nummern 0, 1 und 2. Eine Nummer 3 gibt es nicht.
+
+**Mit Code:** Die drei Punktzahlen sollen addiert werden (richtig wäre 28).
+
+```python
+punkte = [12, 7, 9]
+summe = 0
+i = 1
+while i <= len(punkte):
+    summe += punkte[i]
+    i += 1
+print(summe)
+```
+
+```text
+Traceback (most recent call last):
+  File "beispiel.py", line 5, in <module>
+    summe += punkte[i]
+             ~~~~~~^^^
+IndexError: list index out of range
+```
+
+| Runde | i | `i <= 3`? | `punkte[i]` | summe danach |
+|---|---|---|---|---|
+| 1 | 1 | ja | 7 | 7 |
+| 2 | 2 | ja | 9 | 16 |
+| 3 | 3 | ja | gibt es nicht | Abbruch mit `IndexError` |
+
+Zwei Ursachen, beide um eins daneben:
+
+1. **Start bei 1:** Das erste Element hat den Index 0. Mit `i = 1` wird die 12 übersprungen.
+2. **`<=` statt `<`:** `len(punkte)` ist 3. Mit `<=` läuft die Schleife auch für `i = 3`. Gültig sind aber nur 0 bis 2.
+
+Und weil `print(summe)` erst **nach** der Schleife steht, erscheint gar keine Ausgabe, nur die Fehlermeldung.
+
+**Korrektur:** bei 0 starten und mit `<` vergleichen. Noch einfacher: direkt über die Elemente laufen, dann gibt es keinen Index, der danebenliegen kann.
+
+```python
+punkte = [12, 7, 9]
+summe = 0
+i = 0
+while i < len(punkte):
+    summe += punkte[i]
+    i += 1
+print(summe)
+
+summe = 0
+for p in punkte:
+    summe += p
+print(summe)
+```
+
+```text
+28
+28
+```
+
+| Runde | i | `i < 3`? | `punkte[i]` | summe danach |
+|---|---|---|---|---|
+| 1 | 0 | ja | 12 | 12 |
+| 2 | 1 | ja | 7 | 19 |
+| 3 | 2 | ja | 9 | 28 |
+| Ende | 3 | **nein** | – | Schleife endet, Ausgabe 28 |
+
+**Die Regel:** Eine Liste mit n Elementen hat die Indizes **0 bis n − 1**. Die passende `while`-Schleife ist `i = 0` und `while i < len(liste):`.
+
+### So findest du den Fehler
+
+1. Schreib die Indizes der Liste auf: 0 bis `len - 1`.
+2. Schau auf den Startwert: Ist er 0? Sonst fehlt das erste Element.
+3. Schau auf den Vergleich: `<` ist richtig, `<=` geht einmal zu weit.
+4. Spiel die letzte Runde durch: Welchen Wert hat `i`, und gibt es diesen Index?
+5. Korrigiere, oder nimm `for element in liste:`.
+
+> [!IMPORTANT]
+> **Das Wichtigste**
+> Indizes gehen von 0 bis `len(liste) - 1`. Für eine `while`-Schleife über eine Liste: `i = 0`, `while i < len(liste):`, am Ende `i += 1`.
+
+> [!WARNING]
+> **Typischer Fehler**
+> Nur eine der zwei Ursachen nennen. Der Start bei 1 allein gibt keinen Absturz, sondern eine falsche Summe ohne Fehlermeldung (Logikfehler). Erst `<=` führt zum `IndexError`. Und vergessen, dass vor dem Absturz nichts ausgegeben wurde, weil das `print` hinter der Schleife steht.
+
 ## Übungen
 
 > [!TIP]
@@ -436,6 +676,46 @@ print(hoechster)
 > Stromkosten mit Staffelpreisen: bis 100 kWh 0,25 €/kWh, 101–300 kWh 0,22 €/kWh, ab 301 kWh 0,19 €/kWh, jede Stufe nur für die kWh in ihrem Bereich. Dazu immer 12,90 € Grundpreis. Mit Öko-Tarif und höchstens 250 kWh gibt es 5 € Bonus. Mehr als 100 € werden auf 100 € gesetzt. Was kosten 180 kWh mit Öko-Tarif?
 >
 > Quelle: VL3 F. 51–52, Übung 3 (sinngemäß)
+
+> [!TIP]
+> **Übung 6 · mittel**
+> Bei welchen Werten von `i` wird addiert? Was steht danach in `summe` und in `i`? Leg eine Rundentabelle an.
+>
+> ```python
+> summe = 0
+> for i in range(2, 15, 2):
+>     if i % 4 == 0:
+>         continue
+>     if i > 10:
+>         break
+>     summe += i
+> print(summe, i)
+> ```
+>
+> Quelle: offizielle Probeklausur, A3.2 (sinngemäß, andere Zahlen)
+
+> [!TIP]
+> **Übung 7 · mittel**
+> Schreibe eine Schleife, die so lange eine Note abfragt, bis sie zwischen 1 und 10 liegt, und bei jedem ungültigen Wert `… liegt nicht zwischen 1 und 10.` ausgibt. Python hat kein `do-while`. Teste statt mit `input()` mit der Liste `eingaben = ["0", "12", "5"]`. Was wird ausgegeben?
+>
+> Quelle: offizielle Probeklausur, A3.1 (sinngemäß, als Programmieraufgabe)
+
+> [!TIP]
+> **Übung 8 · Prüfungsniveau**
+> Das Programm soll zählen, wie viele Preise über 2,50 € liegen (richtig: 2). (a) Was passiert beim Ausführen, und wird etwas ausgegeben? (b) Nenne die Ursache. (c) Korrigiere die Schleife. (d) Jemand „korrigiert“ zu `i = 1` und `while i < len(preise):`. Was kommt jetzt heraus, und welche Fehlerart ist das?
+>
+> ```python
+> preise = [4.5, 2.0, 3.5, 1.0]
+> anzahl_teuer = 0
+> i = 0
+> while i <= len(preise):
+>     if preise[i] > 2.5:
+>         anzahl_teuer += 1
+>     i += 1
+> print(anzahl_teuer)
+> ```
+>
+> Quelle: offizielle Probeklausur, A3.3 (sinngemäß, eigenes Programm)
 
 ## Lösungen
 
@@ -591,3 +871,80 @@ for verbrauch_kwh, oeko in [(180, True), (80, False), (400, False)]:
 ```
 
 „Staffelpreis“ heißt laut Musterlösung: Jede Preisstufe gilt nur für die kWh in ihrem Bereich, nicht für alle 180 kWh.
+
+### Übung 6
+
+`range(2, 15, 2)` liefert 2, 4, 6, 8, 10, 12, 14.
+
+| i | `i % 4 == 0`? → `continue` | `i > 10`? → `break` | summe danach |
+|---|---|---|---|
+| 2 | nein | nein | 2 |
+| 4 | ja | – | 2 |
+| 6 | nein | nein | 8 |
+| 8 | ja | – | 8 |
+| 10 | nein | nein (10 ist nicht > 10) | 18 |
+| 12 | ja | – (wird nicht geprüft) | 18 |
+| 14 | nein | **ja, Abbruch** | 18 |
+
+Addiert wird bei 2, 6 und 10. Ausgabe: `18 14`. Die 12 ist zwar größer als 10, aber das `continue` steht vorher und greift zuerst.
+
+```text
+18 14
+```
+
+### Übung 7
+
+```python
+eingaben = ["0", "12", "5"]
+versuch = 0
+while True:
+    zahl = int(eingaben[versuch])
+    versuch += 1
+    if 1 <= zahl <= 10:
+        break
+    print(f"{zahl} liegt nicht zwischen 1 und 10.")
+print(f"Note {zahl} nach {versuch} Versuchen")
+```
+
+```text
+0 liegt nicht zwischen 1 und 10.
+12 liegt nicht zwischen 1 und 10.
+Note 5 nach 3 Versuchen
+```
+
+| Runde | zahl | `1 <= zahl <= 10`? | was passiert |
+|---|---|---|---|
+| 1 | 0 | nein | Meldung |
+| 2 | 12 | nein | Meldung |
+| 3 | 5 | ja | `break` |
+
+Mit Tastatur steht statt `int(eingaben[versuch])` einfach `int(input("Note: "))`.
+
+### Übung 8
+
+(a) Abbruch mit `IndexError: list index out of range`. Es erscheint **keine** Zahl, weil `print` erst hinter der Schleife steht.
+
+(b) `len(preise)` ist 4, gültig sind die Indizes 0 bis 3. Mit `<=` läuft die Schleife auch für `i = 4`, und `preise[4]` gibt es nicht. Der Start bei 0 ist hier richtig.
+
+(c) `while i < len(preise):`. Dann ist die Ausgabe `2` (4.5 und 3.5). Oder ganz ohne Index:
+
+```python
+preise = [4.5, 2.0, 3.5, 1.0]
+anzahl_teuer = 0
+for preis in preise:
+    if preis > 2.5:
+        anzahl_teuer += 1
+print(anzahl_teuer)
+```
+
+```text
+2
+```
+
+(d) Ausgabe `1`. Der Start bei 1 überspringt die 4.5. Es gibt keine Fehlermeldung, das Ergebnis ist nur falsch: ein **Logikfehler**.
+
+| Runde | i | preise[i] | > 2.5? | anzahl_teuer |
+|---|---|---|---|---|
+| 1 | 1 | 2.0 | nein | 0 |
+| 2 | 2 | 3.5 | ja | 1 |
+| 3 | 3 | 1.0 | nein | 1 |
