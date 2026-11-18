@@ -1,16 +1,22 @@
 import Link from "next/link";
+import { TodayPlan } from "@/components/lernplan/TodayPlan";
 import { Countdown } from "@/components/site/Countdown";
 import { StandBadge } from "@/components/site/Badges";
 import { loadLibrary } from "@/lib/content/loader";
 import { formatDate } from "@/lib/dates";
+import { resolvePlan } from "@/lib/lernplan-view";
 
 export default function HomePage() {
   const library = loadLibrary();
   const subjects = library.subjects;
   const exams = [...subjects].sort((a, b) => a.pruefungsdatum.localeCompare(b.pruefungsdatum) || a.number - b.number);
 
+  const plan = resolvePlan(library);
+
   return (
     <main id="inhalt" className="page">
+      <TodayPlan days={plan} compact />
+
       <section className="hero">
         <p className="label kicker">Semester 1 · Wirtschaftsinformatik Data Science · DHBW Heilbronn</p>
         <h1 className="hero-title">Der Stoff des ersten Semesters, zum Lesen und Üben.</h1>
