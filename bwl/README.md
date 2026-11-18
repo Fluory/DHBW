@@ -16,7 +16,7 @@ Moodle: [Kurs 18616](https://moodle.heilbronn.dhbw.de/course/view.php?id=18616) 
 | 6 | 05.11.2026 | Rest Kap. 6 (Break-even, Übung 28h) + Kap. 7 Planung und Kontrolle komplett (Planungsarten/-ebenen, strategische Analyse: Wertkette, Benchmarking, PIMS, 7-S, Five Forces, Szenariotechnik; Kennzahlen/ROI, Balanced Scorecard; Übungen 29–34, Musterklausur A5) – abgeschlossen | Folien „6. Rechnungswesen“ (neue Fassung) + „7. Planung und Kontrolle“ + Skript Kap. 6–7 | [06](vorlesungen/06_2026-11-05.md) |
 | 7 | 10.11.2026 | Kap. 8 Organisation komplett (8.1–8.3: Aufbau-/Prozessorganisation, Leitungssysteme, Übungen 35–38; nicht klausurrelevant) – abgeschlossen; Übung 39–40 (Kap. 9.3) evtl. schon angefangen | Folien „8. Organisation“ + „Lösung bis Übung 40“ + Skript Kap. 8 | [07](vorlesungen/07_2026-11-10.md) |
 | 8 | 12.11.2026 | Kap. 9 Materialwirtschaft: Beschaffungsprinzipien, ABC/XYZ, Bedarfs-, Bestands- (Bestandsarten, Meldebestand) und Beschaffungsplanung (Andler), Sourcing, Lagerung, Lagerkennzahlen; Übungen 39–51 (39–40 offiziell, 41–51 eigene Skizzen) | Skript Kap. 9 + „Lösung bis Übung 40“; 9.4–9.8 vermutet (Sicherheit hoch für Kap. 9, mittel für den Umfang) | [08](vorlesungen/08_2026-11-12.md) |
-| 9 | 17.11.2026 | (vorbereitet) letzter Termin: Rest Kap. 9 Materialwirtschaft, Kap. 10 Produktion (nicht klausurrelevant), Klausurfragen | Skript Kap. 9–10 + „Könnte drankommen“ (vermutet, Sicherheit mittel) | [09](vorlesungen/09_2026-11-17.md) |
+| 9 | 17.11.2026 | letzter Termin: Rest Kap. 9 Materialwirtschaft bis 9.8 (Lagerkennzahlen, Übungen bis 51) – Kap. 9 abgeschlossen; Kap. 10 Produktion laut Folien nicht behandelt | Folien „9. Materialwirtschaft“ (Schlussfolie nach Übung 51) + Skript Kap. 9; Aufteilung 12./17.11. vermutet | [09](vorlesungen/09_2026-11-17.md) |
 
 ## Materialien in Moodle
 
@@ -36,6 +36,7 @@ Moodle: [Kurs 18616](https://moodle.heilbronn.dhbw.de/course/view.php?id=18616) 
 | Folien „7. Planung und Kontrolle“ | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192106) | 06.11.2026 | Termin 6 (Kap. 7, Lösungen Übung 29–34) |
 | „Könnte drankommen“ (Klausurhinweis der Dozentin) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192107) | 06.11.2026 | Klausurvorbereitung (Abschnitt „Klausurhinweise“) |
 | Folien „8. Organisation“ (35 S., erstellt 10.11. mittags) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192377) | 11.11.2026 | Termin 7 (Kap. 8, Übungen 35–38; laut Klausurhinweis nicht klausurrelevant) |
+| Folien „9. Materialwirtschaft“ (101 S., erstellt 17.11. nach dem Termin, mit Lösungen zu Übung 39–51) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192879) | 18.11.2026 | Termin 8 + 9 (Kap. 9 komplett, Abgleich Übung 39–51; korrigiert 42d, 44, 49) |
 
 ## Klausurhinweise
 
