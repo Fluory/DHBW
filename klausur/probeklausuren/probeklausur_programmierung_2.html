@@ -679,6 +679,13 @@ for f in formen:
 
   function normText(s) { return String(s).replace(/\r/g, "").split("\n").map(function (l) { return l.trim().replace(/\s+/g, " "); }).filter(function (l) { return l; }).join("\n"); }
   function normGap(s) { return String(s).replace(/\s+/g, "").replace(/'/g, "\"").toLowerCase(); }
+  // Zahl aus deutscher Schreibweise lesen: "1.200", "12,5 %", "48,60 €", "-3"
+  function parseNum(s) {
+    var t = String(s).replace(/[\s€%]/g, "").replace(/[^0-9,.\-]/g, "");
+    if (t.indexOf(",") !== -1) t = t.replace(/\./g, "").replace(",", ".");
+    else if (/^-?\d{1,3}(\.\d{3})+$/.test(t)) t = t.replace(/\./g, "");
+    return t === "" ? NaN : parseFloat(t);
+  }
   function numSet(s) { return (String(s).match(/-?\d+/g) || []).map(Number).sort(function (a, b) { return a - b; }).join(","); }
   function mark(el, ok) { el.classList.remove("mark-ok", "mark-bad"); el.classList.add(ok ? "mark-ok" : "mark-bad"); }
   function clearMarks() { document.querySelectorAll(".mark-ok, .mark-bad").forEach(function (el) { el.classList.remove("mark-ok", "mark-bad"); }); }
@@ -698,6 +705,7 @@ for f in formen:
       var kind = el.dataset.kind, answers = el.dataset.answer.split("|"), v = el.value, ok = false;
       if (kind === "set") ok = numSet(v) === numSet(answers[0]);
       else if (kind === "gap") ok = answers.some(function (a) { return normGap(a) === normGap(v); });
+      else if (kind === "num") { var x = parseNum(v), tol = Number(el.dataset.tol || 0.01); ok = !isNaN(x) && answers.some(function (a) { return Math.abs(parseNum(a) - x) <= tol; }); }
       else ok = answers.some(function (a) { return normText(a) === normText(v); });
       if (ok) s += Number(el.dataset.points);
       mark(el, ok);
