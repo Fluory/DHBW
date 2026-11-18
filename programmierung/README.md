@@ -19,7 +19,7 @@ Terminal, `uv`, Python 3.14, `ruff`, `ty` – bewusst ohne IDE und ohne KI-Assis
 | 7 | 03.11.2026 | Start OOP II: Vererbung, super(), Überschreiben, @override (VL06 Ü1–2) | Folien „vl06_oop_2“ Folie 1–29 + Rückmeldung („bei VL06 am Anfang, Übung 1“, dann Übung 2) | [07](vorlesungen/07_2026-11-03.md) |
 | 8 | 06.11.2026 | Rest OOP II: Polymorphie, Typangabe vs. Objekt, Duck Typing, object/__repr__, ABC/@abstractmethod, Fähigkeiten (Ü3–5); vermutlich nachmittags Start VL07 Projekt „Kaffeeshop“ (Aufgabe, Startpaket, Stufe 1) | Folien „vl06_oop_2“ ab Folie 30 + „vl07_projekt_onlineshop“ Folie 1–13 (Sicherheit mittel); Nachtrag 09.11.: Wiederholungsmaterial „Fitnessstudio“ VL01–VL06 in der Notiz | [08](vorlesungen/08_2026-11-06.md) |
 | 9 | 13.11.2026 | Projekt „Kaffeeshop“ (VL07): Stufe 1 Lager/Warenkorb/Bestellung, Stufe 2 Produktarten und Zahlungsarten, Stufe 3 Zusatz; Vorstellung und Musterlösung | Folien „vl07_projekt_onlineshop“ + Startpaket (Fortschritt vermutet, Sicherheit mittel) | [09](vorlesungen/09_2026-11-13.md) |
-| 10 | 17.11.2026 | (vorbereitet) vermutlich Exceptions (try/except/raise) und Klausurvorbereitung | vermutet: Modulhandbuch + Hinweise zur Probeklausur (Sicherheit niedrig) | [10](vorlesungen/10_2026-11-17.md) |
+| 10 | 17.11.2026 | Probeklausur „Programmierung 1“ (offiziell, 60 Min., 60 Punkte) in der Vorlesung geschrieben – Grundlagen/Werkzeuge, Datentypen/Fehler, Kontrollstrukturen/Listen, Funktionen, OOP; Lösungswege erklärt | Probeklausur + Musterlösung (Moodle, gesehen 18.11.) + Rückmeldung | [10](vorlesungen/10_2026-11-17.md) |
 
 ## Materialien in Moodle
 
@@ -59,6 +59,10 @@ Terminal, `uv`, Python 3.14, `ruff`, `ty` – bewusst ohne IDE und ohne KI-Assis
 | Wiederholung VL01 bis VL06 – Fitnessstudio (Folien) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192161) | 09.11.2026 | Klausurvorbereitung VL01–VL06; zusammengefasst in Notiz 08 (ob am 06.11. gezeigt, unklar) |
 | Wiederholung VL01 bis VL06 – Fitnessstudio (Beispielcode als Python-Dateien, ZIP) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192162) | 09.11.2026 | Klausurvorbereitung VL01–VL06; `fitnessstudio.py` ausgeführt, siehe Notiz 08 |
 | Vorlesung 7 – Projekt Kaffeeshop (Lösung komplett), Zip: Stufe 1–3 + `test_shop.py` | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192579) | 16.11.2026 | Termin 9, abgeglichen mit `kaffeeshop/README.md` |
+| Probeklausur Programmierung 1 (PDF, 14 S.) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192885) | 18.11.2026 | Termin 10 (in der Vorlesung geschrieben), Klausurvorbereitung; ausgewertet in Notiz 10 |
+| Probeklausur Programmierung 1 (HTML) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192886) | 18.11.2026 | Termin 10, Klausurvorbereitung |
+| Probeklausur Programmierung 1 – Musterlösung (PDF, 16 S.) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192887) | 18.11.2026 | Termin 10, Klausurvorbereitung; Code mit python3 geprüft, siehe Notiz 10 |
+| Probeklausur Programmierung 1 – Musterlösung (HTML) | [Link](https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192888) | 18.11.2026 | Termin 10, Klausurvorbereitung |
 
 ## Prüfung (laut Veranstaltungs- und Prüfungsübersicht)
 
