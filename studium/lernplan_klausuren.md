@@ -226,8 +226,8 @@ Neben den Vorlesungen lernst du **GIT und WI fertig**, weil diese Klausuren zuer
 
 | Tag | Uni | Lernblock |
 |---|---|---|
-| Mi 18.11. | Mkt, Recht | 30 Min: Nachbereitung Kaufrecht (Blurting, § 437-Schema auf Papier) |
-| Do 19.11. | Mkt (vorm.) | **2 h GIT:** Kap. 4 Zahlendarstellung, Kap. 5 Logik nach den 7 Schritten. Mkt-Nachbereitung 20 Min |
+| Mi 18.11. | Mkt, Recht | **2 h GIT:** Kap. 4 Zahlendarstellung, Kap. 5 Logik nach den 7 Schritten (getauscht mit Do) |
+| Do 19.11. | Mkt (vorm.) | 30 Min Kaufrecht nachbereiten · 20 Min Mkt · 30 Min GIT-Wiederholung (Blurting + 3 Aufgaben) |
 | Fr 20.11. | Mathe ganztags | 20 Min Mathe-Nachbereitung, **abends frei** |
 | Sa 21.11. | – | **3 h GIT:** Kap. 7 Datenstrukturen, Kap. 8 Suchen/Sortieren, Kap. 11 SQL. Blurting zu Kap. 4–5 |
 | So 22.11. | – | **1 h Mathe:** Kap. 2–3 Folgen und Reihen, Beispiele nachrechnen, je 3 Aufgaben. Sonst frei |

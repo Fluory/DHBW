@@ -44,11 +44,11 @@ export const PLAN: PlanDay[] = [
     uni: "Marketing, Recht",
     tasks: [
       {
-        fach: RECHT,
-        thema: "Kaufrecht nachbereiten",
-        detail: "Blurting zum heutigen Termin, dann das Schema der Käuferrechte (§ 437) einmal frei auf Papier.",
-        dauer: "30 Min",
-        kapitel: ["leistungsstoerungen"],
+        fach: GIT,
+        thema: "Zahlendarstellung und Logik",
+        detail: "Beide Kapitel nach den 7 Schritten, alle Übungen selbst rechnen. Feynman: Zweierkomplement.",
+        dauer: "2 h",
+        kapitel: ["zahlendarstellung", "logik"],
       },
     ],
   },
@@ -57,11 +57,11 @@ export const PLAN: PlanDay[] = [
     uni: "Marketing (vormittags)",
     tasks: [
       {
-        fach: GIT,
-        thema: "Zahlendarstellung und Logik",
-        detail: "Beide Kapitel nach den 7 Schritten, alle Übungen selbst rechnen. Feynman: Zweierkomplement.",
-        dauer: "2 h",
-        kapitel: ["zahlendarstellung", "logik"],
+        fach: RECHT,
+        thema: "Kaufrecht nachbereiten",
+        detail: "Blurting zum Termin vom 18.11., dann das Schema der Käuferrechte (§ 437) einmal frei auf Papier.",
+        dauer: "30 Min",
+        kapitel: ["leistungsstoerungen"],
       },
       {
         fach: MKT,
@@ -69,6 +69,13 @@ export const PLAN: PlanDay[] = [
         detail: "Zusammenfassung lesen, Blurting, 2 Übungen.",
         dauer: "20 Min",
         kapitel: ["strategische-analysen"],
+      },
+      {
+        fach: GIT,
+        thema: "Wiederholung Zahlen und Logik",
+        detail: "10 Min Blurting zu gestern, dann 3 gemischte Aufgaben (Umrechnen, Zweierkomplement, Wahrheitstafel).",
+        dauer: "30 Min",
+        kapitel: ["zahlendarstellung", "logik"],
       },
     ],
   },
