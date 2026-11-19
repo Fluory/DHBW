@@ -2519,3 +2519,51 @@ tbody tr:last-child td {
     break-inside: avoid;
   }
 }
+
+/* ------------------------------------------------------------------------
+   Lernpfad
+   ------------------------------------------------------------------------ */
+
+.prose .path-chapter {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--line);
+}
+
+.prose .path-meta {
+  font-size: 0.9rem;
+}
+
+.prose .path-step {
+  margin-top: 2.25rem;
+  padding: 0.5rem 0.75rem;
+  border-left: 3px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) var(--tint-strength), var(--bg));
+  border-radius: 0 6px 6px 0;
+  font-size: 1.15rem;
+}
+
+.prose .path-step-no {
+  color: var(--accent-ink);
+  margin-right: 0.35rem;
+}
+
+.prose .path-box {
+  padding: 0.25rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.prose .path-sheet {
+  font-size: 0.92rem;
+}
+
+.prose .path-card {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.prose .path-card-q {
+  margin: 0 0 0.25rem;
+}

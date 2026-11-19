@@ -94,6 +94,12 @@ export default async function SubjectPage({ params }: { params: Promise<Params> 
         <section aria-label="Gesamtansichten" className="section">
           <ul className="chapter-list">
             <li>
+              <Link href={`/${subject.slug}/lernpfad`} className="sources-link">
+                <span className="chapter-title">Lernpfad: das ganze Fach Schritt für Schritt</span>
+                <span className="chapter-summary">Alles auf einer Seite in Lernreihenfolge: pro Kapitel Überblick, Inhalt mit Übungen, Blurting, Feynman, Karteikarten und Spickzettel, am Ende die Probeklausur.</span>
+              </Link>
+            </li>
+            <li>
               <Link href={`/${subject.slug}/zusammenfassung`} className="sources-link">
                 <span className="chapter-title">Zusammenfassung des Fachs</span>
                 <span className="chapter-summary">Das ganze Fach als zusammenhängender Text: der rote Faden und jedes Kapitel in eigenen Worten.</span>

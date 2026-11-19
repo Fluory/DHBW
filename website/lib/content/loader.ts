@@ -188,7 +188,7 @@ function listDir(absolute: string): fs.Dirent[] {
 const rel = (...segments: string[]) => toPosix(path.join(...segments));
 
 /** Kapitel-Slugs, die als Fach-Unterseite vergeben sind. */
-const RESERVED_SLUGS = new Set(["quellen", "zusammenfassung", "alles", "lernen", "spickzettel"]);
+const RESERVED_SLUGS = new Set(["quellen", "zusammenfassung", "alles", "lernen", "spickzettel", "lernpfad"]);
 
 function scanChapters(root: string, dirName: string, issues: ContentIssue[]): ChapterEntry[] {
   const absoluteDir = path.join(root, "faecher", dirName);
