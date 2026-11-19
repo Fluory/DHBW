@@ -102,20 +102,21 @@ Maslow sagt: Menschen handeln wegen unerfüllter Bedürfnisse. Zuerst muss die u
 6. Marketing-Implementierung: umsetzen
 7. Marketing-Controlling: Hat es geklappt?
 
-Dazu kommen vier Grundhaltungen, wie ein Unternehmen auf den Markt schaut:
+Dazu kommen fünf Grundhaltungen, wie ein Unternehmen auf den Markt schaut (Folien und Skript Kap. 1):
 
 | Haltung | Grundgedanke | Problem |
 |---|---|---|
 | Produktionsorientierung | viel und billig herstellen | andere Kundenwünsche werden vergessen |
 | Produktorientierung | das Produkt technisch immer verbessern | man übersieht, was Kunden wirklich brauchen |
 | Verkaufsorientierung | aggressiv werben und überreden | überredete Kunden sind oft unzufrieden (Nachkaufdissonanz), erzählen das weiter und kaufen nicht wieder |
-| Marketingorientierung | die Kundenwünsche sind der Startpunkt | – (das ist das Ziel) |
+| Marketingorientierung | die Kundenwünsche sind der Startpunkt | – |
+| Ganzheitliche Markt- und Umweltorientierung | nicht nur Kunden, sondern alle Kräfte beachten: Gesellschaft, Umwelt, Mitarbeiter, Lieferanten, Händler | – (die weiteste Haltung) |
 
 **Nachkaufdissonanz** heißt: Nach dem Kauf ärgerst du dich und zweifelst, ob der Kauf richtig war. Beispiel: Ein Verkäufer am Telefon hat dir einen Handyvertrag aufgeschwatzt, und am nächsten Tag merkst du, dass er viel zu teuer ist.
 
 **Merkhilfe für die sieben Stufen:** So planst du auch deine Klausurphase. Wo stehe ich (Analyse)? Was kommt dran (Prognose)? Welche Note will ich (Ziel)? Wie lerne ich, zum Beispiel erst Rechnen, dann Begriffe (Strategie)? Welches Material nehme ich (Mix)? Lernen (Umsetzung)? Probeklausur: Hat es gereicht (Controlling)?
 
-Gutes Marketing schaut auf Kunden und Konkurrenz und sucht mindestens einen einzigartigen Vorteil, den **USP** (unique selling proposition). Auf Deutsch: der eine Grund, warum man genau bei dir kauft und nicht beim Nachbarn. Bekanntes Beispiel: Ritter Sport wirbt seit Jahrzehnten mit der quadratischen Tafel („Quadratisch. Praktisch. Gut.“). Je nach Anspruchsgruppe spricht man von Absatzmarketing (Kunden, Handel), internem Marketing (Mitarbeiter), Beschaffungsmarketing (Lieferanten), Wettbewerbsmarketing (Konkurrenten) und Public Marketing (Öffentlichkeit).
+Gutes Marketing schaut auf Kunden und Konkurrenz und sucht mindestens einen einzigartigen Vorteil, den **USP** (unique selling proposition). Auf Deutsch: der eine Grund, warum man genau bei dir kauft und nicht beim Nachbarn. Bekanntes Beispiel: Ritter Sport wirbt seit Jahrzehnten mit der quadratischen Tafel („Quadratisch. Praktisch. Gut.“). Die ganzheitliche Haltung schaut auf alle **Anspruchsgruppen**. Je nach Anspruchsgruppe spricht man von Absatzmarketing (Kunden, Handel), internem Marketing (Mitarbeiter), Beschaffungsmarketing (Lieferanten), Wettbewerbsmarketing (Konkurrenten) und Public Marketing (Öffentlichkeit).
 
 > [!NOTE]
 > **Beispiel: Die Bäckerei**
@@ -126,7 +127,7 @@ Gutes Marketing schaut auf Kunden und Konkurrenz und sucht mindestens einen einz
 > **Das Wichtigste**
 >
 > - Sieben Stufen: Situationsanalyse → Prognose → Ziele → Strategie → Marketingmix → Umsetzung → Controlling. Erst analysieren, dann planen, dann umsetzen und kontrollieren.
-> - Vier Grundhaltungen: Produktions-, Produkt-, Verkaufs- und Marketingorientierung. Nur bei der Marketingorientierung ist der Kundenwunsch der Startpunkt.
+> - Fünf Grundhaltungen: Produktions-, Produkt-, Verkaufs-, Marketingorientierung und ganzheitliche Markt- und Umweltorientierung. Ab der Marketingorientierung ist der Kundenwunsch der Startpunkt, die ganzheitliche Haltung beachtet zusätzlich alle Anspruchsgruppen.
 > - USP = der eine einzigartige Vorteil, warum Kunden bei dir kaufen und nicht bei der Konkurrenz.
 
 > [!WARNING]

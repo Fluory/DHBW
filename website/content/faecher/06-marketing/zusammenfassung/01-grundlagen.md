@@ -10,7 +10,7 @@ Marketing bedeutet, alle Tätigkeiten im Unternehmen so zu planen, umzusetzen un
 
 ### Planung in sieben Stufen und die richtige Haltung
 
-Das Skript beschreibt Marketingmanagement als Ablauf: Situationsanalyse, Prognose, Marketingziele, Marketingstrategie, Marketingmix, Umsetzung und Controlling. Erst analysiert man, dann plant man, dann setzt man um und kontrolliert. Diese Reihenfolge ist auch der Aufbau des ganzen Fachs. Dazu kommen vier Grundhaltungen. Bei der Produktionsorientierung zählt viel und billig, bei der Produktorientierung die Technik, bei der Verkaufsorientierung das Überreden. Überredete Kunden ärgern sich oft nach dem Kauf (Nachkaufdissonanz) und kommen nicht wieder. Nur bei der **Marketingorientierung** ist der Kundenwunsch der Startpunkt. Gutes Marketing sucht außerdem einen **USP**, also den einen Grund, warum man genau bei dir kauft.
+Das Skript beschreibt Marketingmanagement als Ablauf: Situationsanalyse, Prognose, Marketingziele, Marketingstrategie, Marketingmix, Umsetzung und Controlling. Erst analysiert man, dann plant man, dann setzt man um und kontrolliert. Diese Reihenfolge ist auch der Aufbau des ganzen Fachs. Dazu kommen fünf Grundhaltungen. Bei der Produktionsorientierung zählt viel und billig, bei der Produktorientierung die Technik, bei der Verkaufsorientierung das Überreden. Überredete Kunden ärgern sich oft nach dem Kauf (Nachkaufdissonanz) und kommen nicht wieder. Bei der **Marketingorientierung** ist der Kundenwunsch der Startpunkt. Die **ganzheitliche Markt- und Umweltorientierung** geht noch weiter und beachtet auch Gesellschaft, Umwelt, Mitarbeiter und Lieferanten. Gutes Marketing sucht außerdem einen **USP**, also den einen Grund, warum man genau bei dir kauft.
 
 ### Ein Fall, der alles verbindet
 
@@ -22,4 +22,4 @@ Eine Bäckerei liegt in einer Straße mit zwei weiteren Bäckereien und einem Su
 - die fünf Stufen nach Maslow mit Skript-Namen und je einem Kaufbeispiel nennen
 - Verkäufer- und Käufermarkt nach Lage, Nachfrage, Engpass und Macht vergleichen
 - die sieben Stufen des Marketingmanagements in der richtigen Reihenfolge nennen
-- die vier Grundhaltungen zuordnen und den USP erklären
+- die fünf Grundhaltungen zuordnen und den USP erklären

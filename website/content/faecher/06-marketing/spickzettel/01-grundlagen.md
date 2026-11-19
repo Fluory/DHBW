@@ -55,7 +55,8 @@ Heute herrscht meist Käufermarkt → darum braucht man Marketing.
 | Produktionsorientierung | viel und billig herstellen | Kundenwünsche vergessen |
 | Produktorientierung | Produkt technisch verbessern | übersieht echten Bedarf |
 | Verkaufsorientierung | aggressiv werben, überreden | Kunden unzufrieden, kein Wiederkauf |
-| Marketingorientierung | Kundenwunsch ist Startpunkt | – (Ziel) |
+| Marketingorientierung | Kundenwunsch ist Startpunkt | – |
+| Ganzheitl. Markt- und Umweltorient. | alle Anspruchsgruppen, Gesellschaft, Umwelt | – |
 
 ## USP und Anspruchsgruppen
 
