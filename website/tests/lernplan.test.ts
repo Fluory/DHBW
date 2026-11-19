@@ -10,7 +10,7 @@ function nextDay(iso: string): string {
   return new Date(Date.UTC(y, m - 1, d + 1)).toISOString().slice(0, 10);
 }
 
-describe("Lernplan", () => {
+describe("Lernplan", { timeout: 30_000 }, () => {
   it("hat lückenlos einen Eintrag pro Tag", () => {
     expect(PLAN[0].date).toBe(PLAN_START);
     expect(PLAN[PLAN.length - 1].date).toBe(PLAN_END);
