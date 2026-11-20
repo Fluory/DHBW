@@ -61,7 +61,8 @@ async function run() {
           const type = response.headers()["content-type"];
           let body = sizes.responseBodySize;
           let rawBody = sizes.responseBodySize;
-          if (response.status() === 200) {
+          // Revalidiert (304 auf der Leitung, Body aus dem Browser-Cache): Chromium meldet Status 200, Body-Größe 0.
+          if (response.status() === 200 && sizes.responseBodySize > 0) {
             const raw = await response.body().catch(() => null);
             if (raw && raw.length > 0) {
               rawBody = raw.length;
