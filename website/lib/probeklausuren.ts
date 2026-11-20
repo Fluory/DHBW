@@ -6,8 +6,9 @@ const EXAMS: Record<string, InteractiveExam[]> = {
   "grundlagen-it": [{ href: "/probeklausur/grundlagen-it", label: "Probeklausur GIT (48 Min)" }],
   wirtschaftsinformatik: [{ href: "/probeklausur/wirtschaftsinformatik", label: "Probeklausur WI (48 Min)" }],
   programmierung: [
-    { href: "/probeklausur/programmierung", label: "Probeklausur Programmierung, Teil 1 (60 Min)" },
-    { href: "/probeklausur/programmierung-2", label: "Probeklausur Programmierung, Teil 2 (60 Min)" },
+    { href: "/probeklausur/programmierung-offiziell", label: "Offizielle Probeklausur Programmierung 1: Antwortbogen (60 Min)", official: true },
+    { href: "/probeklausur/programmierung", label: "Probeklausur Programmierung von mir, Teil 1 (60 Min)" },
+    { href: "/probeklausur/programmierung-2", label: "Probeklausur Programmierung von mir, Teil 2 (60 Min)" },
   ],
   recht: [{ href: "/probeklausur/recht", label: "Probeklausur Recht (60 Min)" }],
   bwl: [

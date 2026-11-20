@@ -11,6 +11,7 @@ const targetDir = path.resolve(import.meta.dirname, "..", "public", "probeklausu
 export const EXAMS = [
   { file: "probeklausur_git.html", slug: "grundlagen-it", fach: "grundlagen-it", short: "GIT" },
   { file: "probeklausur_wi.html", slug: "wirtschaftsinformatik", fach: "wirtschaftsinformatik", short: "WI" },
+  { file: "offiziell_programmierung.html", slug: "programmierung-offiziell", fach: "programmierung", short: "PROG" },
   { file: "probeklausur_programmierung.html", slug: "programmierung", fach: "programmierung", short: "PROG" },
   { file: "probeklausur_programmierung_2.html", slug: "programmierung-2", fach: "programmierung", short: "PROG" },
   { file: "probeklausur_recht.html", slug: "recht", fach: "recht", short: "RECHT" },
