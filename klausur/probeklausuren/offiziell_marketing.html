@@ -1,0 +1,514 @@
+<title>Marketing: offizielle Musterklausur 2025 – Antwortbogen</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one calm exam column like a printed exam sheet; slim sticky bar with timer and score. */
+:root {
+  --bg: #ffffff; --paper: #f6f7f9; --fg: #1d2129; --muted: #5d6470; --line: #e1e4ea;
+  --accent: #3b4fa0; --ok: #2d5fc4; --ok-soft: #e9f0fd; --bad: #b8432f; --bad-soft: #fbece8;
+  --half: #a8690f; --half-soft: #fbf3e4; --code-bg: #f3f4f7;
+  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --radius: 8px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12141a; --paper: #191c23; --fg: #e7e9ee; --muted: #9aa1ad; --line: #2b2f39; --accent: #9fb0ff;
+    --ok: #8fb4ff; --ok-soft: #18233b; --bad: #ff9a85; --bad-soft: #3a1f1a; --half: #f0b85a; --half-soft: #33280f; --code-bg: #1b1e26;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12141a; --paper: #191c23; --fg: #e7e9ee; --muted: #9aa1ad; --line: #2b2f39; --accent: #9fb0ff;
+  --ok: #8fb4ff; --ok-soft: #18233b; --bad: #ff9a85; --bad-soft: #3a1f1a; --half: #f0b85a; --half-soft: #33280f; --code-bg: #1b1e26;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 16px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 46rem; margin: 0 auto; padding-block: 1.5rem 5rem; }
+h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 .35rem; text-wrap: balance; }
+h2 { font-size: 1.2rem; margin: 0; text-wrap: balance; }
+.lead { color: var(--muted); margin: 0 0 1rem; }
+.meta { display: flex; flex-wrap: wrap; gap: .4rem .8rem; font-size: .9rem; color: var(--muted); margin-bottom: 1rem; }
+.meta b { color: var(--fg); }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; padding-block: .6rem; margin-bottom: 1.5rem; }
+.timer { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 1.05rem; min-width: 4.5ch; }
+.timer.low { color: var(--bad); }
+.score { margin-left: auto; font-weight: 600; font-variant-numeric: tabular-nums; }
+button { font: inherit; font-size: .9rem; border-radius: 6px; padding: .4rem .8rem; cursor: pointer; border: 1px solid var(--line); background: var(--bg); color: var(--fg); }
+button:hover { border-color: var(--muted); }
+button.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); font-weight: 600; }
+button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.overview { width: 100%; border-collapse: collapse; font-size: .92rem; margin-bottom: 2rem; font-variant-numeric: tabular-nums; }
+.overview th, .overview td { text-align: left; padding: .35rem .5rem; border-bottom: 1px solid var(--line); }
+.overview td:last-child, .overview th:last-child { text-align: right; }
+.overview tr.sum td { font-weight: 700; border-bottom: 0; }
+section.task { border-top: 2px solid var(--fg); padding-top: .9rem; margin-top: 2.5rem; }
+.task-head { display: flex; align-items: baseline; gap: .75rem; flex-wrap: wrap; margin-bottom: .6rem; }
+.pts { font-size: .85rem; color: var(--muted); }
+.badge { margin-left: auto; font-size: .85rem; font-weight: 600; padding: .1rem .55rem; border-radius: 999px; font-variant-numeric: tabular-nums; }
+.badge.full { background: var(--ok-soft); color: var(--ok); } .badge.part { background: var(--half-soft); color: var(--half); } .badge.none { background: var(--bad-soft); color: var(--bad); }
+.q { padding-block: .9rem; border-bottom: 1px solid var(--line); }
+.q:last-child { border-bottom: 0; }
+.q > p { margin: 0 0 .5rem; }
+.q-label { font-weight: 600; margin-right: .3rem; }
+.options { display: grid; gap: .3rem; }
+.options label { display: flex; gap: .5rem; align-items: flex-start; cursor: pointer; padding: .25rem .4rem; border-radius: 6px; }
+.options label:hover { background: var(--paper); }
+.options input { margin-top: .3rem; }
+code { font-family: var(--font-mono); font-size: .88em; background: var(--code-bg); padding: 0 .25em; border-radius: 3px; }
+pre { font-family: var(--font-mono); font-size: .86rem; line-height: 1.5; background: var(--code-bg); border: 1px solid var(--line); border-radius: var(--radius); padding: .75rem .9rem; overflow-x: auto; margin: .4rem 0 .7rem; }
+pre code { background: none; padding: 0; }
+.ln { color: var(--muted); user-select: none; }
+textarea, input[type="text"], input[type="number"], select { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: .4rem .55rem; }
+textarea { width: 100%; font-family: var(--font-mono); font-size: .88rem; min-height: 4.5rem; resize: vertical; }
+textarea.code { min-height: 11rem; tab-size: 4; }
+textarea.prose { font-family: var(--font-body); font-size: .95rem; }
+input.gap { font-family: var(--font-mono); width: 11rem; max-width: 100%; }
+input.short { font-family: var(--font-mono); width: 8rem; }
+input[type="number"] { width: 6rem; }
+.row { display: flex; flex-wrap: wrap; gap: .5rem .9rem; align-items: center; margin-bottom: .45rem; }
+.row > span.lbl { min-width: 7rem; color: var(--muted); font-size: .92rem; }
+.grid-err { display: grid; grid-template-columns: 5rem 9.5rem minmax(0, 1fr); gap: .45rem; align-items: center; }
+.grid-err.two { grid-template-columns: 5rem minmax(0, 1fr); }
+.grid-err .h { font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.grid-err input[type="text"] { width: 100%; font-family: var(--font-mono); font-size: .86rem; }
+@media (max-width: 34rem) { .grid-err { grid-template-columns: 4.5rem minmax(0, 1fr); } .grid-err .fix, .grid-err .hfix { grid-column: 1 / -1; } }
+.mark-ok { background: var(--ok-soft) !important; } .mark-bad { background: var(--bad-soft) !important; }
+input.mark-ok, select.mark-ok, textarea.mark-ok { border-color: var(--ok); } input.mark-bad, select.mark-bad, textarea.mark-bad { border-color: var(--bad); }
+.sol { margin-top: .6rem; padding: .7rem .85rem; border-radius: var(--radius); background: var(--paper); border: 1px solid var(--line); font-size: .93rem; }
+.sol p { margin: .3rem 0; }
+.sol .t { font-weight: 600; }
+.rubric { display: grid; gap: .3rem; margin-top: .5rem; }
+.rubric label { display: flex; gap: .5rem; align-items: flex-start; cursor: pointer; }
+.rubric input { margin-top: .3rem; }
+.hint { color: var(--muted); font-size: .88rem; }
+.result { border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.1rem; margin: 1rem 0 1.5rem; background: var(--paper); }
+.result .big { font-size: 1.6rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.result p { margin: .3rem 0; }
+.actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 2.5rem; align-items: center; }
+.confirm { display: inline-flex; gap: .5rem; align-items: center; font-size: .9rem; }
+.table-scroll { overflow-x: auto; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Marketing: offizielle Musterklausur 2025 – Antwortbogen</h1>
+    <p class="lead">So gehst du vor: Öffne das Aufgabenblatt in Moodle, starte hier die Zeit und bearbeite die Aufgaben wie in der echten Klausur. Deine Ergebnisse trägst du auf diesem Bogen ein und klickst dann auf „Prüfen“. Rechenergebnisse werden automatisch bewertet. Bei Text- und Erklärteilen erscheint eine Lösungsskizze mit Häkchen, damit bewertest du dich selbst.</p>
+    <p style="margin:0 0 1rem"><a href="https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190111" target="_blank" rel="noopener" style="display:inline-block;font-weight:600;color:var(--bg);background:var(--accent);border-radius:6px;padding:.45rem .9rem;text-decoration:none">Aufgabenblatt in Moodle öffnen</a>
+      <span class="hint" style="display:inline-block;margin-left:.4rem">Zum Abgleich danach: <a href="https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=193024" target="_blank" rel="noopener" style="color:var(--accent)">offizielle Musterlösung in Moodle</a></span></p>
+    <div class="meta"><span><b>48</b> Minuten</span><span><b>48</b> Punkte</span><span>Hilfsmittel: einfacher Taschenrechner einplanen</span><span>Richtwert bestanden ab <b>24</b> (Annahme: 50 %)</span></div>
+  </header>
+
+  <div class="bar" role="region" aria-label="Zeit und Punkte">
+    <span class="timer" id="timer">48:00</span>
+    <button type="button" id="timerBtn">Zeit starten</button>
+    <button type="button" class="primary" id="checkTop">Prüfen</button>
+    <button type="button" id="hideTop" hidden>Lösungen ausblenden</button>
+    <span class="score" id="scoreTop">noch nicht geprüft</span>
+  </div>
+
+  <div id="result" class="result" hidden></div>
+
+  <table class="overview" aria-label="Aufgabenübersicht">
+    <thead><tr><th>Aufgabe</th><th>Stichwort</th><th>Punkte</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Marktkennzahlen zweier Segmente, relativer Marktanteil, BCG-Stars</td><td id="ov1">12</td></tr>
+      <tr><td>2</td><td>Zusatznutzen am Beispiel Uhr, Markensteuerrad</td><td id="ov2">10</td></tr>
+      <tr><td>3</td><td>Marketing-Mix mit je zwei Beispielen</td><td id="ov3">6</td></tr>
+      <tr><td>4</td><td>Push- und Pull-Strategie vergleichen</td><td id="ov4">6</td></tr>
+      <tr><td>5</td><td>Positionierung nach Kotler, Vorteile Onlineshop</td><td id="ov5">6</td></tr>
+      <tr><td>6</td><td>Tausenderkontaktpreis für zwei Angebote</td><td id="ov6">4</td></tr>
+      <tr><td>7</td><td>Reisender oder Handelsvertreter: kritischer Umsatz</td><td id="ov7">4</td></tr>
+      <tr class="sum"><td></td><td>Summe</td><td id="ovSum">48</td></tr>
+    </tbody>
+  </table>
+
+  <form id="exam" autocomplete="off" spellcheck="false">
+
+  <!-- ================= Aufgabe 1 ================= -->
+  <section class="task" data-task="1" data-max="12">
+    <div class="task-head"><h2>Aufgabe 1 · Marktkennzahlen und BCG</h2><span class="pts">12 Punkte</span><span class="badge" hidden></span></div>
+    <p class="hint">Zahlen darfst du mit Komma oder Punkt eingeben, Einheiten sind egal. Prozentwerte ohne Nachkommastellen reichen hier, das Potenzial auf zwei Nachkommastellen.</p>
+
+    <div class="q">
+      <p><span class="q-label">1 a</span>(6 Punkte) Fehlende Werte der Tabelle</p>
+      <div class="row"><span class="lbl">Tische: Marktanteil Miller (%)</span><input type="text" class="short auto" id="n1a1" data-kind="num" data-answer="8" data-tol="0.01" data-points="1" aria-label="Tische: Marktanteil Miller (%)"></div>
+      <div class="row"><span class="lbl">Tische: Marktanteil stärkster Wettbewerber (%)</span><input type="text" class="short auto" id="n1a2" data-kind="num" data-answer="10" data-tol="0.01" data-points="1" aria-label="Tische: Marktanteil stärkster Wettbewerber (%)"></div>
+      <div class="row"><span class="lbl">Tische: Marktausschöpfungsgrad (%)</span><input type="text" class="short auto" id="n1a3" data-kind="num" data-answer="80" data-tol="0.01" data-points="1" aria-label="Tische: Marktausschöpfungsgrad (%)"></div>
+      <div class="row"><span class="lbl">Stühle: Marktanteil Miller (%)</span><input type="text" class="short auto" id="n1a4" data-kind="num" data-answer="2" data-tol="0.01" data-points="1" aria-label="Stühle: Marktanteil Miller (%)"></div>
+      <div class="row"><span class="lbl">Stühle: Marktanteil stärkster Wettbewerber (%)</span><input type="text" class="short auto" id="n1a5" data-kind="num" data-answer="28" data-tol="0.01" data-points="1" aria-label="Stühle: Marktanteil stärkster Wettbewerber (%)"></div>
+      <div class="row"><span class="lbl">Stühle: Marktpotenzial (Mio. €)</span><input type="text" class="short auto" id="n1a6" data-kind="num" data-answer="263.16" data-tol="0.01" data-points="1" aria-label="Stühle: Marktpotenzial (Mio. €)"></div>
+      <div class="sol" hidden>
+        <p>Marktanteil = eigener Umsatz geteilt durch das Marktvolumen, mal 100. Ausschöpfungsgrad = Marktvolumen geteilt durch Marktpotenzial, mal 100. Für das fehlende Potenzial stellst du die zweite Formel um.</p>
+        <p><b>Tische:</b> 12 / 150 → <b>8 %</b> · 15 / 150 → <b>10 %</b> · 150 / 187,5 → <b>80 %</b>.</p>
+        <p><b>Stühle:</b> 5 / 250 → <b>2 %</b> · 70 / 250 → <b>28 %</b> · Potenzial = 250 / 0,95 = <b>263,16 Mio. €</b>.</p>
+        <p class="hint">Probe: Das Potenzial ist immer mindestens so groß wie das Volumen. Falle: 250 · 1,05 rechnen (= 262,50), das ist nicht dasselbe wie durch 0,95 teilen.</p>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">1 b</span>(2 Punkte) Relativer Marktanteil (als Dezimalzahl, zwei Nachkommastellen)</p>
+      <div class="row"><span class="lbl">Tische</span><input type="text" class="short auto" id="n1b1" data-kind="num" data-answer="0.8" data-tol="0.01" data-points="1" aria-label="Tische: relativer Marktanteil"></div>
+      <div class="row"><span class="lbl">Stühle</span><input type="text" class="short auto" id="n1b2" data-kind="num" data-answer="0.07" data-tol="0.01" data-points="1" aria-label="Stühle: relativer Marktanteil"></div>
+      <div class="sol" hidden>
+        <p>Eigener Marktanteil durch den des stärksten Konkurrenten (oder direkt die Umsätze teilen, das gibt dasselbe).</p>
+        <p>Tische: 8 / 10 = <b>0,80</b>. Stühle: 2 / 28 = 0,0714 → <b>0,07</b>. Miller ist in beiden Segmenten nicht Marktführer (Wert unter 1).</p>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">1 c</span>(4 Punkte) Vier Kennzeichen von Stars</p>
+      <textarea class="prose" id="t1c" aria-label="1 c Stars"></textarea>
+      <div class="sol" hidden>
+        <p>Passende Kennzeichen (vier davon genügen): Der Markt wächst stark · der relative Marktanteil ist hoch, die SGE ist also führend · typisch für die Wachstumsphase im Produktlebenszyklus · Gewinne steigen, gleichzeitig kommen mehr Konkurrenten in den Markt · Normstrategie: investieren, um die Position zu halten oder auszubauen.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb1ca" data-points="1"> 1. passendes Kennzeichen (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb1cb" data-points="1"> 2. passendes Kennzeichen (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb1cc" data-points="1"> 3. passendes Kennzeichen (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb1cd" data-points="1"> 4. passendes Kennzeichen (+1)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 2 ================= -->
+  <section class="task" data-task="2" data-max="10">
+    <div class="task-head"><h2>Aufgabe 2 · Zusatznutzen und Markensteuerrad</h2><span class="pts">10 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q">
+      <p><span class="q-label">2 a</span>(6 Punkte) Drei Arten von Zusatznutzen am Beispiel Uhr</p>
+      <textarea class="prose" id="t2a" aria-label="2 a Zusatznutzen Uhr" style="min-height:8rem"></textarea>
+      <div class="sol" hidden>
+        <p>Grundnutzen einer Uhr: die Zeit anzeigen. Alles, was darüber hinausgeht, ist Zusatznutzen.</p>
+        <p><b>Funktional:</b> zusätzliche technische Leistung, z. B. eine Smartwatch, die Puls und Schlaf misst.</p>
+        <p><b>Emotional:</b> Freude, die du selbst an der Uhr hast, z. B. weil dir Gehäuse, Zifferblatt und Farbe gefallen oder die Marke dich anspricht.</p>
+        <p><b>Sozial:</b> Ansehen bei anderen, z. B. weil die teure neue Uhr als Statussymbol wahrgenommen wird.</p>
+        <p class="hint">Punkte-Aufteilung je Nutzenart (Erklärung + Beispiel) ist eine Annahme, die Musterlösung nennt nur die Summe.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb2a1" data-points="1"> funktionaler Zusatznutzen richtig erklärt (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb2a2" data-points="1"> passendes Uhr-Beispiel dazu (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb2a3" data-points="1"> emotionaler Zusatznutzen richtig erklärt (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb2a4" data-points="1"> passendes Uhr-Beispiel dazu (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb2a5" data-points="1"> sozialer Zusatznutzen richtig erklärt (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb2a6" data-points="1"> passendes Uhr-Beispiel dazu (+1)</label>
+        </div>
+      </div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">2 b</span>(4 Punkte) Weitere Bestandteile des Markensteuerrads nach Esch</p>
+      <textarea class="prose" id="t2b" aria-label="2 b Markensteuerrad"></textarea>
+      <div class="sol" hidden>
+        <p>Der Nutzen ist mit Teil a schon abgedeckt. Gesucht sind die übrigen vier: <b>Markenkern</b> (in der Mitte, auch Markenkompetenz: „Wer bin ich?“), <b>Markenattribute</b> (Eigenschaften), <b>Markentonalität</b> (Persönlichkeit, Gefühle) und <b>Markenbild</b> (sichtbarer Auftritt wie Logo und Design).</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb2b1" data-points="1"> Markenkern / Markenkompetenz (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb2b2" data-points="1"> Markenattribute (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb2b3" data-points="1"> Markentonalität (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb2b4" data-points="1"> Markenbild (+1)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 3 ================= -->
+  <section class="task" data-task="3" data-max="6">
+    <div class="task-head"><h2>Aufgabe 3 · Marketing-Mix</h2><span class="pts">6 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q">
+      <p><span class="q-label">3</span>(6 Punkte) Vier Bereiche mit je zwei Beispielen für die Gartenmöbel</p>
+      <textarea class="prose" id="t3" aria-label="3 Marketing-Mix" style="min-height:9rem"></textarea>
+      <div class="sol" hidden>
+        <p>Eigene Beispiele, andere passende sind genauso richtig. Wichtig ist, dass sie konkret zu Tischen und Stühlen passen.</p>
+        <p><b>Produktpolitik:</b> mehrere Größen und Materialien (Teak, Aluminium) · eine Designlinie im zeitlosen Stil.</p>
+        <p><b>Preispolitik:</b> Rabatt zum Saisonstart · Ratenzahlung für teure Sitzgruppen.</p>
+        <p><b>Kommunikationspolitik:</b> Beilagen in Zeitungen im Frühjahr · Posts und Reels auf Instagram.</p>
+        <p><b>Distributionspolitik:</b> eigener Onlineshop · Verkauf über Gartencenter und Baumärkte.</p>
+        <p class="hint">Punkte-Aufteilung ist eine Annahme: ½ Punkt je Bereich, ½ Punkt je Beispiel.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb3a" data-points="0.5"> Produktpolitik genannt (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb3b" data-points="1"> zwei passende Produkt-Beispiele (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb3c" data-points="0.5"> Preispolitik genannt (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb3d" data-points="1"> zwei passende Preis-Beispiele (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb3e" data-points="0.5"> Kommunikationspolitik genannt (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb3f" data-points="1"> zwei passende Kommunikations-Beispiele (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb3g" data-points="0.5"> Distributionspolitik genannt (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb3h" data-points="1"> zwei passende Distributions-Beispiele (+1)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 4 ================= -->
+  <section class="task" data-task="4" data-max="6">
+    <div class="task-head"><h2>Aufgabe 4 · Push und Pull</h2><span class="pts">6 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q">
+      <p><span class="q-label">4</span>(6 Punkte) Beide Strategien erklären und abgrenzen</p>
+      <textarea class="prose" id="t4" aria-label="4 Push und Pull" style="min-height:8rem"></textarea>
+      <div class="sol" hidden>
+        <p><b>Push:</b> Der Hersteller wendet sich an den <b>Handel</b>. Mit Anreizen (Rabatte, Werbezuschüsse, Displays) bringt er ihn dazu, das Produkt ins Sortiment zu nehmen; viel Ware im Lager setzt den Händler zusätzlich unter Druck, sie aktiv an Endkunden zu verkaufen. Gut geeignet für neue Produkte.</p>
+        <p><b>Pull:</b> Der Hersteller spricht direkt die <b>Endverbraucher</b> an, etwa mit Werbung. Die Kunden wollen das Produkt und fragen im Laden danach, dadurch entsteht ein Sog, und der Handel muss es führen. Das kostet mehr und lohnt sich eher für große, bekannte Unternehmen.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb4a" data-points="1"> Push richtet sich an den Handel (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb4b" data-points="1"> Push: Anreize/Warendruck, Handel gibt das Produkt weiter (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb4c" data-points="1"> Push eignet sich besonders für neue Produkte (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb4d" data-points="1"> Pull richtet sich an die Endverbraucher (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb4e" data-points="1"> Pull: Nachfragesog, Handel muss das Produkt aufnehmen (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb4f" data-points="1"> Pull ist teurer, eher für große, etablierte Firmen (+1)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 5 ================= -->
+  <section class="task" data-task="5" data-max="6">
+    <div class="task-head"><h2>Aufgabe 5 · Positionierung und Onlineshop</h2><span class="pts">6 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q">
+      <p><span class="q-label">5 a</span>(3 Punkte) Drei Anforderungen nach Kotler</p>
+      <textarea class="prose" id="t5a" aria-label="5 a Kotler"></textarea>
+      <div class="sol" hidden>
+        <p>Drei von vier: Die Positionierung wird <b>vor</b> der Produktentwicklung festgelegt · sie stellt <b>eine einzige</b> Eigenschaft heraus, nicht mehrere gleichzeitig · die Konkurrenz kann sie <b>nicht einfach nachmachen</b> · sie ist auf <b>lange Sicht</b> angelegt.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb5a1" data-points="1"> 1. Anforderung richtig (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb5a2" data-points="1"> 2. Anforderung richtig (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb5a3" data-points="1"> 3. Anforderung richtig (+1)</label>
+        </div>
+      </div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">5 b</span>(3 Punkte) Drei Vorteile eines eigenen Onlineshops</p>
+      <textarea class="prose" id="t5b" aria-label="5 b Onlineshop"></textarea>
+      <div class="sol" hidden>
+        <p>Drei davon: Die Firma wird bekannter · mehr Kunden erreichen und mehr Umsatz machen · modernes Image · digitale Abwicklung spart Zeit und Kosten (z. B. kein gedruckter Katalog) · Angebot und Preise lassen sich schnell an den Markt anpassen.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb5b1" data-points="1"> 1. passender Vorteil (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb5b2" data-points="1"> 2. passender Vorteil (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb5b3" data-points="1"> 3. passender Vorteil (+1)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 6 ================= -->
+  <section class="task" data-task="6" data-max="4">
+    <div class="task-head"><h2>Aufgabe 6 · Tausenderkontaktpreis</h2><span class="pts">4 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q">
+      <p><span class="q-label">6</span>(3 Punkte) Zielpersonen und TKP beider Angebote</p>
+      <div class="row"><span class="lbl">A: erreichte Zielpersonen</span><input type="text" class="short auto" id="n6a" data-kind="num" data-answer="540000" data-tol="0.5" data-points="0.5" aria-label="A: erreichte Zielpersonen"></div>
+      <div class="row"><span class="lbl">B: erreichte Zielpersonen</span><input type="text" class="short auto" id="n6b" data-kind="num" data-answer="350000" data-tol="0.5" data-points="0.5" aria-label="B: erreichte Zielpersonen"></div>
+      <div class="row"><span class="lbl">A: TKP (€)</span><input type="text" class="short auto" id="n6c" data-kind="num" data-answer="18.52" data-tol="0.01" data-points="1" aria-label="A: TKP (€)"></div>
+      <div class="row"><span class="lbl">B: TKP (€)</span><input type="text" class="short auto" id="n6d" data-kind="num" data-answer="20" data-tol="0.01" data-points="1" aria-label="B: TKP (€)"></div>
+      <div class="sol" hidden>
+        <p>Erst die Follower mit dem Zielgruppenanteil multiplizieren, dann den Preis durch diese Zahl teilen und mal 1.000 nehmen.</p>
+        <p>A: 900.000 · 0,6 = <b>540.000</b> → 10.000 / 540.000 · 1.000 = <b>18,52 €</b>.</p>
+        <p>B: 500.000 · 0,7 = <b>350.000</b> → 7.000 / 350.000 · 1.000 = <b>20,00 €</b>.</p>
+        <p class="hint">Falle: mit allen Followern rechnen (A 11,11 €, B 14,00 €). Die Rangfolge bleibt hier zwar gleich, gefragt sind aber die Zielpersonen.</p>
+      </div>
+    </div>
+    <div class="q mc" data-answer="a" data-name="m6e">
+      <p><span class="q-label">6</span>(1 Punkt) Deine Entscheidung</p>
+      <div class="options">
+        <label><input type="radio" name="m6e" id="m6ea" value="a"> Influencer A, weil der TKP niedriger ist</label>
+        <label><input type="radio" name="m6e" id="m6eb" value="b"> Influencer B, weil er absolut billiger ist</label>
+        <label><input type="radio" name="m6e" id="m6ec" value="c"> Influencer B, weil sein Zielgruppenanteil höher ist</label>
+        <label><input type="radio" name="m6e" id="m6ed" value="d"> Beide sind gleich gut</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: a.</span> 1.000 Zielpersonen kosten bei A 18,52 €, bei B 20,00 €. Ausschlaggebend ist der Preis je 1.000 Zielpersonen, nicht der Gesamtpreis oder der Anteil allein. Die Punkte-Aufteilung (3 + 1) ist eine Annahme.</p></div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 7 ================= -->
+  <section class="task" data-task="7" data-max="4">
+    <div class="task-head"><h2>Aufgabe 7 · Reisender oder Handelsvertreter</h2><span class="pts">4 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q">
+      <p><span class="q-label">7</span>(2 Punkte) Fixkosten und kritischer Jahresumsatz</p>
+      <div class="row"><span class="lbl">Fixkosten des Reisenden im Jahr (€)</span><input type="text" class="short auto" id="n7a" data-kind="num" data-answer="45400" data-tol="0.5" data-points="1" aria-label="Fixkosten des Reisenden im Jahr (€)"></div>
+      <div class="row"><span class="lbl">kritischer Jahresumsatz (€)</span><input type="text" class="short auto" id="n7b" data-kind="num" data-answer="2270000" data-tol="1" data-points="1" aria-label="kritischer Jahresumsatz (€)"></div>
+      <div class="sol" hidden>
+        <p>1. Fixkosten: Gehalt 3.000 · 13 = 39.000 € · Spesen 200 · 12 = 2.400 € · sonstige 4.000 € → <b>45.400 €</b>.</p>
+        <p>2. Beide Kosten gleichsetzen: 45.400 + 0,02 · U = 0,04 · U → 45.400 = 0,02 · U → U = <b>2.270.000 €</b>.</p>
+        <p class="hint">Probe: bei 2.270.000 € kosten beide 90.800 €. Fallen: 13. Gehalt vergessen oder durch 0,04 statt durch die Differenz 0,02 teilen.</p>
+      </div>
+    </div>
+    <div class="q mc" data-answer="c" data-name="m7c">
+      <p><span class="q-label">7</span>(1 Punkt) Wer ist wann günstiger?</p>
+      <div class="options">
+        <label><input type="radio" name="m7c" id="m7ca" value="a"> Unter dem kritischen Umsatz der Reisende, darüber der Handelsvertreter</label>
+        <label><input type="radio" name="m7c" id="m7cb" value="b"> Der Reisende ist immer günstiger, weil seine Provision kleiner ist</label>
+        <label><input type="radio" name="m7c" id="m7cc" value="c"> Unter dem kritischen Umsatz der Handelsvertreter, darüber der Reisende</label>
+        <label><input type="radio" name="m7c" id="m7cd" value="d"> Der Handelsvertreter ist immer günstiger, weil er kein Gehalt bekommt</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: c.</span> Bei kleinem Umsatz drücken die Fixkosten des Reisenden. Erst über 2.270.000 € gleicht seine niedrigere Provision das aus, dann ist er günstiger.</p></div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">7</span>(1 Punkt) Weiterer Gesichtspunkt neben den Kosten</p>
+      <textarea class="prose" id="t7d" aria-label="7 weiterer Gesichtspunkt"></textarea>
+      <div class="sol" hidden>
+        <p>Zum Beispiel: Den Reisenden kannst du anweisen und auch anderswo einsetzen, der Vertreter ist selbstständig. Ein Vertreter vor Ort kennt dafür oft den spanischen bzw. italienischen Markt schon gut. Auch das Bild beim Kunden kann eine Rolle spielen.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb7d" data-points="1"> ein sinnvoller Gesichtspunkt (Weisungsrecht, Marktkenntnis, Einsetzbarkeit, Image …) (+1)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="actions">
+    <button type="button" class="primary" id="checkBottom">Prüfen</button>
+    <button type="button" id="resetBtn">Alles löschen</button>
+    <span class="confirm" id="resetConfirm" hidden>Wirklich alle Antworten löschen?
+      <button type="button" id="resetYes">Ja, löschen</button>
+      <button type="button" id="resetNo">Abbrechen</button>
+    </span>
+  </div>
+  <p class="hint" style="margin-top:1rem">Antwortbogen zur offiziellen Musterklausur Marketing 2025. Aufgabenstellung und offizielle Musterlösung stehen nur in Moodle; die Lösungsskizzen hier sind in eigenen Worten formuliert, alle Zahlen wurden mit Python nachgerechnet und stimmen mit der Musterlösung überein. Wo die Musterlösung keine Punkte je Teil nennt, ist die Aufteilung eine Annahme. Deine Eingaben werden nur in diesem Browser gespeichert.</p>
+  </form>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var KEY = "pk-mkt-offiziell-2025";
+  var form = document.getElementById("exam");
+  var checked = false;
+  var MAX = { 1: 12, 2: 10, 3: 6, 4: 6, 5: 6, 6: 4, 7: 4 };
+  var STARTCODE = {};
+
+  function fields() { return form.querySelectorAll("input, textarea, select"); }
+  function save() {
+    var d = {};
+    fields().forEach(function (el) { if (!el.id) return; d[el.id] = (el.type === "radio" || el.type === "checkbox") ? el.checked : el.value; });
+    d.__checked = checked;
+    try { localStorage.setItem(KEY, JSON.stringify(d)); } catch (e) {}
+  }
+  function load() {
+    var raw = null; try { raw = localStorage.getItem(KEY); } catch (e) {}
+    if (!raw) return; var d; try { d = JSON.parse(raw); } catch (e) { return; }
+    fields().forEach(function (el) {
+      if (!el.id || !(el.id in d)) return;
+      if (el.type === "radio" || el.type === "checkbox") el.checked = !!d[el.id]; else el.value = d[el.id];
+    });
+    if (d.__checked) grade();
+  }
+  form.addEventListener("input", function (ev) { save(); if (checked && ev.target.classList.contains("rb")) grade(); });
+  form.addEventListener("change", save);
+  form.addEventListener("submit", function (e) { e.preventDefault(); });
+
+  function normText(s) { return String(s).replace(/\r/g, "").split("\n").map(function (l) { return l.trim().replace(/\s+/g, " "); }).filter(function (l) { return l; }).join("\n"); }
+  function normGap(s) { return String(s).replace(/\s+/g, "").replace(/'/g, "\"").toLowerCase(); }
+  // Zahl aus deutscher Schreibweise lesen: "1.200", "12,5 %", "48,60 €", "-3"
+  function parseNum(s) {
+    var t = String(s).replace(/[\s€%]/g, "").replace(/[^0-9,.\-]/g, "");
+    if (t.indexOf(",") !== -1) t = t.replace(/\./g, "").replace(",", ".");
+    else if (/^-?\d{1,3}(\.\d{3})+$/.test(t)) t = t.replace(/\./g, "");
+    return t === "" ? NaN : parseFloat(t);
+  }
+  function numSet(s) { return (String(s).match(/-?\d+/g) || []).map(Number).sort(function (a, b) { return a - b; }).join(","); }
+  function mark(el, ok) { el.classList.remove("mark-ok", "mark-bad"); el.classList.add(ok ? "mark-ok" : "mark-bad"); }
+  function clearMarks() { document.querySelectorAll(".mark-ok, .mark-bad").forEach(function (el) { el.classList.remove("mark-ok", "mark-bad"); }); }
+  function fmt(n) { var r = Math.round(n * 10) / 10; return (r % 1 === 0 ? r.toFixed(0) : r.toFixed(1)).replace(".", ","); }
+
+  function gradeSection(sec) {
+    var s = 0;
+    // Single Choice
+    sec.querySelectorAll(".mc").forEach(function (q) {
+      var ans = q.dataset.answer, chosen = q.querySelector("input:checked"), ok = !!chosen && chosen.value === ans;
+      if (ok) s += 1;
+      q.querySelector('input[value="' + ans + '"]').parentElement.classList.add("mark-ok");
+      if (chosen && !ok) chosen.parentElement.classList.add("mark-bad");
+    });
+    // Automatisch bewertete Felder
+    sec.querySelectorAll(".auto").forEach(function (el) {
+      var kind = el.dataset.kind, answers = el.dataset.answer.split("|"), v = el.value, ok = false;
+      if (kind === "set") ok = numSet(v) === numSet(answers[0]);
+      else if (kind === "gap") ok = answers.some(function (a) { return normGap(a) === normGap(v); });
+      else if (kind === "num") { var x = parseNum(v), tol = Number(el.dataset.tol || 0.01); ok = !isNaN(x) && answers.some(function (a) { return Math.abs(parseNum(a) - x) <= tol; }); }
+      else ok = answers.some(function (a) { return normText(a) === normText(v); });
+      if (ok) s += Number(el.dataset.points);
+      mark(el, ok);
+    });
+    // Fehler finden
+    sec.querySelectorAll(".errblock").forEach(function (blk) {
+      var exp = JSON.parse(blk.dataset.expected), used = exp.map(function () { return false; });
+      var lines = blk.querySelectorAll(".eline"), types = blk.querySelectorAll(".etype");
+      lines.forEach(function (l, i) {
+        var line = parseInt(l.value, 10), t = types[i] ? types[i].value : null, hit = -1;
+        exp.forEach(function (e, k) { if (hit < 0 && !used[k] && e.line.indexOf(line) !== -1 && (!e.type || e.type === t)) hit = k; });
+        if (hit >= 0) { used[hit] = true; s += exp[hit].pts; }
+        mark(l, hit >= 0); if (types[i]) mark(types[i], hit >= 0);
+      });
+    });
+    // Selbstbewertung
+    sec.querySelectorAll(".rb").forEach(function (c) { if (c.checked) s += Number(c.dataset.points); });
+    sec.querySelectorAll(".sol").forEach(function (x) { x.hidden = false; });
+    return Math.min(Math.round(s * 100) / 100, Number(sec.dataset.max));
+  }
+
+  function grade() {
+    checked = true; clearMarks();
+    var total = 0;
+    document.querySelectorAll("section.task").forEach(function (sec) {
+      var k = sec.dataset.task, got = gradeSection(sec), max = MAX[k]; total += got;
+      var b = sec.querySelector(".badge"); b.hidden = false;
+      b.className = "badge " + (got >= max - 0.001 ? "full" : got > 0 ? "part" : "none");
+      b.textContent = fmt(got) + " / " + max + " P";
+      document.getElementById("ov" + k).textContent = fmt(got) + " / " + max;
+    });
+    document.getElementById("ovSum").textContent = fmt(total) + " / 48";
+    document.getElementById("scoreTop").textContent = fmt(total) + " / 48 Punkte";
+    var res = document.getElementById("result"); res.hidden = false;
+    res.innerHTML = '<div class="big">' + fmt(total) + ' von 48 Punkten</div><p>' + (total >= 24 ? "Bestanden (ab 24 Punkten)." : "Noch nicht bestanden. Ab 24 Punkten ist es geschafft.") +
+      '</p><p class="hint">Bei Erklärungen, Korrekturen und eigenem Code sind jetzt die Musterlösungen mit Häkchen eingeblendet. Hak ab, was bei dir stimmt, die Punkte rechnen sich sofort neu. Mit „Lösungen ausblenden“ versteckst du alles wieder, deine Antworten bleiben.</p>';
+    document.getElementById("hideTop").hidden = false;
+    save();
+  }
+
+  function hideSolutions() {
+    checked = false; clearMarks();
+    document.querySelectorAll(".sol").forEach(function (x) { x.hidden = true; });
+    document.querySelectorAll(".badge").forEach(function (b) { b.hidden = true; });
+    document.getElementById("result").hidden = true;
+    Object.keys(MAX).forEach(function (k) { document.getElementById("ov" + k).textContent = MAX[k]; });
+    document.getElementById("ovSum").textContent = "48";
+    document.getElementById("scoreTop").textContent = "noch nicht geprüft";
+    document.getElementById("hideTop").hidden = true;
+    save();
+  }
+
+  function goCheck() { grade(); document.getElementById("result").scrollIntoView({ block: "start" }); }
+  document.getElementById("checkTop").addEventListener("click", goCheck);
+  document.getElementById("checkBottom").addEventListener("click", goCheck);
+  document.getElementById("hideTop").addEventListener("click", function () { hideSolutions(); window.scrollTo(0, 0); });
+
+  var rc = document.getElementById("resetConfirm");
+  document.getElementById("resetBtn").addEventListener("click", function () { rc.hidden = false; });
+  document.getElementById("resetNo").addEventListener("click", function () { rc.hidden = true; });
+  document.getElementById("resetYes").addEventListener("click", function () {
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    form.reset(); Object.keys(STARTCODE).forEach(function (id) { document.getElementById(id).value = STARTCODE[id]; });
+    hideSolutions(); rc.hidden = true; stopTimer(); remaining = 2880; renderTimer(); timerBtn.textContent = "Zeit starten";
+  });
+
+  document.querySelectorAll("textarea.code").forEach(function (ta) {
+    ta.addEventListener("keydown", function (e) {
+      if (e.key === "Tab" && !e.shiftKey) { e.preventDefault(); var s = ta.selectionStart, en = ta.selectionEnd;
+        ta.value = ta.value.slice(0, s) + "    " + ta.value.slice(en); ta.selectionStart = ta.selectionEnd = s + 4; save(); }
+    });
+  });
+
+  var remaining = 2880, handle = null, timerEl = document.getElementById("timer"), timerBtn = document.getElementById("timerBtn");
+  function renderTimer() { var m = Math.floor(remaining / 60), s = remaining % 60; timerEl.textContent = String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0"); timerEl.classList.toggle("low", remaining <= 300); }
+  function stopTimer() { if (handle) { clearInterval(handle); handle = null; } }
+  timerBtn.addEventListener("click", function () {
+    if (handle) { stopTimer(); timerBtn.textContent = "Weiter"; return; }
+    if (remaining <= 0) remaining = 2880;
+    handle = setInterval(function () { remaining -= 1; renderTimer(); if (remaining <= 0) { stopTimer(); timerBtn.textContent = "Neu starten"; timerEl.textContent = "00:00 Zeit um"; } }, 1000);
+    timerBtn.textContent = "Pause";
+  });
+  renderTimer();
+  load();
+})();
+</script>

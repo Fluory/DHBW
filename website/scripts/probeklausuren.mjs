@@ -15,7 +15,9 @@ export const EXAMS = [
   { file: "probeklausur_programmierung_2.html", slug: "programmierung-2", fach: "programmierung", short: "PROG" },
   { file: "probeklausur_recht.html", slug: "recht", fach: "recht", short: "RECHT" },
   { file: "probeklausur_bwl.html", slug: "bwl", fach: "bwl", short: "BWL" },
+  { file: "offiziell_bwl.html", slug: "bwl-offiziell", fach: "bwl", short: "BWL" },
   { file: "probeklausur_marketing.html", slug: "marketing", fach: "marketing", short: "MKT" },
+  { file: "offiziell_marketing.html", slug: "marketing-offiziell", fach: "marketing", short: "MKT" },
   { file: "probeklausur_mathe.html", slug: "mathematik", fach: "mathematik", short: "MATHE" },
 ];
 

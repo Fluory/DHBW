@@ -99,7 +99,11 @@ export default async function SubjectPage({ params }: { params: Promise<Params> 
                 {/* Eigenständige HTML-Seite aus public/, daher <a> statt <Link> */}
                 <a href={exam.href} className="sources-link">
                   <span className="chapter-title">{exam.label}</span>
-                  <span className="chapter-summary">Zum Ausfüllen mit Timer: Antworten eintragen, auf „Prüfen“ tippen, Punkte und Musterlösung sehen. Dein Stand bleibt in diesem Browser gespeichert.</span>
+                  <span className="chapter-summary">
+                    {exam.official
+                      ? "Die Aufgaben stehen im Moodle-PDF (oben verlinkt). Hier trägst du deine Ergebnisse ein, Rechenaufgaben werden automatisch bewertet, Textaufgaben bewertest du selbst mit den Lösungspunkten."
+                      : "Zum Ausfüllen mit Timer: Antworten eintragen, auf „Prüfen“ tippen, Punkte und Musterlösung sehen. Dein Stand bleibt in diesem Browser gespeichert."}
+                  </span>
                 </a>
               </li>
             ))}

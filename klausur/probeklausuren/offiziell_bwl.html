@@ -1,0 +1,553 @@
+<title>BWL Musterklausur 2025 Antwortbogen</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one calm exam column like a printed exam sheet; slim sticky bar with timer and score. */
+:root {
+  --bg: #ffffff; --paper: #f6f7f9; --fg: #1d2129; --muted: #5d6470; --line: #e1e4ea;
+  --accent: #3b4fa0; --ok: #2d5fc4; --ok-soft: #e9f0fd; --bad: #b8432f; --bad-soft: #fbece8;
+  --half: #a8690f; --half-soft: #fbf3e4; --code-bg: #f3f4f7;
+  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --radius: 8px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12141a; --paper: #191c23; --fg: #e7e9ee; --muted: #9aa1ad; --line: #2b2f39; --accent: #9fb0ff;
+    --ok: #8fb4ff; --ok-soft: #18233b; --bad: #ff9a85; --bad-soft: #3a1f1a; --half: #f0b85a; --half-soft: #33280f; --code-bg: #1b1e26;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12141a; --paper: #191c23; --fg: #e7e9ee; --muted: #9aa1ad; --line: #2b2f39; --accent: #9fb0ff;
+  --ok: #8fb4ff; --ok-soft: #18233b; --bad: #ff9a85; --bad-soft: #3a1f1a; --half: #f0b85a; --half-soft: #33280f; --code-bg: #1b1e26;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 16px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 46rem; margin: 0 auto; padding-block: 1.5rem 5rem; }
+h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 .35rem; text-wrap: balance; }
+h2 { font-size: 1.2rem; margin: 0; text-wrap: balance; }
+.lead { color: var(--muted); margin: 0 0 1rem; }
+.meta { display: flex; flex-wrap: wrap; gap: .4rem .8rem; font-size: .9rem; color: var(--muted); margin-bottom: 1rem; }
+.meta b { color: var(--fg); }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; padding-block: .6rem; margin-bottom: 1.5rem; }
+.timer { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 1.05rem; min-width: 4.5ch; }
+.timer.low { color: var(--bad); }
+.score { margin-left: auto; font-weight: 600; font-variant-numeric: tabular-nums; }
+button { font: inherit; font-size: .9rem; border-radius: 6px; padding: .4rem .8rem; cursor: pointer; border: 1px solid var(--line); background: var(--bg); color: var(--fg); }
+button:hover { border-color: var(--muted); }
+button.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); font-weight: 600; }
+button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.overview { width: 100%; border-collapse: collapse; font-size: .92rem; margin-bottom: 2rem; font-variant-numeric: tabular-nums; }
+.overview th, .overview td { text-align: left; padding: .35rem .5rem; border-bottom: 1px solid var(--line); }
+.overview td:last-child, .overview th:last-child { text-align: right; }
+.overview tr.sum td { font-weight: 700; border-bottom: 0; }
+section.task { border-top: 2px solid var(--fg); padding-top: .9rem; margin-top: 2.5rem; }
+.task-head { display: flex; align-items: baseline; gap: .75rem; flex-wrap: wrap; margin-bottom: .6rem; }
+.pts { font-size: .85rem; color: var(--muted); }
+.badge { margin-left: auto; font-size: .85rem; font-weight: 600; padding: .1rem .55rem; border-radius: 999px; font-variant-numeric: tabular-nums; }
+.badge.full { background: var(--ok-soft); color: var(--ok); } .badge.part { background: var(--half-soft); color: var(--half); } .badge.none { background: var(--bad-soft); color: var(--bad); }
+.q { padding-block: .9rem; border-bottom: 1px solid var(--line); }
+.q:last-child { border-bottom: 0; }
+.q > p { margin: 0 0 .5rem; }
+.q-label { font-weight: 600; margin-right: .3rem; }
+.options { display: grid; gap: .3rem; }
+.options label { display: flex; gap: .5rem; align-items: flex-start; cursor: pointer; padding: .25rem .4rem; border-radius: 6px; }
+.options label:hover { background: var(--paper); }
+.options input { margin-top: .3rem; }
+code { font-family: var(--font-mono); font-size: .88em; background: var(--code-bg); padding: 0 .25em; border-radius: 3px; }
+pre { font-family: var(--font-mono); font-size: .86rem; line-height: 1.5; background: var(--code-bg); border: 1px solid var(--line); border-radius: var(--radius); padding: .75rem .9rem; overflow-x: auto; margin: .4rem 0 .7rem; }
+pre code { background: none; padding: 0; }
+.ln { color: var(--muted); user-select: none; }
+textarea, input[type="text"], input[type="number"], select { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: .4rem .55rem; }
+textarea { width: 100%; font-family: var(--font-mono); font-size: .88rem; min-height: 4.5rem; resize: vertical; }
+textarea.code { min-height: 11rem; tab-size: 4; }
+textarea.prose { font-family: var(--font-body); font-size: .95rem; }
+input.gap { font-family: var(--font-mono); width: 11rem; max-width: 100%; }
+input.short { font-family: var(--font-mono); width: 8rem; }
+input[type="number"] { width: 6rem; }
+.row { display: flex; flex-wrap: wrap; gap: .5rem .9rem; align-items: center; margin-bottom: .45rem; }
+.row > span.lbl { min-width: 7rem; color: var(--muted); font-size: .92rem; }
+.grid-err { display: grid; grid-template-columns: 5rem 9.5rem minmax(0, 1fr); gap: .45rem; align-items: center; }
+.grid-err.two { grid-template-columns: 5rem minmax(0, 1fr); }
+.grid-err .h { font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.grid-err input[type="text"] { width: 100%; font-family: var(--font-mono); font-size: .86rem; }
+@media (max-width: 34rem) { .grid-err { grid-template-columns: 4.5rem minmax(0, 1fr); } .grid-err .fix, .grid-err .hfix { grid-column: 1 / -1; } }
+.mark-ok { background: var(--ok-soft) !important; } .mark-bad { background: var(--bad-soft) !important; }
+input.mark-ok, select.mark-ok, textarea.mark-ok { border-color: var(--ok); } input.mark-bad, select.mark-bad, textarea.mark-bad { border-color: var(--bad); }
+.sol { margin-top: .6rem; padding: .7rem .85rem; border-radius: var(--radius); background: var(--paper); border: 1px solid var(--line); font-size: .93rem; }
+.sol p { margin: .3rem 0; }
+.sol .t { font-weight: 600; }
+.rubric { display: grid; gap: .3rem; margin-top: .5rem; }
+.rubric label { display: flex; gap: .5rem; align-items: flex-start; cursor: pointer; }
+.rubric input { margin-top: .3rem; }
+.hint { color: var(--muted); font-size: .88rem; }
+.result { border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.1rem; margin: 1rem 0 1.5rem; background: var(--paper); }
+.result .big { font-size: 1.6rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.result p { margin: .3rem 0; }
+.actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 2.5rem; align-items: center; }
+.confirm { display: inline-flex; gap: .5rem; align-items: center; font-size: .9rem; }
+.table-scroll { overflow-x: auto; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+.moodle { display: inline-block; background: var(--accent); color: var(--bg); font-weight: 600; text-decoration: none; border-radius: 6px; padding: .5rem .9rem; margin: 0 .6rem .6rem 0; }
+.moodle.ghost { background: var(--bg); color: var(--accent); border: 1px solid var(--line); font-weight: 500; }
+.moodle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>BWL: offizielle Musterklausur 2025 – Antwortbogen</h1>
+    <p><a class="moodle" href="https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=190113" target="_blank" rel="noopener">Aufgabenblatt in Moodle öffnen</a><a class="moodle ghost" href="https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=191972" target="_blank" rel="noopener">Musterlösung in Moodle</a></p>
+    <p class="lead">Die Aufgaben stehen nur im Moodle-PDF, hier trägst du deine Antworten ein. So geht’s: PDF öffnen, „Zeit starten“, Aufgabe für Aufgabe lösen und deine Ergebnisse unten eintragen, am Ende „Prüfen“. Rechenergebnisse und Ankreuzfragen werden automatisch bewertet. Bei Text- und Erklärteilen erscheinen nach dem Prüfen Lösungspunkte zum Abhaken, damit bewertest du dich selbst.</p>
+    <div class="meta"><span><b>72</b> Minuten</span><span><b>72</b> Punkte</span><span>Taschenrechner bereitlegen, Rechenweg auf Papier</span><span>bestanden ab <b>36</b> (Annahme: 50 %)</span></div>
+  </header>
+
+  <div class="bar" role="region" aria-label="Zeit und Punkte">
+    <span class="timer" id="timer">72:00</span>
+    <button type="button" id="timerBtn">Zeit starten</button>
+    <button type="button" class="primary" id="checkTop">Prüfen</button>
+    <button type="button" id="hideTop" hidden>Lösungen ausblenden</button>
+    <span class="score" id="scoreTop">noch nicht geprüft</span>
+  </div>
+
+  <div id="result" class="result" hidden></div>
+
+  <table class="overview" aria-label="Aufgabenübersicht">
+    <thead><tr><th>Aufgabe</th><th>Thema</th><th>Punkte</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Werkstoffe, Kennzahlen, Güterarten</td><td id="ov1">16</td></tr>
+      <tr><td>2</td><td>Gewinnverteilung KG, UG, Organe der AG</td><td id="ov2">13</td></tr>
+      <tr><td>3</td><td>Zweipunktverfahren</td><td id="ov3">4</td></tr>
+      <tr><td>4</td><td>Deckungsbeitragsrechnung</td><td id="ov4">6</td></tr>
+      <tr><td>5</td><td>Kennzahlen, ROI, Anforderungen an Kennzahlen</td><td id="ov5">11</td></tr>
+      <tr><td>6</td><td>Optimale Bestellmenge, Meldebestand</td><td id="ov6">7</td></tr>
+      <tr><td>7</td><td>ABC-Analyse, Just in time</td><td id="ov7">9</td></tr>
+      <tr><td>8</td><td>Ziele von Standortentscheidungen</td><td id="ov8">6</td></tr>
+      <tr class="sum"><td></td><td>Summe</td><td id="ovSum">72</td></tr>
+    </tbody>
+  </table>
+
+  <form id="exam" autocomplete="off" spellcheck="false">
+
+  <!-- ================= Aufgabe 1 ================= -->
+  <section class="task" data-task="1" data-max="16">
+    <div class="task-head"><h2>Aufgabe 1 · Werkstoffe, Kennzahlen, Güterarten</h2><span class="pts">16 Punkte</span><span class="badge" hidden></span></div>
+    <p class="hint">Zahlen ohne Einheit eintragen, deutsche Schreibweise ist erlaubt (1.200,50).</p>
+    <div class="q">
+      <p><span class="q-label">1a</span>(6 Punkte) Drei Werkstoffarten mit je einem Beispiel nennen</p>
+      <textarea class="prose" id="t1a" aria-label="1a Antwort"></textarea>
+      <div class="sol" hidden>
+        <p><b>Rohstoffe</b> sind der Hauptbestandteil des Tisches, zum Beispiel Holz, Aluminium oder Kunststoff. <b>Hilfsstoffe</b> stecken auch im Produkt, aber nur als Nebenbestandteil, zum Beispiel Leim, Schrauben oder Lack. <b>Betriebsstoffe</b> gehen nicht ins Produkt ein, sie halten die Fertigung am Laufen, zum Beispiel Strom oder Schmieröl für die Maschinen.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb1a1" data-points="1"> Rohstoffe genannt (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb1a2" data-points="1"> passendes Beispiel für Rohstoffe (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb1a3" data-points="1"> Hilfsstoffe genannt (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb1a4" data-points="1"> passendes Beispiel für Hilfsstoffe (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb1a5" data-points="1"> Betriebsstoffe genannt (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb1a6" data-points="1"> passendes Beispiel für Betriebsstoffe (+1)</label>
+        </div>
+      </div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">1b</span>(6 Punkte) Drei Kennzahlen aus den Jahresdaten berechnen (je 2 Punkte)</p>
+      <div class="row"><span class="lbl">Wirtschaftlichkeit</span><input type="text" class="short auto" id="t1b1" data-kind="num" data-answer="1,125" data-tol="0.03" data-points="2" aria-label="Wirtschaftlichkeit"></div>
+      <div class="row"><span class="lbl">Arbeitsproduktivität</span><input type="text" class="short auto" id="t1b2" data-kind="num" data-answer="1,5" data-tol="0.01" data-points="2" aria-label="Arbeitsproduktivität"> <span class="hint">Stück je Stunde</span></div>
+      <div class="row"><span class="lbl">Eigenkapitalrentabilität</span><input type="text" class="short auto" id="t1b3" data-kind="num" data-answer="20" data-tol="0.05" data-points="2" aria-label="Eigenkapitalrentabilität"> <span class="hint">%</span></div>
+      <div class="sol" hidden>
+        <p>Zuerst Umsatz und Kosten: Umsatz = 120.000 · 300 = 36 Mio. €. Kosten = 2 Mio. + 120.000 · 250 = 32 Mio. €. Gewinn = 4 Mio. €.</p>
+        <p><b>Wirtschaftlichkeit</b> = Umsatz / Kosten = 36 / 32 = <b>1,125</b> (mit einer Nachkommastelle 1,1, beides zählt). <b>Arbeitsproduktivität</b> = Stück / Stunden = 120.000 / 80.000 = <b>1,5 Stück je Stunde</b>. <b>EK-Rentabilität</b> = Gewinn / Eigenkapital = 4 / 20 = <b>20 %</b>.</p>
+        <p class="hint">Falle: Die Produktivität rechnet nur mit Mengen. Sobald Euro im Bruch stehen, ist es Wirtschaftlichkeit oder Rentabilität.</p>
+      </div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">1c</span>(4 Punkte) Vier Inputgüter klassifizieren. Hier wählst du je Gut die passende Kombination (je 1 Punkt).</p>
+    </div>
+    <div class="q mc" data-answer="c" data-name="m1c1">
+      <p><span class="q-label"></span>Gut 1 (Wohnhaus der Familie)</p>
+      <div class="options">
+        <label><input type="radio" name="m1c1" id="m1c1a" value="a"> Gebrauchsgut und Investitionsgut</label>
+        <label><input type="radio" name="m1c1" id="m1c1b" value="b"> Verbrauchsgut und Investitionsgut</label>
+        <label><input type="radio" name="m1c1" id="m1c1c" value="c"> Gebrauchsgut und Konsumgut</label>
+        <label><input type="radio" name="m1c1" id="m1c1d" value="d"> Verbrauchsgut und Konsumgut</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: c.</span> Das Haus wird jahrzehntelang genutzt (Gebrauchsgut), und zwar von einem Privathaushalt (Konsumgut).</p></div>
+    </div>
+    <div class="q mc" data-answer="b" data-name="m1c2">
+      <p><span class="q-label"></span>Gut 2 (Strom im Industriebetrieb)</p>
+      <div class="options">
+        <label><input type="radio" name="m1c2" id="m1c2a" value="a"> Gebrauchsgut und Investitionsgut</label>
+        <label><input type="radio" name="m1c2" id="m1c2b" value="b"> Verbrauchsgut und Investitionsgut</label>
+        <label><input type="radio" name="m1c2" id="m1c2c" value="c"> Gebrauchsgut und Konsumgut</label>
+        <label><input type="radio" name="m1c2" id="m1c2d" value="d"> Verbrauchsgut und Konsumgut</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: b.</span> Strom ist nach einmaliger Nutzung weg (Verbrauchsgut), ein Unternehmen setzt ihn ein (Investitionsgut).</p></div>
+    </div>
+    <div class="q mc" data-answer="a" data-name="m1c3">
+      <p><span class="q-label"></span>Gut 3 (Klimaanlage der Bank)</p>
+      <div class="options">
+        <label><input type="radio" name="m1c3" id="m1c3a" value="a"> Gebrauchsgut und Investitionsgut</label>
+        <label><input type="radio" name="m1c3" id="m1c3b" value="b"> Verbrauchsgut und Investitionsgut</label>
+        <label><input type="radio" name="m1c3" id="m1c3c" value="c"> Gebrauchsgut und Konsumgut</label>
+        <label><input type="radio" name="m1c3" id="m1c3d" value="d"> Verbrauchsgut und Konsumgut</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: a.</span> Läuft viele Jahre (Gebrauchsgut), die Bank ist ein Unternehmen (Investitionsgut).</p></div>
+    </div>
+    <div class="q mc" data-answer="d" data-name="m1c4">
+      <p><span class="q-label"></span>Gut 4 (Katzenfutter im Haushalt)</p>
+      <div class="options">
+        <label><input type="radio" name="m1c4" id="m1c4a" value="a"> Gebrauchsgut und Investitionsgut</label>
+        <label><input type="radio" name="m1c4" id="m1c4b" value="b"> Verbrauchsgut und Investitionsgut</label>
+        <label><input type="radio" name="m1c4" id="m1c4c" value="c"> Gebrauchsgut und Konsumgut</label>
+        <label><input type="radio" name="m1c4" id="m1c4d" value="d"> Verbrauchsgut und Konsumgut</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: d.</span> Einmal gefressen, ist es weg (Verbrauchsgut), genutzt im Privathaushalt (Konsumgut). Im PDF kreuzt du die zutreffenden Spalten an und setzt bei den anderen einen Strich.</p></div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 2 ================= -->
+  <section class="task" data-task="2" data-max="13">
+    <div class="task-head"><h2>Aufgabe 2 · Gewinnverteilung KG, UG, Organe der AG</h2><span class="pts">13 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q">
+      <p><span class="q-label">2a</span>(6 Punkte) Gesamtgewinn der drei KG-Gesellschafter ermitteln (je 2 Punkte)</p>
+      <div class="row"><span class="lbl">Kommanditistin A</span><input type="text" class="short auto" id="t2a1" data-kind="num" data-answer="99000" data-tol="1" data-points="2" aria-label="Kommanditistin A"> <span class="hint">€</span></div>
+      <div class="row"><span class="lbl">Kommanditistin B</span><input type="text" class="short auto" id="t2a2" data-kind="num" data-answer="198000" data-tol="1" data-points="2" aria-label="Kommanditistin B"> <span class="hint">€</span></div>
+      <div class="row"><span class="lbl">Komplementär C</span><input type="text" class="short auto" id="t2a3" data-kind="num" data-answer="153000" data-tol="1" data-points="2" aria-label="Komplementär C"> <span class="hint">€</span></div>
+      <div class="sol" hidden>
+        <p>1. Vergütung für C aufs Jahr: 12 · 10.000 = 120.000 €. 2. Rest = 450.000 − 120.000 = 330.000 €. 3. Einlagen zusammen 500.000 € → Schlüssel 30 % : 60 % : 10 %.</p>
+        <p>4. A = 0,3 · 330.000 = <b>99.000 €</b> · B = 0,6 · 330.000 = <b>198.000 €</b> · C = 0,1 · 330.000 + 120.000 = 33.000 + 120.000 = <b>153.000 €</b>. Probe: Summe 450.000 €.</p>
+        <p class="hint">Fallen: Monatsbetrag nicht mal 12 nehmen · die Vergütung vor der Verteilung nicht abziehen · sie bei C am Ende vergessen.</p>
+      </div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">2b</span>(4 Punkte) Zwangsthesaurierung bei der UG (haftungsbeschränkt) erklären</p>
+      <textarea class="prose" id="t2b" aria-label="2b Antwort"></textarea>
+      <div class="sol" hidden>
+        <p>Die UG darf mit sehr wenig Stammkapital starten (ab 1 €). Als Ausgleich darf sie ihren Gewinn nicht komplett ausschütten: Ein Viertel des Jahresüberschusses (nach Abzug eines Verlustvortrags) muss jedes Jahr in eine gesetzliche Rücklage. Das gilt so lange, bis über eine Kapitalerhöhung aus diesen Rücklagen ein Stammkapital von 25.000 € erreicht ist. Dann kann die UG zur normalen GmbH werden (umfirmieren), die Pflicht entfällt.</p>
+        <p class="hint">Die Musterlösung nennt keine Punkteaufteilung. Die Aufteilung unten ist eine Annahme.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb2b1" data-points="1"> 25 % des Jahresüberschusses müssen einbehalten werden (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb2b2" data-points="1"> Einstellung in eine gesetzliche Rücklage (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb2b3" data-points="1"> gilt, bis das Stammkapital per Kapitalerhöhung aus Gesellschaftsmitteln 25.000 € erreicht (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb2b4" data-points="1"> danach Umfirmierung zur GmbH möglich (+1)</label>
+        </div>
+      </div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">2c</span>(3 Punkte) Organe der AG mit ihrer Funktion nennen</p>
+      <textarea class="prose" id="t2c" aria-label="2c Antwort"></textarea>
+      <div class="sol" hidden>
+        <p><b>Vorstand:</b> leitet die AG und vertritt sie nach außen. <b>Aufsichtsrat:</b> kontrolliert den Vorstand, bestellt und entlässt ihn. <b>Hauptversammlung:</b> Versammlung der Aktionäre, beschließt zum Beispiel über die Gewinnverwendung und wählt die Aktionärsvertreter im Aufsichtsrat.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb2c1" data-points="1"> Vorstand als leitendes Organ (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb2c2" data-points="1"> Aufsichtsrat als überwachendes Organ (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb2c3" data-points="1"> Hauptversammlung als beschließendes Organ (+1)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 3 ================= -->
+  <section class="task" data-task="3" data-max="4">
+    <div class="task-head"><h2>Aufgabe 3 · Zweipunktverfahren</h2><span class="pts">4 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q">
+      <p><span class="q-label">3</span>(4 Punkte) Variable Stückkosten, Fixkosten und Gesamtkosten bei 15.000 Stück bestimmen</p>
+      <div class="row"><span class="lbl">kv (2 P)</span><input type="text" class="short auto" id="t3a" data-kind="num" data-answer="100" data-tol="0.01" data-points="2" aria-label="variable Stückkosten"> <span class="hint">€ je Stück</span></div>
+      <div class="row"><span class="lbl">Kfix (1 P)</span><input type="text" class="short auto" id="t3b" data-kind="num" data-answer="10000" data-tol="1" data-points="1" aria-label="Fixkosten"> <span class="hint">€</span></div>
+      <div class="row"><span class="lbl">K(15.000) (1 P)</span><input type="text" class="short auto" id="t3c" data-kind="num" data-answer="1510000" data-tol="1" data-points="1" aria-label="Gesamtkosten bei 15.000 Stück"> <span class="hint">€</span></div>
+      <div class="sol" hidden>
+        <p>Kleinste und größte <b>Menge</b> nehmen: August (700 | 80.000) und November (1.400 | 150.000). kv = (150.000 − 80.000) / (1.400 − 700) = 70.000 / 700 = <b>100 €</b>. Kfix = 80.000 − 100 · 700 = <b>10.000 €</b>.</p>
+        <p>K(15.000) = 10.000 + 100 · 15.000 = <b>1.510.000 €</b>.</p>
+        <p class="hint">Die Musterlösung nennt keine Aufteilung der 4 Punkte, 2/1/1 ist eine Annahme. Hinweis: Der Oktoberwert liegt nicht auf dieser Geraden. Das Verfahren nimmt trotzdem nur die beiden Extremmengen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 4 ================= -->
+  <section class="task" data-task="4" data-max="6">
+    <div class="task-head"><h2>Aufgabe 4 · Deckungsbeitragsrechnung</h2><span class="pts">6 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q">
+      <p><span class="q-label">4</span>(6 Punkte) Stückdeckungsbeiträge A und B sowie Betriebsergebnis berechnen (je 2 Punkte, Annahme)</p>
+      <div class="row"><span class="lbl">db Produkt A</span><input type="text" class="short auto" id="t4a" data-kind="num" data-answer="35" data-tol="0.01" data-points="2" aria-label="db Produkt A"> <span class="hint">€</span></div>
+      <div class="row"><span class="lbl">db Produkt B</span><input type="text" class="short auto" id="t4b" data-kind="num" data-answer="50" data-tol="0.01" data-points="2" aria-label="db Produkt B"> <span class="hint">€</span></div>
+      <div class="row"><span class="lbl">Betriebsergebnis</span><input type="text" class="short auto" id="t4c" data-kind="num" data-answer="-2500" data-tol="1" data-points="2" aria-label="Betriebsergebnis"> <span class="hint">€ (Verlust mit Minus)</span></div>
+      <div class="sol" hidden>
+        <p>A: Preis = 262.500 / 3.500 = 75 €, kv = 140.000 / 3.500 = 40 € → db = <b>35 €</b>. B: Preis = 285.000 / 3.000 = 95 €, kv = 135.000 / 3.000 = 45 € → db = <b>50 €</b>.</p>
+        <p>DB gesamt = 35 · 3.500 + 50 · 3.000 = 122.500 + 150.000 = 272.500 €. Betriebsergebnis = 272.500 − 275.000 = <b>−2.500 €</b>, also ein Verlust.</p>
+        <p class="hint">Falle: Das Minus vergessen. Die Fixkosten werden erst ganz am Ende vom gesamten Deckungsbeitrag abgezogen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 5 ================= -->
+  <section class="task" data-task="5" data-max="11">
+    <div class="task-head"><h2>Aufgabe 5 · Kennzahlen und ROI</h2><span class="pts">11 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q">
+      <p><span class="q-label">5a</span>(8 Punkte) Gewinn, Kapitalumschlag, Umsatzrentabilität, ROI und Fremdkapital berechnen</p>
+      <div class="row"><span class="lbl">Gewinn (2 P)</span><input type="text" class="short auto" id="t5a1" data-kind="num" data-answer="300000" data-tol="1" data-points="2" aria-label="Gewinn"> <span class="hint">€</span></div>
+      <div class="row"><span class="lbl">Kapitalumschlag (2 P)</span><input type="text" class="short auto" id="t5a2" data-kind="num" data-answer="125" data-tol="0.1" data-points="2" aria-label="Kapitalumschlag"> <span class="hint">%</span></div>
+      <div class="row"><span class="lbl">Umsatzrentabilität (1 P)</span><input type="text" class="short auto" id="t5a3" data-kind="num" data-answer="10" data-tol="0.1" data-points="1" aria-label="Umsatzrentabilität"> <span class="hint">%</span></div>
+      <div class="row"><span class="lbl">ROI (2 P)</span><input type="text" class="short auto" id="t5a4" data-kind="num" data-answer="12,5" data-tol="0.1" data-points="2" aria-label="Return on Investment"> <span class="hint">%</span></div>
+      <div class="row"><span class="lbl">Fremdkapital (1 P)</span><input type="text" class="short auto" id="t5a5" data-kind="num" data-answer="1500000" data-tol="1" data-points="1" aria-label="Fremdkapital"> <span class="hint">€</span></div>
+      <div class="sol" hidden>
+        <p>Kosten = 800.000 + 500.000 + 600.000 + 800.000 = 2.700.000 € → Gewinn = 3.000.000 − 2.700.000 = <b>300.000 €</b>. Gesamtkapital = Anlage- + Umlaufvermögen = 2.400.000 €.</p>
+        <p>Kapitalumschlag = 3.000.000 / 2.400.000 = 1,25 = <b>125,0 %</b>. Umsatzrentabilität = 300.000 / 3.000.000 = <b>10,0 %</b>. ROI = 10 % · 1,25 = <b>12,5 %</b> (Probe: 300.000 / 2.400.000). Fremdkapital = 2.400.000 − 900.000 = <b>1.500.000 €</b>.</p>
+        <p class="hint">Die Musterlösung nennt keine Aufteilung der 8 Punkte, die Gewichtung hier ist eine Annahme. Falle: Mit dem Eigenkapital statt dem Gesamtkapital käme die EK-Rentabilität heraus (33,3 %), nicht der ROI.</p>
+      </div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">5b</span>(3 Punkte) Drei heutige Anforderungen an Kennzahlen nennen</p>
+      <textarea class="prose" id="t5b" aria-label="5b Antwort"></textarea>
+      <div class="sol" hidden>
+        <p>Je 1 Punkt, drei davon: Kennzahlen sollen <b>aktuell</b> sein · <b>schnell abrufbar</b> (kurzfristig verfügbar) · <b>grafisch</b> gut aufbereitet · bei Bedarf <b>spontan erzeugbar</b> (ad hoc).</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb5b1" data-points="1"> erste passende Anforderung (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb5b2" data-points="1"> zweite passende Anforderung (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb5b3" data-points="1"> dritte passende Anforderung (+1)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 6 ================= -->
+  <section class="task" data-task="6" data-max="7">
+    <div class="task-head"><h2>Aufgabe 6 · Optimale Bestellmenge und Meldebestand</h2><span class="pts">7 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q">
+      <p><span class="q-label">6a</span>(4 Punkte) Optimale Bestellmenge und Anzahl Bestellungen pro Jahr berechnen (je 2 Punkte, Annahme)</p>
+      <div class="row"><span class="lbl">optimale Bestellmenge</span><input type="text" class="short auto" id="t6a1" data-kind="num" data-answer="86" data-tol="0.5" data-points="2" aria-label="optimale Bestellmenge"> <span class="hint">Paletten</span></div>
+      <div class="row"><span class="lbl">Bestellungen im Jahr</span><input type="text" class="short auto" id="t6a2" data-kind="num" data-answer="78" data-tol="0.5" data-points="2" aria-label="Bestellungen im Jahr"></div>
+      <div class="sol" hidden>
+        <p>Halbjahresabfluss = 600 + 700 + 500 + 400 + 550 + 600 = 3.350 Paletten → Jahresbedarf = 6.700 Paletten.</p>
+        <p>Andler: xopt = √(2 · 6.700 · 400 / (6.000 · 0,12)) = √(5.360.000 / 720) = √7.444,4 = 86,28 ≈ <b>86 Paletten</b>. Bestellungen = 6.700 / 86 = 77,9 ≈ <b>78</b>.</p>
+        <p class="hint">Fallen: Halbjahr nicht verdoppeln (dann 61) · 12 statt 0,12 einsetzen · die Wurzel vergessen. Die Musterlösung schreibt „Stück“, gemeint sind Paletten.</p>
+      </div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">6b</span>(3 Punkte) Meldebestand mit Sicherheitsbestand berechnen</p>
+      <div class="row"><span class="lbl">Meldebestand</span><input type="text" class="short auto" id="t6b" data-kind="num" data-answer="282" data-tol="0.5" data-points="3" aria-label="Meldebestand"> <span class="hint">Paletten</span></div>
+      <div class="sol" hidden>
+        <p>Tagesverbrauch = 3.350 / 130 = 25,77 Paletten (durch die 130 Abflusstage teilen, nicht durch 180). Meldebestand = Sicherheitsbestand + Tagesverbrauch · Wiederbeschaffungszeit = 50 + 25,77 · 9 = 281,9 ≈ <b>282 Paletten</b>.</p>
+        <p class="hint">Wer den Tagesverbrauch vorher auf 26 rundet, kommt auf 284. Die Musterlösung rechnet ungerundet weiter (282), deshalb zählt hier nur 282.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 7 ================= -->
+  <section class="task" data-task="7" data-max="9">
+    <div class="task-head"><h2>Aufgabe 7 · ABC-Analyse und Just in time</h2><span class="pts">9 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q">
+      <p><span class="q-label">7a</span>(6 Punkte) Granulat per ABC-Analyse einordnen, JIT-Vorschlag mit zwei Gründen bewerten</p>
+      <div class="row"><span class="lbl">Verbrauchswert (1 P)</span><input type="text" class="short auto" id="t7a1" data-kind="num" data-answer="43,75|43750000" data-tol="0.01" data-points="1" aria-label="Verbrauchswert in Mio. Euro"> <span class="hint">Mio. €</span></div>
+      <div class="row"><span class="lbl">Wertanteil (1 P)</span><input type="text" class="short auto" id="t7a2" data-kind="num" data-answer="48,61" data-tol="0.005" data-points="1" aria-label="Wertanteil in Prozent"> <span class="hint">%, 2 Nachkommastellen</span></div>
+      <div class="row"><span class="lbl">Klasse (1 P)</span><input type="text" class="gap auto" id="t7a3" data-kind="gap" data-answer="A|A-Gut|A-Teil|A-Güter|A-Material" data-points="1" placeholder="A, B oder C" aria-label="ABC-Klasse"></div>
+      <p class="hint">Deine Stellungnahme zum JIT-Vorschlag mit zwei Begründungen:</p>
+      <textarea class="prose" id="t7a4" aria-label="7a Stellungnahme"></textarea>
+      <div class="sol" hidden>
+        <p>Verbrauchswert = 25.000 t · 1.750 € = 43.750.000 € = <b>43,75 Mio. €</b>. Wertanteil = 43,75 / 90 = <b>48,61 %</b>. Knapp die Hälfte des gesamten Materialwerts bei nur einer von zehn Positionen → klar ein <b>A-Gut</b>.</p>
+        <p>Stellungnahme: Der Vorschlag ist <b>sinnvoll</b>. Grund 1: Als sehr wertvolles A-Gut bindet das Granulat im Lager viel Kapital und verursacht hohe Lagerkosten, die bei fertigungssynchroner Anlieferung weitgehend wegfallen. Grund 2: Der Bedarf ist sehr groß und über das ganze Jahr gleichmäßig, damit lässt er sich gut planen und in festen Takten anliefern.</p>
+        <p class="hint">Die Musterlösung nennt keine Punkteaufteilung, 1/1/1 + 3 Häkchen ist eine Annahme.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb7a1" data-points="1"> Vorschlag begründet befürwortet (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb7a2" data-points="1"> Grund: hohe Lager- und Kapitalbindungskosten fallen weg (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb7a3" data-points="1"> Grund: große, gleichmäßige, gut planbare Verbrauchsmenge (+1)</label>
+        </div>
+      </div>
+    </div>
+    <div class="q">
+      <p><span class="q-label">7b</span>(3 Punkte) Zwei Nachteile von Just in time nennen</p>
+      <textarea class="prose" id="t7b" aria-label="7b Antwort"></textarea>
+      <div class="sol" hidden>
+        <p>Zwei davon: starke <b>Abhängigkeit vom Lieferanten</b> · <b>höhere Einkaufspreise</b>, weil der Lieferant Lager und Termintreue einpreist · <b>Umweltbelastung</b> durch viele kleine Transporte · Produktionsstillstand bei Lieferstörungen (Stau, Streik).</p>
+        <p class="hint">3 Punkte für zwei Nennungen: Hier zählt jeder Nachteil 1,5 Punkte (Annahme).</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb7b1" data-points="1.5"> erster passender Nachteil (+1,5)</label>
+          <label><input type="checkbox" class="rb" id="rb7b2" data-points="1.5"> zweiter passender Nachteil (+1,5)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 8 ================= -->
+  <section class="task" data-task="8" data-max="6">
+    <div class="task-head"><h2>Aufgabe 8 · Ziele von Standortentscheidungen</h2><span class="pts">6 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q">
+      <p><span class="q-label">8</span>(6 Punkte) Drei Zielkategorien bei Standortentscheidungen mit Beispiel erklären</p>
+      <textarea class="prose" id="t8" aria-label="8 Antwort"></textarea>
+      <div class="sol" hidden>
+        <p><b>Wachstumsziele:</b> einen Standort neu aufbauen oder vergrößern, zum Beispiel ein zweites Werk, um einen neuen Absatzmarkt zu erschließen oder mehr Kapazität zu haben.</p>
+        <p><b>Strukturveränderungsziele:</b> Standorte aufteilen, verlegen oder zusammenlegen, zum Beispiel die Fertigung näher an Kunden oder Lieferanten (Just in time) bringen oder wegen niedrigerer Lohn-, Transport- oder Steuerkosten umziehen.</p>
+        <p><b>Schrumpfungsziele:</b> einen Standort teilweise oder ganz schließen, zum Beispiel um Überkapazitäten abzubauen oder weil das Sortiment kleiner wird.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb81" data-points="1"> Wachstumsziele richtig erklärt (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb82" data-points="1"> Beispiel für Wachstumsziele (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb83" data-points="1"> Strukturveränderungsziele richtig erklärt (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb84" data-points="1"> Beispiel für Strukturveränderungsziele (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb85" data-points="1"> Schrumpfungsziele richtig erklärt (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb86" data-points="1"> Beispiel für Schrumpfungsziele (+1)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="actions">
+    <button type="button" class="primary" id="checkBottom">Prüfen</button>
+    <button type="button" id="resetBtn">Alles löschen</button>
+    <span class="confirm" id="resetConfirm" hidden>Wirklich alle Antworten löschen?
+      <button type="button" id="resetYes">Ja, löschen</button>
+      <button type="button" id="resetNo">Abbrechen</button>
+    </span>
+  </div>
+  <p class="hint" style="margin-top:1rem">Antwortbogen zur offiziellen Musterklausur 2025. Aufgabentext und Musterlösung stehen nur in Moodle, die Lösungswege hier sind in eigenen Worten. Alle Zahlen wurden mit Python nachgerechnet. Wo die Musterlösung keine Punkteaufteilung nennt, ist die Aufteilung eine Annahme. Deine Eingaben werden nur in diesem Browser gespeichert.</p>
+  </form>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var KEY = "pk-bwl-offiziell-2025";
+  var form = document.getElementById("exam");
+  var checked = false;
+  var MAX = { 1: 16, 2: 13, 3: 4, 4: 6, 5: 11, 6: 7, 7: 9, 8: 6 };
+  var STARTCODE = {};
+
+  function fields() { return form.querySelectorAll("input, textarea, select"); }
+  function save() {
+    var d = {};
+    fields().forEach(function (el) { if (!el.id) return; d[el.id] = (el.type === "radio" || el.type === "checkbox") ? el.checked : el.value; });
+    d.__checked = checked;
+    try { localStorage.setItem(KEY, JSON.stringify(d)); } catch (e) {}
+  }
+  function load() {
+    var raw = null; try { raw = localStorage.getItem(KEY); } catch (e) {}
+    if (!raw) return; var d; try { d = JSON.parse(raw); } catch (e) { return; }
+    fields().forEach(function (el) {
+      if (!el.id || !(el.id in d)) return;
+      if (el.type === "radio" || el.type === "checkbox") el.checked = !!d[el.id]; else el.value = d[el.id];
+    });
+    if (d.__checked) grade();
+  }
+  form.addEventListener("input", function (ev) { save(); if (checked && ev.target.classList.contains("rb")) grade(); });
+  form.addEventListener("change", save);
+  form.addEventListener("submit", function (e) { e.preventDefault(); });
+
+  function normText(s) { return String(s).replace(/\r/g, "").split("\n").map(function (l) { return l.trim().replace(/\s+/g, " "); }).filter(function (l) { return l; }).join("\n"); }
+  function normGap(s) { return String(s).replace(/\s+/g, "").replace(/'/g, "\"").toLowerCase(); }
+  // Zahl aus deutscher Schreibweise lesen: "1.200", "12,5 %", "48,60 €", "-3"
+  function parseNum(s) {
+    var t = String(s).replace(/[\s€%]/g, "").replace(/[^0-9,.\-]/g, "");
+    if (t.indexOf(",") !== -1) t = t.replace(/\./g, "").replace(",", ".");
+    else if (/^-?\d{1,3}(\.\d{3})+$/.test(t)) t = t.replace(/\./g, "");
+    return t === "" ? NaN : parseFloat(t);
+  }
+  function numSet(s) { return (String(s).match(/-?\d+/g) || []).map(Number).sort(function (a, b) { return a - b; }).join(","); }
+  function mark(el, ok) { el.classList.remove("mark-ok", "mark-bad"); el.classList.add(ok ? "mark-ok" : "mark-bad"); }
+  function clearMarks() { document.querySelectorAll(".mark-ok, .mark-bad").forEach(function (el) { el.classList.remove("mark-ok", "mark-bad"); }); }
+  function fmt(n) { var r = Math.round(n * 10) / 10; return (r % 1 === 0 ? r.toFixed(0) : r.toFixed(1)).replace(".", ","); }
+
+  function gradeSection(sec) {
+    var s = 0;
+    // Single Choice
+    sec.querySelectorAll(".mc").forEach(function (q) {
+      var ans = q.dataset.answer, chosen = q.querySelector("input:checked"), ok = !!chosen && chosen.value === ans;
+      if (ok) s += 1;
+      q.querySelector('input[value="' + ans + '"]').parentElement.classList.add("mark-ok");
+      if (chosen && !ok) chosen.parentElement.classList.add("mark-bad");
+    });
+    // Automatisch bewertete Felder
+    sec.querySelectorAll(".auto").forEach(function (el) {
+      var kind = el.dataset.kind, answers = el.dataset.answer.split("|"), v = el.value, ok = false;
+      if (kind === "set") ok = numSet(v) === numSet(answers[0]);
+      else if (kind === "gap") ok = answers.some(function (a) { return normGap(a) === normGap(v); });
+      else if (kind === "num") { var x = parseNum(v), tol = Number(el.dataset.tol || 0.01); ok = !isNaN(x) && answers.some(function (a) { return Math.abs(parseNum(a) - x) <= tol; }); }
+      else ok = answers.some(function (a) { return normText(a) === normText(v); });
+      if (ok) s += Number(el.dataset.points);
+      mark(el, ok);
+    });
+    // Fehler finden
+    sec.querySelectorAll(".errblock").forEach(function (blk) {
+      var exp = JSON.parse(blk.dataset.expected), used = exp.map(function () { return false; });
+      var lines = blk.querySelectorAll(".eline"), types = blk.querySelectorAll(".etype");
+      lines.forEach(function (l, i) {
+        var line = parseInt(l.value, 10), t = types[i] ? types[i].value : null, hit = -1;
+        exp.forEach(function (e, k) { if (hit < 0 && !used[k] && e.line.indexOf(line) !== -1 && (!e.type || e.type === t)) hit = k; });
+        if (hit >= 0) { used[hit] = true; s += exp[hit].pts; }
+        mark(l, hit >= 0); if (types[i]) mark(types[i], hit >= 0);
+      });
+    });
+    // Selbstbewertung
+    sec.querySelectorAll(".rb").forEach(function (c) { if (c.checked) s += Number(c.dataset.points); });
+    sec.querySelectorAll(".sol").forEach(function (x) { x.hidden = false; });
+    return Math.min(Math.round(s * 100) / 100, Number(sec.dataset.max));
+  }
+
+  function grade() {
+    checked = true; clearMarks();
+    var total = 0;
+    document.querySelectorAll("section.task").forEach(function (sec) {
+      var k = sec.dataset.task, got = gradeSection(sec), max = MAX[k]; total += got;
+      var b = sec.querySelector(".badge"); b.hidden = false;
+      b.className = "badge " + (got >= max - 0.001 ? "full" : got > 0 ? "part" : "none");
+      b.textContent = fmt(got) + " / " + max + " P";
+      document.getElementById("ov" + k).textContent = fmt(got) + " / " + max;
+    });
+    document.getElementById("ovSum").textContent = fmt(total) + " / 72";
+    document.getElementById("scoreTop").textContent = fmt(total) + " / 72 Punkte";
+    var res = document.getElementById("result"); res.hidden = false;
+    res.innerHTML = '<div class="big">' + fmt(total) + ' von 72 Punkten</div><p>' + (total >= 36 ? "Bestanden (ab 36 Punkten)." : "Noch nicht bestanden. Ab 36 Punkten ist es geschafft.") +
+      '</p><p class="hint">Bei Erklärungen, Korrekturen und eigenem Code sind jetzt die Musterlösungen mit Häkchen eingeblendet. Hak ab, was bei dir stimmt, die Punkte rechnen sich sofort neu. Mit „Lösungen ausblenden“ versteckst du alles wieder, deine Antworten bleiben.</p>';
+    document.getElementById("hideTop").hidden = false;
+    save();
+  }
+
+  function hideSolutions() {
+    checked = false; clearMarks();
+    document.querySelectorAll(".sol").forEach(function (x) { x.hidden = true; });
+    document.querySelectorAll(".badge").forEach(function (b) { b.hidden = true; });
+    document.getElementById("result").hidden = true;
+    Object.keys(MAX).forEach(function (k) { document.getElementById("ov" + k).textContent = MAX[k]; });
+    document.getElementById("ovSum").textContent = "72";
+    document.getElementById("scoreTop").textContent = "noch nicht geprüft";
+    document.getElementById("hideTop").hidden = true;
+    save();
+  }
+
+  function goCheck() { grade(); document.getElementById("result").scrollIntoView({ block: "start" }); }
+  document.getElementById("checkTop").addEventListener("click", goCheck);
+  document.getElementById("checkBottom").addEventListener("click", goCheck);
+  document.getElementById("hideTop").addEventListener("click", function () { hideSolutions(); window.scrollTo(0, 0); });
+
+  var rc = document.getElementById("resetConfirm");
+  document.getElementById("resetBtn").addEventListener("click", function () { rc.hidden = false; });
+  document.getElementById("resetNo").addEventListener("click", function () { rc.hidden = true; });
+  document.getElementById("resetYes").addEventListener("click", function () {
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    form.reset(); Object.keys(STARTCODE).forEach(function (id) { document.getElementById(id).value = STARTCODE[id]; });
+    hideSolutions(); rc.hidden = true; stopTimer(); remaining = 4320; renderTimer(); timerBtn.textContent = "Zeit starten";
+  });
+
+  document.querySelectorAll("textarea.code").forEach(function (ta) {
+    ta.addEventListener("keydown", function (e) {
+      if (e.key === "Tab" && !e.shiftKey) { e.preventDefault(); var s = ta.selectionStart, en = ta.selectionEnd;
+        ta.value = ta.value.slice(0, s) + "    " + ta.value.slice(en); ta.selectionStart = ta.selectionEnd = s + 4; save(); }
+    });
+  });
+
+  var remaining = 4320, handle = null, timerEl = document.getElementById("timer"), timerBtn = document.getElementById("timerBtn");
+  function renderTimer() { var m = Math.floor(remaining / 60), s = remaining % 60; timerEl.textContent = String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0"); timerEl.classList.toggle("low", remaining <= 300); }
+  function stopTimer() { if (handle) { clearInterval(handle); handle = null; } }
+  timerBtn.addEventListener("click", function () {
+    if (handle) { stopTimer(); timerBtn.textContent = "Weiter"; return; }
+    if (remaining <= 0) remaining = 4320;
+    handle = setInterval(function () { remaining -= 1; renderTimer(); if (remaining <= 0) { stopTimer(); timerBtn.textContent = "Neu starten"; timerEl.textContent = "00:00 Zeit um"; } }, 1000);
+    timerBtn.textContent = "Pause";
+  });
+  renderTimer();
+  load();
+})();
+</script>

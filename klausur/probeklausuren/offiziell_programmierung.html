@@ -1,0 +1,696 @@
+<title>Programmierung: offizielle Probeklausur 1 – Antwortbogen</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one calm exam column like a printed exam sheet; slim sticky bar with timer and score. */
+:root {
+  --bg: #ffffff; --paper: #f6f7f9; --fg: #1d2129; --muted: #5d6470; --line: #e1e4ea;
+  --accent: #3b4fa0; --ok: #2d5fc4; --ok-soft: #e9f0fd; --bad: #b8432f; --bad-soft: #fbece8;
+  --half: #a8690f; --half-soft: #fbf3e4; --code-bg: #f3f4f7;
+  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --radius: 8px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12141a; --paper: #191c23; --fg: #e7e9ee; --muted: #9aa1ad; --line: #2b2f39; --accent: #9fb0ff;
+    --ok: #8fb4ff; --ok-soft: #18233b; --bad: #ff9a85; --bad-soft: #3a1f1a; --half: #f0b85a; --half-soft: #33280f; --code-bg: #1b1e26;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12141a; --paper: #191c23; --fg: #e7e9ee; --muted: #9aa1ad; --line: #2b2f39; --accent: #9fb0ff;
+  --ok: #8fb4ff; --ok-soft: #18233b; --bad: #ff9a85; --bad-soft: #3a1f1a; --half: #f0b85a; --half-soft: #33280f; --code-bg: #1b1e26;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 16px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 46rem; margin: 0 auto; padding-block: 1.5rem 5rem; }
+h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 .35rem; text-wrap: balance; }
+h2 { font-size: 1.2rem; margin: 0; text-wrap: balance; }
+.lead { color: var(--muted); margin: 0 0 1rem; }
+.meta { display: flex; flex-wrap: wrap; gap: .4rem .8rem; font-size: .9rem; color: var(--muted); margin-bottom: 1rem; }
+.meta b { color: var(--fg); }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; padding-block: .6rem; margin-bottom: 1.5rem; }
+.timer { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 1.05rem; min-width: 4.5ch; }
+.timer.low { color: var(--bad); }
+.score { margin-left: auto; font-weight: 600; font-variant-numeric: tabular-nums; }
+button { font: inherit; font-size: .9rem; border-radius: 6px; padding: .4rem .8rem; cursor: pointer; border: 1px solid var(--line); background: var(--bg); color: var(--fg); }
+button:hover { border-color: var(--muted); }
+button.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); font-weight: 600; }
+button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.overview { width: 100%; border-collapse: collapse; font-size: .92rem; margin-bottom: 2rem; font-variant-numeric: tabular-nums; }
+.overview th, .overview td { text-align: left; padding: .35rem .5rem; border-bottom: 1px solid var(--line); }
+.overview td:last-child, .overview th:last-child { text-align: right; }
+.overview tr.sum td { font-weight: 700; border-bottom: 0; }
+section.task { border-top: 2px solid var(--fg); padding-top: .9rem; margin-top: 2.5rem; }
+.task-head { display: flex; align-items: baseline; gap: .75rem; flex-wrap: wrap; margin-bottom: .6rem; }
+.pts { font-size: .85rem; color: var(--muted); }
+.badge { margin-left: auto; font-size: .85rem; font-weight: 600; padding: .1rem .55rem; border-radius: 999px; font-variant-numeric: tabular-nums; }
+.badge.full { background: var(--ok-soft); color: var(--ok); } .badge.part { background: var(--half-soft); color: var(--half); } .badge.none { background: var(--bad-soft); color: var(--bad); }
+.q { padding-block: .9rem; border-bottom: 1px solid var(--line); }
+.q:last-child { border-bottom: 0; }
+.q > p { margin: 0 0 .5rem; }
+.q-label { font-weight: 600; margin-right: .3rem; }
+.options { display: grid; gap: .3rem; }
+.options label { display: flex; gap: .5rem; align-items: flex-start; cursor: pointer; padding: .25rem .4rem; border-radius: 6px; }
+.options label:hover { background: var(--paper); }
+.options input { margin-top: .3rem; }
+code { font-family: var(--font-mono); font-size: .88em; background: var(--code-bg); padding: 0 .25em; border-radius: 3px; }
+pre { font-family: var(--font-mono); font-size: .86rem; line-height: 1.5; background: var(--code-bg); border: 1px solid var(--line); border-radius: var(--radius); padding: .75rem .9rem; overflow-x: auto; margin: .4rem 0 .7rem; }
+pre code { background: none; padding: 0; }
+.ln { color: var(--muted); user-select: none; }
+textarea, input[type="text"], input[type="number"], select { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: .4rem .55rem; }
+textarea { width: 100%; font-family: var(--font-mono); font-size: .88rem; min-height: 4.5rem; resize: vertical; }
+textarea.code { min-height: 11rem; tab-size: 4; }
+textarea.prose { font-family: var(--font-body); font-size: .95rem; }
+input.gap { font-family: var(--font-mono); width: 11rem; max-width: 100%; }
+input.short { font-family: var(--font-mono); width: 8rem; }
+input[type="number"] { width: 6rem; }
+.row { display: flex; flex-wrap: wrap; gap: .5rem .9rem; align-items: center; margin-bottom: .45rem; }
+.row > span.lbl { min-width: 7rem; color: var(--muted); font-size: .92rem; }
+.grid-err { display: grid; grid-template-columns: 5rem 9.5rem minmax(0, 1fr); gap: .45rem; align-items: center; }
+.grid-err.two { grid-template-columns: 5rem minmax(0, 1fr); }
+.grid-err .h { font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.grid-err input[type="text"] { width: 100%; font-family: var(--font-mono); font-size: .86rem; }
+@media (max-width: 34rem) { .grid-err { grid-template-columns: 4.5rem minmax(0, 1fr); } .grid-err .fix, .grid-err .hfix { grid-column: 1 / -1; } }
+.mark-ok { background: var(--ok-soft) !important; } .mark-bad { background: var(--bad-soft) !important; }
+input.mark-ok, select.mark-ok, textarea.mark-ok { border-color: var(--ok); } input.mark-bad, select.mark-bad, textarea.mark-bad { border-color: var(--bad); }
+.sol { margin-top: .6rem; padding: .7rem .85rem; border-radius: var(--radius); background: var(--paper); border: 1px solid var(--line); font-size: .93rem; }
+.sol p { margin: .3rem 0; }
+.sol .t { font-weight: 600; }
+.rubric { display: grid; gap: .3rem; margin-top: .5rem; }
+.rubric label { display: flex; gap: .5rem; align-items: flex-start; cursor: pointer; }
+.rubric input { margin-top: .3rem; }
+.hint { color: var(--muted); font-size: .88rem; }
+.result { border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.1rem; margin: 1rem 0 1.5rem; background: var(--paper); }
+.result .big { font-size: 1.6rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.result p { margin: .3rem 0; }
+.actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 2.5rem; align-items: center; }
+.confirm { display: inline-flex; gap: .5rem; align-items: center; font-size: .9rem; }
+.table-scroll { overflow-x: auto; }
+.moodle { display: flex; flex-wrap: wrap; gap: .5rem 1rem; align-items: center; margin: 0 0 1rem; }
+.moodle a { color: var(--accent); font-weight: 500; }
+.moodle a.moodle-btn { display: inline-block; background: var(--accent); color: var(--bg); text-decoration: none; font-weight: 600; padding: .5rem .9rem; border-radius: 6px; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Programmierung: offizielle Probeklausur 1 – Antwortbogen</h1>
+    <p class="lead">Die Aufgaben stehen nur im Aufgabenblatt in Moodle, hier ist bloß der Bogen für deine Antworten. So gehst du vor: Druck das Blatt aus oder leg es neben dich. Stell den Timer, löse alles auf Papier mit Kuli (so wie in der echten Klausur, ohne Rechner und ohne Unterlagen). Danach trägst du deine Antworten hier ein und klickst auf „Prüfen“. Auswahl, Ausgaben, Werte und Lücken werden automatisch bewertet. Erklärungen, Korrekturen und eigenen Code bewertest du mit den eingeblendeten Lösungshinweisen selbst.</p>
+    <p class="moodle"><a class="moodle-btn" href="https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192885" target="_blank" rel="noopener">Aufgabenblatt in Moodle öffnen</a> <a href="https://moodle.heilbronn.dhbw.de/mod/resource/view.php?id=192887" target="_blank" rel="noopener">Musterlösung in Moodle</a></p>
+    <div class="meta"><span><b>60</b> Minuten</span><span><b>60</b> Punkte</span><span>Hilfsmittel: Kuli und Lineal</span><span>bestanden in der Regel ab <b>30</b></span></div>
+  </header>
+
+  <div class="bar" role="region" aria-label="Zeit und Punkte">
+    <span class="timer" id="timer">60:00</span>
+    <button type="button" id="timerBtn">Zeit starten</button>
+    <button type="button" class="primary" id="checkTop">Prüfen</button>
+    <button type="button" id="hideTop" hidden>Lösungen ausblenden</button>
+    <span class="score" id="scoreTop">noch nicht geprüft</span>
+  </div>
+
+  <div id="result" class="result" hidden></div>
+
+  <table class="overview" aria-label="Aufgabenübersicht">
+    <thead><tr><th>Aufgabe</th><th>Thema</th><th>Punkte</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Grundlagen, Werkzeuge und Module</td><td id="ov1">6</td></tr>
+      <tr><td>2</td><td>Datentypen, Operatoren und Fehler</td><td id="ov2">12</td></tr>
+      <tr><td>3</td><td>Kontrollstrukturen und Listen</td><td id="ov3">12</td></tr>
+      <tr><td>4</td><td>Funktionen und Parameter</td><td id="ov4">12</td></tr>
+      <tr><td>5</td><td>Objektorientierung</td><td id="ov5">18</td></tr>
+      <tr class="sum"><td></td><td>Summe</td><td id="ovSum">60</td></tr>
+    </tbody>
+  </table>
+
+  <p class="hint">Single Choice: Im Aufgabenblatt stehen die vier Kästchen ohne Buchstaben untereinander. Hier gilt: <b>A</b> = oberstes Kästchen, <b>B</b> = zweites, <b>C</b> = drittes, <b>D</b> = unterstes. Genau eine Antwort ist richtig, 1 Punkt pro Frage.</p>
+
+  <form id="exam" autocomplete="off" spellcheck="false">
+
+  <!-- ================= Aufgabe 1 ================= -->
+  <section class="task" data-task="1" data-max="6">
+    <div class="task-head"><h2>Aufgabe 1 · Grundlagen, Werkzeuge und Module</h2><span class="pts">6 Punkte</span><span class="badge" hidden></span></div>
+
+    <div class="q mc" data-answer="b" data-name="m11">
+      <p><span class="q-label">1.1</span>Eigenschaft „terminierend“ eines Algorithmus</p>
+      <div class="options">
+        <label><input type="radio" name="m11" id="m11a" value="a"> A</label>
+        <label><input type="radio" name="m11" id="m11b" value="b"> B</label>
+        <label><input type="radio" name="m11" id="m11c" value="c"> C</label>
+        <label><input type="radio" name="m11" id="m11d" value="d"> D</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: B.</span> Er kommt bei jeder zulässigen Eingabe irgendwann zum Ende, nach endlich vielen Schritten. Merke das Trio: gleiche Eingabe, gleiches Ergebnis heißt <b>determiniert</b>; immer eindeutig festgelegter nächster Schritt heißt <b>deterministisch</b>.</p></div>
+    </div>
+
+    <div class="q mc" data-answer="c" data-name="m12">
+      <p><span class="q-label">1.2</span>Was beim Start mit <code>uv run</code> passiert</p>
+      <div class="options">
+        <label><input type="radio" name="m12" id="m12a" value="a"> A</label>
+        <label><input type="radio" name="m12" id="m12b" value="b"> B</label>
+        <label><input type="radio" name="m12" id="m12c" value="c"> C</label>
+        <label><input type="radio" name="m12" id="m12d" value="d"> D</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: C.</span> Python macht aus dem Quellcode Bytecode, und die virtuelle Maschine von Python arbeitet ihn ab. Es entsteht weder eine ausführbare Datei noch Java, und nichts geht an einen Server.</p></div>
+    </div>
+
+    <div class="q mc" data-answer="d" data-name="m13">
+      <p><span class="q-label">1.3</span>Bedeutung von „dynamisch typisiert“</p>
+      <div class="options">
+        <label><input type="radio" name="m13" id="m13a" value="a"> A</label>
+        <label><input type="radio" name="m13" id="m13b" value="b"> B</label>
+        <label><input type="radio" name="m13" id="m13c" value="c"> C</label>
+        <label><input type="radio" name="m13" id="m13d" value="d"> D</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: D.</span> Der Typ hängt am Wert, nicht am Namen. Ein Name darf später auf einen Wert anderen Typs zeigen. Typangaben prüft Python beim Ausführen nicht, und Text plus Zahl ergibt einen <code>TypeError</code> statt einer automatischen Umwandlung.</p></div>
+    </div>
+
+    <div class="q mc" data-answer="b" data-name="m14">
+      <p><span class="q-label">1.4</span>Werkzeug, das einen falschen Argumenttyp vor dem Start meldet</p>
+      <div class="options">
+        <label><input type="radio" name="m14" id="m14a" value="a"> A</label>
+        <label><input type="radio" name="m14" id="m14b" value="b"> B</label>
+        <label><input type="radio" name="m14" id="m14c" value="c"> C</label>
+        <label><input type="radio" name="m14" id="m14d" value="d"> D</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: B.</span> <code>ty</code> ist der Typprüfer. <code>ruff</code> kümmert sich um Stil und typische Fehler, <code>pytest</code> führt Tests aus, <code>uv add</code> fügt ein Paket hinzu.</p></div>
+    </div>
+
+    <div class="q mc" data-answer="b" data-name="m15">
+      <p><span class="q-label">1.5</span>Gültiger Aufruf nach einem <code>from … import</code></p>
+      <div class="options">
+        <label><input type="radio" name="m15" id="m15a" value="a"> A</label>
+        <label><input type="radio" name="m15" id="m15b" value="b"> B</label>
+        <label><input type="radio" name="m15" id="m15c" value="c"> C</label>
+        <label><input type="radio" name="m15" id="m15d" value="d"> D</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: B.</span> Mit <code>from math import ceil</code> ist nur der Name <code>ceil</code> bekannt, nicht <code>math</code>. Für <code>math.ceil(…)</code> bräuchtest du <code>import math</code>, sonst kommt ein <code>NameError</code>.</p></div>
+    </div>
+
+    <div class="q mc" data-answer="c" data-name="m16">
+      <p><span class="q-label">1.6</span>Erster Schritt, um ein Paket von pypi.org zu nutzen</p>
+      <div class="options">
+        <label><input type="radio" name="m16" id="m16a" value="a"> A</label>
+        <label><input type="radio" name="m16" id="m16b" value="b"> B</label>
+        <label><input type="radio" name="m16" id="m16c" value="c"> C</label>
+        <label><input type="radio" name="m16" id="m16d" value="d"> D</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: C.</span> <code>uv add</code> im Projektordner lädt das Paket und trägt es in <code>pyproject.toml</code> ein. Andere bekommen mit <code>uv sync</code> denselben Stand. Python lädt nichts von selbst nach.</p></div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 2 ================= -->
+  <section class="task" data-task="2" data-max="12">
+    <div class="task-head"><h2>Aufgabe 2 · Datentypen, Operatoren und Fehler</h2><span class="pts">12 Punkte</span><span class="badge" hidden></span></div>
+
+    <div class="q mc" data-answer="b" data-name="m21">
+      <p><span class="q-label">2.1</span>(1 Punkt) Konstante, deren Änderung <code>ty</code> als Fehler meldet</p>
+      <div class="options">
+        <label><input type="radio" name="m21" id="m21a" value="a"> A</label>
+        <label><input type="radio" name="m21" id="m21b" value="b"> B</label>
+        <label><input type="radio" name="m21" id="m21c" value="c"> C</label>
+        <label><input type="radio" name="m21" id="m21d" value="d"> D</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: B.</span> Die Variante mit <code>Final</code> ist richtig. Großbuchstaben allein sind nur eine Absprache unter Menschen. <code>const</code> gibt es in Python nicht, und <code>final double</code> ist Java.</p></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">2.2</span>(5 Punkte) Genaue Ausgabe der fünf Codeblöcke</p>
+      <div class="row"><span class="lbl">a) ganzzahlige Division</span><input type="text" class="short auto" id="o1" data-kind="text" data-answer="3" data-points="1" aria-label="2.2 a Ausgabe"></div>
+      <div class="row"><span class="lbl">b) Rest der Division</span><input type="text" class="short auto" id="o2" data-kind="text" data-answer="2" data-points="1" aria-label="2.2 b Ausgabe"></div>
+      <div class="row"><span class="lbl">c) <code>int()</code> einer Kommazahl</span><input type="text" class="short auto" id="o3" data-kind="text" data-answer="9" data-points="1" aria-label="2.2 c Ausgabe"></div>
+      <div class="row"><span class="lbl">d) Vergleich mit Float-Summe</span><input type="text" class="short auto" id="o4" data-kind="text" data-answer="False" data-points="1" aria-label="2.2 d Ausgabe"></div>
+      <div class="row"><span class="lbl">e) <code>x</code> nach den Zuweisungen</span><input type="text" class="short auto" id="o5" data-kind="text" data-answer="14" data-points="1" aria-label="2.2 e Ausgabe"></div>
+      <div class="sol" hidden>
+        <p><b>a) 3</b>: <code>//</code> liefert nur den ganzzahligen Teil des Quotienten.</p>
+        <p><b>b) 2</b>: <code>%</code> liefert, was beim Teilen übrig bleibt (15 passt hinein, 2 bleiben).</p>
+        <p><b>c) 9</b>: <code>int()</code> wirft die Nachkommastellen weg, es rundet <b>nicht</b> auf 10.</p>
+        <p><b>d) False</b>: Kommazahlen sind binär nur ungefähr gespeichert, die Summe ist minimal größer als 0.3. Achte auf die Großschreibung: <code>False</code>.</p>
+        <p><b>e) 14</b>: erst minus 3 (ergibt 7), dann mal 2.</p>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">2.3</span>(6 Punkte) Vier Fehler im Bruttopreis-Programm: Zeile, Art, Korrektur</p>
+      <p class="hint">Trag die Zeilennummern aus dem Aufgabenblatt ein. Die Reihenfolge der Zeilen hier ist egal.</p>
+      <div class="errblock" data-expected='[{"line":[4],"type":"syntax","pts":0.5},{"line":[11],"type":"syntax","pts":0.5},{"line":[9,5,11],"type":"laufzeit","pts":1},{"line":[5],"type":"logik","pts":1}]'>
+        <div class="grid-err">
+          <span class="h">Zeile</span><span class="h">Art</span><span class="h hfix">Korrektur</span>
+          <input type="number" class="eline" id="f1l" aria-label="Fehler 1 Zeile"><select class="etype" id="f1t" aria-label="Fehler 1 Art"><option value="">wählen …</option><option value="syntax">Syntax</option><option value="laufzeit">Laufzeit</option><option value="logik">Logik</option></select><input type="text" class="fix" id="f1f" aria-label="Fehler 1 Korrektur">
+          <input type="number" class="eline" id="f2l" aria-label="Fehler 2 Zeile"><select class="etype" id="f2t" aria-label="Fehler 2 Art"><option value="">wählen …</option><option value="syntax">Syntax</option><option value="laufzeit">Laufzeit</option><option value="logik">Logik</option></select><input type="text" class="fix" id="f2f" aria-label="Fehler 2 Korrektur">
+          <input type="number" class="eline" id="f3l" aria-label="Fehler 3 Zeile"><select class="etype" id="f3t" aria-label="Fehler 3 Art"><option value="">wählen …</option><option value="syntax">Syntax</option><option value="laufzeit">Laufzeit</option><option value="logik">Logik</option></select><input type="text" class="fix" id="f3f" aria-label="Fehler 3 Korrektur">
+          <input type="number" class="eline" id="f4l" aria-label="Fehler 4 Zeile"><select class="etype" id="f4t" aria-label="Fehler 4 Art"><option value="">wählen …</option><option value="syntax">Syntax</option><option value="laufzeit">Laufzeit</option><option value="logik">Logik</option></select><input type="text" class="fix" id="f4f" aria-label="Fehler 4 Korrektur">
+        </div>
+      </div>
+      <div class="sol" hidden>
+        <p class="hint">Automatisch gibt es Punkte für die richtige Zeile mit der richtigen Art: Syntax je ½, Laufzeit und Logik je 1. Die Korrektur bewertest du selbst (Syntax je ½, Laufzeit und Logik je 1). Eine falsch benannte Fehlerart kostet in der Musterlösung nur ½ Punkt, hier gibt es dann für das Erkennen keinen automatischen Punkt. Hak in dem Fall die Korrektur trotzdem ab, wenn sie stimmt.</p>
+        <p><b>Zeile 4, Syntax:</b> Hinter dem Funktionskopf fehlt der Doppelpunkt.</p>
+        <p><b>Zeile 11, Syntax:</b> Der f-String wird nicht mit <code>"</code> geschlossen, vor der letzten Klammer fehlt das Anführungszeichen.</p>
+        <p><b>Zeile 9, Laufzeit</b> (der Absturz passiert erst beim Rechnen in Zeile 5): Die Anzahl ist ein Text. Text mal Kommazahl ergibt <code>TypeError</code>. Korrektur: die Anzahl als Zahl <code>3</code> speichern (oder beim Aufruf bzw. Rechnen mit <code>int(…)</code> umwandeln). Zeile 5 oder 11 als Ort zählt auch. <code>ty</code> würde das schon vor dem Start melden.</p>
+        <p><b>Zeile 5, Logik:</b> Multipliziert man nur mit dem Steuersatz, kommt die Steuer heraus (1.14), nicht der Bruttopreis. Korrektur: mit <code>(1 + MWST_SATZ)</code> multiplizieren, dann ergibt sich 6 · 1,19 = <b>7.14</b>.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb23a" data-points="0.5"> Korrektur Zeile 4 passt (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb23b" data-points="0.5"> Korrektur Zeile 11 passt (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb23c" data-points="1"> Korrektur des Laufzeitfehlers passt (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb23d" data-points="1"> Korrektur des Logikfehlers passt (+1)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 3 ================= -->
+  <section class="task" data-task="3" data-max="12">
+    <div class="task-head"><h2>Aufgabe 3 · Kontrollstrukturen und Listen</h2><span class="pts">12 Punkte</span><span class="badge" hidden></span></div>
+
+    <div class="q mc" data-answer="c" data-name="m31">
+      <p><span class="q-label">3.1</span>(1 Punkt) Ersatz für die fehlende do-while-Schleife</p>
+      <div class="options">
+        <label><input type="radio" name="m31" id="m31a" value="a"> A</label>
+        <label><input type="radio" name="m31" id="m31b" value="b"> B</label>
+        <label><input type="radio" name="m31" id="m31c" value="c"> C</label>
+        <label><input type="radio" name="m31" id="m31d" value="d"> D</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: C.</span> Das Muster heißt <code>while True:</code> mit <code>break</code>, sobald die Eingabe passt. So läuft der Rumpf garantiert mindestens einmal. Die anderen Varianten wiederholen nichts oder laufen gar nicht.</p></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">3.2</span>(3 Punkte) Schleife mit <code>continue</code> und <code>break</code> nachvollziehen</p>
+      <div class="row"><span class="lbl">a) Werte von <code>i</code>, bei denen addiert wird (1 P)</span><input type="text" class="gap auto" id="t32a" data-kind="set" data-answer="1,3,5,7" data-points="1" placeholder="z. B. 2, 4" aria-label="3.2 a Werte von i"></div>
+      <div class="row"><span class="lbl">b) 1. Ausgabe (1 P)</span><input type="text" class="short auto" id="t32b" data-kind="text" data-answer="16" data-points="1" aria-label="3.2 b erste Ausgabe"></div>
+      <div class="row"><span class="lbl">b) 2. Ausgabe (1 P)</span><input type="text" class="short auto" id="t32c" data-kind="text" data-answer="9" data-points="1" aria-label="3.2 b zweite Ausgabe"></div>
+      <div class="sol" hidden>
+        <div class="table-scroll"><table class="overview" style="margin:.3rem 0">
+          <thead><tr><th>i</th><th>gerade → übersprungen?</th><th>größer als 7 → Abbruch?</th><th>summe</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>nein</td><td>nein</td><td>1</td></tr>
+            <tr><td>2</td><td><b>ja</b></td><td>–</td><td>1</td></tr>
+            <tr><td>3</td><td>nein</td><td>nein</td><td>4</td></tr>
+            <tr><td>4</td><td><b>ja</b></td><td>–</td><td>4</td></tr>
+            <tr><td>5</td><td>nein</td><td>nein</td><td>9</td></tr>
+            <tr><td>6</td><td><b>ja</b></td><td>–</td><td>9</td></tr>
+            <tr><td>7</td><td>nein</td><td>nein</td><td>16</td></tr>
+            <tr><td>8</td><td><b>ja</b></td><td>–</td><td>16</td></tr>
+            <tr><td>9</td><td>nein</td><td><b>ja</b></td><td>16</td></tr>
+          </tbody>
+        </table></div>
+        <p>Addiert wird bei <b>1, 3, 5, 7</b>, nicht bei 9: Dort greift der Abbruch vor der Addition. Ausgabe <b>16</b> und <b>9</b>, denn nach dem Abbruch behält <code>i</code> seinen letzten Wert. Ein Folgefehler aus a) wird in b) nicht nochmal abgezogen.</p>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">3.3</span>(4 Punkte) Umsätze summieren: a) was passiert und warum, b) korrigierte Schleife</p>
+      <textarea class="prose" id="t33a" aria-label="3.3 a Erklärung"></textarea>
+      <textarea id="t33b" aria-label="3.3 b korrigierte Schleife" style="margin-top:.4rem"></textarea>
+      <div class="sol" hidden>
+        <p><b>a)</b> Das Programm stürzt mit <code>IndexError</code> ab und gibt gar nichts aus. Ursache 1: Der Zähler beginnt bei 1, also wird das erste Element (Index 0) nie addiert. Ursache 2: Wegen <code>&lt;=</code> läuft die Schleife noch mit dem Index 3, die Liste hat aber nur die Indizes 0 bis 2.</p>
+        <p><b>b)</b> Zum Beispiel direkt über die Elemente laufen (ergibt <b>3580</b>):</p>
+<pre><code>summe = 0
+for betrag in umsaetze:
+    summe += betrag
+print(summe)</code></pre>
+        <p class="hint">Auch richtig: Index bei 0 starten und mit <code>&lt;</code> vergleichen, oder <code>for i in range(len(umsaetze))</code>. Nur <code>sum(umsaetze)</code> ohne Schleife gibt 1 statt 2 Punkte.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb33a" data-points="1"> Ursache 1: Start bei 1 überspringt das erste Element (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb33b" data-points="1"> Ursache 2: <code>&lt;=</code> führt zu Index 3, also <code>IndexError</code> (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb33c" data-points="2"> Korrigierte Schleife ergibt 3580 (+2)</label>
+        </div>
+        <p class="hint">Nur „IndexError“ ohne Ursache zählt ½ Punkt. Den kannst du hier nicht anhaken, merk ihn dir.</p>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">3.4</span>(4 Punkte) Funktion <code>versandkosten</code> mit drei Preisstufen schreiben</p>
+      <textarea class="code" id="t34" aria-label="Code 3.4"></textarea>
+      <div class="sol" hidden>
+<pre><code>def versandkosten(bestellwert: float) -> float:
+    if bestellwert >= 50:
+        return 0.0
+    if bestellwert >= 20:
+        return 2.9
+    return 4.9</code></pre>
+        <p class="hint">Kontrolle: 50.0 → 0.0, 20.0 → 2.9, 19.99 → 4.9, 80.0 → 0.0. <b>Falle:</b> Prüfst du zuerst auf 20, landet auch eine Bestellung über 80 Euro bei 2,90. Von unten mit <code>&lt;</code> zu prüfen geht genauso. <code>print</code> statt <code>return</code> kostet 1 Punkt.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb34a" data-points="1"> Funktionskopf mit Parameter (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb34b" data-points="2"> Bedingungen mit richtigen Grenzen und Reihenfolge (<code>>=</code> bzw. <code>&lt;</code>) (+2)</label>
+          <label><input type="checkbox" class="rb" id="rb34c" data-points="1"> Ergebnis mit <code>return</code>, nicht <code>print</code> (+1)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 4 ================= -->
+  <section class="task" data-task="4" data-max="12">
+    <div class="task-head"><h2>Aufgabe 4 · Funktionen und Parameter</h2><span class="pts">12 Punkte</span><span class="badge" hidden></span></div>
+
+    <div class="q mc" data-answer="b" data-name="m41">
+      <p><span class="q-label">4.1</span>Was <code>return</code> in einer Funktion bewirkt</p>
+      <div class="options">
+        <label><input type="radio" name="m41" id="m41a" value="a"> A</label>
+        <label><input type="radio" name="m41" id="m41b" value="b"> B</label>
+        <label><input type="radio" name="m41" id="m41c" value="c"> C</label>
+        <label><input type="radio" name="m41" id="m41d" value="d"> D</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: B.</span> <code>return</code> beendet die Funktion sofort und liefert den Wert dorthin, wo sie aufgerufen wurde. Es gibt nichts aus und beendet nicht nur eine Schleife.</p></div>
+    </div>
+
+    <div class="q mc" data-answer="d" data-name="m42">
+      <p><span class="q-label">4.2</span>Wo eine in der Funktion angelegte Variable gilt</p>
+      <div class="options">
+        <label><input type="radio" name="m42" id="m42a" value="a"> A</label>
+        <label><input type="radio" name="m42" id="m42b" value="b"> B</label>
+        <label><input type="radio" name="m42" id="m42c" value="c"> C</label>
+        <label><input type="radio" name="m42" id="m42d" value="d"> D</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: D.</span> Sie ist lokal: Es gibt sie nur in dieser Funktion und nur, solange der Aufruf läuft. Draußen kennt niemand den Namen.</p></div>
+    </div>
+
+    <div class="q mc" data-answer="b" data-name="m43">
+      <p><span class="q-label">4.3</span>Zwei <code>def</code> mit gleichem Namen, verschiedene Parameterzahl</p>
+      <div class="options">
+        <label><input type="radio" name="m43" id="m43a" value="a"> A</label>
+        <label><input type="radio" name="m43" id="m43b" value="b"> B</label>
+        <label><input type="radio" name="m43" id="m43c" value="c"> C</label>
+        <label><input type="radio" name="m43" id="m43d" value="d"> D</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: B.</span> Python kennt keine Überladung. Die spätere Definition überschreibt die frühere, ein Aufruf mit zwei Argumenten scheitert dann mit <code>TypeError</code>. Besser: ein Parameter mit Standardwert.</p></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">4.4</span>(5 Punkte) Rabatt-Funktion: a) drei Ausgaben, b) Liste ändert sich, Zahl nicht</p>
+      <div class="row"><span class="lbl">a) 1. Ausgabe</span><input type="text" class="gap auto" id="t44a" data-kind="gap" data-answer="[18.0,45.0]|[18,45]" data-points="1" aria-label="4.4 erste Ausgabe"></div>
+      <div class="row"><span class="lbl">a) 2. Ausgabe</span><input type="text" class="short auto" id="t44b" data-kind="text" data-answer="10" data-points="1" aria-label="4.4 zweite Ausgabe"></div>
+      <div class="row"><span class="lbl">a) 3. Ausgabe</span><input type="text" class="short auto" id="t44c" data-kind="text" data-answer="None" data-points="1" aria-label="4.4 dritte Ausgabe"></div>
+      <textarea class="prose" id="t44d" aria-label="4.4 b Erklärung"></textarea>
+      <div class="sol" hidden>
+        <p><b>a)</b> <code>[18.0, 45.0]</code> · <code>10</code> · <code>None</code>. Beide Preise sinken um 10 %. Die Funktion hat kein <code>return</code>, darum ist ihr Ergebnis beim zweiten Aufruf <code>None</code> (die Liste wird dabei trotzdem nochmal verändert, das wird aber nicht mehr ausgegeben).</p>
+        <p><b>b)</b> Beim Aufruf bekommt die Funktion keine Kopie, sondern einen zweiten Namen für dasselbe Listen-Objekt. Wer über den Index hineinschreibt, ändert genau diese eine Liste, und das sieht <code>main</code>. Die Zuweisung an <code>prozent</code> dagegen biegt nur den lokalen Namen der Funktion auf einen neuen Wert um, der Name in <code>main</code> zeigt weiter auf 10.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb44a" data-points="1"> Parameter und Variable in <code>main</code> zeigen auf dieselbe Liste (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb44b" data-points="1"> Zuweisung an <code>prozent</code> ändert nur den lokalen Namen (+1)</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">4.5</span>(4 Punkte) Ergebnisse der vier Aufrufe mit Standardwert und Aufrunden</p>
+      <div class="row"><span class="lbl">a) nur Artikelzahl</span><input type="text" class="short auto" id="t45a" data-kind="text" data-answer="4" data-points="1" aria-label="4.5 a"></div>
+      <div class="row"><span class="lbl">b) mit eigener Kartongröße</span><input type="text" class="short auto" id="t45b" data-kind="text" data-answer="3" data-points="1" aria-label="4.5 b"></div>
+      <div class="row"><span class="lbl">c) geht genau auf</span><input type="text" class="short auto" id="t45c" data-kind="text" data-answer="2|2.0" data-points="1" aria-label="4.5 c"></div>
+      <div class="row"><span class="lbl">d) Schlüsselwortargumente</span><input type="text" class="short auto" id="t45d" data-kind="text" data-answer="3" data-points="1" aria-label="4.5 d"></div>
+      <div class="sol" hidden>
+        <p><code>math.ceil</code> rundet <b>immer auf</b> und liefert eine ganze Zahl.</p>
+        <p>a) 23 / 6 ≈ 3,83 → <b>4</b> (Standardwert 6) · b) 23 / 10 = 2,3 → <b>3</b> · c) 12 / 6 = 2,0 → <b>2</b> (genau, <code>2.0</code> wird auch gewertet) · d) Bei Namen zählt nicht die Reihenfolge: 9 / 4 = 2,25 → <b>3</b></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 5 ================= -->
+  <section class="task" data-task="5" data-max="18">
+    <div class="task-head"><h2>Aufgabe 5 · Objektorientierung</h2><span class="pts">18 Punkte</span><span class="badge" hidden></span></div>
+
+    <div class="q mc" data-answer="b" data-name="m51">
+      <p><span class="q-label">5.1</span>Was ein Objekt ist</p>
+      <div class="options">
+        <label><input type="radio" name="m51" id="m51a" value="a"> A</label>
+        <label><input type="radio" name="m51" id="m51b" value="b"> B</label>
+        <label><input type="radio" name="m51" id="m51c" value="c"> C</label>
+        <label><input type="radio" name="m51" id="m51d" value="d"> D</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: B.</span> Ein Objekt ist ein konkretes Exemplar einer Klasse mit eigenen Attributwerten. Die Klasse ist der Bauplan dazu.</p></div>
+    </div>
+
+    <div class="q mc" data-answer="c" data-name="m52">
+      <p><span class="q-label">5.2</span>Wann <code>__init__</code> läuft</p>
+      <div class="options">
+        <label><input type="radio" name="m52" id="m52a" value="a"> A</label>
+        <label><input type="radio" name="m52" id="m52b" value="b"> B</label>
+        <label><input type="radio" name="m52" id="m52c" value="c"> C</label>
+        <label><input type="radio" name="m52" id="m52d" value="d"> D</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: C.</span> Der Konstruktor läuft automatisch jedes Mal, wenn du mit <code>Konto(…)</code> ein neues Objekt erzeugst. Von Hand ruft man ihn nicht auf.</p></div>
+    </div>
+
+    <div class="q mc" data-answer="d" data-name="m53">
+      <p><span class="q-label">5.3</span>Was ein Klassenattribut ist</p>
+      <div class="options">
+        <label><input type="radio" name="m53" id="m53a" value="a"> A</label>
+        <label><input type="radio" name="m53" id="m53b" value="b"> B</label>
+        <label><input type="radio" name="m53" id="m53c" value="c"> C</label>
+        <label><input type="radio" name="m53" id="m53d" value="d"> D</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: D.</span> Es steht direkt im Klassenrumpf und gilt für alle Objekte gemeinsam. Was mit <code>self.</code> im Konstruktor entsteht, ist dagegen ein Instanzattribut.</p></div>
+    </div>
+
+    <div class="q mc" data-answer="b" data-name="m54">
+      <p><span class="q-label">5.4</span>Bedeutung von <code>self</code></p>
+      <div class="options">
+        <label><input type="radio" name="m54" id="m54a" value="a"> A</label>
+        <label><input type="radio" name="m54" id="m54b" value="b"> B</label>
+        <label><input type="radio" name="m54" id="m54c" value="c"> C</label>
+        <label><input type="radio" name="m54" id="m54d" value="d"> D</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: B.</span> <code>self</code> ist genau das Objekt, auf dem die Methode gerade aufgerufen wird, keine Kopie und nicht die Klasse.</p></div>
+    </div>
+
+    <div class="q mc" data-answer="c" data-name="m55">
+      <p><span class="q-label">5.5</span>Zweck von <code>super().__init__(…)</code> in der Unterklasse</p>
+      <div class="options">
+        <label><input type="radio" name="m55" id="m55a" value="a"> A</label>
+        <label><input type="radio" name="m55" id="m55b" value="b"> B</label>
+        <label><input type="radio" name="m55" id="m55c" value="c"> C</label>
+        <label><input type="radio" name="m55" id="m55d" value="d"> D</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: C.</span> Es startet den Konstruktor der Oberklasse, damit deren Attribute (hier der Inhaber) auch im neuen Objekt angelegt werden.</p></div>
+    </div>
+
+    <div class="q mc" data-answer="b" data-name="m56">
+      <p><span class="q-label">5.6</span>Objekt einer abstrakten Klasse erzeugen</p>
+      <div class="options">
+        <label><input type="radio" name="m56" id="m56a" value="a"> A</label>
+        <label><input type="radio" name="m56" id="m56b" value="b"> B</label>
+        <label><input type="radio" name="m56" id="m56c" value="c"> C</label>
+        <label><input type="radio" name="m56" id="m56d" value="d"> D</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: B.</span> Eine Klasse mit offener <code>@abstractmethod</code> lässt sich nicht instanziieren, Python bricht schon beim Anlegen mit <code>TypeError</code> ab.</p></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">5.7</span>(3 Punkte) Drei Ausgaben zu zwei Namen und zwei Konten, erste begründen</p>
+      <div class="row"><span class="lbl">1. Ausgabe (½ P + ½ Begründung)</span><input type="text" class="short auto" id="t57a" data-kind="text" data-answer="150" data-points="0.5" aria-label="5.7 erste Ausgabe"></div>
+      <div class="row"><span class="lbl">2. Ausgabe (1 P)</span><input type="text" class="short auto" id="t57b" data-kind="text" data-answer="100" data-points="1" aria-label="5.7 zweite Ausgabe"></div>
+      <div class="row"><span class="lbl">3. Ausgabe (1 P)</span><input type="text" class="short auto" id="t57c" data-kind="text" data-answer="False" data-points="1" aria-label="5.7 dritte Ausgabe"></div>
+      <textarea class="prose" id="t57d" aria-label="5.7 Begründung der ersten Ausgabe"></textarea>
+      <div class="sol" hidden>
+        <p><b>150</b> · <b>100</b> · <b>False</b></p>
+        <p>Die Zuweisung <code>b = a</code> kopiert nichts: Beide Namen meinen dasselbe Konto-Objekt, die Einzahlung über den einen Namen sieht man also auch über den anderen. Das dritte Konto ist ein eigenes Objekt und bleibt bei 100. <code>==</code> prüft bei einer normalen Klasse (ohne <code>@dataclass</code>) nur, ob es <b>dasselbe</b> Objekt ist; gleiche Werte reichen nicht.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb57a" data-points="0.5"> Begründung: zwei Namen für dasselbe Objekt (+½)</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">5.8</span>(4 Punkte) Vier Verstöße gegen die Kapselung finden und korrigieren</p>
+      <div class="errblock" data-expected='[{"line":[8],"pts":0.5},{"line":[12],"pts":0.5},{"line":[15],"pts":0.5},{"line":[17],"pts":0.5}]'>
+        <div class="grid-err two">
+          <span class="h">Zeile</span><span class="h hfix">Korrektur</span>
+          <input type="number" class="eline" id="k1l" aria-label="Stelle 1 Zeile"><input type="text" class="fix" id="k1f" aria-label="Stelle 1 Korrektur">
+          <input type="number" class="eline" id="k2l" aria-label="Stelle 2 Zeile"><input type="text" class="fix" id="k2f" aria-label="Stelle 2 Korrektur">
+          <input type="number" class="eline" id="k3l" aria-label="Stelle 3 Zeile"><input type="text" class="fix" id="k3f" aria-label="Stelle 3 Korrektur">
+          <input type="number" class="eline" id="k4l" aria-label="Stelle 4 Zeile"><input type="text" class="fix" id="k4f" aria-label="Stelle 4 Korrektur">
+        </div>
+      </div>
+      <div class="sol" hidden>
+        <p class="hint">Automatisch gibt es ½ Punkt je richtig gefundener Zeile. Die Korrektur (je ½) bewertest du selbst.</p>
+        <p><b>Zeile 8:</b> Der Konstruktor schreibt auf die Property, die keinen Setter hat, also <code>AttributeError</code> schon beim Anlegen. Korrektur: den Startwert in <code>self._bestand</code> speichern.</p>
+        <p><b>Zeile 12:</b> Der Getter überschreibt den Bestand bei jedem Lesen mit 0. Ein Getter soll nur lesen. Korrektur: Zeile weglassen.</p>
+        <p><b>Zeile 15:</b> Der Unterstrich macht die Methode „intern“, dabei soll gerade sie von außen aufgerufen werden. Korrektur: Methode <code>verkaufen</code> ohne Unterstrich nennen.</p>
+        <p><b>Zeile 17:</b> Auch hier wird auf die Property ohne Setter geschrieben (<code>AttributeError</code>). Korrektur: <code>self._bestand</code> verringern.</p>
+        <p class="hint">Einen Setter hinzuzufügen beseitigt zwar die Abstürze, macht den Bestand aber von außen änderbar. Das widerspricht dem Plan und bringt nur je ½ Punkt. Eine treffende Beschreibung der Stelle statt der Zeilennummer zählt in der Musterlösung voll.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb58a" data-points="0.5"> Korrektur Konstruktor (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb58b" data-points="0.5"> Korrektur Getter (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb58c" data-points="0.5"> Korrektur Methodenname (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb58d" data-points="0.5"> Korrektur beim Verringern (+½)</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">5.9</span>(5 Punkte) Fünf Lücken im Zahlungsarten-Programm ergänzen</p>
+      <div class="row"><span class="lbl">(1) Oberklasse der Basisklasse</span><input type="text" class="gap auto" id="g1" data-kind="gap" data-answer="ABC" data-points="1" aria-label="Lücke 1"></div>
+      <div class="row"><span class="lbl">(2) über der Gebührenmethode</span><input type="text" class="gap auto" id="g2" data-kind="gap" data-answer="@abstractmethod" data-points="1" aria-label="Lücke 2"></div>
+      <div class="row"><span class="lbl">(3) Oberklasse der Kreditkarte</span><input type="text" class="gap auto" id="g3" data-kind="gap" data-answer="Zahlungsart" data-points="1" aria-label="Lücke 3"></div>
+      <div class="row"><span class="lbl">(4) vor <code>.__init__</code></span><input type="text" class="gap auto" id="g4" data-kind="gap" data-answer="super()" data-points="1" aria-label="Lücke 4"></div>
+      <div class="row"><span class="lbl">(5) aufgerufene Methode</span><input type="text" class="gap auto" id="g5" data-kind="gap" data-answer="gebuehr" data-points="1" aria-label="Lücke 5"></div>
+      <div class="sol" hidden>
+        <p>(1) <code>ABC</code> · (2) <code>@abstractmethod</code> · (3) <code>Zahlungsart</code> · (4) <code>super()</code> · (5) <code>gebuehr</code></p>
+        <p><b>Polymorphie:</b> Derselbe Methodenaufruf in der Schleife landet je nach Objekt bei der Rechnung (0) oder bei der Kreditkarte (2 % von 50 = 1.00).</p>
+        <p class="hint">Zu (2): Ohne den Dekorator läuft das Programm auch, verlangt ist aber eine abstrakte Oberklasse, eine leere Lücke gibt 0 Punkte. Zu (4): Der Weg über den Klassennamen klappt nur mit zusätzlich übergebenem <code>self</code> und passt nicht in die Lücke; die Musterlösung gibt dafür trotzdem volle Punkte.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="actions">
+    <button type="button" class="primary" id="checkBottom">Prüfen</button>
+    <button type="button" id="resetBtn">Alles löschen</button>
+    <span class="confirm" id="resetConfirm" hidden>Wirklich alle Antworten löschen?
+      <button type="button" id="resetYes">Ja, löschen</button>
+      <button type="button" id="resetNo">Abbrechen</button>
+    </span>
+  </div>
+  <p class="hint" style="margin-top:1rem">Antwortbogen zur offiziellen Probeklausur. Aufgabentexte, Code und Musterlösung stehen nur in Moodle. Die Lösungshinweise hier sind eigene Kurzfassungen, alle Ergebnisse wurden mit Python 3.13 nachgerechnet. Deine Eingaben werden nur in diesem Browser gespeichert.</p>
+  </form>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var KEY = "pk-prog-offiziell-1";
+  var form = document.getElementById("exam");
+  var checked = false;
+  var MAX = { 1: 6, 2: 12, 3: 12, 4: 12, 5: 18 };
+  var STARTCODE = {};
+
+  function fields() { return form.querySelectorAll("input, textarea, select"); }
+  function save() {
+    var d = {};
+    fields().forEach(function (el) { if (!el.id) return; d[el.id] = (el.type === "radio" || el.type === "checkbox") ? el.checked : el.value; });
+    d.__checked = checked;
+    try { localStorage.setItem(KEY, JSON.stringify(d)); } catch (e) {}
+  }
+  function load() {
+    var raw = null; try { raw = localStorage.getItem(KEY); } catch (e) {}
+    if (!raw) return; var d; try { d = JSON.parse(raw); } catch (e) { return; }
+    fields().forEach(function (el) {
+      if (!el.id || !(el.id in d)) return;
+      if (el.type === "radio" || el.type === "checkbox") el.checked = !!d[el.id]; else el.value = d[el.id];
+    });
+    if (d.__checked) grade();
+  }
+  form.addEventListener("input", function (ev) { save(); if (checked && ev.target.classList.contains("rb")) grade(); });
+  form.addEventListener("change", save);
+  form.addEventListener("submit", function (e) { e.preventDefault(); });
+
+  function normText(s) { return String(s).replace(/\r/g, "").split("\n").map(function (l) { return l.trim().replace(/\s+/g, " "); }).filter(function (l) { return l; }).join("\n"); }
+  function normGap(s) { return String(s).replace(/\s+/g, "").replace(/'/g, "\"").toLowerCase(); }
+  // Zahl aus deutscher Schreibweise lesen: "1.200", "12,5 %", "48,60 €", "-3"
+  function parseNum(s) {
+    var t = String(s).replace(/[\s€%]/g, "").replace(/[^0-9,.\-]/g, "");
+    if (t.indexOf(",") !== -1) t = t.replace(/\./g, "").replace(",", ".");
+    else if (/^-?\d{1,3}(\.\d{3})+$/.test(t)) t = t.replace(/\./g, "");
+    return t === "" ? NaN : parseFloat(t);
+  }
+  function numSet(s) { return (String(s).match(/-?\d+/g) || []).map(Number).sort(function (a, b) { return a - b; }).join(","); }
+  function mark(el, ok) { el.classList.remove("mark-ok", "mark-bad"); el.classList.add(ok ? "mark-ok" : "mark-bad"); }
+  function clearMarks() { document.querySelectorAll(".mark-ok, .mark-bad").forEach(function (el) { el.classList.remove("mark-ok", "mark-bad"); }); }
+  function fmt(n) { var r = Math.round(n * 10) / 10; return (r % 1 === 0 ? r.toFixed(0) : r.toFixed(1)).replace(".", ","); }
+
+  function gradeSection(sec) {
+    var s = 0;
+    // Single Choice
+    sec.querySelectorAll(".mc").forEach(function (q) {
+      var ans = q.dataset.answer, chosen = q.querySelector("input:checked"), ok = !!chosen && chosen.value === ans;
+      if (ok) s += 1;
+      q.querySelector('input[value="' + ans + '"]').parentElement.classList.add("mark-ok");
+      if (chosen && !ok) chosen.parentElement.classList.add("mark-bad");
+    });
+    // Automatisch bewertete Felder
+    sec.querySelectorAll(".auto").forEach(function (el) {
+      var kind = el.dataset.kind, answers = el.dataset.answer.split("|"), v = el.value, ok = false;
+      if (kind === "set") ok = numSet(v) === numSet(answers[0]);
+      else if (kind === "gap") ok = answers.some(function (a) { return normGap(a) === normGap(v); });
+      else if (kind === "num") { var x = parseNum(v), tol = Number(el.dataset.tol || 0.01); ok = !isNaN(x) && answers.some(function (a) { return Math.abs(parseNum(a) - x) <= tol; }); }
+      else ok = answers.some(function (a) { return normText(a) === normText(v); });
+      if (ok) s += Number(el.dataset.points);
+      mark(el, ok);
+    });
+    // Fehler finden
+    sec.querySelectorAll(".errblock").forEach(function (blk) {
+      var exp = JSON.parse(blk.dataset.expected), used = exp.map(function () { return false; });
+      var lines = blk.querySelectorAll(".eline"), types = blk.querySelectorAll(".etype");
+      lines.forEach(function (l, i) {
+        var line = parseInt(l.value, 10), t = types[i] ? types[i].value : null, hit = -1;
+        exp.forEach(function (e, k) { if (hit < 0 && !used[k] && e.line.indexOf(line) !== -1 && (!e.type || e.type === t)) hit = k; });
+        if (hit >= 0) { used[hit] = true; s += exp[hit].pts; }
+        mark(l, hit >= 0); if (types[i]) mark(types[i], hit >= 0);
+      });
+    });
+    // Selbstbewertung
+    sec.querySelectorAll(".rb").forEach(function (c) { if (c.checked) s += Number(c.dataset.points); });
+    sec.querySelectorAll(".sol").forEach(function (x) { x.hidden = false; });
+    return Math.min(Math.round(s * 100) / 100, Number(sec.dataset.max));
+  }
+
+  function grade() {
+    checked = true; clearMarks();
+    var total = 0;
+    document.querySelectorAll("section.task").forEach(function (sec) {
+      var k = sec.dataset.task, got = gradeSection(sec), max = MAX[k]; total += got;
+      var b = sec.querySelector(".badge"); b.hidden = false;
+      b.className = "badge " + (got >= max - 0.001 ? "full" : got > 0 ? "part" : "none");
+      b.textContent = fmt(got) + " / " + max + " P";
+      document.getElementById("ov" + k).textContent = fmt(got) + " / " + max;
+    });
+    document.getElementById("ovSum").textContent = fmt(total) + " / 60";
+    document.getElementById("scoreTop").textContent = fmt(total) + " / 60 Punkte";
+    var res = document.getElementById("result"); res.hidden = false;
+    res.innerHTML = '<div class="big">' + fmt(total) + ' von 60 Punkten</div><p>' + (total >= 30 ? "Bestanden (ab 30 Punkten)." : "Noch nicht bestanden. Ab 30 Punkten ist es geschafft.") +
+      '</p><p class="hint">Bei Erklärungen, Korrekturen und eigenem Code sind jetzt die Musterlösungen mit Häkchen eingeblendet. Hak ab, was bei dir stimmt, die Punkte rechnen sich sofort neu. Mit „Lösungen ausblenden“ versteckst du alles wieder, deine Antworten bleiben.</p>';
+    document.getElementById("hideTop").hidden = false;
+    save();
+  }
+
+  function hideSolutions() {
+    checked = false; clearMarks();
+    document.querySelectorAll(".sol").forEach(function (x) { x.hidden = true; });
+    document.querySelectorAll(".badge").forEach(function (b) { b.hidden = true; });
+    document.getElementById("result").hidden = true;
+    Object.keys(MAX).forEach(function (k) { document.getElementById("ov" + k).textContent = MAX[k]; });
+    document.getElementById("ovSum").textContent = "60";
+    document.getElementById("scoreTop").textContent = "noch nicht geprüft";
+    document.getElementById("hideTop").hidden = true;
+    save();
+  }
+
+  function goCheck() { grade(); document.getElementById("result").scrollIntoView({ block: "start" }); }
+  document.getElementById("checkTop").addEventListener("click", goCheck);
+  document.getElementById("checkBottom").addEventListener("click", goCheck);
+  document.getElementById("hideTop").addEventListener("click", function () { hideSolutions(); window.scrollTo(0, 0); });
+
+  var rc = document.getElementById("resetConfirm");
+  document.getElementById("resetBtn").addEventListener("click", function () { rc.hidden = false; });
+  document.getElementById("resetNo").addEventListener("click", function () { rc.hidden = true; });
+  document.getElementById("resetYes").addEventListener("click", function () {
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    form.reset(); Object.keys(STARTCODE).forEach(function (id) { document.getElementById(id).value = STARTCODE[id]; });
+    hideSolutions(); rc.hidden = true; stopTimer(); remaining = 3600; renderTimer(); timerBtn.textContent = "Zeit starten";
+  });
+
+  document.querySelectorAll("textarea.code").forEach(function (ta) {
+    ta.addEventListener("keydown", function (e) {
+      if (e.key === "Tab" && !e.shiftKey) { e.preventDefault(); var s = ta.selectionStart, en = ta.selectionEnd;
+        ta.value = ta.value.slice(0, s) + "    " + ta.value.slice(en); ta.selectionStart = ta.selectionEnd = s + 4; save(); }
+    });
+  });
+
+  var remaining = 3600, handle = null, timerEl = document.getElementById("timer"), timerBtn = document.getElementById("timerBtn");
+  function renderTimer() { var m = Math.floor(remaining / 60), s = remaining % 60; timerEl.textContent = String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0"); timerEl.classList.toggle("low", remaining <= 300); }
+  function stopTimer() { if (handle) { clearInterval(handle); handle = null; } }
+  timerBtn.addEventListener("click", function () {
+    if (handle) { stopTimer(); timerBtn.textContent = "Weiter"; return; }
+    if (remaining <= 0) remaining = 3600;
+    handle = setInterval(function () { remaining -= 1; renderTimer(); if (remaining <= 0) { stopTimer(); timerBtn.textContent = "Neu starten"; timerEl.textContent = "00:00 Zeit um"; } }, 1000);
+    timerBtn.textContent = "Pause";
+  });
+  renderTimer();
+  load();
+})();
+</script>

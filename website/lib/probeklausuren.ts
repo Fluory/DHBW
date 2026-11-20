@@ -1,5 +1,6 @@
 /** Interaktive Probeklausuren unter public/probeklausur/ (erzeugt mit scripts/probeklausuren.mjs). */
-export type InteractiveExam = { href: string; label: string };
+/** official: Antwortbogen zur offiziellen Klausur aus Moodle (Aufgaben stehen im Moodle-PDF). */
+export type InteractiveExam = { href: string; label: string; official?: boolean };
 
 const EXAMS: Record<string, InteractiveExam[]> = {
   "grundlagen-it": [{ href: "/probeklausur/grundlagen-it", label: "Probeklausur GIT (48 Min)" }],
@@ -9,8 +10,14 @@ const EXAMS: Record<string, InteractiveExam[]> = {
     { href: "/probeklausur/programmierung-2", label: "Probeklausur Programmierung, Teil 2 (60 Min)" },
   ],
   recht: [{ href: "/probeklausur/recht", label: "Probeklausur Recht (60 Min)" }],
-  bwl: [{ href: "/probeklausur/bwl", label: "Probeklausur BWL (72 Min)" }],
-  marketing: [{ href: "/probeklausur/marketing", label: "Probeklausur Marketing (48 Min)" }],
+  bwl: [
+    { href: "/probeklausur/bwl-offiziell", label: "Offizielle Musterklausur BWL 2025: Antwortbogen (72 Min)", official: true },
+    { href: "/probeklausur/bwl", label: "Probeklausur BWL von mir (72 Min)" },
+  ],
+  marketing: [
+    { href: "/probeklausur/marketing-offiziell", label: "Offizielle Musterklausur Marketing 2025: Antwortbogen (48 Min)", official: true },
+    { href: "/probeklausur/marketing", label: "Probeklausur Marketing von mir (48 Min)" },
+  ],
   mathematik: [{ href: "/probeklausur/mathematik", label: "Probeklausur Mathematik I (120 Min)" }],
 };
 
