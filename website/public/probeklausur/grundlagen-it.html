@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Probeklausur Grundlagen der IT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one calm exam column like a printed exam sheet; slim sticky bar with timer and score. */
+:root {
+  --bg: #ffffff; --paper: #f6f7f9; --fg: #1d2129; --muted: #5d6470; --line: #e1e4ea;
+  --accent: #3b4fa0; --ok: #2d5fc4; --ok-soft: #e9f0fd; --bad: #b8432f; --bad-soft: #fbece8;
+  --half: #a8690f; --half-soft: #fbf3e4; --code-bg: #f3f4f7;
+  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --radius: 8px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12141a; --paper: #191c23; --fg: #e7e9ee; --muted: #9aa1ad; --line: #2b2f39; --accent: #9fb0ff;
+    --ok: #8fb4ff; --ok-soft: #18233b; --bad: #ff9a85; --bad-soft: #3a1f1a; --half: #f0b85a; --half-soft: #33280f; --code-bg: #1b1e26;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12141a; --paper: #191c23; --fg: #e7e9ee; --muted: #9aa1ad; --line: #2b2f39; --accent: #9fb0ff;
+  --ok: #8fb4ff; --ok-soft: #18233b; --bad: #ff9a85; --bad-soft: #3a1f1a; --half: #f0b85a; --half-soft: #33280f; --code-bg: #1b1e26;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 16px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 46rem; margin: 0 auto; padding-block: 1.5rem 5rem; }
+h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 .35rem; text-wrap: balance; }
+h2 { font-size: 1.2rem; margin: 0; text-wrap: balance; }
+.lead { color: var(--muted); margin: 0 0 1rem; }
+.meta { display: flex; flex-wrap: wrap; gap: .4rem .8rem; font-size: .9rem; color: var(--muted); margin-bottom: 1rem; }
+.meta b { color: var(--fg); }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; padding-block: .6rem; margin-bottom: 1.5rem; }
+.timer { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 1.05rem; min-width: 4.5ch; }
+.timer.low { color: var(--bad); }
+.score { margin-left: auto; font-weight: 600; font-variant-numeric: tabular-nums; }
+button { font: inherit; font-size: .9rem; border-radius: 6px; padding: .4rem .8rem; cursor: pointer; border: 1px solid var(--line); background: var(--bg); color: var(--fg); }
+button:hover { border-color: var(--muted); }
+button.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); font-weight: 600; }
+button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.overview { width: 100%; border-collapse: collapse; font-size: .92rem; margin-bottom: 2rem; font-variant-numeric: tabular-nums; }
+.overview th, .overview td { text-align: left; padding: .35rem .5rem; border-bottom: 1px solid var(--line); }
+.overview td:last-child, .overview th:last-child { text-align: right; }
+.overview tr.sum td { font-weight: 700; border-bottom: 0; }
+section.task { border-top: 2px solid var(--fg); padding-top: .9rem; margin-top: 2.5rem; }
+.task-head { display: flex; align-items: baseline; gap: .75rem; flex-wrap: wrap; margin-bottom: .6rem; }
+.pts { font-size: .85rem; color: var(--muted); }
+.badge { margin-left: auto; font-size: .85rem; font-weight: 600; padding: .1rem .55rem; border-radius: 999px; font-variant-numeric: tabular-nums; }
+.badge.full { background: var(--ok-soft); color: var(--ok); } .badge.part { background: var(--half-soft); color: var(--half); } .badge.none { background: var(--bad-soft); color: var(--bad); }
+.q { padding-block: .9rem; border-bottom: 1px solid var(--line); }
+.q:last-child { border-bottom: 0; }
+.q > p { margin: 0 0 .5rem; }
+.q-label { font-weight: 600; margin-right: .3rem; }
+.options { display: grid; gap: .3rem; }
+.options label { display: flex; gap: .5rem; align-items: flex-start; cursor: pointer; padding: .25rem .4rem; border-radius: 6px; }
+.options label:hover { background: var(--paper); }
+.options input { margin-top: .3rem; }
+code { font-family: var(--font-mono); font-size: .88em; background: var(--code-bg); padding: 0 .25em; border-radius: 3px; }
+pre { font-family: var(--font-mono); font-size: .86rem; line-height: 1.5; background: var(--code-bg); border: 1px solid var(--line); border-radius: var(--radius); padding: .75rem .9rem; overflow-x: auto; margin: .4rem 0 .7rem; }
+pre code { background: none; padding: 0; }
+.ln { color: var(--muted); user-select: none; }
+textarea, input[type="text"], input[type="number"], select { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: .4rem .55rem; }
+textarea { width: 100%; font-family: var(--font-mono); font-size: .88rem; min-height: 4.5rem; resize: vertical; }
+textarea.code { min-height: 11rem; tab-size: 4; }
+textarea.prose { font-family: var(--font-body); font-size: .95rem; }
+input.gap { font-family: var(--font-mono); width: 11rem; max-width: 100%; }
+input.short { font-family: var(--font-mono); width: 8rem; }
+input[type="number"] { width: 6rem; }
+.row { display: flex; flex-wrap: wrap; gap: .5rem .9rem; align-items: center; margin-bottom: .45rem; }
+.row > span.lbl { min-width: 7rem; color: var(--muted); font-size: .92rem; }
+.grid-err { display: grid; grid-template-columns: 5rem 9.5rem minmax(0, 1fr); gap: .45rem; align-items: center; }
+.grid-err.two { grid-template-columns: 5rem minmax(0, 1fr); }
+.grid-err .h { font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.grid-err input[type="text"] { width: 100%; font-family: var(--font-mono); font-size: .86rem; }
+@media (max-width: 34rem) { .grid-err { grid-template-columns: 4.5rem minmax(0, 1fr); } .grid-err .fix, .grid-err .hfix { grid-column: 1 / -1; } }
+.mark-ok { background: var(--ok-soft) !important; } .mark-bad { background: var(--bad-soft) !important; }
+input.mark-ok, select.mark-ok, textarea.mark-ok { border-color: var(--ok); } input.mark-bad, select.mark-bad, textarea.mark-bad { border-color: var(--bad); }
+.sol { margin-top: .6rem; padding: .7rem .85rem; border-radius: var(--radius); background: var(--paper); border: 1px solid var(--line); font-size: .93rem; }
+.sol p { margin: .3rem 0; }
+.sol .t { font-weight: 600; }
+.rubric { display: grid; gap: .3rem; margin-top: .5rem; }
+.rubric label { display: flex; gap: .5rem; align-items: flex-start; cursor: pointer; }
+.rubric input { margin-top: .3rem; }
+.hint { color: var(--muted); font-size: .88rem; }
+.result { border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.1rem; margin: 1rem 0 1.5rem; background: var(--paper); }
+.result .big { font-size: 1.6rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.result p { margin: .3rem 0; }
+.actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 2.5rem; align-items: center; }
+.confirm { display: inline-flex; gap: .5rem; align-items: center; font-size: .9rem; }
+.table-scroll { overflow-x: auto; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+.site-back { max-width: 860px; margin: 0 auto; padding: 12px 16px 0; font: 14px/1.4 var(--font-body); }
+.site-back a { color: var(--accent); text-decoration: none; margin-right: 1rem; }
+.site-back a:hover { text-decoration: underline; }
+@media print { .site-back { display: none; } }
+/* Handy: nichts darf breiter als der Bildschirm werden */
+select { max-width: 100%; }
+pre { max-width: 100%; overflow-x: auto; }
+label, label code { white-space: normal; overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<nav class="site-back" aria-label="Website"><a href="/grundlagen-it">← Zurück zu GIT</a><a href="/lernplan">Lernplan</a><a href="/">Startseite</a></nav>
+<div class="wrap">
+  <header>
+    <h1>Probeklausur Grundlagen der IT</h1>
+    <p class="lead">Diese Übungsklausur folgt der exemplarischen Punkteverteilung aus der Klausurvorbereitung: 11 Aufgaben, 48 Punkte in 48 Minuten, also etwa ein Punkt pro Minute. Die dicksten Brocken sind Rechnerarchitektur (8), Datenstrukturen (7) und Suchen/Sortieren (6). Füll alles aus und klick auf „Prüfen“. Auswahlfragen, Rechenergebnisse und Begriffe werden automatisch bewertet. Skizzen, Erläuterungen und eigenes SQL bewertest du mit der eingeblendeten Musterlösung selbst.</p>
+    <div class="meta"><span><b>48</b> Minuten</span><span><b>48</b> Punkte</span><span>Hilfsmittel: in der Prüfungsübersicht nicht angegeben, rechne ohne Taschenrechner</span><span>bestanden ab <b>24</b></span></div>
+  </header>
+
+  <div class="bar" role="region" aria-label="Zeit und Punkte">
+    <span class="timer" id="timer">48:00</span>
+    <button type="button" id="timerBtn">Zeit starten</button>
+    <button type="button" class="primary" id="checkTop">Prüfen</button>
+    <button type="button" id="hideTop" hidden>Lösungen ausblenden</button>
+    <span class="score" id="scoreTop">noch nicht geprüft</span>
+  </div>
+
+  <div id="result" class="result" hidden></div>
+
+  <table class="overview" aria-label="Aufgabenübersicht">
+    <thead><tr><th>Aufgabe</th><th>Thema</th><th>Punkte</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Information und Digitalisierung</td><td id="ov1">3</td></tr>
+      <tr><td>2</td><td>IT-Infrastruktur und Cloud-Computing</td><td id="ov2">4</td></tr>
+      <tr><td>3</td><td>Mooresches Gesetz</td><td id="ov3">2</td></tr>
+      <tr><td>4</td><td>Zahlendarstellung und Rechnen</td><td id="ov4">3</td></tr>
+      <tr><td>5</td><td>Wahrheitstabelle, boolesche Ausdrücke, Logikgatter</td><td id="ov5">4</td></tr>
+      <tr><td>6</td><td>Programmierung</td><td id="ov6">2</td></tr>
+      <tr><td>7</td><td>Datenstrukturen</td><td id="ov7">7</td></tr>
+      <tr><td>8</td><td>Suchen und Sortieren</td><td id="ov8">6</td></tr>
+      <tr><td>9</td><td>Rechnerarchitektur: Von Neumann und Harvard</td><td id="ov9">8</td></tr>
+      <tr><td>10</td><td>Speicher: Hierarchie und RAID</td><td id="ov10">4</td></tr>
+      <tr><td>11</td><td>Datenbanken und SQL</td><td id="ov11">5</td></tr>
+      <tr class="sum"><td></td><td>Summe</td><td id="ovSum">48</td></tr>
+    </tbody>
+  </table>
+
+  <p class="hint"><b>Multiple Choice wie in der echten Klausur:</b> Dort kreuzt du alle richtigen Aussagen an (mindestens eine ist immer richtig), und jede Aussage zählt einzeln ±½ Punkt. Hier schreibst du deshalb hinter jede Aussage <b>r</b> (richtig) oder <b>f</b> (falsch) und bekommst ½ Punkt pro richtiger Entscheidung. Minuspunkte gibt es hier nicht, in der Klausur schon: Rate dort nur, wenn du mehr als die Hälfte sicher weißt. Fragen mit Auswahlknöpfen haben genau eine richtige Antwort (1 Punkt). Zahlen darfst du mit Komma schreiben, Bitmuster mit oder ohne Leerzeichen in der Mitte.</p>
+
+  <form id="exam" autocomplete="off" spellcheck="false">
+
+  <!-- ================= Aufgabe 1 ================= -->
+  <section class="task" data-task="1" data-max="3">
+    <div class="task-head"><h2>Aufgabe 1 · Information und Digitalisierung</h2><span class="pts">3 Punkte</span><span class="badge" hidden></span></div>
+
+    <div class="q mc" data-answer="c" data-name="m11">
+      <p><span class="q-label">1.1</span>(1 Punkt) Welche Aussage beschreibt die <b>gesellschaftliche</b> Sichtweise auf Digitalisierung?</p>
+      <div class="options">
+        <label><input type="radio" name="m11" id="m11a" value="a"> Analoge Signale werden in zeit- und wertediskrete Signale umgewandelt.</label>
+        <label><input type="radio" name="m11" id="m11b" value="b"> Daten und Algorithmen werden für neue Produkte und Geschäftsmodelle genutzt.</label>
+        <label><input type="radio" name="m11" id="m11c" value="c"> Lebens- und Arbeitswelten werden auf eine digitale Ebene übertragen, oft verbunden mit Umbrüchen („Disruption“).</label>
+        <label><input type="radio" name="m11" id="m11d" value="d"> Einzelne Funktionen wie die Rechnungserstellung werden automatisiert.</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: c.</span> Die drei Sichtweisen: <b>technisch</b> = analog → zeit- und wertediskret (a), <b>betriebswirtschaftlich</b> = Daten und Algorithmen für Prozesse, Produkte, Geschäftsmodelle (b), <b>gesellschaftlich</b> = Lebens- und Arbeitswelten wandern auf eine digitale Ebene (c). Antwort d ist Phase 1 der Digitalisierung im Unternehmen, keine Sichtweise.</p></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">1.2</span>(2 Punkte) Auf deinem Handy erscheint die Zahl „15“. Erläutern Sie kurz an diesem Beispiel den Unterschied zwischen Daten und Information und wie daraus Wissen und eine Handlung werden.</p>
+      <textarea class="prose" id="t12" aria-label="1.2 Erläuterung"></textarea>
+      <div class="sol" hidden>
+        <p><b>Musterantwort:</b> „15“ allein sind <b>Daten</b>, ein Zeichen ohne Bedeutung. Erst mit dem <b>Kontext</b> „Akkustand in Prozent“ wird daraus die <b>Information</b> „Der Akku ist zu 15 % geladen“. Verknüpft mit anderem Wissen („Ich bin noch acht Stunden unterwegs“) entsteht <b>Wissen</b>: Das reicht nicht. Daraus folgt die <b>Handlung</b>: Ich lade das Handy auf. Mit einem anderen Kontext (15 neue Nachrichten) wären dieselben Daten eine ganz andere Information.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb12a" data-points="1"> Daten = Zeichen ohne Bedeutung, Information = Daten mit Kontext, am Beispiel gezeigt (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb12b" data-points="1"> Wissen (Verknüpfung) und eine passende Handlung genannt (+1)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 2 ================= -->
+  <section class="task" data-task="2" data-max="4">
+    <div class="task-head"><h2>Aufgabe 2 · IT-Infrastruktur und Cloud-Computing</h2><span class="pts">4 Punkte</span><span class="badge" hidden></span></div>
+
+    <div class="q">
+      <p><span class="q-label">2.1</span>(2 Punkte) Multiple Choice: <b>r</b> oder <b>f</b>?</p>
+      <div class="row"><span class="lbl">a) Zu den sieben Hauptkomponenten einer IT-Infrastruktur gehören auch Beratungsdienste und Systemintegratoren.</span><input type="text" class="short auto" id="t21a" data-kind="gap" data-answer="r|richtig" data-points="0.5" placeholder="r/f" aria-label="2.1 a"></div>
+      <div class="row"><span class="lbl">b) In einer N-Tier-Architektur spricht jeder Client direkt mit genau einem Datenbankserver.</span><input type="text" class="short auto" id="t21b" data-kind="gap" data-answer="f|falsch" data-points="0.5" placeholder="r/f" aria-label="2.1 b"></div>
+      <div class="row"><span class="lbl">c) Die Epochen der IT-Infrastruktur überlagern sich; Großrechner werden bis heute eingesetzt.</span><input type="text" class="short auto" id="t21c" data-kind="gap" data-answer="r|richtig" data-points="0.5" placeholder="r/f" aria-label="2.1 c"></div>
+      <div class="row"><span class="lbl">d) Beim Client-Server-Prinzip hält der Client die gemeinsam genutzten Daten des Unternehmens.</span><input type="text" class="short auto" id="t21d" data-kind="gap" data-answer="f|falsch" data-points="0.5" placeholder="r/f" aria-label="2.1 d"></div>
+      <div class="sol" hidden>
+        <p><span class="t">Richtig sind a und c.</span> a) Die sieben Komponenten: Hardware, Betriebssysteme, Datenverwaltung, Netzwerke, Anwendungssysteme, Internet als Plattform, Beratung/Systemintegratoren. Die letzten beiden werden oft vergessen. b) Falsch: N-Tier verteilt die Arbeit auf mehrere Schichten, Client → Webserver → Anwendungsserver → Datenbankserver. c) Richtig: Die Epochen lösen sich nicht ab. d) Falsch: Die gemeinsamen Daten liegen auf dem <b>Server</b>, der Client ist die Eingabestelle.</p>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">2.2</span>(2 Punkte) IaaS, PaaS oder SaaS? Schreib das Kürzel.</p>
+      <div class="row"><span class="lbl">a) Ein Büro nutzt Microsoft 365 im Browser.</span><input type="text" class="short auto" id="t22a" data-kind="gap" data-answer="SaaS" data-points="0.5" aria-label="2.2 a"></div>
+      <div class="row"><span class="lbl">b) Eine Firma mietet bei STACKIT virtuelle Maschinen und installiert Linux und ihre Datenbank selbst.</span><input type="text" class="short auto" id="t22b" data-kind="gap" data-answer="IaaS" data-points="0.5" aria-label="2.2 b"></div>
+      <div class="row"><span class="lbl">c) Ein Entwickler lädt nur seinen Code hoch; Laufzeitumgebung und Datenbank betreibt der Anbieter.</span><input type="text" class="short auto" id="t22c" data-kind="gap" data-answer="PaaS" data-points="0.5" aria-label="2.2 c"></div>
+      <div class="row"><span class="lbl">d) Der Vertrieb pflegt seine Kunden im CRM von Salesforce, ohne etwas zu installieren.</span><input type="text" class="short auto" id="t22d" data-kind="gap" data-answer="SaaS" data-points="0.5" aria-label="2.2 d"></div>
+      <div class="sol" hidden>
+        <p>a) <b>SaaS</b>, b) <b>IaaS</b>, c) <b>PaaS</b>, d) <b>SaaS</b>. Die Frage ist immer: Was betreibt der Anbieter? Bei IaaS nur Rechner, Speicher und Netz (Betriebssystem machst du selbst), bei PaaS zusätzlich Laufzeit und Datenbank (du lieferst nur den Code), bei SaaS die ganze fertige Anwendung.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 3 ================= -->
+  <section class="task" data-task="3" data-max="2">
+    <div class="task-head"><h2>Aufgabe 3 · Mooresches Gesetz</h2><span class="pts">2 Punkte</span><span class="badge" hidden></span></div>
+
+    <div class="q">
+      <p><span class="q-label">3.1</span>(2 Punkte) Multiple Choice: <b>r</b> oder <b>f</b>?</p>
+      <div class="row"><span class="lbl">a) Moore beschrieb ursprünglich eine jährliche Verdopplung der Anzahl der Transistoren pro Chip.</span><input type="text" class="short auto" id="t31a" data-kind="gap" data-answer="r|richtig" data-points="0.5" placeholder="r/f" aria-label="3.1 a"></div>
+      <div class="row"><span class="lbl">b) Die Aussage „Die Leistung von Computern verdoppelt sich alle 18 Monate“ stammt von Moore selbst.</span><input type="text" class="short auto" id="t31b" data-kind="gap" data-answer="f|falsch" data-points="0.5" placeholder="r/f" aria-label="3.1 b"></div>
+      <div class="row"><span class="lbl">c) Verdoppelt sich die Transistorzahl alle zwei Jahre, ist sie nach sechs Jahren achtmal so groß.</span><input type="text" class="short auto" id="t31c" data-kind="gap" data-answer="r|richtig" data-points="0.5" placeholder="r/f" aria-label="3.1 c"></div>
+      <div class="row"><span class="lbl">d) Eine Interpretation lautet: Die Speicherkapazität eines Computers verdoppelt sich alle 18 Monate.</span><input type="text" class="short auto" id="t31d" data-kind="gap" data-answer="f|falsch" data-points="0.5" placeholder="r/f" aria-label="3.1 d"></div>
+      <div class="sol" hidden>
+        <p><span class="t">Richtig sind a und c.</span> a) Original 1965: Anzahl der Transistoren, zuerst jährlich, später alle zwei Jahre. b) Falsch: Das ist eine spätere <b>Interpretation</b>, nicht Moores Aussage. c) Richtig: 6 / 2 = 3 Verdopplungen, 2³ = 8. d) Falsch: Die drei Interpretationen sind Prozessorleistung verdoppelt, Computerleistung verdoppelt, Preis halbiert, alle 18 Monate. Speicher gehört nicht dazu (genau diese Falle stand im Beispiel-MC der Klausurvorbereitung).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 4 ================= -->
+  <section class="task" data-task="4" data-max="3">
+    <div class="task-head"><h2>Aufgabe 4 · Zahlendarstellung und Rechnen</h2><span class="pts">3 Punkte</span><span class="badge" hidden></span></div>
+
+    <div class="q">
+      <p><span class="q-label">4.1</span>(1 Punkt) Wandle 9C₁₆ um.</p>
+      <div class="row"><span class="lbl">dezimal (½ P)</span><input type="text" class="short auto" id="t41a" data-kind="num" data-answer="156" data-tol="0.01" data-points="0.5" aria-label="9C dezimal"></div>
+      <div class="row"><span class="lbl">oktal (½ P)</span><input type="text" class="short auto" id="t41b" data-kind="num" data-answer="234" data-tol="0.01" data-points="0.5" aria-label="9C oktal"></div>
+      <div class="sol" hidden>
+        <p>Dezimal: 9 · 16 + 12 = 144 + 12 = <b>156</b>. Oktal über binär: 9C = 1001 1100 → von rechts in Dreiergruppen 010 | 011 | 100 → <b>234₈</b>. Probe: 2 · 64 + 3 · 8 + 4 = 128 + 24 + 4 = 156 ✓</p>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">4.2</span>(2 Punkte) Berechne 19 − 47 im 8-Bit-Zweierkomplement.</p>
+      <div class="row"><span class="lbl">a) −47 als 8-Bit-Muster (½ P)</span><input type="text" class="short auto" id="t42a" data-kind="text" data-answer="11010001|1101 0001" data-points="0.5" aria-label="minus 47"></div>
+      <div class="row"><span class="lbl">b) Summe als 8-Bit-Muster (½ P)</span><input type="text" class="short auto" id="t42b" data-kind="text" data-answer="11100100|1110 0100" data-points="0.5" aria-label="Summe"></div>
+      <div class="row"><span class="lbl">c) Ergebnis dezimal (½ P)</span><input type="text" class="short auto" id="t42c" data-kind="num" data-answer="-28" data-tol="0.01" data-points="0.5" aria-label="Ergebnis dezimal"></div>
+      <div class="row"><span class="lbl">d) Liegt ein Überlauf vor? (ja/nein, ½ P)</span><input type="text" class="short auto" id="t42d" data-kind="gap" data-answer="nein|n" data-points="0.5" aria-label="Überlauf"></div>
+      <div class="sol" hidden>
+        <ol>
+          <li>19 = 0001 0011.</li>
+          <li>−47: 47 = 0010 1111 → umdrehen 1101 0000 → +1 = <b>1101 0001</b>.</li>
+          <li>0001 0011 + 1101 0001 = <b>1110 0100</b> (kein Übertrag fällt heraus).</li>
+          <li>Erstes Bit 1, also negativ: −128 + 64 + 32 + 4 = <b>−28</b>. Probe: 19 − 47 = −28 ✓</li>
+          <li><b>Kein Überlauf:</b> plus + minus kann nie überlaufen, und −28 liegt in −128 … +127.</li>
+        </ol>
+        <p class="hint">Typischer Fehler: das Komplement von 19 statt von 47 bilden. Dann rechnest du 47 − 19 = +28.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 5 ================= -->
+  <section class="task" data-task="5" data-max="4">
+    <div class="task-head"><h2>Aufgabe 5 · Wahrheitstabelle, boolesche Ausdrücke, Logikgatter</h2><span class="pts">4 Punkte</span><span class="badge" hidden></span></div>
+    <p>Eine Kaffeemaschine startet (Y = 1), wenn Wasser im Tank ist (W = 1) <b>und</b> entweder die Taste gedrückt ist (T = 1) <b>oder</b> der Timer abgelaufen ist (Z = 1).</p>
+
+    <div class="q">
+      <p><span class="q-label">5.1</span>(1 Punkt) Stelle für dich die Wahrheitstabelle mit den Eingängen W, T, Z auf. In welchen Zeilen ist Y = 1? Gib die Zeilennummern an: Die Zeile ist die Binärzahl WTZ, also 000 = 0 bis 111 = 7.</p>
+      <div class="row"><span class="lbl">Zeilen mit Y = 1</span><input type="text" class="gap auto" id="t51" data-kind="set" data-answer="5,6,7" data-points="1" placeholder="z. B. 1, 4" aria-label="Zeilen mit Y gleich 1"></div>
+      <div class="sol" hidden>
+        <div class="table-scroll"><table class="overview" style="margin:.3rem 0">
+          <thead><tr><th>Nr</th><th>W</th><th>T</th><th>Z</th><th>Y</th></tr></thead>
+          <tbody>
+            <tr><td>0–3</td><td>0</td><td>…</td><td>…</td><td>0 (kein Wasser)</td></tr>
+            <tr><td>4</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+            <tr><td>5</td><td>1</td><td>0</td><td>1</td><td><b>1</b></td></tr>
+            <tr><td>6</td><td>1</td><td>1</td><td>0</td><td><b>1</b></td></tr>
+            <tr><td>7</td><td>1</td><td>1</td><td>1</td><td><b>1</b></td></tr>
+          </tbody>
+        </table></div>
+        <p>Y = 1 in den Zeilen <b>5, 6 und 7</b>. Die DNF dazu: (W ∧ ¬T ∧ Z) ∨ (W ∧ T ∧ ¬Z) ∨ (W ∧ T ∧ Z).</p>
+      </div>
+    </div>
+
+    <div class="q mc" data-answer="a" data-name="m52">
+      <p><span class="q-label">5.2</span>(1 Punkt) Welcher Ausdruck ist die vereinfachte Form?</p>
+      <div class="options">
+        <label><input type="radio" name="m52" id="m52a" value="a"> W ∧ (T ∨ Z)</label>
+        <label><input type="radio" name="m52" id="m52b" value="b"> (W ∧ T) ∨ Z</label>
+        <label><input type="radio" name="m52" id="m52c" value="c"> W ∧ T ∧ Z</label>
+        <label><input type="radio" name="m52" id="m52d" value="d"> W ∨ T ∨ Z</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: a.</span> Der Term W ∧ T ∧ Z wird zweimal benutzt: mit W ∧ ¬T ∧ Z ergibt er W ∧ Z, mit W ∧ T ∧ ¬Z ergibt er W ∧ T. (W ∧ Z) ∨ (W ∧ T) = W ∧ (T ∨ Z). Antwort b ist die typische Klammerfalle: Bei W = 0, Z = 1 würde die Maschine ohne Wasser starten.</p></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">5.3</span>(1 Punkt) Beschreibe oder skizziere die Schaltung für den vereinfachten Ausdruck aus genormten Gattern (IEC 60617-12): welche Gatter, mit welchem Zeichen, welche Eingänge.</p>
+      <textarea class="prose" id="t53" aria-label="5.3 Schaltung"></textarea>
+      <div class="sol" hidden>
+<pre><code>T ──┐
+    ├─[≥1]──┐
+Z ──┘       ├─[&amp;]── Y
+W ──────────┘</code></pre>
+        <p>Von innen nach außen: Die Klammer T ∨ Z wird ein ODER-Gatter (Zeichen ≥1), sein Ausgang geht zusammen mit W in ein UND-Gatter (Zeichen &amp;).</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb53a" data-points="0.5"> ODER-Gatter (≥1) mit den Eingängen T und Z (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb53b" data-points="0.5"> UND-Gatter (&amp;) mit W und dem Ausgang des ODER, Ausgang Y (+½)</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">5.4</span>(1 Punkt) Analyse: In wie vielen der 8 Zeilen liefert diese Schaltung Y = 1?</p>
+<pre><code>A ──┐
+    ├─[&amp;]o──┐
+B ──┘       ├─[&amp;]── Y
+C ──────────┘          ([&amp;]o = NAND)</code></pre>
+      <div class="row"><span class="lbl">Anzahl Zeilen</span><input type="text" class="short auto" id="t54" data-kind="num" data-answer="3" data-tol="0.01" data-points="1" aria-label="Anzahl Zeilen"></div>
+      <div class="sol" hidden>
+        <p>Die Schaltung rechnet Y = ¬(A ∧ B) ∧ C. Y = 1 braucht C = 1 und „nicht beide A und B“. Das sind die Zeilen ABC = 001, 011 und 101: <b>3 Zeilen</b>. Bei 111 liefert das NAND 0, also Y = 0.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 6 ================= -->
+  <section class="task" data-task="6" data-max="2">
+    <div class="task-head"><h2>Aufgabe 6 · Programmierung</h2><span class="pts">2 Punkte</span><span class="badge" hidden></span></div>
+
+    <div class="q mc" data-answer="d" data-name="m61">
+      <p><span class="q-label">6.1</span>(1 Punkt) Ein Java-Programm berechnet mit <code>int a = 9; int b = 2; double r = a / b;</code> den Wert 4.0 statt 4.5. Was ist das?</p>
+      <div class="options">
+        <label><input type="radio" name="m61" id="m61a" value="a"> ein Syntaxfehler, der Compiler bricht ab</label>
+        <label><input type="radio" name="m61" id="m61b" value="b"> ein Fehler des Linkers</label>
+        <label><input type="radio" name="m61" id="m61c" value="c"> ein Überlauf, weil 4.5 nicht in ein int passt</label>
+        <label><input type="radio" name="m61" id="m61d" value="d"> ein Semantikfehler: int / int wird ganzzahlig gerechnet, erst danach wird 4 zu 4.0</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: d.</span> Das Programm ist richtig geschrieben und läuft, liefert aber still ein falsches Ergebnis: ein <b>Semantikfehler</b>. Zuerst rechnet Java 9 / 2 = 4 (Ganzzahldivision), dann wird daraus der double 4.0. Richtig wäre <code>(double) a / b</code>. Ein Syntaxfehler (a) würde der Compiler melden.</p></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">6.2</span>(1 Punkt) Ein Programm wird vom Lader an die Adresse 0x3000 geladen. Im Code steht ein Sprung zur Adresse 0x00A4. Wohin springt das Programm tatsächlich? (Hex-Schreibweise)</p>
+      <div class="row"><span class="lbl">Sprungziel</span><input type="text" class="short auto" id="t62" data-kind="gap" data-answer="0x30A4|30A4|30A4h|30A4₁₆" data-points="1" placeholder="0x…" aria-label="Sprungziel"></div>
+      <div class="sol" hidden><p>Der <b>Lader</b> addiert den Offset zu allen Adressen: 0x3000 + 0x00A4 = <b>0x30A4</b>. Nicht verwechseln: Der <b>Linker</b> verbindet die Module, der Lader bringt das Programm in den Arbeitsspeicher.</p></div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 7 ================= -->
+  <section class="task" data-task="7" data-max="7">
+    <div class="task-head"><h2>Aufgabe 7 · Datenstrukturen</h2><span class="pts">7 Punkte</span><span class="badge" hidden></span></div>
+    <p class="hint">Listen mit Komma schreiben, zum Beispiel <code>3, 1, 2</code>.</p>
+
+    <div class="q">
+      <p><span class="q-label">7.1</span>(2 Punkte) Ein leerer Stack: <code>push(6), push(2), push(9), pop(), push(4), pop(), top(), push(1)</code>.</p>
+      <div class="row"><span class="lbl">a) Ausgaben von pop() und top() in Reihenfolge (1 P)</span><input type="text" class="gap auto" id="t71a" data-kind="gap" data-answer="9,4,2" data-points="1" aria-label="Ausgaben Stack"></div>
+      <div class="row"><span class="lbl">b) Inhalt am Ende, von unten nach oben (1 P)</span><input type="text" class="gap auto" id="t71b" data-kind="gap" data-answer="6,2,1|[6,2,1]" data-points="1" aria-label="Stack am Ende"></div>
+      <div class="sol" hidden>
+        <p>Oben = rechts: [6] → [6, 2] → [6, 2, 9] → pop liefert <b>9</b> → [6, 2] → [6, 2, 4] → pop liefert <b>4</b> → [6, 2] → top liest <b>2</b> (bleibt liegen) → [6, 2, 1]. LIFO: Das zuletzt Gelegte kommt zuerst. top() entfernt nichts.</p>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">7.2</span>(1 Punkt) Eine leere Queue: <code>enqueue(3), enqueue(8), dequeue(), enqueue(5), enqueue(1), dequeue(), dequeue()</code>.</p>
+      <div class="row"><span class="lbl">a) Ausgaben von dequeue() (½ P)</span><input type="text" class="gap auto" id="t72a" data-kind="gap" data-answer="3,8,5" data-points="0.5" aria-label="Ausgaben Queue"></div>
+      <div class="row"><span class="lbl">b) Inhalt am Ende, vorne → hinten (½ P)</span><input type="text" class="gap auto" id="t72b" data-kind="gap" data-answer="1|[1]" data-points="0.5" aria-label="Queue am Ende"></div>
+      <div class="sol" hidden>
+        <p>Vorne = links: [3] → [3, 8] → dequeue <b>3</b> → [8] → [8, 5] → [8, 5, 1] → dequeue <b>8</b> → dequeue <b>5</b> → [1]. FIFO: Wer zuerst kam, geht zuerst.</p>
+      </div>
+    </div>
+
+    <div class="q mc" data-answer="b" data-name="m73">
+      <p><span class="q-label">7.3</span>(1 Punkt) Eine Wetterstation speichert für jede der 24 Stunden eines Tages genau einen Messwert und greift oft auf „den Wert von 14 Uhr“ zu. Welche Struktur passt am besten?</p>
+      <div class="options">
+        <label><input type="radio" name="m73" id="m73a" value="a"> Stack, weil der neueste Wert am wichtigsten ist</label>
+        <label><input type="radio" name="m73" id="m73b" value="b"> Array mit 24 Plätzen, weil die Anzahl fest ist und der Index direkt zugreift</label>
+        <label><input type="radio" name="m73" id="m73c" value="c"> einfach verkettete Liste, weil man leicht einfügen kann</label>
+        <label><input type="radio" name="m73" id="m73d" value="d"> Queue, weil die Werte nacheinander ankommen</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: b.</span> Feste Anzahl (24) und Zugriff über eine Nummer: Das ist der Fall für ein <b>Array</b>, <code>wert[14]</code> geht in einem Schritt (O(1)). In der Liste müsstest du vom Kopf aus 14 Elemente durchlaufen. Stack und Queue erlauben nur Zugriff auf oben bzw. vorne.</p></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">7.4</span>(3 Punkte) Füge 45, 22, 67, 11, 30, 58, 80, 27, 35, 62 in dieser Reihenfolge in einen leeren geordneten Binärbaum ein.</p>
+      <div class="row"><span class="lbl">a) alle Blätter (1 P)</span><input type="text" class="gap auto" id="t74a" data-kind="set" data-answer="11,27,35,62,80" data-points="1" aria-label="Blätter"></div>
+      <div class="row"><span class="lbl">b) Höhe des Baums (Wurzel = Ebene 0) (½ P)</span><input type="text" class="short auto" id="t74b" data-kind="num" data-answer="3" data-tol="0.01" data-points="0.5" aria-label="Höhe"></div>
+      <div class="row"><span class="lbl">c) Suchpfad für 62, Knoten in Reihenfolge (½ P)</span><input type="text" class="gap auto" id="t74c" data-kind="gap" data-answer="45,67,58,62" data-points="0.5" aria-label="Suchpfad 62"></div>
+      <div class="row"><span class="lbl">d) Die Wurzel 45 wird gelöscht, Variante „kleinster Wert im rechten Teilbaum“. Welche Zahl wird neue Wurzel? (1 P)</span><input type="text" class="short auto" id="t74d" data-kind="num" data-answer="58" data-tol="0.01" data-points="1" aria-label="neue Wurzel"></div>
+      <div class="sol" hidden>
+<pre><code>              45
+           /      \
+        22          67
+       /  \        /  \
+     11    30    58    80
+          /  \     \
+        27    35    62</code></pre>
+        <p>a) Blätter: <b>11, 27, 35, 62, 80</b>. b) Höhe <b>3</b> (zum Beispiel 45 → 22 → 30 → 27). c) 62 > 45 rechts, 62 &lt; 67 links, 62 > 58 rechts: <b>45, 67, 58, 62</b>. d) Einmal rechts zu 67, dann so weit links wie möglich: <b>58</b>. Sein rechtes Kind 62 rückt an seine alte Stelle. Probe: Von links nach rechts gelesen bleibt die Folge sortiert. (Variante „größter links“ hätte 35 ergeben.)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 8 ================= -->
+  <section class="task" data-task="8" data-max="6">
+    <div class="task-head"><h2>Aufgabe 8 · Suchen und Sortieren</h2><span class="pts">6 Punkte</span><span class="badge" hidden></span></div>
+
+    <div class="q">
+      <p><span class="q-label">8.1</span>(2 Punkte) Multiple Choice: <b>r</b> oder <b>f</b>?</p>
+      <div class="row"><span class="lbl">a) Die lineare Suche funktioniert auch auf unsortierten Daten.</span><input type="text" class="short auto" id="t81a" data-kind="gap" data-answer="r|richtig" data-points="0.5" placeholder="r/f" aria-label="8.1 a"></div>
+      <div class="row"><span class="lbl">b) Die binäre Suche hat den Aufwand O(n log n).</span><input type="text" class="short auto" id="t81b" data-kind="gap" data-answer="f|falsch" data-points="0.5" placeholder="r/f" aria-label="8.1 b"></div>
+      <div class="row"><span class="lbl">c) Merge Sort teilt das Array rekursiv und führt sortierte Teilstücke wieder zusammen.</span><input type="text" class="short auto" id="t81c" data-kind="gap" data-answer="r|richtig" data-points="0.5" placeholder="r/f" aria-label="8.1 c"></div>
+      <div class="row"><span class="lbl">d) Nach dem ersten Durchlauf von Bubble Sort steht das kleinste Element sicher ganz vorne.</span><input type="text" class="short auto" id="t81d" data-kind="gap" data-answer="f|falsch" data-points="0.5" placeholder="r/f" aria-label="8.1 d"></div>
+      <div class="sol" hidden>
+        <p><span class="t">Richtig sind a und c.</span> b) Falsch: binäre Suche O(log n), O(n log n) ist Merge Sort. d) Falsch: Nach dem ersten Durchlauf steht das <b>größte</b> Element hinten. Das kleinste wandert pro Durchlauf nur eine Stelle nach vorne.</p>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">8.2</span>(2 Punkte) Sortiertes Array mit den Indizes 0–12: <code>[4, 9, 15, 21, 28, 33, 40, 46, 52, 59, 65, 71, 80]</code>. Binäre Suche, Mitte = (lo + hi) / 2 abgerundet. Gib die Indizes der geprüften Mitten an.</p>
+      <div class="row"><span class="lbl">a) Suche nach 59: Mitten (½ P)</span><input type="text" class="gap auto" id="t82a" data-kind="gap" data-answer="6,9" data-points="0.5" aria-label="Mitten 59"></div>
+      <div class="row"><span class="lbl">b) Suche nach 30: Mitten (1 P)</span><input type="text" class="gap auto" id="t82b" data-kind="gap" data-answer="6,2,4,5" data-points="1" aria-label="Mitten 30"></div>
+      <div class="row"><span class="lbl">c) Nach wie vielen Vergleichen steht fest, dass 30 fehlt? (½ P)</span><input type="text" class="short auto" id="t82c" data-kind="num" data-answer="4" data-tol="0.01" data-points="0.5" aria-label="Vergleiche 30"></div>
+      <div class="sol" hidden>
+        <p><b>59:</b> Bereich 0–12, Mitte 6 (40), 59 > 40 → lo = 7. Bereich 7–12, Mitte 9 (59), gefunden. Mitten <b>6, 9</b>.</p>
+        <p><b>30:</b> Mitte 6 (40), 30 &lt; 40 → hi = 5. Bereich 0–5, Mitte 2 (15), 30 > 15 → lo = 3. Bereich 3–5, Mitte 4 (28), 30 > 28 → lo = 5. Bereich 5–5, Mitte 5 (33), 30 &lt; 33 → hi = 4. Jetzt lo = 5 > hi = 4: nicht vorhanden. Mitten <b>6, 2, 4, 5</b>, also <b>4 Vergleiche</b>.</p>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">8.3</span>(1 Punkt) Bubble Sort (aufsteigend) auf <code>[8, 3, 6, 1, 5]</code>: Wie sieht das Array nach dem <b>ersten</b> Durchlauf aus?</p>
+      <div class="row"><span class="lbl">nach Durchlauf 1</span><input type="text" class="gap auto" id="t83" data-kind="gap" data-answer="3,6,1,5,8|[3,6,1,5,8]" data-points="1" aria-label="Bubble Sort Durchlauf 1"></div>
+      <div class="sol" hidden><p>8↔3 → [3, 8, 6, 1, 5], 8↔6 → [3, 6, 8, 1, 5], 8↔1 → [3, 6, 1, 8, 5], 8↔5 → <b>[3, 6, 1, 5, 8]</b>. Die 8 ist wie eine Blase nach hinten gewandert.</p></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">8.4</span>(1 Punkt) Wie viele Vergleiche braucht die binäre Suche bei 2 000 sortierten Elementen höchstens?</p>
+      <div class="row"><span class="lbl">höchstens</span><input type="text" class="short auto" id="t84" data-kind="num" data-answer="11" data-tol="0.01" data-points="1" aria-label="Vergleiche binäre Suche"></div>
+      <div class="sol" hidden><p>Kleinstes k mit 2ᵏ > 2 000: 2¹⁰ = 1 024 reicht nicht, 2¹¹ = 2 048 reicht. Also <b>11</b> Vergleiche. Die lineare Suche bräuchte bis zu 2 000.</p></div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 9 ================= -->
+  <section class="task" data-task="9" data-max="8">
+    <div class="task-head"><h2>Aufgabe 9 · Rechnerarchitektur: Von Neumann und Harvard</h2><span class="pts">8 Punkte</span><span class="badge" hidden></span></div>
+
+    <div class="q">
+      <p><span class="q-label">9.1</span>(3 Punkte) Skizzieren Sie den Aufbau eines Von-Neumann-Rechners und beschriften Sie alle Komponenten. (Auf Papier zeichnen; hier kannst du die Komponenten und Verbindungen beschreiben.)</p>
+      <textarea class="prose" id="t91" aria-label="9.1 Skizze"></textarea>
+      <div class="sol" hidden>
+<pre><code>┌──────────── CPU ────────────┐
+│  Steuerwerk   Rechenwerk    │
+│               (ALU)         │
+└──────────────┬──────────────┘
+               ⇅
+═══════════════╪═════════════════  Bussystem (ein gemeinsamer Bus)
+        ⇅                 ⇅
+┌────────────────┐  ┌──────────────────┐
+│ Speicherwerk   │  │ Ein-/Ausgabewerk │
+│ Programme UND  │  │                  │
+│ Daten          │  │                  │
+└────────────────┘  └──────────────────┘</code></pre>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb91a" data-points="1"> Alle fünf Komponenten beschriftet: Rechenwerk, Steuerwerk, Speicherwerk, Ein-/Ausgabewerk, Bussystem (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb91b" data-points="0.5"> Steuerwerk und Rechenwerk als CPU zusammengefasst (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb91c" data-points="0.5"> Beim Speicher „Programme und Daten“ vermerkt (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb91d" data-points="0.5"> <b>Ein</b> gemeinsamer Bus verbindet alle Komponenten (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb91e" data-points="0.5"> Pfeile in beide Richtungen (lesen und schreiben) (+½)</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">9.2</span>(2 Punkte) Der Von-Neumann-Zyklus.</p>
+      <p>Bringe die Phasen in die richtige Reihenfolge: <b>A</b> EXECUTE · <b>B</b> FETCH OPERANDS · <b>C</b> FETCH · <b>D</b> UPDATE INSTRUCTION POINTER · <b>E</b> DECODE</p>
+      <div class="row"><span class="lbl">a) Reihenfolge der Buchstaben (1 P)</span><input type="text" class="gap auto" id="t92a" data-kind="gap" data-answer="C,E,B,A,D|CEBAD" data-points="1" placeholder="z. B. A, B, …" aria-label="Reihenfolge Zyklus"></div>
+      <div class="row"><span class="lbl">b) Welches Register enthält die Adresse des nächsten Befehls? (1 P)</span><input type="text" class="gap auto" id="t92b" data-kind="gap" data-answer="Befehlszähler|Befehlszaehler|Programmzähler|Programmzaehler|Program Counter|PC|Instruction Pointer" data-points="1" aria-label="Register"></div>
+      <div class="sol" hidden>
+        <p>a) <b>C, E, B, A, D</b>: FETCH (Befehl ins Befehlsregister) → DECODE (Steuerwerk entschlüsselt) → FETCH OPERANDS (Werte holen) → EXECUTE (ALU rechnet) → UPDATE INSTRUCTION POINTER (Befehlszähler weiter).</p>
+        <p>b) Der <b>Befehlszähler</b> (Program Counter). Falle: Das <b>Befehlsregister</b> enthält den aktuellen Befehl selbst, nicht seine Adresse.</p>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">9.3</span>(2 Punkte) Multiple Choice: <b>r</b> oder <b>f</b>?</p>
+      <div class="row"><span class="lbl">a) Bei der Harvard-Architektur gibt es getrennte Speicher und getrennte Busse für Befehle und Daten.</span><input type="text" class="short auto" id="t93a" data-kind="gap" data-answer="r|richtig" data-points="0.5" placeholder="r/f" aria-label="9.3 a"></div>
+      <div class="row"><span class="lbl">b) Die Von-Neumann-Architektur ist in der Regel teurer als die Harvard-Architektur.</span><input type="text" class="short auto" id="t93b" data-kind="gap" data-answer="f|falsch" data-points="0.5" placeholder="r/f" aria-label="9.3 b"></div>
+      <div class="row"><span class="lbl">c) AVR-Mikrocontroller (zum Beispiel im Arduino) arbeiten nach der Harvard-Architektur.</span><input type="text" class="short auto" id="t93c" data-kind="gap" data-answer="r|richtig" data-points="0.5" placeholder="r/f" aria-label="9.3 c"></div>
+      <div class="row"><span class="lbl">d) Über den Adressbus werden die gelesenen Daten zur CPU übertragen.</span><input type="text" class="short auto" id="t93d" data-kind="gap" data-answer="f|falsch" data-points="0.5" placeholder="r/f" aria-label="9.3 d"></div>
+      <div class="sol" hidden>
+        <p><span class="t">Richtig sind a und c.</span> b) Falsch: Von Neumann ist einfacher und billiger, Harvard braucht zwei Speicher und zwei Busse. d) Falsch: Steuerbus = <b>ob</b> (lesen/schreiben), Adressbus = <b>wo</b> (welche Zelle), Datenbus = <b>was</b> (die Daten selbst).</p>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">9.4</span>(1 Punkt) Erläutern Sie kurz den Von-Neumann-Flaschenhals und wie die Harvard-Architektur ihn umgeht.</p>
+      <textarea class="prose" id="t94" aria-label="9.4 Flaschenhals"></textarea>
+      <div class="sol" hidden>
+        <p><b>Musterantwort:</b> Befehle und Daten liegen im selben Speicher und laufen über denselben Bus, deshalb müssen sie nacheinander geholt werden (mindestens zwei Takte pro Anweisung). Der Bus wird zum Engpass, nicht die ALU. Harvard hat getrennte Speicher und Busse und kann Befehl und Daten gleichzeitig holen.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb94a" data-points="0.5"> Gemeinsamer Bus, Befehl und Daten nacheinander (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb94b" data-points="0.5"> Harvard: getrennte Speicher/Busse, gleichzeitiges Holen (+½)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 10 ================= -->
+  <section class="task" data-task="10" data-max="4">
+    <div class="task-head"><h2>Aufgabe 10 · Speicher: Hierarchie und RAID</h2><span class="pts">4 Punkte</span><span class="badge" hidden></span></div>
+
+    <div class="q">
+      <p><span class="q-label">10.1</span>(½ Punkt) Ordne vom schnellsten zum langsamsten: <b>A</b> RAM · <b>B</b> Register · <b>C</b> SSD · <b>D</b> L2-Cache · <b>E</b> Magnetband</p>
+      <div class="row"><span class="lbl">Reihenfolge der Buchstaben</span><input type="text" class="gap auto" id="t101" data-kind="gap" data-answer="B,D,A,C,E|BDACE" data-points="0.5" aria-label="Speicherhierarchie"></div>
+      <div class="sol" hidden><p><b>B, D, A, C, E</b>: Register → L2-Cache → RAM → SSD → Magnetband. Nach unten: langsamer, größer, billiger pro Bit. Die Grenze volatil/persistent liegt zwischen RAM und SSD.</p></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">10.2</span>(1 Punkt) Adressleitungen (1 KB = 2¹⁰ Byte, 1 MB = 2²⁰ Byte).</p>
+      <div class="row"><span class="lbl">a) Wie viele Adressleitungen braucht man für 128 MB? (½ P)</span><input type="text" class="short auto" id="t102a" data-kind="num" data-answer="27" data-tol="0.01" data-points="0.5" aria-label="Leitungen 128 MB"></div>
+      <div class="row"><span class="lbl">b) Wie viele MB adressieren 20 Leitungen? (½ P)</span><input type="text" class="short auto" id="t102b" data-kind="num" data-answer="1" data-tol="0.01" data-points="0.5" aria-label="MB bei 20 Leitungen"></div>
+      <div class="sol" hidden><p>a) 128 MB = 2⁷ · 2²⁰ = 2²⁷ → <b>27</b> Leitungen (Exponenten addieren). b) 2²⁰ Byte = 1 048 576 Byte = <b>1 MB</b>. Falle: n Leitungen sind 2ⁿ Byte, nicht n · 8.</p></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">10.3</span>(1½ Punkte) Ein Server hat 5 Platten zu je 6 TB. Wie viel TB sind nutzbar?</p>
+      <div class="row"><span class="lbl">RAID 0 (½ P)</span><input type="text" class="short auto" id="t103a" data-kind="num" data-answer="30" data-tol="0.01" data-points="0.5" aria-label="RAID 0"></div>
+      <div class="row"><span class="lbl">RAID 5 (½ P)</span><input type="text" class="short auto" id="t103b" data-kind="num" data-answer="24" data-tol="0.01" data-points="0.5" aria-label="RAID 5"></div>
+      <div class="row"><span class="lbl">RAID 6 (½ P)</span><input type="text" class="short auto" id="t103c" data-kind="num" data-answer="18" data-tol="0.01" data-points="0.5" aria-label="RAID 6"></div>
+      <div class="sol" hidden><p>RAID 0: 5 · 6 = <b>30 TB</b>, aber 0 Ausfälle. RAID 5: (5 − 1) · 6 = <b>24 TB</b>, 1 Ausfall. RAID 6: (5 − 2) · 6 = <b>18 TB</b>, 2 Ausfälle. Jede Platte, die ausfallen darf, kostet eine Platte Kapazität.</p></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">10.4</span>(1 Punkt) In einer RAID-5-Zeile stehen die Datenblöcke 1010, 0110 und 1111.</p>
+      <div class="row"><span class="lbl">a) Paritätsblock (½ P)</span><input type="text" class="short auto" id="t104a" data-kind="text" data-answer="0011" data-points="0.5" aria-label="Parität"></div>
+      <div class="row"><span class="lbl">b) Die Platte mit 0110 fällt aus. Welchen Block rechnest du aus 1010, 1111 und der Parität zurück? (½ P)</span><input type="text" class="short auto" id="t104b" data-kind="text" data-answer="0110" data-points="0.5" aria-label="wiederhergestellt"></div>
+      <div class="sol" hidden><p>a) 1010 ⊕ 0110 = 1100, 1100 ⊕ 1111 = <b>0011</b>. b) 1010 ⊕ 1111 = 0101, 0101 ⊕ 0011 = <b>0110</b> ✓. XOR ist spaltenweise 1, wenn die Anzahl der Einsen ungerade ist.</p></div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 11 ================= -->
+  <section class="task" data-task="11" data-max="5">
+    <div class="task-head"><h2>Aufgabe 11 · Datenbanken und SQL</h2><span class="pts">5 Punkte</span><span class="badge" hidden></span></div>
+    <p>Ein Großhändler speichert Kunden und Bestellungen. BETRAG ist in Euro.</p>
+    <div class="table-scroll"><table class="overview" style="margin:.3rem 0">
+      <thead><tr><th colspan="3">KUNDE</th></tr><tr><th>KNR</th><th>NAME</th><th>ORT</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Alpha GmbH</td><td>Heilbronn</td></tr>
+        <tr><td>2</td><td>Beta AG</td><td>Stuttgart</td></tr>
+        <tr><td>3</td><td>Gamma KG</td><td>Heilbronn</td></tr>
+        <tr><td>4</td><td>Delta OHG</td><td>Ulm</td></tr>
+      </tbody>
+    </table></div>
+    <div class="table-scroll"><table class="overview" style="margin:.3rem 0">
+      <thead><tr><th colspan="4">BESTELLUNG</th></tr><tr><th>BNR</th><th>KNR</th><th>BETRAG</th><th>STATUS</th></tr></thead>
+      <tbody>
+        <tr><td>101</td><td>1</td><td>120</td><td>offen</td></tr>
+        <tr><td>102</td><td>2</td><td>80</td><td>bezahlt</td></tr>
+        <tr><td>103</td><td>1</td><td>45</td><td>bezahlt</td></tr>
+        <tr><td>104</td><td>3</td><td>200</td><td>offen</td></tr>
+        <tr><td>105</td><td>2</td><td>65</td><td>bezahlt</td></tr>
+        <tr><td>106</td><td>1</td><td>95</td><td>bezahlt</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="q">
+      <p><span class="q-label">11.1</span>(1 Punkt)</p>
+      <div class="row"><span class="lbl">a) Welche Spalte in BESTELLUNG ist der Fremdschlüssel? (½ P)</span><input type="text" class="short auto" id="t111a" data-kind="gap" data-answer="KNR" data-points="0.5" aria-label="Fremdschlüssel"></div>
+      <div class="row"><span class="lbl">b) Kardinalität KUNDE : BESTELLUNG (½ P)</span><input type="text" class="short auto" id="t111b" data-kind="gap" data-answer="1:n|1:viele" data-points="0.5" placeholder="z. B. 1:1" aria-label="Kardinalität"></div>
+      <div class="sol" hidden><p>a) <b>KNR</b> verweist auf den Primärschlüssel KNR der Tabelle KUNDE (Primärschlüssel von BESTELLUNG ist BNR). b) <b>1 : n</b>: Ein Kunde hat viele Bestellungen, eine Bestellung gehört zu genau einem Kunden. Der Fremdschlüssel steht deshalb auf der n-Seite.</p></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">11.2</span>(1½ Punkte) Analyse:</p>
+<pre><code>SELECT KNR, COUNT(*), SUM(BETRAG)
+FROM BESTELLUNG
+WHERE STATUS = 'bezahlt'
+GROUP BY KNR;</code></pre>
+      <div class="row"><span class="lbl">a) Anzahl der Ergebniszeilen (½ P)</span><input type="text" class="short auto" id="t112a" data-kind="num" data-answer="2" data-tol="0.01" data-points="0.5" aria-label="Zeilen"></div>
+      <div class="row"><span class="lbl">b) SUM(BETRAG) für KNR 1 (½ P)</span><input type="text" class="short auto" id="t112b" data-kind="num" data-answer="140" data-tol="0.01" data-points="0.5" aria-label="Summe KNR 1"></div>
+      <div class="row"><span class="lbl">c) SUM(BETRAG) für KNR 2 (½ P)</span><input type="text" class="short auto" id="t112c" data-kind="num" data-answer="145" data-tol="0.01" data-points="0.5" aria-label="Summe KNR 2"></div>
+      <div class="sol" hidden>
+        <p>1. WHERE: bezahlt sind 102 (KNR 2, 80), 103 (KNR 1, 45), 105 (KNR 2, 65), 106 (KNR 1, 95). 2. GROUP BY KNR: zwei Gruppen, Kunde 3 hat nur eine offene Bestellung und fällt heraus. 3. Ergebnis:</p>
+        <div class="table-scroll"><table class="overview" style="margin:.3rem 0">
+          <thead><tr><th>KNR</th><th>COUNT(*)</th><th>SUM(BETRAG)</th></tr></thead>
+          <tbody><tr><td>1</td><td>2</td><td>45 + 95 = 140</td></tr><tr><td>2</td><td>2</td><td>80 + 65 = 145</td></tr></tbody>
+        </table></div>
+        <p>Mit SQLite nachgeprüft.</p>
+      </div>
+    </div>
+
+    <div class="q mc" data-answer="c" data-name="m113">
+      <p><span class="q-label">11.3</span>(1 Punkt) Was liefert diese Abfrage?</p>
+<pre><code>SELECT NAME
+FROM KUNDE, BESTELLUNG
+WHERE KUNDE.KNR = BESTELLUNG.KNR
+  AND BETRAG &gt; 90;</code></pre>
+      <div class="options">
+        <label><input type="radio" name="m113" id="m113a" value="a"> Alpha GmbH, Gamma KG (je einmal)</label>
+        <label><input type="radio" name="m113" id="m113b" value="b"> Alpha GmbH, Beta AG, Gamma KG, Delta OHG</label>
+        <label><input type="radio" name="m113" id="m113c" value="c"> drei Zeilen: Alpha GmbH, Gamma KG, Alpha GmbH</label>
+        <label><input type="radio" name="m113" id="m113d" value="d"> Gamma KG</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: c.</span> Über 90 liegen die Bestellungen 101 (120), 104 (200) und 106 (95). Der Join hängt an jede den Kunden: 101 und 106 gehören Alpha, 104 Gamma. Eine Zeile pro passender Bestellung, also <b>dreimal</b>, Alpha kommt doppelt vor (ohne DISTINCT). Antwort a ist die typische Falle: Ein Join liefert eine Zeile pro passender Bestellung, nicht pro Kunde. Doppelte Namen fielen erst mit <code>SELECT DISTINCT NAME</code> weg.</p></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">11.4</span>(1½ Punkte) Schreiben Sie eine SQL-Abfrage, die für jeden Ort die Summe aller Bestellbeträge ausgibt.</p>
+      <textarea class="code" id="t114" aria-label="11.4 SQL"></textarea>
+      <div class="sol" hidden>
+<pre><code>SELECT ORT, SUM(BETRAG)
+FROM KUNDE, BESTELLUNG
+WHERE KUNDE.KNR = BESTELLUNG.KNR
+GROUP BY ORT;</code></pre>
+        <p>Ergebnis zur Kontrolle: Heilbronn 460 (120 + 45 + 95 + 200), Stuttgart 145 (80 + 65). Ulm erscheint nicht, weil Delta OHG keine Bestellung hat. Gleichwertig: <code>FROM KUNDE JOIN BESTELLUNG ON KUNDE.KNR = BESTELLUNG.KNR</code>.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb114a" data-points="0.5"> <code>SELECT ORT, SUM(BETRAG)</code> (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb114b" data-points="0.5"> beide Tabellen mit Join-Bedingung KUNDE.KNR = BESTELLUNG.KNR (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb114c" data-points="0.5"> <code>GROUP BY ORT</code> („für jeden“) (+½)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="actions">
+    <button type="button" class="primary" id="checkBottom">Prüfen</button>
+    <button type="button" id="resetBtn">Alles löschen</button>
+    <span class="confirm" id="resetConfirm" hidden>Wirklich alle Antworten löschen?
+      <button type="button" id="resetYes">Ja, löschen</button>
+      <button type="button" id="resetNo">Abbrechen</button>
+    </span>
+  </div>
+  <p class="hint" style="margin-top:1rem">Eigene Übungsklausur nach der exemplarischen Punkteverteilung der Klausurvorbereitung (VL05), keine offizielle Klausur. Alle Rechnungen und SQL-Ergebnisse wurden mit Python und SQLite nachgeprüft. Deine Eingaben werden nur in diesem Browser gespeichert.</p>
+  </form>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var KEY = "probeklausur-git-v1";
+  var form = document.getElementById("exam");
+  var checked = false;
+  var MAX = { 1: 3, 2: 4, 3: 2, 4: 3, 5: 4, 6: 2, 7: 7, 8: 6, 9: 8, 10: 4, 11: 5 };
+  var STARTCODE = {};
+
+  function fields() { return form.querySelectorAll("input, textarea, select"); }
+  function save() {
+    var d = {};
+    fields().forEach(function (el) { if (!el.id) return; d[el.id] = (el.type === "radio" || el.type === "checkbox") ? el.checked : el.value; });
+    d.__checked = checked;
+    try { localStorage.setItem(KEY, JSON.stringify(d)); } catch (e) {}
+  }
+  function load() {
+    var raw = null; try { raw = localStorage.getItem(KEY); } catch (e) {}
+    if (!raw) return; var d; try { d = JSON.parse(raw); } catch (e) { return; }
+    fields().forEach(function (el) {
+      if (!el.id || !(el.id in d)) return;
+      if (el.type === "radio" || el.type === "checkbox") el.checked = !!d[el.id]; else el.value = d[el.id];
+    });
+    if (d.__checked) grade();
+  }
+  form.addEventListener("input", function (ev) { save(); if (checked && ev.target.classList.contains("rb")) grade(); });
+  form.addEventListener("change", save);
+  form.addEventListener("submit", function (e) { e.preventDefault(); });
+
+  function normText(s) { return String(s).replace(/\r/g, "").split("\n").map(function (l) { return l.trim().replace(/\s+/g, " "); }).filter(function (l) { return l; }).join("\n"); }
+  function normGap(s) { return String(s).replace(/\s+/g, "").replace(/'/g, "\"").toLowerCase(); }
+  // Zahl aus deutscher Schreibweise lesen: "1.200", "12,5 %", "48,60 €", "-3"
+  function parseNum(s) {
+    var t = String(s).replace(/[\s€%]/g, "").replace(/[^0-9,.\-]/g, "");
+    if (t.indexOf(",") !== -1) t = t.replace(/\./g, "").replace(",", ".");
+    else if (/^-?\d{1,3}(\.\d{3})+$/.test(t)) t = t.replace(/\./g, "");
+    return t === "" ? NaN : parseFloat(t);
+  }
+  function numSet(s) { return (String(s).match(/-?\d+/g) || []).map(Number).sort(function (a, b) { return a - b; }).join(","); }
+  function mark(el, ok) { el.classList.remove("mark-ok", "mark-bad"); el.classList.add(ok ? "mark-ok" : "mark-bad"); }
+  function clearMarks() { document.querySelectorAll(".mark-ok, .mark-bad").forEach(function (el) { el.classList.remove("mark-ok", "mark-bad"); }); }
+  function fmt(n) { var r = Math.round(n * 10) / 10; return (r % 1 === 0 ? r.toFixed(0) : r.toFixed(1)).replace(".", ","); }
+
+  function gradeSection(sec) {
+    var s = 0;
+    // Single Choice
+    sec.querySelectorAll(".mc").forEach(function (q) {
+      var ans = q.dataset.answer, chosen = q.querySelector("input:checked"), ok = !!chosen && chosen.value === ans;
+      if (ok) s += 1;
+      q.querySelector('input[value="' + ans + '"]').parentElement.classList.add("mark-ok");
+      if (chosen && !ok) chosen.parentElement.classList.add("mark-bad");
+    });
+    // Automatisch bewertete Felder
+    sec.querySelectorAll(".auto").forEach(function (el) {
+      var kind = el.dataset.kind, answers = el.dataset.answer.split("|"), v = el.value, ok = false;
+      if (kind === "set") ok = numSet(v) === numSet(answers[0]);
+      else if (kind === "gap") ok = answers.some(function (a) { return normGap(a) === normGap(v); });
+      else if (kind === "num") { var x = parseNum(v), tol = Number(el.dataset.tol || 0.01); ok = !isNaN(x) && answers.some(function (a) { return Math.abs(parseNum(a) - x) <= tol; }); }
+      else ok = answers.some(function (a) { return normText(a) === normText(v); });
+      if (ok) s += Number(el.dataset.points);
+      mark(el, ok);
+    });
+    // Fehler finden
+    sec.querySelectorAll(".errblock").forEach(function (blk) {
+      var exp = JSON.parse(blk.dataset.expected), used = exp.map(function () { return false; });
+      var lines = blk.querySelectorAll(".eline"), types = blk.querySelectorAll(".etype");
+      lines.forEach(function (l, i) {
+        var line = parseInt(l.value, 10), t = types[i] ? types[i].value : null, hit = -1;
+        exp.forEach(function (e, k) { if (hit < 0 && !used[k] && e.line.indexOf(line) !== -1 && (!e.type || e.type === t)) hit = k; });
+        if (hit >= 0) { used[hit] = true; s += exp[hit].pts; }
+        mark(l, hit >= 0); if (types[i]) mark(types[i], hit >= 0);
+      });
+    });
+    // Selbstbewertung
+    sec.querySelectorAll(".rb").forEach(function (c) { if (c.checked) s += Number(c.dataset.points); });
+    sec.querySelectorAll(".sol").forEach(function (x) { x.hidden = false; });
+    return Math.min(Math.round(s * 100) / 100, Number(sec.dataset.max));
+  }
+
+  function grade() {
+    checked = true; clearMarks();
+    var total = 0;
+    document.querySelectorAll("section.task").forEach(function (sec) {
+      var k = sec.dataset.task, got = gradeSection(sec), max = MAX[k]; total += got;
+      var b = sec.querySelector(".badge"); b.hidden = false;
+      b.className = "badge " + (got >= max - 0.001 ? "full" : got > 0 ? "part" : "none");
+      b.textContent = fmt(got) + " / " + max + " P";
+      document.getElementById("ov" + k).textContent = fmt(got) + " / " + max;
+    });
+    document.getElementById("ovSum").textContent = fmt(total) + " / 48";
+    document.getElementById("scoreTop").textContent = fmt(total) + " / 48 Punkte";
+    var res = document.getElementById("result"); res.hidden = false;
+    res.innerHTML = '<div class="big">' + fmt(total) + ' von 48 Punkten</div><p>' + (total >= 24 ? "Bestanden (ab 24 Punkten)." : "Noch nicht bestanden. Ab 24 Punkten ist es geschafft.") +
+      '</p><p class="hint">Bei Erklärungen, Korrekturen und eigenem Code sind jetzt die Musterlösungen mit Häkchen eingeblendet. Hak ab, was bei dir stimmt, die Punkte rechnen sich sofort neu. Mit „Lösungen ausblenden“ versteckst du alles wieder, deine Antworten bleiben.</p>';
+    document.getElementById("hideTop").hidden = false;
+    save();
+  }
+
+  function hideSolutions() {
+    checked = false; clearMarks();
+    document.querySelectorAll(".sol").forEach(function (x) { x.hidden = true; });
+    document.querySelectorAll(".badge").forEach(function (b) { b.hidden = true; });
+    document.getElementById("result").hidden = true;
+    Object.keys(MAX).forEach(function (k) { document.getElementById("ov" + k).textContent = MAX[k]; });
+    document.getElementById("ovSum").textContent = "48";
+    document.getElementById("scoreTop").textContent = "noch nicht geprüft";
+    document.getElementById("hideTop").hidden = true;
+    save();
+  }
+
+  function goCheck() { grade(); document.getElementById("result").scrollIntoView({ block: "start" }); }
+  document.getElementById("checkTop").addEventListener("click", goCheck);
+  document.getElementById("checkBottom").addEventListener("click", goCheck);
+  document.getElementById("hideTop").addEventListener("click", function () { hideSolutions(); window.scrollTo(0, 0); });
+
+  var rc = document.getElementById("resetConfirm");
+  document.getElementById("resetBtn").addEventListener("click", function () { rc.hidden = false; });
+  document.getElementById("resetNo").addEventListener("click", function () { rc.hidden = true; });
+  document.getElementById("resetYes").addEventListener("click", function () {
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    form.reset(); Object.keys(STARTCODE).forEach(function (id) { document.getElementById(id).value = STARTCODE[id]; });
+    hideSolutions(); rc.hidden = true; stopTimer(); remaining = 2880; renderTimer(); timerBtn.textContent = "Zeit starten";
+  });
+
+  document.querySelectorAll("textarea.code").forEach(function (ta) {
+    ta.addEventListener("keydown", function (e) {
+      if (e.key === "Tab" && !e.shiftKey) { e.preventDefault(); var s = ta.selectionStart, en = ta.selectionEnd;
+        ta.value = ta.value.slice(0, s) + "    " + ta.value.slice(en); ta.selectionStart = ta.selectionEnd = s + 4; save(); }
+    });
+  });
+
+  var remaining = 2880, handle = null, timerEl = document.getElementById("timer"), timerBtn = document.getElementById("timerBtn");
+  function renderTimer() { var m = Math.floor(remaining / 60), s = remaining % 60; timerEl.textContent = String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0"); timerEl.classList.toggle("low", remaining <= 300); }
+  function stopTimer() { if (handle) { clearInterval(handle); handle = null; } }
+  timerBtn.addEventListener("click", function () {
+    if (handle) { stopTimer(); timerBtn.textContent = "Weiter"; return; }
+    if (remaining <= 0) remaining = 2880;
+    handle = setInterval(function () { remaining -= 1; renderTimer(); if (remaining <= 0) { stopTimer(); timerBtn.textContent = "Neu starten"; timerEl.textContent = "00:00 Zeit um"; } }, 1000);
+    timerBtn.textContent = "Pause";
+  });
+  renderTimer();
+  load();
+})();
+</script>
+</body>
+</html>

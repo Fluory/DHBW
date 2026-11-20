@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Probeklausur Vertrags- und Schuldrecht</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one calm exam column like a printed exam sheet; slim sticky bar with timer and score. */
+:root {
+  --bg: #ffffff; --paper: #f6f7f9; --fg: #1d2129; --muted: #5d6470; --line: #e1e4ea;
+  --accent: #3b4fa0; --ok: #2d5fc4; --ok-soft: #e9f0fd; --bad: #b8432f; --bad-soft: #fbece8;
+  --half: #a8690f; --half-soft: #fbf3e4; --code-bg: #f3f4f7;
+  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --radius: 8px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12141a; --paper: #191c23; --fg: #e7e9ee; --muted: #9aa1ad; --line: #2b2f39; --accent: #9fb0ff;
+    --ok: #8fb4ff; --ok-soft: #18233b; --bad: #ff9a85; --bad-soft: #3a1f1a; --half: #f0b85a; --half-soft: #33280f; --code-bg: #1b1e26;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12141a; --paper: #191c23; --fg: #e7e9ee; --muted: #9aa1ad; --line: #2b2f39; --accent: #9fb0ff;
+  --ok: #8fb4ff; --ok-soft: #18233b; --bad: #ff9a85; --bad-soft: #3a1f1a; --half: #f0b85a; --half-soft: #33280f; --code-bg: #1b1e26;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 16px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 46rem; margin: 0 auto; padding-block: 1.5rem 5rem; }
+h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 .35rem; text-wrap: balance; }
+h2 { font-size: 1.2rem; margin: 0; text-wrap: balance; }
+.lead { color: var(--muted); margin: 0 0 1rem; }
+.meta { display: flex; flex-wrap: wrap; gap: .4rem .8rem; font-size: .9rem; color: var(--muted); margin-bottom: 1rem; }
+.meta b { color: var(--fg); }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; padding-block: .6rem; margin-bottom: 1.5rem; }
+.timer { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 1.05rem; min-width: 4.5ch; }
+.timer.low { color: var(--bad); }
+.score { margin-left: auto; font-weight: 600; font-variant-numeric: tabular-nums; }
+button { font: inherit; font-size: .9rem; border-radius: 6px; padding: .4rem .8rem; cursor: pointer; border: 1px solid var(--line); background: var(--bg); color: var(--fg); }
+button:hover { border-color: var(--muted); }
+button.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); font-weight: 600; }
+button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.overview { width: 100%; border-collapse: collapse; font-size: .92rem; margin-bottom: 2rem; font-variant-numeric: tabular-nums; }
+.overview th, .overview td { text-align: left; padding: .35rem .5rem; border-bottom: 1px solid var(--line); }
+.overview td:last-child, .overview th:last-child { text-align: right; }
+.overview tr.sum td { font-weight: 700; border-bottom: 0; }
+section.task { border-top: 2px solid var(--fg); padding-top: .9rem; margin-top: 2.5rem; }
+.task-head { display: flex; align-items: baseline; gap: .75rem; flex-wrap: wrap; margin-bottom: .6rem; }
+.pts { font-size: .85rem; color: var(--muted); }
+.badge { margin-left: auto; font-size: .85rem; font-weight: 600; padding: .1rem .55rem; border-radius: 999px; font-variant-numeric: tabular-nums; }
+.badge.full { background: var(--ok-soft); color: var(--ok); } .badge.part { background: var(--half-soft); color: var(--half); } .badge.none { background: var(--bad-soft); color: var(--bad); }
+.q { padding-block: .9rem; border-bottom: 1px solid var(--line); }
+.q:last-child { border-bottom: 0; }
+.q > p { margin: 0 0 .5rem; }
+.q-label { font-weight: 600; margin-right: .3rem; }
+.options { display: grid; gap: .3rem; }
+.options label { display: flex; gap: .5rem; align-items: flex-start; cursor: pointer; padding: .25rem .4rem; border-radius: 6px; }
+.options label:hover { background: var(--paper); }
+.options input { margin-top: .3rem; }
+code { font-family: var(--font-mono); font-size: .88em; background: var(--code-bg); padding: 0 .25em; border-radius: 3px; }
+pre { font-family: var(--font-mono); font-size: .86rem; line-height: 1.5; background: var(--code-bg); border: 1px solid var(--line); border-radius: var(--radius); padding: .75rem .9rem; overflow-x: auto; margin: .4rem 0 .7rem; }
+pre code { background: none; padding: 0; }
+.ln { color: var(--muted); user-select: none; }
+textarea, input[type="text"], input[type="number"], select { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: .4rem .55rem; }
+textarea { width: 100%; font-family: var(--font-mono); font-size: .88rem; min-height: 4.5rem; resize: vertical; }
+textarea.code { min-height: 11rem; tab-size: 4; }
+textarea.prose { font-family: var(--font-body); font-size: .95rem; }
+input.gap { font-family: var(--font-mono); width: 11rem; max-width: 100%; }
+input.short { font-family: var(--font-mono); width: 8rem; }
+input[type="number"] { width: 6rem; }
+.row { display: flex; flex-wrap: wrap; gap: .5rem .9rem; align-items: center; margin-bottom: .45rem; }
+.row > span.lbl { min-width: 7rem; color: var(--muted); font-size: .92rem; }
+.grid-err { display: grid; grid-template-columns: 5rem 9.5rem minmax(0, 1fr); gap: .45rem; align-items: center; }
+.grid-err.two { grid-template-columns: 5rem minmax(0, 1fr); }
+.grid-err .h { font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.grid-err input[type="text"] { width: 100%; font-family: var(--font-mono); font-size: .86rem; }
+@media (max-width: 34rem) { .grid-err { grid-template-columns: 4.5rem minmax(0, 1fr); } .grid-err .fix, .grid-err .hfix { grid-column: 1 / -1; } }
+.mark-ok { background: var(--ok-soft) !important; } .mark-bad { background: var(--bad-soft) !important; }
+input.mark-ok, select.mark-ok, textarea.mark-ok { border-color: var(--ok); } input.mark-bad, select.mark-bad, textarea.mark-bad { border-color: var(--bad); }
+.sol { margin-top: .6rem; padding: .7rem .85rem; border-radius: var(--radius); background: var(--paper); border: 1px solid var(--line); font-size: .93rem; }
+.sol p { margin: .3rem 0; }
+.sol .t { font-weight: 600; }
+.rubric { display: grid; gap: .3rem; margin-top: .5rem; }
+.rubric label { display: flex; gap: .5rem; align-items: flex-start; cursor: pointer; }
+.rubric input { margin-top: .3rem; }
+.hint { color: var(--muted); font-size: .88rem; }
+.result { border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.1rem; margin: 1rem 0 1.5rem; background: var(--paper); }
+.result .big { font-size: 1.6rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.result p { margin: .3rem 0; }
+.actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 2.5rem; align-items: center; }
+.confirm { display: inline-flex; gap: .5rem; align-items: center; font-size: .9rem; }
+.table-scroll { overflow-x: auto; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+.site-back { max-width: 860px; margin: 0 auto; padding: 12px 16px 0; font: 14px/1.4 var(--font-body); }
+.site-back a { color: var(--accent); text-decoration: none; margin-right: 1rem; }
+.site-back a:hover { text-decoration: underline; }
+@media print { .site-back { display: none; } }
+/* Handy: nichts darf breiter als der Bildschirm werden */
+select { max-width: 100%; }
+pre { max-width: 100%; overflow-x: auto; }
+label, label code { white-space: normal; overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<nav class="site-back" aria-label="Website"><a href="/recht">← Zurück zu RECHT</a><a href="/lernplan">Lernplan</a><a href="/">Startseite</a></nav>
+<div class="wrap">
+  <header>
+    <h1>Probeklausur Vertrags- und Schuldrecht</h1>
+    <p class="lead">Eine Übungsklausur für 60 Minuten mit 60 Punkten, aufgebaut wie eine Rechtsklausur: kurze Einzelfragen zu Anspruchsgrundlagen, Fristen und Beträgen, dazu fünf Fälle im Gutachtenstil. Der Schwerpunkt liegt auf dem Kaufrecht, dem zuletzt behandelten Stoff. Füll alles aus und klick auf „Prüfen“. Auswahlfragen, Daten und Beträge werden automatisch bewertet. Deine Falllösungen bewertest du mit der eingeblendeten Musterlösung und den Häkchen selbst.</p>
+    <div class="meta"><span><b>60</b> Minuten</span><span><b>60</b> Punkte</span><span>Hilfsmittel: BGB-Text nach den Auflagen der Dozentin (nur Markierungen und §-Verweise)</span><span>bestanden ab <b>30</b></span></div>
+  </header>
+
+  <div class="bar" role="region" aria-label="Zeit und Punkte">
+    <span class="timer" id="timer">60:00</span>
+    <button type="button" id="timerBtn">Zeit starten</button>
+    <button type="button" class="primary" id="checkTop">Prüfen</button>
+    <button type="button" id="hideTop" hidden>Lösungen ausblenden</button>
+    <span class="score" id="scoreTop">noch nicht geprüft</span>
+  </div>
+
+  <div id="result" class="result" hidden></div>
+
+  <table class="overview" aria-label="Aufgabenübersicht">
+    <thead><tr><th>Aufgabe</th><th>Thema</th><th>Punkte</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Vertragsschluss und Minderjährige</td><td id="ov1">12</td></tr>
+      <tr><td>2</td><td>Stellvertretung</td><td id="ov2">10</td></tr>
+      <tr><td>3</td><td>Leistungsstörungen und Schadensersatz</td><td id="ov3">10</td></tr>
+      <tr><td>4</td><td>Kaufrecht: Mängelrechte und Verbrauchsgüterkauf</td><td id="ov4">16</td></tr>
+      <tr><td>5</td><td>AGB, Widerruf und Klausurregeln</td><td id="ov5">12</td></tr>
+      <tr class="sum"><td></td><td>Summe</td><td id="ovSum">60</td></tr>
+    </tbody>
+  </table>
+
+  <form id="exam" autocomplete="off" spellcheck="false">
+
+  <!-- ================= Aufgabe 1 ================= -->
+  <section class="task" data-task="1" data-max="12">
+    <div class="task-head"><h2>Aufgabe 1 · Vertragsschluss und Minderjährige</h2><span class="pts">12 Punkte</span><span class="badge" hidden></span></div>
+    <p class="hint">Einzelfragen: genau eine Antwort ist richtig (1 Punkt), Daten und Beträge werden automatisch geprüft. Den Fall löst du im Gutachtenstil und bewertest ihn danach mit der Musterlösung selbst.</p>
+
+    <div class="q mc" data-answer="b" data-name="m11">
+      <p><span class="q-label">1.1</span>Ein Onlineshop zeigt einen Rucksack für 79 €. Was ist diese Anzeige rechtlich?</p>
+      <div class="options">
+        <label><input type="radio" name="m11" id="m11a" value="a"> ein bindendes Angebot an alle Besucher (§ 145)</label>
+        <label><input type="radio" name="m11" id="m11b" value="b"> eine invitatio ad offerendum, das Angebot macht erst der Kunde mit der Bestellung</label>
+        <label><input type="radio" name="m11" id="m11c" value="c"> eine Annahme, sobald jemand den Rucksack in den Warenkorb legt</label>
+        <label><input type="radio" name="m11" id="m11d" value="d"> eine Willenserklärung, die mit dem Hochladen zugeht</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: b.</span> Die Anzeige richtet sich an die Allgemeinheit. Der Shop will sich nicht gegenüber jedem binden, sonst müsste er auch liefern, wenn das Lager leer ist. Das Angebot gibt der Kunde mit der Bestellung ab. Eine automatische Eingangsbestätigung ist noch keine Annahme (§ 312i I 1 Nr. 3).</p></div>
+    </div>
+
+    <div class="q mc" data-answer="c" data-name="m12">
+      <p><span class="q-label">1.2</span>Tom (16) kauft ohne Wissen seiner Eltern bei einem Händler einen E-Scooter für 300 € und zahlt mit Geld, das er sich geliehen hat. Was gilt <b>sofort nach dem Kauf</b>?</p>
+      <div class="options">
+        <label><input type="radio" name="m12" id="m12a" value="a"> Der Vertrag ist nichtig (§ 105 I).</label>
+        <label><input type="radio" name="m12" id="m12b" value="b"> Der Vertrag ist wirksam, weil Tom bezahlt hat (§ 110).</label>
+        <label><input type="radio" name="m12" id="m12c" value="c"> Der Vertrag ist schwebend unwirksam (§ 108 I).</label>
+        <label><input type="radio" name="m12" id="m12d" value="d"> Der Vertrag ist wirksam, weil Tom einen wirtschaftlichen Vorteil hat.</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: c.</span> Tom ist 16, also beschränkt geschäftsfähig (§§ 2, 106). Ein Kauf ist wegen der Zahlungspflicht nicht lediglich rechtlich vorteilhaft (§ 107), eine Einwilligung fehlt. § 110 greift nicht, weil das Geld nicht von den Eltern oder mit deren Zustimmung überlassen wurde. Also schwebend unwirksam bis zur Genehmigung. Nichtig (§ 105) wäre der Vertrag nur bei einem Kind unter 7.</p></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">1.3</span>(1 Punkt) Ein Händler fordert die Eltern eines 17-Jährigen schriftlich auf, sich zur Genehmigung eines Kaufs zu erklären (§ 108 II). Der Brief geht am <b>Mittwoch, 25.11.2026</b>, zu. An welchem Tag endet die Frist (24 Uhr)?</p>
+      <div class="row"><span class="lbl">Fristende</span><input type="text" class="gap auto" id="t13" data-kind="gap" data-answer="09.12.2026|9.12.2026|09.12.26|9.12.26" data-points="1" placeholder="TT.MM.JJJJ" aria-label="Fristende 1.3"></div>
+      <div class="sol" hidden><p>Der Zugangstag zählt nicht (§ 187 I), Tag 1 ist Do 26.11. Zwei Wochen enden am gleichnamigen Wochentag (§ 188 II): <b>Mi 09.12.2026</b>, 24 Uhr. Das ist ein Werktag, § 193 spielt keine Rolle. Schweigen die Eltern bis dahin, gilt die Genehmigung als verweigert (§ 108 II 2). (Wochentage mit Python geprüft.)</p></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">1.4</span>(9 Punkte) <b>Fall:</b> Lena ist 17. Am Samstag, 21.11.2026, kauft sie beim Fahrradhändler H ein gebrauchtes E-Bike für 600 €. Sie zahlt 200 € sofort aus Taschengeld, das sie gespart hat. Die restlichen 400 € soll sie in zwei Raten zahlen, die erste am 14.12.2026. H übergibt und übereignet ihr das Rad sofort. Die Eltern wissen von nichts. H wird unsicher und fordert die Eltern schriftlich auf, sich zu erklären. Der Brief geht ihnen am Mittwoch, 25.11.2026, zu (siehe 1.3). Die Eltern reagieren nicht. Am 14.12.2026 verlangt H von Lena die erste Rate.<br><b>Frage:</b> Hat H gegen Lena einen Anspruch auf Zahlung aus § 433 II BGB? Antworte im Gutachtenstil.</p>
+      <textarea class="prose" id="t14" aria-label="1.4 Gutachten" style="min-height:14rem"></textarea>
+      <div class="sol" hidden>
+        <p><b>Musterlösung (eigene Lösungsskizze, im Gutachtenstil):</b></p>
+        <p>1. <b>Obersatz:</b> H könnte gegen Lena einen Anspruch auf Zahlung der Raten aus § 433 II BGB haben. Dazu müsste ein wirksamer Kaufvertrag vorliegen.</p>
+        <p>2. <b>Angebot und Annahme:</b> H und Lena haben sich über Rad, Preis und Raten geeinigt. Fraglich ist, ob Lenas Erklärung wirksam ist.</p>
+        <p>3. <b>Geschäftsfähigkeit:</b> Lena ist 17, also beschränkt geschäftsfähig (§§ 2, 106). Ihre Erklärung ist nur nach den §§ 107 ff. wirksam.</p>
+        <p>4. <b>§ 107:</b> Der Kauf verpflichtet sie zur Zahlung von 600 €. Das ist ein rechtlicher Nachteil, nicht lediglich rechtlich vorteilhaft. Eine Einwilligung der Eltern (§ 183) liegt nicht vor.</p>
+        <p>5. <b>§ 110:</b> Das Taschengeld ist ihr zur freien Verfügung überlassen. „Bewirkt“ heißt aber vollständig bezahlt. Lena hat nur 200 € von 600 € gezahlt, der Rest soll in Raten folgen. § 110 greift nicht.</p>
+        <p>6. <b>§ 108 I:</b> Der Vertrag ist schwebend unwirksam und hängt von der Genehmigung der Eltern ab.</p>
+        <p>7. <b>§ 108 II:</b> Nach der Aufforderung kann die Genehmigung nur bis zum Ablauf von zwei Wochen erklärt werden, also bis Mi 09.12.2026 (siehe 1.3). Die Eltern schweigen. Die Genehmigung gilt als verweigert (§ 108 II 2), der Vertrag ist endgültig unwirksam.</p>
+        <p>8. <b>Ergebnis:</b> H hat am 14.12.2026 keinen Anspruch aus § 433 II BGB. (Zusatz: Lena ist trotzdem Eigentümerin geworden, denn die Übereignung ist lediglich rechtlich vorteilhaft, § 107, Abstraktionsprinzip. H kann das Rad nach § 812 zurückverlangen.)</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb14a" data-points="1"> Obersatz mit § 433 II BGB und Frage nach wirksamem Kaufvertrag (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb14b" data-points="1"> Angebot und Annahme festgestellt, Problem bei Lenas Erklärung erkannt (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb14c" data-points="1"> beschränkt geschäftsfähig, §§ 2, 106 (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb14d" data-points="1"> § 107: Kauf wegen Zahlungspflicht rechtlich nachteilig (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb14e" data-points="1"> keine Einwilligung der Eltern (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb14f" data-points="2"> § 110 geprüft und verneint, weil nicht vollständig bezahlt (Raten) (+2)</label>
+          <label><input type="checkbox" class="rb" id="rb14g" data-points="1"> § 108 II: Schweigen zwei Wochen = Verweigerung, Frist bis 09.12.2026 (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb14h" data-points="1"> Ergebnis: endgültig unwirksam, kein Anspruch (+1)</label>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ================= Aufgabe 2 ================= -->
+  <section class="task" data-task="2" data-max="10">
+    <div class="task-head"><h2>Aufgabe 2 · Stellvertretung</h2><span class="pts">10 Punkte</span><span class="badge" hidden></span></div>
+    <p class="hint">Einzelfragen: genau eine Antwort ist richtig (1 Punkt), Daten und Beträge werden automatisch geprüft. Den Fall löst du im Gutachtenstil und bewertest ihn danach mit der Musterlösung selbst.</p>
+
+    <div class="q mc" data-answer="b" data-name="m21">
+      <p><span class="q-label">2.1</span>Lisa sagt zu ihrem Mitbewohner: „Kauf mir irgendein gutes Wörterbuch, maximal 40 €.“ Was ist der Mitbewohner beim Kauf?</p>
+      <div class="options">
+        <label><input type="radio" name="m21" id="m21a" value="a"> Bote, weil er Lisas Erklärung überbringt</label>
+        <label><input type="radio" name="m21" id="m21b" value="b"> Vertreter, weil er selbst auswählen darf</label>
+        <label><input type="radio" name="m21" id="m21c" value="c"> Vertragspartner des Buchhändlers</label>
+        <label><input type="radio" name="m21" id="m21d" value="d"> Vertreter ohne Vertretungsmacht</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: b.</span> Er hat einen Entscheidungsspielraum (welches Buch, bis 40 €) und gibt eine eigene Willenserklärung ab. Das macht ihn zum Vertreter (§ 164 I). Ein Bote würde eine fertige Erklärung überbringen („Ich nehme Buch X für 29 €“). Mit Lisas Erlaubnis hat er Vertretungsmacht.</p></div>
+    </div>
+
+    <div class="q mc" data-answer="b" data-name="m22">
+      <p><span class="q-label">2.2</span>Ein Angestellter kauft monatelang ohne Vollmacht im Namen seiner Chefin bei einem Lieferanten ein. Die Chefin bemerkt es nicht, hätte es aber an den Rechnungen sofort erkennen können. Der Lieferant ist gutgläubig. Was liegt vor?</p>
+      <div class="options">
+        <label><input type="radio" name="m22" id="m22a" value="a"> Duldungsvollmacht</label>
+        <label><input type="radio" name="m22" id="m22b" value="b"> Anscheinsvollmacht</label>
+        <label><input type="radio" name="m22" id="m22c" value="c"> gar keine Vertretungsmacht, die Chefin ist frei</label>
+        <label><input type="radio" name="m22" id="m22d" value="d"> Insichgeschäft nach § 181</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: b.</span> Die Chefin weiß nichts, hätte das wiederholte Auftreten aber bei Sorgfalt erkennen und verhindern können: Anscheinsvollmacht. Sie ist gebunden. Duldungsvollmacht setzt voraus, dass sie es weiß und geschehen lässt.</p></div>
+    </div>
+
+    <div class="q mc" data-answer="d" data-name="m23">
+      <p><span class="q-label">2.3</span>Ein Vertreter überschreitet bewusst seine Vollmacht, der Vertretene verweigert die Genehmigung. Aus welcher Norm kann der Geschäftspartner gegen den Vertreter vorgehen?</p>
+      <div class="options">
+        <label><input type="radio" name="m23" id="m23a" value="a"> § 177 I BGB</label>
+        <label><input type="radio" name="m23" id="m23b" value="b"> § 179 II BGB (nur Vertrauensschaden)</label>
+        <label><input type="radio" name="m23" id="m23c" value="c"> § 164 II BGB</label>
+        <label><input type="radio" name="m23" id="m23d" value="d"> § 179 I BGB (Erfüllung oder Schadensersatz nach Wahl)</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: d.</span> Der Vertreter kannte den Mangel seiner Vertretungsmacht. Dann haftet er nach § 179 I nach Wahl des Partners auf Erfüllung oder Schadensersatz. § 179 II gilt nur, wenn er den Mangel nicht kannte. § 177 I sagt nur, dass der Vertrag schwebend unwirksam ist, er ist keine Anspruchsgrundlage.</p></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">2.4</span>(7 Punkte) <b>Fall:</b> Mia bittet ihren Kommilitonen Jan, für sie und in ihrem Namen bei Händler H ein Tablet zu kaufen, „aber für <b>höchstens</b> 400 €“. Jan findet ein besseres Modell für 520 € und kauft es ausdrücklich im Namen von Mia. Bezahlt werden soll bei Abholung. H weiß nichts von der Grenze. Mia ist verärgert und lehnt den Kauf ab.<br><b>Fragen:</b> a) Hat H gegen Mia einen Anspruch auf Zahlung von 520 €? b) Was kann H von Jan verlangen?</p>
+      <textarea class="prose" id="t24" aria-label="2.4 Gutachten" style="min-height:14rem"></textarea>
+      <div class="sol" hidden>
+        <p><b>Musterlösung (eigene Lösungsskizze, Aufbau wie die offizielle Lösung zu Skript S. 26, Fälle 3 und 7):</b></p>
+        <p><b>a)</b> 1. <b>Obersatz:</b> H könnte gegen Mia einen Anspruch auf Zahlung von 520 € aus § 433 II i. V. m. § 164 I BGB haben. Mia hat selbst nichts erklärt, Jan müsste sie wirksam vertreten haben.</p>
+        <p>2. <b>Eigene WE im fremden Namen:</b> Jan wählt selbst aus (Spielraum, also kein Bote) und handelt ausdrücklich im Namen von Mia.</p>
+        <p>3. <b>Vertretungsmacht:</b> Mia hat Vollmacht erteilt. „Höchstens 400 €“ ist eine Bedingung, keine bloße Erwartung. Die Auslegung ergibt, dass auch die Vollmacht auf 400 € begrenzt ist. Mit 520 € handelt Jan außerhalb seiner Vertretungsmacht. Für Duldung oder Anschein gibt es keine Anhaltspunkte.</p>
+        <p>4. <b>Folge:</b> Der Vertrag ist schwebend unwirksam (§ 177 I). Mia verweigert die Genehmigung, er ist endgültig unwirksam. <b>Ergebnis:</b> Kein Anspruch gegen Mia.</p>
+        <p><b>b)</b> 1. H könnte gegen Jan einen Anspruch aus § 179 I BGB haben: Jan hat als Vertreter ohne Vertretungsmacht gehandelt, Mia hat die Genehmigung verweigert.</p>
+        <p>2. <b>Kenntnis:</b> Jan kannte die Grenze. Also haftet er nach Wahl des H auf Erfüllung (Abnahme und Zahlung von 520 €) oder Schadensersatz (§ 179 I).</p>
+        <p>3. <b>Kein Ausschluss (§ 179 III):</b> H kannte die Grenze nicht und musste sie nicht kennen. Jan ist als Student volljährig. <b>Ergebnis:</b> H kann von Jan Erfüllung oder Schadensersatz verlangen.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb24a" data-points="1"> a) Obersatz §§ 433 II, 164 I BGB gegen Mia (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb24b" data-points="1"> eigene WE (kein Bote) und Handeln im Namen von Mia (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb24c" data-points="1"> Vertretungsmacht durch Auslegung auf 400 € begrenzt, also überschritten (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb24d" data-points="1"> § 177 I schwebend unwirksam, Verweigerung → kein Anspruch gegen Mia (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb24e" data-points="1"> b) § 179 I: Vertreter ohne Vertretungsmacht + Verweigerung (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb24f" data-points="1"> Jan kannte den Mangel → Erfüllung oder Schadensersatz nach Wahl des H (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb24g" data-points="1"> § 179 III geprüft und verneint (+1)</label>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ================= Aufgabe 3 ================= -->
+  <section class="task" data-task="3" data-max="10">
+    <div class="task-head"><h2>Aufgabe 3 · Leistungsstörungen und Schadensersatz</h2><span class="pts">10 Punkte</span><span class="badge" hidden></span></div>
+    <p class="hint">Einzelfragen: genau eine Antwort ist richtig (1 Punkt), Daten und Beträge werden automatisch geprüft. Den Fall löst du im Gutachtenstil und bewertest ihn danach mit der Musterlösung selbst.</p>
+
+    <div class="q mc" data-answer="b" data-name="m31">
+      <p><span class="q-label">3.1</span>Eine Rechnung lautet „zahlbar bis 15.12.2026“. Der Kunde zahlt nicht. Ab wann ist er im Verzug, wenn keine Mahnung kommt?</p>
+      <div class="options">
+        <label><input type="radio" name="m31" id="m31a" value="a"> gar nicht, ohne Mahnung kein Verzug</label>
+        <label><input type="radio" name="m31" id="m31b" value="b"> ab dem 16.12.2026, die Mahnung ist entbehrlich (§ 286 II Nr. 1)</label>
+        <label><input type="radio" name="m31" id="m31c" value="c"> ab dem 15.12.2026</label>
+        <label><input type="radio" name="m31" id="m31d" value="d"> erst 30 Tage nach Zugang der Rechnung (§ 286 III)</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: b.</span> Die Leistungszeit ist nach dem Kalender bestimmt, der Kalender ersetzt die Mahnung (§ 286 II Nr. 1). Am 15.12. darf der Kunde noch zahlen, der Verzug beginnt am 16.12. Die 30-Tage-Regel (§ 286 III) gilt nur, wenn kein Datum vereinbart ist.</p></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">3.2</span>(1 Punkt) Ein Handwerker schickt einer GmbH eine Rechnung über eine fällige Werklohnforderung, ohne Zahlungsdatum und ohne Mahnung. Die Rechnung geht am <b>Montag, 02.11.2026</b>, zu. Ab welchem Tag ist die GmbH spätestens im Verzug (§ 286 III)?</p>
+      <div class="row"><span class="lbl">Verzug ab</span><input type="text" class="gap auto" id="t32" data-kind="gap" data-answer="03.12.2026|3.12.2026|03.12.26|3.12.26" data-points="1" placeholder="TT.MM.JJJJ" aria-label="Verzug ab 3.2"></div>
+      <div class="sol" hidden><p>30 Tage nach Fälligkeit und Zugang der Rechnung (§ 286 III). Der Zugangstag zählt nicht (§ 187 I): Tag 1 ist der 03.11., Tag 30 der <b>02.12.2026</b>. Verzug also ab <b>Do 03.12.2026</b>. Ein Hinweis in der Rechnung ist nicht nötig, weil die GmbH kein Verbraucher ist. (Mit Python nachgezählt.)</p></div>
+    </div>
+
+    <div class="q mc" data-answer="c" data-name="m33">
+      <p><span class="q-label">3.3</span>Der bestellte Firmenwagen kommt drei Wochen zu spät, der Käufer ist in Verzug gesetzt worden und mietet so lange ein Ersatzauto. Anspruchsgrundlage für die Mietkosten?</p>
+      <div class="options">
+        <label><input type="radio" name="m33" id="m33a" value="a"> § 280 I BGB allein</label>
+        <label><input type="radio" name="m33" id="m33b" value="b"> §§ 280 I, III, 283 BGB</label>
+        <label><input type="radio" name="m33" id="m33c" value="c"> §§ 280 I, II, 286 BGB</label>
+        <label><input type="radio" name="m33" id="m33d" value="d"> § 311a II BGB</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: c.</span> Mietkosten entstehen durch die Verspätung: Verzögerungsschaden, §§ 280 I, II, 286. § 280 II verlangt dafür ausdrücklich den Verzug. § 283 betrifft Schadensersatz statt der Leistung bei Unmöglichkeit, der Wagen kommt aber noch.</p></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">3.4</span>(1 Punkt) Durch einen Fehler des Installateurs entsteht ein Wasserschaden von 1.800 €. Der Eigentümer hat den Schaden vergrößert, weil er das Tropfen tagelang ignoriert hat. Sein Mitverschulden beträgt 25 % (§ 254). Wie viel Euro bekommt er?</p>
+      <div class="row"><span class="lbl">Betrag in €</span><input type="text" class="short auto" id="t34" data-kind="num" data-answer="1350" data-points="1" data-tol="0.01" placeholder="z. B. 1.234,50" aria-label="Betrag 3.4"></div>
+      <div class="sol" hidden><p>Der Eigentümer trägt seinen Anteil selbst: 1.800 € × 75 % = <b>1.350 €</b> (1.800 € − 450 €). Wer 450 € einträgt, hat den eigenen Anteil statt des Ersatzes berechnet.</p></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">3.5</span>(6 Punkte) <b>Fall:</b> V verkauft K seinen gebrauchten Konzertflügel für 8.000 €. K zahlt 2.000 € an, der Rest ist bei Abholung fällig. Zwei Tage vor dem vereinbarten Abholtermin schlägt ein Blitz in Vs Haus ein, der Flügel verbrennt. V trifft kein Verschulden.<br><b>Frage:</b> Wie ist die Rechtslage? Prüfe den Anspruch des K auf Übereignung, den Restkaufpreis des V, das Schicksal der Anzahlung und einen Schadensersatzanspruch des K.</p>
+      <textarea class="prose" id="t35" aria-label="3.5 Gutachten" style="min-height:14rem"></textarea>
+      <div class="sol" hidden>
+        <p><b>Musterlösung (eigene Lösungsskizze):</b></p>
+        <p>1. <b>K gegen V aus § 433 I 1:</b> Ein Kaufvertrag liegt vor. Der gebrauchte Flügel ist eine <b>Stückschuld</b>. Er ist zerstört, niemand kann ihn liefern: objektive, nachträgliche Unmöglichkeit. Der Anspruch ist nach <b>§ 275 I</b> ausgeschlossen.</p>
+        <p>2. <b>V gegen K auf den Rest (§ 433 II):</b> Wird der Schuldner nach § 275 I frei, entfällt der Anspruch auf die Gegenleistung (<b>§ 326 I 1</b>).</p>
+        <p>3. <b>Keine Ausnahme:</b> Die Gefahr war noch nicht übergegangen, der Flügel war nicht übergeben (§ 446). K ist nicht im Annahmeverzug und hat den Brand nicht zu verantworten (§ 326 II).</p>
+        <p>4. <b>Anzahlung:</b> K kann die 2.000 € nach <b>§ 326 IV</b> (mit §§ 346 ff.) zurückverlangen.</p>
+        <p>5. <b>Schadensersatz K gegen V (§§ 280 I, III, 283):</b> Schuldverhältnis und Pflichtverletzung (Nichtleistung wegen Unmöglichkeit) liegen vor. Das Vertretenmüssen wird vermutet (§ 280 I 2), ist hier aber widerlegt: Blitzschlag ist Zufall. <b>Kein Schadensersatz.</b></p>
+        <p><b>Ergebnis:</b> Beide werden frei, K bekommt seine 2.000 € zurück, Schadensersatz gibt es nicht.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb35a" data-points="1"> Stückschuld, § 275 I: Anspruch auf Übereignung ausgeschlossen (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb35b" data-points="1"> § 326 I 1: Kaufpreisanspruch entfällt (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb35c" data-points="1"> Gefahr nicht übergegangen (§ 446), keine Ausnahme nach § 326 II (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb35d" data-points="1"> Anzahlung zurück nach § 326 IV (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb35e" data-points="1"> §§ 280 I, III, 283 als Grundlage für Schadensersatz geprüft (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb35f" data-points="1"> Vertretenmüssen vermutet, aber widerlegt → kein Schadensersatz (+1)</label>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ================= Aufgabe 4 ================= -->
+  <section class="task" data-task="4" data-max="16">
+    <div class="task-head"><h2>Aufgabe 4 · Kaufrecht: Mängelrechte und Verbrauchsgüterkauf</h2><span class="pts">16 Punkte</span><span class="badge" hidden></span></div>
+    <p class="hint">Einzelfragen: genau eine Antwort ist richtig (1 Punkt), Daten und Beträge werden automatisch geprüft. Den Fall löst du im Gutachtenstil und bewertest ihn danach mit der Musterlösung selbst.</p>
+
+    <div class="q mc" data-answer="a" data-name="m41">
+      <p><span class="q-label">4.1</span>Die neuen Kopfhörer von K knistern links. Wer entscheidet, ob repariert oder ein neues Paar geliefert wird?</p>
+      <div class="options">
+        <label><input type="radio" name="m41" id="m41a" value="a"> der Käufer (§ 439 I)</label>
+        <label><input type="radio" name="m41" id="m41b" value="b"> der Verkäufer, weil er die Kosten trägt</label>
+        <label><input type="radio" name="m41" id="m41c" value="c"> der Hersteller</label>
+        <label><input type="radio" name="m41" id="m41d" value="d"> beide gemeinsam, sonst ein Gutachter</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: a.</span> Beim Kauf einer Sache hat der Käufer das Wahlrecht zwischen Nachbesserung und Nachlieferung (§ 439 I). Die Kosten trägt der Verkäufer (§ 439 II). Nur bei digitalen Produkten wählt der Unternehmer (§ 327l).</p></div>
+    </div>
+
+    <div class="q mc" data-answer="d" data-name="m42">
+      <p><span class="q-label">4.2</span>Ein neuer Couchtisch hat einen kleinen, kaum sichtbaren Kratzer. Der Händler beseitigt ihn trotz angemessener Frist nicht. Welche Rechte hat die Käuferin?</p>
+      <div class="options">
+        <label><input type="radio" name="m42" id="m42a" value="a"> Rücktritt und Minderung</label>
+        <label><input type="radio" name="m42" id="m42b" value="b"> nur Rücktritt</label>
+        <label><input type="radio" name="m42" id="m42c" value="c"> keine, der Mangel ist zu klein</label>
+        <label><input type="radio" name="m42" id="m42d" value="d"> nur Minderung, kein Rücktritt</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: d.</span> Ein kleiner Kratzer ist ein unerheblicher Mangel: Der Rücktritt ist ausgeschlossen (§ 323 V 2). Die Minderung bleibt möglich, weil § 441 I 2 diese Grenze ausdrücklich nicht übernimmt. „Keine Rechte“ ist falsch: Auch ein kleiner Mangel ist ein Mangel.</p></div>
+    </div>
+
+    <div class="q mc" data-answer="b" data-name="m43">
+      <p><span class="q-label">4.3</span>Ein mangelhafter Heizlüfter überhitzt und beschädigt Ks Teppich. Der Händler hat den Mangel zu vertreten. Anspruchsgrundlage für den Teppich?</p>
+      <div class="options">
+        <label><input type="radio" name="m43" id="m43a" value="a"> §§ 437 Nr. 3, 280 I, III, 281 I BGB</label>
+        <label><input type="radio" name="m43" id="m43b" value="b"> §§ 437 Nr. 3, 280 I BGB</label>
+        <label><input type="radio" name="m43" id="m43c" value="c"> §§ 437 Nr. 2, 441 BGB</label>
+        <label><input type="radio" name="m43" id="m43d" value="d"> §§ 437 Nr. 1, 439 I BGB</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: b.</span> Der Teppich ist ein anderes Rechtsgut des Käufers: <b>Mangelfolgeschaden</b>, Schadensersatz neben der Leistung nach §§ 437 Nr. 3, 280 I, ohne Fristsetzung. § 281 betrifft Schadensersatz statt der Leistung, also Ersatz für den Heizlüfter selbst.</p></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">4.4</span>(2 Punkte) Eine gebrauchte Kamera wird für <b>1.200 €</b> verkauft. Ohne Mangel wäre sie 1.500 € wert, mit dem Mangel nur 1.000 €. Die Käuferin mindert (§ 441 III).</p>
+      <div class="row"><span class="lbl">a) geminderter Preis in €</span><input type="text" class="short auto" id="t44a" data-kind="num" data-answer="800" data-points="1" data-tol="0.01" placeholder="z. B. 950" aria-label="geminderter Preis 4.4"></div>
+      <div class="row"><span class="lbl">b) Minderungsbetrag in €</span><input type="text" class="short auto" id="t44b" data-kind="num" data-answer="400" data-points="1" data-tol="0.01" placeholder="z. B. 250" aria-label="Minderungsbetrag 4.4"></div>
+      <div class="sol" hidden><p>Der Preis sinkt im Verhältnis des Wertes: 1.000 ÷ 1.500 = 2/3. Geminderter Preis: 1.200 € × 2/3 = <b>800 €</b>. Minderungsbetrag: 1.200 € − 800 € = <b>400 €</b> (mit Python geprüft). Falle: Wer einfach die Wertdifferenz von 500 € abzieht, kommt auf 700 €. Hat die Käuferin schon voll gezahlt, bekommt sie 400 € zurück (§§ 441 IV, 346 I).</p></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">4.5</span>(2 Punkte) Verbraucherin V bekommt ihren neuen Saugroboter am <b>Dienstag, 24.11.2026</b>, geliefert.</p>
+      <div class="row"><span class="lbl">a) Ende der Verjährung (§ 438)</span><input type="text" class="gap auto" id="t45a" data-kind="gap" data-answer="24.11.2028|24.11.28" data-points="1" placeholder="TT.MM.JJJJ" aria-label="Verjährung 4.5"></div>
+      <div class="row"><span class="lbl">b) Ende der Vermutung (§ 477 I)</span><input type="text" class="gap auto" id="t45b" data-kind="gap" data-answer="24.11.2027|24.11.27" data-points="1" placeholder="TT.MM.JJJJ" aria-label="Vermutung 4.5"></div>
+      <div class="sol" hidden><p><b>a)</b> 2 Jahre ab Ablieferung (§ 438 I Nr. 3, II). Der Liefertag zählt nicht (§ 187 I), Ende am gleichen Datum zwei Jahre später (§ 188 II): <b>Fr 24.11.2028</b>. Nicht am Jahresende: § 199 gilt hier nicht. <b>b)</b> Die Beweislastumkehr gilt ein Jahr ab Gefahrübergang: bis <b>Mi 24.11.2027</b>. Sie verlängert nicht die Gewährleistung, sondern regelt nur, wer beweisen muss. (Wochentage mit Python geprüft.)</p></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">4.6</span>(9 Punkte) <b>Fall:</b> Die Studentin Sara kauft beim Elektrohändler E einen neuen Saugroboter für 450 €. Nach drei Wochen fährt der Roboter nur noch im Kreis, weil ein Sensor defekt ist. Sara bringt ihn zu E und schildert den Fehler. E repariert ihn. Eine Woche später tritt derselbe Fehler wieder auf. Sara erklärt E gegenüber den Rücktritt und verlangt 450 € zurück. E meint: „Ich habe ein Recht auf einen zweiten Reparaturversuch. Außerdem zahlen Sie das Porto für die Rücksendung.“<br><b>Frage:</b> Kann Sara die 450 € zurückverlangen? Gehe auch auf Es Einwände ein.</p>
+      <textarea class="prose" id="t46" aria-label="4.6 Gutachten" style="min-height:14rem"></textarea>
+      <div class="sol" hidden>
+        <p><b>Musterlösung (eigene Lösungsskizze, Aufbau wie Kaufrecht-Skript Fall 2 Variante 1):</b></p>
+        <p>1. <b>Obersatz:</b> Sara könnte gegen E einen Anspruch auf Rückzahlung von 450 € aus §§ 437 Nr. 2, 323 I, 346 I BGB haben.</p>
+        <p>2. <b>Kaufvertrag und Verbrauchsgüterkauf:</b> Ein Kaufvertrag liegt vor (§ 433). Sara kauft privat (Verbraucherin, § 13) von E als Unternehmer (§ 14) eine Ware: Verbrauchsgüterkauf (§ 474 I). Die §§ 475 ff. gelten ergänzend.</p>
+        <p>3. <b>Sachmangel:</b> Ein Saugroboter, der nur im Kreis fährt, eignet sich nicht für die gewöhnliche Verwendung und hat nicht die übliche Funktionalität (§ 434 III).</p>
+        <p>4. <b>Bei Gefahrübergang:</b> Der Fehler zeigt sich nach drei Wochen, also innerhalb eines Jahres. Es wird vermutet, dass er schon bei Übergabe da war (§ 477 I). Ein Ausschluss der Rechte ist nicht ersichtlich (§§ 442, 476 I).</p>
+        <p>5. <b>Frist entbehrlich:</b> Nach § 440 S. 2 gilt eine Nachbesserung erst nach dem zweiten erfolglosen Versuch als fehlgeschlagen. Beim Verbrauchsgüterkauf weicht <b>§ 475d I Nr. 2</b> davon ab: Schon nach dem <b>ersten</b> erfolglosen Versuch kann der Verbraucher ohne Fristsetzung zurücktreten. Es Einwand greift nicht.</p>
+        <p>6. <b>Erheblichkeit und Erklärung:</b> Ein Roboter, der nicht saugt, hat keinen unerheblichen Mangel (§ 323 V 2). Sara hat den Rücktritt gegenüber E erklärt (§ 349).</p>
+        <p>7. <b>Rechtsfolge:</b> Rückgewähr nach § 346 I: Roboter gegen 450 €. Die Kosten der Rückgabe trägt beim Verbrauchsgüterkauf der <b>Unternehmer</b> (§ 475 VI). Auch der zweite Einwand greift nicht.</p>
+        <p>8. <b>Ergebnis:</b> Sara kann die 450 € gegen Rückgabe des Roboters verlangen, das Porto zahlt E. (Nicht zu verwechseln: Ein Widerruf scheidet aus, sie hat im Laden gekauft.)</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb46a" data-points="1"> Obersatz mit §§ 437 Nr. 2, 323 I, 346 I BGB (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb46b" data-points="1"> Kaufvertrag und Verbrauchsgüterkauf (§ 474 I) festgestellt (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb46c" data-points="1"> Sachmangel nach § 434 III (Funktionalität) (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb46d" data-points="1"> Gefahrübergang mit Vermutung § 477 I, kein Ausschluss (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb46e" data-points="2"> Frist entbehrlich nach § 475d I Nr. 2: erster Fehlschlag genügt, abweichend von § 440 S. 2 (+2)</label>
+          <label><input type="checkbox" class="rb" id="rb46f" data-points="1"> Mangel erheblich (§ 323 V 2) und Rücktrittserklärung (§ 349) (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb46g" data-points="1"> Rückgewähr § 346 I, Rückgabekosten trägt E (§ 475 VI) (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb46h" data-points="1"> Ergebnis klar formuliert, beide Einwände beantwortet (+1)</label>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ================= Aufgabe 5 ================= -->
+  <section class="task" data-task="5" data-max="12">
+    <div class="task-head"><h2>Aufgabe 5 · AGB, Widerruf und Klausurregeln</h2><span class="pts">12 Punkte</span><span class="badge" hidden></span></div>
+    <p class="hint">Einzelfragen: genau eine Antwort ist richtig (1 Punkt), Daten und Beträge werden automatisch geprüft. Den Fall löst du im Gutachtenstil und bewertest ihn danach mit der Musterlösung selbst.</p>
+
+    <div class="q mc" data-answer="c" data-name="m51">
+      <p><span class="q-label">5.1</span>Welcher Vertrag ist ein Fernabsatzvertrag (§ 312c), bei dem ein Verbraucher widerrufen kann?</p>
+      <div class="options">
+        <label><input type="radio" name="m51" id="m51a" value="a"> Kauf einer Jacke im Kaufhaus nach ausführlicher Beratung</label>
+        <label><input type="radio" name="m51" id="m51b" value="b"> Kauf beim Händler, der die Ware nach Hause liefert, nachdem der Kunde im Laden bestellt hat</label>
+        <label><input type="radio" name="m51" id="m51c" value="c"> Bestellung einer Pfanne über die Hotline eines Teleshopping-Senders</label>
+        <label><input type="radio" name="m51" id="m51d" value="d"> Kauf eines Fahrrads von einer Privatperson über eine Kleinanzeige</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: c.</span> Teleshopping mit Hotline: Vertragsschluss ausschließlich über Fernkommunikationsmittel in einem organisierten Fernabsatzsystem, Unternehmer gegen Verbraucher. Im Laden bestellt ist kein Fernabsatz, auch wenn geliefert wird. Bei der Privatperson fehlt der Unternehmer.</p></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">5.2</span>(1 Punkt) Verbraucher V erhält die online bestellte Ware am <b>Samstag, 21.11.2026</b>. Bis zu welchem Tag muss er den Widerruf spätestens absenden?</p>
+      <div class="row"><span class="lbl">letzter Tag</span><input type="text" class="gap auto" id="t52" data-kind="gap" data-answer="07.12.2026|7.12.2026|07.12.26|7.12.26" data-points="1" placeholder="TT.MM.JJJJ" aria-label="Widerruf 5.2"></div>
+      <div class="sol" hidden><p>14 Tage ab Erhalt der Ware (§§ 355 II, 356 II Nr. 1 a). Der 21.11. zählt nicht (§ 187 I). Zwei Wochen später ist Sa 05.12.2026. Der Widerruf ist eine Willenserklärung, also tritt an die Stelle des Samstags der nächste Werktag (§ 193): <b>Mo 07.12.2026</b>. Die Absendung genügt (§ 355 I 5).</p></div>
+    </div>
+
+    <div class="q mc" data-answer="a" data-name="m53">
+      <p><span class="q-label">5.3</span>Im Onlineshop heißt der letzte Button nur „Weiter“. Eine Verbraucherin klickt darauf. Was gilt?</p>
+      <div class="options">
+        <label><input type="radio" name="m53" id="m53a" value="a"> Es ist kein Vertrag zustande gekommen (§ 312j III).</label>
+        <label><input type="radio" name="m53" id="m53b" value="b"> Ein Vertrag ist zustande gekommen, sie kann aber widerrufen.</label>
+        <label><input type="radio" name="m53" id="m53c" value="c"> Ein Vertrag ist zustande gekommen, der Button ist egal.</label>
+        <label><input type="radio" name="m53" id="m53d" value="d"> Der Vertrag ist schwebend unwirksam, bis sie bezahlt.</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: a.</span> Nach der Button-Lösung kommt ein Vertrag mit einem Verbraucher nur zustande, wenn der Button eindeutig auf die Zahlungspflicht hinweist („zahlungspflichtig bestellen“). Ohne Vertrag gibt es auch nichts zu widerrufen, das ist der typische Fehler.</p></div>
+    </div>
+
+    <div class="q mc" data-answer="b" data-name="m54">
+      <p><span class="q-label">5.4</span>Welchen Klebezettel darfst du laut den Auflagen der Dozentin in dein BGB für die Klausur kleben?</p>
+      <div class="options">
+        <label><input type="radio" name="m54" id="m54a" value="a"> „§ 312g Widerruf“</label>
+        <label><input type="radio" name="m54" id="m54b" value="b"> „§ 312g“</label>
+        <label><input type="radio" name="m54" id="m54c" value="c"> „Widerruf: 14 Tage!“</label>
+        <label><input type="radio" name="m54" id="m54d" value="d"> einen Zettel mit dem Prüfschema zum Widerruf</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: b.</span> Erlaubt sind leere Zettel oder solche, die nur das Gesetz oder den Paragrafen tragen. Die Normüberschrift („Widerruf“), Stichworte, Zahlen ohne §-Bezug, Ausrufezeichen und Schemata sind verboten und gelten als Täuschungsversuch.</p></div>
+    </div>
+
+    <div class="q mc" data-answer="d" data-name="m55">
+      <p><span class="q-label">5.5</span>Ein Möbelhaus druckt seine AGB nur auf die Rückseite des Lieferscheins. Beim Kauf im Laden wurde nicht darauf hingewiesen. Gelten die AGB gegenüber der Verbraucherin?</p>
+      <div class="options">
+        <label><input type="radio" name="m55" id="m55a" value="a"> Ja, weil sie die Lieferung angenommen hat</label>
+        <label><input type="radio" name="m55" id="m55b" value="b"> Ja, AGB gelten immer</label>
+        <label><input type="radio" name="m55" id="m55c" value="c"> Nur, wenn sie nicht innerhalb von 14 Tagen widerspricht</label>
+        <label><input type="radio" name="m55" id="m55d" value="d"> Nein, es fehlt der Hinweis bei Vertragsschluss (§ 305 II Nr. 1)</label>
+      </div>
+      <div class="sol" hidden><p><span class="t">Richtig: d.</span> AGB werden nur Vertragsinhalt, wenn bei Vertragsschluss ausdrücklich auf sie hingewiesen wird und man sie zumutbar zur Kenntnis nehmen kann (§ 305 II). Der Lieferschein kommt erst danach. Es gilt das Gesetz (§ 306 II).</p></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">5.6</span>(7 Punkte) <b>Fall:</b> B ist Mitglied einer Kletterhalle von A. Bei Vertragsschluss hat A auf seine AGB hingewiesen und sie ausgehändigt. Darin steht: „Die Nutzung erfolgt auf eigene Gefahr. Wir haften nur für Vorsatz und grobe Fahrlässigkeit.“ Ein Mitarbeiter von A hat aus Unachtsamkeit ein abgenutztes Sicherungsseil nicht ausgetauscht (einfache Fahrlässigkeit). Das Seil reißt, B stürzt aus geringer Höhe und verletzt sich am Knie. Arztkosten: 300 €. A beruft sich auf die AGB.<br><b>Frage:</b> Hat B gegen A einen Anspruch auf Schadensersatz?</p>
+      <textarea class="prose" id="t56" aria-label="5.6 Gutachten" style="min-height:14rem"></textarea>
+      <div class="sol" hidden>
+        <p><b>Musterlösung (eigene Lösungsskizze, Aufbau wie Kaufrecht-Skript Fall 10):</b></p>
+        <p>1. <b>Obersatz:</b> B könnte gegen A einen Anspruch auf Schadensersatz aus §§ 280 I, 241 II BGB haben.</p>
+        <p>2. <b>Schuldverhältnis und Pflichtverletzung:</b> Zwischen A und B besteht ein Nutzungsvertrag. A muss die Ausrüstung sicher bereitstellen (Schutzpflicht, § 241 II). Ein abgenutztes Seil nicht zu ersetzen, verletzt diese Pflicht.</p>
+        <p>3. <b>Vertretenmüssen:</b> Es wird vermutet (§ 280 I 2). Das fahrlässige Verhalten des Mitarbeiters wird A über <b>§ 278</b> zugerechnet, ohne Entlastungsmöglichkeit.</p>
+        <p>4. <b>Haftungsausschluss durch AGB?</b> Die Klausel ist eine AGB (§ 305 I) und wurde wirksam einbezogen (Hinweis und Aushändigung, § 305 II).</p>
+        <p>5. <b>Inhaltskontrolle:</b> Nach <b>§ 309 Nr. 7 a</b> darf die Haftung für Verletzungen von Leben, Körper und Gesundheit auch bei einfacher Fahrlässigkeit nicht ausgeschlossen werden. Die Klausel schließt genau das aus. Sie ist unwirksam.</p>
+        <p>6. <b>Rechtsfolge (§ 306):</b> Der Vertrag bleibt im Übrigen wirksam, an die Stelle der Klausel tritt das Gesetz. Die Klausel wird nicht auf den erlaubten Teil gekürzt (keine geltungserhaltende Reduktion).</p>
+        <p>7. <b>Schaden und Ergebnis:</b> B kann die Arztkosten von 300 € (§ 249 II 1) und ein angemessenes Schmerzensgeld (§ 253 II) verlangen. A kann sich nicht auf die AGB berufen. (Daneben § 823 I.)</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb56a" data-points="1"> Obersatz mit §§ 280 I, 241 II BGB (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb56b" data-points="1"> Schuldverhältnis und Verletzung der Schutzpflicht (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb56c" data-points="1"> Vertretenmüssen vermutet, Mitarbeiter über § 278 (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb56d" data-points="1"> AGB und Einbeziehung nach § 305 I, II geprüft (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb56e" data-points="1"> § 309 Nr. 7 a: Ausschluss bei Körperschäden unwirksam (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb56f" data-points="1"> § 306: Gesetz gilt, keine geltungserhaltende Reduktion (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb56g" data-points="1"> Schaden: 300 € Arztkosten und Schmerzensgeld (§ 253 II), Ergebnis (+1)</label>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="actions">
+    <button type="button" class="primary" id="checkBottom">Prüfen</button>
+    <button type="button" id="resetBtn">Alles löschen</button>
+    <span class="confirm" id="resetConfirm" hidden>Wirklich alle Antworten löschen?
+      <button type="button" id="resetYes">Ja, löschen</button>
+      <button type="button" id="resetNo">Abbrechen</button>
+    </span>
+  </div>
+  <p class="hint" style="margin-top:1rem">Eigene Übungsklausur, keine offizielle Klausur. Aufbau und Punkteverteilung sind ein Vorschlag: Wie viele Fälle die echte Klausur am 14.12.2026 hat, ist nicht bekannt. Die Musterlösungen sind eigene Lösungsskizzen nach Skript und Gesetz, nicht mit der Dozentin abgestimmt. Alle Daten und Beträge wurden mit Python nachgerechnet. Deine Eingaben werden nur in diesem Browser gespeichert.</p>
+  </form>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var KEY = "probeklausur-recht-v1";
+  var form = document.getElementById("exam");
+  var checked = false;
+  var MAX = { 1: 12, 2: 10, 3: 10, 4: 16, 5: 12 };
+  var STARTCODE = {};
+
+  function fields() { return form.querySelectorAll("input, textarea, select"); }
+  function save() {
+    var d = {};
+    fields().forEach(function (el) { if (!el.id) return; d[el.id] = (el.type === "radio" || el.type === "checkbox") ? el.checked : el.value; });
+    d.__checked = checked;
+    try { localStorage.setItem(KEY, JSON.stringify(d)); } catch (e) {}
+  }
+  function load() {
+    var raw = null; try { raw = localStorage.getItem(KEY); } catch (e) {}
+    if (!raw) return; var d; try { d = JSON.parse(raw); } catch (e) { return; }
+    fields().forEach(function (el) {
+      if (!el.id || !(el.id in d)) return;
+      if (el.type === "radio" || el.type === "checkbox") el.checked = !!d[el.id]; else el.value = d[el.id];
+    });
+    if (d.__checked) grade();
+  }
+  form.addEventListener("input", function (ev) { save(); if (checked && ev.target.classList.contains("rb")) grade(); });
+  form.addEventListener("change", save);
+  form.addEventListener("submit", function (e) { e.preventDefault(); });
+
+  function normText(s) { return String(s).replace(/\r/g, "").split("\n").map(function (l) { return l.trim().replace(/\s+/g, " "); }).filter(function (l) { return l; }).join("\n"); }
+  function normGap(s) { return String(s).replace(/\s+/g, "").replace(/'/g, "\"").toLowerCase(); }
+  // Zahl aus deutscher Schreibweise lesen: "1.200", "12,5 %", "48,60 €", "-3"
+  function parseNum(s) {
+    var t = String(s).replace(/[\s€%]/g, "").replace(/[^0-9,.\-]/g, "");
+    if (t.indexOf(",") !== -1) t = t.replace(/\./g, "").replace(",", ".");
+    else if (/^-?\d{1,3}(\.\d{3})+$/.test(t)) t = t.replace(/\./g, "");
+    return t === "" ? NaN : parseFloat(t);
+  }
+  function numSet(s) { return (String(s).match(/-?\d+/g) || []).map(Number).sort(function (a, b) { return a - b; }).join(","); }
+  function mark(el, ok) { el.classList.remove("mark-ok", "mark-bad"); el.classList.add(ok ? "mark-ok" : "mark-bad"); }
+  function clearMarks() { document.querySelectorAll(".mark-ok, .mark-bad").forEach(function (el) { el.classList.remove("mark-ok", "mark-bad"); }); }
+  function fmt(n) { var r = Math.round(n * 10) / 10; return (r % 1 === 0 ? r.toFixed(0) : r.toFixed(1)).replace(".", ","); }
+
+  function gradeSection(sec) {
+    var s = 0;
+    // Single Choice
+    sec.querySelectorAll(".mc").forEach(function (q) {
+      var ans = q.dataset.answer, chosen = q.querySelector("input:checked"), ok = !!chosen && chosen.value === ans;
+      if (ok) s += 1;
+      q.querySelector('input[value="' + ans + '"]').parentElement.classList.add("mark-ok");
+      if (chosen && !ok) chosen.parentElement.classList.add("mark-bad");
+    });
+    // Automatisch bewertete Felder
+    sec.querySelectorAll(".auto").forEach(function (el) {
+      var kind = el.dataset.kind, answers = el.dataset.answer.split("|"), v = el.value, ok = false;
+      if (kind === "set") ok = numSet(v) === numSet(answers[0]);
+      else if (kind === "gap") ok = answers.some(function (a) { return normGap(a) === normGap(v); });
+      else if (kind === "num") { var x = parseNum(v), tol = Number(el.dataset.tol || 0.01); ok = !isNaN(x) && answers.some(function (a) { return Math.abs(parseNum(a) - x) <= tol; }); }
+      else ok = answers.some(function (a) { return normText(a) === normText(v); });
+      if (ok) s += Number(el.dataset.points);
+      mark(el, ok);
+    });
+    // Fehler finden
+    sec.querySelectorAll(".errblock").forEach(function (blk) {
+      var exp = JSON.parse(blk.dataset.expected), used = exp.map(function () { return false; });
+      var lines = blk.querySelectorAll(".eline"), types = blk.querySelectorAll(".etype");
+      lines.forEach(function (l, i) {
+        var line = parseInt(l.value, 10), t = types[i] ? types[i].value : null, hit = -1;
+        exp.forEach(function (e, k) { if (hit < 0 && !used[k] && e.line.indexOf(line) !== -1 && (!e.type || e.type === t)) hit = k; });
+        if (hit >= 0) { used[hit] = true; s += exp[hit].pts; }
+        mark(l, hit >= 0); if (types[i]) mark(types[i], hit >= 0);
+      });
+    });
+    // Selbstbewertung
+    sec.querySelectorAll(".rb").forEach(function (c) { if (c.checked) s += Number(c.dataset.points); });
+    sec.querySelectorAll(".sol").forEach(function (x) { x.hidden = false; });
+    return Math.min(Math.round(s * 100) / 100, Number(sec.dataset.max));
+  }
+
+  function grade() {
+    checked = true; clearMarks();
+    var total = 0;
+    document.querySelectorAll("section.task").forEach(function (sec) {
+      var k = sec.dataset.task, got = gradeSection(sec), max = MAX[k]; total += got;
+      var b = sec.querySelector(".badge"); b.hidden = false;
+      b.className = "badge " + (got >= max - 0.001 ? "full" : got > 0 ? "part" : "none");
+      b.textContent = fmt(got) + " / " + max + " P";
+      document.getElementById("ov" + k).textContent = fmt(got) + " / " + max;
+    });
+    document.getElementById("ovSum").textContent = fmt(total) + " / 60";
+    document.getElementById("scoreTop").textContent = fmt(total) + " / 60 Punkte";
+    var res = document.getElementById("result"); res.hidden = false;
+    res.innerHTML = '<div class="big">' + fmt(total) + ' von 60 Punkten</div><p>' + (total >= 30 ? "Bestanden (ab 30 Punkten)." : "Noch nicht bestanden. Ab 30 Punkten ist es geschafft.") +
+      '</p><p class="hint">Bei Erklärungen, Korrekturen und eigenem Code sind jetzt die Musterlösungen mit Häkchen eingeblendet. Hak ab, was bei dir stimmt, die Punkte rechnen sich sofort neu. Mit „Lösungen ausblenden“ versteckst du alles wieder, deine Antworten bleiben.</p>';
+    document.getElementById("hideTop").hidden = false;
+    save();
+  }
+
+  function hideSolutions() {
+    checked = false; clearMarks();
+    document.querySelectorAll(".sol").forEach(function (x) { x.hidden = true; });
+    document.querySelectorAll(".badge").forEach(function (b) { b.hidden = true; });
+    document.getElementById("result").hidden = true;
+    Object.keys(MAX).forEach(function (k) { document.getElementById("ov" + k).textContent = MAX[k]; });
+    document.getElementById("ovSum").textContent = "60";
+    document.getElementById("scoreTop").textContent = "noch nicht geprüft";
+    document.getElementById("hideTop").hidden = true;
+    save();
+  }
+
+  function goCheck() { grade(); document.getElementById("result").scrollIntoView({ block: "start" }); }
+  document.getElementById("checkTop").addEventListener("click", goCheck);
+  document.getElementById("checkBottom").addEventListener("click", goCheck);
+  document.getElementById("hideTop").addEventListener("click", function () { hideSolutions(); window.scrollTo(0, 0); });
+
+  var rc = document.getElementById("resetConfirm");
+  document.getElementById("resetBtn").addEventListener("click", function () { rc.hidden = false; });
+  document.getElementById("resetNo").addEventListener("click", function () { rc.hidden = true; });
+  document.getElementById("resetYes").addEventListener("click", function () {
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    form.reset(); Object.keys(STARTCODE).forEach(function (id) { document.getElementById(id).value = STARTCODE[id]; });
+    hideSolutions(); rc.hidden = true; stopTimer(); remaining = 3600; renderTimer(); timerBtn.textContent = "Zeit starten";
+  });
+
+  document.querySelectorAll("textarea.code").forEach(function (ta) {
+    ta.addEventListener("keydown", function (e) {
+      if (e.key === "Tab" && !e.shiftKey) { e.preventDefault(); var s = ta.selectionStart, en = ta.selectionEnd;
+        ta.value = ta.value.slice(0, s) + "    " + ta.value.slice(en); ta.selectionStart = ta.selectionEnd = s + 4; save(); }
+    });
+  });
+
+  var remaining = 3600, handle = null, timerEl = document.getElementById("timer"), timerBtn = document.getElementById("timerBtn");
+  function renderTimer() { var m = Math.floor(remaining / 60), s = remaining % 60; timerEl.textContent = String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0"); timerEl.classList.toggle("low", remaining <= 300); }
+  function stopTimer() { if (handle) { clearInterval(handle); handle = null; } }
+  timerBtn.addEventListener("click", function () {
+    if (handle) { stopTimer(); timerBtn.textContent = "Weiter"; return; }
+    if (remaining <= 0) remaining = 3600;
+    handle = setInterval(function () { remaining -= 1; renderTimer(); if (remaining <= 0) { stopTimer(); timerBtn.textContent = "Neu starten"; timerEl.textContent = "00:00 Zeit um"; } }, 1000);
+    timerBtn.textContent = "Pause";
+  });
+  renderTimer();
+  load();
+})();
+</script>
+</body>
+</html>

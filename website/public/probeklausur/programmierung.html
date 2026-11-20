@@ -1,0 +1,865 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Probeklausur Programmierung</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one calm exam column, like a printed exam sheet; a slim sticky bar holds timer and score. */
+:root {
+  --bg: #ffffff;
+  --paper: #f6f7f9;
+  --fg: #1d2129;
+  --muted: #5d6470;
+  --line: #e1e4ea;
+  --accent: #3b4fa0;
+  --accent-soft: #eef0fa;
+  --ok: #2d5fc4;
+  --ok-soft: #e9f0fd;
+  --bad: #b8432f;
+  --bad-soft: #fbece8;
+  --half: #a8690f;
+  --half-soft: #fbf3e4;
+  --code-bg: #f3f4f7;
+  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --radius: 8px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12141a; --paper: #191c23; --fg: #e7e9ee; --muted: #9aa1ad; --line: #2b2f39;
+    --accent: #9fb0ff; --accent-soft: #1f2540; --ok: #8fb4ff; --ok-soft: #18233b;
+    --bad: #ff9a85; --bad-soft: #3a1f1a; --half: #f0b85a; --half-soft: #33280f; --code-bg: #1b1e26;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12141a; --paper: #191c23; --fg: #e7e9ee; --muted: #9aa1ad; --line: #2b2f39;
+  --accent: #9fb0ff; --accent-soft: #1f2540; --ok: #8fb4ff; --ok-soft: #18233b;
+  --bad: #ff9a85; --bad-soft: #3a1f1a; --half: #f0b85a; --half-soft: #33280f; --code-bg: #1b1e26;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 16px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 46rem; margin: 0 auto; padding-block: 1.5rem 5rem; }
+h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 .35rem; text-wrap: balance; }
+h2 { font-size: 1.2rem; margin: 0; text-wrap: balance; }
+.lead { color: var(--muted); margin: 0 0 1rem; }
+.meta { display: flex; flex-wrap: wrap; gap: .4rem .8rem; font-size: .9rem; color: var(--muted); margin-bottom: 1rem; }
+.meta b { color: var(--fg); font-weight: 600; }
+
+.bar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg);
+  border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem;
+  padding-block: .6rem; margin-bottom: 1.5rem;
+}
+.timer { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 1.05rem; min-width: 4.5ch; }
+.timer.low { color: var(--bad); }
+.score { margin-left: auto; font-weight: 600; font-variant-numeric: tabular-nums; }
+button {
+  font: inherit; font-size: .9rem; border-radius: 6px; padding: .4rem .8rem; cursor: pointer;
+  border: 1px solid var(--line); background: var(--bg); color: var(--fg);
+}
+button:hover { border-color: var(--muted); }
+button.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); font-weight: 600; }
+button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.overview { width: 100%; border-collapse: collapse; font-size: .92rem; margin-bottom: 2rem; font-variant-numeric: tabular-nums; }
+.overview th, .overview td { text-align: left; padding: .35rem .5rem; border-bottom: 1px solid var(--line); }
+.overview td:last-child, .overview th:last-child { text-align: right; }
+.overview tr.sum td { font-weight: 700; border-bottom: 0; }
+
+section.task { border-top: 2px solid var(--fg); padding-top: .9rem; margin-top: 2.5rem; }
+.task-head { display: flex; align-items: baseline; gap: .75rem; flex-wrap: wrap; margin-bottom: .6rem; }
+.pts { font-size: .85rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.badge { margin-left: auto; font-size: .85rem; font-weight: 600; padding: .1rem .55rem; border-radius: 999px; font-variant-numeric: tabular-nums; }
+.badge.full { background: var(--ok-soft); color: var(--ok); }
+.badge.part { background: var(--half-soft); color: var(--half); }
+.badge.none { background: var(--bad-soft); color: var(--bad); }
+
+.q { padding-block: .9rem; border-bottom: 1px solid var(--line); }
+.q:last-child { border-bottom: 0; }
+.q > p { margin: 0 0 .5rem; }
+.q-label { font-weight: 600; margin-right: .3rem; }
+.options { display: grid; gap: .3rem; }
+.options label { display: flex; gap: .5rem; align-items: flex-start; cursor: pointer; padding: .25rem .4rem; border-radius: 6px; }
+.options label:hover { background: var(--paper); }
+.options input { margin-top: .3rem; }
+code { font-family: var(--font-mono); font-size: .88em; background: var(--code-bg); padding: 0 .25em; border-radius: 3px; }
+pre {
+  font-family: var(--font-mono); font-size: .86rem; line-height: 1.5; background: var(--code-bg); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: .75rem .9rem; overflow-x: auto; margin: .4rem 0 .7rem;
+}
+pre code { background: none; padding: 0; }
+.ln { color: var(--muted); user-select: none; }
+textarea, input[type="text"], input[type="number"], select {
+  font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: .4rem .55rem;
+}
+textarea { width: 100%; font-family: var(--font-mono); font-size: .88rem; min-height: 5.5rem; resize: vertical; }
+textarea.code { min-height: 11rem; tab-size: 4; }
+input.gap { font-family: var(--font-mono); width: 7.5rem; }
+input[type="number"] { width: 6rem; font-variant-numeric: tabular-nums; }
+.row { display: flex; flex-wrap: wrap; gap: .5rem .9rem; align-items: center; margin-bottom: .45rem; }
+.row > span.lbl { min-width: 5.5rem; color: var(--muted); font-size: .92rem; }
+.grid-err { display: grid; grid-template-columns: 5rem 9.5rem minmax(0, 1fr); gap: .45rem; align-items: center; }
+.grid-err .h { font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.grid-err input[type="text"] { width: 100%; font-family: var(--font-mono); font-size: .86rem; }
+@media (max-width: 34rem) {
+  .grid-err { grid-template-columns: 4.5rem minmax(0, 1fr); }
+  .grid-err .fix, .grid-err .h3 { grid-column: 1 / -1; }
+}
+.syntax-table { width: 100%; border-collapse: collapse; }
+.syntax-table td { padding: .35rem .4rem; border-bottom: 1px solid var(--line); vertical-align: middle; }
+.syntax-table td:first-child { width: 2rem; color: var(--muted); }
+.syntax-table .choice { white-space: nowrap; text-align: right; }
+.syntax-table label { margin-left: .6rem; cursor: pointer; }
+.table-scroll { overflow-x: auto; }
+
+.mark-ok { background: var(--ok-soft) !important; }
+.mark-bad { background: var(--bad-soft) !important; }
+input.mark-ok, select.mark-ok, textarea.mark-ok { border-color: var(--ok); }
+input.mark-bad, select.mark-bad, textarea.mark-bad { border-color: var(--bad); }
+
+.feedback { margin-top: .6rem; padding: .7rem .85rem; border-radius: var(--radius); background: var(--paper); border: 1px solid var(--line); font-size: .93rem; }
+.feedback p { margin: .25rem 0; }
+.feedback .verdict { font-weight: 600; }
+.feedback .verdict.ok { color: var(--ok); }
+.feedback .verdict.bad { color: var(--bad); }
+.rubric { display: grid; gap: .3rem; margin-top: .5rem; }
+.rubric label { display: flex; gap: .5rem; align-items: flex-start; cursor: pointer; }
+.rubric input { margin-top: .3rem; }
+.hint { color: var(--muted); font-size: .88rem; }
+
+.result {
+  border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.1rem; margin: 1rem 0 1.5rem; background: var(--paper);
+}
+.result .big { font-size: 1.6rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.result p { margin: .3rem 0; }
+.actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 2.5rem; align-items: center; }
+.confirm { display: inline-flex; gap: .5rem; align-items: center; font-size: .9rem; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+.site-back { max-width: 860px; margin: 0 auto; padding: 12px 16px 0; font: 14px/1.4 var(--font-body); }
+.site-back a { color: var(--accent); text-decoration: none; margin-right: 1rem; }
+.site-back a:hover { text-decoration: underline; }
+@media print { .site-back { display: none; } }
+/* Handy: nichts darf breiter als der Bildschirm werden */
+select { max-width: 100%; }
+pre { max-width: 100%; overflow-x: auto; }
+label, label code { white-space: normal; overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<nav class="site-back" aria-label="Website"><a href="/programmierung">← Zurück zu PROG</a><a href="/lernplan">Lernplan</a><a href="/">Startseite</a></nav>
+<div class="wrap">
+  <header>
+    <h1>Probeklausur Grundlagen der Programmierung</h1>
+    <p class="lead">Füll alles aus und klick dann auf „Prüfen“. Multiple Choice, Ausgaben, Lücken und Syntaxfragen werden automatisch bewertet. Bei den Aufgaben, in denen du selbst Code oder Korrekturen schreibst, erscheint die Musterlösung, und du hakst die Punkte selbst ab.</p>
+    <div class="meta"><span><b>60</b> Minuten</span><span><b>60</b> Punkte</span><span>keine Hilfsmittel</span><span>bestanden ab <b>30</b> Punkten (Beispielgrenze)</span></div>
+  </header>
+
+  <div class="bar" role="region" aria-label="Zeit und Punkte">
+    <span class="timer" id="timer" aria-live="off">60:00</span>
+    <button type="button" id="timerBtn">Zeit starten</button>
+    <button type="button" class="primary" id="checkTop">Prüfen</button>
+    <button type="button" id="hideTop" hidden>Lösungen ausblenden</button>
+    <span class="score" id="scoreTop">noch nicht geprüft</span>
+  </div>
+
+  <div id="result" class="result" hidden></div>
+
+  <table class="overview" aria-label="Aufgabenübersicht">
+    <thead><tr><th>Aufgabe</th><th>Thema</th><th>Punkte</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Grundlagen: Multiple Choice</td><td id="ov1">10</td></tr>
+      <tr><td>2</td><td>Was wird ausgegeben?</td><td id="ov2">10</td></tr>
+      <tr><td>3</td><td>Fehler finden</td><td id="ov3">8</td></tr>
+      <tr><td>4</td><td>Kontrollstrukturen</td><td id="ov4">8</td></tr>
+      <tr><td>5</td><td>Funktionen selbst schreiben</td><td id="ov5">10</td></tr>
+      <tr><td>6</td><td>Code mit Lücken</td><td id="ov6">8</td></tr>
+      <tr><td>7</td><td>Was ist syntaktisch falsch?</td><td id="ov7">4</td></tr>
+      <tr><td>8</td><td>Klassen: Was wird ausgegeben?</td><td id="ov8">2</td></tr>
+      <tr class="sum"><td></td><td>Summe</td><td id="ovSum">60</td></tr>
+    </tbody>
+  </table>
+
+  <form id="exam" autocomplete="off" spellcheck="false">
+
+  <!-- ============ Aufgabe 1 ============ -->
+  <section class="task" data-task="1">
+    <div class="task-head"><h2>Aufgabe 1 · Multiple Choice</h2><span class="pts">10 Punkte, je Frage 1</span><span class="badge" hidden></span></div>
+    <p class="hint">Bei jeder Frage ist genau eine Antwort richtig.</p>
+
+    <div class="q" data-mc="1.1" data-answer="b" data-expl="<code>uv run</code> startet ein Programm im Projekt.">
+      <p><span class="q-label">1.1</span>Mit welchem Befehl startest du <code>main.py</code> in einem uv-Projekt?</p>
+      <div class="options">
+        <label><input type="radio" name="mc1_1" id="mc1_1a" value="a"> <code>uv check main.py</code></label>
+        <label><input type="radio" name="mc1_1" id="mc1_1b" value="b"> <code>uv run main.py</code></label>
+        <label><input type="radio" name="mc1_1" id="mc1_1c" value="c"> <code>python run main.py</code></label>
+        <label><input type="radio" name="mc1_1" id="mc1_1d" value="d"> <code>uv start main.py</code></label>
+      </div>
+    </div>
+
+    <div class="q" data-mc="1.2" data-answer="b" data-expl="ruff ist der Linter: Er prüft Stil und typische Fehler.">
+      <p><span class="q-label">1.2</span>Was macht <code>uv run ruff check .</code>?</p>
+      <div class="options">
+        <label><input type="radio" name="mc1_2" id="mc1_2a" value="a"> Es führt die Tests aus.</label>
+        <label><input type="radio" name="mc1_2" id="mc1_2b" value="b"> Es prüft den Code auf Stilprobleme und typische Fehler (Linter).</label>
+        <label><input type="radio" name="mc1_2" id="mc1_2c" value="c"> Es prüft nur die Typangaben.</label>
+        <label><input type="radio" name="mc1_2" id="mc1_2d" value="d"> Es installiert fehlende Pakete.</label>
+      </div>
+    </div>
+
+    <div class="q" data-mc="1.3" data-answer="a" data-expl="ty prüft die Typangaben, zum Beispiel ob eine Funktion mit <code>-&gt; int</code> wirklich einen <code>int</code> liefert.">
+      <p><span class="q-label">1.3</span>Was prüft <code>uv run ty check</code>?</p>
+      <div class="options">
+        <label><input type="radio" name="mc1_3" id="mc1_3a" value="a"> ob die Typangaben zusammenpassen, zum Beispiel ob eine Funktion mit <code>-&gt; int</code> auch einen <code>int</code> liefert</label>
+        <label><input type="radio" name="mc1_3" id="mc1_3b" value="b"> ob das Programm schnell genug läuft</label>
+        <label><input type="radio" name="mc1_3" id="mc1_3c" value="c"> ob alle Tests grün sind</label>
+        <label><input type="radio" name="mc1_3" id="mc1_3d" value="d"> ob die Einrückung 4 Leerzeichen hat</label>
+      </div>
+    </div>
+
+    <div class="q" data-mc="1.4" data-answer="b" data-expl="Das Muster ist <code>from modul import funktion</code>, ohne <code>.py</code>.">
+      <p><span class="q-label">1.4</span>In <code>rechner.py</code> steht die Funktion <code>addiere</code>. Welche Zeile in <code>main.py</code> importiert sie richtig?</p>
+      <div class="options">
+        <label><input type="radio" name="mc1_4" id="mc1_4a" value="a"> <code>import rechner.py</code></label>
+        <label><input type="radio" name="mc1_4" id="mc1_4b" value="b"> <code>from rechner import addiere</code></label>
+        <label><input type="radio" name="mc1_4" id="mc1_4c" value="c"> <code>include rechner</code></label>
+        <label><input type="radio" name="mc1_4" id="mc1_4d" value="d"> <code>from addiere import rechner</code></label>
+      </div>
+    </div>
+
+    <div class="q" data-mc="1.5" data-answer="b" data-expl="Beim Import ist <code>__name__</code> der Modulname. Der Code darunter läuft dann nicht.">
+      <p><span class="q-label">1.5</span>Wozu dient <code>if __name__ == "__main__":</code> am Ende einer Datei?</p>
+      <div class="options">
+        <label><input type="radio" name="mc1_5" id="mc1_5a" value="a"> Damit die Datei schneller läuft.</label>
+        <label><input type="radio" name="mc1_5" id="mc1_5b" value="b"> Der Code darunter läuft nur, wenn die Datei direkt gestartet wird, nicht beim Import.</label>
+        <label><input type="radio" name="mc1_5" id="mc1_5c" value="c"> Damit Python weiß, wie das Programm heißt.</label>
+        <label><input type="radio" name="mc1_5" id="mc1_5d" value="d"> Es ist Pflicht, sonst startet kein Programm.</label>
+      </div>
+    </div>
+
+    <div class="q" data-mc="1.6" data-answer="c" data-expl="Die Indizes gehen von 0 bis 2. Index 3 gibt es nicht, also kommt ein <code>IndexError</code>.">
+      <p><span class="q-label">1.6</span><code>liste = [5, 6, 7]</code>. Was passiert bei <code>print(liste[3])</code>?</p>
+      <div class="options">
+        <label><input type="radio" name="mc1_6" id="mc1_6a" value="a"> Es wird <code>7</code> ausgegeben.</label>
+        <label><input type="radio" name="mc1_6" id="mc1_6b" value="b"> Es wird <code>None</code> ausgegeben.</label>
+        <label><input type="radio" name="mc1_6" id="mc1_6c" value="c"> Es gibt einen <code>IndexError</code>.</label>
+        <label><input type="radio" name="mc1_6" id="mc1_6d" value="d"> Es wird <code>[5, 6, 7]</code> ausgegeben.</label>
+      </div>
+    </div>
+
+    <div class="q" data-mc="1.7" data-answer="b" data-expl="Ohne <code>return</code> liefert eine Funktion <code>None</code>.">
+      <p><span class="q-label">1.7</span>Was liefert eine Funktion, die kein <code>return</code> hat?</p>
+      <div class="options">
+        <label><input type="radio" name="mc1_7" id="mc1_7a" value="a"> <code>0</code></label>
+        <label><input type="radio" name="mc1_7" id="mc1_7b" value="b"> <code>None</code></label>
+        <label><input type="radio" name="mc1_7" id="mc1_7c" value="c"> einen leeren String <code>""</code></label>
+        <label><input type="radio" name="mc1_7" id="mc1_7d" value="d"> einen Fehler</label>
+      </div>
+    </div>
+
+    <div class="q" data-mc="1.8" data-answer="d" data-expl="<code>a</code> hat keinen Standardwert und muss übergeben werden. <code>f()</code> gibt einen <code>TypeError</code>.">
+      <p><span class="q-label">1.8</span>Gegeben ist <code>def f(a, b=2): return a + b</code>. Welcher Aufruf führt zu einem Fehler?</p>
+      <div class="options">
+        <label><input type="radio" name="mc1_8" id="mc1_8a" value="a"> <code>f(1)</code></label>
+        <label><input type="radio" name="mc1_8" id="mc1_8b" value="b"> <code>f(1, 3)</code></label>
+        <label><input type="radio" name="mc1_8" id="mc1_8c" value="c"> <code>f(b=3, a=1)</code></label>
+        <label><input type="radio" name="mc1_8" id="mc1_8d" value="d"> <code>f()</code></label>
+      </div>
+    </div>
+
+    <div class="q" data-mc="1.9" data-answer="b" data-expl="Zwei Strings werden aneinandergehängt.">
+      <p><span class="q-label">1.9</span>Was ist das Ergebnis von <code>"3" + "4"</code>?</p>
+      <div class="options">
+        <label><input type="radio" name="mc1_9" id="mc1_9a" value="a"> <code>7</code></label>
+        <label><input type="radio" name="mc1_9" id="mc1_9b" value="b"> <code>"34"</code></label>
+        <label><input type="radio" name="mc1_9" id="mc1_9c" value="c"> <code>34</code></label>
+        <label><input type="radio" name="mc1_9" id="mc1_9d" value="d"> ein <code>TypeError</code></label>
+      </div>
+    </div>
+
+    <div class="q" data-mc="1.10" data-answer="c" data-expl="pytest findet Funktionen, deren Name mit <code>test_</code> beginnt.">
+      <p><span class="q-label">1.10</span>Welche Funktion erkennt pytest automatisch als Test?</p>
+      <div class="options">
+        <label><input type="radio" name="mc1_10" id="mc1_10a" value="a"> <code>def pruefe_summe():</code></label>
+        <label><input type="radio" name="mc1_10" id="mc1_10b" value="b"> <code>def summe_test():</code></label>
+        <label><input type="radio" name="mc1_10" id="mc1_10c" value="c"> <code>def test_summe():</code></label>
+        <label><input type="radio" name="mc1_10" id="mc1_10d" value="d"> <code>def Test():</code></label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Aufgabe 2 ============ -->
+  <section class="task" data-task="2">
+    <div class="task-head"><h2>Aufgabe 2 · Was wird ausgegeben?</h2><span class="pts">10 Punkte, je Teil 2</span><span class="badge" hidden></span></div>
+    <p class="hint">Schreib genau auf, was im Terminal erscheint, eine Ausgabezeile pro Zeile.</p>
+
+    <div class="q" data-out="2a" data-points="2" data-answer="7 3 5" data-expl="Nach <code>append</code> ist die Liste <code>[4, 7, 1, 9, 3]</code>. <code>[1]</code> ist das zweite Element (7), <code>[-1]</code> das letzte (3), und die Länge ist 5.">
+      <p><span class="q-label">2a</span>2 Punkte</p>
+<pre><code>zahlen = [4, 7, 1, 9]
+zahlen.append(3)
+print(zahlen[1], zahlen[-1], len(zahlen))</code></pre>
+      <textarea id="a2a" aria-label="Ausgabe 2a"></textarea>
+    </div>
+
+    <div class="q" data-out="2b" data-points="2" data-answer="9" data-expl="<code>range(1, 6, 2)</code> liefert 1, 3 und 5. Die Summe ist 1 + 3 + 5 = 9.">
+      <p><span class="q-label">2b</span>2 Punkte</p>
+<pre><code>summe = 0
+for i in range(1, 6, 2):
+    summe += i
+print(summe)</code></pre>
+      <textarea id="a2b" aria-label="Ausgabe 2b"></textarea>
+    </div>
+
+    <div class="q" data-out="2c" data-points="2" data-answer="[2, 4, 6]" data-expl="Die Funktion ändert die Liste selbst. <code>werte</code> und <code>liste</code> sind dieselbe Liste, deshalb ist die Änderung auch außerhalb der Funktion sichtbar.">
+      <p><span class="q-label">2c</span>2 Punkte</p>
+<pre><code>def verdoppeln(liste):
+    for i in range(len(liste)):
+        liste[i] = liste[i] * 2
+
+werte = [1, 2, 3]
+verdoppeln(werte)
+print(werte)</code></pre>
+      <textarea id="a2c" aria-label="Ausgabe 2c"></textarea>
+    </div>
+
+    <div class="q" data-out="2d" data-points="2" data-answer="Hallo, Ben!|Moin, Ben!|Hi, Lea!" data-expl="Ohne zweites Argument gilt der Standardwert <code>&quot;Hallo&quot;</code>. Bei Schlüsselwort-Argumenten ist die Reihenfolge egal.">
+      <p><span class="q-label">2d</span>2 Punkte</p>
+<pre><code>def gruss(name, anrede="Hallo"):
+    return f"{anrede}, {name}!"
+
+print(gruss("Ben"))
+print(gruss("Ben", "Moin"))
+print(gruss(anrede="Hi", name="Lea"))</code></pre>
+      <textarea id="a2d" aria-label="Ausgabe 2d"></textarea>
+    </div>
+
+    <div class="q" data-out="2e" data-points="2" data-answer="K e aff" data-expl="<code>[0]</code> ist das erste Zeichen (K) und <code>[-2]</code> das vorletzte (e). <code>[1:4]</code> sind die Zeichen 1 bis 3 ohne 4, also aff.">
+      <p><span class="q-label">2e</span>2 Punkte</p>
+<pre><code>text = "Kaffee"
+print(text[0], text[-2], text[1:4])</code></pre>
+      <textarea id="a2e" aria-label="Ausgabe 2e"></textarea>
+    </div>
+  </section>
+
+  <!-- ============ Aufgabe 3 ============ -->
+  <section class="task" data-task="3">
+    <div class="task-head"><h2>Aufgabe 3 · Fehler finden</h2><span class="pts">8 Punkte, je Fehler 2</span><span class="badge" hidden></span></div>
+    <p>Das Programm soll den Durchschnitt und die <b>beste</b>, also kleinste, Schulnote ausgeben. Es enthält genau vier Fehler: <b>zwei Syntaxfehler</b>, <b>einen Laufzeitfehler</b> und <b>einen Logikfehler</b>. Trag für jeden Fehler die Zeile, die Art und die Korrektur ein.</p>
+<pre><code><span class="ln"> 1</span>  def durchschnitt(noten: list[float]) -> float
+<span class="ln"> 2</span>      summe = 0
+<span class="ln"> 3</span>      for note in noten:
+<span class="ln"> 4</span>          summe += note
+<span class="ln"> 5</span>      return summe / len(noten)
+<span class="ln"> 6</span>
+<span class="ln"> 7</span>
+<span class="ln"> 8</span>  def beste_note(noten: list[float]) -> float:
+<span class="ln"> 9</span>      beste = noten[0]
+<span class="ln">10</span>      for note in noten:
+<span class="ln">11</span>          if note > beste:
+<span class="ln">12</span>              beste = note
+<span class="ln">13</span>      return beste
+<span class="ln">14</span>
+<span class="ln">15</span>
+<span class="ln">16</span>  noten = [2.0, 1.3, 3.7]
+<span class="ln">17</span>  print("Durchschnitt: " + durchschnitt(noten))
+<span class="ln">18</span>  print("Beste Note:", beste_note(noten)</code></pre>
+
+    <div class="q" id="err-block">
+      <div class="grid-err">
+        <span class="h">Zeile</span><span class="h">Art</span><span class="h h3">Korrektur</span>
+        <input type="number" id="e1l" min="1" max="18" aria-label="Fehler 1 Zeile"><select id="e1t" aria-label="Fehler 1 Art"><option value="">wählen …</option><option value="syntax">Syntax</option><option value="laufzeit">Laufzeit</option><option value="logik">Logik</option></select><input type="text" class="fix" id="e1f" aria-label="Fehler 1 Korrektur">
+        <input type="number" id="e2l" min="1" max="18" aria-label="Fehler 2 Zeile"><select id="e2t" aria-label="Fehler 2 Art"><option value="">wählen …</option><option value="syntax">Syntax</option><option value="laufzeit">Laufzeit</option><option value="logik">Logik</option></select><input type="text" class="fix" id="e2f" aria-label="Fehler 2 Korrektur">
+        <input type="number" id="e3l" min="1" max="18" aria-label="Fehler 3 Zeile"><select id="e3t" aria-label="Fehler 3 Art"><option value="">wählen …</option><option value="syntax">Syntax</option><option value="laufzeit">Laufzeit</option><option value="logik">Logik</option></select><input type="text" class="fix" id="e3f" aria-label="Fehler 3 Korrektur">
+        <input type="number" id="e4l" min="1" max="18" aria-label="Fehler 4 Zeile"><select id="e4t" aria-label="Fehler 4 Art"><option value="">wählen …</option><option value="syntax">Syntax</option><option value="laufzeit">Laufzeit</option><option value="logik">Logik</option></select><input type="text" class="fix" id="e4f" aria-label="Fehler 4 Korrektur">
+      </div>
+      <div class="feedback" id="fb3" hidden>
+        <p class="hint">Je Fehler gibt es 1 Punkt automatisch für die richtige Zeile mit der richtigen Art. Den zweiten Punkt für die Korrektur hakst du selbst ab, wenn deine Korrektur zur Lösung passt.</p>
+        <div class="table-scroll"><table class="overview" style="margin:0.4rem 0 0.6rem">
+          <thead><tr><th>Zeile</th><th>Art</th><th>Korrektur</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Syntax</td><td>Doppelpunkt fehlt: <code>… -&gt; float:</code></td></tr>
+            <tr><td>18</td><td>Syntax</td><td>Klammer fehlt: <code>print("Beste Note:", beste_note(noten))</code></td></tr>
+            <tr><td>17</td><td>Laufzeit</td><td><code>str + float</code> gibt einen <code>TypeError</code>. Korrektur: <code>print("Durchschnitt:", durchschnitt(noten))</code> oder <code>str(…)</code></td></tr>
+            <tr><td>11</td><td>Logik</td><td><code>&gt;</code> findet die schlechteste Note (3.7). Richtig ist <code>if note &lt; beste:</code></td></tr>
+          </tbody>
+        </table></div>
+        <div class="rubric">
+          <label><input type="checkbox" id="r3_1"> Meine Korrektur für Zeile 1 passt (+1)</label>
+          <label><input type="checkbox" id="r3_18"> Meine Korrektur für Zeile 18 passt (+1)</label>
+          <label><input type="checkbox" id="r3_17"> Meine Korrektur für Zeile 17 passt (+1)</label>
+          <label><input type="checkbox" id="r3_11"> Meine Korrektur für Zeile 11 passt (+1)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Aufgabe 4 ============ -->
+  <section class="task" data-task="4">
+    <div class="task-head"><h2>Aufgabe 4 · Kontrollstrukturen</h2><span class="pts">8 Punkte</span><span class="badge" hidden></span></div>
+<pre><code>def bewerten(punkte: int) -> str:
+    if punkte >= 90:
+        return "sehr gut"
+    elif punkte >= 70:
+        return "gut"
+    elif punkte >= 50:
+        return "bestanden"
+    else:
+        return "nicht bestanden"
+
+
+def zaehle(liste: list[int], grenze: int) -> int:
+    anzahl = 0
+    for zahl in liste:
+        if zahl > grenze:
+            anzahl += 1
+        elif zahl == grenze:
+            anzahl += 10
+    return anzahl</code></pre>
+
+    <div class="q">
+      <p><span class="q-label">4a</span>Was liefert <code>bewerten</code> für diese Werte? (2 Punkte)</p>
+      <div class="row"><span class="lbl">95</span><select class="sel4" id="b95" data-answer="sehr gut" data-points="0.5"></select></div>
+      <div class="row"><span class="lbl">90</span><select class="sel4" id="b90" data-answer="sehr gut" data-points="0.5"></select></div>
+      <div class="row"><span class="lbl">69</span><select class="sel4" id="b69" data-answer="bestanden" data-points="0.5"></select></div>
+      <div class="row"><span class="lbl">0</span><select class="sel4" id="b0" data-answer="nicht bestanden" data-points="0.5"></select></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">4b</span>Jetzt wird in <b>allen drei</b> Bedingungen <code>&gt;=</code> durch <code>&gt;</code> ersetzt. Was kommt dann heraus? (2 Punkte)</p>
+      <div class="row"><span class="lbl">90</span><select class="sel4" id="c90" data-answer="gut" data-points="0.6667"></select></div>
+      <div class="row"><span class="lbl">70</span><select class="sel4" id="c70" data-answer="bestanden" data-points="0.6667"></select></div>
+      <div class="row"><span class="lbl">50</span><select class="sel4" id="c50" data-answer="nicht bestanden" data-points="0.6667"></select></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">4c</span>Was liefert <code>zaehle([3, 8, 5, 10, 5], 5)</code>? (2 Punkte)</p>
+      <div class="row"><input type="number" class="num4" id="z5" data-answer="22" data-points="2" aria-label="Ergebnis 4c"></div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">4d</span>Und mit <code>grenze = 8</code>? Was liefert <code>zaehle([], 5)</code>? (2 Punkte)</p>
+      <div class="row"><span class="lbl">Grenze 8</span><input type="number" class="num4" id="z8" data-answer="11" data-points="1" aria-label="Ergebnis Grenze 8"></div>
+      <div class="row"><span class="lbl">leere Liste</span><input type="number" class="num4" id="z0" data-answer="0" data-points="1" aria-label="Ergebnis leere Liste"></div>
+    </div>
+    <div class="feedback" id="fb4" hidden>
+      <p><b>4a:</b> 90 &gt;= 90 ist wahr, also bekommt 90 noch „sehr gut“.</p>
+      <p><b>4b:</b> Mit <code>&gt;</code> rutschen die Grenzwerte eine Stufe nach unten: 90 → „gut“, 70 → „bestanden“, 50 → „nicht bestanden“.</p>
+      <p><b>4c:</b> Rechnung: 3 → nichts, 8 → +1, 5 → +10, 10 → +1, 5 → +10, zusammen <b>22</b>.</p>
+      <p><b>4d:</b> Bei Grenze 8 ist nur 10 größer (+1) und 8 gleich (+10), zusammen <b>11</b>. Bei einer leeren Liste läuft die Schleife nie, also <b>0</b>.</p>
+    </div>
+  </section>
+
+  <!-- ============ Aufgabe 5 ============ -->
+  <section class="task" data-task="5">
+    <div class="task-head"><h2>Aufgabe 5 · Funktionen selbst schreiben</h2><span class="pts">10 Punkte</span><span class="badge" hidden></span></div>
+    <p>Schreib die Funktionen <b>mit Typangaben</b>. <code>max()</code> und <code>sum()</code> sind nicht erlaubt.</p>
+
+    <div class="q">
+      <p><span class="q-label">5a</span>(4 Punkte) <code>groesster_wert(werte: list[float]) -> float</code> gibt den größten Wert der Liste zurück. Die Liste ist nie leer.<br>
+      <span class="hint">Beispiele: <code>groesster_wert([3, 9, 2])</code> → <code>9</code>, <code>groesster_wert([-5, -2, -8])</code> → <code>-2</code></span></p>
+      <textarea class="code" id="a5a" aria-label="Code 5a">def groesster_wert(werte: list[float]) -> float:
+    </textarea>
+      <div class="feedback" id="fb5a" hidden>
+        <p class="verdict">Musterlösung</p>
+<pre><code>def groesster_wert(werte: list[float]) -> float:
+    groesster = werte[0]          # mit dem ersten Wert starten
+    for wert in werte:
+        if wert > groesster:
+            groesster = wert
+    return groesster              # nach der Schleife!</code></pre>
+        <p class="hint">Achtung: Startest du mit <code>groesster = 0</code>, ist das Ergebnis bei <code>[-5, -2, -8]</code> falsch (0 statt −2).</p>
+        <div class="rubric">
+          <label><input type="checkbox" id="r5a1"> Kopfzeile mit Typangaben (+1)</label>
+          <label><input type="checkbox" id="r5a2"> Startwert ist das erste Element, nicht 0 (+1)</label>
+          <label><input type="checkbox" id="r5a3"> Schleife mit Vergleich und Merken des größeren Werts (+1)</label>
+          <label><input type="checkbox" id="r5a4"> <code>return</code> steht nach der Schleife (+1)</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">5b</span>(6 Punkte) <code>fahrpreis(alter: int, km: float) -> float</code> berechnet einen Busfahrpreis:</p>
+      <ul style="margin:0 0 .5rem; padding-left:1.2rem">
+        <li>Grundpreis 2,00 € plus 0,30 € pro Kilometer</li>
+        <li>Kinder <b>unter 6</b> fahren kostenlos (<code>0.0</code>)</li>
+        <li><b>unter 18</b>: halber Preis</li>
+        <li><b>ab 65</b>: 20 % Rabatt</li>
+        <li>Ergebnis auf 2 Nachkommastellen runden</li>
+      </ul>
+      <p class="hint">Beispiele: <code>fahrpreis(30, 10)</code> → <code>5.0</code>, <code>fahrpreis(10, 10)</code> → <code>2.5</code>, <code>fahrpreis(4, 10)</code> → <code>0.0</code>, <code>fahrpreis(70, 10)</code> → <code>4.0</code></p>
+      <textarea class="code" id="a5b" aria-label="Code 5b">def fahrpreis(alter: int, km: float) -> float:
+    </textarea>
+      <div class="feedback" id="fb5b" hidden>
+        <p class="verdict">Musterlösung</p>
+<pre><code>def fahrpreis(alter: int, km: float) -> float:
+    if alter &lt; 6:
+        return 0.0
+    preis = 2.0 + 0.30 * km
+    if alter &lt; 18:
+        preis = preis / 2
+    elif alter >= 65:
+        preis = preis * 0.8
+    return round(preis, 2)</code></pre>
+        <p class="hint">Achtung, Reihenfolge: Prüfst du „unter 18“ vor „unter 6“, zahlt ein Vierjähriger den halben Preis statt nichts.</p>
+        <div class="rubric">
+          <label><input type="checkbox" id="r5b1"> Kopfzeile mit Typangaben (+1)</label>
+          <label><input type="checkbox" id="r5b2"> unter 6 ergibt 0.0, und das wird zuerst geprüft (+1)</label>
+          <label><input type="checkbox" id="r5b3"> Grundpreis 2.0 + 0.30 · km (+1)</label>
+          <label><input type="checkbox" id="r5b4"> unter 18 ergibt den halben Preis (+1)</label>
+          <label><input type="checkbox" id="r5b5"> ab 65 ergibt · 0.8 (+1)</label>
+          <label><input type="checkbox" id="r5b6"> <code>round(…, 2)</code> und <code>return</code> (+1)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Aufgabe 6 ============ -->
+  <section class="task" data-task="6">
+    <div class="task-head"><h2>Aufgabe 6 · Code mit Lücken</h2><span class="pts">8 Punkte, je Lücke 1</span><span class="badge" hidden></span></div>
+    <p><code>bestanden([1.7, 4.0, 5.0, 2.3])</code> soll <code>[1.7, 4.0, 2.3]</code> liefern. Nach Einzahlungen von 50 und 20.5 soll <code>stand</code> den Wert <code>70.5</code> haben.</p>
+<pre><code>def bestanden(noten: list[float]) -> list[float]:
+    ergebnis: list[float] = <b>(1)</b>
+    for note <b>(2)</b> noten:
+        if note <b>(3)</b> 4.0:
+            ergebnis.<b>(4)</b>(note)
+    <b>(5)</b> ergebnis
+
+
+class Konto:
+    def <b>(6)</b>(self, inhaber: str, stand: float = 0) -> None:
+        self.inhaber = inhaber
+        self.stand = stand
+
+    def einzahlen(<b>(7)</b>, betrag: float) -> None:
+        self.stand <b>(8)</b> betrag</code></pre>
+    <div class="q">
+      <div class="row"><span class="lbl">(1)</span><input type="text" class="gap" id="g1" data-answer="[]|list()"></div>
+      <div class="row"><span class="lbl">(2)</span><input type="text" class="gap" id="g2" data-answer="in"></div>
+      <div class="row"><span class="lbl">(3)</span><input type="text" class="gap" id="g3" data-answer="&lt;="></div>
+      <div class="row"><span class="lbl">(4)</span><input type="text" class="gap" id="g4" data-answer="append"></div>
+      <div class="row"><span class="lbl">(5)</span><input type="text" class="gap" id="g5" data-answer="return"></div>
+      <div class="row"><span class="lbl">(6)</span><input type="text" class="gap" id="g6" data-answer="__init__"></div>
+      <div class="row"><span class="lbl">(7)</span><input type="text" class="gap" id="g7" data-answer="self"></div>
+      <div class="row"><span class="lbl">(8)</span><input type="text" class="gap" id="g8" data-answer="+="></div>
+    </div>
+    <div class="feedback" id="fb6" hidden>
+      <p>Lösung: (1) <code>[]</code> · (2) <code>in</code> · (3) <code>&lt;=</code> · (4) <code>append</code> · (5) <code>return</code> · (6) <code>__init__</code> · (7) <code>self</code> · (8) <code>+=</code></p>
+      <p class="hint">Typischer Fehler bei (3): <code>&lt;</code> statt <code>&lt;=</code>. Dann fällt die 4.0 heraus, obwohl 4.0 bestanden ist.</p>
+    </div>
+  </section>
+
+  <!-- ============ Aufgabe 7 ============ -->
+  <section class="task" data-task="7">
+    <div class="task-head"><h2>Aufgabe 7 · Was ist syntaktisch falsch?</h2><span class="pts">4 Punkte, je Zeile 0,5</span><span class="badge" hidden></span></div>
+    <p>Genau vier der acht Zeilen sind syntaktisch falsch.</p>
+    <div class="table-scroll">
+    <table class="syntax-table">
+      <tbody>
+        <tr data-syn="a" data-answer="falsch" data-expl="Ein Vergleich braucht <code>==</code>. Ein einzelnes <code>=</code> ist eine Zuweisung."><td>a</td><td><code>if x = 5:</code></td><td class="choice"><label><input type="radio" name="s_a" id="s_a_r" value="richtig"> richtig</label><label><input type="radio" name="s_a" id="s_a_f" value="falsch"> falsch</label></td></tr>
+        <tr data-syn="b" data-answer="falsch" data-expl="Nach <code>range(10)</code> fehlt der Doppelpunkt."><td>b</td><td><code>for i in range(10)</code> <span class="hint">(darunter eingerückt <code>print(i)</code>)</span></td><td class="choice"><label><input type="radio" name="s_b" id="s_b_r" value="richtig"> richtig</label><label><input type="radio" name="s_b" id="s_b_f" value="falsch"> falsch</label></td></tr>
+        <tr data-syn="c" data-answer="richtig" data-expl="Syntaktisch in Ordnung. Ob <code>name</code> existiert, merkt Python erst zur Laufzeit."><td>c</td><td><code>print("Hallo", name)</code></td><td class="choice"><label><input type="radio" name="s_c" id="s_c_r" value="richtig"> richtig</label><label><input type="radio" name="s_c" id="s_c_f" value="falsch"> falsch</label></td></tr>
+        <tr data-syn="d" data-answer="richtig" data-expl="Gültiger Funktionskopf mit Standardwert."><td>d</td><td><code>def f(a, b=2):</code></td><td class="choice"><label><input type="radio" name="s_d" id="s_d_r" value="richtig"> richtig</label><label><input type="radio" name="s_d" id="s_d_f" value="falsch"> falsch</label></td></tr>
+        <tr data-syn="e" data-answer="falsch" data-expl="Die eckige Klammer wird nicht geschlossen."><td>e</td><td><code>liste = [1, 2, 3</code></td><td class="choice"><label><input type="radio" name="s_e" id="s_e_r" value="richtig"> richtig</label><label><input type="radio" name="s_e" id="s_e_f" value="falsch"> falsch</label></td></tr>
+        <tr data-syn="f" data-answer="richtig" data-expl="Gültig, die Schleife endet sofort mit <code>break</code>."><td>f</td><td><code>while True:</code> <span class="hint">(darunter eingerückt <code>break</code>)</span></td><td class="choice"><label><input type="radio" name="s_f" id="s_f_r" value="richtig"> richtig</label><label><input type="radio" name="s_f" id="s_f_f" value="falsch"> falsch</label></td></tr>
+        <tr data-syn="g" data-answer="falsch" data-expl="In Python heißt es <code>elif</code>, nicht <code>else if</code>."><td>g</td><td><code>else if x > 3:</code></td><td class="choice"><label><input type="radio" name="s_g" id="s_g_r" value="richtig"> richtig</label><label><input type="radio" name="s_g" id="s_g_f" value="falsch"> falsch</label></td></tr>
+        <tr data-syn="h" data-answer="richtig" data-expl="Mit <code>str()</code> umgewandelt, deshalb klappt das <code>+</code>."><td>h</td><td><code>x = "Preis: " + str(5)</code></td><td class="choice"><label><input type="radio" name="s_h" id="s_h_r" value="richtig"> richtig</label><label><input type="radio" name="s_h" id="s_h_f" value="falsch"> falsch</label></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="feedback" id="fb7" hidden></div>
+  </section>
+
+  <!-- ============ Aufgabe 8 ============ -->
+  <section class="task" data-task="8">
+    <div class="task-head"><h2>Aufgabe 8 · Klassen: Was wird ausgegeben?</h2><span class="pts">2 Punkte, je Zeile 0,5</span><span class="badge" hidden></span></div>
+<pre><code>class Tier:
+    def __init__(self, name: str) -> None:
+        self.name = name
+
+    def laut(self) -> str:
+        return "..."
+
+    def vorstellen(self) -> str:
+        return f"{self.name} sagt {self.laut()}"
+
+
+class Hund(Tier):
+    def laut(self) -> str:
+        return "Wuff"
+
+
+class Katze(Tier):
+    def __init__(self, name: str, alter: int) -> None:
+        super().__init__(name)
+        self.alter = alter
+
+    def laut(self) -> str:
+        return "Miau"
+
+
+tiere = [Hund("Bello"), Katze("Mia", 3), Tier("Nemo")]
+for tier in tiere:
+    print(tier.vorstellen())
+print(len(tiere), tiere[1].alter)</code></pre>
+    <textarea id="a8" aria-label="Ausgabe Aufgabe 8"></textarea>
+    <div class="feedback" id="fb8" hidden>
+<pre><code>Bello sagt Wuff
+Mia sagt Miau
+Nemo sagt ...
+3 3</code></pre>
+      <p class="hint"><code>vorstellen()</code> steht nur in <code>Tier</code>, ruft aber <code>self.laut()</code> auf. Welches <code>laut()</code> läuft, entscheidet das Objekt. Das ist Polymorphie. <code>Katze</code> ruft mit <code>super().__init__</code> den Konstruktor von <code>Tier</code> auf.</p>
+    </div>
+  </section>
+
+  <div class="actions">
+    <button type="button" class="primary" id="checkBottom">Prüfen</button>
+    <button type="button" id="resetBtn">Alles löschen</button>
+    <span class="confirm" id="resetConfirm" hidden>Wirklich alle Antworten löschen?
+      <button type="button" id="resetYes">Ja, löschen</button>
+      <button type="button" id="resetNo">Abbrechen</button>
+    </span>
+  </div>
+  <p class="hint" style="margin-top:1rem">Deine Eingaben werden nur in diesem Browser zwischengespeichert. Eigene Übungsklausur, keine offizielle Klausur.</p>
+  </form>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var KEY = "probeklausur-prog-v1";
+  var form = document.getElementById("exam");
+  var checked = false;
+
+  // Auswahllisten für Aufgabe 4 füllen
+  var grades = ["sehr gut", "gut", "bestanden", "nicht bestanden"];
+  document.querySelectorAll("select.sel4").forEach(function (sel) {
+    var o = document.createElement("option"); o.value = ""; o.textContent = "wählen …"; sel.appendChild(o);
+    grades.forEach(function (g) { var op = document.createElement("option"); op.value = g; op.textContent = "\"" + g + "\""; sel.appendChild(op); });
+  });
+
+  // ---------- Zwischenspeichern ----------
+  function fields() { return form.querySelectorAll("input, textarea, select"); }
+  function save() {
+    var data = {};
+    fields().forEach(function (el) {
+      if (!el.id) return;
+      if (el.type === "radio" || el.type === "checkbox") data[el.id] = el.checked;
+      else data[el.id] = el.value;
+    });
+    data.__checked = checked;
+    try { localStorage.setItem(KEY, JSON.stringify(data)); } catch (e) {}
+  }
+  function load() {
+    var raw = null;
+    try { raw = localStorage.getItem(KEY); } catch (e) {}
+    if (!raw) return;
+    var data; try { data = JSON.parse(raw); } catch (e) { return; }
+    fields().forEach(function (el) {
+      if (!el.id || !(el.id in data)) return;
+      if (el.type === "radio" || el.type === "checkbox") el.checked = !!data[el.id];
+      else el.value = data[el.id];
+    });
+    if (data.__checked) grade();
+  }
+  form.addEventListener("input", function (ev) {
+    save();
+    if (checked && ev.target.type === "checkbox") grade(); // Selbstbewertung sofort einrechnen
+  });
+  form.addEventListener("change", save);
+  form.addEventListener("submit", function (e) { e.preventDefault(); });
+
+  // ---------- Hilfen ----------
+  function norm(s) {
+    return String(s).replace(/\r/g, "").split("\n").map(function (l) { return l.trim().replace(/\s+/g, " "); })
+      .filter(function (l) { return l !== ""; }).join("\n");
+  }
+  function normGap(s) { return String(s).trim().replace(/\s+/g, "").replace(/^["']|["']$/g, ""); }
+  function mark(el, ok) { el.classList.remove("mark-ok", "mark-bad"); el.classList.add(ok ? "mark-ok" : "mark-bad"); }
+  function clearMarks() { document.querySelectorAll(".mark-ok, .mark-bad").forEach(function (el) { el.classList.remove("mark-ok", "mark-bad"); }); }
+  function fmt(n) { var r = Math.round(n * 10) / 10; return (r % 1 === 0 ? r.toFixed(0) : r.toFixed(1)).replace(".", ","); }
+  function addFeedback(container, html) {
+    var fb = container.querySelector(":scope > .feedback.auto");
+    if (!fb) { fb = document.createElement("div"); fb.className = "feedback auto"; container.appendChild(fb); }
+    fb.innerHTML = html; fb.hidden = false;
+  }
+  function setBadge(task, got, max) {
+    var b = document.querySelector('section[data-task="' + task + '"] .badge');
+    b.hidden = false; b.className = "badge " + (got >= max - 0.001 ? "full" : got > 0 ? "part" : "none");
+    b.textContent = fmt(got) + " / " + max + " P";
+    document.getElementById("ov" + task).textContent = fmt(got) + " / " + max;
+  }
+  function cb(id) { var el = document.getElementById(id); return el && el.checked ? 1 : 0; }
+
+  // ---------- Bewerten ----------
+  function grade() {
+    checked = true; clearMarks();
+    var scores = {};
+
+    // Aufgabe 1
+    var s1 = 0;
+    document.querySelectorAll("[data-mc]").forEach(function (q) {
+      var ans = q.dataset.answer, chosen = q.querySelector("input:checked");
+      var ok = chosen && chosen.value === ans; if (ok) s1 += 1;
+      q.querySelectorAll("label").forEach(function (l) { l.classList.remove("mark-ok", "mark-bad"); });
+      var right = q.querySelector('input[value="' + ans + '"]').parentElement; right.classList.add("mark-ok");
+      if (chosen && !ok) chosen.parentElement.classList.add("mark-bad");
+      addFeedback(q, '<p class="verdict ' + (ok ? "ok" : "bad") + '">' + (ok ? "Richtig" : chosen ? "Falsch, richtig ist " + ans + ")" : "Nicht beantwortet, richtig ist " + ans + ")") + '</p><p>' + q.dataset.expl + "</p>");
+    });
+    scores[1] = s1;
+
+    // Aufgabe 2
+    var s2 = 0;
+    document.querySelectorAll("[data-out]").forEach(function (q) {
+      var ta = q.querySelector("textarea"); var want = q.dataset.answer.split("|").join("\n");
+      var ok = norm(ta.value) === norm(want); var pts = ok ? Number(q.dataset.points) : 0; s2 += pts; mark(ta, ok);
+      addFeedback(q, '<p class="verdict ' + (ok ? "ok" : "bad") + '">' + (ok ? "Richtig" : "Nicht ganz. Richtig ist:") + "</p>" +
+        (ok ? "" : "<pre><code>" + want.replace(/&/g, "&amp;").replace(/</g, "&lt;") + "</code></pre>") + "<p>" + q.dataset.expl + "</p>");
+    });
+    scores[2] = s2;
+
+    // Aufgabe 3
+    var expected = { 1: "syntax", 18: "syntax", 17: "laufzeit", 11: "logik" }, used = {}, s3 = 0;
+    for (var i = 1; i <= 4; i++) {
+      var l = document.getElementById("e" + i + "l"), t = document.getElementById("e" + i + "t");
+      var line = parseInt(l.value, 10), ok = expected[line] && expected[line] === t.value && !used[line];
+      if (ok) { used[line] = true; s3 += 1; }
+      mark(l, !!ok); mark(t, !!ok);
+    }
+    s3 += cb("r3_1") + cb("r3_18") + cb("r3_17") + cb("r3_11");
+    document.getElementById("fb3").hidden = false;
+    scores[3] = Math.min(s3, 8);
+
+    // Aufgabe 4
+    var s4 = 0;
+    document.querySelectorAll("select.sel4").forEach(function (sel) { var ok = sel.value === sel.dataset.answer; if (ok) s4 += Number(sel.dataset.points); mark(sel, ok); });
+    document.querySelectorAll("input.num4").forEach(function (inp) { var ok = inp.value !== "" && Number(inp.value) === Number(inp.dataset.answer); if (ok) s4 += Number(inp.dataset.points); mark(inp, ok); });
+    document.getElementById("fb4").hidden = false;
+    scores[4] = Math.round(s4 * 10) / 10;
+
+    // Aufgabe 5 (Selbstbewertung)
+    document.getElementById("fb5a").hidden = false; document.getElementById("fb5b").hidden = false;
+    scores[5] = cb("r5a1") + cb("r5a2") + cb("r5a3") + cb("r5a4") + cb("r5b1") + cb("r5b2") + cb("r5b3") + cb("r5b4") + cb("r5b5") + cb("r5b6");
+
+    // Aufgabe 6
+    var s6 = 0;
+    document.querySelectorAll("input.gap").forEach(function (inp) {
+      var answers = inp.dataset.answer.split("|").map(normGap); var ok = answers.indexOf(normGap(inp.value)) !== -1;
+      if (ok) s6 += 1; mark(inp, ok);
+    });
+    document.getElementById("fb6").hidden = false;
+    scores[6] = s6;
+
+    // Aufgabe 7
+    var s7 = 0, lines7 = [];
+    document.querySelectorAll("[data-syn]").forEach(function (row) {
+      var chosen = row.querySelector("input:checked"), ok = chosen && chosen.value === row.dataset.answer;
+      if (ok) s7 += 0.5; mark(row, !!ok);
+      lines7.push("<p><b>" + row.dataset.syn + ")</b> " + row.dataset.answer + ". " + row.dataset.expl + "</p>");
+    });
+    var fb7 = document.getElementById("fb7"); fb7.innerHTML = lines7.join(""); fb7.hidden = false;
+    scores[7] = s7;
+
+    // Aufgabe 8
+    var want8 = ["Bello sagt Wuff", "Mia sagt Miau", "Nemo sagt ...", "3 3"];
+    var got8 = norm(document.getElementById("a8").value).split("\n"), s8 = 0;
+    want8.forEach(function (w, k) { if (got8[k] === w) s8 += 0.5; });
+    mark(document.getElementById("a8"), s8 === 2);
+    document.getElementById("fb8").hidden = false;
+    scores[8] = s8;
+
+    // Summe
+    var total = 0, max = { 1: 10, 2: 10, 3: 8, 4: 8, 5: 10, 6: 8, 7: 4, 8: 2 };
+    Object.keys(max).forEach(function (k) { total += scores[k]; setBadge(k, scores[k], max[k]); });
+    document.getElementById("ovSum").textContent = fmt(total) + " / 60";
+    document.getElementById("scoreTop").textContent = fmt(total) + " / 60 Punkte";
+    var res = document.getElementById("result"); res.hidden = false;
+    var passed = total >= 30;
+    res.innerHTML = '<div class="big">' + fmt(total) + " von 60 Punkten</div>" +
+      "<p>" + (passed ? "Bestanden (ab 30 Punkten)." : "Noch nicht bestanden. Ab 30 Punkten ist es geschafft.") + "</p>" +
+      '<p class="hint">Bei Aufgabe 3 (Korrekturen) und Aufgabe 5 sind jetzt Musterlösungen eingeblendet. Hak dort ab, was bei dir stimmt. Die Punkte rechnen sich sofort neu. Mit „Lösungen ausblenden“ versteckst du alles wieder, deine Antworten bleiben stehen.</p>';
+    document.getElementById("hideTop").hidden = false;
+    save();
+  }
+
+  // Lösungen wieder verstecken, Antworten bleiben stehen
+  function hideSolutions() {
+    checked = false; clearMarks();
+    document.querySelectorAll(".feedback").forEach(function (f) { f.hidden = true; });
+    document.querySelectorAll(".badge").forEach(function (b) { b.hidden = true; });
+    document.querySelectorAll(".options label").forEach(function (l) { l.classList.remove("mark-ok", "mark-bad"); });
+    document.getElementById("result").hidden = true;
+    var max = { 1: 10, 2: 10, 3: 8, 4: 8, 5: 10, 6: 8, 7: 4, 8: 2 };
+    Object.keys(max).forEach(function (k) { document.getElementById("ov" + k).textContent = max[k]; });
+    document.getElementById("ovSum").textContent = "60";
+    document.getElementById("scoreTop").textContent = "noch nicht geprüft";
+    document.getElementById("hideTop").hidden = true;
+    save();
+  }
+  document.getElementById("hideTop").addEventListener("click", function () { hideSolutions(); window.scrollTo(0, 0); });
+
+  document.getElementById("checkTop").addEventListener("click", function () { grade(); document.getElementById("result").scrollIntoView({ block: "start" }); });
+  document.getElementById("checkBottom").addEventListener("click", function () { grade(); document.getElementById("result").scrollIntoView({ block: "start" }); });
+
+  // ---------- Löschen ----------
+  var rc = document.getElementById("resetConfirm");
+  document.getElementById("resetBtn").addEventListener("click", function () { rc.hidden = false; });
+  document.getElementById("resetNo").addEventListener("click", function () { rc.hidden = true; });
+  document.getElementById("resetYes").addEventListener("click", function () {
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    form.reset(); checked = false; clearMarks(); rc.hidden = true;
+    document.getElementById("a5a").value = "def groesster_wert(werte: list[float]) -> float:\n    ";
+    document.getElementById("a5b").value = "def fahrpreis(alter: int, km: float) -> float:\n    ";
+    document.querySelectorAll(".feedback").forEach(function (f) { f.hidden = true; });
+    document.querySelectorAll(".badge").forEach(function (b) { b.hidden = true; });
+    document.getElementById("result").hidden = true;
+    var max = { 1: 10, 2: 10, 3: 8, 4: 8, 5: 10, 6: 8, 7: 4, 8: 2 };
+    Object.keys(max).forEach(function (k) { document.getElementById("ov" + k).textContent = max[k]; });
+    document.getElementById("ovSum").textContent = "60";
+    document.getElementById("scoreTop").textContent = "noch nicht geprüft";
+    stopTimer(); remaining = 3600; renderTimer(); timerBtn.textContent = "Zeit starten";
+    document.getElementById("hideTop").hidden = true;
+  });
+
+  // ---------- Tab-Taste in Code-Feldern ----------
+  document.querySelectorAll("textarea.code").forEach(function (ta) {
+    ta.addEventListener("keydown", function (e) {
+      if (e.key === "Tab" && !e.shiftKey) {
+        e.preventDefault(); var s = ta.selectionStart, en = ta.selectionEnd;
+        ta.value = ta.value.slice(0, s) + "    " + ta.value.slice(en); ta.selectionStart = ta.selectionEnd = s + 4; save();
+      }
+    });
+  });
+
+  // ---------- Timer ----------
+  var remaining = 3600, handle = null, timerEl = document.getElementById("timer"), timerBtn = document.getElementById("timerBtn");
+  function renderTimer() {
+    var m = Math.floor(remaining / 60), s = remaining % 60;
+    timerEl.textContent = String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0");
+    timerEl.classList.toggle("low", remaining <= 300);
+  }
+  function stopTimer() { if (handle) { clearInterval(handle); handle = null; } }
+  timerBtn.addEventListener("click", function () {
+    if (handle) { stopTimer(); timerBtn.textContent = "Weiter"; return; }
+    if (remaining <= 0) remaining = 3600;
+    handle = setInterval(function () {
+      remaining -= 1; renderTimer();
+      if (remaining <= 0) { stopTimer(); timerBtn.textContent = "Neu starten"; timerEl.textContent = "00:00 Zeit um"; }
+    }, 1000);
+    timerBtn.textContent = "Pause";
+  });
+  renderTimer();
+
+  load();
+})();
+</script>
+</body>
+</html>

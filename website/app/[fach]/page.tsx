@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { interactiveExams } from "@/lib/probeklausuren";
 import { notFound } from "next/navigation";
 import { Markdown } from "@/components/reader/Markdown";
 import { KlausurBadge, StandBadge } from "@/components/site/Badges";
@@ -93,6 +94,15 @@ export default async function SubjectPage({ params }: { params: Promise<Params> 
       {subject.chapters.length > 0 ? (
         <section aria-label="Gesamtansichten" className="section">
           <ul className="chapter-list">
+            {interactiveExams(subject.slug).map((exam) => (
+              <li key={exam.href}>
+                {/* Eigenständige HTML-Seite aus public/, daher <a> statt <Link> */}
+                <a href={exam.href} className="sources-link">
+                  <span className="chapter-title">{exam.label}</span>
+                  <span className="chapter-summary">Zum Ausfüllen mit Timer: Antworten eintragen, auf „Prüfen“ tippen, Punkte und Musterlösung sehen. Dein Stand bleibt in diesem Browser gespeichert.</span>
+                </a>
+              </li>
+            ))}
             <li>
               <Link href={`/${subject.slug}/lernpfad`} className="sources-link">
                 <span className="chapter-title">Lernpfad: das ganze Fach Schritt für Schritt</span>

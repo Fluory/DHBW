@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Probeklausur Wirtschaftsinformatik</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one calm exam column like a printed exam sheet; slim sticky bar with timer and score. */
+:root {
+  --bg: #ffffff; --paper: #f6f7f9; --fg: #1d2129; --muted: #5d6470; --line: #e1e4ea;
+  --accent: #3b4fa0; --ok: #2d5fc4; --ok-soft: #e9f0fd; --bad: #b8432f; --bad-soft: #fbece8;
+  --half: #a8690f; --half-soft: #fbf3e4; --code-bg: #f3f4f7;
+  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --radius: 8px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12141a; --paper: #191c23; --fg: #e7e9ee; --muted: #9aa1ad; --line: #2b2f39; --accent: #9fb0ff;
+    --ok: #8fb4ff; --ok-soft: #18233b; --bad: #ff9a85; --bad-soft: #3a1f1a; --half: #f0b85a; --half-soft: #33280f; --code-bg: #1b1e26;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12141a; --paper: #191c23; --fg: #e7e9ee; --muted: #9aa1ad; --line: #2b2f39; --accent: #9fb0ff;
+  --ok: #8fb4ff; --ok-soft: #18233b; --bad: #ff9a85; --bad-soft: #3a1f1a; --half: #f0b85a; --half-soft: #33280f; --code-bg: #1b1e26;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 16px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 46rem; margin: 0 auto; padding-block: 1.5rem 5rem; }
+h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 .35rem; text-wrap: balance; }
+h2 { font-size: 1.2rem; margin: 0; text-wrap: balance; }
+.lead { color: var(--muted); margin: 0 0 1rem; }
+.meta { display: flex; flex-wrap: wrap; gap: .4rem .8rem; font-size: .9rem; color: var(--muted); margin-bottom: 1rem; }
+.meta b { color: var(--fg); }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; padding-block: .6rem; margin-bottom: 1.5rem; }
+.timer { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 1.05rem; min-width: 4.5ch; }
+.timer.low { color: var(--bad); }
+.score { margin-left: auto; font-weight: 600; font-variant-numeric: tabular-nums; }
+button { font: inherit; font-size: .9rem; border-radius: 6px; padding: .4rem .8rem; cursor: pointer; border: 1px solid var(--line); background: var(--bg); color: var(--fg); }
+button:hover { border-color: var(--muted); }
+button.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); font-weight: 600; }
+button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.overview { width: 100%; border-collapse: collapse; font-size: .92rem; margin-bottom: 2rem; font-variant-numeric: tabular-nums; }
+.overview th, .overview td { text-align: left; padding: .35rem .5rem; border-bottom: 1px solid var(--line); }
+.overview td:last-child, .overview th:last-child { text-align: right; }
+.overview tr.sum td { font-weight: 700; border-bottom: 0; }
+section.task { border-top: 2px solid var(--fg); padding-top: .9rem; margin-top: 2.5rem; }
+.task-head { display: flex; align-items: baseline; gap: .75rem; flex-wrap: wrap; margin-bottom: .6rem; }
+.pts { font-size: .85rem; color: var(--muted); }
+.badge { margin-left: auto; font-size: .85rem; font-weight: 600; padding: .1rem .55rem; border-radius: 999px; font-variant-numeric: tabular-nums; }
+.badge.full { background: var(--ok-soft); color: var(--ok); } .badge.part { background: var(--half-soft); color: var(--half); } .badge.none { background: var(--bad-soft); color: var(--bad); }
+.q { padding-block: .9rem; border-bottom: 1px solid var(--line); }
+.q:last-child { border-bottom: 0; }
+.q > p { margin: 0 0 .5rem; }
+.q-label { font-weight: 600; margin-right: .3rem; }
+.options { display: grid; gap: .3rem; }
+.options label { display: flex; gap: .5rem; align-items: flex-start; cursor: pointer; padding: .25rem .4rem; border-radius: 6px; }
+.options label:hover { background: var(--paper); }
+.options input { margin-top: .3rem; }
+code { font-family: var(--font-mono); font-size: .88em; background: var(--code-bg); padding: 0 .25em; border-radius: 3px; }
+pre { font-family: var(--font-mono); font-size: .86rem; line-height: 1.5; background: var(--code-bg); border: 1px solid var(--line); border-radius: var(--radius); padding: .75rem .9rem; overflow-x: auto; margin: .4rem 0 .7rem; }
+pre code { background: none; padding: 0; }
+.ln { color: var(--muted); user-select: none; }
+textarea, input[type="text"], input[type="number"], select { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: .4rem .55rem; }
+textarea { width: 100%; font-family: var(--font-mono); font-size: .88rem; min-height: 4.5rem; resize: vertical; }
+textarea.code { min-height: 11rem; tab-size: 4; }
+textarea.prose { font-family: var(--font-body); font-size: .95rem; }
+input.gap { font-family: var(--font-mono); width: 11rem; max-width: 100%; }
+input.short { font-family: var(--font-mono); width: 8rem; }
+input[type="number"] { width: 6rem; }
+.row { display: flex; flex-wrap: wrap; gap: .5rem .9rem; align-items: center; margin-bottom: .45rem; }
+.row > span.lbl { min-width: 7rem; color: var(--muted); font-size: .92rem; }
+.grid-err { display: grid; grid-template-columns: 5rem 9.5rem minmax(0, 1fr); gap: .45rem; align-items: center; }
+.grid-err.two { grid-template-columns: 5rem minmax(0, 1fr); }
+.grid-err .h { font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.grid-err input[type="text"] { width: 100%; font-family: var(--font-mono); font-size: .86rem; }
+@media (max-width: 34rem) { .grid-err { grid-template-columns: 4.5rem minmax(0, 1fr); } .grid-err .fix, .grid-err .hfix { grid-column: 1 / -1; } }
+.mark-ok { background: var(--ok-soft) !important; } .mark-bad { background: var(--bad-soft) !important; }
+input.mark-ok, select.mark-ok, textarea.mark-ok { border-color: var(--ok); } input.mark-bad, select.mark-bad, textarea.mark-bad { border-color: var(--bad); }
+.sol { margin-top: .6rem; padding: .7rem .85rem; border-radius: var(--radius); background: var(--paper); border: 1px solid var(--line); font-size: .93rem; }
+.sol p { margin: .3rem 0; }
+.sol .t { font-weight: 600; }
+.rubric { display: grid; gap: .3rem; margin-top: .5rem; }
+.rubric label { display: flex; gap: .5rem; align-items: flex-start; cursor: pointer; }
+.rubric input { margin-top: .3rem; }
+.hint { color: var(--muted); font-size: .88rem; }
+.result { border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.1rem; margin: 1rem 0 1.5rem; background: var(--paper); }
+.result .big { font-size: 1.6rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.result p { margin: .3rem 0; }
+.actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 2.5rem; align-items: center; }
+.confirm { display: inline-flex; gap: .5rem; align-items: center; font-size: .9rem; }
+.table-scroll { overflow-x: auto; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+.site-back { max-width: 860px; margin: 0 auto; padding: 12px 16px 0; font: 14px/1.4 var(--font-body); }
+.site-back a { color: var(--accent); text-decoration: none; margin-right: 1rem; }
+.site-back a:hover { text-decoration: underline; }
+@media print { .site-back { display: none; } }
+/* Handy: nichts darf breiter als der Bildschirm werden */
+select { max-width: 100%; }
+pre { max-width: 100%; overflow-x: auto; }
+label, label code { white-space: normal; overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<nav class="site-back" aria-label="Website"><a href="/wirtschaftsinformatik">← Zurück zu WI</a><a href="/lernplan">Lernplan</a><a href="/">Startseite</a></nav>
+<div class="wrap">
+  <header>
+    <h1>Probeklausur Wirtschaftsinformatik</h1>
+    <p class="lead">Diese Übungsklausur folgt den offiziellen Klausurhinweisen: 48 Minuten, 48 Punkte, drei Aufgabentypen. Multiple Choice hat 12 Punkte, offene Fragen 22 Punkte, Transferaufgaben (EPK modellieren, ER-Modell, Business Model Canvas) 14 Punkte. Stoff sind Tag 1 und Tag 2 (Kapitel 1–8). Füll alles aus und klick auf „Prüfen“. Auswahlfelder und Rechenergebnisse werden automatisch bewertet, freie Antworten und Zeichnungen bewertest du mit der eingeblendeten Musterlösung selbst. Alle Aufgaben sind neu, das Unternehmen ist ausgedacht.</p>
+    <div class="meta"><span><b>48</b> Minuten</span><span><b>48</b> Punkte</span><span>Hilfsmittel: nur Stifte, Lineal, Radierer, Klausurpapier (wie in den Klausurhinweisen); in der Klausur mit Kuli kreuzen, Bleistift zählt nicht</span><span>bestanden ab <b>24</b></span></div>
+  </header>
+
+  <div class="bar" role="region" aria-label="Zeit und Punkte">
+    <span class="timer" id="timer">48:00</span>
+    <button type="button" id="timerBtn">Zeit starten</button>
+    <button type="button" class="primary" id="checkTop">Prüfen</button>
+    <button type="button" id="hideTop" hidden>Lösungen ausblenden</button>
+    <span class="score" id="scoreTop">noch nicht geprüft</span>
+  </div>
+
+  <div id="result" class="result" hidden></div>
+
+  <table class="overview" aria-label="Aufgabenübersicht">
+    <thead><tr><th>Aufgabe</th><th>Thema</th><th>Punkte</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Multiple Choice (Kapitel 1–8)</td><td id="ov1">12</td></tr>
+      <tr><td>2</td><td>Grundbegriffe und Arten von IS</td><td id="ov2">5</td></tr>
+      <tr><td>3</td><td>Organisation, Anforderungen, Integration</td><td id="ov3">4</td></tr>
+      <tr><td>4</td><td>Geschäftsprozess als EPK (Transfer)</td><td id="ov4">6</td></tr>
+      <tr><td>5</td><td>ER-Modell und Relationen (Transfer)</td><td id="ov5">5</td></tr>
+      <tr><td>6</td><td>Business Model Canvas (Transfer)</td><td id="ov6">5</td></tr>
+      <tr><td>7</td><td>Informationsmanagement</td><td id="ov7">5</td></tr>
+      <tr><td>8</td><td>BI, Data Science, digitale Transformation</td><td id="ov8">6</td></tr>
+      <tr class="sum"><td></td><td>Summe</td><td id="ovSum">48</td></tr>
+    </tbody>
+  </table>
+
+  <form id="exam" autocomplete="off" spellcheck="false">
+
+  <!-- ================= Aufgabe 1 ================= -->
+  <section class="task" data-task="1" data-max="12">
+    <div class="task-head"><h2>Aufgabe 1 · Multiple Choice</h2><span class="pts">12 Punkte</span><span class="badge" hidden></span></div>
+    <p class="hint">Wie in der Klausur: Bei jeder Frage können mehrere Aussagen richtig sein, mindestens eine ist es immer. Entscheide bei jeder Aussage „ankreuzen“ oder „nicht ankreuzen“. Gewertet wird wie in der echten Klausur: Jede richtige Entscheidung bringt ½ Punkt, jede falsche kostet ½ Punkt. Pro Frage gibt es mindestens 0 und höchstens 2 Punkte. Wer bei einer Frage gar nichts ankreuzt, bekommt 0. Eine Aussage auf „–“ zählt wie „nicht ankreuzen“.</p>
+
+    <div class="q mcx">
+      <p><span class="q-label">1.1</span>Grundlagen: Welche Aussagen sind richtig? (2 P)</p>
+      <div class="options">
+        <div class="row"><select class="mcxs" id="m11a" data-kind="gap" data-answer="x" data-points="0.5" aria-label="1.1 Aussage A"><option value="">–</option><option value="x">ankreuzen</option><option value="o">nicht ankreuzen</option></select><span style="flex:1 1 14rem"><b>A</b> Aufgabe betrieblicher Informationssysteme ist es, Menschen bei ihren Aufgaben mit den richtigen Informationen zur richtigen Zeit zu versorgen.</span></div>
+        <div class="row"><select class="mcxs" id="m11b" data-kind="gap" data-answer="o" data-points="0.5" aria-label="1.1 Aussage B"><option value="">–</option><option value="x">ankreuzen</option><option value="o">nicht ankreuzen</option></select><span style="flex:1 1 14rem"><b>B</b> Ein Informationssystem besteht aus Hardware und Software.</span></div>
+        <div class="row"><select class="mcxs" id="m11c" data-kind="gap" data-answer="o" data-points="0.5" aria-label="1.1 Aussage C"><option value="">–</option><option value="x">ankreuzen</option><option value="o">nicht ankreuzen</option></select><span style="flex:1 1 14rem"><b>C</b> Ein Modell ist umso besser, je vollständiger es die Realität abbildet.</span></div>
+        <div class="row"><select class="mcxs" id="m11d" data-kind="gap" data-answer="x" data-points="0.5" aria-label="1.1 Aussage D"><option value="">–</option><option value="x">ankreuzen</option><option value="o">nicht ankreuzen</option></select><span style="flex:1 1 14rem"><b>D</b> Dieselbe Angabe kann für eine Person Information sein und für eine andere nur Daten.</span></div>
+      </div>
+      <div class="sol" hidden><p><span class="t">Ankreuzen: A, D.</span> Eine Frage aus dem Kern von Kapitel 1.</p><p><b>A</b> richtig: Das ist die Aufgabe betrieblicher IS (offizielle Beispielfrage der Klausurhinweise).</p><p><b>B</b> falsch: Hardware und Software sind das Anwendungssystem. Zum IS gehört der Mensch (sozio-technisch: Mensch, Aufgabe, Technik, Organisation).</p><p><b>C</b> falsch: Ein Modell lässt bewusst weg, was für den Zweck unwichtig ist (U-Bahn-Plan). Gut ist es, wenn es zum Zweck passt.</p><p><b>D</b> richtig: Information ist zweck- und personenabhängig (Wettervorhersage Kanada: für die Getreidehändlerin Information, für die meisten nur Daten).</p><p class="hint">Klausurwertung: je richtige Entscheidung +½, je falsche −½, Summe der Frage mindestens 0. Beispiel: 3 richtig und 1 falsch ergibt 1,5 − 0,5 = 1 Punkt, hier auf der Seite 1,5.</p></div>
+    </div>
+    <div class="q mcx">
+      <p><span class="q-label">1.2</span>Arten von Informationssystemen: Welche Aussagen sind richtig? (2 P)</p>
+      <div class="options">
+        <div class="row"><select class="mcxs" id="m12a" data-kind="gap" data-answer="x" data-points="0.5" aria-label="1.2 Aussage A"><option value="">–</option><option value="x">ankreuzen</option><option value="o">nicht ankreuzen</option></select><span style="flex:1 1 14rem"><b>A</b> ERP steht für Enterprise Resource Planning.</span></div>
+        <div class="row"><select class="mcxs" id="m12b" data-kind="gap" data-answer="o" data-points="0.5" aria-label="1.2 Aussage B"><option value="">–</option><option value="x">ankreuzen</option><option value="o">nicht ankreuzen</option></select><span style="flex:1 1 14rem"><b>B</b> Ein ERP-System arbeitet mit getrennten Datenbanken je Abteilung, die einmal pro Nacht abgeglichen werden.</span></div>
+        <div class="row"><select class="mcxs" id="m12c" data-kind="gap" data-answer="x" data-points="0.5" aria-label="1.2 Aussage C"><option value="">–</option><option value="x">ankreuzen</option><option value="o">nicht ankreuzen</option></select><span style="flex:1 1 14rem"><b>C</b> Systems of Insight unterstützen Entscheidungen, zum Beispiel mit Auswertungen und Dashboards.</span></div>
+        <div class="row"><select class="mcxs" id="m12d" data-kind="gap" data-answer="o" data-points="0.5" aria-label="1.2 Aussage D"><option value="">–</option><option value="x">ankreuzen</option><option value="o">nicht ankreuzen</option></select><span style="flex:1 1 14rem"><b>D</b> Ein Onlineshop, in dem Endkunden selbst bestellen, ist ein innerbetriebliches System.</span></div>
+      </div>
+      <div class="sol" hidden><p><span class="t">Ankreuzen: A, C.</span> </p><p><b>A</b> richtig: offizielle Beispielfrage. Die Falle „Entity Relationship Program“ gehört zum ER-Modell.</p><p><b>B</b> falsch: Kern eines ERP ist die gemeinsame Datenbasis für alle Module. Getrennte Datenbanken wären gerade das, was ein ERP vermeidet.</p><p><b>C</b> richtig: Record = Transaktion, Insight = Entscheidung, Engagement = Interaktion.</p><p><b>D</b> falsch: Der Shop macht Endkunden zu Nutzern, also endkundenorientiert (B2C).</p><p class="hint">Klausurwertung: je richtige Entscheidung +½, je falsche −½, Summe der Frage mindestens 0. Beispiel: 3 richtig und 1 falsch ergibt 1,5 − 0,5 = 1 Punkt, hier auf der Seite 1,5.</p></div>
+    </div>
+    <div class="q mcx">
+      <p><span class="q-label">1.3</span>EPK: Welche Aussagen sind richtig? (2 P)</p>
+      <div class="options">
+        <div class="row"><select class="mcxs" id="m13a" data-kind="gap" data-answer="x" data-points="0.5" aria-label="1.3 Aussage A"><option value="">–</option><option value="x">ankreuzen</option><option value="o">nicht ankreuzen</option></select><span style="flex:1 1 14rem"><b>A</b> Nach einem XOR-Split wird genau einer der Wege durchlaufen.</span></div>
+        <div class="row"><select class="mcxs" id="m13b" data-kind="gap" data-answer="o" data-points="0.5" aria-label="1.3 Aussage B"><option value="">–</option><option value="x">ankreuzen</option><option value="o">nicht ankreuzen</option></select><span style="flex:1 1 14rem"><b>B</b> Direkt nach einem Ereignis darf mit einem OR-Konnektor verzweigt werden.</span></div>
+        <div class="row"><select class="mcxs" id="m13c" data-kind="gap" data-answer="x" data-points="0.5" aria-label="1.3 Aussage C"><option value="">–</option><option value="x">ankreuzen</option><option value="o">nicht ankreuzen</option></select><span style="flex:1 1 14rem"><b>C</b> Eine Funktion wird als Tätigkeit benannt, zum Beispiel „Kiste packen“.</span></div>
+        <div class="row"><select class="mcxs" id="m13d" data-kind="gap" data-answer="o" data-points="0.5" aria-label="1.3 Aussage D"><option value="">–</option><option value="x">ankreuzen</option><option value="o">nicht ankreuzen</option></select><span style="flex:1 1 14rem"><b>D</b> Ein XOR-Split wird mit einem AND-Join wieder zusammengeführt.</span></div>
+      </div>
+      <div class="sol" hidden><p><span class="t">Ankreuzen: A, C.</span> </p><p><b>A</b> richtig: XOR = genau ein Weg, OR = mindestens einer, AND = alle.</p><p><b>B</b> falsch: Regel 4, nur Funktionen entscheiden. Nach einem Ereignis ist nur ein AND-Split erlaubt.</p><p><b>C</b> richtig: Funktion = Tätigkeit (Substantiv + Verb), Ereignis = Zustand („Kiste gepackt“).</p><p><b>D</b> falsch: Regel 5, zusammenführen wie aufgeteilt. Der AND-Join würde ewig auf den zweiten Weg warten (Deadlock).</p><p class="hint">Klausurwertung: je richtige Entscheidung +½, je falsche −½, Summe der Frage mindestens 0. Beispiel: 3 richtig und 1 falsch ergibt 1,5 − 0,5 = 1 Punkt, hier auf der Seite 1,5.</p></div>
+    </div>
+    <div class="q mcx">
+      <p><span class="q-label">1.4</span>Datenmodellierung: Welche Aussagen sind richtig? (2 P)</p>
+      <div class="options">
+        <div class="row"><select class="mcxs" id="m14a" data-kind="gap" data-answer="x" data-points="0.5" aria-label="1.4 Aussage A"><option value="">–</option><option value="x">ankreuzen</option><option value="o">nicht ankreuzen</option></select><span style="flex:1 1 14rem"><b>A</b> Eine n:m-Beziehung wird zu einer eigenen Relation, deren Primärschlüssel aus den Primärschlüsseln beider Entity-Typen besteht.</span></div>
+        <div class="row"><select class="mcxs" id="m14b" data-kind="gap" data-answer="x" data-points="0.5" aria-label="1.4 Aussage B"><option value="">–</option><option value="x">ankreuzen</option><option value="o">nicht ankreuzen</option></select><span style="flex:1 1 14rem"><b>B</b> Ein Datenbanksystem besteht aus der Datenbank und dem Datenbankmanagementsystem (DBS = DB + DBMS).</span></div>
+        <div class="row"><select class="mcxs" id="m14c" data-kind="gap" data-answer="o" data-points="0.5" aria-label="1.4 Aussage C"><option value="">–</option><option value="x">ankreuzen</option><option value="o">nicht ankreuzen</option></select><span style="flex:1 1 14rem"><b>C</b> Das ER-Modell gehört zur logischen Entwurfsstufe.</span></div>
+        <div class="row"><select class="mcxs" id="m14d" data-kind="gap" data-answer="o" data-points="0.5" aria-label="1.4 Aussage D"><option value="">–</option><option value="x">ankreuzen</option><option value="o">nicht ankreuzen</option></select><span style="flex:1 1 14rem"><b>D</b> Bei einer 1:n-Beziehung kommt der Fremdschlüssel in die Relation auf der 1-Seite.</span></div>
+      </div>
+      <div class="sol" hidden><p><span class="t">Ankreuzen: A, B.</span> </p><p><b>A</b> richtig: Die beiden Fremdschlüssel bilden zusammen den Primärschlüssel, Attribute der Beziehung wandern mit.</p><p><b>B</b> richtig: DB = Datenbestand, DBMS = verwaltende Software.</p><p><b>C</b> falsch: Das ER-Modell ist konzeptionell. Logisch ist das Relationenmodell, physisch die Umsetzung per SQL.</p><p><b>D</b> falsch: Der Fremdschlüssel kommt auf die n-Seite, denn dort hat er nur einen Wert.</p><p class="hint">Klausurwertung: je richtige Entscheidung +½, je falsche −½, Summe der Frage mindestens 0. Beispiel: 3 richtig und 1 falsch ergibt 1,5 − 0,5 = 1 Punkt, hier auf der Seite 1,5.</p></div>
+    </div>
+    <div class="q mcx">
+      <p><span class="q-label">1.5</span>Informationsmanagement: Welche Aussagen sind richtig? (2 P)</p>
+      <div class="options">
+        <div class="row"><select class="mcxs" id="m15a" data-kind="gap" data-answer="o" data-points="0.5" aria-label="1.5 Aussage A"><option value="">–</option><option value="x">ankreuzen</option><option value="o">nicht ankreuzen</option></select><span style="flex:1 1 14rem"><b>A</b> Ein Service Level Agreement legt fest, bis wann neue Funktionswünsche umgesetzt werden.</span></div>
+        <div class="row"><select class="mcxs" id="m15b" data-kind="gap" data-answer="x" data-points="0.5" aria-label="1.5 Aussage B"><option value="">–</option><option value="x">ankreuzen</option><option value="o">nicht ankreuzen</option></select><span style="flex:1 1 14rem"><b>B</b> Der Product Owner pflegt und priorisiert das Product Backlog.</span></div>
+        <div class="row"><select class="mcxs" id="m15c" data-kind="gap" data-answer="o" data-points="0.5" aria-label="1.5 Aussage C"><option value="">–</option><option value="x">ankreuzen</option><option value="o">nicht ankreuzen</option></select><span style="flex:1 1 14rem"><b>C</b> Open Source ist ein Betriebsmodell wie Software as a Service.</span></div>
+        <div class="row"><select class="mcxs" id="m15d" data-kind="gap" data-answer="x" data-points="0.5" aria-label="1.5 Aussage D"><option value="">–</option><option value="x">ankreuzen</option><option value="o">nicht ankreuzen</option></select><span style="flex:1 1 14rem"><b>D</b> Das Lastenheft beschreibt die Anforderungen des Auftraggebers an das System.</span></div>
+      </div>
+      <div class="sol" hidden><p><span class="t">Ankreuzen: B, D.</span> </p><p><b>A</b> falsch: Ein SLA regelt Leistung und Qualität des Betriebs (Verfügbarkeit, Antwortzeiten). Eine neue Funktion ist ein neues Projekt.</p><p><b>B</b> richtig: Der Scrum Master räumt Hindernisse weg, die Developers organisieren sich selbst.</p><p><b>C</b> falsch: Open Source ist eine Lizenzform. Betreiben kann man es selbst oder in der Cloud.</p><p><b>D</b> richtig: Lastenheft = das Was des Auftraggebers, Pflichtenheft = das Wie des Lieferanten.</p><p class="hint">Klausurwertung: je richtige Entscheidung +½, je falsche −½, Summe der Frage mindestens 0. Beispiel: 3 richtig und 1 falsch ergibt 1,5 − 0,5 = 1 Punkt, hier auf der Seite 1,5.</p></div>
+    </div>
+    <div class="q mcx">
+      <p><span class="q-label">1.6</span>BI, Data Science und digitale Transformation: Welche Aussagen sind richtig? (2 P)</p>
+      <div class="options">
+        <div class="row"><select class="mcxs" id="m16a" data-kind="gap" data-answer="x" data-points="0.5" aria-label="1.6 Aussage A"><option value="">–</option><option value="x">ankreuzen</option><option value="o">nicht ankreuzen</option></select><span style="flex:1 1 14rem"><b>A</b> Beim überwachten Lernen gibt es eine Zielspalte mit bekannten Antworten.</span></div>
+        <div class="row"><select class="mcxs" id="m16b" data-kind="gap" data-answer="o" data-points="0.5" aria-label="1.6 Aussage B"><option value="">–</option><option value="x">ankreuzen</option><option value="o">nicht ankreuzen</option></select><span style="flex:1 1 14rem"><b>B</b> „Warum sind die Bestellungen im Mai gesunken?“ ist eine prädiktive Frage.</span></div>
+        <div class="row"><select class="mcxs" id="m16c" data-kind="gap" data-answer="o" data-points="0.5" aria-label="1.6 Aussage C"><option value="">–</option><option value="x">ankreuzen</option><option value="o">nicht ankreuzen</option></select><span style="flex:1 1 14rem"><b>C</b> RAG trainiert das Sprachmodell mit den Dokumenten des Unternehmens neu.</span></div>
+        <div class="row"><select class="mcxs" id="m16d" data-kind="gap" data-answer="o" data-points="0.5" aria-label="1.6 Aussage D"><option value="">–</option><option value="x">ankreuzen</option><option value="o">nicht ankreuzen</option></select><span style="flex:1 1 14rem"><b>D</b> In der SWOT-Analyse beschreiben Stärken und Schwächen das Umfeld des Unternehmens.</span></div>
+      </div>
+      <div class="sol" hidden><p><span class="t">Ankreuzen: A.</span> Hier ist nur eine Aussage richtig. Auch das kommt vor: Mindestens eine ist immer richtig, mehr müssen es nicht sein.</p><p><b>A</b> richtig: Zielspalte vorhanden = überwacht (Regression oder Klassifikation), keine Zielspalte = unüberwacht (Clustering).</p><p><b>B</b> falsch: „Warum?“ ist diagnostisch. Prädiktiv fragt „Was wird passieren?“.</p><p><b>C</b> falsch: RAG sucht passende Textstellen und gibt sie im Prompt mit, das Modell bleibt unverändert. Weitertrainieren wäre Feinabstimmung.</p><p><b>D</b> falsch: Stärken und Schwächen sind intern, Chancen und Risiken extern.</p><p class="hint">Klausurwertung: je richtige Entscheidung +½, je falsche −½, Summe der Frage mindestens 0. Beispiel: 3 richtig und 1 falsch ergibt 1,5 − 0,5 = 1 Punkt, hier auf der Seite 1,5.</p></div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 2 ================= -->
+  <section class="task" data-task="2" data-max="5">
+    <div class="task-head"><h2>Aufgabe 2 · Grundbegriffe und Arten von Informationssystemen</h2><span class="pts">5 Punkte</span><span class="badge" hidden></span></div>
+    <p class="hint">Durchgehendes Beispiel aller Aufgaben ist die ausgedachte <b>Hofkiste GmbH</b>: Sie liefert jede Woche Kisten mit regionalem Bio-Gemüse im Abo. Bestellt wird per App oder Website, die Ware kommt von Partnerhöfen, gepackt wird im eigenen Packlager, ausgeliefert von eigenen Fahrern. Die Hofkiste hat rund 60 Beschäftigte.</p>
+
+    <div class="q">
+      <p><span class="q-label">2.1</span>(3 P) Ordnen Sie die drei Systeme der Hofkiste nach Reichweite und Anwendungszweck ein.</p>
+      <p style="margin:.5rem 0 .25rem">(1) Lohnabrechnung für Fahrer und Packteam</p>
+      <div class="row"><span class="lbl">Reichweite</span><select class="auto" id="t21r1" data-kind="gap" data-answer="intern" data-points="0.5" aria-label="System 1 Reichweite"><option value="">wählen …</option><option value="intern">innerbetrieblich</option><option value="b2b">zwischenbetrieblich (B2B)</option><option value="b2c">endkundenorientiert (B2C)</option></select><span class="lbl">Zweck</span><select class="auto" id="t21z1" data-kind="gap" data-answer="transaktion" data-points="0.5" aria-label="System 1 Zweck"><option value="">wählen …</option><option value="transaktion">Transaktion</option><option value="entscheidung">Entscheidungsunterstützung</option><option value="interaktion">Interaktion/Zusammenarbeit</option></select></div>
+      <p style="margin:.5rem 0 .25rem">(2) Portal, in dem die Partnerhöfe die bestellten Mengen bestätigen und Lieferscheine abrufen</p>
+      <div class="row"><span class="lbl">Reichweite</span><select class="auto" id="t21r2" data-kind="gap" data-answer="b2b" data-points="0.5" aria-label="System 2 Reichweite"><option value="">wählen …</option><option value="intern">innerbetrieblich</option><option value="b2b">zwischenbetrieblich (B2B)</option><option value="b2c">endkundenorientiert (B2C)</option></select><span class="lbl">Zweck</span><select class="auto" id="t21z2" data-kind="gap" data-answer="transaktion" data-points="0.5" aria-label="System 2 Zweck"><option value="">wählen …</option><option value="transaktion">Transaktion</option><option value="entscheidung">Entscheidungsunterstützung</option><option value="interaktion">Interaktion/Zusammenarbeit</option></select></div>
+      <p style="margin:.5rem 0 .25rem">(3) Dashboard für die Geschäftsführung: Abo-Kündigungen je Region und Monat</p>
+      <div class="row"><span class="lbl">Reichweite</span><select class="auto" id="t21r3" data-kind="gap" data-answer="intern" data-points="0.5" aria-label="System 3 Reichweite"><option value="">wählen …</option><option value="intern">innerbetrieblich</option><option value="b2b">zwischenbetrieblich (B2B)</option><option value="b2c">endkundenorientiert (B2C)</option></select><span class="lbl">Zweck</span><select class="auto" id="t21z3" data-kind="gap" data-answer="entscheidung" data-points="0.5" aria-label="System 3 Zweck"><option value="">wählen …</option><option value="transaktion">Transaktion</option><option value="entscheidung">Entscheidungsunterstützung</option><option value="interaktion">Interaktion/Zusammenarbeit</option></select></div>
+      <div class="sol" hidden>
+        <p><b>(1) innerbetrieblich, Transaktion:</b> Die Lohnabrechnung verarbeitet jeden Monat Massendaten nach festen Regeln (Administrationssystem) und betrifft nur das eigene Unternehmen.</p>
+        <p><b>(2) zwischenbetrieblich (B2B), Transaktion:</b> Das Portal verbindet die Hofkiste mit ihren Lieferanten. Gebucht werden Bestellmengen und Lieferscheine, wie beim Lieferantenportal des Leuchtenhändlers.</p>
+        <p><b>(3) innerbetrieblich, Entscheidungsunterstützung:</b> Verdichtete Kennzahlen für die Geschäftsführung sind ein System of Insight.</p>
+        <p class="hint">In der echten Klausur zählt bei Grenzfällen die Begründung. Diese drei sind bewusst eindeutig gewählt.</p>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">2.2</span>(2 P) Erläutern Sie kurz den Unterschied zwischen einem Anwendungssystem und einem Informationssystem am Beispiel der Hofkiste.</p>
+      <textarea class="prose" id="t22" aria-label="2.2 Antwort"></textarea>
+      <div class="sol" hidden>
+        <p>Das <b>Anwendungssystem</b> ist nur die Technik: Anwendungssoftware (zum Beispiel die Bestell-App und die Tourenplanung), Basissoftware (Betriebssystem, Datenbanksystem) und Hardware (Server, Handscanner im Packlager).</p>
+        <p>Das <b>Informationssystem</b> umfasst zusätzlich die Menschen, die damit arbeiten: zum Beispiel das Packteam, das mit der Tourenplanung die Kisten packt. Es ist ein sozio-technisches System aus Mensch, Aufgabe, Technik und Organisation.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb22a" data-points="1"> AS = nur Technik (Software und Hardware), mit Beispiel (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb22b" data-points="1"> IS = AS plus Menschen (sozio-technisch), mit Beispiel (+1)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 3 ================= -->
+  <section class="task" data-task="3" data-max="4">
+    <div class="task-head"><h2>Aufgabe 3 · Organisation, Anforderungen und Integration</h2><span class="pts">4 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q">
+      <p><span class="q-label">3.1</span>(1 P) Die Hofkiste will ein neues Tourenplanungssystem auswählen. Nennen Sie die drei Elemente, die die Anforderungen an ein Informationssystem bestimmen.</p>
+      <textarea class="prose" id="t31" aria-label="3.1 Antwort"></textarea>
+      <div class="sol" hidden>
+        <p><b>Geschäftsmodell</b> (womit schafft das Unternehmen Wert?), <b>Unternehmensaufbau</b> (wer ist wofür zuständig?), <b>Geschäftsprozesse</b> (wie läuft die Arbeit ab?). Merksatz: erst das Unternehmen verstehen, dann das System beurteilen. Nicht: „die verfügbare Technik“.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb31" data-points="1"> alle drei Elemente genannt (+1)</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">3.2</span>(2 P) Erläutern Sie kurz die Begriffe Aufbauorganisation und Ablauforganisation.</p>
+      <textarea class="prose" id="t32" aria-label="3.2 Antwort"></textarea>
+      <div class="sol" hidden>
+        <p><b>Aufbauorganisation (Wo?):</b> das hierarchische Gerüst eines Unternehmens aus Stellen und Abteilungen mit ihren Weisungsbeziehungen, dargestellt im Organigramm. Beispiel: Das Packlager ist der Leitung Logistik unterstellt.</p>
+        <p><b>Ablauforganisation (Wie?):</b> gestaltet die oft abteilungsübergreifenden Prozesse der Leistungserstellung, also was wann wo durch wen geschieht. Beispiel: Bestellung (Kundenservice) → Kiste packen (Packlager) → ausliefern (Fahrer) → Rechnung (Buchhaltung).</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb32a" data-points="1"> Aufbau: Struktur, Stellen/Abteilungen, Weisung oder Organigramm (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb32b" data-points="1"> Ablauf: (abteilungsübergreifende) Prozesse, was wann wo durch wen (+1)</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">3.3</span>(1 P) Welche Art der Integration liegt vor?</p>
+      <div class="row"><span style="flex:1 1 18rem">(1) Eine Bestellung aus der App läuft ohne erneute Eingabe ins Packlager, in die Tourenplanung und in die Buchhaltung.</span><select class="auto" id="t33a" data-kind="gap" data-answer="horizontal" data-points="0.5" aria-label="3.3 Situation 1"><option value="">wählen …</option><option value="horizontal">horizontal</option><option value="vertikal">vertikal</option></select></div>
+      <div class="row"><span style="flex:1 1 18rem">(2) Aus allen Bestellungen entsteht jeden Monat automatisch der Umsatz je Kistensorte für die Geschäftsführung.</span><select class="auto" id="t33b" data-kind="gap" data-answer="vertikal" data-points="0.5" aria-label="3.3 Situation 2"><option value="">wählen …</option><option value="horizontal">horizontal</option><option value="vertikal">vertikal</option></select></div>
+      <div class="sol" hidden>
+        <p><b>(1) horizontal:</b> entlang des Prozesses quer durch die Abteilungen, ohne Medienbruch. <b>(2) vertikal:</b> operative Daten werden verdichtet und nach oben ans Management gereicht.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 4 ================= -->
+  <section class="task" data-task="4" data-max="6">
+    <div class="task-head"><h2>Aufgabe 4 · Geschäftsprozess als EPK</h2><span class="pts">6 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q">
+      <p><span class="q-label">4.1</span>(3 P) Eine Kollegin hat den Prozess „Reklamation einer Kiste bearbeiten“ als EPK modelliert. Die Tabelle beschreibt das Modell. Ab Schritt 2 teilt sich der Fluss in Zweig A und Zweig B, in Schritt 9 laufen beide zusammen.</p>
+      <div class="table-scroll"><table class="overview" style="margin-bottom:.6rem">
+        <thead><tr><th>Schritt</th><th>Elementtyp</th><th style="text-align:left">Beschriftung</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Ereignis</td><td style="text-align:left">Reklamation eingegangen</td></tr>
+          <tr><td>2</td><td>Konnektor</td><td style="text-align:left">XOR-Split (Zweig A und Zweig B)</td></tr>
+          <tr><td>3</td><td>Ereignis</td><td style="text-align:left">Reklamation berechtigt (A)</td></tr>
+          <tr><td>4</td><td>Funktion</td><td style="text-align:left">Gutschrift erstellen (A)</td></tr>
+          <tr><td>5</td><td>Ereignis</td><td style="text-align:left">Gutschrift prüfen (A)</td></tr>
+          <tr><td>6</td><td>Ereignis</td><td style="text-align:left">Reklamation unberechtigt (B)</td></tr>
+          <tr><td>7</td><td>Funktion</td><td style="text-align:left">Absage formulieren (B)</td></tr>
+          <tr><td>8</td><td>Ereignis</td><td style="text-align:left">Absage formuliert (B)</td></tr>
+          <tr><td>9</td><td>Konnektor</td><td style="text-align:left">AND-Join (führt 5 und 8 zusammen)</td></tr>
+          <tr><td>10</td><td>Funktion</td><td style="text-align:left">Kunden benachrichtigen</td></tr>
+          <tr><td>11</td><td>Ereignis</td><td style="text-align:left">E-Mail versendet (Kante direkt aus 10)</td></tr>
+          <tr><td>12</td><td>Ereignis</td><td style="text-align:left">SMS versendet (Kante direkt aus 10)</td></tr>
+        </tbody>
+      </table></div>
+      <p>Das Modell enthält <b>vier Verstöße</b> gegen die sechs Modellierungsregeln. Geben Sie je Fehler den Schritt, die am direktesten verletzte Regel und die Korrektur an.</p>
+      <div class="errblock" data-expected='[{"line":[1,2],"type":"r4","pts":0.5},{"line":[5],"type":"r6","pts":0.5},{"line":[9],"type":"r5","pts":0.5},{"line":[10,11,12],"type":"r3","pts":0.5}]'>
+        <div class="grid-err">
+          <span class="h">Schritt</span><span class="h">Regel</span><span class="h hfix">Korrektur</span>
+          <input type="number" class="eline" id="e41l" aria-label="Fehler 1 Schritt"><select class="etype" id="e41t" aria-label="Fehler 1 Regel"><option value="">wählen …</option><option value="r1">1 Start/Ende Ereignis</option><option value="r2">2 abwechseln</option><option value="r3">3 je eine Kante</option><option value="r4">4 nur Funktionen entscheiden</option><option value="r5">5 Join wie Split</option><option value="r6">6 richtig benennen</option></select><input type="text" class="fix" id="e41f" aria-label="Fehler 1 Korrektur">
+          <input type="number" class="eline" id="e42l" aria-label="Fehler 2 Schritt"><select class="etype" id="e42t" aria-label="Fehler 2 Regel"><option value="">wählen …</option><option value="r1">1 Start/Ende Ereignis</option><option value="r2">2 abwechseln</option><option value="r3">3 je eine Kante</option><option value="r4">4 nur Funktionen entscheiden</option><option value="r5">5 Join wie Split</option><option value="r6">6 richtig benennen</option></select><input type="text" class="fix" id="e42f" aria-label="Fehler 2 Korrektur">
+          <input type="number" class="eline" id="e43l" aria-label="Fehler 3 Schritt"><select class="etype" id="e43t" aria-label="Fehler 3 Regel"><option value="">wählen …</option><option value="r1">1 Start/Ende Ereignis</option><option value="r2">2 abwechseln</option><option value="r3">3 je eine Kante</option><option value="r4">4 nur Funktionen entscheiden</option><option value="r5">5 Join wie Split</option><option value="r6">6 richtig benennen</option></select><input type="text" class="fix" id="e43f" aria-label="Fehler 3 Korrektur">
+          <input type="number" class="eline" id="e44l" aria-label="Fehler 4 Schritt"><select class="etype" id="e44t" aria-label="Fehler 4 Regel"><option value="">wählen …</option><option value="r1">1 Start/Ende Ereignis</option><option value="r2">2 abwechseln</option><option value="r3">3 je eine Kante</option><option value="r4">4 nur Funktionen entscheiden</option><option value="r5">5 Join wie Split</option><option value="r6">6 richtig benennen</option></select><input type="text" class="fix" id="e44f" aria-label="Fehler 4 Korrektur">
+        </div>
+      </div>
+      <div class="sol" hidden>
+        <p class="hint">Automatisch gibt es je ½ Punkt für den richtigen Schritt mit der richtigen Regel. Die Korrekturen bewertest du selbst.</p>
+        <p><b>Schritt 2 (bzw. 1 → 2), Regel 4 „nur Funktionen entscheiden“:</b> Direkt nach dem Ereignis „Reklamation eingegangen“ wird mit XOR verzweigt. Ein Zustand kann nicht entscheiden. Korrektur: Funktion „Reklamation prüfen“ (Kundenservice) zwischen Schritt 1 und 2 einfügen. Damit ist auch der Wechsel Ereignis/Funktion (Regel 2) wieder in Ordnung.</p>
+        <p><b>Schritt 5, Regel 6 „richtig benennen“:</b> „Gutschrift prüfen“ ist eine Tätigkeit, steht aber als Ereignis da. Korrektur: Ereignis „Gutschrift erstellt“.</p>
+        <p><b>Schritt 9, Regel 5 „zusammenführen wie aufgeteilt“:</b> Der XOR-Split aus Schritt 2 wird mit AND zusammengeführt. Es kommt aber nur ein Zweig an, das AND wartet ewig. Korrektur: XOR-Join.</p>
+        <p><b>Schritt 10 (Kanten zu 11 und 12), Regel 3 „je eine Kante rein, eine raus“:</b> Aus der Funktion gehen zwei Kanten ohne Konnektor heraus. Korrektur: nach „Kunden benachrichtigen“ einen Konnektor setzen, hier OR (E-Mail und/oder SMS); weil eine Funktion davorsteht, ist der OR-Split erlaubt.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb41a" data-points="0.5"> Korrekturen für mindestens zwei Fehler passen (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb41b" data-points="0.5"> Korrekturen für alle vier Fehler passen (+½)</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">4.2</span>(3 P) Modellieren Sie den folgenden Ablauf als EPK. Eine Textdarstellung genügt, zum Beispiel <code>⟨Ereignis⟩ → (Funktion) → XOR</code>, je Zeile ein Element; Organisationseinheiten in Klammern dahinter.</p>
+      <p>Eine Neukundin bestellt in der App eine Probekiste. Der Kundenservice prüft im CRM, ob die Lieferadresse im Liefergebiet liegt. Liegt sie außerhalb, sendet der Kundenservice eine Absage, und der Prozess endet. Liegt sie im Liefergebiet, packt das Packlager die Kiste. Danach werden gleichzeitig die Kiste ausgeliefert (Fahrer) und die Rechnung erstellt (Buchhaltung). Ist beides erledigt, ist die Bestellung abgeschlossen.</p>
+      <textarea class="code" id="t42" aria-label="4.2 EPK"></textarea>
+      <div class="sol" hidden>
+        <p>Eine mögliche Lösung (andere Namen sind richtig, solange Ereignis = Zustand und Funktion = Tätigkeit):</p>
+<pre><code>⟨ Probekiste bestellt ⟩
+            │
+( Lieferadresse prüfen )        ── Kundenservice, CRM-System
+            │
+          (XOR)
+     ┌──────┴───────────────┐
+⟨ Adresse außerhalb ⟩    ⟨ Adresse im Liefergebiet ⟩
+     │                       │
+( Absage senden )        ( Kiste packen )        ── Packlager
+     │                       │
+⟨ Absage versendet ⟩     ⟨ Kiste gepackt ⟩
+  (Ende)                     │
+                            (∧)
+                     ┌───────┴────────┐
+              ( Kiste ausliefern )  ( Rechnung erstellen )
+                  ── Fahrer            ── Buchhaltung
+                     └───────┬────────┘
+                            (∧)
+                             │
+               ⟨ Bestellung abgeschlossen ⟩
+
+⟨ ⟩ = Ereignis, ( ) = Funktion, ── = Zuordnung (Linie ohne Pfeil)</code></pre>
+        <p class="hint">Prüfpunkte: Start und Ende sind Ereignisse; der XOR-Split folgt auf die Funktion „Lieferadresse prüfen“; der AND-Split darf auf das Ereignis „Kiste gepackt“ folgen; nach dem AND-Join kommt ein Ereignis. Zwei Endereignisse sind hier richtig, weil zwei verschiedene Ergebnisse entstehen.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb42a" data-points="1"> Start- und Endereignisse vorhanden, Ereignis und Funktion wechseln sich ab (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb42b" data-points="1"> XOR-Split nach der Prüf-Funktion mit zwei passenden Ereignissen (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb42c" data-points="0.5"> AND-Split und AND-Join für Ausliefern und Rechnung (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb42d" data-points="0.5"> Benennung korrekt und Organisationseinheiten zugeordnet (+½)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 5 ================= -->
+  <section class="task" data-task="5" data-max="5">
+    <div class="task-head"><h2>Aufgabe 5 · ER-Modell und Relationen</h2><span class="pts">5 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q">
+      <p>Die Hofkiste plant ihre Lieferungen in Touren. Eine <b>Tour</b> hat eine eindeutige Tour-Nr. und einen Wochentag. Jeder <b>Kunde</b> (eindeutige Kunden-Nr., Name, Adresse) wird von genau einer Tour beliefert, eine Tour beliefert viele Kunden. Jede Tour wird fest von genau einem <b>Fahrer</b> (eindeutige Personal-Nr., Name) gefahren, und jeder Fahrer fährt genau eine Tour. Es gibt verschiedene <b>Kistensorten</b> (eindeutige Sorten-Nr., Bezeichnung, Preis). Ein Kunde kann mehrere Kistensorten abonnieren, eine Kistensorte wird von vielen Kunden abonniert. Zu jedem Abo werden das Startdatum und der Lieferrhythmus (wöchentlich oder 14-täglich) gespeichert.</p>
+      <p><span class="q-label">5.1</span>(2 P) Bestimmen Sie die Kardinalitäten und den Ort des Attributs Startdatum.</p>
+      <div class="row"><span class="lbl">Tour – Kunde („beliefert“)</span><select class="auto" id="t51a" data-kind="gap" data-answer="1n" data-points="0.5" aria-label="Kardinalität Tour Kunde"><option value="">wählen …</option><option value="11">1:1</option><option value="1n">1:n</option><option value="nm">n:m</option></select></div>
+      <div class="row"><span class="lbl">Fahrer – Tour („fährt“)</span><select class="auto" id="t51b" data-kind="gap" data-answer="11" data-points="0.5" aria-label="Kardinalität Fahrer Tour"><option value="">wählen …</option><option value="11">1:1</option><option value="1n">1:n</option><option value="nm">n:m</option></select></div>
+      <div class="row"><span class="lbl">Kunde – Kistensorte („abonniert“)</span><select class="auto" id="t51c" data-kind="gap" data-answer="nm" data-points="0.5" aria-label="Kardinalität Kunde Kistensorte"><option value="">wählen …</option><option value="11">1:1</option><option value="1n">1:n</option><option value="nm">n:m</option></select></div>
+      <div class="row"><span class="lbl">Startdatum gehört an …</span><select class="auto" id="t51d" data-kind="gap" data-answer="abonniert" data-points="0.5" aria-label="Ort Startdatum"><option value="">wählen …</option><option value="kunde">den Entity-Typ Kunde</option><option value="kistensorte">den Entity-Typ Kistensorte</option><option value="abonniert">die Beziehung „abonniert“</option><option value="tour">den Entity-Typ Tour</option></select></div>
+      <div class="sol" hidden>
+        <p>Immer in beide Richtungen fragen:</p>
+        <p><b>Tour 1 : n Kunde.</b> Eine Tour beliefert viele Kunden, ein Kunde wird von genau einer Tour beliefert.</p>
+        <p><b>Fahrer 1 : 1 Tour.</b> Ein Fahrer fährt genau eine Tour, eine Tour hat genau einen Fahrer.</p>
+        <p><b>Kunde n : m Kistensorte.</b> Ein Kunde abonniert mehrere Sorten, eine Sorte hat viele Abonnenten.</p>
+        <p><b>Startdatum an „abonniert“:</b> Es steht erst für das Paar Kunde + Kistensorte fest. Am Kunden hätte er für alle Abos dasselbe Datum.</p>
+<pre><code>[Fahrer] 1 ── ⟨fährt⟩ ── 1 [Tour] 1 ── ⟨beliefert⟩ ── n [Kunde] n ── ⟨abonniert⟩ ── m [Kistensorte]
+                                                                       |
+                                                       (Startdatum) (Rhythmus)</code></pre>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">5.2</span>(2 P) Überführen Sie das Modell in Relationen. Kennzeichnen Sie Primärschlüssel (zum Beispiel unterstrichen oder <b>fett</b>) und Fremdschlüssel (zum Beispiel mit ↑).</p>
+      <textarea id="t52" aria-label="5.2 Relationen"></textarea>
+      <div class="sol" hidden>
+        <p>Fahrer(<b>Personal-Nr.</b>, Name)<br>Tour(<b>Tour-Nr.</b>, Wochentag, Personal-Nr.↑)<br>Kunde(<b>Kunden-Nr.</b>, Name, Adresse, Tour-Nr.↑)<br>Kistensorte(<b>Sorten-Nr.</b>, Bezeichnung, Preis)<br>abonniert(<b>Kunden-Nr.↑, Sorten-Nr.↑</b>, Startdatum, Rhythmus)</p>
+        <p class="hint">1:n → Fremdschlüssel auf die n-Seite (Kunde bekommt Tour-Nr.). 1:1 → Fremdschlüssel in einer der beiden Relationen (Personal-Nr. in Tour oder Tour-Nr. in Fahrer, beides richtig). n:m → eigene Relation mit beiden Schlüsseln als zusammengesetztem Primärschlüssel; die Attribute der Raute wandern mit.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb52a" data-points="0.5"> Kunde mit Fremdschlüssel Tour-Nr. (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb52b" data-points="1"> eigene Relation abonniert mit beiden Schlüsseln als Primärschlüssel und Startdatum, Rhythmus (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb52c" data-points="0.5"> 1:1 Fahrer–Tour über einen Fremdschlüssel in einer der beiden Relationen (+½)</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">5.3</span>(1 P) Bisher stehen die Abos in einer Excel-Liste, in der in jeder Abo-Zeile auch die Adresse des Kunden steht. Eine Kundin mit drei Abos zieht um, geändert wird aber nur eine Zeile. Welche Anomalie liegt vor?</p>
+      <div class="row"><select class="auto" id="t53" data-kind="gap" data-answer="aenderung" data-points="1" aria-label="5.3 Anomalie"><option value="">wählen …</option><option value="einfuege">Einfügeanomalie</option><option value="aenderung">Änderungsanomalie</option><option value="loesch">Löschanomalie</option><option value="keine">keine Anomalie</option></select></div>
+      <div class="sol" hidden>
+        <p><b>Änderungsanomalie.</b> Die Adresse ist redundant dreimal gespeichert. Wird nur eine Zeile geändert, hat die Kundin jetzt zwei verschiedene Adressen, die Daten widersprechen sich. Im Relationenmodell steht die Adresse nur einmal in Kunde.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 6 ================= -->
+  <section class="task" data-task="6" data-max="5">
+    <div class="task-head"><h2>Aufgabe 6 · Business Model Canvas</h2><span class="pts">5 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q">
+      <p>Die Hofkiste liefert Privatkunden jede Woche eine Kiste mit regionalem Bio-Gemüse nach Hause. Das Abo kostet je nach Größe 19,90 € bis 34,90 € pro Kiste und lässt sich jederzeit pausieren. Zielgruppen sind Familien und Berufstätige in der Stadt, die frisch kochen wollen, aber wenig Zeit zum Einkaufen haben. Außerdem beliefert die Hofkiste Büros mit Obstkisten für die Beschäftigten und stellt dafür monatlich eine Rechnung. Das Gemüse kommt von zwölf Bio-Höfen aus der Region. Die Kühlfahrzeuge sind geleast, bezahlt wird über einen Zahlungsdienstleister. Zu jeder Kiste gibt es in der App passende Rezepte.</p>
+      <p><span class="q-label">6.1</span>(4 P) Analysieren Sie das Geschäftsmodell mit dem Business Model Canvas. Konzentrieren Sie sich auf Wertversprechen, Schlüsselpartner, Kundensegmente und Einnahmequellen, je zwei Einträge.</p>
+      <div class="row"><span class="lbl">Wertversprechen</span></div>
+      <textarea class="prose" id="t61a" aria-label="Wertversprechen"></textarea>
+      <div class="row"><span class="lbl">Schlüsselpartner</span></div>
+      <textarea class="prose" id="t61b" aria-label="Schlüsselpartner"></textarea>
+      <div class="row"><span class="lbl">Kundensegmente</span></div>
+      <textarea class="prose" id="t61c" aria-label="Kundensegmente"></textarea>
+      <div class="row"><span class="lbl">Einnahmequellen</span></div>
+      <textarea class="prose" id="t61d" aria-label="Einnahmequellen"></textarea>
+      <div class="sol" hidden>
+        <p><b>Wertversprechen:</b> frisches, regionales Bio-Gemüse ohne Einkaufen, bis an die Haustür · flexibel pausierbar, mit passenden Rezepten · für Büros: gesunde Snacks für die Beschäftigten ohne Aufwand.</p>
+        <p><b>Schlüsselpartner:</b> die zwölf Bio-Höfe der Region · Leasinggeber der Kühlfahrzeuge · Zahlungsdienstleister.</p>
+        <p><b>Kundensegmente:</b> Familien und Berufstätige in der Stadt, die frisch kochen wollen · Büros bzw. Unternehmen, die ihren Beschäftigten Obst anbieten.</p>
+        <p><b>Einnahmequellen:</b> Abo-Preis je Kiste (19,90 € bis 34,90 €) · monatliche Rechnung für die Büro-Obstkisten.</p>
+        <p class="hint">Typische Fehler: die Höfe als Kundensegment eintragen (sie liefern zu, sind also Partner) · „gute Qualität“ als Wertversprechen ohne Bezug zum Fall · Wertversprechen und Einnahmequelle verwechseln.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb61a" data-points="1"> Wertversprechen: zwei passende, konkrete Einträge (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb61b" data-points="1"> Schlüsselpartner: zwei passende Einträge (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb61c" data-points="1"> Kundensegmente: zwei passende Einträge (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb61d" data-points="1"> Einnahmequellen: zwei passende Einträge (+1)</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">6.2</span>(1 P) Ab 2027 will die Hofkiste eine App öffnen, in der Höfe aus der Region ihre Produkte selbst einstellen und direkt an Endkunden verkaufen. Die Hofkiste behält von jedem Verkauf 8 % Provision. Welches Muster digitaler Geschäftsmodelle ist das?</p>
+      <div class="row"><select class="auto" id="t62" data-kind="gap" data-answer="plattform" data-points="1" aria-label="6.2 Muster"><option value="">wählen …</option><option value="freemium">Freemium</option><option value="plattform">Plattform</option><option value="service">Produkt als Service</option><option value="industrie">Industrie 4.0</option></select></div>
+      <div class="sol" hidden>
+        <p><b>Plattform.</b> Die Hofkiste bringt fremde Anbieter (Höfe) und Kunden zusammen und verdient an jedem Geschäft mit, wie Etsy. Das ist zugleich Stufe 3 der digitalen Transformation: eine neue Einnahmequelle. Bei einem Verkauf über 25 € blieben 25 · 0,08 = 2 € bei der Hofkiste.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 7 ================= -->
+  <section class="task" data-task="7" data-max="5">
+    <div class="task-head"><h2>Aufgabe 7 · Informationsmanagement</h2><span class="pts">5 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q">
+      <p><span class="q-label">7.1</span>(1 P) Projekt oder Daueraufgabe?</p>
+      <div class="row"><span style="flex:1 1 18rem">(1) Die Hofkiste führt ein neues Tourenplanungssystem ein.</span><select class="auto" id="t71a" data-kind="gap" data-answer="projekt" data-points="0.5" aria-label="7.1 Fall 1"><option value="">wählen …</option><option value="projekt">Projekt</option><option value="dauer">Daueraufgabe</option></select></div>
+      <div class="row"><span style="flex:1 1 18rem">(2) Jeden Dienstag werden Sicherheitsupdates auf den Servern eingespielt.</span><select class="auto" id="t71b" data-kind="gap" data-answer="dauer" data-points="0.5" aria-label="7.1 Fall 2"><option value="">wählen …</option><option value="projekt">Projekt</option><option value="dauer">Daueraufgabe</option></select></div>
+      <div class="sol" hidden>
+        <p><b>(1) Projekt:</b> einmalig, mit Ziel und Begrenzung in Zeit, Geld und Personal (DIN 69901: Einmaligkeit der Bedingungen). <b>(2) Daueraufgabe:</b> wiederkehrende Routine im Betrieb.</p>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">7.2</span>(2 P) Die Geschäftsführung schreibt: „Die App soll besser werden.“ Formulieren Sie daraus ein SMART-Ziel und zeigen Sie kurz, wie es die Kriterien erfüllt.</p>
+      <textarea class="prose" id="t72" aria-label="7.2 SMART-Ziel"></textarea>
+      <div class="sol" hidden>
+        <p>Ein möglicher Vorschlag: „Bis 30.06.2027 steigt die Bewertung der App im Store von 3,8 auf 4,3 Sterne, und eine Bestellung dauert höchstens 2 Minuten.“</p>
+        <p><b>Spezifisch:</b> welche App, welche Verbesserung (Bewertung, Bestelldauer). <b>Messbar:</b> Sterne und Minuten. <b>Akzeptiert:</b> Produktteam und Kundenservice tragen es mit. <b>Realistisch:</b> +0,5 Sterne ist machbar, nicht 5,0. <b>Terminiert:</b> 30.06.2027.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb72a" data-points="1"> Kennzahl mit Ausgangs- und Zielwert (messbar, spezifisch) (+1)</label>
+          <label><input type="checkbox" class="rb" id="rb72b" data-points="0.5"> fester Termin (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb72c" data-points="0.5"> Kriterien kurz begründet, Ziel realistisch (+½)</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">7.3</span>(1 P) Die App betreibt ein Cloud-Anbieter. Das SLA sichert <b>99,8 %</b> Verfügbarkeit pro Monat zu (30 Tage). Wie viele Stunden darf die App im Monat höchstens ausfallen?</p>
+      <div class="row"><span class="lbl">Stunden</span><input type="text" class="short auto" id="t73" data-kind="num" data-answer="1,44" data-tol="0.01" data-points="1" aria-label="7.3 Stunden"></div>
+      <div class="sol" hidden>
+        <p>1. Stunden im Monat: 30 · 24 = 720. 2. Erlaubter Ausfall: 100 % − 99,8 % = 0,2 % = 0,002. 3. 720 · 0,002 = <b>1,44 Stunden</b>, rund 1 Stunde 26 Minuten (0,44 · 60 = 26,4).</p>
+        <p class="hint">Typische Fehler: 0,2 Stunden (Prozentzahl direkt als Stunden) oder 14,4 Stunden (Komma verrutscht, 720 · 0,02). Neue Funktionen der App regelt das SLA übrigens nicht, das wäre ein neues Projekt.</p>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">7.4</span>(1 P) Die Hofkiste will in der App Rezeptvorschläge passend zum Kisteninhalt anbieten. Was genau die Kunden wollen, ist noch unklar, und die Technik ist für das Team teilweise neu. Welches Vorgehen empfiehlt die Stacey-Matrix?</p>
+      <div class="row"><select class="auto" id="t74" data-kind="gap" data-answer="agil" data-points="1" aria-label="7.4 Vorgehen"><option value="">wählen …</option><option value="klassisch">klassisch (Wasserfall)</option><option value="agil">agil (Scrum)</option><option value="lastenheft">erst das Lastenheft vollständig festlegen, dann umsetzen</option><option value="dauer">als Daueraufgabe im Betrieb nebenher</option></select></div>
+      <div class="sol" hidden>
+        <p><b>Agil (Scrum).</b> Unklare Anforderungen und teilweise neue Technik sind „komplex“. Dann arbeitet man in kurzen Sprints, zeigt nach jedem Sprint ein nutzbares Ergebnis und priorisiert das Backlog neu. Klassisch passt nur bei klaren Anforderungen und bekannter Technik, etwa beim Umstellen der Lohnabrechnung.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Aufgabe 8 ================= -->
+  <section class="task" data-task="8" data-max="6">
+    <div class="task-head"><h2>Aufgabe 8 · BI, Data Science und digitale Transformation</h2><span class="pts">6 Punkte</span><span class="badge" hidden></span></div>
+    <div class="q">
+      <p><span class="q-label">8.1</span>(2 P) Welche Methode passt jeweils?</p>
+      <div class="row"><span style="flex:1 1 18rem">(1) Wie viele Kisten werden in der Kalenderwoche 50 bestellt?</span><select class="auto" id="t811" data-kind="gap" data-answer="regression" data-points="0.5" aria-label="8.1 Fall 1"><option value="">wählen …</option><option value="bericht">BI-Bericht</option><option value="regression">Regression</option><option value="klassifikation">Klassifikation</option><option value="clustering">Clustering</option></select></div>
+      <div class="row"><span style="flex:1 1 18rem">(2) Kündigt eine Abo-Kundin in den nächsten drei Monaten, ja oder nein? (Für 3&nbsp;000 frühere Abos ist bekannt, ob gekündigt wurde.)</span><select class="auto" id="t812" data-kind="gap" data-answer="klassifikation" data-points="0.5" aria-label="8.1 Fall 2"><option value="">wählen …</option><option value="bericht">BI-Bericht</option><option value="regression">Regression</option><option value="klassifikation">Klassifikation</option><option value="clustering">Clustering</option></select></div>
+      <div class="row"><span style="flex:1 1 18rem">(3) Die Kunden sollen ohne Vorgaben in Gruppen mit ähnlichem Bestellverhalten eingeteilt werden.</span><select class="auto" id="t813" data-kind="gap" data-answer="clustering" data-points="0.5" aria-label="8.1 Fall 3"><option value="">wählen …</option><option value="bericht">BI-Bericht</option><option value="regression">Regression</option><option value="klassifikation">Klassifikation</option><option value="clustering">Clustering</option></select></div>
+      <div class="row"><span style="flex:1 1 18rem">(4) Wie viele Kisten wurden im letzten Monat je Sorte verkauft?</span><select class="auto" id="t814" data-kind="gap" data-answer="bericht" data-points="0.5" aria-label="8.1 Fall 4"><option value="">wählen …</option><option value="bericht">BI-Bericht</option><option value="regression">Regression</option><option value="klassifikation">Klassifikation</option><option value="clustering">Clustering</option></select></div>
+      <div class="sol" hidden>
+        <p>Frage 1: Gibt es eine Zielspalte mit bekannten Antworten? Frage 2: Zahl oder Kategorie? Gegenprobe: Reicht Summieren vorhandener Zahlen?</p>
+        <p><b>(1) Regression:</b> Ziel ist eine Zahl (Anzahl Kisten). <b>(2) Klassifikation:</b> Ziel ist eine Kategorie (ja/nein), bekannte Antworten liegen vor. <b>(3) Clustering:</b> keine Zielspalte, die Gruppen entstehen erst aus den Daten. <b>(4) BI-Bericht:</b> vorhandene Verkäufe summieren, kein Modell nötig.</p>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">8.2</span>(1 P) Welche Analysestufe ist das?</p>
+      <div class="row"><span style="flex:1 1 18rem">(1) „Warum sind die Kündigungen im Oktober gestiegen?“</span><select class="auto" id="t82a" data-kind="gap" data-answer="diagnostisch" data-points="0.5" aria-label="8.2 Frage 1"><option value="">wählen …</option><option value="deskriptiv">deskriptiv</option><option value="diagnostisch">diagnostisch</option><option value="praediktiv">prädiktiv</option><option value="praeskriptiv">präskriptiv</option></select></div>
+      <div class="row"><span style="flex:1 1 18rem">(2) „Welchen Rabatt sollen wir welcher Kundengruppe anbieten?“</span><select class="auto" id="t82b" data-kind="gap" data-answer="praeskriptiv" data-points="0.5" aria-label="8.2 Frage 2"><option value="">wählen …</option><option value="deskriptiv">deskriptiv</option><option value="diagnostisch">diagnostisch</option><option value="praediktiv">prädiktiv</option><option value="praeskriptiv">präskriptiv</option></select></div>
+      <div class="sol" hidden>
+        <p><b>(1) diagnostisch:</b> Warum ist es passiert? <b>(2) präskriptiv:</b> Was sollen wir tun? Die Reihenfolge der Stufen: Was ist passiert? → Warum? → Was wird passieren? → Was sollen wir tun?</p>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">8.3</span>(1 P) Für ein Kündigungsmodell liegen 2&nbsp;000 frühere Abos mit bekannter Antwort vor. Sie werden 80/20 in Trainings- und Testdaten geteilt.</p>
+      <div class="row"><span class="lbl">a) Anzahl Testfälle (½ P)</span><input type="text" class="short auto" id="t83a" data-kind="num" data-answer="400" data-tol="0.01" data-points="0.5" aria-label="8.3 a Testfälle"></div>
+      <div class="row"><span class="lbl">b) Das Modell liegt bei 340 Testfällen richtig. Trefferquote in % (½ P)</span><input type="text" class="short auto" id="t83b" data-kind="num" data-answer="85" data-tol="0.1" data-points="0.5" aria-label="8.3 b Trefferquote"></div>
+      <div class="sol" hidden>
+        <p><b>a)</b> 20 % von 2 000 = 2 000 · 0,2 = <b>400</b> Testfälle (1 600 bleiben fürs Training). <b>b)</b> 340 / 400 = 0,85 = <b>85 %</b>.</p>
+        <p class="hint">Vorsicht mit Prozenten: Kündigen nur 5 % der Kunden, liegt ein Modell, das immer „kündigt nicht“ sagt, schon bei 95 %, findet aber keine einzige Kündigung.</p>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">8.4</span>(1 P) Welche Stufe auf dem Weg zur digitalen Transformation ist das?</p>
+      <div class="row"><span style="flex:1 1 18rem">(1) Bestellungen aus der App landen ohne Abtippen in der Tourenplanung.</span><select class="auto" id="t84a" data-kind="gap" data-answer="s2" data-points="0.5" aria-label="8.4 Fall 1"><option value="">wählen …</option><option value="s1">Stufe 1: Informationen digitalisieren</option><option value="s2">Stufe 2: Prozesse digitalisieren</option><option value="s3">Stufe 3: digitale Transformation</option></select></div>
+      <div class="row"><span style="flex:1 1 18rem">(2) Die neue Höfe-App vermittelt Produkte fremder Höfe und verdient an jedem Verkauf mit.</span><select class="auto" id="t84b" data-kind="gap" data-answer="s3" data-points="0.5" aria-label="8.4 Fall 2"><option value="">wählen …</option><option value="s1">Stufe 1: Informationen digitalisieren</option><option value="s2">Stufe 2: Prozesse digitalisieren</option><option value="s3">Stufe 3: digitale Transformation</option></select></div>
+      <div class="sol" hidden>
+        <p><b>(1) Stufe 2:</b> Ein bestehender Ablauf wird schneller und ohne Medienbruch. <b>(2) Stufe 3:</b> neues Wertversprechen und neue Einnahmequelle, das Geschäftsmodell ändert sich. Stufe 1 wäre zum Beispiel die Rechnung als PDF statt auf Papier.</p>
+      </div>
+    </div>
+
+    <div class="q">
+      <p><span class="q-label">8.5</span>(1 P) Die Hofkiste plant einen KI-Assistenten im Kundenservice. Erläutern Sie kurz den Unterschied zwischen einem RAG-Chatbot und einem Agenten an einem Beispiel der Hofkiste.</p>
+      <textarea class="prose" id="t85" aria-label="8.5 Antwort"></textarea>
+      <div class="sol" hidden>
+        <p><b>RAG-Chatbot:</b> sucht passende Stellen in eigenen Dokumenten (zum Beispiel den Abo-Bedingungen) und gibt sie dem Sprachmodell im Prompt mit. Er <b>informiert</b>: „Bis wann kann ich mein Abo pausieren?“ Das Modell wird dabei nicht neu trainiert.</p>
+        <p><b>Agent:</b> plant Schritte und <b>handelt</b> mit Werkzeugen in den Systemen: Er pausiert das Abo im Bestellsystem und informiert die Kundin. Leitplanken: klare Rechte, Mensch entscheidet bei großer Tragweite, Protokoll; die Haftung bleibt beim Unternehmen.</p>
+        <div class="rubric">
+          <label><input type="checkbox" class="rb" id="rb85a" data-points="0.5"> RAG: eigene Dokumente als Kontext, informiert (+½)</label>
+          <label><input type="checkbox" class="rb" id="rb85b" data-points="0.5"> Agent: nutzt Werkzeuge und handelt in Systemen, mit Beispiel (+½)</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="actions">
+    <button type="button" class="primary" id="checkBottom">Prüfen</button>
+    <button type="button" id="resetBtn">Alles löschen</button>
+    <span class="confirm" id="resetConfirm" hidden>Wirklich alle Antworten löschen?
+      <button type="button" id="resetYes">Ja, löschen</button>
+      <button type="button" id="resetNo">Abbrechen</button>
+    </span>
+  </div>
+  <p class="hint" style="margin-top:1rem">Eigene Übungsklausur nach den offiziellen Klausurhinweisen (Aufbau, Punkte, Aufgabentypen, Operatoren), keine offizielle Klausur. Die Hofkiste GmbH ist ausgedacht. Rechenergebnisse sind mit Python nachgerechnet. Deine Eingaben werden nur in diesem Browser gespeichert.</p>
+  </form>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var KEY = "probeklausur-wi-v1";
+  var form = document.getElementById("exam");
+  var checked = false;
+  var MAX = { 1: 12, 2: 5, 3: 4, 4: 6, 5: 5, 6: 5, 7: 5, 8: 6 };
+  var STARTCODE = {};
+
+  function fields() { return form.querySelectorAll("input, textarea, select"); }
+  function save() {
+    var d = {};
+    fields().forEach(function (el) { if (!el.id) return; d[el.id] = (el.type === "radio" || el.type === "checkbox") ? el.checked : el.value; });
+    d.__checked = checked;
+    try { localStorage.setItem(KEY, JSON.stringify(d)); } catch (e) {}
+  }
+  function load() {
+    var raw = null; try { raw = localStorage.getItem(KEY); } catch (e) {}
+    if (!raw) return; var d; try { d = JSON.parse(raw); } catch (e) { return; }
+    fields().forEach(function (el) {
+      if (!el.id || !(el.id in d)) return;
+      if (el.type === "radio" || el.type === "checkbox") el.checked = !!d[el.id]; else el.value = d[el.id];
+    });
+    if (d.__checked) grade();
+  }
+  form.addEventListener("input", function (ev) { save(); if (checked && ev.target.classList.contains("rb")) grade(); });
+  form.addEventListener("change", save);
+  form.addEventListener("submit", function (e) { e.preventDefault(); });
+
+  function normText(s) { return String(s).replace(/\r/g, "").split("\n").map(function (l) { return l.trim().replace(/\s+/g, " "); }).filter(function (l) { return l; }).join("\n"); }
+  function normGap(s) { return String(s).replace(/\s+/g, "").replace(/'/g, "\"").toLowerCase(); }
+  // Zahl aus deutscher Schreibweise lesen: "1.200", "12,5 %", "48,60 €", "-3"
+  function parseNum(s) {
+    var t = String(s).replace(/[\s€%]/g, "").replace(/[^0-9,.\-]/g, "");
+    if (t.indexOf(",") !== -1) t = t.replace(/\./g, "").replace(",", ".");
+    else if (/^-?\d{1,3}(\.\d{3})+$/.test(t)) t = t.replace(/\./g, "");
+    return t === "" ? NaN : parseFloat(t);
+  }
+  function numSet(s) { return (String(s).match(/-?\d+/g) || []).map(Number).sort(function (a, b) { return a - b; }).join(","); }
+  function mark(el, ok) { el.classList.remove("mark-ok", "mark-bad"); el.classList.add(ok ? "mark-ok" : "mark-bad"); }
+  function clearMarks() { document.querySelectorAll(".mark-ok, .mark-bad").forEach(function (el) { el.classList.remove("mark-ok", "mark-bad"); }); }
+  function fmt(n) { var r = Math.round(n * 10) / 10; return (r % 1 === 0 ? r.toFixed(0) : r.toFixed(1)).replace(".", ","); }
+
+  function gradeSection(sec) {
+    var s = 0;
+    // Single Choice
+    sec.querySelectorAll(".mc").forEach(function (q) {
+      var ans = q.dataset.answer, chosen = q.querySelector("input:checked"), ok = !!chosen && chosen.value === ans;
+      if (ok) s += 1;
+      q.querySelector('input[value="' + ans + '"]').parentElement.classList.add("mark-ok");
+      if (chosen && !ok) chosen.parentElement.classList.add("mark-bad");
+    });
+    // Multiple Choice mit Klausurwertung: +½ richtig, −½ falsch, je Frage mindestens 0, nichts angekreuzt = 0
+    sec.querySelectorAll(".mcx").forEach(function (q) {
+      var sels = q.querySelectorAll("select.mcxs"), sum = 0, anyX = false;
+      sels.forEach(function (el) {
+        var v = el.value || "o", ok = v === el.dataset.answer;
+        if (v === "x") anyX = true;
+        sum += ok ? 0.5 : -0.5; mark(el, ok);
+      });
+      s += anyX ? Math.max(0, sum) : 0;
+    });
+    // Automatisch bewertete Felder
+    sec.querySelectorAll(".auto").forEach(function (el) {
+      var kind = el.dataset.kind, answers = el.dataset.answer.split("|"), v = el.value, ok = false;
+      if (kind === "set") ok = numSet(v) === numSet(answers[0]);
+      else if (kind === "gap") ok = answers.some(function (a) { return normGap(a) === normGap(v); });
+      else if (kind === "num") { var x = parseNum(v), tol = Number(el.dataset.tol || 0.01); ok = !isNaN(x) && answers.some(function (a) { return Math.abs(parseNum(a) - x) <= tol; }); }
+      else ok = answers.some(function (a) { return normText(a) === normText(v); });
+      if (ok) s += Number(el.dataset.points);
+      mark(el, ok);
+    });
+    // Fehler finden
+    sec.querySelectorAll(".errblock").forEach(function (blk) {
+      var exp = JSON.parse(blk.dataset.expected), used = exp.map(function () { return false; });
+      var lines = blk.querySelectorAll(".eline"), types = blk.querySelectorAll(".etype");
+      lines.forEach(function (l, i) {
+        var line = parseInt(l.value, 10), t = types[i] ? types[i].value : null, hit = -1;
+        exp.forEach(function (e, k) { if (hit < 0 && !used[k] && e.line.indexOf(line) !== -1 && (!e.type || e.type === t)) hit = k; });
+        if (hit >= 0) { used[hit] = true; s += exp[hit].pts; }
+        mark(l, hit >= 0); if (types[i]) mark(types[i], hit >= 0);
+      });
+    });
+    // Selbstbewertung
+    sec.querySelectorAll(".rb").forEach(function (c) { if (c.checked) s += Number(c.dataset.points); });
+    sec.querySelectorAll(".sol").forEach(function (x) { x.hidden = false; });
+    return Math.min(Math.round(s * 100) / 100, Number(sec.dataset.max));
+  }
+
+  function grade() {
+    checked = true; clearMarks();
+    var total = 0;
+    document.querySelectorAll("section.task").forEach(function (sec) {
+      var k = sec.dataset.task, got = gradeSection(sec), max = MAX[k]; total += got;
+      var b = sec.querySelector(".badge"); b.hidden = false;
+      b.className = "badge " + (got >= max - 0.001 ? "full" : got > 0 ? "part" : "none");
+      b.textContent = fmt(got) + " / " + max + " P";
+      document.getElementById("ov" + k).textContent = fmt(got) + " / " + max;
+    });
+    document.getElementById("ovSum").textContent = fmt(total) + " / 48";
+    document.getElementById("scoreTop").textContent = fmt(total) + " / 48 Punkte";
+    var res = document.getElementById("result"); res.hidden = false;
+    res.innerHTML = '<div class="big">' + fmt(total) + ' von 48 Punkten</div><p>' + (total >= 24 ? "Bestanden (ab 24 Punkten)." : "Noch nicht bestanden. Ab 24 Punkten ist es geschafft.") +
+      '</p><p class="hint">Bei Erklärungen, Korrekturen und eigenem Code sind jetzt die Musterlösungen mit Häkchen eingeblendet. Hak ab, was bei dir stimmt, die Punkte rechnen sich sofort neu. Mit „Lösungen ausblenden“ versteckst du alles wieder, deine Antworten bleiben.</p>';
+    document.getElementById("hideTop").hidden = false;
+    save();
+  }
+
+  function hideSolutions() {
+    checked = false; clearMarks();
+    document.querySelectorAll(".sol").forEach(function (x) { x.hidden = true; });
+    document.querySelectorAll(".badge").forEach(function (b) { b.hidden = true; });
+    document.getElementById("result").hidden = true;
+    Object.keys(MAX).forEach(function (k) { document.getElementById("ov" + k).textContent = MAX[k]; });
+    document.getElementById("ovSum").textContent = "48";
+    document.getElementById("scoreTop").textContent = "noch nicht geprüft";
+    document.getElementById("hideTop").hidden = true;
+    save();
+  }
+
+  function goCheck() { grade(); document.getElementById("result").scrollIntoView({ block: "start" }); }
+  document.getElementById("checkTop").addEventListener("click", goCheck);
+  document.getElementById("checkBottom").addEventListener("click", goCheck);
+  document.getElementById("hideTop").addEventListener("click", function () { hideSolutions(); window.scrollTo(0, 0); });
+
+  var rc = document.getElementById("resetConfirm");
+  document.getElementById("resetBtn").addEventListener("click", function () { rc.hidden = false; });
+  document.getElementById("resetNo").addEventListener("click", function () { rc.hidden = true; });
+  document.getElementById("resetYes").addEventListener("click", function () {
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    form.reset(); Object.keys(STARTCODE).forEach(function (id) { document.getElementById(id).value = STARTCODE[id]; });
+    hideSolutions(); rc.hidden = true; stopTimer(); remaining = 2880; renderTimer(); timerBtn.textContent = "Zeit starten";
+  });
+
+  document.querySelectorAll("textarea.code").forEach(function (ta) {
+    ta.addEventListener("keydown", function (e) {
+      if (e.key === "Tab" && !e.shiftKey) { e.preventDefault(); var s = ta.selectionStart, en = ta.selectionEnd;
+        ta.value = ta.value.slice(0, s) + "    " + ta.value.slice(en); ta.selectionStart = ta.selectionEnd = s + 4; save(); }
+    });
+  });
+
+  var remaining = 2880, handle = null, timerEl = document.getElementById("timer"), timerBtn = document.getElementById("timerBtn");
+  function renderTimer() { var m = Math.floor(remaining / 60), s = remaining % 60; timerEl.textContent = String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0"); timerEl.classList.toggle("low", remaining <= 300); }
+  function stopTimer() { if (handle) { clearInterval(handle); handle = null; } }
+  timerBtn.addEventListener("click", function () {
+    if (handle) { stopTimer(); timerBtn.textContent = "Weiter"; return; }
+    if (remaining <= 0) remaining = 2880;
+    handle = setInterval(function () { remaining -= 1; renderTimer(); if (remaining <= 0) { stopTimer(); timerBtn.textContent = "Neu starten"; timerEl.textContent = "00:00 Zeit um"; } }, 1000);
+    timerBtn.textContent = "Pause";
+  });
+  renderTimer();
+  load();
+})();
+</script>
+</body>
+</html>

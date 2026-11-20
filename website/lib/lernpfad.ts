@@ -4,6 +4,7 @@ import type { ChapterEntry, SubjectEntry } from "@/lib/content/loader";
 import type { Card } from "@/lib/content/schema";
 import type { Heading } from "@/lib/markdown/headings";
 import { processMarkdown, type ProcessedMarkdown } from "@/lib/markdown/pipeline";
+import { interactiveExams } from "@/lib/probeklausuren";
 
 /**
  * Lernpfad: ein Fach als eine Seite, die Schritt für Schritt durchs Lernen führt.
@@ -226,7 +227,13 @@ export function buildLernpfad(subject: SubjectEntry): ProcessedMarkdown & { tota
     headings.push({ id: "probeklausur", text: "Zum Schluss: Probeklausur", depth: 2 });
     children.push(
       el("h2", { id: "probeklausur", className: ["path-chapter"] }, [text("Zum Schluss: Probeklausur")]),
-      ...md("Erst schreiben, wenn alle Kapitel durch sind. Timer stellen, Handy weg, auf Papier. Danach streng korrigieren und jeden Fehler ins Fehlerlog."),
+      ...md(
+        `Erst schreiben, wenn alle Kapitel durch sind. Timer stellen, Handy weg, auf Papier. Danach streng korrigieren und jeden Fehler ins Fehlerlog.${
+          interactiveExams(subject.slug).length > 0
+            ? `\n\nZum Ausfüllen mit automatischer Auswertung: ${interactiveExams(subject.slug).map((item) => `[${item.label}](${item.href})`).join(" · ")}`
+            : ""
+        }`,
+      ),
       ...(processMarkdown(exam.body, { sourcePath: exam.file, inlineSolutions: true, headingOffset: 1, idPrefix: "probe-" }).tree
         .children as ElementContent[]),
     );
