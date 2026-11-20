@@ -48,7 +48,13 @@ Die Website ist ein statischer Export (`output: "export"` → `out/`). Den Passw
 Pages Functions in `functions/` (`_middleware.ts` prüft jede Anfrage, `api/login.ts` setzt den Cookie),
 die Logik steht in `lib/auth.ts` und ist getestet.
 
-Einstellungen im Cloudflare-Projekt (Workers & Pages → Create → Pages → Connect to Git → `Fluory/DHBW`):
+**Weg A, Cloudflare Workers (empfohlen):** `wrangler.jsonc` + `worker/index.ts` liefern `out/` als statische Assets
+aus, der Worker prüft vorher den Login. Workers & Pages → Create → Import a repository → `Fluory/DHBW`:
+Build command `pnpm build`, Deploy command `npx wrangler deploy`, Path `/website`, Build-Variablen
+`NODE_VERSION` = `22` und `PNPM_VERSION` = `10.28.0`. Nach dem ersten Deploy unter Settings → Variables and Secrets
+`SITE_PASSWORD` als **Secret** anlegen (bis dahin zeigt die Seite „Zugang ist nicht eingerichtet“).
+
+**Weg B, Cloudflare Pages:** Einstellungen im Projekt (Workers & Pages → Create → „Looking to deploy Pages?“ → Connect to Git → `Fluory/DHBW`):
 
 - Production branch: `main`
 - Framework preset: None · Build command: `pnpm build` · Build output directory: `out`
