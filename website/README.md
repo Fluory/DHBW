@@ -43,7 +43,21 @@ pnpm verify                                 # lint + typecheck + test + build
 
 ## Deployment
 
-Vercel: Projekt aus dem Repo `fluory/dhbw` anlegen, **Root Directory `website`**, Framework Next.js, Build-Befehl `pnpm build`. Alle Seiten sind statisch. Zu setzen ist `SITE_PASSWORD` (gemeinsames Passwort für den Login; ohne die Variable ist die Seite gesperrt, siehe `.env.example`).
+**Cloudflare Pages** (seit 20.11.2026; Vercel war wegen des Datenlimits im kostenlosen Tarif pausiert).
+Die Website ist ein statischer Export (`output: "export"` → `out/`). Den Passwortschutz übernehmen
+Pages Functions in `functions/` (`_middleware.ts` prüft jede Anfrage, `api/login.ts` setzt den Cookie),
+die Logik steht in `lib/auth.ts` und ist getestet.
+
+Einstellungen im Cloudflare-Projekt (Workers & Pages → Create → Pages → Connect to Git → `Fluory/DHBW`):
+
+- Production branch: `main`
+- Framework preset: None · Build command: `pnpm build` · Build output directory: `out`
+- Root directory: `website`
+- Variablen: `NODE_VERSION` = `22`, `PNPM_VERSION` = `10.28.0`, `SITE_PASSWORD` = gemeinsames Passwort
+  (als Secret). Ohne `SITE_PASSWORD` ist die Seite gesperrt.
+
+`public/_routes.json` nimmt `/_next/static/*` von den Functions aus (spart Aufrufe), `public/_headers` setzt
+die Sicherheits-Header. Lokal ansehen: `pnpm build && node scripts/serve-out.mjs 3100` (ohne Login).
 
 ## Struktur
 

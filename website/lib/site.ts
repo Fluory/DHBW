@@ -17,6 +17,7 @@ export function moodleUrl(id: number): string {
 }
 
 export function siteUrl(): URL {
-  const host = process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.VERCEL_URL;
-  return new URL(host ? `https://${host}` : "http://localhost:3000");
+  // Cloudflare Pages setzt CF_PAGES_URL beim Build.
+  const url = process.env.CF_PAGES_URL;
+  return new URL(url && url.startsWith("https://") ? url : "http://localhost:3000");
 }

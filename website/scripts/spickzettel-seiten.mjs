@@ -1,5 +1,5 @@
 // Spickzettel prüfen und als PDF ablegen.
-// Server muss laufen, z. B. `pnpm build && SITE_PASSWORD=lokaltest pnpm start --port 3100`.
+// Server muss laufen, z. B. `pnpm build && node scripts/serve-out.mjs 3100` (statischer Export, ohne Login).
 //   node scripts/spickzettel-seiten.mjs [fach-slug ...]         prüft: jeder Spickzettel = genau eine A4-Seite
 //   node scripts/spickzettel-seiten.mjs --pdf [fach-slug ...]   legt zusätzlich die PDFs in public/spickzettel/ ab
 //                                                               (je Kapitel und je Fach) und aktualisiert manifest.json

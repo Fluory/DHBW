@@ -39,3 +39,10 @@ Jede Abhängigkeit mit einer Zeile Begründung. Vorbild ist die Architektur von 
 - **`agentRules: false`** in `next.config.ts`, damit `next dev` die `CLAUDE.md` nicht umschreibt; `turbopack.root` auf `website/`, weil die Website ein Unterordner des Repos ist.
 - **Passwortschutz in der Website:** `proxy.ts` leitet ohne gültigen Cookie auf `/login` um; das Passwort steht nur in der Umgebungsvariable `SITE_PASSWORD` (öffentliches Repo, nie im Code). Der Cookie ist ein HMAC vom Passwort (httpOnly, 30 Tage), ein neues Passwort macht alle Logins ungültig. Fehlt `SITE_PASSWORD`, bleibt die Seite gesperrt (fail closed), nur `next dev` ist offen. Keine neue Abhängigkeit (`node:crypto`, `zod` war schon da).
 - **Lernen-Bereich ohne neue Abhängigkeit:** Karteikarten und Quiz kommen aus `karteikarten.json`, werden auf dem Server über die vorhandene Markdown-Pipeline gerendert und als fertige React-Knoten an Client-Komponenten übergeben. Lernstand und Bestwerte nur in `localStorage` (abgesichert mit try/catch, sonst nur im Speicher der Seite). Optionen werden nicht gemischt, weil Erklärungen auf Buchstaben verweisen. Bewertungsleiste klebt nur auf schmalen Bildschirmen unten.
+
+## 20.11.2026: Cloudflare Pages statt Vercel
+
+Vercel (Hobby) hat das Konto wegen 14,45 von 10 GB „Fast Origin Transfer“ bis 20.12. pausiert. Ursache war
+vermutlich `Cache-Control: private, no-store` aus dem Passwortschutz: Jede Seite und jedes Prefetch kam vom
+Ursprung. Jetzt: statischer Export auf Cloudflare Pages (Datenverkehr für statische Dateien unbegrenzt),
+Passwortschutz als Pages Functions mit Web Crypto (`lib/auth.ts`). Keine neue Abhängigkeit.
