@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/site/Link";
 import { TodayPlan } from "@/components/lernplan/TodayPlan";
 import { Countdown } from "@/components/site/Countdown";
 import { StandBadge } from "@/components/site/Badges";

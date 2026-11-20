@@ -59,6 +59,41 @@ Einstellungen im Cloudflare-Projekt (Workers & Pages → Create → Pages → Co
 `public/_routes.json` nimmt `/_next/static/*` von den Functions aus (spart Aufrufe), `public/_headers` setzt
 die Sicherheits-Header. Lokal ansehen: `pnpm build && node scripts/serve-out.mjs 3100` (ohne Login).
 
+## Datenverkehr (Kostenbremse)
+
+Vercel hat das Konto im November 2026 pausiert (14,45 von 10 GB „Fast Origin Transfer“ im kostenlosen Tarif).
+Laut Vercel zählt dazu jeder Byte zwischen CDN und Rechenzeit, auch Middleware („Fast Origin Transfer is
+incurred when using several Vercel products including Vercel Functions, Middleware, Blob and Data Cache“,
+<https://vercel.com/docs/manage-cdn-usage>, gelesen 20.11.2026). Hier lief jede Seite durch `proxy.ts`, mit
+`private, no-store` (kein Browser-Cache) und Prefetch jedes sichtbaren Links.
+
+Auf Cloudflare Pages kostet jede Anfrage, die die Functions startet (also alles außer `public/_routes.json` →
+`exclude`), ein Stück vom Tageskontingent (kostenlos 100.000 Anfragen pro Tag); statische Dateien ohne Function
+sind frei. Gemessen mit `scripts/measure-transfer.mjs` (Besuch: Start → Fach → Kapitel → Zusammenfassung →
+Alles lesen → Lernpfad, lokal gebauter Export):
+
+| Stand | Anfragen durch den Schutz | Bytes durch den Schutz (unkomprimiert / gzip) | zweiter Besuch |
+|---|---|---|---|
+| Vercel mit `proxy.ts` (bis 19.11.) | ca. 35–45 | ca. 6 MB / 1,4 MB | genauso viel (`no-store`) |
+| Export mit Prefetch (20.11. früh) | ca. 130 | ca. 11,6 MB / 2,7 MB | genauso viel |
+| jetzt | 6 | 3,3 MB / 0,7 MB | 0 innerhalb von 5 Minuten |
+
+Zwei Regeln für jede Änderung:
+
+1. **Kein Vorladen.** Interne Links nur über `@/components/site/Link` (lädt erst beim Klick), nie `next/link`
+   direkt und nie `prefetch`. `tests/transfer.test.ts` prüft das.
+2. **Nur Unvertrauliches am Schutz vorbei.** `public/_routes.json` nimmt nur `/_next/static/*`, `/icon.svg` und
+   `robots.txt` aus; geschützte Antworten tragen `private, max-age=300, must-revalidate` (nur der eigene
+   Browser, nie ein geteilter Cache). PDFs und Seiten bleiben hinter dem Login.
+
+Nachmessen: `pnpm build && node scripts/serve-out.mjs 3100`, dann in einem zweiten Terminal
+`node scripts/measure-transfer.mjs` (braucht Playwright mit Chromium; `MAX_GATE_MB=5` lässt den Lauf
+scheitern, wenn ein Besuch mehr als 5 MB unkomprimiert durch den Schutz schickt). Die echten Zahlen stehen nur
+im Cloudflare-Dashboard (Workers & Pages → Projekt → Metriken).
+
+Nicht auf Vercel bauen: Der Export hätte dort keinen Passwortschutz. `vercel.json` schaltet Git-Deployments ab,
+und `next.config.ts` bricht einen Build mit `VERCEL=1` ab (`lib/hosting.ts`).
+
 ## Struktur
 
 ```

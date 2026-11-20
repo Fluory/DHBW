@@ -1,5 +1,9 @@
 import path from "node:path";
 import type { NextConfig } from "next";
+import { assertProtectedHost } from "./lib/hosting";
+
+// Ohne Passwortschutz nie bauen (Vercel kennt die Cloudflare Functions nicht).
+assertProtectedHost(process.env);
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,

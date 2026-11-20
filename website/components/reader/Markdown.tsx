@@ -1,6 +1,6 @@
 import type { Root } from "hast";
 import { toJsxRuntime, type Components } from "hast-util-to-jsx-runtime";
-import Link from "next/link";
+import Link from "@/components/site/Link";
 import type { ComponentProps } from "react";
 import { Fragment, jsx, jsxs } from "react/jsx-runtime";
 import { Callout } from "@/components/reader/Callout";

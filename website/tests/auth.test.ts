@@ -63,7 +63,11 @@ describe("Passwortschutz", () => {
     const ok = await handleRequest(new Request("https://semester.example/bwl", { headers: { Cookie: cookie } }), env, page);
     expect(ok.status).toBe(200);
     expect(await ok.text()).toBe("Inhalt");
-    expect(ok.headers.get("Cache-Control")).toBe("private, no-cache");
+    const cacheControl = ok.headers.get("Cache-Control") ?? "";
+    expect(cacheControl).toBe("private, max-age=300, must-revalidate");
+    // Nie in einem geteilten Cache: kein public, kein s-maxage.
+    expect(cacheControl.split(",")[0].trim()).toBe("private");
+    expect(cacheControl).not.toMatch(/public|s-maxage/);
     const open = await handleRequest(new Request("https://semester.example/login"), env, page);
     expect(open.status).toBe(200);
   });

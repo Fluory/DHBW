@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/site/Link";
 import { ThemeToggle } from "@/components/site/ThemeToggle";
 
 export function SiteHeader() {

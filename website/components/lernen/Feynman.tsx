@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/site/Link";
 import { useEffect, useId, useRef, useState } from "react";
 import { focusAndReveal, shortcutAllowed } from "@/components/lernen/keys";
 import { RatingButtons } from "@/components/lernen/RatingButtons";

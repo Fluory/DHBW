@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/site/Link";
 import { BoxCounts } from "@/components/lernen/BoxCounts";
 import { percent } from "@/lib/lernen/quiz";
 import { useBestScores, useProgress } from "@/lib/lernen/storage";

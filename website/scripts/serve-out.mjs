@@ -2,6 +2,7 @@
 // Ohne Login: Den Passwortschutz übernimmt erst Cloudflare (functions/_middleware.ts).
 // Aufruf: node scripts/serve-out.mjs [port]   (Standard 3100)
 import { createReadStream, existsSync, statSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { createServer } from "node:http";
 import path from "node:path";
 
@@ -38,6 +39,22 @@ createServer((request, response) => {
     else response.end("Nicht gefunden");
     return;
   }
-  response.writeHead(200, { "Content-Type": types[path.extname(file)] ?? "application/octet-stream" });
+  // Cache-Header wie auf Cloudflare (public/_headers und PROTECTED_CACHE_CONTROL in lib/auth.ts),
+  // damit scripts/measure-transfer.mjs auch den zweiten Besuch realistisch misst.
+  const stat = statSync(file);
+  const etag = `"${createHash("sha1").update(`${file}:${stat.size}:${stat.mtimeMs}`).digest("hex").slice(0, 16)}"`;
+  const cacheControl = (request.url ?? "").startsWith("/_next/static/")
+    ? "public, max-age=31536000, immutable"
+    : "private, max-age=300, must-revalidate";
+  if (request.headers["if-none-match"] === etag) {
+    response.writeHead(304, { ETag: etag, "Cache-Control": cacheControl });
+    response.end();
+    return;
+  }
+  response.writeHead(200, {
+    "Content-Type": types[path.extname(file)] ?? "application/octet-stream",
+    "Cache-Control": cacheControl,
+    ETag: etag,
+  });
   createReadStream(file).pipe(response);
 }).listen(port, () => console.log(`out/ auf http://localhost:${port}`));

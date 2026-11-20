@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/site/Link";
 import { PlanCalendar } from "@/components/lernplan/PlanCalendar";
 import { TodayPlan } from "@/components/lernplan/TodayPlan";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";

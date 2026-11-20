@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/site/Link";
 import { useSyncExternalStore } from "react";
 import { DayDetail } from "@/components/lernplan/DayDetail";
 import { localToday } from "@/lib/dates";

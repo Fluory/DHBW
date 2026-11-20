@@ -67,7 +67,7 @@ export function safeNext(value: unknown): string {
   return `${url.pathname}${url.search}${url.hash}`;
 }
 
-/** Pfade, die ohne Login erreichbar sind: die Anmeldeseite selbst und die statischen Next-Dateien. */
+/** Pfade, die ohne Login erreichbar sind: die Anmeldeseite, robots.txt und die statischen Next-Dateien. */
 export function isOpenPath(pathname: string): boolean {
   return (
     pathname === "/login" ||
@@ -75,11 +75,19 @@ export function isOpenPath(pathname: string): boolean {
     pathname === "/login.txt" ||
     pathname === "/api/login" ||
     pathname === "/icon.svg" ||
+    pathname === "/robots.txt" ||
     pathname.startsWith("/_next/static/")
   );
 }
 
 type Env = { SITE_PASSWORD?: string };
+
+/**
+ * Cache-Regel für geschützte Antworten: nur im eigenen Browser (`private`, nie in einem geteilten
+ * Cache), dort 5 Minuten ohne neue Anfrage. Jede Anfrage startet die Function; ohne diese Frist fragt der
+ * Browser bei jedem Seitenwechsel erneut an. Danach fragt er wieder nach (ETag, meist 304 ohne Body).
+ */
+export const PROTECTED_CACHE_CONTROL = "private, max-age=300, must-revalidate";
 
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -99,8 +107,7 @@ export async function handleRequest(request: Request, env: Env, next: () => Prom
   if (await isAuthorized(readCookie(request.headers.get("Cookie"), AUTH_COOKIE), password)) {
     const response = await next();
     const result = new Response(response.body, response);
-    // Nur im eigenen Browser zwischenspeichern, nie in einem geteilten Cache.
-    result.headers.set("Cache-Control", "private, no-cache");
+    result.headers.set("Cache-Control", PROTECTED_CACHE_CONTROL);
     return result;
   }
 

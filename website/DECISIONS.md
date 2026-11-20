@@ -46,3 +46,27 @@ Vercel (Hobby) hat das Konto wegen 14,45 von 10 GB „Fast Origin Transfer“ bi
 vermutlich `Cache-Control: private, no-store` aus dem Passwortschutz: Jede Seite und jedes Prefetch kam vom
 Ursprung. Jetzt: statischer Export auf Cloudflare Pages (Datenverkehr für statische Dateien unbegrenzt),
 Passwortschutz als Pages Functions mit Web Crypto (`lib/auth.ts`). Keine neue Abhängigkeit.
+
+## 20.11.2026: Datenverkehr durch den Passwortschutz klein halten
+
+Gemessen statt vermutet (`scripts/measure-transfer.mjs`, README „Datenverkehr“). Beide Vermutungen stimmten:
+`no-store` ließ jeden Besuch alles neu laden, und Prefetch holte auf jeder Seite Dutzende nie geöffnete Kapitel
+durch den Schutz (im Export ca. 120 von 130 Anfragen je Besuch). Entscheidungen:
+
+- **Links ohne Prefetch** (`components/site/Link.tsx`, `prefetch` standardmäßig `false`): geladen wird erst
+  beim Klick. Ein Klick wartet dadurch kurz auf die Seite; dafür startet ein Besuch 6 statt ca. 130 Functions.
+- **Browser-Cache 5 Minuten** (`private, max-age=300, must-revalidate`): nur im eigenen Browser, nie geteilt;
+  danach Nachfrage mit ETag. Inhalte ändern sich höchstens täglich.
+- **`robots.txt` mit `Disallow: /`** an den Functions vorbei: Bots bekommen eine kleine Datei statt einer Weiterleitung.
+- **Große Seiten (Lernpfad bis 1,9 MB, „Alles lesen“ bis 0,9 MB) nicht geteilt:** Auf Cloudflare zählen Anfragen,
+  nicht Bytes; Teilen würde den Leser verändern, ohne Kosten zu sparen.
+- **Kein Vercel mehr für diesen Export:** Vercel kennt `functions/` nicht, der Export wäre dort öffentlich.
+  `vercel.json` (`git.deploymentEnabled: false`) und `lib/hosting.ts` (Build-Abbruch bei `VERCEL=1`).
+  Quelle zu Vercel: „Fast Origin Transfer: Data sent between the CDN and Vercel Functions.“ und „If using
+  Middleware, it is possible to accrue Fast Origin Transfer twice for a single Function request“
+  (<https://vercel.com/docs/manage-cdn-usage>, Stand der Seite 14.09.2026, gelesen 20.11.2026). Ob die Bytes
+  einer statischen Seite hinter einer Middleware, die nur `next()` aufruft, mitzählen, steht dort nicht ausdrücklich.
+- Quelle zu Cloudflare: „Requests to your Pages Functions count towards your quota for the Workers Free plan …
+  100,000 daily request usage“ und „requests to static assets are free and unlimited. A request is considered
+  static when it does not invoke Functions.“ (<https://developers.cloudflare.com/pages/functions/pricing/>, gelesen 20.11.2026).
+- Keine neue Abhängigkeit: Das Messskript nutzt Playwright wie `scripts/spickzettel-seiten.mjs` (nicht in `package.json`).
