@@ -1,0 +1,17 @@
+{
+  // Cloudflare Workers mit statischen Assets. Build: `pnpm build` (Export nach out/), Deploy: `npx wrangler deploy`.
+  // SITE_PASSWORD wird im Dashboard als Secret gesetzt (Settings → Variables and Secrets), nie hier.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "dhbw",
+  "main": "worker/index.ts",
+  "compatibility_date": "2025-11-01",
+  "keep_vars": true,
+  "assets": {
+    "directory": "./out",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/*", "!/_next/static/*", "!/icon.svg"]
+  },
+  "observability": { "enabled": true }
+}
