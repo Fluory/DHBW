@@ -73,8 +73,8 @@ incurred when using several Vercel products including Vercel Functions, Middlewa
 <https://vercel.com/docs/manage-cdn-usage>, gelesen 20.11.2026). Hier lief jede Seite durch `proxy.ts`, mit
 `private, no-store` (kein Browser-Cache) und Prefetch jedes sichtbaren Links.
 
-Auf Cloudflare Pages kostet jede Anfrage, die die Functions startet (also alles außer `public/_routes.json` →
-`exclude`), ein Stück vom Tageskontingent (kostenlos 100.000 Anfragen pro Tag); statische Dateien ohne Function
+Auf Cloudflare kostet jede Anfrage, die den Schutz startet (Pages Functions bzw. Worker; also alles außer den
+Ausnahmen in `public/_routes.json` und `wrangler.jsonc`), ein Stück vom Tageskontingent (kostenlos 100.000 Anfragen pro Tag); statische Dateien ohne Function
 sind frei. Gemessen mit `scripts/measure-transfer.mjs` (Besuch: Start → Fach → Kapitel → Zusammenfassung →
 Alles lesen → Lernpfad, lokal gebauter Export):
 
@@ -88,7 +88,8 @@ Zwei Regeln für jede Änderung:
 
 1. **Kein Vorladen.** Interne Links nur über `@/components/site/Link` (lädt erst beim Klick), nie `next/link`
    direkt und nie `prefetch`. `tests/transfer.test.ts` prüft das.
-2. **Nur Unvertrauliches am Schutz vorbei.** `public/_routes.json` nimmt nur `/_next/static/*`, `/icon.svg` und
+2. **Nur Unvertrauliches am Schutz vorbei.** `public/_routes.json` (Pages) und `run_worker_first` in
+   `wrangler.jsonc` (Worker) nehmen nur `/_next/static/*`, `/icon.svg` und
    `robots.txt` aus; geschützte Antworten tragen `private, max-age=300, must-revalidate` (nur der eigene
    Browser, nie ein geteilter Cache). PDFs und Seiten bleiben hinter dem Login.
 

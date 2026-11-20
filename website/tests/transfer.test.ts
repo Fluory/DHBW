@@ -42,6 +42,11 @@ describe("Datenverkehr durch den Passwortschutz", () => {
     expect(isOpenPath("/icon.svg")).toBe(true);
     expect(isOpenPath("/robots.txt")).toBe(true);
     expect(isOpenPath("/spickzettel/mathematik.pdf")).toBe(false);
+    // Gleiche Liste für den Worker (wrangler.jsonc, JSON mit Kommentaren).
+    const wrangler = JSON.parse(
+      fs.readFileSync(path.join(root, "wrangler.jsonc"), "utf8").replace(/^\s*\/\/.*$/gm, ""),
+    );
+    expect(wrangler.assets.run_worker_first).toEqual(["/*", "!/_next/static/*", "!/icon.svg", "!/robots.txt"]);
   });
 
   it("sperrt Suchmaschinen per robots.txt aus", () => {
