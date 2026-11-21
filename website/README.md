@@ -43,7 +43,7 @@ pnpm verify                                 # lint + typecheck + test + build
 
 ## Deployment
 
-**Cloudflare Pages** (seit 20.11.2026; Vercel war wegen des Datenlimits im kostenlosen Tarif pausiert).
+**Cloudflare** (seit 20.11.2026, Adresse: https://dhbw.florian-hein-sh.workers.dev; Vercel war wegen des Datenlimits im kostenlosen Tarif pausiert).
 Die Website ist ein statischer Export (`output: "export"` → `out/`). Den Passwortschutz übernehmen
 Pages Functions in `functions/` (`_middleware.ts` prüft jede Anfrage, `api/login.ts` setzt den Cookie),
 die Logik steht in `lib/auth.ts` und ist getestet.
